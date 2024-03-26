@@ -1,0 +1,12 @@
+{
+    "software_name": "Aspherix",
+    "comprehensive_overview": "Aspherix is a computational tool used for modeling and simulating optical systems and aberrations, particularly in the field of aspherical and freeform optics. It provides precise simulations for designing and optimizing optical components and systems.",
+    "core_features": ["Models and simulates optical systems and aberrations", "Focuses on aspherical and freeform optics", "Provides precise simulations for optical design and optimization"],
+    "general_tags": ["Optical system simulation", "Aberration modeling"],
+    "additional_tags": {
+        "research_discipline": "Optics",
+        "research_area": "Optical Design",
+        "software_class": "Optical Modeling Tool",
+        "software_type": "Tool"
+    }
+}

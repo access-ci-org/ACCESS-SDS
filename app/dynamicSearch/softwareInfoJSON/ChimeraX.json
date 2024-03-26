@@ -1,0 +1,12 @@
+{
+    "software_name": "ChimeraX",
+    "comprehensive_overview": "ChimeraX is a molecular visualization program developed by the UCSF Computer Graphics Lab for interactive visualization and analysis of molecular structures. It offers advanced tools for visualizing proteins, nucleic acids, small molecules, density maps, and molecular dynamics trajectories.",
+    "core_features": ["Molecular visualization and analysis program", "Interactive visualization of molecular structures", "Advanced tools for proteins, nucleic acids, and molecular dynamics"],
+    "general_tags": ["Molecular visualization", "Structural analysis"],
+    "additional_tags": {
+        "research_discipline": "Structural Biology",
+        "research_area": "Molecular Visualization",
+        "software_class": "Visualization Software",
+        "software_type": "Tool"
+    }
+}

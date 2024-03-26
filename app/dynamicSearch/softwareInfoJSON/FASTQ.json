@@ -1,0 +1,12 @@
+{
+    "software_name": "FASTQ",
+    "comprehensive_overview": "FASTQ is a text-based format for storing both a biological sequence (usually nucleotide sequence) and its corresponding quality scores. It is commonly used to store high-throughput sequencing data.",
+    "core_features": ["Storage of biological sequences", "Storage of quality scores", "Compatibility with high-throughput sequencing data"],
+    "general_tags": ["Bioinformatics", "Next-generation sequencing", "Data format"],
+    "additional_tags": {
+        "research_discipline": "Genomics",
+        "research_area": "High-throughput sequencing",
+        "software_class": "Bioinformatics tool",
+        "software_type": "Data format"
+    }
+}

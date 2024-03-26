@@ -1,0 +1,12 @@
+{
+    "software_name": "Gaussian",
+    "comprehensive_overview": "Gaussian is a popular computational chemistry software package for quantum chemistry calculations. It provides a broad range of methods and capabilities for electronic structure analysis, molecular dynamics simulations, and predicting chemical properties and reactivities.",
+    "core_features": ["Computational chemistry software", "Quantum chemistry calculations", "Electronic structure analysis and property prediction"],
+    "general_tags": ["Quantum chemistry", "Computational chemistry"],
+    "additional_tags": {
+        "research_discipline": "Chemistry",
+        "research_area": "Quantum Chemistry",
+        "software_class": "Computational Chemistry",
+        "software_type": "Tool"
+    }
+}

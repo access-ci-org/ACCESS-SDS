@@ -1,0 +1,12 @@
+{
+    "software_name": "GeneMark",
+    "comprehensive_overview": "GeneMark is a gene prediction software that identifies protein-coding genes in microbial genomes.",
+    "core_features": ["Gene prediction", "Microbial genomes", "Protein-coding genes identification"],
+    "general_tags": ["Gene prediction", "Bioinformatics", "Microbial genomics"],
+    "additional_tags": {
+        "research_discipline": "Bioinformatics",
+        "research_area": ["Genomics", "Microbiology"],
+        "software_class": "Gene prediction",
+        "software_type": "Bioinformatics tool"
+    }
+}

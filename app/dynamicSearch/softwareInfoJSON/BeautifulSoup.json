@@ -1,0 +1,12 @@
+{
+    "software_name": "BeautifulSoup",
+    "comprehensive_overview": "BeautifulSoup is a Python library used for web scraping and parsing HTML and XML documents. It provides tools to navigate and extract data from web pages, making it easier to collect information for data extraction, web scraping, and data analysis.",
+    "core_features": ["Web scraping and parsing library", "Extracts data from HTML and XML documents", "Facilitates data extraction from web pages"],
+    "general_tags": ["Web scraping", "Data extraction"],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Web Scraping Tool",
+        "software_type": "Library"
+    }
+}

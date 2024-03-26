@@ -1,0 +1,20 @@
+{
+    "software_name": "FLASh",
+    "comprehensive_overview": "FLASh (Fast Length Adjustment of SHort reads) is a very accurate and fast tool for merging paired-end reads from next-generation sequencing experiments. FLASh is designed to merge pairs of reads when the original DNA fragments are shorter than twice the length of reads.",
+    "core_features": [
+        "Merge paired-end reads",
+        "Accurate and fast",
+        "Handles short DNA fragments effectively"
+    ],
+    "general_tags": [
+        "NGS data analysis",
+        "Sequence data processing",
+        "Paired-end read merging"
+    ],
+    "additional_tags": {
+        "research_discipline": "Bioinformatics",
+        "research_area": "Genomics",
+        "software_class": "Sequence Analysis",
+        "software_type": "Tool"
+    }
+}
