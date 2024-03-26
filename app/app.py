@@ -1,6 +1,6 @@
 from flask import Flask, render_template, jsonify
 from dotenv import load_dotenv
-from softwareStatic import create_static_table
+from app.softwareStatic import create_static_table
 import os
 import re
 import pandas as pd
