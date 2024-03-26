@@ -1,0 +1,12 @@
+{
+    "software_name": "DeepLabCut",
+    "comprehensive_overview": "DeepLabCut is an open-source software tool for markerless pose estimation in behavioral analysis research. It employs deep learning methods to automatically track and analyze the movements of body parts or objects in videos, enabling precise and efficient motion tracking in various applications.",
+    "core_features": ["Markerless pose estimation software", "Uses deep learning for motion tracking", "Automatically analyzes movements in video data"],
+    "general_tags": ["Behavioral analysis", "Motion tracking"],
+    "additional_tags": {
+        "research_discipline": "Neuroscience",
+        "research_area": "Behavioral Analysis",
+        "software_class": "Behavioral Tracking Tool",
+        "software_type": "Tool"
+    }
+}

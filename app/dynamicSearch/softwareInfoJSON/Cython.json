@@ -1,0 +1,12 @@
+{
+    "software_name": "Cython",
+    "comprehensive_overview": "Cython is a programming language that makes it easy to write C extensions for Python language. It allows for seamless integration of C/C++ code with Python, providing a hybrid environment for performance optimization and building Python extensions with compiled code for speed improvement.",
+    "core_features": ["Enhance Python with C-like performance", "Seamless integration of C/C++ with Python", "Convert Python code to C for performance improvements"],
+    "general_tags": ["Python extension", "Performance optimization"],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Programming Language",
+        "software_type": "Tool"
+    }
+}

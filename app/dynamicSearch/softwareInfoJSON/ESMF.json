@@ -1,0 +1,12 @@
+{
+    "software_name": "ESMF",
+    "comprehensive_overview": "ESMF (Earth System Modeling Framework) is a software infrastructure for developing and coupling Earth system models, designed to facilitate interoperability and portability across diverse modeling systems. It provides a framework for high-performance computing, parallel simulations, and ensemble modeling in Earth system science.",
+    "core_features": ["Software infrastructure for Earth system models", "Facilitates model interoperability and portability", "Supports high-performance computing and ensemble modeling"],
+    "general_tags": ["Earth system modeling", "Model coupling"],
+    "additional_tags": {
+        "research_discipline": "Earth System Science",
+        "research_area": "Modeling Framework",
+        "software_class": "Modeling Infrastructure",
+        "software_type": "Tool"
+    }
+}

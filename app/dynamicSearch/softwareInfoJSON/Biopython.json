@@ -1,0 +1,12 @@
+{
+    "software_name": "Biopython",
+    "comprehensive_overview": "Biopython is a Python library for biological computation that provides tools for bioinformatics and computational biology tasks. It offers modules for DNA and protein sequence analysis, molecular modeling, phylogenetics, and genetic data processing.",
+    "core_features": ["Python library for biological computation", "DNA and protein sequence analysis tools", "Modules for molecular modeling and phylogenetics"],
+    "general_tags": ["Bioinformatics", "Computational biology"],
+    "additional_tags": {
+        "research_discipline": "Bioinformatics",
+        "research_area": "Biological Computation",
+        "software_class": "Bioinformatics Library",
+        "software_type": "Library"
+    }
+}

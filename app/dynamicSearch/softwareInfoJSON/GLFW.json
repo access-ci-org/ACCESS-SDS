@@ -1,0 +1,12 @@
+{
+    "software_name": "GLFW",
+    "comprehensive_overview": "GLFW is an open-source, multi-platform library for managing windows, OpenGL contexts, and input devices for graphics application development. It simplifies the process of creating graphical user interfaces, handling user input, and managing OpenGL contexts across different platforms.",
+    "core_features": ["Window and OpenGL context management", "Input device handling", "Cross-platform GUI development"],
+    "general_tags": ["Graphics library", "Window management"],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Library",
+        "software_type": "Development Tool"
+    }
+}

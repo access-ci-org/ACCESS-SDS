@@ -1,0 +1,20 @@
+{
+  "software_name": "Fluent",
+  "comprehensive_overview": "Fluent is a computational fluid dynamics software developed by Ansys that enables engineers and scientists to perform simulations on complex fluid flow and heat transfer phenomena.",
+  "core_features": [
+    "Multiphase flow modeling",
+    "Turbulence modeling",
+    "Heat transfer simulations",
+    "Chemical reactions modeling",
+    "Fluid-structure interaction",
+    "Automated meshing",
+    "Post-processing and visualization tools"
+  ],
+  "general_tags": ["CFD", "Engineering", "Simulation", "Fluid Dynamics"],
+  "additional_tags": {
+    "research_discipline": "Engineering",
+    "research_area": "Computational Fluid Dynamics",
+    "software_class": "Computational Modeling",
+    "software_type": "Simulation Software"
+  }
+}
