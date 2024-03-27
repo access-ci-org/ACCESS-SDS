@@ -1,0 +1,29 @@
+Use Case: Clairvoyante is a tool used for predicting variant types, indels, zygosity, etc., from genomic sequences using deep learning models. It requires as inputs, two files: a tensorflow model file (trained for the particular task) and a genomic data file (in .npz format).
+
+Code Details and Examples:
+Code snippet to run Clairvoyante (assuming the model file is named 'model' and the input file is named 'input.npz'):
+
+```python
+import Clairvoyante.model as model
+import Clairvoyante.call_variants as call_variants
+m = model.Model('model')
+call_variants.call(m, 'input.npz')
+```
+
+The model file is a binary file storing the weights and architecture of a tensorflow deep learning model. It doesn't have a particular format, but is generated through training the model on the command line with the training data set. 
+
+The input file is a .npz file storing the sequences and their variants in a compressed numpy array format. Its format depends on the task, but generally it stores one sequence per line, with the sequence and its variants separated by tabs. For example:
+
+```
+AACTG  0 0 0 1
+TTGAC  1 0 0 0
+CTGAT  0 1 0 0
+```
+This represents three sequences: 'AACTG', 'TTGAC', and 'CTGAT'. The numbers after the sequences represent the variants, with 1 indicating the presence of the variant and 0 indicating its absence. 
+
+The command to run the python script varies depending on the environment, but generally you can use:
+
+```bash
+python script.py
+```
+Where 'script.py' is the python script that uses Clairvoyante to call variants.

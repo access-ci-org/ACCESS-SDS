@@ -1,29 +1,23 @@
-Use Case: BLAT (BLAST-Like Alignment Tool) is a sequence alignment tool that is commonly used in bioinformatics for comparing sequences.
+Use Case: BLAT (BLAST-like alignment tool) is a bioinformatics software for rapidly aligning sequences to a large reference genome. It can be used for tasks such as aligning mRNA sequences to the human genome, or aligning two genomic sequences.
 
 Code details and examples:
-BLAT can be run through command line with the following command:
-```
-blat <database> <query> <output>
-```
-- `<database>`: The file containing the sequences to search against.
-- `<query>`: The file containing the query sequence.
-- `<output>`: The output file to store the results of the alignment.
+Code: The input file for BLAT is typically a multi-fasta file. An example input file could have the following content:
 
-Sample input files:
-- Database file (example.fasta):
 ```
 >seq1
-ATCGTACGTA
+ATGCATGCATGC
 >seq2
-TACGTACGTA
-```
-- Query file (query.fasta):
-```
->query1
-ATCGTACGTA
+ATGCATGCATGCA
 ```
 
-Example command to run BLAT:
+This file contains two sequences, 'seq1' and 'seq2', which are identifiers for the sequences. The lines following the identifiers are the sequences themselves.
+
+To run BLAT with an example input file, you can use the following command line:
+
 ```
-blat example.fasta query.fasta output.psl
+blat database.fasta input.fasta output.psl
 ```
+
+In the above command, 'database.fasta' is the sequence you are aligning to (often a reference genome), 'input.fasta' is the file containing the sequences you want to align (this could contain mRNA sequences or genomic sequences), and 'output.psl' is where you want the output to go. The output is in .psl format, which is a tab-delimited format with one line per alignment.
+
+The output file will contain information about the alignment, such as the position of the alignment in the reference genome, the score of the alignment, the number of mismatches, and more. Each line corresponds to a single match. For more information on the format of the output file, you can look at the BLAT documentation.

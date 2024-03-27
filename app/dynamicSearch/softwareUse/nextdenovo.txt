@@ -1,0 +1,56 @@
+Use Case: NextDenovo is a HPC software package. It's used for de novo genome assembly using long reads, like PacBio or Oxford Nanopore. It has a particular focus on assembling large genomes. 
+
+Code Details and Examples:
+
+The primary input for NextDenovo is a sequencing read file, often in a format like fastq. 
+
+For example, your file might look something like this:
+
+```
+@SEQ_ID
+GATCGGAAGAGCGGTTCAGCAGGAATGCCGAGACCGATCTCGTATGCCGT
++
+!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
+```
+
+In this example, `@SEQ_ID` is a header that gives some information about the read. The first line is the actual sequence, and the second line, which begins with a plus, is a quality score for each base in the sequence. 
+
+To use NextDenovo, you need to direct it to a `run.cfg` config file, which will tell it where to find the input files and how to run the assembly. 
+
+This might look something like:
+
+```
+[General]
+job_type = local
+job_prefix = nextDenovo
+task = all
+rewrite = yes
+rerun = 3
+parallel_jobs = 20
+multithread_jobs = 5
+genome_size = auto
+seed_cutoff = 32332
+
+[correct_option]
+read_cuoff = auto
+seed_cutoff = auto
+blocksize = 1g
+pa_correction = 2
+sort_options = -m 1g -t 10 -k 40
+minimap2_options_raw = -x ava-ont -t 10
+
+[assemble_option]
+random_round = 10
+minimap2_options_cns = -x ava-ont -t 10
+nextgraph_options = -a 1
+```
+
+A very simple command to run NextDenovo might look like:
+
+```
+nextDenovo run.cfg
+```
+
+In this command, `run.cfg` is the name of your config file. 
+
+Note: It's important to remember that this is a high performance computing tool, and should be run on an appropriate infrastructure. The example provided here is for a local run, meaning it's set up to run on the machine it's being executed on, using its own resources. To run this on a shared infrastructure, like a computing cluster, the options will need to be adjusted accordingly.

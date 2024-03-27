@@ -1,0 +1,38 @@
+Use Case: Bumphunter is a Bioconductor software package used for finding differentially methylated regions (DMRs) in methylation data. It's used in epigenomic studies where there is a need to identify genomic regions that show different methylation patterns across different conditions.
+
+Code details and examples:
+
+Code: 
+
+To use Bumphunter, you usually start by loading the necessary packages and setting the right options for the analysis. An example is shown below:
+
+```
+library(Biobase)
+library(bumphunter)
+options(stringsAsFactors=FALSE)
+
+```
+
+Then, you would need to load the data. The input to Bumphunter is usually a data frame or matrix containing the methylation data. Each row represents a genomic feature, e.g., a CpG site, and each column represents a sample. Below is an example:
+
+```
+methy_data <- read.csv("methylation_data.csv")
+```
+
+Then, you define your design matrix. The design matrix indicates the experimental conditions for each sample in the methylation data. 
+
+```
+design_matrix <- model.matrix(~ condition, data = pdata)
+```
+
+Finally, you run Bumphunter. This might look like the following:
+
+```
+res <- bumphunter(methy_data, design = design_matrix, cutoff = 0.1)
+```
+
+In the code above, `bumphunter` is the main function in the package that does the DMR analysis. The `methy_data` is the input data, `design` is the design matrix, and `cutoff` is a parameter that controls the threshold for calling DMRs.
+
+In the end, `res` will be a table of DMRs, each row represents one DMR, including the genomic coordinates, the mean methylation difference, the statistical significance, etc.
+
+No command is needed to run this package in R, you just need to use the R interpreter to run the R script that contains these commands.

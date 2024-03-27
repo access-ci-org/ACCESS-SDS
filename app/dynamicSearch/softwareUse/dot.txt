@@ -1,0 +1,19 @@
+Use Case: Graphviz's dot is a command-line tool to create drawings of directed graphs in a variety of formats (SVG, PNG, etc.) It reads a text file that describes the nodes and edges of a graph.
+
+Code Details and Examples: 
+
+Code:
+
+```
+graph {
+    a -- b;
+    b -- c;
+    a -- c;
+    d -- c;
+    e -- c;
+    e -- a;
+}
+```
+This is a simple example of an undirected graph. Save this text in a file, for example, `graph.dot`.
+
+The command to create an SVG image of this graph is `dot -Tsvg -O graph.dot`. The `-Tsvg` option specifies the output format and the `-O` option causes the output file to be named `graph.dot.svg`.

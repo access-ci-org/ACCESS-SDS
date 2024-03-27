@@ -1,30 +1,27 @@
-Use Case: Matrix element computations in quantum chemistry calculations.
-Code details and examples:
-Libint provides a library for efficient computation of molecular integrals for quantum chemistry calculations. It is commonly used in electronic structure calculations.
+Use Case: Libint is widely used for computations of molecular integrals over Gaussian functions in molecular quantum chemistry. These computations are essential for molecular modeling and simulation. As Libint is a core computational kernel and its performance critical for many applications, we need to ensure that we use efficient algorithms. Molecular orbital basis set data is usually provided by the user in the form of a Gaussian-type orbital (GTO) basis set.  The format is the normalized contraction coefficients and exponents of the primitive Gaussian functions.
 
-Example of using libint to calculate molecular integrals:
-```c
-#include <libint2/eri.h>
-#include <libint2/engine.h>
+Code details and examples: Code
 
-using namespace libint2;
+In libint, one usually specifies the basis set as a part of the molecular input file, for example:
 
-int main() {
-    const char* molecule = "H 0 0 0\nH 0 0 0.74";
-    const auto bf = Operator::coulomb; // compute two electron repulsion integrals
-    const auto engine = Engine(bf, max_nprim(bf), max_l(bf), 0);
-    const auto shells = engine.target(basis, basis);
+3
+water
+O 0.000000 0.000000 0.000000
+H 0.758602 0.000000 0.504284
+H 0.758602 0.000000 -0.504284
+sto-3g
 
-    const auto integrals = engine.compute(shells);
-    
-    return 0;
-}
+Where the first line (3) indicates the number of atoms in the molecule, "water" is a comment line for the user, the next three lines specify the atomic coordinates (in Angstroms), and the final line specifies the basis set (sto-3g is a popular choice for initial calculations).
+
+The molecule file is then read by the driver which computes the energies and forces. The libint code itself is a low-level library designed to be used by other quantum chemistry software, rather than being used directly. 
+
+The command to run libint dependent code could look like:
+
+```
+gcc -o myprog myprog.c `pkg-config --libs libint`
+./myprog < molecule.data
 ```
 
-To compile and run the code:
-```
-g++ -std=c++11 -o my_program my_program.cpp -l libint2
-./my_program
-```
+Where `myprog.c` is code written by the user utilizing the libint library, and `molecule.data` is the input file in the format given above.
 
-Please note that the input file containing the molecular geometry and basis set must be provided in a specific format as expected by the Libint functionality.
+Please note, these are hypothetical and for comprehensive details, one has to refer to manuals or relevant literature.

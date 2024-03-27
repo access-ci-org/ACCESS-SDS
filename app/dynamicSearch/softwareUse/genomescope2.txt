@@ -1,0 +1,35 @@
+Use Case: GenomeScope 2.0 is a computational tool used for genome size estimation, as well as predicting levels of heterozygosity, duplicate ratios, and more. It is effective for raw read sequence data, and is frequently used in bioinformatics research.
+
+Code details and examples: 
+
+Input files: GenomeScope utilizes .hist files, which are k-mer histograms. These histograms are generated from raw sequence data. 
+
+Here is an example of what a .hist file may look like:
+
+```
+1 34883162 
+2 18603550 
+3 7737916 
+4 6175060 
+5 2284764 
+6 1754172 
+```
+
+In this example, the first column lists the k-mer multiplicities, while the second column lists the number of k-mers seen at that many times. 
+
+Command details: 
+
+To run GenomeScope, use the following command:
+
+```bash
+Rscript genomescope.R input.hist k-mer_length read_length output_prefix
+```
+
+For example: 
+
+```bash
+Rscript genomescope.R test.hist 21 100 test_results
+```
+This specifies a k-mer length of 21, a read length of 100, and directory named "test_results" for the output. 
+
+GenomeScope will output a variety of plots and reports detailing the estimated genome size, heterozygosity and repeat content based on the provided k-mer histogram. This will be located in the named output directory.

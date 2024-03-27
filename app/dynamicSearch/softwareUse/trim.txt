@@ -1,11 +1,35 @@
-Trimming tools used in bioinformatics for removing low-quality bases or adapter sequences from sequencing data. Here is an example:
+Use Case: Trimmomatic is a flexible, fast and high-throughput read trimming software for Illumina NGS data. It is used in bioinformatics to remove low-quality ends from reads in a high-throughput sequencing dataset.
 
-Use Case: Trim raw sequencing reads using Trimmomatic
-Code details and examples:
+Code details and examples: 
+
+Input File Format: 
+The input must be in FASTQ format (.fastq or .fq). Both paired and unpaired reads are accepted.
+
+Sample Input File:
+For paired-end data:
+
 ```
-java -jar trimmomatic.jar PE -phred33 input_forward.fastq.gz input_reverse.fastq.gz output_forward_paired.fastq.gz output_forward_unpaired.fastq.gz output_reverse_paired.fastq.gz output_reverse_unpaired.fastq.gz ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
++
+!''*((((***+))%%%++))(0DEFIIHIIIJJJJJIJJJJJJIJIHHHHHFFFFFEEE
+@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTAA
++
+!''*((((***+))%%%++))(0DEFIIHIIIJJJJJIJJJJJJIJIHHHHHFFFFFEE
 ```
 
-In this example, Trimmomatic is used to trim paired-end fastq files (`input_forward.fastq.gz` and `input_reverse.fastq.gz`). The trimmed output files are `output_forward_paired.fastq.gz` and `output_reverse_paired.fastq.gz` for the paired reads after trimming, and `output_forward_unpaired.fastq.gz` and `output_reverse_unpaired.fastq.gz` for any unpaired reads. The command specifies various trimming options like adapter clipping, quality trimming, and length filtering.
+Command to run Trimmomatic:
+Other configurations can be made in the command depending on the type of sequencing data.
 
-Note: The actual command may vary based on the version of Trimmomatic and the specific needs of your data.
+For single-ended data:
+
+```
+java -jar trimmomatic-0.36.jar SE -phred33 input.fq.gz output.fq.gz ILLUMINACLIP:TruSeq3-SE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+```
+For paired-end data:
+
+```
+java -jar trimmomatic-0.36.jar PE -phred33 input_forward.fq.gz input_reverse.fq.gz output_forward_paired.fq.gz output_forward_unpaired.fq.gz output_reverse_paired.fq.gz output_reverse_unpaired.fq.gz ILLUMINACLIP:TruSeq3-PE.fa:2:30:10:2:keepBothReads LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+```
+In these commands, "SE" refers to "Single-End", "PE" refers to "Paired-End", "-phred33" indicates the quality score encoding in the input fastq file, "ILLUMINACLIP:TruSeq3-SE.fa:2:30:10" is the adapter sequence file with specific parameters, "LEADING:3", "TRAILING:3", "SLIDINGWINDOW:4:15", and "MINLEN:36" are different quality control steps. The output files are specified with types of "paired" and "unpaired".

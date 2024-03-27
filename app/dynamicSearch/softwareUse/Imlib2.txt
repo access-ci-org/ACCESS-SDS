@@ -1,37 +1,58 @@
-Imlib2 library for image manipulation. 
+Use Case: Imlib2 is a powerful graphics library that can be used for loading, saving, rendering, scaling, and editing of images. Imlib2 is often utilized in image manipulation programs, games, and desktop environments for rendering wallpapers, icons, and cursors.
 
-Use Case: Image loading and manipulation with Imlib2
 Code details and examples:
 
-Imlib2 is a library for loading, saving, and manipulating images in various formats. Here is an example of using Imlib2 to load and save an image in C:
+Code: 
 
-```c
+Here is an example of a C program that loads an image file using Imlib2, scales it, and saves it to a new file.
+
+```C
 #include <Imlib2.h>
 
 int main() {
-    // Load an image
-    Imlib_Image image = imlib_load_image("input.jpg");
-    
-    // Modify the image here if needed
-    
-    // Save the modified image
-    imlib_save_image_with_error_return(image, "output.jpg", NULL);
-    
-    // Free the image
-    imlib_free_image();
-    
-    return 0;
+   Imlib_Image img;
+   Imlib_Load_Error err;
+
+   imlib_set_cache_size(2048 * 1024);
+   imlib_context_set_dither(1);
+   imlib_context_set_blend(0);
+
+   img = imlib_load_image_with_error_return("input.jpg", &err);
+   if (!img) {
+      fprintf(stderr, "Error Loading Image: %d\n", err);
+      return 1;
+   }
+   imlib_context_set_image(img);
+   imlib_image_set_has_alpha(1);
+
+   imlib_context_set_image(img);
+   imlib_image_resize(1024, 768);
+   
+   //Saving the resized image
+   imlib_save_image_with_error_return("output.jpg", &err);
+   if (err != IMLIB_LOAD_ERROR_NONE) {
+      fprintf(stderr, "Error Saving Image: %d\n", err);
+      return 1;
+   }
+
+   return 0;
 }
 ```
 
-For input files, you would need an image file in a supported format such as jpg, png, bmp, etc.
+For this code, input would be an image file named "input.jpg" in the same location where your code is running. The output will be a resized image named "output.jpg" saved in the same location.
 
-To compile the C code, you can use the following command:
-```
-gcc -o image_manipulation image_manipulation.c -lImlib2
+The code can be saved in a file named "imlib2_example.c". To compile it, use the gcc compiler with the Imlib2 library like so:
+
+```bash
+gcc -o imlib2_example imlib2_example.c `pkg-config --cflags --libs imlib2`
 ```
 
-To run the program (assuming the executable file is named 'image_manipulation'):
-```
-./image_manipulation
-```
+To run the compiled program, use:
+
+```bash
+./imlib2_example
+``` 
+
+In this case, the .jpg files will need to be in the same directory or the path needs to be mentioned if in other directories.
+
+Remember, to run the code, one must have Imlib2 installed and configured correctly in the environment.

@@ -1,0 +1,59 @@
+Use Case: Used for simulation of neurons and networks of neuron for different brain regions.
+
+Code details and examples:
+
+Code:
+
+To simulate the passive properties of a neuron using Python and NEURON, you would regularly use the Python Neuron module and follow these steps.
+
+First, import the necessary modules:
+
+```python
+from neuron import h, gui
+```
+
+Create a spherical section to represent the soma of a neuron:
+
+```python
+soma = h.Section(name='soma')
+soma.L = 20  # length (µm)
+soma.diam = 20  # diameter (µm)
+```
+
+Define passive properties:
+
+```python
+soma.Ra = 100    # axial resistance (Ω*cm)
+soma.cm = 1   # capacitance (µF/cm^2)
+```
+
+Insert passive channels:
+
+```python
+soma.insert('pas')
+for seg in soma:
+    seg.pas.g = 0.1  # conductance (S/cm^2)
+    seg.pas.e = -65  # reversal potential (mV)
+```
+
+Your simulation will now demonstrate a neuron's passive properties.
+
+To run the simulation:
+
+```python
+h.psection(sec=soma)
+```
+
+This will run the simulation, and present you with the variables affecting the soma, including cm, gnabar_hh, gkbar_hh, gl_hh, el_hh, ena, and ek.
+
+Sample Input Files:
+
+Neuron does not rely on sample input files, as it interfaces with Python or hoc language directly. However, you might be using a .hoc or .py files to run your simulation.
+
+File Format:
+
+The required format in this scenario would simply be Python code (.py) or hoc code (.hoc).
+
+Specifications and Details in Input Files:
+
+The input specifications are the parameters for the neuron such as section's length, diameter, axial resistance, capacitance, conductance, and reversal potential. These can vary according to the model and simulation at hand.

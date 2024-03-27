@@ -1,0 +1,30 @@
+Use Case: Flit is useful to manage the distribution and packaging of Python applications or libraries. It helps create a distribution package which you can distribute through PyPI.
+
+Code details and examples:
+
+Code: 
+
+Create a `pyproject.toml` configuration file:
+
+    [build-system]
+    requires = ["flit"]
+    build-backend = "flit.buildapi"
+
+    [tool.flit.metadata]
+    module = "sample"
+    author = "Your Name"
+    author-email = "your.email@example.com"
+
+Now you can use Flit to install your project from source:
+    
+    $ flit install   
+
+To build a source distribution or wheel file:
+
+    $ flit build    
+
+To upload your distribution to PyPI:
+
+    $ flit publish 
+
+Please replace the 'sample' in the above file with the name of your python module and provide your respective 'author' and 'author-email'. Input files for this package are python scripts and modules.

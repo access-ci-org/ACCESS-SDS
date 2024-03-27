@@ -1,18 +1,30 @@
-Use Case: Mathematical operations on arrays in Python
+Use Case: Used for numerical computations, it is a library for the Python programming language, adding multifaceted array object, matrices, along with an enormous library of high-level mathematical functions to operate on these arrays.
 
-Code details and examples:
+Code details and examples: 
+
+Code:
 ```python
-# Import the numpy library
-import numpy as np
+import numpy as np 
 
-# Create an array
-a = np.array([1, 2, 3, 4, 5])
+# Sample Input - Arrays
+array_1 = np.array([1, 2, 3]) 
+print("1D array: ", array_1) 
 
-# Perform mathematical operations
-mean_a = np.mean(a)
-sum_a = np.sum(a)
+# Sample Input - Matrices
+matrix_1 = np.array([[1, 2, 3],[4, 5, 6]]) 
+print("\n2D matrix: ", matrix_1)
 
-print("Mean of array:", mean_a)
-print("Sum of array:", sum_a)
+# Sample mathematical operation
+result = np.add(array_1, matrix_1)
+print("\nResult of addition: ", result)
 ```
-To run the code, you can save it in a Python script (e.g., `numpy_example.py`) and run it using a Python interpreter.
+
+Command to run:
+
+python filename.py
+
+Note: filename.py is the name of the file where this code has been written. Replace filename with the actual file name. 
+
+Required Input file format: No specific input file requirement for numpy, it works with the numerical data provided within the code.
+
+Specification in Input Files: N/A

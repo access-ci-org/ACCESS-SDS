@@ -1,34 +1,44 @@
-Use Case: Linear algebra library for C++
+Use Case: Armadillo is an open-source C++ linear algebra library (matrix maths) aiming towards a good balance between speed and ease of use. The syntax is deliberately similar to Matlab. Integer, floating point and complex numbers are supported, as well as a subset of trigonometric and statistics functions. 
 
-Code details and examples:
-Armadillo is a linear algebra library for C++ that provides high-level matrix and vector operations similar to MATLAB. Here is an example of how you can use Armadillo to perform a matrix multiplication:
+Code details and examples: 
 
-```cpp
+Code:
+```C++
 #include <iostream>
 #include <armadillo>
 
 int main()
 {
-    // Define two matrices
-    arma::mat A = {{1, 2}, {3, 4}};
-    arma::mat B = {{5, 6}, {7, 8}};
+  // Initializing a matrix of zeros
+  arma::mat A = arma::zeros<arma::mat>(4,5);
 
-    // Perform matrix multiplication
-    arma::mat C = A * B;
+  // Adding values to the matrix
+  A(1,2) = 2.0;  
+  A(3,2) = -1.0;
+  
+  // Output the matrix
+  std::cout << "A: \n" << A << "\n";
 
-    // Print the result
-    std::cout << "Result of matrix multiplication:\n" << C << std::endl;
+  // Computations
+  arma::mat B = arma::randu<arma::mat>(4,5);
+  std::cout << "B: \n" << B << "\n";
 
-    return 0;
+  arma::mat C = A + B;
+  std::cout << "C: \n" << C << "\n";
+
+  return 0;
 }
 ```
+Running the code:
 
-To compile the above code, you can use the following command:
-```
-g++ -o matrix_multiply matrix_multiply.cpp -larmadillo
+To compile the code with Armadillo, the typical command would be:
+
+```shell
+g++ -std=c++11 -O2 -DARMA_NO_DEBUG -lopenblas -llapack example.cpp -o example
 ```
 
-And then run the executable:
-```
-./matrix_multiply
+Then, run the resulting executable with the command:
+
+```shell
+./example
 ```

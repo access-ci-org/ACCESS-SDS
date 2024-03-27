@@ -1,0 +1,41 @@
+Use Case: SDSC (San Diego Supercomputer Center) is not a software but instead a research unit of the University of California, San Diego (UCSD). It provides high-performance computing (HPC) resources, services, and expertise to the national research community including industry and academia. The supercomputers at SDSC are used for a wide range of computational tasks including molecular modeling, genome sequencing, earthquake simulation, and climate modeling among others. 
+
+However, SDSC also develops software tools for high-performance computing. OpenTopography is one such software platform developed by SDSC for providing access to Earth topography data and processing tools. The software can be used to obtain topography data and derive secondary products such as slope maps, aspect maps, contour maps etc.
+
+Code Details and Examples: 
+
+Code: 
+To access the OpenTopography data and services, users need to go through the OpenTopography portal which can be accessed through a web interface or programmatic API. Here we give an example of obtaining a DSM (Digital Surface Model) using the REST API:
+
+```
+# Python code to call OpenTopography API
+
+import requests
+
+base_url = 'https://portal.opentopography.org/API/globaldem'
+params = {
+    'demtype': 'SRTMGL1',  # DEM Type
+    'south': 32.53,  # bounding box coordinates
+    'north': 32.54,
+    'west': -116.82,
+    'east': -116.81,
+    'outputFormat': 'GTiff'  # output format
+}
+
+# Send a GET request
+response = requests.get(base_url, params=params)
+
+# Write the data to a file
+with open('output.dem', 'wb') as f:
+    f.write(response.content)
+```
+
+This code snippet sends a GET request to the OpenTopography API to obtain an SRTMGL1 type Digital Surface Model (DSM) for a specific geographic bounding box. The returned data is in GeoTIFF format. It is then written to a file named 'output.dem'.
+
+Command to run: 
+
+Since this is a Python script, it is run in a Python environment.
+
+`python my_script.py`
+
+Please note that this is a sample and the actual parameters might vary based on the usage. An API key might also be required for accessing the service. An understanding of the API documentation is necessary to properly utilize it.

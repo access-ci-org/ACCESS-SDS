@@ -1,0 +1,34 @@
+Use Case: libspatialindex is a library that provides a general framework for managing spatial indices. It's useful for applications that perform point location queries, nearest neighbor searches, and range searching.
+
+Code details and examples:
+
+Code: 
+
+In the using libspatialindex, you would typically begin by creating an instance of `SpatialIndex::ISpatialIndex`, then use the `SpatialIndex::ISpatialIndex::insertData` method to add spatially indexed data. Here's an example of how you to use it:
+
+```cpp
+#include <spatialindex/SpatialIndex.h>
+#include <iostream>
+
+using namespace SpatialIndex;
+using namespace std;
+
+// define the dimensionality of the data which is to be held within the tree.
+// in this example, a 2D point would be held.
+double coords[2] = {1.00, 1.50}; 
+Point p = Point(&coords[0], 2); 
+```
+
+The details in the input file include coordinates. The point `1.00, 1.50` is being stored in the `Point p` object. Check specifics of any software as different softwares have different details required. 
+
+To run this code, it can be compiled using a C++ compiler like g++. 
+
+```bash
+> g++ -o output filename.cpp
+```
+
+Then, you can run the output file
+
+```bash
+> ./output
+```

@@ -1,0 +1,35 @@
+Use Case: DeepSignal2 is a useful tool for nanopore sequencing adenosine to inosine RNA editing sites detection.
+
+Code details and examples: 
+
+Code:
+```bash
+# First, extract features from fast5 files
+python ./deepsignal2/deepsignal2 extract --fast5_dir fast5_dir --reference_path ref.fa --methy_label 0 --recursive --correct_edit --rna --no_albacore
+
+#run deepsignal_plant with the methylated fraction estimation model
+python deepsignal2/train.py --data_dir data_dir --out_dir out_dir --test_path test_path --log_dir log_dir --num_classes 2
+```
+
+Input File:
+1. `fast5_dir`: Directory containing the fast5 files from nanopore sequencing. This file is typically outputted directly from running the Oxford Nanopore Technologies sequencing platform.
+2. `ref.fa`: Fasta file containing reference genome sequence for alignment. The file extension .fa means FASTA format, which is a common format for storing genetic sequences.
+3. `data_dir`: Directory containing inputs required for neural network training: a FASTA file and coresponding FAST5 files. 
+4.`test_path`: Directory containing inputs for model testing.
+5. `log_dir`: Directory for saving log files.
+6. `out_dir`: Directory for storing output files.
+
+Specifications:
+- deepsignal2 is designed to run on a Linux or Unix-based operating systems.
+- deepsignal2 does need TensorFlow (≥1.5.0, but not including 2.x) and other dependencies installed to function correctly.
+- Note that deepsignal2 is pre-trained with Nanopolish, so all predictions should be obtained using Nanopolish as the basecaller.
+- All models used in deepsignal2 are binary classification models. The plant model is trained with 1 for methylated cytosines and 0 for unmethylated cytosines. The human and e.coli models are trained with 1 for methylated cytosine and 0 for other bases (A, T, G, C).
+
+Command to Run:
+```bash
+# replace python and directories with your own python and path settings
+python deepsignal2/deepsignal2 extract --fast5_dir /path_to_my/fast5_files/ --reference_path /path_to_my/reference/sequence/ref.fa --methy_label 0 --recursive --correct_edit --rna --no_albacore
+
+python deepsignal2/train.py --data_dir /path_to_my/input_data_dir --out_dir /path_to_my/output_dir --test_path /path_to_my/test_path --log_dir /path_to_my/log_dir --num_classes 2
+```
+Please replace "/path_to_my/fast5_files/", "/path_to_my/reference/sequence/ref.fa", "/path_to_my/input_data_dir", "/path_to_my/output_dir", "/path_to_my/test_path", "/path_to_my/log_dir" with your actual paths.

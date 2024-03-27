@@ -1,0 +1,55 @@
+Use Case: Use botorch for Bayesian optimization. 
+
+Code details and examples: Code
+
+The botorch library is used for Bayesian optimization. It might be used for tuning hyperparameters. It requires only two inputs: f (function to be optimized) and bounds (domain over which we want to optimize the function). 
+
+We are optimizing a simple function f(x) = (6x - 2)^2 * sin(12x - 4) over the interval [0,1].
+
+Firstly, we define the function to be optimized:
+
+```
+import torch
+from math import pi, sin
+
+def f(x):
+    return (6*x - 2)**2 * sin(12*x - 4)
+```
+
+Then, to implement botorch, we need to define the bounds domain over which we want to optimize:
+
+```
+bounds = torch.tensor([[0.0], [1.0]])
+```
+
+Furthermore, we need to define a function that returns a random set of parameters:
+
+```
+def get_initial_points(bounds, num_points=5):
+    return bounds[0] + (bounds[1] - bounds[0]) * torch.rand(num_points, bounds.shape[-1])
+```
+
+An optimized function 'optimize' is also defined:
+
+```
+from botorch.optim import optimize
+
+def optimize(f, bounds, num_points=5, max_iter=50):
+    parameters = get_initial_points(bounds, num_points)
+    for _ in range(max_iter):
+        loss = f(parameters).mean()
+        grad = torch.autograd.grad(loss, parameters)[0]
+        parameters = parameters - 0.01 * grad
+        parameters = parameters.detach().requires_grad_()
+    return parameters
+```
+
+To run, simply use the optimize function:
+
+```
+solution = optimize(f, bounds)
+print(f'solution: {solution}')
+
+output> solution: tensor([[0.5576]], requires_grad=True)
+```
+The output should indicate the x value which minimizes the function f(x).

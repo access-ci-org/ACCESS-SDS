@@ -1,0 +1,47 @@
+Use Case: PyFR is an open-source Python-based framework for solving advection-diffusion type problems on streaming architectures using the Flux Reconstruction approach of Huebner. It is designed to solve a range of governing systems on mixed unstructured grids containing various element types. It is used for large scale simulations on high performance computing systems.
+
+Code details and examples: 
+
+Code:
+
+Firstly, configuring PyFR with a .ini file is required to run computations. For example, .ini file could contain information about the backend to use for computation:
+
+```ini
+[backend-openmp]
+cc = gcc
+cc-omp = -fopenmp
+```
+
+This tells PyFR to use the OpenMP backend with the GCC compiler and to use the `-fopenmp` flag to enable OpenMP support.
+
+After the configuration file is set up, you can run the PyFR script. Example command for running PyFR would be:
+
+```bash
+pyfr run -b openmp -p example.pyfrm example.ini
+```
+
+In this command,-b specifies the backend to use (in this case, OpenMP), -p specifies the mesh file, and the last argument is the configuration file. Here, `example.pyfrm` should be a PyFR mesh file and `example.ini` should be a PyFR configuration file.
+
+Sample Input:
+You can design input file as per your requirement.
+First, you need to define [mesh] which can be .msh file from Gmsh. This can include dimensions and other mesh properties. Then, sections on solver properties such as time stepping and order can be included. 
+Example: 
+.ini input file:
+
+```ini
+[mesh]
+file = mesh.msh
+type = gmsh
+
+[solver]
+name = naca-M3-ringleb
+order = 3
+
+[solver-time-integrator]
+formulation = bogey-bailly
+```
+
+Command to run:
+pyfr run -b openmp -p example.pyfrm example.ini
+
+This command will begin computation on the problem defined by the mesh and configuration files using the OpenMP backend. Outputs are standard .vtu files, which can be visualized with Paraview or similar 3D visualization software.

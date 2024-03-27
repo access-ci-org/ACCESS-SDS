@@ -1,0 +1,37 @@
+Use Case:
+Ensembl VEP is a Perl script for Variant Effect Predictor, it is used to predict the functional effects of known and unknown variants in genomic data. The input is a list of genetic variants, and the output is a list of the predicted consequences for those variants.
+
+Code details and examples:
+
+Code:
+
+The primary input file for Ensembl VEP is a VCF file, it can be gzipped for storage and processing efficiency.
+
+A minimal VCF file content looks like this:
+```
+##fileformat=VCFv4.0
+#CHROM POS   ID      REF  ALT     QUAL  FILTER  INFO  
+20     14370 rs6054  G    A       .     PASS    .
+```
+
+You can run the VEP script by the following command:
+
+```bash
+./vep -i /path/to/input.vcf
+```
+
+In more complex scenarios, you can select species, genome assembly version, offline mode, cache mode, etc to speed up the processing. For example:
+
+```bash
+./vep -i /path/to/input.vcf --cache --offline --species homo_sapiens --assembly GRCh38
+```
+
+Output is by default written to the console, to receive the output in a file, use the “-o” option:
+
+```bash
+./vep -i /path/to/input.vcf --cache --offline --species homo_sapiens --assembly GRCh38 -o /path/to/output.txt
+```
+
+The output file gives the predicted effect of each variant, along with information about the gene and transcript it affects, as well as any associated phenotype or disease information. 
+
+For further details, refer to the Ensembl VEP documentation.

@@ -1,0 +1,27 @@
+Use Case: Emboss is a software package designed for conducting molecular biology analyses. For this use case, we will use 'water' tool from EMBOSS package for sequence alignment of two sequences.
+
+Code Details and Examples:
+
+Code:
+
+1. Inputs for 'water' tool includes two sequence files, myseq1.fa and myseq2.fa which should be in FASTA format. The identified similarities between two sequences will be written out to the output file, water.out.
+
+Input Files:
+myseq1.fa
+```
+>sequence1
+GATGGAACTTGAAGGTGGAAGGGGCAAGGCGAAAGGAAGAAAGGAAGAAAGG
+```
+myseq2.fa
+```
+>sequence2
+GGAAGCGAAAGGAAGAAAGATGAACTTGACCGTGGGCGAAAACAAAGAACTT
+```
+
+2. Running the 'water' tool from the command line:
+
+Command: `water -asequence myseq1.fa -bsequence myseq2.fa -outfile water.out -gapopen 10.0 -gapextend 0.5`
+
+The output file `water.out` will contain an alignment and similarity score between two sequences.
+
+Please note: Each of the sequence files (myseq1.fa, myseq2.fa) should contain a single sequence and should be formatted in FASTA format. Also, the parameters for gapopen and gapextend are specific for this example and may need to be adjusted based on the specific needs of the alignment.

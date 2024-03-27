@@ -1,0 +1,28 @@
+Use Case: GANGSTR is used for genotyping of STRs (Short Tandem Repeats) from high-throughput sequencing data. STRs are genetic variant types that comprise repeated short motifs. The software analyses high-throughput sequencing reads and outputs a genotype call for a given individual for input STR loci.
+
+Code details and examples: 
+
+Before you run, you need to have your BAM file available which contains your sequence data. Make sure you have specified the location of the Reference Genome file (Fa Reference) and region file (Region file). 
+
+Input File: 
+Your main input file will be a .bam file which is a Binary Alignment Map format – a compressed, binary representation of sequence read alignments. 
+
+Command: 
+
+    gangstr --bam mydata.bam --ref myreference.fa --regions myregions.bed --out myoutput
+
+BAM file: "mydata.bam": This is your sequence data in bam format.
+
+Reference file: "myreference.fa": Reference genome file in .fa format.
+
+Region file: "myregions.bed": The BED file which contains the regions of interest.
+
+Output File: "myoutput": Output file that you specify. 
+
+The output of this command will be a .vcf file which will contain the genotypes for the specified regions of interest.
+
+Note: Replace "mydata.bam", "myreference.fa", "myregions.bed" and "myoutput" with your actual file names or paths. 
+
+This command, essentially, is all you need to use GANGSTR for genotyping, given you have the correct input files. Make sure that the .bam file and the .fa files are compatible and come from the same source data.
+
+Please check the GANGSTR manual on the official website for more detailed usage and options.

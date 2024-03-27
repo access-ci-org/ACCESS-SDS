@@ -1,19 +1,49 @@
-It seems like you might have meant Intel oneAPI. Here is an example:
+Use Case: iimpi is a popular software stack used in high performance computing (HPC). It stands for Intel compilers (icc/ifort), Intel MPI, Intel Math Kernel Library (MKL), and Intel Trace Analyzer and Collector. This is often used to compile and run MPI parallelized programs, which are common in scientific computing.
 
-Use Case: Compiling a C program with Intel oneAPI
-Code details and examples:
+Code details and examples: 
+
+Dependencies: Look for software names like icc, ifort, impi, imkl in the environment module. 
+
+You can compile a C code with the Intel C compiler (icc) in the following way:
+
+- Code:
 ```bash
-# Sample C code (hello.c)
+module load iimpi
+icc my_program.c -o my_program
+```
+
+This will produce an executable file named "my_program". You can then use the Intel MPI to run the program on multiple cores. Suppose we want to run the program on 8 cores, we can use the following command:
+
+- Code
+```bash
+mpirun -np 8 ./my_program
+```
+
+The program "my_program.c" must be a c program that's designed for parallel computing with MPI. For example, it can look like this:
+
+- Code:
+```C
+#include <mpi.h>
 #include <stdio.h>
 
-int main() {
-    printf("Hello, World!\n");
-    return 0;
+int main(int argc, char** argv) {
+    MPI_Init(NULL, NULL);
+
+    int world_size;
+    MPI_Comm_size(MPI_COMM_WORLD, &world_size);
+
+    int world_rank;
+    MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
+
+    char processor_name[MPI_MAX_PROCESSOR_NAME];
+    int name_len;
+    MPI_Get_processor_name(processor_name, &name_len);
+
+    printf("Hello world from processor %s, rank %d out of %d processors\n",
+           processor_name, world_rank, world_size);
+
+    MPI_Finalize();
 }
-
-# Compile the code with Intel oneAPI
-icc -o hello hello.c
-
-# Run the compiled program
-./hello
 ```
+
+This is a simple hello-world program for MPI. It basically prints out the rank and the total number of processor cores from every process.

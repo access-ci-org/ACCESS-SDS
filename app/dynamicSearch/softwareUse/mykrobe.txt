@@ -1,0 +1,39 @@
+Use Case: Mykrobe is a software tool that predicts antibiotic resistance from genomic data. It was originally developed for TB but now includes Staphylococcus aureus. It uses de Bruijn graph data structures to construct a panel of a subset of k-mers from a large set of known resistome sequences. 
+
+Code details and examples:
+
+Code:
+
+Input file format: Requires input files to be in FASTQ or BAM format. The sample name should be the same as the filename. 
+
+An example of a command to predict resistance using FASTQ files in Mykrobe:
+
+```
+mykrobe predict SampleName staph --seq reads.fastq.gz
+```
+
+In this case, "SampleName" is the name of the sample to be used in the output files, "staph" specifies the species, and "reads.fastq.gz" is the path to the sequence data file. 
+
+If you want to use more than one data file, you can specify them all on the command line:
+
+```
+mykrobe predict SampleName staph --seq reads1.fastq.gz reads2.fastq.gz
+```
+
+In the case of BAM files, usage is as below,
+
+```
+mykrobe predict SampleName staph --seq reads.bam
+```
+
+The BAM file needs to be indexed, which can be done using SAMtools. The index file (".bai") must be in the same directory as the BAM file and have the same name, plus the ".bai" extension.
+
+Regarding the output of Mykrobe, it usually generates:
+1. A JSON file (default filename: SampleName.json)
+2. An HTML file (default filename: SampleName.html)
+
+To specify a different output directory, use the `-o|--output` option:
+
+```
+mykrobe predict SampleName staph --seq reads.fastq.gz --output /path/to/output
+```

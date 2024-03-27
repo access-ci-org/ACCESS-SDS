@@ -1,0 +1,33 @@
+Use Case: ArrayFire is a computing library that utilizes data parallel computations with graphics processing units (GPUs), simplifying the process of developing software that utilizes GPU computing power. It can be utilized in machine learning, computer vision, and many other domains. 
+
+Code Details and Examples:
+
+Input File Format: No specific input file format is required, ArrayFire functions can take arrays stored in a variety of formats including dense single and double precision floating point.
+
+Code Snippet:
+
+```cpp
+#include <arrayfire.h>
+using namespace af;
+
+int main() {
+    af::info(); // Information about ArrayFire
+
+    array data = randu(5, 5); // generating a 5x5 array with random values
+    print("Random Array", data);
+
+    array result = sum(data);
+    print("Sum of Array", result);
+
+    return 0;
+}
+```
+This C++ program utilizes ArrayFire to create a 5x5 floating point array filled with random values, then computes and prints the sum of the elements in this array.
+
+Command to Run:
+
+```bash
+g++ main.cpp -o main -lafcpu
+./main
+```
+This command will compile the main.cpp using g++ compiler and ArrayFire library. The `-lafcpu` flag indicates to the compiler to link the ArrayFire library. The `./main` will run the output file.

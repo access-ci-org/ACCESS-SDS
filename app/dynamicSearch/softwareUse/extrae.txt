@@ -1,12 +1,57 @@
-Use Case: Extrae is a software package for tracing and visualizing parallel and distributed applications.
+Use Case: 
+
+Extrae is mainly used as a performance analysis tool in the High Performance Computing (HPC) world. It can instrument the code and gather information about the program execution. The primary use of Extrae is the extraction of information about the application from the running binary in a non intrusive manner.
 
 Code details and examples:
-- To trace a parallel application:
-```bash
-extrae -in <application_binary> -o <output_trace_file>
+
+Code
+
+To use Extrae, it is required to compile the program with Extrae's library and run the program with 'extrarun' command. Here's a simple C code and how Extrae is used:
+
+```
+#include <stdio.h>
+
+void func() {
+  int i;
+  for (i = 0; i < 1000000; i++);
+}
+
+int main() {
+  func();
+
+  return 0;
+}
 ```
 
-- To visualize the trace data:
-```bash
-jgraph -output-format PNG -output-file <output_graph_file> <output_trace_file>
+To compile this code with Extrae:
+
+```
+gcc -o program program.c ${EXTRAE_HOME}/lib/libompt.so
+```
+
+Before running the application, Extrae needs a xml configuration file to extract the information. A sample xml file might look like this:
+
+```
+<trace_home>.</trace_home>
+<application_execution></application_execution>
+
+<trace_format>Paraver</trace_format>
+<file_size>0</file_size>
+<buffer_size>1000000</buffer_size>
+<initialized>no</initialized>
+<dynamic-memory>true</dynamic_memory>
+<maximum-memory>1024</maximum_memory>
+
+<callers>10</callers>
+<cpu>yes</cpu>
+
+<sampling enabled="yes">
+  <minimum intervalue="1" />
+</sampling>
+```
+
+Finally, the command to run the application with Extrae would be something like:
+
+```
+EXTRAE_CONFIG_FILE=myconfig.xml ./program
 ```

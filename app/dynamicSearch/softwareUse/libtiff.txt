@@ -1,44 +1,48 @@
-Use Case: Working with tiff files using libtiff
+Use Case: Libtiff is a library for reading and writing Tagged Image File Format (TIFF) images. This is most commonly used in scientific applications to handle large images and microscopy data.
 
-Code details and examples:
-```c
-#include <stdio.h>
-#include <tiffio.h>
+Code details and examples: 
 
-int main() {
-    TIFF* tiff = TIFFOpen("sample.tif", "r");
-    
-    if (tiff) {
-        uint32 width, height;
-        TIFFGetField(tiff, TIFFTAG_IMAGEWIDTH, &width);
-        TIFFGetField(tiff, TIFFTAG_IMAGELENGTH, &height);
-        
-        uint32* raster = (uint32*) _TIFFmalloc(width * height * sizeof(uint32));
-        
-        if (raster) {
-            TIFFReadRGBAImage(tiff, width, height, raster, 0);
-            
-            for (uint32 i = 0; i < height; i++) {
-                for (uint32 j = 0; j < width; j++) {
-                    printf("(%d, %d, %d, %d) ", TIFFGetR(raster[i * width + j]), TIFFGetG(raster[i * width + j]), TIFFGetB(raster[i * width + j]), TIFFGetA(raster[i * width + j]));
-                }
-                printf("\n");
-            }
+Code:
 
-            _TIFFfree(raster);
+# Include necessary files
+#include "tiffio.h"
+void main()
+
+{
+TIFF* image;
+uint32 width, height;
+uint32* raster;
+
+// Open an existing TIFF file
+image = TIFFOpen("image.tiff", "r");
+if (image != NULL) 
+{
+    // Fetch width and height of the image
+    TIFFGetField(image, TIFFTAG_IMAGEWIDTH, &width);
+    TIFFGetField(image, TIFFTAG_IMAGELENGTH, &height);
+    raster = (uint32*) _TIFFmalloc(width * height * sizeof (uint32));
+    if(raster!=NULL)
+    {
+        // Fetch the content of the image
+        if (TIFFReadRGBAImage(image, width, height, raster, 0)) 
+        {
+            // Process the image code here
         }
-        
-        TIFFClose(tiff);
-    } else {
-        printf("Error: Unable to open the TIFF file\n");
+        // Remember to free the raster memory
+        _TIFFfree(raster);
     }
-    
-    return 0;
+TIFFClose(image);
 }
-```
 
-To compile and run the code:
-```bash
-gcc read_tiff.c -o read_tiff -ltiff
-./read_tiff
-```
+}
+
+Input file:
+
+The input file is in TIFF format, such as "image.tiff". There is no specific format required for this file as the library is capable of handling any TIFF image.
+
+Command to run:
+
+Compile and run the C program that uses the libtiff library. It may look something like this:
+
+gcc readtiff.c -l tiff -o readtiff
+./readtiff

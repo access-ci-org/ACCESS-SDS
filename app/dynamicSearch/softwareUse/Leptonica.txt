@@ -1,37 +1,40 @@
-Use Case: Image processing library in C
-Code details and examples:
-Leptonica is an open-source image processing library in C that provides a wide range of image processing functions. Here is an example of how to perform basic image processing using Leptonica.
+Use Case: Optical Character Recognition (OCR) in images with text; image processing and analysis including tasks such as image file reading and writing, extraction of binary character/glyph bitmaps from a page of text, removal of line intersections, and image skew correction.
 
-```c
-#include <stdio.h>
+Code Details and Examples: 
+
+Sample Input File: The input file for Leptonica is an image file. Leptonica supports multiple formats: BMP, GIF, JPEG, PNG, etc. Here we assume a PNG image "input.png".
+
+Code Snippet:
+```
 #include "allheaders.h"
 
-int main() {
-    PIX *image = pixRead("input.jpg");
-    if (image == NULL) {
-        fprintf(stderr, "Error: cannot read image\n");
+int main(int argc, char **argv)
+{
+    PIX *pixs;
+
+    if (argc != 2)
+    {
         return 1;
     }
 
-    // Convert the image to grayscale
-    PIX *grayImage = pixConvertRGBToLuminance(image);
-
-    // Save the grayscale image
-    pixWrite("output.png", grayImage, IFF_PNG);
-
-    // Clean up
-    pixDestroy(&image);
-    pixDestroy(&grayImage);
+    pixs = pixRead(argv[1]);
+    if (pixs == NULL)
+    {
+        return 1;
+    }
+    
+    pixDisplay(pixs, 0, 0);
+    pixDestroy(&pixs);
 
     return 0;
 }
 ```
+This C code snippet reads an image file, the path to which is passed as a command line argument, and displays the image in a new window. The PIX data structure is unique to Leptonica and represents an image up to 4 samples per pixel (red, green, blue, and alpha transparency). So it is most commonly used with images.
 
-In this example, we read an input image "input.jpg", convert it to grayscale using Leptonica's `pixConvertRGBToLuminance` function, and then save the grayscale image as "output.png".
+Command to Run: Leptonica C APIs can be compiled and run with any C/C++ compiler. Considering we are using GCC, with the source code stored in a file named `main.c`, the commands to compile and run the above C code snippet are: 
 
-To compile and run the code, you can use the following commands:
+```
+gcc -Wunused-result -Wsign-compare -Wunreachable-code -ansi -DINPUTS_PATH=\"./\" -Wall -DANDROID_BUILD -g -I/usr/include/leptonica -o main main.c -llept 
 
-```bash
-gcc -o image_processing image_processing.c -llept
-./image_processing
+./main input.png
 ```

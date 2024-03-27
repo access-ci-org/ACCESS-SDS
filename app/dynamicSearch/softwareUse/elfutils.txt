@@ -1,15 +1,41 @@
-Use Case: Extract debugging information from ELF binaries using elfutils
+Use Case: elfutils is used for reading, creating and modifying ELF binary files. You can use it to inspect binary files, libraries or executables and also to add sections to existing ELF files or modify the details of the existing sections. 
+
 Code details and examples:
+Code:
+1. Parsing an ELF File:
 
-Elfutils is a collection of utilities and libraries for handling ELF (Executable and Linkable Format) files. One common use case is to extract debugging information from ELF binaries using the `eu-readelf` tool.
-
-Sample input file (binary file): `example_binary`
-
-Command to extract debugging information:
+Sample input file: example.out - a binary ELF file
+Example command to run elfutils: 
+```bash 
+readelf -a example.out
 ```
-eu-readelf -w -a example_binary
+This will display all information about the ELF file- headers, sections, symbols, etc. 
+
+2. Creating an ELF file:
+
+```C
+#include <libelf.h>
+#include <gelf.h>
+
+int main()
+{
+    Elf *e;
+    char *id, tmp[128];
+    GElf_Ehdr ehdr;
+
+    if (elf_version(EV_CURRENT) == EV_NONE)
+        return 2;
+
+    e = elf_begin(0, NULL, NULL);
+    if (gelf_newehdr(e, EV_CURRENT) == NULL)
+        return 1;
+
+    if (gelf_getehdr(e, &ehdr) == NULL)
+        return 3;
+
+    id = elf_getident(e, NULL);
+}
 ```
+This code creates a new ELF header in the ELF descriptor. Compile the C file and run the output file. The output ELF file will have the new section header added.
 
-This command will display all debugging information present in the `example_binary` file. The `-w` flag is used to display DWARF information (debugging information) and the `-a` flag is used to display all headers of the ELF file.
-
-Please note that you may need to adjust the command based on the specific information you are interested in extracting from the ELF binary.
+Note: The code provided above is a sample code snippet to demonstrate elfutils functionality, the actual code will depend on the specific use case and requirements.

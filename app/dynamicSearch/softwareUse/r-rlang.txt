@@ -1,0 +1,33 @@
+Use Case: r-rlang is an R library that's meant to provide a set of functions that makes it easier to work with data, making it a fantastic tool for data wrangling, processing, and visualization. For instance, you could use r-rlang for a task involving the manipulation and cleaning of a complex dataset. 
+
+Code details and examples:
+
+Code:
+
+```R
+# Assuming that you have a dataframe df
+# and df looks something like this:
+#       id value
+#   1    1     5
+#   2    2     6
+#   3    3     7
+
+# Let's say you want to add a new column "new_value" to df 
+# "new_value" is equal to "value" * 2
+
+# Here's how you do it in R using rlang
+library(rlang)
+
+new_value_expr <- expr(value * 2)
+df <- mutate(df, new_value := !!new_value_expr)
+
+# Now, df should look something like this:
+#       id value new_value
+#   1    1     5        10
+#   2    2     6        12
+#   3    3     7        14
+```
+
+In this case, the required input format is a dataframe, which is standard in R for dealing with tabular data. Specifications of the dataframe include an 'id' column and a 'value' column.
+
+This script can be run in R environment by copying and pasting the script or sourcing it from a file. In case of running it from an R-script file (for example, script.R), the command would be `source("script.R")`.

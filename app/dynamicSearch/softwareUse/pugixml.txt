@@ -1,0 +1,51 @@
+Use Case: To parse an XML document, manipulate its data, and create a new XML document. The input file format is XML.
+
+Code details and examples:
+
+Code:
+```cpp
+#include "pugixml.hpp"
+#include <iostream>
+
+int main()
+{
+    pugi::xml_document doc;
+
+    if (!doc.load_file("example.xml"))
+    {
+        std::cerr << "Could not load XML file" << std::endl;
+        return 1;
+    }
+
+    pugi::xml_node tools = doc.child("profile").child("tools");
+
+    for (pugi::xml_node tool = tools.first_child(); tool; tool = tool.next_sibling())
+    {
+        std::cout << "Tool:" << std::endl;
+        std::cout << "Name: " << tool.child_value("name") << std::endl;
+        std::cout << "Version: " << tool.child_value("version") << std::endl;
+    }
+
+    return 0;
+}
+```
+Input File: example.xml
+
+```xml
+<profile>
+    <tools>
+        <tool>
+            <name>Hammer</name>
+            <version>1.0</version>
+        </tool>
+        <tool>
+            <name>Screwdriver</name>
+            <version>1.1</version>
+        </tool>
+    </tools>
+</profile>
+```
+
+Command to run: g++ main.cpp -lpugixml
+
+Note: To parse the XML, the document is loaded using the load_file method with the filename as the argument. The document is further navigated using the child method, specifying the node names. The first_child and next_sibling methods are used to navigate between sibling nodes. The child_value method gets the value of the named child of a node.

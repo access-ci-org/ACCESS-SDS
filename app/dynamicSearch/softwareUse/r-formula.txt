@@ -1,0 +1,38 @@
+Use Case: Use r-formula for statistical modeling tasks where you want to describe relationships between variables. Predominantly used in statistical modeling to create easy to read yet expressive model specification.
+
+Code details and examples:
+
+Code: 
+
+Here is how you would specify a linear regression model with mpg as the response variable and wt and cyl as the explanatory variables in R:
+
+```R
+# Load the necessary library
+library(stats)
+
+# Load built-in dataset
+data(mtcars)
+
+# Specify the model
+model <- lm(formula = mpg ~ wt + cyl, data = mtcars)
+
+# Print model summary
+print(summary(model))
+```
+
+Specification in Input file: Data file (such as a CSV file) where each column is a variable and each row is an observation. Each variable should have a unique name. For the mtcars dataset used in the example above, we have 32 observations on 11 variables, e.g., mpg, cyl, disp, hp, drat, wt, qsec, vs, am, gear, carb.
+
+Sample of Input Data (mtcars data - first five rows):
+
+```
+                   mpg cyl disp  hp drat    wt  qsec vs am gear carb
+Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+Hornet Sportabout 18.7   8  360 175 3.15 3.620 17.02  0  0    3    2
+```
+
+Command to run: In R console or script file just run the lines of code sequentially.
+
+Note that the "~" sign is used to separate the response variables (on the left) from the explanatory variables (on the right). "+" is used to add additional explanatory variables. You can also use "-" to remove variables and ":" to denote interaction terms. Other functions like "I()" can be used for transformations.

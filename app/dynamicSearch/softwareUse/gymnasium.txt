@@ -1,0 +1,37 @@
+Use Case: The Gymnasium software in Python is usually used for developing and comparing reinforcement learning algorithms.
+
+Code details and examples: Code 
+
+Python standard libraries such as numpy, gym are required for this.
+
+Sample Python code to utilize Gymnasium:
+
+```python
+import gym
+env = gym.make('CartPole-v0')
+for i_episode in range(20):
+    observation = env.reset()
+    for t in range(100):
+        env.render()
+        print(observation)
+        action = env.action_space.sample()
+        observation, reward, done, info = env.step(action)
+        if done:
+            print("Episode finished after {} timesteps".format(t+1))
+            break
+env.close()
+```
+The command to run the python script (let's name it script.py) is:
+Command: `python script.py`
+
+If you use an input data file, the input can be specified in JSON, XML, or CSV depending on the Gym environment you are working on. Usually, the whole functionality is modeled as an environment/game, hence the need for explicit input files is absent in most cases.
+
+`Gym.make('CartPole-v0')` This line is used to set up the environment. 'CartPole-v0' is one of the simplest environments in gym.
+
+`env.action_space.sample()` This is the line where the action for each step is chosen. This sample function returns a random action from the set of all possible actions.
+
+`env.step(action)` This executes the chosen action in the environment.
+
+`env.render()` This is used for visualizing the environment. You can remove this line if you don't want to visualize the environment.
+
+`observation, reward, done, info = env.step(action)` This line gets the new state of the environment, the reward for the executed action, whether the state is terminal, and some extra information after executing the action.

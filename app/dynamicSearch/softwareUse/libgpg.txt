@@ -1,17 +1,35 @@
-Use Case: Encryption and decryption of files using libgpg.
+Use Case: Libgpg is typically used for providing data encryption and signature services. ;
 
-Code details and examples:
-Sample input file (plaintext.txt):
-```
-Hello, this is a sample input file for encryption.
+Code details and examples: Code 
+
+The libgpg library is used in programming circles, not only as a standalone tool. Here, a simple use of the library might involve encrypting a message.
+
+File format: The input file format should be a .txt file or any raw text format for the encryption or decryption use case.
+File specification: There are no specific criteria the input should meet.
+
+With libgpg, we first initiate the GnuPG objects like so:
+```Python
+import gnupg
+gpg = gnupg.GPG(gnupghome='/path/to/key/directory')
 ```
 
-Sample code for encryption using libgpg:
+Suppose you have a text message saved in a variable `text_msg`. You can encrypt it like so: 
+```Python
+encrypted_data = gpg.encrypt(text_msg, 'recipient@email.com')
+encrypted_string = str(encrypted_data)
+```
+
+But before encrypting, it’s worth checking if a key pair already exists. You do this by listing all the keys with `gpg.list_keys()`. If there are no keys, make sure to create new one:
+```Python
+input_data = gpg.gen_key_input(
+    name_email='testuser@email.com',
+    passphrase='secret')
+key = gpg.gen_key(input_data)
+```
+
+To run the code, if you saved it as script `libgpg_example.py`, use this command line:
 ```bash
-gpg --output encrypted.txt --symmetric plaintext.txt
+python libgpg_example.py
 ```
 
-Sample code for decryption using libgpg:
-```bash
-gpg --output decrypted.txt --decrypt encrypted.txt
-```
+Disclaimer: Please refer to libgpg and its respective API documentation for further functions and exception handling.

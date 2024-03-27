@@ -1,24 +1,39 @@
-Harfbuzz is an open-source text shaping engine that converts Unicode text into beautifully formatted text in various languages and scripts.
+Use Case: HarfBuzz is an open-source text shaping engine used in various operating systems, web browsers, and other text rendering applications. It takes Unicode text, OpenType font as inputs, processes it and provides glyph indices and positions that can be drawn by a graphic library. 
 
-Use Case: Text shaping for complex scripts
 Code details and examples:
 
-Input file (input.txt):
-```
-ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ
-```
+Format required: Unicode Text data, OpenType font file
 
-Code (pseudo-code):
-```
-import harfbuzz
+Sample Input Files
+1. Text Data: "Hello, World!"
+2. OpenType Font file: "Example.otf"
 
-text = read_input_file('input.txt')
-shaped_text = harfbuzz.shape_text(text)
+Specifications and Details in Input Files:
+1. "Hello, World!" - a simple example of Unicode text.
+2. "Example.otf" - OpenType font file which contains information about styling of text(data like font size, font family, etc).
 
-print(shaped_text)
-```
+Python Code Snippet using harfpy (Python bindings for HarfBuzz)
 
-Command to run (if available):
+```python
+from harfpy import Harfbuzz as hb
+from PIL import ImageFont, Image, ImageDraw
+
+def harfbuzz_test():
+    face = hb.Face('Example.otf')
+    font = hb.Font(face)
+    buf = hb.Buffer()
+    buf.add_str('Hello, World!')
+    buf.shape(font)
+    glyph_infos, glyph_positions = buf.get_glyphs()
+    for info, pos in zip(glyph_infos, glyph_positions):
+        print(info.codepoint, pos.x_advance, pos.y_advance, pos.x_offset, pos.y_offset)
+
+font = ImageFont.truetype("Example.otf", 20)
+img = Image.new("RGB", (200, 200), "white")
+draw = ImageDraw.Draw(img)
+draw.text((50, 70), "Hello, World!", "black", font)
+img.save("output.png")
+
 ```
-python script.py
-```
+Command: python harfbuzz_test.py
+Note: Make sure Python, PIL, and harfpy are installed and the used font file is present in the directory from where the script is being executed.

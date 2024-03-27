@@ -1,9 +1,26 @@
-Use Case: JupyterHub is a multi-user Hub that spawns, manages, and proxies multiple instances of the single-user Jupyter notebook server for each user. It is commonly used in educational institutions, companies, and research labs to provide a platform for interactive computing.
+Use Case: JupyterHub is used to serve Jupyter notebooks to multiple users. It can be used in a class of students, a corporate data analysis group, a scientific research group, or any team that uses Jupyter notebooks for their projects.
 
-Code details and examples: 
-```bash
-# Command to start JupyterHub
-jupyterhub
+Code Details and Examples:
+
+Code:
+
+The details inside a Jupyter notebook can be varied depending upon the problem that is being solved or the analysis being performed. Here is a simple Python script that can be inserted into a Jupyter notebook cell:
+
+```python
+# Import necessary libraries
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load CSV file data
+data = pd.read_csv('file.csv')
+
+# Display the first few rows of the DataFrame
+print(data.head())
+
+# Plot a histogram of the 'age' column
+data['age'].plot(kind='hist')
+plt.show()
 ```
+Input files: This Python script uses a CSV file named `file.csv` as its input. This file should ideally be uploaded in the same directory as the Jupyter notebook for easy access.
 
-After running the command, users can access JupyterHub through their web browser by navigating to the provided URL. Users will then be able to launch Jupyter notebooks and run code interactively.
+Command to run: Jupyter notebooks are run cell by cell. To run a particular cell containing code, you can press `Shift + Enter` after selecting the cell. To run the entire notebook, you can navigate to `Cell --> Run All` from the menu.

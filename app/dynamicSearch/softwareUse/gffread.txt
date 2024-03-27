@@ -1,0 +1,33 @@
+Use Case: Use gffread to extract sequences from a FASTA file covered by features in a GFF file, useful in bioinformatics for transcriptome analysis. The sample input would include a GFF file (which includes annotations like gene name, start, end, etc.) and a corresponding FASTA file.
+
+Code details and examples: Code.
+
+Sample input files:
+
+1. sequences.fasta: 
+
+```
+>seq0
+ACTGACTGACTGACTGACTGACTGACTG
+>seq1
+ACTGACTGACTGACTGACTGACTG
+```
+
+2. annotations.gff:
+
+```
+seq0   .   gene    1   26  .   +   .   ID=gene0;Name=gene0
+seq0   .   mRNA    1   26  .   +   .   ID=transcript0;Parent=gene0
+seq0   .   exon    1   26  .   +   .   ID=exon0;Parent=transcript0
+seq1   .   gene    1   25  .   +   .   ID=gene1;Name=gene1
+seq1   .   mRNA    1   25  .   +   .   ID=transcript1;Parent=gene1
+seq1   .   exon    1   25  .   +   .   ID=exon1;Parent=transcript1
+```
+
+Command to run:
+
+```
+gffread annotations.gff -g sequences.fasta -w output.fasta
+```
+
+This command reads the annotated regions from the GFF file 'annotations.gff', extracts these from the FASTA file 'sequences.fasta', and writes them to 'output.fasta'.

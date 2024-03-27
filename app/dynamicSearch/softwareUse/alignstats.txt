@@ -1,0 +1,27 @@
+Use Case: The AlignStats software is used for inspecting and summarizing alignment statistics from next-generation sequencing data. It reads IDAT alignment files and generates statistics and plots for QC or exploratory data analysis. AlignStats can be used with a variety of input files including SAM, BAM, and FASTQ files.
+
+Code details and examples:
+
+Code:
+
+Input file:
+
+The input to AlignStats is typically a mapped sequence alignment file in BAM format:
+
+```
+@SQ SN:chr1 LN:248956422
+@SQ SN:chr2 LN:242193529
+@SQ SN:chr3 LN:198295559
+read1 0 chr1 100 0 76M * 0 0 AAAAAGGGGGCCCCCCCTTTTTTTTTTGGGGGGGGGGCCCCTTGTAAAAAAAAA NM:i:3
+read2 0 chr2 200 0 76M * 0 0 AAAAAGGGGGCCCCCCCTTTTTTTTTTGGGGGGGGGGCCCCTTGTAAAAAAAAA NM:i:2
+```
+This BAM file contains two reads, each 76bp long, mapping to chromosomes 1 and 2, with respective NM (edit distance) tags of 3 and 2.
+
+Command to run AlignStats:
+
+To generate statistics and plots from the BAM file, you would use the following command:
+
+```bash
+AlignStats -i input.bam -o output
+```
+This will produce a detailed summary of the alignment statistics in the output file. It can also take additional parameters for customization. Detailed usage instructions can be found in AlignStats's documentation.

@@ -1,0 +1,21 @@
+Use Case: Clust is an open-source tool intended for the automatic extraction of optimal co-expressed gene clusters from gene expression data. It identifies common patterns with genes grouped together based on the similarity of their expression profiles across several conditions or time-series data points.  
+
+Code Details and Examples: Clust works with tab-delimited text input files where the first row is expected to contain sample names and the first column should contain gene identifiers. Sample names and gene identifiers must be unique values. For instance, if you have a file named 'expression_data.txt', you can use Clust as follows:
+
+Code:
+```
+cat expression_data.txt
+    sample1 sample2 sample3 sample4
+gene1   0.1     0.8     0.3     0.4
+gene2   0.2     0.7     0.5     0.6
+gene3   0.3     0.6     0.7     0.8
+gene4   0.4     0.5     0.9     1.0
+```   
+Command to run with Clust: 
+```
+clust expression_data.txt
+```
+
+Upon running this command, Clust will generate several output files with the most important one being *optimized_clusters.txt* that contains the discovered clusters. Each cluster in this file includes a subset of genes that share a similar expression profile across the defined conditions or time points.
+
+Keep in mind that the values in the input file 'expression_data.txt' should be real numeric values that represent gene expression levels. Always verify the format of your input files before running Clust to assure precision of your clustering results.

@@ -1,27 +1,33 @@
-Use Case: Convert a SMILES string to a 3D structure using Open Babel
+Use Case: Open Babel is a chemical toolbox used to search, convert, analyze, or store chemical data. In particular, it can be used to convert chemical file formats. 
 
-Code details and examples:
-1. Input file (input.txt):
+Code Details and Examples:
+
+Code:
+
+Consider a molecule stored in a "MOL" format file named "input.mol" and we want to convert it into "PDB" format.
+
+- Sample Input File: `input.mol`
+
 ```
-C1=CC=CC=C1
+ OpenBabel09022116273D
+
+  9  9  0  0  0  0  0  0  0999 V2000
+    0.0000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.2990    0.7500    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.2990   -0.7500    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+    1.0878    1.4627   -1.0023 O   0  0  0  0  0  0  0  0  0  0  0  0
+    1.0878    1.4627    1.0023 N   0  0  0  0  0  0  0  0  0  0  0  0
+  -1.2990   -0.7500    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.2990    0.7500    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+  M  END
+
+$$$$
 ```
 
-2. Command to convert SMILES to 3D structure:
-```
-obabel input.txt -O output.xyz
-```
+- Command to run: `obabel input.mol -O output.pdb`
 
-3. Output file (output.xyz):
-```
-5
-OpenBabel12102117403D
+This will convert the input molecular structure in "MOL" format to an output structure in "PDB" format and save it as "output.pdb". 
 
- 16 15  0  0  0  0  0  0  0  0999 V2000
-    2.1213    0.2690    0.3028 C   0  0  0  0  0  0  0  0  0  0  0  0
-    1.3798   -0.8250    0.2936 C   0  0  0  0  0  0  0  0  0  0  0  0
-...
-```
+The "-O" flag is used to specify the output file and format. 
 
-4. Visualization software like Avogadro can be used to open the output XYZ file for visualization.
-
-Note: Make sure Open Babel is installed in the system.
+Note that the input and output file formats are inferred from the file extensions.

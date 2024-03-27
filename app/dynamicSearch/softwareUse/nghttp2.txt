@@ -1,0 +1,43 @@
+Use Case: Web server benchmarking; Speed testing for HTTP/2 enabled servers; HTTP/2 protocol debugging and testing. 
+
+Code details and examples: 
+
+Command to start a server:
+
+```
+nghttpd 3000
+```
+
+This command starts an HTTP/2 server at the localhost on port 3000.
+
+To start a server using a private key and a self-signed certificate:
+
+```
+nghttpd -D --no-tls 3000
+```
+
+This command starts an HTTP/2 server at the localhost on port 3000, with the addition of the '-D' option, which means the server will run in the background as a daemon. The '--no-tls' option disables TLS/SSL. 
+
+Command to request a page from a server:
+
+```
+nghttp -v http://localhost:3000
+```
+
+This command sends a GET request to the server running at 'localhost' on port '3000' and prints the response data to the stdout. The '-v' option is used to output debug information. 
+
+Command to upload a file to a server:
+
+```
+nghttp -v -d /path/to/file http://localhost:3000/upload
+```
+
+This command uploads a file to the server using HTTP POST. The '-d' option is used to specify the data to include in the POST request. The data can be read from a file which path is specified after '-d'. 
+
+Command to push multiple resources:
+
+```
+nghttp -v -d '{"resources":["/img1.png","/img2.png"]}' http://localhost:3000/push
+```
+
+This command pushes multiple resources to the server. The '-d' option is used to specify the data to include in the POST request. The data here should be a JSON object that contains an array of resources to be pushed.

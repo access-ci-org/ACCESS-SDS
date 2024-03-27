@@ -1,18 +1,40 @@
-Use Case: Version control system for software development
-Code details and examples:
-1. Initialize a new repository:
-```bash
-git init
+Use Case: libgit2 is a library for handling git repositories. It's widely used for applications needing git-interfacing capabilities.
+
+Code Details and Examples: 
+
+Code. 
+
+libgit2 is primarily a C library, and the sample below shows how to initialize the library, open a repository, and then cleanup:
+
+```c
+#include <git2.h>
+
+int main(int argc, char *argv[])
+{
+    git_libgit2_init();
+
+    git_repository *repo = NULL;
+    int error = git_repository_open(&repo, ".");  // Open the repository in the current directory
+
+    if (error < 0) {
+        const git_error *err = git_error_last();  // If an error occurred, print it and cleanup
+        printf("Error opening repository: %s\n", err->message);
+        git_libgit2_shutdown();
+        return 1;
+    }
+
+    git_repository_free(repo);
+    git_libgit2_shutdown();
+
+    return 0;
+}
 ```
-2. Add a file to the staging area:
+
+Command to run:
+
 ```bash
-git add <file>
+gcc example.c -lgit2 -o example
+./example
 ```
-3. Commit changes to the repository:
-```bash
-git commit -m "Commit message"
-```
-4. Push changes to a remote repository:
-```bash
-git push origin master
-```
+
+This example code is written in C, with gcc as the compiler, and uses libgit2 to open the git repository in the current directory. If an error occurs, it prints the error message and shuts down the library; otherwise, it cleans up the resources automatically.

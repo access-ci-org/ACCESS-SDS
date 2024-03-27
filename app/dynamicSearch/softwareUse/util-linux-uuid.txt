@@ -1,0 +1,25 @@
+Use Case: Util-linux-uuid is a powerful Linux package useful in generating Universally Unique Identifiers (UUIDs). These identifiers are extensively used by developers to uniquely identify data, sessions, or actions within their code. It offers the ability to generate various types of UUIDs including random-based, time-based, name-based (SHA1 or MD5), and nil UUIDs.
+
+Code details and examples: Code 
+
+The utility is invoked from the command line, and it doesn't usually require any input file or special format. You just need to run the utility with the correct options to generate the needed UUID type.
+
+To generate a new random UUID, run:
+```
+uuidgen --random
+```
+
+To generate a new time-based UUID, run:
+```
+uuidgen --time
+```
+
+If you don't specify any input to uuidgen by not using '--random' or '--time', it automatically generates a random-based UUID.
+
+To generate a name-based UUID (SHA1), use the --sha1 and --namespace options:
+```
+uuidgen --sha1 --namespace @dns --name "www.example.com"
+```
+The system has predefined namespaces stored under /etc/uuid. The names are '@dns', '@url', '@oid', and '@x500'.
+
+Note: UUIDs created are distinct across all space and time, thus making them perfect for their primary job – to uniquely identify information.

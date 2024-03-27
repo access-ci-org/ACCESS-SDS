@@ -1,0 +1,32 @@
+Use Case: Use util-macros to facilitate the writing of Autoconf scripts for X.org modules. It provides several m4 macros and various shell scripts for common tasks that can be re-used across multiple packages.
+
+Code details and examples: Code
+
+The input file would be a configuration script that utilizes the m4 macros provided by the util-macros package. For instance:
+
+```
+AC_PREREQ([2.60])
+AC_INIT([FULL-PACKAGE-NAME], [VERSION], [BUG-REPORT-ADDRESS])
+AM_INIT_AUTOMAKE([1.9 foreign no-dist-gzip dist-bzip2])
+AM_MAINTAINER_MODE
+
+XORG_DEFAULT_OPTIONS
+
+AC_CONFIG_FILES([
+Makefile
+src/Makefile
+])
+AC_OUTPUT
+```
+
+This script is written in the m4 macro language and will utilize macros provided by both Autoconf (`AC_PREREQ`, `AC_INIT`, etc.) and util-macros (`XORG_DEFAULT_OPTIONS`). The script can be written in any text editor and does not need to adhere to any particular file format.
+
+You would then run Autoconf to generate a 'configure' script:
+
+`autoconf`
+
+Then call your newly-generated script:
+
+`./configure`
+
+This will prepare your application's source code so that it can be built and installed on the user's system.

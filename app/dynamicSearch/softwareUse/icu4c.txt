@@ -1,0 +1,25 @@
+Use Case: icu4c is a C++ library that provides support for the Unicode Common Locale Data Repository (CLDR) and is widely used for software internationalization. It is used to perform Unicode operations like string comparisons, collation, date/time formatting, etc.
+
+Code details and examples:
+
+Code:
+```cpp
+#include <unicode/ustream.h>
+#include <unicode/unistr.h>
+
+int main() {
+    icu::UnicodeString string = icu::UnicodeString::fromUTF8("Hello, World!");
+    std::cout << string << std::endl;
+    return 0;
+}
+```
+
+In this simple C++ program, we include two headers from icu4c library, then create a Unicode string, and print it to the standard output. The input here is a UTF-8 encoded string "Hello, World!".
+
+To compile and run this program, you need to use a g++ compiler with icu4c support. Below is the command to compile and run it:
+
+```
+g++ -o hello_world hello_world.cpp `pkg-config --cflags --libs icu-uc icu-io`
+./hello_world
+```
+Please note that command line options can vary depending on the system and library configurations.

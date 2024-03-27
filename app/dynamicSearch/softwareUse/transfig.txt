@@ -1,29 +1,39 @@
-As Transfig is a tool for converting FIG files created by xfig to other formats, I'll provide examples of how to use Transfig to convert a FIG file to different formats.
+Use Case: TransFig is a computer language with a lot of libraries for graphics and it's used for producing figures that can be displayed in a variety of ways. For example, it's often used by scientists and engineers who need to create diagrams or schematics for their research papers. The TransFig package includes several tools that generate code to make charts in many popular formats, such as LaTeX, PostScript, GIF, SVG, and others.
 
-Use Case: Convert a FIG file to PNG using Transfig
-Code details and examples:
-```bash
-fig2dev -L png input.fig output.png
+Code details and examples: Code
+
+When writing TransFig code, you can use expressions to describe shapes, colors, and rotations. TransFig does a lot of the heavy graphical lifting for you, so you can focus on what the graphic should represent rather than the minutiae of how to arrange every individual pixel.
+
+Here is an example of a simple TransFig file (myfigure.fig):
+
 ```
-In this command:
-- `fig2dev` is the command for using Transfig.
-- `-L png` specifies the output format as PNG.
-- `input.fig` is the input FIG file to be converted.
-- `output.png` is the output PNG file that will be created.
+#FIG 3.2
+Landscape
+Center
+Metric
+A4
+100.00
+Single
+-2
+1200 2
+1 3 0 1 0 7 50 -1 -1 0.000 0 0 -1 0 0 5
+	 375 400 375 1550 975 1550 975 400 375 400
+4 1 0 50 -1 0 12 0.0000 4 135 1125 750 2475 Just a test box\001
+2 4 0 1 0 7 50 -1 -1 0.000 0 0 -1 0 0 2
+	 1125 750 2475 1800
+	 1800 2250 900 900
+	```
 
-You can adjust the output format by changing the `-L` flag to a different format like `pdf`, `jpeg`, etc.
+This .fig file represent three shapes: one composed of five points forming a polygon (a rectangle in this case), one composed of a line and an arc, and text which says "Just a test box". 
 
-Use Case: Convert a FIG file to PDF using Transfig
-Code details and examples:
-```bash
-fig2dev -L pdf input.fig output.pdf
-```
-In this command:
-- `fig2dev` is the command for using Transfig.
-- `-L pdf` specifies the output format as PDF.
-- `input.fig` is the input FIG file to be converted.
-- `output.pdf` is the output PDF file that will be created.
+Fig files can be created using xfig graphical editor. However, the language is simple enough so that .fig files can be created or edited with any text editor.
 
-Just like before, you can change the output format to a different one by modifying the `-L` flag.
+Commands to run: 
 
-These commands assume that Transfig is installed and available in the system's PATH.
+To create a PNG file from a .fig file:
+
+`fig2dev -L png myfigure.fig myfigure.png`
+
+To create a PostScript file from a .fig file:
+
+`fig2dev -L ps myfigure.fig myfigure.ps`

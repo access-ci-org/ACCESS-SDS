@@ -1,0 +1,45 @@
+Use Case: Sympy is a powerful Python library for symbolic mathematics. It is capable of performing powerful symbolic computations, which make it equally useful for theoretical and applied mathematics alike. An example use of sympy is to solve a quadratic equation.
+
+Code details and examples: 
+
+Code:
+
+```python
+from sympy import *
+
+# This will automatically enable the best printer available in your environment.
+init_printing()
+
+# create a symbol for x
+x = symbols('x')
+
+# create a quadratic equation
+equation = Eq(2*x**2 - 3*x + 4, 0)
+
+# solve the equation
+solutions = solve(equation, x)
+
+# print the solutions
+for solution in solutions:
+    pprint(solution)
+```
+Input file:
+
+No input file needed.
+
+Input format and specifications:
+
+No input file needed. The equations are written directly in the Python code.
+
+Command to run:
+
+Save the sample code into a Python file, for example, sympy_example.py. Run the file with Python command in terminal:
+
+```bash
+python sympy_example.py
+```
+In this simple example, no extra packages are required. The only requirement is that sympy package is installed, which can be done with pip:
+
+```bash
+pip install sympy
+```

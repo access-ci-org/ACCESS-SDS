@@ -1,0 +1,32 @@
+Use Case: EZTrace is a tool for automatically tracing and analyzing the behavior of HPC applications (including MPI, OpenMP, pthread, and CUDA applications). For instance, you could use EZTrace to trace a MPI application to obtain performance information and identify possible bottlenecks. 
+
+Code Details and Examples:
+Code:
+
+Creating the trace:
+
+Here is a simple example of how to obtain a trace with EZTrace. Suppose we have a MPI program named "mpi_program". 
+
+```bash
+# Load the EZTrace environment
+source /opt/eztrace/etc/eztrace.sh
+ 
+# Automatically instrument the mpi_program application
+eztrace_cc mpi_program.c -o mpi_program
+
+# Create a trace of mpi_program
+eztrace -t mpi ./mpi_program
+```
+The output will be a trace file named "mpi_program.ezf.trace" in the current directory.
+
+Analyzing the trace:
+
+EZTrace also provides eztrace_stats, a tool to get statistics from a trace.
+
+```bash
+# Getting stats from the trace
+eztrace_stats mpi_program.ezf.trace
+```
+This will output various statistics about the execution of mpi_program, including the number of MPI calls, their distribution, etc.
+
+The input to EZTrace is an executable program, which has been compiled with the EZTrace compiler wrapper (eztrace_cc). As such, there is no specific input file or format required. However, the program should either be in a language that EZTrace supports (C, C++, Fortran) or should use a supported library (MPI, OpenMP, pthreads, CUDA).

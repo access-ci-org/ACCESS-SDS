@@ -1,0 +1,36 @@
+Use Case: ViennaRNA is a software package that provides an option to predict secondary structures of single stranded RNA or DNA sequences. It also offers comparative sequence analysis options.
+
+Code details and examples: Code
+
+To use ViennaRNA, the input file should be in FASTA format. Here’s an example of a sequence in a FASTA format:
+
+```
+>SequenceName
+GCUAUCUGCAUAGCUAGCUAGC
+```
+
+The secondary structure prediction can be initiated with the 'RNAfold' command:
+
+```sh
+RNAfold < input.fasta
+```
+
+The output is the sequence, structure, and the free energy like this:
+
+```sh
+>SequenceName
+GCUAUCUGCAUAGCUAGCUAGC
+.....((((..((((..)))).)))). (-12.30)
+```
+
+Note: The brackets denote base pairs while the '.' signifies unpaired bases. The number in the bracket is the minimum free energy (MFE) in kcal/mol. 
+
+For comparative sequence analysis, the tool `RNAalifold` can be used. The input file should contain the aligned sequences in ClustalW format. 
+
+```sh
+RNAalifold < aligned_sequences.clustalw
+```
+
+The result is similar to RNAfold's output, but with an additional line for consensus structure. 
+
+Remember, ViennaRNA package has many tools associated with it. The functionality depends upon the exact tool that you are using from the package.

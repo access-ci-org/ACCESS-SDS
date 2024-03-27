@@ -1,0 +1,30 @@
+Use Case: QUAST (Quality Assessment Tool for Genome Assemblies) is used in bioinformatics to evaluate genome assemblies by computing a number of metrics, including N50, NG50, NA50, and others, based on reference genomes or without a reference.
+
+Code details and examples:
+
+Code: 
+
+QUAST provides an easy-to-use command-line interface. You can evaluate a number of assemblies in a single run and compare them. 
+
+Input files: FASTA/FASTQ format.
+Specifications in the input files: The sequences should be in the FASTA/FASTQ format. 
+
+Required file format: Sequence (FASTA, FASTQ), gene annotation (GFF, GTF), or reference genome (FASTA). 
+
+Region specification: Regions can be specified using BED format.
+
+Example command to run Quast with a reference:
+
+```
+quast.py test_data/scaffolds.fasta -R test_data/reference.fasta
+```
+
+Where "test_data/scaffolds.fasta" is your assembled sequence and "test_data/reference.fasta" is your reference sequence. 
+
+If you do not have a reference, you can still get useful statistics about the assembly:
+
+```
+quast.py test_data/scaffolds.fasta
+```
+
+In this command, "test_data/scaffolds.fasta" is your assembled sequence.

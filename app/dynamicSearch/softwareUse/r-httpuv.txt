@@ -1,0 +1,42 @@
+Use Case: httpuv is a package in R used for asynchronous HTTP/WebSocket server. It could be used to create a simple server that will send a "Hello, World!" message.
+
+Code details and examples: Code
+
+First, you'll need to load the library:
+
+```R
+library(httpuv)
+```
+
+Next, you can use the following example to create a very basic server:
+
+```R
+
+server <- startServer(
+  "0.0.0.0",
+  8080,
+  list(
+    onHeaders = function(req) {
+      list(
+        status = 200L,
+        headers = list(
+          'Content-Type' = 'text/html'
+        ),
+        body = "Hello, world!"
+      )
+    }
+  )
+)
+```
+
+In this example, the server is set to listen on all interfaces (`0.0.0.0`) and port `8080`. When a request is received, it simply returns a `200 OK` response along with the string `"Hello, world!"` as the body of the response.
+
+The `onHeaders` function is the callback that is called when a request is received. This function takes a `req` argument, which is a list that contains details about the request such as headers and body.
+
+You might prefer to provide a more appropriate response based on the headers of the request. In this case, you would inspect or manipulate the `req` argument according to your needs.
+
+Running this code will start the server. If you visit `http://localhost:8080` in a web browser, you will see the message "Hello, world!".
+
+To stop the server, you can use the `stopServer(server)` command from within R.
+
+This package doesn't require any specific input file and loads in memory. It's compatible with most of the current browsers and doesn't need any specific configurations. It works dynamically and can compile and run programs on-the-fly.

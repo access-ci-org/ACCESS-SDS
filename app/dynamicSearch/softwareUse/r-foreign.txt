@@ -1,0 +1,35 @@
+Use Case: The R-package "foreign" provides functions that can read data files and data formats from other statistical software including Minitab, S, SAS, SPSS, Stata, etc. The usage of foreign can be handy for R users who want to make use of a dataset that is only available in a certain format or for users who are transitioning to R from other platforms.
+
+Code details and examples:
+
+Code:
+
+```R
+# load library
+library(foreign)
+
+# import a SAS data file
+sas_data <- read.ssd("datafile.ssd")
+```
+
+File/data specifications: 
+The data file should be in a format compatible with the type of file you are reading. For instance, with the command "read.ssd()", the file to be read needs to be a SAS data file with the extension .ssd.
+
+Useful functions:
+- read.spss() : Reads SPSS data files.
+- read.ssd() : Reads SAS XPORT data files.
+- read.dta() : Reads Stata binary data files.
+- read.dbf() : Reads DBF database files.
+- read.epiinfo() : Reads Epi Info data files.
+- read.mtp() : Reads Minitab portable worksheet files.
+- read.octave() : Reads GNU Octave text data files.
+
+The file format required is largely dependent on the function being used. For instance, read.spss() can read .sav SPSS files, while read.dta() can read .dta Stata files.
+
+Command to Run:
+In your R environment, the command to run this function would simply be the function call itself, i.e., calling read.ssd, read.spss, etc., with the appropriate file as an argument. For example:
+```R
+# Run the function
+sas_data <- read.ssd("datafile.ssd")
+```
+If the code is running without errors, this will import the dataset from "datafile.ssd" into your R environment, storing it in the object sas_data.

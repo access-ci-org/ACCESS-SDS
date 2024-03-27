@@ -1,0 +1,41 @@
+Use Case: Use MCScanX to compare several genomes in order to identify synteny or collinearity: to analyze genome evolution through genome duplication, speciation, inversion, translocation and deletion.
+
+Code details and Examples: Code
+
+The MCScanX takes two input files. The first is a multiple fasta file of the concatenated genomic sequences for which synteny or collinearity is to be identified. The second is a blastp E-value cutoff file resulting from the first file, with protein sequences of genes compared against each other. 
+
+
+Sample of the first file named 'genes.fa' might look like this:
+```
+>Gene1
+ATGGCCCTGCAA...
+>Gene2
+ATGTCTAGGAT...
+...
+>GeneN
+ATGCCTAGCTT...
+```
+
+This file is then run via `blastp` as such: 
+```
+blastp -query genes.fa -db genes.fa -out blastp.out -evalue 1e-10 -outfmt 6 -num_threads 8
+```
+This command results in a `blastp` output file named 'blastp.out' comparing each of the genes to every other gene in 'genes.fa'.
+
+Next, to initiate MCScanX, you will need a .gff file that can act as a reference for identifying the genetic code. This file named 'genes.gff' can look something like the following:
+
+```
+Chr1    .   gene    3631     5899   .  +  .  ID=AT1G01010
+Chr1    .   gene    5928     8737   .  +  .  ID=AT1G01020
+... 
+Chr5    .   gene    26975284 26979467 .  - .  ID=AT5G67370
+Chr5    .   gene    26979755 26981832 .  - .  ID=AT5G67380
+```
+
+To run the MCScanX for the given 'genes.fa', 'blastp.out' and 'genes.gff', command will look like this:
+```
+MCScanX genes
+```
+Assuming all input files (gene sequences, blastp output and .gff file) have been formatted correctly and are within the working directory, MCScanX will run and produce output files that represent the collinearity and synteny of your input genome. 
+
+Please note: you have to maintain the discipline in naming files if you are using MCScanX. The GFF and fasta files have to start with the same name otherwise it won't recognize them. And, MCScanX was designed with very short genes in mind, so even a small number of genes can take a long time to run. Also, MCScanX operates on the assumption that your input genes are coded in the sense strand, but if they include antisense, you need to flip either the sense or antisense genes to match. The program checks for this automatically.

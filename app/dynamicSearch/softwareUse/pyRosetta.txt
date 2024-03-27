@@ -1,27 +1,42 @@
-Use Case: Protein structure prediction and design in Rosetta using Python interface pyRosetta
+Use Case: Use; To analyze, visualize and sample biomolecular structures; To perform protein structure prediction or design.
 
-Code details and examples:
+Code details and examples: Code; 
+
+PyRosetta is a powerful tool that enables computational modeling and analysis of biomolecular structures. It is a Python-based interface to the Rosetta software suite.
+
+Example of code snippets:
+
+Firstly, an input file written in protein data bank format (PDB) is required for PyRosetta. PDB files are plain text files containing information about the atomic coordinates of proteins.
+
+Sample PDB file (named 'example.pdb'):
+
+"""
+ATOM   1  N   ALA A   1      1.452   0.407  -1.191  1.00 30.78           N  
+ATOM   2  CA  ALA A   1      0.238  -0.200  -1.191  1.00 25.57           C  
+ATOM   3  C   ALA A   1      0.447  -1.604  -0.618  1.00 22.64           C  
+ATOM   4  O   ALA A   1      1.578  -2.209  -0.605  1.00 19.93           O  
+ATOM   5  CB  ALA A   1     -0.989   0.086   0.000  1.00 24.80           C  
+ATOM   6 1HA  ALA A   1      0.097  -0.200  -2.191  1.00 26.49           H  
+ATOM   7 2HA  ALA A   1     -1.689  -0.200  -1.691  1.00 26.49           H  
+ATOM   8 1HB  ALA A   1     -1.489   0.686   0.600  1.00 26.18           H
+"""
+
+Code snippet:
+
 ```python
-# Sample code to perform protein structure prediction with pyRosetta
 from pyrosetta import *
 pyrosetta.init()
 
-# Create a pose from a sequence
-pose = pose_from_sequence("AAAAA")
+# Load a protein structure into PyRosetta
+pose = pose_from_pdb("example.pdb")
 
-# Setup a score function
+# Determining the total energy
 scorefxn = get_fa_scorefxn()
+total_energy = scorefxn(pose)
 
-# Perform energy minimization
-print("Before minimization:", scorefxn(pose))
-mm = MinMover()
-mm.score_function(scorefxn)
-mm.apply(pose)
-print("After minimization:", scorefxn(pose))
-
-# Output the minimized structure to a PDB file
-pose.dump_pdb("minimized_structure.pdb")
+# Print energy
+print("Total energy:", total_energy)
 ```
 
-Command to run the script (if applicable):
-No direct command line usage, must be run within a Python environment with pyRosetta installed.
+For running this script, save it in file `prob.py`, then use the command: `./prob.py` If you have python set as your environment variable. If not use the command: `python prob.py`.
+This command will execute the script in PyRosetta. It first initializes Rosetta with default options, then loads a PDB file, then it will use a score function to calculate the total energy of the pose and prints it out.

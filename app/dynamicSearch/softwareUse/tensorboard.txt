@@ -1,30 +1,58 @@
-Use Case: Visualization of machine learning models and logs with TensorBoard;
+Use Case: TensorBoard is the interface used to visualize TensorFlow runs and experiments. It provides visualization and tooling for machine learning experimentation, including metrics, parameters, and experimental results.
+
 Code details and examples:
-TensorBoard is a visualization toolkit provided with TensorFlow that allows you to visualize training metrics like loss and accuracy, as well as visualize the computational graph of your model.
 
-To run TensorBoard, you need to first have TensorFlow installed, and then you can start TensorBoard with the following command in the terminal:
-```
-tensorboard --logdir=/path/to/logs
-```
+Code: 
 
-This will start a TensorBoard server which you can access in your browser by navigating to http://localhost:6006. You can then explore the various tabs to visualize different aspects of your model.
+Suppose you are training a Deep Learning model using Tensorflow and want to monitor the training process, TensorBoard makes this easy. Once your TensorFlow program is running with TensorBoard callbacks configured, you need to launch TensorBoard in a new terminal with a log directory argument pointing to the directory where the callbacks are writing logs.
 
-You can save logs from your TensorFlow model using the `tf.summary` module. Here is an example of how you can log scalar values (like loss and accuracy) to be visualized in TensorBoard:
 ```python
 import tensorflow as tf
+import datetime
 
-# Create a summary writer
-summary_writer = tf.summary.create_file_writer("/path/to/logs")
+# Clear any logs from previous runs
+!rm -rf ./logs/
 
-with summary_writer.as_default():
-    for step in range(num_steps):
-        # Perform training step
-        loss = # Calculate loss
-        accuracy = # Calculate accuracy
+# Load the TensorBoard notebook extension
+%load_ext tensorboard
 
-        # Log metrics
-        tf.summary.scalar("loss", loss, step=step)
-        tf.summary.scalar("accuracy", accuracy, step=step)
+# Define a simple sequential model
+def create_model():
+  model = tf.keras.models.Sequential([
+    tf.keras.layers.Dense(512, activation='relu', input_shape=(784,)),
+    tf.keras.layers.Dropout(0.2),
+    tf.keras.layers.Dense(10, activation='softmax')
+  ])
+  model.compile(optimizer='adam',
+                loss='sparse_categorical_crossentropy',
+                metrics=['accuracy'])
+
+  return model
+
+# Create a basic model instance
+model = create_model()
+
+log_dir = "logs/fit/" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
+tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=1)
+
+# Train the model
+model.fit(x=train_dataset,
+          y=train_labels, 
+          epochs=5, 
+          validation_data=(test_dataset, test_labels), 
+          callbacks=[tensorboard_callback])
 ```
 
-Additionally, you can also log other types of data such as images, histograms, and embeddings for visualization in TensorBoard.
+To run the TensorBoard, you can use the following command in your terminal:
+
+``` shell
+tensorboard --logdir=logs/fit
+```
+
+Now, you can navigate to the localhost link provided in your terminal output to view the TensorBoard interface.
+
+In this example:
+
+- "train_dataset" and "train_labels" is your training data and its corresponding labels.
+- "test_dataset" and "test_labels" is your validation or test data and its corresponding labels.
+- "logs/fit/" is the path where you want to save the outputs for visualization in TensorBoard.

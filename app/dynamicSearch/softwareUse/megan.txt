@@ -1,0 +1,24 @@
+Use Case: MEGAN (MEtaGenome ANalyzer) is a microbiome analysis software. It is used for analyzing taxonomical content of large metagenomic datasets.
+
+Code details and examples: Code.
+
+1. Sample input files: 
+   1.1. A DAA or SAM file (result of a sequence comparison software, e.g. DIAMOND, BWA), which consists of the sequences and the mapping information. 
+
+2. Format required: 
+   2.1. DAA, SAM or BLAST format 
+
+3. Specifications and details in input files: 
+   3.1. The input file must be a mapping file containing sequence alignment/mapping information (reads, reference, mapping quality, etc.)
+
+4. Command to run: 
+
+"meganizer -i input.daa -mdb megan-map-Jul2020-2.db" 
+
+Here, the "i" flag is used to specify the input file, and "mdb" to specify the mapping database. 
+
+More complex commands can include taxonomical and functional analysis: 
+
+"daa2rma -i input.daa -o output.rma6 -alg longReads -mdb megan-map-Jul2020-2.db -t 16" 
+
+Where "o" specifies the output file, "alg" the algorithm used for binning (in this case, long reads), "mdb" the mapping database, and "t" the number of threads used for the computation.

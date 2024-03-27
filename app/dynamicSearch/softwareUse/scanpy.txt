@@ -1,0 +1,28 @@
+Use Case: You want to do single-cell transcriptomics data (scRNA-seq) analysis by using Scanpy library in Python, and visualize the main cell clusters that make up the mouse visual cortex with Louvain groups.
+
+Code details and examples:
+
+Input File Format: Scanpy supports the file format of newick(.nwk), h5ad(.h5ad), graphml, xml, leiden(.lbg), plain text files, and csv files loaded with either pandas or numpy.
+
+Sample Input File: Here, we will need a file "mouse_visual_cortex.h5ad" which is a sample data file to visualize the main cell clusters that make up the mouse visual cortex. 
+
+```Python
+import scanpy as sc
+
+# Read the h5ad file into an AnnData object
+adata = sc.read('mouse_visual_cortex.h5ad')
+
+# Perform preprocessing steps
+sc.pp.neighbors(adata, n_neighbors=10, n_pcs=40)
+
+# Compute a clustering for the dataset
+sc.tl.louvain(adata, resolution=1.0)
+
+# Visualizing the cluster with UMAP
+sc.tl.umap(adata)
+
+# Plotting the cluster
+sc.pl.umap(adata, color=['louvain'])
+```
+
+Command to run: Above Python code can be copied in a Python script say "analysis.py" and run by: python analysis.py. Remember to have "mouse_visual_cortex.h5ad" file in the same directory where python script is present.

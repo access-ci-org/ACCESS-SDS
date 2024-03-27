@@ -1,0 +1,27 @@
+Use Case: Genomedata is a software that is used for efficient storage of large scale human genome sequence data. It is used by bioinformaticians and computational biologists for storing and accessing large scale DNA sequences for genetic research. 
+
+Code details and examples: Code 
+
+1. First, an input file is needed where the genomic sequences are stored. This file (`.gmt` format) contains the actual sequences like 'ATTCCGGA..'. An example of such a file can be made:
+
+```
+>seq1
+AGCTTCACGTTCTTGATCAT
+```
+This is genomic sequence of a hypothetical 20 nucleotide sequence. Alternatively, a real `.gmt` file containing human genomic sequence can be downloaded from NCBI or other genomic databases.
+
+2. The genomedata can use this file and create a genomedata archive. Below is the command to create archive, 
+
+```
+genomedata-load -s seqfile.gmt my_genome_data
+```
+
+Here, `seqfile.gmt` is the file containing the genomic sequences and `my_genome_data` is the name of the archive to be created.
+
+3. For accessing the data from the created genomedata archive. Below command could be used:
+
+```
+genomedata-query my_genome_data seq1 1 20
+```
+
+Here, `my_genome_data` is the genomedata archive name, `seq1` is the genomic sequence name and `1 20` states that we are querying the first 20 nucleotides.

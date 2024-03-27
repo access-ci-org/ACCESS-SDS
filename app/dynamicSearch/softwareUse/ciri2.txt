@@ -1,0 +1,15 @@
+Use Case: CIRI2 is an improved tool for circular RNA (circRNA) identification using multiple filtration strategies. It requires three input files: (1) paired-end mapped reads in BAM format; (2) reference gene annotation in gene transfer format (GTF); and (3) reference genome sequences in FASTA format.
+
+Code details and examples:
+
+ 
+Code: 
+```bash
+ciri2.pl -I input.bam -O output.CIRI -F ref.fa -A ref.gtf 
+
+## GTF file specification: standard gene transfer format file
+## Input BAM file specification: BAM file from alignment tools such as BWA
+
+```
+
+This command uses the input BAM file "input.bam", GTF annotation "ref.gtf", FASTA genome sequences "ref.fa" and outputs the circular RNAs to "output.CIRI".

@@ -1,0 +1,33 @@
+Use Case: MEME (Multiple EM for Motif Elicitation) is a tool for discovering motifs in sets of unaligned nucleotide or peptide sequences. A motif is a pattern that occurs repeatedly in a group of related protein or DNA sequences. 
+
+Code details and examples:
+
+Code:
+
+Input File Format: The MEME suite uses FASTA format for all sequence inputs. FASTA begins with a single-line description, followed by lines of sequence data. Each single-line description sequence begins with ">". An example of the input file format is:
+
+```
+>seq1 
+ATCGATCGATCGATCGATT
+>seq2 
+ATCGATATCGATCGATC
+>seq3 
+ATGAATCGATCGGTCGA
+```
+
+Command to Run: 
+```bash
+meme input.fasta -oc output_dir -nostatus -time 18000 -maxsize 60000 -p 4 -dna -mod zoops -nmotifs 3 -minw 6 -maxw 10
+```
+In this command, 
+- `-oc` specifies the output directory.
+- `-nostatus` prevents MEME from checking the progress of the job.
+- `-time` sets the maximum time (in seconds) allowed for finding a single motif. 
+- `-maxsize` sets maximum size for dataset (default is 60000).
+- `-p` specifies number of processors to use. 
+- `-dna` specifies DNA sequence. 
+- `-mod` specifies the motif occurrence model ('zoops' stands for zero or one per sequence).
+- `-nmotifs` specifies the total number of motifs MEME should find. 
+- `-minw` and `-maxw` set the minimum and maximum motif width.
+
+All paths (to input.fasta and output_dir) should be absolute or relative to directory from which the command is run.

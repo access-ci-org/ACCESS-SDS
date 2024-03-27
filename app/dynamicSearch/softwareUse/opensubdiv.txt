@@ -1,0 +1,38 @@
+Use Case: OpenSubdiv is used for computer graphics, primarily for subdividing surface or image discretization. It implements Catmull-Clark subdivision surfaces, Loop subdivision surfaces and other forms of subdivision techniques.
+
+Code details and examples:
+
+Code:
+```c++
+#include <osd/cpuGLVertexBuffer.h>
+#include <osd/glDrawContext.h>
+#include <osd/cpuComputeController.h>
+
+Osd::CpuComputeController *controller = new Osd::CpuComputeController();
+
+Osd::CpuVertexBuffer * vertexBuffer = Osd::CpuVertexBuffer::Create(3, numVerts);
+vertexBuffer->UpdateData(vertices, numVerts);
+
+Osd::Mesh<VertexBuffer> *mesh =
+    Osd::Mesh<CpuVertexBuffer>::Create(vertexBuffer, face, numVerts, level);
+
+Osd::DrawContext::PatchArrayVector const & getPatchArray = mesh->GetDrawContext()->GetPatchArrayVector();
+
+for(int patchArray=0; patchArray<(int)getPatchArray.size(); ++patchArray){
+    for(int i=0; i<getPatchArray[patchArray].numPatches; ++i){
+        Osd::DrawContext::PatchDescriptor desc = getPatchArray[patchArray].descriptor;
+        printf("%d\n", desc.GetPattern());
+    }
+}
+```
+The code snippet above shows an example of creating a controller, vertex buffer, and a mesh in OpenSubdiv. These are fundamentals of the package.
+
+Input Files: Data in a proprietary format are supplied as input to OpenSubdiv. For instance, vertices of a mesh represented as an array of floats.
+
+Running the program: You will typically use a Makefile to compile and run C++ code that uses OpenSubdiv. A basic command line execution might look like this:
+
+```bash
+g++ filename.cpp -o outputfile -lopbuffersubdiv
+./outputfile
+```
+This assumes that OpenSubdiv libraries have been appropriately installed and linked.

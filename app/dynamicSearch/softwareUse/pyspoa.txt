@@ -1,0 +1,50 @@
+Use Case: PySPOA is used for multiple sequence alignment based on partial order graphs. It is often used in bioinformatics for tasks like sequence assembly, sequence alignment, and detection of sequence variants.
+
+Code details and examples: Code
+
+SAMPLE INPUT FILE FORMAT: It is necessary to create FASTA or FASTQ files with sequence data for input. The script reads from STDIN and writes to STDOUT.
+
+Example FASTA file (`sequences.fasta`):
+```
+>sequence1
+ATCGATTGAGCTCTAGCG
+>sequence2
+ATCGTTTGAGCTCTAGCG
+>sequence3
+ATCGGTTGAGCTCTAGCG
+```
+
+Code:
+
+
+```python
+import spoa
+
+# read the sequences from the fasta file
+def read_fasta(file):
+    with open(file) as f:
+        sequences = f.read().split('>')[1:]
+    sequences = [s.replace('\n', '')[s.find('\n')+1:] for s in sequences]
+    return sequences
+
+sequences = read_fasta('sequences.fasta')
+
+alignment_engine = spoa.AlignmentEngine()
+graph = spoa.POG()
+
+# add the sequences to the graph
+for sequence in sequences:
+    graph.add_alignment(alignment_engine.align(sequence), sequence)
+
+# perform the multiple sequence alignment
+msa, _ = graph.msa()
+
+print(msa)
+```
+
+Command to run the code:
+```
+python align_sequences.py
+```
+
+This Python script reads multiple sequences from a FASTA file, aligns them with PySPOA, and prints the resulting multiple sequence alignment. If successful, this will output a list of aligned sequences. The alignment is represented as strings where the same index in each string corresponds to the same position in the alignment.

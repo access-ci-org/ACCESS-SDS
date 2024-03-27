@@ -1,0 +1,63 @@
+Use Case: nvCOMP is a powerful library useful in the compression and decompression of data in NVIDIA GPUs. In case of running workloads where data compression is a crucial part, nvCOMP can help in managing memory bandwidth and reducing data transfer times.
+
+Code Details and Examples:
+
+Code:
+
+The following code example demonstrates the usage of nvcomp's Cascaded compression and decompression, by compressing an array of integers and then decompressing it.
+
+```cpp
+#include <nvcomp/cascaded.h>
+#include <random>
+
+int main(int argc, char* argv[])
+{
+
+  // Set up some fake data to compress
+  size_t size = 100000000;
+  int* data = new int[size];
+  std::fill(data, data + size, 50);
+
+  // Set Cascaded compressor configuration
+  nvcomp::CascadedCompressor<int> compressor(
+      data, size, nvcomp::CascadedCompressorFormat::INT, 1, true, false, false);
+
+  // Allocate and compress data
+  size_t compressedSize;
+  char* d_comp_out;
+  cudaMalloc(&d_comp_out, compressedSize);
+  compressor.compress_async(
+      d_comp_out, &compressedSize, cudaStream_t());
+
+  // Set up decompressor
+  nvcomp::CascadedDecompressor<int> decompressor(d_comp_out, compressedSize);
+
+  // Allocate and decompress data
+  int* decompressedData;
+  cudaMalloc(&decompressedData, size * sizeof(int));
+  decompressor.decompress_async(
+      decompressedData, size, cudaStream_t());
+
+  // Cleanup
+  delete[] data;
+  cudaFree(d_comp_out);
+  cudaFree(decompressedData);
+
+  return 0;
+}
+```
+To compile the program, use the nvcc command like below:
+
+`nvcc -o sample sample.cu -lnvcomp`
+
+To run the program, use the command like below:
+
+`./sample`
+
+Specifications:
+
+Input File Format: No input file required. Values for the data to be compressed are generated within the program.
+
+Output: The program does not output a result. Instead, it performs compression and decompression in-memory.
+
+For this example, there are no additional specifications or details needed for the input code.

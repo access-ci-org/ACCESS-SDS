@@ -1,17 +1,43 @@
-Use Case: Parsing Maestro files using maeparser
+Use Case: Reads, parses and writes Maestro (Schrödinger) files.
 
-Code details and examples:
-```python
-from maeparser import parse
+Code details and examples: Code:
 
-# Load a Maestro file
-mae_file = "input.mae"
-with open(mae_file, "r") as f:
-    mae_data = list(parse(f))
-
-# Accessing data from the Maestro file
-for record in mae_data:
-    print(record)
 ```
+import maeparser
 
-Make sure to have the `maeparser` Python package installed before running the code.
+with Reader("ptest.mae") as reader:
+    for st in reader:
+        print("The title of the structure is: ", st.get_title())
+        print("The energy of the structure is: ", st.get_energy())
+```
+In this code, the input file "ptest.mae" is read with the maeparser library. The block "for st in reader" iterates over every structure in the Maestro file. The title and energy of each structure are printed.
+
+File Format: The input files for maeparser are Maestro .mae files. These are Schrödinger's customized file format for representing molecules, based on the MacroModel atom types.
+
+Input file specifications: The .mae file should contain information about atom types, bonding, and other molecular features.
+
+Command to run: This is a Python library, so the file containing the Python code should be run from the command line with python yourfile.py.
+
+Input Example: A .mae file cannot be represented as plain text, but can be created using Schrödinger Maestro graphical user interface. It would look similar to this:
+
+```
+  f_m_ct { 
+    s_m_title
+    ":::"
+    i_m_ct_format 2 
+    r_chorus_box[6] -3.81440 -3.55560 -3.56800 3.29840 3.55560 3.84760 
+    b_m_ct_use_suboff false 
+    b_m_ct_use_chgoff false 
+    i_m_ct_n_ionizable 0 
+    i_m_ct_subst 0 
+    r_m_ct_charge 0.00000000 
+
+    # BLOCK: molecule: m_atom
+    #
+    m_atom [
+      # First column is index #
+      #
+      2       30      "S   " 0         0.00000000 0.00000000 0.00000000 0.000000 0.000000 0.000000 0 1 0
+      ...
+```
+In this example, the m_atom block includes the atomic properties of each atom in the molecular structure. Atom index, atomic number, element type, formal charge, and the x, y and z coordinates are specified for each atom.

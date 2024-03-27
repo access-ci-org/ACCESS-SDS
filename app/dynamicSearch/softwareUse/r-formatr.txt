@@ -1,0 +1,39 @@
+Use Case: FormatR is an R package that is used for reformatting the R code to make it more legible and standard. It aids in making the code more readable and hence, more maintainable in a long run. The R code format includes the spaces around operators, the proper indentation, the consistent line return, and the reasonable use of white space.
+
+Code details and examples:
+
+Code:
+
+In R, say that we have a piece of code formatted as follows:
+
+```R    
+multiline_string =
+"this is a long string
+ that spans multiple
+ lines" 
+```
+
+To reformat this piece of code using formatR, we would enter:
+
+```R
+library(formatR)
+str = '
+multiline_string =
+"this is a long string
+that spans multiple
+lines" 
+'
+
+tidy_source(text = str)
+```
+
+Output:
+
+```
+multiline_string = "this is a long string
+that spans multiple
+lines"
+```
+In this example, the FormatR package is used to tidy up the spacing in the R code snippet. It works to ensure the R code is as readable as possible by operating on the spacing in the provided code snippet.
+
+To run FormatR, launch your R interface, load the library with the command `library(formatR)`, and apply the function `tidy_source()` as required on your source code. The main function in FormatR is `tidy_source()`, which can be used to reformat R scripts.

@@ -1,18 +1,21 @@
-Use Case: asciinema allows you to record and share terminal sessions.
-Code details and examples:
-To install asciinema:
-```
-pip install asciinema
-```
+Use Case: Asciinema is a free and open source command-line based solution for recording the terminal sessions and sharing them online. It's used by software engineers for showing how a specific program works, in bug reports, during blogs, and many other cases.
 
-To record a terminal session:
-```
-asciinema rec demo.cast
-```
+Code Details and Examples: Code 
 
-To upload the recorded session to asciinema.org:
-```
-asciinema upload demo.cast
-```
+To start recording with asciinema, you call:
 
-The recorded session can be shared by providing the link generated after uploading.
+`asciinema rec`
+
+This command starts recording all terminal activity. The recording is only interrupted once you type `exit` or press `Ctrl-D`.
+
+To replay a recording locally in your terminal you call:
+
+`asciinema play <filename>`
+
+Where `<filename>` is the path to your saved asciinema session file. 
+
+If you want to share the recording online, you don't need to upload the file manually. Just call `asciinema upload <filename>` and it will be uploaded to asciinema.org where you can share it with anyone.
+
+Asciinema doesn’t require any program-specific data and uses plaintext, so there are no input files to provide. As well, since asciinema is meant to be used as a command line tool, there are no code snippets to provide.
+
+Command to Run: All of asciinema's functionality is accessible through its command line interface. The commands to record, play, and upload sessions are `asciinema rec`, `asciinema play <filename>`, and `asciinema upload <filename>`, respectively

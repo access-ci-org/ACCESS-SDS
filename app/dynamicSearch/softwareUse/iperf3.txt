@@ -1,0 +1,27 @@
+Use Case: Iperf3 is often used to measure the bandwidth performance of a network. It provides details such as the throughput, loss, transit delay, etc of a network.
+
+Code details and examples: Code
+
+Iperf3 mostly uses command-line interface for utilization. For instance, if we are trying to find the client to server bandwidth of a system, we first run the iperf3 server on the host machine with this command:
+
+```
+iperf3 -s
+```
+
+Then, on the client machine, we run the iperf3 client command targeting the server's IP Address. Here is a sample command where the IP address of the server is 192.168.1.1:
+
+```
+iperf3 -c 192.168.1.1
+```
+
+The standard output will then show the bandwidth between the client machine and the server machine.
+
+If we need to specify the port or the time of the test, more command-line options can be applied as follows:
+
+```
+iperf3 -c 192.168.1.1 -p 5201 -t 30
+```
+
+This command tells iperf to connect to the server at 192.168.1.1, using port 5201, and to conduct the test for 30 seconds.
+
+The input in this case is simply command line arguments and there isn't a requirement for a separate input file.

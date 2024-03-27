@@ -1,0 +1,47 @@
+Use Case: Global Arrays (GA) is a library that provides a shared-memory programming style even on distributed-memory architectures. It is used for array-based computations and can be used to parallelize many types of scientific applications, like those involving large dense matrices and grids.
+
+Code Details and Examples: 
+
+One of the APIs provided by GA is the C API.
+
+Input File: There are no explicit input files used in Global Arrays. Matrix data is either generated on-the-go or read directly into the arrays.
+
+Specifications in Input Files: N/A
+
+Code Snippet:
+
+Initialising Global Arrays in a C Application:
+
+```
+#include "mpi.h"
+#include "ga.h"
+#include "macdecls.h"
+
+int main(int argc, char **argv) {
+    ...
+    MPI_Init(&argc, &argv);
+    GA_Initialize();
+    ...
+    int one = 1;
+    int two = 2;
+    int stack[2];
+    stack[0] = one;
+    stack[1] = two;
+    GA_Icreate(stack, 2, "example_array");
+    ...
+    GA_Sync();
+    ...
+}
+```
+Running the code:
+
+To compile the example code with GA library, use:
+
+```
+mpicc -o myprogram myprogram.c -I /path/to/ga/include -L /path/to/ga/lib -lga -larmci
+```
+
+To execute:
+```
+mpirun -np 4 ./myprogram
+```

@@ -1,0 +1,39 @@
+Use Case: Unit Testing
+
+Code details and examples:
+
+Use Catch2 to facilitate the creation of unit tests in your C++ projects. The input files require #include "catch.hpp" at the top, followed by TEST_CASE() functions that encapsulate your tests.
+
+The code goes in a C++ source file with the extension .cpp. Below is an example of unit tests for a simple "add" function:
+
+```C++
+#include "catch.hpp"
+#include "adder.h"
+
+TEST_CASE("Addition") {
+    REQUIRE( add(1, 1) == 2 );
+    REQUIRE( add(-1, 1) == 0 );
+    REQUIRE( add(0, 0) == 0 );
+}
+```
+The input file should have the add() function code available. For instance, it could be in "adder.h":
+
+```C++
+#ifndef ADDER_H
+#define ADDER_H
+
+int add(int a, int b) {
+    return a + b;
+}
+
+#endif //ADDER_H
+```
+
+It's recommended to put Catch2 tests under separate directory, typically named 'tests' or 'tst', then use separate target for your tests in a build system like CMake or Make.
+
+To run the tests, compile the Catch2 input file with the same compiler and flags used for the rest of the project. Then run the produced executable. For example, if the file was name "tests.cpp", the compile and run commands could look like this:
+
+```sh
+g++ tests.cpp -o tests
+./tests
+```

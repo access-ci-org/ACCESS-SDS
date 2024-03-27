@@ -1,0 +1,33 @@
+Use Case: SeqKit is a cross-platform bioinformatics toolkit for manipulating FASTA and FASTQ format files for DNA sequence data manipulation. It supports common FASTA/FASTQ file manipulation operations such as format conversion, sequence designation, feature extraction, etc. SeqKit requires input files in FASTA or FASTQ format.
+
+Code details and examples:
+
+Code:
+
+Example of use case: Finding palindromic sequences:
+The following command will find the palindromic sequences in a fasta file (sequences.fasta) using SeqKit:
+
+```
+seqkit locate -i -p "ATGCGCAT" sequences.fasta
+```
+The `-i` flag makes the search insensitive to case, and `-p` defines the pattern, in this case, the DNA sequence to find.
+
+Input File Format:
+
+Input to seqkit is typically in a standard sequence format FASTA or FASTQ. Each record in a FASTA format starts with a single-line description, followed by lines of sequence data. 
+
+An example of a valid FASTA format file:
+```
+>Sequence_1
+ATGCATGCATGCATGCATGCTAGCTAGATCGATCGGATCG
+>Sequence_2
+ATGCGCATGCGCATGCGCTAGATCGATCGGATCGTACGAT
+```
+
+Each section starts with `>` symbol and a unique identifier for the sequence, and this is followed by the sequence data in the next line(s). FASTQ format contains one record for each sequence, which include the nucleotide sequence and the associated quality scores. 
+
+Command to Run:
+
+It has a variety of commands, for example the 'stats' command would be run in the following way:
+
+```seqkit stats test.fasta```

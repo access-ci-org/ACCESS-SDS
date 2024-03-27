@@ -1,0 +1,34 @@
+Use Case: Use byacc (Berkley Yacc) to parse input data streams. It's practical for handling input files containing complex data structures like expressions, statements or program units. 
+
+Code details and examples: Code 
+
+1. Input File: A yacc input file (example.y) that describes the grammar of the input data stream should be provided. This file primarily contains three sections: definitions, rules, and user subroutines.
+
+```
+Definitions
+%{
+#include <stdio.h>
+%}
+
+Rules
+%%
+"Hello"[ \t]*"World" { printf("Hello World Matched\n"); }
+. ;
+%%
+
+User subroutines
+int main()
+{
+    yylex();
+    return 0;
+}
+
+int yywrap()
+{
+    return 1;
+}
+```
+
+2. Command to compile and run byacc: The command to generate a parser from a yacc grammar is `byacc example.y`. This produces an output file y.tab.c which is a C source file. The C file can be compiled with a C compiler to produce a parser. The C file can also be compiled with `cc y.tab.c -o parser` to produce an executable named parser.
+
+3. Execution: The parser can be run by executing the command `./parser`. The parser waits for input data stream and prints "Hello World Matched" when it encounters a line containing "Hello" followed by "World".

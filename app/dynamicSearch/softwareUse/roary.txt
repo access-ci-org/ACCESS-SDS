@@ -1,0 +1,42 @@
+Use Case: Roary is a Python software package designed to speed up large-scale analysis of thousands of bacterial genomes. It produces pan genomes, core genes and accessory genes in bacteria. It requires the bacterial genomes to be annotated with Prokka before analysis.
+
+Code Details and Examples: Code
+
+Step 1: Annotation using Prokka on fasta format bacterial genomes. File formats required - fasta
+
+Input file format Sample (.fasta):
+
+```
+>sequence1
+ATGGCGACCTTTGTCCCCGTGTTCCAGGTTGACCTACGGTTCAATATG
+>sequence2
+ATGGAAAACAGTTGTTCCCAAAGTACCCAAAGGAGGTTTCAGCTTCAG
+```
+
+Command used:
+
+```
+prokka bacterial_genome.fasta --outdir prokka_output --prefix annotated
+```
+
+This will generate the required input .gff files for Roary.
+
+Step 2: Analysis with Roary. File formats required - .gff
+
+Input file format Sample (.gff):
+
+Include Descriptors, sequence identifiers and regions in bacterial genomes. A typical format is:
+
+```
+##gff-version 3
+sequence1 Prokka   CDS 1   50  .   +   0   ID=sequence1;product=hypothetical protein
+sequence2 Prokka   CDS 1   50  .   +   0   ID=sequence2;product=hypothetical protein
+```
+
+Command used:
+
+```
+roary -f output_directory -e --mafft -p 8 *.gff
+```
+
+This command will run Roary on all .gff files in the current directory, it uses MAFFT to generate a core gene alignment, it writes out gene_presence_absence.csv, a binary presence and absence matrix, and annotated concatenated core gene alignments in aligned.fa. It uses 8 parallel threads for the analysis. Output files will be stored in a directory named "output_directory".

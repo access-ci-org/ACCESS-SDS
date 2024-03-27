@@ -1,43 +1,49 @@
-Use Case: Seurat is a popular R package for single-cell RNA-seq analysis.
+Use Case: Seurat is an R package designed for QC, analysis, and exploration of single-cell RNA-seq data. Seurat has helped enable users to identify and interpret sources of heterogeneity from single-cell transcriptomic measurements, and to integrate diverse types of single-cell data.
 
-Code details and examples:
-Seurat requires an R environment to run. Here are some basic commands to get started with Seurat:
+Code Details and examples:
 
-Install Seurat package:
-```R
-install.packages("Seurat")
-```
-
-Load Seurat library:
-```R
+###Please note that in the code snippets below, "#" represents comments in R and they are used to provide more information about the line of code.  
+ ```R
+#Load library
 library(Seurat)
-```
 
-Create a Seurat object from a matrix of gene expression counts:
-```R
-# Load example dataset
-data("pbmc_small")
+#Read an input data
+data = Read10X(data.dir = "./filtered_gene_bc_matrices/hg19/")
 
-# Create a Seurat object
-pbmc <- CreateSeuratObject(counts = pbmc_small$RNA, project = "pbmc_small")
-```
+#Create a Seurat object 
+seurat = CreateSeuratObject(counts = data, project = "10X_data", min.cells = 3, min.features = 200)
 
-Perform basic QC and normalization:
-```R
-pbmc <- NormalizeData(pbmc)
-pbmc <- FindVariableFeatures(pbmc)
-pbmc <- ScaleData(pbmc)
-```
+#Normalize the data
+seurat <- NormalizeData(seurat)
 
-Cluster cells and visualize:
-```R
-pbmc <- RunPCA(pbmc, verbose = FALSE)
-pbmc <- FindNeighbors(pbmc, dims = 1:10)
-pbmc <- FindClusters(pbmc, resolution = 0.6)
-pbmc <- RunUMAP(pbmc, dims = 1:10)
-DimPlot(pbmc, label = TRUE)
-```
+#Identify the highly variable features (or genes)
+seurat <- FindVariableFeatures(seurat, selection.method = "vst", nfeatures = 2000)
 
-For more advanced analysis and visualization techniques, refer to the Seurat documentation: https://satijalab.org/seurat/
+#Scale the data
+seurat <- ScaleData(seurat)
 
-Please note that the above commands are just examples and may need to be adjusted based on your specific dataset and analysis goals.
+#Perform linear dimensional reduction
+seurat <- RunPCA(seurat, npcs = 30, verbose = FALSE)
+
+# Determine the “dimensionality” of the dataset
+elbow <- ElbowPlot(seurat)
+
+#Cluster the cells 
+seurat <- FindNeighbors(seurat, dims = 1:10)
+
+#Identify clusters of cells
+seurat <- FindClusters(seurat,resolution = 0.5)
+
+# Run Non-linear dimensional reduction (UMAP/tSNE)
+seurat <- RunUMAP(seurat, dims = 1:10)
+
+#Visualizing the data with a scatter plot
+DimPlot(seurat, reduction = "umap")
+ ```
+ Command to run: Rscript seurat_script.R
+
+Input files: Cell ranger output in a folder named "filtered_gene_bc_matrices/hg19/" in .mtx (Matrix Market) format. 
+
+Specifications: The Read10X function reads in the output of the 10x Genomics pipeline, where genes are stored as rows and cells are stored as columns. The CreateSeuratObject command is used to create a Seurat object. Please adjust path as per your local system for the Read10X function. It requires counts(matrix), project name and min.cells, min.features for filtering.
+
+Please note that the above code snippets are an example of a basic pipeline but actual parameters may vary according to the requirements of an individual project.

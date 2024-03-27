@@ -1,11 +1,30 @@
-Use Case: Module enables users to load software environments, tools, libraries, or compilers on HPC systems. 
+Use Case: The Modules package provides for the dynamic modification of the user's environment via module files; 
 
 Code details and examples:
-```
-module avail  # List all available software modules
-module load <module_name>  # Load a specific module
-module list  # List currently loaded modules
-module unload <module_name>  # Unload a specific module
+
+Code:
+
+A sample module file can look like this:
+
+```bash
+#%Module
+
+prepend-path    PATH            /opt/toolchain/bin
+prepend-path    MANPATH         /opt/toolchain/man
+prepend-path    INFOPATH        /opt/toolchain/info
+prepend-path    LD_LIBRARY_PATH /opt/toolchain/lib
 ```
 
-When using module command, you can specify the name of the module you want to load. Each module may have specific software, tools, libraries, or compilers that it provides. To list available modules, you can use `module avail`. To see the currently loaded modules, you can use `module list`.
+In the above module file, the tools in /opt/toolchain are added to the path and the library files are added to the environment.
+
+You can use the following command to load the above module file:
+
+```bash
+module load toolchain
+```
+
+The following command can be used to unload the module file:
+
+```bash
+module unload toolchain
+```

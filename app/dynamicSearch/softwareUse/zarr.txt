@@ -1,28 +1,26 @@
-Use Case: ZARR is a storage format that stores multi-dimensional arrays in chunked, compressed, and metadata-aware format.
+Use Case: Zarr is a python library for handling big numerical arrays larger than memory. It provides a compact, efficient binary format and it is useful, for instance, in multi-dimensional climate data and genomics data where the demand for larger arrays is common.
 
-Code details and examples:
-Zarr can be used in Python with the help of the `zarr` package. Here is an example of how to create a zarr array, store data in it, and read data from it.
+Code details and examples: In Python, Zarr library usage often includes different types of data manipulation. Here is an example of creating a 2D array and populating it with data:
 
+Code:
 ```python
-import zarr
 import numpy as np
+import zarr
 
-# Create a zarr array
-array = zarr.zeros((1000, 1000), chunks=(100, 100), dtype='i4')
+# Create a Zarr array
+z = zarr.zeros((10000, 10000), chunks=(1000, 1000), dtype='i4')
 
-# Store some random data in the array
-array[:, :] = np.random.randint(0, 100, size=(1000, 1000))
+# Now, we can treat `z` just like a NumPy array, and populate it with data.
+z[:] = np.arange(100000000).reshape((10000, 10000))
 
-# Retrieve data from the array
-data = array[:]
-
-print(data)
+# We can also read the data back:
+out = z[0:1000, 0:1000]
 ```
 
-In this example, we first create a zarr array of zeros with dimensions (1000, 1000) and chunk size (100, 100) and data type 'i4'. We then store random data in the array and retrieve all the data.
+Command to run: the Python file can be run from the command line like this: `python filename.py` where 'filename.py' is the name of your python script containing the above code. 
 
-To run the code, you can save it in a Python script (e.g., `zarr_example.py`) and run it using the command:
+Input Files: It doesn't require any input file. All the necessary inputs are generated within the code script.
 
-```bash
-python zarr_example.py
-```
+Format Required: Since this doesn't require an input file, there's no specific format required.
+
+Specification and Details in Input Files: As no input file is used, there are no specifications to be met.

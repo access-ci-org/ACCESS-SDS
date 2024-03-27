@@ -1,0 +1,40 @@
+Use Case: Clair3 is a popular tool in the bioinformatics field. It is designed for fast and accurate deep learning-based Genome Variant Calling from high-throughput sequencing data.
+
+Code details and examples:
+
+Before proceeding further, remember that Clair3 requires inputs to be in BAM and FASTA formats for alignment and reference genome files respectively.
+
+Input Files:
+1. An input BAM file, e.g., "alignment.bam"
+2. A reference genome sequence file in FASTA format, e.g., "reference.fasta"
+
+Code snippet for variant calling:
+```bash
+# define variables
+INPUT_BAM="alignment.bam"
+REF_FASTA="reference.fasta"
+OUTPUT_VCF="output.vcf.gz"
+MODEL="model-name"
+
+# running clair3
+python3 Clair3.py callVarBam \
+  --bam_fn=$INPUT_BAM \
+  --ref_fn=$REF_FASTA \
+  --model_fn=$MODEL \
+  --ctg_name="Chr1" \
+  --ctg_start=1 \
+  --ctg_end=10000 \
+  --call_fn=$OUTPUT_VCF
+```
+
+In the above command:
+1. "callVarBam" is used to call variants from BAM.
+2. "--bam_fn" needs the BAM file name.
+3. "--ref_fn" parameter takes the reference genome filename.
+4. "--model_fn" is for the model file name.
+5. "--ctg_name" is the name of the sequence or chromosome.
+6. "--ctg_start" is the start position.
+7. "--ctg_end" is the end position.
+8. "--call_fn" is for specifying the output file name. The variant calling results will be written to this file.
+
+Remember to replace the variable values with actual values in your case.

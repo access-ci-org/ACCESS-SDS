@@ -1,15 +1,22 @@
-Use Case: Image Compression  
-Code details and examples:  
-Brunsli is a lossy image compression tool developed by Google. It aims to achieve better compression ratios than other formats without compromising on visual quality. Brunsli operates on JPEG input images and produces compressed Brunsli files as output.   
+Use Case: Brunsli is a project that provides lossless JPEG repacking. Compression of original JPEG files into smaller size without losing the quality.
 
-Sample Input file: input.jpg (JPEG image)  
+Code details and examples:
 
-Command to compress:  
+Code:
+
+For decompression process, your input file should be in .jbr format which is output of Brunsli compression. For example, let's take an input file as "efg.jbr"
+
+Command to decompress:
 ```
-brunsli -file_in=input.jpg -file_out=output.brunsli
-```  
-
-To decompress a Brunsli file, use the following command:  
+brunsli efg.jbr > efg.jpg
 ```
-brunsli -file_in=output.brunsli -file_out=decompressed.jpg
-```  
+This command outputs a .jpg file after decompressing the .jbr file.
+
+For compression process, the input should be an original uncompressed .jpg image file. For Example, let's take an input file as "abc.jpg" 
+
+Command to compress:
+
+```
+brunslidec abc.jpg > abc.jbr
+```
+This command creates a .jbr file which is compressed form of original .jpg file.

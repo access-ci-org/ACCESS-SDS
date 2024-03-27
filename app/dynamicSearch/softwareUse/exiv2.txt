@@ -1,0 +1,22 @@
+Use Case: The Exiv2 utility is a C++ library and command line utility to manage image metadata. It provides fast and easy read and write access to the Exif, IPTC, and XMP metadata of images in various formats.
+
+Code Details and Examples:
+
+Code: 
+The primary use of the Exiv2 command-line utility is to read and write Image metadata. Below is an example of how to read metadata:
+
+```
+exiv2 example.jpg
+```
+This command provides the output of available metadata within example.jpg image.
+
+To add or modify metadata, exiv2 allows for changes through command line. Below is an example of how to write metadata:
+
+```   
+exiv2 -M"set Exif.Photo.DateTimeOriginal 2022:12:29 10:48:50" example.jpg
+```
+This command modifies or adds the DateTimeOriginal metadata value on example.jpg image.
+
+The input file required is an image file (example.jpg in the cases above), and there are no specific details or specifications needed in this input file.
+
+To see changes, you can then use the exiv2 command made earlier to view the metadata.

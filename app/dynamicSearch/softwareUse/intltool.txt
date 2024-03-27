@@ -1,25 +1,37 @@
-Use Case: intltool is a set of tools for creating and maintaining internationalized messages. It can be particularly useful for software projects that require localization and internationalization support.
+Use Case: intltool is used to extract translatable strings from source files. This helps to internationalize different parts of a program into numerous languages. It's commonly used in software development where the application needs to support multiple languages.
 
 Code details and examples:
-intltool-merge - Merge translated strings from source code into .pot file.
-Example input file (source code file containing strings to be translated):
-```c
-printf(_("Hello, world!\n"));
+
+If we take an example of a .po file like:
+
+```
+msgid ""
+msgstr " "
+"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Hello World!"
+msgstr "Hola Mundo!"
+```
+This would be a simple translation file for a program that prints "Hello World!" and we want it to support Spanish, translating "Hello World!" to "Hola Mundo!"
+
+To export translations to .mo files (which is the format gettext uses), you would use:
+
+Code:
+
+```shell
+msgfmt es.po -o es.mo
 ```
 
-Command to merge translated strings:
-```bash
-intltool-merge source_code.c output.pot
+This would generate an `es.mo` file which can be used to translate the original program strings to Spanish.
+
+For extracting translatable strings from source files to create a .pot file, the command would be:
+
+Code:
+
+```shell
+intltool-extract --type=gettext/ini filename.extension
 ```
 
-intltool-update - Update translations from .pot files.
-Example input file (translation file to be updated):
-```po
-msgid "Hello, world!"
-msgstr "Bonjour, le monde !"
-```
+This will generate a .pot file that is used to translate the original source strings.
 
-Command to update translations:
-```bash
-intltool-update -p output.pot
-```
+Here, filename.extension is the name and extension of the source file one wants to extract the strings from.

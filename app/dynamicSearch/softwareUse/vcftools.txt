@@ -1,30 +1,27 @@
-Use Case: VCF file manipulation and analysis
+Use Case: Analyzing and manipulating variant call format (VCF) files such as filtering, comparing, summarizing.
 
 Code details and examples:
-VCFtools is a software suite for processing and analyzing VCF (Variant Call Format) files commonly used in genetics and genomics research. Here are some examples of commands you can run using VCFtools:
 
-1. Filtering VCF file by individual:
-```bash
-vcftools --vcf input.vcf --keep sample_list.txt --recode --out output
+Code:
+
+Let's say we have a VCF file named `example.vcf` and we want to calculate the depth of coverage for each individual in our VCF file. The input file is `example.vcf` and there are no additional specifications required for this particular tool and use case. 
+
+Command-line interface: 
+
 ```
-In this command, replace `input.vcf` with your VCF file, `sample_list.txt` with a text file containing a list of individuals to keep, `output` with the desired output file prefix. This command will filter the VCF file to include only the specified individuals.
-
-2. Calculating allele frequency:
-```bash
-vcftools --vcf input.vcf --freq --out output
+vcftools --vcf example.vcf --depth
 ```
-This command will calculate the allele frequencies for all variants in the VCF file and output the results to a file with the prefix `output`.
 
-3. Extracting SNPs from VCF file:
-```bash
-vcftools --vcf input.vcf --remove-indels --recode --recode-INFO-all --out output
+With this command, the software will create a output file (`out.depth`) with the mean depth per individual present in the VCF file. Each row in the output file represents an individual, the first column is the individual ID, and the second column is the mean depth.
+
+Note: Vcftools can also handle compressed VCF or BCF files. In these cases, file extensions should be either `.vcf.gz` or `.bcf`.
+
+Let's consider another use case. Let's say we want to filter the SNPs with a minor allele frequency less than 0.05. 
+
+Command-line interface: 
+
 ```
-This command will extract only SNPs (single nucleotide polymorphisms) from the VCF file, removing indels, and output the results to a new VCF file with the prefix `output`.
-
-4. Generating a site frequency spectrum:
-```bash
-vcftools --vcf input.vcf --site-frequency --out output
+vcftools --vcf example.vcf --maf 0.05 --recode --out filtered
 ```
-This command will generate a site frequency spectrum from the VCF file, showing the distribution of allele frequencies across sites.
 
-To run these commands, make sure you have VCFtools installed and accessible in your environment.
+This command will generate a new VCF file named `filtered.recode.vcf`, which includes only the SNPs that have MAF greater than 0.05. The `--recode` flag tells the software to generate a new vcf file. `--out` specifies the prefix of your output file. If you want to change the output format to BCF instead of VCF, you can replace `--recode` with `--recode-bcf`.

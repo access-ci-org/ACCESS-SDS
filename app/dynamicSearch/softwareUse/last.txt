@@ -1,0 +1,28 @@
+Use Case: LAST (Low-complexity Alignment Search Tool) is a fast and versatile tool for aligning DNA and protein sequences. It can handle sequences of millions of letters, and alignments of hundreds of thousands of sequences. Ideal for genome-wide comparisons and large-scale alignment tasks in genomics, phylogenetics, and proteomics.
+
+Code details and examples: 
+
+Code snippet for routine DNA alignment task:
+
+```
+# generate a LAST database from the reference sequence
+
+lastdb refDB ref.fa   
+
+# align the query sequence to the reference database
+
+lastal -Q1 refDB query.fq   > aln.maf
+```
+
+Input Files:
+
+1. `ref.fa`: Reference genome sequence file in FASTA format.
+2. `query.fq`: Query sequence file, which can be in FASTQ or FASTA format.
+
+
+Any specifications:
+1. `lastdb` command is used to build a database from the reference genome sequence. The first argument `refDB` is the name of the database to be created, and the second argument is the reference genome file.
+2. `lastal` command is used to align the query sequences with the reference database. `-Q1` option specifies that the query sequences are in FASTQ format. `refDB` is the previously generated database, and `query.fq` is the query sequence file.
+3. > `aln.maf`: This is the output file containing alignments in MAF format.
+
+A note on the command to run: In this case, `lastdb` is run first to create a sequence database, then `lastal` is run to perform the alignment against the database. These commands are usually run as part of a pipeline process and may require additional flags or parameters depending on the specifics of the sequences being aligned.

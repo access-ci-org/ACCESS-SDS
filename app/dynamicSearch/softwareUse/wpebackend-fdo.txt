@@ -1,0 +1,40 @@
+Use Case: wpebackend-fdo (FDO Backend for Web Platform for Embedded) is a library that can be used to create applications (mostly browsers) using the WPE web engine. It bridges the WPE engine to the HOST using Wayland protocols for rendering.
+
+Code details and examples: 
+
+Code:
+
+```C++
+#include <wpe/fdo.h>
+
+int main()
+{
+    auto* wpe = wpe_loader_init("libWPEBackend-fdo.so.1.0.0");
+
+    // Initialize the WPE FDO backend
+    wpe_fdo_initialize_for_egl_display(EGL_NO_DISPLAY);
+
+    // Create a new view backend
+    auto* backend = wpe_fdo_view_backend_create();
+
+    // Do something with the backend...
+    // ...
+
+    // Free the backend when done
+    wpe_view_backend_destroy(backend);
+
+    return 0;
+}
+```
+
+This code snippet is showcasing how the WPE FDO backend can be used with C++ base application. Here we are creating a basic application where we initialize the WPE backend and then create a view backend which can be used to display web contents.
+
+Build and Run:
+
+```bash
+g++ main.cpp -lwpe-1.0 -lWPEBackend-fdo-1.0 -o application
+export WPE_BACKEND=fdo
+./application
+```
+
+Here is how you can compile and run your application. '-lwpe-1.0 -lWPEBackend-fdo-1.0' links the WPE and WPE FDO backend library to your application. 'export WPE_BACKEND=fdo' sets the WPE backend to be used as FDO. './application' runs the compiled application.

@@ -1,17 +1,45 @@
-Use Case: View BAM file statistics
+Use Case: BamTools offers a programmer's API and an end-user's toolkit for handling BAM files: a binary format for storing sequence data.
+
 Code details and examples:
-```bash
-bamtools stats -in input.bam
+- Code:
+   
+   First, create a JSON script to specify your desired settings (here's a simple one which filters for alignments with mapping quality >20):
+
+```json
+{
+    "filter" : {
+        "id" : { "tag" : "NM", "value" : 1, "operator" : ">" },
+        "mapQuality" : { "value" : 20, "operator" : ">" }
+    }
+}
 ```
 
-Use Case: Extract sequences from a BAM file
-Code details and examples:
-```bash
-bamtools convert -format fasta -in input.bam -out output.fasta
-```
+Save this in a file (let's say my_settings.json) and run the `bamtools filter` command in the terminal:
 
-Use Case: Filter reads based on mapping quality
-Code details and examples:
-```bash
-bamtools filter -in input.bam -mapQuality ">30" -out filtered.bam
-```
+   ```bash
+   bamtools filter -in your_file.bam -out result.bam -script my_settings.json
+   ```
+
+Here, "your_file.bam" is a sample input file in BAM format and "result.bam" is the output file.
+
+
+- File Format: Your input file should be in BAM format, which is a compressed binary version of SAM (Sequence Alignment/Map) format.
+
+- File Requirements: A BAM file typically contains header sections and alignment sections. The header section contains information about the entire sequencing run, while the alignment sections contain information about each individual sequencing read and its alignment to the reference genome. Both sections are essential for further analysis.
+   
+
+- Command to run:
+ 
+   They are run in a Unix/Linux shell with the format:
+
+   ```bash
+   bamtools [command] [options]
+   ```
+
+For example, to get help on the 'filter' command, you would use:
+
+   ```bash
+   bamtools filter -help
+   ```
+
+The specific commands and options used depend on the specific use case.

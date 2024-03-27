@@ -1,49 +1,67 @@
-Use Case: SCOTCH is a software package for graph partitioning, static mapping, and sparse matrix ordering.
+Use Case: SCOTCH is a software package used in High-Performance Computing for implementing different computation decomposition methods and dynamics. It is used for creating partitions of graphs with high computational cost to improve the speed and effectiveness of computation.
+
 Code details and examples:
-1. Graph partitioning:
-Sample input file (graph.txt):
+
+The main inputs for SCOTCH are graph files. These are text files detailing the nodes and the edges of a graph.
+
+File format example:
 ```
-8 10
-0 1 2
-0 2 1
-1 2 3
-1 3 1
-2 3 1
-2 4 2
-3 4 1
-3 5 2
-4 6 2
-5 6 1
+0
+5 7 0 0 0
+0 2 1 3
+1 2 0 2
+2 3 0 1 3 4
+3 2 0 2
+4 1 2
 ```
 
-Command to run SCOTCH graph partitioning:
-```
-gmk_m2 8 10 graph.txt graph.m2
-gpmetis graph.m2 2
-```
-This will partition the graph into 2 parts.
+In this file format, the first line is typically 0, the second line contains five stats about the graph: number of vertices, number of edges, ‘0’, ‘0’, and an optional fifth number that can be ‘0’ or ‘1’. From the third line on, each line gives the adjacency list of one vertex of the graph.
 
-2. Sparse matrix ordering:
-Sample input file (matrix.txt):
-```
-5 5
-1 1 1
-1 2 1
-2 2 1
-3 3 1
-4 4 1
-3 4 1
-4 5 1
-5 5 1
-```
+Code:
+SCOTCH has various functions, but a basic function like SCOTCH_graphBuild can be used to create a graph. Below example represent sequential graph creation and viewing.
 
-Command to run SCOTCH sparse matrix ordering:
 ```
-scotch_amk_p spaff matrix.txt matrix
+#include <stdio.h>
+#include <scotch.h>
+
+int main(void) {
+    SCOTCH_Graph graph;
+    SCOTCH_Num *vertTab, *edgeTab;
+    SCOTCH_Strat stradat;
+
+    SCOTCH_graphInit(&graph);
+
+    vertTab = new SCOTCH_Num[6]{0,2,4,7,9,10};
+    edgeTab = new SCOTCH_Num[10]{1,3,0,2,1,0,2,4,0,2};
+
+    SCOTCH_graphBuild(&graph, 
+                      0,      /* base value */
+                      5,      /* number of vertices */
+                      vertTab, 
+                      NULL,   /* vertendtab */
+                      NULL,   /* velotab */
+                      NULL,   /* blondtab */
+                      10,      /* number of edges */
+                      edgeTab,
+                      NULL);  /* edlotab */
+
+    SCOTCH_stratInit(&stradat);
+    SCOTCH_graphCheck(&graph);
+
+    printf("\nGraph data:\n");
+    SCOTCH_graphView(&graph, stdout);
+
+    SCOTCH_graphExit(&graph);
+    SCOTCH_stratExit(&stradat);
+
+    return 0;
+}
 ```
-This will perform sparse matrix ordering on the input matrix.
+This program will output basic information about the graph.
 
-3. Static mapping:
-SCOTCH can also be used for static mapping of tasks onto processors.
+To build this code use below command:
+```gcc -I$SCOTCHDIR/include -L$SCOTCHDIR/lib -lscotch -lscotcherr main.c```
+Replace $SCOTCHDIR with the directory where SCOTCH is installed. 
 
-Please note that the input file formats may vary depending on the specific use case within SCOTCH.
+To run the compiled program use:
+```./a.out```

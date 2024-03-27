@@ -1,51 +1,48 @@
-I assume you are referring to the Pluggable Authentication Modules (PAM) library commonly used in Unix-like systems for authentication tasks.
+Use Case: Use of libpam to authenticate users in a Linux/Unix system.
 
-Use Case: Authenticating a user with a sample password.
+Code details and examples: 
 
-Code details and examples:
+Code:
 
-**Sample Input File (pam_auth_input.txt):**
+Firstly, configuration file for PAM will be created. Let's say we are creating this for "myapp".
+
+/etc/pam.d/myapp
+
+This is a file which needs to be created and below are the details that will be inside the file. 
+
 ```
-auth    required    pam_unix.so
-account required    pam_unix.so
-password required    pam_unix.so
-session required    pam_unix.so
+#%PAM-1.0
+auth       required     pam_unix.so
+account    required     pam_unix.so
+password   required     pam_unix.so
+session    required     pam_unix.so
 ```
 
-**Code (pam_authenticate.c):**
-```c
-#include <security/pam_appl.h>
-#include <stdio.h>
+In a C program, PAM can be used for authentication. Create a file "myapp.c"
 
-int main() {
-    const char *service_name = "login";
-    pam_handle_t *pamh = NULL;
-    int retval;
+```C
+#define PAM_SM_PASSWORD
+#include <security/pam_modules.h>
 
-    retval = pam_start(service_name, NULL, NULL, &pamh);
-    if (retval != PAM_SUCCESS) {
-        fprintf(stderr, "Failed to initialize PAM\n");
-        return 1;
-    }
-
-    retval = pam_authenticate(pamh, 0);
-    if (retval != PAM_SUCCESS) {
-        fprintf(stderr, "Authentication failure\n");
-        return 1;
-    }
-
-    pam_end(pamh, PAM_SUCCESS);
-    
-    printf("Authentication successful\n");
-
-    return 0;
+PAM_EXTERN int
+pam_sm_chauthtok(pam_handle_t *pamh, int flags, int argc, const char **argv)
+{
+    return PAM_SUCCESS;
 }
 ```
 
-**Compile and run:**
+To compile this code gcc compiler is used.
+
+Command to compile and create an object file:
 ```
-gcc -o pam_authenticate pam_authenticate.c -lpam
-./pam_authenticate
+gcc -fPIC -c myapp.c
 ```
 
-Please note that this is a basic example of using the PAM library for user authentication. Real-world usage may involve more complex configurations and error handling.
+Command to create a shared library:
+```
+ld -x --shared -o myapp.so myapp.o
+```
+
+This will create myapp.so file which needs to be in the /lib/security directory.
+
+After moving the file to /lib/security, you can use the "myapp" with any application that uses PAM for authentication.

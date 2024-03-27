@@ -1,0 +1,39 @@
+Use Case: Jansson is used for encoding, decoding, and manipulating JSON data. 
+
+Code Details and Examples:
+
+Code:
+
+```c
+#include <jansson.h>
+
+int main(int argc, char *argv[])
+{
+    /* Create a new empty object */
+    json_t *root = json_object();
+
+    /* Add a key-value pair to the object */
+    json_object_set_new(root, "Key", json_string("Value"));
+
+    /* Print the JSON object */
+    char *str = json_dumps(root, 0);
+    printf("%s\n", str);
+
+    /* Cleanup */
+    free(str);
+    json_decref(root);
+    return 0;
+}
+```
+
+This code uses Jansson library to create a JSON object, add a string key-value pair to it, and print it as a string. 
+
+Run Command: gcc -o test test.c -ljansson && ./test
+
+Input File: No input file is required. Within the code, the input "Key: Value" is provided, but Jansson could be used with an input file containing JSON data by using file handling methodologies. 
+
+Format Required: N/A 
+
+Specifications: For encoding a JSON object using Jansson, the object keys are string literals, and the value can be any valid JSON object (like string, number, object, array, etc.). The JSON objects should not contain any circular references, as it's not a feature supported by JSON standard. 
+
+Note that any code written with the Jansson library must include jansson.h. Also, Jansson uses an automatic garbage collector, so you must decrement the reference count of your objects manually when they're no longer required, with json_decref, to avoid memory leaks. If your data involves a lot of objects, improper handling can lead to memory leak. 

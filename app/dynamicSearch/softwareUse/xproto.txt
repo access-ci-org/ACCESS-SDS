@@ -1,0 +1,37 @@
+Use Case: Use Xproto in creating declarations for X11 protocol types in C language.
+
+Code details and examples:
+Code:
+
+1. Create a protocol request in Xproto:
+
+```
+REQUEST CreateWindow
+{
+    BYTE depth;
+    WINDOW wid;
+    WINDOW parent;
+    INT16 x;
+    INT16 y;
+    CARD16 width;
+    CARD16 height;
+    CARD16 border-width;
+    BYTE class;
+    VISUALID visual;
+    BITGRAVITY bit-gravity;
+    WINGRAVITY win-gravity;
+    CREATEWINDOW bit-mask;
+    LISTofVALUE<BITMASK,CORE> value-list;
+}
+```
+2. Create a simple macro in Xproto:
+
+```
+#define WINDOWDRAWN(pWin) (!(pWin)->map_is_unobscured | (pWin)->is_transparent)
+```
+
+This code snippet describes two protocol request and macro creation respectively in Xproto.
+
+Command to run them:
+
+To implement and run Xproto, you'll need to include it in your C or C++ files then compile normally using gcc or g++ compilers. No separate command is available for Xproto.

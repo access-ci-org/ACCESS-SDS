@@ -1,0 +1,55 @@
+Use Case: Differential expression analysis of RNA-Seq data.
+
+Code details and examples:
+
+DESeq2 is a bioinformatics tool used for differential expression analysis of count data from high-throughput sequencing assays such as RNA-Seq. This tool is implemented as a R package.
+
+Sample Input File:
+
+An example of an input file for DESeq2 is a CSV file containing the counts of reads mapped to each gene in each sample. 
+
+The format required is a CSV file with the first column containing the gene identifiers and the remaining columns containing the read counts for each sample, like so:
+
+```
+"Gene","Sample1","Sample2","Sample3"
+"Gene1",10,12,14
+"Gene2",20,22,24
+"Gene3",30,32,34
+```
+
+Code Snippet:
+
+Here is a simple example of using DESeq2 in R:
+
+```r
+library(DESeq2)
+
+# Load the count data
+countdata <- read.csv("countdata.csv", row.names = 1)
+
+# Specify the conditions for each sample
+condition <- factor(c("control","control","treatment"))
+
+# Create a DESeqDataSet object
+dds <- DESeqDataSetFromMatrix(countData = countdata, colData = DataFrame(condition = condition), design = ~ condition)
+
+# Perform differential expression analysis
+dds <- DESeq(dds)
+
+# Get the results
+res <- results(dds)
+
+# Plot the results
+plotMA(res, main = "DESeq2")
+```
+
+In this code snippet, `DESeqDataSetFromMatrix` is used to create a DESeqDataSet object from the count data, `DESeq` is then used to perform the differential expression analysis, and `results` is used to get the results of the analysis. The results are then plotted using `plotMA`.
+
+Command to run:
+
+In R, source the script like so:
+
+```r
+source("deseq2_script.R")
+```
+Where "deseq2_script.R" is the name of your script.

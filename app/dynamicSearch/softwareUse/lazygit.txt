@@ -1,6 +1,24 @@
-Use Case: Interactive Git interface
-Code details and examples:
-- Input files: No specific input files required for lazygit.
-- Command to run: To run lazygit, simply type `lazygit` in the terminal.
+Use Case: Lazygit is a simple, high-level terminal UI for git commands, written in Go, complete with previews of file diffs and emoji. Input files for Lazygit include your codebase files, which must be stored in a repository that Git can track. Lazygit captures the command line commands but simplifies it with GUI.
 
-Note: lazygit is an interactive Git tool that does not require specific input files or formats. Simply run the command in the terminal to launch the tool.
+Code details and examples: Code
+
+Executing the command in your git-tracked codebase:
+
+```bash
+cd /your/codebase/path
+lazygit
+```
+
+The above command can be used to start the Lazygit terminal UI inside your codebase repository. No specific input file format or specifications are required as it is assumed to be a git-tracked repository.
+
+Lazygit does not work based on files, rather it simplifies git commands using its interactive user interface. Users can navigate through files, stage files for commit, compare changes with its in-built diffing tool, push/pull to a remote repository and do other tasks dropping down to the terminal.
+
+Using Lazygit, let's say, to stage an unstaged file:
+
+Unstaged files can be seen in the left-side panel (the "Files" panel) of Lazygit. You can navigate through this list with the arrow keys (or 'j' and 'k' keys). To stage a file, simply press the 'space' key. Then Lazygit shows this file in the Staged Files panel.
+
+Doing a commit:
+
+Press 'c' to start preparing a new commit, type your commit message and press 'Enter'. Lazygit will commit these staged changes with your typed message.
+
+No Code snippets are necessary as lazygit simplifies command usage in an interactive way. 

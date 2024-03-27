@@ -1,0 +1,36 @@
+Use Case: CircExplorer2 is a bioinformatics software for the annotation and exploration of back-spliced circular RNAs (circRNAs) from RNA-seq data. It extracts the back-spliced junction (BSJ) reads after aligning the RNA-seq data to reference genome with TopHat-Fusion and classifies/annotates circRNAs with TopHat-Fusion results and RefSeq gene annotations.
+
+Code details and examples:
+
+Input File: 
+
+1. Junction.bed generated from TopHat-Fusion
+
+   Format: TAB separated text file containing chromosome, start point, end point, strand, fusion, circular and linear counts as columns.
+   
+   Example:
+   
+        chr1 100 200 + FUSION 5 0
+        chr3 400 500 - FUSION 3 1
+        chr2 300 450 - FUSION 10 2
+   
+2. Refgene.txt saved from RefSeq or Ensembl database
+
+   Format: TAB separated text file with gene annotations in columns.
+   
+   Example:
+   
+        1 hg19_ncbiRefSeq  -  1000 2000 1000 2000 1 1000,  2000,  0 NM_000546 1000 2000 + TP53
+
+Command to run:
+
+The working pipeline of CircExplorer2 can be represented as follows:
+
+    circexplorer2 parse -t FUSION <TopHat-Fusion junctions file>
+    circexplorer2 annotate -r <ref.txt> -g <ref_genome.fa> -j circRNA_candidate.txt -o circexplorer2_output.txt
+
+Note:
+
+CircExplorer2 requires the junctions file from TopHat-Fusion (--fusion-report in TopHat-Fusion or --fusion-search in TopHat2). TopHat-Fusion requires start and end points for each chromosome region in order to make the junctions.bed file. It also requires a reference genome file for annotate step.
+
+For the annotate step, ref.txt file with gene annotations should also be prepared. This file can be downloaded from RefSeq or Ensembl database. Ref_genome.fa is the genome sequence file in FASTA format. CircRNA_candidate.txt file was generated in the parse step. The result will be output to circexplorer2_output.txt file.

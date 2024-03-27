@@ -1,0 +1,40 @@
+Use Case: Libgcrypt is a general purpose cryptographic library that provides functions for all cryptograhic building blocks. It can be used to encrypt and decrypt data securely, generate cryptographic hashes, and perform other cryptographic operations.
+
+Code details and examples:
+Code in C:
+
+```c
+#include <gcrypt.h>
+
+int main(){
+    // Initialize the cryptographic library
+    gcry_check_version(NULL);
+    // Disable secure memory
+    gcry_control(GCRYCTL_DISABLE_SECMEM, 0);
+    // Check for any other unneeded file descriptors
+    gcry_control(GCRYCTL_INITIALIZATION_FINISHED, 0);
+
+    // Create a variable to hold the hash result
+    unsigned char hash[32];
+    // The string we want to hash
+    char data[] = "Hello, World!";
+    //Compute the hash
+    gcry_md_hash_buffer(GCRY_MD_SHA256, hash, data, strlen(data));
+
+    // Print out the hash in HEX format
+    for(int i = 0; i < gcry_md_get_algo_dlen(GCRY_MD_SHA256); i++) {
+        printf("%02x", hash[i]);
+    }
+    printf("\n");
+    return 0;
+}
+```
+
+Compile and run the program using gcc:
+
+```bash
+gcc -o myhash myhash.c $(libgcrypt-config --cflags --libs)
+./myhash
+```
+
+This will output a SHA256 hash of the string "Hello, World!". The input is the string to be hashed, and no special formatting is needed. The output is the hash value, printed as a hexadecimal number.

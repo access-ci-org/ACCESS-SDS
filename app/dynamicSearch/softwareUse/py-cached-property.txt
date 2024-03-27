@@ -1,0 +1,44 @@
+Use Case: The cached_property package in Python allows optimization in your code by memoizing a method's return value. The cache value is stored in the object's dictionary so that subsequent calls to the method will return the cached value, unless the object's state changes to invalidate the cached value. 
+
+Code Details and Examples: 
+
+Code:
+
+```python
+from cached_property import cached_property
+
+class ModulatedWave:
+    
+    def __init__(self, frequency, amplitude):
+        self.frequency = frequency
+        self.amplitude = amplitude
+
+    @cached_property
+    def max_wave(self):
+        # expensive calculation
+        result = 0
+        for i in range(10000):
+            result += self.frequency * self.amplitude
+        return result
+
+wave = ModulatedWave(5.0, 0.5)
+print(wave.max_wave)
+```
+This code defines a class `ModulatedWave` which has an expensive calculation method `max_wave`. Using `@cached_property` decorator on this method allows the method's result to be cached for each instance of the class.
+
+Command to run the code:
+
+- Save the above code in a `.py` file.
+- Run the script using the Python interpreter from the terminal:
+
+```bash
+python filename.py
+```
+(Replace `filename.py` with the actual file name.) 
+
+Here, there are no specific input files required. The input parameters are frequency and amplitude of a wave which are passed while creating an instance of the class.
+
+Specifications in the input:
+
+- frequency: a floating-point number that represents the frequency of a wave.
+- amplitude: a floating-point number that represents the amplitude of a wave.

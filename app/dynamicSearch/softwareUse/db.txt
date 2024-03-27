@@ -1,0 +1,41 @@
+Use Case: You are creating a database in MySQL with a table to store users' contact information.
+
+Code details and examples: 
+
+Code:
+
+First, you should define the SQL command with CREATE DATABASE UsersDB; to create a new database and CREATE TABLE Contacts; to create a new table. The table will consist of columns for ID (a unique identifier), First Name, Last Name, Phone and Email.
+
+```SQL
+CREATE DATABASE UsersDB;
+USE UsersDB;
+CREATE TABLE Contacts (
+    ID INT NOT NULL AUTO_INCREMENT,
+    FirstName VARCHAR(100) NOT NULL,
+    LastName VARCHAR(100) NOT NULL,
+    Phone VARCHAR(15),
+    Email VARCHAR(100),
+    PRIMARY KEY (ID)
+);
+```
+
+To insert data into the table, you would use the following example command:
+
+```SQL
+INSERT INTO Contacts (FirstName, LastName, Phone, Email)
+VALUES ('John', 'Doe', '123-456-7890', 'john.doe@email.com');
+```
+
+Suppose you want to extract John Doe's information, you can use a SELECT statement:
+
+```SQL
+SELECT * FROM Contacts WHERE FirstName='John' AND LastName='Doe';
+```
+
+To execute your SQL commands, you would typically use a client such as MySQL Workbench or from command line as below
+
+```bash
+mysql -u username -p < myfile.sql
+```
+
+Here, "username" is your MySQL username, "-p" prompts for your password, and "myfile.sql" is the file containing your SQL commands.

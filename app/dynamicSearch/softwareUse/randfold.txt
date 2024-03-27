@@ -1,0 +1,31 @@
+Use Case: Used for the prediction of RNA secondary structure stability. It calculates the probability that the Minimum Free Energy (MFE) of an RNA's structure is as extreme as observed, by linear folding of randomized sequences.
+
+Code details and examples: Code
+
+randfold works with FASTA formatted input files, typically RNA sequences.
+
+Sample input file ("input.fasta"):
+
+```
+>Sequence1
+UGAAGACCCAUUGAGGAUCUGCUUGUUAAGUCUGAUCGCUGCGAUCUCGCGAUGUAGUAAAGCCGUCG
+>Sequence2
+GCCGGUACUUGUAAAGGUAUUAAGUGAACGGUUUACCAGAGGAGAAAGUCACCACGCAAAGUAUGCCA
+```
+
+Command to run the program:
+
+```bash
+randfold -s 1000 input.fasta
+```
+
+The "-s" flag in the command is used to specify the number of shuffles.
+
+randfold output includes the sequence's actual Minimum Free Energy (MFE), the average MFE of the shuffled sequences, and the z-score.
+
+Notes about specifications and details in input files:
+
+- The sequence IDs should start with ">".
+- Only the four RNA bases (A, C, G, U) should be present in the sequence. Other characters are not valid.
+- There should be no spaces in the sequence. 
+- Do not include comments or headers in the fasta file except the sequence id line. The sequence id line always starts with “>”.

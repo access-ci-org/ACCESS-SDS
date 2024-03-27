@@ -1,45 +1,36 @@
-Use Case: Captum is an open-source library to interpret and analyze the predictions of neural networks. It provides various attribution algorithms to understand the importance of input features on the model's output.
+Use Case: Captum is a Python library developed by Facebook for understanding, interpreting and visualizing input features in machine learning models. It is often used for tasks such as model interpretation and debugging, feature importance ranking, and understanding model biases and potential limitations.
 
 Code details and examples:
-Captum can be used with PyTorch to analyze the model's behavior. Here is an example of using Captum with a simple PyTorch model:
 
-First, install captum:
-```bash
-pip install captum
-```
-
-Then, you can use Captum to calculate feature attributions. Below is a code snippet demonstrating how to use Captum to calculate Integrated Gradients for a PyTorch model:
+Code:
 
 ```python
-import torch
-import torch.nn as nn
-import torch.optim as optim
+# Assume we already have a pretrained model named `model`
 from captum.attr import IntegratedGradients
 
-# Define a simple model
-class SimpleModel(nn.Module):
-    def __init__(self):
-        super(SimpleModel, self).__init__()
-        self.linear = nn.Linear(10, 1)
-
-    def forward(self, x):
-        return self.linear(x)
-
-model = SimpleModel()
-optimizer = optim.SGD(model.parameters(), lr=0.01)
-
-# Create input data
-input_data = torch.randn(1, 10, requires_grad=True)
-
-# Create IntegratedGradients object
 ig = IntegratedGradients(model)
 
-# Calculate feature attributions
-attributions = ig.attribute(input_data, target=0)
+input = torch.randn(1, 28, 28, 3)
+# Baseline is all zeros
+baseline = torch.zeros(1, 28, 28, 3)
 
-print("Feature Attributions:", attributions)
+# Compute attributions
+attributions = ig.attribute(input, baseline)
+
+# To visualize the attributions, use the visualization utility provided by Captum
+from captum.attr import visualization as viz
+
+viz.visualize_image_attr_multiple(attr, sign='all')
 ```
 
-In this example, we first define a simple PyTorch model and create an input tensor. We then use Captum's IntegratedGradients algorithm to calculate feature attributions for the input_data tensor.
+Input File:
 
-Please note that the above code is a simple example to demonstrate the usage of Captum. In a real-world scenario, you would replace the SimpleModel with your own neural network model.
+The input file is not an actual file but a tensor in PyTorch, representing the input data to the model. It must be a tensor of the shape that your model expects. In this case, tensor has a shape of (1, 28, 28, 3), meaning we feed a one 28x28 RBG image.
+
+To run the code above, you simply run the Python script where it exists. If the Python script is saved as `captum_example.py`, you run it with:
+
+```bash
+python captum_example.py
+```
+
+The gradients computed provide insights on the contribution of each pixel of the image to the model's final decision. The visualization would display a heatmap, showing which pixels influenced the model's decision the most.

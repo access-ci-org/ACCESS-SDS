@@ -1,0 +1,19 @@
+Use Case: RagTag can be used to improve draft genome assembly by using one or more reference genomes. ;
+
+Code details and examples: Code 
+
+Input: The required input for RagTag is a draft genome assembly (FASTA format) and at least one reference genome (FASTA format). 
+
+Input Example:
+```
+>contig-1
+ACTGACTGACTGACTGACTG
+>contig-2
+ACGTACGTACGTACGTACGT
+```
+
+Command to run: 
+```bash
+ragtag.py correct assembly.fasta reference.fasta
+```
+The above command will output the improved draft genome assembly.

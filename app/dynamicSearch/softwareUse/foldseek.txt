@@ -1,0 +1,30 @@
+Use Case: FoldSeek is a bioinformatics tool used for protein fold recognition and assignment. It can process a query protein sequence and compute its probable structural class based on a library of known protein folds; 
+
+Code details and examples: 
+
+FoldSeek relies on 2D profile-profile alignment (2D-PSSM) and Hidden Markov Model (HMM) for fold recognition and HHPred P-value for the assignment of folds. 
+
+Input files: 
+The primary input is a single or multiple Protein Data Bank (PDB) formatted files or a custom protein model file in the same format. 
+
+Command Line Interface Example:
+
+```> foldseek -i input.pdb -n 5 -o output.txt```
+
+In this script, -i specifies the input file(s), -n indicates the number of output results desired, and -o denotes the output file name.
+
+FoldSeek might also accept an argument for a cut-off p-value (--p-value or -p).
+
+```> foldseek -i input.pdb -p 0.05 ```
+
+Here, p-values less than 0.05 would be considered as significant and listed in the output file.
+
+Another feature of FoldSeek is the use of threads, which accelerates the fold recognition process.
+
+```> foldseek -i input.pdb -t 4```
+
+-t 4, where t stands for threads, specifies that 4 threads would be used in this job.
+
+Format required: The input file required by FoldSeek is a standard Protein Data Bank (PDB) file, which is a text file containing information about the 3D coordinates of atoms in a protein. PDB files are widely used and accepted in structural biology and bioinformatics research. 
+
+The output file would contain the top predicted folds, the associated p-values, and a list of proteins representing these folds.

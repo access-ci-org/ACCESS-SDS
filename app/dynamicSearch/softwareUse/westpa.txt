@@ -1,28 +1,32 @@
-Use Case: Analysis of weighted ensemble simulations
+Use Case: This software is used for performing weighted ensemble path sampling simulations, a method widely used in computational chemistry and biophysics for simulating rare events or long timescale phenomena. 
+
 Code details and examples:
-WESTPA (Weighted Ensemble Simulation Toolkit with Parallelization and Analysis) is a software package used for the analysis of weighted ensemble simulations. It can be used to perform various types of analysis on the data generated from weighted ensemble simulations.
 
-To run WESTPA, you need to provide input files such as a WESTPA control file (west.cfg), a WESTPA system input file (system.h5), and a WESTPA kinetics input file (kinetics.h5). Below is an example of a basic WESTPA control file:
+Code:
+The main run script for WESTPA is `west.sh`, often run in a directory specified for the particular simulation. Here's a basic example of it running, where "." specifies the current directory:
 
-```bash
-# west.cfg
-[west]
-verbosity = high
-
-[system]
-# Input file that contains information about the system
-file = system.h5
-
-[kinetics]
-# Input file that contains information about the kinetics
-file = kinetics.h5
+```
+~/westpa/bin/w_init.sh --work-manager=threads "./"
 ```
 
-To run WESTPA, you can use the following command:
-```bash
-west run west.cfg
+Once we have initialized the simulation, we run the main loop with:
+```
+~/westpa/bin/w_run --work-manager=threads
 ```
 
-This command will run WESTPA using the configuration provided in the west.cfg file.
+For the actual simulation, WESTPA uses a system of "plugins" or "hooks" that are specified in the west.cfg file. An example configuration might look like:
 
-Please note that WESTPA requires a properly configured environment with all dependencies installed.
+```
+west:
+  propagator:
+    name: westpa.binning
+    bin_mapper:
+      name: RectilinearBinMapper
+      boundaries: !!python/object/apply:numpy.array [ [0, 1], [1, 2], [2, 3], [3, 4] ]
+      n_dim: 1
+
+```
+
+The input files required by WESTPA depend on the specific simulation being performed. The setup typically includes initial structure files for the system being simulated, a configuration file (west.cfg) specifying the details of the simulation, and various scripts used to propagate, analyze, and steer the simulation. 
+
+Note: the format required for WESTPA's input files vary depending on the specific requirements of the simulation being performed. For example, structure files could be in PDB or DCD format, depending on what is supported by the molecular dynamics engine being interfaced with WESTPA. Similarly, the configuration file is written in YAML format but its exact contents will depend on the specifics of the simulation. That said, full documentation on WESTPA's required input files is provided in the WESTPA Manual.

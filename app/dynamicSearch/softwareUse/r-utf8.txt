@@ -1,0 +1,26 @@
+Use Case: The R package 'utf8' is commonly used to manipulate and analyze data that contains non-ASCII characters. It is particularly useful when working with languages that are not well represented in the ASCII table like Russian, Chinese, or Arabic.
+
+Code details and examples:
+
+Code:
+
+```R
+# Load the library
+library(utf8)
+
+# Define a UTF-8 string
+text <- "你好"
+
+# Check if the string is valid UTF-8
+valid <- utf8_valid(text)
+print(valid) # Should return TRUE as "你好" is valid UTF8
+
+# Convert the string to ASCII
+# Non-ASCII characters will be replaced with question marks
+ascii <- utf8_encode(text, "ASCII")
+print(ascii) # Should print "??"
+```
+To run the code, you should:
+
+1. Save it in a script file (like `utf8_example.R`).
+2. Execute the script using Rscript from your command line: `Rscript utf8_example.R`. Note that this assumes that Rscript is in your system PATH, which would typically be the case if R is installed normally.

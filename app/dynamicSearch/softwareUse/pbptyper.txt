@@ -1,0 +1,33 @@
+Use Case: PbpTyper is a software package employed in assigning penicillin binding protein (PBP) types in Streptococcus pneumoniae, an important human pathogen. The PBP types are linked to beta-lactam susceptibility in this species. It is particularly useful for researchers and scientists in microbiology and pharmaceutical fields.
+
+Code details and examples: Code.
+
+Input Files:
+PbpTyper requires three types of data files: 
+- Amplification and sequencing primers (in CSV format)
+- Reference proteins (in FASTA format) 
+- Query sequences (in FASTA format)
+
+An example of the required CSV file format can be noted as:
+
+    Primer_Name, Sequence, Amplifies_Gene
+    PBPM3f, ATGAAAAAATTTCGTGGTGGA, pbp1a
+    PBP2a1F, ACTTTATTCTGTATTGGGAGG, pbp2a
+
+For FASTA format, the format becomes:
+
+    >gene1
+    ATGGCCATCGATCGATCGATCGGGGATC
+    >gene2
+    CCTTACCCCCGATCGGGAAAAT
+
+Code Snippets:
+
+    # To run PbpTyper with default parameters:
+    pbptyper query.fna
+
+    # To run PbpTyper with custom files and parameters:
+    pbptyper -q query.fna -p primers.csv -r reference.faa -o output_dir
+
+
+Here, "-q" is the command for the query sequences, "-p" for the primers file, "-r" for the reference proteins, and "-o" for the output directory.

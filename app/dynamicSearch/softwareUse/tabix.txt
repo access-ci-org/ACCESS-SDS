@@ -1,26 +1,36 @@
-Use Case: Indexing and querying tab-delimited files using tabix.
+Use Case: Tabix is a generic indexer that allows fast retrieval of very large tab-delimited, newline-terminated text files with a header; it's a great tool for querying and managing large genetic variation datasets.
 
-Code details and examples:
-Tabix is a tool for indexing and querying tab-delimited files, such as VCF, BED, GFF, and various other formats. Here are some examples of how to use tabix:
+Code details and examples: Code.
 
-1. Index a tab-delimited file:
-```bash
-tabix -p vcf my_file.vcf.gz
+Tabix requires a sorted and compressed input file:
+
+Sample input file (named 'file.txt'):
+
 ```
-This command will create an index file named "my_file.vcf.gz.tbi" for the compressed VCF file "my_file.vcf.gz".
-
-2. Query a tab-delimited file:
-```bash
-tabix my_file.vcf.gz chr1:10000-20000
+1 1000 rs1 0 0
+2 2000 rs2 0 0
+3 3000 rs3 0 0
+4 4000 rs4 0 0
+5 5000 rs5 0 0
 ```
-This command will retrieve all records within the specified region (chr1:10000-20000) from the VCF file "my_file.vcf.gz".
 
-3. Query a tab-delimited file with an index file:
-```bash
-tabix -R regions.bed my_file.vcf.gz
+To sort and compress:
+
 ```
-This command will retrieve all records that overlap with the regions specified in the BED file "regions.bed" from the VCF file "my_file.vcf.gz".
+sort -k1,1 -k2,2n file.txt | bgzip > file.gz
+```
+The -k options indicate the key fields; here, the sort is on fields 1 and 2 (chromosome and position). The 'n' following the 2 in -k2,2n directs a numerical sort.
 
-Note: The input files should be tab-delimited and sorted by chromosome and position. The chromosome names in the input files should match the chromosome names used in the queries.
+Then, index the compressed file:
 
-Make sure to adjust the commands and file names according to your specific use case.
+```
+tabix -s 1 -b 2 -e 2 file.gz
+```
+The -s, -b, and -e options indicate the columns for the chromosome, start position, and end position, respectively.
+
+To query the resulting index:
+
+```
+tabix file.gz 1:1000-2000
+```
+Retrieving variants on chromosome 1 between positions 1000 and 2000.

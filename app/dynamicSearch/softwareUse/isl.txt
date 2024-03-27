@@ -1,0 +1,46 @@
+Use Case: isl (Integer Set Library) is a library for manipulating sets and relations of integer points bounded by affine constraints. The library offers data types and functions for manipulating sets and relations of integer points bounded by affine constraints. Typical use cases include combinatorial compiling and software verification.
+
+Code details and examples: Code 
+
+Example of computing with integer sets and maps:
+
+```c
+#include <isl/set.h>
+
+int main(int argc, char **argv)
+{
+    struct isl_ctx *ctx;
+    struct isl_map *map;
+    struct isl_set *set;
+    struct isl_map *mapped;
+
+    ctx = isl_ctx_alloc();
+
+    /* Create a map from a string */
+    map = isl_map_read_from_str(ctx, "{ [i] -> [i + 1] }");
+
+    /* Create a set from a string */
+    set = isl_set_read_from_str(ctx, "{ [i] : 0 <= i <= 10 }");
+
+    /* Apply the map to the set */
+    mapped = isl_map_apply_range(isl_map_copy(map), isl_set_copy(set));
+
+    /* Print the result */
+    isl_map_print(mapped, stdout, 0, NULL, NULL);
+
+    isl_map_free(map);
+    isl_set_free(set);
+    isl_map_free(mapped);
+    isl_ctx_free(ctx);
+
+    return 0;
+}
+```
+In the above example, you create a map which adds 1 to an input integer and a set which includes all integers from 0 to 10. Then, you apply the map to the set which results in a new set having each integer incremented by 1. The result is printed to the stdout. 
+
+To run use the following `gcc` command:
+```bash
+gcc example.c -lisl -o example && ./example
+``` 
+
+In this case, the input sets are hard coded into the script. However, in a more complex application, you might read input sets from a file or data stream. Please refer to the API documentation in order to understand how to use more complex functions from the library.

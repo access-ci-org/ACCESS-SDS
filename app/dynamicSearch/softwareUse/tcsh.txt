@@ -1,37 +1,31 @@
-Use Case: tcsh (Tenex C Shell) is a Unix shell based on and compatible with the C shell (csh). It provides command-line editing, history substitution, and a variety of interactive features.
+Use Case: tcsh is a command processor which allows the user to execute commands with familiar syntax and to conduct complicated and repetitive tasks quickly. It can also be used to launch programs and functions on Unix-based systems. 
 
-Code details and examples:
-- To start a tcsh session, simply type `tcsh` in the terminal:
-```
-tcsh
-```
+Code details and examples: Code
 
-- To run a script in tcsh, create a script file (e.g., `script.tcsh`) with your commands and then run it as follows:
+To execute a command in the tcsh shell, open a terminal and type the command. Here's an example of a command. 
+```command
+% echo "Hello World"
 ```
-tcsh script.tcsh
-```
+In this example, "echo" is the command that prints out the words "Hello World" to the console.
 
-- You can also execute a single command using the `-c` option:
-```
-tcsh -c "echo Hello, World!"
-```
+Similarly, you could run a complete script written in tcsh (*.tcsh, *.csh).
 
-- Within a tcsh script, you can use variables and conditionals. For example:
-```tcsh
+Sample script (filename: sampleScript.tcsh)
+```bash
 #!/bin/tcsh
-
-set name = "Alice"
-
-if ($name == "Alice") then
-    echo "Hello, $name!"
-else
-    echo "Hello, Stranger!"
-endif
+# This is a comment
+set myvar = 5
+@ myvar = $myvar + 5
+echo "myvar is" $myvar
 ```
-
-- Additionally, tcsh supports standard shell features such as piping and redirection:
+To grant execute permissions:
+```bash
+chmod +x sampleScript.tcsh
 ```
-ls | grep txt > file_list.txt
+To run this script, you would use the following command.
+```bash
+./sampleScript.tcsh
 ```
+By running this command, the output would be "myvar is 10". That's because the script updates the value of myvar to be 5 plus its original value (5), and then prints that out.
 
-Please note that tcsh commands and syntax may vary slightly from other shells like bash.
+Meanwhile, the input files required would simply be any tcsh script that you'd like to run. There aren't necessarily any special specifications required in these input files; you'd simply write them as you would any script or list of commands. However, it is important to know that any variables or commands should be written following tcsh (or csh) syntax.

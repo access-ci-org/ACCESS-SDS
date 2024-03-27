@@ -1,0 +1,30 @@
+Use Case: Freyja is a software package that performs operations on structures stored in a constituent database known as Loki. It can be used for tasks such as aligning protein structures, performing searches on the database, and creating different types of plots. 
+
+Code Details and Examples: 
+
+Code:
+
+First of all, you will have to setup the environment file, freyja.env. This file should include the parameters for the freyja sessions such as the freyja working directory, path to loki database, and settings for various plots. 
+
+Then, a typical usage of freyja is in its interactive shell. Running the command 'freyja' will open the shell. The following is an example of the commands that can be ran in the freyja shell. 
+
+```
+# First define the structure list
+> define_struct_list structure.pdb.structures
+# Then align all structures using the first structure as reference
+> align_structure_list structure.pdb.structures
+# Output b-factors plot
+> plot_bfactors_structure structure.pdb.structure1
+```
+
+In the first command, structure.pdb.structures is a file that contains a list of protein structures to be analysed. The structures should be present in pdb format in the loki database and the list should contain the names of the structures in the database one in each line. 
+
+In the second command, Freyja will generate a structural alignment of all structures listed in structure.pdb.structures file using the first structure as a reference. 
+
+In the third command, Freyja will generate a b-factor plot for the first structure in the list. B-factors represent the atomic displacement or mobility of protein atoms. 
+
+Note that all the files generated will be stored in the freyja working directory as defined in the environment file. 
+
+Command to run the program: 
+
+Freyja can be run just by typing freyja to the terminal. If you want to run it in a non-interactive mode, a script can be created with all the commands that would be typed in the shell and run using the command 'freyja < script'.

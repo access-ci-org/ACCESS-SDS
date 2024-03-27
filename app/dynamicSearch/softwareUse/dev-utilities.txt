@@ -1,0 +1,82 @@
+Use Case: GNU Compiler Collection (GCC) is often used in high performance computing to compile codes written in languages like C and C++. It has a number of optimizations and supports various standards.
+
+Code details and examples: 
+
+Code: 
+```c
+#include<stdio.h>
+
+int main() {
+    printf("Hello, World!");
+    return 0;
+}
+```
+This is a simple Hello World application written in C.
+
+Command to compile and run: 
+
+```bash
+gcc HelloWorld.c -o HelloWorld
+./HelloWorld
+```
+
+In the first command, `HelloWorld.c` is the input file and `HelloWorld` is the output file name. The `-o` option is used to specify the output file name.
+
+Use Case: OpenMPI is often used in high performance computing to write parallel programs using the Message Passing Interface (MPI) standard.
+
+Code details and examples: 
+
+Code: 
+```c
+#include <mpi.h>
+#include <stdio.h>
+
+int main(int argc, char** argv) {
+    MPI_Init(NULL, NULL);
+    int world_size;
+    MPI_Comm_size(MPI_COMM_WORLD, &world_size);
+    int world_rank;
+    MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
+    char processor_name[MPI_MAX_PROCESSOR_NAME];
+    int name_len;
+    MPI_Get_processor_name(processor_name, &name_len);
+    printf("Hello world from processor %s, rank %d out of %d processors\n",
+           processor_name, world_rank, world_size);
+    MPI_Finalize();
+}
+```
+This is a simple "Hello, World!" MPI program. It gets the processor name and the world size and rank from the MPI environment.
+
+Command to compile and run: 
+
+```bash
+mpicc HelloWorld.c -o HelloWorld
+mpirun -np 4 ./HelloWorld
+```
+In the first command, `HelloWorld.c` is the input file, `HelloWorld` is the output file name and `mpicc` is the MPI C compiler. In the second command, `-np 4` tells MPI to use 4 processes.
+
+Use Case: NumPy is a Python library often used in scientific computing for numerical calculations.
+
+Code details and examples:
+
+Code:
+
+```python
+import numpy as np
+
+a = np.array([1, 2, 3, 4, 5])
+b = np.array([6, 7, 8, 9, 10])
+
+print("Addition: ", np.add(a, b))
+print("Subtraction: ", np.subtract(a, b))
+print("Multiplication: ", np.multiply(a, b))
+print("Division: ", np.divide(a, b))
+```
+This is a simple example showing basic arithmetic operations with NumPy arrays.
+
+Command to run:
+
+```bash
+python3 numpy_example.py
+```
+Here, `numpy_example.py` is the input file.

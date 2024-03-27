@@ -1,0 +1,40 @@
+Use Case: Use R-bibtex to create bibliographies in R Markdown.
+
+Code details and examples: Code
+
+Sample input file:
+```
+---
+title: "My Document"
+output: pdf_document
+bibliography: my_references.bib
+---
+```
+In this case, the input file (a .bib file) consists of a collection of bibliography entries. Each entry includes information about a particular reference, including the author, title, year of publication, and so on.
+
+Format required: .bib file
+```
+@article{smith2017,
+ author = {John Smith},
+ title = {Interesting Paper},
+ journal = {The Journal of Interesting Papers},
+ year = {2017},
+ volume = {4},
+ pages = {1--10}
+}
+```
+
+Command to run the file:
+```
+rmarkdown::render("my_document.Rmd")
+```
+This command reads the .Rmd file, processes it, and outputs a PDF document with the bibliography included at the end.
+
+Specifications and details in input files: In the .bib file, each bibliography entry starts with `@article` (or some other type), followed by an identifier in braces—this identifier is used to cite the reference in the .Rmd file (e.g., `[@smith2017]`). The citation information follows, with each piece of information separated by commas and included within braces.
+
+Code Snippets: 
+```{r}
+# R Markdown
+This is my paper. I cite [@smith2017].
+```
+This snippet includes a citation of the Smith (2017) paper in the text. R-bibtex will compile this citation and correctly format it in the final document based on the citation information included in the @smith2017 entry in the .bib file. The output will be a PDF document with the citation correctly formatted in the text and bibliography included at the end of the document.

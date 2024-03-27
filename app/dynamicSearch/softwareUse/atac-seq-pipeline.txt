@@ -1,0 +1,37 @@
+Use Case: The atac-seq-pipeline is used for the preprocessing of ATAC-seq (Assay for Transposase-Accessible Chromatin using sequencing) data. The pipeline processes raw reads to align them to a reference genome, performs peak calling, and generates scaled signal tracks ready for subsequent genomic visualization.
+
+Code Details and Examples:
+
+Code:
+
+Input file: The input to atac-seq-pipeline typically consists of paired-end raw reads in FastQ or BAM format. In addition, you'll need a genome index file compatible with your genome of interest.
+
+Sample File Specifications:
+
+Example Input FastQ file: test_R1.fastq
+```
+@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
++
+!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
+```
+Example Input FastQ file (paired): test_R2.fastq
+```
+@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
++
+!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
+```
+The FastQ files contain sequenced read fragments and their corresponding quality scores.
+
+Command to run them:
+
+The following command can be used to execute the pipeline:
+
+```
+./atac-seq-pipeline --fastq1 test_R1.fastq --fastq2 test_R2.fastq --genome-index human_genome_index
+```
+
+This command initiates the ATAC-seq pipeline using paired-end FastQ files and an example genome index. Please replace "test_R1.fastq", "test_R2.fastq", and "human_genome_index" with your actual file names or paths. The pipeline will output a variety of files, including aligned reads, filtered reads, and peak calls in BED format, among others. Notice: the command and parameters may need to be modified according to specific setup and requirements. 
+
+Notice: For more information about this software, please refer to https://github.com/ENCODE-DCC/atac-seq-pipeline.

@@ -1,0 +1,35 @@
+Use Case: Microbedmm is a python library used for multinomial logistic regression for microbial composition data, it is commonly used in bioinformatics for modeling purposes. 
+
+Code details and examples: 
+
+Code:
+
+```
+import microbedmm
+
+# sample input file
+# a CSV file with first column as unique sample IDs, and 
+# other columns as abundance of microbial taxa in each sample
+abundances = 'path_to_input_file.csv'
+
+# categories / labels for each sample
+categories = 'path_to_input_file.csv'
+
+# additional convariates
+convar = 'path_to_input_file.csv'
+
+# model specification
+model_spec = "response_variable ~ ."
+
+# fit the model
+mdl = microbedmm.MultinomialLogitModel(abundances, categories, convar, model_spec)
+mdl.fit()
+
+# prediction
+predictions = mdl.predict()
+
+# output the result to a csv file
+predictions.to_csv('prediction.csv')
+```
+
+The above code requires CSV files as input. The first column in each CSV file contains sample IDs and other columns contain abundance of microbial taxa in each sample. The response_variable in the model specification refers to the categories/labels each sample belong to. The command to run the above code snippet depends on how you want to execute it. If it's in a python script, you can run it as "python script.py".

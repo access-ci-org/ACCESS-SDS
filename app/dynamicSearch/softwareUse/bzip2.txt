@@ -1,24 +1,35 @@
-Use Case: Compression tool for files and directories.
+Use Case: Compression and decompression of files.
 
 Code details and examples:
-1. Compress a file:
+
+1. Compression:
+
+Code:
+
 ```bash
-bzip2 file.txt
+bzip2 filename
 ```
 
-2. Decompress a file:
+This command will replace filename with filename.bz2 in compressed form.
+
+Input File: filename (any file)
+
+Format Required: The original file could be in any format (txt, data, etc.)
+
+Specifications and Details: None. The original file can contain any data.
+
+2. Decompression:
+
+Code:
+
 ```bash
-bzip2 -d file.txt.bz2
+bunzip2 filename.bz2
 ```
 
-3. Compress a directory:
-```bash
-tar cvf directory.tar directory/
-bzip2 directory.tar
-```
+This command will extract the original file from filename.bz2.
 
-4. Decompress a directory:
-```bash
-bzip2 -d directory.tar.bz2
-tar xvf directory.tar
-```
+Input File: filename.bz2 (BZ2 file)
+
+Format Required: .bz2 (Bzip2 Compressed File)
+
+Specifications and Details: The compressed file should be a valid BZ2 file.

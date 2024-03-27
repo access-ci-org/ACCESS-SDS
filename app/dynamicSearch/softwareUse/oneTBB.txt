@@ -1,53 +1,44 @@
-Use Case: Task-based parallelism in C++ with Intel Threading Building Blocks (oneTBB)
+Use Case: oneTBB is a flexible C++ library that simplifies the work of adding parallel computing tasks to software. It provides a rich and complete approach to expressing parallelism thanks to its task-based algorithms, concurrent containers and task scheduler.
 
-Code details and examples:
-oneTBB is a C++ library for task-based parallelism developed by Intel. It allows developers to write parallel programs that scale across multicore processors. Here is an example of using oneTBB to parallelize a loop:
+Code Details and Examples:
 
-Sample input file (input.txt):
+Code:
 ```
-10
-1 2 3 4 5 6 7 8 9 10
-```
-
-Sample code snippet to parallelize a loop using oneTBB:
-```cpp
-#include <iostream>
+#include "tbb/parallel_for.h"
+#include "tbb/blocked_range.h"
 #include <vector>
-#include <tbb/tbb.h>
 
-using namespace tbb;
+class ApplyFoo {
+  std::vector<int>& my_vector;
+public:
+  void operator()( const tbb::blocked_range<size_t>& r ) const {
+    for( size_t i=r.begin(); i!=r.end(); ++i )
+      my_vector[i] = foo(my_vector[i]);
+  }
+  ApplyFoo(std::vector<int>& v ) :
+    my_vector(v)
+    {}
+};
 
-int main() {
-    std::vector<int> data;
-    int n;
-
-    // Read input from file
-    std::ifstream input_file("input.txt");
-    input_file >> n;
-    data.resize(n);
-    for (int i = 0; i < n; ++i)
-        input_file >> data[i];
-
-    // Parallelize the loop
-    parallel_for(blocked_range<size_t>(0, data.size()), [&](const blocked_range<size_t>& r) {
-        for (size_t i = r.begin(); i != r.end(); ++i) {
-            data[i] *= 2;  // Double each element
-        }
-    });
-
-    // Output the results
-    for (int i = 0; i < n; ++i)
-        std::cout << data[i] << " ";
-    std::cout << std::endl;
-
-    return 0;
+void ParallelApplyFoo( std::vector<int>& a ) {
+  tbb::parallel_for(tbb::blocked_range<size_t>(0,a.size()),
+                    ApplyFoo(a));
 }
 ```
 
-To compile and run the code using oneTBB, you can use the following command:
-```
-g++ -o parallel_loop parallel_loop.cpp -ltbb
-./parallel_loop
-```
+Explanation:
 
-This will compile the code with the oneTBB library and run the parallel loop program.
+The above example shows how to use oneTBB's `parallel_for` to concurrently apply a function `foo` to all elements in a `std::vector`, where `foo` is a user-defined function. 
+
+The `ApplyFoo` class encapsulates the action of applying `foo` to an element. Its operator() applies `foo` to a range of elements. The `ParallelApplyFoo` function splits the total range [0,a.size()) into subranges and applies `ApplyFoo` to each subrange.
+
+- Input file: Not applicable. This code operates on a `std::vector` in memory. You need to define the `foo` function and the `std::vector`.
+- Format Required: The standard format of a C++ source file (.cpp).
+- Specifications and details in the input file: Not applicable for this use case.
+
+- Command to run the code: After installing oneTBB and setting it up correctly, you can compile and run the program as you would with any C++ code. For example, with g++:
+
+```
+$ g++ -I /path/to/tbb/include -L /path/to/tbb/lib -ltbb your_file.cpp
+$ ./a.out
+```

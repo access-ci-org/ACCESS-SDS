@@ -1,0 +1,24 @@
+Use Case: Analyzing CPU performance using the "psutil" Python library. This library provides an interface for retrieving information on running processes and system utilization.
+
+Code details and examples:
+Code:
+
+```python
+import psutil
+
+# Get the CPU usage
+print("The CPU usage is: ", psutil.cpu_percent())
+
+# Get the number of logical CPUs in the system
+print("The number of logical CPUs is: ", psutil.cpu_count())
+```
+
+This script doesn't require any input files. However, the "psutil" module must be present in the Python environment. It should be run directly in a Python environment, which may be initiated using the `python` or `python3` command in the command line.
+
+Command to run this python script:
+
+```bash
+python cpu_usage.py
+```
+
+In this example, `cpu_usage.py` is the name of the file containing the script.

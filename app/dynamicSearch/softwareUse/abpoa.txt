@@ -1,0 +1,29 @@
+Use Case: ABPOA is a software package used for multiple sequence alignment, which is crucial in computational biology to identify evolutionarily related proteins or genes and to predict the function of uncharacterized proteins. 
+
+Code details and examples:
+ 
+Code:
+
+The required input file format for ABPOA is FASTA. For example, a simple input file in FASTA format:
+
+```
+>Sequence1
+ATGCGTACGTACGTACG
+>Sequence2
+ATGCGTACGTAGTACG
+```
+
+A sample command-line execution of ABPOA is as follows:
+
+```bash
+./abpoa -r1 seqs.fa >seqs.msa.fa
+```
+
+In above command, `./abpoa` calls the executable file for ABPOA, `-r1` represents to output MSA in consensus order and `seqs.fa` is the input file which contains unaligned sequences in FASTA format. The output after running this command is sent to `seqs.msa.fa`, which contains aligned sequences also in FASTA format.
+
+Any specifications and details in input files:
+
+- ABPOA implementation needs raw unaligned sequences as input in FASTA format. The first line of each sequence begins with '>' followed by the name/identifier of the sequence. The following lines contain the sequence of nucleotides or amino acids.
+- Each sequence must be presented on a new line following its identifier.
+- Blank lines are not allowed, neither within sequences nor between them. 
+- Lowercase and uppercase letters are accepted, and will be treated as the same.

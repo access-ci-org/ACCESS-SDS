@@ -1,0 +1,42 @@
+Use Case: CUnit is a lightweight system for writing, administering, and running unit tests in C. It provides C programmers a basic testing functionality with a flexible variety of user interfaces. 
+
+Code details and examples: 
+
+Code:
+
+```c
+#include <CUnit/Basic.h> 
+
+int foo(int i) {
+    return i * 2;
+}
+
+void test_foo(void) {
+    CU_ASSERT_EQUAL(foo(1), 2);
+    CU_ASSERT_EQUAL(foo(2), 4);
+}
+
+int main() {
+    CU_initialize_registry();
+    CU_pSuite suite = CU_add_suite("Test the function foo", NULL, NULL);
+    CU_add_test(suite, "foo", test_foo);
+    CU_basic_set_mode(CU_BRM_VERBOSE);
+    CU_basic_run_tests();
+    CU_cleanup_registry();
+    return CU_get_error();
+}
+```
+
+To compile and run the C code with CUnit:
+
+1. Save the code in a file, for example `test.c`.
+2. Compile the C code with gcc by linking the CUnit library:
+```
+gcc -o test test.c -lcunit
+```
+3. Run the compiled program:
+```
+./test
+```
+
+The input files for running the CUnit are the test cases written in C. There aren't any specific requirements or specifications needed unlike some other libraries. The format is in C code and the only requirement is that it should be syntactically correct. The compilation and execution steps will take care of the rest. As for the code details, it is divided into three main parts. The first part is writing the function we want to test. The second part is to write the test case for the function. The last part is to put everything inside the main function where we initialize the CUnit registry and create a test suite, adding the test case to the suite and running the tests in verbose mode.

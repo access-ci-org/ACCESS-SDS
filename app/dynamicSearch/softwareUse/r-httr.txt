@@ -1,0 +1,22 @@
+Use Case: r-httr is a user-friendly R package for web APIs. It simplifies the process of working with URLs, HTTP headers, query strings, form data, multipart requests, and file uploads/downloads that most web APIs require.
+
+Code details and examples: Code.
+
+Sample code snippet 
+
+```R
+library(httr)
+
+google <- oauth_endpoint(NULL, "https://accounts.google.com/o/oauth2/token", NULL)
+myapp <- oauth_app("google", "consumer_key", "consumer_secret")
+google_token <- oauth2.0_token(google, myapp)
+
+gtoken <- get_google_token("https://www.googleapis.com/auth/userinfo.profile")
+req <- GET("https://www.googleapis.com/oauth2/v1/userinfo", config(token = gtoken))
+stop_for_status(req)
+content(req)
+```
+
+In this code, myapp requires "consumer_key" and "consumer_secret" as inputs, these should be provided by the User and are application-specific. The input to get_google_token is a URL which requires access, in this case, "https://www.googleapis.com/auth/userinfo.profile".
+
+The command to run this file, if it was named as `main.r` would be `Rscript main.r` in the terminal or use the `Source` button if you are using an interface like RStudio.

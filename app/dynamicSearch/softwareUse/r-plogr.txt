@@ -1,0 +1,31 @@
+Use Case: The Plogr library in R is commonly used for computing the binary logarithm (log base 2). A common use case might be in a bioinformatics context where a dataset of gene expression values often needs to be log-transformed to normalize the data and make it suitable for statistical tests, such as t-tests or ANOVA.
+
+Code details and examples:
+
+Code:
+
+```R
+# Load plogr package
+library(plogr)
+
+# Define your vector
+x <- c(1, 2, 4, 8, 16, 32, 64)
+
+# Calculate log base 2 using plogr
+result <- plog2(x)
+
+# Print the result
+print(result)
+```
+
+In this example, the input is a vector of numbers `x`. The output from `plog2(x)` is the binary logarithm of each number in the vector `x`. There are no specific input file formats associated with the plog2 function; however the input should be a numeric vector.
+
+Command to run:
+
+You could run this script from the command line using Rscript, like so:
+
+```bash
+Rscript myfile.R
+```
+
+Where `myfile.R` is the name of the file that contains the R script above.

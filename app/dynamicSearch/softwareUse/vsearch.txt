@@ -1,0 +1,23 @@
+Use Case: VSEARCH is used for several bioinformatics operations such as searching, clustering, chimera detection, and dereplication.
+ 
+Code details and examples: 
+
+Code 1: For sequence searching.
+
+Input File specs: FASTA or FASTQ file, for instance, query.fasta. It should contain the sequences you want to search for.
+
+Command: 
+```shell
+vsearch --usearch_global query.fasta --db database.fasta --id 0.97 --alnout results.aln
+```
+Where `--usearch_global` specifies the file with the query sequences, `--db` specifies the database file where the sequences will be searched, `--id` sets the sequence identity threshold, and `--alnout` specifies the output file.
+
+Code 2: For clustering sequences.
+
+Input File specs: FASTA or FASTQ file, for instance, sequences.fasta. It should contain the sequences you want to cluster.
+
+Command: 
+```shell
+vsearch --cluster_fast sequences.fasta --id 0.97 --centroids cluster.fasta
+```
+Where `--cluster_fast` specifies the file with sequences to cluster, `--id` sets the sequence identity threshold, and `--centroids` specifies the output file with the centroid sequence for each cluster.

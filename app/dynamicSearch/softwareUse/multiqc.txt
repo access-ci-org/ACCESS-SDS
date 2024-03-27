@@ -1,0 +1,28 @@
+Use Case: User wants to generate a report that summarizes analysis results for multiple sequencing samples and experiments. User will provide input files generated from various types of bioinformatic software (e.g., FastQC, Samtools, etc.) as the raw data. These files must be in their appropriate formats like plain text (.txt), Comma Separated Values (.csv), YAML (.yml) and JSON (.json).
+
+Code details and examples:
+First, we need a set of input files to work with. Here is an example setup:
+```
+project/
+│
+├── sample1/
+│   ├── file1_fastqc.zip
+│   ├── bismark_report.txt
+│   └── ...
+│
+├── sample2/
+│   ├── file2_fastqc.zip
+│   ├── bismark_report.txt
+│   └── ...
+│
+└── ...
+```
+Here, every sample directory contains FastQC reports (in FastQC zip format) and a Bismark alignment report (in text format). In a real case scenario, there would be many other report files from other types of software.
+
+Now, to run multiQC, we will let it scan the entire project directory ("project/") and compile the relevant data into a single comprehensive report:
+```bash
+multiqc project/
+```
+This command will generate a single MultiQC report (by default, titled "multiqc_report.html") in the same directory as the one we ran the command in.
+
+For creating more advanced reports and customizing the output, you can use various options and commands available in MultiQC's comprehensive documentation.

@@ -1,25 +1,30 @@
-Use Case: PYTHIA is a powerful event generator widely used in high-energy physics for the simulation of particle collisions.
+Use Case: Pythia is primarily used for event generation in high-energy physics. It is a library for generating events in high-energy collisions.
 
 Code details and examples:
-Input file format for a basic PYTHIA simulation (e.g., sim.hep):
+
+Code:
 ```
-! sim.hep input file for PYTHIA
-! Parameters for the generation of hard QCD processes
-Main:numberOfEvents = 100
-Main:timesAllowErrors = 3
+import pythia8
 
-! Set the center-of-mass energy
-Beams:eCM = 13000.
+# Create Pythia instance
+pythia = pythia8.Pythia()
 
-! Process selection
-HardQCD:all = on
+# Set up the beams, for frame with unequal beam energies.
+pythia.settings.mode("Beams:frameType", 2)
 
-! Output file
-Output:file = sim.lhe
-Output:file = sim.hepmc
+# Set up the lifetime of unstable particles.
+pythia.particleData.mayDecay(300, False)
 ```
 
-Command to run PYTHIA with the input file:
+Input Files: Pythia does not rely on specific input files, instead, it sets parameters and commands via a Python interface.
+
+Commands to run this sample:
+
+1. Write the above code to a file, say `test_pythia.py`.
+2. Run the file using Python:
+
 ```
-pythia8 -c sim.hep
+python test_pythia.py
 ```
+
+Specification in Input Files: Since Pythia's settings and parameters are directly set in the code, there is no need for specific formatting of input files. However, information related to events and particles can be adopted in a format that Pythia can understand. More details can be obtained from the Pythia user manual.

@@ -1,30 +1,43 @@
-Use Case: Silo is a library for reading and writing a wide variety of scientific data to binary, disk files. It supports structured mesh, unstructured mesh, particle, and image data.
-Code details and examples:
+Use Case: Silo is a library for scientific computing. It's primarily used for reading, writing and sharing scientific data on disk files, particularly for large, complex, time-varied, multi-dimensional data.
+
+Code details and examples: 
+
+Code:
+
+```python
+#!/usr/local/bin/python
+
+import os
+import h5py
+from array import array as Array
+
+# File locations
+dirpath = os.path.dirname(os.path.realpath(__file__))
+infilepath = os.path.join(dirpath, 'input.txt')
+outfilepath = os.path.join(dirpath, 'output.silo')
+
+# Read from input file
+with open(infilepath, 'r') as fin:
+    data = fin.read().split()
+
+# Open the output file
+outfile = h5py.File(outfilepath, 'w')
+
+# Write data to file
+db = outfile.create_dataset('mydata', (len(data),), dtype='i')
+db[...] = Array('i', data)
+
+# Close the file
+outfile.close()
 ```
-Sample input file (mesh.silo):
-DBPutQuadmesh("mesh", NULL, coords, dims, datatype, DB_COLLINEAR, NULL)
 
-Sample code snippet:
-#include <silo.h>
+The input file (input.txt) for this program is a simple ASCII text file with integers separated by whitespace.
 
-int main()
-{
-    float coords[] = {0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0};
-    int dims[] = {2, 2, 2};
-    DBfile *dbfile = NULL;
-
-    dbfile = DBCreate("mesh.silo", DB_CLOBBER, DB_LOCAL, "Example data", DB_HDF5);
-
-    DBPutQuadmesh(dbfile, "mesh", NULL, coords, 3, dims, 2, DB_FLOAT, DB_COLLINEAR, NULL);
-
-    DBClose(dbfile);
-
-    return 0;
-}
-
-Command to compile:
-gcc example.c -o example -lsilo
-
-Command to run:
-./example
 ```
+1 2 3
+4 5 6
+7 8 9
+```
+The command to run the above example would be `python example.py`.
+
+Note that this doesn't create a .silo file per se, but a .h5 file, which is a format often used in tandem with silo and visit, tools frequently used together with Silo. To create a .silo file you can use the Silo library's functions, but Python's bindings for Silo are currently limited and may not support all features.

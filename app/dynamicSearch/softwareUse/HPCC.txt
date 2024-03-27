@@ -1,19 +1,42 @@
-HPCC (High-Performance Computing Cluster) is an open-source, big data computing platform. It provides a distributed file system (Thor) and a parallel processing computing environment (Roxie).
+Use Case: HPCC (High-Performance Computing Cluster) is a comprehensive, open-source big-data computing platform. It allows large scale data processing and analytics. An example can be parsing through large amounts of data, like Log files, for specific formatting or pattern matching.
 
-Use Case: Submitting a job to HPCC cluster
-Code details and examples:
-1. Sample input file for a job submission (myjob.ecl):
+Code Details and Examples:
+
+Input file: Assume we have a Log.txt file containing a large data set.
+
+Python Code Snippet:
+```python
+from hpccm.templates.CMakeBuild import CMakeBuild
+
+cm = CMakeBuild()
+
+# The installation prefix
+cm.prefix = '/usr/local'
+
+# The source directory
+cm.srcdir = '/path/to/source'
+
+# Any extra arguments to pass to CMake
+cm.extra_cmake_args = ['-DBUILD_SHARED_LIBS=ON']
+
+# Generate a CMake build stage
+print(str(cm))
 ```
-// myjob.ecl
-IMPORT STD;
-IMPORT MYMODULE;
 
-OUTPUT('Hello, World!');
-```
+This Python code uses the HPCCm (HPC Container Maker) Python module to define a CMake build stage. The parameters defined include the installation prefix (the path where the built executables should be placed), the source directory (the path to the source code to build), and any additional arguments to pass to CMake. These additional arguments control CMake's behaviour beyond what's defined in the build script.
 
-2. Submit the job to HPCC cluster:
+Command to Run: To run the above Python script, save it to a file called build.py, then run it in the terminal with the command:
 ```bash
-ecl run myjob.ecl
+python3 build.py
 ```
 
-(Note: The actual commands may vary depending on the specific HPCC cluster configuration and setup.)
+Specify the output format required by commenting at the top of your python file:
+```python
+# format: docker
+```
+To enable this format in code, the command is:
+```bash
+hpccm --recipe recipe.py --format docker
+```
+
+Note: You must have the HPCCm module installed to run this script, and the above Python script must be executed where docker is installed and containerized. The script also assumes you have the necessary rights and environment to execute python3 and docker commands.

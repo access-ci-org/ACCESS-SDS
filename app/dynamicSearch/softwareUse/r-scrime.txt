@@ -1,0 +1,44 @@
+Use Case:
+
+R-SCRM (R Sequential Coalescent and Recombinations Model) is an R-based library primarily used in evolutionary genetics. It simulates coalescence with recombination events and generates coalescent genealogies according to a sequential Markov coalescent model. 
+
+Code Details and Examples: 
+
+Code:
+
+```R
+# Load the package
+library("r-scrime");
+
+# Parameters: 
+theta <- 4*100*0.001;  #4Neu, where Ne is the effective population size, and u is the neutral mutation rate per site
+rho <- 4*100*0.001;    #4Ner, where Ne is the effective population size, and r is the recombination rate per site
+L <- 10000;            # length of sequence
+samplesize <- 10;      # number of sampled chromosomes
+
+# Simulation using R-SCRM
+result <- rscrm(samplesize, theta, rho, L);
+
+# Generate summary statistics
+summary_statistic <- summary(result); 
+
+# Print summary statistics
+print(summary_statistic);
+```
+
+The above code snippet loads the R-SCRM library and initializes parameters for the simulation: `theta`, `rho`, `L` (sequence length), and `samplesize` (number of sampled chromosomes). These parameters simulate the generation of coalescent genealogies. The generated summary statistics help inspect the genealogical characteristics of the generated genealogies. 
+
+Running command:
+The code can be run within an R environment (such as RStudio) or via command line Rscript like:
+
+```bash
+Rscript rscrm_script.R
+```
+
+Format Required: The input parameters are numeric values defined within the R-SCRM code script itself.
+
+Specifications and Details in Input Files: No external input files are required for R-SCRM. All parameters are defined within the script. 
+
+Note: The values for `theta`, `rho`, `L`, and `samplesize` can and should be adjusted based on the specifics of the evolutionary biology study being conducted. 
+
+This example assumes we are working with an effective population size of 100, a neutral mutation rate per site of 0.001, a recombination rate per site of 0.001, a sequence length of 10,000, and a sample size of 10 chromosomes. Adjust these values before running your simulation.

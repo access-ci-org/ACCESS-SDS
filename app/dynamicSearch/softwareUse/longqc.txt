@@ -1,0 +1,31 @@
+Use Case: LongQC is a quality control tool for long read sequencing data. It provides various metrics such as sequence quality, read length distribution, and adapter contents to help users evaluate their sequencing data. LongQC operates on either FASTQ or BAM format input files.
+
+Code details and examples: 
+
+Code:
+
+Running LongQC for a FASTQ file:
+
+```
+longQC.py sample -p 4 -o output_directory myReads.fastq
+```
+
+Here, `-p 4` instructs LongQC to use 4 CPU cores, `-o output_directory` sets the output directory, and `myReads.fastq` is the input file. 
+
+For a BAM file:
+
+```
+longQC.py sample -p 4 -o output_directory -x myReference.fasta myReads.bam
+```
+
+Here, `-x myReference.fasta` loads the reference genome required for BAM input.
+
+The input files, `myReads.fastq` or `myReads.bam`, should be in the appropriate format (FASTQ or BAM) and contain sequencing reads. If a BAM file is used, a reference genome should be specified using the `-x` flag. 
+
+Command to run LongQC:
+
+The command to run LongQC is `longQC.py sample`. This command should be followed by any desired options and the path to the input file. 
+
+```
+longQC.py sample -p 4 -o output_directory myReads.fastq
+```

@@ -1,26 +1,48 @@
-Use Case: Image processing
+Use Case: Libpng is a library used for reading and writing PNG images in a variety of programming languages. It supports a wide range of PNG features and is extensively tested for compliance with the PNG specification.
+
 Code details and examples:
-```python
-import numpy as np
-import matplotlib.pyplot as plt
-import png
 
-# Sample input data
-data = np.random.randint(0, 256, (100, 100, 3), dtype=np.uint8)
+Code:
 
-# Save data as PNG image
-with open('output.png', 'wb') as f:
-    writer = png.Writer(width=data.shape[1], height=data.shape[0], bitdepth=8)
-    writer.write(f, data.reshape(-1, data.shape[1]*data.shape[2]))
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <png.h>
 
-# Load and display PNG image
-img = plt.imread('output.png')
-plt.imshow(img)
-plt.axis('off')
-plt.show()
+int main() {
+    FILE *fp = fopen("file.png", "rb");
+
+    png_structp png = png_create_read_struct(PNG_LIBPNG_VER_STRING, NULL, NULL, NULL);
+    if(!png) abort();
+
+    png_infop info = png_create_info_struct(png);
+    if(!info) abort();
+
+    if(setjmp(png_jmpbuf(png))) abort();
+
+    png_init_io(png, fp);
+
+    png_read_info(png, info);
+
+    int width = png_get_image_width(png, info);
+    int height = png_get_image_height(png, info);
+
+    printf("Image width: %d\n", width);
+    printf("Image height: %d\n", height);
+
+    fclose(fp);
+
+    return 0;
+}
 ```
 
-Command to run:
-```bash
-python your_script.py
-```
+This code opens a PNG file and reads the image info using libpng. The sample input file required is any valid PNG image file. Note that if any errors occur while reading the PNG image, the program will abort. 
+
+Input File: 
+- Any PNG format image file. 
+
+Specifications: 
+- For reading the PNG file, the file must be in PNG format and the path must be correctly passed.
+
+Command to Run:
+- Assuming you saved the code in a file named `main.c`, and you have `gcc` and `libpng` installed, compile the program with `gcc main.c -lpng -o main` and run it by `./main`.

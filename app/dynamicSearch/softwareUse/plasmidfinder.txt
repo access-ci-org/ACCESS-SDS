@@ -1,0 +1,33 @@
+Use Case: PlasmidFinder is used in bioinformatics to identify plasmids in total or partial sequenced isolates of bacteria.
+
+Code details and examples:
+
+Code:
+
+```
+plasmidfinder.py -i input.fa -o output_dir
+```
+
+- The `-i` option indicates the input file, which should be a FASTA file (.fa or .fasta format) containing the bacterial sequences
+- The `-o` option indicates the directory where the output files should be saved 
+
+The input file would contain a sequence of nucleotides and look something like this:
+
+```
+>sequence1
+ATGCGAGTGTTGAAGTTCGGCGGTACATCAGTGGCAAATGCAGAACGTTTTCTGCGTGTTGCCGATATTCTGGAAAG
+>sequence2
+CCGGGCCAACGACAAGGCGACCACCGCCGCCGACAAAGTCCGGCCGATCAATGAGCGTCCGGTTAAGGACGCATCGC
+..
+..
+```
+
+Each sequence should start with a '>' followed by an identifier and then the sequence of nucleotides.
+
+The command to run PlasmidFinder would be:
+
+``` 
+python plasmidfinder.py -i input.fasta -o output_dir
+``` 
+
+This command would initiate the PlasmidFinder program, using the provided input file and placing the output in the specified directory.

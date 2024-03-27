@@ -1,0 +1,27 @@
+Use Case: Calculating Transcript Per Million values for high-throughput sequencing data for dimensionality reduction.
+
+Code details and examples:
+
+Code:
+```python
+from tpmcalculator import *
+
+tpmcalc = TPMCalculator()
+
+list_of_files = ["file1.bam","file2.bam"] # List your bam files here
+output_folder = "results_folder" # Specify your output directory here
+
+tpmcalc(list_of_files, output_folder)
+```
+
+This code calculates TPM values given a list of BAM files. Note that the BAM files should be indexed (i.e., .bai files should be present in the same directory).  
+
+The input in this case is a list of bam files. Detailed specifications of bam file can be found here: http://samtools.github.io/hts-specs/SAMv1.pdf.  
+
+The output for each input BAM file is two text files, one contains gene-level TPM/FPKM/RPKM and raw read counts. The other contains isoform-level TPM/FPKM/RPKM and raw read counts. The former can be read by `pd.read_csv('file_name', sep='\t')` for further processing.
+
+Command to run them (assuming the script is saved as tpm_calculation.py): 
+
+```
+python tpm_calculation.py
+```

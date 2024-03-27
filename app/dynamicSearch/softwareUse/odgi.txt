@@ -1,0 +1,31 @@
+Use Case: ODGI (Oriented Directed Graph of Intervals) is used for compressing genome graphs. It is a great tool for working with pangenomes. The pangenome graph itself can be analyzed with subsequent processing; like path queries, node queries, and visualization. It also supports FASTA format and GFA format for graph building.
+
+Code details and examples:
+
+Input File:
+Input files must be in GFA or FASTA format containing genomic information. An example of a GFA format file:
+
+```
+S       1       A
+L       1       +       1       -       0M
+P       x       1       +       0M
+```
+
+This GFA file represents a simple circular single-nucleotide graph.
+
+Code Snippet:
+The code to run ODGI is quite simple, as it primarily serves as a command line tool. Once you have your data in the GFA or FASTA formats, you can use them to build a graph. If your file was named "genome.gfa", you could build a graph with it as follows:
+
+```
+odgi build -g genome.gfa -o genome.odgi
+```
+
+That command builds a graph from the GFA file "genome.gfa" and outputs the result to "genome.odgi".
+
+To visualize the graph, you can use the "view" command:
+
+```
+odgi view -i genome.odgi -P > genome.png
+```
+
+This command generates a PNG ("genome.png") representing the structure of the genome stored within the ODGI file "genome.odgi". The "-P" option tells odgi to output in the PNG format.

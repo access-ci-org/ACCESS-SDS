@@ -1,0 +1,32 @@
+Use Case: Use r-siggenes for differential gene expression analysis in microarray data. 
+
+Code details and examples: 
+
+Code: 
+
+First you will need to have the data in a matrix form, where each row corresponds to a gene and each column to a sample. Additionally, you'll need a vector stating the groups to which each sample belongs.
+
+Here's an example: 
+
+```R
+# Suppose the data is in a matrix 'data' and the group vector is 'group'
+
+library(siggenes)
+data <- matrix(rnorm(5000),100,50)
+group <- c(rep(1,25), rep(2,25))
+
+sam.out <- sam(data, group, resp.type="Two class unpaired", nperms=100)
+summary(sam.out)
+
+# this will output the summary of the Significant Analysis of Microarrays (SAM)
+```
+
+To run the script, just submit it to R environment. 
+
+```sh
+Rscript script.r 
+```
+The data for this specific example is generated randomly, in real-life scenarios the data matrix will be the gene expression data (e.g. read counts or TPMs) and the group vector will be the conditions under which the samples were taken (e.g. control vs. treatment, disease vs. healthy). 
+The function `sam` from package siggenes is used for Significant Analysis of Microarrays (SAM), where the null distribution of the test statistic is estimated by permuting the group labels. 
+
+For further details about input format and usage refer to the [siggenes documentary](https://www.rdocumentation.org/packages/siggenes/versions/1.66.0).

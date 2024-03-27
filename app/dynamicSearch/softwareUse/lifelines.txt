@@ -1,32 +1,27 @@
-Use Case: lifelines is a Python library for survival analysis and reliability analysis. It offers tools for estimating hazard rates, survival functions, and more.
+Use Case: Lifelines is a Python library for survival analysis. It can be used in various fields where duration or survival analysis is required, such as sociology, economics, marketing, or epidemiology. We often need to answer questions like "how long will a certain event take?" or "what proportion of the population will survive past a specific time?" in these fields. 
 
 Code details and examples:
-```python
-# Sample input file (CSV format):
-# time, event
-# 5, 1
-# 10, 0
-# 15, 1
-# 20, 1
-# 25, 0
 
-from lifelines import KaplanMeierFitter
+Code:
+
+```
+import lifelines
 import pandas as pd
 
-# Load data from CSV
-data = pd.read_csv('survival_data.csv')
+# Sample data for survival analysis (Duration, Event)
+data = pd.DataFrame({
+  'duration': [5, 3, 10, 8, 7, 4],
+  'event': [1, 1, 0, 1, 0, 1]
+})
 
-# Fit the Kaplan-Meier estimator
-kmf = KaplanMeierFitter()
-kmf.fit(data['time'], event_observed=data['event'])
+# Code for the Kaplan Meier Fitter
+kmf = lifelines.KaplanMeierFitter()
 
-# Plot the Kaplan-Meier survival curve
-kmf.plot()
+kmf.fit(data['duration'], event_observed=data['event'])
+
+kmf.plot_survival_function()
 ```
 
-Command to run the code (after installing lifelines):
-```bash
-python script.py
-```
+The above code creates a Kaplan Meier Survival function plot. `fit` function is used to fit the data and `plot_survival_function` is used to plot the survival function. The input dataframe has two columns `duration` and `event` where `duration` is the timeline of the event and `event` is either 0 (censored) or 1 (event observed).
 
-This example demonstrates how to use lifelines to perform survival analysis using the Kaplan-Meier estimator.
+To run the code, just use any python environment or IDE and make sure you installed the lifelines library. You can also use command line with a command `python <file_name.py>` where `file_name.py` is the name of your python script. Make sure pandas and lifelines are correctly installed in your python environment where you run the command.

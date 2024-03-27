@@ -1,0 +1,47 @@
+Use Case: Use r-digest to calculate hash digests of arbitrary R objects.
+
+Code details and examples: Code.
+
+In the r-digest package, the main function is digest(). This function creates hash digests from a character vector(record) using a standard C library(CRC32).
+
+Here's an example of how to use it:
+
+```R
+# Load the digest package
+library(digest)
+
+# Define a character vector
+record <- c("John Doe", "123 Main St", "Anytown, USA")
+
+# Compute the hash digest
+digest(record)
+```
+
+Another use of r-digest is to check the integrity of downloaded files. You can compute the hash of the downloaded file and compare it to the expected hash provided by the source.
+
+Here's an example:
+
+```R
+# Load the digest package
+library(digest)
+
+# Compute the hash digest of the downloaded file
+file_hash <- digest(file="downloaded_file.zip", file=TRUE)
+
+# Compare file_hash to the expected hash
+if (file_hash == "expected_hash") {
+  print("File integrity confirmed")
+} else {
+  print("File may be corrupt")
+}
+```
+
+The input is a vector of data or a filename (with `file=TRUE`). In the first example, the `digest()` function hashes the vector of strings. In the second example, `digest()` hashes a file's content. The `digest()` function outputs a hash string (hash digest), which can be used as an identifier for the input data. 
+
+To call these, you'd execute the R scripts from the command line like this:
+
+```bash
+Rscript digest_example.R
+```
+
+This will run `digest_example.R`, which should contain one of the code snippets above.

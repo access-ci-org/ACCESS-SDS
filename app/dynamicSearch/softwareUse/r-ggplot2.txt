@@ -1,0 +1,25 @@
+Use Case: Creating a simple histogram from a data set.
+
+Code details and examples:
+
+Library(‘ggplot2’)
+
+Code:
+
+        library(ggplot2)
+        data(mtcars)
+
+        # Create a sample data frame
+        df <- mtcars
+
+        # Code for creating a histogram of 'mpg' column
+        # the data frame 'df'
+        ggplot(df, aes(x=df$mpg)) + 
+        geom_histogram(color="black", fill="white") + 
+        theme_classic()
+
+Format required: A dataframe in R. For the above case, 'mtcars' data frame found in R is used.
+
+Specifications and Details in input files: For this example, the data set we are using is 'mtcars' which is a default sample data available in R. This data comprises of various types of measurements on different car models, one of them is "miles per gallon" (mpg) which we will be using for our histogram.
+
+Command to run them: This is just a R code snippet which can be run in any R environment, either using RStudio or any other tool which support R. If you are running each line of code in a console, you can run them one by one. But in a script file, you can select all lines and run them simultaneously.

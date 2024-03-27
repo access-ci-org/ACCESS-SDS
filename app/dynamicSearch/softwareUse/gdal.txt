@@ -1,18 +1,21 @@
-Use Case: Geospatial data conversion and manipulation
+Use Case: Use GDAL to convert a GeoTIFF file to an ASCII grid.
 
 Code details and examples:
-GDAL (Geospatial Data Abstraction Library) is a popular open-source library for reading and writing raster and vector geospatial data formats.
 
-Example of converting a GeoTIFF file to a PNG file using GDAL:
-
-```bash
-gdal_translate input.tif output.png
-```
-
-Example of clipping a raster file using a bounding box:
+Code:
 
 ```bash
-gdalwarp -te xmin ymin xmax ymax input.tif clipped_output.tif
+gdal_translate -of AAIGrid source.tif output.asc
 ```
 
-GDAL is a powerful tool for geospatial analysis and manipulation with a wide range of functionalities.
+In this command, "source.tif" is a sample input file which should be a GeoTIFF file. The output will be an ASCII grid file named "output.asc". 
+
+GDAL uses command-line arguments. Here, '-of AAIGrid' specifies the output format. 'source.tif' is the input file and 'output.asc' is the output file.
+
+Input file (source.tif): A valid GeoTIFF file. 
+
+Output file (output.asc): A valid ASCII grid file.
+
+Specs: No particular specs required in the input file. But the input file should be in a format that GDAL can read, which includes a structured GeoTIFF file. The output format will be an ASCII grid.
+
+Command to run: This command-line script can be run on a terminal.

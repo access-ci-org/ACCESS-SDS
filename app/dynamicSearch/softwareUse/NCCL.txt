@@ -1,20 +1,54 @@
-NCCL (NVIDIA Collective Communications Library) is a software library developed by NVIDIA for high-performance communication in parallel computing environments. It is designed to leverage multiple GPUs within a single node for efficient data communication.
+Use Case: Use NCCL for multi-GPU and multi-node collective communication primitives that are optimization for NVIDIA GPUs.
 
-Use Case: Multi-GPU AllReduce
-Code details and examples:
-```python
-import nccl
+Code details and examples: Code.
+The NCCL library provides routines such as all-gather, all-reduce, broadcast, reduce, reduce-scatter, that are foundational to many parallel algorithms. For simplicity, let's consider an all-reduce operation, where all GPUs have a unique number which needs to be summed across all GPUs and the result should be available on all of them.
 
-# Initialize NCCL communicator
-comm = nccl.NcclCommunicator()
+Sample Input:
+Number each GPU holds:
+GPU1: 1
+GPU2: 2
+GPU3: 3
+GPU4: 4
 
-# Define input data
-input_data = [1, 2, 3, 4]
+Command to run NCCL:
+ncclAllReduce inPlace numBytes stream.
 
-# Perform allreduce operation across multiple GPUs
-output_data = comm.allreduce(input_data)
+```c++
+#include <stdio.h>
+#include "nccl.h"
 
-print(output_data)
+__global__ void kernel(float* data, int size) {
+  int id = threadIdx.x + blockIdx.x*blockDim.x;
+  if (id < size) data[id] = id;
+}
+
+int main() {
+  ncclComm_t comm;
+  cudaStream_t s;
+
+  // Allocate 3 buffers of 256 MB
+  size_t size = ((size_t)256)*1024*1024;
+  float *data, *result;
+
+  // Setup NCCL
+  ncclCommInitAll(&comm, nGpus, devs);
+  cudaStreamCreate(&s);
+
+  // Launch the kernel
+  kernel<<<256,1024,s>>>(data, size);
+  kernel<<<256,1024,s>>>(result, size);
+
+  // All-reduce the data
+  ncclAllReduce(data, result, size, ncclFloat, ncclSum, comm, s);
+
+  // Wait for reduction to complete
+  cudaStreamSynchronize(s);
+
+  // Finalize NCCL
+  ncclCommDestroy(comm);
+}
 ```
 
-Please note that the above code snippet is a simplistic example and may not reflect the actual implementation details. The command to run the code will depend on how you have set up your Python environment with NCCL support.
+The buffers need to be allocated and managed by the user application. NCCL simply operates on the pointers and sizes that the user application provides.
+
+Please note that due to CUDA constraints, all NCCL calls are required to be made from the same thread which created the CUDA context. To help with this, NCCL provides the `ncclGroupStart` and `ncclGroupEnd` calls which can be used to create a group of communication calls to be made from the same thread. When ncclGroupEnd is called, all communication calls since the last ncclGroupStart are launched on the device.

@@ -1,0 +1,32 @@
+Use Case: The R package 'viridisLite' provides colorblind-friendly, perceptually-uniform colors. It includes color scales for use with R-based graphics. A common use case is generating heatmaps or color coded plots in scientific data visualization.
+
+Code Details and Example:
+
+The input to 'viridisLite' is a dataset that requires color scales. Here’s an example:
+
+```R
+# Load the required libraries
+library(viridisLite)
+library(ggplot2)
+
+# Generate some data
+set.seed(10)
+df <- data.frame(
+  x = rnorm(1000),
+  y = rnorm(1000)
+)
+
+# Plot with viridis colour scale
+ggplot(df, aes(x=x, y=y)) +
+  geom_hex() +
+  scale_fill_viridis() +
+  theme_minimal()
+```
+
+This example uses the `ggplot2` package in conjunction with `viridisLite`. It generates a hexbin plot of two normally-distributed variables `x` and `y`, and applies the `viridis` color scale. The command to run the code is simply to execute it in the R console or any R IDE like RStudio.
+
+In the above code, the input file is essentially the dataframe, `df`, that we've created within the script itself. It is of the form of two columns `x` and `y` with 1000 rows of random normally distributed numbers. 
+
+As for the color scale from `viridisLite`, the `viridis()` function provides a series of color hues that can be applied to any plot with color scales, as the fill aesthetic in this case. The `scale_fill_viridis()` function is used for this exact purpose. 
+
+Please note that 'viridisLite' does not take any file input directly. It works in conjunction with other libraries such as ggplot2 to provide a color palette for visualizations.

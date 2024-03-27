@@ -1,65 +1,53 @@
-Use Case: Fastest Fourier Transform in the West (FFTW3) is a software library for computing discrete Fourier transforms (DFTs). It is widely used in scientific computing and signal processing applications.
+Use Case: Use FFTW3 for computing complex to complex Fast Fourier Transform.
 
-Code details and examples:
-1. FFT of a 1D array using FFTW3 in C:
-```c
+Code details and examples: 
+Code: 
+
+    	
+```C++
+#include <complex>
 #include <fftw3.h>
-#include <stdio.h>
-
+ 
+const ptrdiff_t N0 = 10, N1 = 10;
+ 
 int main()
 {
-    fftw_complex *in, *out;
-    fftw_plan p;
-    
-    int N = 10;
-    in = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * N);
-    out = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * N);
-    
-    // Initialize input array
-    for (int i = 0; i < N; i++) {
-        in[i][0] = i; // Real part
-        in[i][1] = 0; // Imaginary part
-    }
-    
-    p = fftw_plan_dft_1d(N, in, out, FFTW_FORWARD, FFTW_ESTIMATE);
-    fftw_execute(p);
-    
-    // Print the output array
-    for (int i = 0; i < N; i++) {
-        printf("%f + %fi\n", out[i][0], out[i][1]);
-    }
-    
-    fftw_destroy_plan(p);
-    fftw_free(in);
-    fftw_free(out);
-    
-    return 0;
+    fftw_complex *data, *fft_result;
+    fftw_plan plan_forward, plan_backward;
+    ptrdiff_t alloc_local, local_n0, local_0_start, i, j;
+ 
+    alloc_local = fftw_mpi_local_size_2d(N0, N1, MPI_COMM_WORLD,
+                                         &local_n0, &local_0_start);
+ 
+    data = fftw_alloc_complex(alloc_local);
+    fft_result = fftw_alloc_complex(alloc_local);
+ 
+    plan_forward = fftw_mpi_plan_dft_2d(N0, N1, data, fft_result,
+                                        MPI_COMM_WORLD, FFTW_FORWARD, FFTW_ESTIMATE);
+ 
+    plan_backward = fftw_mpi_plan_dft_2d(N0, N1, fft_result, data,
+                                         MPI_COMM_WORLD, FFTW_BACKWARD, FFTW_ESTIMATE);
+ 
+    for (i = 0; i < local_n0; ++i) 
+      for (j = 0; j < N1; ++j)
+        data[i*N1 + j][0] = i*N1 + j,
+        data[i*N1 + j][1] = 0;
+
+    fftw_execute(plan_forward);
+    fftw_execute(plan_backward);
+ 
+    fftw_destroy_plan(plan_forward);
+    fftw_destroy_plan(plan_backward);
+    fftw_free(data); fftw_free(fft_result);
 }
 ```
 
-2. FFT of a 2D array using FFTW3 in Python with PyFFTW library:
-```python
-import numpy as np
-import pyfftw
+The above code computes the 2D complex-to-complex FFT. In the above code, `N0` and `N1` are dimensions of the problem, `alloc_local` is the size of the local data, `local_n0` is the number of rows, `local_0_start` is starting row of the process, `data` is input memory block, `fft_result` is the output of FFT.
 
-N = 10
-in_data = np.random.rand(N, N) + 1j * np.random.rand(N, N)
+In order to compile and run the FFTW program, you can use 
 
-# Create FFTW plan
-p = pyfftw.FFTW(in_data, in_data, axes=(0,1), direction='FFTW_FORWARD', flags=('FFTW_ESTIMATE',))
+`mpic++ -o fft mpi_fft.cpp -lfftw3_mpi -lfftw3 -lm`
 
-# Execute FFT
-out_data = p()
+`mpirun -np 4 ./fft`
 
-print(out_data)
-```
-
-To compile the C code using FFTW3 library (assuming FFTW3 is installed), you can use the following command:
-```
-gcc -o fft_example fft_example.c -lfftw3 -lm
-```
-
-To run the compiled C program:
-```
-./fft_example
-```
+The sample data is generated within the code itself for simplicity. It’s a simple pattern where each element is `i*N1 + j`.

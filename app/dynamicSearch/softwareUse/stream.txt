@@ -1,0 +1,49 @@
+Use Case: STREAM is a High Performance Computing tool used to measure sustainable memory bandwidth and the corresponding computation rate for simple vector kernels. 
+
+Code details and examples: Code
+
+Sample Input File: No input file is needed for STREAM.
+
+Format Required: N/A
+
+Specifications and Details in Input Files: N/A
+
+Code Snippet:
+```c
+#define STREAM_ARRAY_SIZE 1000000
+#define NTIMES 10
+static double a[STREAM_ARRAY_SIZE],
+              b[STREAM_ARRAY_SIZE],
+              c[STREAM_ARRAY_SIZE];
+             
+double scalar = 3.0;
+
+// Initialization
+for (j=0; j<STREAM_ARRAY_SIZE; j++)
+   a[j] = b[j] = c[j] = 1.0 * j;
+
+// Copy
+for (j=0; j<STREAM_ARRAY_SIZE; j++)
+   c[j] = a[j];
+
+// Scale
+for (j=0; j<STREAM_ARRAY_SIZE; j++)
+   b[j] = scalar*c[j];
+
+// Add
+for (j=0; j<STREAM_ARRAY_SIZE; j++)
+   c[j] = a[j]+b[j];
+
+// Triad
+for (j=0; j<STREAM_ARRAY_SIZE; j++)
+   a[j] = b[j]+scalar*c[j];
+```
+Command to run:
+To run the STREAM Benchmark, an appropriate compiler is needed. The benchmark is compiled with the command:
+```bash
+$ gcc stream.c -O2 -o stream
+```
+Then, execute the binary
+```bash
+$ ./stream
+```

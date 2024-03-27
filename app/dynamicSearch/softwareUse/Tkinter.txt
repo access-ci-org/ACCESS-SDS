@@ -1,18 +1,38 @@
-Use Case: Tkinter is a popular GUI toolkit for Python.
+Use Case: Use Tkinter to create a GUI that takes user input and displays it in a label.
 
-Code details and examples:
-```python
+Code details and examples: Code.
+
+To generate a simple GUI that collects user input and displays it, you can use the following code:
+
+```Python
+# Required Libraries
 import tkinter as tk
 
-# Create a basic Tkinter window
-root = tk.Tk()
-root.title("Sample Tkinter Window")
-label = tk.Label(root, text="Hello, Tkinter!")
-label.pack()
-root.mainloop()
-```
+# Function to display the input text.
+def display_text():
+   fetch_text = name.get()                       # Fetch the input provided by the user.
+   print_label = tk.Label(window, text=fetch_text)   # Create label widget to print text.
+   print_label.pack()                            # Pack the widget in the GUI.
+  
+window = tk.Tk()                                # Create the main window.
 
-To run the code:
+name = tk.StringVar()                           # Create a Tkinter variable to hold text.
+
+# Create an Entry widget to collect input text from the user.
+input_text = tk.Entry(window, textvariable=name, width = 40)
+
+input_button = tk.Button(window, text="Print Text", command=display_text)  # Button to call function.
+
+# Pack the widgets.
+input_text.pack()
+input_button.pack()
+
+window.mainloop()                               # Call the Main GUI function.
 ```
-python your_script.py
-```
+This command is run directly in the python environment. 
+
+This python script creates a window with an input field and a button. When you input text and click the 'Print Text' button, the input text is displayed in the window. This is a basic example, but you can extend and develop it to create complex GUIs. 
+
+The input file is not needed in this case, this tutorial directly takes input from the users from the GUI. 
+
+Note: This script is executed directly in the python environment, no additional commands are required to run it. Just save it as a .py file and execute it in a python environment.

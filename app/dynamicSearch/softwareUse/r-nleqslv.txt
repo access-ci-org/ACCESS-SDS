@@ -1,0 +1,32 @@
+Use Case: The r-nleqslv is an R package used for solving non-linear equations. Its primary function is to find a root of a system of non-linear equations. 
+
+Code details and examples:
+
+Code: 
+
+```
+#Load the library
+library(nleqslv)
+
+# Input Function
+eqn <- function(x) {
+  c(
+    x[1]*2 + x[2]*2 - 1,
+    x[1]*-1 + x[2]*3 - 2
+  )
+}
+
+# Initial point
+x.start <- c(0, 0)
+
+# Solve equations
+solution <- nleqslv(x.start, eqn)
+
+# Show solution
+print(solution$x)
+```
+
+In this simple example, we defined a system of two nonlinear equations `x[1]*2 + x[2]*2 - 1` and `x[1]*-1 + x[2]*3 - 2`. `x.start` is the initial point from which to start the search for the solution. `nleqslv` is the function used to solve the given system of equations. 
+
+Command to run this code: 
+This code can be run in any R environment by executing each command sequentially. In RStudio, this could be done by highlighting the entire code snippet and then clicking the "Run" button.

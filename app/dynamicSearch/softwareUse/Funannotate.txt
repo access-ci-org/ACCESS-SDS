@@ -1,18 +1,32 @@
-Use Case: Funannotate is a software tool for functional annotation of fungal genomes.
+Use Case: Funannotate is commonly used for predicting and annotating gene models in fungal, plant, and animal genomes. It functions with Unix/Linux and is specifically useful in functional annotation of a genome.
 
-Code details and examples:
-- Sample input files:
-  - Fasta file of the genome to be annotated
-  - Optional transcriptome data in fasta format
-  - Protein sequences in fasta format
-- Format required:
-  - Fasta format for genome, transcriptome, and protein sequences
-- Command to run:
-  ```
-  funannotate predict -i genome.fasta --protein protein.fasta
-  ```
-- Additional specifications:
-  - Funannotate provides various modules for different steps in the annotation process, such as prediction, training, and annotation.
-  - It supports various annotation sources, including InterProScan, BUSCO, and more.
+Code Details and Examples: 
 
-For more information and detailed usage instructions, you can refer to the Funannotate documentation: https://funannotate.readthedocs.io.
+Code:
+
+Required Input file Format: genomic DNA sequences in FASTA format and RNA-Seq data if available
+
+```
+# Build database
+funannotate setup -i all
+
+# Train Augustus
+funannotate train -i /path/to/sequences.fasta --species aug_species_model --cpus 16 -o /output/folder
+
+# Predict
+funannotate predict -i /path/to/training/sequences.fasta --species aug_species_model -o /output/folder --organism other --SeqCenter 'XYZ' --strain mystrain
+
+# Update
+funannotate update -i /output/folder --cpus 16
+
+# Functional annotation
+funannotate annotate -i /output/folder --cpus 16
+```
+
+Specifications of the input data:
+1. Fasta format for sequences
+2. Genomic DNA sequences, preferably without any contaminant sequences
+3. RNA-seq data to train the algorithm
+
+Command to run:
+This is command-line software and all functions are called with "funannotate [function] [options]". Here "[function]" is one of the following: setup, clean, check, species, sort, vectorclean, train, predict, fix, update, annotate, compare, iprscan, remote, p2g, view, test. The "[options]" depend on the function called.

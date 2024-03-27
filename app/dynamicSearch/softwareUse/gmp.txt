@@ -1,43 +1,55 @@
-Use Case: Arbitrary-precision arithmetic with GMP
+Use Case: The GMP (GNU Multiple Precision) library is a C library for arbitrary precision arithmetic, operating on signed integers, rational numbers, and floating-point numbers. GMP is extremely efficient for large operands. It's typically used for cryptographic or numerical applications, such as implementing cryptographic algorithms or large number factorization.
 
 Code details and examples:
-```c
-#include <gmp.h>
-#include <stdio.h>
 
-int main() {
-    mpz_t num1, num2, result;
-    
-    // Initialize variables
-    mpz_init(num1);
-    mpz_init(num2);
-    mpz_init(result);
-    
-    // Set values
-    mpz_set_str(num1, "123456789012345678901234567890", 10);
-    mpz_set_str(num2, "987654321098765432109876543210", 10);
-    
-    // Perform addition
-    mpz_add(result, num1, num2);
-    
-    // Output result
-    gmp_printf("Result: %Zd\n", result);
-    
-    // Clear variables
-    mpz_clear(num1);
-    mpz_clear(num2);
-    mpz_clear(result);
-    
-    return 0;
+Code:
+
+The GMP library supports numbers with practically no limit (only limited by available memory). Here is a simple example of how to add and multiply arbitrarily large integers.
+
+```c
+#include <stdio.h>
+#include <gmp.h>
+
+int main (void)
+{
+  mpz_t a, b, c;  /* working variables */
+  mpz_init (a);  /* initialize a, b and c */
+  mpz_init (b);
+  mpz_init (c);
+
+  mpz_set_str (a, "123456789012345678901234567890", 10);  /* Base 10 */
+  printf ("a = ");
+  mpz_out_str (stdout, 10, a);  /* print a in base 10 */
+  printf ("\n");
+
+  mpz_set_str (b, "987654321098765432109876543210", 10);  /* Base 10 */
+  printf ("b = ");
+  mpz_out_str (stdout, 10, b);  /* print b in base 10 */
+  printf ("\n");
+
+  mpz_add (c, a, b);  /* c = a + b */
+  printf ("c = ");
+  mpz_out_str (stdout, 10, c);  /* print c in base 10 */
+  printf ("\n");
+
+  mpz_mul (c, a, b);  /* c = a * b */
+  printf ("c = ");
+  mpz_out_str (stdout, 10, c);  /* print c in base 10 */
+  printf ("\n");
+
+  mpz_clear (a);  /* free the memory used by a, b and c */
+  mpz_clear (b);
+  mpz_clear (c);
+
+  return 0;
 }
 ```
 
-Compilation command:
-```
-gcc -o gmp_example gmp_example.c -lgmp
-```
+This program adds and multiplies large numbers. The mpz_set_str function is used to set the initial values of the numbers, indicating the base (10 in this case). The mpz_add and mpz_mul functions perform the arithmetic operations.
 
-To run the compiled program:
-```
-./gmp_example
+To compile and run the program, you'd typically do something like this at the command line (assuming the code is in a file named main.c and gcc is available):
+
+```bash
+gcc -o main main.c -lgmp
+./main
 ```

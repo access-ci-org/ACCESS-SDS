@@ -1,26 +1,28 @@
-Use Case: Greenlet is a lightweight coroutine library for Python.
+Use Case: Greenlet is a python library that lets you run functions in a separate thread, or greenlet. It is a primitive form of cooperative multitasking for Python. It's a spin-off of Stackless, a version of CPython that supports micro-threads (a.k.a. greenlets). The greenlet package is a spin-off from Stackless, a version of CPython that supports micro-threads called "tasklets". The greenlet library can be very useful when you need to handle a lot of concurrent connections, for example when writing a server.
 
-Code details and examples: 
+Code Details and Examples: 
+
+Code: 
+
 ```python
 from greenlet import greenlet
 
-# Define two greenlets
 def test1():
-    print("Hello from test1")
+    print("This is function 1")
     gr2.switch()
-    print("Goodbye from test1")
+    print("Switched back to function 1")
 
 def test2():
-    print("Hello from test2")
+    print("This is function 2")
     gr1.switch()
-    print("Goodbye from test2")
+    print("Switched back to function 2")
 
-# Create greenlets
 gr1 = greenlet(test1)
 gr2 = greenlet(test2)
-
-# Start execution
 gr1.switch()
 ```
+In the above code two greenlets are created, gr1 and gr2, each associated with function test1 and test2 respectively. When `gr1.switch()` is called, execution shifts to function `test1()`. Inside `test1()`, `gr2.switch()` is called that suspends the current greenlet `gr1` and resumes `gr2` resulting in the execution shifting to `test2()`. When `gr1.switch()` is called inside `test2()`, execution again shifts back to `test1()`.
 
-In this example, `test1` and `test2` are two functions that switch context back and forth using greenlets.
+To run the script, save the script to a .py file then run the python file with python filename.py from the terminal. For example, if the script was saved as example.py:
+
+Command to run: `python example.py`

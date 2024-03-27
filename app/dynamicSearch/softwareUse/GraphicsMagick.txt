@@ -1,23 +1,25 @@
-Use Case: Image manipulation and processing 
-Code details and examples:
-```
-# Sample input file: image.jpg
-# Command to resize an image
-gm convert image.jpg -resize 50% resized_image.jpg
-```
+Use Case: Convert an image format, resize an image, create a montage of images, create a thumbnail.
 
-Use Case: Image conversion 
-Code details and examples:
-```
-# Sample input file: image.png
-# Command to convert image format
-gm convert image.png converted_image.jpg
-```
+Code Details and Examples:
 
-Use Case: Drawing on images
-Code details and examples:
-```
-# Sample input file: original_image.jpg
-# Command to draw a red rectangle on an image
-gm convert original_image.jpg -fill none -stroke red -strokewidth 2 -draw "rectangle 10,10 100,100" image_with_rectangle.jpg
-```
+Code 1:
+To convert an image format from JPEG to PNG, users will first need an input file in JPEG format.
+Command:
+`gm convert input.jpeg output.png`
+
+Code 2:
+To resize an image, users will need an image file. The following command will resize an image to a width of 100 pixels, and the height will be adjusted to maintain aspect ratio.
+Command: 
+`gm convert -resize 100 input.jpeg output.jpeg`
+
+Code 3:
+Creating a montage of images, for this use case, first select the series of images that will be combined into a montage. They should be in the same format.
+Command: 
+`gm montage image1.jpeg image2.jpeg -geometry +2+2 montage.png`
+
+Code 4:
+To create a thumbnail of an image. A source image file needed and the following command will create a thumbnail of the desired size.
+Command: 
+`gm convert -size 120x120 input.jpeg -resize 120x120 +profile "*" thumbnail.jpeg` 
+
+Please replace `input.jpeg`, `output.jpeg`, `output.png`, `image1.jpeg`, `image2.jpeg` with actual file names. Replace `120x120` with the desired dimension of the thumbnail. Replace `100` with the desired width when resizing images.

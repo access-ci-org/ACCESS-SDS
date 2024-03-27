@@ -1,0 +1,36 @@
+Use Case: fwdpy11 is a Python library useful in forward-time population genetic simulations. It can be used to explore the genetic architecture of complex traits.  
+
+Code details and examples: 
+
+Code:
+```
+import numpy as np
+import fwdpy11 as fp11
+import fwdpy11.model_params
+
+rng = fp11.GSLrng(101)
+pop = fp11.SlocusPop(1000)
+pdict = {
+    'nregions' : [], 
+    'sregions' : [fp11.ExpS(0,1,1,0.05,-0.05)],
+    'recregions' : [fp11.Region(0,1,1)], 
+    'rates' : (0, 0.005, None), 
+    'gvalue' : fp11.SlocusAdditive(2.0)
+}
+params = fp11.model_params.ModelParams(**pdict)
+fp11.SlocusForward(rng,pop,params)
+
+Sample Input File or Format: 
+
+This code does not necessarily require an input file. The parameters for the simulation are defined within the script itself. In this example, 'nregions' and 'sregions' are coding sequences and selected regions respectively and they are defined by a list of region objects. 'recregions' is a list of regions where recombination can happen. 'rates' are the mutation, recombination and environmental noise rates. 'gvalue' is the genetic value of an individual.
+
+Command to run: 
+
+In your workspace,
+python script.py
+
+(where 'script.py' is the name you saved this script as)
+
+Specifications: 
+
+It’s crucial to set the parameters based on the requirements of your specific genetic simulation. Modifying the parameters of 'nregions', 'sregions', 'recregions', and mutation and recombination rates within 'rates' changes the behavior of the simulation. Inputs like 'nregions' or 'sregions' accept lists of regions. Each region is defined using the `fp11.Region` method, which takes three arguments: the left and right boundaries and the weight.

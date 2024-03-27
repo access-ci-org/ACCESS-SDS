@@ -1,0 +1,46 @@
+Use Case: Use pytest-xdist for distributed and parallel testing in Python. xdist plugin extends pytest with some unique testing features; Performance: speed up test run time by sending tests to multiple CPUs; Basics: allow to manage tests on remote machines using ssh; Looponfailing: run your tests repeatedly in a loop re-running the failures. This option allows unittest-like functionality for when the developer is focusing on a single or limited set of test cases. This plugin is highly compatible with the coverage plugin.
+
+Code details and examples: Code
+
+1. Create a Python file `test_sample.py`:
+
+```
+def test_one():
+    x = 'this'
+    assert 'h' in x
+
+def test_two():
+    x = 'hello'
+    assert hasattr(x, 'check')
+```
+
+2. This is the basic structure of pytest unittest. You do not need an input file. 
+
+3. To run a parallel test with pytest-xdist, use the following command:
+
+```
+pytest -n [NUM]
+```
+where [NUM] is the number of CPUs to be used.
+
+For instance, with 4 CPUs, it will be:
+```
+pytest -n 4
+```
+
+4. For distributed testing in multiple machines, you need to specify the hostnames of your machines in the setup.cfg file within the [pytest] section. The machines will need to have sshd running and pytest installed. You will also need to be able to ssh password-less to the target machines, which can usually be accomplished by ssh-copy-id.
+
+5. For using the looponfailing mode, use the following command:
+
+```
+pytest --looponfail
+```
+This command will run all the tests just like pytest does, but on a failure it will enter a loop that only runs the failing tests. It will leave this loop once all the tests pass, rerunning the entire suite of tests.
+
+6. Basic sample input file for running a specific set of test cases when using looponfailing could look like this:
+```
+# content of :test_suites.ini
+[general_tests]
+files = ['test_file.py']
+```
+With this file, you can run the test_file.py by using the command pytest @test_suites.ini to run the test cases specified in this .ini file in looponfailing mode until all the test cases pass.

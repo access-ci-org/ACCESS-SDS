@@ -1,0 +1,23 @@
+Use Case: Racon is used commonly in genomics for consensus sequence generation. It can be used for reads correction, error correction in raw sequences, and for generating consensus sequences. It is specifically designed to correct third-generation sequencing reads.
+
+Code details and examples: Code
+
+To run Racon, you first need to create an overlap file from your reads, which is typically a .paf file. 
+
+Many tools can generate these, such as minimap2. Here is a typical command to generate the required overlaps:
+
+```
+minimap2 -x map-ont reference.fasta reads.fastq > overlaps.paf
+```
+Then you would use Racon to correct the reads. Below is the general form of the command
+
+```
+racon -t threadsNumber reads.fastq overlaps.paf reference.fasta > output.fasta
+```
+
+For example: 
+
+```
+racon -t 8 reads.fastq overlaps.paf reference.fasta > output.fasta
+```
+In this usage, `-t` is the number of CPU threads, `reads.fastq` is the FASTQ file of your raw reads, `overlaps.paf` is the overlaps file you generated with minimap2 (or another tool), `reference.fasta` is the initial reference sequence, and `output.fasta` stands for the corrected sequence. Note that Racon can also accept GZipped FASTQ files as input.

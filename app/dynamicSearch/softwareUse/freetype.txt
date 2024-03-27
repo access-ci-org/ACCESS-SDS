@@ -1,37 +1,41 @@
-Use Case: Text rendering library  
-Code details and examples:  
-Freetype is a popular software library used for rendering text on different platforms. Below is a simple example to demonstrate how to render text using Freetype in C.
+Use Case: FreeType is a software development library that is able to load fonts, render them to bitmaps, and provide support for several font-related operations. A popular use case for FreeType is to render a TrueType font (.ttf) onto an image.
 
-Input file (font file required for text rendering in this case):
-- Font file (e.g., Arial.ttf)
+Code details and examples:
 
-```c
-#include <ft2build.h>
-#include FT_FREETYPE_H
+Code:
 
-int main() {
-    FT_Library ft;
-    FT_Face face;
+```python
+import matplotlib
+import matplotlib.ft2font as ft2font
 
-    FT_Init_FreeType(&ft);
-    FT_New_Face(ft, "Arial.ttf", 0, &face);
-    FT_Set_Char_Size(face, 0, 16*64, 300, 300);
+# Load the font file
+filename = 'PATH_TO_YOUR_FONT.ttf'
 
-    // Render text here
+# The FreeType font object
+face = ft2font.FT2Face(filename)
 
-    FT_Done_Face(face);
-    FT_Done_FreeType(ft);
+# Render the text onto the image
+text = 'Hello, world!'
+dpi = 72    # Pixels per inch
+fontsize = 20    # Font size in points
 
-    return 0;
-}
+# Get the font's dimensions
+face.set_char_size(int(fontsize * 64))    # Set the character size
+text_width, text_height = face.get_width_height()   # Get the text's dimensions
+
+text_width /= 64    # Convert from FreeType's 26.6 fixed-point format
+text_height /= 64
+
+glyphs = [face.load_char(c, flags=ft2font.LOAD_RENDER) for c in text]
+
+bitmap = sum([g.bitmap for g in glyphs])
+bitmap_width, bitmap_height = bitmap.shape
 ```
 
-To compile the above code using GCC:
-```bash
-gcc -o text_rendering text_rendering.c -lfreetype
+Command to run the code:
+
+```sh
+python3 render_text.py
 ```
 
-To run the generated executable:
-```bash
-./text_rendering
-```
+The input file for this FreeType script in this case is a `.ttf` format font file. Font files are usually fixed and no specific specifications are needed for them. Other font formats supported by FreeType include Type1, CFF, OpenType, SFNT, PCF, BDF, FNT, PFR and Type42. Please replace `'PATH_TO_YOUR_FONT.ttf'` with your actual font file path. The text to be rendered can be changed with `text = 'Hello, world!'`. DPI or Pixels per inch can be set using `72 dpi`. Fontsize in points can be set using `fontsize = 20`. The final bitmap dimensions can be obtained from `bitmap_width, bitmap_height = bitmap.shape`.

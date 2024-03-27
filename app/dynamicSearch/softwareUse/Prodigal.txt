@@ -1,28 +1,31 @@
-Use Case: Prodigal is a microbial gene prediction software widely used in bioinformatics for predicting protein-coding genes in bacterial and archaeal genomes.
+Use Case: Prodigal is typically used for gene prediction in bacteria, archaes, and metagenomes. It predicts genes based on finding potential open reading frames and using a sophisticated algorithm to analyze protein-coding potentials. 
 
 Code details and examples:
-1. Running Prodigal on a bacterial genome fasta file:
-```bash
-prodigal -i input.fasta -o output.gbk
-```
-In this command, `input.fasta` is the input genome file in FASTA format and `output.gbk` is the output file in GenBank format containing the predicted gene sequences.
 
-2. Running Prodigal in metagenome mode:
-```bash
-prodigal -i input.fasta -o output.gbk -p meta
-```
-In this command, `-p meta` specifies the metagenome mode which is used for predicting genes in metagenomic datasets.
+Code:
 
-3. Running Prodigal with a specified training file:
-```bash
-prodigal -i input.fasta -o output.gbk -t training_file.txt
-```
-In this command, `-t training_file.txt` specifies a user-provided training file for Prodigal to use during gene prediction.
+Input Files Format:
+Prodigal requires a fasta file as input. The command needs to have Prodigal followed by:
+ 
+- -i to specify input filename 
+- -o to specify output filename 
+- -a to specify protein sequence output filename (optional)
+- -p to specify the procedure (single or metagenomic) (optional)
 
-4. Running Prodigal to output nucleotide sequences:
-```bash
-prodigal -i input.fasta -a output.fna
 ```
-In this command, `-a output.fna` specifies the output file in FASTA format containing the predicted nucleotide sequences.
+prodigal -i input.fna -o output.txt -a output.faa -p single
+```
 
-Note: The above examples are command-line usage examples and may vary based on the specific version of Prodigal you are using. Always refer to the Prodigal documentation for detailed usage instructions and options.
+The input file could be an assembled genome and the format of the file should be as follows:
+ 
+```
+>sequence_1
+ATG CTGAAA...
+>sequence_2
+ATG VCGGT...
+```
+
+Here, sequence_1, sequence2, ... indicates names of sequences and these are followed by DNA sequences (ATG CTGAAA...). 
+
+Output Files:
+The output file contains the gene sequences (in fasta format) while another output file output.txt contains the location of genes on contigs.

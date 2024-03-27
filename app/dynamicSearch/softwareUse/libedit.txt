@@ -1,40 +1,59 @@
-Use Case: libedit
+Use Case: libedit is a software library that provides functions to support line editing. These functions include those used to read a line from the terminal, set command history, and perform tab completion. Ideal for command-line interfaces and scripting languages, providing user-friendly interfaces to utilities or services that require command-line inputs.
 
 Code details and examples:
-libedit is a library for command-line editing. It is typically used in UNIX-like systems as an alternative to GNU Readline. Here is a basic example of how libedit can be used:
 
-```c
+Code:
+```C
 #include <stdio.h>
 #include <histedit.h>
 
-int main() {
-    EditLine *el = el_init("libedit_example", stdin, stdout, stderr);
-    History *hist = history_init();
-    HistoryEvent ev;
+char *prompt(EditLine *e);
 
+char *prompt(EditLine *e) {
+    return "prompt> ";
+}
+
+int main(void) {
+    EditLine *el;
+    History *myhistory;
+    HistEvent ev;
+
+    el = el_init("myprog", stdin, stdout, stderr);
     el_set(el, EL_PROMPT, &prompt);
     el_set(el, EL_EDITOR, "emacs");
 
-    while (1) {
-        const char *line = el_gets(el, NULL);
-        if (!line) {
-            break;
-        }
-
-        history(hist, &ev, H_ENTER, line);
-        printf("Received input: %s\n", line);
+    myhistory = history_init();
+    if (myhistory == 0) {
+        fprintf(stderr, "history could not be initialized\n");
+        return 1;
     }
 
-    history_end(hist);
+    history(myhistory, &ev, H_SETSIZE, 800);
+
+    el_set(el, EL_HIST, history, myhistory);
+
+    for (;;) {
+        int count;
+        const char *line = el_gets(el, &count);
+
+        if (!line || count <=0) break;
+
+        history(myhistory, &ev, H_ENTER, line);
+
+        printf("You entered: %s", line);
+        fflush(stdout);
+    }
+
+    history_end(myhistory);
     el_end(el);
     return 0;
 }
 ```
-
-You can compile the above code with:
-
+To run the example, save it to a file named `example.c`, then compile it with the following command:
 ```bash
-gcc -l edit -o libedit_example libedit_example.c
+gcc -o example example.c -ledit
 ```
-
-Please note that libedit is a C library, so the above code is written in C.
+This will create an executable named `example` which can be run by typing:
+```bash
+./example
+```

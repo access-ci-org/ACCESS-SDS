@@ -1,35 +1,43 @@
-Use Case: iCommands is a collection of command-line utilities for managing data in the iRODS distributed data management system.
+Use Case: iCommands is a collection of commands for the Integrated Rule-Oriented Data System (iRODS). It can handle data management, sharing, and integration and is used in high-performance computing and data-heavy processing applications.
 
-Code details and examples:
-1. icd: Change the current iRODS collection.
-   ```
-   icd /tempZone/home/user1/
-   ```
+Code Details and Examples:
 
-2. ils: List the contents of the current or specified iRODS collection.
-   ```
-   ils
-   ils /tempZone/home/user1/
-   ```
+Code 1: Standard command to display information about the iRODS system and the user's iRODS account.
 
-3. iput: Upload a file or directory to the iRODS collection.
-   ```
-   iput myfile.txt /tempZone/home/user1/
-   ```
+Command: ils
 
-4. iget: Download a file or directory from the iRODS collection.
-   ```
-   iget /tempZone/home/user1/myfile.txt .
-   ```
+The "ils" command lists the contents of a collection. 
 
-5. irm: Remove a file or directory from the iRODS collection.
-   ```
-   irm /tempZone/home/user1/myfile.txt
-   ```
+```
 
-6. ilsresc: List resources or storage devices in the iRODS system.
-   ```
-   ilsresc -l
-   ```
+ils /tempZone/home/rods
+/tempZone/home/rods:  
+gearRules.json
+test1.txt
+```
 
-To use iCommands, you would typically connect to an iRODS server and authenticate using your credentials before running these commands.
+Code 2: Command to upload a file to the iRODS repository.
+
+Command: iput (input, then filename)
+
+iput is used to put a file into iRODS.
+
+Input file: test_file.txt
+
+```
+iput test_file.txt
+```
+
+Code 3: Command to download a file from the iRODS repository.
+
+Command: iget
+
+iget retrieves a file from the iRODS.
+
+```
+iget test_file.txt
+```
+
+Remember that these commands can only function in an active iRODS environment - you need to be connected to an iRODS grid.
+
+You can test these commands by creating a dummy text file in the same directory where the commands are run. Make sure that the file names are exactly the same in the commands and actual files.

@@ -1,34 +1,45 @@
-As LVM2 is a set of user-space tools for managing logical volume management, here is an example use case and code details for creating a logical volume using LVM2.
+Use Case: LVM2 (Logical Volume Manager 2) is a tool for managing logical volumes, or compiling groups of hard drives into one large virtual disk. It allows for more flexibility with volume sizing as it abstracts the physical layout of the disks and lets you resize volumes as needed. 
 
-Use Case: Create a logical volume using LVM2
-Code details and examples:
+Code details and examples: Code
 
-1. Create a Physical Volume (PV):
-```bash
-pvcreate /dev/sdX
-```
+Suppose you have two hard drives sda and sdb and you want to create a logical volume named myVolume, the commands would generally look like this:
 
-2. Create a Volume Group (VG):
-```bash
-vgcreate my_vg /dev/sdX
-```
+1. Create the physical volumes:
 
-3. Create a Logical Volume (LV):
-```bash
-lvcreate -L 10G -n my_lv my_vg
-```
+    ```
+    pvcreate /dev/sda /dev/sdb
+    ```
 
-4. Format the Logical Volume:
-```bash
-mkfs.ext4 /dev/my_vg/my_lv
-```
+2. Create the volume group:
 
-5. Mount the Logical Volume:
-```bash
-mkdir /mnt/my_lv
-mount /dev/my_vg/my_lv /mnt/my_lv
-```
+    ```
+    vgcreate myVolumeGroup /dev/sda /dev/sdb
+    ```
 
-Note: Replace `/dev/sdX` with the appropriate block device in your system.
+3. Create the logical volume:
 
-Keep in mind that it's essential to have the LVM2 tools installed in your system before running these commands.
+    ```
+    lvcreate -n myVolume -l 100%FREE myVolumeGroup
+    ```
+
+This will create a single logical volume using all of the available space on the two drives. 
+
+To list all your physical volumes you can use `pvdisplay`, to list all volume groups `vgdisplay`, to list all logical volumes `lvdisplay`. 
+
+You can easily extend your logical volume if you add a new physical volume to the volume group:
+
+    ```
+    pvcreate /dev/sdc
+    vgextend myVolumeGroup /dev/sdc
+    lvextend -l +100%FREE /dev/myVolumeGroup/myVolume
+    ```
+
+Note: The '+' sign before '100%FREE' tells lvextend to add the free space to the existing space, instead of setting the space to that amount. Always make sure to resize the filesystem to use the new space available:
+
+    ```
+    resize2fs /dev/myVolumeGroup/myVolume
+    ```
+
+Be cautious while using LVM (or any disk-related) commands, mishandling can lead to data losses. Always ensure to back up essential data and carefully check your commands before execution.
+
+These commands need to be run as superuser so you may precede commands with `sudo` or run as root user. This software usually comes pre-installed with most Linux operating systems.

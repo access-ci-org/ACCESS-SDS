@@ -1,0 +1,37 @@
+Use Case: Fseq is a bioinformatics software used for feature density estimation for high-throughput sequence tags. It is frequently used in genomics and bioinformatics research to visualize and understand the significance of sequence data. 
+
+Code details and examples: 
+
+Code:
+
+Here is an example of how to use Fseq with a sample input file. For the purposes of these examples, let's assume that our input data file is named 'example.bed', and is formatted according to the BED format specifications (i.e., it is a tab-delimited text file with chromosome, start and end positions as the first three columns). We will also assume that our desired output file is named 'output.txt'.
+
+Command to run Fseq: 
+
+```bash
+fseq -o output.txt -f example.bed
+```
+
+In this command, '-o output.txt' specifies the output file name, and '-f example.bed' specifies the input file.
+
+Format Required:
+
+The format required for Fseq is BED format. BED format is a simple, flexible format for representing genomic regions. It consists of one line per feature, each containing 3-12 columns. 
+
+Here is a basic example of a BED file:
+
+```
+chr1    1000    2000
+chr2    5000    6000
+chr3    8000    9000
+```
+
+The first three columns are mandatory and must be in the order specified:
+
+1. Chromosome - The name of the chromosome. For example, 'chr1', 'chr2', etc.
+2. Start - The starting position of the feature in the chromosome. The first base in a chromosome is numbered 0.
+3. End - The ending position of the feature in the chromosome. The end position is included in the feature.
+
+Specifications and Details in Input Files:
+
+The input file should be in BED format with at least three columns specifying chromosome, start and end positions. Additional columns can provide additional information about each feature, but are not required by Fseq.

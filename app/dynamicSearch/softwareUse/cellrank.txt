@@ -1,0 +1,21 @@
+Use Case: CellRank is a Python library that is used to infer cellular trajectories and fates from single-cell data. It is often used in bioinformatics to estimate cell lineage progression from single-cell RNA sequencing data or other similar ‘omics’ datasets. 
+
+Code Details and Examples: 
+
+CellRank takes as input a preprocessed AnnData object, which is a common data structure used in many Python single-cell RNA sequencing data analysis packages, including Scanpy - another popular Python library for single-cell RNA seq.
+
+Here’s an example:
+
+Code:
+```python
+import cellrank as cr
+import scanpy as sc
+
+adata = sc.read("<path_to_your_data>.h5ad")
+cr.tl.terminal_states(adata, cluster_key='clusters')
+cr.tl.lineages(adata)
+cr.pl.lineages(adata)
+```
+In this example, we first import the required modules `cellrank` and `scanpy`. Then we assign to variable 'adata' the data from a .h5ad file using scanpy's 'read' method. 'h5ad' is the file format for the HDF5-based AnnData object. The `cr.tl.terminal_states` function is then used to compute the terminal states for the cell transitions, where 'cluster_key' is the key under which cluster IDs are stored in the AnnData object. The lineages of cells are then computed using `cr.tl.lineages` and then visualized with `cr.pl.lineages`.
+
+In keeping with the exact case sensitivity, the library should be imported as `cellrank` not `CellRank` or `Cellrank`.

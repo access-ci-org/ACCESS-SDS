@@ -1,0 +1,36 @@
+Use Case: Use r-nor1mix to fit univariate normal mixtures for a given dataset. 
+
+Code details and examples: Code. 
+For the r-nor1mix library, an R package, you might have input data structured in a CSV file with several columns where each column represents a different variable. Let's say you have a CSV file named "data.csv" has a column "Age" which you want to fit a univariate normal mixture.
+
+Sample data file (data.csv):
+```
+ID,Age
+1,25
+2,24
+3,27
+4,23
+5,30
+6,28
+7,29
+```
+Here is a sample code snippets that reads the data file, and fits univariate normal mixtures on "Age" using r-nor1mix library:
+
+```R
+# Required library
+library(nor1mix)
+
+# Read your data, here for instance a CSV file
+data <- read.csv("data.csv")
+
+# Fit the univariate normal mixtures
+fit <- norMixEM(data$Age)
+
+# Print the result
+print(fit)
+```
+The command to run this R script (assume that it is saved as script.R) would be as follows:
+
+```bash
+Rscript script.R
+```

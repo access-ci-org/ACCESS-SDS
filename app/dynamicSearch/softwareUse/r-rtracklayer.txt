@@ -1,0 +1,28 @@
+Use Case: Use rtracklayer to import and export data to and from the UCSC Genome Browser and other browsers that support the same protocols.
+
+Code details and examples:
+ 
+Code:
+```R
+# Import the bioconductor package
+library(rtracklayer)
+
+# To reads in a BED file, run:
+bedFile <- system.file("extdata", "somefile.bed", package = "rtracklayer")
+bed <- import.bed(bedFile)
+print(bed)
+
+# To export a GRanges object to a BED file, run:
+export.bed(bed, file = "output.bed")
+
+# To retrieve a track from the UCSC genome browser, run:
+session <- browserSession()
+genome(session) <- "hg38"
+track <- getTrack(session, "RefSeq Genes")
+```
+
+Input Files:
+- somefile.bed: A BED file contains genomic coordinate and gene annotation information. It has a simple format, where each line corresponds to a gene or feature and each field in the line provides information about the feature. The three mandatory fields are: chromosome name, start position and end position.
+
+Output Files:
+- output.bed: This file will store the exported GRanges object in BED format.

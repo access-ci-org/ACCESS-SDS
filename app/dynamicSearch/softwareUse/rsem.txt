@@ -1,16 +1,17 @@
-Use Case: RNA-Seq by Expectation-Maximization (RSEM) is a software package for estimating gene and isoform expression levels from RNA-Seq data.
+Use Case: Estimating gene and isoform expression levels from RNA-Seq data with RSEM.
 
 Code details and examples:
-1. Sample input files for running RSEM:
-   - Reference transcriptome in fasta format (e.g., ref_transcriptome.fa)
-   - RNA-Seq reads in fastq format (e.g., sample_reads1.fq, sample_reads2.fq)
 
-2. Command to run RSEM:
+In RSEM, the input file should be FASTQ or SAM/BAM file of RNA-Seq reads. 
+
+Code:
+   ```bash
+   # Preparing Reference
+   rsem-prepare-reference --gtf Homo_sapiens.GRCh38.99.gtf Homo_sapiens.GRCh38.dna.primary_assembly.fa Homo_sapiens
+
+   # Calculating Expression Estimates
+   rsem-calculate-expression --paired-end read1.fastq read2.fastq Homo_sapiens sample_output
    ```
-   rsem-calculate-expression --paired-end sample_reads1.fq sample_reads2.fq ref_transcriptome rsem_output
-   ```
+The first code snippet prepares the reference for alignment. The two input files are genome sequence in FASTA format ("Homo_sapiens.GRCh38.dna.primary_assembly.fa") and gene annotations in GTF format ("Homo_sapiens.GRCh38.99.gtf"). The output is prefix ("Homo_sapiens") for naming the output files.
 
-3. Additional specifications:
-   - RSEM output will include estimated gene and isoform expression levels in TPM (Transcripts Per Million) values.
-
-Note: Please make sure to adjust the command with the actual file names and paths in your system.
+The second code snippet calculates expression estimates. The input files are paired-end RNA-seq reads in FASTQ format ("read1.fastq" and "read2.fastq"). Additionally, it uses the prefix of the reference files ("Homo_sapiens") and names the output files using a prefix ("sample_output"). The "--paired-end" option should be used for paired-end data; for single-end data, use "--single-end".

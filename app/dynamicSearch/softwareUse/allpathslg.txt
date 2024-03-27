@@ -1,0 +1,30 @@
+Use Case: AllPathsLG is used for de novo assembly of whole-genome shotgun microreads. 
+
+Code Details and Examples: 
+
+Sample Input File: 
+
+The input files for AllPathsLG are in FASTQ format containing sequence reads. A "lib" file showing the insert libraries is also required. 
+
+A sample FASTQ file (reads_1.fastq):
+```
+@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
++
+!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
+```
+
+A sample lib file (lib.csv):
+```
+"LIB" "TYPE" "READ_FRAG" "MEAN_FRAG_LEN" "STD_DEV"
+"lib1" "Fragment" "5000" "900" "2500"
+```
+Code:
+
+After preparing the necessary input files, the AllPathsLG command to run assembly is as follows:
+```
+run_ALLPATHS-LG PRE=INPUT_DIRECTORY/ DATA_DIR=PWD PLOIDY=1 READS=(frag_reads1=frags1.fastq, jump_reads1=mates1.fastq) REFERENCE_NAME=Name
+```
+Where INPUT_DIRECTORY is the directory containing input files, PWD is the current working directory, frags1.fastq and mates1.fastq are the read files, and Name is the reference sequence name.
+
+Note: AllPathsLG is no longer maintained or supported, and the above command and input files may not work with other assembly software.

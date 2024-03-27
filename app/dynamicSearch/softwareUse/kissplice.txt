@@ -1,0 +1,27 @@
+Use Case: KisSplice is a software that enables to analyse RNA-seq data with or without a reference genome. It is an application of de Bruijn graphs which can be used to identify polymorphisms (SNPs and Indels) without a reference genome.
+
+Code details and examples: 
+
+Code:
+
+KisSplice uses FASTQ/FASTA files as input, which are commonly used to store raw sequence data.
+
+Sample input file (`reads_1.fasta`):
+
+```
+>read1
+AGCTTCGAGTGCCAGGACAGTCAG
+>read2
+CCTTCGATGAATAGGGCCTTCCAG
+>read3
+GCCAGAGTTTCCAGGCTTCGATGA
+...
+```
+
+The command to run KisSplice is as follows:
+
+```
+kissplice -s 1 -k 41 -v --experimental -r reads_1.fasta -r reads_2.fasta
+```
+
+In this command, `-s` specifies the step to start from, `-k` specifies the size of the k-mers to use, `-v` runs KisSplice in verbose mode, `--experimental` enables experimental features, and `-r` flags are used to specify the input read files.

@@ -1,0 +1,26 @@
+Use Case: Crispritz is a software developed for the analysis and design of CRISPR experiments. In terms of usage, one example is generating guideRNAs using the available human genome and then performing off-target evaluation using Cas9 protein.
+
+Code details and examples:
+
+Code:
+To generate the guideRNA:
+
+```bash
+python crispritz.py add-variants-guide genome_directory/ genome_edited_directory/ variants.vcf
+python crispritz.py guide-chooser genome_edited_directory/ guideRNA_output_directory/ -mm 4 -bpx 6
+```
+
+For off-targeting using generated guides and Cas9 protein: 
+
+```bash
+python crispritz.py search genome_edited_directory/ guideRNA_output_directory/ Cas9_results_directory/ -mm 4 -bpx 6 -t
+```
+
+Input file format and specifications:
+1. genome_directory: This should be the directory containing the reference genome in .fa or .fasta format.
+2. genome_edited_directory: This is the directory where the genome with variants will be saved.
+3. variants.vcf: This is the input file containing the variants in variant call format (vcf).
+4. guideRNA_output_directory: This is the directory where the guideRNAs will be saved.
+5. Cas9_results_directory: This is the directory where the off-targeting results will be saved.
+
+The -mm parameter corresponds to the maximum number of mismatches allowed in the algorithm, -bpx corresponds to the length of the seed region, and -t indicates that the mismatches should be counted only in the seed region.

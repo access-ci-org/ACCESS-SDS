@@ -1,0 +1,37 @@
+Use Case: RepeatScout is used for identifying repetitive sequences in genomic data. It's especially useful in studying genomes where the set of repeats is not completely known.
+
+Code details and examples:
+
+Code: 
+
+1. Firstly, you need to create a sequence file. An example of a sequence file is given below:
+
+```bash
+>sequence1
+CGAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTA
+>sequence2
+TCGATCGATCGATCGATCGATCGATCGATCGATCGA
+```
+
+Save this in a file named `input.fasta`.
+
+2. The next step is to execute RepeatScout on the sequence file. Use the following command:
+
+```bash
+RepeatScout -sequence input.fasta -output output.repeats
+```
+
+In this command, `input.fasta` is the input sequence file you generated, and `output.repeats` is where the results will be saved.
+
+3. An example output looks like this:
+
+```bash
+>RepeatScout_family-0
+GCCGCGCGGCCGCCGCC.
+>RepeatScout_family-1
+ATCGATCGATCGATCGA.
+```
+
+Each line starting with `>` indicates a different repeat family discovered in the genome. The line after indicates the repeat sequence. 
+
+Please, note that RepeatScout does not provide any further specifications for input files, it simply requires a file of sequences in FASTA format.

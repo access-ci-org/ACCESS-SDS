@@ -1,22 +1,32 @@
-Use Case: Compilation of C code
+Use Case: The GNU Compiler Collection (gcc) includes front ends for C, C++, Objective-C, Fortran, Ada, and Go. These front ends can be used for multiple purposes such as software development, creating executable files, debugging program code and more. For this example, let's use gcc in a basic C program compilation use case.
 
 Code details and examples:
-```c
-// sample.c
+
+Code:
+
+Save this C program as 'helloworld.c'
+
+```C
 #include <stdio.h>
 
 int main() {
-    printf("Hello, World!\n");
-    return 0;
+   printf("Hello World\n");
+   return 0;
 }
 ```
 
-To compile the `sample.c` file using `gcc`, use the following command:
-```bash
-gcc sample.c -o sample
-```
+Format Required: The program should be in a C source file (.c extension).
 
-To run the compiled executable:
-```bash
-./sample
-```
+To compile the C program above; open terminal (command prompt) in the directory where you've saved 'helloworld.c', then run the command below:
+
+Command:
+
+`gcc helloworld.c -o helloworld`
+
+This will create an executable file named 'helloworld' in the same directory.
+
+To run the compiled program, use the command below:
+
+Command:
+
+`./helloworld`

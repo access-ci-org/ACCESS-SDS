@@ -1,0 +1,37 @@
+Use Case: SPOA (SIMD POA) is a c++ standalone library and tool designed for constructing multiple sequence alignments (MSAs) and extracting consensus sequences in bioinformatics. It is commonly used for generating MSAs of DNA, RNA, or protein sequences. 
+
+Code Details and Examples:
+
+Code:
+ 
+In order to use SPOA, input sequences are expected to be in FASTA or FASTQ format. An example of this format is:
+
+```
+@Sequence1
+AGCTGACGATCG
++ 
+!\"#$%&'()*+,-./0123456789:
+```
+The first line, beginning with '@', is the sequence identifier. The second line is the sequence itself. The line beginning with '+' is an optional comment line, and the last line is quality scores for the sequence.
+
+To generate a multiple sequence alignment using SPOA, the command is generally in the following format:
+
+```bash
+./spoa sequences.fasta
+```
+
+In which 'sequences.fasta' is the input file containing the sequences to be aligned. 
+
+For more specific usage, you can specify the algorithm option (0=local, 1=global, 2=glocal), the method of MSA generation (0=heuristic, 1=complete) and number of threads to be used for computation:
+
+```bash
+./spoa -a 1 -m 1 -t 8 sequences.fasta
+```
+
+The output, by default, is a consensus sequence of the MSA and it's printed to the standard output (console). If you want it to be written in a file:
+
+```bash
+./spoa sequences.fasta > output.fasta
+```
+
+The main specifications are that the input sequences must be in FASTA or FASTQ format with a unique sequence identifier for each sequence. Sequences can be of uneven lengths. As SPOA uses reverse complement calculation for consensus sequence generation, input file should not contain mixed DNA and RNA sequences at a time. The quality scores (ASCII code) are optional. The tool optimizes memory usage based on the number of sequences and the maximum length of sequences.

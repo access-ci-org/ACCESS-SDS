@@ -1,47 +1,68 @@
-It seems like "oclfpga" refers to Intel's OpenCL for FPGA (Field-Programmable Gate Array) technology, which allows for the development of FPGA applications using OpenCL programming language.
+Use Case: Utilizing Intel's FPGA SDK for OpenCL, the oclFPGA can be used for accelerating the computation of complex tasks by exploiting parallelism and deploying on FPGA. It is targeted towards high-performace computing (HPC), artificial intelligence, and data center applications.
 
-Use Case: Compilation and execution of an OpenCL FPGA program
-Code details and examples:
-```c
-// Sample OpenCL FPGA program (vector addition)
-__kernel void vector_add(__global const int *a, __global const int *b, __global int *c) {
-    int idx = get_global_id(0);
-    c[idx] = a[idx] + b[idx];
+Code details and examples: Code
+
+Input: The OpenCL kernel code (*.cl files) and host C/C++ code files are the input for this process.
+
+The format for inputs is C/C++ for host code and OpenCL C for kernel code. 
+
+A simple OpenCL host code example (main.c):
+
+```C
+#include <CL/cl.h>
+#include "AOCLUtils/aocl_utils.h"
+
+using namespace aocl_utils;
+
+#define N 100
+
+int main() {
+    cl_int status;
+  
+    /* Setup OpenCL platform and device */
+    cl_platform_id platform;
+    status = clGetPlatformIDs(1, &platform, NULL);
+
+    cl_device_id device;
+    status = clGetDeviceIDs(platform, CL_DEVICE_TYPE_ALL, 1, &device, NULL);
+      
+    /* Create context and command queue */
+    cl_context context = clCreateContext(NULL, 1, &device, NULL, NULL, &status);
+    
+    cl_command_queue queue = clCreateCommandQueue(context, device, CL_QUEUE_PROFILING_ENABLE, &status);
+
+    /* Read kernel code */
+    const char *source = readFromFile("vector_add.cl");
+
+    /* Create program object */
+    cl_program program = clCreateProgramWithSource(context, 1, (const char **) &source, NULL, &status);
+
+    // kernel source code (vector_add.cl)
+    __kernel void vector_add(__global int *A, __global int *B, __global int *C) {
+        int gid = get_global_id(0);
+        C[gid] = A[gid] + B[gid];
+    }
+
+    return 0;
 }
-
-// Sample input files
-// input_a.txt
-1
-2
-3
-4
-5
-// input_b.txt
-6
-7
-8
-9
-10
-
-// Command to compile the OpenCL program for FPGA
-aoc -v vector_add.cl -o vector_add.aocx
-
-// Command to run the compiled program on FPGA
-aocl program acl0 vector_add.aocx
-aocl reprogram acl0 vector_add.aocx
-
-// Input files for the FPGA program can be passed as buffers to the FPGA kernel
-// Code snippet to load and pass input files to the FPGA kernel
-int input_a[] = {1, 2, 3, 4, 5};
-int input_b[] = {6, 7, 8, 9, 10};
-cl_mem buffer_a = clCreateBuffer(context, CL_MEM_READ_ONLY | CL_MEM_COPY_HOST_PTR, sizeof(input_a), &input_a, NULL);
-cl_mem buffer_b = clCreateBuffer(context, CL_MEM_READ_ONLY | CL_MEM_COPY_HOST_PTR, sizeof(input_b), &input_b, NULL);
-clSetKernelArg(kernel, 0, sizeof(cl_mem), &buffer_a);
-clSetKernelArg(kernel, 1, sizeof(cl_mem), &buffer_b);
-clSetKernelArg(kernel, 2, sizeof(cl_mem), &buffer_c);
-
-// Command to enqueue the kernel for execution on FPGA
-clEnqueueNDRangeKernel(queue, kernel, 1, NULL, &global_size, NULL, 0, NULL, NULL);
 ```
 
-Please note that the exact commands and code snippets may vary depending on the specific FPGA development environment (e.g., Intel Quartus Prime for Intel FPGAs) and the OpenCL implementation for FPGAs being used.
+To compile the host program and generate the FPGA binary, follow these commands hereinbelow:
+
+```Bash
+# compile host program
+i++ -fopencl -o vector_add_host vector_add_host.cpp
+
+# offline compile the OpenCL kernel to FPGA binary
+aoc device/vector_add.cl -o binary/vector_add.aocx
+```
+
+To execute the program on FPGA:
+
+```Bash
+# create emulator configuration file for vector_add.aocx
+emulator_setup.sh --board p385_hpc_d5 -t vector_add.aocx
+
+# execute host program with FPGA emulation 
+CL_CONTEXT_EMULATOR_DEVICE_INTELFPGA=1 ./vector_add_host
+```

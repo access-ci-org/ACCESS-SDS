@@ -1,0 +1,51 @@
+Use Case: bioconvert is a collaborative project to facilitate the interconversion of life science data from one format to another. The main focus is to provide a robust, efficient, flexible and easy-to-use converter software. It's useful in bioinformatics to handle a wide array of biological data formats including emerging standards such as FASTQ, SAM, BAM, etc.
+
+Code details and examples: Code
+
+1. bioconvert FASTQ to BAM:
+
+Input files: FASTQ format is used to store raw sequence data and associated quality scores. This file will have line-based sequences with a sequence identifier, the sequence itself, a comment line, and a quality code line. 
+
+Sample FASTQ:
+
+```
+@SRR001666.1 071112_SLXA-EAS1_s_7:5:1:817:345 length=36
+GGGTGATGGCCGCTGCCGATGGCGTCAAATCCCACCA
++SRR001666.1 071112_SLXA-EAS1_s_7:5:1:817:345 length=36
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIII9IG9IC
+```
+
+Command to run: 
+
+```bash
+bioconvert fastq2bam sample.fastq --output sample.bam
+```
+
+2. bioconvert BAM to SAM:
+
+Input files: BAM format is binary and compressed version of Sequence Alignment/Map (SAM) format. 
+
+Command to run:
+
+```bash
+bioconvert bam2sam sample.bam --output sample.sam
+```
+
+3. bioconvert GFF3 to BED: 
+
+Input files: GFF3 files contain structured, ontology-supported data about genetic features. 
+
+Sample GFF3 features:
+
+```gff
+ctg123 . exon            1300  1500  .  +  .  ID=exon00001;Parent=mRNA00001;Name=EDEN.1
+ctg123 . CDS             1300  1500  .  +  0  ID=cds00001;Parent=mRNA00001;Name=edenprotein.1
+```
+
+Command to run:
+
+```bash
+bioconvert gff32bed sample.gff3 --output sample.bed
+```
+
+Note: The above commands can be installed and run from the terminal or command prompt. It's crucial to replace 'sample.fastq', 'sample.bam' and 'sample.gff3' with your input files. Also, these commands need appropriate rights to perform read and write operations on input and output files.

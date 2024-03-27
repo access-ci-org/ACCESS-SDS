@@ -1,0 +1,24 @@
+Use Case: Fastx_toolkit is used for preprocessing high-throughput sequencing data. It is a collection of command-line tools with the capacity to manipulate reads in the FASTA or FASTQ format. It can be used to split the file into individual sequences, trim sequences based on quality, format conversion from FASTQ to FASTA, etc.
+
+Code Details and Examples:
+
+Code 1:
+FASTQ-A input file: my_reads.fastq
+
+The command to filter the reads based on quality score (minimum quality score 20) and percent of bases that must have [ -q] quality (50%)
+
+```
+fastq_quality_filter -q 20 -p 50 -i my_reads.fastq -o out_reads.fastq
+```
+
+Code 2:
+FASTA input file: my_reads.fasta
+
+Command to reverse-complement each sequence in the file:
+
+```
+fasta_formatter -i my_reads.fasta | fastx_reverse_complement -i - -o my_reads_rev.fasta
+```
+
+Specification in input files: 
+Input files must be in the correct FASTA or FASTQ format. FASTQ files should have each sequence represented with a name line starting with a '@' symbol followed by sequence line, then a '+' line that sometimes includes the same sequence identifier and finally a quality line that holds quality scores for the sequence. FASTA files should have each sequence represented with a name line beginning with a '>' symbol followed by one or multiple lines of the sequence data. All sequences in FASTQ file will have a corresponding quality score line, while this is not the case for FASTA files.

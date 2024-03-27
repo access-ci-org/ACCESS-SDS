@@ -1,11 +1,73 @@
-Use Case: Javascript engine
+Use Case: libv8 is a C++ library that is used in Google Chrome for JavaScript execution and is a very common package for creating and running JavaScript scripts in a C++ environment. It provides APIs for creating JavaScript objects and arrays and calling JavaScript functions. It also allows for JavaScript scripts to be generated from C++ and run within the C++ application.
+
 Code details and examples:
-Sample input file (example.js):
-```javascript
-console.log('Hello, World!');
+
+ let's consider an example where we create a JavaScript object, set properties on it, and then run a script that uses the object. 
+
+Code: 
+
+```c++
+#include <v8.h>
+
+using namespace v8;
+
+int main(int argc, char* argv[]) {
+  // Initialize V8.
+  V8::InitializeICUDefaultLocation(argv[0]);
+  Platform* platform = platform::CreateDefaultPlatform();
+  V8::InitializePlatform(platform);
+  V8::Initialize();
+
+  // Create a new Isolate and make it the current one.
+  Isolate::CreateParams create_params;
+  create_params.array_buffer_allocator =
+      ArrayBuffer::Allocator::NewDefaultAllocator();
+  Isolate* isolate = Isolate::New(create_params);
+  {
+    Isolate::Scope isolate_scope(isolate);
+
+    // Create a stack-allocated handle scope.
+    HandleScope handle_scope(isolate);
+
+    // Create a new context.
+    Local<Context> context = Context::New(isolate);
+
+    // Enter the context for compiling and running the script.
+    Context::Scope context_scope(context);
+
+    // Create a string containing the JavaScript source code.
+    Local<String> source =
+        String::NewFromUtf8(isolate, "'Hello' + ', World!'",
+                            NewStringType::kNormal).ToLocalChecked();
+
+    // Compile the source code.
+    Local<Script> script = Script::Compile(context, source).ToLocalChecked();
+
+    // Run the script to get the result.
+    Local<Value> result = script->Run(context).ToLocalChecked();
+
+    // Convert the result to an UTF8 string and print it.
+    String::Utf8Value utf8(result);
+    printf("%s\n", *utf8);
+  }
+
+  // Dispose the isolate and tear down V8.
+  isolate->Dispose();
+  V8::Dispose();
+  V8::ShutdownPlatform();
+  delete create_params.array_buffer_allocator;
+  return 0;
+}
 ```
 
+This code uses libV8 to create a JavaScript context and use it to run a simple JavaScript expression ("Hello" + ", World!"). Resulting string "Hello, World!" is printed on the screen.
+
 Command to run:
+
+Assuming the C++ file is named main.cpp:
+```bash
+g++ main.cpp -lv8 -o main
+./main
 ```
-v8 example.js
-```
+Here, -lv8 is the flag to link against the V8 library and -o main specifies the output file name
+Note: This code needs libv8 installed to run as specified.

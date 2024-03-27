@@ -1,0 +1,22 @@
+Use Case: Ragout is a tool to perform reference-assisted genome assembly. It allows building a target (query) genome based on known structures of related (reference) genomes. The user would provide a "recipe" file as the main input, which describes available data and desired structure of the result. 
+
+Code details and examples: 
+
+Recipe file format:
+
+```
+references
+  ref1=path/to/reference1
+  ref2=path/to/reference2
+targets
+  tgt=path/to/target
+```
+
+Run command:
+
+```ragout.py recipe.txt```
+
+Note:
+- The tags 'references' and 'targets' are mandatory and should appear exactly once.
+- The paths can be relative or absolute and should point to FASTA files that could be potentially compressed with gzip.
+- Multiple reference and target genomes are supported, you can specify as many as you need.

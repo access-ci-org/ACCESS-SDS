@@ -1,0 +1,15 @@
+Use Case: Running a simple linear regression model in Stata, using an imaginary dataset named "mydata.dta", which contains two variables: "income" and "education". 
+
+Code details and examples: 
+
+Code:
+```
+*Loading the dataset
+use "mydata.dta"
+
+*Running the linear regression model where income is the dependent variable and education is the independent variable
+regress income education
+```
+The dataset "mydata.dta" needs to be in the working directory of the Stata program. The command to run these lines of code is simply by pasting them on the command window of Stata and pressing enter. 
+
+The format of the .dta files is proprietary to Stata. The variables "income" and "education" need to be numeric.

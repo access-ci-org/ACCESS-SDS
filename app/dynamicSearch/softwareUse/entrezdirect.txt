@@ -1,0 +1,31 @@
+Use Case: Obtain FASTA formatted sequence data from the NCBI Nucleotide database using the accession number.
+
+Code details and examples: 
+
+Code: 
+```
+#!/bin/bash
+
+# Get the FASTA sequence for the accession number "AF086833"
+efetch -db nucleotide -id AF086833 -format fasta > sequence.fasta
+```
+
+Input files: 
+
+N/A
+
+Format required: 
+
+The input is an accession number given as a string and not a file.
+
+Specifications and details in input files: 
+
+N/A
+
+Command to run them: 
+
+```
+bash script.sh
+``` 
+
+In this script, `efetch` is a command line utility provided by the EntrezDirect package. It fetches and downloads data from a variety of NCBI databases. In this case, we are interacting with the `nucleotide` database. The `-id` flag is followed by the accession number of the sequence we want to retrieve. The `-format fasta` tells `efetch` we want the sequence data in FASTA format. Finally, the output is redirected to a file called `sequence.fasta`.

@@ -1,0 +1,32 @@
+Use Case: Impute2 is a computational tool for phasing observed genotypes and imputing missing genotypes. It is used in genome-wide association studies to statistically infer genotypes not directly observed in the sequencing or SNP array data. 
+
+Code details and examples: 
+
+Code:
+
+The input file for impute2 is a plink binary bfile which contains genotype information. The input file must follow the following format:
+
+```
+P FID IID PID MID SEX PHENOTYPE
+1 1 1 0 0 1 1
+1 1 2 0 0 1 1
+2 1 3 1 2 1 1
+2 1 4 0 0 1 1
+...
+```
+
+Where P is the population, FID is the family ID, IID is the individual ID, PID is the paternal ID, MID is the maternal ID, SEX is the gender, and PHENOTYPE is the disease status.
+
+You would first change your file into the needed .bed/.bim/.fam format using PLINK:
+
+```bash
+plink --file data --make-bed --out data
+```
+
+Then you can run Impute2 with the following command: 
+
+```bash
+impute2 -m example_data/genetic_map.txt -h example_data/reference.hap.gz -l example_data/reference.legend.gz -known_haps_g example_data/example_study_data.hap.gz -int 20.001 40 -Ne 20000 -o example_data/example_output
+```
+
+In this example, genetic_map.txt is a file that contains info about the recombination rates, reference.hap.gz and reference.legend.gz are the haplotype and legend files for the reference panel, respectively, example_study_data.hap.gz is the haplotype file for the study data, -int specifies the region to impute on the human genome, -Ne is the effective population size, and -o specifies the output file.

@@ -1,0 +1,33 @@
+Use Case: ASGAL (Alternative Splicing Graph ALigner) is an HPC software developed for the detection and the quantification of splicing events using RNA-Seq data. 
+
+Code details and examples: 
+
+Input files: ASGAL requires three input files which should be in specific formats:
+1. A Repeat-Masked sequence file: It should be in FASTA format.
+2. An Annotation file: It should be in GTF/GFF3 format providing the genomic annotation of every single exon/intron.
+3. Alignment file: It should be in SAM/BAM format coming from a previously performed RNA-Seq alignment.
+
+Example of commands:
+```
+asgal
+--fasta /path/to/genome.fa 
+--gtf /path/to/annotation.gtf 
+--bam /path/to/alignment.bam 
+--outDir /path/result/
+```
+
+Here, "--fasta" specifies the genome sequence, "--gtf" specifies the annotations, "--bam" specifies the aligned RNA sequence file, and "--outDir" is the directory to store the output.
+
+Typically, the output gives a list of predicted splicing events.
+
+Further, the ASGAL output can be run with code like this for splicing estimation:
+
+```
+./ase -i /path/to/ASGAL/results/ouput/AS_Event.tsv -o /path/to/output/CSV -f /path/to/fastq
+```
+
+Here, "ase" is to process the alignment by event, "-i" is used to specify the input file, "-o" is for the final output file and "-f" is the path to the FASTQ file of the RNA-Seq data.
+
+NOTE:
+- Alignment, if not already done, must be prepared as per the software's specific guidelines.
+- Paths specified as "/path/to..." must be replaced by actual path where file resides.

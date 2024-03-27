@@ -1,0 +1,26 @@
+Use Case: Capstone is a lightweight multi-platform, multi-architecture disassembly framework. It is used to disassemble machine code into human-readable assembly, useful for reverse-engineering binary files or writing compilers, debuggers, etc.
+
+Code Details and Examples:
+
+Code:
+
+```
+import capstone
+
+CODE = b"\x55\x48\x8b\x05\xb8\x13\x00\x00"
+
+md = capstone.Cs(capstone.CS_ARCH_X86, capstone.CS_MODE_64)
+for i in md.disasm(CODE, 0x1000):
+    print("0x%x:\t%s\t%s" %(i.address, i.mnemonic, i.op_str))
+```
+Input: The input here is raw binary data, in this case, the bytes "CODE". Note that the variable CODE is a Python 'bytes' object.
+
+Specification:
+- This script disassembles x86_64 binary data into assembly using the x86_64 disassembler. 
+- The 'disasm' function provides a generator object which yields each instruction in the binary data.
+
+Command to run: python3 disassemble.py
+
+This will print:
+0x1000: push rbp
+0x1001: mov rax, qword ptr [rip + 0x13b8]

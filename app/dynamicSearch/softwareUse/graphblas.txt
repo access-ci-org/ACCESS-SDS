@@ -1,0 +1,67 @@
+Use Case: GraphBLAS library is used for graph algorithms in the language of linear algebra. It is often used for high performance graph computations.
+
+Code details and examples:
+
+Before you can use GraphBLAS, you need to include the relevant headers in your C/C++ code:
+
+```C
+#include <GraphBLAS.h>
+```
+
+For instance, to create an empty GraphBLAS matrix:
+
+```C
+GrB_Matrix A;
+GrB_Matrix_new(&A, GrB_INT32, 4, 4);
+```
+
+This will create a new 4x4 matrix with zero value in each cell.
+
+To set the value of a cell:
+
+```C
+GrB_Matrix_setElement_INT32(A, 3, 0, 0); 
+```
+
+This will set the value of the cell at 0th row and 0th column to 3.
+
+To compute the complement of A:
+
+```C
+GrB_Matrix_not(B, A);
+```
+
+This will assign to B the complement of A.
+
+Sample input file format in Matrix Market format:
+
+```
+%%MatrixMarket matrix coordinate real general
+%  
+4 4 16
+1 1 1.0
+1 2 2.0
+1 3 3.0
+1 4 4.0
+2 1 5.0
+2 2 6.0
+2 3 7.0
+2 4 8.0
+3 1 9.0
+3 2 10.0
+3 3 11.0
+3 4 12.0
+4 1 13.0
+4 2 14.0
+4 3 15.0
+4 4 16.0
+```
+
+Command to compile and run this on a UNIX-style system:
+
+```Sh
+gcc -o sample source.c -lgraphblas
+./sample < input_matrix.mtx
+``` 
+
+This will compile the C source code file and run it with the provided matrix market file. When linking the GraphBLAS library `-lgraphblas` is used.

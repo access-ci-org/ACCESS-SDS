@@ -1,72 +1,59 @@
-Use Case: Creating a simple animated GIF using giflib.
+Use Case: Use giflib for reading and writing gif images
 
-Code details and examples:
-```c
-#include <stdio.h>
+Code details and examples: Code
+
+Giflib is a library designed for reading and writing gif images. Here's an example detail on how to create a gif file using giflib:
+
+### C++ Source Code ###
+```
+#include "gif_lib.h"
 #include <stdlib.h>
-#include <string.h>
-#include <gif_lib.h>
 
-#define WIDTH 100
-#define HEIGHT 100
+int main()
+{
+    int Width = 10, Height = 10;
+    int ErrorCode;
 
-int main() {
-    int error;
-    GifFileType* gifFile;
+    GifFileType* GifFile = EGifOpenFileName("output.gif", false, &ErrorCode);
 
-    GifByteType* gifData = (GifByteType *) malloc(WIDTH * HEIGHT);
-    if (gifData == NULL) {
-        fprintf(stderr, "Error: Failed to allocate memory for GIF data.\n");
-        exit(EXIT_FAILURE);
+    // Error Handling
+    if (GifFile == NULL) {
+        printf("Failed to open file. Error Code: %d", ErrorCode);
+        exit(1);
     }
 
-    // Fill GIF data with some example pixels
-    memset(gifData, 0, WIDTH * HEIGHT);
-    for (int i = 0; i < WIDTH * HEIGHT; i++) {
-        gifData[i] = i % 256;  // Simple gradient pattern
+    ColorMapObject* OutputColorMap = MakeMapObject(256, NULL);
+
+    // Set color map
+    for (int i = 0; i < 256; i++) {
+        OutputColorMap->Colors[i].Red = i;
+        OutputColorMap->Colors[i].Green = i;
+        OutputColorMap->Colors[i].Blue = i;
     }
 
-    if ((gifFile = EGifOpenFileName("output.gif", false, &error)) == NULL) {
-        PrintGifError(error);
-        exit(EXIT_FAILURE);
-    }
+    // Initialize local structure as per GIF required.
+    SavedImage image_desc;
+    image_desc.ImageDesc.Top = image_desc.ImageDesc.Left = 0;
+    image_desc.ImageDesc.Width = Width;
+    image_desc.ImageDesc.Height = Height;
+    image_desc.ImageDesc.Interlace = false;
+    image_desc.ImageDesc.ColorMap = OutputColorMap;
+    image_desc.RasterBits = (GifByteType*)malloc(Width * Height * sizeof(GifByteType));
+    for (int i = 0; i < Width * Height; i++)
+	{
+	      image_desc.RasterBits[i] = i % 256;
+	}
 
-    if (EGifPutScreenDesc(gifFile, WIDTH, HEIGHT, 8, 0) == GIF_ERROR) {
-        fprintf(stderr, "Error: Failed to write screen description.\n");
-        exit(EXIT_FAILURE);
-    }
-
-    if (EGifPutImageDesc(gifFile, 0, 0, WIDTH, HEIGHT, false, NULL) == GIF_ERROR) {
-        fprintf(stderr, "Error: Failed to write image description.\n");
-        exit(EXIT_FAILURE);
-    }
-
-    if (EGifPutLine(gifFile, gifData, WIDTH) == GIF_ERROR) {
-        fprintf(stderr, "Error: Failed to write image data.\n");
-        exit(EXIT_FAILURE);
-    }
-
-    if (EGifCloseFile(gifFile, &error) == GIF_ERROR) {
-        PrintGifError(error);
-        exit(EXIT_FAILURE);
-    }
-
-    free(gifData);
+    EGifPutScreenDesc(GifFile, Width, Height, 8, 0, OutputColorMap);
+    EGifPutImageDesc(GifFile, &image_desc);
+    EGifCloseFile(GifFile, &ErrorCode);
 
     return 0;
 }
 ```
 
-To compile the above code, you can use a command like:
-```bash
-gcc -o create_gif create_gif.c -lgif
-```
+To compile and run the above program with g++, save the source code as `main.cpp`, afterward use the following commands:
 
-And then run the executable:
-```bash
-./create_gif
-```
+Compilation command: `g++ -o test main.cpp -lgif`
 
-This will create a simple gradient pattern GIF image named "output.gif" in the same directory.
-
-Please note that this is a basic example and does not cover all functionalities of giflib.
+Execution command: `./test`

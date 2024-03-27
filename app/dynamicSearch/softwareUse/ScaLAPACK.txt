@@ -1,52 +1,49 @@
-Use Case: Linear algebra operations on distributed-memory parallel computers with ScaLAPACK.
+Use Case: ScaLAPACK (Scalable Linear Algebra PACKage) is a software library used for performing parallel linear algebra computations. This tool is designed for distributed memory machines and can be used to solve systems of linear equations, linear least squares problems, eigenvalue problems, and singular value problems.
 
-Code details and examples: 
-ScaLAPACK is a parallel version of LAPACK for distributed-memory computers utilizing MPI for communication. It provides routines for solving systems of simultaneous linear equations, least squares solutions of linear systems, eigenvalue problems, and singular value decomposition.
+Code details and examples: Code
 
-Example of sample input file (.dat):
-```
-5
-1.0 2.0 0.0 0.0 0.0
-2.0 1.0 2.0 0.0 0.0
-0.0 2.0 1.0 2.0 0.0
-0.0 0.0 2.0 1.0 2.0
-0.0 0.0 0.0 2.0 1.0
-```
+We're using a basic example of solving a linear system of equations AX = b using ScaLAPACK. The system is defined as follows:
 
-Example code snippet for solving a system of linear equations using ScaLAPACK:
-```fortran
-program scalapack_example
-  implicit none
-  include 'pblas.h'
-  include 'scalapack.h'
-  
-  integer :: n, nrhs, nb, info
-  integer :: myrank, nprocs
-  
-  ! Initialize variables
-  n = 5
-  nrhs = 1
-  nb = 2
-  
-  call blacs_pinfo(myrank, nprocs)
-  call blacs_get(0, 0, icontxt)
-  
-  ! Allocate memory for the matrices
-  allocate(a(n, n), b(n, nrhs))
-  
-  ! Initialize the matrices a and b
-  
-  ! Call ScaLAPACK routine for solving linear equations
-  call pdgesv(n, nrhs, a, 1, 1, desc_a, ipiv, b, 1, 1, desc_b, info)
-  
-  ! Print the solution matrix b
-  
-  deallocate(a, b)
-end program scalapack_example
-```
+    A = [4, 1; 3, 2]
+    b = [1; 1]
 
-Command to compile and run the code (assuming ScaLAPACK is properly linked):
-```bash
-mpif90 -o scalapack_example scalapack_example.f -lscalapack -lblacs -lblacs-f77 -lm
-mpirun -np 4 ./scalapack_example
-```
+The ScaLAPACK input file "input.dat" can be written as:
+
+    4 1 1
+    3 2 1
+
+Code Snippets for ScaLAPACK procedure "PDGESV" can be written in FORTRAN:
+
+    INTEGER            N, NRHS, INFO
+    PARAMETER          (N=2, NRHS=1)
+    DOUBLE PRECISION   A(N, N), B(N, NRHS)
+    INTEGER            IPIV(N)
+    
+    ! Initialization 
+    A(1,1) = 4; 
+    A(1,2) = 1;
+    A(2,1) = 3;
+    A(2,2) = 2;
+    B(1,1) = 1;
+    B(2,1) = 1;
+    
+    ! Call ScaLAPACK to solve
+    CALL PDGESV(N, NRHS, A, 1, 1, DESC_A, IPIV, B, 1, 1, DESC_B, INFO)
+
+    IF (INFO .NE. 0) THEN
+        PRINT *, 'The linear equation could not be solved. INFO = ', INFO
+        STOP
+    END IF
+    
+    PRINT *, 'The solution is '
+    PRINT *, 'X = ', B(1,1)
+    PRINT *, 'Y = ', B(2,1)
+    END
+
+This code must be compiled using a FORTRAN compiler with MPI and ScaLAPACK libraries. The gfortran compiler could be used with the mpif90 wrapper:
+
+    mpif90 -o solver example.f -L /usr/local/lib/ -lscalapack
+
+To run the compiled code using 4 processes:
+
+    mpirun -np 4 ./solver

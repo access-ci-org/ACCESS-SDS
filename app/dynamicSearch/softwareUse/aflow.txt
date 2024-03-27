@@ -1,0 +1,37 @@
+Use Case: AFLOW (Automatic FLOW) is designed for high-throughput computational materials design. It offers an efficient way to calculate material properties, enabling the user to optimize for specific characteristics in a systematic way.
+
+Code details and examples: 
+
+Code:
+
+An example of an aflow input file "aflow.in" might look something like this:
+
+```
+# AFLOW Automatic FLOW for materials discovery
+# BCC Te2
+# prototype: 
+# Pearson symbol: cI6_19_b_a
+# spacegroup: 19 
+# Stoichiometry AB2
+
+[AFLOW]
+#CONTROL
+automagic                       = ON
+compound(1:N)	calculation_type = bandstructure_mu
+compound(2:N)	calculation_type = bandstructure_mu
+compound(3:N)	calculation_type = bandstructure_mu
+#CALCULATIONS
+compound(1:N)	K00.VASP        = 1
+compound(2:N)	K00.VASP        = 2
+compound(3:N)	K00.VASP        = 3
+#DATA
+compound(1:N)	parameter_file  = lib.aflow.crystal_prototypes/bcc/Pearson_cI6_19_b_a/Te2/AFLOWLIB
+compound(2:N)	parameter_file  = lib.aflow.crystal_prototypes/bcc/Pearson_cI6_19_b_a/Te2/AFLOWLIB
+compound(3:N)	parameter_file  = lib.aflow.crystal_prototypes/bcc/Pearson_cI6_19_b_a/Te2/AFLOWLIB
+```
+
+This example control file tells aflow to perform a bandstructure_mu calculation for three compounds. For each compound, it tells aflow the calculation type (K00.VASP) and the location of the parameter file.
+
+The command to execute aflow operation with this file might look like this:
+
+`aflow --run`

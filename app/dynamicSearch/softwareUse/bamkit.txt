@@ -1,0 +1,27 @@
+Use Case: BamKit is a set of tools for genomic sequence data in BAM format. It is most commonly used in the field of bioinformatics, particularly in the processing and analysis of high throughput sequence data.
+
+Code details and examples:
+BamKit includes multiple command line tools, each of which has its own specifics about input formats and command usage. The general input format is .bam or .sam, the standard binary and text formats for storing large-scaled aligned sequence data.
+
+1. BKGrep 
+An example use case of BKGrep would be to filter reads from a .bam/.sam file that matches the provided pattern.
+
+```bash
+#command
+BKGrep [OPTIONS] -p <PATTERN> <BAM/SAM>
+#example 
+BKGrep -p CGATCGATCG example.bam
+```
+
+2. BKSort
+BKSort sorts a SAM/BAM file by read name or by reference name and position.
+A typical command looks like this:
+
+```bash
+#command
+BKSort [OPTIONS] <BAM/SAM>
+#example
+BKSort -t name example.bam
+```
+
+Please note that the listed commands are highly simplified and the actual usage would require tailoring according to specific objectives, and might require other options (represented by [OPTIONS] in the examples) to be specified. Please refer to the BamKit’s manual for detailed instructions and references.

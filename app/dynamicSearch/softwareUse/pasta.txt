@@ -1,0 +1,27 @@
+Use Case: PASTA is a software package that is used for multiple sequence alignment tasks. It is optimal for large scale datasets because it applies a divide-and-conquer strategy to reduce the problem size, solving smaller problems individually before combining them for the final solution.
+
+Code Details and Examples: 
+
+Code: 
+
+Running PASTA on the command line requires a configuration file. A sample of which is:
+
+```
+[input]
+seqfile = my_sequences.fasta
+[commandline]
+num_threads = 4
+```
+
+Save this as pasta_config.txt. The field seqfile refers to a fasta format file containing your sequences.
+
+Command to run: 
+
+```
+run_pasta.py -i pasta_config.txt
+```
+Visualization of the return can be done using a tool like FigTree.
+
+Requirements for Input Files: Ensure that the input sequence file is in FASTA format and that it contains only letters of the nucleotide or amino acid codes, without any other special characters or spaces. Sequences must also have unique identifiers.
+
+PASTA allows for a wide range of options and parameters to be specified, so the user can tailor the program's functionality to best benefit their specific use case. For advanced options, consult the PASTA manual or documentation.

@@ -1,35 +1,33 @@
-Use Case: Image processing, conversion, and editing
-Code details and examples:
-ImageMagick is a powerful command-line tool for image manipulation, conversion, and editing. Here are some examples of how to use ImageMagick with some sample input files:
+Use Case: ImageMagick is a software suite to create, edit, and compose bitmap images. It can read, convert and write images in a variety of formats (over 100) including DPX, EXR, GIF, JPEG, JPEG-2000, PDF, PhotoCD, PNG, Postscript, SVG, and TIFF. ImageMagick is used to translate, flip, mirror, rotate, scale, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves.
 
-1. Convert an image from one format to another:
-```bash
-convert input.jpg output.png
+Code details and examples: Code.
+
+The program interface is primarily through command line commands. Here's a simple example:
+
+Example: Convert an image from JPEG to PNG format
+
+Command to use:
 ```
-
-2. Resize an image:
-```bash
-convert input.jpg -resize 50% output.jpg
+convert image.jpg image.png
 ```
+The input file for this example is image.jpg and it is in JPEG format.
 
-3. Crop an image:
-```bash
-convert input.jpg -crop 100x100+10+10 output.jpg
+Example: Resize an image
+
+Command to use:
 ```
-
-4. Add a border to an image:
-```bash
-convert input.jpg -bordercolor black -border 10x10 output.jpg
+convert -resize 50% image.jpg image_small.jpg
 ```
+This command will resize the input file `image.jpg` to 50% of its original size and output the result to `image_small.jpg`.
 
-5. Rotate an image:
-```bash
-convert input.jpg -rotate 90 output.jpg
+Example: Combine multiple images into one
+
+Command to use:
 ```
-
-6. Create a thumbnail:
-```bash
-convert input.jpg -thumbnail 100x100 output.jpg
+convert image1.jpg image2.jpg +append output.jpg
 ```
+In this example, ImageMagick takes image1.jpg and image2.jpg as input, and combines them into one image (output.jpg) placed side by side. 
 
-These are just a few examples of what you can do with ImageMagick. You can explore more options and functionalities by referring to the official documentation.
+Important to note: In the input file, there are no particular restrictions other than it should be in a format recognizable by ImageMagick.
+
+Make sure to replace `image.jpg`, `image.png` etc with your actual file paths.

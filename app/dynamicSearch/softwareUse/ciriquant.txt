@@ -1,0 +1,42 @@
+Use Case: Ciriquant is a package used for circular RNA (circRNA) quantification to work with high-throughput sequencing data. It uses RNA-seq data to perform its functions.
+
+Code details and examples: Code
+
+Input Files:
+
+1. BAM file: This is a binary version of a SAM file that has been compressed for storage efficiency.
+
+2. The genome reference.
+
+Specifications in Input Files:
+
+1. BAM files typically include read sequences, quality scores, and alignment information.
+
+2. The genome reference should be in FASTA format, which includes identifiers and DNA sequences for individual chromosomes.
+
+Example of an input BAM file:
+
+This is a binary file so human-readable content is not available, but it will contain the details of sequences and alignments fetched from RNA-seq data.
+
+Example of Genome reference:
+
+```
+>chr1
+NNNNNNNNNNNNNNNNNN...
+>chr2
+NNNNNNNNNNNNNNNN...
+```
+The decoding of BAM file for alignment is complex, but here RANDseq data is expected to describe the unique sequence IDs and their respective sequences which map to circular RNA molecules.
+
+Command to run:
+
+To run Ciriquant, you can use the following commands:
+
+```
+ciriquant.py map -i trimmed.fastq -o ciriquant_out -l hg38 -t 8
+ciriquant.py circ -i ciriquant_out/ -o ciriquant_out/ -t 8
+ciriquant.py quant -i ciriquant_out/ -o ciriquant_out/ -g hg38.gtf -r ribo_snRNA_tRNA.fa
+```
+In this example, `trimmed.fastq` is the input RNA-seq data, `ciriquant_out` is the directory for output files, `hg38` refers to the genome reference, and `ribo_snRNA_tRNA.fa` is a specific ribosomal RNA file. `-t 8` indicates the usage of 8 threads. 
+
+Note: Ciriquant requires several Python packages like `pandas`, `numpy`, `pysam`, `mappy` and so forth. It also requires additional software like "STAR" for the mapping stage.

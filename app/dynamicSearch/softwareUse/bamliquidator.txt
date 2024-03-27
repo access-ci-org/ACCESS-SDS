@@ -1,0 +1,31 @@
+Use Case: bamliquidator is an HPC software used for generating coverage datasets from coordinate-sorted BAM files. These coverage datasets are typically required for visualizing results using IGV. 
+
+Code Details and Examples:
+
+Code: Bamliquidator
+
+Input File Format: Coordinate-sorted BAM files. The format will include data like the read name, flag, reference name, position, mapping quality and more.
+
+Input File Specification: The BAM files should be sorted according to the coordinates. The system also expects indexed BAM files.
+
+Code Snippet:
+
+```
+# First, we need to index the BAM file
+samtools index example_sorted.bam
+
+# Then the bamliquidator can be used to compute the coverage
+bamliquidator_batch.py --sense . -e 200 --blacklist hg19.blacklist.bed -n 8 --match_bamToGFF -o output_folder example_sorted.bam example.bed
+```
+
+Command to Run:
+
+`bamliquidator_batch.py --sense . -e 200 --blacklist hg19.blacklist.bed -n 8 --match_bamToGFF -o output_folder example_sorted.bam example.bed`
+
+In the above command, `--sense .` specifies strand specificity,
+`-e 200` specifies extension in base pairs,
+`--blacklist` is used to specify genomic regions to ignore,
+`-n 8` specifies the number of cores to use,
+`--match_bamToGFF` is used to ensure that the BAM and BED files are matched,
+`-o` is used to specify the output folder,
+`example_sorted.bam` is the input BAM file and `example.bed` is a BED file specifying the regions of interest.

@@ -1,22 +1,25 @@
-Use Case: Statistical analysis and data visualization in RStudio Desktop
+Use Case: RstudioDesktop is an open-source IDE for R, providing user-friendly interface to work with R. Common use case for scientists is to perform data analysis and visualization.
 
 Code details and examples:
-Sample input files: 
-- Data file: 'data.csv' containing the dataset for analysis
 
 Code:
+We will be using an example of data analysis where the `mtcars` dataset is used.
+```r
+# Load the dataset
+data(mtcars)
+
+# Calculate the mean of mpg (Miles per gallon)
+mean(mpg)
+
+# Perform a linear regression where mpg is dependent on cyl (Number of cylinders)
+outcome <- lm(mpg ~ cyl, data = mtcars)
+
+# Get a summary of the regression model
+summary(outcome)
 ```
-# Sample code for data analysis in RStudio Desktop
-# Load the data
-data <- read.csv("data.csv")
 
-# Perform statistical analysis
-summary(data)
-plot(data)
+Input: 
+The `mtcars` dataset is a built-in dataset in R, it's loaded into the environment using `data(mtcars)`
 
-# Generate a simple linear regression model
-lm_model <- lm(y ~ x, data=data)
-summary(lm_model)
-```
-
-Command to run in RStudio Desktop: Select the code and click on 'Run' or use shortcut key (Ctrl+Enter) to execute each line or block of code.
+The command to run code snippet in RStudio:
+Use the shortcut Command/Control-Enter (Mac/Windows) to run the line of code where your cursor is.

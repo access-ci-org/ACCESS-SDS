@@ -1,0 +1,24 @@
+Use Case: PIRATE is a flexible bioinformatics tool designed to process, annotate and compare multiple prokaryotic genomes simultaneously. It facilitates the comparison of closely related genomes at the gene level. 
+
+Code details and examples: Code
+
+Sample Input File (FASTA format):
+
+```
+>seq1
+GATGTCTGTCTAACGACGGTGACG...
+>seq2
+CGTACGTGCTAGTGCTGACTGATC...
+```
+
+Code Snippet (in Bash):
+
+After preparing the input files in the required format, the command to run the PIRATE tool is as simple as:
+
+```
+pirate -i /path/to/input/files -o /path/to/output/files
+```
+
+This command takes the directory of your input genomes (in a .gff format) and specifies the output directory for the results. The above mentioned command uses default settings. However, PIRATE allows users to modify the settings according to their requirement.
+
+Please note that PIRATE is run from the command line, and thus requires rudimentary knowledge of command line interfaces. PIRATE also requires parallel installation and works with gff files as input. GFF or General Feature Format files are simple tab-delimited text files that describe the genes and other features of DNA, RNA, and protein sequences.

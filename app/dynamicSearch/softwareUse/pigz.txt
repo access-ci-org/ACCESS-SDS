@@ -1,30 +1,17 @@
-Use Case: pigz is a parallel implementation of gzip that uses multiple processors and multiple cores for compression and decompression.
+Use Case: pigz, which stands for parallel implementation of gzip, is a fully functional replacement for gzip that exploits multiple processors and multiple cores to the hilt when compressing data. pigz is great for multi-core processors and multi-processor systems.
 
-Code details and examples:
-1. Compression:
-```bash
-pigz input_file.txt
-```
-This command will compress the input_file.txt using pigz, which will utilize multiple processors for faster compression.
+Code details and examples: Code
 
-2. Decompression:
-```bash
-pigz -d input_file.txt.gz
-```
-This command will decompress the input_file.txt.gz using pigz.
+pigz compresses using threads to make use of multiple processors and cores. The input is split into 128 KB chunks with each chunk compressed in parallel. The individual check value for each chunk is also calculated in parallel. The compressed data is written in order to the output, and a combined check value is calculated from the individual check values.
 
-3. Parallel compression with specified number of threads:
-```bash
-pigz -p 4 input_file.txt
-```
-This command will compress the input_file.txt using pigz with 4 threads (processors).
+The compressed data format generated is in the gzip, zlib, or single-entry zip format using the deflate compression method, the same as the compression format used by gzip and compatible with all known software for decompressing gzip compressed data.
 
-4. Decompress with stdout:
-```bash
-pigz -dc input_file.txt.gz
-```
-This command will decompress the file input_file.txt.gz and write the output to stdout.
+Sample input file: example.txt (with some content to be compressed)
 
-Input file format: Input files can be any text or binary files that need to be compressed or decompressed.
+Command to run: pigz example.txt
 
-Make sure to adjust the number of threads according to the available resources on your system for optimal performance.
+This will create an example.txt.gz file (gzip-compressed version of example.txt). The original file (example.txt) will be deleted.
+
+To decompress file with pigz, you would use the following command: unpigz example.txt.gz
+
+This will result in the decompressed file example.txt being created in the current directory. The original gzip-compressed file (example.txt.gz) will be deleted.

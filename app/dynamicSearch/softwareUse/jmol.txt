@@ -1,0 +1,12 @@
+Use Case: Jmol is an interactive browser-based platform that can be used for visualizing scientific data, specifically molecular structures. It is capable of displaying a vast variety of molecular formats including PDB, CIF, SDF, MOL, PyMOL PSE files, and proteins, nucleic acids, and chemical compounds. For instance, Jmol can be used to view a Protein Data Bank (PDB) file for hemoglobin protein.
+
+Code details and examples:
+
+Code:
+```bash
+jmol protein.pdb
+```
+
+In this case, 'protein.pdb' is a Protein Data Bank file that contains the 3D structure of the protein. The input file must be in PDB format which can contain atomic coordinates, connectivities, secondary structure information, and more.
+
+Running the command will open up a Jmol window displaying the 3D structure of the protein. This can be rotated, zoomed, and manipulated to visualize the protein's structure in various ways. Jmol also has a scripting language that allows for the creation of animations, interactive presentations, and custom actions by the user.

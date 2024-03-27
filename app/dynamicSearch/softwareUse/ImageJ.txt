@@ -1,19 +1,21 @@
-Use Case: Image analysis and processing
+Use Case: ImageJ is often used for analyzing images in scientific research. You can use it to calculate area and pixel value statistics of user-defined selections, measure distances and angles, create density histograms and line profile plots, performs logical operations between image selections and much more.
 
 Code details and examples:
-- Sample input files: Sample images in various formats (e.g. .tif, .jpg)
-- Format required: Depends on the specific analysis or processing task
-- Code snippet: 
-  - Example 1: opening an image
-    ```
-    File file = new File("path/to/image.tif");
-    ImagePlus image = IJ.openImage(file.getAbsolutePath());
-    image.show();
-    ```
-  - Example 2: applying a filter
-    ```
-    ImagePlus image = IJ.openImage("path/to/image.tif");
-    image.getProcessor().smooth();
-    image.show();
-    ```
-- Command to run (if available): ImageJ can be run by executing the ImageJ executable file.
+
+Code:
+
+Typically, you would open an image file using the GUI, but you can also automate tasks using macros and plugins. Below is an example macro that opens an image, inverts it, and then saves the result.
+
+```
+open("C:\\Path\\To\\Image.tif");
+run("Invert");
+save("C:\\Path\\To\\Result.tif");
+```
+
+Command to run this would be: Plugins > Macros > Run...
+
+This macro opens an image file named "Image.tif" from a specified path, performs the "Invert" operation, and then saves the result back to the specified path as "Result.tif". The image file should be in .tif format, and ImageJ supports 8-bit, 16-bit, 32-bit (real) and RGB images. 
+
+Remember to replace "C:\\Path\\To\\Image.tif" with your actual image file path.
+
+Besides, ImageJ can handle Text Images (up to a limit of around 2 Million characters), where each line ends with a carriage return. Step-through, local variables and breakpoints are supported for debugging. If you make a syntax error while typing a new function, errors will be flagged as such with a beep and Error message.

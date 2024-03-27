@@ -1,0 +1,24 @@
+Use Case: pytz is a Python library that allows accurate and cross-platform timezone calculations. It also solves the issue of ambiguous times at the end of daylight saving time, which can be an issue for many types of software.
+
+Code details and examples: Code
+
+Sample Code:
+```
+from datetime import datetime
+import pytz
+
+utc = pytz.utc
+print("UTC time:", datetime.now(utc))
+
+eastern = pytz.timezone('US/Eastern')
+print("US/Eastern time:", datetime.now(eastern))
+```
+Command to run: `python3 sample_code.py` 
+
+Sample Input File: No input file required.
+
+Specifications and details in Input files: Not applicable. 
+
+This script first imports `datetime` from the datetime module and `pytz`. It then creates `utc` as an instance of `UTC` timezone and prints the current time in `UTC` timezone. Similarly, it creates `eastern` as an instance of `US/Eastern` timezone and prints the current time in `US/Eastern` timezone.
+
+The `pytz` library brings the Olson tz database into Python. This library allows accurate and cross-platform timezone calculations using Python `2.3` or higher. It also solves the issue of ambiguous times at the end of daylight saving time, which can be an issue for many types of software.

@@ -1,10 +1,13 @@
-Use Case: High-speed file transfer software for HPC environments.
+Use Case: Aspera is used for high-speed file transfer across large distances. It is optimal for transferring large files or many files across the globe, and is especially useful in fields like bioinformatics where large datasets are common.
+
 Code details and examples: 
-Aspera provides a command line tool called "ascp" to transfer files at high speed. To transfer a file using ascp, you can use the following command:
+
+Code:
+
+Specific inputs for Aspera depend on the specific use case, but a common set of requirements include the source file or directory, the destination directory, and authentication credentials. Here is a command line example of an Aspera transfer:
+
 ```
-ascp <source_file> <destination_user>@<destination_host>:<destination_path>
+# ascp -T -l100m -P33001 -i /path/to/asperaweb_id_dsa.openssh user@host:/path/to/source/file /path/to/destination/
 ```
-For example:
-```
-ascp input.txt user@example.com:/home/user/data/
-```
+
+In this example, `-T` disables encryption for faster transfer, `-l100m` sets the target rate to 100 Mbps, `-P33001` sets the SSH port to 33001, `-i /path/to/asperaweb_id_dsa.openssh` specifies the private key file for authentication, `user@host` is the username and host name of the machine where the file is located, `/path/to/source/file` is the file to be transferred, and `/path/to/destination/` is the location where the file will be saved.

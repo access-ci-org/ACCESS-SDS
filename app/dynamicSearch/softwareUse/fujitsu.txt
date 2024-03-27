@@ -1,0 +1,5 @@
+Use Case: The Fujitsu HPC software is used for high-performance computing purposes which includes tasks like large-scale simulations, scientific computations, data analysis and processing, and complex numerical tasks.
+
+Code details and examples: 
+
+Code: Fujitsu doesn't provide a explicit software for HPC but rather they offer a comprehensive range of HPC solutions, including high performance servers like PRIMERGY and PRIMEHPC that are embedded with features like Parallel File System and HPC Gateway for facilitating the scalability and capacity of computing tasks. The use and command of these resources depend on the specific IT environment and Infrastructure and is beyond the scope of this format.

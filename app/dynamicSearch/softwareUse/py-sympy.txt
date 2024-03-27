@@ -1,0 +1,24 @@
+Use Case: Use py-sympy for symbolic mathematical computations in Python. It provides computer algebra capabilities with robust, extensive collection of mathematical functions. 
+
+Code details and examples: Code
+
+Sample Use Case: Solve a quadratic equation
+
+```python
+from sympy import symbols, solvers
+
+x = symbols('x')
+equation = x**2 - 3*x + 2
+
+solutions = solvers.solve(equation, x)
+print(solutions)
+```
+
+This script will solve the equation `x^2 - 3x + 2 = 0` and print the solutions.
+
+Command to run: `python your_script.py`
+If you are running it in an interactive environment like Jupyter notebook, no command to run is needed. All you need to do is run the cell.
+
+Note: In the code `x = symbols('x')`, 'x' is a string specifying the name of the variable. In this case, it is 'x' but it could be any arbitrary string. The `solvers.solve` function takes two arguments. The first is the equation to be solved, and the second is the symbol for the variable of the equation. 
+
+The solutions are returned as a list object. Some equations may have multiple solutions, hence it is useful to have the solutions in the form of a list, from which specific solutions can be indexed.

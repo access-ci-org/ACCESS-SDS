@@ -1,0 +1,51 @@
+Use Case: Designing, modelling or testing various system architectures. 
+
+Code Details and Examples:
+
+1. Code: OpenFOAM (HPC Software)
+
+Sample Input: gableCavity.tar
+
+Specifications in input file: The file is in tar format and contains information in a manner that OpenFOAM can interpret and run in the solver. Detailed configurations of the simulation are generally located in system/controlDict and constant/polyMesh/blockMeshDict.
+
+Command to Run: decomposePar -case gableCavity; simpleFoam -parallel; reconstructPar -parallel
+
+2. Code: Scipy (Python Library)
+
+Sample Input: .py file with scipy function calls
+
+Specifications in input file: Python script with scipy functions to execute desired calculations.
+
+Command to Run: python script.py
+
+3. Code: BLAST (Bioinformatics Software)
+
+Sample Input: input.fasta (nucleotide or amino acid sequences)
+
+Specifications in input file: The input file contains nucleotide or protein sequences in FASTA format.
+
+Command to Run: blastp -query input.fasta -db database
+
+4. Code: Gaussian (Computational Chemistry Package)
+
+Sample Input: input.com
+
+Specifications in input file: Input file with molecule structure and settings for the computational chemistry run.
+
+Command to Run: g09 input.com
+
+5. Code: Intel MKL (Scientific Library)
+
+Sample Input: N/A
+
+Specifications in input file: Intel MKL is a library providing various mathematical routines and does not take specific input files.
+
+Command to Run: Compile and run your C/C++ or Fortran codes with MKL linked.
+
+6. Code: GCC (Compiler tool)
+
+Sample Input: file.c
+
+Specifications in Input file: C source code file that is to be compiled.
+
+Command to run: gcc file.c -o outputName

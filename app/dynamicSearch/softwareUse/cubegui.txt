@@ -1,0 +1,30 @@
+Use Case: CubeGUI is an essential part of CP2K, a quantum chemistry and solid state physics software package, that facilitates the visualization of electronic density. A typical use case for CubeGUI could be to visualize the electronic density of a molecule after a DFT calculation.
+
+Code details and examples: 
+
+Code: 
+
+Typically, the input file for CubeGUI is a .cube file, generated using other components of the CP2K package. Here is a simplified example of a .cube file for water:
+
+```
+cp2k
+ 2  atomic units
+He    2.65820033       2.19675084       2.74128201
+H     2.88735311       2.35277018       2.73890670
+H     2.51265246       2.32733118       2.76102923
+ 6 0.7
+-0.01416
+-0.01634
+-0.01980
+-0.02471
+-0.03136
+-0.04011
+```
+
+The first line contains the program name (cp2k), followed by the number of atoms and the atomic units. The next three lines contain the atomic symbols of the atoms in the molecule and their coordinates. The following line contains the number of grid points and the space between the grid points, and the last few lines contain the electronic density values.
+
+Command to run:
+
+The CubeGUI doesn't require a specific command to run. Instead, it is a graphical user interface. To use it, once installed, you need to open the application, then go to "File > Open" and select your .cube file to visualize the electronic density.
+
+Please note that CubeGui is utilized for visualization purposes only, thus it does not require input files in a traditional sense with explicit data processing or computation. Rather, it reads the data and renders the visual output.

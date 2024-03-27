@@ -1,0 +1,30 @@
+Use Case: Cryptography is a Python library that is used for cryptographic recipes and primitives. It provides secure cryptographic functionality such as encryption, hashing, message authentication codes, key derivation functions, and cryptographic signatures.
+
+Code details and examples:
+
+Code:
+
+```python
+from cryptography.fernet import Fernet
+# key generation
+key = Fernet.generate_key()
+cipher_suite = Fernet(key)
+# conversion of plain text into bytes
+data = "my data".encode()
+cipher_text = cipher_suite.encrypt(data)
+plain_text = cipher_suite.decrypt(cipher_text)
+```
+
+Input file: This python code does not need any input file. It takes a string "my data" as an input directly in the code.
+
+Format required: The input is of type string in this example and it gets converted into bytes before encryption.
+
+Specifications and details in input files: There is no input file in this code.
+
+Command to run:
+
+```
+python your_file_name.py
+```
+
+I assume this code would be contained in a script you would run from your terminal. Make sure you replace your_file_name with the name of the file where you have copied the code.

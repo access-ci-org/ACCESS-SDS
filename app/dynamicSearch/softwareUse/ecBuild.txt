@@ -1,22 +1,39 @@
-Use Case: Building and Compiling Code with ecBuild
+Use Case: ecBuild is a versatile tool utilized in the setup of a CMake build system, aiding in the easy management and building of large-scale software projects. It is commonly deployed in the development of meteorological, oceanographic and climate software systems.
 
-Code details and examples:
-Input file: MyCode.cpp
-```
-#include <iostream>
+Code Details and Examples: 
 
-int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
-}
-```
+Code:
+In providing a basic example, let's assume you have a project called `test`, and you have your source code in a directory named `src` under `test`. For instance, our directory structure now looks like:
 
-Command to compile with ecBuild:
 ```
-ecBuild MyCode.cpp -o MyExecutable
+/test
+     CMakeLists.txt
+     /src
+       foo.cpp
 ```
 
-Command to run the compiled executable:
+And we have the following contents in `CMakeLists.txt`:
+
 ```
-./MyExecutable
+ecbuild_declare_project()
+
+# add test code
+ecbuild_add_library(
+
+TARGET  mylibrary
+SOURCES src/foo.cpp
+)
+
 ```
+Above, `TARGET` refers to the name of the library we want to create, and `SOURCES` refers to the source files to compile.
+
+Command to Run: To use ecBuild for building this project, navigate to the root directory of the project (where `CMakeLists.txt` is) and use the following commands:
+
+```
+mkdir build
+cd build
+ecbuild ..
+make
+```
+
+These commands generate a build directory, navigate into it, configure the build using ecBuild, and build the project using `make`.

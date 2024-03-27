@@ -1,0 +1,61 @@
+Use Case: Use pyTables for reading and writing large HDF5 files, performing queries on the stored data, and in general, for high performance computing (HPC) tasks. 
+
+Code Details and Examples: Code
+
+Usually, you start by importing the necessary modules:
+
+```python
+import tables
+import numpy as np
+```
+
+Then, define the hk5 file you will work on:
+
+```python
+h5file = tables.open_file('tutorial1.h5', mode='w', title="Test file")
+```
+
+Next, define a group of data:
+
+```python
+group = h5file.create_group("/", 'detector', 'Detector information')
+```
+
+Define a table within the group, with the structure you want:
+
+```python
+from tables import IsDescription, StringCol, Int32Col
+class Particle(IsDescription):
+     name  = StringCol(16)
+     idnumber = Int32Col() 
+```
+
+To initialize a table, you do so:
+
+```python
+table = h5file.create_table(group, 'readout', Particle, "Readout example")
+```
+
+To fill the table with data, we use a particle instance:
+
+```python
+particle = table.row
+for i in range(10):
+     particle['name']  = f'Particle_{i}'
+     particle['idnumber'] = i
+     particle.append()
+```
+
+To save the changes after populating data, we:
+
+```python
+table.flush()
+```
+
+You can run the program by calling the name of the Python file:
+
+```bash
+python3 your_file_name.py
+```
+
+Please remember to replace 'your_file_name.py' with the name of your Python file containing the code above.

@@ -1,0 +1,88 @@
+Use Case: OpenMPI - a widely used open source HPC software for supporting parallelization of programs, practically used in many high-performance computing applications.
+Code details and examples:
+
+    Code:
+    #include <mpi.h>
+    #include <stdio.h>
+
+    int main(int argc, char** argv) {
+        // initialize MPI
+        MPI_Init(NULL, NULL);
+
+        // Get world size and world rank
+        int world_size;
+        MPI_Comm_size(MPI_COMM_WORLD, &world_size);
+
+        int world_rank;
+        MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
+
+        // Print a hello message
+        printf("Hello world from processor %s, rank %d out of %d processors\n",
+               getenv("SLURM_JOB_NODELIST"), world_rank, world_size);
+
+        MPI_Finalize();
+        return 0;
+    }
+   
+Command to run it:
+    
+    mpicc hello_world.c -o hello_world
+   
+    mpirun -np 4 ./hello_world
+
+
+Use Case: NumPy - A Python library used for numeric and mathematical computing. 
+Code details and examples:
+
+    Code:
+   
+    import numpy as np 
+
+    A = np.array([[1,2,3],[4,5,6],[7,8,9]])
+    print("Initial Array: ")
+    print(A) 
+
+    res = A.transpose()
+    print("\n Transposed Array: ")
+    print(res) 
+
+    output:
+
+    Initial Array:
+    [[1, 2, 3],
+     [4, 5, 6],
+     [7, 8, 9]]
+
+    Transposed Array: 
+    [[1, 4, 7],
+     [2, 5, 8],
+     [3, 6, 9]]
+    
+
+Use Case: BLAST - Bioinformatics software for comparing primary biological sequence information.
+
+Code details and examples:
+
+    blastx -query input.fa -db nr -out output.txt
+
+    Here, `input.fa` is your input sequence file in FASTA format and `output.txt` is the file where you want your results to be stored.
+
+
+Use Case: Gaussian - It's a computational chemistry software program that calculates molecular electronic structure.
+
+Code details and examples:
+
+    %Chk=water.chk
+    #P B3LYP/6-311G(d) Pop=Full
+
+    Water energy
+
+    0 1
+    O
+    H 1 0.96
+    H 1 0.96 2 104.5
+
+    Command to run it:
+    g09 < myjob.gjf 
+
+The input file specifications are complicated. A short explanation is the calculation command is B3LYP/6-311G(d) and then you provide the molecule geometry.

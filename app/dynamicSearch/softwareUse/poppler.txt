@@ -1,20 +1,38 @@
-Use Case: poppler
+Use Case: Poppler is a PDF rendering library that is used for reading PDF files. It's often used within other PDF libraries and applications.
 
 Code details and examples:
-Poppler is a PDF rendering library based on the xpdf-3.0 code base. It is used to extract text, images, and other information from PDF files.
+Code:
 
-To extract text from a PDF file using poppler, you can use the command line tool `pdftotext`.
+Poppler doesn't normally interact with command line. Instead, it's used within applications or other libraries, such as pdftotext. Here's an example of how you might use pdftotext (which includes Poppler) in bash to convert a PDF to text:
 
-Sample input file (input.pdf):
-```
-Sample PDF file with some text.
-```
-
-Command to extract text from input.pdf:
-```
+```bash
 pdftotext input.pdf output.txt
 ```
 
-This command will extract the text from `input.pdf` and save it to `output.txt`.
+Input Files: The input file is a PDF document.
 
-Please note that poppler provides various other tools and APIs for working with PDF files.
+Format Required: PDF (Portable Document Format)
+
+Specifications: The input PDF file should be a valid format that can be opened and read without errors.
+
+Note: Poppler doesn't usually provide error messages or issues to the user directly. Instead, any issues with the PDF would likely result in an error from the application using Poppler (like pdftotext). 
+
+If using Poppler in a programming language (like Python), the code might look something like this:
+
+```python
+import pdftotext
+
+# Load your PDF
+with open("input.pdf", "rb") as f:
+    pdf = pdftotext.PDF(f)
+
+# If it's password-protected
+with open("secure.pdf", "rb") as f:
+    pdf = pdftotext.PDF(f, "secret")
+
+# Save all text to a txt file.
+with open('output.txt', 'w') as f:
+    f.write("\n\n".join(pdf))
+```
+
+In the above Python code, it opens your PDF file, reads its content and writes the content to a .txt file. If your PDF file is password-protected, you need to enter the password as shown in the code.

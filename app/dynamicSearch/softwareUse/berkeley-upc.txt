@@ -1,0 +1,25 @@
+Use Case: Use Berkeley UPC (Unified Parallel C) for high-level, efficient programming for parallel systems. It extends the C language with lightweight, single program multiple data (SPMD) parallelism. It is designed for a range of hardware platforms from clusters to supercomputers.
+
+Code details and examples: 
+
+Code:
+
+```c
+#include <upc_relaxed.h>
+shared int array[THREADS];
+int main() {
+  int i;
+  for (i = 0; i < THREADS; i++)
+    array[i] = MYTHREAD;
+  upc_barrier;
+  for (i = 0; i < THREADS; i++)
+    if (i != MYTHREAD)
+      printf("Thread %d saw array[%d] = %d\n", MYTHREAD, i, array[i]);
+  return 0;
+}
+```
+Save this code in a file named 'upc_example.upc'. To compile it you would use the command `upcc upc_example.upc`, which would produce an executable, such as `upc_example`. 
+
+Then you can simply run it using `./upc_example`.
+
+This program distributes an array over the threads, so that each thread owns one element. Each thread initializes its array element to its thread number. After all threads have reached the barrier, each thread checks the values of every other thread's array element.

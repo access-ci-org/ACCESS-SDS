@@ -1,38 +1,55 @@
-Use Case: Molecular dynamics simulations using LAMMPS
+Use Case: LAMMPS (Large-scale Atomic/Molecular Massively Parallel Simulator) is a molecular dynamics library that stands out because it is very modular. It contains many pre-built models for different types of interatomic potentials and properties, and it can be used to simulate a wide variety of systems.
 
-Code details and examples:
-LAMMPS input script example for a simple Lennard-Jones system:
+Code details and examples: 
 
-```
-# Initialize simulation
-units lj
-dimension 3
-boundary p p p
-atom_style atomic
+Among the tools included in the LAMMPS distribution, there are some like Pizza.py which is designed to aid with setup and analysis of LAMMPS simulations.
 
-# Create atoms
-lattice fcc 0.8442
-region box block 0 10 0 10 0 10
-create_box 1 box
-create_atoms 1 box
-mass 1 1.0
+A basic LAMMPS simulation needs at least these two files:
 
-# Define interactions
-pair_style lj/cut 2.5
-pair_coeff 1 1 1.0 1.0 2.5
+1. A LAMMPS input file. E.g., in.lj 
 
-# Set up minimization
-reset_timestep 0
-fix 1 all nve
-thermo 100
-thermo_style custom step pe ke etotal press temp
-minimize 1.0e-6 1.0e-8 1000 10000
+   In this file, we specify what particles are in the system, what interatomic potentials to use, what thermodynamic conditions to simulate, etc.
 
-# Run simulation
-run 1000
-```
+   ```
+   # 3d Lennard-Jones melt
 
-To run the above LAMMPS input script, save the script in a file (e.g., `in.lj`) and then run the LAMMPS executable with the input script using the following command:
+   units lj
+   atom_style atomic
+
+   lattice fcc 0.8442
+   region box block 0 4 0 4 0 4
+   create_box 1 box
+   create_atoms 1 box
+   mass 1 1.0
+   pair_style lj/cut 2.5
+   pair_coeff 1 1 1.0 1.0 2.5
+
+   neighbor 0.3 bin
+   neigh_modify delay 0 every 20 check no
+
+   fix 1 all nve
+
+   velocity all create 1.44 87287 loop geom
+
+   thermo 50
+   thermo_modify temp new
+
+   dump id all atom 50 dump.melt
+
+   run 1000
+   ```
+
+2. A potential file. E.g., lj.lammps
+
+   This is a "library" of many different interatomic potentials that LAMMPS understands, annotated with their parameters.
+
+   ```
+   # lj potential file
+   LAMMPS Description
+   1 1 1 1.0 1.0
+   ```
+
+These files are run via the LAMMPS executable, the command to run the files would be something like:
 
 ```
 lmp_serial -in in.lj

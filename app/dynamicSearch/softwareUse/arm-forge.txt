@@ -1,0 +1,29 @@
+Use Case: Forge is a suite of developer tools for high-performance computing applications. It can be useful for profiling, debugging and optimizing high-performance scientific and industrial software on Linux on ARM or on x86 platforms. 
+
+Code details and examples: 
+Code: Typically, the workflow for using the Forge suite, including its DDT debugger and MAP profiler, involves first compiling your code with debugging symbols (-g flag typically), running your application using command line options to generate profiling information, and then inspecting that information.
+
+Here is an example using the ARM DDT debugger:
+
+```bash
+arm-ddt ./my-program
+```
+The my-program is the name of your compiled application. Note that DDT supports parallel debugging, so this could be a parallel build of an MPI application for example.
+
+Similarly for the MAP Profiler:
+
+```bash
+map --profile ./my-program
+```
+In this case, my-program is again your application, but in this case MAP runs it and generates a profile that you can inspect to understand where time is being spent in your application.
+
+MAP can also use MPI for parallel profiling:
+
+```bash
+mpirun -np 4 map --profile ./my-program
+```
+In this command, mpirun -np 4 runs the code on 4 cores, and map --profile generates a profile of the execution. After the execution, a .map file is generated, which can be viewed with the MAP application. 
+
+- Input files: the input files will depend on the application you have compiled. MPI applications, for example, might include a hosts file specifying the MPI hosts to be used.
+- Formats required: the formats will again depend on the application you have designed, but could be as simple as text files or as complex as a binary data format. ARM Forge does not stipulate a specific data format. Functional inputs for profiling and debugging are code specific and set by the application developer or user.
+- Specifications in input files and code snippets: ARM Forge does not specify the input file formats. It works with the applications that you have developed and does not prescribe specific input formats. 

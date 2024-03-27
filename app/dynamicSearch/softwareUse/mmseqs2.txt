@@ -1,0 +1,33 @@
+Use Case: MMseqs2 (Many-against-Many sequence searching) is a versatile software suite for protein sequence analysis. It can be used for tasks such as sequence searching, clustering, constructing profile HMMs, and taxonomy assignments.
+
+Code details and examples:
+
+Input files: Fasta formatted sequence files.
+
+Fasta format:
+```
+>sequence1
+ACTGACTGACTGACTG
+```
+
+Parameters:
+Database creation requires the input file and a prefix for the database.
+Search requires the databases to be searched, a query database, and an output file prefix.
+
+Code:
+
+Database creation:
+
+```
+mmseqs createdb sequence.fasta sequence_db
+```
+
+Search:
+
+```
+mmseqs search sequence_db sequence_db result_db tmp
+```
+
+In the code example above, 'sequence.fasta' is the input fasta sequence file. 'sequence_db' will be the created database. 'result_db' is the prefix for the output of the search command. 'tmp' is a temporary directory for intermediate files.
+
+The input for the 'search' command are two databases created previously with the 'createdb' command. The output is written to 'result_db'. The 'tmp' directory is used for temporary files during the search process.

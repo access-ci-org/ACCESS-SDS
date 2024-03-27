@@ -1,19 +1,45 @@
-Aspect is a 3D thermal convection and fluid dynamics simulation software used in geodynamics research. 
+Use Case: The Aspect library in deal.II is used for complex simulations in the computational science, such as geodynamic simulations. Deal.II is a library written in C++.
 
-Use Case: Model convection in the Earth's mantle
-Code details and examples:
-```aspect
-# Sample input file for convection simulation
-subsection Materials
-set Rock     Density 3300
-set Rock     Viscosity 10^21
-end
+Code details and examples: Code
 
+Input File Format: 
+
+Input file is a plain text file with ".prm" extension.
+
+Example input file (named "input.prm"):
+
+```
+# Test input file for Aspect
 subsection Initial temperature model
-set Initial temperature model Box
-set Initial temperature model Domain 0 0 0 1000 1000 300
-set Initial temperature model Minimum 1300
-set Initial temperature model Maximum 1800
+  set Model name = function
+  subsection Function
+    set Function expression = 273
+  end
 end
 ```
-To run the simulation, use the command `aspect input.pr`.
+
+Code Snippet: 
+
+To use the Aspect library in your deal.II, first, you need to instantiate an object of the Simulator class.
+
+```C++
+#include "aspect/simulator.h"
+
+Aspect::Simulator<2> simulator(MPI_COMM_WORLD);
+```
+You need to initialize the simulator object before using it.
+```C++
+simulator.initialize("input.prm");
+```
+And finally, run the simulator 
+```C++
+simulator.run();
+```
+
+This completes a full Aspect use-case within a deal.II application.
+
+Command to run:
+```
+mpirun -np 4 ./aspect input.prm
+```
+where `-np 4` is the number of processes (could be changed according to the availability of computational resources), `./aspect` is the path to the executable, and `input.prm` is the name of the input file.

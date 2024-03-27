@@ -1,0 +1,42 @@
+Use Case: Use R-lumi for microarray data analysis. The R-lumi package is ideal for handling and analyzing Illumina microarray data. Here is an example of using R-lumi for reading data and preprocessing.
+
+Code details and examples: Code.
+
+Sample Input Files: The minimum requirement is a microarray file in a simple text format. Here is the structure:
+
+    ID_REF    VALUE
+    204567_x_at    7.26
+    204968_s_at    7.35
+    204846_s_at    7.23
+
+To start, load the lumi package. The script below is given assuming that we are using R:
+
+```R
+library(lumi)
+```
+
+Next, read in the Illumina BeadStudio report file:
+
+```R
+yourData <- lumiR('yourFileName.txt')
+```
+
+Once your data has been read in, there are numerous preprocessing methods available. Below is an example of transforming the data using variance stabilizing transformation (VST):
+
+```R
+yourData.vst <- vst(yourData)
+```
+
+Here is how to perform robust spline normalization (RSN):
+
+```R
+yourData.rsn <- rsn(yourData.vst)
+```
+
+And finally, write your normalized data to an output file:
+
+```R
+write.exprs(yourData.rsn, file = "yourOutputFileName.txt")
+```
+  
+Remember to replace 'yourFileName.txt' and 'yourOutputFileName.txt' with your actual input and output file names respectively.

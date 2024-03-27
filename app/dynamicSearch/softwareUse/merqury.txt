@@ -1,0 +1,24 @@
+Use Case: It is used to evaluate the quality of a genome assembly using k-mer spectra. 
+
+Code Details and Examples: 
+
+Code:
+
+Firstly, the user must generate a k-mer counts table using meryl. Meryl is a k-mer counter that comes bundled with the Merqury tool. Let's suppose you have a reference genome (referred.fasta) and an assembly to evaluate (assembly.fasta). Here is a brief step-by-step guide on how to generate the required k-mer histogram files:
+
+To get the k-mer counts for the reference genome:
+```
+meryl count k=21 [referred.fasta] output reference.meryl
+```
+To get the k-mer histogram for the reference genome:
+
+```
+meryl histogram reference.meryl > reference.hist
+```
+To evaluate the assembly quality using Merqury:
+```
+merqury reference.meryl assembly.fasta assembly_qc
+```
+This will create a myriad of output files, including assembly statistics, a VCF file of errors in the assembly, and various plots and histograms showing the k-mer composition of the assembly. When complete, check "assembly_qc.qc" for the final assessment stats and "assembly_qc.html" for the plots.
+
+Reference: https://github.com/marbl/merqury/

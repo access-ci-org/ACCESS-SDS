@@ -1,0 +1,29 @@
+Use Case: This tool is used for identifying Cas protein and CRISPR arrays in the given nucleotide sequence.
+
+Code details and examples:
+
+Code:
+
+Input Files: 
+
+A FASTA file containing a sequence of nucleotides e.g `sequence.fasta`. The file format should be as per the FASTA specification with each sequence beginning with a '>' sign immediately followed by the ID of the sequence and on the next lines the actual sequence as:
+```
+>sequence_id
+ATGCACACGA....
+```
+
+Command to run it: 
+
+It is typically run on a command line as with the following command:
+```
+perl casfinder.pl -in sequence.fasta -out results -cas -def S -so
+```
+In this command, `-in` specifies the input file (seq.fasta), `-out` outlines the results, `-cas` triggers CASFinder, `-def` is for defining cas subtype and `-so` sorts the sequences in the output files. 
+
+Output will be stored in the `results` directory. The `CASFinder-Result.txt` is the main result file. It contains details about identified CRISPR arrays and their corresponding encoded Cas protein within the input sequences.
+
+Specifications and Details in input files:
+
+The input sequence must be DNA and not protein. The tool takes as input a single or multiple DNA sequence(s) in FASTA format (`*.fasta` or `*.fa`). The sequences must be ranged from 400 to 560 000 nucleotides. Sequences longer than 560 000 nt are also processed but by segments of maximum 560 000 nt. 
+
+The identifier of each sequence in the input file must be unique (1st line starting with '>'). If the sequence identifier already exists in the `userJobID` directory, the sequence will not be treated.

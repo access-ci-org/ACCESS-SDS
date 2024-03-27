@@ -1,8 +1,24 @@
-Use Case: Converting Illumina BCL files to FASTQ format for downstream analysis.
+Use Case: bcl2fastq is used to convert raw base call (BCL) data from Illumina sequencing systems into FASTQ file formats for downstream processing. It also demultiplexes data, splitting it up by sample based on a barcoding scheme.
 
-Code details and examples:
-```
-bcl2fastq --runfolder-dir /path/to/runfolder --output-dir /path/to/output
-```
+Code Details and Examples:
 
-In this example, replace `/path/to/runfolder` with the path to the directory containing the Illumina sequencing run data (BCL files) and specify the output directory where the FASTQ files will be generated. The `bcl2fastq` command is typically used to demultiplex and convert raw sequencing data from Illumina sequencers into FASTQ format for further analysis.
+Code:
+```
+bcl2fastq --input-dir ./RunFolder/Data/Intensities/BaseCalls \
+  --output-dir ./RunFolder/Data/Intensities/BaseCalls/Unaligned \
+  --sample-sheet ./RunFolder/Data/Intensities/BaseCalls/SampleSheet.csv \
+  --barcode-mismatches 1
+```
+In the command, four parameters are set: the input directory (--input-dir), output directory (--output-dir), sample sheet (--sample-sheet) and barcode mismatches (--barcode-mismatches).
+
+The input directory is where the base call files are located. The output directory is where the FASTQ files will be written to. The sample sheet file contains the sample information for demultiplexing the data. The barcode mismatches parameter determines how many mismatches are allowed in the barcode sequence during the demultiplexing process.
+
+Additionally, SampleSheet.csv file format will be something like:
+
+```
+[Data]
+Sample_ID,Sample_Name,Description,Index
+Sample_1,Sample 1,Description 1,ATCG
+Sample_2,Sample 2,Description 2,CATG
+```
+Each row after the [Data] line represents a single sample. Barcode sequences are provided in the Index column. Multiple barcodes for the same sample can be provided by adding additional rows with the same sample information.

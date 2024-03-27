@@ -1,0 +1,51 @@
+Use Case: PyOpenGL is used for accessing OpenGL libraries in Python code, which is useful for generating 2D and 3D graphics and animations in applications.
+
+Code details and examples: Code
+Below is a basic example of a PyOpenGL script that creates a simple OpenGL red square on a blue background.
+
+```python
+from OpenGL.GL import *
+from OpenGL.GLUT import *
+from OpenGL.GLU import *
+
+w,h= 500,500
+def square():
+    glBegin(GL_QUADS)
+    glVertex2f(100, 100)
+    glVertex2f(200, 100)
+    glVertex2f(200, 200)
+    glVertex2f(100, 200)
+    glEnd()
+
+def iterate():
+    glViewport(0, 0, 500, 500)
+    glMatrixMode(GL_PROJECTION)
+    glLoadIdentity()
+    glOrtho(0.0, 500, 0.0, 500, 0.0, 1.0)
+    glMatrixMode (GL_MODELVIEW)
+    glLoadIdentity()
+
+def showScreen():
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
+    glLoadIdentity()
+    iterate()
+    glColor3f(1.0, 0.0, 3.0)
+    square()
+    glutSwapBuffers()
+
+glutInit()
+glutInitDisplayMode(GLUT_RGB)
+glutInitWindowSize(500, 500)
+glutInitWindowPosition(0, 0)
+wind = glutCreateWindow(b"OpenGL Coding Practice")
+glutDisplayFunc(showScreen)
+glutIdleFunc(showScreen)
+glutMainLoop()
+
+```
+
+To run the above script, you just need to save it to a python file named `main.py` and run the command `python main.py` from the command line. This will create a 500x500 pixel window and it will draw a red square in it.
+
+This script doesn't require any input files and there is no specific format required.
+
+Note: You need to have the PyOpenGL, PyOpenGL_accelerate and glut libraries installed in your Python environment to be able to run this script.

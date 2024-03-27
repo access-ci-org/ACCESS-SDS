@@ -1,0 +1,37 @@
+Use Case: Adios2 is a data management system designed to support parallel, multi-step scientific simulations by providing flexible and efficient I/O systematically.
+
+Code Details and Examples:
+
+Suppose we have a data array "my_array" with dimensions 8 by 8.
+
+Code:
+```c++
+#include <adios2.h>
+
+int main()
+{
+    const size_t Nx = 8; 
+    adios2::ADIOS myadios;         
+    adios2::IO myio = myadios.DeclareIO("OutputIO");
+    adios2::Engine myEngine = myio.Open("myData.bp", adios2::Mode::Write);
+    myio.DefineVariable<int>("myArray", {Nx, Nx});
+    std::complex<double> myArray[Nx][Nx]; 
+    myEngine.BeginStep();
+    myEngine.Put("myArray", myArray);
+    myEngine.EndStep();
+    myEngine.Close();
+}
+```
+In the code above, we declare a data array "myArray".  We then write the data into "myData.bp" using the `Put` command. 
+
+To compile and run the example in UNIX-like system, you may use the following commands:
+
+Compile the program:
+```
+g++ -o write write.cpp
+```
+Run the program:
+```
+./write
+```
+The output will be stored in a binary file named "myData.bp". Please ensure that ADIOS2 is correctly installed and included in your path before running the program.

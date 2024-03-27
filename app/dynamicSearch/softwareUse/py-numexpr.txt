@@ -1,0 +1,30 @@
+Use Case: Use Numexpr for high performance, multi-threaded numerical expression evaluator in Python. It is used for evaluation of element-by-element mathematical expressions on arrays. This makes Numexpr ideal for mathematical operations on large arrays, such as addition, subtraction, multiplication, division, square root, exponentiation, and trigonometric functions.
+
+Code Details and Examples: Code
+
+Firstly designate Numexpr to handle and evaluate an expression. An expression will be like a string mathematical operation with the use of NumPy array variables.
+
+```python
+import numpy as np
+import numexpr as ne
+
+# initialize arrays
+a = np.random.rand(1000000)
+b = np.random.rand(1000000)
+c = np.random.rand(1000000)
+
+# normal numpy expression
+%timeit np.sqrt(a**2 + b**2 + c**2)
+
+# numexpr expression
+expression = 'sqrt((a**2 + b**2 + c**2))'
+%timeit ne.evaluate(expression)
+```
+In this example, three NumPy arrays (a, b, c) of size 1,000,000 are created and their square root of sum of squares is computed using both traditional NumPy method and Numexpr. In both cases, the expressions are evaluated for each element in the array.
+
+To run this script, save this as a Python file, then run it with the following command in your terminal:
+
+```shell
+python filename.py
+```
+(replace filename.py with your actual Python script file name)

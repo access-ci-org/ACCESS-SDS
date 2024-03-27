@@ -1,24 +1,28 @@
-Use Case: xarray is a Python package that brings the labeled data power of pandas to the physical sciences, by providing N-dimensional variants of the core pandas data structures.
+Use Case: For handling large multi-dimensional arrays of data in a Pandas-like manner, Xarray is widely used. It aims to bring the labelled data power of pandas to the physical sciences, by providing N-dimensional variants of the core pandas data structures.
 
-Code details and examples:
-```
-# Sample Input File - temperature_data.nc
-# A NetCDF file containing temperature data
-# Dimensions: time (365), latitude (180), longitude (360)
-# Variables: temperature (time, latitude, longitude)
+Code details and examples: 
 
-# Load the temperature data from the NetCDF file
+Code:
+
+```python
+import numpy as np
 import xarray as xr
 
-data = xr.open_dataset('temperature_data.nc')
+# Create a DataArray
+da = xr.DataArray(np.random.randn(2, 3), coords={'x': ['a', 'b'], 'y': [-99, -1, 1]}, dims=['x', 'y'])
+print(da)
 
-# Calculate the mean temperature along the time dimension
-mean_temperature = data['temperature'].mean(dim='time')
-
-print(mean_temperature)
+# Manipulate data
+da['x'] = ['c', 'd']
+print(da)
 ```
 
-To run the code:
+This snippet creates a 2D data array with dimensions 'x' and 'y'. An appropriate input would be numpy arrays or a similar compatible data type.
+
+Running this snippet requires a Python environment with the Xarray package installed. In a typical Python environment, you would run it simply by executing the script:
+
 ```bash
-python script.py
+python3 script_name.py
 ```
+
+The input values, 'x' and 'y', are optional and will default to integer indices if not specified. The number of dimensions of the data array should match the number of provided coordinates. In this snippet, two coordinates are provided, 'x' and 'y', each with two values. The dimensions 'x' and 'y' are then used to label the axes of the data array.

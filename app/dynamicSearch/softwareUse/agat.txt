@@ -1,0 +1,26 @@
+Use Case: AGAT (Another Gff Analysis Toolkit) can be used for manipulating (filtering, transforming, checking...) any text files taking into account the hierarchical nature of biological information. For example, it could be used to filter a GFF file for genes of a certain length, or transform a GFF into a table for further statistical analyses.
+
+Code details and examples: Code
+
+First, let's see a basic use of AGAT - sp_manage_functionality.pl function. This function can be used to perform operations on a gff file, such as adding an attribute. 
+
+Input Files:
+1. GFF file with the information about the gene. Let's say "test.gff"
+
+The code will look like this:
+
+```
+./agat_sp_manage_functionality.pl --gff test.gff --Value 1 --key ID --atr id
+```
+
+The above command will add the attribute `id` with value `1` to all the features in the GFF file `test.gff` that have the key `ID`.
+
+The command `agat_sp_manage_functionality.pl` needs to be at the path where AGAT is installed and the GFF file needs to be in the same folder or you need to give the full path of the file. The attribute `--Value` represents the value you want to add, the `--key` represents the key that must exist for the value to be added and the `--atr` represents the attribute that will be added.
+
+This is a basic example and AGAT has many functionalities to work and manipulate with gff files. You can get a list of all these functions and how to use them by typing:
+
+```
+agat_sp_manage_functionality.pl --help
+```
+
+AGAT is written in Perl and can be run from a command line interface in a Unix-like environment.

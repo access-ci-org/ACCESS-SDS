@@ -1,0 +1,25 @@
+Use Case: ShoRAH (Short Read Assembly into Haplotypes) is a software aimed at the inference of viral population structure from Next-Generation Sequencing (NGS) data. It was developed to analyze HIV sequencing data, but can be applied to any rapidly evolving population of sequences.
+
+Code details and examples:
+
+Code: 
+
+Your data should be in FASTQ format. In this format, each sequence is represented by four lines:
+
+Line 1 begins with '@' and is followed by the sequence identifier.
+Line 2 is the raw sequence.
+Line 3 begins with '+' and is optionally followed by the sequence identifier.
+Line 4 encodes the quality values for the sequence in line 2.
+
+Sample Input File:
+
+    @SEQ_ID
+    GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
+    +
+    !''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
+
+Command to run:
+
+    ./diri_sampler -j 10 -k 8 -b <inputfile>.sam -a 0.05
+
+This command runs ShoRAH with a window size (j) of 10, a padding (k) of 8, using the input file <inputfile>.sam, and a significance level (a) of 0.05 for statistical tests. The output by default gets dumped into the present working directory.

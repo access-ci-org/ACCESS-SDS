@@ -1,0 +1,39 @@
+Use Case: Network Security Services (NSS) is a set of libraries designed to support the cross-platform development of security-enabled server applications. Applications built with NSS can support SSL v2 and v3, TLS, PKCS #5, PKCS #7, PKCS #11, PKCS #12, S/MIME, X.509 v3 certificates and other security standards.
+
+Code details and examples: Code.
+
+Sample Input file: 
+
+Input file that contains the base64 encoded certificate, "certificate.pem":
+```
+-----BEGIN CERTIFICATE-----
+MIIDITCCAoqgAwIBAgIQL9+89q6RUm0PmqPfQDQ+mjANBgkqhkiG9w0BAQsFADA5
+...
+-----END CERTIFICATE-----
+```
+
+NSS tools typically require databases to be initialized with "certutil". 
+
+```bash
+#initialize NSS DB
+mkdir -p ~/nssdb
+certutil -N -d ~/nssdb
+
+#Add the Certificate to NSS DB
+certutil -A -n "My_Certificate" -t "CT,C,C" -i ~/certificate.pem -d ~/nssdb
+```
+
+The first command initializes the Network Security Services databases in a new directory "~/nssdb". The second command adds the certificate included in the file "~/certificate.pem" to the newly created databases.
+
+`-A` option is for adding a new certificate. `-n` option is for the name of the certificate. `-t` denotes token.
+"CT,C,C" is a string representing the trust flags in for SSL, email and object signing. The repository "~/nssdb" created earlier is used.
+
+Requirements or Specifications: 
+
+Think of the NSS DB as a keychain where your certificates and keys live. The certificate.pem should be a file that contains a base64 encoded X.509 certificate.
+
+Running NSS library: 
+
+NSS libraries have no standalone functionality and, therefore, do not have a simple command to run them. They are designed to be used as libraries for server applications to support network security functionalities like SSL/TLS. The command to use them would vary based on the application they are incorporated into. However, the commands shared above show how to leverage NSS tools for managing certificates in an NSS database. 
+
+The document does not provide complete information and should not be used as a complete guide to using the NSS libraries. It is supposed to give an idea about how the libraries are utilized in an application. The use-case should be part of a much larger server application.

@@ -1,0 +1,24 @@
+Use Case: Highr library is used in R for syntax highlighting. It can be used to highlight R code or other programming languages code for markup languages like Latex, HTML, and others.
+
+Code details and examples:
+Code:
+
+```
+# Load the library
+library(highr)
+
+# var_string represents the R code that you want to highlight
+var_string = "my_data <- read.csv('file.csv')\nmean(my_data$column)"
+
+# Now use the function hi_andre to highlight the R source code 
+highlighted_code = hi_andre(var_string)
+
+# Print the highlighted code
+print(highlighted_code)
+```
+
+In the above code, the function hi_andre is used to highlight the R code contained in the variable var_string. Functions from the highr package return the highlighted code as a character vector which can then be used for pretty-printing in a variety of contexts including HTML and LaTex documents.
+
+The general format required for input is a character vector containing the code that you wish to highlight. As for specifications and details in the input files, there are none. The highr package functions are flexible enough to handle any valid R code.
+
+Command to Run: Scripts using the highr library can be run in RStudio or through R command line with the command `Rscript <scriptname.R>`.

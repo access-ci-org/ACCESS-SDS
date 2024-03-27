@@ -1,0 +1,61 @@
+Use Case: Use PyTorch for deep learning processes, creating computational graphs, and running on the GPU.
+
+Code details and examples: Code
+
+PyTorch operates under a dynamic computation graph model, which means that the graph will create on the fly as the operations occur in contrast to other deep learning frameworks -where an ahead-of-time computation graph is created.
+
+Here is an example of a simple matrix multiplication using PyTorch:
+
+```python
+import torch
+
+# Create tensor
+tensor1 = torch.tensor([[1, 2,], [3, 4.]])
+tensor2 = torch.tensor([[5, 6,], [7, 8.]])
+
+# Multiply tensors
+result = torch.matmul(tensor1, tensor2)
+print(result)
+```
+
+This would output:
+
+```
+tensor([[19., 22.],
+        [43., 50.]])
+```
+
+Running a simple linear regression model:
+```python
+import torch
+from torch import nn
+
+# Here is some artificial data
+x = torch.tensor([1, 2, 3, 4], dtype=torch.float32)
+y = torch.tensor([2, 4, 6, 8], dtype=torch.float32)
+
+# We need to create a model
+model = nn.Linear(1, 1)
+
+# Here is our training loop
+for epoch in range(10):
+    # Forward pass
+    y_pred = model(x)
+
+    # Loss calculation
+    loss = (y_pred - y**2).mean()
+
+    # Backward pass
+    loss.backward()
+
+    # Update weights using gradient descent
+    with torch.no_grad():
+        for p in model.parameters():
+            p -= p.grad
+    model.zero_grad()
+
+print(f'Prediction after training: {model(x).detach().numpy()}')
+```
+Predictions will be printed at the end.
+
+With PyTorch, you have the flexibility to design your computation graph during runtime, and this is why PyTorch is more pythonic than other frameworks.

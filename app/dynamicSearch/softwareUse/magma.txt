@@ -1,42 +1,60 @@
-Use Case: Magma is a dense linear algebra library that provides highly efficient routines for computations on hybrid GPU-based systems.
+Use Case: Solving large scale linear algebra problems.
 
 Code details and examples: 
-Magma requires input files in specific formats depending on the operation being performed. Below is an example of how you can use Magma to perform LU factorization on a matrix.
+
+Code:
+Magma is used to solve linear algebra problems effectively using the GPUs. The inputs are usually large matrices. 
+
+Example: Solving a system of linear equations AX = B using Magma
+
+Input File Format:
+The input file should contain your matrix A and B. These can be stored in plain text file format. Each line corresponds to a row of the matrix, with the values in the row separated by spaces.
+
+Suppose we have a 2x2 matrix A = [1, 2; 3, 4] and a 2x1 vector B = [5; 6] to represent the system of linear equations:
+
+1*x1 + 2*x2 = 5
+3*x1 + 4*x2 = 6 
+
+Sample Input File:
+
+For Matrix A:
+1 2
+3 4  
+
+For Vector B:
+5
+6
+
+Code Snippet:
+
+In MAGMA, we first need to initialize the MAGMA library with `magma_init()`, then we create the matrices and vectors.
 
 ```c
-#include <magma_v2.h>
-#include <stdio.h>
+#include "magma_v2.h"
 
-int main() {
-    magma_init();
+// create matrices
+magma_d_matrix A={Magma_CSR}, B={Magma_CSR}, X={Magma_CSR};
 
-    magma_int_t n = 3;
-    magma_int_t lda = n;
-    magma_int_t info;
+// Read matrices A and B
+magma_d_csr_mtx(&A, "A.txt");
+magma_d_csr_mtx(&B, "B.txt");
 
-    double *a = (double*)malloc(n*n*sizeof(double));
-    // Fill in the matrix a with your input
+// solve AX = B
+magma_d_solver( A, B, &X, opts);
 
-    magma_dgetrf(n, n, a, lda, NULL, &info);
+// Write the solution matrix X
+magma_d_csr_mtx(&X, "X.txt");
 
-    if (info == 0) {
-        printf("LU factorization successful.\n");
-    } else {
-        printf("LU factorization failed.\n");
-    }
-
-    magma_finalize();
-
-    return 0;
-}
+magma_finalize(); // finalize the magma
 ```
 
-To compile the code, assuming the file is named `lu_magma.c`, you can use the following command:
-```bash
-gcc lu_magma.c -o lu_magma -I /path_to_magma/include -L /path_to_magma/lib -lmagma -lcula -lcublas -lcudart
+Command to Run:
+
+You compile the code using gcc and then run the executable. For example, if the file is named `solver.c`:
+
+```shell
+gcc -o solver solver.c -lmagma
+./solver
 ```
 
-To run the executable:
-```bash
-./lu_magma
-```
+In the file X.txt, you'll find the solution to your system of equations.

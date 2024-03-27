@@ -1,0 +1,46 @@
+Use Case: PyStan is commonly used for Bayesian Inference, which facilitates statistical modeling and high-performance statistical computation. 
+
+Code Details and Examples:
+
+Code:
+
+```python
+# Import required library
+import pystan
+
+# Create a model with a normal distribution
+model_code = '''
+data {
+  int<lower=0> J; // number of observed data points
+  vector[J] y; // observed values
+  vector<lower=0>[J] sigma; // standard deviation
+}
+
+parameters {
+  real mu;
+  real<lower=0> tau;
+  vector[J] theta;
+}
+
+model {
+  theta ~ normal(mu, tau);
+  y ~ normal(theta, sigma);
+}
+'''
+
+# Prepare data for the model
+data = {
+    'J': 8,
+    'y': [28, 8, -3, 7, -1, 1, 18, 12],
+    'sigma': [15, 10, 16, 11, 9, 11, 10, 18]
+}
+
+# Fit the data to the model
+sm = pystan.StanModel(model_code=model_code)
+fit = sm.sampling(data=data, iter=1000, chains=4)
+```
+Representation of Input Data File: The data required for this example is in the dictionary format accepted by Python, with integer and array values.
+
+Representation of Input Files: No specific input file format needed, as the dataset is embedded in Python code directly. The 'data' dictionary contains a list of parameters and corresponding data values. The keys in the dictionary contain the data type and constraints, and the values in the dictionary are list of corresponding data points.
+
+Command to Run: This code snippet can be executed by running a script that includes this code or directly in a python environment like Jupyter notebook.

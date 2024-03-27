@@ -1,0 +1,47 @@
+Use Case: HiC-Pro is a bioinformatics software package developed for the processing of Hi-C data, from raw reads to normalized contact maps. The pipeline manages different steps including read mapping, quality controls, interaction scores, and contact matrices. 
+
+Code details and examples: Code
+
+1. Input Files and format for HiC-Pro
+   The main input files for HiC-Pro are FastQ files. Here is the sample input file and format.
+
+   Read 1: File1_r1.fastq
+   Read 2: File1_r2.fastq
+
+   An example of FastQ file format is as follows.
+   ```
+   @SEQ_ID
+   GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
+   +
+   !''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
+   ```
+
+2. Configuration File.
+   You need to create a configuration file with naming `hicpro.config` before running HiC-Pro. This file contains all parameters and paths required for HiC-Pro. 
+
+   Here are some part of `hicpro.config` looks like
+   ```
+   [bwt2_index]
+   GENOME_INDEX = /path/to/genome/index
+
+   [bwt2_options]
+   bwt2_opts = --very-sensitive
+   ```
+   
+3. Command to run HiC-Pro
+   Once the configuration file is ready, You can execute HiC-Pro with following command.
+   ```
+   HiC-Pro -i /path/to/data -o /path/to/output -c hicpro.config
+   ```
+
+4. Code Snippet
+   Here is a brief code snippet to show how you might use HiC-Pro.
+   ```
+   # Navigate to the working directory
+   cd /path/to/data
+
+   # Run HiC-Pro
+   HiC-Pro -i . -o /path/to/output -c hicpro.config
+   ```
+
+**Please watch out for directory paths** as HiC-Pro uses absolute paths and always requires trailing slashes.

@@ -1,0 +1,33 @@
+Use Case: N50 is a statistic that is widely used to assess the quality of assemblies in the field of genomics. It measures the contiguity of a genome assembly. It is defined as the length of the shortest contig such that the sum of contigs of equal length or longer is at least 50% of the total length of all contigs.
+
+Code details and examples: 
+Code:
+
+N50.py is a Python script that calculates N50 from a multi-FASTA-formatted file containing contigs from a genome assembly.
+
+Command to run:
+
+```
+python N50.py inputfile.fasta
+```
+
+Input format:
+
+The input file for N50.py is a FASTA file, which is a text-based format for representing nucleotide sequences or amino acid sequences. Each sequence in the FASTA format starts with a single-line description which is followed by lines of sequence data. The description line (defline) is distinguished from the sequence data by a greater-than (">") symbol in the first column. 
+
+Here is a sample input file:
+
+``` 
+>contig00001 
+GATGATTTAGCCGGTGCGTACATTTTGC
+>contig00002
+CGTACGTCGACGTCGACGTAGCTAGCTTGATTACGTAC
+>contig00003
+GATCGATCGATCGTAGCTACGTAGCATGCTAGCTAGC 
+>contig00004 
+ACTAGTAGCTAGCTAGCTGCTAGTAGCTAGCTATGC
+```
+
+This FASTA file contains sequences of four contigs. The first contig has a sequence "GATGATTTAGCCGGTGCGTACATTTTGC" and so on.
+
+No specifications in the input file are required. However, the input file must be in the FASTA format. 

@@ -1,0 +1,29 @@
+Use Case: Structure is a software package used for inferring population structures and assigning individuals to populations. It is commonly utilized in genomics to interpret complex genetic data.
+
+Code Details and Examples: Code
+
+Your input file for Structure (usually a tab-delimited txt file) should contain, at a minimum, the following data:
+
+- An identifier for each individual
+- A row for each individual, with the genetic data for that individual
+
+Example input file:
+
+```
+Ind1    1   2   3   4   5
+Ind2    1   2   3   4   5
+Ind3    2   3   4   5   1
+Ind4    2   3   4   5   1
+```
+
+Once you have properly formatted your input file, you can call Structure from the command line as follows: 
+
+```
+./structure -K 2 -i example_input.txt -o output
+```
+
+This command tells Structure to infer two population clusters (`-K 2`), to take `example_input.txt` as the input file (`-i example_input.txt`), and to write the output to `output` (`-o output`).
+
+Note that in the command above, `-K 2` specifies the number of population clusters Structure will infer. This number should be adjusted based on the specifics of your study.
+
+As with most command line tools, you can get a full list of Structure's options by running `./structure --help`.

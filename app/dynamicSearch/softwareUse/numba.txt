@@ -1,20 +1,33 @@
-Use Case: Numba is a JIT compiler for Python that translates Python functions to optimized machine code at runtime.
+Use Case: Use numba to speed up Python calculations, specifically those that frequently call functions with a small number of scalar numerical arguments. Essentially, it translates a subset of Python and NumPy code into fast machine code.
 
-Code details and examples:
-Sample input file (input.py):
+Code details and examples: Code
+
+
 ```python
-import numpy as np
 from numba import jit
+import numpy as np
 
-@jit
-def add(a, b):
-    return a + b
+# function to be accelerated
+@jit(nopython=True) # use Just-In-Time (JIT) Compilation for Python
+def sum2d(arr):
+    M, N = arr.shape
+    result = 0.0
+    for i in range(M):
+        for j in range(N):
+            result += arr[i,j]
+    return result
 
-result = add(1, 2)
-print(result)
+# data for testing
+data = np.random.rand(1000, 1000)
+
+# call the function
+result = sum2d(data)
 ```
+
+In the above example function `sum2d` is decorated with `@jit`, instructing numba to compile this function using the `nopython` mode. This function calculates the sum of all elements in a 2D array. For testing this function, a random 2D numpy array having shape `(1000, 1000)` is created and passed to this function.
+
+The input file that passes numpy array to the numba function is a 2D matrix stored in a NumPy array. The array shape must be known before calling the numba function. There are no specific file format requirements or any specifications and details required in the input files apart from these.
 
 Command to run:
-```
-python input.py
-```
+
+There's no special command needed to run numba-jit-compiled function. After decorating the chosen function with `@jit` and defining the parameters for that function, one can call it just like a regular Python function. In the given example, we call the function `sum2d` with NumPy array as parameter: `result = sum2d(data)`. It can be run directly in a Python environment.

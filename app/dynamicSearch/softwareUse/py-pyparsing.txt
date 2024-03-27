@@ -1,0 +1,21 @@
+Use Case: Pyparsing is a Python library / module that provides a simple way to create custom text parsing solutions. This can be useful for reading a specified format of file, parsing programming languages, or even for advanced web scraping.
+
+Code details and examples:
+
+Code:
+
+```python
+from pyparsing import Word, alphas
+
+# define grammar
+greet = Word(alphas) + "," + Word(alphas) + "!"
+
+# parse input string
+hello = "Hello, World!"
+print(greet.parseString(hello))
+```
+
+In the above code snippet, we have defined a simple grammar parser using the pyparsing library. The defined grammar `greet` expects a string of alphabets, followed by a comma, another string of alphabets, and an exclamation mark. The `parseString` function is then used to parse the string "Hello, World!" using our defined `greet` parser.
+
+Required Input file format: No specific file format is necessary as Pyparsing operates directly on strings.
+Command to run: As it's a python script, use python filename.py to run the code.

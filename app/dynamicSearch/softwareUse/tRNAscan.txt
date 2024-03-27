@@ -1,8 +1,40 @@
-Use Case: tRNAscan is a software tool used for finding transfer RNA (tRNA) genes in genomic sequence.
-Code details and examples:
-- Input format: The input for tRNAscan can be a DNA sequence in FASTA format.
-- Code:
-  ```
-  tRNAscan /path/to/input.fasta
-  ```
-- This command will run tRNAscan on the input DNA sequence file to identify tRNA genes.
+Use Case: Use tRNAscan-SE to predict tRNA regions in an input genome sequence.
+
+Code details and examples: Code
+
+1. Sample input files: Genome sequence in FASTA format (.fasta)
+
+```
+>Seq1
+ATGGCGCGTACGTACGCGTACGCGTACGGCTAGCATGCTACGCGTAGCTAGCTACGGCGCGTACGACGGTACGCGTAGCTA
+CGCGTACGCGTACGCGTACGGCTAGCTAGCTAGCACGCGTACGCGTAGCGTACGTAGCTAGCCTAGCTAGCTAGCACGCG
+```
+
+2. Format required: The genome sequence data should be in FASTA format.
+
+3. Specifications and details in input files: 
+
+   The input file includes the sequence ID (e.g., ">Seq1") and the sequence data in lines. The sequence data should be in uppercase and only contains the four nucleotide letters (A, T, C, G), without any additional characters or line descriptions.
+
+4. Code snippets:
+
+```bash
+# Command line:
+
+tRNAscan-SE [options] <sequence file>
+```
+An example with options:
+
+```bash
+tRNAscan-SE -o output_file.txt -f secondary_structures.txt genome_sequence.fasta
+```
+
+5. Command to run:
+
+```bash
+tRNAscan-SE -o sample_output.txt -f sample_secondary.txt sample.fasta
+``` 
+
+In this command line, "-o" is used to specify the result file, "-f" is used to direct the secondary structures of predicted tRNA to the file, and the last term is the input genome sequence file. The output will include the identified tRNA regions with detail information.
+
+Note: Please replace "sample_output.txt", "sample_secondary.txt", and "sample.fasta" with your actual file names.

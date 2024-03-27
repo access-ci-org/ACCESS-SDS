@@ -1,28 +1,53 @@
-Free Lossless Audio Codec. Below are some examples with sample input files, formats required, specifications, and details for FLAC.
+Use Case: FLAC is a software package that performs explicit, two-dimensional, dynamic simulations for computational solid earth geophysics. It is typically used for modeling large strains in geologic material, such as might occur during an earthquake.
 
-Use Case: Encode WAV file to FLAC format
 Code details and examples:
-```bash
-# Convert WAV file to FLAC
-flac input.wav -o output.flac
+
+Code:
+
+In FLAC, a typical input file (usually a .dat or .flac file) would contain the numerical parameters for the simulation, including grid size, time steps, and material properties. 
+
+Sample FLAC input file format:
+
+```
+;---------------------------------------------
+; FLAC GRID
+; --------------------------------------------
+GRID 100 100
+; TIME STEPPING
+DYNAMIC
+TIME INCREMENT 0.001
+; SET PROPERTIES
+ZONE PROPERTY density=2.5 xperm=1e-10 yperm=1e-10
+;---------------------------
+; BOUNDARY CONDITIONS
+; --------------------------
+FIX VELOCITY
+    ; set roller boundary at east and west
+    ZONE FACE X 100
+    VALUE VELOCITY-NORMAL 0
+    ZONE FACE X 1
+    VALUE VELOCITY-NORMAL 0
+
+;---------------------------
+; INITIAL CONDITIONS
+; --------------------------
+    ZONE INITIALIZE PRESSURE 101
+    ZONE INITIALIZE VELOCITY-NORMAL 0
+    ZONE INITIALIZE VELOCITY-SHEAR 0
+;---------------------------
+; MODEL CYCLE
+; --------------------------
+    CYCLE 50000
+    HISTORY 'time' 'vert. displacement at base'
+cancel last
+plot
+end
 ```
 
-Use Case: Decode FLAC file to WAV format
-Code details and examples:
+Command to run FLAC program (in a Bash shell):
+
 ```bash
-# Convert FLAC file to WAV
-flac -d input.flac -o output.wav
+/path/to/flac inputfile.dat
 ```
 
-Format for input files: 
-- Input files should be in WAV format to encode to FLAC or in FLAC format to decode to WAV.
-
-Specifications for input files:
-- For encoding to FLAC, the sample input file should be a WAV audio file.
-- For decoding to WAV, the sample input file should be a FLAC audio file.
-
-Additional details:
-- FLAC supports encoding and decoding of audio files with lossless compression.
-- It is a popular choice for preserving original audio quality while reducing file size.
-
-Please ensure you have the FLAC software installed on your system before running the commands.
+This would execute the FLAC program on the inputfile.dat. The path requires correct FLAC installation. The results of the simulation are usually written to a .his or .out file in the same directory as the input file.

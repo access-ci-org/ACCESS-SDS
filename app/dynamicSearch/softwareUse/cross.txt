@@ -1,0 +1,44 @@
+Use Case: Use BioPython for working with sequences in bioinformatics. It performs common operations for biological sequence data such as reading from and writing to FASTA formatted files.
+
+Code details and examples: 
+
+Code:
+
+```python
+from Bio import SeqIO
+
+# Reading a FASTA formatted file
+for seq_record in SeqIO.parse("example.fasta", "fasta"):
+    print(seq_record.id)
+    print(seq_record.seq)
+
+# Writing to a FASTA formatted file
+seq_record = SeqIO.SeqRecord(Seq("ATGC"))
+SeqIO.write(seq_record, "output.fasta", "fasta")
+```
+
+The input file must be in the FASTA format, which is a text-based format for representing either nucleotide sequences or peptide sequences, in which nucleotides or amino acids are represented using single-letter codes. The format also allows for sequence names and comments to precede the sequences. The sequences and the descriptions are separated by line breaks.
+
+The command to run this file if it is saved as script.py would be `python script.py`.
+
+Use Case: Use numpy for performing numerical calculations in Python.
+
+Code details and examples:
+
+Code:
+
+```python
+import numpy as np
+
+# Creating an array
+arr = np.array([1, 2, 3])
+print(arr)
+
+# Performing element-wise addition
+arr2 = np.array([4, 5, 6])
+print(arr + arr2)
+```
+
+No specific input file is required for numpy as it operates in-memory. But, it can load data from text or binary files using functions like `np.loadtxt()` or `np.load()`. 
+
+The command to run this file if it is saved as script.py would be `python script.py`.

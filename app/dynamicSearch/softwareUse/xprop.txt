@@ -1,6 +1,17 @@
-Use Case: xprop allows users to retrieve and display window properties in X server.
+Use Case: xprop is a tool that allows users to examine and edit window and font properties in an X server. A common use case would be to get the window id of a specific window on an X server.
 
-Code details and examples:
-xprop
+Code details and examples: 
 
-This command will prompt the user to click on the window they want to retrieve properties for. Once the window is selected, xprop will output a list of properties for that window.
+Code: 
+```
+xprop -id $(xprop -root -notype | awk '$1=="_NET_ACTIVE_WINDOW(WINDOW):" {print $5}')
+```
+This command uses awk to parse the id of the active window from the output of a `xprop -root -notype` command and then it passes it to another `xprop` command to extract the properties of it. 
+
+Sample Input File: No Input File is required in this case. 
+
+Input Format Requirements: The above command can take any type of input provided. 
+
+Additional Specifications: You need to use ";" to separate xprop flags. The "-id" option specifies the window to examine when you do not click a window. 
+
+Command to Run: `xprop` or `xprop -root`

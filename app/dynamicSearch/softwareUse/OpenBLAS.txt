@@ -1,31 +1,34 @@
-Use Case: Linear algebra library for HPC computing
+Use Case: OpenBLAS is an optimized BLAS (Basic Linear Algebra Subprograms) library that can be used in numerical computing and mathematical software applications. It comes in handy for high-performance operations on vectors and matrices.
 
-Code details and examples:
-1. Sample Input file (matrix multiplication in Python):
-```python
-import numpy as np
-import time
-import os
+Code Details and Examples:
 
-# Create two random matrices
-A = np.random.rand(1000, 1000)
-B = np.random.rand(1000, 1000)
+OpenBLAS does not need a separate input file but is often used alongside other programming languages such as C++, R, and Python for computations. Here is a simple example in C++ where OpenBLAS is used for matrix multiplication:
 
-start_time = time.time()
+```cpp
+#include<cblas.h>
 
-C = np.dot(A, B)  # Matrix multiplication using OpenBLAS
+void multiply_matrices() {
+  
+  double a[6] = {1.0,2.0,1.0,-3.0,4.0,-1.0};
+  double b[6] = {1.0,2.0,1.0,-3.0,4.0,-1.0};
+  double c[9] = {.5,.5,.5,.5,.5,.5,.5,.5,.5};
 
-print("Time taken: %s seconds" % (time.time() - start_time))
+  cblas_dgemm(CblasColMajor, CblasNoTrans, CblasTrans,3,3,2,1,a, 3, b, 3,2,c,3);
+}
+
+int main()
+{
+    multiply_matrices();
+    return 0;
+}
 ```
 
-2. Command to run the code (assuming Python is installed):
-```bash
-python matrix_multiplication.py
-```
+No input files are needed for the OpenBLAS C library. The library provides functions for Various mathematical operations on Vector and Matrix.
 
-3. Expected Output: 
-```
-Time taken: X seconds
-```
+To compile the code using OpenBLAS you could use the following command: 
 
-Note: OpenBLAS provides optimized implementations of basic linear algebra subprograms (BLAS) and linear algebra routines, leading to faster computations for matrix operations in high-performance computing applications.
+```g++ -I /path/to/cblas/ -L /path/to/openblas/ -lopenblas your_file.cpp```
+
+Where -I indicates the include directory (header files), -L indicates the library directory (OpenBLAS library), and -lopenblas is the library to link against. Replace /path/to/cblas/ and /path/to/openblas/ with the actual path where CBLAS and OpenBLAS are installed respectively.
+
+Note: OpenBLAS doesn't interact with input files directly. It provides routines that can be called from higher-level programming languages. This example is displaying how to use OpenBLAS in a C++ program. Furthermore, using libraries like OpenBLAS often requires understanding of the linear algebra operations that you wish to perform.

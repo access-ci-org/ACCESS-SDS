@@ -1,0 +1,37 @@
+Use Case: GimmeMotifs is a computational motif discovery tool used to find motifs in sets of co-regulated or similarly annotated genomic sequences. It predicts potential transcription factor binding sites and helps in situations when you don't know the transcription factor, but you have a set of genomic regions.
+
+Code details and examples:
+
+Code snippet to generate predictions of motifs, here is example code in Python:
+
+```python
+from gimmemotifs.motif import read_motifs
+# Read motifs from a file
+motifs = read_motifs("motifs.pfm")
+# Consider first 5 motifs
+motifs = motifs[:5]
+# First motif
+print(motifs[0].id)
+print(motifs[0].to_pwm())
+# Access as dictionary
+for motif in motifs:
+    print(motif["id"])
+```
+
+Input file: The input to this tool is a FASTA file that contains sequences for motif prediction. The FASTA file typically has the format:
+
+```
+>sequence_1
+ATGCGTATCGT
+>sequence_2
+CGTACGTACGTA
+...
+```
+
+Command to run: To run GimmeMotifs from the command line, once sequences are saved in a FASTA file "sequence.fasta", use the following command to discover motifs:
+
+```bash
+gimme motifs sequence.fasta output_directory
+```
+
+It produces an HTML report in output_directory that contains the discovered motifs and information about them. The result directory also contains a variety of output files, including genomic locations for discovered motifs, ranking graphics for comparison with known motifs, a table with sequence-based features, and others.

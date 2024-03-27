@@ -1,19 +1,34 @@
-Use Case: Unit conversion in scientific computing.
+Use Case: Udunits is a scientific software typically used for handling units of physical quantities. The primary use case is converting data between different units. The software library provides support for units of physical quantities such as time, length, mass, heat, and others.
 
-Code details and examples:
-```python
-from udunits2 import Unit
+Code details and examples: Code
 
-# Create a Unit object for converting temperature from Celsius to Fahrenheit
-celsius = Unit('degree_Celsius')
-fahrenheit = Unit('degree_Fahrenheit')
+In typical use, we first create a `udunits2` system. This represents a collection of unit information, from which units can be created and various manipulations can be done. The `udunits2.txt` file should be present in your work directory.
 
-# Define the value in Celsius
-celsius_value = 25.0
+```c
+#include <udunits2.h>
 
-# Convert Celsius to Fahrenheit
-fahrenheit_value = celsius.convert(celsius_value, fahrenheit)
-
-print(f"{celsius_value} degrees Celsius is equal to {fahrenheit_value} degrees Fahrenheit.")
+int main() {
+  ut_system* system;
+  cv_converter* converter;
+  ut_unit* source;
+  ut_unit* target;
+  
+  system = ut_read_xml(NULL);
+  source = ut_parse(system, "meters", UT_ASCII); 
+  target = ut_parse(system, "feet", UT_ASCII);
+  
+  converter = ut_get_converter(source, target);
+  
+  printf("10 meters is %f feet\n", cv_convert_double(converter, 10));
+}
 ```
-Ensure you have the `udunits2` Python library installed before running this code.
+
+This C code creates a udunits2 system, creates units of meters and feet, then a converter to convert from meters to feet, and finally does a conversion.
+
+Compiling this C code typically done with gcc might look something like this:
+
+`gcc -o converter converter.c -ludunits2`
+
+and running it with something like this:
+
+`./converter`

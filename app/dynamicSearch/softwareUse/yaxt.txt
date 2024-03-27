@@ -1,0 +1,38 @@
+Use Case: YAXT is a communication middleware library extensively used in high performance computing applications to perform efficient communication among computational entities with dependency in data. It is a great tool for parallel programming, especially parallel I/O management and load distribution. It works with both MPI and threads.
+
+Code details and examples:
+
+Code: Here's a simple example of using YAXT to create a one-to-one communication plan using its xchg_create method.
+
+```c
+#include "yaxt.h"
+int main(int argc, char **argv)
+{
+    MPI_Init(&argc, &argv);
+    yaxt_init();
+
+    // creating a one-to-one commutation plan among processes
+    int size, rank;
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+    MPI_Comm_size(MPI_COMM_WORLD, &size);
+    Xt_redist redist;
+    int src[1] = { rank };
+    int dst[1] = { (rank+1)%size }; //points to the next process in a ring-like structure
+
+    redist = xchg_create(1, src, 1, dst, MPI_INT, MPI_COMM_WORLD);
+
+    yaxt_finalize();
+    MPI_Finalize();
+
+    return 0;
+}
+```
+
+To compile and run this code initially, save it with filename yaxt_example.c. Then use the following commands:
+
+```bash
+mpicc yaxt_example.c -lyaxt -o yaxt_example
+mpirun -np 4 ./yaxt_example
+```
+
+In the code above, 'mpicc' is the MPI C compiler used to compile the source file; '-lyaxt' tells the compiler to link the YAXT library to the code; '-o yaxt_example' generates an executable file named yaxt_example. 'mpirun -np 4 ./yaxt_example' finally runs the compiled code on 4 processes. Remember, YAXT needs to be previously installed and available in the library path.

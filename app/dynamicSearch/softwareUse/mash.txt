@@ -1,0 +1,37 @@
+Use Case: Use mash for fast genome and metagenome distance estimation using MinHash. It is particularly useful for large datasets as sizes and sequencing depth are reduced to fixed-length signatures.
+
+Code Details and Examples: Code
+
+Sample Input File:
+A FASTA or FASTQ file is used as input for mash. The input file can be uncompressed or compressed with gzip.
+
+Format Required:
+FASTA/FASTQ format which includes nucleotide sequences. Example of a FASTA file:
+
+```
+>Sequence1
+ATCGGGAGGCGTGA
+>Sequence2
+TGCCTTAGCTAGGCCC
+```
+
+Specifications and details in input files:
+Each sequence in the FASTA/FASTQ file must have a unique identifier, followed by the nucleotide sequence. If the input is a multi-FASTA file, each sequence is treated separately. It's important that the given sequence identifiers should not contain white spaces.
+
+Code Snippet (using Sketch to create a .msh sketch from a FASTA file):
+
+```
+mash sketch -i input.fasta -o output.msh
+```
+
+Command to run:
+
+```
+mash dist output.msh another.fasta > output.dist
+```
+
+This will create a .dist file with row-wise output for each 'query' input (species compared against the .msh sketch in this case). 
+
+Note: 'input.fasta' and 'another.fasta' are placeholders for your sequence data.
+
+Command line flags `-i` and `-o` specify the input and output files respectively. The 'dist' command creates an output with distance estimation between the .msh sketch and another .fasta file.

@@ -1,0 +1,38 @@
+Use Case: Flye is a de novo assembler for single-molecule high-noise sequencing data, such as those produced by Pacific Biosciences (PacBio) and Oxford Nanopore Technologies (ONT). It's commonly used in genome sequencing and analysis, especially in the field of bioinformatics.
+
+Code details and examples: 
+
+Code:
+Flye requires a FASTA or FASTQ file as input. The input file needs to be in a specific format, either FASTA (.fasta) or FASTQ (.fastq).
+
+A sample minimal input FASTA file:
+
+```
+>Sequence_1
+AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC
+```
+
+This file contains one sequence (Sequence_1) and its corresponding DNA bases.
+
+A sample minimal input FASTQ file:
+
+```
+@Sequence_1
+AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC
++
+!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
+```
+
+This file contains one sequence (Sequence_1), its corresponding DNA bases, and the quality score of individual base calls.
+
+A basic command to run Flye could look like this:
+
+```
+flye --nano-raw reads.fastq --out-dir assembly --genome-size 5m --threads 4
+```
+
+Where:
+- --nano-raw reads.fastq specifies the input file.
+- --out-dir assembly specifies the output directory.
+- --genome-size 5m specifies the estimated genome size (here 5 million bases).
+- --threads 4 specifies the number of threads to use.

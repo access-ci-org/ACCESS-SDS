@@ -1,0 +1,26 @@
+Use Case: The "gc" tool is often used in the context of managing memory within software development. It is not standalone software, but a module within the Python programming language that aids in managing and tracking objects that take up memory space. The primary aim of "gc" is to provide the facility to release unreferenced memory that has been used by Python objects during execution. The gc module provides the capability to disable the collector, tune the collection frequency, or set debugging options with varying degrees of granularity.
+
+Code details and examples: Code
+
+
+```python
+# Importing gc 
+import gc 
+
+# Returns the number of 
+# objects it has collected 
+# and deallocated 
+collected = gc.collect() 
+
+# Prints Garbage collector 
+# as 0 object 
+print("Garbage collector: collected", 
+    "%d objects." % collected) 
+```
+
+The command to run this would be by using python command followed by the python file name:
+```shell
+python gc_example.py
+```
+
+Note: There are no specific input files for gc as the functions interact with the objects within the executing Python environment.

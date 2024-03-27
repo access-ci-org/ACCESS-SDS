@@ -1,0 +1,28 @@
+Use Case: MACS3 (Model-based Analysis for ChIP-Seq), is a bioinformatics tool used to identify transcript factor binding sites in ChIP-Seq data. This tool is commonly used for analyzing high-throughput sequencing data.
+
+Code details and examples:
+
+Code:
+
+Input:
+A couple of aligned .bam files for ChIP and control experiments. You can also use .sam, .bed, or .elnd files.
+
+Format required: 
+Sequence file in BAM, SAM, BED, or ELND format
+
+Example input files:
+1. chip.bam : The alignment results of ChIP sample
+2. control.bam : The alignment results of Control sample
+
+Specifications in input files:
+The BAM files must be sorted; the peaks are reported with 1-based coordinates.
+
+Command to run it: 
+
+    macs3 callpeak -t chip.bam -c control.bam -f BAM -g hs -n test -B -q 0.01
+
+  Here the `-t` option specifies the treatment file (ChIP), `-c` specifies the control file, `-f` specifies the file format, `-g` specifies the effective genome size (human), `-n` is for naming the run, `-B` tells MACS to store read distribution and `-q` is for setting the q-value cutoff.
+
+This command will generate various files such as a bedgraph file of pileup signals, a peak file in narrowPeak format, xls file with peak locations, summits, height, etc.
+
+The output .narrowPeak file can be loaded directly to the UCSC genome browser. Remove the beginning track line if you want to analyze it by bedtools or other software.

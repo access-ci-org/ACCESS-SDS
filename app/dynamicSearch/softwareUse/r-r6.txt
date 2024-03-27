@@ -1,0 +1,45 @@
+Use Case: R6 is an R package that implements encapsulated object-oriented programming. It is often used in data analytics for creating classes with reference semantics, just like R's built-in reference classes. 
+
+Code details and examples: 
+
+Code: 
+
+```R
+# Load the R6 library
+library(R6)
+
+# Define a simple class
+Person <- R6Class("Person",
+  private = list(
+    .age = NA,
+    .name = NA
+  ),
+  public = list(
+    initialize = function(name, age = NA) {
+      private$.name <- name
+      private$.age <- age
+    },
+    
+    set_age = function(age) {
+      private$.age <- age
+    },
+    
+    print_age = function() {
+      paste(private$.name, "is", private$.age, "years old.")
+    }
+  )
+)
+
+John <- Person$new("John", 23)
+John$print_age()   # Prints "John is 23 years old."
+```
+
+This R script creates a Person class with private fields for name and age, and public methods for initializing the class, setting the age, and printing the person's age.
+
+To run this code, save it to a file (for example, myScript.R), and then run the file with the command: 
+
+```
+Rscript myScript.R
+```
+
+This will execute the script and print the output. Note that the input to this code is not in file format but is provided directly as arguments to the methods of the R6 class.

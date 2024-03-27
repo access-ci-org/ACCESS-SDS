@@ -1,0 +1,34 @@
+Use Case: Use LDhat to analyse recombination rates in nucleotide sequences.
+
+Code details and examples: Code
+
+LDhat mainly has multiple components, but most use cases involve two critical parts: pairwise and interval.
+
+1. Pairwise:
+This program extrapolates rates of recombination between adjacent pairs of sites.
+
+Sample Input File: infile (Nucleotide sequence file in FASTA format)
+
+Sequence Format: 
+````
+>seq1
+ACGCGTGAC
+>seq2
+ACGTGTGAC
+````
+Command to run it: 
+````
+pairwise -seq [input sequence file] -loc [file containing positions of sites] -lk [lookup table] -its [number of iterations] -burn [number of burn-in iterations]
+````
+
+2. Interval:
+This program follows up on Pairwise, using a Bayesian MCMC method to fit variable recombination rates across a sequence. 
+
+Sample Input File: same as Pairwise, but compatibility matrix is required, generated from `complete` part of LDhat.
+
+Command to run it: 
+````
+interval -seq [input sequence file] -loc [file containing positions of sites] -lk [lookup table] -its [number of iterations] -burn [number of burn-in iterations] -samp [sampling frequency]
+````
+
+In both cases, the lookup table (`-lk` option) must be precomputed and is sequence length-dependent. It gets calculated with the `complete` module of LDhat. The number of iterations (`-its` option) and burn-in iterations (`-burn` option) must be chosen based on the complexity of your sequence data.

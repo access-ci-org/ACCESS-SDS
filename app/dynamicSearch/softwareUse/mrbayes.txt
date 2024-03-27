@@ -1,0 +1,36 @@
+Use Case: Use MrBayes to perform a Bayesian inference of phylogeny. User aims to infer the evolutionary history of a group of species from aligned sequences of certain genomic regions.
+
+Code details and examples: Code.
+
+File Format: Standard NEXUS format.
+
+Sample Input:
+```
+#NEXUS
+begin data;
+dimensions ntax=4 nchar=20;
+format datatype=dna interleave=no gap=-;
+matrix
+TaxonA ATGCTAGCTAGCTACGACTA
+TaxonB ATGCTAGCTAGCTACGACTC
+TaxonC ATGCTAGCTAGCAACGACTG
+TaxonD ATGCTA-CGACTAGCACTA
+;
+end;
+begin mrbayes;
+lset nst=6 rates=invgamma;
+mcmc ngen=1000000 printfreq=1000 samplefreq=100;
+sump burnin=250;
+sumt burnin=250;
+end;
+```
+
+The above NEXUS format data has 4 taxa with 10 nucleotide characters. A MrBayes block is included which sets the model of evolution to GTR+I+G, specifies to run for 1,000,000 generations, to print every 1,000 generations and sample trees every 100 generations. The burnin is set to 250.
+
+Command to run the file:
+
+```sh
+mb < inputfile.nexus > outputfile.out
+```
+
+Notably, MrBayes is primarily used in the field of evolutionary biology and operates on sequence data in the form of protein sequences, RNA sequences, DNA sequences, and restriction site data. It has been widely used in numerous academic journal publications and is cited frequently for its importance in phylogenetic inference.

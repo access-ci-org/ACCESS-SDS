@@ -1,0 +1,76 @@
+Use Case: covgen is a python package used for generating covariance matrix from a given genotype. It allows for Matrix-handling operations on large, potentially genome-wide, datasets which makes it a powerful tool in sectors such as genomics with large scale data.
+
+Input Details: The caller must pass a genotype matrix X, where rows denote the SNPs or People, and columns stand for the Genotypes. The Matrix values specify the number of allele uncovered. 
+
+Code Details and Examples:
+
+Code: 
+
+```
+import numpy as np
+import covgen
+
+X = np.array([
+    [1, 2, 1],
+    [0, 1, 1],
+    [2, 2, 0]])
+
+output = covgen.cov_gen(X)
+print(output)
+```
+
+Command to run: python script_name.py  
+
+## GROMACS:
+
+Use Case: 
+
+GROMACS is a versatile package to perform molecular dynamics, i.e. simulate the Newtonian equations of motion for systems with hundreds to millions of particles. GROMACS is commonly used in biochemical molecules like proteins, lipids, and nucleic acids that have many complicated bonded interactions.
+
+Input Details: 
+
+GROMACS requires a molecular structure file as an input for any simulation. The standard format is the GRO or PDB file.
+
+Code Details and Examples:
+
+Code: 
+
+Command to place the command files in the working directory
+```
+gmx editconf -f protein.pdb -o protein.gro
+```
+
+To run a simulation (once all input files have been configured) the input is the topologies file (.tpr)
+```
+gmx mdrun -v -deffnm em
+```
+This will generate all types of output files with the prefix 'em'.
+
+## SciKit-Learn:
+
+Use Case:
+
+SciKit-Learn is a machine learning library for python. It features various classification, regression, and clustering algorithms, and is designed to interoperate with the Python numerical and scientific libraries NumPy and SciPy. 
+
+Input Details: 
+
+Input to most of the models/methods is usually the dataset in array format.
+
+Code Details and Examples:
+
+Code: 
+
+Using SciKit-Learn to split a dataset into training and test sets.
+
+```
+from sklearn.model_selection import train_test_split
+
+X, y = np.arange(10).reshape((5, 2)), range(5)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
+```
+
+Command to run: python script_name.py
+
+For all the above packages, they can be directly run as python scripts after installation of required packages without any need for a special command. 
+
+NOTE: The python scripts can be run using the command: python script_name.py.

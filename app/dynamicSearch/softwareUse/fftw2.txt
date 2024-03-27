@@ -1,20 +1,52 @@
-Use Case: Fastest Fourier Transform in the West (FFTW) version 2
+Use Case: Fourier transforms are widely used mathematical techniques which can be applied to any data relating to a space or a period of time. Fftw2 is a C subroutine library used for computing the discrete Fourier transform (DFT) in one or more dimensions. The script takes an input file containing a sequence of numbers and prints their Fourier transform as output. 
 
-Code details and examples:
-FFTW version 2 is no longer actively maintained or recommended for new projects. Users are encouraged to use FFTW version 3 or higher. Below is a general example of how FFTW version 2 can be used:
+Code Details and Examples: 
 
-Input file format: The input file for FFTW version 2 typically contains the data on which the Fourier Transform needs to be performed.
+Code Input File: Your input file "input.txt" might look something like this: 
+
 ```
-# Sample input file for FFTW version 2
-1.0 2.0 3.0
-4.0 5.0 6.0
-7.0 8.0 9.0
+1
+2
+3
+4
+5
 ```
+This is a sequence of 5 numbers from 1 to 5.
 
-Code snippet:
-```bash
-# Estimate the forward Fourier Transform in FFTW2
-fftw input.dat output.dat
+Code: 
+
 ```
+#include <fftw.h>
 
-Please note that the above command is a placeholder, and the actual command to run FFTW version 2 may differ based on the system and how FFTW version 2 was installed.
+int main(void){
+    int n = 5;
+    fftw_complex in[n], out[n];
+    fftw_plan my_plan;
+    my_plan = fftw_create_plan(n, FFTW_FORWARD, FFTW_ESTIMATE);
+    int i;
+    for (i = 0; i < n; i++){
+        in[i].re = i + 1;
+        in[i].im = 0;
+    }
+    fftw_one(my_plan, in, out);
+    for (i = 0; i < n; i++){
+        printf("out[%d] = %f + %fi\n", i, out[i].re, out[i].im);
+    }
+    fftw_destroy_plan(my_plan);
+    return 0;
+}
+```
+This script computes the one-dimensional n-point complex DFT. It initializes an input sequence and memory for output, creates a plan and executes it, then destroys the plan and outputs the resulting transform. 
+
+Command to compile and run the code:
+To compile the above C code, we need to link it to FFTW library. Use the below command:
+
+```
+gcc fftw_example.c -lfftw -o fftw_example
+```
+Run the program:
+
+```
+./fftw_example
+```
+Please replace `fftw_example.c` with the name of your C file and `fftw_example` with the desired output file name. Also, make sure your input file is in the same directory as your C file.

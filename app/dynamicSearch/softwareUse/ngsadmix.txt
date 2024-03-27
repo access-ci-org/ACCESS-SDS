@@ -1,0 +1,32 @@
+Use Case: Use Ngsadmix for ancestry analysis based on next generation sequencing (NGS) data
+
+Code details and examples: Code
+
+To use NGSadmix you would need a genotype likelihood file in beagle format or genotype posterior probabilities file from ANGSD. 
+
+Sample input files:
+Two input files are required: the genotype likelihood file (e.g., infile.beagle.gz) and the population information file (e.g., popinfo.txt).
+
+The genotype likelihood file in beagle format may look like this (numbers are likelihoods for the genotype):
+
+```
+marker  ind1  ind2  ind3
+locus1  0.90 0.05 0.05  0.90 0.05 0.05  0.10 0.20 0.70
+locus2  0.90 0.05 0.05  0.90 0.05 0.05  0.10 0.20 0.70
+locus3  0.90 0.05 0.05  0.90 0.05 0.05  0.10 0.20 0.70
+```
+
+The population information file would contain identifier with assigned population:
+
+```
+ind1 pop1
+ind2 pop1
+ind3 pop2
+```
+
+Command to run NGSadmix:
+
+```
+NGSadmix -likes infile.beagle.gz -K 2 -P 4 -minMaf 0.05 -outfiles ngsadmix_out
+```
+This command will run NGSadmix on the input file 'infile.beagle.gz'. The analysis is done for K=2 ancestral populations (which can be adjusted based on biological knowledge), and uses 4 processors (-P 4). The '-minMaf 0.05' specifies the minimum minor allele frequency to be considered in the analysis. The output files will be written in the 'ngsadmix_out' directory.

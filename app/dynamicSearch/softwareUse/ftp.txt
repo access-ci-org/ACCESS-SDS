@@ -1,0 +1,46 @@
+Use Case: File Transfer Protocol (FTP) is a software application used to transfer files over an IP network.
+
+Code details and examples: Code
+
+1. An FTP session is initiated from the command prompt using the FTP command.
+
+```sh
+ftp
+```
+
+2. Connect to a remote server
+
+```sh
+open <hostname or IP>
+```
+
+3. Login using your credentials
+
+```sh
+user <username>
+<password>
+```
+
+4. The get command is used to download files from the remote server. 
+
+```sh
+get filename
+```
+
+5. The put command is used to upload files to the remote server.
+
+```sh
+put filename
+```
+
+6. To disconnect from the FTP server, you can use the bye or quit commands.
+
+```sh
+bye
+```
+
+Input format:
+The DNS hostname or IP address of the remote server, the username, password and the filename to be uploaded or downloaded are required as inputs to be manually entered by the user.
+
+Command to run:
+FTP commands are initiated from the host system's command line interface (CLI). Execute the commands as shown above.

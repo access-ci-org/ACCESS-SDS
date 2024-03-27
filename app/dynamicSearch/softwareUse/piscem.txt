@@ -1,0 +1,57 @@
+Use Case: Psicem is a computational chemistry package that can be used for the predicting properties of molecular systems using quantum mechanics. 
+
+Code details and examples: Code 
+
+1. For Psicem, the input file typically comes in a .inp format and consists of sections separated by the $ sign. 
+
+Here is an example for a basic HF calculation on a water molecule:
+
+```
+Start
+$Comment
+Geometry optimisation of water at the HF/STO-3G level using psicem;
+$End
+$System
+Charge = 0
+Multiplicity = 1
+Coordinates (Cartesian)
+O    0.000000    0.000000    0.000000
+H    0.000000    0.000000    0.969000
+H    0.000000    0.927806    -0.321763
+        Basis = STO-3G
+        End
+$HF
+MaxIt = 50
+Convergence = 1.0e-6
+$End
+```
+
+To run it: 
+```bash
+psicem water.inp > water.out
+```
+
+2. Second example is of an MP2 calculation: 
+```
+Start
+$Comment
+Geometry optimisation of water at the MP2/6-31G level using psicem;
+$End
+$System
+Charge = 0
+Multiplicity = 1
+Coordinates (Cartesian)
+O    0.000000    0.000000    0.000000
+H    0.000000    0.000000    0.969000
+H    0.000000    0.927806    -0.321763
+Basis = 6-31G
+$End
+$MP2
+Convergence = 1.0e-6
+$End
+```
+
+To run it: 
+```bash
+psicem water_mp2.inp > water_mp2.out
+```

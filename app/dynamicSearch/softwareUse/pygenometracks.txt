@@ -1,0 +1,34 @@
+Use Case: PyGenomeTracks is a python-based tool for plotting genomic data such as gene models, DNA methylation, ChIP-seq peaks, chromatin structure and many other data types on top of each other. It is widely useful in genomics researches.
+
+Code details and examples: Code
+
+Input File:
+
+The input files can be in several formats: bigWig, bigBed, bed, bedgraph, gtf, gff, narrowPeak, broadPeak, bedgraph or tdf.
+
+Here's a simple example of a bed file:
+
+```
+chr1    1000    2000    track1 line 1
+chr2    2000    3000    track1 line 2
+```
+This bed file contains the chromosomal location and the annotation.
+
+Configuration of PyGenomeTracks can be done with .ini files. Here is a simple example of an .ini file:
+``` 
+[default]
+height = 3
+color = black
+# the type of file could be 'bed', 'gff', 'narrow_peak', 'hic_matrix', etc.
+file_type = bed
+```
+These settings can be used as defaults for all the other data tracks.
+
+Command Line to Run:
+
+To make a plot using the settings above, you could use the following command:
+
+``` 
+pyGenomeTracks --tracks track.ini --region chr2:1,000,000-2,000,000 --outFileName nice_image.pdf
+``` 
+This command is telling pyGenomeTracks to make a plot using the settings in the 'track.ini' file, for the region chr2:1,000,000-2,000,000, and save the plot as 'nice_image.pdf'.

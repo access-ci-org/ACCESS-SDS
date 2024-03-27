@@ -1,0 +1,42 @@
+Use Case: Velvet is an algorithm used to assemble short-read sequencing data, especially those produced by de novo genome assembly. 
+
+Code details and examples: 
+
+Input Files: Velvet requires FASTQ or FASTA formatted input files which contain sequence data. They are usually produced by a high-throughput sequencer.
+
+2 Sample Input files:
+
+Sample FASTA input:
+
+    >sequence1
+    ATGCAGTGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAG
+
+Sample FASTQ input:
+
+    @sequence2
+    ATGCAGTGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAG
+    +
+    IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+
+Specifications and details: The sequence data should not include characters other than A, C, G, T, and N. Velvet can be used with single-end or paired-end data. Please note that Velvet does not support reads longer than 32 kbp.
+
+Code Snippets: 
+
+You can perform genome assembly with Velvet using the `velveth` and `velvetg` commands. The `velveth` command is used to construct a de Bruijn graph, and `velvetg` is used to simplify the graph and extract contigs. Here is sample code:
+
+1. Construct the de Bruijn graph. This step also requires specifying k-mer size (e.g., 31).
+
+    velveth out_dir 31 -fastq -short Paired_end_data.fastq
+
+2. Simplify the graph and extract contigs.
+
+    velvetg out_dir -cov_cutoff auto
+
+Command to Run: 
+
+You can run Velvet by executing the `velveth` and `velvetg` commands in your terminal or command line interface. These commands are normally run in consecutive order. The exact command can vary depending on your sequence data and desired parameters. 
+
+Here is a basic example to run Velvet:
+
+    velveth out_dir 31 -fastq -short Paired_end_data.fastq
+    velvetg out_dir -cov_cutoff auto

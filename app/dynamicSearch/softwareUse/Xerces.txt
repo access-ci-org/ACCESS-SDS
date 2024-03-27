@@ -1,50 +1,63 @@
-Use Case: XML Parsing  
-Code details and examples:  
-Sample input file (input.xml):
-```xml
-<root>
-    <person>
-        <name>John Doe</name>
-        <age>30</age>
-    </person>
-    <person>
-        <name>Jane Smith</name>
-        <age>25</age>
-    </person>
-</root>
+Use Case: Parsing XML documents, creating XML documents, manipulating and navigating through XML documents.
+
+Code details and examples: 
+
+There are 3 main parts of an XML – elements, attributes, and text. Xerces, being a full-fledged XML parser, provides parsing, validation and manipulation capabilities for all these parts. Here is an example:
+
+Required Input File Format: XML
+
+Example of XML Input file ("sample.xml"):
+```
+<note>
+    <to>Tove</to>
+    <from>Jani</from>
+    <heading>Reminder</heading>
+    <body>Don't forget me this weekend!</body>
+</note>
 ```
 
-Sample code snippet to parse XML using Xerces in Java:
-```java
-import org.apache.xerces.parsers.DOMParser;
-import org.w3c.dom.Document;
-import org.w3c.dom.Node;
-import org.xml.sax.InputSource;
+Code Snippet:
 
-import java.io.File;
+In C++:
+```
+#include <xercesc/parsers/XercesDOMParser.hpp>
+#include <xercesc/sax/HandlerBase.hpp>
+#include <xercesc/util/XMLUni.hpp>
 
-public class XMLParser {
-    public static void main(String[] args) {
-        try {
-            DOMParser parser = new DOMParser();
-            parser.parse(new InputSource(new File("input.xml").toURI().toString()));
-            Document doc = parser.getDocument();
-            Node root = doc.getDocumentElement();
-
-            // Accessing elements and attributes
-            System.out.println("Root element: " + root.getNodeName());
-
-            // Further processing of XML document
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+int main (int argc, char* argv[]){
+    try {
+        XMLPlatformUtils::Initialize(); // Initialize the XML4C2 system
     }
+    catch (const XMLException& toCatch) {
+        // Do your failure processing here
+        return 1;
+    }
+
+    XercesDOMParser* parser = new XercesDOMParser;
+    
+    parser->setValidationScheme(XercesDOMParser::Val_Always);    // optional.
+    parser->setDoNamespaces(true);  // optional
+
+    ErrorHandler* errHandler = (ErrorHandler*) new HandlerBase;
+    parser->setErrorHandler(errHandler);
+
+    try {
+        parser->parse("sample.xml"); // This will parse the XML file
+    }
+    catch (const XMLException& toCatch) {
+        char* message = XMLString::transcode(toCatch.getMessage());
+        // Do your exception handling here
+        delete parser;
+        return -1;
+    }
+    
+    delete parser;
+    delete errHandler;
+    return 0;
 }
 ```
-
-Command to run the Java code:
-Assuming the Java file containing the above code is XMLParser.java, you can compile and run it using:
-```bash
-javac -cp path/to/xerces.jar XMLParser.java
-java -cp .:path/to/xerces.jar XMLParser
+Command to run: 
+```
+g++ main.cpp -lxerces-c -o main
+./main
 ```

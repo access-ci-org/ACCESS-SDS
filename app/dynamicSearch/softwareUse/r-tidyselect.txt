@@ -1,0 +1,18 @@
+Use Case: Use tidyselect when you need to subset data in R using tidyverse-style code. This can be useful for exploratory data analysis, data cleaning, and data manipulation tasks. ;
+
+Code details and examples: Code.
+
+```r
+# You should have the tidyselect library loaded:
+library(tidyselect)
+
+# Assume you have a data frame `df` that you need to subset:
+df <- data.frame(a=1:3, b=4:6, c=7:9)
+
+# Suppose you need to select all columns from `a` to `c`. You can use the `:` operator to do this:
+select(df, a:c)
+```
+
+This code would output a data frame with just the columns a, b, and c. The input required by tidyselect functions is typically a data frame and a list of column names, possibly defined with helper functions or operators like `:`. The format of the data frame doesn't matter to tidyselect, but the column names must be named in the data frame, and any helper function or operator you use must correspond to column names in the data frame.
+
+The command to run this in a command-line R session would be `Rscript scriptname.R`, where `scriptname.R` is the name of the file containing your R code.

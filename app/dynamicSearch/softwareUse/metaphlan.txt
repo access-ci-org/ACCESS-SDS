@@ -1,0 +1,22 @@
+Use Case: MetaPhlAn is a computational tool for profiling the composition of microbial communities (Bacteria, Archaea, Eukaryotes, and Viruses) from metagenomic shotgun sequencing data (i.e., not 16S) with species-level. It utilizes unique clade-specific marker genes identified from ~17,000 reference genomes (~13,500 bacterial and archaeal, ~3,500 viral, and ~110 eukaryotic), allowing:
+
+- Profiling the composition of microbial communities and relative abundance of each clade.
+- Super-kingdom, phyla, class, order, family, genus, species, strain, virulence factors and antibiotic resistance genes.
+
+Code Details and Examples:
+Input file: The main input for MetaPhlAn is fastq file, gzipped fastq file, or SAM/BAM alignment files. Let's say this is named as `mysample.fastq`.
+
+- FastQ Files: These are the raw reads obtained after sequencing. They must be in FastQ format which comprises of four lines per sequence.
+- Gzipped FastQ Files: Gzipped version of FastQ file can also be used. The lines in the file take the same format as FastQ.
+- SAM/BAM Files: SAM (Sequence Alignment/Map) format is a text-based format that holds nucleotide sequences alignment data. BAM format is the binary form of SAM.
+
+Code:
+Utilizing MetaPhlAn for microbial profiling involves running the MetaPhlAn script with an input metagenome. The basic command is:
+
+```bash
+metaphlan mysample.fastq --input_type fastq > profiled_metagenome.txt
+```
+
+This will output a tab-delimited file with the relative abundance of each identified clade. The –-input_type option is used to specify whether the input is in fastq, fasta, or sam/bam format. The relative abundance is calculated by dividing the number of reads mapping to a taxon marker by the total number of reads mapping to any marker.
+
+For more comprehensive commands, refer to the MetaPhlAn tutorial or manual.

@@ -1,24 +1,31 @@
-Use Case: Memory debugging and profiling tool.  
-Code details and examples:  
-1. Consider a simple C program `example.c` that has a memory leak:
+Use Case: Valgrind is an instrumentation framework for building dynamic analysis tools. It provides several features including detecting memory-management errors, threading bugs and profile your code for performance bottlenecks.
+
+Code details and examples: 
+
+Code:
+Here is a simple C example where memory leak is likely to happen:
+
 ```c
 #include <stdlib.h>
 
+void f() {
+    int* x = malloc(10 * sizeof(int));
+    x[10] = 0;  // problem 1: heap block overrun
+}  // problem 2: memory leak -- x not deallocated
+
 int main() {
-    int* ptr = malloc(10 * sizeof(int));
-    // Forgot to free the allocated memory
+    f();
     return 0;
 }
 ```
 
-2. Compile the program with debugging symbols:
+Save the above as "example.c". Compile it (using gcc):
 ```
-gcc -g example.c -o example
-```
-
-3. Run the program with Valgrind to detect memory leaks:
-```
-valgrind ./example
+$ gcc -o example example.c
 ```
 
-4. Valgrind output will show memory leak details and can help in debugging and fixing the issue.
+Use valgrind to detect the memory error:
+```
+$ valgrind --tool=memcheck --leak-check=yes ./example
+```
+In the output, Valgrind will point out our two problems: we've overrun the end of the block we malloc'ed, and we leaked memory by failing to free that block before f() exited.

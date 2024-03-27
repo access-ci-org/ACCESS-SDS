@@ -1,0 +1,56 @@
+Use Case: Use WPS (Weather Research and Forecasting Preprocessing System) for meteorological data preprocessing during numerical weather prediction modeling.
+
+Code details and examples: 
+
+Code:
+For using WPS, the main input file is the namelist.wps. This text file contains specific configurations for the WPS modules to run properly. A sample could be:
+
+```
+&share
+ wrf_core      = 'ARW',
+ max_dom       = 2,
+ start_date    = '2008-08-29_00:00:00','2008-08-29_00:00:00',
+ end_date      = '2008-08-30_00:00:00','2008-08-30_00:00:00',
+ interval_seconds = 21600
+ io_form_geogrid = 2
+/
+
+&geogrid
+ parent_id        = 1, 1,
+ parent_grid_ratio = 1, 3,
+ i_parent_start   = 1, 36,
+ j_parent_start   = 1, 41,
+ e_we             = 90, 121,
+ e_sn             = 72, 100,
+ geog_data_res    = '10m','2m',
+ dx               = 30000,
+ dy               = 30000,
+ map_proj         = 'lambert',
+ ref_lat          = 40.0,
+ ref_lon          = -97.0,
+ truelat1         = 33.0,
+ truelat2         = 45.0,
+ stand_lon        = -97.0,
+ geog_data_path   = './GEOG'
+/
+
+&ungrib
+ out_format       = 'WPS',
+ prefix           = 'FILE'
+/
+
+&metgrid
+ fg_name          = 'FILE'
+ io_form_metgrid  = 2
+/
+```
+
+After configuring this file as per user need and the available data, below are the commands to run the WPS:
+
+```
+1. ./geogrid.exe
+2. ./ungrib.exe
+3. ./metgrid.exe
+```
+
+Above three steps are executed sequentially. The `geogrid.exe` generates the geographic information that's needed by the WRF model. The `ungrib.exe` extracts the necessary meteorological fields from the input data. The `metgrid.exe` horizontally interpolates the input meteorological data onto the WRF domains specified in the 'namelist.wps'.

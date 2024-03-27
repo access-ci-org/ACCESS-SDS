@@ -1,0 +1,37 @@
+Use Case: IsoQuant is a software tool utilized in the analysis of RNA-Seq data, particularly in the identification and quantification of isoforms. It includes quality control, alignment, and quantification functionalities.
+
+Code Details and Examples: Code
+ 
+```bash
+# Run IsoQuant via the command line
+java -jar isoquant.jar [options]
+
+# Here, [options] can include one or several of the following command-line parameters:
+
+-in <path>           # path to input files (required)
+-db <path>           # path to output SQLite database report file (required)
+-pept <path>         # write output peptides into file (optional)
+-proteins <path>     # write output proteins into file (optional)
+-annotation <path>   # annotation file in GTF or BED format (optional)
+
+# A config file can also be used instead of command line parameters
+java -jar isoquant.jar @<config_file>
+```
+
+Sample input files in IsoQuant takes data in the format of .fastq (Illumina short-read sequence data) or aligned .bam files. Here's a hypothetical structure of fastq entries:
+
+```
+@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
++
+!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
+``` 
+
+Sample data in aligned .bam file:
+
+```
+SRR165755.1	99	chr1	10000	255	36M10000S	=	10036	36	NTCTTAGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
+SRR165755.1	147	chr1	10036	255	10000S36M	=	10000	-36	NTCTTAGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
+```
+
+Before running IsoQuant, the input files need to be aligned with a reference genome, which could be accomplished with an aligner like TopHat or HISAT. All the used parameters are fully described and specified in the tool's manual.

@@ -1,22 +1,45 @@
-Use Case: Text tokenization and subword modeling with SentencePiece.
-Code details and examples: 
-Sample input file (input.txt):
-```
-SentencePiece is a simple and efficient text tokenization tool.
-```
+Use Case: Use SentencePiece for subword tokenization in natural language processing tasks;
 
-Code:
-1. Training a SentencePiece model:
-```bash
-spm_train --input=input.txt --model_prefix=m --vocab_size=1000
-```
+Code details and examples: Code
 
-2. Tokenizing the input text using the trained model:
-```bash
-spm_encode --model=m.model --output_format=piece < input.txt
-```
+To utilize SentencePiece, the text data required for training must be in a plain text file. Each line of the file corresponds to a single sentence. 
 
-3. Detokenizing the tokenized text:
-```bash
-spm_decode --model=m.model < input.txt
+```plaintext
+This is a sample sentence.
+SentencePiece is used for tokenization.
+Train the tokenizer on this data.
 ```
+Save the above sentences in a file named "data.txt". 
+
+To train a SentencePiece tokenizer, use the command line interface.
+
+```shell
+spm_train --input=data.txt --model_prefix=m --vocab_size=2000
+```
+This will train a tokenizer on `data.txt` and save the model and vocabulary to files named `m.model` and `m.vocab` respectively. `vocab_size` indicates the number of unique tokens in the vocabulary.
+
+After the model is trained, it can be used to encode text into subwords. 
+
+```shell
+spm_encode --model=m.model --output_format=nbest_id
+```
+`output_format` specifies the output format. `nbest_id` output format returns the n-best segmentations with segment ids.
+
+For Python usage, import SentencePiece as spm and initialize SentencePieceProcessor.
+
+```python
+import sentencepiece as spm
+
+# Load the model file
+sp = spm.SentencePieceProcessor()
+sp.load('m.model')
+
+# Encode a sentence
+encoded = sp.encode_as_pieces('This is a test')
+print(encoded)
+
+# Decode a list of pieces
+decoded = sp.decode_pieces(encoded)
+print(decoded)
+```
+The `encode_as_pieces` method tokenizes a sentence into subwords. The `decode_pieces` method reconstructs the original sentence from the subwords.

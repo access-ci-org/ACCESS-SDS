@@ -1,8 +1,20 @@
-Use Case: Interactive development environment for data science, machine learning, and scientific computing.
+Use Case: JupyterLab is a web-based interactive development environment for programming languages including Python, R, Julia, and others. It allows users to create and share documents containing live code, equations, visualizations and narrative text. Use cases include: data cleaning and transformation, numerical simulation, statistical modeling, data visualization, machine learning, and much more.
 
-Code details and examples:
-- Sample input files: N/A
-- Format required: N/A
-- Specifications: N/A
-- Code snippets: N/A
-- Command to run: N/A
+Code details and examples: 
+
+Code:
+
+```python
+# A basic Python code that prints Hello World
+print("Hello World")
+```
+
+You just need to write this code in a Jupyter cell and run the cell to get the output.
+
+Command to run: It can be started by running "jupyter lab" from the command line after installing the JupyterLab package. 
+
+Input file: It does not require any input files. The required input is the code written in the cells.
+
+No additional specifications are required in the input file. 
+
+Format required: Jupyter notebooks are saved as .ipynb files (stands for IPython Notebook) and can be exported to a range of static formats, including HTML, LaTeX, PDF. It also supports interactive widgets which can be used to build interactive dashboards, data visualization tools etc.

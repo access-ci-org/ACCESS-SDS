@@ -1,26 +1,43 @@
-Use Case: Audio compression and streaming with LibVorbis
+Use Case: Libvorbis is used for converting audio to the Ogg Vorbis .ogg format. Ogg Vorbis is a fully open, non-proprietary, and patent-free compressed audio format. While it is not as popular as MP3, it is generally preferred by audiophiles for its higher quality at the same bit rate.
 
 Code details and examples:
-LibVorbis is a library for encoding and decoding audio data using the Vorbis audio codec. Below is an example of encoding a WAV file to the Ogg Vorbis format using the `oggenc` command-line tool provided by LibVorbis.
 
-1. Install LibVorbis using your package manager or through source code compilation.
+Input File Format: The input file can be in any audio format that is recognized by libvorbis. Sample input files are often .wav or other uncompressed audio formats. However, libvorbis also supports other formats like .flac, .aiff, and more.
 
-2. Encode a WAV file to Ogg Vorbis format:
+Specifications in Input Files: Since the input file is an audio file, there aren't typically "specifications" to be concerned with. However, for best results, the audio should be of high sample rate and bit depth (such as a CD quality 44.1kHz, 16 bit .wav file).
+
+Command to run them:
+
+To encode a .wav file to .ogg using the command line oggenc utility (which uses libvorbis), the following command can be used:
+
 ```bash
 oggenc input.wav -o output.ogg
 ```
 
-In the above command:
-- `input.wav` is the input WAV file you want to encode.
-- `-o output.ogg` specifies the output Ogg Vorbis file name.
+This command takes input.wav, encodes it to the vorbis format, and saves it as output.ogg
 
-3. Decode an Ogg Vorbis file to WAV format:
+The general format for oggenc is:
+
 ```bash
-oggdec input.ogg -o output.wav
+oggenc [options] input_file
 ```
 
-In the above command:
-- `input.ogg` is the input Ogg Vorbis file you want to decode.
-- `-o output.wav` specifies the output WAV file name.
+Various options can be used to impact the output quality, metadata, channels, etc:
 
-Note: Make sure you have the necessary permissions to read/write files in the specified locations.
+```bash
+oggenc -q 5 --artist "Artist Name" --album "Album Name" --date "2003" --tracknum 1 --genre "Rock" input.wav -o output.ogg
+```
+
+In this example, `-q 5` sets the quality level of the resulting .ogg file (0 lowest - 10 highest), and various metadata fields are set for the output .ogg file. 
+
+Code:
+
+Libvorbis does not normally include code snippets since it is typically used via its command line utilities like oggenc or oggdec. However, it is possible to use the vorbisfile API to programmatically encode and decode .ogg files. If you require examples of this, I recommend the [official vorbisfile API documentation](https://xiph.org/vorbis/doc/vorbisfile/).
+
+Finally, to play an .ogg file encoded with vorbis using the command line ogg123 utility, one can use the following command:
+
+```bash
+ogg123 output.ogg
+```
+
+Note: ogg123 is part of the vorbis-tools package, so ensure it is installed if you wish to use this feature.

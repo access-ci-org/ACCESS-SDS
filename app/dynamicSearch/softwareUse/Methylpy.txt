@@ -1,30 +1,41 @@
-Methylpy is a Python package used for analyzing whole-genome bisulfite sequencing (WGBS) and RRBS data. It provides tools for preprocessing raw sequencing data, performing differential methylation analysis, and visualizing methylation patterns. 
+Use Case: Methylpy is a Python package used for processing and analyzing whole-genome bisulfite sequencing (WGBS) and reduced representative bisulfite sequencing (RRBS) data. This includes differential methylation analysis, allele-specific methylation (ASM) analysis, etc.
 
-Use Case: Analysing whole-genome bisulfite sequencing data with Methylpy
-Code details and examples:
-```python
-import methylpy
+Code Details and Examples:
 
-# Read in the raw sequencing data in BAM format
-bam_file = "sample.bam"
-bam_reader = methylpy.IO.BamReader(bam_file)
+Code:
 
-# Define the reference genome in FASTA format
-fasta_file = "reference_genome.fa"
+Methylpy starts with raw read data as input. A typical pair-end RRBS data input file is in fastq format. 
 
-# Create a methylpy object for the samples
-samples = methylpy.Samples(name="SampleName", read_lengths=[100], lib_type="fr-unstranded", bam_handle=bam_reader)
+Here is an example of the inputs required:
 
-# Create a methylpy object for the reference genome
-reference = methylpy.Reference(fasta_file)
-
-# Perform methylation calling for the samples
-meth_caller = methylpy.CallMethylation(reference=reference, samples=samples)
-meth_caller.call(output= "methylation_output", num_procs=4)
-
-# Perform differential methylation analysis
-diff_meth = methylpy.DifferentialMethylation(samples, "control_group", "treatment_group")
-diff_meth.run(output="diff_meth_output", num_procs=4)
+```
+@QSEQ_ID
+AGTTCCGGTAACGATCGGCGACACGCAGTGGATCTTACGTTTGGACCCTACGTGTTGCAGGTTCCGTACGTTCTGGTGTCG
++
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 ```
 
-Please note that the sample input files required for Methylpy include BAM files containing aligned bisulfite sequencing reads and a reference genome in FASTA format. Additionally, some functions in Methylpy require specifying parameters such as read lengths, library types, and sample groups for analysis.
+Command to run DMRfind, which identifies DMRs:
+
+```
+# Test DMRfind
+methylpy DMRfind \\
+--allc-files allc_test.tsv \\
+--samples test \\
+--mc-type CGN \\
+--output-prefix test_DMR \\
+--num-procs 8 \\
+--dmr-max-dist 250 \\
+--min-num-dms 2 \\
+--sample-category 0
+```
+
+In this command:
+- `allc-files` specifies the ALLC files produced by the Methylpy pipeline.
+- `samples` specifies the labels of the samples.
+- `mc-type` specifies the sequence context(s).
+- `output-prefix` specifies file prefix for outputs.
+- `num-procs` specifies the number of processors to use.
+- `dmr-max-dist` specifies the maximum distance for DMRs.
+- `min-num-dms` specifies the minimum number of DMS required to call a DMR. 
+- `sample-category` specifies the category of samples for DMR calling.

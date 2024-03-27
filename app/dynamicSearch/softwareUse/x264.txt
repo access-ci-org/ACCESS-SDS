@@ -1,7 +1,39 @@
-Use Case: Video encoding with x264
-Code details and examples: 
+Use Case: Use x264 to encode a raw video file into H.264/AVC format.
+
+Code details and examples: Code
+
+Input:
+1. Raw video file (YUV format, 4:2:0 subsampling)
+2. Configuration file (optional)
+
+The software reads RAW video data from stdin and writes encoded H.264/AVC data to stdout. It also accepts a configuration file to customize the encoding parameters.
+
+Input File Format:
+YUV format, 4:2:0 subsampling.
+
+Sample Input File:
+Create a YUV file (raw video data).
+
+Configuration File Format:
+Plain text file containing encoding parameters.
+
+Sample Configuration File (config.txt):
+```txt
+--bitrate 1000
+--preset slower
+--tune film
 ```
-# Sample input video file: input.mp4
-# Command to encode video using x264
-x264 input.mp4 -o output.mp4
+This will set the bitrate to 1000 Kbps, use the 'slower' preset for a trade-off between encoding speed and compression efficiency and tune the encoder for film content.
+
+Command to run x264:
+
+```bash
+x264 --config config.txt <input.yuv >output.264
+```
+This will read the video data from "input.yuv", encoded based on parameters in "config.txt", and write the encoded data to "output.264".
+
+If no configuration file is used, x264 defaults to reasonable encoding settings. For instance, to use default settings:
+
+```bash
+x264 <input.yuv >output.264
 ```

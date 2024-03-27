@@ -1,0 +1,56 @@
+Use Case: Use KBLAS-GPU for high-performance linear algebra computations on GPUs. Such as matrix multiplication, matrix inversion, etc.
+
+Code details and examples: Code 
+
+------- 
+
+Software Package: KBLAS-GPU
+
+1. Sample Input File: No input file required. Input should be matrices.
+
+2. Input File Format: No specific file format required. Matrices can be given directly in the code.
+
+3. Input File Specifications: You need to provide matrices in a suitable data structure for the operation you want to perform.
+
+4. Code Snippet:
+
+Here is a code snippet for basic usage:
+
+```
+#include <stdio.h>
+#include "kblas.h"
+
+int main()
+{
+    // Initialize KBLAS
+    kblasCreate();
+
+    // Allocating and initializing matrices
+    int m = 1000, n = 1000, k = 1000;
+    float alpha = 1.0f, beta = 0.0f;
+    float* A = (float*)malloc(m*k*sizeof(float));
+    float* B = (float*)malloc(k*n*sizeof(float));
+    float* C = (float*)malloc(m*n*sizeof(float));
+
+    // Do a matrix multiply
+    kblasSgemm('N', 'N', m, n, k, alpha, A, m, B, k, beta, C, m);
+
+    // Finalize KBLAS
+    kblasDestroy();
+    return 0;
+}
+```
+
+5. Command to Run: To compile and run the code, use the following commands:
+
+Compile:
+
+```
+gcc -I/path/to/kblas/headers -L/path/to/kblas/libs -lkblas -o my_program my_program.c -lcuda -lcublas
+```
+
+Run:
+
+```
+./my_program
+```

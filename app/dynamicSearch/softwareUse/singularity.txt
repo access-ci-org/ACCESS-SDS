@@ -1,32 +1,34 @@
-Use Case: Singularity is a container platform that allows users to run and share applications across different computing environments. It is commonly used in HPC and bioinformatics for reproducibility and portability of software.
+Use Case: Use Singularity for running reproducible scientific analyses in a portable software container.
 
-Code details and examples:
-1. Running a container:
-```
-singularity exec <container.sif> <command>
-```
+Code details and examples: Code
 
-2. Running a shell inside a container:
-```
-singularity shell <container.sif>
+To use Singularity, you need a Singularity Image File (SIF) file. SIF files are single-file binary representations of the container and its contents. Consider that we have a Singularity image named "my_image.sif".
+
+```bash
+# Sample command to run a shell within the container
+singularity shell my_image.sif
 ```
 
-3. Running a container with specific options:
-```
-singularity exec --bind <host_path>:<container_path> <container.sif> <command>
+To run a specific command within the container, use:
+
+```bash
+singularity exec my_image.sif ls /data
 ```
 
-4. Pulling a container from a registry:
-```
-singularity pull <container_name.sif> docker://<docker_image>
+For scripts or applications within a SIF, the Singularity run command can be used:
+
+```bash
+singularity run my_image.sif
 ```
 
-5. Creating a container from a definition file:
-```
-sudo singularity build <container.sif> <definition_file>
+For running MPI applications:
+
+```bash
+mpirun -np 20 singularity exec my_image.sif ./my_mpi_application
 ```
 
-6. Running a Singularity container with MPI support:
-```
-mpirun -np <num_procs> singularity exec --nv <container.sif> <mpi_command>
-```
+Specifications and name of required input files depend on the scientific application you have chosen to run within the Singularity container.
+
+Regarding input file formatting, it would depend on the contained program. Singularity itself doesn't require any specific input file or format. It simply provides a contained and reproducible environment in which to run your scientific applications.
+
+Note: For creating your own SIF files with a specific environment, Singularity takes a specification file (a text file named Singularity) as input.

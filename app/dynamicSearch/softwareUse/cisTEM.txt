@@ -1,13 +1,40 @@
-Use Case: cisTEM is a software package for single-particle reconstruction of macromolecular complexes using cryo-electron microscopy data.
+Use Case: Use cisTEM for performing high-resolution cryo-electron microscopy analysis. 
 
-Code details and examples:
-- Input files: 
-  - Particle images in MRC or TIF format
-  - Corresponding particle coordinates in STAR or CSV format
-  - Motion correction parameters in STAR or TXT format
-  - CTF parameters in STAR or TXT format
+Code details and examples: Code.
 
-- Command to run cisTEM:
-  ```
-  cisTEM --input_particles particles.star --input_micrographs micrographs.star --input_ctf ctf.star --output_volume reconstruction.mrc --symmetry C1
-  ```
+Input files:
+Requirements: A set of aligned micrographs or particle stacks in .mrc/MRC format.
+
+1. Micrograph files are typically named as mic*.mrc, where * is the number of micrographs.
+2. Particle stack files are named as particle*.mrc.
+
+Sample Filenames:
+1. mic_001.mrc
+2. particle_stack.mrc
+
+Command to Run:
+
+The GUI (Graphical User Interface) way to run cisTEM is to execute
+```
+cistem 
+```
+On running this command the GUI panel of cisTEM will open. 
+
+For command line, the commands are of format: 
+```
+cistem command_name --first_parameter value --second_parameter value ...
+```
+
+For instance, to run an ab initio 3D reconstruction command for particle stack is:
+```
+cistem ab-initio-3d --input_stack particle_stack.mrc --output_star_file output.star
+```
+Above command will initiate an "Ab-Initio 3D" job using particle_stack.mrc as the input stack and create a output.star file that can be used for later high-resolution refinement.
+
+Specifications and Details in Input files:
+
+1. Micrograph file (mic_001.mrc): It's an MRC file which contains a 2D image of a micrograph.
+  
+2. Particle stack file (particle_stack.mrc): It's an MRC file which has a 3D array of particles extracted from the micrograph. Each Z-slice of the volume represents a single particle.
+
+Codes snippets are typically not required as cisTEM is a software package designed to be operated via GUI or command-line without coding. However, for batch processing or automating tasks, one can write bash or python scripts to sequentially execute cisTEM commands.

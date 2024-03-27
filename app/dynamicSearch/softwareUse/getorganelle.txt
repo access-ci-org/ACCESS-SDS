@@ -1,0 +1,31 @@
+Use Case: Extract and assemble organellar genomes (chloroplast, mitochondrion, relevant viruses) from whole genome sequencing data (WGS). This can be especially useful in genomics and botany research for identifying plant organelles and their genetic makeup. It mainly uses plastome, mitogenome, and relevant viral genomes.
+
+Code Details and Examples:
+
+Code: 
+
+`#Command to run getorganelle to get the organelle genomes from WGS
+get_organelle_from_reads.py -1 sample_forward_reads.fastq -2 sample_reverse_reads.fastq -o out_put_dir -R 15 -k 21,45,65,85,105 -F plant_cp`
+
+The input files here are fastq files of paired-end reads (sample_forward_reads.fastq and sample_reverse_reads.fastq). These files contain sequences of raw reads from WGS. The command 'get_organelle_from_reads.py' requires paired-end read files (-1 and -2 denote the forward and reverse files respectively), an output directory (-o), a seed-and-extend repeat number (-R), a comma-separated list of kmer sizes (-k), and a flag indicating what to filter (-F).
+
+`#Command to view the log file that GetOrganelle has generated
+cat out_put_dir/get_organelle.log`
+
+Flanking region choosing and adjustment, and coverage and depth spanning thresholds can be customized. The default settings are usually good for most cases. 
+
+Command List:
+
+1. `get_organelle_from_reads.py` : used for extracting and assembling organelle genomes from WGS data.
+
+2. `get_organelle_config.py` : used to make settings, providing help or downloading databases.
+
+3. `get_organelle_compare_reads_bw_genomes.py` : used for comparing reads between genomes (e.g., cp versus mt, or against nuclear).
+
+4. `get_organelle_plot.py` : used for visualizing organelle genomes, comparing genomes or visualizing the read-coverage variation.
+
+5. `get_organelle_visualize_reads_of_genomes.py` : used for examining the "transparency", especially bad connectivity of your targeted genomes.
+
+The output files of getorganelle are graphs in FASTG file format and sequences in FASTA file format. The FASTG file shows the intricate relationships between contigs (continuous sequences of DNA), while the FASTA file displays the final, longest contigs chosen, typically representing the organellar genomes of interest. If multiple sets of kmer sizes were specified (-k), multiple files will be output as well, one for each kmer size.
+
+It must be noted that parameters should be adjusted according to the specific project requirements. The above example showcases the most basic operation of getorganelle and the code may vary depending upon the complexity and requirements of the specific task.

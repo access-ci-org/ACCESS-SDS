@@ -1,20 +1,44 @@
-Computational biology tool related to phylogenetics, the following example might be relevant:
+Use Case: Cactus is a widely-used open-source HPC software framework for solving complex computational problems, and is mainly used in fields of computational astrophysics, physics, and meteorology.
 
-Use Case: Phylogenetic tree reconstruction using Cactus
-Code details and examples:
-Sample input file (sequences.fasta):
-```
->SpeciesA
-ACTGCTAGCTAGCTAGCTAGCTAGCTAGCT
->SpeciesB
-ACTGCTAGCTAGCTAGCTAGCTAGCTAGCT
->SpeciesC
-ACTGCTAGCTAGCTAGCTAGCTAGCTAGCT
+Code Details and Examples: 
+
+The input formats for Cactus simulations are text files written in the Cactus Param Language. These parameter files must adhere to a strict syntax to specify the modules to use, and to set the simulation parameters.
+
+A simple example is as follows:
+
+```c
+## file: waveform.par
+# An example parameter file for a Cactus simulation
+
+# Specify the modules
+ActiveThorns = "MoL Carpet CarpetIOBasic CarpetIOASCII CarpetReduce CartGrid3D SymBase ADMBase ADMCoupling Tmunu Einstein HydroBase GRHydro"
+
+# Set the default parameters
+Cactus::cctk_final_time  = 1.0
+MoL::MoL_Intermediate_Steps = 4
+Carpet::domain_from_coordbase = "yes"
+
+# Setup the initial data
+ADMBASE::initial_data = "Waveform"
+ADMBASE::initial_lapse = "One"
+ADMBASE::initial_shift = "Zero"
+ADMBASE::initial_dtlapse = "Zero"
+ADMBASE::initial_dtshift = "Zero"
+HydroBase::initial_hydro = "Waveform"
+
+# Specify the output parameters
+IOBasic::outInfo_every = 1
+IOBasic::outScalar_every = 1
+IOASCII::out2D_every = 1
+IOASCII::out2D_vars = "ADMBase::lapse ADMBase::shift GRHydro::*"
 ```
 
-Command to run Cactus for phylogenetic analysis with HAL format output:
-```
-cactus input_sequences.fasta output_hal_file.hal
+To run a Cactus simulation, the Cactus executable, named `cactus_sim` for instance, is run with name of a parameter file as its argument.
+
+Command: 
+
+```shell
+./cactus_sim waveform.par
 ```
 
-Please provide more details if you are referring to a different software package.
+The specified simulation is then run, producing output files in the form of ASCII text files in a format suitable for further processing with popular data analysis software, such as gnuplot or matlab.

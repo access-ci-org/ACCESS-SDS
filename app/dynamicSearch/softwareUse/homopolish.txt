@@ -1,0 +1,28 @@
+Use Case: Homopolish is a post-polishing tool used for improving the accuracy of assembly of an organism's genomic sequence. Specifically, Homopolish is used for correcting errors in viral and bacterial Nanopore genomic data.
+
+Code details and examples: Code 
+
+The example provided below does not include input file formats as Homopolish automatically takes care of file conversion.
+
+1. In order to use Homopolish, you need assembly data in FASTA format.
+   For the example, assume a file named `assembly.fasta` that contains assembled genomic sequences.
+
+2. Additionally, we would need trained models which come with the installation of Homopolish.
+
+Here is an example of how to run Homopolish:
+
+```bash
+homopolish polish -a assembly.fasta -f {model folder} -t {number of threads}
+```
+
+Parameters: 
+
+- `-a`: Specifies the file that was used to contain the assembled sequences.
+- `-f`: Directory of trained models.
+- `-t`: Number of threads.
+
+Provide the actual path for `{model folder}` (folder where trained models are stored) and  
+Provide the actual integer for `{number of threads}` (Number of parallel computations that can be run, depends on the user's equipment.)
+This command will generate a polished FASTA file as output.
+
+Remember that the actual path and parameter values based on your local environment need to be substituted in the placeholder `{model folder}` and `{number of threads}`.

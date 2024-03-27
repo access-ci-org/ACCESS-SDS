@@ -1,0 +1,24 @@
+Use Case: NanoFilt is commonly used to filter nanopore sequencing data based on quality and/or read length. 
+
+Code details and examples:
+
+Code:
+
+```
+# Required Input File Format
+# Fastq file generated from nanopore sequencing 
+
+# Sample Input File   
+# sequence.fastq
+
+# Command to run NanoFilt tool
+gzip -dc sequencing_reads.fastq.gz | NanoFilt -q 10 -l 500 | gzip > filtered_reads.fastq.gz
+```
+
+In this command, "-q 10" is the minimum quality score you want for your reads and "-l 500" is the minimum length of the reads you want to keep. The filtered data is written to the file "filtered_reads.fastq.gz". As input, NanoFilt takes the uncompressed FastQ data directly from gzip via a pipe. 
+
+Specifications:
+
+- Quality scores are expected to be encoded as Phred+33.
+- When using extremely large datasets, manually set the number of cores.
+- FastQ can be provided via standard input, allowing piping.

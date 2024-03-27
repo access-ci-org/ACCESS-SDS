@@ -1,0 +1,28 @@
+Use Case: Use NLME package in R for fitting non-linear mixed-effects model to longitudinal data;
+
+Code details and examples: 
+
+Code:
+
+    # load package
+    library(nlme)
+
+    # Load inbuilt dataset Orange
+    data(Orange)
+
+    # Fit a non-linear mixed effects model
+    fit <- nlme(circumference ~ SSlogis(age, Asym, mid, scal),
+                data = Orange,
+                random = Asym ~ 1,
+                start = c(Asym = 200, mid = 700, scal = 350))
+
+    # Print Summary of the model
+    summary(fit)
+
+The input data 'Orange' comes with the R package nlme and consists of measurements of the growth of orange trees. The response is the tree's circumference and the predictor variable is the 'age' of the tree in days at the time of measurement. The data also includes a grouping variable for the five trees that were measured.
+
+Command to run:
+
+    Rscript non_linear_model.r
+
+Where 'non_linear_model.r' is the name of the R script file containing the above code.

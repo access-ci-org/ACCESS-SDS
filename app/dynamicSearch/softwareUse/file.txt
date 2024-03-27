@@ -1,0 +1,35 @@
+Use Case: Use MPI (Message Passing Interface) in High Performance Computing (HPC)
+
+Code details and examples:
+
+Code:
+
+```
+#include <mpi.h>
+#include <stdio.h>
+
+int main(int argc, char** argv) {
+
+    MPI_Init(NULL, NULL);
+    
+    int size;
+    MPI_Comm_size(MPI_COMM_WORLD, &size);
+
+    int rank;
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+
+    char processor_name[MPI_MAX_PROCESSOR_NAME];
+    int name_len;
+    MPI_Get_processor_name(processor_name, &name_len);
+
+    printf("Hello world from processor %s, rank %d out of %d processors\n", processor_name, rank, size);
+
+    MPI_Finalize();
+}
+```
+
+This code When you run it, it'll print "Hello world from processor [processor name], rank [rank] out of [number of processors] processors". It's set up for multi-node processing with MPI. Save this as hello_world_mpi.c. It uses the C programming language.
+
+The command to compile this would be `mpicc -o hello_world_mpi hello_world_mpi.c` and run with `mpirun -np 4 ./hello_world_mpi`  where -np 4 is the number of processes.
+
+Input: There are no specific input files or formats required for this code. The specifications lie within the code parameters, specifically in the rank and size variables provided by MPI_Comm_rank and MPI_Comm_size, respectively.

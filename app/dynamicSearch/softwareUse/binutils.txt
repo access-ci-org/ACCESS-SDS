@@ -1,20 +1,64 @@
-Use Case: Binutils is a collection of binary tools for handling binary files, including object files, executables, and libraries.
+Use Case: Binutils is a collection of binary tools that are primarily used for creating and debugging binary programs. The tools in the packages have different roles from handling binary object files to relocating and linking. 
 
-Code details and examples:
-1. Disassemble an executable file:
-```bash
-objdump -d <executable_file>
-```
-Example:
-```
-objdump -d my_program.exe
-```
+Code details and examples: Code 
 
-2. View the headers of an object file:
-```bash
-readelf -h <object_file>
-```
-Example:
-```
-readelf -h my_object.o
-```
+1. **objdump** - It is a command-line program for displaying various information about object files.
+
+Example: 
+	Run the command below to get a disassemble output of an ELF file.
+	Command: `objdump -d /path/to/binary`
+	
+	Input: Binary file
+	Format required: ELF, PE, COFF, a.out, ar (archive), Intel hex, or S-records.
+	Specifications: No specific instruction for input files, just feed it the binary
+	
+2. **as** - The GNU assembler 
+   
+Example: 
+    	Write Hello World assembly program
+   
+   	```
+   	section .data
+   	hello db 'Hello, World!', 0   ; Null terminated string to output
+   	len equ $ - hello              ; Length of the string 
+
+   	section .text
+   	global _start
+
+   	_start:
+    	mov eax, 4                    ; syscall number (sys_write)
+    	mov ebx, 1                    ; file descriptor (stdout)
+    	mov ecx, hello                ; pointer to message to write
+    	mov edx, len                  ; message length
+    	int 0x80                      ; call kernel
+
+    	mov eax, 1                    ; syscall number (sys_exit)
+    	xor ebx, ebx                  ; exit code
+    	int 0x80                      ; call kernel
+  	```
+	Now, compile and link it with as and ld respectively.
+	Command: `as -o hello.o hello.s ; ld -o hello hello.o`
+	
+	Input: Assembly code (.s or .asm)
+	Format required: x86 Assembly
+	Specifications in input: Program written in Assembly language. 
+
+3. **ld** - The GNU linker 
+
+Example: 
+   	The command below links a translated hello world object code into an executable. 
+   	Command: `ld -o hello hello.o`
+   
+   	Input: Translated object code from assembly (.o)
+   	Format required: Object Code
+   	Specifications: Non-specific, .o files from as can be used.
+
+4. **ar** - a Unix archiving program
+
+Example: 
+   	The command below creates an archive file from two object files.
+   	Command: `ar rcs lib.a file1.o file2.o`
+		
+	Input: Object files
+	Format required: Object file format or any readable format
+	Specifications: Non-specific, as long as it can read the file it can archive it.

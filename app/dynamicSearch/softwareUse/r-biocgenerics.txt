@@ -1,0 +1,16 @@
+Use Case: Use BiocGenerics for basic functions and types common to bioinformatics, genomics, and experimental data analysis.
+
+Code details and examples: Code
+
+In R:
+```r
+# Import BiocGenerics package
+library("BiocGenerics")
+
+# Demonstrate show method
+setClass("track", representation(chrom="character", pos="numeric"))
+show(getClass("track"))
+```
+The example sets up a class "track" with fields "chrom" and "pos". It then uses the "show" method to output the class structure.
+
+To run the code, simply execute the R script file in your R environment.

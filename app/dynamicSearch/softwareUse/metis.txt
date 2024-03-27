@@ -1,0 +1,61 @@
+Use Case: METIS is used for partitioning unstructured graphs, partitioning meshes, and computing fill-reducing orderings of sparse matrices. 
+
+Code Details and Examples: 
+
+The input file format for METIS is as follows. Asset idxStuff value:
+
+```
+<numVertices> <numEdges> <formattingOptions>
+<vertexData>
+...
+<vertexData>
+```
+A sample input file could look like this:
+
+```
+5 7 001 
+1 2 10 
+2 3 30 
+3 4 50 
+4 5 70 
+5 2 90 
+2 4 120 
+3 5 150 
+```
+
+Here the number of vertices is 5 and the number of edges is 7. Each subsequent line to the first has three numbers, the source vertex, destination vertex, and a weight for the edge between them. 
+
+The command for partitioning this graph using METIS would be:
+
+```
+gpmetis file.graph nparts
+```
+
+Where nparts is the number of partitions desired. For example:
+
+```
+gpmetis sample.graph 2
+```
+
+The command line parameters for METIS can be found in the manual. For gpmetis, the full syntax is:
+
+
+gpmetis [options] <GraphFile> <Nparts>
+
+
+Options for gpmetis are as follows:
+
+-ctype=string
+-rtype=string
+-iptype=string
+-objtype=string
+-cfactor=double
+-ufactor=integer
+-minconn
+-contig
+-nooutput
+-seed=integer
+-niter=integer
+-ncuts=integer
+-nseps=integer
+-help

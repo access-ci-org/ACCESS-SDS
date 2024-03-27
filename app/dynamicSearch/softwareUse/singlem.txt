@@ -1,0 +1,36 @@
+Use Case: SingleM is an open-source package used for fast taxonomic profiling of metagenomic datasets. It's specially designed to accurately profile microbial community composition from shotgun metagenome data.
+
+Code details and examples: 
+
+Code: 
+SingleM commands are usually run with the singlem package, which has several different subcommands, one for each function.
+
+Typical usage is as follows:
+
+```
+singlem pipe --sequences sequences.fastq --otu_table otu_table.csv
+```
+
+In this case, "sequences.fastq" is the input FASTQ sequence file, and "otu_table.csv" is the output file where the OTU table will be written.
+
+Input Files:
+
+1. Sequences file in FASTQ format. This file contains the sequences to be processed. Each sequence record consists of a sequence identifier, the sequence itself, a separator line and a sequence quality line.
+
+2. The pipeline requires a reference package, which can be obtained using the "singlem prepare" command. If no reference package is specified, SingleM uses a default set of packages.
+
+Format required: 
+The input file is expected to be in FASTQ format. This is a standard file format used for storing the output of high-throughput sequencing machines. 
+
+Specifications and details in input files:
+1. Every sequence has a unique identifier, and the sequences are separated by lines containing only the '+' character.
+2. Each sequence must be accompanied by a corresponding quality line, which contains ASCII characters representing the confidence of each base call.
+
+Command to run:
+The typical command to run a SingleM pipeline is as follows:
+
+```
+singlem pipe --sequences sequences.fastq --otu_table otu_table.csv
+```
+
+This command will run the SingleM pipeline on the sequences file "sequences.fastq" and write the output to "otu_table.csv".

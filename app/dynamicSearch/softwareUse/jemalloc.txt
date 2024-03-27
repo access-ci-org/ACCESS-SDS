@@ -1,0 +1,21 @@
+Use Case: jemalloc is a general-purpose scalable concurrent malloc implementation that emphasizes fragmentation avoidance and scalable concurrency support. It is often used to replace the standard C library memory allocator in high-performance applications due to its excellent performance characteristics.
+
+Code details and examples: Code
+In most cases, using jemalloc involves compiling your application against the jemalloc library. Here's an example using gcc:
+
+```bash
+gcc -o myprogram myprogram.c -ljemalloc
+```
+
+The only jemalloc-specific addition here is the -ljemalloc option, which links against the jemalloc library.
+
+You can also use jemalloc without modifying your application by preloading it:
+
+```bash
+export LD_PRELOAD=/path/to/libjemalloc.so
+./myprogram
+```
+
+Here you need to ensure that libjemalloc.so is in your LD_LIBRARY_PATH.
+
+Jemalloc does not require any input files. The allocator interfaces take care of requesting the exact amount of memory that is required for each allocation. It's up to the allocator to decide how to best manage the system's memory to meet these requests.

@@ -1,0 +1,25 @@
+Use Case: The R package TxDb.Hsapiens.UCSC.hg19.knownGene is used for annotation of genes based on the human genome version hg19. It contains information about genomic locations and sequences of genes. This data is provided by the UCSC Genome Browser.
+
+Code Details and Examples: 
+
+Code:
+
+```R
+# Load the library
+library(TxDb.Hsapiens.UCSC.hg19.knownGene)
+
+# Access gene-level metadata 
+genes <- genes(TxDb.Hsapiens.UCSC.hg19.knownGene)
+
+# Get the transcripts of a particular gene
+txs <- transcriptsBy(TxDb.Hsapiens.UCSC.hg19.knownGene, by="gene")
+txsForGene <- txs[["1234"]]   # replace "1234" with the gene ID you are querying
+
+# You can also get the exons or cds of a gene
+exonsForGene <- exons(TxDb.Hsapiens.UCSC.hg19.knownGene, by="gene")
+```
+
+Note: No input file is required. You just need to load the library and query the gene id.
+
+Command to run:
+No command line is needed because this package runs in R environment. You can just enter the above code in your R terminal or IDE.

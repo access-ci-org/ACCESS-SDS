@@ -1,0 +1,25 @@
+Use Case: Pandora is a set of scripts and libraries used to build and manage computational biology workflows. It allows users to customize their workflows and execute them on high-performance computing clusters. It supports a variety of software tools, technologies, and data sources to enhance the output of sequencing data.
+
+Code details and examples:
+
+Code:
+Let's say you have a configuration file `config.ini` which looks like this:
+
+```
+[LOCAL]
+data_folder = /home/username/data
+```
+Assuming you have an appropriate environment set up to run Pandora, you can launch a run using a command line like this:
+```
+pandora -p MYPROJECT -w /path/to/work_directory -pe smp 4 -m 16G -config config.ini
+```
+
+In this example, `-p` refers to the project name, `-w` is the working directory where temporary files should be written, `-pe smp 4` refers to the fact that we are launching a parallel environment with 4 cores, `-m 16G` specifies that we are limiting memory usage to 16 gigabytes, `-config config.ini` is the configuration file. Please note that this is a hypothetical example and in reality there will be more parameters depending on the workflow you want to run. 
+
+Input file specifications:
+
+- Configuration files: These files specify the path to the existing data in the LOCAL section. 
+- FASTQ files: These are the primary input files for many workflows in Pandora. They contain sequencing reads from an Illumina sequencer which Pandora will analyze.
+- Feature annotation files: These are another type of input that is often needed. They provide information about genes and other features that are annotated in the reference genome.
+  
+Note: Commands, paths, and other specifics may vary depending on the system and configuration used. Please refer to specific tool documentation for further understanding and usage. Always ensure that you correctly have installed all the dependencies and the software you are interacting with in the correct environment.

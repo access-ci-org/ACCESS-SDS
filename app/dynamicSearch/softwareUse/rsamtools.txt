@@ -1,19 +1,18 @@
-Use Case: rsamtools is an R/Bioconductor package for reading, manipulating, and writing SAM/BAM files.
+Use Case: The Rsamtools package in R is primarily used for high-performance reading, writing and modification of Sequence Alignment Map (SAM) files and Binary Alignment Map (BAM) files, which are common formats for storing large-scale, high-throughput sequencing data. It'll be utilized for handling BAM files in genomic analysis.
 
-Code details and examples:
+Code Details and Examples:
+
 ```R
-# Load the library
-library("Rsamtools")
+library(Rsamtools)
+bamfile <- system.file('extdata', 'ex1.bam', package='Rsamtools')
 
-# Read a BAM file
-bam_file <- system.file("extdata", "ex1.bam", package="Rsamtools")
-bam <- readGAlignmentPairs(bam_file)
+# Specify the param indicating the sequences to fetch from the file.
+param <- ScanBamParam(what=scanBamWhat(), flag=scanBamFlag(isUnmappedQuery=FALSE))
+header <- scanBamHeader(bamfile)
+res <- scanBam(bamfile, param=param)
 
-# Explore the read data
-head(bam)
-
-# Count the number of reads
-countBam(bam_file)
+# Accessing the BAM file
+bam <- BamFile(bamfile, yieldSize=1e5)
 ```
 
-Command to run: N/A. The code above can be run within an R environment with Rsamtools package installed.
+Please replace 'ex1.bam' with the path to your own .bam file. No special formatting or specifications are needed for the input file; it just needs to be a valid .bam file. Command to run is not applicable as Rsamtools is an R package and the code should be run within an R environment.

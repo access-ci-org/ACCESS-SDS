@@ -1,34 +1,61 @@
-Use Case: fastai is a deep learning library built on top of PyTorch, providing high-level abstractions for training models efficiently.
+Use Case: Training a model to perform multi-label classification using fast.ai library.
 
-Code details and examples:
-1. Training a image classification model using fastai:
+Code details and examples: 
+
+Code:
+
+Firstly, you have to import the necessary libraries:
+
 ```python
 from fastai.vision.all import *
-
-path = untar_data(URLs.MNIST_SAMPLE)
-dls = ImageDataLoaders.from_folder(path)
-learn = cnn_learner(dls, resnet18, metrics=accuracy)
-learn.fine_tune(1)
 ```
 
-2. Training a text classification model using fastai:
+Let's imagine we have a CSV file that contains two columns: 'id' and 'labels'. The 'id' column contains the name of the image file, and the 'labels' column contains the labels associated with the image, separated by a space.
+
+Sample Dataset Input structure:
+
+| id  | labels      |
+|-----|------------|
+| 1   | cat dog    |
+| 2   | bird cat   |
+| 3   | dog bird   |
+
+Next, let's load the images and the labels from the CSV file:
+
 ```python
-from fastai.text.all import *
+df = pd.read_csv('data.csv')
 
-dls = TextDataLoaders.from_folder(untar_data(URLs.IMDB), valid='test')
-learn = text_classifier_learner(dls, AWD_LSTM, drop_mult=0.5, metrics=accuracy)
-learn.fine_tune(4)
+def get_x(r): return path/'images'/r['id']
+def get_y(r): return r['labels'].split(' ')
+
+rand_img = df.sample()
+print(rand_img)
+
+block = DataBlock(blocks=(ImageBlock, MultiCategoryBlock),
+   get_x = get_x, 
+   get_y = get_y)
+
+dls = block.dataloaders(df)
 ```
 
-3. Using fastai for tabular data:
+Build and train the model:
+
 ```python
-from fastai.tabular.all import *
+learn = cnn_learner(dls, resnet50, metrics=partial(accuracy_multi, thresh=0.2))
 
-path = untar_data(URLs.ADULT_SAMPLE)
-dls = TabularDataLoaders.from_csv(path/'adult.csv', path=path, y_names="salary",
-                                  cat_names = ['workclass', 'education', 'marital-status', 'occupation', 'relationship', 'race'],
-                                  cont_names = ['age', 'fnlwgt', 'education-num'],
-                                  procs = [Categorify, FillMissing, Normalize])
-learn = tabular_learner(dls, metrics=accuracy)
-learn.fit_one_cycle(3)
+learn.fine_tune(3, base_lr=3e-3, freeze_epochs=4)
 ```
+
+Finally, let's predict the labels for a new image:
+
+```python
+learn.predict('new_image.jpg')
+``` 
+
+To run this Python program, you would enter this in the command line:
+
+```
+python3 your_script_name.py
+```
+
+Please replace 'your_script_name.py' with the name of the Python script file that contains your code.

@@ -1,0 +1,27 @@
+Use Case: bali-phy is used for simulating and estimating evolutionary biology processes. It can be used for alignment and phylogeny estimation from molecular sequence data with an accounting for uncertainty.
+
+Code details and examples: Code
+
+bali-phy accepts an input file in NEXUS format. 
+
+The NEXUS file has things like `#NEXUS`, `Begin data;` and `End;`.
+Here is an example of a part of a NEXUS file:
+
+```
+#NEXUS
+Begin data;
+Dimensions ntax=3 nchar=13;
+Format datatype=dna gap=- matchchar=. ;
+Matrix
+taxon1   AAGCTTCACCGTG
+taxon2   AAGCTTCACCGTG
+taxon3   AAGCTTCACCGTG
+End;
+```
+
+This defines a small sequence alignment with three taxa (taxon1, taxon2, taxon3) and 13 characters long. 
+
+The command to invoke bali-phy to analyze a nexus file named "sequences.nex" would be:
+```
+bali-phy sequences.nex
+```

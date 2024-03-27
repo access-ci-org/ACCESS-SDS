@@ -1,0 +1,58 @@
+Use Case: Cobaya is a software package used in cosmology. For example, it is used to generate Monte Carlo samples from a cosmological model's posterior distribution for a given set of observations.
+
+Code details and examples:
+
+In essence, writing an input file for Cobaya comes down to specifying 3 dictionaries. A theory, a likelihood and a sampler. These can be written in json or yaml format.
+
+For example, a very basic yaml input file could look as follows:
+
+```yaml
+theory:
+  classy:
+    extra_args:
+      N_ur: 2.0328
+likelihood:
+  planck_2018_highl_plik.TTTEEE:
+    path_install: $PLANCKLIK
+sampler:
+  mcmc:
+    Rminus1_stop: 0.001
+    max_tries: 100000
+    convergence: R-1
+    drag: True
+```
+
+This will then use the classy theory class for a ΛCDM model with an effective number of ultra-relativistic species equal to 2.0328. It sets the likelihood to the high-l Planck temperature and polarization data and use a basic MCMC sampler.
+
+You can run this using the command `cobaya-run input.yaml`.
+
+If you need to add parameters, you can add them:
+
+```yaml
+params:
+  # Fixed parameters
+  Omega_Lambda: 0.7
+  Omega_matter: 0.3
+  Sigma8_star: 0.8
+  w: -1
+  n_s: 1
+  logA: 3
+  # Sampled (and derived) parameters
+  B:
+    prior:
+      min: 0
+      max: 6
+    ref:
+      dist: norm
+      loc: 0
+      scale: 1
+    proposal: 0.5
+    latex: B
+  Hp:
+    value: 'lambda H0: H0/100'
+    derived: True
+``` 
+
+The parameters can either be fixed or allowed to run over a specific interval. Lambda functions can also be used to define derived parameters. For example, the Hubble parameter in units of km/s/Mpc (`H0`) can be converted to the dimensionless Hubble parameter (`Hp=H0/100`). This new parameter is not sampled over, but is calculated at each sampled point, and is saved as part of the chain.
+
+You can then run this using the command `cobaya-run input_params.yaml`.

@@ -1,0 +1,42 @@
+Use Case: Using `R-progress` to track the progress of a long running for loop in a scientific computation task using R.
+
+Code Details and Examples: Code
+
+**Initialization:**
+First, import the progress and the sample data:
+
+```R
+library(progress)
+
+n <- 1e5
+```
+
+**Sample Input File:**
+None required. 
+
+**Format: Format required for the input file:**
+No input file is necessary as the data is directly generated in the program.
+
+**Any specifications and details in input files:**
+No input file is needed for this example.
+
+**Sample Code:**
+
+```R
+pb <- progress_bar$new(total = n)
+for(i in seq_len(n)) {
+  pb$tick()
+}
+```
+In the above example, the progress of the loop executing 1e5 times is tracked using the progress bar.
+
+**Command to run**
+
+The above code can be run in RStudio or in an R shell. To run it, simply copy and paste the code into the appropriate R environment and hit enter.
+
+After you copied and pasted entire code and hit Enter, you will see something like this in the console.
+
+```R
+  |=============================================================  | 98%
+```
+This is the display of `R-progress` showing the completion status of the operation. It will keep updating as the task progresses.

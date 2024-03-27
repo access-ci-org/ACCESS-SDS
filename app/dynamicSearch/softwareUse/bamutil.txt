@@ -1,0 +1,30 @@
+Use Case: bamutil is a repository that consists of several utility programs which contain different functionalities. It can be used when you need to work or manipulate BAM (Binary Alignment/Mapping) files in a high performance computing (HPC) environment.  
+
+Code details and examples:
+
+Code: 
+
+To filter fastq files, the command will look something like this:
+
+```bash
+bam fastq -I input.bam -L reads.not.found.list -o output.fastq
+```
+
+Where,
+- `input.bam` is the input BAM file.
+- `reads.not.found.list` is the list of reads to be excluded from the fastq file.
+- `output.fastq` is the output fastq file.
+
+The input file (`input.bam`) is a BAM format file, and it contains all the aligned sequences. The other input file (`reads.not.found.list`) is a simple text file with the names of the reads to be excluded.
+
+The output (`output.fastq`) will be a fastq file, which contains the filtered reads.
+
+In another use case, to validate bam files, the command would be:
+
+```bash
+bam validate --in input.bam
+```
+
+Here, `input.bam` is the input BAM file, and the software will validate it and print any errors.
+
+The bam files are in specific format. They contain headers and data. The headers include metadata about the sequence, while the data section contains sequence, read name, quality values, etc.

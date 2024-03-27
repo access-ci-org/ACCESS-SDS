@@ -1,0 +1,27 @@
+Use Case: Py-xlrd is a library for developers to use to mainly extract data from MS Excel like .xls and .xlsx files. It provides a way to read excel worksheets with rich information. 
+
+Code details and examples:
+
+Code:
+```python
+import xlrd
+
+workbook = xlrd.open_workbook("sample.xls")
+worksheet = workbook.sheet_by_index(0)
+
+for row in range(worksheet.nrows):
+    for column in range(worksheet.ncols):
+        print(worksheet.cell(row, column).value, end=" ")
+    print()
+```
+In this example, we use py-xlrd to read 'sample.xls', which can be any excel file, and then print the data of each cell in console. The input is the path to the excel file ("sample.xls").
+
+To run it, you just need to run it with python in command line:
+
+```shell
+python script.py
+``` 
+
+where script.py is the file contains the code. 
+
+Please note the file to be read ('sample.xls' in this case) should be in the same directory of script.py or the absolute path of the file should be given.

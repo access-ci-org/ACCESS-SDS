@@ -1,16 +1,35 @@
-Use Case: scientific computing  
-Code details and examples:  
+Use Case: Use Fortran to calculate the sum of integers from 1 to n.
+
+Code details and examples: The input file should be a simple text file containing a single integer representing the number n up to which you want to calculate the sum.
+
+Input File (input.txt) Format:
+
+```
+10
+```
+
+Code Snippet:
+
 ```fortran
-program main
-    implicit none
-    integer :: i
-    do i = 1, 10
-        write(*,*) i
-    end do
-end program main
+! Fortran program to calculate sum
+PROGRAM SumCalculation
+    IMPLICIT NONE
+    INTEGER :: n, sum, i
+    OPEN(UNIT=10, FILE='input.txt')
+    READ(10, *) n
+    sum = 0
+    DO i=1, n
+        sum = sum + i
+    END DO
+    PRINT*, sum
+END PROGRAM SumCalculation
 ```
-To compile and run the Fortran code:
-```
-gfortran program.f90 -o program
-./program
-```
+
+Command to run:
+
+```bash
+$ gfortran sum_calculation.f90 -o sum_calculation
+$ ./sum_calculation
+``` 
+
+This program reads an integer n from the file 'input.txt', calculates sum of integers from 1 to n and prints the result.

@@ -1,29 +1,28 @@
-Use Case: Quantum chemistry calculations with ORCA software.
+Use Case: ORCA is a highly flexible, efficient and easy-to-use quantum chemistry program package. It is used for predicting molecular properties such as structure and molecular spectra. 
 
-Code details and examples:
-ORCA is a quantum chemistry software package often used for ab initio calculations of molecular systems. It supports a wide range of quantum chemical methods including DFT, MP2, CCSD(T), and more.
+Code details and examples: 
 
-To run ORCA, you typically provide it with an input file containing the necessary information for your calculation. Here is an example input file for a simple energy calculation of a water molecule:
+Code: 
 
-Input file (water.inp):
+Consider the hypothetical file called "input.inp", which contains the following data:
+
 ```
-! HF/6-31G calculation for water
-%pal nprocs 4 end
-%maxcore 2048
+! RHF 6-31G*
+
 * xyz 0 1
-O  0.000000  0.000000  0.117307
-H  0.000000  0.755450 -0.469226
-H  0.000000 -0.755450 -0.469226
-*
+O    0    0     0
+H    0    0     0.9697
+H    0.9697    0     0 
 ```
 
-You can then run ORCA using a command similar to the following:
+In this example, the "! RHF 6-31G*" line tells ORCA that you want to perform a calculation using the Restricted Hartree-Fock method with the 6-31G* basis set. The "* xyz 0 1" line is suggesting that the following lines represent a molecule's coordinates in the xyz format. The 0 and 1 indicate charge and multiplicity respectively.
 
-Command to run ORCA:
+To perform the calculation, you would use the command:
+
+```bash
+orca input.inp > output.out
 ```
-orca water.inp > water.out
-```
 
-This command will run the ORCA calculation using the input file "water.inp" and write the output to "water.out".
+This command implies you are running ORCA using the input file ("input.inp") and that you will save the output to "output.out". 
 
-Please note that the actual command to run ORCA may vary based on your specific installation and system setup.
+The output file, "output.out" will hold the results of your computation including structure, energy, and other computed properties. The actual results will vary based on the type of calculation and the options chosen in your input file.

@@ -1,0 +1,29 @@
+Use Case: The R package XVector provides data structures for storing large sets of genomic intervals and associated data. XVector is used to store these large sequences without other attached metadata, which can be handled by other bioconductor packages.
+
+Code details and examples: 
+
+Code:
+
+```R
+# Load the library
+library(XVector)
+
+# Create a DNAString object
+dna_str <- DNAString("ACTGNNNCAN")
+
+# Generate an XString object
+xstr <- XString(dna_str)
+
+# Print the object
+print(xstr)
+```
+
+This script first loads the XVector library. After that, it creates a DNAString object by providing a string of DNA nucleotides. The DNAString function converts this string into a DNAString object that can be used with the other XVector functions.
+
+The script then generates an XString object from the DNAString using the XString function, before printing the object to the console.
+
+The required input for this use case is a string of DNA nucleotides, which can be provided to the DNAString function in the form of an R character string. The nucleotides should be represented by their respective characters ('A', 'T', 'G', 'C'), and any unknown or null nucleotides can be represented by 'N'. 
+
+Command to run:
+
+This code can be run in any R environment by simply copying and pasting the code into the console and pressing enter. No additional command is needed to execute the code.

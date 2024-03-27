@@ -1,0 +1,49 @@
+Use Case: Understanding of spatial transcriptomics and uses gene expression and splice variant analysis. The end result is a digital spatial gene expression matrix where each spot in the spatial array is represented as an individual cell.
+
+Code Details and Examples:
+
+Code: 
+
+In this example data are located in /data/input & sample is named test_sample. It first loads libraries and then runs scripts.
+
+```
+spaceranger count --id=test_sample \
+                  --transcriptome=/data/refdata-gex-GRCh38-2020-A \
+                  --fastqs=/data/input/test_sample \
+                  --image=/data/input/test_sample.tif \
+                  --slide=SI-GA-A1 \
+                  --area=A1 \
+                  --loupe-alignment=/data/input/test_sample.bam \
+                  --jobmode=local \
+                  --localcores=16 \
+                  --localmem=120
+```
+
+Input Files:
+
+- FASTQ files (either paired-end or single-end reads)
+- HE or IF microscopy image(s) in TIFF format
+- A reference transcriptome for the sample species 
+
+The input parameters are:
+
+--id: a unique run ID string
+--transcriptome: the path to the pre-built transcriptome reference
+--fastqs: the path to the directory containing FASTQ files
+--image: the path to the TIFF-format image file
+--slide: the ID of the slide (found on the label adhered to the glass slide)
+--area: the ID of the capture area (found printed on the chip)
+--jobmode: the execution environment 
+--localcores: the number of cores to use when jobmode=local
+--localmem: the maximum memory (in GB) to use when jobmode=local.
+
+Specifications and Details in Input Files and Code:
+
+- The HE or IF microscopy image(s) should be in TIFF format.
+- The reference transcriptome can be obtained from the 10x Genomics website.
+- Both paired-end and single-end reads in FASTQ files are acceptable.
+- The --slide and --area parameters can be found on the device and chip, respectively.
+
+Command to Run:
+
+In command line environment, navigating to the appropriate file directory, and enter the provided command directly into the terminal.

@@ -1,0 +1,27 @@
+Use Case: Scirpy is a Python library that is used for analyzing single-cell T-cell receptor sequencing data. It works best when the target files are in the Anndata format, specifically the .h5ad type.
+
+Code Details and Examples:
+
+Code:
+
+```python
+# Import the necessary libraries
+import scirpy as ir
+import scanpy as sc
+
+# Read the data file
+adata = sc.read("/path/to/your/datafile.h5ad")
+
+# Run the preprocessing
+ir.pp.ir_dist(adata, metric = "jaccard")
+
+# Run the clustering
+ir.tl.define_complementarity_groups(adata)
+
+# Visualize the results
+ir.pl.complementarity_group(adata)
+```
+
+For this example, you would need a .h5ad file, which is most commonly generated through the Scanpy library. This file includes matrix arrays, graphs, annotations, and dimensions. Note that "/path/to/your/datafile.h5ad" needs to be replaced with the specific path to your data file.
+
+The command to run this script depends on your Python execution setup. For example, if you are running this script from a Python interactive shell or Jupyter notebook, you can simply use the `run` command followed by the file name. If you are running this script from the terminal, you can use the `python` command followed by the script name.

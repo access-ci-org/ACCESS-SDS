@@ -1,5 +1,5 @@
 {
-    "name": "PostgreSQL",
+    "software_name": "PostgreSQL",
     "comprehensive overview": "PostgreSQL is a powerful, open-source relational database management system known for its reliability, robustness, and performance. It offers advanced features such as multi-version concurrency control, point-in-time recovery, and full ACID compliance.",
     "core features": [
         "Relational database management system",

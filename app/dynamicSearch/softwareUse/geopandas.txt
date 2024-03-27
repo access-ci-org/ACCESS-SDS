@@ -1,0 +1,36 @@
+Use Case: Geopandas is a Python library used for handling geospatial data in Python. Geopandas makes use of the pandas library and extends it to allow for the use of geometric types. It allows for easy manipulation and analysis of geometric data types. It can be used to manage and manipulate spatial data and conduct various spatial operations.
+
+Code details and examples:
+
+Code:
+
+```
+# First, import geopandas library
+import geopandas as gpd
+
+# Load a GeoJSON file into a GeoDataFrame
+gdf = gpd.read_file('data.geojson')
+
+# Print the first 5 lines of the GeoDataFrame
+print(gdf.head())
+
+# Filtering the data
+filtered_data = gdf[gdf['PropertyType'] == 'Commercial']
+
+# Creating a GeoDataFrame from a DataFrame with coordinates
+df['Coordinates'] = list(zip(df.Longitude, df.Latitude))
+df['Coordinates'] = df['Coordinates'].apply(Point)
+gdf = gpd.GeoDataFrame(df, geometry='Coordinates')
+
+# Saving a GeoDataFrame to a file
+gdf.to_file('output.geojson', driver='GeoJSON')
+
+```
+
+This sample code covers simple operations with Geopandas: loading a GeoJSON file, displaying contents, filtering data based on properties, transforming a regular DataFrame to a GeoDataFrame and saving a GeoDataFrame to a file. The input file data.geojson should be the GeoJSON file you want to load. The output file 'output.geojson' is the file where you want to save the GeoDataFrame.
+
+To run this code, assuming it is saved in a file called geopandas_script.py, the following command can be used:
+
+```
+python geopandas_script.py
+```

@@ -1,0 +1,26 @@
+Use Case: MEME is a tool for discovering motifs in a group of related DNA or protein sequences. A motif is a sequence pattern that occurs repeatedly in a group of related protein or DNA sequences. MEME represents motifs as position-dependent letter-probability matrices which describe the probability of each possible letter at each position in the pattern. It can also represent motifs using regular expressions or as consensus sequences. 
+
+Code details and examples:
+
+Code:
+
+Input file is in FASTA format.
+
+```
+>seq1
+ATGCATGCATGC
+>seq2
+ATGCATGCAAAA
+>seq3
+ATGCATGCGGGG
+```
+You can run MEME using the following command:
+
+```shell
+meme input.fasta -o output_directory -dna -mod zoops -nmotifs 3 -minsites 2 -maxsites 50 -minw 6 -maxw 50
+```
+This command tells MEME to find motifs in the sequences contained in the file 'input.fasta'.  It tells MEME that the sequences are in DNA, to use the zero or one per sequence (zoops) model of motifs, to discover a maximum of 3 motifs, the minimum number of sites for each motif is 2, the maximum number sites per motif is 50, the minimum width of each motif is 6, and the maximum width of each motif is 50. The results are placed in a sub directory of the current directory called 'output_directory'.
+
+You can find these motifs in 'output_directory/meme.html'. Opening that file in a web browser allows you to easily navigate all of the results produced by MEME.
+
+Note: Replace "input.fasta" and "output_directory" with your own input file and preferred output directory, respectively.

@@ -1,0 +1,49 @@
+Use Case: VeryFastTree is a tool that creates approximately-maximum-likelihood phylogenetic trees from alignments of nucleotide or protein sequences. It works by implementing minimum-evolution NNIs (nearest-neighbour interchanges), using the Jukes-Cantor or the generalized time-reversible model and the Shimodaira-Hasegawa test. For amino acid sequences, it provides the JTT model and uses the Gamma20 distribution.
+
+Code details and examples: 
+
+Code:
+
+Input file format required: FASTA (.fas) or Newick (.nwk). 
+
+For a given sequence alignment in FASTA format:
+
+```
+>human
+MAAQT-----GTG-----VGAPVF---
+>A.bushbaby
+-S--S-----GTG-----MGA----------
+>owlmonkey
+--Y--MTTTTPGTGLT---
+>P.tarsier
+---DVEERAHDRAR----GERVY----
+>marmoset
+-D--AVLGDIGTTKYRM----
+>mouse
+--G--V--GACGKTT--YDV--
+>rat
+---N--V--GACGKTT--YDI----
+>cow
+---KVEGDIGTTKY---EMNL--
+```
+Save this as input.fas.
+
+The command to run FastTree:
+```bash
+FastTree -nt < input.fas > output.nwk
+```
+This command reads a MSA from input file (input.fas), constructs a tree and writes the resulting tree to an output file (output.nwk) in Newick format. The `-nt` switch is used to specify that the input sequences are nucleotide sequences.
+
+If you'd like to utilize the Gamma model of rate heterogeneity, the command would be:
+```bash
+FastTree -nt -gtr -gamma < input.fas > output.nwk
+```
+The `-gtr` specifies General Time Reversible model and `-gamma` specifies gamma distributed rates across sites.
+
+NOTE: MSA stands for Multiple Sequence Alignment. FastTree assumes that the input sequences are already aligned.
+
+Output:
+```
+((human:0.089907,A.bushbaby:0.235076,owlmonkey:0.202265)0.995:0.140658,P.tarsier:0.333806,marmoset:0.315542,(mouse:0.291474,rat:0.074377,cow:0.199677)0.733:0.079263);
+```
+This is a Newick formatted tree where the numbers following the colons represent branch lengths and the numbers in parentheses represent local support values.

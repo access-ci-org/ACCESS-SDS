@@ -1,19 +1,45 @@
-Use Case: Profiling HPC jobs with XALT
+Use Case: XALT is a tool that allows you to track the software usage on a cluster. It provides a way to understand what libraries and executables are being used. The process is transparent to the end users.
 
 Code details and examples:
-XALT (XALT Accounting and Logging Tool) is a program that tracks program executions on HPC systems to provide job profiling and usage statistics. To use XALT, first, load the XALT module on the HPC system.
+Code:
 
-Sample code to load XALT module:
-```bash
-module load xalt
+Input files: The primary input file for XALT is JSON file.
+
+Format required: JSON
+
+Specifications and details in input files:
+
+```
+{
+  "userT": {
+    "usr": "user1"
+  },
+  "startT": {
+    "epoch": "1543936646.5953"
+    "human": "2018-12-04T14:57:26.595271"
+  },
+  "endT": {
+    "epoch": "1543936926.5953"
+    "human": "2018-12-04T14:58:26.595271"
+  },
+  "runT": {
+    "days": 0,
+    "hours": 0,
+    "mins": 2,
+    "secs": 31
+  },
+  "num_cores": "1",
+  "num_nodes": "1",
+  "listA": [
+    "/opt/software/library1/1.0/bin/library1",
+    "/opt/software/library2/2.0/bin/library2",
+    "/opt/software/library3/3.0/bin/library3"
+  ]
+}
 ```
 
-Once the XALT module is loaded, you can submit your job scripts as usual. XALT will automatically track the execution of your job and generate profiling information.
+Running xalt with JSON file as input:
 
-To view the job profiling information collected by XALT, you can use the `xalt` command with appropriate options. For example, to view a summary of user job statistics, you can use the following command:
+Command to run: `./xalt_file_to_db.py --delete=yes json_file.json` 
 
-```bash
-xalt --user-summary
-```
-
-Additionally, you can use various options with the `xalt` command to get detailed information about job executions, module loads, and more. Refer to the XALT documentation for a full list of available options and commands.
+The command line to run XALT, would be: `xalt_file_to_db.py jsonFile.json`, where `jsonFile.json` is the file containing the tracking information of the software usage. Run this command from the directory where you have installed XALT.

@@ -1,15 +1,17 @@
-Use Case: Supporting tools for Lua programming language.  
-Code details and examples:  
-- Lua source code files with the extension ".lua" are used as input files.  
-- Code snippets are written in Lua programming language.  
-- An example code snippet to print "Hello, World!" is as follows:  
+Use Case: LuaTools is a script interpreter for the programming language Lua. This tool can be used to develop, test, and run scripts in Lua. This software is widely used for system administration, game development, prototyping, and web development.
 
+Code details and examples: 
+
+Code: 
+
+Input file: test.lua (Lua script file)
 ```lua
 print("Hello, World!")
 ```
+Here, the function `print` is used to print the text "Hello, World!" to the console.
 
-- Lua source code files can be executed using the Lua interpreter.  
-Command to run the Lua source code file "hello.lua":  
+Command to run the script: 
+```shell
+luatools test.lua
 ```
-lua hello.lua
-```  
+This will execute the Lua script and print "Hello, World!" to the console.

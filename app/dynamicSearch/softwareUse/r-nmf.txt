@@ -1,0 +1,35 @@
+Use Case: We use r-nmf library in R for performing non-negative matrix factorization, which is a common technique for data analysis in fields like text mining, signal processing, bioinformatics etc. The input data should be a numeric matrix where all the values are non-negative.
+
+Code details and examples: 
+
+1. First, load this r-nmf library in R:
+
+   ```R
+   library(NMF)
+   ```
+
+2. Sample input file (matrix.txt): A plain text file with numeric matrix. Each row is a separate line in the text file. Columns are separated by tab or space. Make sure the matrix has only non-negative values.
+
+   ```
+   1 2 3
+   4 5 6
+   7 8 9
+   ```
+
+3. Code to read the input file and apply NMF:
+
+   ```R
+   # assuming the file is in the current directory
+   data <- read.table("matrix.txt", header = FALSE)
+   
+   # apply NMF, here '3' is the expected number of clusters
+   nf <- nmf(data, 3)
+   ```
+   
+4. Running code: If your file's name and path is `matrix.txt`, run this code in R studio or R command line:
+
+   ```R
+   source("your_code_file.R")
+   ```
+
+This will read the data from 'matrix.txt', apply NMF algorithm on the data and store the results in the 'nf' variable. The results can be further analyzed or visualized as per requirement.

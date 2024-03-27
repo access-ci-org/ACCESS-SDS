@@ -1,5 +1,5 @@
 {
-    "name": "monitor",
+    "software_name": "monitor",
     "comprehensive_overview": "A monitor is an electronic visual display for computers. It usually consists of a screen, circuitry, and casing. The display device in modern monitors is typically a thin film transistor liquid crystal display (TFT-LCD) or a flat panel LED display, while older monitors used a cathode ray tube (CRT). Monitors are used to display output from the computer's graphics card, allowing users to interact with the computer and its software.",
     "core_features": "1. Display output from the computer's graphics card. 2. Allow users to interact with the computer and its software. 3. Show visual information in various resolutions and colors. 4. Can be integrated with speakers, USB hubs, and other functionalities.",
     "general_tags": ["technology", "display", "computer hardware"],

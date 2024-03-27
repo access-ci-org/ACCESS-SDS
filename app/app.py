@@ -31,7 +31,7 @@ def software_search_dynamic():
 
 @app.route("/example_use/<software_name>")
 def get_example_use(software_name):
-
+    
     if software_name == '7-Zip':
         software_name = '7z'
 

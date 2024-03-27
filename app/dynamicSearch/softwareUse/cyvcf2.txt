@@ -1,0 +1,40 @@
+Use Case: Manipulation of VCF files for genomic data interpretation typically used in bioinformatics; summarize heterozygosity over N bases in a VCF.
+
+Code details and examples: 
+
+Required Format: .vcf (or equivalent like .vcf.gz) 
+
+Sample VCF File content:
+```
+##fileformat=VCFv4.2
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Total Depth">
+##FILTER=<ID=LowQual,Description="Low quality">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+chr1	10505	.	A	T	.	.	DP=10
+chr1	10506	.	C	A	.	.	DP=13
+chr1	10507	.	G	C	.	.	DP=7
+chr1	10508	.	C	G	.	.	DP=20
+chr1	10509	.	G	A	.	.	DP=12
+```
+
+Python code utilizing cyvcf2 library for counting heterozygosity:
+
+```python
+import numpy as np
+from cyvcf2 import VCF
+
+def count_heterozygosity(vcf_file:str, region_size:int)->np.ndarray:
+    vcf_obj = VCF(vcf_file)
+    counts = np.ones(vcf_obj.seqlens()//region_size + 1) 
+    for variant in vcf_obj:
+        if variant.is_indel: continue
+        if not variant.is_snp: continue
+        if variant.is_het: 
+            counts[variant.POS//region_size] += 1
+    return counts
+
+print(count_heterozygosity("sample.vcf",10000))
+```
+Program run command: python3 script.py 
+
+This script reads a VCF file and counts the number of heterozygous Single Nucleotide Polymorphisms (SNPs) within each region of a specified size, skipping over indels (insertions or deletions) in the data. Note that cyvcf2 is built to handle variant call format (VCF) and BCF files from the output of variant callers like GATK, samtools, and others, so it requires such files as input. The method implemented here would print the count of heterozygous SNPs per region (of size 10000 in this case) in the VCF file.

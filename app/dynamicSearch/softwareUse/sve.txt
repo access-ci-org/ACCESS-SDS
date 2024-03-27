@@ -1,0 +1,17 @@
+Use Case: Structural Variant Prediction and Assessment in Genomics
+
+Code details and examples: 
+
+SVEngine (SVE) is a robust, scalable and user-friendly pipeline for the structural variant prediction and assessment in genomics. For SV prediction, a number of methods can be used including DELLY, MANTA, WHAM, CNVNATOR, and LUMPY. A .VCF file is usually used as input. 
+
+Code:
+
+```
+sve pipeline -a cnvnator,delly,lumpy,manta,wham -d ./output/ -w ./work/ -g human -p 20 -c /config-sve.yml ./input.vcf
+```
+
+This command processes an input VCF file (--input.vcf) using five algorithms (cnvnator, delly, lumpy, manta, wham) defined after the `-a` parameter. The results are stored in an output directory (./output/) specified with the `-d` parameter, the intermediate working files in a work directory (./work/) using the `-w` parameter. The `-g human` parameter specifies to use the human genome for the prediction, `-p 20` parameter is set to use 20 threads for processing, and `-c /config-sve.yml` specifies a configuration file in YAML format.
+
+The input file is a VCF (Variant Call Format) file. This file contains information about variants found in a genomic sequence. Each data line in VCF file contains information about a position in the genome. The required columns must include: #CHROM POS ID REF ALT QUAL FILTER INFO.
+
+Please note that many researchers may have different setups and pipeline variables. As such, the files and necessary parameters may vary across different use cases. Always ensure to use the correct inputs/parameters for your specific case while using SVE.

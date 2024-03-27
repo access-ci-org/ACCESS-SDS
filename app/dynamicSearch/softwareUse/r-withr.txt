@@ -1,0 +1,36 @@
+Use Case: 
+The `withr` package is used in R to run code 'with' a modified global state. This is helpful for managing resources like options, par() or connection based files.
+
+Code details and examples:
+
+Code: 
+
+```R
+# loading the library
+library(withr)
+
+# setting a temporary global option
+with_options(list(raster.options(maxmemory = 1e+09)), 
+{
+  # code here that requires a higher raster memory limit
+})
+
+# resetting the global option to its default state 
+raster::rasterOptions(maxmemory = .Machine$integer.max)
+
+# executing a command with a temporarily modified working directory
+with_dir(tempdir(), getwd())
+```
+
+The code above first loads the `withr` library, then sets a temporary global option for increasing the raster memory limit. After the code block is executed, the global option is reset to its original value. The last piece of code executes a command while temporarily changing the working directory. 
+
+The `with_options` function modifies the global option for the duration of the given code block, while the `with_dir` function changes the working directory temporarily when executing the specified command.
+
+The required input format for `withr` commands is typically a list of parameters to modify, followed by a code block that relies on these modified parameters. 
+
+To run these snippets at the command line you would use the Rscript command followed by the path to your R file. Such as:
+```bash
+Rscript /path/to/your/script.R
+```
+
+In the case of the withr package, there are no specifications or special details needed in the input files. The only requirement is that the parameters passed to the `withr` functions need to be applicable to the subsequent code block.

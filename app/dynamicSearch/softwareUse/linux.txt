@@ -1,0 +1,35 @@
+Use Case: The Linux operating system is widely used in scientific computing due to its flexibility, powerful command-line interface, and open-source nature. Tasks that can be easily accomplished using Linux include file manipulation, data processing, and system management.
+
+Code details and examples:
+
+Code: 
+```
+# To list all files in a directory
+ls 
+
+# To print the working directory
+pwd 
+
+# To change directory
+cd /path/to/directory 
+
+# To create a directory
+mkdir directory_name 
+
+# To remove a file 
+rm file_name 
+
+# To pipe the output of one command as the input of another
+command1 | command2 
+
+# To run a Python script
+python script.py 
+
+# To compile a C program
+gcc -o output_file source_file.c 
+
+# To run the compiled C program
+./output_file 
+```
+
+These commands are run in the terminal or shell of a Linux operating system. The input for them typically comes in the form of command-line arguments (such as the name of a file, a directory path, or the name of an output file), direct user input, or text or data files. For example, a Python script named script.py can be run using the command `python script.py`, where 'script.py' is the input to the command 'python'.

@@ -1,34 +1,37 @@
-HPCToolkit is a set of performance analysis tools for profiling applications to identify performance bottlenecks in parallel programs. 
+Use Case: Performance profiling and analysis of large scale parallel applications like MPI.
 
-Use Case: Profile a parallel application with HPCToolkit
 Code details and examples:
 
-Input file (sample MPI application):
-```c
-#include <stdio.h>
-#include <mpi.h>
+HPCToolkit uses executable files as its input. It profiles a program by sampling statistical data of the program. In HPCToolkit, the executable files should already be compiled with flags necessary for profiling.
 
-int main(int argc, char *argv[]) {
-    int rank, size;
-    MPI_Init(&argc, &argv);
-    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-    MPI_Comm_size(MPI_COMM_WORLD, &size);
+To profile a program with HPCTOolkit, the code should be written in a compile-able language like Fortran, C++, C etc. Here we consider a sample C++ code `hello_world.cpp`.
 
-    printf("Hello from rank %d out of %d\n", rank, size);
+//////////////////////////////////////////////////////////////////////////////////
+#include <iostream>
 
-    MPI_Finalize();
+int main() 
+{
+    std::cout << "Hello World!";
     return 0;
 }
-```
+//////////////////////////////////////////////////////////////////////////////////
 
-Compilation command (assuming MPI is installed):
-```
-mpicc mpi_hello.c -o mpi_hello
-```
+This simple C++ code just prints "Hello World" to the console. To profile this with HPCToolkit, first the code needs to be compiled with `-g` flag for GNU compilers or `-G` flag for Intel compilers (or whatever the equivalent in other compilers), to include debugging information.
 
-Profiling command with HPCToolkit:
-```
-hpcrun ./mpi_hello
-```
+For example, a g++ compiled executable `hello_world` can be obtained with:
 
-This will generate profiling data that can be visualized using HPCToolkit's GUI tool for further analysis.
+#g++ -g -o hello_world hello_world.cpp
+
+HPCToolkit can now profile the application as follows:
+
+#hpcrun ./hello_world
+
+`hpcrun` is the command from hpctoolkit which profiles the application `hello_world` by sampling statistical data every time a timer expires or a hardware counter overflows.
+
+The collected measurement data can be presented using a variety of views through command `hpcviewer`.
+
+#hpcviewer ./hpctoolkit-hello_world-measurements-xyz
+
+Note: 'xyz' is pid of the last hpcrun execution which varies on each run. The `hpcviewer` brings up a GUI to analyze the profiling information.
+
+This is a very basic example and HPCToolkit can perform very advanced profiling by specifying event counters, multiplexing events, profiling MPI, Pthreads, OpenMP or CUDA applications etc.

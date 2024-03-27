@@ -1,23 +1,50 @@
-Use Case: Linear algebra software for high-performance computing.
+Use Case: ATLAS (Automatically Tuned Linear Algebra Software) is a high-performance software library for linear algebra. It provides a mature set of BLAS APIs for performing basic linear algebra operations such as vector addition, scalar multiplication, dot products, matrix multiplication, and more. 
 
-Code details and examples:
-- Input format: Matrix in text file
-- Code:
+Code details and examples: 
+
+Here is an example of using ATLAS to perform a basic linear algebra operation: matrix multiplication.
+
+Sample Input Files: No specific input file. It generally takes the array and matrix for multiplication.
+
+Format Required: As data is provided direct in the method call.
+
+Specifications and Details in Input Files: NA
+
+Code Snippet:
+
+```c
+#include "cblas.h"
+#include <stdio.h>
+
+int main() {
+
+    /* Declare the matrices and vectors */
+    double A[4] = {1,2,3,4};
+    double B[4] = {5,6,7,8};
+    double C[4] = {0,0,0,0};
+
+    /* Perform the multiplication: C = A * B, where A, B, and C are matrices */
+    cblas_dgemm(CblasRowMajor, CblasNoTrans, CblasNoTrans, 2, 2, 2, 1.0, A, 2, B, 2, 1.0, C, 2);
+
+    /* Print the result */
+    for(int i=0; i<4; i++) {
+        printf("%f ", C[i]);
+    }
+
+    return 0;
+}
+```
+
+Command to Run:
+
+Compile the code with gcc and -lcblas flag:
+
 ```bash
-./xatlas < input.txt
+gcc -o matrix_mult matrix_mult.c -lcblas
 ```
-- Sample input file (input.txt):
-```
-3 3
-1 2 3
-4 5 6
-7 8 9
-```
-- Output:
-```
-Performing matrix operations...
-Result:
-45 54 63
-54 66 78
-63 78 93
+
+Then run the compiled executable:
+
+```bash
+./matrix_mult
 ```

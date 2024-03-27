@@ -1,0 +1,36 @@
+Use Case: The R-XML library in R provides functions for the structural manipulation of XML documents. Use cases include data mining, data transformation, etc.
+
+Code details and examples: Code
+
+1. Reading an XML document into a tree structure:
+
+``` 
+library(XML)
+mydoc <- xmlTreeParse("mydoc.xml")
+```
+
+In the above snippet, "mydoc.xml" is a sample XML input file to be parsed. The format required for the XML file is as per XML standard, i.e., proper nesting of tags, attribute-value pairs within tags, etc.
+
+2. Extracting elements from the XML tree:
+
+```
+rootnode <- xmlRoot(mydoc)
+first_child <- xmlChildren(rootnode)[[1]]
+```
+
+Here, xmlRoot function is used to get the root of the XML document and xmlChildren is used to access the child nodes.
+
+3. Creating an XML document:
+
+```
+newdoc <- xmlTree()
+newdoc$addTag("sample", "Hello, World!", close = TRUE)
+```
+
+In the above code, xmlTree() creates an empty XML document and the addTag function is used to add tags to the XML document.
+
+Command to run the script (assuming it is saved as script.R on the command line):
+
+```
+Rscript script.R
+```

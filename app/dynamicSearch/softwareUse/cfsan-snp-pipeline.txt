@@ -1,0 +1,22 @@
+Use Case: The CFSAN SNP Pipeline can be used for SNP detection and SNP phylogeny building. The pipeline accepts raw Illumina FastQ data, mapped BAM format files, and previously called variants in VCF format from any source; it does not support PacBio or 454 data directly but can process variant calls made by external tools from that data.
+
+Code Details and Examples:
+
+Code: 
+Consider a single sample called Sample1, with the FASTQ files: Sample1_R1.fastq and Sample1_R2.fastq located in the fastq folder.
+
+To run the pipeline first, create an SNVPhyl input.yaml:
+
+```
+reference-file-name: reference.fasta
+fastq-files:
+ Sample1: [fastq/Sample1_R1.fastq, fastq/Sample1_R2.fastq]
+num-snps: 100
+min-coverage: 10
+```
+
+Then, run the pipeline:
+
+`snp-pipeline run --run-id MyRun --num-cores 8 --reference-file MyRef.fasta --fastq-dir ./fastq --output-dir ./SNPdata input.yaml`
+
+This command will use SNVPhyl to identify SNPs present in the file Sample1 relative to the reference genome MyRef.fasta. The pipeline will output a set of SNP data files to the directory ./SNPdata.

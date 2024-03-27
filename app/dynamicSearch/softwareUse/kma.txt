@@ -1,0 +1,25 @@
+Use Case: KMA is a sequence alignment and mapping tool commonly used for comparing and aligning reads from Next-Generation Sequencing data to a template database. It is particularly popular in the bioinformatic space for identifying and characterizing bacteria directly from metagenomic sequencing data. 
+
+Code details and examples: 
+
+Firstly, you would need to index your database file:
+```bash
+kma index -i database.fsa -o database
+```
+Where database.fsa is your input file in FASTA format, and database is the name of the output file.
+
+To perform the alignment and mapping:
+```bash
+kma -ipe forward.fasta reverse.fasta -o OUTPUT -1t1 -mem_mode -and -apm simple
+```
+Among the options:
+- -ipe forward.fasta reverse.fasta indicates the input files, which must be in FASTA or FASTQ format
+- -o OUTPUT specifies the output prefix 
+- -1t1 directs KMA to only keep the best scoring template for each read
+- -mem_mode instructs KMA to keep the symbol arrays in memory to speed up alignment
+- -and directs KMA to use AND when comparing kmers
+- -apm simple instructs KMA to use a basic aligning progressive method (APM) that is slightly slower but achieves good results.
+
+The template.fa file should have been previously indexed with kma index. The files template.fsa.b and template.fsa.b.offs are required to be in the same directory with template.fa file. The templates in the database should be in fasta format, where the ID line should contain first the name of the template, then a space, and finally the complete description of the template. 
+
+The OUTPUT.res.col contains the results.

@@ -1,19 +1,20 @@
-Use Case: Genome assembly using Canu
-Code details and examples:
-Canu is a software for assembling genomes using PacBio or Oxford Nanopore sequencing data. Here is an example of how to run Canu for genome assembly:
+Use Case: Canu is a popular bioinformatics tool that specializes in high-noise single-molecule sequencing (such as from Pacific Biosciences and Oxford Nanopore). With the use of a hierarchical assembly process, Canu can correct sequence errors, trim reads, and then assemble those pieces back together.  
 
-Input files required:
-- PacBio or Nanopore sequencing data files (e.g., fastq or fasta format)
+Code details and examples: 
+
+Input files: Canu necessitates sequence data in fasta or fastq format. Compressed files are acceptable as well. The tool will automatically figure out which kind of data it is dealing with based on the file extensions. The typical input file might be a fastq file from a sequencing machine such as Illumina MiSeq, and it would comprise of numerous sequencing reads, each with a unique identifier, sequence, and quality scores. 
+
+Example of the sequence in a fastq file:
+
+    @SEQ_ID
+    GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
+    +
+    !''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
 
 Command to run Canu:
-```
-canu -p myGenome -d myGenomeFolder genomeSize=5m -nanopore-raw nanopore_data.fastq
-```
 
-In the above command:
-- `-p myGenome` specifies the prefix for output files.
-- `-d myGenomeFolder` specifies the output directory.
-- `genomeSize=5m` specifies the estimated genome size (5 megabases in this example).
-- `-nanopore-raw nanopore_data.fastq` specifies the input Nanopore sequencing data file.
+(canu -p ecoli -d ecoli-auto genomeSize=4.8m -pacbio-raw pacbio.fastq) or (canu -p ecoli -d ecoli-auto genomeSize=4.8m -nanopore-raw nanopore.fastq)
 
-This is just a basic example, and Canu provides many options for genome assembly customization.
+Here, 'ecoli' signifies the assembly prefix which the output files will contain it. The 'ecoli-auto' is the directory for Canu to store the output files. Also, the ‘genomeSize’ is to specify the estimated genome size. The last part, either '-pacbio-raw' or '-nanopore-raw', is the command to define the specified sequencing data (either from the Pacific Biosciences or Oxford Nanopore technology) and its subsequent fastq file.
+
+Note: Canu will auto-detect available resources and configure itself to optimally run based on the resources of the system on which it is being run. For manual configuration, users can further specify their computing setup information.

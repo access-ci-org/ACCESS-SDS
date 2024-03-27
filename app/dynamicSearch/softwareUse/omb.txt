@@ -1,0 +1,40 @@
+Use Case: The Ohio MicroBoard (OMB) software is used to simulate the behaviour of digital microcircuit boards for testing and validation. It's a utility popular among electronics engineers for product development and prototypes. It is often used to simulate FPGA designs, testbench creation, timing analysis and so forth.
+
+Code details and examples: 
+
+Code:
+```
+// Sample VHDL code for a basic flip-flop circuit 
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity flip_flop is
+  port(
+    clk: in std_logic;
+    d: in std_logic;
+    q: out std_logic;
+    not_q: out std_logic
+  );
+end flip_flop;
+
+architecture behavior of flip_flop is
+begin
+  flip_flop: process(clk)
+  begin
+    if rising_edge(clk) then
+      q <= d;
+      not_q <= not d;
+    end if;
+  end process flip_flop;
+end behavior;
+```
+Input file: The input for the OMB software is VHDL code (.vhdl or .vhd files). In the above example, a D flip-flop is being simulated. The change in outputs q and not_q are controlled by the state of the input d and the CLK (clock) signal.
+
+To run this with OMB:
+1. Save the VHDL file (assuming flip_flop.vhdl)
+2. Open OMB and browse to the VHDL file
+3. Click 'Run' to simulate
+(Note: The exact commands may vary based on the OMB version and interface)

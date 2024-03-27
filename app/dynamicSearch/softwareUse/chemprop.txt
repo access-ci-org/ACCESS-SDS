@@ -1,36 +1,27 @@
-Use Case: Chemprop is a library for molecular property prediction using deep learning models.
+Use Case: Predicting molecular properties using a message passing neural network in chemprop
 
 Code details and examples:
 
-```python
-from chemprop.data import get_data, get_data_from_smiles
-from chemprop.features import get_available_features_generators, get_features_generator
-from chemprop.train import cross_validate, train, predict
-from chemprop.train.run_training import run_training
+Code:
 
-# Get data from a CSV file
-data = get_data(path='data.csv')
+The input file for ChemProp is a CSV file with SMILES strings. In the example, we have a simple molecule structure represented as a SMILES string, like:
 
-# Get data from SMILES strings
-data_from_smiles = get_data_from_smiles(smiles=['CCO', 'COC'])
+`Cn1cnc2c1c(=O)n(c(=O)n2C)C "compound1"`
 
-# Get available feature generators
-available_generators = get_available_features_generators()
+`CC(=O)OC1=CC=CC=C1C(=O)O "compound2"`
 
-# Get a specific feature generator
-features_generator = get_features_generator(generator='rdkit_2d')
+SMILES (Simplified molecular-input line-entry system) is a specification for representing the structure of chemical species using short ASCII strings.
 
-# Train a model using cross-validation
-results = cross_validate(data=data, config_path='config.json')
+After creating your dataset file, you can train a model using the following command:
 
-# Train a model
-train(model_type='MPNN', data=data, config_path='config.json', dataset_type='multiclass')
+`python train.py --data_path data.csv --dataset_type classification --split_type random --ensemble_size 5 --num_folds 5 --epochs 30 --batch_size 50`
 
-# Predict using a trained model
-predict(data=data, checkpoint_dir='checkpoints/model_checkpoints', features_path='features.npy')
+Where:
 
-# Run training directly from the command line
-!chemprop_train --data_path data.csv --config_path config.json
-```
-
-Note: The command `chemprop_train` can be run from the command line to train a model using data and configuration specified in the arguments.
+- `--data_path` is the path to your SMILES CSV file
+- `--dataset_type` classification or regression
+- `--split_type` how to split your data (random, scaffold, or time)
+- `--ensemble_size` number of models to train in the ensemble
+- `--num_folds` number of folds to use in cross-validation
+- `--epochs` number of training epochs
+- `--batch_size` size of mini-batches

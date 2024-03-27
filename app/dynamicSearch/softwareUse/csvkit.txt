@@ -1,0 +1,43 @@
+Use Case: CSVKit is a library of utilities for working with CSV, the king of tabular file formats. It is designed to be piped together on the command line or used as part of larger programs. The library comprises the following tools: in2csv, csvlook, csvclean, csvjoin, csvcut, csvstat, csvgrep, csvjson, csvpy, csvformat.
+
+Code details and examples:
+
+Code:
+
+Example 1: CSV to JSON conversion
+
+Input: A .csv file 'input.csv'
+Command to run: 
+```sh
+csvjson input.csv > output.json
+```
+
+Example 2: Extract specific columns from a CSV file
+
+Input: A .csv file 'input.csv'
+Command to run:
+```sh
+csvcut -c column1,column2 input.csv > output.csv
+```
+Here, column1 and column2 are the names of the columns you want to extract.
+
+Example 3: Join two CSV files based on a common column
+
+Input: Two .csv files 'file1.csv' and 'file2.csv'
+Command to run:
+```sh
+csvjoin -c "column1" file1.csv file2.csv > output.csv
+```
+Here, column1 is the name of the common column in both input CSV files. 
+
+Example 4: Get statistics from a CSV file
+
+Input: A .csv file 'input.csv' 
+Command to run:
+```sh
+csvstat input.csv 
+```
+
+Note: Includes information like column type, min, max, sum, mean, median, stdev, unique values, most/least common values for each column in the CSV. 
+
+All command to run examples are run in the command line. You can run the command in whatever your preferred terminal or shell that supports Python and CSVKit.

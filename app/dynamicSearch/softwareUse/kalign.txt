@@ -1,23 +1,27 @@
-Use Case: Multiple sequence alignment with kalign
+Use Case: Kalign is used for the alignment of multiple proteins or nucleotide sequences. 
 
-Code details and examples:
-Kalign is a multiple sequence alignment tool that can be used to align protein or nucleotide sequences.
+Code details and examples: 
 
-Input file format (fasta format):
+Sample input file format required: FASTA format, as Kalign uses standard FASTA sequence file as an input. For example:
+
 ```
->seq1
-MTEITAAMVKELRESTGAGMMDCKNALSETNGDFDKAVQLLREKGLGKAAKKADRLAAEG
-LVSVKVSDDFTIAAMRPSYLSYEDLDMTFVENEYKALVAELEKENEERRRLKDPNKPEHK
-IPQFASRKQLSDAILKEAEEKIKEELKAQGKPEKIWDNIIPGKMNSFIADNSQLDSKL
->seq2
-MVKEITAAMVKELRESTGSGMMDCKNALSETNGDGDKAVQLLREKGLGKAAEKRADRLAAEG
-LVSVKVSDDFTIAAMRPSYLSYEDLDMTFVENEYKALVAELEKENEERRRLKDPNKPEHK
-IPQFASRKQLSDAILKEAEEKIKEELKAQGKPEKIWDNIIPGKMNSFIADNSQLDSKL
+>Sequence_1
+MPEPAKSAPAPKKGSKKAVTKAQKKDGKKRKRSRKESYSVYVYKVLKQVHPDTGISSKAMGIMNSFVNDIFERIAGEASRLAHYNKRSTITSREIQTAVRLLLPGELAKHAVSEGTKAVTKYTSSK
+>Sequence_2
+MPEPAKSAPAPKKGSKKAVTKAQKKDGKKRKRSRKESYSTVYVYKVLKQVHPDTGISSKAMGIMNSFVNDIFERIAGEASRLAHYNKRSTITSREIQTAVRLLLPGELAKHAVSEGTKAVTKYTSSK
 ```
 
-Code to run kalign:
-```
-kalign input.fasta > output.aln
-```
+Command to run the alignment:
 
-In the above code snippet, replace 'input.fasta' with the name of your input file containing sequences in fasta format. The output will be written to 'output.aln'.
+```bash
+kalign -input fastafile.fasta -output alignfile.aln
+```
+This command takes 'fastafile.fasta' as the input file and writes the output sequence alignment to 'alignfile.aln'. 
+
+Specifications and details: The input sequences are in the FASTA format. The letters in the sequence represent individual amino acids (for protein sequences) or nucleotides (for DNA/RNA sequences). The '>' is used to specify the name (ID) of the sequence. Sequences in the file can be of variable lengths. 
+
+Code: The command is a simple one-liner that does not involve more heavy code. The flags -input specifies the input file name and -output specifies the output file name. 
+
+```bash
+kalign -input filename.fasta -output filename.aln
+```

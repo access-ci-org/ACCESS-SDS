@@ -1,0 +1,42 @@
+Use Case: FreeBayes is a variant detection algorithm tool used in genomics for calling variations in sequenced data. It is utilized to detect SNPs(Single Nucleotide Polymorphism), SVs(Structural Variations) or MNPs(Multi-nucleotide Polymorphisms) in the sequences.
+
+Code details and examples:
+
+Code:
+
+```
+# Sample command to run freebayes
+freebayes -f ref.fa aln.bam >var.vcf
+```
+
+Here, `ref.fa` is the reference sequence in FASTA format, `aln.bam` is the aligned sequence reads in Binary Alignment/Map (BAM) format, and `var.vcf` is the output file containing detected variants in Variant Call Format (VCF).
+
+Input File:
+
+1. Reference sequence file (`ref.fa`): This is the input reference sequence in FASTA format. An example of the format:
+
+```
+>seq0
+AGCTGACTGACTGACTG
+```
+
+2. Aligned sequence reads (`aln.bam`): This file contains aligned sequenced data in BAM format. BAM files are binary files and not human-readable but are usually created from human-readable SAM files. Here is an example SAM file that could be converted to BAM:
+
+```
+@SQ    SN:seq0    LN:17
+read1    0    seq0    1    60    17M    *    0    0    AGCTGACTGACTGACTG    * 
+```
+
+Output File:
+
+1. Detected Variants (`var.vcf`): The output file in VCF format contains the variations detected by FreeBayes. An example:
+
+```
+##fileformat=VCFv4.2
+#CHROM    POS    ID    REF    ALT    QUAL    FILTER    INFO    FORMAT    sample1
+seq0    3    .    T    G    .    .    .    GT    1/1
+```
+
+In this case, the variant is an SNP where the nucleotide T has been replaced with G at position 3 of the sequence.
+
+Remember, you must index your BAM file before using it with FreeBayes, which can be done with the `samtools index` command. You should also ensure that your FASTA reference file has been processed with the `samtools faidx` command for indexing.

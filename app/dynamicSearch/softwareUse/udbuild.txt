@@ -1,0 +1,49 @@
+Use Case: udbuild is utilized to build user-defined functions from source files for use in ANSYS FLUENT. Using udbuild, you can compile, link, and load your user-defined functions all in one step. For example, one might use this tool to create a User-Defined Function (UDF) that specifies a custom boundary condition for a simulation in Fluent.
+
+Code Details and Examples:
+The udbuild utility is called from the command line with the following structure: 
+
+```
+udbuild <libudfname>
+```
+
+E.g.,
+A common use case might be to build a UDF that specifies a varying boundary condition. 
+
+Code:
+Assume that we have a C source code file named `myfunction.c`. The UDF, `myfunction.c`, might look like this:
+
+```c
+#include "udf.h"
+
+DEFINE_PROFILE(my_boundary_condition, thread, position)
+{
+    face_t face;
+    real x[ND_ND];  /* this will hold the position vector */
+    real t = CURRENT_TIME;
+
+    /* loop over all faces in the thread passed in */
+    begin_f_loop(face, thread)
+    {
+        /* find the centroid of the face */
+        F_CENTROID(x,face,thread);
+
+        /* set the boundary condition at the face 
+           here, we specify a boundary condition that varies with position and time */
+        F_PROFILE(face, thread, position) = 5.0*x[0]*t;
+    }
+    end_f_loop(face, thread)
+}
+```
+
+The file describes a boundary condition that varies with both position and time. 
+
+Invoking `udbuild`:
+
+You would use the `udbuild` command-line utility to compile this UDF like so:
+
+```udbuild myfunction```
+
+This command tells udbuild to build a shared library from the source code in `myfunction.c`. This shared library can then be loaded into Fluent so that the function `my_boundary_condition()` is available for use in your simulations.
+
+Note: The format required is a compatible C or C++ source file. The source file is expected to include the `udf.h` header file which contains various macros, and function calls used in ANSYS Fluent. The compiled file will be a C or C++ shared library which can be loaded into ANSYS Fluent.

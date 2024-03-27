@@ -1,0 +1,24 @@
+Use Case: geneplotter is a Bioconductor package in R for visualizing gene expression data. It offers heat maps, MDS plots and other plots to visualize microarray data, RNA-Seq data and other forms of high dimensional data.
+
+Code details and examples: Code 
+
+Sample input file: Expression Set (ES) object in R. An ES object typically includes base level data (e.g. gene expression levels from a microarray), metadata about the experiment (e.g. experimental design), and often has gene annotation data included as well.
+
+The code snippet to create a heat map is as follows: 
+```R
+# Load the library
+library("geneplotter")
+
+# Assume we have a ExpressionSet object named "eset"
+eset <- read.table("eset.txt", header=T)
+
+# Create a heatmap
+heatmap(eset)
+```
+Command to run:
+```R
+Rscript script.R
+```
+Please note that this is a simplistic command, for real usage, more detailed and complex commands may be used.
+
+Details in input files: For heatmap, the input file should be a table where each row is a gene and each column is a sample. This will usually be a log-transformed count matrix from a microarray or RNA-Seq experiment. Metadata about the samples can be stored in the phenoData slot of the ES object. The ExpressionSet class in R is a convenient way to store all of this information together in one object.

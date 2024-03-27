@@ -1,0 +1,35 @@
+Use Case: sourmash is a command-line tool and Python library for computing MinHash signatures from DNA sequences, comparing them to each other, and plotting the results. This makes it possible to do large-scale pairwise comparisons of metagenome, genome, and transcriptome data.
+
+Code Details and Examples:
+
+Code:
+
+Before using sourmash, the signature of the sequence data needs to compute by using the `compute` command. 
+
+```
+sourmash compute *.fasta
+``` 
+
+The input file for this command is fasta and sourmash will create a `.sig` file for each input file. 
+
+The compare operation can be done on those `.sig` files:
+
+``` 
+sourmash compare *.sig -o comparison 
+```
+
+Then the comparison matrix can be plotted with the `plot` command: 
+
+```
+sourmash plot comparison
+```
+
+This will generate a `comparison.matrix.png` file, a heatmap that visually shows the comparison result. 
+
+You could also search for similar sequences in the databases, using the `search` command:
+
+```
+sourmash search sequence.sig -k 21 --dna --best-only
+```
+
+Using this command it will output the best matching sequences to the `sequence.sig` in the current local database. '-k 21' specifies the kmer size and '--dna' to limit to DNA signatures.

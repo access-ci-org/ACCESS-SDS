@@ -1,33 +1,27 @@
-I see you mentioned QEMU, which is an open-source machine emulator and virtualizer. It allows users to run operating systems and programs for one machine on a different machine. Below are some details and examples for using QEMU:
+Use Case: Running an ARM binary on a different machine (like x86).
 
-Use Case: Emulate an ARM-based system using QEMU
 Code details and examples:
-1. Create a sample ARM assembly program (e.g., `hello.s`):
-```arm
-    .global _start
-    _start:
-        mov     r7, #4
-        ldr     r0, =msg
-        mov     r2, #11
-        svc     0
 
-        mov     r7, #1
-        mov     r0, #0
-        svc     0
+Code:
 
-    msg:
-        .ascii  "Hello World\n"
+Suppose we have an ARM executable named `hello`. We want to run it on a QEMU emulator on an x86 machine.
+
+The binary file `hello` could be a simple "Hello, World!" program compiled for ARM. Its contents are irrelevant for the case, it's only important that it's a valid ARM binary.
+
+The command to run the ARM binary using QEMU would be:
+
+```
+qemu-arm -L /usr/arm-linux-gnueabi/ hello
 ```
 
-2. Assemble the program using the ARM GCC toolchain:
-```bash
-arm-linux-gnueabihf-as -o hello.o hello.s
-arm-linux-gnueabihf-ld -o hello hello.o
-```
+This command assumes that:
 
-3. Run the ARM binary in QEMU:
-```bash
-qemu-arm ./hello
-```
+- `qemu-arm` is the QEMU emulator for the ARM processor. This may vary depending on the version of ARM your binary is targeting.
 
-This is a simple example of using QEMU to emulate an ARM-based system and run an assembly program on it.
+- `-L` /usr/arm-linux-gnueabi/ allows us to specify the location of the "sysroot". This folder should contains the libraries needed by the `hello` binary. This may vary depending on your specific setup.
+
+- `hello` is the ARM binary we want to run.
+
+Several input/output/error redirections, environment variables and command line arguments can be passed after the binary name.
+
+Again, please note that paths, binary names and ARM versions may vary broadly depending on your specific needs and setup.

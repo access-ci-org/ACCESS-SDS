@@ -1,31 +1,43 @@
-Use Case: PCRE2 for regular expression matching  
-Code details and examples:  
-PCRE2 provides a library for regular expression matching and a set of command-line tools for working with regular expressions.  
+Use Case: PCRE2 is a library for Perl-compatible regular expressions. It is used for tasks that involve pattern matching, searching, and replacing in texts. 
 
-Sample input file (example.txt):
-```
-Hello, my email is user@example.com
+Code details and examples: 
+
+In the case of using PCRE2 with a C program:
+
+Here's an example of a basic code snippet for using PCRE2 in a C program. The program matches a pattern against an input string and prints the matches.
+
+```C
+PCRE2_SPTR pattern;
+PCRE2_SPTR subject;
+int errornumber;
+int rc;
+PCRE2_SIZE erroroffset;
+pcre2_code *re;
+pcre2_match_data *match_data;
+size_t start_offset = 0;
+
+pattern = (PCRE2_SPTR)"this";   
+subject = (PCRE2_SPTR)"this is a test";  
+re = pcre2_compile(pattern, PCRE2_ZERO_TERMINATED, 0, &errornumber, &erroroffset, NULL);
+    
+match_data = pcre2_match_data_create_from_pattern(re, NULL);
+
+rc = pcre2_match(re, subject, strlen((char *)subject), start_offset, 0, match_data, NULL);
+
+// … check rc, handle the match(es), and clean up
 ```
 
-Code:
-1. To compile a regular expression and match it against a file:
-```
-pcre2_compile '/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/' - < example.txt
+Command to compile and run the program (its name is assumed to be `main.c`): 
+
+```bash
+gcc -o main main.c -lpcre2-8
+./main
 ```
 
-2. To use PCRE2 tool to perform a regex match:
-```
-pcre2grep '\b[a-z]+\b' example.txt
-```
+Requirements for input:
 
-3. To replace all occurrences of a pattern with another pattern:
-```
-pcre2_substitute 's/old/new/g' - < example.txt
-```
+- Pattern (`pattern`): A Perl-compatible regular expression, given as a null-terminated string.
+- Subject (`subject`): The string to search within, given as a null-terminated string.
+- `start_offset`: The position in the subject string where the search should start. It defaults to 0, meaning the search starts at the beginning of the subject.
 
-4. To test a regular expression pattern against a string:
-```
-pcre2test
-```
-
-For detailed options and usage, refer to the PCRE2 documentation.
+The program needs to be compiled with the `-lpcre2-8` option to link the PCRE2 library. It will then match the pattern against the subject and return the matches.

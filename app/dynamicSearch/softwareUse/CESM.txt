@@ -1,10 +1,36 @@
-Use Case: CESM (Community Earth System Model) is a fully-coupled, community, global climate model that provides state-of-the-art computer simulations of the Earth's past, present, and future climate states.
+Use Case: CESM (Community Earth System Model) is a modular climate model primarily used in climate change and biogeochemistry research. 
 
 Code details and examples: 
-- CESM requires specific input data files for different model components (e.g., atmosphere, ocean, land, ice). These input files are provided as part of the model package when downloaded.
-- Model configurations and setup details are specified in a case configuration file, typically named "case.setup", which defines the experimental setup, runtime options, and other parameters.
-- To run CESM, you typically execute a script provided with the model package, such as "cesm.x", which reads the case configuration file and launches the model simulation. For example:
-  ```bash
-  ./cesm.x my_case.setup
-  ```
-- CESM also provides a graphical user interface (CESM-LE) for setting up and running model simulations, analyzing results, and visualizing output data.
+
+CESM uses namelist files as its primary input format. These files set variables that control the operation of the model. For example, a simple namelist file for controlling the length of the model run and the output might look like this:
+
+```
+&seq_timemgr_inparm
+ calendar = 'noleap'
+ start_ymd = 18500101
+ end_ymd = 18551231
+/
+&cam_inparm
+ empty_htapes = .true.
+ nhtfrq = -24
+ nhtfrq_rh0 = 0
+ fname_htape1 = 'h1'
+/
+
+&clm_inparm
+ hist_mfilt(1) = 12
+ hist_mfilt(2) = -1
+ hist_nhtfrq(1) = -8760
+ hist_nhtfrq(2) = 0
+/
+```
+
+Each section marked by "&name" and "/" sets variables for a specific model component. Here, seq_timemgr_inparm controls the main model timing, cam_inparm controls the atmosphere model output, and clm_inparm controls the land model output.
+
+To run the model, use the `./cesm` command in the main CESM directory:
+
+```
+./cesm my_case_name
+```
+
+This will create a new case with the given name, initialize all inputs with default settings, and then start the simulation. The model will automatically output to various netCDF files for each model component and timestep.

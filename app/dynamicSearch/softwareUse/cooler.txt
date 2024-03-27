@@ -1,0 +1,34 @@
+Use Case: Cooler is a Python library used for exploring and manipulating large scale genomic interaction matrices such as Hi-C datasets.
+
+Code details and examples:
+
+Code: 
+```
+import cooler
+
+# Open the .cool file
+c = cooler.Cooler('myData.cool')
+
+# The .cool file is a data matrix storing interaction frequencies between genomic loci
+# To get the total number of contacts in the file
+tot = c.info['sum']
+
+# To get the number of bins in the file
+n_bins = c.info['nbins']
+
+# To get the the number of nonzero elements in the file
+n_el = c.info['nnz']
+
+# The .cool file also includes genomic coordinates. 
+# You can get the chromosome table like so
+chroms = c.chromnames
+
+# To interact with the matrix data, use the matrix method.
+# This will generate the full Hi-C matrix
+mtx = c.matrix(balance=True).fetch('chr1')
+
+```
+
+The input file myData.cool should be a matrix of interaction frequencies between genomic loci obtained from a Hi-C experiment. This file can be obtained directly from your sequencing service, or can be generated from the raw sequencing data using a Hi-C processing pipeline like Juicer or HiC-Pro.
+
+Command to run: `python myscript.py` (Assuming the script is named myscript.py).

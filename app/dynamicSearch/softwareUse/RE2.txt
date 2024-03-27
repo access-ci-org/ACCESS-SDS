@@ -1,24 +1,31 @@
-Use Case: Regular expression library for C++
-Code details and examples: 
-```cpp
-#include <re2/re2.h>
-#include <iostream>
+Use Case: RE2 is a regularly used software library that provides efficient, fast and scalable pattern matching using regular expressions. It is typically used where one needs to parse large amounts of text to find or replace substrings that match a certain pattern.
 
-int main() {
-    RE2 re("(a|b)(c|d)");
-    std::string input = "ac";
-    
-    if (RE2::FullMatch(input, re)) {
-        std::cout << "Input matches the regular expression";
-    } else {
-        std::cout << "Input does not match the regular expression";
+Code: 
+
+### Code details and examples ###
+
+Particularly, in C++, an example of using RE2 might look as follows:
+
+    #include <re2/re2.h>
+    #include <string>
+    #include <iostream>
+
+    int main() {
+        std::string str = "hello re2";
+        RE2 re("re*");
+
+        if (RE2::FullMatch(str, re)) {
+            std::cout << "Match found!" << std::endl;
+        } else {
+            std::cout << "No match found." << std::endl;
+        }
+
+        return 0;
     }
 
-    return 0;
-}
-```
-To compile and run the code using RE2 library:
-```
-g++ my_program.cpp -o my_program -lre2
-./my_program
-```
+The command to compile and run the program (on a Unix-like system with the g++ compiler and RE2 library installed) is:
+
+    g++ -std=c++11 -lre2 example.cpp && ./a.out
+
+The sample input file is not relevant here; the input to RE2 is the strings in memory.
+The format required for the regular expression depends on what you are trying to match. For more specifications and details on the input, please refer to the official RE2 syntax guide: https://github.com/google/re2/wiki/Syntax.

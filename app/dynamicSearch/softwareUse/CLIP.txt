@@ -1,17 +1,23 @@
-Use Case: RNA-protein binding analysis
-Code details and examples:
-- Format of the input file for CLIP analysis:
-  - The input file should be in FASTQ format containing raw sequencing data from CLIP experiments.
-  
-- Example input file (input.fq):
-  ```
-  @SEQ_ID
-  GATCGGAAGAGCACACGTCT
-  +
-  IIIIIIIIIIIIIIIIIIIII
-  ```
+Use Case: Clip is a command-line clipboard utility that is used to manage the clipboard contents. It can be used to pipe the output of commands directly to the Windows clipboard.
 
-- Command to run CLIP analysis:
-  ```
-  clip_analysis --input input.fq --parameters params.txt
-  ```
+Code details and examples:
+
+Code:
+
+To copy the contents of a file to the clipboard:
+```
+clip < filename.txt
+```
+This command will copy the contents of filename.txt to the clipboard.
+
+To pipe the output of a command to the clipboard:
+```
+dir | clip
+```
+This command will list the contents of the current directory and copy the result to the clipboard.
+
+Specifications and Details in Input Files: Clip does not require any input files. The input is provided directly from the command line or piped from the output of another command. 
+
+Format required: Since the input is taken from the command line, there is no required format. The input can be any text or output from any command.
+
+Command to run them: The commands are run directly from the Windows command prompt. The format is "clip < input" to copy a file's contents to the clipboard, or "command | clip" to pipe the output of a command to the clipboard. In these examples, "input" is the name of the file to copy, and "command" is any command whose output you want to copy.

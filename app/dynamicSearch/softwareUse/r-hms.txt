@@ -1,0 +1,24 @@
+Use Case: Hms is an R package used for the representation of time-of-day values. It is primarily useful in handling and manipulating hours, minutes, and seconds stored data for data analysis purposes.
+
+Code Details and Examples: Here is an example of how you can use the hms package in R.
+
+```r
+# Code:
+# Load the hms package
+library(hms)
+
+# Create a HMS variable
+my_time = hms(hours = 12, minutes = 10, seconds = 30)
+print(my_time)
+
+# Output: 12:10:30
+
+# We can also specify time as character strings
+my_time_2 = hms("13:20:40")
+print(my_time_2)
+
+# Output: 13:20:40
+```
+Command to run: If you're running this code in a script file, you can execute the script in your terminal by running the command `Rscript <your_script_filename>.R`.
+
+Please note that the input needs to be in the format of hours, minutes, and seconds (either separately as integers in the hms function, or combined as a character string). The package does not support timezone-specific times or leap seconds. The return value is always in seconds, and higher units (such as minutes or hours) are ignored if more than 60 or 24 (respectively) are specified. Input is type-checked, and invalid types (such as logical or list) will result in an error.

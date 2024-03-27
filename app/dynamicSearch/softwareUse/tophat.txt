@@ -1,0 +1,29 @@
+Use Case: Tophat is often used in bioinformatics for aligning sequencing reads to a reference genome for the purpose of identifying splice junctions. It is especially useful for processing RNA-seq data.
+
+Code details and examples: 
+
+To use Tophat, you would need two input files: 
+
+1. A reference genome in FASTA format. This file usually uses the extension .fa or .fasta. The reference genome should be indexed by Bowtie before it can be used. Exact files like these do not normally come when you download the genome from public databases. 
+
+ Here is an example how Bowtie indexed reference genome files look like:
+ For genome.fa, the bowtie indexed files are genome.1.ebwt, genome.2.ebwt, genome.3.ebwt, genome.4.ebwt, genome.rev.1.ebwt, genome.rev.2.ebwt
+
+2. RNA-seq data files in FASTQ format. These files use the extension .fq or .fastq. They contain sequencing reads and corresponding quality scores. An example paired end RNA-seq data may be named like file1_1.fq and file1_2.fq. 
+
+Here is an example of FastQ format:
+```
+@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
++
+!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
+```
+
+To align RNA-seq reads to the reference genome using Tophat:
+
+Command:
+```bash
+tophat -G genes.gtf -o output_directory reference_genome_index files_1.fq file_2.fq
+```
+
+This command runs Tophat, taking genes.gtf as an optional parameter for a file of known gene structures, output_directory as the directory to contain the results, reference_genome_index as the genome reference index files created by Bowtie, and files_1.fq and file_2.fq as the sequence data to be aligned.

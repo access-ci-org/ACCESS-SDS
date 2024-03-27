@@ -155,8 +155,7 @@ def make_df():
 
     df = pd.DataFrame(data_dicts)
     df.fillna('',inplace=True)
-    return df
-'''
+
     rpAndSoftware = pd.read_csv('./dynamicSearch/rpAndSoftwares.csv')
     rpAndSoftware.rename(columns={'Software': 'software name'}, inplace=True)
 
@@ -176,8 +175,8 @@ def make_df():
     df.drop(empty_columns,axis=1,inplace=True)
 
     df.rename(columns={'overview':'Description'},inplace=True)
-'''
-   # return df
+    
+    return df
 
 df = make_df()
 

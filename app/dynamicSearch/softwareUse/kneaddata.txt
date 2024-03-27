@@ -1,0 +1,42 @@
+Use Case: Use KneadData to preprocess Next-Generation Sequencing (NGS) metagenomic data. This includes removing of human reads and low-quality sequences, trimming adapter sequences, etc.
+
+Code Details and Examples: Code 
+
+Format Required:
+KneadData requires two types of input files:
+
+1. Raw Fastq Files: These are the pair of Illumina reads. Typically ends with .fastq or .fq.gz
+2. Database Files: A set of indexed fasta files for human genome or microbiome reference indexes.
+
+Sample Input Files:
+1. Sample.fastq.gz: This file contains raw Illumina reads. It is in compressed gz format.
+
+Command to Run:
+```bash
+kneaddata --input Sample.fastq.gz --output Output_Directory --reference-db reference_db --threads 4
+```
+
+In this command, 
+
+--input: specifies the input raw reads file.
+--output: specifies the directory to hold the processed reads.
+--reference-db: specifies the genome reference database to use for data cleansing.
+--threads: specifies the number of threads to use for multiprocessing. 
+
+Note: If you have pair-end reads, use --input and repeat with each file: 
+
+```bash
+kneaddata --input Sample_1.fastq.gz --input Sample_2.fastq.gz --output Output_Directory --reference-db reference_db --threads 4
+```
+
+Remember to replace 'Sample.fastq.gz', 'Output_Directory', 'reference_db' with actual path of your raw data, output directory and reference db.	Resource usage is managed with '--threads'. 
+
+Code Snippets:
+
+The output files will be stored in the directory specified by '--output'. By default, KneadData keeps only the final cleaned data but log, intermediate and temporary files can be stored by using the '--store' and '--store-temp-output' options.
+
+The '--log' option gives the file to record the log: 
+
+```bash
+kneaddata --input Sample.fastq.gz --output Output_Directory --reference-db reference_db --log logfile
+```

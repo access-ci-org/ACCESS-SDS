@@ -1,35 +1,56 @@
-Use Case: ANTLR is a powerful parser generator for reading, processing, executing, or translating structured text or binary files. 
+Use Case: Use ANTLR (ANother Tool for Language Recognition) to generate a lexer, parser, and tree parser from a grammar that defines a programming language. This can be used, for example, to create new domain-specific languages or to parse existing ones.
 
-Code details and examples:
-ANTLR requires grammar files to define the language syntax. An example of a grammar file in ANTLR is shown below:
+Code details and examples: Code
+
+1. Below is sample grammar in ANTLRv4 used to define a simple programming language called Tiny:
+
+```antlr
+grammar Tiny;
+
+// parser rules
+prog:   (stat)+ ;
+
+stat:   expr NEWLINE                # printExpr
+    |   ID '=' expr NEWLINE        # assign
+    |   NEWLINE                    # newline
+    ;
+
+expr:   expr ('*'|'/') expr        # MultDiv
+    |   expr ('+'|'-') expr        # AddSub
+    |   INT                        # int
+    |   ID                         # id
+    |   '(' expr ')'               # parens
+    ;
+
+// lexer rules
+ID : [a-z]+ ;
+INT: [0-9]+ ;
+NEWLINE : '\r'? '\n' ;
+WS : [ \t]+ -> skip ;
 ```
-// Sample Grammar for Arithmetic Expressions
-grammar ArithmeticExpressions;
 
-// Parser Rules
-expression: additiveExpression;
-additiveExpression: multiplicativeExpression (('+' | '-') multiplicativeExpression)*;
-multiplicativeExpression: unaryExpression (('*' | '/') unaryExpression)*;
-unaryExpression: '-' atom | atom;
-atom: NUMBER;
-NUMBER: [0-9]+ ('.' [0-9]+)?;
+In this grammar:
+
+- '`prog`' represents a program, which is a series of statements.
+- Each '`stat`' can be an expression followed by a newline, an assignment, or just a newline
+- An '`expr`' can be a calculation, a number, a variable, or parentheses encompassing another expression.
+
+2. To generate Java classes for the lexer and parser defined by the above grammar, save the grammar in a file called Tiny.g4, and then execute the following command:
+
+```
+antlr4 Tiny.g4
 ```
 
-To generate a parser using ANTLR, you can use the ANTLR tool with the grammar file:
-```
-antlr ArithmeticExpressions.g4
-```
+3. To compile the generated Java classes, execute:
 
-After generating the parser, you can use the generated parser classes in your code to parse input files based on the defined grammar.
-
-ANTLR provides tools for generating parsers in various languages such as Java, C#, Python, etc. Make sure to check the ANTLR documentation for language-specific details and usage.
-
-Command to run the generated parser (for Java):
 ```
-javac *.java
-grun ArithmeticExpressions expression -tokens input.txt
+javac Tiny*.java
 ```
 
-In the above command, `grun` is a utility provided by ANTLR to test the parser on an input file (`input.txt`) for the rule `expression`. 
+4. To run the parser on an input file, execute:
 
-These are just basic examples to demonstrate the usage of ANTLR. For more complex and detailed use cases, refer to the ANTLR documentation and tutorials.
+```
+grun Tiny prog -guio input.tiny
+```
+
+Where `input.tiny` is a text file containing code in the Tiny language, and `-gui` instructs ANTLR to display a parse tree in a GUI window.

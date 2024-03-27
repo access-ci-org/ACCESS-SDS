@@ -1,0 +1,25 @@
+Use Case: The pyproj library is used in python for the transformations of geographic coordinates. It is primarily used in geographical information systems where geographical coordinates are transformed from one projection system to another. For example, one can transform longitude and latitude in the WGS84 datum to a projection coordinate system.
+
+Code details and examples:
+```
+Code:
+# import the library pyproj
+from pyproj import Proj, transform
+
+# Define a projection with Proj4 notation, in this case WGS84
+inProj = Proj(init='epsg:4326')
+
+# Define another projection in Proj4 notation, in this case Mercator Projection
+outProj = Proj(init='epsg:3857') 
+
+# Use the transform method of pyproj to convert from long/lat to Mercator
+x2,y2 = transform(inProj, outProj, 12.4923, 41.8902)
+print(x2, y2)
+```
+
+This code will run without any input files, you can just directly run this code using Python.
+
+Command to run it:
+```
+python filename.py # replace filename with the name of your python file
+```

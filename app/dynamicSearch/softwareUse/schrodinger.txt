@@ -1,0 +1,25 @@
+Use Case: Schroedinger is a suite of molecular modelling software that is used for drug discovery, materials research, and many more applications. The Maestro module in it, for example, is used for structure visualization, whereas the Desmond module is used for Molecular Dynamics Simulations.
+
+Code Details and Examples:
+
+Code: 
+The input file required to run a Desmond module in Schroedinger is a Molecular System file (.cms). It can be prepared using the Maestro module. Here is an example of a command to compute Molecular Dynamics Simulation using the Desmond module.
+
+```
+$SCHRODINGER/desmond --mode mdsim --inp in.cms --mem 5000 --mpi_np 4 --force_cuda FALSE
+```
+The above command runs a Molecular Dynamics Simulation using the Desmond module of Schroedinger on the input molecular system "in.cms" with a memory of 5000MB, using 4 MPI processes. The "--force_cuda FALSE" command forces the use of CPU over GPU.
+
+Use Case: Using 'Glide' for performing Ligand docking with receptor preparation and grid generation.
+
+Code Details and Examples:
+
+Code: 
+The Glide module in Schroedinger is used for Ligand docking. The input file required is a Grid Parameter file (.glide), which can be prepared using the Glide Receptor Grid Generation panel in Maestro. Here is an example command to run ligand docking:
+
+```
+$SCHRODINGER/glide -HOST localhost -TMPLAUNCHDIR -NJOBS 2 -ATTACHED ligand.glide
+```
+The above command runs the Glide module in Schroedinger on the input "ligand.glide" using two jobs and outputs the results in the current directory.
+
+Note – `$SCHRODINGER` is an environment variable which stands for the path of the Schroedinger software. Replace it with the actual path of your Schroedinger software. The commands provided above must be executed in a Unix/Linux terminal.

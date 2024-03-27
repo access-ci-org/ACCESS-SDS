@@ -1,0 +1,24 @@
+Use Case: Parasail, an implementation of Smith-Waterman local alignment algorithm, is used to find regions of similarity between two DNA or protein sequences. Prior to running the software, the user is expected to provide two input sequences for comparison.
+
+Code details and examples: Code.
+
+Contents of Input.txt:
+
+```
+>sequence1
+AGCTTAGCTAGCTACGA
+>sequence2
+CGTACGCTAGCTAGCT
+```
+
+Command to run: 
+
+```bash
+parasail_aligner -a smithwaterman -x -c 2 -i -d -k 1 Input.txt
+```
+
+In the command line console: The '-a' denotes the alignment algorithm to be used (smithwaterman), '-x' enables traceback, '-c 2' specifies the number of threads to be used for the computation, '-i -d' initiates the alignment process with a gap opening penalty of 1 and extension penalty of 1, and '-k 1' specifies the minimum score for reporting alignments. 'Input.txt' is the file that contains the sequences to be compared.
+
+Please note that the output varies based on the sequences used for comparison and the specified command line options. If you would like to use a different algorithm - for example, the Needleman-Wunsch global alignment, simply replace smithwaterman with needleman_wunsch e.g., "-a needleman_wunsch".
+
+Also note that the input file needs to be in fasta format: that is, the sequences should be preceded by a ">" followed by the sequence identifier. Directly following that line, without any new line or space characters in between, the DNA or protein sequence should start.

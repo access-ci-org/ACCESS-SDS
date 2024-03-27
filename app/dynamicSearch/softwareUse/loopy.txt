@@ -1,0 +1,28 @@
+Use Case: Loopy is used to create loopy diagrams, which are a type of graph often used in fields such as mathematics, computer science, linguistics, and more. A simple use case for Loopy could be to create a model illustrating feedback loops, for example in a predator-prey ecosystem.
+
+Code details and examples:
+
+Code:
+
+```python
+from loopy import make_kernel
+knl = make_kernel(
+         "{ [i]: 0<=i<n }",
+         "out[i] = 2*a[i]",
+     )
+
+n = 15   
+a = np.random.randn(n).astype(np.float32)
+out = np.empty(n, np.float32)
+knl(out, a)
+```
+
+In this simple example, you start by importing the necessary libraries (numpy and loopy). The `make_kernel` function is then used to create a new computation expressed in the data-parallel language OpenCL. The input to `make_kernel` specifies the iteration domain and the assignment inside the loop. This code computes the multiplication of 2 with each element of array 'a' and stores the result in 'out' array.
+
+The command to run the kernel is simply calling the name of the kernel with its arguments. In this case, the input file would be an array (a in the example) and the output of the program is another array.
+
+Input files:
+In the example above, the input is an array 'a' with random float numbers. The array could be of any shape and size, the size being specified by 'n' in the example.
+
+Additional Specs:
+Loopy supports a wide range of operations beyond just scalar multiplication, including reduction operations, complex array indexing schemes, and more. It also supports a fair degree of customization, including the ability to specify types for intermediate computations, to control data layout, and to use advanced hardware features like shared memory on GPUs. You can represent any loop-nest and array access pattern in Loopy.

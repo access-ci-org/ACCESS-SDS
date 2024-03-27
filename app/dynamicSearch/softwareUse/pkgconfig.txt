@@ -1,21 +1,49 @@
-Use Case: Retrieving information about installed libraries.
+Use Case: pkg-config is a helper tool used when compiling applications and libraries. It helps you insert the correct compiler options on the command line so an application can use libraries installed on the system, whether they are installed in the system standard directories or in a place chosen by the user.
 
-Code details and examples:
-  
-`pkg-config` is a helper tool used when compiling applications and libraries. It helps to retrieve information about the compiler flags needed to link a library.
+Code Details and Examples:
 
-To get the compiler flags for a specific package, you can use the following command:
+Code:
 
-```bash
-pkg-config --cflags --libs <package-name>
+`pkg-config` is a system which is typically used through the command line thanks to the pkg-config command.
+
+A short example of its use in a makefile might be:
+
+```
+CC = gcc
+CFLAGS = `pkg-config --cflags foo`
+LIBS = `pkg-config --libs foo`
+
+all:
+    $(CC) -o test test.c $(CFLAGS) $(LIBS)
 ```
 
-For example, to get information about the `gtk+-3.0` package, you can run:
+In this example, `pkg-config` with the `--cflags` option gets the compiler flags necessary for compiling something that uses the library 'foo'.
 
-```bash
-pkg-config --cflags --libs gtk+-3.0
+`pkg-config` with the `--libs` option gets the libraries necessary for linking a program that uses the library 'foo'.
+
+Here's an example of a `pkg-config` file for a made-up library called 'foo':
+
+```
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: Foo
+Description: The Foo library
+Version: 1.0.0
+Cflags: -I${includedir}/foo
+Libs: -L${libdir} -lfoo
 ```
 
-This will output the compiler flags needed to compile and link a program with the `gtk+-3.0` library.
+This tells `pkg-config` when it's asked about 'foo' where to find the headers files (`Cflags: -I${includedir}/foo`) and the location of the actual library for linking (`Libs: -L${libdir} -lfoo`). The `-lfoo` argument tells the compiler the library will need to be link against is called 'foo'.
 
-Note: The above command may vary based on the package you are querying.
+Running the command:
+
+Command to run this would be:
+
+```
+$ pkg-config --cflags foo
+```
+
+This command tells pkg-config to output the compiler flags that are necessary for compiling a C program with library 'foo'.

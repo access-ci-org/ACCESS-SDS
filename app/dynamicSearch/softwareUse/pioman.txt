@@ -1,0 +1,37 @@
+Use Case: Pioman is an open-source Python library to handle asynchronous I/Os in a multiprocess or multithread environment.
+
+Code details and examples:
+
+Code:
+
+```python
+import pioman
+
+# Define an event handler
+def my_handler(event):
+    print(event)
+
+# Instantiate the event manager
+manager = pioman.EventManager()
+
+# Subscribe to events
+manager.subscribe('my_event', my_handler)
+
+# Emit an event
+manager.emit('my_event', 'Hello, world!')
+
+# Run the event manager loop
+manager.loop()
+```
+
+This code subscribes to an event named 'my_event', and defines a handler for that event. The event handler simply prints whatever data is associated with the event. When the event is emitted, the handler is invoked.
+
+There are no specific input files required for this code. However, the data passed when emitting the event can be of any type.
+
+The command to run the code:
+
+```bash
+python3 my_script.py
+```
+
+Please replace "my_script.py" with the Python script file name. You also need to make sure the Pioman library is installed in the Python environment where the script is run.

@@ -1,0 +1,24 @@
+Use Case: Hyper-shell is used for queue management, resource monitoring and accounting in HPC environments. It allows the submission of jobs to a cluster, monitors their execution and gathers statistics about their resource usage.
+
+Code details and examples:
+
+Code Input File: job_script.sh
+The script should contain the following lines:
+
+```
+#!/bin/bash
+#SBATCH --job-name=test
+#SBATCH --output=test.out
+#SBATCH --error=test.err
+#SBATCH --time=01:00:00
+#SBATCH --ntasks=16
+#SBATCH --partition=normal
+
+module load <your-software-module>
+
+<your-software-command> <parameters>
+```
+
+Replace `<your-software-module>` with the module you wish to load and replace `<your-software-command> <parameters>` with the command to run your software along with any required parameters.
+
+Command to run the script: `sbatch job_script.sh` This will submit the job to the cluster. Please note that the account name and partition name in the `sbatch` command should match your HPC system specifications. This command will generate an id. You can check state of your job with command `squeue -j <job_id>`.

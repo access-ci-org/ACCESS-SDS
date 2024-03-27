@@ -1,0 +1,46 @@
+Use Case: Use PICRUSt2 (Phylogenetic Investigation of Communities by Reconstruction of Unobserved States) for metagenome prediction
+
+Code details and examples:
+
+Code:
+
+Input for PICRUSt2 is typically a pair of files: The first is a sequence file in FASTA format which should contain 16S rRNA gene sequences that have already been quality-controlled and clustered into OTUs. The second is a tab-delimited text file that maps each sequence to its corresponding OTU abundance.
+
+### Input file 1: FASTA file
+```
+>OTU_1
+ACTGCTAGCTAGCTCGATCGATCGCATGCATCTCGATCGCACTG
+>OTU_2
+ATCGATAGCTCGATCGATCGATCGATCGCTAGCTAGCTAGTACG
+...
+
+### Input file 2: OTU abundance
+OTU_ID    sample1    sample2    sample3    ...
+OTU_1     10         0          30         ...
+OTU_2     0          20         10         ...
+...
+```
+Command to run: Each individual step can be run with BASH on a Unix-based system:
+
+Step 1: Align the representative sequences: 
+```bash
+place_seqs.py -s marker.fasta -o out.tre -p 1
+```
+Step 2: Calculate gene family abundances using the above produced files with default parameters and a number of threads specified, here 1:
+```bash
+castor.py -i marker.fasta -o count_table.tsv -g out.tre -n -p 1
+```
+Step 3: Normalizes each sample in this file by its 16S rRNA gene copy number:
+```bash
+normalize.py -i marker.fasta -o normalize_out.tre
+```
+All together as one script:
+ ```bash
+#!/bin/bash
+set -e
+
+place_seqs.py -s marker.fasta -o out.tre -p 1
+castor.py -i marker.fasta -o count_table.tsv -g out.tre -n -p 1
+normalize.py -i marker.fasta -o normalize_out.tre
+```
+Save this script as `run_picrust2.sh` and run with `bash run_picrust2.sh`.

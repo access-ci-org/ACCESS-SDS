@@ -1,0 +1,25 @@
+Use Case: Ninja is a small build system with a focus on speed. It is useful in situations where small incremental builds are done often and fast turnaround times are needed. Ideal for preprocessing stage of large computational applications, building executables, etc.
+
+Code details and examples: Code
+
+Sample input file:
+
+ninja.build File:
+
+```
+rule gcc
+  command = gcc -c $in -o $out
+build foo.o: gcc foo.c
+build bar.o: gcc bar.c
+rule ar
+  command = ar rcs $out $in
+build libstuff.a: ar foo.o bar.o
+```
+
+This file defines three build rules, 'gcc' for compiling source files, 'ar' for building static library files, and 'bar.o' for building object files. It also defines several build edges that tell Ninja how to use these rules to create specific output files. Files are then built by invoking 'ninja' with the desired output files as goals.
+
+The command to run Ninja would be:
+
+```ninja libstuff.a```
+
+This would cause Ninja to build 'libstuff.a', which in turn requires it to build 'foo.o' and 'bar.o'. Each of these object files depends on its corresponding source file. Ninja will compute this dependency graph, check which files are out of date, and run the specified commands to bring everything up to date.

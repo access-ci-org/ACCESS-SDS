@@ -1,38 +1,43 @@
-Use Case: High Performance Computing software for MPI (Message Passing Interface) applications
+Use Case: MVAPICH2 (MPI-3 over InfiniBand, 10GigE/iWARP, and RoCE) is a popular open-source implementation of MPI (Message Passing Interface) that is often used to build parallel applications for high performance computing (HPC) systems. It can handle a variety of HPC workloads and is often utilized in scientific research environments.
 
-Code details and examples:
-MVAPICH2 is an MPI library designed for high-performance computing. Here is an example of running a simple MPI application using MVAPICH2:
+Code Details and Examples:
 
-1. Sample MPI application (hello.c):
+Code:
+
+The input in a typical MVAPICH2 application would be a program written in a language like C, C++, or Fortran that uses the MPI library. Here is an example of a simple MPI program in C, which uses the MPI_Send and MPI_Recv functions for communication.
+
 ```c
 #include <stdio.h>
 #include <mpi.h>
 
-int main(int argc, char *argv[]) {
-    int rank, size;
-
-    MPI_Init(&argc, &argv);
-    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-    MPI_Comm_size(MPI_COMM_WORLD, &size);
-
-    printf("Hello world from rank %d out of %d\n", rank, size);
-
+int main(int argc, char** argv) {
+    MPI_Init(NULL, NULL);
+    int world_size;
+    MPI_Comm_size(MPI_COMM_WORLD, &world_size);
+    int world_rank;
+    MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
+    char processor_name[MPI_MAX_PROCESSOR_NAME];
+    int name_len;
+    MPI_Get_processor_name(processor_name, &name_len);
+    printf("Hello world from processor %s, rank %d out of %d processors\n",
+           processor_name, world_rank, world_size);
     MPI_Finalize();
-
-    return 0;
 }
 ```
 
-2. Compiling the MPI application:
+Save this code in a file named `hello_world.c`. 
+
+To compile the program with mpicc from the MVAPICH2 toolkit:
+
 ```bash
-mpicc -o hello hello.c
+mpicc -o hello_world hello_world.c
+```
+To run the program with mpirun:
+
+```bash
+mpirun -np 4 ./hello_world
 ```
 
-3. Running the MPI application using MVAPICH2:
-```bash
-mpirun -np 4 ./hello
-```
+In this command, -np 4 tells MPI to use 4 processes.
 
-This will run the "hello" MPI application with 4 processes.
-
-Note: The actual command to run MPI applications may vary depending on your MPI installation and system configuration.
+Please note: This sample is very simple and does not involve any computation. Depending on the complexity of your program, more advanced features of MVAPICH2 and MPI (such as collective communication operations, non-blocking operations, virtual topologies, etc.) might be required.

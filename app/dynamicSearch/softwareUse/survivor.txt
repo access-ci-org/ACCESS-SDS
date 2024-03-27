@@ -1,0 +1,45 @@
+Use Case: USE 
+
+SURVIVOR is a software tool for simulating/evaluating structural variations. It is often used in the field of bioinformatics to simulate structural variations, merge structural variations from different callers, filtering, comparing part of the tool chain, and other functionalities related to structural variation.
+
+Code details and examples: CODE
+
+The input file for SURVIVOR is a parameter.txt file. The sample input file with corresponding specifications is as follows:
+
+# parameter file for SURVIVOR simSV
+2000 	# length of the read
+100 	# Number of reads
+0.1 	# SV to Read Ratio
+0.8 	# Insertion to SV ratio
+0.1 	# Deletion to SV ratio
+0.1  	# Duplication to SV ratio
+0.1 	# inversion to SV ratio
+0.1 	# Translocation to SV ratio
+10  	# length of the SV
+100 	# Standard deviation of the length
+20 	# Number of repetition
+100	# Standard deviation of the number of repetitions
+
+Given the above parameter file as input, the code snippet to simulate structural variations using SURVIVOR is:
+
+```
+./SURVIVOR 5 parameter.txt ./  > simulated.vcf
+```
+
+This command will generate a simulated.vcf file which contains the simulated structural variations based on the parameters defined in the parameter.txt file. Note that SURVIVOR should be located in the current directory to use it in this way.
+
+The other common use of SURVIVOR is to merge the structural variations from different callers into a single file. The input file for this process is a text file that contains the paths of VCF files, one per line. Sample input file format is as follows:
+
+/some/path/caller1.vcf
+/some/path/caller2.vcf
+/some/path/caller3.vcf
+
+Given this as input, the code snippet to merge structural variations is:
+
+```
+./SURVIVOR 1 file_list.txt 1000 1 1 0 50 merged.vcf
+```
+
+This will generate a merged.vcf file by merging the structural variations from different callers.
+
+Please note that you need to replace "file_list.txt" and "merged.vcf" and other numerical values in the command according to your requirement.

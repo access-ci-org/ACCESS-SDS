@@ -1,0 +1,26 @@
+Use Case: NanoPlot is used to visualize various aspects from long-read sequencing data, including quality control, plotting read lengths, and mapping rates.
+
+Code details and examples:
+
+Code:
+
+NanoPlot is called from the command line. 
+
+Command Line Interface (CLI) command:
+```bash
+NanoPlot --fastq reads.fastq --loglength -o output_directory
+```
+Input file format:
+NanoPlot requires a FASTQ or BAM formatted file as input. The input file should contain the sequencing reads.
+
+Input file example (FASTQ format):
+```
+@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
++
+!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
+```
+Note: "@" is a sequence identifier, the second line is a sequence of nucleotides, "+" is a quality score identifier, and the final line is a quality score string.
+
+Description:
+Reads.fastq is the input file which contains your sequencing data. The "--loglength" argument tells NanoPlot to create a logarithmic plot of read length. "-o output_directory" is the directory where NanoPlot outputs the plots.

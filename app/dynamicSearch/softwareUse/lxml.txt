@@ -1,0 +1,34 @@
+Use Case: lxml is a Python-based library which allows for easy handling and manipulation of XML and HTML files. It facilitates the parsing of these files, extraction and modification of data, and creating new HTML/XML files.
+
+Code details and examples:
+
+Code:
+```python
+from lxml import etree
+
+# Parse the XML file
+tree = etree.parse('example.xml')
+
+# Find elements using XPath
+result = tree.xpath('//element')
+
+# Loop through elements and print the text
+for r in result:
+    print(r.text)
+```
+
+Input Files:
+
+An XML file called 'example.xml'. Here's a simple example:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <element>Example text</element>
+</root>
+```
+In the above code, the lxml library parse the XML document. The XPath method is then used to select all nodes with the name 'element'. The text of these elements is printed.
+
+Command to Run:
+
+If the above code is saved in a Python script 'script.py', it can be run using the following command: `python script.py`.

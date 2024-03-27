@@ -1,20 +1,42 @@
-Use Case: Use biocontainers for creating reproducible computational environments for bioinformatics tools.
+Use Case: BioContainers is an open-source and community-driven framework which provides the infrastructure necessary for the creation, management and distribution of bioinformatics containers. These are ready-to-use software packages that include everything needed to run a piece of software, including the code, a runtime, libraries, environment variables, and config files.
 
-Code details and examples: 
-1. Pulling a biocontainer image:
-```
-$ docker pull quay.io/biocontainers/bwa:0.7.17--h9bb3ff6_7
-```
+Code details and examples: Code
 
-2. Running a biocontainer image:
-```
-$ docker run -v /path/to/data:/data quay.io/biocontainers/bwa:0.7.17--h9bb3ff6_7 bwa index /data/example.fasta
-```
+Given below is an example of usage of a Biocontainers image.
 
-3. Using Singularity with a biocontainer image:
+1.Input files:
+
+Here is an example of a FASTQ file that could be used as an input:
 ```
-$ singularity exec docker://quay.io/biocontainers/bowtie2:2.4.4--py39h295c915_2 bowtie2 -x /path/to/index -U /path/to/reads.fastq -S /path/to/output.sam
+@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
++
+!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
 ```
 
-4. Biocontainers registry website: https://biocontainers.pro/#/
+2.Format required:
+
+Biocontainers use a variety of formats, as they support many different bioinformatics tools. The format would depend on the specific tool you plan to use. For instance, for sequence analysis tools, the common formats are FASTQ, SAM/BAM for NGS data, PDB for protein structures, etc.
+
+3.Any specifications and details in input files:
+
+The specific details depend greatly on the tool being used. For NGS tools, quality scores, sequences, and sequence identifiers would be essential.
+
+4.Code snippets:
 ```
+#!/bin/bash
+docker pull biocontainers/bwa:v0.7.17-3-deb_cv1
+docker run biocontainers/bwa:v0.7.17-3-deb_cv1 bwa mem <reference_genome.fa> <read1.fq> <read2.fq>
+```
+
+In this case, the names reference_genome.fa, read1.fq, and read2.fq should be replaced by your actual file names.
+
+Command to run:
+```
+# pull the biocontainers image
+docker pull biocontainers/bwa:v0.7.17-3-deb_cv1
+# run the software from the container
+docker run biocontainers/bwa:v0.7.17-3-deb_cv1 bwa mem <reference_genome.fa> <read1.fq> <read2.fq>
+```
+
+This will run the bwa mem algorithm for aligning sequencing reads against a reference genome. The reference genome and the sequencing reads are to be provided by the user in the form of .fa and .fq files respectively.

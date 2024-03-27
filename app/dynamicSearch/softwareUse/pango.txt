@@ -1,35 +1,51 @@
-PANGO font system used for rendering text. Here are some details and examples for PANGO:
+Use Case: pango is a library that enables the layout and rendering of text, with an emphasis on internationalization. Pango can be used in any software where displaying high-quality text is a requirement.
 
-Use Case: Text rendering with PANGO
 Code details and examples:
-```
+
+Code Sample 1:
+
+```python
 import gi
 gi.require_version('Pango', '1.0')
+from gi.repository import Pango
+
+description = Pango.FontDescription.from_string("Sans Bold 12")
+print(description.get_family())
+print(description.get_style())
+print(description.get_variant())
+print(description.get_weight())
+print(description.get_stretch())
+print(description.get_size())
+```
+
+  In this python pango program, we are writing a string "Sans Bold 12" which represents the type of font, weight of font, and the size of font to the 'from_string' function which in turn populate the attributes of 'description' object. Then we are printing the font, style, variant, weight, stretch and size details of the given font description.
+
+Code Sample 2:
+
+```python
+import gi
 gi.require_version('PangoCairo', '1.0')
-from gi.repository import Pango, PangoCairo
-import cairo
+from gi.repository import PangoCairo
 
-def render_text():
-    surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, 200, 100)
-    context = cairo.Context(surface)
+# Creating a Cairo Context for Drawing Device
+surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, 240, 80)
+context = cairo.Context(surface)
 
-    layout = PangoCairo.create_layout(context)
-    Pango.layout_set_text(layout, "Hello, World!", -1)
-    
-    font_desc = Pango.FontDescription("Sans 12")
-    Pango.layout_set_font_description(layout, font_desc)
-    
-    PangoCairo.show_layout(context, layout)
+layout = PangoCairo.create_layout(context)
+layout.set_text("Hello, World!", -1)
+PangoCairo.update_layout(context, layout)
+PangoCairo.show_layout(context, layout)
 
-    surface.write_to_png("output.png")
-
-render_text()
+surface.write_to_png("hello.png")
 ```
 
-In this code snippet, we are using the Pango library for text rendering with Cairo. The code creates a Pango layout, sets the text to "Hello, World!", sets a font description (Sans 12), and then renders the text onto a Cairo surface, which is then saved to an output PNG file.
+  In this python pango and cairo program, we are creating a surface for the cairo context. After setting the text to "Hello, World!", the layout is updated with the cairo context, the layout is shown using cairo context. Finally, the content is written to a PNG (Portable Network Graphics) file.
 
-To run this code, assuming you have Python and the necessary Python libraries installed, you can simply save it to a file (e.g., render_text.py) and run it using a Python interpreter:
+Running Command:
 
-```
-python render_text.py
+Python scripts can be run with the `python` command in the terminal.
+For example, if your script was named `script.py`, you could run it with:
+
+```shell
+python script.py
 ```

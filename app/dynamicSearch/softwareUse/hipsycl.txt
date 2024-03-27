@@ -1,0 +1,94 @@
+Use Case: Run a simple single-source computation.
+
+Code Details and Examples:
+
+1. Create a source file named `vector_add.cpp` 
+
+Code:
+
+```
+#include <CL/sycl.hpp>
+
+// Simple vector addition kernel
+void add_vectors(cl::sycl::queue &device_queue, int *a, int *b, int *c, const int n)
+{
+    cl::sycl::range<1> nums{ n };
+
+    auto a_buffer = cl::sycl::buffer<int, 1>{ a, nums };
+    auto b_buffer = cl::sycl::buffer<int, 1>{ b, nums };
+    auto c_buffer = cl::sycl::buffer<int, 1>{ c, nums };
+
+    device_queue.submit([&](cl::sycl::handler &cgh){
+       auto a_ptr = a_buffer.get_access<sycl::access::mode::read>(cgh);
+       auto b_ptr = b_buffer.get_access<sycl::access::mode::read>(cgh);
+       auto c_ptr = c_buffer.get_access<sycl::access::mode::write>(cgh);
+
+       // Execute the kernel
+       cgh.parallel_for<class add_vectors>(nums, [=](sycl::id<1> pos){
+           c_ptr[pos] = a_ptr[pos] + b_ptr[pos];
+       });
+    });
+}
+
+int main(int, char**)
+{
+    const int n = 1 << 20;  // 1M elements
+    int *a = new int[n];
+    int *b = new int[n];
+    int *c = new int[n];
+
+    // Initialize vectors a and b with random ints
+    std::random_device rnd_device;
+    std::mt19937 mersenne_engine{ rnd_device() };
+    std::uniform_int_distribution<int> dist{1, 100};
+    auto gen = [&dist, &mersenne_engine]() {
+        return dist(mersenne_engine);
+    };
+
+    std::generate(a, a + n, gen);
+    std::generate(b, b + n, gen);
+
+    // By default, the queue is constructed with the default selector
+    // In a typical SYCL application, a device is selected by either a default selector or a custom one
+    cl::sycl::queue device_queue;
+
+    add_vectors(device_queue, a, b, c, n);
+    
+    // At this point our host code continues to execute
+    // The kernel is not guaranteed to have finished executing
+
+    // To ensure synchronization between host and device
+    // we introduce a buffer::wait method call
+    device_queue.wait();
+
+    // Verify the output
+    bool correct = true;
+    for(int i = 0; i < n; i++) {
+        if(c[i] != a[i] + b[i]) {
+            correct = false;
+        }
+    }
+
+    device_queue.wait();
+
+    delete[] a;
+    delete[] b;
+    delete[] c;
+
+    return correct ? 0 : 1;
+}
+```
+
+2. Compile the source code:
+
+If your source->sycl application is in your current working directory, you can compile it with:
+```
+syclcc-clang vector_add.cpp -o vector_add
+```
+
+3. Run the binary:
+You just need to run the output binary file:
+
+```
+./vector_add 
+```

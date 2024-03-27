@@ -1,0 +1,26 @@
+Use Case: Phrap is widely used as a foundational tool in gene sequencing projects and genomic research for assembling sequence reads into longer, more contiguous sequences.
+
+Code details and examples:
+
+Code:
+
+An example of an input file for running phrap would look something like this (in FASTA format):
+
+```
+>sequence1
+ACTGACTGACTGACTGACTGACTG
+>sequence2
+CTGACTGACTGACTGACTGACTGA
+```
+
+Now you want to assembly this sequences you can run `phrap`:
+
+Command
+
+```shell
+phrap sequence_data.fasta
+```
+
+The program will generate several output files. The file `.contigs` will contain the assembled sequences, the file `.singlets` will contain the sequences which could not be assembled. The `.view` file is a concatenation of the .ace and .contigs file. 
+
+Please note all these commands and file names are examples and the actual file input / commands might differ based on the actual data and software version used.

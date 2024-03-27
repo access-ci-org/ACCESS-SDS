@@ -1,0 +1,29 @@
+Use Case: Development of a software, web application or utilities using Toolkit.
+
+Code details and examples:
+
+For example, usage of a graphical user interface Toolkit such as Tkinter in Python.
+
+Code:
+
+```python
+import tkinter as tk
+
+def create_window():
+    window = tk.Tk()
+    label = tk.Label(window, text="Hello World")
+    label.pack()
+    window.mainloop()
+
+create_window()
+```
+
+Input file: Python code file (.py)
+
+Format required: The commands should be written in structured Python syntax.
+
+Specifications and details in input files: Python instructions given in a structured manner which in this case will create a new Window displaying "Hello World".
+
+Command to run: python <filename>.py
+
+Provide the filename where the python code is written.

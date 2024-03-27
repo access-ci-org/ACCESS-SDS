@@ -1,0 +1,32 @@
+Use Case: Rcpp is widely used in finance, bioinformatics, and other areas for high-performance computations in R. Rcpp provides a connection between R and C++. This library provides a way to write C++ functions in a way that they're callable from R as regular functions.
+
+Code details and examples:
+
+Code:
+
+```R
+// This is the C++ function you want to call from R
+
+#include <Rcpp.h>
+using namespace Rcpp;
+
+// [[Rcpp::export]]
+NumericVector timesTwo(NumericVector x) {
+  return x * 2;
+}
+```
+
+This is written in C++ but can be called from R thanks to the Rcpp package. Here we define a function timesTwo which takes a numeric vector x and returns x * 2.
+
+```R
+// This is how you call your C++ function from R
+
+library(Rcpp)
+sourceCpp("timesTwo.cpp")
+
+timesTwo(1:4)
+```
+
+Here we load Rcpp, compile the function timesTwo (which is in the file timesTwo.cpp), and then call it from R with a vector argument of 1:4. The result will be the vector (2, 4, 6, 8). 
+
+Notice that there's no input file here, but rather direct interaction with the R environment. This is typical for Rcpp; you're usually linking C++ functionality directly into R, rather than running standalone programs that require input files. However, you could certainly write a C++ function that reads an input file if you need to, and call it from R in exactly the same way. The file format would depend on your requirements.

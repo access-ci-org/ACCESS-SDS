@@ -1,0 +1,48 @@
+Use Case: aTRAM is a program that is used to assemble Target Restricted Assembly Method (aTRAM) libraries. It is especially useful in molecular biology and genetics to study specific genes and their functions.
+
+Code details and examples: Code: 
+
+aTRAM uses several input files and parameters. Let's consider a basic use-case where the aTRAM library is already created, and we want to assemble sequences from this library. 
+
+Sample Input file -  The input library is a .json file which contains aTRAM library metadata, like "library": "/path/to/aTRAM_library", and "reads": "/path/to/reads.fastq" or "reads": "/path/to/reads.bam".
+
+For a .fastq reads file:
+
+```json
+{
+  "library": "/path/to/aTRAM_library",
+  "reads": "/path/to/reads.fastq"
+}
+```
+
+For a .bam reads file:
+
+```json
+{
+  "library": "/path/to/aTRAM_library",
+  "reads": "/path/to/reads.bam"
+}
+```
+
+Specifications of input files - 
+
+1. Library JSON file: The .json file should point to the location of the aTRAM library and to the read data (reads can be in .fastq or .bam format). More specific control can be represented in the JSON, including options for assembler, blast_type, and step parameters.
+
+2. Read file(s): The files can be in FASTQ or BAM format. If the sequencing reads are paired and in two separate files, both files should be indicated in the input .json.
+
+Code to run:
+
+To assemble sequences from an existing aTRAM library with a fasta file of contigs, use the --target-file parameter and the --assemble parameter with the assembler of your choice:
+
+```bash
+atram.py -b '/path/to/aTRAM_library' -q '/path/to/reads.fastq' -t '/path/to/contigs.fasta' --log-file '/path/to/log' --assemble 'velvet'
+```
+
+In this command: 
+
+- '-b' indicates the aTRAM library,
+- '-q' indicates the reads file (could also be -i for BAM format),
+- '-t' stands for the target file and 
+- '--assemble' specifies the assembler (in this case, 'velvet'; other options could be 'spades', 'trinity', etc.). 
+
+The log file path is specified with '--log-file'. Replace '/path/to/aTRAM_library', '/path/to/reads.fastq' '/path/to/contigs.fasta', '/path/to/log' with the actual directories and file paths.

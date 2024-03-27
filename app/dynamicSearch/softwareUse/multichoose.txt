@@ -1,0 +1,29 @@
+Use Case: To calculate combinations with repetitions allowed, the python library 'multichoose' can be employed. This tool allows you to find all the possible combinations (with repetition) for any list of elements and the number of repetitions allowed. It can be particularly useful in fields such as combinatorics, probability theory and statistics.
+
+Code Details and Examples:
+
+This is a Python library that can be used directly without any specifications in input files.
+
+Code:
+
+```python
+from sympy.functions.combinatorial.numbers import multichoose
+
+# create a multiset
+multiset = [1, 2, 2, 3]
+
+# choose 2 items from the multiset
+n = 2
+
+# use the multichoose function
+result = multichoose(multiset, n)
+
+# print the result
+print(f'The multichoose result is: {result}')
+```
+
+The output will then be a list of possible combinations with repetitions. Note that the order does not matter in this library, as it treats [1, 2] as the same as [2, 1].
+
+The command to run the file depends on the name of the python file. If for instance, the file is saved as 'multi.py' on the desktop, one can navigate to the desktop using the command prompt, and then input 'python multi.py' to run it.
+
+Command: python multi.py

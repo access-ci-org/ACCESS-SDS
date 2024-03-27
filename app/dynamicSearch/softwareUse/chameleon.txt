@@ -1,0 +1,29 @@
+Use Case: Chameleon is used for software testing on HPC systems through emulation techniques. It is particularly great for simulating large-scale computations to test the scaling of the codes. The input files used commonly are binary executable files compiled through HPC compilers and an optional configuration file in JSON format that includes parameters like number of MPI processes, threads, network topology among others.
+
+Code details and examples: 
+
+Let's say we have an executable file named "my_program" and a configuration file "config.json".
+
+Step 1: Create a JSON configuration file named config.json
+
+Content of the config.json file:
+
+```
+{
+  "mpi_processes": 32,
+  "threads": 16,
+  "network_topology": "dragonfly"
+}
+```
+
+This configuration file sets up the emulation environment to have 32 MPI processes, each with 16 threads and the network topology simulated is dragonfly. 
+
+Step 2: Run the emulation 
+
+Code to run the emulation is a shell command:
+
+`chameleon --config config.json my_program`
+
+This command will start Chameleon with the specified configuration file and execute the binary file "my_program".
+
+Note: Always use absolute paths for the executable and the configuration file while running the Chameleon.

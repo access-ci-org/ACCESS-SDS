@@ -1,0 +1,27 @@
+Use Case: Cray CCE (Cray Compiler Environment) is often used in supercomputing environments for parallel programming. It can be leveraged in the writing of code that can be distributed across a cluster of computers in order to maximize the computational efficiency.
+
+Code details and examples: Code
+
+Assuming there is a Fortran file called "hello.f90" with a simple hello world program.
+
+```fortran
+program hello
+    print *, "Hello world!"
+end program hello
+```
+
+To compile this Fortran source file using Cray CCE compiler, the CC and FTN environment variables should point to the correct compilers. The Fortran compiler can be used with:
+
+```
+CC=cc
+FTN=ftn
+${FTN} -o hello hello.f90
+```
+
+The preceding commands will create an executable called hello. To run the executable do:
+
+```
+aprun -n 1 ./hello
+```
+
+The "-n 1" argument to aprun specifies that 1 processing element should be used to run the job.

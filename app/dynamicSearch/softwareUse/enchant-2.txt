@@ -1,0 +1,36 @@
+Use Case: Use enchant-2 for spelling correction in multiple languages or word suggestions. It is useful in applications such as text editors, spell checkers, and applications that require dictionary check.
+
+Code Details and Examples: Code
+
+Import the enchant library:
+```python
+import enchant
+```
+
+To check if a word exists in a specific dictionary:
+```python
+d = enchant.Dict("en_US")
+print(d.check("Hello"))  # Returns True if the word exists
+```
+
+The input file should contain the words to be checked. Each word should be on a new line. For example,
+```
+Hello
+Halp
+```
+
+To suggest possible corrections for a misspelled word:
+```python
+print(d.suggest("Hllo"))  # Returns a list of suggestions
+```
+
+You can also add to the dictionary:
+```python
+d.add("Ninjanuity")
+```
+
+The command to run a python file containing enchant code would be:
+```bash
+python filename.py
+```
+It's important to note that the 'enchant' library needs the dictionaries of the languages you intend to use. The dictionaries are not provided by 'enchant' itself.

@@ -1,0 +1,34 @@
+Use Case: Use chewBBACA for allele calling in microbial genome sequences. 
+
+Code details and examples: Code 
+
+In order to use chewBBACA, you need three input files. 
+
+1. The genome sequences. These should be in the FASTA format and each sequence should be in a separate file. The names of the files should match the names of the sequences. 
+
+2. The schema. This is a file that contains the definition of the alleles. It should be in the Prodigal training file format. 
+
+3. The training file. This is a file that contains the instructions for allele calling. It should be in the Prodigal training file format.
+
+Example for schema (Prodigal training file):
+```
+> Allele1
+ATGGTACCAGATGACCTGACTTCCAGCTCCGATCGACACACATCAAGGAGAACCTAAGGAGAACCTCATGATGACAGCTTGATCCGAG
+> Allele2
+ATGGTACCGGAAGTCCCGACCCCAAGTCGAACCTGGACCCAGAAGCTCCGACGAGAAGCTGACCAGCTTGACCGATCCGAG
+```
+Example for training file (Prodigal training file):
+```
+DIVISION_CODON_POSITIONS_START=20;
+DIVISION_CODON_POSITIONS_END=30;
+CODON_POSITIONS_START=1;
+CODON_POSITIONS_END=3;
+```
+
+Command to run chewBBACA:
+
+`chewBBACA.py AlleleCall -i <input_files> -g <genes_files> -o <output_files> --cpu <cpu>`
+   
+In this command replace `<input_files>`, `<genes_files>`, `<output_files>` and `<cpu>` with the paths to your input genome sequences file, schema, output path and number of processes to use, respectively.
+   
+In the end, you'll find various output files, including a file with an allele call for each genome sequence.

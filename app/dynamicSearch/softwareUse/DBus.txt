@@ -1,12 +1,25 @@
-Use Case: Inter-process communication
-Code details and examples:
-- D-Bus is a message bus system, which provides a way for different processes to communicate with each other. It is commonly used in desktop environments for communication between applications.
+Use Case: D-Bus is a messaging tool for software-based on the Linux desktop stack. It is effective in building a single API that can function across multiple bus systems. D-Bus is best for applications that involve communicating with various parts of the system, such as detecting system status, configuring network interfaces, etc.
 
-Sample input files:
-- D-Bus does not require specific input files. Communication between processes is done using method calls, signals, and properties.
+Code details and examples: Code
 
-Code: 
-- D-Bus can be used via its command-line tools or programming libraries in various languages such as Python, C, and Java. Below is an example of using the `dbus-send` command-line tool to send a message on the session bus:
-```bash
-dbus-send --session --dest=org.freedesktop.DBus --type=method_call --print-reply /org/freedesktop/DBus org.freedesktop.DBus.ListNames
+Input file: D-Bus doesn’t use traditional file inputs, instead it works by sending and receiving messages between applications. The messages are structured data defined by a schema. The D-Bus specification contains the XML schema definition.
+
+Code Snippet:
+
+```python
+import dbus
+
+bus = dbus.SessionBus()
+
+helloservice = bus.get_object('org.freedesktop.SampleService', '/org/freedesktop/sample/object')
+hello = helloservice.get_dbus_method('hello', 'org.freedesktop.SampleInterface')
+
+print (hello())
 ```
+
+Command to run the code:
+
+```shell
+python dbus_example.py
+```
+In this script, we're connecting to a hypothetical D-Bus service 'SampleService', getting an object '/sample/object' from it, calling the 'hello' method on this object which belongs to the 'SampleInterface', and printing the result. The method call 'hello' would correspond to the 'hello' element in the service's XML schema. In practice, the service and interface names, object path, and method would be decided by the service you're connecting to.

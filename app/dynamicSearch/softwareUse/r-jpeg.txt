@@ -1,0 +1,39 @@
+Use Case: The `r-jpeg` is a R package used for reading and writing JPEG images. It provides an easy and simple way to read, write and display bitmapped images stored in the JPEG format. This package can be useful in various fields such as data analysis, image processing and computer vision where handling of JPEG images is required. 
+
+Code details and examples:
+
+Code:
+```R
+# Load
+library(jpeg)
+ 
+# Read the jpeg file
+img <- readJPEG("path-to-image-file.jpeg")
+
+# Display an Image
+plot(1:2,type="n")
+rasterImage(img,1,1,2,2)
+
+# Write an image
+# Generate some image data.
+# Note that for the jpeg function, the pixel values must be in the range 0...1, so scale the data accordingly.
+img <- matrix(runif(100*100),100,100)
+writeJPEG(img, target="path-to-output-file.jpeg")
+
+# Verify if the image has been written correctly
+img_new <- readJPEG("path-to-output-file.jpeg")
+```
+
+In the example above, `readJPEG` is used to read a JPEG file and `writeJPEG` is used to write an image matrix to a JPEG file. The `rasterImage` function is used to display the image. Requires the file path of the JPEG file to read and the target file path to write the image.
+
+Command to run:
+
+R script can be run from terminal:
+```shell
+Rscript script.R
+```
+or from within R or R Studio:
+```R
+source("script.R")
+```
+Aforementioned code will read a local jpeg file, display it, write it to an output file and lastly read the generated file to verify it. Make sure to replace `"path-to-image-file.jpeg"` and `"path-to-output-file.jpeg"` with the correct path to your images.

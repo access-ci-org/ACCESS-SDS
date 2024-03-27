@@ -1,48 +1,58 @@
-Use Case: MATIO (MATLAB I/O)
-MATIO is a library for reading and writing MATLAB MAT files. It supports MATLAB v4 and v5 MAT file formats.
+Use Case: MATIO is a library used for reading and writing MATLAB MAT files. It can be used to read data from a .mat file, manipulate it, and then write it back to a file.
 
-Code details and examples:
-Example of a MATLAB MAT file (sample.mat):
-```
-% sample.mat
-A = [1, 2, 3; 4, 5, 6; 7, 8, 9];
-save('sample.mat', 'A');
-```
+Code Details and Examples:
 
-Reading a MAT file using MATIO in C++:
-```cpp
-#include <matio.h>
-#include <iostream>
+Code:
 
-int main() {
-    mat_t *matfp = Mat_Open("sample.mat", MAT_ACC_RDONLY);
-    if (matfp) {
-        matvar_t *matvar = Mat_VarRead(matfp, "A");
-        if (matvar) {
-            if (matvar->class_type == MAT_T_DOUBLE && matvar->rank == 2) {
-                double *data = (double*)matvar->data;
-                size_t numel = matvar->dims[0] * matvar->dims[1];
-                for (size_t i = 0; i < numel; i++) {
-                    std::cout << data[i] << " ";
-                }
-                std::cout << std::endl;
-            }
-            Mat_VarFree(matvar);
-        }
-        Mat_Close(matfp);
+```c
+#include "matio.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char **argv)
+{
+    mat_t *matfp;
+    matvar_t *matvar;
+
+    matfp = Mat_Open(argv[1], MAT_ACC_RDONLY);
+    if ( NULL == matfp ) {
+        fprintf(stderr,"Error opening MAT file %s\n",argv[1]);
+        return EXIT_FAILURE;
     }
-    return 0;
+
+    while ( (matvar = Mat_VarReadNext(matfp)) != NULL ) {
+        printf("Name: %s, rank: %d, data type: %s\n",
+               matvar->name,
+               matvar->rank,
+               Mat_data_type_to_str(matvar->data_type));
+        Mat_VarFree(matvar);
+        matvar = NULL;
+    }
+
+    Mat_Close(matfp);
+
+    return EXIT_SUCCESS;
 }
 ```
 
-Compile the C++ code linking with MATIO:
-```
-g++ example.cpp -lmatio -lz -o example
-```
+In this example, the .mat file name is called as an argument from the command line.
 
-Run the compiled code:
-```
-./example
-```
+To run this code, you would first compile it, then pass the .mat file as the argument:
 
-This will read the MAT file "sample.mat" and print the contents of the variable "A" (matrix) stored in it.
+`gcc read_mat_file.c -lmatio -o read_mat_file`
+
+`./read_mat_file data.mat`
+
+Input file: 
+
+The input file is a .mat file, which is a MATLAB data file. These files typically contain variables, arrays, functions, and other data items. MATIO reads this data into a mat_t structure. You can then manipulate this data as needed.
+
+Sample input file is any .mat file that can be read by MATLAB, which is a binary file, is a valid input for this software library.
+
+Format required:
+
+The format is .mat and it consists of variable names, data types and the actual data. Different variables can have different data types and are determined from the .mat file.
+
+Any specifications and details in input files:
+
+The .mat file consists of variable data which should be in a format that can be read by MATLAB. Different variables can have different types and the details of each variable type can be found in the matlab documentation: https://www.mathworks.com/help/matlab/import_export/mat-file-versions.html

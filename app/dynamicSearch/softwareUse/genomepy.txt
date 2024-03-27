@@ -1,0 +1,38 @@
+Use Case: Genomepy is used to download genomes from NCBI or EnsEMBL, or use the --local option to create a Genomepy genome from your local FASTA file. The main purpose of genomepy is to automate the downloading process from NCBI/Ensembl and to create a .fa.gz file. 
+
+Code details and examples:
+
+Code:
+
+Step 1: The primary use of genomepy is to download genomes, which can be done via the command line. For example, to download the GRCh38 human reference genome from the NCBI, you would use the command:
+
+```bash
+genomepy install GRCh38 --provider NCBI
+```
+
+On successful completion of the download, a .fa.gz file will be created. 
+
+Step 2: The .fa.gz file can be used to generate an index which is used by different bioinformatics tools like bowtie2 or BWA:
+ 
+```bash
+bowtie2-build GRCh38.fa.gz GRCh38
+```
+OR 
+
+```bash
+bwa index GRCh38.fa.gz
+```
+
+These .fa.gz file and the index can be used as a reference to map sequencing reads using bowtie2 or bwa. 
+
+Step 3: Bowtie2 example usage:
+
+```bash
+bowtie2 -x GRCh38 -U reads.fq -S out.sam
+```
+
+In this command, `-x` is used to specify the prefix of the index for the reference genome, `-U` for the reads file and `-S` specifies the output SAM file.
+
+The input files required for these commands are the genomepy generated .fa.gz file or index files (which you will have to generate) and the sequencing reads in .fq format.
+
+Note: The Bowtie2 and BWA commands are an example of how to use .fa.gz and index file, they are not components of genomepy.

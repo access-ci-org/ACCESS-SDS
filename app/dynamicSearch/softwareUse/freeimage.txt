@@ -1,0 +1,49 @@
+Use Case: FreeImage is a versatile library designed for developers of applications who need to load, save and manipulate images in a variety of formats. It offers you a wide array of functions to process image data. For instance, you might use FreeImage to convert images between different formats, manipulate color values, apply filters, and much more.
+
+Code Details and Examples:
+
+Code:
+
+FreeImage provides both a high-level and a low-level interface to manipulate different types of image data. The following example shows you how to load a JPEG image, manipulate it, and then save it again:
+
+```cpp
+#include "FreeImage.h"
+
+int main() {
+    FreeImage_Initialise();
+
+    FIBITMAP* bitmap = FreeImage_Load(FIF_JPEG, "input.jpg", JPEG_DEFAULT);
+    if (!bitmap) {
+        std::cerr << "Error: Could not load image." << std::endl;
+        return 1;
+    }
+
+    // Invert the image
+    FreeImage_Invert(bitmap);
+
+    // Save the image
+    if (!FreeImage_Save(FIF_JPEG, bitmap, "output.jpg", JPEG_DEFAULT)) {
+        std::cerr << "Error: Could not save image." << std::endl;
+        return 1;
+    }
+
+    FreeImage_DeInitialise();
+
+    return 0;
+}
+```
+
+This C++ code uses the FreeImage library to load a JPEG image file called "input.jpg". The image is then inverted, meaning that the colors are flipped (black becomes white, red becomes cyan, etc.). The result is saved as "output.jpg". For this to work, "input.jpg" needs to be in the same directory as the executable or the correct relative path must be provided.
+
+The 'FreeImage_Initialise()' and 'FreeImage_DeInitialise()' functions must be called at the beginning and end of your application, respectively, to set up and tear down the FreeImage library.
+
+Command to run:
+
+In order to compile and run, you can use g++ for compiling the source code and run the resulting executable:
+
+```shell
+g++ -I/path/to/FreeImage/include -L/path/to/FreeImage/lib -o app application.cpp -lfreeimage
+./app
+```
+
+Please replace `/path/to/FreeImage/include` and `/path/to/FreeImage/lib` with the actual directories where FreeImage headers and libraries are installed. For instance, if FreeImage is installed in `/usr/local`, the include path would be `/usr/local/include`, and the lib path would be `/usr/local/lib`.

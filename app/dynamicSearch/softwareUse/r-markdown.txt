@@ -1,0 +1,45 @@
+Use Case: r-markdown is a software package for R programming language, that provides functionalities for dynamic report generation. The user can create documents that contain live R code chunks and narratives.
+
+Code Details and Examples: 
+Code: 
+
+```
+---
+title: "Untitled"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+1. This is a R Markdown document. Markdown is a simple formatting syntax.
+
+```{r cars}
+summary(mtcars)
+```
+
+```
+To run this R Markdown document, save it with a .Rmd extension and use this command in R console:
+
+```r
+rmarkdown::render("Untitled.Rmd")
+```
+
+Input Files: R Markdown (.Rmd) files.
+
+Format Required: For a typical R Markdown file, it starts with a header enclosed by ---, which contains metadata of the document, such as title and output type. The main body contains text and R code chunks.
+
+Specifications and Details in Input Files: The body of an R Markdown document is mixed with texts and R code chunks, which start with ```{r} and end with ```.
+
+Code Snippets: 
+
+```r
+# Define a numeric vector in R
+x <- c(1, 3, 5, 7, 9)
+
+# Calculate the mean of the vector
+mean(x)
+```

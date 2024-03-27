@@ -1,0 +1,17 @@
+Use Case: Cuttlefish is a software for visualization and analysis of high-dimensional data. It can be used in a variety of applications such as data exploration, clustering, and dimensionality reduction.
+
+Code details and examples: Code. 
+
+Cuttlefish is GUI software and does not have a command line interface. However, it does require specific file formats and specifications for its input files.
+
+Typically, the input to Cuttlefish can be a file in .csv format where each row represents an individual data point and each column represents a feature or dimension of the data.
+
+Make sure that your CSV file includes a header row to label each column(all labels must be unique). Any row with missing data will be excluded from the dataset.
+
+When you start the Cuttlefish software, you'd be asked to select a data file. Navigate to the CSV file from your computer and select.
+
+Once a valid data file has been selected, Cuttlefish will load the data and display a scatter plot.
+
+Alternately, you can load a previously saved Cuttlefish project file (.cfp), which will allow you to view and continue work from a previous session. This file type will load any datasets, visualizations, and filters from the previous session. 
+
+Remember to save your work by clicking File > Save or pressing Ctrl + S to save the project file. Please Note: Saving only saves the project (what datasets, visualizations, filters, etc. are currently loaded) and does not save actual datasets or visualization images.

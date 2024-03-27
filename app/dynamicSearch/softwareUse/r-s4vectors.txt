@@ -1,0 +1,45 @@
+Use Case: The S4Vectors package in R is used mainly for the generation and manipulation of vector-like and list-like objects in a consistent and efficient manner. For instance, it allows for the creation of S4 vector objects (an advanced Gibbs sampling implementation for the estimation of scale mixture of normals), which have proven to be efficient for storing and handling large-scale genomic data.
+
+Code Details and Examples: 
+
+Code:
+
+1. Loading the S4Vectors library
+
+```R
+library(S4Vectors)
+```
+
+2. Defining an S4Vector object 
+
+```R
+vec <- S4Vectors::S4Vectors(1:10)
+print(vec)
+```
+
+3. Manipulating the S4Vector object using various functions provided by the S4Vectors module like arithmetic operations. 
+
+```R
+vec1 <- vec + 10
+print(vec1)
+```
+
+Expect the output:
+
+```R
+> print(vec)
+[1]  1  2  3  4  5  6  7  8  9 10
+
+> print(vec1)
+[1] 11 12 13 14 15 16 17 18 19 20
+```
+
+Input Files: No input files are needed for this case as we are manually creating and manipulating data for the sake of demonstration.
+
+Format Required: All the codes and commands should be executed in R compatible IDE or console.
+
+Specifications and Details in Input Files: Since we are creating our data manually, there are no specific details or specifications needed in any input files.
+
+Command to run:
+
+Run each command line by line in the R console or an IDE that supports R (like RStudio). Each command is executed by simply pressing the "Enter" key after typing or pasting the command.

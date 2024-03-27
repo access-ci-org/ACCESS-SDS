@@ -1,0 +1,52 @@
+Use Case: cereal is a serialization library for C++. It allows you to serialize your data into various formats, such as binary, XML, or JSON. It is used when you want to store the state of your program, or when you need to send data over a network.
+
+Code details and examples: Code 
+
+To use cereal, you create a struct or class that you want to serialize, and then you define a serialize function for that object. The serialize function should take an `archive` argument (the type of archive depends on the format you want to serialize to) and use that to store/restore the data members of the object.
+
+Here is an example of how you might use cereal to serialize a simple struct to JSON:
+
+```cpp
+#include <cereal/types/vector.hpp>
+#include <cereal/types/string.hpp>
+#include <cereal/archives/json.hpp>
+#include <fstream>
+
+// Define your data structure
+struct MyData {
+    int id;
+    std::string name;
+    std::vector<float> values;
+
+    // This method lets cereal know which data members to serialize
+    template<class Archive>
+    void serialize(Archive & archive) {
+        archive(CEREAL_NVP(id), CEREAL_NVP(name), CEREAL_NVP(values));
+    }
+};
+
+int main() {
+    // Create an instance of your data structure
+    MyData data = {1, "test", {1.1, 2.2, 3.3}};
+
+    // Open a file 
+    std::ofstream file("output.json");
+
+    // Create a JSON output archive
+    cereal::JSONOutputArchive oarchive(file);
+
+    // Write the data to the archive
+    oarchive(CEREAL_NVP(data));
+    
+    return 0;
+}
+```
+
+In this example, the `CEREAL_NVP` macro is used to give names to the data members in the serialized output. This line will produce a JSON file 'output.json' with the data structure contents.
+
+To run the above code, you just need to compile and run as a normal C++ program assuming cereal library is part of the include path. For the above piece of code saved in `example.cpp`, use g++ or clang++:
+
+```bash
+g++ -std=c++11 example.cpp -o example
+./example
+```

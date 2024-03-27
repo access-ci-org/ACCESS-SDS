@@ -1,0 +1,32 @@
+Use Case: Scgen is a Python package for single-cell RNA-seq data manipulation and synthetic data generation. It employs Variational Autoencoders (VAEs) and adversarial training to generate realistic synthetic data.
+
+Code Details and Examples: 
+
+Code: 
+
+```python 
+import scanpy as sc
+import scgen
+
+# Load train and test datasets
+train = sc.read("traindata.h5ad")
+test = sc.read("testdata.h5ad")
+
+# create a scgen object.
+network = scgen.VAEArithKeras(x_dimension=train.shape[1], model_path="./models/scgen")
+
+# train the scgen network.
+network.train(train_data=train, n_epochs=500)
+
+# Generate synthetic data
+synthetic_data = scgen.predict(network, train)
+
+```
+
+Input File: The input file for scgen is typically a .h5ad file containing gene expression data. Example files might be "traindata.h5ad" and "testdata.h5ad".
+
+Input File Format: The input file format required by Scgen is an Anndata object. The object is an file with .h5ad format from the AnnData package.
+
+Command to Run: The code snippet along with the input files when run in a Jupyter notebook or python interpreter runs the whole scgen process. It includes training the network and generating the synthetic data.
+
+Specifications in Input Files: The input files need to be in .h5ad format containing gene expressions. The h5ad file is an HDF5 file storing an AnnData object, typically containing gene expression data.

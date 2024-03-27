@@ -1,0 +1,42 @@
+Use Case: The bit64 package in R is particularly useful when you have large vectors of integers. It is able to handle these data structures more efficiently than the default integer data type in R, which can lead to significant performance improvements for certain operations.
+
+Code details and examples:
+
+Input File: 
+A CSV file with integer values is used in the example. CSV format is required
+
+Specifications in File: 
+The CSV file should contain column headers for each column of data and the data should be numeric. Here is a small snapshot of how the CSV file might look:
+
+```
+ID,value
+1,34343434
+2,54545454
+3,65656565
+...
+```
+
+Code snippet:
+The code below reads a CSV file and then converts a column of data to an integer64 data type using the bit64 package.
+
+```R
+# Load the bit64 package
+library(bit64)
+
+# Read in data from a CSV file
+data <- read.csv('data.csv')
+
+# Convert a column to integer64
+data$ID <- as.integer64(data$ID)
+
+# Print out the class of the column to confirm it is integer64
+print(class(data$ID))
+```
+
+Command
+The above code is executed within R or an R environment like RStudio. The command to execute this will be:
+1. Load the R environment (Terminal: R, RStudio: New Script)
+2. Copy and paste the above code and execute (Terminal: [Enter], RStudio: 'Run').
+
+The output should be: 
+"[1] "integer64"

@@ -1,0 +1,33 @@
+Use Case: Grid Analysis and Display System (GrADS) is an interactive desktop tool that is used for easy access, manipulation, and visualization of earth science data. The tool supports gridded data formats like netCDF, HDF, GRIB, etc.
+
+Code details and examples:
+
+Code: 
+
+Input file: Generally, GrADS utilizes data descriptor files (.ctl), binary data files(.dat), and optional index files(.idx).
+
+Example of a .ctl (control) file: 
+    
+    DSET  ^gfs.t00z.pgrb2.0p25.f999.dat
+    TITLE  GFS 0.25 degree forecast
+    UNDEF  -9.99e+33
+    XDEF 1440 linear    0 0.25
+    YDEF  721 linear -90 0.25
+    ZDEF 31 levels (list all the levels)
+    TDEF 124 linear 12z26dec2004 3hr
+    VARS  8
+    HGT   31 99  Geopotential height (m)
+    TMP   31 99  Temperature (K)
+    RH    31 99  Relative humidity (%)
+    WIND  31 99  Wind speed (m/s)
+    UWND  31 99  u-wind (m/s)
+    VWND  31 99  v-wind (m/s)
+    PS    0  99  Surface pressure (Pa)
+    PMSL  0  99  Mean sea level pressure (Pa)
+    
+Example of a GrADS command that displays a variable (for example HGT) from an opened dataset:
+
+    open mydata.ctl
+    display HGT
+
+The first command "open mydata.ctl" opens a dataset "mydata" and the second command "display HGT" visualizes the "HGT" variable.

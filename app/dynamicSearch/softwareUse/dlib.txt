@@ -1,0 +1,35 @@
+Use Case: dlib can be used for a wide range of machine learning tasks, such as predicting the location of an object in an image or predicting the rating of a product based on user reviews.
+
+Code details and examples:
+
+To use the dlib Python library for face detection, the input file will be an image file and the output will be the same image file with rectangles around detected faces.
+
+Code:
+
+```python
+import dlib
+import cv2
+
+# Load the detector
+detector = dlib.get_frontal_face_detector()
+
+# Read the image with OpenCV
+img = cv2.imread("image.jpg")
+
+# Use the detector to find faces in the image
+dets = detector(img, 1)
+
+# Draw a rectangle around each face
+for i, d in enumerate(dets):
+    cv2.rectangle(img, (d.left(), d.top()), (d.right(), d.bottom()), (0, 255, 0), 2)
+
+# Write the image with rectangles to a file
+cv2.imwrite("image_with_faces.jpg", img)
+```
+
+Command to run it (in a terminal):
+```bash
+python detect_faces.py
+```
+
+In this case, "detect_faces.py" is the name of the Python file where the above code is written. The command may change based on the filename. The input image file "image.jpg" should be in the same directory as the Python file. The output will be an image file named "image_with_faces.jpg" in the same directory.

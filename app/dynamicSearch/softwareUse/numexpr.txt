@@ -1,0 +1,34 @@
+Use Case: Numexpr is a Python package that efficiently evaluates large array-like expressions in a way that saves memory and computational resources. It is commonly used in scientific computations.
+
+Code details and examples: Code:
+
+The NumPy library is required for the functions of Numexpr, so you would have to import both of them. A sample code is shown below, note that Numexpr uses standard Python operators and functions.
+
+```Python
+import numexpr as ne
+import numpy as np
+
+# Create NumPy array
+arr1 = np.arange(1, 101)
+arr2 = np.arange(100, 0, -1)
+
+# Define your expression as a string
+expression = "(arr1**2 + arr2**2)>50"
+
+# Use numexpr.evaluate to evaluate the expression   
+filtered_data = ne.evaluate(expression)
+print(filtered_data)
+```
+
+The command run the above script (saved as script.py) from terminal would be: 
+```shell
+$ python script.py
+```
+
+For input files, numexpr works with ndarray objects typically from numpy, so a suitable method of importing data is using numpy's data import functions. For instance, if you have a CSV file 'data.csv' full of numerical data you want to use with numexpr, you can load it in using numpy's genfromtxt:
+
+```python
+arr1 = np.genfromtxt('data.csv', delimiter=',')
+```
+
+Numexpr then uses these ndarrays in its computations.

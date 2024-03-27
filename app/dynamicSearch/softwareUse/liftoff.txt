@@ -1,0 +1,39 @@
+Use Case: Liftoff is a tool primarily used in genomics for lifting annotations from one genomic assembly to another, ensuring that the features are correctly mapped in both locations.
+
+Code details and examples:
+
+Code:
+
+Here is a sample input file for Liftoff in GFF3 format:
+
+    ```
+    chr1    gene    6788    11796   .   +   .   ID=gene1
+    chr1    mRNA    6788    11796   .   +   .   ID=transcript1;Parent=gene1
+    chr1    exon    6788    6904    .   +   .   ID=exon1-1;Parent=transcript1
+    chr1    CDS     6788    6904    .   +   0   ID=CDS1-1;Parent=transcript1
+    chr1    exon    7006    7150    .   +   .   ID=exon1-2;Parent=transcript1
+    chr1    CDS     7006    7150    .   +   2   ID=CDS1-2;Parent=transcript1
+    ```
+
+This file describes a gene on the 'chr1' chromosome from position 6788 to 11796. Two exons and their corresponding coding sequences (CDS) are included in this annotation.
+
+Specifications and details in input file:
+
+1. Column1: The name of the chromosome or scaffold.
+2. Column2: The source of the feature. Could be 'gene', 'mRNA', 'exon', 'CDS' or something else depending on the organism.
+3. Column3: The start of the feature.
+4. Column4: The end of the feature.
+5. Column5: The score of the feature, often "."
+6. Column6: The strand of the feature (+ or -).
+7. Column7: The phase of the feature, this is only valid for CDS entries.
+8. Column8: The attribute of the feature. This typically includes an ID for the feature and often an ID for the feature's parent.
+
+Command to run liftoff:
+
+The main command for running Liftoff is as follows:
+
+```bash
+liftoff -gff reference_annotation.gff -o lifted_over.gff target_genome.fasta reference_genome.fasta
+```
+
+Here, -gff is the input annotations in GFF3 format that we want to 'lift-over', `-o` is the output GFF3 file name where the lifted over annotations will be written to, `target_genome.fasta` is the genome that we want to lift the annotations to and `reference_genome.fasta` is the genome that our annotations currently describe.

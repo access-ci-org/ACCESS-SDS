@@ -1,45 +1,66 @@
-Use Case: Reading and manipulating FITS (Flexible Image Transport System) files using CFITSIO library.
+Use Case: CFITSIO is a library of C and Fortran subroutines for reading and writing data files in FITS (Flexible Image Transport System) data format. It simplifies the task of handling FITS format, offering easy methods to open, read/write and close FITS files. 
 
 Code details and examples:
-```c
-#include <fitsio.h>
 
-int main() {
-    fitsfile *fptr;
-    int status = 0;
+Code: 
 
-    // Open FITS file
-    fits_open_file(&fptr, "sample.fits", READONLY, &status);
+```C
+#include "fitsio.h"
+#define IMAGE_SIZE 1000
 
-    if (status) {
-        fits_report_error(stderr, status);
-        return status;
+void main()
+{
+    fitsfile *fptr;       /* FITS file pointer, defined in fitsio.h */
+    int status = 0;   /* CFITSIO status value MUST be initialized to zero! */
+    int bitpix, naxis, ii, anynul;
+    long naxes[2] = {1,1}, fpixel[2] = {1,1};
+    double *pixels;
+    char format[20], hdformat[20];
+
+    if (fits_open_file(&fptr, argv[1], READONLY, &status)) /* Open the FITS file */
+         printf("Can't open FITS file\n");
+
+    if ( fits_get_img_param(fptr, 2, &bitpix, &naxis, naxes, &status) )
+         printf("Error in reading FITS\n");
+
+    pixels = (double *) malloc(naxes[0] * sizeof(double)); /* memory allocation */
+
+    if (pixels == NULL) {
+        printf("Memory allocation error\n");
+        return(1);
     }
 
-    // Read header
-    int nkeys;
-    fits_get_hdrspace(fptr, &nkeys, NULL, &status);
-    
-    // Print out all header keywords and values
-    for (int i = 1; i <= nkeys; i++) {
-        char keyname[FLEN_KEYWORD], value[FLEN_VALUE];
-        fits_read_keyn(fptr, i, keyname, value, NULL, &status);
-        printf("%s = %s\n", keyname, value);
+    for (fpixel[1] = naxes[1]; fpixel[1] >= 1; fpixel[1]--)  /* loop over rows */
+    {
+        /* read row of pixels */
+        if ( fits_read_pix(fptr, TDOUBLE, fpixel, naxes[0], NULL,
+                pixels, NULL, &status) )
+            break;  /* jump out of loop on error */
+        for (ii = 0; ii < naxes[0]; ii++)
+            printf("%f ", pixels[ii]);   /* Print pixel values */
+        printf("\n"); 
     }
-
-    // Close FITS file
     fits_close_file(fptr, &status);
-
-    return 0;
 }
 ```
 
-To compile the code, you can use:
-```bash
-gcc -o read_fits read_fits.c -lcfitsio
+Command to run: 
+
+```bash 
+gcc -o read_fits code.c -lcfitsio 
+./read_fits file.fits 
 ```
 
-To run the compiled program:
-```bash
-./read_fits
-```
+Sample input files : 
+
+The sample input should be in .fits format which will include the information from CCD(coupled-charged device) for astronomical purposes. Images, tables, and header keywords can be read from FITS files, and images and tables can be written to FITS files.
+
+Format required : 
+
+The input file is taken as a command-line argument in .fits format. CFITSIO supports all valid FITS data types, including ASCII and binary tables and images with up to 999 dimensions.
+
+Specifications and details in input files : 
+
+The FITS file contains an ASCII text header followed by arrays of binary data. The header contains a sequence of keyword = value statements. These keyword values can be accessed by the corresponding keyword string.
+
+Note: Make sure to include the CFITSIO library during compilation and have a .fits file available for testing the code.

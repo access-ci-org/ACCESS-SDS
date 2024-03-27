@@ -1,56 +1,52 @@
-Dakota is a software package for optimization, uncertainty quantification, parameter estimation, and sensitivity analysis. 
+Use Case: Dakota (Design Analysis Kit for Optimization and Terascale Applications) is a software toolkit providing a flexible interface for optimization, sensitivity analysis, uncertainty analysis, and design of experiments.
 
-Use Case: Dakota for sensitivity analysis
 Code details and examples:
-1. Create a input file for Dakota (input.in):
-```
-environment
-  tabular_data
-    tabular_data_file = 'sens_data.dat'
-    tabular_data_file_format = 'ascii'
-    separable_concatenate = 'both'
-  method_pointer
-    analysis_driver = './sens_analysis_driver'
-  input_file
-    input_file_name = 'sens.in'
+
+Code:
+
+```python
+# Dakota input file (dakota.in)
+
+method,
+  id_method = 'optim'
+  model_pointer = 'model1'
+  optimization
+    max_function_evaluations = 200
+    convergence_tolerance = 1.e-4
+variables,
+  continuous_design = 2
+    initial_point  0.5 1.5
+    lower_bounds  -5  -5
+    upper_bounds   5   5
+interface,
+  id_interface = 'rosenbrock'
+  fork
+    analysis_driver = 'rosenbrock'
+model,
+  id_model = 'model1'
+  single
+    variables_pointer = 'optim'
+    interface_pointer = 'rosenbrock'
+
+# Python function for rosenbrock evaluation (rosenbrock.py)
+
+from dakota.interfacing import DirectApplicInterface
+import sys
+import numpy as np
+
+class Rosenbrock(DirectApplicInterface):
+
+    def evaluate(self, vars, controls, response):
+        x = np.array(vars["continuous_design"])
+        y = np.sum(100.0*(x[1:] - x[:-1]**2.0)**2.0 + (1 - x[:-1])**2.0)
+        response["objective_function"] = y
+
+if __name__ == "__main__":
+    Rosenbrock().run(sys.argv[1])
 ```
 
-2. Create a sample input file for the analysis driver (sens.in):
-```
-sensitivity_method
-  global
-  {
-    output_ranked = 5
-  }
-```
+To run a Dakota analysis, use the Dakota command followed by the name of the input file. Here's an example:
 
-3. Create a data file (sens_data.dat) with sample data:
-```
-5 4
-0 0 0 0
-1 2 3 4
-2 4 6 8
-3 6 9 12
-4 8 12 16
-5 10 15 20
-```
-
-4. Create an analysis driver code (sens_analysis_driver) in C++ for sensitivity analysis:
-```cpp
-#include <iostream>
-#include "dakota_global_defs.hpp"
-#include "dakota_sensitivity.hpp"
-
-int main()
-{
-  Dakota::Sensitivity sens_analysis;
-  sens_analysis.readInputDeck(std::cin);
-  sens_analysis.writeOutputDeck(std::cout);
-  return 0;
-}
-```
-
-5. Run Dakota with the input file:
-```
-dakota -i input.in -o output.out
+```bash
+dakota -i dakota.in -o dakota.out
 ```

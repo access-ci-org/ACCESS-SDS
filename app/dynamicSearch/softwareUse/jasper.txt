@@ -1,59 +1,27 @@
-I assume you are referring to JasperReports, which is a Java-based reporting tool.
+Use Case: Jasper is an open-source initiative to provide a free software-based reference implementation of the codec specified in the JPEG-2000 Part-1 standard. This includes compression and decompression of images and can be useful in several fields like multimedia applications or scientific visualizations.
 
-Use Case: Generate a simple report using JasperReports
-Code details and examples:
-```java
-// Sample java code to generate a simple report using JasperReports
-import net.sf.jasperreports.engine.*;
-import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
-import net.sf.jasperreports.view.JasperViewer;
+Code details and examples: 
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+Code:
 
-public class ReportGenerator {
+The command-line interface to the library of functions for manipulating JPEG-2000 files is 'jasper'. Here is an example of how you can encode and decode an image using the jpeg-2000 format:
 
-    public static void main(String[] args) throws JRException {
-        // Prepare data
-        List<Map<String, Object>> dataList = new ArrayList<>();
-        Map<String, Object> data = new HashMap<>();
-        data.put("name", "Alice");
-        data.put("age", 30);
-        dataList.add(data);
+1. For converting a bmp image to jp2, using jasper:
 
-        // Load jrxml file
-        JasperReport jasperReport = JasperCompileManager.compileReport("sample_report.jrxml");
+   ```
+   jasper --input input_image.bmp --output output_image.jp2 
+   ```
 
-        // Fill the report with data
-        JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, new HashMap<>(), new JRBeanCollectionDataSource(dataList));
+2. For converting a jp2 to bmp image, using jasper:
 
-        // Display the report
-        JasperViewer.viewReport(jasperPrint);
-    }
-}
-```
-In the above code snippet, "sample_report.jrxml" is the JasperReports template file containing the report design.
+   ```
+   jasper --input input_image.jp2 --output output_image.bmp
+   ```
+   
+Format Required: Jasper supports multiple input and output formats for images, including BMP and PNM.
 
-You can create a simple JRXML file with the following content:
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd">
-    <detail>
-        <band height="20">
-            <textField>
-                <reportElement x="0" y="0" width="100" height="20"/>
-                <textElement/>
-                <textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
-            </textField>
-            <textField>
-                <reportElement x="100" y="0" width="100" height="20"/>
-                <textElement/>
-                <textFieldExpression><![CDATA[$F{age}]]></textFieldExpression>
-            </textField>
-        </band>
-    </detail>
-</jasperReport>
-```
-To run the code, you would need the JasperReports library in your classpath and a sample_report.jrxml template file.
+Specifications and Details in Input Files: The input files for the above code example are image files in either Bitmap (BMP) or JPEG-2000 (JP2) format.
+The BMP is a format that stores bitmap images, including both monochrome and color, that are uncompressed or compressed with lossless compression.
+The JP2 is a format that is a bitmap image type used by JPEG 2000, an image encoding system. It uses wavelet compression to code the image to achieve high compression ratios.
+
+Command to Run: The commands to run the given examples are provided in the code examples section.

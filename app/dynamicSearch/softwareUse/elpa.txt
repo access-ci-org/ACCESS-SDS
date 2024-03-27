@@ -1,14 +1,55 @@
-Use Case: Computational package for electronic structure calculations in condensed matter physics and quantum chemistry.
+Use Case: ELPA is a high-performing library for the parallel solution of symmetric and Hermitian eigenvalue problems. Particularly, ELPA is used in scientific research for electronic structure calculations.
 
 Code details and examples:
-- ELPA (Eigenvalue soLvers for Petascale Applications) is a high-performance library for solving the dense symmetric (hermitian) eigenvalue problems encountered in electronic structure calculations. It can be used for various types of eigenvalue problems, including standard eigenvalue problems, generalized eigenvalue problems, and partial symmetric eigenvalue problems.
 
-Sample input files:
-ELPA requires input data in the form of matrices for eigenvalue calculations. These matrices can be generated using various quantum chemistry software packages such as Quantum ESPRESSO, VASP, or SIESTA.
+Code: 
+The required format for input matrices in ELPA is a block-cyclic distribution. Let's use a simple matrix as example:
 
-Command to run ELPA:
-ELPA doesn't have a command-line interface. Instead, it is usually linked with quantum chemistry or materials science codes that require solving eigenvalue problems. The integration and usage of ELPA depend on the specific code being used. 
+```fortran
+program testing_elpa
+  use elpa
+  implicit none
+  integer, parameter :: dp = kind(1.0d0)
+  integer, parameter :: n = 1000
+  real(dp), allocatable :: a(:,:), b(:,:)
+  integer :: na, myid, handle
+  integer :: mpi_flag
+  integer, parameter :: mpiroot = 0
+  integer :: error
 
-For more details on how to integrate ELPA with specific codes, refer to the official ELPA documentation: https://elpa.mpcdf.mpg.de/
+  Call mpi_init(mpi_flag)
 
-Note: ELPA is typically used as a library and integrated into larger computational codes rather than being run directly from the command line.
+  !initialize elpa
+  na = elpa_init(n)
+  if (na < 0) stop
+
+  !allocate memory
+  allocate(a(n, na), b(n,na))
+
+  !fill the matrices
+  call random_number(a)
+  call random_number(b)
+
+  !create handle
+  handle = elpa_allocate(n, elpa_real_double_precision)
+
+  !diagonalize the matrix
+  call elpa_diagonalize(handle, a, b, error)
+
+  !release the handle
+  call elpa_deallocate(handle)
+
+  !finalize the library
+  call elpa_finalize()
+
+  call mpi_finalize(mpi_flag)
+end program testing_elpa
+```
+
+To compile the program, you would have to link the ELPA library along with an MPI compiler: `mpif90 testing_elpa.f90 -lelpa`.
+
+Command to run the program is: `mpirun -np 4 ./a.out`. 
+
+Here, `n` represents the matrix size and `na` signifies the number of eigenvalues to be computed. The matrices are filled with random numbers and then diagonalized. The diagonalized matrix is then stored in `a` and the eigenvalues in `b`. 
+
+In terms of the input files required, this depends on the specific use-case. Typically, ELPA is used as part of larger applications (such as electronic structure calculations), and it uses the input from these applications which often comes in the form of large matrices. It should be noted that the matrix elements must be of double precision real or complex numbers, and the matrix should be symmetric (real) or Hermitian (complex).

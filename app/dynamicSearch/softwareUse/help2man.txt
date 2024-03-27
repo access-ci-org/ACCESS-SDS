@@ -1,24 +1,23 @@
-Use Case: Generating a man page for a command line tool using help2man.
+Use Case: help2man is a tool that automatically generates simple man pages from program output. It is used when the software doesn't have a manual page.
 
-Code details and examples:
-1. Create a simple bash script (example_script.sh) that prints "Hello, World!" when run.
-```bash
-echo "Hello, World!"
+Code Details and Examples: 
+
+help2man is typically used in a command-line environment. Here are some examples of how you might use it:
+
+* Generate a man page for the gcc program:
 ```
-
-2. Save the script and make it executable.
-```bash
-chmod +x example_script.sh
+help2man gcc -N --name="the GNU compiler collection" -o gcc.1
 ```
+In this example, `-N` means to not include a "SEE ALSO" section in the man page, `--name` provides a description for the program, and `-o` specifies the output file.
 
-3. Use help2man to generate a man page for the script.
-```bash
-help2man ./example_script.sh -o example_script.1
+* Generate a man page including information from the `--help` and `--version` options:
 ```
-
-4. View the generated man page.
-```bash
-man ./example_script.1
+help2man --include=help.txt --version-string=1.0 myprogram -o myprogram.1
 ```
+In this case, `--include` specifies a file containing text to include in the man page, such as responses from `--help`, and `--version-string` provides a version for the program.
 
-This will display the man page with the help text extracted from the script.
+Input Files: help2man reads output from running the program with `--help` and `--version` options.
+
+File Formats: The output file is a text file written in the roff language, which is used for creating man pages.
+
+Note that there's no need for a sample input file, as help2man creates its output based on the built-in `--help` and `--version` options of the program it's documenting.

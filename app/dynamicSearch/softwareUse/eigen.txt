@@ -1,0 +1,30 @@
+Use Case: Use the Eigen library for matrix calculations in C++, such as multiplication, addition, subtraction, etc.
+
+Code Details and Examples: Code
+
+First, you need to include the main header of Eigen in your C++ program.
+
+```c++
+#include <Eigen/Dense>
+```
+
+You can declare a 3x3 matrix with int data type and make a simple calculation as follows:
+
+```c++
+Eigen::Matrix3i mat1;
+mat1 << 1, 2, 3,
+        4, 5, 6,
+        7, 8, 9;
+        
+Eigen::Matrix3i mat2;
+mat2 << 2, 3, 4,
+        5, 6, 7,
+        8, 9, 10;
+
+// Adding two matrices
+Eigen::Matrix3i mat3 = mat1 + mat2;
+```
+
+Here, `mat1` and `mat2` are 3x3 matrices declared with integers and `mat3` is the result of mat1 added to mat2. The `<<` operator is used to assign values to the matrices.
+
+Eigen doesn't have specific input files or formats or any running commands as it's a header-only C++ library and integrated within the code itself. It's not a standalone software but a library used within a software. The data types of the matrices (int, float, double, etc.) should match with the types of data you're working with.

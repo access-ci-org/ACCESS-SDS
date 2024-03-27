@@ -1,0 +1,39 @@
+Use Case: McCortex is used to analyze genomic data using De Bruijn Graphs, often for identifying variation in genomes.
+
+Code Details and Examples: 
+
+Input Format Required:
+1) A Fasta file containing DNA sequences.
+2) A text file that contains a list of paths to sequence files.
+
+Sample File:
+Fasta File:
+
+```text
+>header
+AGCTAGCTAGCTAGCTA...
+>header2
+AGCTAGCTAGCTAGCTT...
+```
+Text File:
+```text
+/directory/file1.fasta
+/directory/file2.fasta
+...
+
+```
+The Fasta files should contain DNA sequences under headers, and the text file should contain the paths to these Fasta files. 
+
+Code to Create a Graph:
+```bash
+mccortex31 build --nkmers 50m --threads 4 --kmer 31 --mem 8G --sample MySample --seq2 /directory/mysample_1.fastq.gz,/directory/mysample_2.fastq.gz mysample.ctx
+```
+This will create a graph with a kmer-size of 31, using 4 threads and 8G of memory. It will expect the sample name "MySample", and the list of sequences came from "mysample_1.fastq.gz" and "mysample_2.fastq.gz".
+
+Code to Merge Graphs:
+```bash
+mccortex31 join sample1.ctx sample2.ctx sample1_and_sample2.ctx
+```
+This will combine the graphs from two separate samples into one.
+
+Note: Replace "31" with the number of hash table size, where the options are: 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31. Make sure the expected RAM and disk space requirements are met before processing.

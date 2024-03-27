@@ -1,33 +1,34 @@
-Use Case: Drawing diagrams and figures
+Use Case: Xfig is a software package that allows for interactive drawing and editing of figures. It supports different types of objects including lines, circles, ellipses, arcs, polygons and text. Xfig is used for architectural diagrams, flowcharts, and illustrating scientific papers or reports.
 
-Code details and examples:
-- Xfig is a tool for drawing diagrams and figures using a graphical user interface.
-- Input files are Xfig files (.fig) that contain the visual representation of the diagram or figure.
-- Users can create shapes, lines, text, colors, and perform other drawing operations using Xfig.
+Code Details and Examples:
 
-Sample input file format (.fig):
+Code:
+
+Xfig doesn't exactly require a 'code' to operate as it's a graphical, interactive software. Yet, it does support importing and exporting in a variety of file formats, including an inherent Xfig format (.fig). 
+
+Here is an example of a very basic .fig file:
+
 ```
-#FIG 3.2
-Landscape
+#FIG 3.2  Produced by xfig version 3.2.5b
+Portrait
 Center
-Inches
-Letter
+Metric
+A4     
 100.00
 Single
 -2
 1200 2
-1 3 -1 0 0 7 50 -1 20 0.000 0 0 -1 0 0 5
-0 0 0 5 <- bounding box
-50 401 5429 6722 5200 9728 6168 11909 5568 11488 50 401
-0 0 42 <- polyline
-3
-9 0 0 50 401 5429 6722 5200 9728 6168 11909 5568 11488 50 401
-7 0 5 1 4096 16777215 4096 3342386 4011 6684621 6016 10044839 6217 1179648
-5 0 0 2 0 -1 0 0 15 0.0000 30 1
-4 3 0 10 5 <-> arrow
-4 3 0 10 5 <-> arrow
-4 3 0 10 5 <-> arrow
-
+1 3 0 1 -1 7 50 -1 -1 0.000 1 0.0000 1046 1706 1010 849 -1046 849 -266 1408 0 0 0 
+1 3 0 1 -1 7 50 -1 -1 0.000 1 0.0000 1057 2098 1010 790 -1078 790 21 1518 0 0 0 
+4 1 -1 0 50 -1 22 12 0.0000 4 195 345 1263 2388 1 -1 -1 0 0 0 Advanced Tab - Continue
 ```
 
-- Command to run Xfig: xfig
+This file represents a simple diagram with two arrows and a piece of text.
+
+To open this file with Xfig, simply use:
+
+```
+xfig filename.fig
+```
+
+You can perform various operations, modifications and add new objects using the graphical interface of Xfig. The above code is generated when you save a Xfig diagram in its inherent format (.fig).

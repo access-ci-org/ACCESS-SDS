@@ -1,0 +1,33 @@
+Use Case: Use CLHEP (A Class Library for High Energy Physics) to perform vector and matrix operations, random number generations, and physical units representations. It is particularly useful in physics and engineering computations. 
+
+Code details and examples: 
+
+The code snippet below demonstrates the use of three dimensional vectors:
+
+Code:
+```cpp
+#include "CLHEP/Vector/ThreeVector.h"
+using namespace std;
+using namespace CLHEP;
+
+int main(){
+    Hep3Vector a(1.0, 2.0, 3.0);
+    Hep3Vector b(2.0, 3.0, 4.0);
+
+    Hep3Vector c = a + b;
+
+    cout << "c = " << c << endl;
+    return 0;
+}
+```
+Command to Compile:
+```shell
+g++ -I /path_to_CLHEP/include/ -L /path_to_CLHEP/lib/ -o test test.cpp -lCLHEP
+```
+Command to Run:
+```shell
+./test
+```
+This will print the sum of vector 'a' and 'b'. The '/path_to_CLHEP/' should be replaced with the actual directory where CLHEP is installed. 
+
+Note: Sample input file or format is not required for this example as it directly takes input within the code.

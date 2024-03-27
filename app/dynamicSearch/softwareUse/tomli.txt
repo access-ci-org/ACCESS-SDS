@@ -1,0 +1,39 @@
+Use Case: Tomli is a Python library for parsing TOML files. It is typically used when there's a need to parse a TOML document from a string to a Python data structure. 
+
+Code details and examples: 
+
+Code: 
+
+You can use Tomli to fetch values from a TOML file as follows:
+
+```python
+import tomli
+
+with open('config.toml', 'rb') as f:
+    data = tomli.load(f)
+    
+print(data['title'])
+```
+
+Sample Input Files and Format: 
+
+Example of a 'config.toml' input file.
+
+```toml
+# config.toml
+[owner]
+name = "John Doe"
+dob = 1987-07-05T05:45:00Z
+```
+
+The above file is a standard TOML file with the `.toml` extension. 
+
+Specifications and Details in Input File: 
+
+The input file should be in TOML format, a file format that is easy to read because it is similar to a simple .ini file, but standardized and with clear specifications.
+
+Command to run:
+
+You can run the Python script from a command line:
+
+python3 script.py

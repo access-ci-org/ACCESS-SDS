@@ -1,11 +1,22 @@
-Use Case: Data compression library for scientific data.
+Use Case: libaec provides lossless compression with a focus on space science data. The data format is the same as used by HDF5 and netCDF4 using the SZIP compression, and it can be used as a more performant drop-in replacement. Input files for libaec are expected to be in a binary data format.
 
-Code details and examples:
-```
-Sample input file:
-- File to be compressed: data.txt
+Code details and examples: Code.
 
-Code:
-$ aec -c data.txt data.aec     # compress data.txt
-$ aec -d data.aec data_decompressed.txt     # decompress data.aec
+1. Create a simple text based file only for demonstration purposes. This file might not give a realistic compression but it serves the purpose.
+```BASH
+echo "Hello, world!    Hello, world! Hello, world! Hello, world! Hello, world!" > input.txt
 ```
+
+2. Compress the file using the `sz` utility that comes with libaec:
+`sz input.txt`
+
+This generates `input.txt.sz`, a compressed version of `input.txt`.
+
+3. To decompress, use `dsz`, which comes with libaec as well:
+`dsz input.txt.sz`
+
+The original file `input.txt` is restored.
+
+Please note that libaec is intended for use with binary raster data, and will not provide optimal, or possibly any, compression with text or other types of data. Use realistic input based on your practical scenario.
+
+It's also worth noting that sz and dsz are command line utilities provided with libaec for very basic and direct compression/decompression operations, and that normal usage of libaec would often involve using the library via an API in a programming language like C or Python. The library provides a lot more flexibility and control than the simple sz and dsz utility commands.

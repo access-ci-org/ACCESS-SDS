@@ -1,0 +1,29 @@
+Use Case: Use AfterQC to automatically filter, trim, correct HTS( High throughput sequencing) data. AfterQC can be used for both single end and paired end data. The software provides functions including auto-detection of adapter sequence, trim of low quality bases, statistic of data quality and visualization. 
+
+Code details and examples: Code   
+
+Before using AfterQC, let's assume we have a FastQ file `input.fastq` (a common file format used for storing a biological sequence and its corresponding quality scores)
+
+```
+@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
++
+!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
+```
+This is the format of a FastQ file where `@SEQ_ID` represents the sequence identifier.
+
+You can perform the basic quality control operation by running: 
+
+```
+after.py -1 input.fastq
+```
+
+Common options include:
+
+ `-1 or --read1` Read1's file, which may be gzip (*.gz) compressed 
+ `-2 or --read2` Read1's file, only for paired end data 
+ `-o or --out` Folder name to store all the output files
+
+After running AfterQC, you will receive various output files containing cleaned reads, low quality reads, etc all in FastQ format.
+
+For more details of the commands, type `after.py -h` to display the full list of command options. The `-h` flag in the command gives helps about the usage of the software.

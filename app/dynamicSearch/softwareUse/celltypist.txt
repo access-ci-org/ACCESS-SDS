@@ -1,0 +1,41 @@
+Use Case: CellTypist is used for cell type annotation of single-cell RNA-seq data from mouse or human in a supervised way. 
+
+Code details and examples: Code 
+
+The first step is to load the data. In this case, we are using an example provided by CellTypist.
+
+```
+import celltypist
+data = celltypist.Data.from_example()
+```
+
+Now, let's get the model.
+
+```
+model = celltypist.models.Model.load()
+```
+
+Annotation is performed using the `infer` method.
+
+```
+annotation = model.infer(data, match_to='celltypist')
+```
+
+The annotation can be visualized using the `plot` method, which is a part of the `annotation` object.
+
+```
+annotation.plot(data, show_highest_score=True)
+```
+
+To get the detailed results of the annotation:
+
+```
+annotation.scores
+annotation.assignments
+```
+
+Format Required: The data input should be in anndata format, which is a format to handle annotated data matrices. Specifically, it is recommended to use the scanpy library for single-cell and general transcriptomics and to have the gene expression matrix in the .X slot.
+
+Specifications and Details in Input Files: The expression matrix (.X) should contain normalized expression values, not raw counts, and the features (genes) should be in human readable format, not ENSEMBL ids. Further, keep in mind that the model currently only works on RNA-seq data from human or mouse.
+
+Command to Run: There is no need for a command to run cell typing as it is not a standalone tool but a Python package; the tool is run by executing Python scripts or commands, which can be done in a Python-based environment such as a Jupyter notebook or a Python script on a command line.

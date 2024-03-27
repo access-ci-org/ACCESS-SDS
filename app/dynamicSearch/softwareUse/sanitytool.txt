@@ -1,0 +1,41 @@
+Use Case: Sanity tool is an efficient tool used by data scientists and numerical analysts to check the sanity or logical correctness of their computational work or datasets. It checks if data processes and outcomes fall within defined expectations and restrictions. 
+
+Code details and examples: 
+
+Code 
+
+The Sanity tool is designed as a command-line tool. You will need a series of measurement data arranged in a CSV file format.
+
+Sample Input File Details: Create a CSV file named `data.csv` with sample input as follows:
+
+```
+Date,Variable1,Variable2 
+01-01-2021,0.25,20 
+02-01-2021,0.30,25 
+03-01-2021,0.32,22 
+```
+
+The Input specification: the CSV file should have a date column and the columns with variable measurements.
+
+To check if Variable1 has approximately normal distribution You will need to create a JSON file named `sanitycheck.json` with corresponding instructions.
+
+```
+{
+  "Date": ["date", "01-01-2021", "31-12-2021"],
+  "Variable1": ["numeric", "bimodal", 0.2, 0.4],
+  "Variable2": ["numeric", "monotonically_increasing", null]
+} 
+```
+
+To use these files with Sanity tool, you would run the command:
+
+```python sanitytool.py -i data.csv -c sanitycheck.json```
+
+This command prompts the Sanity tool to execute the checks specified in `sanitycheck.json` on the data in `data.csv`. 
+
+Please remember: 
+
+* For date check: ["date", "start_date", "end_date"]
+* For numeric check: ["numeric", "expectation", parameters]. Depending on "expectation" parameters vary. For "bimodal", give two means. For "uniform", give lower and upper bounds.+
+
+SanityTool will output inconsistencies with these rules in `data.csv`.

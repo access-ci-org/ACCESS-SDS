@@ -1,30 +1,29 @@
-Use Case: 3D rendering using POV-Ray
+Use Case: The Persistence of Vision Raytracer (POV) is a software package that generates images from a text-based scene description. It is used in fields such as graphic design, video games, film, animation, and other areas where realistic rendering is required.
 
-Code details and examples:
-Input file format for defining scenes in POV-Ray:
-- .pov file containing scene descriptions, camera settings, light sources, objects, etc.
+Code Details And Examples:
 
-Sample POV-Ray input file (example.pov):
+Input file format: .pov/or .ini file
+
+Specifications And Details In Input Files: 
+
+Files for POV-Ray consist of scene description files - plain text files that contain all of the information for the objects, lighting, texturing, etc., necessary to render a three-dimensional scene.
+
+Here is a simple example depicting a sphere on a checkerboard plane.
+
+Input File:
+
 ```
-camera {
-    location <0, 0, -5>
-    look_at <0, 0, 0>
-}
-
-light_source {
-    <10, 10, -10>
-    color rgb <1, 1, 1>
-}
-
-sphere {
-    <0, 0, 0>, 2
-    pigment { color rgb <1, 0, 0> }
-}
+#include "colors.inc"
+background{White}
+camera{location <0,0,-5> look_at 0}
+light_source{<-10,10,-10> color White}
+sphere{<0,0,0>,1 pigment{Red}}
+plane{<0,1,0>,1 pigment{checker Silver,Gold}}
 ```
+This .pov file creates a simple scene that includes a red sphere on a checkerboard plane, lit by a single white light source. The camera is located 5 units away from the centre of the scene and aimed at the origin.
 
-Command to render the scene using POV-Ray:
-```
-povray +Iexample.pov +Ooutput.png
-```
+Command to run it:
 
-This command runs POV-Ray with input file `example.pov` and generates an output image `output.png` based on the scene description provided in the input file.
+```povray +Iinput.pov +Ooutput.png +W1024 +H768 -D```
+
+In this command, `+Iinput.pov` specifies the input file and `+Ooutput.png` specifies the output file plus its format. `+W1024 +H768` sets the image dimensions, while `-D` sets the mode to display the image while rendering.

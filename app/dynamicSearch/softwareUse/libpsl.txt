@@ -1,0 +1,36 @@
+Use Case: This is a library that allows applications to check domains against the Mozilla Public Suffix List. It can be used by web browsers, cookie libraries, or other system components to avoid privacy-leaking 'supercookies' or 'super domain' certificates, amongst other uses.
+
+Code details and examples: 
+
+Code: 
+
+Here is a simple usage example:
+
+```c
+#include <stdio.h>
+#include <libpsl.h>
+
+int main(void) {
+    const char *domain = "www.google.com";
+
+    const psl_ctx_t *psl = psl_builtin();
+    const char *suffix = psl_unregistrable_domain(psl, domain);
+
+    if (suffix)
+        printf("The public suffix part is: %s\n", suffix);
+    else
+        printf("No public suffix found for %s\n", domain);
+
+    psl_free(psl);
+    return 0; }
+```
+
+This example takes a domain string (www.google.com in this case) and prints out the public suffix part of the domain using the `psl_unregistrable_domain` function.
+
+To compile this program, you can use a command like this:
+
+```
+gcc -o test test.c -lpsl
+```
+
+Note that `-lpsl` links the libpsl library.

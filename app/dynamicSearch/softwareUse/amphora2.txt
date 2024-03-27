@@ -1,0 +1,38 @@
+Use Case: Phylogenetic assignment of prokaryotic sequences using a collection of specific marker genes.
+
+Code details and examples: 
+
+For AMPhora2, you can use a FASTA file as input. This is a text-based format for representing either nucleotide sequences or peptide sequences, in which nucleotides or amino acids are represented using single-letter codes.
+
+Input File: Example.fasta
+```
+>sequence1
+GGCAGATTCCCCCTAGACCCGCCCGCACCATGGTCAGGCATGCCCCTTC
+>sequence2
+GGGCGCACGGAATACAAAGCCGTGTATCTGCTGAATGAAGTGGGAGA
+```
+
+Code:
+```bash
+MarkerScanner.pl -Bacteria -DNA example.fasta
+```
+This command will apply the MarkerScanner to the example.fasta file. The `-Bacteria` flag is used to specify that the sequences are of bacterial origin, and the `-DNA` flag specifies the type of the data. 
+
+Output will be in `example.fasta.amphora`.
+
+If you want to further analyze with multiple sequences then use the command:
+```bash
+MarkerAlignTrim.pl -WithReference -OutputFormat phylip example.fasta.amphora 
+```
+This command will find the appropriate markers, extract, align, and trim them. `-WithReference` flag is used to indicate that reference sequences should be used in the alignment. `OutputFormat` helps to get the output in 'phylip' format. The result will be a collection of neatly aligned sequences that's easy to analyze. 
+
+Finally, to build a phylogenetic tree:
+```bash
+Phylotyping.pl example.fasta.amphora > example.tree
+```
+This command will generate a phylogenetic tree in Newick format, which can be viewed with tree viewer software like FigTree. 
+
+If you want a quick phylotyping result:
+```bash
+FastPhylotyping.pl example.fasta.amphora > example.fast 
+```

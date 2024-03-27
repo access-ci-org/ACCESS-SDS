@@ -1,0 +1,25 @@
+Use Case: Visualization of phylogenetic relationships among various microbial species based on metagenomic data.
+
+Code Details and Examples:
+
+Code:
+# Here is an example of a command to generate an annotated phylogenetic tree with Graphlan.
+
+graphlan_annotate.py --annot annotation.txt input_tree.txt output_tree.xml
+
+# After the annotation, we can generate the image using the following command.
+graphlan.py --dpi 300 output_tree.xml output_image.png
+
+Specifications and Details in Input Files: 
+
+- The input file 'input_tree.txt' format in this context is a Newick file which contains phylogenetic data. The edge lengths and leaf labels within this file are assigned during the tree building. A sample hierarchical tree might look like: ((A:0.1,B:0.2):0.3,(C:0.3,D:0.4):0.5,E:0.1);
+
+- The annotation file 'annotation.txt' format is an assignment of branches, nodes, and clades to a set of features. It is a tab-delimited text file that contains as first field the name of the node and the property to set in the second. This file allows the User to assign labels and adjust the graphical appearance of the tree. The structure of the file is: node1    annotation1\n node2    annotation2\n ....
+
+Command to Run: 
+
+Examples of commands to run GraphLAN:
+
+graphlan.py --dpi 300 output.xml out.png --external_legends
+
+Note: 'graphlan.py' is the name of the python script used to generate the graphical output, '--dpi' is the resolution of the image, '300' is the chosen dpi value, and 'output.xml' is the input xml file which contains the annotated phylogenetic tree. The output is a graphical visualization file named 'out.png'. '--external_legends' is an optional flag that will place the legend outside of the circle.

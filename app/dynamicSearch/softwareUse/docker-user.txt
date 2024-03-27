@@ -1,0 +1,57 @@
+Use Case: Docker is a platform used to automate the deployment, scaling, and management of applications by using containerization. It's commonly used in both production and development environments to maintain consistency.
+
+Code details and examples: Code
+
+- Dockerfile:
+
+To instruct Docker to build a new image we'll need a Dockerfile which is simply a plain text file that contains all commands, in order, needed to build a given image.
+
+```Dockerfile
+# Use an official Python runtime as a parent image
+FROM python:3.7-slim
+
+# Set the working directory in the container to /app
+WORKDIR /app
+
+# Add the current directory contents into the container at /app
+ADD . /app
+
+# Install any needed packages specified in requirements.txt
+RUN pip install --trusted-host pypi.python.org -r requirements.txt
+
+# Make port 80 available to the world outside this container
+EXPOSE 80
+
+# Define environment variable
+ENV NAME World
+
+# Run app.py when the container launches
+CMD ["python", "app.py"]
+```
+Here, the Dockerfile defines a Python 3.7 application and its dependencies in a requirements.txt file. The application listens on port 80 and the environment variable NAME is set to 'World'. 
+
+- requirements.txt:
+
+This regular text file holds a list of items to be installed using pip install. 
+
+```
+Flask==1.0.2
+Redis==3.2.0
+```
+This will install Flask and Redis python packages of specific versions.
+
+To build the Docker image and run it, the following commands are used:
+
+- Build the Docker image:
+
+```
+docker build -t helloworld:latest .
+```
+
+- Run the Docker container:
+
+```
+docker run -p 4000:80 helloworld:latest
+```
+
+In the first command, `helloworld` is the name of your Docker image and `latest` is the tag of your image. In the second command, `4000` is the host port and `80` is the Docker container port.

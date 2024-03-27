@@ -1,0 +1,72 @@
+Use Case: ColossalAI is a high-performance deep learning system designed to support model and pipeline parallelism for training large models. It simplifies the process of using a cluster of GPUs in a unifying way by handling hundreds of GPUs across multiple nodes.
+
+Code details and examples: 
+
+Code example 1: 
+
+```python
+# Import required packages
+from colossalai.context import Config
+from colossalai.utils import print_rank_0
+
+# Set configuration
+config = Config('./path_to_your_config_file/config.yaml')
+
+# Define a function for efficiency
+def run():
+    # Place your model creation and training logic here
+
+# Set parameter
+parameter = './path_to_your_parameter_file/parameter.txt'
+
+# Print the rank
+print_rank_0(f'Parameter: {parameter}')
+    
+# Call function
+run()
+```
+
+For run command: python [filename].py
+
+Please replace the './path_to_your_config_file/config.yaml' and './path_to_your_parameter_file/parameter.txt' with your actual file paths. Entries in 'config.yaml' should be in a valid YAML format with parameters for setting up the model parallelism, pipeline parallelism, and tensor parallelism. Please consult the ColossalAI's [documentation](https://colossal-ai.readthedocs.io/). 
+
+Parameter.txt should contain the parameters required for training the model in the following form: 
+```
+parameter1: value1
+parameter2: value2
+```
+
+Code Example 2: Initializing a model in ColossalAI.
+
+```python
+from colossalai.core import global_context as gpc
+from colossalai.utils import print_rank_0
+from colossalai.engine import Engine
+import torch.nn as nn
+
+class SimpleModel(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.linear = nn.Linear(10, 10)
+
+    def forward(self, x):
+        return self.linear(x)
+ 
+if __name__ == '__main__':
+    engine = Engine('./path_to_your_config_file/config.yaml')
+    model = SimpleModel()
+
+    if gpc.is_initialized(): # check if the parallel context has been initialized
+        model = model.to(gpc.get_default_device()) # send the model to the default device
+    else: 
+        print_rank_0('Parallel context has not been initialized')
+
+    engine.setup_optimizer(model)
+    engine.setup_lr_scheduler(model)
+    engine.train(100, model)
+
+    engine.destroy() # destroy the engine after use
+```
+The configuration file and the parameter paths should be replaced with actual paths. This example demonstrates the setup of a simple linear model, and requires that the parallel context is initialized and the model is sent to the default device for computation. The model setup, optimization, scheduling and training logic must be placed within the 'run' function. 
+
+For run command: python [filename].py

@@ -1,15 +1,33 @@
-Use Case: AWS provides a wide range of services including cloud computing, storage, and machine learning tools.
+Use Case: Use AWS S3 to store bioinformatics data for genomic analysis.
 
-Code details and examples:
-- AWS CLI (Command Line Interface)
-   - Sample Input: Not applicable
-   - Input Format: Not applicable
-   - Code: `aws <command>`
-- Amazon S3 (Simple Storage Service)
-   - Sample Input: Not applicable
-   - Input Format: Not applicable
-   - Code: `aws s3 <subcommand>`
-- Amazon EC2 (Elastic Compute Cloud)
-   - Sample Input: Not applicable
-   - Input Format: Not applicable
-   - Code: `aws ec2 <subcommand>`
+Code details and examples: 
+
+Code:
+
+AWS CLI is a powerful command line interface which is used to interact with AWS services. Here's an example of the commands to upload files to Amazon S3.
+
+Input files: Any files or folders to be uploaded to S3.
+
+Format required: No specific format is required.
+
+Example:
+
+```bash
+aws s3 cp myfolder s3://mybucket/myfolder --recursive
+```
+
+The `cp` command is used to upload files and folders to S3. The `--recursive` flag allows the command to navigate through all subfolders within 'myfolder' and upload all files.
+
+Specifications:
+
+Note: The upload path is specified as s3://mybucket/myfolder . Here 'mybucket' is the name of the bucket you are uploading to, and 'myfolder' is an optional directory within the bucket where the files will be uploaded. 
+
+Command to run: 
+
+The command can be run from a terminal window.
+
+```bash
+aws s3 cp myfolder s3://mybucket/myfolder --recursive
+```
+
+Note: AWS CLI installation and appropriate credentials setup is necessary to run this command.

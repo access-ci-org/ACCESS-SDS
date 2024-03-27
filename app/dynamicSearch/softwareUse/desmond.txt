@@ -1,0 +1,33 @@
+Use Case: Desmond is a software package under high-performance scientific computing software. It is used for molecular dynamics simulations and is known for high performance. Useful for research in biological and materials sciences.
+
+Code details and examples: Code.
+
+Desmond uses an input file format that is called .cfg
+
+Sample code for a Desmond input file:
+
+<code>
+# Desmond config file
+temperature     = 300
+pressure        = 1
+simulation_time = 100
+num_steps       = 1000000
+output_freq     = 1000
+structure_file  = input.pdb
+</code>
+
+The input file requires certain parameters to run the simulation. 
+- The 'temperature' specifies the temperature (in Kelvin) at which the simulation should occur.
+- The 'pressure' sets the pressure (in atm) for the simulation. 
+- 'simulation_time' sets the duration (in ps) for the simulation.
+- 'num_steps' sets the total simulation steps.
+- The 'output_freq' represents how often (in steps) the program writes to the output. 
+- 'structure_file' is the location of the structure file (.pdb format) which contains the structure of the molecule you want to simulate.
+
+The command to run Desmond:
+
+<code>
+desmond --config my_config.cfg
+</code>
+
+In this command, 'my_config.cfg' needs to be replaced with the name of your Desmond configuration file.

@@ -1,0 +1,24 @@
+Use Case: Compute matrix multiplication in large-scale mathematical operations with the academic software package UCC (Universal Cluster Computing).
+
+Code details and examples: Code.
+
+Input file:
+
+The input file needs to be a .txt file with two matrices written line by line (each line represents a row of the matrix) separated by a blank line. For example:
+
+```
+1 2 3
+4 5 6
+
+7 8
+9 10
+11 12
+```
+This represents two matrices: [1 2 3; 4 5 6] and [7 8; 9 10; 11 12]
+
+Command to run:
+
+```bash
+ucc matmul -i input.txt -o output.txt
+```
+This command will execute the matrix multiplication task in UCC (Universal Cluster Computing) with the `-i` option indicating the input file and `-o` the output file. The task `matmul` is the task of performing matrix multiplication.

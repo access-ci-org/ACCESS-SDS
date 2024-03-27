@@ -1,0 +1,28 @@
+Use Case: skae is a Python library that provides tools for astronomers to remove cosmic ray hits in astronomical images.; 
+
+Code Details and Examples: 
+
+Cosmic ray hits in astronomical images can be identified and cleaned using skae. Normally, this is done by using a sigma-clipping algorithm to identify pixels which are disproportionately bright compared to their neighbors.
+
+In this example, we use skae to clean an image 'image.fits' (FITS is the standard image format in astronomy). 
+
+```python
+# import skae
+from skae import Skae
+
+# create an instance of the Skae
+skae = Skae('dark.fits')
+
+# Input details: 'dark.fits' is an example of a 2D image file in FITS format, with the assumption that each pixel value represents the intensity. Details in the input file 'image.fits' will be read as a 2D array, with a value representing the intensity of light at that pixel.
+
+# clean the image using skae's 'clean_image' function
+skae.clean_image('image.fits')
+```
+
+To run the command:
+
+```shell
+$ python clean_image.py
+```
+
+Here, 'clean_image.py' is the Python script containing the above code.

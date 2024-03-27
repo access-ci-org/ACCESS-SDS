@@ -1,0 +1,26 @@
+Use Case: DeconSeq is a bioinformatics tool used for the detection and removal of contaminant sequences from genomic and metagenomic datasets. It can handle both complete genomes and draft genomes for contaminant detection. 
+
+Code details and examples:
+
+Code:
+
+The input file for DeconSeq should be in fasta format. Here is an example of a fasta file:
+
+```
+>Sequence_1
+ATGCAAGTGACAGCTACTGCGTCTGCAGTACGACGACGTACGACGTGAC
+>Sequence_2
+ACGACGTGACTACGACGACTAGCGTACGACTACGACGACTAGCTAGCTGAC
+>Sequence_3
+ACTGACGACTGACGACTGACGACTAGCTAGCTGACGACTAGCTAGCTAGC
+```
+
+The command to run DeconSeq could look like this:
+
+`perl deconseq.pl -f input_file.fasta -dbs db_name`
+
+Where `-f` specifies the input file and `-dbs` specifies the database against which the sequences should be checked.
+
+The output of DeconSeq will be a fasta file with the contaminant sequences removed.
+
+Please note: The DeconSeq perl script itself is not included. This is just an example of how the input file should look and how the command to call this script might look like. Actual usage may vary based on the installation and configuration of DeconSeq.

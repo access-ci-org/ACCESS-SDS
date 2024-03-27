@@ -1,0 +1,28 @@
+Use Case: The R-genomeinfodbdata package is used in Bioinformatics to provide version metadata for genomes and chromosomes. This package is used by other packages to ensure a universal mapping of chromosomes to genomes. 
+
+Code details and examples: 
+
+In R, you can use this package by loading it:
+
+```R
+library('GenomeInfoDbData')
+```
+
+Next, you would use it to map chromosomes to genomes:
+
+```R
+genome <- 'hg38'
+GenomeInfoDb::seqlengths(genome)
+```
+
+In this example, we're asking for the sequence lengths (i.e. chromosome lengths) of the human genome 'hg38' or GRCh38. 
+
+Command to run it: 
+
+You can run it as an R script using the command:
+
+```bash
+Rscript RgenomeInfoDbData.R
+``` 
+
+(Note: 'RgenomeInfoDbData.R' should be replaced by the script name, if different.)

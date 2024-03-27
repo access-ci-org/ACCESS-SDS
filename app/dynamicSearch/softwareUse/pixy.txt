@@ -1,0 +1,29 @@
+Use Case: Pixy is a maximum likelihood based statistic that integrates over uncertainty in the sample ancestry proportions, providing a robust means of identifying and characterizing population differentiation in whole-genome sequence data. It is commonly used in scientific research, particularly in population genetics.
+
+Code details and examples:
+
+Code: Pixy is written in Python and can take input file in VCF or VCF.gz format with Phased genotypes encoding. Note that the file must have the sample IDs in the header so Pixy can know what population each sample belongs to. An example minimal input VCF file can look like this:
+
+```
+##fileformat=VCFv4.1
+#CHROM  POS     ID      REF     ALT     QUAL    FILTER  INFO    FORMAT  NA00001 NA00002 NA00003
+20      14370   rs6054257       G       A       29      PASS    NS=3;DP=14;AF=0.5;DB;H2       GT:GQ:DP:HQ 0|0:48:1:51,51       1|0:48:8:51,51       1/1:43:5:.,.
+20      17330   .       T       A       3       q10     NS=3;DP=11;AF=0.017  GT:GQ:DP:HQ 0|0:49:3:58,50       0|1:3:5:65,3        0/0:41:3
+20      1110696 rs6040355       A       G,T     67      PASS    NS=2;DP=10;AF=0.333,0.667;AA=T;DB       GT:GQ:DP:HQ 1|2:21:6:23,27      2|1:2:0:18,2        2/2:35:4
+20      1230237 .       T       .       47      PASS    NS=3;DP=13;AA=T       GT:GQ:DP:HQ 0|0:54:7:56,60       0|0:48:4:51,51       0/0:61:2
+```
+
+The command to run Pixy in the simplest form will be:
+```
+pixy --stats pi fst dxy --vcf data.vcf --populations populations.txt
+```
+
+Here, `--stats` specifies the statistics to calculate, `--vcf` is used to specify the VCF file, and `--populations` specifies the file that defines the populations. The populations file is a plain text file where each line is a sample ID followed by the population it belongs to. It may look like this:
+
+```
+NA00001 A
+NA00002 A
+NA00003 B
+```
+
+Which means sample NA00001 and NA00002 belong to population A, and NA00003 belongs to population B.

@@ -1,0 +1,37 @@
+Use Case: EDTA (Enhanced Domain Tandem Analyzer) is a comprehensive computational pipeline for the systematic annotation of transposable elements (TEs) from genome assemblies. It has proven utility in curating high-quality TE libraries for diverse eukaryotic genomes. It efficiently identifies and annotates TEs in a two-step process: structural-based identification and homology-based identification. 
+
+Code Details and Examples:
+
+Code: 
+
+Firstly, the program requires a whole genome sequence in FASTA format. For ease, we'll use a fictional "example.fasta" file:
+
+```bash
+./EDTA.pl -genome example.fasta
+```
+
+In this command:
+- "-genome" indicates the genome file name.
+
+Command to annotate LTR retrotransposons only:
+
+```bash
+./EDTA.pl -genome example.fasta -type ltr
+```
+
+Command to annotate TIR DNA transposons only:
+
+```bash
+./EDTA.pl -genome example.fasta -type tir
+```
+
+Command to annotate Helitron DNA transposons only:
+
+```bash
+./EDTA.pl -genome example.fasta -type helitron
+```
+
+In these commands:
+- "-type" indicates the type of transposable element to annotate.
+
+Note: Before running, ensure that all dependencies are installed and correctly set in the configuration file. This command must be run in Linux command-line environment, and it must have Perl installed. The input files must be in FASTA format. The code snippets provided are based on the syntax suggested in the EDTA user manual and documentation. It’s crucial to strictly follow the guidelines provided by the software developers.

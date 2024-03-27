@@ -1,0 +1,32 @@
+Use Case: monitor is a software that helps to monitor application and server in real-time. 
+
+Code details and examples: Code 
+
+```
+# existing server
+server = Server.where(name: 'Server 1').first
+
+# create a new monitor
+monitor = server.pings.create!
+
+# the inputs for a monitor are name (required), url (required, unique),
+# interval (required), timeout, backend, and http_verb. The format of 
+# the input file should be a CSV or an array.
+
+monitor.ping!
+# => true/false
+
+monitor.up?
+# => true/false
+
+monitor.historical_up?
+# => true/false
+
+monitor.response_time
+# => 123.4 (in ms)
+
+# To run the Monitor software, you can use the following command:
+$ ruby monitor.rb
+```
+
+This is a standard ruby code and the name and url inputs are required for a new monitor. The url input should be unique. The interval input is also required and indicates the time (in minutes) between monitor checks. The timeout input corresponds to the maximum time (in seconds) that the monitor will wait for a response before considering the check a failure. The backend input is optional and indicates which protocol should be used for the check (ICMP, HTTP, HTTPS, FTP, etc.). The http_verb input is optional and specifies which HTTP verb (GET, POST, etc.) should be used if the backend is HTTP or HTTPS. If not provided it defaults to GET. The output is either true or false for each monitor check and the response time (in ms) can also be obtained.

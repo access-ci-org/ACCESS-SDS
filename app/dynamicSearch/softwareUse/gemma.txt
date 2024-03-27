@@ -1,0 +1,30 @@
+Use Case: GEMMA is a software tool for the analysis of genome-wide association (GWAS) data. It can handle large-scale data and provide outputs for different types of analysis including estimating the proportion of variance explained by all the genome-wide SNPs for a complex trait (the so-called "chip heritability"), predicting individual genetic values based on all SNPs and test associations.
+
+Code Details and Examples:
+
+Code:
+
+```
+gemma -bfile [filename] -k [matrix_filename] -n [1] -miss [0.1] -maf [0.01] -km [1] -o [output_filename]
+```
+
+Parameters:
+
+`-bfile [filename]`: The input file in binary PED format, which is a commonly used format for GWAS.
+
+`-k [matrix_filename]`: A relatedness matrix calculated from the input file, which is used for adjustments in the analysis.
+
+`-n [1]`: The column number of the phenotype data to be used for analysis.
+
+`-miss [0.1]`: The rate of missing data allowed for the analysis. The default is 0.1.
+
+`-maf [0.01]`: The minimum allele frequency required for the analysis. The default is 0.01.
+
+`-km [1]`: The coding method used for genotype data. The default is 1, meaning that additive coding is used.
+
+`-o [output_filename]`: The prefix of output files. If this parameter is not specified, output files will be named `output`.
+
+Sample Input Files are given in standard GEMMA format:
+`.fam`, `.bed`, and `.bim` files with the binary information about the pedigree and genotype. `.pheno` file containing the phenotypic traits of interest. 
+
+It is important that the phenotype file, and any covariate file used (`-c file.txt` in the command line), must not contain any missing data in the phenotype of interest, and must be aligned and sorted identically to the .fam file. Similarly, the .bim file and any pos file given must be aligned exactly with one another.

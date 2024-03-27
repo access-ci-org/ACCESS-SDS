@@ -1,33 +1,35 @@
-Use Case: FLTK (Fast Light Toolkit) is a cross-platform GUI toolkit for C++.
-Code details and examples:
-FLTK provides a set of widgets for creating graphical user interfaces. Below is an example of a simple FLTK program that creates a window with a button:
+Use Case: FLTK (Fast Light Toolkit) is a cross-platform C++ GUI toolkit for UNIX, Windows, and MacOS. It provides a modern GUI interface for programs where the user interface is hard-coded, or in C/C++ code. 
 
-```cpp
+Code details and examples: 
+
+Code: 
+
+```c++
 #include <FL/Fl.H>
 #include <FL/Fl_Window.H>
-#include <FL/Fl_Button.H>
+#include <FL/Fl_Box.H>
 
-void button_callback(Fl_Widget* widget, void*)
-{
-    Fl_Button* button = dynamic_cast<Fl_Button*>(widget);
-    button->label("Hello, FLTK!");
-}
-
-int main()
-{
-    Fl_Window window(300, 200, "FLTK Example");
-    Fl_Button button(100, 100, 100, 40, "Click Me");
-    button.callback(button_callback);
-    window.show();
-    return Fl::run();
+int main(int argc, char **argv) {
+  Fl_Window *window = new Fl_Window(340,180);
+  Fl_Box *box = new Fl_Box(20,40,300,100,"Hello, World!");
+  box->box(FL_UP_BOX);
+  box->labelsize(36);
+  box->labelfont(FL_BOLD+FL_ITALIC);
+  box->labeltype(FL_SHADOW_LABEL);
+  window->end();
+  window->show(argc, argv);
+  return Fl::run();
 }
 ```
+This simple FLTK program opens a window and displays a text "Hello, World!". 
 
-To compile and run this program, you can use the following commands:
+The command to compile and run this FLTK program using g++ would be:
 
 ```bash
-g++ fltk_example.cpp -lfltk
-./a.out
+$ g++ -o hello `fltk-config --cxxflags` hello.cpp `fltk-config --ldflags`
+$ ./hello
 ```
 
-This will compile the program and create an executable `a.out` which you can run to see the window with the button.
+FLTK also provides the fltk-config script that can be used to get the compiler flags necessary for compiling FLTK programs. The "fltk-config --cxxflags" command returns the required compiler flags and "fltk-config --ldflags" returns the required linker flags.
+
+There is no specific input file or format required for this example. The code can be written inside any text editor and saved with a .cpp extension.

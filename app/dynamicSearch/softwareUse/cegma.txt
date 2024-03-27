@@ -1,0 +1,33 @@
+Use Case: CEGMA (Core Eukaryotic Genes Mapping Approach) is a pipeline for building a set of highly conserved genes from genomic data. It is normally used as a completeness test for genome projects.
+
+Code details and examples:
+
+Code: 
+
+Input files: 
+
+1. Genome Sequence file: It should be in FASTA format. Each sequence in the file is treated as a separate genome. 
+
+Code Snippet Example:
+
+cegma -g genome.fa
+
+(Here, genome.fa is the genome sequence file.)
+
+Command:
+
+To run CEGMA, you simply use the following command, supplying the genome file as argument:
+
+$ cegma -g <genome_file>
+
+Here <genome_file> is a FASTA formatted file containing your assembled sequences. You can reference multiple assemblies by separating each file name with a comma.
+
+For example, running CEGMA on a single genome could look like this:
+
+$ cegma -g my_assembly.fa
+
+To run CEGMA on multiple genomes at once could look like this:
+
+$ cegma -g my_assembly1.fa,my_assembly2.fa,my_assembly3.fa
+
+Note: CEGMA is a compute intensive process and may take several hours or even days to run, depending on the size and complexity of your genome.

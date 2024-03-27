@@ -1,0 +1,31 @@
+Use Case: MCL (Markov Cluster algorithm) is software that clusters a network/graph into groups. It is widely used in bioinformatics for finding families in protein similarity networks.
+
+Code details and examples: 
+
+Code:
+
+The MCL algorithm accepts an input in the simplest form of an edge list. This is an example edge list for a simple undirected graph:
+
+1 2 0.2
+1 3 0.8
+2 3 0.6
+
+This file must be named with a ".abc" extension. The format is that each line represents an edge, with the nodes being the first two numbers and the weight of the edge being the third. 
+
+Before running the MCL algorithm, your graph must be processed into an MCL format using the "mcxload" command:
+
+```$ mcxload -abc myGraph.abc --stream-mirror --stream-neg-log10 -stream-tf 'ceil(200)' -o myGraph.mci -write-tab myGraph.tab```
+
+The resulting myGraph.mci file can then be processed with the MCL algorithm:
+
+```$ mcl myGraph.mci -I 1.4```
+
+This will output the clusters to stdout. You can direct this to a file by appending "> output.clusters" to the command: 
+
+```$ mcl myGraph.mci -I 1.4 > output.clusters```
+
+You can examine the clusters with the "mcxdump" command:
+
+```$ mcxdump -icl output.clusters -tabr myGraph.tab -o dump```
+
+This will output a user-friendly view of the clusters in dump.

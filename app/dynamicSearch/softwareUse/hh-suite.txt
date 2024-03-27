@@ -1,0 +1,41 @@
+Use Case: The HH-suite is a toolkit for protein sequence searching and alignment constructions. It includes programs for deriving a multiple sequence alignment (MSA) from sequence database searches, for making an HMM from an MSA, and for searching databases using a query HMM.
+
+Code Details and Examples:
+
+1. Production of Multiple Sequence Alignment (MSA)
+Input Format: .fasta
+Command: `addss.pl query.a3m`
+
+Code Snippet:
+```bash
+#!/bin/bash
+hhblits -i query.fasta -d database -oa3m query.a3m -n 3
+addss.pl query.a3m
+```
+This can be implemented in a bash script and run via a bash shell.
+
+2. Making a Hidden Markov Model (HMM) from an MSA
+Input Format: .a3m or .hhm
+Command: `hhmake -i query.a3m -o query.hhm`
+
+Code Snippet:
+```bash
+#!/bin/bash
+hhmake -i query.a3m -o query.hhm
+```
+
+This command takes an MSA file from the previous command and saves it as an HMM.
+
+3. Searching Databases with a Query HMM
+Input Format: .hhm
+Command: `hhsearch -i query.hhm -d database`
+
+Code Snippet:
+```bash
+#!/bin/bash
+hhsearch -i query.hhm -d database
+```
+
+Here, the program takes an HMM file and searches a database for similar models.
+
+All codes are run in a bash shell. Make sure to replace 'query.fasta' with your input fasta sequence, 'query.a3m' with your output MSA file, 'query.hhm' with your output HMM file, and 'database' with the database against which you are searching.

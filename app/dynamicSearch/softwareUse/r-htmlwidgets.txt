@@ -1,0 +1,29 @@
+Use Case: Visualizing interactive graphics in R's programming environment. 
+
+Code details and examples:
+
+1. **Library** - htmlwidgets
+2. **Input format** - data in R data frames
+3. **Specifications** - Data should be arranged in rows and columns. There aren't necessarily any specific formatting requirements, except the typical requirements that come with the usage of R data frames.
+
+Here's a detailed example with `r-htmlwidgets` using the `leaflet` package, which is a popular package used for displaying interactive maps.
+
+```R
+# loading necessary packages
+require(leaflet)
+require(htmlwidgets)
+
+# Creating a simple map with leaflet
+m <- leaflet() %>% addTiles()
+
+# Saving the map as an HTML-widget
+saveWidget(m, 'leaflet_map.html', selfcontained = FALSE)
+```
+
+This R script creates a simple map using the Leaflet library and then uses the htmlwidgets `saveWidget` function to save the map as an interactive HTML file. The `selfcontained = FALSE` argument means that the necessary JavaScript and CSS files will be saved separately, which can be beneficial when the size of the widget is a concern. 
+
+3. **Command to run** - The code can be executed line by line in Rstudio or can be written in a script and run using the Rscript command in the terminal. 
+
+```bash
+Rscript script_name.R
+```

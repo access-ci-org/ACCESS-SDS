@@ -1,26 +1,30 @@
-Use Case: SHAP (SHapley Additive exPlanations) is a popular Python library for interpreting machine learning models.
+Use Case: SHAP (SHapley Additive exPlanations) is a game theoretic approach to explain the output of any machine learning model. It relies on the collaboration of Shapley values which come from game theory and connects optimal credit allocation with local explanations using the classic attribution values from cooperative game theory.
 
-Code details and examples:
+Code details and examples: Code
+
+For example consider the use case where SHAP is used for explaining a gradient boosting model trained on the Boston Housing dataset.
+
 ```python
+# import necessary libraries
 import shap
-import numpy as np
+import xgboost
 
-# Load a model (example using a dummy model)
-model = lambda x: np.sum(x, axis=1) + np.random.randn(x.shape[0])
-data = np.random.randn(100, 5)
+# load boston housing dataset
+X,y = shap.datasets.boston()
+X_train,X_test,Y_train,Y_test = train_test_split(X, y, test_size=.2, random_state=0)  # splitting train and test data
 
-# Create an explainer object
-explainer = shap.Explainer(model, data)
+# train XGBoost model
+model = xgboost.train({"learning_rate": 0.01}, xgboost.DMatrix(X_train, label=Y_train), 100)
 
-# Calculate SHAP values for a specific instance
-shap_values = explainer.shap_values(data[0])
+# explain the model's predictions using SHAP
+# compute SHAP values
+explainer = shap.Explainer(model)
+shap_values = explainer.shap_values(X_test)
 
-print(shap_values)
+# visualize the first prediction's explanation
+shap.force_plot(explainer.expected_value, shap_values[0,:], X_test.iloc[0,:])
 ```
 
-Note: This is a basic example of using SHAP to calculate SHAP values for a dummy model and a sample input data.
-It is important to replace the dummy model with your own trained model and the data with your dataset.
+You can run this script using the following command: python SHAP_script.py
 
-To run the above code, simply execute it in a Python environment with SHAP installed.
-
-For more advanced usage and details, refer to the SHAP documentation: https://shap.readthedocs.io/en/latest/
+The input files required are built-in datasets available with `shap.datasets.boston()` command. No specific format is required. The `shap_values` that are computed are a measure of the importance of each feature in making predictions. If all the `shap_values` are close to zero for a feature, then that feature is not contributing much to the model's predictions.

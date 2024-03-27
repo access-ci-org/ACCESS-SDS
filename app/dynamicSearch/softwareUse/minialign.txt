@@ -1,0 +1,33 @@
+Use Case: Minialign is commonly used in bioinformatics for high-speed alignment of long DNA sequences. Large sequencing data can be processed efficiently because of its high-speed algorithm. 
+
+Code details and examples: 
+
+Code:
+
+The main command for running Minialign is:
+
+`minialign -xont reads.fasta reference.fasta > align.sam`
+
+Input Files:
+
+1) `reads.fasta`: This is an input file containing DNA sequences that you wish to align. It needs to be in FASTA format. A sample FASTA file looks like:
+
+```
+>sequence1
+ATGCGCTTGCT
+>sequence2
+AATAGCTAGCATCG
+>sequence3
+TTTATGCTAGCTG
+```
+
+2) `reference.fasta`: This is the reference genome (also in FASTA format) which the sequences will be aligned to. It may look something like:
+
+```
+>reference
+TAATCGCTAGAGCTAATCGG
+```
+
+**Please note**: To run Minialign, the reference sequence and query sequences should be stored in the FASTA format.
+
+Output: The output is written to the 'align.sam' file. SAM, which stands for Sequence Alignment/Map format, is a TAB-delimited text format consisting of a header section (which is optional) and an alignment section.

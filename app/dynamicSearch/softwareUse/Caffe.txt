@@ -1,41 +1,49 @@
-Caffe is a deep learning framework developed by the Berkeley Vision and Learning Center. Below is an example of how you can use Caffe for image classification.
+Use Case: Caffe is a deep learning framework that allows users to build, train and deploy neural networks. It is particularly effective for image classification and convolutional networks. 
 
-Use Case: Image Classification 
+Code details and examples: 
 
-Code details and examples:
-```python
-# Make sure Caffe is properly installed and the required models are available
+Code:
 
-import caffe
-import numpy as np
-import cv2
+1. Define the network in a plain text protocol buffer (`prototxt`) format. A simple example of a LeNet for MNIST digits recognition.
 
-# Load the pre-trained Caffe model
-model_def = 'deploy.prototxt'
-model_weights = 'model.caffemodel'
+```
+name: "LeNet"
+layer {
+  name: "mnist"
+  type: "Data"
+  top: "data"
+  top: "label"
+  include {
+    phase: TRAIN
+  }
+  transform_param {
+    scale: 0.00390625
+  }
+  data_param {
+    source: "examples/mnist/mnist_train_lmdb"
+    batch_size: 64
+    backend: LMDB
+  }
+}
 
-net = caffe.Net(model_def, model_weights, caffe.TEST)
+... (several layers here, please refer to actual LeNet tutorial for full script)
 
-# Load and preprocess the input image
-image = cv2.imread('image.jpg')
-resized_image = cv2.resize(image, (224, 224))
-mean_pixel = np.array([104.00698793, 116.66876762, 122.67891434])  # BGR mean values
-
-input_image = resized_image[...,::-1].astype(np.float32) - mean_pixel
-
-# Reshape the input image
-net.blobs['data'].data[...] = input_image.transpose((2, 0, 1))
-
-# Perform forward pass
-output = net.forward()
-
-# Get the predicted class label
-output_prob = output['prob']
-predicted_class = np.argmax(output_prob)
-
-print(f"Predicted Class: {predicted_class}")
+layer {
+  name: "loss"
+  type: "SoftmaxWithLoss"
+  bottom: "ip2"
+  bottom: "label"
+  top: "loss"
+}
 ```
 
-To run the above code, you need to have Caffe installed on your system with the necessary dependencies. Save the above code to a file, make sure to replace `'deploy.prototxt'`, `'model.caffemodel'`, and `'image.jpg'` with the paths to your deploy prototxt file, model weights file, and input image file respectively. Then you can run the script using a Python interpreter.
+This defines a neural net for training on MNIST dataset. The `source` in `data_param` should be the directory of your LMDB or LevelDB (other DB backends may be used as well) file.
 
-Please note that the above code is a simplified example and might need modifications based on the specific model and task you are working with.
+2. Prepare your data in the format specified inside the `prototxt` file.
+
+3. Train your model with the following command:
+
+```shell
+./build/tools/caffe train --solver=examples/mnist/lenet_solver.prototxt
+```
+The solver file is another `prototxt` file that specifies options like learning rate, momentum etc.

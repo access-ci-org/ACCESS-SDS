@@ -1,0 +1,52 @@
+Use Case: Use dace for performing transformations and optimizations on parametric dataflow programs, with the aim of realizing the program on a heterogeneous computing system.
+
+Code details and examples: Code
+
+The output of a Python program using dace consists of a directed acyclic graph (DAG), where nodes represent computations and edges represent data dependencies.
+
+Here is an example of a simple matrix multiplication in dace:
+
+```python
+import dace
+import numpy as np
+
+# Define symbolic sizes for the matrices
+N = dace.symbol("N")
+M = dace.symbol("M")
+K = dace.symbol("K")
+
+# Define data containers (arrays) with the symbolic sizes
+A = dace.ndarray([N, M], dtype=dace.float32)
+B = dace.ndarray([M, K], dtype=dace.float32)
+C = dace.ndarray([N, K], dtype=dace.float32)
+
+# Define a state (computation)
+state = dace.State()
+
+# Add nodes to compute the matrix multiplication
+i, j, k = state.add_loop(["i", "j", "k"], [(0, N-1), (0, K-1), (0, M-1)])
+multi = state.add_node(dace.nodes.Tasklet("multi", {"a_in", "b_in"}, {"c_out"}, "c_out = a_in * b_in"))
+state.add_edge(A, None, multi, "a_in", dace.Memlet.simple(A, "i, k"))
+state.add_edge(B, None, multi, "b_in", dace.Memlet.simple(B, "k, j"))
+state.add_edge(multi, "c_out", C, None, dace.Memlet.simple(C, "i, j"))
+
+# Define a program with the state
+program = dace.Program(state)
+
+# Compile the program
+compiled_program = dace.compile(program)
+```
+
+The corresponding command to run the DaCe program would then typically be in a Python shell or file:
+
+```python
+# Define input matrices
+a = np.random.rand(10, 20).astype(np.float32)
+b = np.random.rand(20, 15).astype(np.float32)
+c = np.zeros([10, 15], dtype=np.float32)
+
+# Execute the program
+compiled_program(a=a, b=b, c=c)
+```
+
+The input files in this case would be the Python file containing the program and any data files required for computation. The data should be in a rectangular format with consistent data types, such as a CSV file for a matrix. The command to run this would be python <filename>, replacing <filename> with the name of the Python file.

@@ -1,38 +1,54 @@
-libogg library for handling Ogg bitstreams. Here is an example of using libogg.
+Use Case: libogg is a library used for playing and creating Ogg bitstream format data. It is especially essential in multimedia applications for audio streaming and processing.
 
-Use Case: Encode a WAV audio file to Ogg format using the libogg library.
 Code details and examples:
 
+Code:
 ```c
-#include <stdio.h>
-#include <stdint.h>
-#include <ogg/ogg.h>
+#include "ogg/ogg.h"
 
 int main() {
-    FILE* wav_file = fopen("input.wav", "rb");
-    FILE* ogg_file = fopen("output.ogg", "wb");
+    ogg_sync_state oy; /* sync and verify incoming physical bitstream */
+    ogg_stream_state os; /* take physical pages, weld into a logical stream of packets */
+    ogg_page og; /* one Ogg bitstream page. Vorbis packets are inside */
+    ogg_packet op; /* one raw packet of data for decode */
 
-    ogg_stream_state os;
-    ogg_page og;
-    ogg_packet op;
+    /* Initialize Sync state */
+    ogg_sync_init(&oy);
 
-    ogg_stream_init(&os, rand());
+    /* Writing to the stream */
+    FILE* input = /* Your input file */;
+    char* buffer = ogg_sync_buffer(&oy, 4096);
+    size_t bytes = fread(buffer, 1, 4096, input);
+    ogg_sync_wrote(&oy, bytes);
 
-    // Pretend we read the WAV data into wave_data buffer
+    /* Check new page */
+    if(ogg_sync_pageout(&oy, &og) == 1) {
+      /* Initialize a stream with the serialized page */
+      ogg_stream_init(&os, ogg_page_serialno(&og));
+    }
 
-    // Encode WAV to Ogg
-    ogg_stream_packetin(&os, &op);
-    ogg_stream_pageout(&os, &og);
-    fwrite(og.header, 1, og.header_len, ogg_file);
-    fwrite(og.body, 1, og.body_len, ogg_file);
-
-    ogg_stream_clear(&os);
-
-    fclose(wav_file);
-    fclose(ogg_file);
+    ogg_stream_packetin(&os, &op); /* Add packet to the stream */
 
     return 0;
 }
 ```
 
-Please note that this is a simplified example and would need to be adapted to your specific use case.
+Command to compile (assuming gcc and libogg are correctly installed):
+```bash
+gcc sample.c -logg -o sample
+```
+
+This sample code demonstrates how to initialize a Sync state, write into the Ogg stream from a certain input, create a page from this data and use the page to initialize an Ogg stream. Then, a packet from this data is inserted into the stream.
+
+All of the given functions take certain input parameters and change a specific state:
+
+- ogg_sync_init: Initializes the given ogg_sync_state struct
+- ogg_sync_buffer: Provides a buffer that can be written to. The buffer is part of the given ogg_sync_state, so the return value is actually a pointer to a portion of the memory already occupied by the given state.
+- ogg_sync_wrote: Tells the Sync state that there's new data to process.
+- ogg_sync_pageout: Check to see if a full page is available in the Sync state.
+- ogg_stream_init: Initialize a stream with the given serial number.
+- ogg_stream_packetin: Add a packet to a stream.
+
+Apart from the libogg functions, the C standard library functions like fread are used for reading the input file.
+
+No specific input file is required, because the code essentially works with any file that contains audio data. The size of the data that is read at once is set to 4096 bytes for an example and can be adjusted according to the needs and the performance.

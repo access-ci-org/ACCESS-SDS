@@ -1,0 +1,31 @@
+Use Case: Stacks is a software suite for processing and analyzing genomic data from RAD (Restriction site Associated DNA) and GBS (Genotyping by Sequencing) methods. It allows users to identify loci of interest, detect and quantify polymorphisms, call genotypes, and perform population genomics analyses.
+
+Code details and examples: Code
+
+Input files needed for Stacks include FASTQ files from Illumina sequencing. File names should include sample names and barcode sequences. An example of the file format is given below:
+
+```
+@HWI-ST1223:80:D1FMTACXX:2:1101:1243:2213 1:N:0:AGTCAA
+NTGCAGGTCAGATTTGTGGAAGTTGTTGTTGTTTTTTTTTTTTTTTT
++
+#4:DDDD,DDDDDD7=<DDDDDDDDDDDDBDDDDDDBD
+```
+Each sequence read in the FASTQ file begins with a unique identifier. The sequence follows this identifier on the next line. On the line after the sequence, there is a '+' character followed by the same sequence identifier (or this line can just be '+'). The final line records a quality score for each base in the string.
+
+Command to run Stacks using a single processor (a single core on a single machine, an ideal setup for testing and small projects) can be done by running the `ustacks` program for each sample in the project. For example, if we were processing sample_1, and wished to disable the deleveraging algorithm and have Stacks correct sequencing errors, we could do the following:
+
+```
+ustacks -t fastq -f ./path_to_your_files/sample_1.fq -o ./path_to_your_outputs/ -i 1 -d -r
+```
+
+Where `./path_to_your_files/` would be the path to your sample files, `./path_to_your_outputs/` would be the path where you want your outputs to be stored, `-i 1` sets this as the first individual input file, `-d` disables the deleveraging algorithm (a local greed algorithm), `-r` enables the removal of highly-repetitive stacks and nearby errors.
+
+The Population Map file is a tab separated file specifying which samples belong to which population. This file should be formatted with each sample name followed by a TAB and then the population name:
+
+```
+sample_1    population_1
+sample_2    population_2
+sample_3    population_3
+sample_4    population_1
+sample_5    population_2
+```

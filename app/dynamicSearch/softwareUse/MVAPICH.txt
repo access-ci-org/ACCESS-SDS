@@ -1,40 +1,64 @@
-Use Case: High-performance MPI library  
-Code details and examples:  
-MVAPICH is an MPI Library for high-performance computing. To run a sample MPI job using MVAPICH, you need a host file specifying the nodes on which the MPI job will run and an executable program.  
+Use Case: Use MVAPICH2 (message passing interface for InfiniBand version 2) for running parallel programming applications in a cluster.
 
-Sample host file (hostfile.txt):
-```
-node1
-node2
-node3
-```
+Code details and examples: 
 
-Sample MPI program (mpi_code.c):
-```c
+Code: 
+
+To illustrate the usage of this software let's take a simple MPI code which finds the maximum number in a list.(max.c)
+
+```C
 #include <stdio.h>
-#include <mpi.h>
+#include "mpi.h"
+#define MAX_LIST 10000
 
-int main(int argc, char *argv[]) {
-    int rank, size;
+int main(int argc, char **argv){
 
-    MPI_Init(&argc, &argv);
-    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-    MPI_Comm_size(MPI_COMM_WORLD, &size);
+ int rank, total_ranks;
+ int global_max = 0;
+ int local_max = 0;
 
-    printf("Hello world from rank %d out of %d processes\n", rank, size);
+ int i;
+ int locals[MAX_LIST] = { 0 };
+ MPI_Init(&argc, &argv);
+ MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+ MPI_Comm_size(MPI_COMM_WORLD, &total_ranks);
 
-    MPI_Finalize();
+ for(i=0;i<MAX_LIST;i++)
+ {
+    locals[i] = rank * MAX_LIST + i;
+ }
 
-    return 0;
+ for(i=0;i<MAX_LIST;i++)
+ {
+  if(locals[i] > local_max)
+     local_max = locals[i];
+ }
+
+ MPI_Reduce(&local_max, &global_max, 1, MPI_INT, MPI_MAX, 0,MPI_COMM_WORLD);
+
+ if(rank==0)
+ {
+    printf("Maximum value = %d\n", global_max);
+ }
+
+ MPI_Finalize();
+ return 0;
 }
 ```
+To compile this code you would use:
 
-Compile the MPI program:
-```
-mpicc mpi_code.c -o mpi_executable
-```
+`mpicc -o max max.c`
 
-Run the MPI program using MVAPICH specifying the host file:
-```
-mpirun -np 4 -hostfile hostfile.txt ./mpi_executable
-```
+After this, to run the Max program (compiled above) on your cluster via MVAPICH2, the general format for the command is:
+
+`mpirun -np 4 ./max`
+
+Here, `-np` denotes the number of processes and `4` implies we wish to run this program using 4 processes. You may want to adjust this number according to the architecture of the cluster you are working on. 
+
+Files required: Input files are not necessary for this example as we are generating an array of integers based on the rank of each process.
+
+Specifications and details in input files: N/A. 
+
+There will not be any input files provided as we are generating data based on the rank of each process. 
+
+It is important to mention that MVAPICH2 is designed to work with the Message Passing Interface (MPI) standard which is widely used for writing parallel programs. This standard provides a library of functions that allow communication between distributed processes, essential for running parallel programs in a cluster, but also useful for multiprocessor systems. The MPI library is available in C, C++, and Fortran.

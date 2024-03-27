@@ -1,23 +1,59 @@
-Use Case: Circos is a software package for visualizing data in a circular layout widely used in genomics and other fields.
+Use Case: Circos is a powerful visualization tool for genomic data that employs a circular layout to represent relationships between genomic intervals. It is used to identify patterns and trends in complex datasets and is highly configurable given it's designed for creating publication-quality infographics.
 
-Code details and examples:
-1. Sample input files: 
-   - Configuration file (circos.conf): Contains information about the data tracks, colors, layout, etc.
-   - Data files (e.g., data.txt): Contains the actual data to be visualized.
+Code details and examples: 
 
-2. Input file formats:
-   - Circos configuration file: Defines the layout, data tracks, and appearance of the Circos plot. It is in a text format.
-   - Data files: Can be in various formats like tab-delimited, space-separated, or custom formats depending on the data being visualized.
+Code:
 
-3. Example code snippets:
-   - To run Circos:
-     ```
-     circos -conf circos.conf
-     ```
-   - This command will generate the Circos plot based on the configuration file provided.
+```bash
+circos -conf circos.conf
+```
 
-4. Note:
-   - Circos is highly customizable but requires a good understanding of its configuration file syntax for optimal use.
-   - Sample configuration files and tutorials are available on the Circos website for reference.
+Input File:
 
-Please refer to the Circos documentation for more detailed information on usage and customization.
+The configuration file is typically named circos.conf. There are various types of input file formats used including parsed text files (.txt) and karyotype files (.karyotype). Data is typically tab-delimited, where the values depend on the type of data being represented, such as scatter, histogram, heatmap, etc.
+
+Sample circos.conf:
+
+```bash
+<<include etc/colors_fonts_patterns.conf>>
+<<include etc/housekeeping.conf>>
+
+<karyotype>
+data/karyotype/karyotype.human.txt
+</karyotype>
+
+<<include ideogram.conf>>
+<<include ticks.conf>>
+
+<plots>
+
+<plot>
+<file>
+data/5/chr.k562.genes.txt
+</file>
+<type>
+heatmap
+</type>
+</plot>
+
+</plots>
+
+<<include image.conf>>
+```
+
+Specific rules in the input files:
+- Comment lines (beginning with a #) and empty lines are ignored.
+- Tabs separate fields (except within <image>, <colors>, <fonts>, <patterns>, and <links> blocks).
+- A block begins with `<blockname>`.
+- A block ends with `</blockname>`.
+- Within a block, lines can be of the form `<name>value<name>` or `value`.
+- The order of blocks is irrelevant.
+- Blocks that appear more than once are concatenated.
+
+Equally, you would need a 'karyotype.human.txt' and 'chr.k562.genes.txt' file in the appropriate directories with the right data for this example to work.
+
+Command to run:
+
+```bash
+circos -conf circos.conf
+```

@@ -1,24 +1,45 @@
-Use Case: ColabFold is a tool for protein structure prediction and analysis.
+Use Case: ColabFold is used for predicting protein structures from sequences. The package utilizes deep learning models trained on vast protein structure databases to generate highly accurate protein structure predictions.
 
-Code details and examples:
-ColabFold can be used directly in Google Colab notebooks. Here is an example of how to use it for protein structure prediction:
+Code details and examples: Code
 
-```python
-# Install necessary libraries
-!pip install biopython
-!pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
-!pip install tape_proteins
+The input for ColabFold is a protein sequence(s) in Fasta format.
 
-# Download the ColabFold repository
-!git clone https://github.com/sokrypton/ColabFold
+Sample Input File (fasta):
 
-# Move to the ColabFold directory
-%cd ColabFold
-
-# Run the AlphaFold model for protein structure prediction
-!python3 run_alphafold.py --use_ptm --use_msa examples/1u19A/B.ali
+```
+>Sequence1
+MTEYKLVVVGAGGVGKSALTIQLIQNHFVDEYDPTIEDSYRKQVVIDGETCLLDILDTAG
+QEEYSAMRDQYMRTGEGFLCVFAINNTKSFEDIHQYREQIKRVKDSDDVPMVLVGNKCDL
 ```
 
-In the example above, we first install necessary libraries, then download the ColabFold repository, move into the directory, and finally run the AlphaFold model for protein structure prediction on a sample input file `B.ali`.
+Note: The header line (begins with a >) is optional and often holds information like a unique identifier for the sequence and/or an informative description.
 
-Please note that ColabFold is based on AlphaFold and requires a Google Colab environment for execution.
+To run ColabFold you would typically use a command in the Google Colab environment integrated with Jupyter notebook, since ColabFold is a Google Colab notebook itself. Make sure you also have the neccessary dependencies like py3Dmol, and follow the Google Colab instructions to start the notebook and enter the protein sequence to execute the predictions. Due to the interactive nature of the ColabFold Google Colab notebook, it doesn't have a single command line instruction to execute.
+
+For instance:
+
+```python
+# Any dependency imports
+import py3Dmol
+
+# Input sequence(s) in FASTA format
+seq = """
+>Sequence1
+MTEYKLVVVGAGGVGKSALTIQLIQNHFVDEYDPTIEDSYRKQVVIDGETCLLDILDTAG
+QEEYSAMRDQYMRTGEGFLCVFAINNTKSFEDIHQYREQIKRVKDSDDVPMVLVGNKCDL
+"""
+
+# Call the prediction function on the sequence
+prediction = alphafold_model.predict(seq)
+
+# The prediction is a dictionary containing different results from the AlphaFold model
+# Here, we simply display the predicted 3D structure using py3Dmol
+import py3Dmol
+view = py3Dmol.view(js='3dmol.js')
+view.addModel(prediction['3d_structure'],'pdb')
+view.setStyle({'cartoon':{'color':'spectrum'}})
+view.zoomTo()
+view.show()
+```
+
+(Note: The ColabFold Google Colab requires token access which is also obtained inside the notebook following the on-screen instructions)

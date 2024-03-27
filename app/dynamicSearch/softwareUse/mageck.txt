@@ -1,0 +1,49 @@
+Use Case: mageck is a computational tool for analysing CRISPR/Cas9 knockout screening experiments, widely used in bioinformatics. It allows researchers to identify essential genes in a given genome, which can be crucial in understanding disease progression and drug development.
+
+Code Details and Examples: 
+
+Code: 
+
+1. **sgRNA count table in mageck**
+
+Input: A tab-delimited text file with sgRNA sequences and their respective counts in each sample. The first column is the sgRNA identifier, the second column is the gene that the sgRNA targets, the remaining columns are read counts for each sample. 
+
+```
+sgRNA	Gene	Sample1	Sample2
+sgRNA1	Gene1	100	90
+sgRNA2	Gene1	120	110
+sgRNA3	Gene2	200	190
+sgRNA4	Gene2	220	210
+```
+
+Command to run: 
+
+```shell
+mageck test -k count_table.txt -t Sample2 -c Sample1 -o output_dir
+```
+
+2. **FASTQ file input in mageck**
+
+mageck also supports directly processing of FASTQ files (raw sequencing data). 
+
+Given a FASTQ file, the first you need to do is to generate the count table. A separate sgRNA library file (a text file with one sgRNA per line) is required. 
+
+Suppose the library file (library.txt) is:
+
+```
+sgRNA1
+sgRNA2
+sgRNA3
+sgRNA4
+```
+
+and the FASTQ files are `Sample1.fastq` and `Sample2.fastq` 
+
+Command to run:
+
+```shell
+mageck count -l library.txt --fastq Sample1.fastq --sample-label Sample1
+mageck count -l library.txt --fastq Sample2.fastq --sample-label Sample2
+```
+
+This will generate two count files, then you need to merge the count files into a count table as in the first example in order to perform the downstream analysis.

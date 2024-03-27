@@ -1,0 +1,26 @@
+Use Case: Genrich is frequently used in genomics, where it helps in detecting and identifying genomic sites that are uniquely covered by next-generation sequencing reads. Such sites could be potential binding sites for proteins, locations of DNA or RNA modifications, or regions susceptible to chromosomal breakages.
+
+Code details and examples: 
+Code:
+
+Input files required for Genrich are alignment files in BAM or CRAM format. The reads in these files should have been preprocessed (cleaned, filtered, aligned, etc.) according to standard next-generation sequencing practices.
+
+In case you wish Genrich to analyze paired-end data, that should be represented as paired reads in the input alignment file(s), not as two separate files of first mate and second mate alignments.
+
+An example of a command:
+
+```
+./Genrich -t file1.bam,file2.bam -o output.narrowPeak
+```
+
+Here, the `-t` parameter defines the treatment alignment files, `-o` specifies the output name and format. Genrich supports two output formats: narrowPeak and bed.
+
+The output in the narrowPeak format contains information about the detected genomic sites such as their genomic coordinates, enrichment scores, and q-values for statistical significance. The q-values are calculated from p-values using the Benjamini-Hochberg procedure to control the false discovery rate.
+
+For more complex analyses, Genrich provides additional options, including signal track generation, ATAC-seq mode, and control for replication.
+
+For example, you can use -j parameter to enable ATAC-seq mode:
+```
+./Genrich -j -t file1.bam,file2.bam -o output.narrowPeak
+```
+Note: Replace "file1.bam, file2.bam" with the paths to your sample bam files.

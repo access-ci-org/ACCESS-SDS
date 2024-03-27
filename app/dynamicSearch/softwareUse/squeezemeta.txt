@@ -1,0 +1,30 @@
+Use Case: SqueezeMeta is a comprehensive pipeline that combines different well-known software packages for metagenomic analysis. It can take raw reads, co-assemblings them, and then maps them against the contigs to estimate the abundance of each OTU. It uses several integrated packages for completing these steps. 
+
+Code details and examples: Code
+
+Input Format: 
+- Sequencing reads in fastq format. Ideally, users should provide very clean reads, free of Ns, adapters or phiX control remnants. 
+
+Example Input File:
+
+- R1.fastq: This file contains pair 1 of your input reads.
+- R2.fastq: This file contains pair 2 of your input reads.
+
+Command to run SqueezeMeta:
+```
+SqueezeMeta.pl -m coassembly -s samples_file.txt -f path_to_fastq_files
+```
+
+- The `-m` option specifies the mode of operation. Possible values include `seq` (sequential), `coassembly` or `merge`. 
+- The `-s` option allows the user to specify a samples file. A samples file is a tab-delimited file with two columns, the first one containing the sample name, and the second one the name of the file or files containing the reads (separated by commas in the case of paired-end reads).
+- The `-f` option specifies the path to the directory containing the input fastq files.
+
+NOTE: SqueezeMeta requires a significant amount of computational resources, especially in terms of RAM usage. For a typical metagenome of ~20Gb, the DIAMOND steps can go up to ~100Gb of RAM. 
+
+Sample File Format for samples_file.txt:
+
+```
+SampleA    SampleA_1.fastq,SampleA_2.fastq
+SampleB    SampleB_1.fastq,SampleB_2.fastq
+```
+In this file, `SampleA` and `SampleB` are two samples, each with a pair of fastq files representing their reads.

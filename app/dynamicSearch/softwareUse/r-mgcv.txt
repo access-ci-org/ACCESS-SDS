@@ -1,0 +1,36 @@
+Use Case: Using mgcv package in R for generalized additive model fitting;
+
+Code details and examples:
+
+Code:
+
+```R
+# Loading the required library
+library(mgcv)
+
+# Creating some sample data
+set.seed(0)
+n <- 400
+sig <- 2
+x0 <- runif(n, 0, 1)
+x1 <- 2 * (runif(n, 0, 1) - 0.5)
+x2 <- 2 * (runif(n, 0, 1) - 0.5)
+y <- sin(12 * (x0 + 0.2)) / (0.1 + (x0 + 0.2)^2) + 0.1 * x1 * x2 + rnorm(n, 0, sig)
+
+# Creating a data frame
+dat <- data.frame(y = y, x0 = x0, x1 = x1, x2 = x2)
+
+# Fitting a GAM model
+fit <- gam(y ~ s(x0, k = 20) + s(x1, x2, k = 40), data = dat)
+
+# Printing the summary of the model fit
+summary(fit)
+```
+
+Input files required: Variable data in R compatible formats (like Rdata, CSV, etc.).
+
+Input Files Format: This doesn't use any file inputs, but Data frames used as input.
+
+Specifications and details in input files: gam() function requires formula as input based on which model is fitted. It uses smooth terms s(). 'k' in smooth term is the maximum number of basis for the smooth. 
+
+Command to run: Above code can be run directly in R environment, or using 'Rscript filename.R' in command line.

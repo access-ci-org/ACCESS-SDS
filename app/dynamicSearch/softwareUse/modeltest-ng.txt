@@ -1,0 +1,38 @@
+Use Case: Use modeltest-ng to perform a Model Selection test that will help determine the best model of sequence evolution that fits the data, based on a given phylogenetic tree and alignment file.
+
+Code Details and Examples: Code. 
+
+The modeltest-ng program accepts as input a sequence alignment file in PHYLIP format and a corresponding phylogenetic tree file in Newick format.
+
+Format Required:
+1. PHYLIP Sequence Alignment file - This is a standard format for sequence alignment that includes the number of sequences, sequence length, and sequence lines for each species.
+2. Newick Tree file - A standard format for tree files that represents phylogenetic trees as a set of nested parentheses.
+
+Specification:
+Your PHYLIP file and Newick file should be correctly formatted. In the PHYLIP file, you need to have the same species names for sequence alignment and tree file.
+
+Sample Input file:
+Alignment file (PHYLIP format): 
+
+3 13
+
+Dog ATGACGTACGTAG
+
+Chicken ATGCCGTAGCTAG
+
+Elephant ATCGTAGCTGACG
+
+Tree file (Newick format):
+
+(Dog:0.37,Chicken:0.23,(Elephant:0.56):0.14);
+
+
+Command to run:
+
+You'll call the modeltest-ng on your alignment and tree file as follows:
+
+```
+modeltest-ng -d nt -i alignment.phy -t tree.nwk
+``` 
+
+By running the command above, you are telling modeltest-ng to perform model selection on the alignment file alignment.phy, using the tree specified in tree.nwk. The -d nt option specifies that the data are nucleotides.

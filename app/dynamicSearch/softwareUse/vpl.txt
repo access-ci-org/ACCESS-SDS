@@ -1,0 +1,39 @@
+Use Case: Use VPL for creating programming lab assignments for educational purposes. It allows the entire class to check their assignments and submits their code in a secure environment. 
+
+Code details and examples: Code:
+
+The following is an example of a VPL environment to run a Python program to calculate the factorial of a number.
+
+1. You create a file named `vpl_execution` with the following content:
+
+```bash
+#!/bin/bash
+python3 factorial.py
+```
+
+This file instructs VPL to execute the `factorial.py` Python script.
+
+2. Create a Python script, `factorial.py`, with your assignment's requirements. Here is an example where a factorial of a number has to be calculated:
+
+```python
+def factorial(n):
+    return 1 if (n==1 or n==0) else n * factorial(n - 1);
+num = 5
+print("Factorial of",num,"is",
+factorial(num))
+```
+
+The above python script calculates the factorial of a number (for instance, here it is 5).
+
+3. Next, make `vpl_execution` executable by running the command:
+
+```bash
+chmod +x vpl_execution
+```
+Now your `vpl_execution` file is executable.
+
+4. Finally, TEST the environment on the VPL platform by clicking on `Check` in the VPL Activity.
+
+It will run the `vpl_execution` file in a Docker image, and display the results for you in a safe secured environment. 
+
+Command to run: Teacher or Student can test or submit their activity in the vpl module in Moodle by clicking on the `Test` or `Submit` buttons respectively.

@@ -1,0 +1,26 @@
+Use Case: InterProScan is used for protein sequence analysis and classification by running a protein sequence through multiple protein signature recognition algorithms and comparing it with the InterPro database. 
+
+Code details and examples: 
+
+Code: 
+
+1. Input file format: Interproscan requires the sequence data to be in one of the following formats: raw, fasta, tsv, xml, gff3, json, html, svg, sseq, iprlookup, goterms, pathfinder, or an user-defined output format.  The name of the input file should be input.fasta.
+
+Example of a FASTA format input file (input.fasta):
+
+```bash
+>sequence1
+MTEYKLVVVGAGGVGKSALTIQLIQNHFVDEYDPTIEDSYRKQVVIDGETCLLDILDTAGQEEYSAMRDQ
+>sequence2
+MRVKEKYQHLWRGGGCGRGGWSGLGTGGSCIACHGHPSHAGGFGSGCSTSSRGSCSGSCWTFSTRTYRS
+```
+
+2. Running InterproScan:
+
+You can run Interproscan with the following command:
+
+```bash
+./interproscan.sh -i input.fasta -b output_file -f tsv
+```
+
+In this command, `-i` indicates the input file, `-b` is for the base name of the output file, and `-f` is the output file format. The `-f tsv` will provide an output that is formated as a tab-separated file, which is easy to read and to parse for further analysis.

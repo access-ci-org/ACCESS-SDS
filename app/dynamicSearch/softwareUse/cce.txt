@@ -1,0 +1,41 @@
+Use Case: Compiling and running a C++ code using Cray Programming Environment's Cray Compiler Environment(cce).
+
+Code details and examples: 
+
+Code:
+The typical C++ code used for this use-case can be a basic Hello World program.
+
+For instance: 
+
+```cpp
+#include<iostream>
+
+int main()
+{
+	std::cout << "Hello, World!\n";
+	return 0;
+}
+```
+
+This code can be saved in a file called HelloWorld.cpp.
+
+Input File format: 
+In this instance, HelloWorld.cpp is a text file including the C++ source code.
+
+Specifications: 
+C++ source code should follow the syntax and semantics of C++. 
+
+Command to run the code:
+
+To compile and run the code on a system with Cray Programming Environment installed, the following commands are used.
+
+To compile the code, use:
+```shell
+CC -o HelloWorld HelloWorld.cpp
+```
+After the above command, if there are no errors in the code, an executable file named HelloWorld is created.
+
+To run the created executable, use:
+```shell
+./HelloWorld
+```

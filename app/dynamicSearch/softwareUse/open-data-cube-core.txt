@@ -1,0 +1,30 @@
+Use Case: Open Data Cube (ODC) is an open-source software library that provides an integrated gridded data analysis environment. It is used for analysis of large volumes of earth observation data.
+
+Code Details and Examples:
+
+Code: Geometry and CRS (Projection Information) Specification
+---
+ODC expects the crs (Coordinate Reference System) to be specified in EPSG format. The geometry or extent of analysis should be described in geojson format.
+```
+{
+'longitude': ('name of longitude dimension', range),
+'latitude': ('name of latitude dimension', range),
+'crs': 'EPSG string or dict specifying projection',
+'geobox': 'optional geobox object if ready',
+}
+```
+Code: Loading Data
+---
+ODC has a load function to read data from its grid-based structure.
+```python
+dc = datacube.Datacube(app_name='my_app')
+datasets = dc.load(product='ls8_nbar_scene', measurements=['red'], time=('2017-01', '2017-03'))
+```
+Code: Running Analyses
+---
+ODC includes several wrapper functions for common analyses. Here, an NDVI calculation is performed.
+```python
+ndvi = (datasets.nir - datasets.red) / (datasets.nir + datasets.red)
+```
+
+Command to run them: Python scripts using ODC can be run using a command such as 'python myscript.py' from the command line, where 'myscript.py' is the name of the script file. The ODC package should be installed and properly configured prior to running the script.

@@ -1,0 +1,31 @@
+Use Case: SyRI (Synteny and Rearrangement Identifier) is used for identifying synteny and rearrangements between two closely related genomes. This software is commonly used in genomics research to compare genomes and identify structural differences.
+
+Code details and examples:
+Code:
+The input required for SyRI are two genome assemblies (reference and query) in FASTA format and their corresponding whole genome alignment in MAF format.
+
+1. A reference genome file (for example, Ref_genome.fasta), which could look like this:
+```
+>chr1
+ATCCAGCT
+```
+
+2. A query genome file (for example, Query_genome.fasta), which could look like this:
+```
+>chr2
+AAGCTTCC
+```
+
+3. A whole genome alignment file (for example, alignment.maf), which could look like this:
+```
+a score=23262.0
+s chr1 1 8 + 100 ATCCAGTT
+s chr2 1 8 + 100 AAGCTTAC
+```
+
+Given these files, you would then run SyRI using the following command:
+```
+python SyRI.py -r Ref_genome.fasta -q Query_genome.fasta -c alignment.maf -o output
+```
+
+In this command, `-r` represents the reference genome file, `-q` the query genome file, `-c` the alignment file, and `-o` the output directory. The output files will detail the identified synteny and rearrangements between the reference and query genomes.

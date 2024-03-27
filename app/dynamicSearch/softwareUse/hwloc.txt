@@ -1,13 +1,63 @@
-Use Case: HWLOC (Hardware Locality)
+Use Case: hwloc helps in mapping the computing resources of high performance computing (HPC) systems. It is used for obtaining the structure and characteristics of the machine, such as the number of CPUs, threads, cores, and caches, and their relative positions. This provides a simple way to distribute workload across available resources optimally.
 
-Code details and examples:
-HWLOC (Hardware Locality) is a software package that provides a portable abstraction (and tool) for the hierarchical topology of modern architectures. It primarily helps applications identify the physical hardware topology of the system on which they're running.
+Code details and examples: 
 
-Example of running lstopo command to visualize the topology of the system:
+The API provided by hwloc generates an abstract view of the machine's hardware topology. Here is a simple C language code snippet that uses the hwloc API, which allocates memory in each of the cores:
+
+```C
+#include <hwloc.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <errno.h>
+
+#define MEMORY_SIZE (1024*1024*500)
+
+int main() {
+    hwloc_topology_t topology;
+    hwloc_cpuset_t cpuset;
+    void *memory;
+
+    // initialize a topology context
+    hwloc_topology_init(&topology);  
+    // load the nodes
+    hwloc_topology_load(topology); 
+
+    // Allocate some memory
+    memory = malloc(MEMORY_SIZE);
+    if (memory == NULL) {
+        perror("Failed to allocate memory");
+        return 1;
+    }
+
+    // Get the first one
+    cpuset = hwloc_bitmap_alloc();
+
+    // loop over the detected cores
+    for (int i = 0; i < hwloc_get_nbobjs_by_type(topology, HWLOC_OBJ_CORE)]++; i++) {
+        hwloc_obj_t core = hwloc_get_obj_by_type(topology, HWLOC_OBJ_CORE, i);
+         // bind memory
+        if (hwloc_set_area_membind_nodeset(topology, memory, MEMORY_SIZE, core->nodeset, HWLOC_MEMBIND_BIND, HWLOC_MEMBIND_STRICT)) {
+            fprintf(stderr, "Failed to bind memory on core %d: %s\n", i, strerror(errno));
+            return 1;
+        }
+    }
+
+    // free the allocated resources
+    hwloc_bitmap_free(cpuset);
+    hwloc_topology_destroy(topology);
+    free(memory);
+
+    return 0;
+}
+
 ```
-lstopo
+This program attempts to allocate memory and bind the allocated memory to each core. The APIs used include `hwloc_topology_init`, `hwloc_topology_load`, `hwloc_bitmap_alloc`, `hwloc_set_area_membind_nodeset`, `hwloc_topology_destroy`, and `hwloc_bitmap_free`.
+
+No specific input files are required for this code, and it can be compiled and run with GCC (GNU Compiler Collection) using the following commands:
+
+```bash
+gcc -I /path/to/hwloc/include -L /path/to/hwloc/lib -lhwloc memory_bind.c -o memory_bind
+./memory_bind
 ```
 
-For more advanced usage such as specifying input files or customizing the output format, you can refer to the official documentation: https://www.open-mpi.org/projects/hwloc/
-
-Note: The exact command and options may vary depending on the version of HWLOC installed on your system.
+The first command compiles the code. The `-I` and `-L` options should be set to the directories where hwloc's header and library files are installed. The `-lhwloc` flag links the program with the hwloc library. The compiled program is then run with the `./memory_bind` command.

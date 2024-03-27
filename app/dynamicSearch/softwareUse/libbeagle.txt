@@ -1,0 +1,22 @@
+Use Case: libBEAGLE is an attempt to make a high performance computing (HPC) library. It can be used in bioinformatics, particularly phylogenetics, for likelihood calculations.
+
+Code Details and Examples:
+
+The command line for libBEAGLE is not typically used as it is a library and not a stand-alone application. However, it can be utilized by BEAST/BEAGLE. Here, we show an example of how it can be used as part of this phylogenetic package:
+
+Code:
+
+```XML
+<beast useBeagle="true" beagleOrder="1" beagleResource="0" beagleScaling="dynamic" beagleInstance="0">
+<run id="mcmc" spec="MCMC" chainLength="1000000">
+...
+</run>
+</beast>
+```
+With this example, 'spec="MCMC"' indicates that a Markov chain Monte Carlo method will be used. The 'chainLength' attribute sets the number of iterations.
+
+Format Required:
+
+The input file, in this case, is an XML file that contains multiple data blocks. The blocks may specify things like the model of evolution, tip dates, configurations for MCMC and BEAGLE+, etc. Note the attribute 'useBeagle="true"' in the 'beast' tag, which specifies that the libBEAGLE should be used for likelihood calculations.
+
+NOTE: libBEAGLE is a package that needs to be called by other software - it doesn't read input files or run operations by itself. It is the responsibility of the master application to provide correctly formatted input data (arrays of probabilities, sequence data etc) to libBEAGLE via its API.

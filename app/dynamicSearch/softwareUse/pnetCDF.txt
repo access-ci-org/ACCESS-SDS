@@ -1,71 +1,46 @@
-Use Case: pnetCDF is a parallel I/O library for accessing NetCDF files in parallel. It allows multiple processes to read and write NetCDF files concurrently.
+Use Case: Parallel netCDF (PnetCDF) is a high-performance I/O library that provides an interface for manipulating data stored in netCDF format, primarily used in scientific applications that need to process large-scale multidimensional data.
 
-Code details and examples:
-1. Creating a new NetCDF file using pnetCDF:
+Code details and examples: 
+
+A typical netCDF dataset in PnetCDF is manipulated using various functions provided by the library:
+
+Code:
+
 ```c
 #include <stdio.h>
-#include <pnetcdf.h>
+#include <string.h>
+#include netcdf.h>
 
-#define FILE_NAME "output.nc"
+#define FILE_NAME "test.nc"
+#define DIM0_NAME "x"
+#define DIM_SIZE 4
 
 int main() {
-    int ncid, varid;
-    int dimid, dim[1] = {4};
-    int data[4] = {1, 2, 3, 4};
+  int ncid, varid, dimids[1];
+  int data_out[DIM_SIZE] = {0, 10, 20, 30};
 
-    MPI_Init(NULL, NULL);
+  nc_create(FILE_NAME, NC_CLOBBER, &ncid);
+  nc_def_dim(ncid, DIM0_NAME, DIM_SIZE, &dimids[0]);
+  nc_def_var(ncid, "data", NC_INT, 1, dimids, &varid);
+  nc_enddef(ncid);
 
-    ncmpi_create(MPI_COMM_WORLD, FILE_NAME, NC_CLOBBER, MPI_INFO_NULL, &ncid);
-    ncmpi_def_dim(ncid, "dim", dim[0], &dimid);
-    ncmpi_def_var(ncid, "var", NC_INT, 1, &dimid, &varid);
+  nc_put_var_int(ncid, varid, &data_out[0]);
 
-    ncmpi_enddef(ncid);
+  nc_close(ncid);
 
-    ncmpi_put_var_int(ncid, varid, data);
-    
-    ncmpi_close(ncid);
-    
-    MPI_Finalize();
-
-    return 0;
+  return 0;
 }
 ```
 
-2. Reading from an existing NetCDF file using pnetCDF:
-```c
-#include <stdio.h>
-#include <pnetcdf.h>
+This C program creates a new netCDF file named "test.nc" with a single dimension "x" of size 4, and a variable "data" of size 4. The "data" variable is then populated with four integer values.
 
-#define FILE_NAME "output.nc"
+To compile and run this code, we may need to specify the include and library paths for the netCDF library, which might look like this:
 
-int main() {
-    int ncid, varid;
-    int data[4];
+Command to run:
 
-    MPI_Init(NULL, NULL);
-
-    ncmpi_open(MPI_COMM_WORLD, FILE_NAME, NC_NOWRITE, MPI_INFO_NULL, &ncid);
-    ncmpi_inq_varid(ncid, "var", &varid);
-
-    ncmpi_get_var_int(ncid, varid, data);
-    
-    ncmpi_close(ncid);
-    
-    MPI_Finalize();
-
-    for (int i = 0; i < 4; i++) {
-        printf("%d\n", data[i]);
-    }
-
-    return 0;
-}
+```
+gcc -I /path/to/netcdf/include -L /path/to/netcdf/lib -lnetcdf -o test test.c
+./test
 ```
 
-To compile and run the above examples with pnetCDF, you can use the following commands:
-```bash
-mpicc create_nc.c -o create_nc -lpnetcdf
-mpirun -n <num_procs> ./create_nc
-
-mpicc read_nc.c -o read_nc -lpnetcdf
-mpirun -n <num_procs> ./read_nc
-```
+Note: Please replace "/path/to/netcdf/include" and "/path/to/netcdf/lib" with the actual paths to the netCDF include files and libraries. Usually these paths can be obtained by running "nc-config --cflags" and "nc-config --flibs" respectively.

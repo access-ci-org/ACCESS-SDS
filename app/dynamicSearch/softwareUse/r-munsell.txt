@@ -1,0 +1,36 @@
+Use Case: The R "munsell" package is a tool for managing colors by the Munsell color system. This package provides easy ways to manipulate Munsell colors and includes a palette of colors that are perceptually even according to the Munsell color system.
+
+Code details and examples:
+
+Code:
+
+```R
+# Load the munsell library
+library(munsell)
+
+# Define a Munsell color
+my_color <- mnsl("5BG 5/10")
+
+# Convert Munsell color to RGB
+rgb_color <- mnsl2rgb(my_color)
+
+# Convert RGB color to Munsell
+mns_color <- rgb2mnsl(rgb_color)
+
+# Get the hue, value, and chroma of a Munsell color
+hue <- get_hue(my_color)
+value <- get_value(my_color)
+chroma <- get_chroma(my_color)
+```
+
+Command to run:
+
+Typically, R scripts are run from the R console with the source() function. The following command assumes that the script is saved in a file named "color_script.R" in the current working directory.
+
+```R
+source("color_script.R")
+``` 
+
+In the case of working with RStudio, just press the "Source" button in the upper right corner in the script tab to run the code.
+
+Note that this doesn't have any specific input file format requirements, as all the data here is directly provided in the script. The colors used by the `mnsl()` function are in the Munsell color format of "{Hue} {Value}/{Chroma}", where Hue is a character string representing color hue, Value is a number representing color lightness, and Chroma is a number representing color intensity.

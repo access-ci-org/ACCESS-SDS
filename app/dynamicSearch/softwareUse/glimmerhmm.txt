@@ -1,0 +1,27 @@
+Use Case: GlimmerHMM is used in bioinformatics for gene prediction. It is particularly useful for predicting the genes from eukaryotic genomes such as plants, humans, and animals.
+
+Code Details and Examples:
+
+Code:
+```
+glimmerhmm <sequence file> -d <trained directory> -o <output file>
+```
+
+Input File:
+- Sequence file: This should be a file of FASTA format. Let's assume the file name is sequence.fa.
+
+```fasta
+>seq1
+ATGGCGCGTTAGCGTAGTCGTAGCTGACGTAGTCTGATCGTA
+CAGCTGACGACGATGCTAGCTAGCTAGCTGCTAGTAGGCTAG
+TAGCTAGCTAGCTAGTCAGCTAGCTAGCGTGACGCTAGCTTG
+```
+
+Trained directory: A directory contains the trained model. You can download it from the GlimmerHMM website.
+
+The command to run:
+
+Code:
+```
+glimmerhmm sequence.fa -d Trained_dir -o output.txt
+```

@@ -1,0 +1,31 @@
+Use Case: Use r-viridis for visualizing data in gradients of color in graphs and plots. The colors are distinctly different from each other in order to make interpretation easier.
+
+Code details and examples:
+Code:
+
+```r
+# Load the library
+library(viridis)
+
+# Create a plot
+plot(volcano, col=viridis(100), main="Viridis Color Map")
+
+# Generate a scatterplot
+x <- rnorm(1000)
+y <- rnorm(1000)
+plot(x, y, col=viridis(10)[as.numeric(cut(y,breaks=10))], pch=20, cex=2)
+```
+
+This code first loads the viridis library, and then it creates a 3D effect plot using the data from the volcano dataset, a topographic representation of Maunga Whau Volcano, that comes with base R. The plot is colored according to the viridis palette, which ranges from bluish-green to yellow.
+
+Then, the code generates a scatterplot of random numbers. The color of the points correspond to the y-value of the points, separated into 10 bins, then colored according to the viridis palette. The parameter 'pch=20' indicates the shape of the points, solid circles. The 'cex=2' parameter makes the points 2 times their normal size. 
+
+Command to run the code: 
+
+This code can be executed within any R environment simply by copying and pasting it. If running from a Unix command line, the code would need to be saved to a file, e.g. 'script.r', then it can be executed with the following:
+
+Command:
+
+```sh
+Rscript script.r
+```

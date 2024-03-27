@@ -1,0 +1,29 @@
+Use Case: BAM-readcount is a tool used to generate metrics at single nucleotide positions. It's often used for variant calling in bioinformatics pipelines to filter and assess the quality of called variants.
+
+Code details and examples: 
+
+Input File: BAM file (Binary version of a Sequence Alignment/Map (SAM) file)
+
+Code:
+
+BAM file:
+
+```bash
+@HD    VN:1.4  SO:coordinate
+@SQ    SN:Seq1 LN:500
+Read1  0   Seq1  100 60  50M *   0   0   AGCTTGCATGCCTGCAGGTTAAAAAGTGCTTCAGTT    *   NM:i:0
+Read2  16  Seq1  150 60  50M *   0   0   TGCCTGCAGGTTAAAAAGTGCTTAGTCACTTGAGTTAG *   NM:i:0
+Read3  0   Seq1  200 60  50M *   0   0   AGTGCTTCAGTTAGTTGCAGGTTAAAAAGTGCTTAGT *   NM:i:0
+```
+
+Command to run it: 
+
+```bash
+bam-readcount -f reference.fa input.bam -l variant_sites.bed > output.txt
+```
+Here, 
+
+- '-f' specifies the reference fasta file, 
+- 'input.bam' is the input BAM file, 
+- '-l' specifies a BED file of variant sites of interest, 
+- 'output.txt' is the output file where the metrics will be written.

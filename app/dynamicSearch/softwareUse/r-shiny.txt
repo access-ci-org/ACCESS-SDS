@@ -1,0 +1,46 @@
+Use Case: R Shiny is used for building interactive web apps straight from R. Here is a simple use case, a Histogram of the Old Faithful data set's Eruptions length, using R Shiny.
+
+Code details and examples:
+
+Code: 
+
+```R
+library(shiny)
+
+ui <- fluidPage(
+   
+   titlePanel("Old Faithful Geyser Data"),
+   
+   sidebarLayout(
+      sidebarPanel(
+         sliderInput("bins",
+                     "Number of bins:",
+                     min = 1,
+                     max = 50,
+                     value = 30)
+      ),
+      
+      mainPanel(
+         plotOutput("distPlot")
+      )
+   )
+)
+
+server <- function(input, output) {
+   
+   output$distPlot <- renderPlot({
+      
+      x    <- faithful[, 2] 
+      bins <- seq(min(x), max(x), length.out = input$bins + 1)
+      
+      hist(x, breaks = bins, col = 'darkgray', border = 'white')
+      
+   })
+}
+
+shinyApp(ui = ui, server = server)
+```
+
+The input this Shiny application takes is an integer slider input "bins" with minimum value 1, maximum value 50, and default value 30.
+
+To run this application, save this code in a `.R` file and run it using RStudio or from the R command line using the command `shiny::runApp('path/to/.R/file')`. The application runs locally in your web browser.

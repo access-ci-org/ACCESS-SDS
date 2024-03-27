@@ -1,47 +1,35 @@
-Use Case: SQLite is a popular embedded relational database management system.
+Use Case: Sqlite can be used in applications where a local lightweight database is required that runs on the disk. It can be run with a SQL interface that executes SQL queries and returns results.
 
 Code details and examples: 
-1. Creating a SQLite database and table:
-```sql
-CREATE TABLE Employees (
-    ID INTEGER PRIMARY KEY,
-    Name TEXT NOT NULL,
-    Department TEXT,
-    Salary REAL
-);
+
+Code: 
+
+```python
+import sqlite3
+from sqlite3 import Error
+
+def create_connection():
+    conn = None;
+    try:
+        conn = sqlite3.connect(':memory:') # create a database in RAM 
+        print(sqlite3.version)
+    except Error as e:
+        print(e)
+        
+    if conn:
+        conn.close()
+
+
+if __name__ == '__main__':
+    create_connection()
 ```
 
-2. Inserting data into the table:
-```sql
-INSERT INTO Employees (Name, Department, Salary) VALUES ('Alice', 'IT', 50000);
-INSERT INTO Employees (Name, Department, Salary) VALUES ('Bob', 'HR', 45000);
-```
+This is a simple example of how to interact with SQLITE in Python.
 
-3. Querying data from the table:
-```sql
-SELECT * FROM Employees;
-```
+Command to run:
 
-4. Updating data in the table:
-```sql
-UPDATE Employees SET Department = 'Finance' WHERE ID = 2;
-```
+You can run this script using Python command line interface:
 
-5. Deleting data from the table:
-```sql
-DELETE FROM Employees WHERE Name = 'Alice';
-```
-
-6. Connecting to a SQLite database from the command line:
 ```bash
-sqlite3 database.db
+python script_name.py
 ```
-
-7. Running SQL queries from the command line:
-```bash
-sqlite3 database.db "SELECT * FROM Employees;"
-```
-
-Note: SQLite commands can be run in a SQLite shell, SQLite GUI tools, or integrated into applications through libraries.
-
-For advanced usage and features of SQLite, refer to the official SQLite documentation: https://www.sqlite.org/docs.html

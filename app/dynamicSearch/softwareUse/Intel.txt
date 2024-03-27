@@ -1,42 +1,11 @@
-Use Case: Intel oneAPI HPC Toolkit
-Code details and examples:
+Use Case: Intel MPI Benchmark; Intel MPI Benchmark is a tool that can be used for measuring the performance of MPI implementations. It offers several benchmark tests which include point-to-point communications, collective communications, and non-blocking operations. 
+
+Code details and examples: The input for the Intel MPI Benchmark is typically specified through command-line parameters when launching the benchmark. A typical invocation would look like this:
+
+Code:
+
 ```
-#!/bin/bash
-
-module load intel                       # Load Intel module
-
-icc -O3 -o hello_world hello_world.c     # Compile C code with Intel C Compiler
-./hello_world                            # Run executable
-```
-
-Input files: hello_world.c
-```c
-#include <stdio.h>
-
-int main() {
-    printf("Hello, World!\n");
-    return 0;
-}
+mpirun -np 4 IMB-MPI1
 ```
 
-Command to compile and run: bash compile_and_run.sh
-
-Use Case: Intel oneAPI Base Toolkit
-Code details and examples:
-```
-#!/bin/bash
-
-module load intel                       # Load Intel module
-
-ifort -O3 -o hello_world hello_world.f90   # Compile Fortran code with Intel Fortran Compiler
-./hello_world                            # Run executable
-```
-
-Input files: hello_world.f90
-```fortran
-program hello
-    print *, "Hello, World!"
-end program hello
-```
-
-Command to compile and run: bash compile_and_run.sh
+In this example, the "-np 4" parameter tells the benchmark to run with 4 MPI processes. The benchmark will then print its output to the console, which includes various measurements of MPI performance. There are many additional parameters and options that can be used with the Intel MPI Benchmark, which, for instance, allow to specify which specific benchmarks to run, how long to run them, and how to format the output. Further information about these parameters and options can be found in the included documentation. There are no specific input files required for the Intel MPI Benchmark. All relevant parameters are specified via command-line arguments.

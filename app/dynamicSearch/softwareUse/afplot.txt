@@ -1,0 +1,35 @@
+Use Case: Afplot is used for generating quantitative plots from ASCII data files in a fast and easy way. 
+
+Code details and examples: 
+
+Code: 
+
+```
+afplot -i input.dat -o output.png -l "X-Axis Label" "Y-Axis Label"
+```
+
+This command takes the data from the input.dat file and generates a plot in .png format, output.png. 
+
+The input file (input.dat) should be in ASCII format, where each line denotes a point. The first number on the line is the X value, and the second number is the Y value. For example:
+
+```
+1 2
+2 4
+3 6
+4 8
+5 10
+```
+
+The -l option is used to label the X and Y axis. 
+
+It is important to note that Afplot does not accept missing or non-numerical values. 
+
+You can also use various options to customize the plot, such as -t to set the title, -s to set the styles of the points and lines, or -g to set the grid. 
+
+Command to run it:
+
+```
+afplot -i input.dat -o output.png -l "X" "Y" -t "My plot" -s p,l -g on
+```
+
+This command generates a plot with points and lines, a grid, and the title 'My plot'.

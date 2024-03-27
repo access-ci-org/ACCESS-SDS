@@ -1,0 +1,35 @@
+Use Case: EnergyPlus is typically used for modelling heating, cooling, lighting, ventilating, and other energy flows in buildings. It is widely used by architects and engineers for simulation and designing of energy efficient buildings.
+
+Code Details and Examples:
+
+Code: EnergyPlus takes in a proprietary text-based IDF (Input Data File), and produces several output files, most notably a table summarizing the energy use, and an SQLite database of more detailed results.
+
+Sample IDF file content:
+
+```
+!-Generator IDFEditor 1.34, EnergyPlus 8.0
+
+Site:Location,
+   San Francisco International Ap CA USA TMY3 WMO # = 724940,    !- Name
+   37.62,                         !- Latitude
+   -122.4,                        !- Longitude
+   -8,                            !- Time Zone
+   2;                             !- Elevation
+
+SimulationControl,
+   Yes,                           !- Do Zone Sizing Calculation
+   Yes,                           !- Do System Sizing Calculation
+   No,                            !- Do Plant Sizing Calculation
+   Yes,                           !- Run Simulation for Sizing Periods
+   No;                            !- Run Simulation for Weather File Run Periods
+```
+
+The IDF is run from the command line in the following way:
+
+`energyplus -w weather.epw -d output_directory input.idf`
+
+where
+
+- `weather.epw` is a file containing weather data.
+- `output_directory` is the directory where output files will be saved.
+- `input.idf` is the input file previously described.

@@ -1,0 +1,42 @@
+Use Case: GROMACS; a computational chemistry package used to simulate molecular dynamics. It is particularly used in bioinformatics for simulating biophysical properties of molecules. 
+
+Code details and examples: The package requires an input file in the .mdp (Molecular Dynamics Parameter) format specifying conditions of the simulation (e.g. temperature, pressure) and a .gro (GROMOS87) or .pdb (Protein Data Bank) file describing the initial configuration of the system. 
+
+Input file 1 (.mdp):
+```
+integrator   = md
+dt           = 0.002
+nsteps       = 5000
+nstxout      = 500
+nstvout      = 500
+nstenergy    = 500
+nstlog       = 500
+coulombtype  = PME
+coulomb-modifier = Potential-shift-Verlet
+vdw-type     = Cut-off
+vdw-modifier = Force-switch
+rlist        = 1.0
+rcoulomb     = 1.0
+rvdw-switch  = 0.9
+rvdw         = 1.0
+pbc          = xyz
+```
+
+Input file 2 (.gro):
+```
+3
+1 Protein A    LEU    1    4.798   3.416   4.567
+2 AntiProtein B    LEU    2    4.998   3.216   4.367
+3 Other C    LEU    3    5.198   3.016   4.167
+2.77   2.77   2.77
+```
+
+Code to run GROMACS:
+
+```bash
+gmx grompp -maxwarn 2 -f input.mdp -c input.gro -p topol.top -o output.tpr
+gmx mdrun -s output.tpr -o output.trr -e output.edr -g output.log
+```
+
+Note: GROMACS is invoked using the 'gmx' command. The 'grompp' command is used to prepare the input files for simulation, including the .mdp and .gro files. The 'mdrun' command is used to run the simulation, producing several output files including the trajectory (.trr), energy (.edr) and log (.log) files.
+

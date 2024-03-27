@@ -1,0 +1,37 @@
+Use Case: IOR (Interleaved or Random), initially developed by the ASCI program, is purposefully used to benchmark parallel file systems and I/O systems in high performance computing environments. It is designed to provide detailed performance measurements for HPC platforms.
+
+Code Details and Examples: 
+
+Code:
+
+File for IOR execution - ior.sh:
+
+```
+#!/bin/bash
+#SBATCH -J ior_test   #Job name
+#SBATCH -o %j.out     #Standard output
+#SBATCH -e %j.err     #Standard error
+#SBATCH -n 64         #Number of total cores 
+#SBATCH --ntasks-per-node=16  #tasks per node
+#SBATCH -t 01:00:00   #Run time 
+
+module load intel
+module load ior
+
+export MPI_BUFS_PER_PROC=512
+
+srun ior -a MPIIO -p -i 3 -t 8m -b 16m
+```
+Here, the -a option specifies the API to be used (MPIIO in this case), -p provides a unique set of files for each task, -i 3 specifies the number of iterations for the test, -t 8m sets the transfer size to 8MB, and -b 16m sets the block size to 16MB. 
+
+To run the script, you would use the command:
+
+```
+sbatch ior.sh
+```
+
+Input file format and specifications: There are no exact input files given to the IOR. The script in itself is given as an input to the sbatch command. The input parameters for the IOR tests can be modified in the shell script file which is considered a job file in this context.
+
+Results are usually printed in text or HDF5 format, which provides human-readable output and a format for subsequent plotting and analysis. The performance will be measured in terms of bytes transferred per unit time, and is typically expressed in megabytes per second (MB/s). 
+
+IOR can support several interfaces including POSIX, MPIIO, or HDF5. The chosen interface, test parameters like block size, transfer size, file per process, interleave the blocks etc. can all be specified as command-line arguments or in an input file.

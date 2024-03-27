@@ -1,0 +1,33 @@
+Use Case: PopPunk (Population Partitioning Using Nucleotide K-mers) is commonly used in bioinformatics to swiftly assign isolates of bacteria to species, strains or lineages. It has applications in outbreak surveillance, multi-strain infections and tracing bacterial evolution.
+
+Code details and examples:
+
+Code:
+
+The input file for PopPunk is a list of genome assemblies in FASTA format. Required file format is .fasta. The specification for the file: Single line description followed by nucleotide bases (either in single line or in multiple lines). 
+
+FASTA file (input.fasta):
+```
+>seq0
+ATCGGCTAGCT
+>seq1
+ATCGTATAGCT
+```
+
+You can then run PopPunk with the following command:
+
+```bash
+poppunk --create-db --r-files genomes.txt --output my_example --k-step 3
+```
+
+In this command `genomes.txt` is a text file that lists the path to each genome assembly in your dataset, one on each line:
+
+```bash
+/pathto/genome1.fasta
+/pathto/genome2.fasta
+/pathto/genome3.fasta
+```
+
+The `--output` flag specifies the basename for output files, and `--k-step` is used to control the range of k-mer sizes used (default is every number from 14 to 32).
+
+This command will compute all pairwise genome distances and use them to identify clusters of similar genomes, outputting a network in .gt format with edges representing core and accessory genome distances.

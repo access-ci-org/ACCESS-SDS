@@ -1,0 +1,68 @@
+Use Case: Use GoLang for building simple web server.
+
+Code details and examples: Code 
+
+First, let's create a simple `main.go` file:
+
+```go
+package main
+
+import (
+	"fmt"
+	"net/http"
+)
+
+func helloWorld(w http.ResponseWriter, r *http.Request){
+	fmt.Fprintf(w, "Hello World")
+}
+
+func main() {
+	http.HandleFunc("/", helloWorld)
+	http.ListenAndServe(":8080", nil)
+}
+```
+
+In this sample code, a simple web server using GoLang is created which listens on port 8080 and returns "Hello World" when accessed.
+
+The command to run this GoLang file:
+
+```bash
+go run main.go
+```
+
+Use Case: Use GoLang for creating Fibonacci series.
+
+Code details and examples: Code 
+
+We can create a `fibonacci.go` file:
+
+```go
+package main
+
+import "fmt"
+
+func fibonacci(n int) int {
+	if n <= 1 {
+        	return n
+    	}
+    	return fibonacci(n-1) + fibonacci(n-2)
+}
+
+func main() {
+	var n int
+    fmt.Print("Enter the number of terms: ")
+    fmt.Scanln(&n)
+
+    for i := 0; i < n; i++ {
+    	fmt.Println(fibonacci(i))
+    }
+}
+```
+
+In this program, we have defined a recursive function `fibonacci` which takes an integer argument and returns the Fibonacci series up to that limit. In the `main` function, we take an input from the user for the number of terms of the series to be displayed.
+
+The command to run this GoLang file:
+
+```bash
+go run fibonacci.go
+```

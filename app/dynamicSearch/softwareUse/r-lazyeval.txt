@@ -1,0 +1,32 @@
+Use Case: `lazyeval` is a package in R that allows for easier manipulation of R expressions. It's most common use-case is in the creation of new functions, where `lazyeval`'s lazy evaluation behavior allows for more flexible and user-friendly function inputs. For example, if you want to create a new function to add two numbers, but you want to allow your users to input 2 as either `2` or `"two"`, you would typically have to write a lot of error-checking code to handle all the different possible inputs. But with `lazyeval`, you can simply create a function that will add two numbers together regardless of how those numbers are input.
+
+Code details and examples: Code
+```
+# Load the lazyeval package
+library(lazyeval)
+
+# Define a function to add two numbers
+add_two <- function(x, y) {
+  # If the inputs are characters, convert them to numeric
+  if (is.character(x)) { x <- as.numeric(x) }
+  if (is.character(y)) { y <- as.numeric(y) }
+
+  # If the inputs are expressions, evaluate them
+  if (is.expression(x)) { x <- eval(x) }
+  if (is.expression(y)) { y <- eval(y) }
+
+  # Return the sum of the two inputs
+  return(x + y)
+}
+
+# Use the `add_two` function with numeric inputs
+add_two(2, 3)  # returns 5
+  
+# Use the `add_two` function - it will convert character inputs
+add_two("2", "3")  # returns 5
+   
+# Use the `add_two` function with expression inputs
+add_two(expression(2+2), expression(3+3))  # returns 10
+```
+
+Command to run: This code can be run within an R environment after installing the `lazyeval` package. The command to run the entire script would be `Rscript script.R`, where `script.R` is the name of the R script containing the above code.

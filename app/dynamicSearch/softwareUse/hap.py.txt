@@ -1,0 +1,27 @@
+Use Case: hap.py is a software tool used by bioinformaticians and genetic scientists for benchmarking and validating variant calls in Next Generation Sequencing data. It compares the truth set VCF to the test set VCF and produces various statistics on the concordance and discordance between the two sets.
+
+Code details and examples:
+
+Code:
+
+To run hap.py, the basic command structure is:
+
+```
+hap.py <truth.vcf.gz> <query.vcf.gz> -f <confident.bed> -r <reference.fasta> -o <output>
+```
+
+A real example, assuming you have a ground truth VCF, test VCF, BED file defining high confidence regions, and reference FASTA file:
+
+```
+hap.py truth.vcf.gz test.vcf.gz -f confident.bed -r hg19.fa -o results
+```
+
+Note:
+
+- `<truth.vcf.gz>`: Truth VCF file in gz format (e.g., truth.vcf.gz). This file contains the correct variant calls.
+- `<query.vcf.gz>`: Query VCF file in gz format (e.g., query.vcf.gz). This file contains the variant calls that you want to evaluate.
+- `-f <confident.bed>`: A BED file defining high confidence regions (e.g., confident.bed). Variants not in these regions are ignored.
+- `-r <reference.fasta>`: Reference genome file in FASTA format (e.g., hg19.fa).
+- `-o <output>`: Output prefix. The output consists of several files (e.g., results).
+
+The output of hap.py will include various statistics on the concordance between the truth VCF and the test VCF, including precision, recall, and F1 score.

@@ -1,0 +1,40 @@
+Use Case: PanPhlAn is a tool for profiling the gene-level population diversity of a specific bacterial species or genus in complex metagenomes. It provides a quantification of the presence/absence and abundance of gene families and pathways in a sample of metagenomic data.
+
+Code details and examples: Code.
+
+1. Input File
+
+- A sample input file would be a Fastq or Fasta file containing the sequencing reads from a metagenomic sample. 
+
+Example:
+
+> Sample1_F1
+AGCTGGGCGAAATTTTGATCGGAAGAGCCATGCCTAAGGCGTGGAGTTGACCT....
+> Sample1_R1
+CGTAGTCGGATCCGCAGATCGGAAGACACCGTTCAGCAGGAATGCCGAGACCG....
+
+2. Input File Format
+
+- The input file should be in Fastq or Fasta format.
+
+3. Code Snippet
+
+```
+# Mapping to the reference database
+bowtie2 -x example_db -1 example_reads_1.fq -2 example_reads_2.fq -S example_mapped.sam
+
+# Converting SAM to BAM
+samtools view -bS example_mapped.sam > example_mapped.bam
+
+# Sorting BAM file
+samtools sort example_mapped.bam -o example_mapped_sorted.bam  
+
+# Profiling with PanPhlAn
+panphlan_profile.py --input_files example_mapped_sorted.bam --o_mapped_folder ./output_mapped/ --o_profiles ./output_profiles/
+```
+
+4. Running Command
+
+- After installing and setting up PanPhlAn and its dependencies, you can run it through the command line using the 'panphlan_profile.py' script. This command should be run for each metagenomic sample, with the appropriate Fastq input file and output directories specified.
+
+Note: This example assumes that Bowtie2 and Samtools, which are used for read mapping and file conversion, are also installed and correctly set up on your system. Additionally, the 'example_db' used in the Bowtie2 mapping command would be a PanPhlAn database specific to the bacterial species or genus that you're analyzing. These databases can be downloaded from the PanPhlAn website.

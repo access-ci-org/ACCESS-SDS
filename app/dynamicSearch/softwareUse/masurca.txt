@@ -1,0 +1,46 @@
+Use Case: 
+MaSuRCA is a bioinformatics software package used for genome assembly. It can assemble data sets containing only short reads from Illumina sequencing and data sets with a mixture of data types. 
+
+Code details and examples: 
+
+Input Files: 
+
+1. PE (Paired-End library)
+   For an Illumina paired-end library, at least one group must be defined. 
+   Example of command and input file:
+   ```
+   DATA
+   PE= pe 300 150 /path_to_file/lib_name.R1.fq /path_to_file/lib_name.R2.fq
+   END
+   ```
+   Each line provides information about the insert size (300 in this case), insert size standard deviation (150 in this case), and the paths to the paired fastq files.
+
+2. JUMP (Long-Jumping library)
+    For long-jump libraries, a group must be defined.
+    Example of command and input file:
+    ```
+    DATA
+    JUMP= jump 8000 2000 /path_to_file/lib_name.R1.fq /path_to_file/lib_name.R2.fq
+    END
+    ```
+   Each line provides information about the insert size (8000 in this case), insert size standard deviation (2000 in this case), and the paths to the paired fastq files.
+
+3. Pacbio or Nanopore reads
+   If Pacbio or Nanopore reads are available, they can be used.
+   Example of command and input file:
+   ```
+   DATA
+   PACBIO=/path_to_file/pacbio_reads.fa
+   NANOPORE=/path_to_file/nanopore_reads.fa
+   END
+   ```
+   Each path should be to a file containing all SMRT cells of data.
+
+Command to run:
+
+Once configuration file is ready we can run the assembler with the following command:
+
+   ```
+   assemble.sh configuration.txt
+   ```
+This will generate the desired output files.

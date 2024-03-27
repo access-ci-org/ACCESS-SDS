@@ -1,0 +1,25 @@
+Use Case: The R-askpass library is used in R programming to safely prompt the user for sensitive input such as passwords and tokens. The input is masked when typed, providing a higher level of security. For example, the askpass() function can be used to trigger a password prompt when accessing an SQL database or an API with password protection.
+
+Code details and examples:
+
+Code:
+
+```R
+# Load the library
+library('askpass')
+
+# Assume we are accessing an SQL database with user 'John' and the password is required
+
+con <- DBI::dbConnect(RMySQL::MySQL(), 
+  username = "John", 
+  password = askpass::askpass("Enter your SQL password: "), 
+  dbname = "database_name", 
+  host = "localhost"
+)
+```
+
+In the code snippet above, the user is prompted to enter their SQL password when the script is run. The password they enter is masked for security purposes. There aren't any specific input files or formats required as the input is interactively collected from the user at runtime.
+
+Command to Run:
+
+To run this script in R, you simply navigate to your R environment (such as RStudio) and run the lines of code.

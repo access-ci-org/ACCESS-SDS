@@ -1,0 +1,26 @@
+Use Case: Molecular simulation for High Performance Computing (HPC) using Tinker-HP; exploring the energy landscape of a protein structure by carrying out molecular dynamics simulations; predicting and analyzing the conformational changes in protein structures over time.
+
+Code details and examples: Code
+
+The input for Tinker-HP generally requires a .xyz file for positioning of atoms and a .key file for system parameters. Here's a simple example of what these might look like:
+
+Title :
+3
+Phe 475 N 1.00 0.00 0.00
+Phe 475 CA 1.45 1.35 0.00
+Phe 475 C 2.22 1.31 -1.08
+
+sample.key:
+parameters protein
+integrator leapfrog verlet
+timestep 1.0
+PME polarizable
+pbc none
+
+Your command to run a dynamics simulation would then look something like this: 
+
+./dynamic.x sample.xyz 100 1.0 2 1
+
+This command executes the binary dynamic.x, on the sample.xyz structure for 100 steps, with a 1.0 fs timestep, 2 for a device number, and output printed every step. 
+
+Note: Much of Tinker-HP's functionality depends on compilation with the right flags and atomic parameters for your specific system and requirements. Always check the project's official documentation for more detailed instruction.

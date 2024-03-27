@@ -1,0 +1,34 @@
+Use Case: ProtHint is a bioinformatics software used for gene prediction in foreign genomes. Typically, it's input files are multi-FASTA files of genomic sequences, and protein sequence data from related organisms.
+
+Code details and examples:
+Code:
+
+Here, we'll examine an example of predicting genes in the E. coli K12 genome using protein data from the Pseudomonas fluorescence genome.
+
+Your genome data may be in the file `echoli.fasta` and the protein sequence data in the file `pfluorescens.fasta`. 
+
+```shell
+prothint.py --threads 8 echoli.fasta pfluorescens.fasta
+```
+
+This command will initiate the ProtHint pipeline on eight threads using your input files. 
+
+The main output file is `prothints.gff`, which contains the locations of all predicted genes. Other output files contain various intermediate results.
+
+Input file format:
+
+1. echoli.fasta - This file should contain the E. coli K12 genomic sequence in FASTA format. The beginning of the file might look like this:
+
+```fasta
+>Echoli
+AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGAT...
+```
+
+2. pfluorescens.fasta - This file should contain the Pseudomonas fluorescence protein sequence in FASTA format. The beginning of the file might look like this:
+
+```fasta
+>Pfluorescens
+MIDNKVLVVGVNGFGKTTVAKLNLQDKLNPDVSVDIVEYQPPER...
+```
+
+No specific details or modifications to the input files are necessary. Ensure that the FASTA files are in the correct format, with the 'greater than' symbol (`>`) preceding the identifier for each sequence.

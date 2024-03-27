@@ -1,0 +1,22 @@
+Use Case: Tigmint is used for detecting and correcting erroneously large gaps in genome assemblies. It utilizes linked reads for achieving this through the identification of inconsistencies in the physical coverage across these assemblies.
+
+Code details and examples:
+
+Code:
+
+Input files: Tigmint accepts an assembly in FASTA format and alignments in BAM/SAM format. The assembly should be the one you wish to correct, and the alignments should be of linked reads to the assembly. 
+
+Assembly file (assembly.fa)
+Alignment file (alignments.bam)
+
+Sample command to run tigmint:
+
+```
+tigmint -p4 -a0.5 -n5 -d50000 -t1000 -i10 -x2000 assembly.fa alignments.bam
+```
+
+Note: Here, `-p` refers to the number of threads, `a` to the maximum allowed alignment score, `n` the minimum number of mapped reads required to break the assembly, `d` the maximum gap size (bp) between mapped reads to break the assembly, `t` the minimum length of the contig in an assembly to be broken, `i` the minimum insert size in the linked reads library, and `x` the maximum insert size.
+
+Specifications and details in input files:
+1. Assembly.fa should be in FASTA format. This file will contain the sequence of the genome you wish to correct.
+2. Alignments.bam should be in BAM format. This file will contain the sequence alignments of the linked reads to the reference assembly.

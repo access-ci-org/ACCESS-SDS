@@ -1,60 +1,65 @@
-Use Case: Expat is an XML parser library in C. It is widely used for parsing XML files in various applications.
+Use Case: Expat is a stream-oriented XML parser library written in C. It's commonly used in applications for parsing XML data. 
 
-Code details and examples:
-Sample input XML file (input.xml):
+Code Details and Examples: Code
+
+First, we'll create a simple XML file that we can parse with Expat.
+
 ```
-<root>
-    <name>John Doe</name>
-    <age>30</age>
-</root>
+<?xml version="1.0" encoding="UTF-8"?>
+<note>
+ <to>John</to>
+ <from>Jane</from>
+ <heading>Reminder</heading>
+ <body>Don't forget the meeting tomorrow!</body>
+</note>
 ```
 
-Sample code snippet to parse input.xml using Expat in C:
-```c
-#include <stdio.h>
-#include <stdlib.h>
+To parse this XML file, we'll need to create an Expat parser and handle the start and end elements of the XML file. Below is C code sample with Expat:
+
+```C
 #include <expat.h>
 
-void startElement(void *userData, const XML_Char *name, const XML_Char **atts) {
-    printf("Element start: %s\n", name);
+static void XMLCALL
+startElement(void *userData, const char *name, const char **atts) {
+    // handle start element
 }
 
-void endElement(void *userData, const XML_Char *name) {
-    printf("Element end: %s\n", name);
-}
-
-void characterData(void *userData, const XML_Char *s, int len) {
-    printf("Character data: %.*s\n", len, s);
+static void XMLCALL
+endElement(void *userData, const char *name) {
+    // handle end element
 }
 
 int main() {
-    FILE *fp = fopen("input.xml", "r");
+    FILE* fp = fopen("note.xml", "r"); // open XML file
 
     XML_Parser parser = XML_ParserCreate(NULL);
     XML_SetElementHandler(parser, startElement, endElement);
-    XML_SetCharacterDataHandler(parser, characterData);
 
-    char buf[1024];
-    int bytesRead;
-    while ((bytesRead = fread(buf, 1, sizeof(buf), fp)) > 0) {
-        XML_Parse(parser, buf, bytesRead, bytesRead < sizeof(buf));
-    }
+    char buf[BUF_SIZE];
+    int done;
+    do {
+        size_t len = fread(buf, 1, sizeof(buf), fp);
+        done = len < sizeof(buf);
+        if (XML_Parse(parser, buf, len, done) == XML_STATUS_ERROR) {
+            // handle parse error
+        }
+    } while (!done);
 
-    XML_Parse(parser, buf, 0, 1); // Finalizing parsing
-
-    XML_ParserFree(parser);
-    fclose(fp);
-
+    XML_ParserFree(parser); // free parser
     return 0;
 }
 ```
 
-To compile the code, you can use a command like:
+Here, the startElement function is called at the start of every XML element, and the endElement function is called at the end of every XML element. Both functions are passed the name of the element and a list of attributes.
+
+To compile this C code with Expat, use the following command:
+
 ```bash
-gcc -o xml_parser xml_parser.c -lexpat
+gcc -lexpat main.c -o main
 ```
 
-And then run the compiled program:
+To run the compiled code, use the following command:
+
 ```bash
-./xml_parser
+./main
 ```

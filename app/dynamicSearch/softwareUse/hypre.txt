@@ -1,47 +1,41 @@
-Use Case: HYPRE is a library of high-performance preconditioners and solvers for the solution of large, sparse linear systems on parallel computers.
+Use Case: Hypre is used in large scale computation of linear equations in a grid or mesh based system where each element primarily interacts with its neighboring elements. It is used in scientific computation, specifically in parallel computing.
 
-Code details and examples:
-```
-1. Sample input files for HYPRE are typically in matrix market format (.mtx) or HYPRE's own binary format (.h5).
-2. Here is an example of how to use HYPRE with a sample input file (assume it is in matrix market format):
-```
+Code details and examples: 
 
-```c
-#include <iostream>
+Code:
+
+```C
+#include "HYPRE.h"
 #include "_hypre_utilities.h"
-#include "_HYPRE_utilities.h"
-#include "_HYPRE_parcsr_mv.h"
-#include "_HYPRE_IJ_mv.h"
+#include "HYPRE_krylov.h"
+#include "HYPRE_struct_ls.h"
 
-int main()
+int main (int argc, char *argv[])
 {
-    // Initialize HYPRE
-    HYPRE_Init();
+    int i, j;
+    int n, iseed = 77521;
+    HYPRE_IJMatrix A;
+    HYPRE_ParVector b;
+    HYPRE_ParVector x;
+    …
 
-    // Create an empty matrix object
-    HYPRE_ParCSRMatrix A;
-    HYPRE_IJMatrixCreate(HYPRE_COMM_WORLD, 0, 0, 0, 0, &A);
-    
-    // Load the matrix from a file
-    const char *filename = "example_matrix.mtx";
-    HYPRE_IJMatrixRead(filename, HYPRE_COMM_WORLD, HYPRE_PETSC, A);
-    
-    // As an example, perform some operations on the matrix
+    HYPRE_IJMatrixSetObjectType(A, HYPRE_PARCSR);
+    HYPRE_IJMatrixInitialize(A);
 
-    // Destroy the matrix object and finalize HYPRE
-    HYPRE_IJMatrixDestroy(A);
-    HYPRE_Finalize();
-
-    return 0;
+    /*  Set the matrix coefficients  */
+    for (j=0; j<n; j++)
+    {
+        for (i=0; i<n; i++)
+        {
+            HYPRE_IJMatrixSetValues(A, 1, &nrows, &i, &ncols, &j, &value);
+        }
+    }
+    /* Assemble the coefficient matrix*/
+    HYPRE_IJMatrixAssemble(A);
+    …
 }
 ```
 
-To compile this code, you would typically use a command like:
-```
-mpicc -o myprogram myprogram.c -I<path_to_hypre_install>/include -L<path_to_hypre_install>/lib -lHYPRE
-```
+The command to run: `mpirun -np 4 ./a.out`
 
-And to run the compiled program:
-```
-mpirun -np 4 ./myprogram
-```
+This is a basic C example of Hypre. The input file consists of a description of the matrix in the matrix market format. The format is dense because each element of the matrix is specified explicitly. The matrix being square has `n*n` elements where `n` is the side length. The row and column indices are specified for each element, which allows for a sparse matrix. For the input, `i` and `j` are the row and column indices respectively and `value` is the element value at (i, j) in the matrix `A`. HYPRE_IJMatrixSetValues sets the matrix coefficients and HYPRE_IJMatrixAssemble assembles the matrix. This is a very basic example of how to set up and run Hypre. More complex mesh and grid systems with more complex interactions between elements require more complex set ups and use more Hypre functions.

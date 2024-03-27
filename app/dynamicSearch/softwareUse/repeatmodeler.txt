@@ -1,0 +1,31 @@
+Use Case: RepeatModeler is a de novo repeat family identification and modeling package. It can build, refine and classify consensus models of putative interspersed repeats from de novo sequence assemblies or WGS datasets. 
+
+Code details and examples: Code
+
+```
+BuildDatabase -name <database_name> -engine <seq_search_method> <genome_sequence_file>
+```
+
+The genome_sequence_file should be in FASTA format. For example,
+
+```
+>sequence_1
+ATCGATCGATCGATCGATCGAT
+>sequence_2
+ACGTACGTACGTACGTACGTAC
+```
+
+To run RepeatModeler:
+
+```
+RepeatModeler -database <database_name> -engine <seq_search_method> -pa <parallel_jobs>
+```
+
+Example:
+
+```
+BuildDatabase -name my_database -engine ncbi my_genome.fasta
+RepeatModeler -database my_database -engine ncbi -pa 10
+``` 
+
+In this case, `<database_name>` would be replaced by your desired name for the database, `<seq_search_method>` should be replaced with the sequence search method you wish to use (e.g. "ncbi" or "rmblast"), `<genome_sequence_file>` should be replaced with the path to your input genome sequence file in FASTA format, and `<parallel_jobs>` should be replaced with the number of jobs you want to run in parallel. For the example given, a database named "my_database" is created using NCBI's sequence search method and the input genome sequence file "my_genome.fasta", and 10 jobs are specified to run in parallel.

@@ -1,9 +1,20 @@
-Use Case: Display a simple analog clock in a graphical window.
+Use Case: Xclock is a simple and lightweight clock for X that can be run in analog or digital mode. It is used to check the current time, a simple demonstration of an X client, or testing system performance.
 
-Code details and examples:
+Code details and examples: Code
+
+The xclock program does not require any input files. It uses command line options to customize the appearance and behavior. Here are some of the options:
+
+- "-analog": display analog clock
+- "-digital": display digital clock
+- "-padding number": specify the amount of space between the text and the window’s borders
+- "-update seconds": specify how frequently the clock should be updated
+
+A sample command to run xclock could be:
+
 ```bash
-xhost +
-xclock
+xclock -digital -padding 10 -update 1
 ```
 
-Running the above commands will display a basic analog clock application on the screen. This is a simple demonstration of the X Window System's capabilities and can be used as a simple graphical tool.
+This command will run xclock in digital mode, with a padding of 10 pixels around the text, and an update interval of 1 second. 
+
+To run the software, you just need to type the command into your terminal (assuming you have xclock installed and in your system's PATH).

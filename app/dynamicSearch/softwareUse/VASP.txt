@@ -1,25 +1,58 @@
-Use Case: Quantum calculations in materials science
+Use Case: Use VASP (Vienna Ab initio Simulation Package) to perform ab initio quantum mechanical molecular dynamics (MD) using pseudo potentials and a plane wave basis set to simulate atomic scale systems. 
 
-Code details and examples:
-VASP (Vienna Ab-initio Simulation Package) is a software package for performing ab-initio quantum-mechanical molecular dynamics (MD) simulations. It is widely used in materials science research.
+Code details and examples: Code
 
-Input files for VASP typically include:
-- INCAR: Contains parameters for the calculation
-- POSCAR: Specifies the atomic structure
-- POTCAR: Defines the pseudopotentials
-- KPOINTS: Sets the k-point mesh for the calculation
+Vasp requires four input files, i.e., POSCAR, POTCAR, KPOINTS, and INCAR. 
 
-Below is an example of a VASP input file (INCAR):
+1. POSCAR: Contains the position of ions
 ```
-SYSTEM = Example
-ENCUT = 400
-ISMEAR = 0
-EDIFF = 1E-6
-```
-
-To run VASP, you would typically execute the following command:
-```
-vasp_std
+3.52
+   1.0    0.0    0.0
+   0.0    1.0    0.0
+   0.0    0.0    1.0
+   2    1
+Direct
+   0.0    0.0    0.0
+   0.5    0.5    0.5
+   0.25    0.25    0.25
 ```
 
-Please note that VASP is a licensed software and may not be freely available.
+2. POTCAR: This file is made by concatenating individual potentials for each element in your structure, file provided by VASP.
+3. KPOINTS: Selects the k-point grid.
+```
+ Automatic mesh
+ 0
+ Gamma
+ 6 6 6
+ 0 0 0
+```
+
+4. INCAR: Various tags.
+```
+  PREC = Medium ;
+  IBRION = 2 ;
+  ISIF = 3 ;
+  EDIFF = 1E-5 ;
+  NSW = 10 ;
+  ISMEAR = 0 ;
+  SIGMA = 0.05 ;
+```
+
+Command to run VASP:
+If you're using a shell, you can submit a job script to your cluster using the command `sbatch`:
+```bash
+sbatch vasp.slurm
+```
+The contents of `vasp.slurm` may look something like this:
+```bash
+#!/bin/bash
+#SBATCH --job-name=vasp_job
+#SBATCH --output=output.out
+#SBATCH --time=01:00:00
+#SBATCH --ntasks=16
+
+module load VASP
+mpirun vasp_std
+```
+
+Keep in mind that you may have to change the details of your slurm script to match the requirements of your own HPC cluster, such as the time, ntasks, nodes, etc.

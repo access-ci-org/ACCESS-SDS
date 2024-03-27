@@ -1,0 +1,41 @@
+Use Case: r-promises library is often used for improving the responsiveness of your Shiny applications, by making possible to perform more operations asynchronously. It works by offloading heavy Shiny operations into background R processes with the help of future and promises.
+
+Code Details and Examples: Code
+
+```R
+# Load the library
+library(promises)
+library(future)
+
+# Configure future to execute each call in a separate R process
+plan(multiprocess)
+
+# Generate a Shiny app that performs a large data calculation asynchronously
+runApp(
+ list(
+   ui = fluidPage(
+     plotOutput("plot")
+   ),
+   server = function(input, output) {
+     large_data_calculation <- reactive({
+       future({
+         # Simulate a heavy computation
+         Sys.sleep(2)
+         rnorm(1000)
+       })
+     })
+     output$plot <- renderPlot({
+       req(large_data_calculation())
+       hist(large_data_calculation())
+     })
+   }
+ )
+)
+```
+In this example, the heavy computation is simulated via `Sys.sleep(2)`, the computation can be a call to a time-consuming function dealing with large datasets. User requests in the web application would not block while this computation is ongoing, improving the responsiveness of the application. The `future` function sends code to be executed in the background, while `promises` is used to handle the result when it comes.
+
+To run an R script from the command line, you can use the `Rscript` command followed by the script name:
+```
+Rscript script.R
+```
+This would run the script named "script.R". Please note the specifics of running an R script could depend on the execution environment used. This specific command is based off a general Linux environment.

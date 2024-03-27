@@ -1,15 +1,42 @@
-Use Case: Likwid provides a set of command line tools and a library for performance oriented programmers. It can be used to measure hardware performance counters on modern processors.
-  
-Code details and examples:
-```bash
-# Install likwid using package manager
-sudo apt-get install likwid
+Use Case: Use: LIKWID stands for 'Like I Knew What I'm Doing', a suite of command-line applications for developers, researchers, and scientific computing professionals who are interested in the performance of CPUs, GPUs and other kinds of accelerators. Amongst its capabilities are the abilities to measure and monitor performance, pin threads to specific cores, visualize and specify hardware topologies, and much more.
 
-# Example command to measure cache misses using likwid-perfctr
-likwid-perfctr -c L2CACHE ./my_application
+Code Details and examples: Code:
 
-# Example command to measure energy consumption using likwid-powermeter
-likwid-powermeter -g PACKAGE_ENERGY ./my_application
+1. Profiling an application using LIKWID's perfctr command:
+
+Command:
+```
+likwid-perfctr -C S0:0-3 -g L3 -m ./application
 ```
 
-Please refer to the Likwid documentation for more advanced usage and options: https://github.com/RRZE-HPC/likwid
+This command measures application performance on cores 0 through 3, with the `-C` flag specifying the cores to use, `-g` flag specifying the performance group (L3 cache in this case), and `-m` enabling output of both metrics and events. `./application` refers to the command used to start the application being profiled, it can be any command to start an application/program.
+
+
+2. Pinning application threads to specific cores:
+
+Command:
+```
+likwid-pin -c S0:0-3 ./application
+```
+
+The `-c S0:0-3` flag instructs LIKWID to pin the application's threads to cores 0 through 3. `./application` is the command to start the application.
+
+
+3. Viewing hardware topology:
+
+Command:
+```
+likwid-topology
+```
+
+This command displays the topology of the hardware on which the command is run. No specific input files, specifications, or details are required for this command as it examines the underlying hardware.
+
+
+4. Microbenchmarking command:
+
+Command:
+```
+likwid-bench -t copy_avx -w S0:0:48KB@L1 ./application
+``` 
+
+The `-t` flag specifies the benchmark to run (copy_avx in this case), and the `-w` flag specifies the work configuration. `S0:0:48KB@L1` sets the benchmark to use socket 0, core 0, and a working set size of 48KB at the L1 cache level. Note that available benchmarks and work configuration options may vary depending on the system and software version.

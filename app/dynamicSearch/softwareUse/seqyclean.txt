@@ -1,0 +1,25 @@
+Use Case: Use SeqyClean to quality control and preprocess NGS sequencing data. SeqyClean is typically used to remove technical sequences (adaptors, primers etc.), low quality reads, reads with N bases, and contaminant sequences (in that order).
+ 
+Code details and examples:
+
+Code: 
+```
+./seqyclean -1 sample_R1.fastq -2 sample_R2.fastq -s contaminants.fasta -o output_folder
+```
+
+Input File Format: FASTQ format for the sequencing reads (reads for QC)
+Specification and detail in Input file:
+For the `-1` and `-2` arguments, these are the sequencing reads from an experiment, each in FASTQ format. 
+
+For `-s`, SeqyClean expects a contaminant sequence file in FASTA format. 
+
+Input file example:
+```
+@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
++
+!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
+```
+Above is an example of a FASTQ record which includes a sequence ID, the raw sequence, a '+' and a quality score line.
+
+**Please note that the commands to run these software might not work directly on all systems without the complete path to the executable binaries if they are not exported to the PATH environment variable of the system.

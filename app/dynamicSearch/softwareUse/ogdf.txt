@@ -1,0 +1,55 @@
+Use Case: OGDF (Open Graph Drawing Framework) is a self-contained C++ class library for the automatic layout of diagrams. It offers sophisticated algorithms and data structures to use within your own applications or scientific projects.
+
+Code details and examples: Code
+
+One of the main uses of OGDF is for drawing graphs. Here is a basic example that shows how to create a graph and then draw it.
+
+```C++
+#include <ogdf/basic/Graph.h>
+#include <ogdf/basic/graph_generators.h>
+#include <ogdf/basic/simple_graph_alg.h>
+#include <ogdf/module/LayoutModule.h>
+#include <ogdf/energybased/FMMMLayout.h>
+#include <ogdf/fileformats/GraphIO.h>
+
+using namespace ogdf;
+
+int main() 
+{
+    // Creates a graph object 
+    Graph G;
+
+    // Generates a random simple graph with 12 nodes and 30 edges
+    randomSimpleGraph(G, 12, 30);
+
+    // Constructs the planar representation of G
+    PlanRep P(G);
+
+    // Applies the planar biconnected layout algorithm
+    PlanarStraightLayout layout;
+    layout.call(P);
+
+    // Exports the layout to a .gml file
+    GraphIO::writeGML(P, "output.gml");
+
+    return 0;
+}
+```
+
+To run this example, compile it using the OGDF library:
+
+```bash
+g++ -std=c++11 -I/path_to_OGDF/include -L/path_to_OGDF/_release -lOGDF -lCOIN -pthread test.cpp -o test
+```
+
+Then run the resulting binary:
+
+```bash
+./test
+```
+
+This will generate a .gml file that contains the graph layout. You can then view this file using a GML reader to see the layout of the graph.
+
+A note on input format: There's no specific format for the input data. Instead, graphs are created programmatically as shown above. The resulting graph can then be exported to various formats using OGDF's GraphIO module. The above example exports to GML format, but you could also export to other formats like GraphML or LEDA. 
+
+The exported file can then be viewed or further processed using other tools that understand the chosen output format. Different output formats provide different levels of details about the graph. For instance, LEDA provides only very basic information, whereas GraphML can also include layout information. GML is somewhere in between, providing a reasonable amount of detail without overwhelming complexity.

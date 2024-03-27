@@ -1,0 +1,34 @@
+Use Case: The rasusa tool is used in bioinformatics and genomics for random subsampling of sequencing reads to a specified coverage. It is mostly used when one is required to downsample their fastq files.
+
+Code Details and Examples: 
+
+The input file for rasusa should be in FASTQ format, a text-based format for storing both a biological sequence (usually nucleotide sequence) and its corresponding quality scores.
+
+Sample Input file:
+
+```
+@SEQ01
+AACTTGAAGACTTTGTCAAC
++
+\!\040494499:<<<<<8
+@SEQ02
+CGAGTGCGTAGAGACGTGTA
++
+[[]]^_aadfghhhhhhhh
+@SEQ03
+ACGACTGACTAGCATGCTAC
++
+]]]_adddddddddddeee
+```
+
+Command to run rasusa:
+
+```
+rasusa --coverage 30 --genome-size 3m --input input.fastq --output output.fastq
+```
+
+Where:
+- `--coverage` is the desired coverage,
+- `--genome-size` is the estimated genome size,
+- `--input` is the input fastq file, and
+- `--output` is the output fastq file.

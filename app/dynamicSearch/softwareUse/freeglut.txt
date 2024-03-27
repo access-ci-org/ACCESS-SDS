@@ -1,45 +1,39 @@
-Use Case: Visualization of OpenGL graphics using freeglut
-Code details and examples:
-```c
+Use Case: FreeGLUT is a software application that provides a free-software alternative to the OpenGL Utility Toolkit (GLUT) library. This library is designed to help programmers avoid low-level details and begin programming 3D applications quickly. It is primarily used to create and manage windows with OpenGL contexts, handle user input, and manage time.
+
+Code details and examples: Code:
+
+Sample FreeGLUT Application:
+
+```C
 #include <GL/freeglut.h>
-#include <GL/gl.h>
 
 void display()
 {
-    glClearColor(0.0, 0.0, 0.0, 1.0);
-    glClear(GL_COLOR_BUFFER_BIT);
-
-    glBegin(GL_POLYGON);
-    glColor3f(1.0, 0.0, 0.0);
-    glVertex2f(-0.5, -0.5);
-    glColor3f(0.0, 1.0, 0.0);
-    glVertex2f(0.5, -0.5);
-    glColor3f(0.0, 0.0, 1.0);
-    glVertex2f(0.0, 0.5);
-    glEnd();
-
-    glFlush();
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glutWireCube(1.0);
+    glutSwapBuffers();
 }
 
 int main(int argc, char** argv)
 {
     glutInit(&argc, argv);
-    glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
-    
-    glutInitWindowSize(500, 500);
-    glutCreateWindow("Freeglut Example");
-
+    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH);
+    glutInitWindowSize(600, 600);
+    glutCreateWindow("A basic FreeGLUT application");
     glutDisplayFunc(display);
-    
     glutMainLoop();
-    
     return 0;
 }
 ```
-Command:
-```
-gcc -o example example.c -lglut -lGL -lGLU
-./example
+This code will display a rotating cube. First, we are including the freeglut header. Then, within our display function, we are clearing the screen and drawing a wire cube. We are using double buffering and swapping the buffers at the end of each frame. In our main function, we initialize freeglut, set the display mode, set the window size, create a window and set the display function. At the end, we enter into the main loop.
+
+The input format for FreeGLUT is the command line arguments passed to the main function when starting the program. 
+
+Command to compile and run the code (on a Unix-based system with gcc):
+
+```bash
+gcc -o myprogram myprogram.c -lglut -lGL -lGLU
+./myprogram
 ```
 
-In this example, we are using freeglut to create a simple OpenGL program that displays a colored triangle on the screen. The code sets up the display function, initializes the window and OpenGL settings, and then enters the main loop to display the graphics.
+The '-l' options tell the linker which libraries to link with the program. The `./myprogram` command runs the created program.

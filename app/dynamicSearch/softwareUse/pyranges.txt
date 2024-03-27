@@ -1,0 +1,42 @@
+Use Case: Use PyRanges for efficient comparison and manipulation of genomic intervals in python. Allows one to easily compare, manipulate, create and test ranges of genomic intervals with different attributes.
+
+Code details and examples: Code. 
+
+In PyRanges, the major data type is the PyRanges-object. Each PyRanges contains a minimum of three columns: Chromosome, Start and End. Additional columns might be Name, Score, Strand and thickStart, thickEnd, itemRgb, blockCount, blockSizes and blockStarts. Also, any other columns are also possible. 
+
+PyRanges uses a format similar to the GRanges format in Bioconductor as the input format. A small example is presented below:
+
+Chromosomes     Start    End
+chr1                 1         5
+chr1                 6         10
+chr2                 1         5
+chr2                 6         10
+
+Read a file:
+
+```python
+import pandas as pd
+import pyranges as pr
+
+df = pd.DataFrame({"Chromosome": ["chr1", "chr1", "chr2", "chr2"],
+                  "Start": [1, 6, 1, 6],
+                  "End": [5, 10, 5, 10]})
+
+gr = pr.PyRanges(df)
+```
+
+Test the equality between two PyRanges. 
+
+```python
+cpg = pr.data.chipseq()
+eq = cpg == cpg
+print(eq)
+```
+
+Output: True
+
+Command to run a pyranges script:
+
+```bash
+python3 pyranges_script.py
+```

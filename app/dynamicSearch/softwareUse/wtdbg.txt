@@ -1,0 +1,25 @@
+Use Case: Wtdbg is commonly used for de novo assembly from long noisy reads, such as those produced by PacBio or Oxford Nanopore sequencers. 
+
+Code details and examples:
+
+Code:
+
+General command structure: 
+
+```
+wtdbg -i <input file> -o <output prefix>
+```
+
+Input file has to be in FASTA or FASTQ formats, containing the sequencing reads. for example, we will use reads.fq as our input file and my_assembly as the prefix for all output files. 
+
+```
+wtdbg -i reads.fq -o my_assembly
+```
+
+This will generate several output files, including my_assembly.ctg.lay which contains the layout of sequences in the assembly.
+
+Please note that the actual command might be more complex and depend on the specifics of the sequencing reads and the organism that is being sequenced. For example, for PacBio reads of a mammalian genome, the command might include options for the length of the k-mer to be used in assembly (-k 15, default is 21), minimal read length (-l 5000, default is 4000), and the minimal alignment identity (-p 0.70, default is 0.05):
+
+```
+wtdbg -k 15 -l 5000 -p 0.70 -i reads.fq -o my_assembly
+```

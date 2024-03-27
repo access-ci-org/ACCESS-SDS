@@ -1,0 +1,25 @@
+Use Case: "r-mime" is an R library used to map filenames to MIME types. It can be used for application scenarios, like web development, where there's a need to determine the kind of file from the extension of the filename.
+
+Code details and examples:
+
+Code:
+```R
+# Include the mime package
+library(mime)
+
+# Using the guess_type() function to get MIME type
+mime_type <- guess_type("sample.pdf")
+print(mime_type)
+```
+
+This R code uses the mime library to determine the MIME type of a file. In this case, the file is "sample.pdf". The guess_type() function is used to determine the MIME type based on the extension of the filename.
+
+Input files: A file with an extension. In this case, "sample.pdf" is the file used.
+Format required: The file should have an extension. The function guesses the MIME type based on the file extension.
+Specifications and details in input files: Not applicable since it works on the file extension.
+
+Command to run the code: Just source the R script file. If the file is named `mime_example.R`, you can run it using:
+
+```bash
+Rscript mime_example.R
+```

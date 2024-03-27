@@ -1,0 +1,47 @@
+Use Case: SWAT (Soil and Water Assessment Tool) is a hydrology model developed to predict the impact of land management practices on water, sediment and agricultural chemical yields in large complex watersheds. 
+
+Code details and examples: 
+
+Code: 
+
+```
+import swat
+
+cnf = swat.CNFG.read('file.cnfg')
+cnf.get('PROJECT_DIR')
+cnf.get('SCENARIO')
+cnf.get('MODEL_DIR')
+cnf.get('DATABASE')
+cnf.get('OUTPUT_DIR')
+
+cnf.set('MODEL_DIR', 'path/to/model/dir')
+
+cnf.write('file.cnfg')
+
+swat.swat_exec('file.cnfg', 'path/to/swat/binary')
+```
+
+Input File: 
+
+The file.cnfg file could contain this:
+
+```
+[Settings]
+PROJECT_DIR=path/to/project
+SCENARIO=scenario_name
+MODEL_DIR=path/to/model
+DATABASE=path/to/db
+OUTPUT_DIR=path/to/output
+```
+
+Output:
+
+The main output is typically a collection of text files containing hydrologic and water quality results for each sub-basin.
+
+Command to Run: 
+
+```
+python swat_script.py
+```
+
+The script swat_script.py could be as simple as the few lines of Python code mentioned. It sorts the confusion coefficients and sets the new directory for the model. It then executes the "swat" command on the configuration file and binary file. The specifics would be highly dependent on the particular use case.

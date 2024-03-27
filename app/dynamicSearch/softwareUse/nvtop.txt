@@ -1,7 +1,9 @@
-Use Case: Monitoring NVIDIA GPUs on a Linux system.
-Code details and examples: 
-nvtop is a htop-like task monitor that displays the utilization of NVIDIA GPUs in real-time. 
-To run nvtop, simply open a terminal and type: 
+Use Case: nvtop is used for GPU usage monitoring. It is a handy tool when you want to see how much of your NVIDIA GPU resources are being utilized. 
+
+Code details and examples: To use nvtop, no input file or special format is required. The command to run nvtop is simply:
+
 ```bash
 nvtop
 ```
+
+nvtop then provides a real-time, top-like monitoring of GPU usage. It is important to note that users require the necessary NVIDIA driver and nvml libraries to run this command. Depending on configuration, these may need to be loaded via module commands.

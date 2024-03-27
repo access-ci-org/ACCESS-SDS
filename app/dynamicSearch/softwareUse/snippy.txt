@@ -1,0 +1,17 @@
+Use Case: Snippy is a fast, accurate tool used for bacterial variant calling from NGS reads. It finds single nucleotide polymorphisms (SNPs) between microbial genomes. 
+
+Code Details and Examples:
+
+Input File Formats: Snippy supports FASTQ, BAM or CRAM format as input files. It requires a reference genome (in FASTA format) and some kind of short-read data (either Illumina or Ion Torrent).
+
+Any Specifications and Details in Input Files: The input files are genome sequence files. 
+
+Command to run it (using default settings, but additional options can be added with --optionegers):
+
+```bash
+snippy --cpus 16 --outdir mysnps --ref Listeria.fasta --R1 FDA_R1.fastq.gz --R2 FDA_R2.fastq.gz
+```
+
+In this case, `--cpus 16` is to specify the number of processing units to be used (which could be adjusted based on resources), `--outdir mysnps` is to designate the output directory named "mysnps", `--ref Listeria.fasta` is to input the given Listeria reference genome, and `--R1 FDA_R1.fastq.gz` and `--R2 FDA_R2.fastq.gz` are the paired-end reads. 
+
+Please note that the paths to the reference genome and FASTQ files may need to be adjusted depending on your file structure.

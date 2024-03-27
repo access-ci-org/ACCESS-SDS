@@ -1,0 +1,26 @@
+Use Case: In case of custom logging or more advanced logging for R applications. Futile.logger is a logging package that is easy to use and flexible. It is modeled after log4j and it allows a runtime definition of the logging level and outputs logs to console or file appropriately.
+
+Code details and examples:
+
+Code: 
+
+```
+# First, load the library
+library("futile.logger")
+
+# Define the logger level environment
+flog.logger(name = "flog", appender = console_appender(), threshold = INFO)
+
+# Log the info
+flog.info("the value of log is: %s", value_to_log)
+
+# Log the error
+flog.error("This is an error log")
+```
+
+Running the code:
+In this case, the commands are executed directly in the R interpreter, no separate command to run the entire script is required unless the script is saved in a file.
+
+The input does not require any specific format but the variable value_to_log used in flog.info should be defined in the scope. This can be either a string or any variable that can convert to a string. The appender function console_appender() makes sure that the logs are outputted on the console.
+
+This code snippet is set up to create a simple logging configuration, where logs of level Info will be displayed on console and this logging configuration is named “flog”. The logger is then used to log information and errors. The text to be logged is formatted with sprintf-style format strings.

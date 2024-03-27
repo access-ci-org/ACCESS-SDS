@@ -1,0 +1,41 @@
+Use Case: AMD LibM is a software library containing a collection of basic math functions optimized for x86-64 AMD processors. It provides many routines from the list of standard C99 math functions. Applications can link into AMD LibM library and invoke math functions instead of compiler's math functions for better accuracy and performance. 
+
+Code details and examples: Code 
+
+Sample Input file for the sin function:
+
+```c
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+   double num, result;
+
+   printf("Enter a number: ");
+   scanf("%lf", &num);
+
+   // computing the sin of num
+   result = sin(num);
+
+   printf("sin(%lf) = %lf", num, result);
+
+   return 0;
+}
+```
+
+In this C program, note that the sin function is defined in <math.h> header file. Here, the sin function computes sine of a given value, ('num' in the program) and the resulting value is stored in the 'result' variable.
+
+Command to run:
+
+`gcc -lm sin.c -o sin`
+
+Then, execute the program:
+
+`./sin`
+
+Note that linking order matters, '-lm' needs to be after 'sin.c'.
+ 
+Specifications:
+- The 'num' is the angle in radians for which sine has to be computed.
+- The num value should be a floating-point value and can be either positive or negative.
+- The result will always be in the range -1 to 1 as sin value cannot exceed these limits.

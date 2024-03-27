@@ -1,0 +1,22 @@
+Use Case: Cross_Match is a software package for aligning high-quantity genomic sequences with a reference genome to identify similarities and differences. It is extensively used in bioinformatics for sequence alignment and is particularly useful in comparative genomics and genome assembly.
+
+Code Details and Examples: 
+The command for Cross_Match is usually in this format: cross_match subject_file query_file
+
+Code:
+
+```
+cross_match genome.fasta reads.fasta -minmatch 10 -minscore 20
+```
+
+In this use case, 'genome.fasta' is the subject file and 'reads.fasta' is the query file. The '-minmatch' parameter sets the smallest exact match that will be detected and the '-minscore' parameter sets the smallest alignment score for a match to be reported to the output. Both files are in FASTA format.
+
+FASTA Format:
+A fasta file starts with a single-line description, followed by lines of sequence data. The description is distinguished from the sequence data by a greater-than (">") symbol at the beginning. It is recommended that all lines of text be shorter than 80 characters in length.
+An example sequence in FASTA format is: 
+
+```
+>gi|186681228|ref|YP_001864424.1| phycoerythrobilin:ferredoxin oxidoreductase
+MKNWIKVAVKGAAGQISTAILVNRGAAKMNAKLTRGIELGEYGFLLFDLGGGTFDVSILTIEDGIFEVKQAGSGKT
+```
+In this example, the sequence identification is denoted by ">gi|186681228|ref|YP_001864424.1| phycoerythrobilin:ferredoxin oxidoreductase". Following this identification is the sequence beginning with "MKNWIKVAVKGAAGQISTAILV".

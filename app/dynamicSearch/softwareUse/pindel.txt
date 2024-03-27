@@ -1,0 +1,25 @@
+Use Case: Pindel is a software tool for detecting breakpoints of large deletions and medium-sized insertions from paired-end short reads. It utilizes pattern growth algorithm to identify the breakpoints of these variants from paired-end short reads.
+
+Code details and examples: Code
+
+1. Pindel Configuration file 
+
+The configuration file should be prepared which lists the input BAM files along with the insert size. The file format is:
+`<path to the bam or sam file>	<size of insert>	<label>`
+Here the label is arbitrary, it is used to keep different files separate in the ouput.
+Sample configuration file:
+`/users/genome/paired_1.bam 	300 	Sample1`
+
+2. Pindel Command 
+
+Here is the Pindel command to run the software with several common options:
+
+`pindel -f <reference genome fasta> -i <Configuration file> -c <chromosome> -o <outputfile prefix> -T <Number of threads>`
+
+For example if you have a configuration file named conf.txt, and want to search for structural variants on chromosome 1 in the reference genome human_g1k_v37.fasta, the command would be 
+
+`pindel -f human_g1k_v37.fasta -i conf.txt -c ALL -o output -T 4`
+
+The -c ALL option tells Pindel to search all chromosomes in the reference genome for structural variants.
+
+Pindel output files have the prefix specified in the command and are also labelled with the type of structural variant detected. For example, output_SI would contain all the short insertions detected. The output file is tab-delimited and includes information such as the breakpoints of the structural variant, the size and type of the variant and the supporting reads. Each line in the file describes one structural variant.

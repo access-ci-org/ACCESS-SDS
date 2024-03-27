@@ -1,0 +1,32 @@
+Use Case: Kaiju is a bioinformatics software used for taxonomic classification of sequences from metagenomic reads against a reference database containing taxa-specific marker genes. For example, it might be used to determine the species composition of bacteria in a given environmental sample.
+
+Code details and examples: Code 
+
+Input File: Kaiju requires a file of metagenomic reads in FASTA or FASTQ format. An example read might be:
+
+    >read1
+    ACGTACGTACGTACGT
+    >read2
+    GTCAGTCACTGACG
+    ...
+
+Database: Kaiju uses a database of reference protein sequences. While several pre-made databases are available from the Kaiju website, users can also build their own using the 'kaiju-makedb' command.
+
+Command: To run Kaiju on an input file named 'reads.fq' against a database 'proteins.fmi', the command would be:
+
+    kaiju -t /path/to/proteins.fmi -i /path/to/reads.fq -o kaiju.out
+
+Output: The output of this command is a file 'kaiju.out' that contains the classification results, where each line corresponds to a read in the input file. The output file is tab-delimited and has the following columns: 
+
+    1. "C" or "U": whether the read was classified or unclassified.
+    2. Name of the read.
+    3. Taxon identifier of the assigned taxon.
+    4. Name of assigned taxon.
+    5. Matched fragment of the read sequence (optional).
+    6. Name of the reference sequence that was used for classification (optional).
+
+Example of an output line might be:
+
+    C       read1   1234    Bacteria        ACGTACGT
+        
+This would indicate that read1 was classified (C) into taxon 1234 (Bacteria) based on the sequence fragment ACGTACGT.

@@ -1,0 +1,28 @@
+Use Case: agfusion is a bioinformatics software used for visualizing the annotations of gene fusions. Using the protein sequences from the Ensembl database, agfusion can help to annotate and check for the possible effects of different gene fusions in different organisms.
+
+Code details and examples: Code
+
+To utilize agfusion, you need to have a `.gtf` file and an input structure. The `.gtf` file is a format for gene information, and an example content could look something like this:
+
+```
+chr20   Ensembl gene    14363   29806   .   +   .    gene_id "ENSG00000223972"; gene_version "5"; gene_name "DDX11L1"; gene_source "ensembl_havana"; gene_biotype "transcribed_unprocessed_pseudogene";
+chr20   Ensembl transcript  14363   29806   .   +   .    gene_id "ENSG00000223972"; gene_version "5"; transcript_id "ENST00000456328"; transcript_version "2"; gene_name "DDX11L1"; gene_source "ensembl_havana"; gene_biotype "transcribed_unprocessed_pseudogene"; transcript_name "DDX11L1-002"; transcript_source "ensembl";
+```
+
+The input structure file specifies the name of the genes that are being fused, the position of the fusion and the strand direction. An example content could be something like this:
+
+```
+BCL11A    2    62984849    +    HSPB8   12    64561560    +
+```
+
+Given these files, you can use the script `agfusion annotate` to annotate the fusion. The command to run the script looks like this:
+
+```
+agfusion annotate -g Homo_sapiens.GRCh38.92.gtf.gz -d ensembl_92_Homo_sapiens -f fusions.txt -o output
+```
+
+Where:
+  * `-g` specifies the location of the gtf file used.
+  * `-d` specifies the database to be used for the ensembl sequences.
+  * `-f` specifies the file for the fusion input structure.
+  * `-o` specifies the name of the output folder where the results will be saved.

@@ -1,0 +1,48 @@
+Use Case: Use R-Locfit package to perform local regression, odds ratio or hazard ratio.
+
+Code details and examples: Code.
+
+1. Load the Locfit library in an R script file
+```R
+library(locfit)
+```
+
+2. Load the data. This can be done by using built-in datasets.
+
+```R
+data(cars)
+```
+If data is loaded from a CSV file, format required in CSV file:
+
+- Each row represents a different data point or measurement.
+- Each column represents a different variable. In this example, we have 2 variables: speed and dist.
+
+```R
+df <- read.csv("yourfile.csv")
+```
+
+3. Perform locfit
+
+```R
+fit <- locfit(dist~speed, data=cars)
+```
+Here, 'dist' is dependent variable and 'speed' is independent variable. 
+
+4. Plot the fitted line or curve with help of 'plot' function
+
+```R
+plot(fit)
+```
+
+5. Evaluate the locfit model on required points with 'predict' function
+
+```R
+prediction = predict(fit, newdata = data.frame(speed=c(15)))
+print(prediction)
+```
+This will predict the 'dist' for 'speed' value of 15.
+
+The command to run the R script file (here 'script.r') from command line:
+```
+Rscript script.r
+```

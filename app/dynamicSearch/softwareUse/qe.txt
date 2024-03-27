@@ -1,39 +1,51 @@
-Use Case: Quantum ESPRESSO (QE) is an integrated suite of Open-Source computer codes for electronic-structure calculations and materials modeling at the nanoscale. It is widely used in the field of computational materials science.
+Use Case: Quantum Espresso (QE) is a program for high-quality materials modeling at the nanoscale. It is used for electronic-structure calculations and quantum-mechanical molecular dynamics from first principles.
 
 Code details and examples:
-- Example input file for performing a simple ground-state calculation of Silicon using QE:
-```bash
-cat > si.in << EOF
-&control
-    calculation = 'scf',
-    prefix = 'si',
-    pseudo_dir = '/path/to/pseudo/',
-    outdir = './'
-/
-&system
-    ibrav = 2,
-    celldm(1) = 10.2625,
-    nat = 2,
-    ntyp = 1,
-    ecutwfc = 40.0
-/
-&electrons
-/
-ATOMIC_SPECIES
-   Si  28.086  Si.pbe-mt_fhi.UPF
-ATOMIC_POSITIONS crystal
-   Si 0.00 0.00 0.00
-   Si 0.25 0.25 0.25
-K_POINTS automatic
-  4 4 4 0 0 0
-EOF
-```
 
-- To run the calculation using QE, you can use the following command:
-```bash
-pw.x -in si.in > si.out
-```
+File format: Input files for Quantum Espresso should be in the .in format, which is a text file. The typically used pseudopotential files have a .UPF extension.
 
-This will perform a self-consistent field (SCF) calculation for the given Silicon input file.
+Sample QE input file (for silicon):
 
-Note: You need to have QE installed on your system and have the correct pseudopotentials in the specified directory to run this example.
+    &control
+    calculation='scf',
+    restart_mode='from_scratch',
+    pseudo_dir = '/path/to/pseudopotentials',
+    outdir='/temp/directory'
+    prefix='silicon'
+    /
+  
+    &system
+    ibrav= 2,
+    celldm(1) =10.20,
+    nat= 2,
+    ntyp= 1,
+    ecutwfc =20.0
+    /
+  
+    &electrons
+    conv_thr =  1.0d-8
+    /
+  
+    ATOMIC_SPECIES
+    Si  28.086  Si.pz-vbc.UPF
+  
+    ATOMIC_POSITIONS {alat}
+    Si 0.00 0.00 0.00 
+    Si 0.25 0.25 0.25 
+  
+    K_POINTS {automatic}
+    6 6 6 1 1 1
+
+This file can be run with the following command:
+
+    pw.x < silicon.in > silicon.out  
+
+In this example, the input configuration specifies all the essential parameters for performing a self-consistent field (SCF) calculation on Silicon, using the PZ pseudopotential (Si.pz-vbc.UPF). Output of the calculation is directed to 'silicon.out'.
+
+The section ATOMIC_POSITIONS provides the atomic coordinates in lattice units (since {alat} is specified), and K_POINTS defines the Monkhorst-Pack k-point grid for Brillouin zone integration. 
+
+The `pseudo_dir` specifies the directory where pseudopotential files are stored, and `outdir` is the directory where output will be written. The `prefix` is used to tag output files. 
+
+The `celldm(1)` parameter sets the lattice parameter in Bohr units, `ibrav` selects the Bravais lattice, and `ecutwfc` is the cut-off energy for the wave functions.
+
+The `conv_thr` parameter inside &electrons sets the convergence criterion for the self-consistency cycle. When the energy difference between two consecutive iterations is below `conv_thr`, the calculation is considered self-consistent.

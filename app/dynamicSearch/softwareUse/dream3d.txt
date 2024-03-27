@@ -1,15 +1,15 @@
-Dream.3D is an open-source software package for digital microstructure analysis and visualization. It is used in materials science and engineering for the analysis of 3D image data. It provides a graphical user interface for easy visualization and analysis of microstructural properties.
+Use Case: Dream3D is a software package that aids in the analysis of 3D/4D data sets in materials science. Some common usages include visualisation of 3D microstructure data, data reconstruction, and continuous homogenization.
 
-Use Case: Visualizing microstructure data in Dream.3D
-Code details and examples:
-```
-# Sample input file: An example input file for Dream.3D may include a 3D image dataset in formats such as .raw, .tif, .dat, etc.
+Code details and examples: 
 
-# Steps to run Dream.3D:
-1. Launch Dream.3D software.
-2. Load the input 3D image dataset.
-3. Use the various tools and filters in Dream.3D to analyze and visualize microstructural properties.
-4. Save the analyzed results or visualizations in the desired format.
-```
+In Dream3D, the input file formats are .ang, .ctf, .csv, .h5 or .dream3d formats. The .ang and .ctf formats are similar and used for electron backscatter diffraction data. Whereas, .csv format is used for statistical data, .h5 and .dream3d formats are for storing data that is created within the Dream3D environment.
 
-Please note that Dream.3D is primarily a graphical software tool, and hence the interactions are done through the graphical user interface provided by the software.
+To load an .ang file into Dream3D, you can use the 'ReadAngData' filter.
+
+Here is an example of a command-line script for running Dream3D:
+
+Dream3D
+- -pipeline DefaultPipelines/Reconstruction/01_SmallIN100FullReconstruction.json
+- -angFile SmallIN100/Slice_1.ang
+
+'- -pipeline' provides the path of the pipeline file to use to pre-process the data whereas '-angFile' path is used to import an .ang EBSD file into Dream3D.

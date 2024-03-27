@@ -1,21 +1,30 @@
-"ferret" is used for the analysis and visualization of oceanographic data.
+Use Case: Ferret is an interactive computer visualization and analysis environment designed to meet the needs of oceanographers and meteorologists analyzing complex sets of data. 
 
-Use Case: Loading data file in Ferret
-Code details and examples:
-```
-yes? use data_file.nc
-```
+Code details and examples: 
 
-Use Case: Plotting a map in Ferret
-Code details and examples:
-```
-yes? shade variable_name[l=1]
+Code:
+
+```sh
+yes? USE coads_climatology
+yes? SHADE/L=1 sst
 ```
 
-Use Case: Creating a time series plot in Ferret
-Code details and examples:
-```
-yes? plot variable_name
+Input Files:
+The only file loaded and used by Ferret is the one specified in the USE command. In this case, that's coads_climatology.
+
+Format Required:
+Ferret reads netCDF files, a common file format for storing multidimensional scientific data (variables) such as temperature, humidity, pressure, wind speed and direction. 
+
+Specifications and Details:
+All data files loaded by Ferret must be in the form of netCDF files. Ferret can, however, create ASCII, Binary, or even netCDF data files from data that live purely in memory.
+
+Command to run:
+
+Ferret can run in both interactive mode and batch mode. For interactive mode, you just type ferret at the command line. For batch mode, you would write your script (like the one above) to a file, say script.jnl, and then run it with Ferret like so:
+
+```sh
+ferret < script.jnl
 ```
 
-Please note that the above commands are simplified examples and actual usage may require additional specifications and details in the input files and code snippets.
+
+Reference: http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/command-line-usage/GETTING-STARTED-WITH-FERRET

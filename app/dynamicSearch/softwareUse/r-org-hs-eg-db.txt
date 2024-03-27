@@ -1,0 +1,34 @@
+Use Case: This is a Homo sapiens gene annotation package for the organism Homo sapiens (Human) used in the Bioconductor project that provides tools for the analysis and comprehension of high-throughput genomic data. This gene annotation package is used to annotate datasets, and further used for the analysis and comprehension of High-throughput Genomics Data. 
+
+Code details and examples:
+
+Code:
+Package: org.Hs.eg.db
+Type: Package
+Title: Genome wide annotation for Human
+Description: This package provides annotation data for the org.Hs.eg identifier class objects.
+Version: 3.8.2
+
+Command to load library and see some attributes.
+```R
+library(org.Hs.eg.db)
+
+columns(org.Hs.eg.db)
+```
+Output:
+$cdf
+[1] "hgu133a"   "hgu133a2"  "hgu133b"   "hgu133plus2" .....
+
+This provides the types of attributes that can be retrieved from org.Hs.eg.db
+
+To retrieve specific gene information:
+```R
+select(org.Hs.eg.db, keys="7157", columns=c("SYMBOL", "GENENAME"), keytype="ENTREZID")
+```
+Output:
+  ENTREZID SYMBOL                 GENENAME
+1     7157  TP53 tumor protein p53
+
+The `select` function retrieves attributes for a given set of key values (keys) for the given keytype. In the above command, it is using ENTREZID as keytype and retrieving SYMBOL and GENENAME as attributes.
+
+The data for org.Hs.eg.db is typically accessed by using select and related functions from the AnnotationDbi package. The select function typically takes a three arguments: (1) the annotation package to use; (2) the keys (e.g.,eg: gene ids or symbols); (3) the columns to retrieve; and (4) the keytype, which tells select what type of keys your keys argument represents.

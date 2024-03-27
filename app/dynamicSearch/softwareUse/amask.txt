@@ -1,0 +1,41 @@
+Use Case: AMASK is a software package used for performing arithmetic on multi-dimensional arrays in an efficient manner. It provides features such as broadcasting, shuffling, and indexing which are crucial for numerical computation. It is widely used in scientific computation for tasks like signal processing, data analysis, and modeling.
+
+Code Details and Examples: 
+
+Code:
+
+```python
+import numpy as np
+import amask
+
+# creating a sample ndarray  
+a = np.array([[1, 2], [3, 4]])
+
+# specifying mask 
+mask = amask.array([0, 1], mask=[False, True])
+
+# performing masked operation
+b = a + mask
+
+print(b)
+```
+
+In this example, the input is a two-dimensional array and a mask array. The output array adds the non-masked elements from the mask to the original array.
+
+Command to run:
+```console
+python file_name.py
+```
+
+Where "file_name.py" is the python script containing the code.
+
+Inputs:
+- The numpy array "a" and the mask "mask".
+
+Formats:
+- Both inputs are multi-dimensional arrays specified using numpy.
+- The mask is a special array that specifies which elements to include in operations.
+
+Specifications:
+- The array and mask must have congruent shapes for the operations to succeed.
+- The mask is a boolean array where "True" indicates to include the element and "False" indicates to exclude it.

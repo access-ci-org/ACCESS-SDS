@@ -1,17 +1,34 @@
-Arriba (Analysis of gene fusions, RNA-binding regions, and rearrangements). 
+Use Case: Arriba is used for detecting gene fusions from RNA-Seq data. It's a command line tool that is widely used in bioinformatics and genomics research.
 
-Use Case: Arriba is a tool for detecting gene fusions, recurrent RNA binding protein (RBP) hotspots, and chromosomal rearrangements in RNA-seq data.
-
-Code details and examples:
+Code details and examples: Code
 
 Input files:
-- RNA-seq reads in BAM format
+1. A .fastq file containing RNA-Seq data. An example of such file can be:
 
-Command to run Arriba:
-```
-arriba --aligner star --reference reference.fa --transcripts transcripts.gtf --output output_dir/ input.bam
-```
+@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
++
+!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
 
-Note: In the command above, replace `reference.fa`, `transcripts.gtf`, `output_dir/`, and `input.bam` with the appropriate files and directories.
+2. A reference genome file in .fasta format. An example of a genome line can be:
 
-For more information and parameters, you can refer to the Arriba documentation: [Arriba GitHub](https://github.com/suhrig/arriba)
+>Chr1
+ATCATGCCGACGTGCTAGTACGTACGTAGCTACGACTGATCGTAGCTAGTCAGTACG
+
+3. A gene model in GTF format. An example of lines in the GTF file:
+
+1	havana	gene	11869	14409	.	+	.	gene_id "ENSG00000223972"; gene_version "5"; gene_name "DDX11L1"; gene_source "havana"; gene_biotype "transcribed_unprocessed_pseudogene";
+
+Command:
+The command to run Arriba is a single line command of the following format, assuming two paired-end RNA-Seq files:
+
+arriba -x reads1.fastq.gz -y reads2.fastq.gz -g genes.gtf -a genome.fasta -o fusions.tsv -O fusions.bam
+
+Arriba will generate two files: fusions.tsv and fusions.bam.
+
+In the output fusions.tsv file, each row represents a fusion candidate. Important columns include:
+
+- gene1/gene2: the names of the fusion partners
+- junctionReadCount/spanningFragCount: the count of junction reads and spanning fragments supporting the fusion
+- downstream/upstream: the direction of the genes involved in fusion
+- strand1(strand2): the strand of the genes.

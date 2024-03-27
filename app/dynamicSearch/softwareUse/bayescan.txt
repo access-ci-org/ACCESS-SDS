@@ -1,0 +1,33 @@
+Use Case: Use BayeScan to identify candidate loci under natural selection from genetic data, using differences in allele frequencies between populations. BayeScan is based on the multinomial-Dirichlet model. 
+
+Code details and examples: Code
+
+Input Files:
+1. Input file (*.fst.txt) - This file contains the FST values for the loci.
+2. Parameter file (*.par) - This includes the number of demes (populations), the number of loci, the prior odds for the neutral model, specific details about the MCMC algorithm, and the name of the input file. 
+
+Format:
+
+fst.txt
+```
+[Data]
+[[Structure]]
+dimension= 3 1
+```
+par file
+```
+[Run]
+chain_len= 100000
+thin_interval= 100
+discard_samp= 100000
+numb_runs= 5
+```
+In the above code, "dimension" refers to the number of populations and the number of locus to use. In the run file, "chain_len" refers to total length of the Markov chain, "thin_interval" to the thinning interval length for the Markov chain, "discard_samp" to the number of iterations discarded as burn-in at the beginning of the simulations, and "numb_runs" to the number of independent Markov chains for the estimation of the mode deviance information criterion.
+
+Command to Run:
+
+The BayeScan software is command-line based and can be run as follows:
+
+`bayescan_2.1 < input.par > output.txt`
+
+This code runs BayeScan on the input data specified in the parameter file and outputs the results to the specified text file.

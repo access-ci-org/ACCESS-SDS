@@ -1,0 +1,44 @@
+Use Case: The libidn library is used for internationalized string processing. It takes in an encoded string as input and returns an ASCII-encoded string.
+
+Code details and examples: Code
+
+For example, let's say we want to input a domain name using the Punycode standard, a type of Internationalized Domain Name (IDN) encoding used to allow non-ASCII characters in domain names.
+
+Sample Input File:
+
+```text
+zeichenhausö.de
+```
+
+This file should contain the domain name that you want to convert. It should be in UTF-8 format as that is the encoding standard supported by libidn.
+
+This is a basic code snippet utilizing libidn:
+
+```C
+#include <stdio.h>
+#include <string.h>
+#include <idn/api.h>
+
+int main() {
+    const char *input = "zeichenhausö.de";
+    char *output;
+    int rc;
+
+    rc = idna_to_ascii_8z(input, &output, 0);
+    if (rc != IDNA_SUCCESS) {
+        printf("Conversion failed: %s\n", idna_strerror(rc));
+        return 1;
+    }
+    printf("Converted string: %s\n", output);
+
+    free(output);
+    return 0;
+}
+```
+
+The command to run this code will depend on your system. Typically, you will need to link against the libidn library, which you can do with -lidn when using gcc:
+
+```bash
+gcc -o test_idn test_idn.c -lidn
+./test_idn
+```

@@ -1,0 +1,29 @@
+Use Case: Running an AI model training session using Tensorflow that requires high-level GPU computation power for processing large volumes of data. 
+
+Code details and examples:
+Code:
+```python
+import tensorflow as tf
+
+# Create some tensors
+a = tf.constant([[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]])
+b = tf.constant([[1.0, 2.0], [3.0, 4.0], [5.0, 6.0]])
+
+c = tf.matmul(a, b)
+
+print("c:", c)
+
+# Check if GPU is available
+print("Is the Tensor on GPU #0:  "),
+print(c.device.endswith('GPU:0'))
+```
+- The code uses Tensorflow library to perform Matrix Multiplication.
+- Checks if the operation was performed using GPU.
+
+Required Input Format: There is no input file required for this code but a compatible GPU device should be available. 
+
+Command to run the Code: `python3 filename.py` where filename.py is your python file. 
+
+Specifications and Details in Input Files: The code doesn't have input files, instead it creates some tensors. 
+
+NOTE: Make sure your system has a compatible GPU and correctly installed Tensorflow.

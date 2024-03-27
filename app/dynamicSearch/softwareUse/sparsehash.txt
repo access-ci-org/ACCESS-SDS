@@ -1,0 +1,39 @@
+Use Case: Use of Sparsehash for implementing memory-efficient hash_map and hash_set.
+
+Code details and examples: Code
+
+Sparsehash is a Google developed C++ templates based library that uses hash-based containers and provides efficient memory utilization.
+
+Input files: N/A
+
+Specifications and details in input file: N/A
+
+Code Snippet:
+
+```C++
+#include <sparsehash/sparse_hash_map>
+
+int main(){
+    // Key must be a simple datatype
+    google::sparse_hash_map<int, int> map;
+
+    // Set a deleted key, required by sparsehash
+    map.set_deleted_key(-1);
+
+    // Insert a key:value pair
+    map[1] = 2;
+
+    // Check if key exists
+    bool exists = (map.find(1) != map.end());
+
+    // Remove a key
+    map.erase(1);
+
+    return 0;
+}
+```
+Run Command: This goes with regular c++ compilation command:
+
+```bash
+g++ filename.cpp
+```

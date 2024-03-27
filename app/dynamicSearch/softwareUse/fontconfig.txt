@@ -1,17 +1,84 @@
-Use Case: fontconfig is a library designed to provide system-wide font configuration, customization, and layout. It is commonly used in conjunction with applications that require font management and rendering capabilities.
+Use Case: Fontconfig is a library designed to provide system-wide font configuration, customization and application access.
 
-Code details and examples:
-1. Listing available fonts:
-```bash
-fc-list
+Code Details and Examples:
+
+Fontconfig uses a configuration file, those are usually XML-based, for its setup and operation.
+
+Here is an example of a fontconfig configuration file:
+
+```xml
+<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+<fontconfig>
+  <!-- Match all families -->
+  <match>
+    <edit name="antialias" mode="assign">
+      <bool>true</bool>
+    </edit>
+  </match>
+</fontconfig>
 ```
 
-2. Matching fonts based on certain criteria:
+This configuration file enables anti-aliasing for all font families. 
+
+To enable or disable fontconfig for a specific application, you can create a config file inside a .fontconfig directory in the user's home directory.
+
+Follow the following steps -
+
+Create a `.fonts.conf` file in your home directory:
+
 ```bash
-fc-match -a Arial
+$ nano ~/.fonts.conf
 ```
 
-3. Generating a font cache:
-```bash
-fc-cache
+An example `.fonts.conf` might look something like this:
+
+```xml
+<fontconfig>
+ <dir>/usr/share/fonts</dir>
+ <dir>/usr/share/fonts/truetype</dir>
+ <dir>/usr/share/fonts/type1</dir>
+ <dir>~/.fonts</dir>
+ <match target="font">
+   <edit mode="assign" name="rgba">
+   <const>rgb</const>
+   </edit>
+ </match>
+ <match target="font">
+   <edit mode="assign" name="hinting">
+   <bool>true</bool>
+   </edit>
+ </match>
+ <match target="font">
+   <edit mode="assign" name="hintstyle">
+   <const>hintfull</const>
+   </edit>
+ </match>
+ <match target="font">
+   <edit mode="assign" name="antialias">
+   <bool>true</bool>
+   </edit>
+ </match>
+</fontconfig>
 ```
+
+Finally, run fc-cache to update your font cache:
+
+```bash
+$ fc-cache -fv
+```
+
+To query configuration values, you can use the command:
+
+```bash
+$ fc-match fontname
+```
+
+Replacing 'fontname' with the name of the font you want to query. This will print the font file matching the config and its basic properties.
+
+Please replace `fontname` with a specific font's name. An example could be:
+
+```bash
+$ fc-match Arial
+```
+
+This command will provide information about the `Arial` font if it is available on the system.

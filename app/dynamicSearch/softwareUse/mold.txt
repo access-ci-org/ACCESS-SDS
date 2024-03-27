@@ -1,0 +1,41 @@
+Use Case: MOLD is a HPC software package that is primarily used for ab initio quantum chemistry calculations. It is capable of carrying out a variety of electronic structure methods such as Hartree-Fock, Density Functional Theory (DFT), and various post Hartree-Fock methods. 
+
+Code details and examples: 
+
+For the input file, it usually requires a ".inp" file. This is a text file which includes details of the molecule for which the calculations are to be done along with any other specifications for the calculation method, basis set, and other settings.
+
+Example input file (filename: benzene.inp):
+
+```
+#Mold Input
+#This is a sample calculation for Benzene molecule
+start benzene
+
+#Method specification
+HF/STO-3G
+
+#Geometry specification
+geometry = C 0.00000 1.40272 0.00000 
+           C 1.21479 0.70136 0.00000 
+           C 1.21479 -0.70136 0.00000 
+           C 0.00000 -1.40272 0.00000 
+           C -1.21479 -0.70136 0.00000
+           C -1.21479 0.70136 0.00000
+           H 0.00000 2.49029 0.00000
+           H 2.15666 1.24515 0.00000
+           H 2.15666 -1.24515 0.00000
+           H 0.00000 -2.49029 0.00000
+           H -2.15666 -1.24515 0.00000
+           H -2.15666 1.24515 0.00000
+      
+end
+```
+In this example, the molecule is benzene and the method used is Hartree-Fock with a STO-3G basis set. The geometry is then specified (in XYZ format).
+
+After you have your input file ready, usually you will run the program with a command in the terminal that might look something like this:
+
+```
+mold benzene.inp
+```
+
+This command tells the MOLD program to read the input file "benzene.inp" and perform the calculations specified in it. The results are then usually printed to the screen or to a separate output file. Due to the high computational demands, these calculations are often run on HPC clusters.

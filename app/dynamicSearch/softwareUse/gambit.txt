@@ -1,0 +1,22 @@
+Use Case: GAMBIT is used as a software tool for game theory. It provides models of games, solution algorithms and a graphical user interface for defining and studying games. 
+
+Code details and examples: 
+
+Code:
+First, define the model using .nfg format which stands for "Normal Form Game". Below is the structure of the file,
+  
+  NFG 1 R "Sample Game" { "Player 1" "Player 2" }
+  { { "1" "2" } { "A" "B" } }
+  " " & 
+  { 
+    "1" 1, 0
+    "2" 0, 1 
+  }
+
+The game contains two players named "Player 1" and "Player 2". Each player has two strategies, denoted as "1", "2" for Player 1 and "A", "B" for Player 2. The numbers in the final section determine the payoff for each combination of strategies.
+
+Command to run: 
+
+gambit-enummixed < Sample_Game.nfg 
+
+This command computes the Nash equilibria using the tool 'gambit-enummixed' for the game defined in the 'Sample_Game.nfg' file.

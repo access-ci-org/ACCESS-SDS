@@ -1,0 +1,30 @@
+Use Case: Lumpy-SV is a probabilistic framework for structural variant discovery, used in genomic studies and bioinformatics. It is designed to integrate multiple signals to be used to resolve the putative structure for a variant in genomic data. The input requires are a standard .bam alignment file and a .bedpe formatted breakpoint file. 
+
+Code details and examples:
+
+Code:
+
+```bash
+lumpyexpress -B sample.bam -S sample.splitters.bam -D sample.discordants.bam -o sample.vcf
+```
+
+`sample.bam` is the input file in BAM format, which contains sequence alignment data. The `sample.splitters.bam` and `sample.discordants.bam` are also BAM files that contain specific data needed by Lumpy such as split reads and discordant read pairs. The output is a vcf file `sample.vcf` which gives the details about the structural variants.
+
+For the BAM file, an example entry could be:
+
+```txt
+EAS114_8:5:1:1820:104717#0    99  1   31765325  42  76M =   31765393  166 AGATGCTGGGATTACAGGCGTGAGCCACCACGCGCCCGGCC  AGAAGTTTA...
+
+```
+
+This entry gives details of the offset, alignment, and sequence of a read in the genomic data. Note: actual data is much longer and more complex.
+
+The BEDPE file could have entries like:
+
+```
+chr1    1000    1001    chr1    5000    5001
+```
+
+This specifies a potential breakpoint where a structural variant may exist between the genomic data at positions 1001 and 5000 on chromosome 1. More complex structural variants will have multiple breakpoints.
+
+It is essential that your input files are correctly formatted and extract the required data correctly. Improperly formatted or faulty input will likely result in errors or inaccurate results.

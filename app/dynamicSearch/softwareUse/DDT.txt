@@ -1,42 +1,47 @@
-As DDT is a parallel debugger tool used in high-performance computing environments, I will provide a general outline for how to use a parallel debugger tool, like DDT, with an MPI program.
+Use Case: DDT (Distributed Debugging Tool) is a popular tool used for debugging parallel applications. It supports multiple parallel programming models and helps developers in identifying and rectifying bugs in their parallel code.
 
-Use Case: Using a parallel debugger tool with an MPI program 
-Code details and examples:
+Code details and examples: 
 
-1. Sample MPI Program (mpi_example.c):
-```c
+Code:
+
+```
 #include <stdio.h>
-#include "mpi.h"
+#include <stdlib.h>
 
 int main(int argc, char **argv) {
-    int rank, size;
-    
-    MPI_Init(&argc, &argv);
-    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-    MPI_Comm_size(MPI_COMM_WORLD, &size);
-    
-    printf("Hello from process %d of %d\n", rank, size);
+    int i, n;
+    double *a, sum = 0.0;
 
-    MPI_Finalize();
-    
+    if(argc < 2) {
+        fprintf(stderr, "Usage: %s <num>\n", argv[0]);
+        exit(1);
+    }
+
+    n = atoi(argv[1]);
+    a = malloc(sizeof(double) * n);
+
+    for(i = 0; i < n; i++) {
+        a[i] = i;
+        sum += a[i];
+    }
+
+    printf("Sum: %g\n", sum);
+
+    free(a);
     return 0;
 }
 ```
 
-2. Compilation of MPI Program:
-```bash
-mpicc mpi_example.c -o mpi_example
-```
+To debug the above C code using DDT, we start the tool with the ddt command as follows:
 
-3. Running MPI Program:
-```bash
-mpirun -np 4 ./mpi_example
-```
+`ddt ./program`
 
-4. Using DDT to debug MPI Program:
-- Start DDT and create a new debugging session.
-- Select your MPI executable (e.g., mpi_example) and the number of processes.
-- Set breakpoints, inspect variables, and run the program in debug mode.
-- Use DDT's interface to analyze the behavior of the MPI program and debug any issues.
+After you start the tool, it automatically analyzes the code and allows you to set breakpoints, watch variables, etc. Additionally, you can navigate the source code to look at different parts of your program.
 
-Please note that the exact steps to use DDT may vary based on the specific version and configuration.
+With DDT you have to make sure to use executable compiled with -g option to include debugging symbols in the binary. 
+
+For more complex case, like running on MPI code, you may use command like:
+
+`ddt --connect mpirun -np 4 ./program <arg1> <arg2>`
+
+Where arg1, arg2 are arguments required by your program. In the above case, 4 is the number of processes to start, it should be modified to fit your requirements.

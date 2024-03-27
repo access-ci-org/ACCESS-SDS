@@ -1,26 +1,44 @@
-Use Case: libgd is a graphics library. It is used to create and manipulate images.
+Use Case: Use libgd to create an image with a single line of text "Hello, World!" and save it to a file.
 
-Code details and examples:
+Code details and examples: Code:
+
 ```c
-#include <gd.h>
+#include "gd.h"       /* include the gd library header */
+#include "gdfontg.h"  /* and the gd font header */
+
 int main() {
-    gdImagePtr im = gdImageCreate(100, 100);
-    FILE *pngout;
-    if (!im) {
-        return 1;
-    }
-    pngout = fopen("output.png", "wb");
-    gdImagePng(im, pngout);
+    /* Declare the image */
+    gdImagePtr im;
+    /* Declare output files */
+    FILE *out;
+    /* Declare color indexes */
+    int black;
+    int white;
+    /* Allocate the image: dimensions of 400 pixels x 30 pixels */
+    im = gdImageCreate(400, 30);
+    /* Allocate the color black. This will always be the first color in a new image */
+    black = gdImageColorAllocate(im, 0, 0, 0);  
+    white = gdImageColorAllocate(im, 255, 255, 255);
+    /* Draw a string at the specified location (upper left is 0,0) using the big font and the color white. */
+    gdImageString(im, gdFontGetGiant(), 10, 10, "Hello, World!", white);
+    /* Output the image to a file */
+    out = fopen("hello_world.png", "wb");
+    /* Write the image to the file in PNG format */
+    gdImagePng(im, out);
+    /* Close the file */
+    fclose(out);
+    /* Destroy the image in memory */
     gdImageDestroy(im);
-    fclose(pngout);
-    return 0;
 }
 ```
-To compile the code:
+To compile the above C code, use the gcc compiler:
+
+```bash
+gcc yourfile.c -lgd -o hello_world
 ```
-gcc example.c -o example -lgd
-```
-To run the compiled code:
-```
-./example
+
+And to run the executable file, use the following command:
+
+```bash
+./hello_world
 ```

@@ -1,0 +1,73 @@
+Use Case: Load a configuration file and modify the values in it
+
+Code details and examples:
+
+Code:
+
+```python
+from yacs.config import CfgNode as CN
+
+# define the config
+cfg = CN()
+cfg.MODEL = CN()
+cfg.MODEL.BACKBONE = "resnet101"
+cfg.MODEL.KERNEL_SIZE = 3
+
+cfg_str = cfg.dump()
+print(cfg_str)
+```
+
+Output:
+
+```python
+MODEL:
+  BACKBONE: resnet101
+  KERNEL_SIZE: 3
+```
+
+You can use yacs to easily change the values in your configuration:
+
+```python
+cfg.MODEL.BACKBONE = "resnet50"
+cfg.MODEL.KERNEL_SIZE = 5
+
+cfg_str = cfg.dump()
+print(cfg_str)
+```
+
+Output:
+
+```python
+MODEL:
+  BACKBONE: resnet50
+  KERNEL_SIZE: 5
+```
+ 
+yacs also supports loading from a file:
+
+```python
+cfg_file = "/path/to/your/config.yaml"
+cfg.merge_from_file(cfg_file)
+```
+
+and from a list of options, which can overwrite the options in your config:
+
+```python
+opts = ["MODEL.BACKBONE", "resnet50", "MODEL.KERNEL_SIZE", 5]
+cfg.merge_from_list(opts)
+```
+
+To start using yacs, you simply need to import the CfgNode class from the yacs.config module and then create an instance of CfgNode which is your config. 
+
+Now you can start adding elements to your config as you'd do with a normal Python dictionary.
+
+You can use the `dump` method to print your config as string. 
+
+If you want to change the values in your config, you simply assign the new value to the respective key.
+
+yacs supports loading the configs from a yaml file with the help of `merge_from_file` method. 
+
+Finally, yacs also allows for loading the config from a list of strings that represent options that you might want to overwrite the default options with. This is done with the `merge_from_list` method. You first define your options as a list and each key-value pair is two successive strings in the list.
+
+Running the code:
+The Python file can be run as a normal Python code, e.g. `$ python my_config_file.py`. The file should be in the same directory with all the dependencies installed or it will fail.

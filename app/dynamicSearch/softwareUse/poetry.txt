@@ -1,0 +1,44 @@
+Use Case: Poetry is a Python package manager that simplifies dependency management and packaging. It's often used for installing and managing Python dependencies in software projects.
+
+Code details and examples:
+
+Code: 
+A simple `pyproject.toml` file looks something like this:
+
+```
+[tool.poetry]
+name = "helloworld"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@email.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+```
+
+In the above file, the `name`, `version`, `description` and `authors` are project metadata. `python = "^3.8"` declares that this project requires Python 3.8 or any later version. 
+
+If you had further dependencies (say, a package named `requests`), you would add it in the `tool.poetry.dependencies` section like so:
+
+```
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.25.1"
+```
+
+Command to run:
+Once the project is configured you can install all dependencies using:
+
+```shell
+poetry install
+```
+
+And to run the project you would use:
+
+```shell
+poetry run python yourscript.py
+```

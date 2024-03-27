@@ -1,0 +1,37 @@
+Use Case: Use r-biomart for the retrieval of genomic data from BioMart databases. It is handy for bioinformatics research where large sets of genes and other biological data need to be fetched.
+
+Code details and examples: Code
+
+In R, you can use the biomaRt package like so:
+
+```R
+# Load the library
+library(biomart)
+
+# Use the useMart function to connect to the Ensembl database
+ensembl = useMart("ensembl")
+
+# List the available datasets
+datasets = listDatasets(ensembl)
+print(datasets)
+
+# Choose a specific dataset
+hsapiens = useDataset("hsapiens_gene_ensembl", mart = ensembl)
+
+# Get all the genes on the Y chromosome
+genes = getBM(attributes = c("ensembl_gene_id", "external_gene_name"),
+               filters = "chromosome_name",
+               values = "Y",
+               mart = hsapiens)
+
+# Print the data
+print(genes)
+```
+
+This code will print out all the genes on the human Y chromosome according to the Ensembl database. It first establishes a connection to the Ensembl BioMart, then selects the Homo sapiens dataset and retrieves all the Y chromosome genes.
+
+As for commands to run the script, you would typically do this interactively in Rstudio, or save the script as a .R file and run it with the Rscript command from the terminal:
+
+```
+Rscript myscript.R
+```

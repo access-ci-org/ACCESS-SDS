@@ -1,21 +1,34 @@
-Use Case: C++ programming
+Use Case: Using C++ software language to write a basic "Hello World" program.
 
-Code details and examples:
-```cpp
+Code details and examples: 
+
+Code:
+
+```c++
+// Hello World in C++
+
 #include <iostream>
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    std::cout << "Hello World!";
     return 0;
 }
 ```
 
-To compile the above code, you can use the g++ compiler:
-```
-g++ filename.cpp -o output
+In the above code, `#include <iostream>` is a header file library that includes the declarations for basic input/output services in C++. `std::cout` is the object that sends the output to standard out device, which is typically the computer screen.
+
+The required input file is a .cpp file that contains the C++ source code. In this case, the C++ source code is written directly in the text editor or Integrated Development Environment (IDE) used to write and compile C++.
+
+To compile and run this code (in Linux environment), navigate to the directory containing the .cpp file in the terminal and use the g++ compiler. If the file is named `hello_world.cpp`, the commands would be:
+
+Compile:
+```sh
+g++ hello_world.cpp -o hello_world
 ```
 
-To run the compiled executable:
+Run:
+```sh
+./hello_world
 ```
-./output
-```
+
+This will print `Hello World!` to the terminal.

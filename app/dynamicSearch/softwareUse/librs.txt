@@ -1,0 +1,40 @@
+Use Case: librs is a library for reading and writing data in the RecordStream format, a computer-readable format for structured data. It's commonly used to manipulate data on the command-line or from shell scripts. 
+
+Code details and examples: 
+
+Code:
+In this example, we will create a rs file from json and write the content of a rs file to a json file.
+
+```python
+import librs
+
+# Create a recordstream object
+rs = librs.RecordStream()
+
+# Append some records
+rs.append({"name": "John", "age": 18})
+rs.append({"name": "Jim", "age": 20})
+
+# Save to a file
+with open("data.rs", "wb") as f:
+    rs.write_to_file(f)
+
+# Load file from a recordstream
+with open("data.rs", "rb") as f:
+    new_rs = librs.RecordStream.read_from_file(f)
+
+# Write each record into json
+for record in new_rs:
+    print(json.dumps(record))
+
+```
+
+Command to run:
+
+```bash
+python3 script.py
+```
+
+input files: script.py
+format required: Python script
+Specifications in input files: No special requirements, other than that input data must be in the format expected by the RecordStream class (i.e., each record should be a Python dictionary). Please note that it is a hypothetical use-case. This library doesn't actually exist.

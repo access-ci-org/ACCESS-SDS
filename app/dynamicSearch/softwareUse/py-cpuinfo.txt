@@ -1,0 +1,16 @@
+Use Case: py-cpuinfo is used to get the CPU info. The module doesn't require any input file.
+
+Code details and examples:
+```python
+import cpuinfo
+
+info = cpuinfo.get_cpu_info()
+
+for key, value in info.items():
+   print("{0}: {1}".format(key, value))
+```
+You can run this python script normally. If this script is named as cpuinfo.py, you can run it as
+```bash
+python cpuinfo.py
+```
+This will print the details of the CPU such as brand, Hz, cores, family, model etc.

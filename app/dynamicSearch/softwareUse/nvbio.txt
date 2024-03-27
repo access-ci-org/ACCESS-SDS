@@ -1,0 +1,29 @@
+Use Case: Use nvbio for high-performance bioinformatics and genomics data analysis. It can specifically be used for processing and analyzing large-scale Next Generation Sequencing (NGS) data; reading and writing FASTA, FASTQ, and SAM files; conversion between these file formats and more. 
+
+Code details and examples: Code 
+
+Sample input file for nvbio is it takes a FASTA or FASTQ file as input which could look something like:
+
+>seq0
+CAGTGTGTCAGTGTAGC
+>seq1
+ACTGTCAGTGAC
+
+The software is used from the command line and does not need specific details in the input file other than formatting, unless a specific method is being used inside the software. 
+A typical use might therefore look like:
+
+nvbio fasta2fastq -i seq.fasta -o seq.fastq
+
+To run nvbio with an input file (say "input.fasta"), the command might look something like:
+
+> nvbio sort -i input.fasta -o sorted.fasta
+
+This will sort the sequences in the input.fasta file and output them to sorted.fasta.
+
+There is also a variety of other methods available inside the nvbio for processing sequencing data, such as:
+
+> nvbio fasta2sam -i input.fasta -o output.sam
+
+This command will convert a fasta file into a sam file.
+
+The nvbio suite also includes a variety of other tools and example code snippets for doing more complicated processing and analysis of sequencing data are provided in the nvbio GitHub repository.

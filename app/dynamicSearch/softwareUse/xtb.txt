@@ -1,17 +1,32 @@
-Use Case: xtb is a quantum chemistry software for computation of molecular properties.
-Code details and examples:
-Input file (input.xyz):
-```
+Use Case: The xtb software is a semi-empirical quantum mechanical method that is used predominantly for predicting the molecular structure and associated properties of small-to-moderately-sized molecular systems. This method is a parameterized one, i.e., it's been optimized to reproduce a variety of different molecular properties, as well as thermochemistry, for molecules that include the most common elements in organic and biological chemistry. 
+
+Code details and examples: 
+
+For example, if we are looking to calculate the optimized geometry of a molecule, we can use the following:
+
+1. The input file required is a .xyz file that contains the coordinates of the molecule.
+
+Sample input file (water.xyz):
+
 3
-Water geometry optimized using xtb
-O 0.000000 0.000000 0.117366
-H 0.000000 0.756277 -0.469464
-H 0.000000 -0.756277 -0.469464
-```
+Water molecule
+O 0.000000 0.000000 0.000000
+H 0.758602 0.000000 0.504283
+H 0.758602 0.000000 -0.504283
 
-Code:
-```
-xtb input.xyz
-```
+2. The command to run the geometry optimization is as follows:
 
-The command will run xtb on the input.xyz file and compute the molecular properties.
+xtb water.xyz –opt
+
+3. The output will show the optimized geometry and the energy of the molecule.
+
+The xtb software also requires a .xtbopt file to control the optimization process. The file would look like the following:
+
+$opt
+  hess = CalcHess
+  optlevel = l1opt
+$end
+
+This file specifies that the hessian is to be calculated using the CalcHess method and the optimization is to be done using the l1opt algorithm. This input file is not needed if default settings are used. 
+
+Note: Always use xtb software according to the recommendations provided by the software authors and respect the licenses of the software. If possible, consider citing the software source when publishing results obtained with the software.

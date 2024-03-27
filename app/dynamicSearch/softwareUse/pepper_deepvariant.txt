@@ -1,0 +1,26 @@
+Use Case: DeepVariant is a genome variant caller that uses deep learning to call genetic variants from next-generation DNA sequencing data. It is developed by Google Brain and Verily Life Sciences. Pepper is a variant calling pipeline developed by Google and it was developed to improve DeepVariant's speed and accuracy. It can be used in both research and clinical settings where genomic variant identification is required.
+
+Code details and examples:
+
+Input file format: Pepper_DeepVariant requires the human genome raw sequence data in FASTQ format and a referece genome in the FASTA format.
+
+Step 1: Convert FASTQ to BAM file
+
+Here, you need to align read pairs to reference sequences and convert it into a BAM file.
+
+```
+bwa mem -M -t 8 HUMAN_REFERENCE.fa INPUT1.fastq INPUT2.fastq | samtools sort -O bam -o OUTPUT.bam
+samtools index OUTPUT.bam
+```
+
+Step 2: Call Variants using Pepper DeepVariant
+
+```
+make_examples --mode calling --ref HUMAN_REFERENCE.fa --reads OUTPUT.bam --examples OUTPUT.tfrecord.gz
+call_variants --outfile OUTPUT.calls --examples OUTPUT.tfrecord.gz --checkpoint CHECKPOINT_PATH
+postprocess_variants --ref HUMAN_REFERENCE.fa --infile OUTPUT.calls --outfile OUTPUT.vcf
+```
+
+You can replace `HUMAN_REFERENCE.fa`, `INPUT1.fastq`, `INPUT2.fastq`, `CHECKPOINT_PATH` and `OUTPUT.bam` with your actual file paths. 
+
+The above commands and code snippets show the basic pipeline of using Pepper_DeepVariant. Please note that these commands and steps may vary a lot depending on the specific versions of the tools and data. Always refer to the latest official documentations for the most accurate and detailed instructions and explanations.

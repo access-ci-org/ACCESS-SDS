@@ -1,0 +1,50 @@
+Use Case: CHARMM (Chemistry at HARvard Macromolecular Mechanics) is a versatile and widely used molecular simulation program with broad application to many-particle systems. It is used for the simulation of macromolecules and has many features that are designed specifically for the modeling of biopolymers, peptides, and proteins.
+
+Code details and examples: Code.
+
+Input Files: This example will require two files. The first is a Protein Data Bank (PDB) file, which contains the atomic coordinates of your protein. The second is a CHARMM input file that specifies the simulation parameters.
+
+Format Required: PDB format for the protein structure, CHARMM format for the parameters.
+
+PDB File (1ubq.pdb):
+
+```
+ATOM    1  N   GLY A   1      27.340  24.430  2.614  1.00  9.67      1UBQ  71
+ATOM    2  CA  GLY A   1      26.266  25.413  2.842  1.00  9.81      1UBQ  72
+ATOM    3  C   GLY A   1      26.913  26.639  3.531  1.00  8.79      1UBQ  73
+ATOM    4  O   GLY A   1      27.886  26.463  4.240  1.00  8.64      1UBQ  74
+...
+END
+```
+
+CHARMM Input File (simulation.inp):
+
+```
+* 1UBQ simulation
+*
+
+! Read topology and parameter files
+open read card name top_all36_prot.rtf
+read rtf card
+close
+
+open read card name par_all36_prot.prm
+read para card
+close
+
+! Read protein coordinates
+open read card name 1ubq.pdb
+read sequ pdb
+close
+
+! Energy minimization
+mini sd nstep 500
+```
+
+To kick-start a simulation, the appropriate command to use would be:
+
+```
+charmm < simulation.inp > simulation.out
+```
+
+In this command, `simulation.inp` is the input file and `simulation.out` is the output file to which CHARMM writes the results of the simulation. In all of this, CHARMM takes the commands from the input file, applies these to the molecular structure as specified in the PDB file, and generates an output.

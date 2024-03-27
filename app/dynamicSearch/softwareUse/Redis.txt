@@ -1,46 +1,40 @@
-Use Case: Redis (In-Memory Data Structure Store)
+Use Case: Use Redis for key-value storage, message queue and caching data in-memory for faster access.
 
-Code details and examples:
-1. To set a key-value pair in Redis:
-```
-SET mykey "Hello"
-```
+Code details and examples: Code
 
-2. To get the value of a key in Redis:
-```
-GET mykey
-```
+Package Name: Redis
 
-3. To store a list of values in a Redis list:
-```
-LPUSH mylist "world"
-LPUSH mylist "hello"
-```
+- File format: No specific input file needed. Redis uses commands in the form of Redis Query Language (RQL). 
 
-4. To retrieve values from a Redis list:
-```
-LRANGE mylist 0 -1
-```
+Start the Redis server with the following command:
 
-5. To store a hash data structure in Redis:
-```
-HSET myhash field1 "value1"
-HSET myhash field2 "value2"
+```redis-server```
+
+Write a Python script to set up a key-value pair in Redis:
+
+```python
+import redis
+
+r = redis.Redis(
+    host='localhost',
+    port=6379)  
+
+r.set('foo', 'bar')
 ```
 
-6. To retrieve a value from a hash in Redis:
-```
-HGET myhash field1
+This script connects to a Redis server running on localhost at port 6379 and sets the key 'foo' to the value 'bar'.
+
+To retrieve this value:
+
+```python
+value = r.get('foo')
+print(value)  # Prints: b'bar'
 ```
 
-7. To publish a message to a channel in Redis:
-```
-PUBLISH mychannel "new message"
-```
+This script gets the value at key 'foo' from the Redis server and prints it to console.
 
-8. To subscribe to messages on a Redis channel using the redis-cli tool:
-```
-SUBSCRIBE mychannel
-```
+These example commands are executed at command line via Python interpreter:
 
-Note: These are just a few examples of the commands that can be used with Redis. The actual commands and usage may vary depending on the specific use case and requirements.
+```python3 your_script.py```
+
+Before running your Python script, make sure you have Redis server running and Python3 is installed with `redis` library.

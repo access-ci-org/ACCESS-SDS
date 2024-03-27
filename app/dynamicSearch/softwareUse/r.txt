@@ -1,0 +1,61 @@
+Use Case: Running MPI programs on HPC software.
+
+Code Details and Examples: Code
+
+TO run an MPI program, we usually need the following two files: a PY file and a SBC file.
+
+Here is a sample MPI.py file (assuming we have numpy installed):
+
+Code:
+```python
+from mpi4py import MPI
+import numpy
+
+def compute_average(arr):
+    return numpy.average(arr)
+
+def main():
+    add_these_numbers = range(1000000)
+    avg = compute_average(add_these_numbers)
+    print('Average: ', avg)
+
+if __name__ == "__main__":
+    main()
+```
+
+This will compute the average of the numbers from 0 to 1 000 000 and print.
+
+And here is the sbatch file needed to run this MPI program on a Slurm-based HPC cluster (named run_mpi_example.sbatch):
+
+Code:
+```bash
+#!/bin/bash
+#SBATCH --job-name=mpi_example      
+#SBATCH --nodes=16                 
+#SBATCH --time=00:20:00             
+#SBATCH --partition=normal          
+#SBATCH --output=mpi_example.%N.%j.out 
+#SBATCH --error=mpi_example.%N.%j.err  
+
+module load mpi4py/3.0.0
+srun python MPI.py
+```
+
+To run this, we simply use the following command:
+```bash
+sbatch run_mpi_example.sbatch
+```
+
+Specifications for the sbatch file are as follows:
+
+- #SBATCH --job-name: The name of your job. This name appears when you use the squeue command.
+- #SBATCH --nodes: The number of nodes you require for your job.
+- #SBATCH --time: The maximum runtime for your job in days-hrs:mins:secs
+- #SBATCH --partition: The cluster/partition you wish to run your job on.
+- #SBATCH --output: Here, you specify the location/name of the file the standard output of your job is written to.
+- #SBATCH --error: Here, you specify the location/name of the file the standard error of your job is written too.
+
+The 'module load mpi4py/3.0.0' command will depend on your HPC cluster and how you have mpi4py installed. It is needed to set up your environment properly.
+The 'srun python MPI.py' command actually runs your python script. It's 'srun' because we're running this on a Slurm-based HPC cluster.
+
+The input is taken from the range function inside the script. The output is written to the files specified in the sbatch file.

@@ -1,26 +1,34 @@
-Use Case: Manipulating VCF/BCF files
+Use Case: BCFtools is a set of utilities for variant calling and manipulating VCFs (Variant Call Formats) and BCFs (Binary Call Formats). They work on sorted and indexed sequence alignments in BAM and CRAM formats produced by programs such as SAMtools.
+
 Code details and examples:
-1. Filter sites with a minimum QUAL score of 30:
-```bash
-bcftools view input.vcf.gz -i 'QUAL>=30' -o output.vcf
+
+Code Sample Input File: 
+A .vcf or .bcf file is required for bcftools. Here is a small example of .vcf file:
+
+```
+##fileformat=VCFv4.2
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Total Depth">
+##FILTER=<ID=lowqual,Description="Low quality">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+#CHROM  POS     ID      REF     ALT     QUAL    FILTER  INFO    FORMAT   Sample1
+chr20   14370   rs6054257       G       A       29      PASS    DP=14    GT      0/0
+chr20   17330   .       T       A       3       q10     DP=11   GT      0/0
+chr20   1110696 rs6040355       A       G,T     67      PASS    DP=10   GT      1/2
+chr20   1230237 .       T       .       47      PASS    DP=13   GT      0/0
+chr20   1234567 microsat1       GTC     G,GTCT  50      PASS    DP=9    GT      0/2
 ```
 
-2. Subset VCF file to include only a specific region:
-```bash
-bcftools view input.vcf.gz -r chr1:1000-2000 -o output.vcf
-```
+Command to run : 
 
-3. Convert VCF to BCF format:
-```bash
-bcftools view input.vcf -O b -o output.bcf
-```
+```bcftools view -g Sample1 file.vcf``` 
+This command will show the genotypes for Sample1 in the provided VCF file. 
 
-4. Merge multiple VCF files into a single file:
-```bash
-bcftools merge file1.vcf file2.vcf -o merged.vcf
-```
+You can also do operations like filtering, sorting, merging and comparing VCF/BCF files. For example:
 
-5. Annotate VCF file with allele frequencies from 1000 Genomes Project:
-```bash
-bcftools annotate -a 1000Genomes.vcf.gz -c INFO/AF -o annotated.vcf input.vcf
-```
+```bcftools merge file1.bcf file2.bcf``` 
+This command will merge the two BCF files into one.
+
+Another example is:
+
+```bcftools filter -i'%QUAL>20 && DP>10' file.vcf``` 
+This command will filter the VCF file for entries where the quality is more than 20 and the depth is more than 10.

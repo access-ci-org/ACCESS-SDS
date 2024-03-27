@@ -1,0 +1,33 @@
+Use Case: Analyzing and interpreting Illumina Infinium DNA methylation arrays in R. 
+
+Code details and examples: 
+
+Code:
+
+In order to use the Minfi package to process and analyze Illumina 450k methylation data, here is a basic process to follow:
+
+Step 1: Load the necessary libraries
+
+```R
+library(minfi)
+library(IlluminaHumanMethylation450kmanifest)
+```
+
+Step 2: Read in your data. You must have a RGChannelSet object, which represents the raw or preprocessed data. In this case, the input files are expected to be idat files.
+
+```R
+baseDir <- system.file("extdata", package="minfi")
+targets <- read.metharray.sheet(baseDir)
+RGset <- read.metharray.exp(targets = targets)
+```
+Note here that the `read.metharray.sheet` function is used to load the sample sheet (csv file) with the metadata, and `read.metharray.exp` is loading the actual idat files.
+
+Step 3: Preprocess data. Here, it is using the preprocessQuantile method.
+
+```R
+Mset.quantile <- preprocessQuantile(RGset)
+```
+
+After that you would usually do some quality control and differential methylation analysis, but that is beyond the scope of this example.
+
+Run Command: This code is supposed to be run in a R script or in a R console. So you would typically run the script by: Rscript my_script.R or by calling source("my_script.R") from within R. Or in interactive mode, you can just run each line to see the results immediately.

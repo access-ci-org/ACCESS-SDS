@@ -1,48 +1,35 @@
-Use Case: Arbitrary-precision arithmetic with mpfr.
+Use Case: MPFR library for high-precision arithmetic computations. Typically used for performing extensive floating-point arithmetic with guaranteed precision. 
 
 Code details and examples:
-1. Example input file (input.txt):
-```
-10
-3.14159265358979323846264338327950288419716939937510
-```
 
-2. Code snippet for arbitrary-precision arithmetic using mpfr in C:
-```c
+Code:
+
+```cpp
 #include <stdio.h>
 #include <mpfr.h>
 
-int main() {
-    mpfr_t x, pi;
-    mpfr_init2(x, 1000);
-    mpfr_init(pi);
-
-    FILE *file = fopen("input.txt", "r");
-    mpfr_inp_str(x, file, 10);
-    mpfr_const_pi(pi, MPFR_RNDN);
-
-    mpfr_add(x, x, pi, MPFR_RNDN);
-  
-    printf("Result: ");
-    mpfr_out_str(stdout, 10, 0, x, MPFR_RNDN);
-    printf("\n");
-
-    mpfr_clear(x);
-    mpfr_clear(pi);
-    fclose(file);
-    
+int main()
+{
+    mpfr_t pi;
+    mpfr_init2 (pi, 1000);
+    mpfr_const_pi (pi, MPFR_RNDN);
+    mpfr_printf ("Pi is approximately %.1000Rf\n", pi);
+    mpfr_clear (pi);
     return 0;
 }
 ```
 
-3. Compile the code using mpfr library:
-```bash
-gcc -o mpfr_example mpfr_example.c -lmpfr
-```
+This sample code calculates the value of pi up to 1000 decimal places using MPFR.
 
-4. Run the compiled code:
-```bash
-./mpfr_example
-```
+For MPFR, gcc supports it directly, so you can compile and run the code using the following commands:
 
-This code reads a number from the input file, adds it to the value of pi with arbitrary precision, and prints the result.
+Compile the MPFR code:
+```bash
+gcc -o pi mpfr_sample.c -lmpfr
+```
+Run the compiled executable:
+```bash
+./pi
+``` 
+
+In this code "mpfr_init2" initializes the variable and assign it a precision, "mpfr_const_pi" computes the value of Pi for the given precision and rounding mode, and "mpfr_printf" prints the value. After computations are done, the memory is freed by "mpfr_clear". Here, no input file is required as this is a stand alone program.

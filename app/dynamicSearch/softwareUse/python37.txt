@@ -1,17 +1,49 @@
-Use Case: Python 3.7 
+Use Case: Python37 is widely used for developing, testing and running applications that require the Python 3.7 runtime environment. It is used across a wide range of domains including web development, data analysis, artificial intelligence and more.
 
-Code details and examples:
-- Sample input files: N/A
-- Format required: N/A
-- Specifications: N/A
+Code Details and Examples:
 
-- Code snippet:
+Code:
+
+1. Python Hello World program:
 ```python
-# Python 3.7 code here
-print("Hello, Python 3.7!")
+print("Hello, World!")
 ```
+To run this, save the file as hello.py and execute using the command: python hello.py
 
-- Command to run:
-```bash
-python3.7 your_script.py
+2. Reading a CSV file using pandas python library:
+```python
+import pandas as pd
+
+file_path = '/path/to/your/csv/file.csv'
+data = pd.read_csv(file_path)
+
+print(data.head())
 ```
+The input file here is a CSV file. The file path needs to be replaced with the actual path where your CSV file resides.
+
+Command to run: python read_csv.py (Assuming the file is saved as read_csv.py)
+
+3. Simple Linear Regression using sklearn python library:
+```python
+from sklearn.model_selection import train_test_split 
+from sklearn.linear_model import LinearRegression
+from sklearn import metrics
+import pandas as pd
+
+# load dataset
+file_path = '/path/to/your/csv/file.csv'
+dataset = pd.read_csv(file_path)
+
+X = dataset['Independent_var'].values.reshape(-1,1)
+y = dataset['Dependent_var'].values.reshape(-1,1)
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
+
+regressor = LinearRegression()  
+regressor.fit(X_train, y_train)
+
+y_pred = regressor.predict(X_test)
+```
+This script runs a simple linear regression on a dataset. The dataset should be a CSV file with at least two columns - 'Independent_var' and 'Dependent_var' 
+
+Command to run: python linear_regression.py (Assuming the file is saved as linear_regression.py)

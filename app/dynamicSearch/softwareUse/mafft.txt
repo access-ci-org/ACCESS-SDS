@@ -1,0 +1,30 @@
+Use Case: MAFFT is a high-speed, high-accuracy multiple sequence alignment software for genomic data. Users can utilize this during the processing and analysis of genomic sequences.
+
+Code details and examples: Code
+
+Input File format:
+Users need to provide an input file containing all the sequences that need to be aligned. This file should be in FASTA format. 
+
+Here is an example of the input file format:
+```
+>sequence1
+ATGCTAGCTAGCTAGCTG
+>sequence2
+ATGCGTAGTAGCTAGCTG
+>sequence3
+ATGCTAGCTAACAGCTG
+```
+Command:
+To execute the MAFFT software, input a command with the following syntax:
+```bash
+mafft [options] filenames > outputfile
+```
+Here is a sample command to run MAFFT:
+```bash
+mafft --auto sequence.fasta > output.fasta
+```
+The `--auto` flag within the command allows best strategy option to be automatically chosen according to data size.
+
+The output of the MAFFT command will be the multiple sequence alignment in FASTA format. You can then use this file for downstream analysis. 
+
+Note: The ">" symbol is used for redirecting the output to a file. The output of your command will now be saved in a file named "output.fasta".

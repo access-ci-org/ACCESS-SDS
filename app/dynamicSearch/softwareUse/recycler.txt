@@ -1,0 +1,29 @@
+Use Case: Recycler is an algorithm for detecting plasmids from de novo assembly graphs. The application breaks graphs into subgraphs it predicts derive from plasmids.
+
+Code details and examples:
+Code:
+Ensure the required files are in order.
+
+Input files needed:
+- Assembly graph in GFA format. 
+- Reads in fastA format
+
+Given these input files, you could run recycler using this command:
+
+```bash
+recycler.py -g your_graph.gfa -k 55 -o output_dir
+```
+
+In this case:
+- `-g` specifies the input graph GFA file.
+- `-k` is the kmer length that was used to assemble the input graph.
+- `-o` specifies the output directory where Recycler will write its results.
+
+Output files created:
+- recycler.final.fasta: Contains circular contigs that Recycler has identified as putative plasmids.
+
+Specifications on input file formatting:
+GFA format - a tab-delimited text file describing the assembly graph. Each line describes either a node in the graph or an edge between nodes.
+FastA format - a text-based format for representing either nucleotide sequences or amino acid (protein) sequences. Each sequence in FastA format begins with a single-line description, followed by lines of sequence data.
+
+NOTE: For accurate results, input files should be correctly formatted and the data should be the appropriate data for the function.

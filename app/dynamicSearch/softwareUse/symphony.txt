@@ -1,29 +1,50 @@
-Use Case: Optimization tool   
-Code details and examples:   
-Symphony is an open-source solver for Mixed Integer Linear Programming (MILP) problems. It is often used for various optimization tasks.   
+Use Case: SYMPHONY is a software package for solving mixed-integer linear programs (MILPs). This can be used for applications such as supply chain optimization, resource allocation, scheduling and etc.
 
-Sample input file (in .mps format):   
+Code details and examples: 
+
+Code:
+Let's assume that we have a MILP problem defined in a file named "problem.mps". To solve this problem, you would use the following command:
+
+```bash
+symphony -F problem.mps
+```
+
+The input file must be in MPS format, which is a standard, widely-used format for representing linear and mixed-integer linear programs. An exemplary MPS file might look like this:
+
 ```
 NAME          EXAMPLE
 ROWS
- N  OBJ
- L  ROW1
- L  ROW2
+ N  COST
+ L  CONSTRAINT1
+ G  CONSTRAINT2
+ E  CONSTRAINT3
 COLUMNS
-         MARK0001  'MARKET'  ROW1                   1.0
-         MARK0001  'MARKET'  ROW2                   1.0
-         MARK0002  'MARKET'  ROW1                   1.0
-         MARK0002  'MARKET'  ROW2                   1.0
+    JOBCOST        COST                 1
+    JOBCOST        CONSTRAINT1          1
+    JOBCOST        CONSTRAINT2          1
+    RESOURCE      COST                 2
+    RESOURCE      CONSTRAINT1         -1
+    RESOURCE      CONSTRAINT2         -2
+    RESOURCE      CONSTRAINT3          1
 RHS
-     RHS1  'ROW1'                      2.0
-     RHS1  'ROW2'                      2.0
+    RHS1          CONSTRAINT1          1
+    RHS1          CONSTRAINT2          2
+    RHS1          CONSTRAINT3          3
 BOUNDS
- UP BND1       'MARKET'                  1.0
- UP BND2       'MARKET'                  1.0
+ UP BND1        JOBCOST                4
+ LO BND1        RESOURCE              -1
+ UP BND1        RESOURCE               3
 ENDATA
 ```
 
-Command to run Symphony (assuming Symphony is installed and in the system path):   
+This file defines a problem with three constraints and two variables. The objective is to minimize the cost, which is defined in the "ROWS" section. Each row after the "COLUMNS" keyword defines the coefficients for each variable in each constraint and the cost (objective) function.
+
+Please note that SYMPHONY uses an in-built MPS reader to interpret this file, so the formatting and naming conventions must adhere to the MPS standard for SYMPHONY to correctly interpret it. The MPS format allows for quite complex and large-scale problems to be defined in a relatively compact manner. 
+
+To execute the code above:
+
+```bash
+symphony -F problem.mps
 ```
-symphony -F example.mps
-```
+
+This tells SYMPHONY to read the problem from the file "problem.mps" and solve it. The solution – if one exists – will be written to the console.

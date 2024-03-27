@@ -1,0 +1,24 @@
+Use Case: DelayedArray is an R package for handling large datasets that cannot be loaded into memory. It provides array abstractions like matrix manipulation and subsetting, but delay the operations until actually necessary. Used largely in big data operations, genomics etc where huge datasets are frequent.
+
+Code details and examples:
+
+Input file can be a CSV file with large numeric data.
+
+Code in R: 
+
+```R
+library(DelayedArray)
+# create a DelayedArray object from a matrix
+m <- matrix(1:20, nrow=4)
+X <- DelayedArray(m)
+
+# operations are performed on the delayed array without loading into memory
+X_transposed <- t(X)
+X_cubed <- X^3
+X_filtered <- X[X > 10]
+```
+Run this code in R console or R script. These operations like transpose, power, filtering etc are delayed till it is actually needed.
+
+Command: Run in R console or save as a .R script and use command `Rscript your_code.R` from terminal.
+
+This is a basic example, exact usage may differ based on specific use case.

@@ -1,0 +1,48 @@
+Use Case: Voro++ is a software library for carrying out three-dimensional computations of the Voronoi tessellation. A distinguishing feature of the Voro++ library is that it carries out cell-based calculations, computing the Voronoi cell for each particle individually, rather than using a global meshing algorithm.
+
+Code details and examples: Code
+
+**Input file specifications**: The basic voro++ tool works with simple text files that specify the particle positions. Each particle is denoted by its x, y, and z coordinates. For example, the content of such a file (named 'particles.dat') could look like this:
+
+0.1 0.4 0.2
+0.2 0.1 0.3
+0.3 0.3 0.1
+0.4 0.2 0.4
+
+In these files, each line should contain three entries, corresponding to the coordinates of the particle in the x, y, and z direction respectively.
+
+**Running the Voro++ program**
+Here is a simple command to run the Voro++ program using the input file:
+
+```bash
+voro++ -c "%i %q %v" -o particles.dat
+```
+In the command above:
+- "-c" option specifies the custom output format.
+- "%i %q %v" will produce an output with particle ID, position, and volume for each Voronoi cell.
+- "-o" option is used to write the output information to separate files for each Voronoi cell.
+
+**Code example**
+For example, one could use the following C++ code snippet to compute the Voronoi cell for a particular particle in the system:
+
+```c++
+#include "voro++.hh"
+
+using namespace voro;
+
+// Create a container with the geometry corresponding to your problem.
+container con(x_min, x_max, y_min, y_max, z_min, z_max, nx, ny, nz, periodic_x, periodic_y, periodic_z, init_mem);
+
+// Add the particles to the system.
+for(int i = 0; i < number_of_particles; i++) {
+    con.put(i, particle_positions[i*3], particle_positions[i*3+1], particle_positions[i*3+2]);
+}
+
+// This will compute the Voronoi cell for the particle with ID 'id'.
+voronoicell_neighbor c;
+if(con.compute_cell(c, id)) {
+    // 'c' now contains the information of the Voronoi cell corresponding to particle 'id'.
+    double volume = c.volume();
+}
+```
+The 'nx', 'ny', 'nz', 'periodic_x', 'periodic_y', 'periodic_z' and 'init_mem' parameters should be set according to the specifics of the system you are studying. The 'particle_positions' array should contain the x, y, and z coordinates of the particles. The 'id' variable represents the ID of the particle for which we want to calculate the Voronoi cell.

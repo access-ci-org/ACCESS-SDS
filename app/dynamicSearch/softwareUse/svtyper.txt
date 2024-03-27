@@ -1,0 +1,45 @@
+Use Case: SVTyper is used for genotyping structural variants in VCF format. It provides the most likely genotype as well as allele counts for each sample. 
+
+Code details and examples: Code
+
+- Sample Input File:
+
+First, you need to generate its input file in VCF format. If you have a `.bam` file (which is a commonly used format for representing sequence alignments), you can use software like LUMPY to generate a `.vcf` file.
+
+Here's a sample `.vcf` file:
+
+```
+##fileformat=VCFv4.1
+#CHROM  POS ID  REF ALT QUAL    FILTER  INFO    FORMAT  sample1
+3   178922330   .   N   <DEL>   .   PASS    SVTYPE=DEL;END=178922340;BKPTID=V1;HOMLEN=5;HOMSEQ=ATAGG;CIPOS=-10,10;CIEND=-10,10   GT:GQ   1/1:15
+```
+
+- Specifications and Details in Input Files:
+
+SVTyper requires a single sample in VCF format and a BAM file specifying the sequence alignments. The sequencing data in BAM format is used to genotype the variants in the VCF file. The VCF file should contain SVTYPE, END and other relevant tags in the INFO field for SVTyper to work properly.
+
+- Code Snippets:
+
+Python code to run SVTyper:
+
+```
+import os
+
+input_file = "<path_to_input_vcf_file>"
+bam_file = "<path_to_bam_file>"
+output_file = "<path_to_output_vcf_file>"
+
+os.system("svtyper -i %s -B %s > %s" % (input_file, bam_file, output_file))
+```
+
+- Command to Run:
+
+In the terminal, you can run SVTyper like this:
+
+```
+svtyper -i input.vcf -B sample.bam > output.vcf 
+```
+
+Where `input.vcf` is the path to the input VCF file and `sample.bam` is the path to the BAM file. The output is the genotyped VCF file. SVTyper will write the output to the terminal, which you can redirect to a file using the greater than sign `>`.  
+
+Note, SVTyper must be installed and available in the system PATH for the command to work.

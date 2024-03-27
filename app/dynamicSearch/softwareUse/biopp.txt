@@ -1,43 +1,51 @@
-Use Case: Bioinformatics package  
-Code details and examples:  
-Bio++ is a bioinformatics library that provides tools for sequence analysis, phylogenetics, molecular evolution, and population genetics. Below is an example of running a simple sequence analysis using Bio++.
+Use Case: The Bio++ libraries are a set of portable, efficient and modular C++ libraries designed for the development of bioinformatics and molecular evolution applications.
 
-Sample input file (input.txt):
+Code details and examples:
+
+Bio++ is versatile and does not have one specific input file or format, it heavily depends on the application or custom developed software but we'll use the example of a simple sequence analysis program. 
+
+Input File: An alignment file formatted in PHYLIP. Here's a sample with two sequences that align "AAA-TTT" and "AAA-CCC":
+
 ```
->seq1
-ATGCATGCATGC
->seq2
-TACGTACGTACG
+2 7
+Seq1 AAA-TTT
+Seq2 AAA-CCC
 ```
 
-Code:
+Code: Here is a simple sequence alignment reading and printing program:
+
 ```cpp
-#include <Bpp/Seq/Alphabet/Alphabet.h>
 #include <Bpp/Seq/Sequence.h>
+#include <Bpp/Seq/Alphabet/AlphabetTools.h>
 #include <Bpp/Seq/Io/Fasta.h>
-#include <Bpp/Phyl/Model/Nucleotide/SubstitutionModels/K80.h>
-#include <Bpp/Phyl/Tree/TreeTemplate.h>
-#include <Bpp/Phyl/Io/Newick.h>
+#include <Bpp/Seq/Container/VectorSequenceContainer.h>
+#include <iostream>
 
 using namespace bpp;
 
-int main() {
-    // Read sequences from file
-    Fasta fastaReader;
-    SiteContainer seqs = fastaReader.readSequences("input.txt");
+int main()
+{
+  // Get a sequence reader
+  Fasta fastaReader;
+  
+  // Read a sequence file
+  VectorSequenceContainer* sequences = fastaReader.readSequences("/path_to_alignment/aligment.phylip", &AlphabetTools::DNA_ALPHABET);
 
-    // Define a substitution model (K80 in this case)
-    K80 nucleotideModel(&seqs);
-
-    // Perform a simple analysis (for demonstration purposes)
-    TreeTemplate<Node> tree("((seq1,seq2)InternalNode1,seq3)Root;");
-
-    return 0;
+  // Print the sequences to the console
+  for (size_t i = 0; i < sequences->getNumberOfSequences(); ++i) {
+    const Sequence* sequence = &sequences->getSequence(i);
+    std::cout << sequence->getName() << ": " << sequence->toString() << std::endl;
+  }
+  
+  delete sequences;
+  
+  return 0;
 }
 ```
 
-To compile and run the code (assuming Bio++ is installed and configured correctly):
-```
-g++ my_analysis.cpp -o my_analysis -lbpp-phy -lbpp-seq
-./my_analysis
+Command to compile and run:
+
+```bash
+g++ -o sequence_analysis sequence_analysis.cpp -lbpp-seq
+./sequence_analysis
 ```

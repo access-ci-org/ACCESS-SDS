@@ -1,38 +1,42 @@
-Use Case: GUI development with GTK4
+Use Case: Developing a graphical user interface for a desktop application.
+
 Code details and examples:
-GTK4 is a toolkit for creating graphical user interfaces. Below is a simple example of creating a window using GTK4 in C:
 
-```c
-#include <gtk/gtk.h>
+Code: 
 
-// Callback function to close the window
-void on_close_app() {
-    gtk_main_quit();
-}
+```python
+import gi
 
-int main(int argc, char *argv[]) {
-    gtk_init(&argc, &argv);
+gi.require_version("Gtk", "4.0")
 
-    // Create a new window
-    GtkWidget *window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
-    gtk_window_set_title(GTK_WINDOW(window), "Hello GTK4");
-    g_signal_connect(window, "destroy", G_CALLBACK(on_close_app), NULL);
+from gi.repository import Gtk
 
-    // Display the window
-    gtk_widget_show_all(window);
+class MyWindow(Gtk.Window):
+    def __init__(self):
+        Gtk.Window.__init__(self, title = "Hello World")
 
-    gtk_main();
+        self.button = Gtk.Button(label = "Click Here")
+        self.button.connect("clicked", self.on_button_clicked)
 
-    return 0;
-}
+        self.add(self.button)
+    
+    def on_button_clicked(self, widget):
+        print("Hello World")
+
+win = MyWindow()
+win.connect("destroy", Gtk.main_quit)
+win.show_all()
+
+Gtk.main()
 ```
 
-To compile the above code, you can use the following command:
-```bash
-gcc `pkg-config --cflags --libs gtk4` main.c -o hello_gtk4
+This is a Python script that utilizes the GTK+ 4 toolkit to create a simple graphical user interface. 
+
+You can run the script with the following command in the terminal:
+```python
+python3 myfile.py
 ```
 
-To run the compiled program:
-```bash
-./hello_gtk4
-```
+The example shown above is a script of a simple GUI having just a button with text "Click Here". When you click the button, it prints "Hello World" in the console.
+
+There are no input files required. The specifications of the application are defined within the script itself.

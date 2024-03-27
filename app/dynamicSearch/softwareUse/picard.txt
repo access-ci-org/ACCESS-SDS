@@ -1,42 +1,25 @@
-Use Case: Picard is a set of command line tools for manipulating high-throughput sequencing data.
+Use Case: 
+
+Picard is a set of Java command line tools that are used to manipulate high-throughput sequencing (HTS) data and formats. One of the common use cases is to mark duplicated reads in a BAM or SAM file.
+
 Code details and examples:
 
-1. MarkDuplicates:
-   Description: Identifies duplicate reads in a BAM or SAM file and tags them as duplicates.
-   Input format: BAM/SAM file
-   Command: 
-   ```
-   java -jar picard.jar MarkDuplicates I=input.bam O=marked_duplicates.bam M=marked_dup_metrics.txt
-   ```
+File required: sorted.bam (The input BAM or SAM file should be sorted in coordinate order)
 
-2. CollectAlignmentSummaryMetrics:
-   Description: Collects metrics to assess the alignment of reads in a SAM/BAM file.
-   Input format: BAM/SAM file
-   Command:
-   ```
-   java -jar picard.jar CollectAlignmentSummaryMetrics R=reference.fasta I=input.bam O=output.txt
-   ```
+Command to run the software: 
 
-3. SortSam:
-   Description: Sorts a SAM or BAM file by coordinate.
-   Input format: BAM/SAM file
-   Command:
-   ```
-   java -jar picard.jar SortSam INPUT=input.bam OUTPUT=sorted.bam SORT_ORDER=coordinate
-   ```
+```
+java -jar picard.jar MarkDuplicates I=sorted.bam O=marked_duplicates.bam M=marked_dup_metrics.txt
+```
 
-4. CreateSequenceDictionary:
-   Description: Creates a sequence dictionary (SAM-style) for a reference sequence.
-   Input format: FASTA file
-   Command:
-   ```
-   java -jar picard.jar CreateSequenceDictionary REFERENCE=reference.fasta OUTPUT=reference.dict
-   ```
+In the command above, `I=sorted.bam` specifies the input file while `O=marked_duplicates.bam` sets the output file. `M=marked_dup_metrics.txt` captures the metrics of duplication.
 
-5. CollectInsertSizeMetrics:
-   Description: Collects insert size metrics for paired-end reads.
-   Input format: BAM/SAM file
-   Command:
-   ```
-   java -jar picard.jar CollectInsertSizeMetrics INPUT=input.bam OUTPUT=output.txt HISTOGRAM_FILE=histogram.pdf
-   ```
+Other commands in Picard are used in a similar fashion. For instance, `ValidateSamFile` is used to check the validity of a SAM/BAM file.
+
+Command to run:
+
+```
+java -jar picard.jar ValidateSamFile I=example.bam
+```
+
+The software will examine all the records in the input file (example.bam) to see if they meet the standard for a valid SAM/BAM file. If the file is invalid, the software will provide a description of the error.

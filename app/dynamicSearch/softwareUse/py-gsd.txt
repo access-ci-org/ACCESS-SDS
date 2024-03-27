@@ -1,0 +1,36 @@
+Use Case: Use py-gsd for trajectory analysis in molecular dynamics simulation. 
+
+Code Details and Examples: Code
+
+First, py-gsd has a specific format for input files, which are .gsd files. These are binary files that contain molecular dynamics simulation data.
+
+We can visualize a system and explore it by reading a GSD file:
+
+```python
+from gsd import hoomd
+import matplotlib.pyplot as plt
+import numpy as np
+
+# opening the file
+t = hoomd.open(name='example.gsd', mode='rb')
+
+# get the last frame
+snap = t[-1]
+
+# get the positions of all particles
+positions = snap.particles.position
+
+# plotting the positions
+plt.scatter(positions[:,0], positions[:,1])
+plt.show()
+```
+
+Here, 'example.gsd' is the GSD file obtained from a HOOMD simulation. 
+
+The gsd file must be previously generated from a simulation using HOOMD-blue software or any other compatible software. Here, 'example.gsd' is just an example, your gsd file name could be different.
+
+Command to run a '.py' python script file in the Linux terminal:
+
+`python filename.py`
+
+This command runs the script named 'filename.py'. For scripts that require command-line arguments, specify these after the filename.

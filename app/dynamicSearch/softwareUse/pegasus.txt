@@ -1,34 +1,37 @@
-Use Case: Pegasus is a workflow management system that enables users to create, submit, monitor, and manage workflows in distributed computing environments.
+Use Case: Pegasus is used for executing complex computational tasks involving pipelines of jobs in high-performance computing (HPC) environments. It allows scientists to compose scientific workflows in abstracted form. 
 
-Code details and examples:
-Pegasus workflows are specified using a workflow description language called DAX (Directed Acyclic Graph in XML). Below is an example of a simple DAX file for a workflow with two jobs:
+Code details and examples: Code
 
+Example Input File (DAX):
+
+A DAX (Directed Acyclic Graph in XML) file represents a scientific workflow. It is an XML file that has definitions for all the jobs that need to be executed and their dependencies.
+
+An example of a DAX file looks like:
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE adag SYSTEM "http://pegasus.isi.edu/schema/dax-2.1.xsd">
-<adag xmlns="http://pegasus.isi.edu/schema/DAX" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pegasus.isi.edu/schema/DAX http://pegasus.isi.edu/schema/dax-2.1.xsd" version="2.1">
-    <job id="ID00000" name="job1" nodeLabel="example" runtime="60" cores="1">
-        <uses file="input1.txt" link="input" size="1024"/>
-        <uses file="output1.txt" link="output" size="1024"/>
+<adag xmlns="http://pegasus.isi.edu/schema/DAX" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pegasus.isi.edu/schema/DAX http://pegasus.isi.edu/schema/dax-3.0.xsd" version="3.0" count="1" index="0" root="ID0000001"  name="my_workflow">
+  <job id="ID0000001" namespace="my_workflow" name="job1" version="1.0" runtime="60.00">
+    <argument>-a input1.txt -o output1.txt</argument>
+    <uses file="input1.txt" link="input"/>
+    <uses file="output1.txt" link="output" register="true"/>
+  </job>
+  <child ref="ID0000001">
+    <job id="ID0000002" namespace="my_workflow" name="job2" version="1.0" runtime="60.00">
+      <argument>-a output1.txt -o output2.txt</argument>
+      <uses file="output1.txt" link="output" transfer="true"/>
+      <uses file="output2.txt" link="output" register="true"/>
     </job>
-    <job id="ID00001" name="job2" nodeLabel="example" runtime="120" cores="1">
-        <uses file="output1.txt" link="input" size="1024"/>
-        <uses file="output2.txt" link="output" size="1024"/>
-    </job>
-    <child ref="ID00001" ref="ID00000"/>
+  </child>
 </adag>
 ```
 
-To run a workflow using Pegasus, you can use the `pegasus-plan` command to generate an executable workflow from the DAX file. Below is an example command to generate a workflow plan:
+Command to run: 
+
+To plan and execute a workflow from a DAX file, you would use the `pegasus-plan` command:
 
 ```bash
-pegasus-plan --conf pegasus.properties --dax your_workflow.dax --dir output_dir
+pegasus-plan --conf pegasus.properties --dax my_workflow.dax --dir submit_dir --output-site local --cleanup leaf
 ```
 
-After generating the workflow plan, you can submit it for execution using the `pegasus-run` command. Below is an example command to submit the workflow plan:
+This command will generate an executable workflow and submit it to the execution environment defined in the pegasus properties file. The workflow data products are staged back to the local site, and intermediate files are cleaned up after workflow execution.
 
-```bash
-pegasus-run --dir output_dir
-```
-
-This will submit the workflow to the execution site specified in the configuration file `pegasus.properties` and monitor its progress.
+The specifications and details of input files vary according to individual jobs in the DAX definition. In the example, job1 takes input1.txt as input (-a) and generates output1.txt as output (-o). Similarly, job2's uses output1.txt as input and turns it into output2.txt.

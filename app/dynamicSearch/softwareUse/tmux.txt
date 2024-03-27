@@ -1,37 +1,56 @@
-Use Case: tmux is a terminal multiplexer that allows multiple terminal sessions to be created, accessed, and controlled from a single screen.
+Use Case: Tmux is a terminal multiplexer for Unix-like operating systems. It allows multiple terminal sessions to be accessed simultaneously in a single window. It is useful when you want to run more than one command-line program at the same time. It can also save a session and, later, attach it again.
 
 Code details and examples:
-1. Create a new tmux session:
-   ```bash
-   tmux new-session -s mysession
-   ```
-   
-2. Detach from a tmux session:
-   Press `Ctrl+b` then `d`
+Before running tmux, there is no need for an input file. All commands are executed in the terminal. Below you can find some basic functionality with code snippets and corresponding descriptions.
 
-3. Reattach to a tmux session:
-   ```bash
-   tmux attach-session -t mysession
-   ```
-   
-4. Split the tmux window horizontally:
-   Press `Ctrl+b` then `%`
-   
-5. Split the tmux window vertically:
-   Press `Ctrl+b` then `"`
-   
-6. Navigate between tmux panes:
-   Press `Ctrl+b` then arrow keys
+Code:
 
-7. Close a tmux pane:
-   Press `Ctrl+d`
+1. Starting a new session:
 
-8. List existing tmux sessions:
-   ```bash
-   tmux ls
-   ```
+Command: `tmux`
 
-9. Kill a tmux session:
-   ```bash
-   tmux kill-session -t mysession
-   ```
+This will start a new session.
+
+2. Creating a new session with a specific name:
+
+Command: `tmux new -s my_session`
+
+This will create a new session and name it "my_session".
+
+3. Detaching from a session:
+
+Command: `tmux detach` or press `Ctrl + b, then d`
+
+This will detach you from the current session.
+
+4. Listing all sessions:
+
+Command: `tmux ls`
+
+This command lists all the available sessions.
+
+5. Attaching a session:
+
+Command: `tmux attach -t my_session`
+
+This will attach the session named "my_session".
+
+6. Killing a session:
+
+Command: `tmux kill-session -t my_session`
+
+This will kill the session named "my_session".
+
+While in a session, tmux also allows you to split your terminal into panes. 
+
+7. Splitting the window vertically:
+
+Command: `Ctrl + b, %`
+
+This will split the window vertically.
+
+8. Splitting the window horizontally:
+
+Command: `Ctrl + b, "`
+
+This will split the window horizontally.

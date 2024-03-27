@@ -1,39 +1,33 @@
-Use Case: The Climate Data Store Python API (cdsapi) allows users to access climate data from the Copernicus Climate Data Store (CDS) using Python.
+Use Case: Climate Data Store (CDS) API (cdsapi) is a Python library that allows users to request and download data from the Copernicus Climate Data Store. 
 
-Code details and examples:
-Sample input file (request.json):
-```
-{
-    "resource": "reanalysis-era5-single-levels",
-    "variable": "2m_temperature",
-    "year": "2020",
-    "month": "01",
-    "day": "01",
-    "time": "12:00",
-    "format": "netcdf"
-}
-```
+Code Details and Examples:
 
 Code:
+
 ```python
 import cdsapi
 
 c = cdsapi.Client()
 
 c.retrieve(
-    'reanalysis-era5-single-levels',
+    'reanalysis-era5-land',
     {
+        'format': 'grib',
         'variable': '2m_temperature',
         'year': '2020',
         'month': '01',
         'day': '01',
-        'time': '12:00',
-        'format': 'netcdf'
+        'time': '12:00'
     },
-    'download.nc')
-```
+    'download.grib')
+ ```
 
-Command to run the code (assuming it's in a file named request.py):
+This will retrieve the 2m_temperature of ERA5-Land reanalysis from Copernicus CDS for year 2020, month of January, day 1 at 12:00 in grib format and download the file as 'download.grib'. 
+
+Note that input file is not required in this case as parameters are provided in the code itself.
+
+Command line usage:
+The package can be used in command line as a python script. Save the above example as a python file (example.py) and run with:
 ```
-python request.py
+ python example.py
 ```

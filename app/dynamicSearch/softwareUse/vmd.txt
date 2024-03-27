@@ -1,15 +1,40 @@
-Use Case: Visualization of Molecular Dynamics (VMD) is a molecular visualization program for displaying, animating, and analyzing large biomolecular systems using 3D graphics and built-in scripting languages.
+Use Case: VMD (Visual Molecular Dynamics) is a molecular visualization and analysis software designed to simulate and analyze large biomolecular systems. 
 
-Code details and examples:
+Code details and examples: Code
+
+1. Visualization of a PDB file
+
+Input file: A PDB (Protein Data Bank) file containing 3D coordinates of atoms in a molecule/protein. 
+
+Sample Input File (XYZ format):
+
 ```
-# Loading molecule and trajectory file
-vmd -pdb input.pdb -dcd trajectory.dcd
-
-# Running VMD script
-vmd -e script.tcl
-
-# Rendering images
-vmd -dispdev text -e render.tcl
+6
+Water
+O  0.000000 0.000000 0.000000
+H  0.757000 0.586000 0.000000
+H -0.757000 0.586000 0.000000
 ```
 
-For more information and detailed documentation, please refer to the VMD website: https://www.ks.uiuc.edu/Research/vmd/
+Command to run:
+
+```vmd -pdb input.pdb```
+
+2. Use tcl script for automated analysis
+
+Input file: A Tcl script file to automate VMD's functionalities.
+
+Sample Tcl script file
+
+```
+# Load a PDB file
+mol load pdb "input.pdb"
+
+# simple Analysis, calculate number of hydrogen bonds
+set sel [atomselect top "name O or name N"]
+$sel hbonds -sel $sel -dist 3.0 -angle 20.0 -plot "hbonds.dat"
+```
+
+Command to run:
+
+```vmd -dispdev text -e script.tcl```

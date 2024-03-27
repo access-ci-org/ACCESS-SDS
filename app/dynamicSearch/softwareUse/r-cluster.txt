@@ -1,0 +1,27 @@
+Use Case: R-Cluster is used for cluster analysis and complex calculations through the combination of the 'R' programming language and Birmingham Environment for Academic Research (BEAR). Cluster allows for parallel computing, efficient use of memory, and job scripts. Allowing tasks to be run on computers far away.
+
+Code details and examples:
+Code:
+
+Sample Input:
+```
+# Import r-cluster
+library('cluster')
+
+# Example data
+data(iris)
+
+# K-means clustering
+clustering <- kmeans(iris[,1:4], 3)
+```
+
+The input file with iris dataset has 5 columns: Sepal.Length, Sepal.Width, Petal.Length, Petal.Width, Species. The K-means algorithm uses the first 4 column data for clustering.
+
+Command to run:
+Once the code is written in a .R file, use Rscript command in terminal to run the file. For example, if the file is named cluster.R, use the command:
+
+```
+Rscript cluster.R
+```
+
+The output will be the clustering object containing the 3 clusters from the iris dataset.

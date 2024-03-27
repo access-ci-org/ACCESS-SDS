@@ -1,0 +1,28 @@
+Use Case: Mob-suite is a set of tools designed to support analysis of bacterial plasmids from complete genome sequences or raw sequence reads. It helps in the rapid characterization of mobile genetic elements in diverse datasets.
+
+Code Details and Examples: 
+
+Code:
+```python
+mob_recon -i Ecoli.fasta -o Ecoli_mob 
+```
+In the above command, `mob_recon` is a module of Mob-suite that groups contigs into putative plasmids and chromosomes for a single genomics assembly.
+
+Input file: The input `-i` or `--infile` is a bacterial assembly in FASTA format or Genbank (.gbk/.gb) format.
+
+Output file: `-o` or `--outdir` specifies the output directory. If it doesn't exist, it will be created.
+
+In the Ecoli.fasta file, there would be a complete sequence of the bacterial genome. The file has to be in the FASTA format.
+
+```
+>Ecoli_strain1
+ATGGCGCAAGCCGAACGACCGGTTGTCGTAGCGTATAACGCCGAGCCTGCCCAGGCCGTGCGTTAACTCG
+GAACGGGTGTTGACCGGCCGATCGCAAACCGAAACGGGTGAGAGAACCGGAAGGAGAGAGGTTGTTGTTG
+....
+``` 
+
+The main output files produced include:
+
+- A tab-delimited info file (`*_info.tsv`) with details about each assembly (sample name, total length, GC content, predicted number of plasmids etc.)
+- Predicted plasmid sequences file in FASTA format (`*_predicted_plasmids.fna`)
+- Predicted chromosomal sequences file in FASTA format (`*_predicted_chromosomes.fna`)

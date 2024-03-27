@@ -1,0 +1,26 @@
+Use Case: Lattice is a powerful and elegant high-level data visualization system in R. It is designed with an emphasis on multivariate data and is suitable for visualizing data under several scenarios, especially useful in producing conditioning plots (also known as trellis plots).
+
+Code details and examples:
+
+Code
+
+```R
+# Import the library
+library(lattice)
+
+# Create Data
+age <- c(18,19,20,21,22,23,24,25,26,27,28)
+height <- c(76.1,77,78.1,78.2,78.8,79.7,79.9,81.1,81.2,81.8,82.8)
+
+# Create a Data Frame
+df <- data.frame(age, height)
+
+# Create a Lattice Plot
+xyplot(height ~ age, data = df, main = "Lattice Plot",
+       xlab = "Age", ylab = "Height",
+       type = "b", pch = 19, col = "blue", lwd = 2)
+```
+
+This code will produce an XY plot that tracks height against age, using blue markers connected by lines.
+
+One can run this code in RStudio or any integrated development environment (IDE) that supports R, just by executing the script. No special command is needed for running the script. The data file here is included directly in the code and is not read from an external source; therefore, no specific input file format is required in this case.

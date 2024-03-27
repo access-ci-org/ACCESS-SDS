@@ -1,0 +1,36 @@
+Use Case: UPcxx is used for data parallel programming and supports executing code in parallel and managing data locality. 
+
+Code details and examples: 
+Code:
+
+UPC++ is a C++ library that supports the Partitioned Global Address Space (PGAS) model. Here's how to write a simple "Hello, World!" program in UPC++.
+
+```cpp
+#include <upcxx/upcxx.hpp>
+#include <iostream>
+
+int main() {
+    upcxx::init();
+    std::cout << "Hello, world! I am " << upcxx::rank_me() << " of " << upcxx::rank_n() << ".\n";
+    upcxx::finalize();
+    return 0;
+}
+```
+
+In the code above, `upcxx::init()` and `upcxx::finalize()` are used to initialize and clean up UPC++, respectively. `upcxx::rank_me()` returns the rank (ID) of the current process from 0 to `upcxx::rank_n()-1`.
+
+To compile and run the program, save it in a file named `hello.cpp`, and then:
+
+```
+$ upcxx -o hello hello.cpp
+$ upcxx-run -n 4 ./hello
+
+You should see something like:
+
+Hello, world! I am 0 of 4.
+Hello, world! I am 1 of 4.
+Hello, world! I am 2 of 4.
+Hello, world! I am 3 of 4.
+```
+
+The `-n 4` option specifies the number of processes to run.

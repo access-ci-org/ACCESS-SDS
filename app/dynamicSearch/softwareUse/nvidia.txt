@@ -1,77 +1,48 @@
-Use Case: Accelerating computing with NVIDIA GPUs
+Use Case: Training a machine learning model using TensorFlow with Nvidia GPU.
 
 Code details and examples:
-NVIDIA provides various tools and libraries to accelerate computing using GPUs. Some examples include:
 
-1. CUDA (Compute Unified Device Architecture):
-CUDA is a parallel computing platform and application programming interface model created by NVIDIA. It allows developers to use NVIDIA GPUs for general-purpose processing. Here is a simple CUDA code example:
+Code:
+This example illustrates how to run a TensorFlow script utilizing GPU acceleration.
 
-```cpp
-#include <cuda_runtime.h>
-#include <iostream>
+Assume we have python script "train_model.py" which contains TensorFlow code to train a machine learning model. 
 
-__global__ void addKernel(int *c, const int *a, const int *b) {
-    int i = threadIdx.x;
-    c[i] = a[i] + b[i];
-}
-
-int main() {
-    // Input data
-    int a[] = {1, 2, 3, 4};
-    int b[] = {5, 6, 7, 8};
-    int c[4];
-
-    // Allocate device memory
-    int *d_a, *d_b, *d_c;
-    cudaMalloc(&d_a, 4 * sizeof(int));
-    cudaMalloc(&d_b, 4 * sizeof(int));
-    cudaMalloc(&d_c, 4 * sizeof(int));
-
-    // Copy input data to device
-    cudaMemcpy(d_a, a, 4 * sizeof(int), cudaMemcpyHostToDevice);
-    cudaMemcpy(d_b, b, 4 * sizeof(int), cudaMemcpyHostToDevice);
-
-    // Launch kernel
-    addKernel<<<1, 4>>>(d_c, d_a, d_b);
-
-    // Copy results back to host
-    cudaMemcpy(c, d_c, 4 * sizeof(int), cudaMemcpyDeviceToHost);
-
-    // Print results
-    for (int i = 0; i < 4; i++) {
-        std::cout << c[i] << " ";
-    }
-    std::cout << std::endl;
-
-    // Free device memory
-    cudaFree(d_a);
-    cudaFree(d_b);
-    cudaFree(d_c);
-
-    return 0;
-}
-```
-
-To compile and run the above CUDA code (assuming file name is `add.cu`), you can use the following commands:
-```
-nvcc -o add add.cu
-./add
-```
-
-2. NVIDIA cuDNN (CUDA Deep Neural Network library):
-cuDNN is a GPU-accelerated library for deep neural networks. It provides highly tuned implementations for standard routines used in deep learning. Here is an example of using cuDNN with Python:
+Here is a minimal TensorFlow script snippet that checks if GPU is available for computation:
 
 ```python
+# TensorFlow example snippet, checking if GPU is accessible
+
 import tensorflow as tf
 
-# TensorFlow code that uses cuDNN
-# ...
+# check if GPU is available
+if tf.test.is_gpu_available(cuda_only=False, min_cuda_compute_capability=None):
+    print('GPU is available')
+else:
+    print('GPU is not available')
+```
+Command to run:
 
-# Example snippet
-gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.333)
-sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
+To run this script on a system with Nvidia GPU, use the following command:
 
-# ...
+```shell
+python train_model.py
+```
+Remember to set the CUDA_VISIBLE_DEVICES environment variable if you want to specify which GPUs to use:
+
+```shell
+export CUDA_VISIBLE_DEVICES=0
+python train_model.py
+```
+For multiple GPUs, assign a comma-separated list:
+
+```shell
+export CUDA_VISIBLE_DEVICES=0,1
+python train_model.py
+```
+The specified GPUs need to be visible to TensorFlow. You can check this by running the following TensorFlow command:
+
+```python
+print("Num GPUs Available: ", len(tf.config.experimental.list_physical_devices('GPU')))
 ```
 
-These are just a couple of examples of NVIDIA tools for accelerating computing using GPUs. There are many more tools and libraries available depending on the specific use case.
+Please ensure the Nvidia drivers and CUDA toolkit are installed properly in your system as TensorFlow needs them for GPU acceleration.

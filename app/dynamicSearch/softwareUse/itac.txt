@@ -1,0 +1,27 @@
+Use Case: Use Intel Trace Analyzer and Collector (ITAC) for performance profiling of MPI applications. ITAC can provide detailed analysis of MPI communication patterns; detect performance problems such as load imbalances, communication inefficiencies, or synchronization delays. 
+
+Code details and examples: Code
+
+Before you start with the profiling, you need to add the following lines to your MPI script, making sure to include the -trace option:
+
+```
+$ source /opt/intel/itac/2021.1.113/intel64/bin/itacvars.sh
+$ mpiicpc main.cxx -o main -trace 
+```
+
+In the above steps '/opt/intel/itac/2021.1.113/intel64/' may vary based on the installation path. 
+
+Then, you can submit the job using mpiexec or mpirun command as per your HPC environment:
+
+```
+$ mpiexec -n 4 ./main
+$ mpirun -np 4 ./main
+```
+
+This will give you a ".stf" file. To visualize this, you can use the "traceanalyzer" command on this file:
+
+```
+$ traceanalyzer -if yourfile.stf
+```
+
+Note: ITAC only works with MPI applications. For parallel applications that use shared memory, an integrated sampling-based performance tool called VTune can be used.

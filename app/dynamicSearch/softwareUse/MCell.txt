@@ -1,28 +1,40 @@
-Use Case: MCell is a Monte Carlo modeling and simulation software used for creating spatially realistic models of cellular signaling and molecular processes.
+Use Case: Use MCell for modeling complex microscopic biochemical systems, such as inside living cells. It can track molecules in a 3D space over time executing their modifications. 
 
-Code details and examples:
-1. Input files: MCell requires a model file in ".mdl" format and a configuration file in ".cfg" format to run simulations.
-2. Sample model file (sample.mdl):
-```plaintext
-BeginModel
-  Species A
-    D 1e-6
-  EndSpecies
-  Species B
-    D 1e-6
-  EndSpecies
-  Reaction A + B -> C
-    k 1e-3
-  EndReaction
-EndModel
+Code details and examples: Code :
+
+Input File: The input to MCell is a plain text MDL (MCell Development Language) file. The MDL file describes the physical system and chemical reactions. Here is a simple example of MDL file:
+
 ```
-3. Sample configuration file (sample.cfg):
-```plaintext
-BeginSimulation
-  Iterations 1000
-EndSimulation
+// Create box
+WORLD_BOX
+{
+  [0,0,0]
+  [1,1,1]
+}
+ 
+// Place molecules
+DEFINE_MOLECULES
+{
+  MOL_A
+  {
+    DIFFUSION_CONSTANT_3D = 1e-06 [um^2 us^1] [molecules=1e15]
+  }
+}
+ 
+//Create an instantiation for placement of molecules. 
+INSTANTIATIONS
+{
+  DEFAULT_RELEASE
+  {
+    MOL_A = [[0,0,0]]
+  }
+}
 ```
-4. Command to run MCell simulation:
-```bash
-mcell sample.mdl sample.cfg
+This simple example creates a cubic world box of size 1 um and places a single `MOL_A` molecule at the origin.
+
+Run the MCell simulation : 
+
+Command to run this MDL file, named `test.mdl`, is: 
+```
+mcell test.mdl
 ```

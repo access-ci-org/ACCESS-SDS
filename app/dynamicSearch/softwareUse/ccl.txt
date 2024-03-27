@@ -1,0 +1,26 @@
+Use Case: Use CCL for orbital-orbital transformations in Quantum Chemistry applications;
+
+Code details and examples: Code
+
+Input file: A typical input file (let's refer to it as example.inp) would look something like this:
+
+    molecule m1 {
+     0 1
+     O   0.000000   0.000000  -0.129476949
+     H  -1.494187340   0.000000   1.027446390
+     H1.494187340   0.000000   1.027446390
+    }
+
+    prop = run_ccl('HF', 'STO-3G', molecule=m1)
+
+The input file (.inp) should contain the structure definition for the molecule for which the quantum properties need to be calculated. 
+
+The first parameter in the 'run_ccl()' function specifies the method of calculation ('HF' for Hartree-Fock) and the second parameter notes the basis set to use ('STO-3G' here). 
+
+The 'molecule' keyword is used to select the molecule defined at the start of the input file.
+
+Command to run: The command to execute this script would be something like: 
+
+'ccl example.inp'. 
+
+This command should be run in the command line terminal and not within the input file itself.

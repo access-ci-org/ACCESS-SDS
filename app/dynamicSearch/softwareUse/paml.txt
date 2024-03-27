@@ -1,0 +1,31 @@
+Use Case: Phylogenetic Analysis by Maximum Likelihood (PAML) is a package of programs for phylogenetic analyses of DNA or protein sequences using maximum likelihood. It is often used for the reconstruction of evolutionary histories and studying molecular evolution. 
+
+Code details and examples:
+
+Code: codeml
+
+Sample input file: This is an example of a control file required to run codeml, one of the programs in PAML. The control file is case sensitive and usually named something like "codeml.ctl".
+
+    seqfile = seqfile.txt  * sequence data file name
+    outfile = results.txt  * main result file name 
+    treefile = tree.phy * tree structure file name
+    noisy = 9  * lots of rubbish on the screen
+    verbose = 1 * detailed output
+    runmode = 0 * user defined tree
+    model = 0 * one omega ratio for all branches
+    NSsites = 0 * no site heterogeneity
+    icode = 0 * universal code
+    fix_kappa = 0 * kappa fixed 
+    kappa = 2 * initial or fixed kappa
+    fix_omega = 0 * omega to be estimated 
+    omega = 0.5 * initial or fixed omega
+
+The above file format is required to run the codeml program from PAML. It uses a sequential file (seqfile.txt), a tree structure (tree.phy) and specifies some parameters for the model.
+
+To run codeml, place the control file in the same directory as the executable file and use the following command:
+
+Command to run: `./codeml codeml.ctl`
+
+Note: The sequence and tree file should be in the correct format and in the same directory as the `codeml` program and the control file. 
+
+This will produce an output file named results.txt which will contain the results of the phylogenetic analysis.

@@ -1,17 +1,31 @@
-Use Case: Plotting data using Matplotlib
-Code details and examples:
+Use Case: 
+
+Matplotlib is a python library used for data visualization in 2D/3D plotting. This library is used to create static, animated, and interactive visualizations in Python. 
+
+Code Details and Examples:
+
+Code:
+
 ```python
-import numpy as np
-import matplotlib.pyplot as plt
+    import matplotlib.pyplot as plt
+    import numpy as np
 
-# Sample data
-x = np.linspace(0, 10, 100)
-y = np.sin(x)
+    # Creating a sample dataset
+    x = np.linspace(0, 2 * np.pi, 400)
+    y = np.sin(x ** 2)
 
-# Plot the data
-plt.plot(x, y)
-plt.xlabel('x')
-plt.ylabel('y')
-plt.title('Sin wave')
-plt.show()
+    # A figure with just one sub-plot
+    fig, ax = plt.subplots()
+    ax.plot(x, y)
+    ax.set_title('A single plot')
+
+    plt.show()
 ```
+
+Input File: No specific input file is needed. Here, a range of values for x is created using numpy's linspace function, and a corresponding y is calculated by applying a function to x.
+
+Format Required: As mentioned, we are generating the data within the script itself. However, matplotlib accepts numpy arrays as inputs, so if your inputs are in a file, you'd need to use numpy or pandas to read the file into an array/DataFrame. 
+
+Specifications and Details in Input Files: No specific input file here.
+
+Command to run: If the above code was saved in a file called plot.py, you can run this python file with the command: `python plot.py`

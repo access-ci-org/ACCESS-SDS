@@ -1,21 +1,27 @@
-Use Case: File compression with gzip
+Use Case: Use gzip for file compression. This can be especially useful for managing large data files.
 
-Code details and examples:
+Code details and examples: Code 
+
 ```
-# Example input file
-# Create a sample file
-echo "Hello, this is a sample text file" > sample.txt
-
-# Compress the file using gzip
-gzip sample.txt
-
-# This will create a compressed file named sample.txt.gz
+# Here is a simple example where we wish to compress a large text file named "example.txt"
+gzip example.txt
 ```
+Command Explanation:
+The 'gzip' command followed by a filename will compress the file and replace it with a new file that has the ".gz" extension. In this example, "example.txt" will be compressed and replaced with "example.txt.gz".
 
-To decompress the file:
-```
-# Decompress the file using gzip
-gzip -d sample.txt.gz
+Input File:
+The input file "example.txt" can contain any readable text data. In our example we've used a simple text file.
 
-# This will decompress the file back to its original state
+Specifications: 
+1. The input file can have any content and there is no specific format required.
+2. The compressed file format is .gz. 
+
+Command to Run:
+To run the command, simply open your terminal (For Linux, macOS) or command prompt (For Windows) and type the command: 
 ```
+gzip example.txt
+``` 
+
+This command will compress the file and save space in your hard drive.
+
+Code snippets are not applicable for this software as it's used directly in the terminal or command prompt and do not require coding knowledge.

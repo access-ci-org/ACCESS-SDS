@@ -1,0 +1,30 @@
+Use Case: HyPhy, short for Hypothesis Testing using Phylogenies, is used for conducting sophisticated and custom phylogenetic hypothesis tests using maximum likelihood (ML).
+
+Code details and examples: Code:
+
+HyPhy software requires a Newick formatted phylogenetic tree file as input dataset. Here is a sample Newick tree format:
+```plain
+(((A:0.1,B:0.2):0.3,(C:0.3,D:0.4):0.5):0.6,E:0.1);
+```
+
+A typical data file (like sequence data) you may want to input in HyPhy may be in the FASTA format:
+```plain
+>A
+AGCT
+>B
+AGTT
+```
+
+You should setup a batch language file (.bf) or alternatively you can use standard analysis .bf files. Here is a very basic example:
+```plaintext
+GetInformation(Info, 'Starting',PackageWindowName,1);
+fprintf(stdout,Info);
+```
+
+Then, the software can be run with the command as follows "HYPHYMP analysis.bf" or you may use GUI. Here, HYPHYMP is the executable filename and analysis is the filename of the batch file.
+
+**Note**: 
+- HyPhy batch (.bf) language file is a set of instructions and functions that define your statistical model and instruct HyPhy what to do with the model
+- All the file formats (.bf, .dat (for sequence data), .tree (for phylogeny)) should be in the same directory unless path is specified. 
+- Always check the HyPhy reference manual for better details. 
+- Please note that each analysis requires different types of input files and formats, above is a very basic example for illustration purposes.

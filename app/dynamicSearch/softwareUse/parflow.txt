@@ -1,32 +1,44 @@
-Use Case: ParFlow is a modeling software for modeling surface and subsurface hydrology processes. It is used for simulations of water movement in the soil and aquifers.
+Use Case: ParFlow is a tool that simulates groundwater and surface flow. It is often utilized by scientists for hydrological research, studying areas such as watersheds or the effects of climate change on water resources.
 
-Code details and examples:
-ParFlow input files typically include parameter files, domain files, and run files. Here is an example of an input file for running a ParFlow simulation:
+Code details and examples: Code:
 
-Parameter File (pfset.prm):
-```text
-PFLO TRANSPORT_METHOD BDF2
-PFLO SATUR_THRESHOLD 0.01
-...
+The input files for Parflow are typically in TCL format. Common files include:
+
+1. Simulation name file (.pfidb), includes the name of the simulation and the solver to be used.
+2. Domain and Computational Grid file (.pfsol), defines the simulation domain and the computational grid to be used.
+3. Parameter file (.pfiname), defines initial conditions, physical properties, etc.
+
+Here's an example of each of these, respectively:
+
+Simulation name file (.pfidb):
+```
+[Top]
+name=runname
+process.topology.p=1
+process.topology.q=1
+process.topology.r=1
+solver=pfmg
 ```
 
-Domain File (domain.pfd):
-```text
-DOMAIN CONFIGURATION "domain.config"
-DOMAIN DIMENSION 2
-...
+Domain and Computational Grid file (.pfsol ):
+```
+[domain]
+Lower.X  0.0
+Lower.Y  0.0
+Lower.Z  0.0
+Upper.X  1000.0
+Upper.Y  1000.0
+Upper.Z  1000.0
+nx 50
+ny 50
+nz 50
 ```
 
-Run File (run.sh):
-```bash
-#!/bin/bash
-mpirun -np 4 parflow < pfset.prm > pfout.log
+Parameter file (.pfiname):
+```
+[permeability]
+Type  Constant
+Value 1.0
 ```
 
-To run the ParFlow simulation:
-```bash
-chmod +x run.sh
-./run.sh
-```
-
-This is a basic example, and the actual input files and configurations may vary based on the specific simulation being performed.
+To run ParFlow, you typically use a command of the form `parflow runname`. To run the solver and write outputs to a specific directory, for example, you might use `parflow runname -outdir output_dir`

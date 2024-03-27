@@ -1,0 +1,29 @@
+Use Case: Use 'r-purrr' package, a functional programming toolkit for R programming, for better handling of lists and data frames.
+
+Code details and examples: Code
+
+Input File: No specific input file required, but the data can be in any data frame format (.csv, .txt, etc.).
+
+Specification: The data should be in a table format.
+
+Sample Code:
+
+```R
+# Load the required package
+library(purrr)
+
+# Create a data frame 
+df <- data.frame(
+  x = rnorm(10),
+  y = runif(10)
+)
+
+# Use 'map' function from purrr to square every value in x and y column of the dataframe
+df_new <- df %>%
+  map(~ .^2)                  
+
+# Print the new data frame
+print(df_new)
+```
+
+Command to run: The above code can be run directly in an R environment like RStudio.

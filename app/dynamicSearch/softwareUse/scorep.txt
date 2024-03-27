@@ -1,30 +1,39 @@
-Use Case: Profiling parallel applications using Score-P
+Use Case: Score-P is a tool for measurement of software execution profile in high performance computing systems. It is used mainly for managing performance measurements like collecting, storing, and managing performance data.
 
-Code details and examples:
-Score-P is a performance measurement infrastructure for parallel programs. It provides support for instrumentation, measurement, and analysis of HPC applications. Below is an example of how to use Score-P to profile a parallel application.
+Code details and examples: 
 
-Sample input file (hello_world.c):
-```c
-#include <stdio.h>
-#include "omp.h"
+Code:
+For C/C++ programs, it can be used in the following way:
 
-int main() {
-    #pragma omp parallel
-    {
-        printf("Hello World from thread %d\n", omp_get_thread_num());
-    }
-    return 0;
-}
+Typically, Score-P uses two commands for instrumentation. 
+
+```
+scorep gcc test.c -o test
 ```
 
-Compilation:
+Here, scorep works as the compiler by wrapping around the gcc compiler. "test.c" is the example inputs file in C, and "test" is the output executable filename.
+
+To run this executable with Score-P, we use:
+
 ```
-scorep --mpp=mpi --compiler mpicc mpicc -fopenmp -o hello_world hello_world.c
+scorep ./test
 ```
 
-Execution:
+If the input file requires arguments, they can be provided in the following way:
+
 ```
-scorep --mpp=mpi mpirun -np 4 ./hello_world
+scorep ./test arg1 arg2
 ```
 
-This will generate measurement data that can be analyzed using tools provided by Score-P.
+Once the program has been run, Score-P will generate a measurement directory which contains the profiling data.
+
+It is also possible to control the level of instrumentation. For example, a user can select to instrument only user functions, but not MPI for a MPI C program. It can be done using environment variable:
+
+```
+export SCOREP_ENABLE_PROFILING="true"
+export SCOREP_ENABLE_TRACING="false"
+```
+
+Then compile and run the code with scorep.
+
+Please note that the specific input file and requirements might change depending on the software or program being profiled. Score-P supports more complex scenarios, as well as the ability to specify which parts of the code to measure. This makes it a flexible tool to measure performance of a wide variety of programs.});

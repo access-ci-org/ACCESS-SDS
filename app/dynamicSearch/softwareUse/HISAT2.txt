@@ -1,18 +1,23 @@
-Use Case: HISAT2 is a fast and sensitive alignment tool for aligning RNA-seq reads to a reference genome.
+Use Case: HISAT2 is a fast and sensitive alignment program which is used for mapping next-generation sequencing reads (both DNA and RNA) to a population of human genomes (as well as to a single reference genome).
 
-Code details and examples:
-1. Download the HISAT2 software from the official website and make sure it is in your PATH.
-2. Prepare the index files for the reference genome using HISAT2-build:
-```bash
-hisat2-build reference_genome.fasta reference_index
-```
-3. Run the alignment using HISAT2:
-```bash
-hisat2 -x reference_index -1 forward_reads.fastq -2 reverse_reads.fastq -S output.sam
-```
-In the above command:
-- `-x` specifies the path to the reference genome index generated using HISAT2-build.
-- `-1` and `-2` specify the input files for paired-end forward and reverse reads.
-- `-S` specifies the output SAM file.
+Code Details and Examples:
 
-Note: HISAT2 also provides options for single-end reads and other parameters to customize the alignment process.
+Code:
+
+Input file required: Two FASTQ or a single BAM file
+
+Here is a sample commands to align paired end RNA-seq reads to the human genome:
+
+```bash
+hisat2 -p 8 -x /path_to_your_index/hg38 --dta -1 read1.fastq -2 read2.fastq -S sample.sam
+```
+
+In this example, '-p 8' tells HISAT2 to use 8 processor cores to achieve multithreading. The '-x' option points HISAT2 to the basename of the index for the reference genome (`/path_to_your_index/hg38`). 
+
+The '--dta' option tells HISAT2 that this is RNA-seq data and the result will be used for a downstream transcript assembler (e.g., StringTie). 
+
+The '-1' and '-2' options point to the two FASTQ files for the paired end reads. 
+
+The '-S' option points HISAT2 to where to write the SAM file output (`sample.sam`) which will contain the alignments.
+
+There are several options, settings, and specifications that one can use in HISAT2 which are detailed in its manual. Always check the manual for the most accurate and detailed information.

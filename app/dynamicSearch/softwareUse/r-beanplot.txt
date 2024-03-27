@@ -1,0 +1,33 @@
+Use Case: Use r-beanplot for creating beanplots which are useful graphical representation of data set. Beanplots provide similar information as boxplots but are enriched with displaying the data density in addition to individual observations.
+
+Code details and examples: 
+
+Code: 
+This code is an R script that will use the beanplot package to create a beanplot of the iris dataset built into R. The data plotted will be the Sepal.Length column of all the irises, grouped by the iris species.
+
+```r
+# Loading necessary library
+library(beanplot)
+
+# Loading iris dataset
+data(iris)
+
+# Defining the input data for beanplot
+input_data <- iris$Sepal.Length
+group_data <- iris$Species
+
+# Creating Beanplot
+beanplot(input_data ~ group_data, data = iris, col=list(1,"white"), method="jitter", border = NA)
+
+# Saving the plot
+dev.off()
+```
+
+Command to Run:
+You can run the R script using the Rscript command followed by the script's name in your terminal:
+
+```shell
+Rscript script.R
+```
+
+This code doesn't need any additional input file rather uses built-in iris dataset. If you are working with a different dataset, make sure your dataset is in a CSV format, and you can load the data using the `read.csv("path_to_your_file.csv")` function in R. The column you want to plot must consist of numerical values and the column for grouping should ideally be categorical. For example, if you are working with human height data, your data column could be a column of numerical height values and your group column could be a categorical column of genders.

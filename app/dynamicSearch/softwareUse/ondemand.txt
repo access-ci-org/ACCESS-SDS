@@ -1,20 +1,29 @@
-Use Case: ondemand  
-Code details and examples:  
-- **Interactive computing with Jupyter Notebooks**  
-  Input files: Jupyter notebook (.ipynb file)  
-  Code:  
-  ```
-  jupyter notebook
-  ```  
-- **Remote visualization with ParaView**  
-  Input files: Data files for visualization  
-  Code:  
-  ```
-  paraview
-  ```  
-- **Job submission to a cluster with Slurm**  
-  Input files: Slurm script for job submission  
-  Code:  
-  ```
-  sbatch myjobscript.sh
-  ```
+Use Case: OnDemand is a web platform that provides HPC (High Performance Computing) resources to a broader set of users without command-line experience. It is an open-source tool designed for accessing HPC services. Users can submit and monitor jobs, manage files, open terminal sessions and even develop code.
+
+Code details and examples: 
+
+Due to the nature of OnDemand, this service is more like a web interface and does not involve actual programming from the user's end. However, the usage of it typically involves job submission, and it often requires job scripts. Here's a simplified version of how you would submit a job script, this script is generally a text file with commands that would be run in a UNIX shell.
+
+For example, you may have a file called `myjobscript.sh` with the following:
+
+```bash
+#!/bin/bash
+#SBATCH --time=01:00:00 
+#SBATCH --nodes=2 
+#SBATCH --ntasks-per-node=5 
+#SBATCH --job-name=mytestjob
+
+module load mySoftwareModule
+mySoftwareCommand inputfile outputfile
+```
+This job script instructs the cluster to run `mySoftwareCommand inputfile outputfile` on two nodes, with five tasks per node, for a total of ten tasks. The job is named `mytestjob` and the job should stop after one hour at most.
+
+To submit the job, you would upload this script to OnDemand's file management interface and then use the job submission interface to submit it. In Submit Jobs option, choose the shell script file `myjobscript.sh` and click on submit.
+
+Once the job starts running, OnDemand will output a job id, which you can use to access and manage the job.
+
+Remember actual use of OnDemand may differ based on the setup and configuration done by your organization or institution. This is just a basic example.
+
+Command to run this job: This would be done through the OnDemand interface, no command line command is needed.
+
+ Formatting, Specifications and Details in Input files: The specifications of the file depend heavily on the job you are running. For instance, the example `mySoftwareCommand inputfile outputfile` command would depend on the specific software being used. It could be any HPC software that can be operated with command-line arguments, and the input and output files would be specific to that software. Most often, these are text based files or specific data format files depending on the software package.

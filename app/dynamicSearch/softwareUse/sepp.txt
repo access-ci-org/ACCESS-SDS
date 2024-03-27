@@ -1,0 +1,43 @@
+Use Case: SEPP (SATe Enabled Phylogenetic Placement) is a bioinformatics software for large-scale phylogenetic placement of sequences. It is primarily used for incorporating new sequences into an existing, large, reference tree and alignment.;
+
+Code details and examples:
+
+Code: SEPP requires different types of input files: 
+
+1. A query sequence file in fasta format.
+2. A reference alignment file in fasta format.
+3. A reference tree file in newick format. 
+
+For instance, the query file (`query.fasta`) might look like:
+
+```
+>Sequence1
+ATGCGAGTGTTGAAGTTCGGCGGTACATCAGTGGCAAATGCAGAACGTTTTCTGCGTGTTGCCGATATTCTGGAAAG
+>Sequence2
+ATGGCCGTTGTTATTGGAAGTACTCATTCGTTTCGGAGTAACACGTGGGAAATTCCGAGTCTGATAAATTCCCCCTG
+```
+
+The reference alignment (`reference.alignment`) might be:
+
+```
+>RefSeq1
+ATGGCGAGTGTTGAAGTTCGACGGTACATCAGTGGCAAATGCAGAACGTTTTCTGCGTGTTGCCGATATTCCGGAAGGTAACGGTTCCGAGGAGGAAGGTG
+>RefSeq2
+ATGGCCGCGGTTATTGGAAGTACTAATTCGTTTCGGAAGTAACACGTGGAATTCCGAGTGTGATAAATTCCCCCTGGCGAACGGGTGAGTAACCC
+```
+
+And the reference tree (`reference.tree`) might look like: 
+
+```
+(RefSeq1:0.1234,RefSeq2:0.5678);
+```
+
+After preparing your input files, you can run SEPP via the following command:
+
+```bash
+run-sepp.sh query.fasta reference.alignment reference.tree -x 10
+```
+
+This command runs SEPP on a fasta file named `query.fasta` with a reference alignment named `reference.alignment` and a reference tree named `reference.tree`, using 10 threads (`-x 10`). All file paths are relative to the current directory. The result will be output to the file `query.fasta_result.json`.
+
+Detailed manual and further explanation of each parameters can be found in the official SEPP documentation.

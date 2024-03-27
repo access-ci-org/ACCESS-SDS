@@ -1,38 +1,33 @@
-Use Case: Pydantic is a data validation and settings management library in Python.
+Use Case: Pydantic is a validation library in Python used to validate data structures like data classes and other mutable containers using Python type annotations. 
 
-Code details and examples:
-Sample input file (input_data.json):
-```json
-{
-    "name": "John Doe",
-    "age": 30,
-    "email": "johndoe@example.com"
-}
-```
+Code Details and Examples: 
 
-**Validation using Pydantic:**
+Code:
+
+Firstly you import the BaseModel class from pydantic. Then, you create a class, which includes the data attributes and their types that you want to validate. 
+
 ```python
 from pydantic import BaseModel
 
 class User(BaseModel):
+    id: int
     name: str
-    age: int
     email: str
-
-# Load data from input file
-import json
-with open("input_data.json", "r") as file:
-    data = json.load(file)
-
-# Validate input data
-try:
-    user = User(**data)
-    print(user)
-except Exception as e:
-    print(f"Input data is invalid: {e}")
 ```
 
-Run the Python script to validate the input data:
-```bash
-python validate_data.py
+After you have the class setup, you then create an instance of the class providing the data that you want to validate. 
+
+```python
+user_data = {'id': 123, 'name': 'John Doe', 'email': 'johndoe@example.com'}
+user = User(**user_data)
 ```
+
+Once you provide the data, the data gets validated by Pydantic. If the data is valid, you can access the data just like any other normal class. elif there's an issue with the data, Pydantic raises an error.
+
+```python
+print(user.id)  # Will print 123
+print(user.name)  # Will print 'John Doe'
+print(user.email)  # Will print 'johndoe@example.com'
+```
+
+To run the above code, save the file and run python filename.py from the command line.

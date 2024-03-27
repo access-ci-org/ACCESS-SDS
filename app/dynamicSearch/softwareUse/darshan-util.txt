@@ -1,0 +1,34 @@
+Use Case: Darshan-util is a useful software package for understanding the I/O behavior of HPC applications. It provides detailed per-file and per-process I/O characterization that aids in discovering abnormal patterns and bottlenecks.
+
+Code details and examples: Code
+For Darshan logs, the typical file extension is *.darshan. This is a binary file that can be parsed using Darshan's utilities.
+
+To analyze the output logs of Darshan, you can use 'darshan-parser'.
+
+Input File: my_logfile.darshan
+
+Command to Run: 
+```
+darshan-parser my_logfile.darshan
+```
+
+This will print the parsed logs to the terminal; the data includes the application’s name, execution time, the rank, and information about I/O operations.
+
+If you would like to sort this list by a specific field, you can do so. To sort by the 'file_id' field, you can use the command:
+
+```
+darshan-parser my_logfile.darshan | sort -k 1n
+```
+
+The -k 1n option means to sort based on the first column in numerical order. You can replace '1' with the number of whatever column you want to sort by. 
+
+Another utility tool is 'darshan-job-summary.pl', which takes a Darshan log file as input and creates a PDF file as output. This PDF contains a graphical summary of the I/O activity during the job.
+
+Command to Run:
+```
+darshan-job-summary.pl my_logfile.darshan
+```
+
+This command produces 'my_logfile.pdf', which can be opened using any PDF viewer to see a graphical representation of the I/O operations. 
+
+Note that '*my_logfile.darshan*' should be replaced with your actual darshan log file.

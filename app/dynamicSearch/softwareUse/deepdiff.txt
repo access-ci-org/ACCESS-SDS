@@ -1,40 +1,28 @@
-DeepDiff is a Python library for calculating the difference between two objects. It can be used in various scenarios such as data analysis, testing, debugging, etc.
+Use Case: DeepDiff is used for the recursive difference of dictionaries, iterables, strings and other objects in Python. It's useful in this case when you need to know the difference between two complex data structures.
 
-Use Case: Finding the difference between two dictionaries using DeepDiff
-Code details and examples:
+Code details and examples: 
+
+Code:
 
 ```python
+# Importing the library
 from deepdiff import DeepDiff
 
-# Sample input dictionaries
-dict1 = {"a": 1, "b": 2, "c": 3}
-dict2 = {"a": 1, "b": 3, "d": 4}
+# Define dictionary samples
+dict1 = {'name': 'John', 'age': 25, 'job': 'Software Engineer'}
+dict2 = {'name': 'John', 'age': 30, 'job': 'Senior Software Engineer'}
 
-# Finding the difference between two dictionaries
-diff = DeepDiff(dict1, dict2)
+# Use DeepDiff for finding the difference
+ddiff = DeepDiff(dict1, dict2, ignore_order=True)
 
-# Printing the result
-print(diff)
+# Print the difference
+print(ddiff)
 ```
 
-Output:
-```
-{
-    'values_changed': {
-        "root['b']": {
-            'new_value': 3,
-            'old_value': 2
-        },
-        "root['c']": 3,
-        "root['d']": 4
-    },
-    'dictionary_item_added': {
-        "root['d']": 4
-    },
-    'dictionary_item_removed': {
-        "root['c']": 3
-    }
-}
-```
+In the above example, we have two dictionaries dict1 and dict2. We import DeepDiff from deepdiff library and find the difference using DeepDiff function. The `ignore_order=True` argument ensures that the order of items in the dictionaries does not affect the result.
 
-Command to run the code: `python script.py`
+The command `print(ddiff)` will output the differences between dict1 and dict2.
+
+The format required for input files would be valid python dictionaries or other acceptable python data structures such as lists, tuples or sets. There is no specification requirement as long as the data structures are valid. 
+
+Execute the script by running `python filename.py` in the command line where `filename.py` is the name of your python script file.

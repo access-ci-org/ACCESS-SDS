@@ -1,0 +1,30 @@
+Use Case: HDBSCAN is a clustering software which stands for Hierarchical Density-Based Spatial Clustering of Applications with Noise. It extends DBSCAN by converting it into a hierarchical clustering algorithm, and then using a technique to extract a flat clustering based in the stability of clusters.
+
+Code details and examples:
+
+Code:
+
+```python
+import hdbscan
+import numpy as np
+from sklearn.datasets import make_blobs
+
+# Generating a sample dataset
+data, label = make_blobs(n_samples=500, centers=5, n_features=2, random_state=0)
+
+# Specifying the parameters for the HDBSCAN
+clusterer = hdbscan.HDBSCAN(min_cluster_size=5, gen_min_span_tree=True)
+
+# Fit the model to your data
+clusterer.fit(data)
+
+# Obtain cluster labels
+cluster_labels = clusterer.labels_
+```
+
+Input requirements:
+
+The above code snippet uses the `make_blobs` function from the `sklearn.dataset` module to create a synthetic dataset. The input to the `hdbscan.HDBSCAN()` function is the minimum cluster size (min_cluster_size) and whether to generate the minimum spanning tree (gen_min_span_tree). The dataset is then fit to the model using the `clusterer.fit(data)` function, where data is a 2D array-like or sparse matrix, where n_samples is the number of samples, and n_features is the number of features.
+
+Command to run them:
+If you save the above code to a file named main.py you can run the code with the following command: `python main.py`

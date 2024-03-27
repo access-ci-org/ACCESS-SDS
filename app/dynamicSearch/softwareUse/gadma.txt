@@ -1,0 +1,30 @@
+Use Case: GADMA (Genetic Algorithm for inferring Demographic history using Multiple models, Approximate Bayesian Computation) is used in evolutionary biology to infer demographic history of species from genetic data. By using genetic data as input, the software can estimate parameters such as population sizes, split times, migration rates and more.
+
+Code Details and Examples: Code
+
+Input Format: This software supports various input data types including genotype frequency data (GFD), SNP data, and sequence data. The input format for genotype frequency data (GADAM's primary input type) generally consists of a text file with various population parameters. 
+
+Here is a sample input file format for GFD:
+
+```
+# GFD format for Gadma
+# n_pops n_sites [pop labels]
+2       100             
+pop1    pop2
+10      10
+1       1       0.31
+1       2       0.42
+2       1       0.12
+2       2       0.15
+```
+This file specifies a two population model with 100 sites. The populations are labeled 'pop1' and 'pop2', each with a size of 10. The following lines represent the genotype frequencies.
+
+Command to Run: After the input file is prepared, you can use the following command to run GADMA with default options:
+
+```
+gadma -f your_input_file
+```
+
+Here, replace "your_input_file" with the path to your input data.
+ 
+Please refer to the official GADMA documentation for more details and to know more about different possible input formats: http://gadma.readthedocs.io/

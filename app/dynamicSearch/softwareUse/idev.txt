@@ -1,11 +1,50 @@
-Use Case: Supercomputer Job Scheduling
+Use Case: The command, `idev`, is a part of the SLURM workload manager in High Performance Computing(HPC). It is used to request an interactive computing session on a compute node, for tasks such as debugging code, running jobs interactively, and developing software.
+
 Code details and examples: 
-idev is a command often used on HPC clusters to request interactive development nodes for debugging and testing purposes. It allows users to get access to a compute node for a limited time without submitting a regular job through the batch system. Users can use it to compile and test their code interactively before submitting it as a batch job.
 
-To request an interactive development node using idev, users can simply type the following command:
-
+Code:
+```bash
+# Request an interactive session on a compute node. Let's say we need a session 
+# with 2 cores, 4GB memory and expected runtime of 1 hour.
+idev -n 2 -m 4gb -W 60
 ```
-idev
+
+Once you are in the interactive session, you can run your code directly on the command line or use a script.
+
+```bash
+# running your code directly on command line
+python my_script.py
+
+# or execute your bash script
+bash my_script.sh
 ```
 
-This will typically allocate a compute node and provide the user with a shell prompt on that node where they can compile, test, and debug their code interactively. The specific options and time limits for idev sessions may vary depending on the configuration of the HPC cluster.
+Your my_script.py file could be a simple Python script:
+```python
+# my_script.py
+print("Hello, World!")
+```
+
+Whereas the my_script.sh could be a Bash script that executes a program:
+```bash
+#!/bin/bash
+# my_script.sh
+./my_program
+```
+
+Make sure your scripts or programs have the proper permissions to be executed. If not, you can use chmod command:
+
+```bash
+chmod +x my_program
+```
+
+The command to end the interactive session is `exit`.
+
+```bash
+exit
+```
+
+Command to run:
+```bash
+idev -n 2 -m 4gb -W 60
+```

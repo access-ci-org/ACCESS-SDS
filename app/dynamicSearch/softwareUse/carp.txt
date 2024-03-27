@@ -1,33 +1,55 @@
-It seems like you are referring to the CARP (Cardiac Arrhythmia Research Package) software used for simulating cardiac electrophysiology. Here is an example:
+Use Case: CARP (Cardiac Arrhythmia Research Package) is a software tool utilized extensively by scientists and research professionals for simulation of electrical activity in the heart. It finds its use in studying various cardiac conditions and disorders. The software allows users to generate system parameters, run simulations, and visualize results. Input files typically include geometry files (*.elem, *.pts), conductivities file (*.cond), time scaling file (*.ts), and stimulus file (*.stim).
 
-Use Case: Simulation of cardiac electrophysiology with CARP
+Code details and examples: 
 
-Input file format:
-- CARP uses configuration files in XML format to specify simulation parameters, mesh, and tissue properties.
+Code: 
 
-Code details and examples:
-```xml
-<Simulation>
-  <TimeStep>0.01</TimeStep>
-  <EndTime>100</EndTime>
-</Simulation>
-
-<Mesh>
-  <File>heart_mesh.msh</File>
-</Mesh>
-
-<Tissue>
-  <Conductivity>0.2</Conductivity>
-  <Anisotropy>
-    <Lambda>1</Lambda>
-    <Sheets>
-      <File>sheets.txt</File>
-    </Sheets>
-  </Anisotropy>
-</Tissue>
+```
+carp ./input/geometry.elem ./input/geometry.pts -stimulus ./input/stimulus.stim -num_threads 8
 ```
 
-Command to run:
+The geometry data is split among two files: an `.elem` file that contains the finite elements of the system, and a `.pts` file that contains the points representing the vertices:
+
+geometry.elem:
 ```
-carp <input_file.xml>
+7 3 ... 0.1 0.2 0.3 1 0
+... repeat for each finite element ...
+```
+
+geometry.pts:
+```
+1 0 0.1 0.2 0.3
+... repeat for each vertex/point ...
+```
+
+Stimulation is done using a `.stim` file, which controls the application of current to the system:
+
+stimulus.stim:
+```
+0 .. 0.15 0
+0 .. 0.2 1
+0 .. 0.25 2
+... repeat for each stimulus event ...
+```
+
+Conductivity is controlled with a `.coord` file, which accounts for conductance on the three physical axes:
+
+conductivities.coord:
+```
+0 1 1 1
+... repeat for each discrete area of the system ...
+```
+
+Time scaling is defined in the `.ts` file, which aids in viewing the system state at various points in time:
+
+time scaling.ts:
+```
+0.01 0.01 1 10
+... repeat for each time scaling event ...
+```
+
+A command line call to run the CARP program might then be:
+
+```
+carp /path/to/geometry.elem /path/to/geometry.pts -conductivities /path/to/conductivities.coord -time_scaling /path/to/time_scaling.ts -stimulus /path/to/stimulus.stim -num_threads 8
 ```

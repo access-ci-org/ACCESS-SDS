@@ -1,0 +1,22 @@
+Use Case: The snp-dists software is an application that calculates pairwise SNP (Single Nucleotide Polymorphism) distance matrices from a multi-FASTA alignment file.
+
+Code details and examples:
+
+Code:
+
+```bash
+# Sample Input File:
+# Your FASTA file should look something like this:
+>sample1
+ACTG
+>sample2
+ACCG
+
+# Command to run:
+snp-dists yourfastafile.fasta
+```
+
+Specifications and Details:
+The input file for this software is a multiple sequence alignment in FASTA format. Each sequence in the file should have a unique identifier specified in the header line (the line that begins with a > symbol). In the FASTA file, sequences are expected to be of equal length. 
+
+The output is a matrix of SNP distances in CSV format. Each row and column is labeled with a sequence identifier and the cells contain the SNP distance between the sequences.

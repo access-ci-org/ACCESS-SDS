@@ -1,0 +1,39 @@
+Use Case: Virtualenv is used to create isolated Python environments to avoid package dependencies and version conflicts, and progress in a project-by-project manner.
+
+Code details and examples: 
+
+Code:
+```
+# To create a virtual environment
+virtualenv env_name
+
+# To activate the virtual environment on Windows
+env_name\Scripts\activate
+
+# To deactivate the virtual environment on Windows
+deactivate
+
+```
+The `virtualenv` command creates an env_name folder which contains all the necessary executables to use the packages that a Python project would need.
+
+Note: `env_name` is just a placeholder name for the actual environment name you prefer.
+
+The command to run the program: 
+
+On a python file named `my_script.py`, running it in an active virtual environment can be done using the command, 
+
+``` 
+python my_script.py
+```
+
+The input file is any Python (.py) file which contain the Python code to run in the environment. There isn't a specific structure required for the input file as they just generally contain Python code specific to the task at hand. The Python scripts can be created and used via text editor as normal `.py` files. As an example, if the script were to print 'Hello, World', the `.py` file would look like:
+
+`my_script.py`:
+
+```python
+
+print("Hello, World!")
+
+```
+
+This Python script would print 'Hello, World' when run in the environment after activation.

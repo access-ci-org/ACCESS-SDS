@@ -1,54 +1,43 @@
-Use Case: PyTorch is a popular open-source machine learning library for Python, optimized for deep learning tasks.
+Use Case: PyTorch is an open-source machine learning framework that accelerates the path from research to production, enabling faster prototyping and reducing the need for recoding. It provides a wide range of algorithms for deep learning, and uses the dynamic computational graph of TorchScript for processing. PyTorch is mostly used for applications such as natural language processing.
 
-Code details and examples:
-1. Sample input files:
-Input data for a simple neural network:
+Code Details and Examples:
+
+Code:
+
 ```python
 import torch
 
-# Define input data
-x = torch.tensor([[0, 0], [0, 1], [1, 0], [1, 1]], dtype=torch.float32)
-y = torch.tensor([[0], [1], [1], [0]], dtype=torch.float32)
+# Create a random tensor
+x = torch.rand(5, 3)
+print(x)
+
+# Create a tensor based on an existing tensor. 
+# These methods will reuse properties of the input tensor, e.g. dtype, unless new values are provided by user
+x = x.new_ones(5, 3, dtype=torch.double)      
+print(x)
+
+# Add two tensors with the same shape
+y = torch.rand(5, 3)
+print(x + y)
+
+# Resize/reshape tensor
+x = torch.randn(4, 4)
+y = x.view(16)
+z = x.view(-1, 8)  # the size -1 is inferred from other dimensions
+print(x.size(), y.size(), z.size())
 ```
 
-2. Code snippet to create a simple neural network using PyTorch:
-```python
-import torch
-import torch.nn as nn
-import torch.optim as optim
-import torch.nn.functional as F
+Input:
 
-# Define a simple neural network
-class NeuralNet(nn.Module):
-    def __init__(self):
-        super(NeuralNet, self).__init__()
-        self.fc = nn.Linear(2, 1)
+No specific input file necessary. PyTorch's data manipulation is done through tensors, and it has utilities for loading data in parallel.
 
-    def forward(self, x):
-        x = self.fc(x)
-        return torch.sigmoid(x)
+Command:
 
-# Define the model, loss function, and optimizer
-model = NeuralNet()
-criterion = nn.BCELoss()
-optimizer = optim.SGD(model.parameters(), lr=0.1)
-
-# Train the model
-for epoch in range(1000):
-    optimizer.zero_grad()
-    output = model(x)
-    loss = criterion(output, y)
-    loss.backward()
-    optimizer.step()
-
-# Test the model
-test_data = torch.tensor([[0, 0], [0, 1], [1, 0], [1, 1]], dtype=torch.float32)
-with torch.no_grad():
-    predictions = model(test_data)
-    print(predictions)
+To run a python file using PyTorch, you would typically execute:
+```sh
+python filename.py
 ```
 
-3. Command to run the code (assuming the code is saved in a file named `simple_nn.py`):
-```
-python simple_nn.py
-```
+Specifications:
+
+All tensor operations considering the computation graph are defined under torch namespace. PyTorch supports a variety of tensor types and operations, much like numpy. Additionally, it also offers rich API for neural network. One of the major advantages of PyTorch is that it uses dynamic computation graph, meaning the graph is generated on the fly and the graph operation could be changed dynamically in the program.

@@ -1,0 +1,25 @@
+Use Case: Use Attrdict to simplify the code while accessing data stored in dictionaries.
+
+Code details and examples: 
+
+Code:
+```python
+from attrdict import AttrDict
+
+employee = AttrDict({'Name': 'John', 'Age': 25, 'Role': 'Manager'})
+
+# Traditional dictionary access
+print(employee['Name']) # Output: John
+
+# AttrDict access
+print(employee.Name) # Output: John
+```
+
+No input files required. The data is input directly into the python script through a dictionary. AttrDict is a subclass of dict, so it follows the same format as a dictionary in python - a collection of key-value pairs enclosed within curly braces. Keys are unique identifiers for the values. 
+
+Command to run:
+Assuming the code is saved in a file named script.py, use the following command to run it in the terminal.
+
+```bash
+python script.py
+```

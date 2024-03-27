@@ -1,23 +1,17 @@
-Use Case: Image manipulation
+Use Case: Netpbm is a toolkit for manipulation of graphic images, including conversion of images between a variety of different formats. This toolkit can be used to convert an image from one format (e.g., JPEG) to another format (e.g., PNG).
+
 Code details and examples:
-Netpbm is a collection of image processing tools that can manipulate images in various formats such as PBM (Portable Bitmap), PGM (Portable Graymap), and PPM (Portable Pixmap).
 
-Example of converting an image from one format to another:
-1. Convert a PPM image to PGM:
+Code:
+
+Input file: A JPEG image.
+
+Specifications and details in input file: The JPEG image can be any image that needs to be converted. It should be in .jpg format.
+
+To convert a JPEG image to a PNG image using the Netpbm toolkit's `jpegtopnm` and `pnmtopng` utilities, you would use the following command:
+
 ```bash
-ppmtopgm input.ppm > output.pgm
+jpegtopnm input.jpg | pnmtopng > output.png
 ```
 
-2. Convert a PGM image to PBM:
-```bash
-pgmtopbm input.pgm > output.pbm
-```
-
-3. Convert a PBM image to PPM:
-```bash
-pbmtojbg input.pbm > output.ppm
-```
-
-The input files should be in the specified format (PBM, PGM, PPM) and the output will be saved in the desired format.
-
-To view more options and details, you can refer to the Netpbm documentation or use the `man` command for specific tool options.
+This will read the JPEG image from 'input.jpg', convert it to PNM format, then pipe that PNM image to `pnmtopng`, which converts it to PNG format and writes it to 'output.png'.

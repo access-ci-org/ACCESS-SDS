@@ -1,6 +1,51 @@
-Use Case: Remote development using VS Code Server  
-Code details and examples:  
-- Install the VS Code Server on a remote machine and access it through a web browser to develop code remotely.  
-- Connect to the remote VS Code Server by entering the server URL in the web browser.  
-- Use the VS Code interface to edit code, debug, and collaborate with others in real-time.  
-- Command to run: `N/A - Access the VS Code Server through a web browser`
+Use Case: Using Visual Studio Code Server for remote development, debugging, and testing.
+
+Code details and examples: Code
+
+1. Command to start vs code server (vscodeserver):
+
+```sh
+./code-server --port 8080 --auth none
+```
+
+2. Once you have started the server, you should be able to access the Visual Studio Code interface via your web browser by navigating to http://localhost:8080.
+
+The file format required depends on the specific actions you want to perform. For instance, if you want to run a Python or Node.js program, your files should be in .py or .js format respectively. 
+
+Python file (sample.py):
+
+```python
+def hello(name):
+    print(f"Hello, {name}")
+
+hello("Code Server User!")
+```
+Command to run python file:
+
+```sh
+python sample.py
+```
+
+Node.js file (sample.js):
+
+```javascript
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello, Code Server User!\n');
+});
+
+server.listen(port, hostname, () => {
+  console.log('Server running');
+});
+```
+
+Command to run Node.js file:
+
+```sh
+node sample.js
+```
+
+These examples are simple but they illustrate the basic usage of Visual Studio Code Server. Please note that to run python or Node.js files, it's necessary to have the corresponding runtime environments (Python or Node.js) installed in your system. The use of Visual Studio Code Server extends far beyond this and can accommodate more complex use cases with more complex file structures and programming languages.

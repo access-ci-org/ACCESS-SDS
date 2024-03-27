@@ -1,0 +1,40 @@
+Use Case: Library for Inter-Client Exchange (libICE) is useful for maintaining session protocol between clients and the server in a network system. It allows multiple clients to communicate with each other and the server efficiently.  
+
+Code Details and Examples: 
+
+Code:
+```c
+#include <X11/ICE/ICElib.h>
+#include <stdio.h>
+
+int main() {
+    IceConn connection;
+    char *networkId = "192.168.0.1"; // example network ID, you may change it
+    // Initiate the connection to the ICE network
+    connection = IceOpenConnection(networkId, NULL, False, 0, NULL);
+    // Check if the connection is successful
+    IceConnectStatus status;
+    for (;;) {
+        status = IceConnectionStatus(connection);
+        if (status == IceConnectPending)
+            continue;
+        if (status == IceConnectAccepted) 
+            printf("Connection established with ICE network.\n");
+        else 
+            printf("Failed to connect to ICE network.\n");
+        break;
+    }
+    return 0;
+}
+```
+
+Command to run the above ICElib C code will depend on the C compiler you are using, with gcc (GNU Compiler Collection):
+
+```bash
+gcc ice_example.c -lICE -lSM -o ice_example
+./ice_example
+```
+
+The `-lICE` and `-lSM` flags are to link the code to ICElib and Session Management library respectively. The `ice_example.c` is the source code file name and `ice_example` is the output executable file.
+
+There is no input file required for this as the program does not take any input from a file. It is a simple client connection initialization example. A real world example will have more specific to the system sender, listener and message details set up to use ICE protocol effectively.

@@ -1,0 +1,31 @@
+Use Case: The r-pillar package is used in R programming for styling and formatting outputs. It provides tools for accurately formatting numbers, dates, times, and text, and for aligning them in a column. It allows users to create complex, formatted and coloured console outputs with consistent width.
+
+Code details and examples:
+Code:
+
+```r
+# Load library
+library(pillar)
+
+# Create a simple dataframe
+df <- data.frame(Name = c("John", "Mike", "Sara"),
+                 Age = c(23, 35, 30),
+                 Salary = c(2000, 3500, 3000))
+
+# Print dataframe with pillar
+pillar::pillar(df)
+```
+
+Above code will print:
+
+```
+# A tibble: 3 x 3
+  Name   Age Salary
+  <chr> <dbl>  <dbl>
+1 John     23   2000
+2 Mike     35   3500
+3 Sara     30   3000
+```
+Command to run:
+
+This code can be executed in any R environment by simply pasting and running the script.

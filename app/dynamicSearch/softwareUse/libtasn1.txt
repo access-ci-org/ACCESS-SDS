@@ -1,0 +1,72 @@
+Use Case: libtasn1 is a standalone library in C for managing ASN.1 (Abstract Syntax Notation One) structures, which are used for representing, encoding, transmitting, and decoding data in telecommunications and computer networking. 
+
+Code details and examples: Code
+
+Sample input file (ASN.1 structure):
+
+filename: sample.asn
+```
+Test DEFINITIONS ::=
+BEGIN
+   MyType ::= INTEGER
+END
+```
+
+Command to compile ASN.1 structure:
+
+```bash
+asn1Parser sample.asn
+```
+
+This command will create a C structure named sample_asn.h which can be used for data transmission and processing.
+
+Sample usage in C code:
+
+filename: main.c
+```c
+#include <libtasn1.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+static const asn1_static_node my_asn1_tab[] = {
+  { "Test", 536875024, NULL },
+  { NULL, 1073741836, NULL }
+};
+
+int main() {
+  asn1_node definitions = NULL, structure = NULL;
+  char errorDescription[ASN1_MAX_ERROR_DESCRIPTION_SIZE];
+  int result;
+
+  result = asn1_array2tree (my_asn1_tab, &definitions, errorDescription);
+  if (result != ASN1_SUCCESS)
+  {
+    printf ("error in array2tree: %s\n", errorDescription);
+    exit (1);
+  }
+
+  result = asn1_create_element (definitions, "Test.MyType", &structure);
+  if (result != ASN1_SUCCESS)
+  {
+    printf ("error in create_element: %s\n", errorDescription);
+    exit (1);
+  }
+
+  asn1_delete_structure (&definitions);
+  asn1_delete_structure (&structure);
+
+  return 0;
+}
+```
+
+Command to compile C code using gcc:
+```bash
+gcc main.c -ltasn1 -o main
+```
+
+Command to run the compiled code:
+```bash
+./main
+``` 
+
+The example provided has no specific output. Normally, the resulting ASN1 structure would be used in other parts of a larger program.

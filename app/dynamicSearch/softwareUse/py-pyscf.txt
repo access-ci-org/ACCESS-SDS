@@ -1,0 +1,24 @@
+Use Case: PySCF is a Python library for quantum chemistry computations. It can perform a variety of tasks including Hartree-Fock (HF), Density Functional Theory (DFT), many-body perturbation theory (MBPT), and coupled-cluster (CC) calculations. 
+
+Code details and examples: Code
+
+In PySCF, you generally need to first specify the molecule/information. An example would be setting up a H2 molecule calculation.
+
+```python
+from pyscf import gto, scf
+mol = gto.M(
+    atom = 'H 0 0 0; H 0 0 1',  # positions of H atoms
+    basis = 'sto-3g'            # basis set
+)
+```
+
+Once the molecule is set up, you can perform a calculation (such as HF):
+
+```python
+mf = scf.RHF(mol)
+print('E(HF) =', mf.kernel())
+```
+
+The command to run the calculations would be the usual `python filename.py` where `filename.py` is the name of the Python file containing the script.
+
+The input for PySCF typically takes the form of a standard Python script, and the input specifications largely depend on the specific quantum chemistry task. For example, for a standard HF calculation all you need are the atom positions and types, and the basis set. For a more complex calculation you might need to specify other details such as the number of electrons, spin multiplicity, etc. Furthermore, additional parameters can be used to control the precision of the calculation, the convergence criteria, etc.

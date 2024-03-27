@@ -1,0 +1,34 @@
+Use Case: Convert a Julian Date to a proleptic Gregorian date, or vice versa. 
+
+Code details and examples: 
+
+Julian day numbers are used in astronomy to date astronomical observations, thus eliminating the difficulties resulting from the irregular durations of the day in solar time. Julian Dates are simply a continuous count of days and fractions since noon Universal Time on January 1, 4713 BCE.
+
+Example:
+
+Code:
+```python
+from jdcal import gcal2jd, jd2gcal
+
+# converting a proleptic Gregorian date to a Julian date
+year = 2023
+month = 7
+day = 14
+jd = sum(gcal2jd(year, month, day))
+print(f"The Julian Date for {day}/{month}/{year} is {jd}")
+
+# converting a Julian date to a proleptic Gregorian date
+jd = 2457221.5
+date_tuple = jd2gcal(jd, 0)
+year = date_tuple[0]
+month = date_tuple[1]
+day = date_tuple[2]
+print(f"The proleptic Gregorian date for JD {jd} is {day}/{month}/{year}")
+```
+
+Command to run this code:
+```bash
+python3 jdcal_example.py
+```
+
+The jdcal package does not require any input files. You just need to provide year, month, and day as integers to convert them into a Julian date, and a Julian date to convert it into a proleptic Gregorian date.

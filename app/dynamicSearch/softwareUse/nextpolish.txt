@@ -1,0 +1,42 @@
+Use Case: NextPolish is a useful tool for genome assembly and polishing. It uses both ONT and Illumina reads and employs an iterative correction mode that gradually improves the accuracy of assembly.
+
+Code Details and Examples:
+
+Code:
+
+The input files for NextPolish include:
+1. The draft genome assembly in FASTA format.
+2. The short reads in FASTQ format.
+3. The long reads in FASTQ format.
+
+The command line to run with NextPolish is generally as follow:
+
+```
+nextPolish1 sgs_options.cfg
+```
+
+NextPolish needs a specific config file (sgs_options.cfg), below is an example:
+
+```
+[sgs_option]
+sgs_fofn = ./input.fofn
+genome = ./input.genome.fa
+rounds = 2
+sgs_options = -max_depth 100
+job_type = local
+job_prefix = nextPolish
+task = 121151
+rewrite =yes
+rerun = 3
+help = full 
+```
+
+Where:
+- sgs_fofn is a text file containing the path to your short reads (Illumina) data. 
+- genome is the path to your draft assembly.
+- rounds is the number of times to iterate the correction. 
+- sgs_options are the options to pass to minimap2 when aligning the short reads to the draft genome. For example, max_depth 100 will limit the depth of sequencing to avoid wasting time on super deep regions.
+- The other options control job handling and whether to overwrite or retry failed jobs.
+
+The output of NextPolish includes:
+- The polished genome assembly in FASTA format.

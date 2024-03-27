@@ -1,45 +1,37 @@
-LMDB (Lightning Memory-Mapped Database) is a fast, memory-efficient database library. 
+Use Case: LMDB is a software library that provides a disk-map capability. The library is designed to provide a C library interface for applications that need to manipulate a persistent key-value store on disk. 
 
-Use Case: Creating an LMDB database with Python
+Code details and examples: 
 
-Code details and examples:
+Code:
+
+Here's an example of using LMDB in Python:
+
 ```python
 import lmdb
 
-# Create a new LMDB environment
-env = lmdb.open('mydatabase', map_size=104857600)  # 100 MB map size
+# Open LMDB database.
+env = lmdb.open('/path/to/mylmdb')
 
-# Begin a new write transaction
+# Write to the database.
 with env.begin(write=True) as txn:
-    # Open the database
-    db = txn.cursor()
+    txn.put(b'key', b'value')
 
-    # Insert key-value pairs
-    db.put(b'key1', b'value1')
-    db.put(b'key2', b'value2')
-
-# Close the LMDB environment
-env.close()
-```
-
-Use Case: Accessing an LMDB database with Python
-
-Code details and examples:
-```python
-import lmdb
-
-# Open an existing LMDB environment
-env = lmdb.open('mydatabase', readonly=True)
-
-# Begin a read transaction
+# Read from the database.
 with env.begin() as txn:
-    # Open the database
-    db = txn.cursor()
+    print(txn.get(b'key'))
 
-    # Retrieve value for a key
-    value = db.get(b'key1')
-    print(value)
-
-# Close the LMDB environment
+# Close the database.
 env.close()
 ```
+
+In this example, '/path/to/mylmdb' is a string that specifies the directory in which the LMDB database resides. The 'b' before 'key' and 'value' is used to convert the strings to bytes, as LMDB operates on bytes.
+
+Command to run: 
+
+```
+python lmdb_example.py
+```
+
+Note: The name of the python script is `lmdb_example.py`. Please replace it with your script name. 
+
+This command assumes that the Python script is named lmdb_example.py and that it is located in the same directory where the command is run. It also assumes that Python is installed and available in your command line environment.

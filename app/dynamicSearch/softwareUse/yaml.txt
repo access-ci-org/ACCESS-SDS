@@ -1,34 +1,28 @@
-Use Case: YAML
-Code details and examples:
-YAML (YAML Ain't Markup Language) is a human-readable data serialization format that is often used with configuration files.
+Use Case: YAML is not a software package in itself, but a human-friendly data serialization language that is often used to write configuration files for many software applications. It’s particularly popular in configuration files for Ruby on Rails and other Ruby applications, Docker, Kubernetes, and more. 
 
-Sample input file (example.yaml):
+Code details and examples: 
+
+For example, in the following YAML file (sample_input.css.yml), the CSS styles are defined and loaded in a Ruby on Rails application.
+
 ```yaml
-# Sample YAML file
-name: John Doe
-age: 30
-city: New York
-interests:
-  - hiking
-  - photography
-  - cooking
+stylesheets:
+  - reset
+  - grid
+  - typography
 ```
 
-Code snippet to read and parse YAML file in Python:
-```python
-import yaml
+In this Ruby code snippet, the YAML file is loaded:
 
-# Load YAML file
-with open('example.yaml', 'r') as file:
-    data = yaml.safe_load(file)
+```ruby
+require 'yaml'
 
-# Access data
-print(data['name'])
-print(data['age'])
-print(data['interests'])
+file = YAML.load_file('sample_input.css.yml')
+
+file['stylesheets'].each do |stylesheet|
+  puts stylesheet
+end
 ```
 
-Command to run the Python script:
-```
-python example.py
-```
+This Ruby code reads in the YAML file, then for each stylesheet mentioned in the file, it prints the name of the stylesheet to the command line. There's no particular command to run YAML files as they are typically used as configuration files. 
+
+The format of YAML files is quite versatile and depends on the specific use case. The data in YAML files often looks like key-value pairs, such as in the example above. Here, the key is "stylesheets" and the value is a list of stylesheets ("reset", "grid", "typography").

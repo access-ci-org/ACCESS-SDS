@@ -1,0 +1,46 @@
+Use Case: Use MariaDB for a variety of data manipulation tasks, including creating databases, retrieving data, updating records, and deleting information. MariaDB is a community-developed fork of MySQL intended to remain free under the General Public License.
+
+Code details and examples: Code.
+
+Sample Input File: Not required in this context as MariaDB uses SQL commands for operation.
+
+Format Required: Command-line SQL instructions
+
+Any specifications and details in input files: N/A
+
+Code Snippet (CRUD operations):
+
+To use MariaDB, first you must login with a valid user. If you have the root access you can use the following command.
+```
+mysql -u root -p
+```
+Creating Database,
+```SQL
+CREATE DATABASE sampleDB;
+```
+Use the database,
+```SQL
+USE sampleDB;
+```
+Create a new table,
+```SQL
+CREATE TABLE employees (id INT PRIMARY KEY NOT NULL, name VARCHAR(50) NOT NULL, position VARCHAR(50) NOT NULL);
+```
+Insert a record,
+```SQL
+INSERT INTO employees (id, name, position) VALUES (10,'John', 'Engineer');
+```
+Retrieve the data,
+```SQL
+SELECT * FROM employees;
+```
+Update a record,
+```SQL
+UPDATE employees SET name = 'Mike' WHERE id = 10;
+```
+Delete a record,
+```SQL
+DELETE FROM employees WHERE id = 10;
+```
+
+Command to run: The given code snippets can be executed step by step on the MariaDB command interface.

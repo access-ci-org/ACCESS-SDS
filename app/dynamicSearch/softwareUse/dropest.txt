@@ -1,0 +1,22 @@
+Use Case: dropest is a bioinformatics package that is utilized for analyzing droplet-based single-cell RNA-seq data. The tool provides rates, biases correction among other outputs in relation to scRNA-seq data.
+
+Code Details and Examples:
+Code:
+
+Your input file would be in BAM or SAM format. For this example, let's assume the file is called "input.bam".
+
+Command to run dropest:
+
+`dropest -m -g [gtf_file] input.bam`
+
+This command will run dropest with the input file "input.bam" and a GTF file that specifies gene annotations.
+
+The `-m` option tells dropest to calculate the statistics for the matrix, while the `-g` option is used to provide the path to your GTF file.
+
+On completion, dropest will generate 'filtered.matrices.rds' output file. The file contains a list with E, D and W matrices and ERCC information. 
+
+`readRDS("filtered.matrices.rds")`
+
+It's important to note, the input BAM/SAM files should be aligned to your reference genome before running dropest. The files should also be sorted by cell and UMI barcodes incorporated in your read IDs. 
+
+The GTF file should be the same reference file used for aligning your reads. It must be in GTF format and must match your reference genome.

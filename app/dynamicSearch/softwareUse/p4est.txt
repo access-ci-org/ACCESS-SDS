@@ -1,45 +1,59 @@
-Use Case: p4est is a library for dynamic, adaptive and parallel refinement on forests of octrees. It enables the construction and manipulation of forests of octrees and can be used in a variety of scientific computing applications.
+Use Case: p4est is a library for the parallel adaptive refinement of forest-of-octrees in high-performance computing. As a result, it's essential for managing a mesh of quadrilateral or hexahedral elements in 2D or 3D domains respectively. If you're working in a complex environment that requires dynamic load balancing in a domain decomposition setting, p4est is a valuable tool.
 
-Code details and examples:
-1. Creating an octree:
+Code details and examples: Code
+
+To make an executable, you might need a driver C file, e.g., `p4est_step1.c`.
+
+Sample input file: There's no direct input file needed as p4est creates and manages the octree mesh itself through the code.
+
+1. Driver File: Below is an example of how a driver file might look.
+
 ```c
-// Initialize p4est library
-p4est_init(NULL, SC_LP);
+#include <p4est_to_p8est.h>
+#include <p8est_geometry.h>
+#include <p8est_vtk.h>
+#include <p8est_ghost.h>
 
-// Create an octree
-int min_level = 0;
-int max_level = 4;
-size_t dim = 2; // Dimension of the octree (2D or 3D)
-p4est_connectivity_t *conn = p4est_connectivity_new_unitsquare(); // For 2D
-p4est_t *p4est = p4est_new(conn, min_level, max_level, dim);
+int
+main (int argc, char **argv)
+{
+  int                 mpiret;
+  sc_MPI_Comm         mpicomm;
+  p8est_t            *p8est;
+  p8est_connectivity_t *conn;
 
-// Refine the octree
-int num_refinements = 3;
-p4est_refine(p4est, num_refinements);
+  mpiret = sc_MPI_Init (&argc, &argv);
+  SC_CHECK_MPI (mpiret);
 
-// Destroy the octree
-p4est_destroy(p4est);
-p4est_connectivity_destroy(conn);
+  mpicomm = sc_MPI_COMM_WORLD;
 
-// Finalize p4est library
-p4est_finalize();
+  conn = p8est_connectivity_new_brick (2, 2, 0);
+  p8est = p8est_new (mpicomm, conn, 0, NULL, NULL);
+
+  p8est_destroy (p8est);
+  p8est_connectivity_destroy (conn);
+
+  sc_finalize ();
+
+  mpiret = sc_MPI_Finalize ();
+  SC_CHECK_MPI (mpiret);
+
+  return 0;
+}
 ```
 
-2. Sample input file for the octree (input.txt):
-```
-2
-3
-1 0 0
-0 1 0
-0 0 0
-1 1 1
-2 1 1
-1 2 1
-1 1 2
+2. Compile the driver file:
+
+```bash
+gcc -o myApp p4est_step1.c $(pkg-config --cflags --libs p4est)
 ```
 
-3. Command to compile and run the code (Assuming the code is saved in code.c):
+Replace 'p4est_step1' with the name of your file.
+
+Run instructions:
+
+```bash
+mpirun -np 4 ./myApp
 ```
-gcc code.c -o octree_example -lp4est -lsc
-./octree_example
-```
+
+Replace '4' with the number of cores you want to use, and 'myApp' with the name of your Application.

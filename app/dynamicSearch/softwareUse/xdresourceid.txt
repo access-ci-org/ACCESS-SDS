@@ -1,0 +1,26 @@
+Use Case: Use of the xdresourceid package for identifier resolution in the context of heterogeneous data sources in Python.
+
+Code details and examples: Code:
+```python
+import xdresourceid
+
+# Create a resolver for DOIs
+resolver = xdresourceid.get_resolver('doi')
+
+# Get a resource
+resource = resolver.get('10.1234/foo')
+
+# Use the resource
+print(resource.url)
+print(resource.content)
+```
+On usage of the above code, `xdresourceid` library is imported and `get_resolver` method is called with 'doi' as argument to create a resolver for DOI (Digital Object Identifiers). To fetch a resource corresponding to a DOI identifier the `get` method is called on the resolver object. It returns resource object related to the identifier public url and content are printed.
+
+Input files: No input files needed.
+Format required: No particular format needed.
+Any specifications and details in input files: No input files needed.
+
+Command to run:
+```
+python script.py
+```

@@ -1,0 +1,63 @@
+Use Case: The GROMACS Optimized Bio-molecular Force Field (GOBFF) is typically used in molecular dynamics simulations to gain insights into the behavior and interactions of molecules.
+
+Code details and examples: Code
+
+Input file format:
+The input to GOBFF mainly requires two files: equil.mdp and topology.top.
+
+The equil.mdp file outlines the details of the simulation such as the temperature control method, the type of ensemble, and the duration of the simulation.
+An example of equil.mdp is as follows:
+
+; RUN CONTROL PARAMETERS
+integrator               = md 
+tinit                    = 0 
+dt                       = 0.002
+nsteps                   = 500000
+nstcomm                  = 1
+nstxout                  = 5000
+nstvout                  = 5000
+nstfout                  = 0
+nstlog                   = 5000
+nstenergy                = 5000
+nstxout-compressed       = 5000
+; FORCE PARAMETER
+cutoff-scheme            = Verlet
+ns-type                  = grid
+nstlist                  = 10
+rcoulomb                 = 1.0
+rvdw                     = 1.0
+...
+
+The topology.top file outlines the molecular structure and the force field parameters.
+An example of topology.top is as follows:
+
+;
+;	Example topology file
+;
+[ defaults ]
+; nbfunc	comb-rule	gen-pairs	fudgeLJ	fudgeQQ
+1		2		yes		0.5	0.8333...
+
+[ atomtypes ]
+; name	bond_type	atomic_number	mass	charge
+O	8	8	15.9994	-0.8476
+H	1	1	1.00794	0.4238...
+
+[ moleculetype ]
+; Name
+WATER
+
+[ atoms ]
+; n	type	resnr	residue	atom	cgnr 	charge
+1	O	1		WAT		O	1		-0.8476
+2	H	1		WAT		H1	1		0.4238...
+
+Command to run it:
+First, you need to pre-process your input files. This is done with the command:
+```
+gmx grompp -f equil.mdp -c system.gro -p topology.top -o system.tpr
+```
+Then, the simulation is run with:
+```
+gmx mdrun -v -deffnm system
+```

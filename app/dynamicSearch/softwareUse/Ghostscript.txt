@@ -1,19 +1,37 @@
-Use Case: Ghostscript is a powerful interpreter for the PostScript language and Portable Document Format (PDF) files. It can be used for various tasks such as converting images, merging PDF files, and more.
+Use Case: Ghostscript is used to interpret PostScript language and PDF files; create high-quality rasterizations of pages in these formats for print and prepress; display such pages on screen; convert these file types to multiple, popular, image file formats; create bitmap or scalable fonts; etc. 
 
-Code details and examples:
-1. Converting a PostScript file to PDF:
-```bash
-gs -sDEVICE=pdfwrite -o output.pdf input.ps
+Code details and examples: Code
+
+Sample Input File: 
+You need a Postscript or PDF file to be able to use Ghostscript. It is typically a .ps or .pdf file. Standard format for these files can't be described as they are usually already standard formatted files exported from various software. 
+
+Command:
+To use Ghostscript to convert a Postscript file to a PDF, use the following command:
 ```
-2. Merging multiple PDF files into one:
-```bash
-gs -q -dNOPAUSE -sDEVICE=pdfwrite -sOutputFile=output.pdf file1.pdf file2.pdf
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/default -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.ps
 ```
-3. Extracting text from a PDF file:
-```bash
-gs -sDEVICE=txtwrite -o output.txt input.pdf
+Where 'input.ps' is your Postscript input file and 'output.pdf' is the output PDF file name. 
+
+Code Snippets:
+A simple PostScript program that draws a red, one-inch square at the bottom left corner of the page is as follows:
+
 ```
-4. Compressing a PDF file:
-```bash
-gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf
+%!PS
+72 72 moveto
+0 72 rlineto
+72 0 rlineto
+0 -72 rlineto
+closepath
+2 setlinewidth
+0.8 setgray
+stroke
+showpage
 ```
+
+This will create a square on a page when run with Ghostscript. 
+
+Command to run the code snippet is: 
+```
+gs square.ps
+```
+Here 'square.ps' is the name of the file containing the code snippet.

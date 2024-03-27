@@ -1,0 +1,41 @@
+Use Case: Use Qwt for creating custom plots, handles, gauges, and diagrams for visual data representation.
+
+Code details and examples: Code:
+
+Sample Input File (in .txt format). This input file includes two columns of numbers representing X and Y coordinates for a plot:
+
+```
+1 2
+2 3
+3 4
+4 5
+5 6
+```
+
+Here is the code for creating a simple curve using Qwt in a Qt application in C++:
+
+```c++
+#include <qwt_plot.h>
+#include <qwt_plot_curve.h>
+#include <qwt_series_data.h>
+
+QwtPlot * plot = new QwtPlot(parent);
+QwtPlotCurve * curve = new QwtPlotCurve();
+
+QVector<QPointF> samples;
+samples << QPointF(1, 2) << QPointF(2, 3) << QPointF(3, 4) << QPointF(4, 5) << QPointF(5, 6);
+
+curve->setSamples(samples);
+curve->attach(plot);
+
+plot->replot();
+```
+
+Command to compile and run:
+
+```bash
+g++ -o plotExample plotExample.cpp -lqwt
+./plotExample
+```
+
+The above example assumes that you've created a C++ file named `plotExample.cpp` in which you've written the given code, and that the Qwt library is installed in your system. The `-lqwt` flag is used with g++ to link the Qwt library to the application. Once compiled successfully, you can run the executable `plotExample` to view the plot.

@@ -1,0 +1,39 @@
+Use Case: Parsnp is a tool to identify core genome SNPs quickly and accurately within closely related set of prokaryotic genomes. The user inputs a set of genomes in FASTA format (nucleotide sequences), and parsnp outputs a whole genome alignment of the core genome, a variant call format file (which includes detected SNP sites), and a newick formatted phylogenic tree file.
+
+Code details and examples: 
+
+Code: The software parnsp is implemented via the command line.
+
+Sample Input File(s): 
+
+The input to parsnp is a directory with .fasta files. Each line of a .fasta file is either a sequence ID starting with a '>' character, followed by the sequence on the next lines.
+
+Example:
+
+```
+>sequence1
+ATGCATGCATGCATGCATGC
+>sequence2
+ATGCATGCATGTATGCATGC
+>sequence3
+ATGCATGCATGCATGCATGA
+```
+
+Command to Run:
+
+The command to run parsnp on a directory of genomes is:
+
+```
+parsnp -d /path/to/genomes/
+```
+Note: "/path/to/genomes/" should be replaced by the directory where the .fasta files are stored.
+
+Specifications and Details in Input Files: 
+
+The input files should contain the genome sequences in the FASTA format. For example, each sequence should start with a ">" followed by the sequence name, and the sequence itself should be in the next line. The sequence can be either upper-case or lower-case. No special characters should be included. 
+
+Output Files:
+
+Parsnp will output a .xmfa file which is the multiple genome alignment, a .vcf file which has all the SNPs detected, and a .tree file which is the phylogenetic tree of the input genomes.
+
+Note: All the above commands and examples are based on Parsnp version 1.2. The command and file formats may differ based on the version and source of download. Please refer to the Parsnp manual for precise instructions.

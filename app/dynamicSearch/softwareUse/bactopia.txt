@@ -1,0 +1,21 @@
+Use Case: Bactopia is a tool used for the analysis of bacterial genomes with a focus on the outbreak analysis, antibiotic resistance profiling, and quality control.
+
+Code Details and Examples:
+
+Code:
+
+Specifying an input folder that contains all Fastq files in the current working directory.
+
+`bactopia --R1 samples/R1.fastq.gz --R2 samples/R2.fastq.gz --cpus 4 --outdir project_folder`
+
+This command must be run with sufficient resources allocated as it runs multiple containers within it.
+
+Note:
+
+In the above command,
+- R1.fastq.gz and R2.fastq.gz are input files that would typically be generated through next-generation sequencing. They are paired-end reads where R1 refers to the forward reads and R2 refers to the reverse reads.
+- File end with extension .gz because they are compressed using gzip to save space.
+- `--cpus 4` refers to allocation of 4 cores in the CPU for this task.
+- `project_folder` would be the name given to the directory where output files would be stored.
+
+Bactopia uses a multitude of other software programs internally and uses the input provided to deliver a well set output. Input requirements for Bactopia are relatively simple and it is designed such that the user does not need to worry about dataset generation for individual tools used within Bactopia. These are taken care of internally.

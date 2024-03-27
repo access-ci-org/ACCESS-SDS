@@ -1,0 +1,28 @@
+Use Case: Build is a commonly used utility for building and managing projects made up from multiple source or script files. 
+
+Code details and examples: 
+
+Code
+For instance, a simple Makefile to build a C program would look like this:
+
+`
+CC=gcc
+CFLAGS=-I.
+
+all: hello-world
+
+hello-world: hello-world.o
+ $(CC) -o hello-world hello-world.o 
+
+clean:
+ rm -f *.o hello-world
+`
+
+Here, "all" is the default target, which depends on the "hello-world" target. The "hello-world" target itself depends on the "hello-world.o" file. The code that follows the colon is the command that make should run to generate the "hello-world" executable from the "hello-world.o" object file. The "clean" rule doesn't depend on any other rules, but it's used to remove all generated files.
+
+The required input for the Makefile would be a C source file (hello-world.c).
+
+The command to run this would be "make" at the command line from the folder containing the Makefile.
+   
+
+ 

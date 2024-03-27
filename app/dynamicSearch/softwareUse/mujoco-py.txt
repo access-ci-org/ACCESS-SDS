@@ -1,0 +1,40 @@
+Use Case: mujoco-py is a Python wrapper for the MuJoCo physics engine. It enables the advanced physics simulation and rendering for environments such as OpenAI Gym. It's widely used for building and testing AI models in robotics.
+
+Code details and examples:
+
+Code:
+
+To use mujoco-py, you first need to import it in your Python script.
+
+```python
+import mujoco_py
+#from os.path import dirname
+#model = mujoco_py.load_model_from_path(dirname(mujoco_py.__file__) + "/xmls/claw.xml")
+#sim = mujoco_py.MjSim(model)
+
+#print(sim.data.qpos)
+```
+In this example, the MuJoCo model file (claw.xml) is loaded and a simulation is started. The current positions of all joints in the model are then printed.
+
+To run this script, you would use the command (assuming you saved it as `mujoco_test.py`):
+
+```shell
+python mujoco_test.py
+```
+This Python script will output the current positions of all joints in the model. By calling `sim.data.qpos` more times, you will get the new positions after physics has been simulated for some time. 
+
+Remember to replace the file path and file name of your XML model file. The XML model file is the description of a robot or a full environment that will be simulated. It should be a valid MuJoCo XML.
+
+For example, the XML file for a one joint robot will look like:
+```xml
+<mujoco model="robot">
+  <worldbody>
+    <light name="top" pos="0 0 1.3"/>
+    <body name="robot" pos="0 0.2 0">
+      <joint name="joint" type="hinge" axis="1 0 0"/>
+      <geom name="geom" type="sphere" size="0.1"/>
+    </body>
+  </worldbody>
+</mujoco>
+```
+This describes a one joint robot (hinge joint) with a spherical shape. The robot and the joint are named ("robot" and "joint" respectively), and you will use these names to interact with them through mujoco-py.

@@ -1,16 +1,73 @@
-Use Case: Image compression and optimization
+Use Case: libwebp is typically used to convert images to the WebP format for smaller file sizes while maintaining a similar level of quality. 
 
-Code details and examples:
+Code details and examples: 
 
-libwebp is a library for handling the WebP image format. Below is an example of how you can use libwebp to compress an image using the command line.
+Code: 
+
+The command line tool is simple to use. The basic usage is `cwebp input_image -o output_image.webp`. Here's a more detailed example:
 
 ```bash
-# Compress an image using libwebp
-cwebp input_image.png -o output_image.webp
+cwebp -q 80 input.jpg -o output.webp
 ```
 
-In the above example:
-- `input_image.png` is the input image file you want to compress.
-- `output_image.webp` is the output WebP image file.
+Here, `-q` sets the quality factor, which ranges from 0 to 100. Higher values will result in larger files, but better image quality.
 
-You can also specify additional options such as quality settings and compression levels. More information about additional options can be found in the libwebp documentation.
+The input file should be an image in one of the formats that cwebp supports, such as JPEG, PNG, or TIFF. The output file will be the converted image in WebP format.
+
+To decode the WebP image back into a more traditional format, you can use the `dwebp` command:
+
+```bash
+dwebp input.webp -o output.png
+```
+
+libwebp also provides an API for developers who wish to add WebP support to their applications. This typically involves including the relevant header files in your source code and linking against the libwebp library. The input can be any image data that your application can produce, while the output will be the WebP-encoded image data. Use of the API generally involves calls to functions such as `WebPEncodeRGB`, `WebPEncodeBGR`, or similar. Ex:
+
+```c
+#include <webp/encode.h>
+
+// ...
+
+uint8_t* img_data; /* Your RGB image data */
+int width, height; /* Dimensions of your image */
+
+uint8_t* webp_data; /* Output WebP image data */
+size_t webp_data_size;
+
+WebPConfig config;
+if (!WebPConfigInit(&config)) {
+  /* Handle error */
+}
+
+if (!WebPConfigLosslessPreset(&config, 9)) {
+  /* Handle error */
+}
+
+config.method = 6;
+
+if (!WebPValidateConfig(&config)) {
+  /* Handle error */
+}
+
+WebPPicture pic;
+if (!WebPPictureInit(&pic)) {
+  /* Handle error */
+}
+
+pic.width = width;
+pic.height = height;
+if (!WebPPictureImportRGB(&pic, img_data, width * 3)) {
+  /* Handle error */
+}
+
+pic.writer = WebPMemoryWrite;
+pic.custom_ptr = &webp_data;
+
+if (!WebPEncode(&config, &pic)) {
+  /* Handle error */
+}
+
+/* At this point, webp_data contains your WebP image data, and
+   pic.custom_ptr contains the size of the data. */
+
+WebPPictureFree(&pic);
+```

@@ -1,27 +1,16 @@
-Use Case: Visualization of molecular structures in 3D using py3Dmol library.
+Use Case: Visualize and manipulate molecular structures in 3D using a Jupyter Notebook. 
 
-Code details and examples:
+Code details and examples: Code
+
 ```python
 import py3Dmol
 
-# Create a viewer object
-view = py3Dmol.view(width=800, height=600)
-
-# Load a molecular structure file (e.g. PDB format)
-pdb_file = open("input.pdb").read()
-view.addModel(pdb_file, "pdb")
-
-# Style the molecular structure
-view.setStyle({'cartoon': {'color': 'spectrum'}})
-
-# Show the viewer
-view.zoomTo()
-view.show()
+# Initialize a viewer and add a model
+viewer = py3Dmol.view(query='pdb:1dc9')
+viewer.setStyle({'cartoon': {'color':'spectrum'}})
+viewer.zoomTo()
+viewer.show()
 ```
+No input files are needed, instead, the code refers directly to a Protein Data Bank (PDB) id. The data is then fetched online. There is also an option to load data from a local file in PDB format or other recognized structures.
 
-Note: You can create the input file (e.g. input.pdb) containing the molecular structure in PDB format before running the above code.
-
-To run the code, save it in a Python file (e.g. visualize_structure.py) and run it using Python interpreter:
-```
-python visualize_structure.py
-```
+Command to run it: After scripting, it is enough to run the Python script in an environment where py3Dmol has been installed. In this case, a Jupyter Notebook is used.

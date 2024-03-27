@@ -1,0 +1,39 @@
+Use Case: Meraculous is a whole genome assembler for Next Generation Sequencing data geared for large genomes. It uses algorithms to capture all information contained in the sequence data to maximize the quality of the final assembly. 
+
+Code Details and Examples: 
+
+1. The input files needed are paired-end sequences in FASTQ format, configuration file in txt format. 
+
+2. The sample input files and their format are:
+  a) Paired-end sequences:
+
+     ```
+     @read1
+     ACTGACTGACTGACTGA
+     +
+     IIIIIIIIIIIIIIII
+
+     @read2
+     TGACTGACTGACTTACA
+     +
+     IIIIIIIIIIIIIIII
+     ```
+
+  b) Configuration file (meraculous.config):
+
+     ```
+     PARAMETERS {
+     LIBRARY {
+       seq_prefix  = "sequences";
+       mean_insert = 200.0;
+       std_dev = 20.0;
+     }}
+     ```
+
+3. The code to run meraculous is:
+
+    `meraculous -c meraculous.config`
+
+This command will initiate the Meraculous pipeline with the configuration outlined in the `meraculous.config` file. The pipeline includes steps for error correction, u-unitig construction, and scaffold generation, among others.
+
+Note that the parameters within the configuration file can be tailored to suit the specifics of the dataset being used. For instance, the `mean_insert` and `std_dev` parameters would need to be adjusted based on the paired-end sequencing approach used to generate the FASTQ files. All paths used in the configuration file should also be absolute, not relative.

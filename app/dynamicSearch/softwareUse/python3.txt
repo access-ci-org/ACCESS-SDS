@@ -1,9 +1,73 @@
-Use Case: General-purpose programming language
+Use Case: Fundamental mathematical operations, string manipulations, and data management. 
+
 Code details and examples: 
+
+1. Fundamental mathematical operation:
+
+Code:
 ```python
-print("Hello, World!")
+# Addition
+num1 = 5
+num2 = 3
+add = num1 + num2
+print('The sum of {} and {} is {}'.format(num1, num2, add))
+
+# Subtraction
+sub = num1 - num2
+print('The difference of {} and {} is {}'.format(num1, num2, sub))
+
+# Multiplication
+mul = num1 * num2
+print('The product of {} and {} is {}'.format(num1, num2, mul))
+
+# Division
+div = num1 / num2
+print('The division of {} and {} is {}'.format(num1, num2, div))
 ```
-To run the above code, save it in a file (e.g., hello.py) and run it using the command:
+Run this by using the command: `python math_operations.py`
+
+2. String manipulation:
+
+Code:
+```python
+# String concatenation
+str1 = 'Hello'
+str2 = ', World!'
+concat = str1 + str2
+print('Concatenated string is: {}'.format(concat))
+
+# String slicing
+name = 'Alice'
+first_three_chars = name[:3]
+print('First three characters in the name are: {}'.format(first_three_chars))
 ```
-python3 hello.py
+Run this by using the command: `python string_manipulation.py`
+
+3. Data management:
+
+Code:
+```python
+# Making a list
+fruits = ['apple', 'banana', 'cherry']
+print('The list of fruits is: ', fruits)
+
+# Adding to a list
+fruits.append('durian')
+print('The updated list of fruits is: ', fruits)
+
+# Removing from a list
+fruits.remove('banana')
+print('The updated list of fruits is: ', fruits)
+
+# Accessing elements in a list
+print('The first fruit is: ', fruits[0])
+
+# Changing elements in a list
+fruits[1] = 'blueberry'
+print('The updated list of fruits is: ', fruits)
+
+# Sorting a list
+fruits.sort()
+print('The sorted list of fruits is: ', fruits)
 ```
+Run this by using the command: `python data_management.py`

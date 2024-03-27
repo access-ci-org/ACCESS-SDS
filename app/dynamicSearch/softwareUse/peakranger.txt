@@ -1,0 +1,30 @@
+Use Case: PeakRanger is a robust open source software that detects peaks from ChIP-seq data. It is capable of calling broad and narrow peaks besides quantifying them.
+
+Code Details and Examples: Code
+
+PeakRanger software takes raw aligned reads and detects positions of DNA-binding proteins or chromatin modifications.
+
+Input files required: two .bam files, one for control input and the other for ChIP sample.
+
+For example, if you have two .bam files named "control.bam" and "sample.bam", and you want to call peaks, and you would use the following command:
+
+```bash
+peakranger ranger --format bam -d control.bam -r sample.bam -o peaks.txt
+```
+
+The "-d" flag is for the ChIP sample, "-r" is for the control, "--format" is to specify that inputs are .bam files, and "-o" is for output file.
+
+In the output file, named here as "peaks.txt", each line represents a peak region. The fields start with chromosome name, start and end positions, peak name (which is in the form of "chr1_peak_1"), score, strand, and signal value.
+
+Please note that proper function requires that the control and test files are aligned to the exact same reference genome. 
+
+Also, please note that .bam files are usually produced by aligning the reads with any aligner like Novoalign, BWA, or Bowtie and then sorted using a tool like samtools. This sorting step is crucial as the tool expects sorted .bam files as its input. 
+
+Besides, .bam files should have indexed files (.bai) present in the same directory, which can be produced with samtools as:
+
+```bash
+samtools index control.bam
+samtools index sample.bam
+``` 
+
+Where control.bam and sample.bam are your input .bam files. This will create .bai files with same names in the same directory.

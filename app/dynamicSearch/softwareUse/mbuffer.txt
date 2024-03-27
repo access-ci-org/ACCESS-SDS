@@ -1,0 +1,24 @@
+Use Case: Use mbuffer to improve the performance of data transfers by avoiding disk I/O bottlenecks. This is useful when transferring large datasets from one system to another over a network.
+
+Code details and examples: Code:
+
+mbuffer is a command-line application that copies standard input to standard output, buffering data in memory to smooth out the data flow and report progress and data throughput.
+
+The input file is usually specified as standard input, thus redirection or pipe is used. Output file is specified with '-o' flag.
+
+Sample Input File:
+
+Let's assume you have a large file named `largefile.dat`
+
+Command to use mbuffer:
+
+```bash
+cat largefile.dat | mbuffer -s 128k -m 1G -o outputfile.dat
+```
+
+Here, 
+'-s 128k' sets the block size to 128 kilobytes.
+'-m 1G' sets the maximum memory to be used for buffering to 1 gigabyte.
+'-o outputfile.dat' specifies the output file.
+
+Please note that mbuffer does not require a specific file format, it works with raw binary data from standard input to standard output.

@@ -1,63 +1,39 @@
-Use Case: CP2K is an open-source quantum chemistry and solid state physics software package. It can perform atomistic simulations of solid state, liquid, molecular, and biological systems.
+Use Case: CP2K is a quantum chemistry and solid state physics software package that can perform atomistic simulations of solid state, liquid, molecular, periodic, material, crystal, and biological systems. CP2K provides a general framework for different modeling methods such as DFT using the mixed Gaussian and plane waves approaches GPW and GAPW. Supported elements include s, p, d, f, g functions up to angular momentum, methods like HF, MP2, RPA, semi-empirical methods, and potentiaLS.
 
-Code details and examples:
-CP2K requires input files in a specific format called the CP2K input file. Here is an example of a simple input file for a molecular dynamics simulation:
+Code details and examples: Code;
 
-```plaintext
-&GLOBAL
-  RUN_TYPE MD
-  PROJECT_NAME Water_MD
-&END GLOBAL
+Input File: Let's say we have a CP2K input file named "test.inp". The file format is divided into sections (denoted by &SECTION), keywords and values. An example input file could look like this:
 
-&MOTION
-  &MD
-    ENSEMBLE NVE
-    TIMESTEP 0.5
-    STEPS 1000
-  &ENDMD
-&END MOTION
-
+```
 &FORCE_EVAL
   METHOD Quickstep
   &DFT
     BASIS_SET_FILE_NAME BASIS_MOLOPT
     POTENTIAL_FILE_NAME GTH_POTENTIALS
-    &MGRID
-      CUTOFF 300
-    &END MGRID
     &QS
+      EPS_DEFAULT 1.0E-10
       METHOD GPW
     &END QS
+    &SCF
+      SCF_GUESS ATOMIC 
+      EPS_SCF 1.0E-7
+      MAX_SCF 300
+    &END SCF
   &END DFT
+  &SUBSYS
+    &CELL
+      ABC 12.418 12.418 12.418
+    &END CELL
+    &COORD
+      C 0.000000  0.000000  0.000000
+      O 1.159076  1.159076  1.159076
+    &END COORD
+  &END SUBSYS
 &END FORCE_EVAL
-
-&SUBSYS
-  &CELL
-    ABC 10 10 10
-  &END CELL
-
-  &KIND H
-    ELEMENT H
-    BASIS_SET DZVP-MOLOPT-SR-GTH
-    POTENTIAL GTH-PBE-q1
-  &END KIND
-
-  &KIND O
-    ELEMENT O
-    BASIS_SET DZVP-MOLOPT-SR-GTH
-    POTENTIAL GTH-PBE
-  &END KIND
-
-  &TOPOLOGY
-    COORD_FILE_NAME water.xyz
-    COORD_FILE_FORMAT xyz
-    CONN_FILE_FORMAT OFF
-  &END TOPOLOGY
-&END SUBSYS
 ```
 
-To run CP2K with the provided input file, you would typically use a command like:
+This file provides input configuration to calculate force evaluation for a CO molecule, using DFT with GPW method and SCF electronic structure method.
 
-```
-cp2k.popt Water_MD.inp > Water_MD.out
-```
+Command to run it: Assuming you have CP2K installed correctly, you could run this example at the terminal by inputting: `cp2k.popt test.inp > output.log` 
+
+The output will be logged into the file output.log.

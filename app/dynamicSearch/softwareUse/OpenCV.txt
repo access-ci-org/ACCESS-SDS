@@ -1,22 +1,28 @@
-Use Case: Image processing, computer vision
-Code details and examples:
-```python
+Use Case: Use OpenCV for image processing operations such as reading an image, gray scaling it and displaying the image.
+
+Code details and examples: Code
+
+Sample Image: The input file must be an image file. For example, we'll use 'example.jpg'.
+
+Specifications: The input image must be present in the directory from which the script is run, or the full path to the file must be given.
+
+Code:
+"""
 import cv2
 
-# Load an image
-image = cv2.imread('sample_image.jpg')
+# load color image 
+img_color = cv2.imread('example.jpg')
 
-# Convert the image to grayscale
-gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+# convert color image to grayscale
+img_gray = cv2.cvtColor(img_color, cv2.COLOR_BGR2GRAY)
 
-# Display the original and grayscale images
-cv2.imshow('Original Image', image)
-cv2.imshow('Grayscale Image', gray_image)
+# Display the two images
+cv2.imshow('Color image', img_color)
+cv2.imshow('Grayscale image', img_gray)
+
+# Need to press any key to close the image windows
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-```
+"""
 
-Command to run:
-```bash
-python my_opencv_script.py
-```
+To run this code a python environment that is installed with OpenCV is necessary. Then use the command : python filename.py or python3 filename.py depending on your python installation to run the script.

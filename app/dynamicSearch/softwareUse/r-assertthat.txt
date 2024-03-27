@@ -1,0 +1,27 @@
+Use Case: r-assertthat is an R package designed to make testing your code easier by providing a set of predicates (assertions) that you can use to check the properties of your variables. It allows to stop the execution of your program when the test fails.
+
+Code details and examples: 
+
+Code:
+```R
+# Load r-assertthat library
+library(assertthat)
+
+# declare test variable
+test <- 1
+
+# use assert_that to test if the test variable is numeric
+assert_that(is.numeric(test))
+
+# use assert_that to test if the test variable is less than 2
+assert_that(test < 2)
+```
+
+In this example, the variable "test" is assigned the value of 1. The function assert_that is then used to test if "test" is a numeric variable, and if "test" is less than 2. When run, if all assertions are true, the function will return silently. If any of the conditions do not hold, an informative error message is thrown.
+
+Command to run:
+You can run the R script either by source command in the R console:
+
+R command line: `$ Rscript your_script.R`
+
+Or in R Studio, you can use the "Run" button.

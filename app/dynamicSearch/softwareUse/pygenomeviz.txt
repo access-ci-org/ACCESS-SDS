@@ -1,0 +1,27 @@
+Use Case: Use pyGenomeViz for genome visualization such as drawing graphics of genome structure and annotation.
+
+Code details and examples: 
+
+Code:
+
+```python
+# Import the module
+from pyGenomeViz.pyGenomeViz import Gene, Genome
+
+# Make a new genome
+myGenome = Genome("myGenomeID")
+
+# Add genes to the genome
+myGene = Gene("myGeneID", start=10, end=20, strand=1)
+myGenome.add_gene(myGene)
+
+# Draw the genome
+myGenome.draw()
+
+```
+
+Input file format: pyGenomeViz does not require any input file. The software is based on Python's matplotlib library, so you create and manipulate data within the Python program itself.
+
+Specifications in input data: This example assumes you have genomic data describing the start, end, and strand of a gene. This data could be obtained from a variety of sources such as a database or a gene annotation file.
+
+Command to run: You run this Python script (saved as a .py file) with `python your_python_script.py` in your command line. Please make sure you have Python and the libraries listed above installed.

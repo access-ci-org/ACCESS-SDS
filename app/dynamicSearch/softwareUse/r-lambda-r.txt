@@ -1,0 +1,51 @@
+Use Case: The primary purpose of r lambda r application is to serve as an implementation of functional programming, in which computation is the evaluation of mathematical functions and avoids data mutation. It is specifically used in R programming language for statistical computing.
+
+Code details and examples:
+
+Code:
+
+In r lambda r, we create a lambda function as follows. Let's say we want to create a lambda function to add two numbers. 
+
+```R
+add <- function(x) {
+  function(y) {
+    x + y
+  }
+}
+```
+In the above function, we have a lambda function that takes 'x' and returns another function that takes another argument 'y'. Then it adds 'x' and 'y'.
+
+To use this function:
+
+```R
+sum <- add(10)
+result <- sum(20)
+print(result)
+```
+In the above code, initially, we have passed 10 to the add function. It has returned another function that has 10 added in its scope. Next, we have called this returned function with 20 as an argument. Hence, it has returned the addition of 10 and 20.
+
+You can run the code by using the command `Rscript your_file_name.R` through your command line. Here, 'your_file_name.R' is the file you want to run.
+
+No specified input files are required for this software, it undergoes computation with the mathematical functions passed directly in the software.
+
+
+Use Case: The 'purrr' package in R also implements the functional programming style similar to r lambda r. This package provides a comprehensive and consistent set of tools to work with lists and functions
+
+Code details and examples:
+
+Code:
+
+```R
+# Load the required library
+library(purrr)
+
+# Simple example to apply function on list
+x <- list(a = 1:5, b = 6:10)
+x %>% map(~.x^2)
+```
+
+In the above code, we are using purrr to square all the numbers in x.
+
+You can run the code by using the command `Rscript your_file_name.R` at the command line.
+
+There are no specified input files for this package, you can directly pass the vectors or lists in the R script.

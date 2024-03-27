@@ -1,18 +1,52 @@
-Use Case: AMDuProf is a performance profiler for AMD GPUs that can help analyze and optimize GPU-accelerated applications.
+Use Case: AMDuProf is a performance analysis tool which is used to analyse the performance and power consumption of written code by analysing CPU and GPU interactions. It is used as an optimization tool, mainly to ensure that code is optimized and executed efficiently with minimal time and resource utilization.
 
 Code details and examples:
-- To use AMDuProf, you first need to install it on your system. Once installed, you can use the following command to profile your application:
-```
-amduprof <application>
-```
 
-- Sample input files: Your GPU-accelerated application that you want to profile.
+Code Input Format: It can analyse code written in multiple languages like C, C++, Python, Java, etc.
 
-- Specifications: AMD GPU hardware and compatible software environment.
+Input file required: "Example.c" (Source code written in appropriate language)
 
-- Code snippet:
-```
-amduprof my_gpu_application
-```
+Specifications in input file: The input file is the source code which is to be analyzed in terms of its execution time, power consumption, CPU-GPU interactions, etc.
 
-Note: For detailed usage and options, please refer to the official AMDuProf documentation.
+Code Snippet:
+
+`
+#include<stdio.h>
+
+int main() {
+  int i, num, j, isPrime;
+
+  printf("Enter a positive number\n");
+  scanf("%d",&num);
+
+  printf("Prime numbers up to %d are:\n", num);
+
+  for(i = 2; i <= num; i++) {
+    isPrime = 1;
+
+    for(j = 2; j <= i/2; j++) {
+      if(i % j == 0) {
+         isPrime = 0;
+         break;
+      }
+    }
+
+    if(isPrime == 1)
+      printf("%d ", i);
+  }
+
+  return 0;
+}
+`
+This C source code calculates and prints all prime numbers up to a certain number. This is just an example, AMDuProf can be used to analyze any code.
+
+Command to run the tool: It takes a PDB file and an executable file to analyze the code performance.
+
+Command:
+`
+AMDuProfCLI.exe collect -m teb -- teb.exe
+` 
+
+The AMDuProf CLI tool collects the Time-based Sampling (TBS) profile ("teb") of the application teb.exe. The command line above triggers TBS mode to collect the performance profile for the provided exe file. Please replace "teb.exe" with your executable file. Note that AMDuProf supports a variety of performance analysis like performance counter, instruction-based sampling, power profiling etc. and a lot of these can be triggered directly from the command line. 
+
+This command runs the analysis and the output is a `*.run` file which contains all the analysis results. This `*.run` file can be opened using AMDuProf GUI to visualize the analysis report.

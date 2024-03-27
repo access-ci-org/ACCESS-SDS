@@ -1,0 +1,31 @@
+Use Case: Variant Effect Predictor (VEP) is a Perl script that annotates variants (such as SNPs, insertions, deletions, CNVs or structural variants), whether they are novel or known. It allows users to input variants in either Variant Call Format (VCF) or in an Ensembl default format and can produce output in VCF, HTML, JSON or tab-delimited text format. It can integrate variant data from various sources (such as dbSNP, 1000 Genomes, or the Ensembl databases) and has built-in plugins for tools such as SIFT and PolyPhen.
+
+Code details and examples:
+
+Code:
+
+Input File: A typical VEP input file would be in vcf format, which consists of a header section, which includes information about the file itself and its contents, and a data section, which contains the actual variants. Here is an example of what one might look like:
+
+```
+##fileformat=VCFv4.0
+#CHROM POS ID REF ALT QUAL FILTER INFO
+20 14370 rs6054257 G A 29 PASS NS=3;DP=14;AF=0.5;DB;H2
+20 17330 . T A 3 q10 NS=3;DP=11;AF=0.017
+```
+
+Command to Run:
+
+Before running the VCF input it is necessary to compress and index it:
+
+```
+bgzip input.vcf
+tabix -p vcf input.vcf.gz
+```
+
+Then, to annotate the variants in the file using VEP, you would use a command like:
+
+```
+./vep -i input.vcf.gz -o output.txt
+```
+
+This command will produce an output.txt file that contains the variant annotations. The preceding "./" indicates that vep is in the current directory; if vep is located elsewhere, it would need to be substituted with the correct path.

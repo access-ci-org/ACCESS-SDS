@@ -1,0 +1,34 @@
+Use Case: This file command-type can be used for storing and operating on data in a structured way. It is common with SQL databases. For this example, we are using SQLite database.
+
+Code details and examples: 
+
+Code:
+Firstly, to interact with a '.db' file using Python3, one needs to use the sqlite3 module.
+
+```python
+import sqlite3
+# Connect to SQLite database
+conn = sqlite3.connect('example.db')
+
+# Create a cursor object
+c = conn.cursor()
+
+# Execute a SQL command
+c.execute("CREATE TABLE stocks (date text, trans text, symbol text, qty real, price real)")
+
+# Insert a row of data
+c.execute("INSERT INTO stocks VALUES ('2006-01-05','BUY','RHAT',100,35.14)")
+
+# Save (commit) the changes
+conn.commit()
+
+# Close the connection
+conn.close()
+```
+In this simple demonstration, a SQLite database file called example.db is being manipulated using Python's sqlite3 module. A table called "stocks" is created with five columns: date, trans, symbol, qty, and price. After which a single row of data is inserted into the table.
+
+Command to date:
+
+`python3 script.py`
+
+Note: dbname.db is a SQLite database file.

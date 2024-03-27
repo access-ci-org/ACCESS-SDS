@@ -1,8 +1,23 @@
-Use Case: Basecalling with Guppy
-Code details and examples:
-**Input format:** Guppy accepts fast5 files as input.
-**Command:** 
+Use Case: Guppy is a basecaller software developed by the Oxford Nanopore Technologies for decoding raw signal data from nanopore sequencing into DNA sequences.
+
+Code Details and Examples:
+
+Code: 
+
+For basecalling with Guppy, you'll need a FAST5 file (raw read input file) and a model file specific to the sequencing kit used. 
+
+Here's an example of how you'd use Guppy:
+
 ```
-guppy_basecaller --input_path /path/to/fast5_directory --save_path /path/to/output_directory
+guppy_basecaller -i /path/to/fast5/files -s /output/directory --flowcell FLO-PRO002 --kit SQK-DCS109
 ```
-This command will basecall the fast5 files in the specified input directory and save the output files in the specified output directory.
+
+In this command:
+- `-i` specifies the directory containing input Fast5 read files.
+- `-s` specifies the directory where output files will be saved.
+- `--flowcell` specifies the flow cell used - in this case, it's FLO-PRO002.
+- `--kit` specifies the sequencing kit used - in this case, it's SQK-DCS109.
+
+Note that the specific flowcell and kit options will depend on your specific experiment. Use `guppy_basecaller --help` to view possible options.
+
+Your output will primarily be a `.fastq` file, containing the called sequences.

@@ -1,46 +1,38 @@
-EasyBuild is a software build and installation framework for building software packages in a structured, repeatable, and robust way. It aims to simplify the process of building software on High-Performance Computing (HPC) clusters.
+Use Case: EasyBuild is a software build and installation framework that allows you to manage (scientific) software on High Performance Computing (HPC) systems in an efficient way.
 
-Use Case: EasyBuild
-Code details and examples:
-1. Install a software package using EasyBuild:
-- To install a software package like GCC using EasyBuild, you can create an EasyConfig file (e.g., gcc.eb) with the necessary details and dependencies. Here is an example content for the gcc.eb EasyConfig file:
+Code Details and Examples: 
 
-```
-easyblock = 'ConfigureMake'
-name = 'gcc'
-version = '9.3.0'
-toolchain = {'name': 'gcc', 'version': '9.3.0'}
-source_urls = ['https://ftp.gnu.org/gnu/gcc/']
-sources = [SOURCE_TAR_GZ]
-source_md5 = 'xxxxxxx'
-moduleclass = 'tools'
-
-sanityCheckPaths = { 'files': ['bin/gcc'] } # Path(s) to verify with the sanity check, after installation
-
-sanityCheckCmd = '${GCC_PREFIX}/${name}/bin/gcc --version'
-
-modulefile = '''
-setenv("EBROOTGCC", "${prefix}")
-prepend_path("PATH", "${prefix}/bin")
-'''
-
-# dependencies
-dependencies = [('GMP', '6.2.0'), ('MPFR', '4.0.2'), ('MPC', '1.1.0')]
+EasyBuild does not directly use input files but instead uses EasyConfig files, which provide specifications for building software, and EasyBlock Python scripts, which implement software building procedures. A typical EasyConfig file could be for installing GCC 4.8.2:
 
 ```
+name = 'GCC'
+version = '4.8.2'
 
-- Next, run EasyBuild with the created EasyConfig file to install the software package:
+homepage = 'http://gcc.gnu.org'
+description = """The GNU Compiler Collection includes front ends for C,
+C++, Objective-C, Fortran, Java, and Ada, as well as libraries for these
+languages (libstdc++, libgcj,...)."""
 
+toolchain = SYSTEM
+
+sources = [
+  'gcc-%(version)s.tar.bz2',
+  'gmp-5.0.5.tar.bz2',
+  'mpfr-3.1.2.tar.gz',
+  'mpc-1.0.1.tar.gz',
+]
+source_urls = [GNU_SOURCE]
+
+builddependencies = [('binutils', '2.23.52')]
+
+moduleclass = 'compilers'
 ```
-eb gcc.eb
-```
 
-2. List available software packages using EasyBuild:
+Once the EasyConfig file is created, it can be passed to the `eb` command-line tool to perform the build, like:
 
-- To list available software packages that can be installed using EasyBuild, use the following command:
+Command:
+``` bash
+eb GCC-4.8.2.eb --robot
+```   
 
-```
-eb --search
-```
-
-This command will display a list of available software packages along with their versions that can be installed using EasyBuild.
+This command instructs EasyBuild to automatically install GCC version 4.8.2, including any prerequisites such as gmp, mpfr, and mpc. The `--robot` option tells EasyBuild to automatically handle dependencies.

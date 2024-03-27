@@ -1,23 +1,26 @@
-Use Case: Java
-Code details and examples:
-Java is a programming language and does not have specific sample input files. Below is a simple "Hello World" program in Java.
+Use Case: Developing an application or a software using Java language to perform a specific operation.
 
-```java
-public class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
+Code details and examples: 
+
+Code:
+
+```java    
+    public class Main {
+        public static void main(String[] args) {
+            System.out.println("Hello, World!");
+        }
     }
-}
 ```
 
-To compile and run the Java program:
-1. Save the code in a file named `HelloWorld.java`.
-2. Open a command prompt or terminal.
-3. Compile the program using the command:
-   ```
-   javac HelloWorld.java
-   ```
-4. Run the compiled program using the command:
-   ```
-   java HelloWorld
-   ```
+Above is a basic Java program. In Java, every application begins with a class name, and the program execution begins with the 'main' method. A Java program can contain multiple classes. In this code snippet, Main is the class name and it contains a single public class (the 'Main' class). The 'System.out.println' statement is used to print out the text "Hello, World!" on the screen.
+
+File Format Required: Java Source Files (*.java).
+
+Specifications in Input Files: The code must be written in correct Java syntax. Depending on the use case, the necessary libraries must be imported. A Java program starts executing from the 'main' method.
+
+Command to Run: To compile and run the Java program, firstly compile it to bytecode (.class files) using the 'javac' (Java compiler) command, then run it using the 'java' command.
+
+```bash   
+    javac Main.java
+    java Main
+```

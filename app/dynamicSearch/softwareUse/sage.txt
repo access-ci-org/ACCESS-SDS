@@ -1,0 +1,48 @@
+Use Case: Use SageMath for number theory computations, graph theory, calculus, and statistics.
+
+Code details and examples: Code
+
+1. Number theory:
+   ```
+   sage: factor(100)
+   ```
+   SageMath will output: 
+   ```
+   2^2 * 5^2
+   ```
+This command breaks down a number into its prime factors.
+
+2. Graph theory:
+   ```
+   sage: g = graphs.PetersenGraph()
+   sage: g.plot()
+   ```
+This command creates the Petersen graph and then plots it. There is no need for input file because the graph is directly generated from within SageMath.
+
+3. Calculus:
+   ```
+   sage: f = function('f')(x)
+   sage: diff(f, x)
+   ```
+SageMath will output: 
+   ```
+   D[0](f)(x)
+   ```
+This command differentiates a function with respect to a variable. Change the name of the function and the variable as per your need.
+
+4. Statistics:
+   ```
+   sage: StatisticalMethods().mean([1,2,3,4,5])
+   ```
+SageMath will output:
+   ```
+   3
+   ```
+This command computes the mean of the provided list of numbers. Replace the numbers with your own data.
+   
+Run the SageMath code by calling sage from your terminal:
+   ```
+   $ sage filename.sage
+   ```
+
+This will execute the SageMath code from a .sage file. Replace filename with your own file name.

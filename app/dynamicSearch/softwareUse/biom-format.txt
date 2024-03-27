@@ -1,0 +1,32 @@
+Use Case: Use biom-format for analysis, storing, and sharing of biological sample by sample data especially in metagenomics and marker-gene surveys.
+
+Code details and examples:
+
+Code:
+
+Here are examples of using the biom-format package. We demonstrate creating a simple table, and accessing its metadata:
+
+```python
+from biom.table import Table
+import numpy as np
+
+# Prepare your data
+data = np.array([[0, 1, 2], [3, 4, 5]])
+sample_ids = ['sample_1', 'sample_2', 'sample_3']
+observation_ids = ['observation_1', 'observation_2']
+sample_metadata = [{'environment': 'A'}, {'environment': 'B'}, {'environment': 'A'}]
+observation_metadata = [{'species': 's1'}, {'species': 's2'}]
+
+# Create the table
+table = Table(data, observation_ids, sample_ids, observation_metadata, sample_metadata)
+
+# Accessing metadata
+for value, id, metadata in table.iter(axis='sample'):
+    print(f'Sample {id} is from environment {metadata["environment"]}')
+```
+
+Command to run: Simply use the python command to execute the script created with the code snippet above. For instance, if the code was saved in a file named "biom_example.py", use the following command:
+
+```bash
+python biom_example.py
+```

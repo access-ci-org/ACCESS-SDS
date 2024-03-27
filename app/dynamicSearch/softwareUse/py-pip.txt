@@ -1,0 +1,33 @@
+Use Case: Python's package installer or 'pip' is used to manage software packages written in Python. It can install packages from the Python Package Index and from other indexes.
+ 
+Code details and examples:
+Code:
+
+```python
+import requests
+
+url = 'https://www.python.org'
+response = requests.get(url)
+print(response)
+```
+
+This is a simple Python code that uses the 'requests' module to get the HTML of the 'https://www.python.org' web page and print it. 
+
+To use this module, you have to install it using pip. The command to install the requests module is:
+
+```shell
+pip install requests
+```
+
+Input file format: N/A
+
+Input file specifications: N/A
+
+Command to run:
+
+```shell
+python your-file.py
+```
+Here 'your-file.py' refers to the Python file which contains the script to be executed. 
+
+Note: The command to run the Python code might be different on your system depending on how you have Python installed and configured.

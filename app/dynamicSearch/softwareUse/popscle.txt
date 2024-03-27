@@ -1,0 +1,38 @@
+Use Case: Popsicle is a powerful tool used for demultiplexing pooled single-cell RNA-seq data, specifically mapping droplet barcode information to specific samples. It's used extensively in bioinformatics.
+
+Code details and examples:
+
+Code:
+
+The following tools are provided by popsicle:
+
+- freemuxlet: a tool to demultiplex samples and detect doublets.
+  
+    ```shell
+    freemuxlet \
+    --bam merged.bam \
+    --group-list group_list.txt \
+    --out freemuxlet \
+    --meta-group sample_list.txt \
+    --plp-summary popscle_summary \
+    --umi-counts matrix.mtx
+    ```
+     
+    Here, the merged.bam file is the file with the aligned sequencing reads. The group_list.txt is a text file with one line per droplet, containing the barcode of the droplet. The sample_list.txt is a text file with one line per sample, containing the sample name. matrix.mtx contains the count data, one row per gene and one column per droplet.
+
+- dsc-pileup: a tool to create a pileup from a BAM file.
+
+    ```shell
+    dsc-pileup \
+    --bam merged.bam \
+    --group-list group_list.txt \
+    --out pileup \
+    --meta-group sample_list.txt \
+    --plp-summary popscle_summary
+    ```
+  
+    Here, merged.bam file is the file with the aligned sequencing reads. group_list.txt is a text file with one line per droplet containing the barcode of the droplet. 
+
+These are examples of command lines for running Popscle tools. Please note that Popscle does not provide an option for inputting files in any specific format or specifications as other packages. Rather, it operates directly on standard BAM files and other common formats for single-cell RNA-seq data.
+
+The examples I provided use .bam, .txt, and .mtx files in a Linux shell with the backslash indicating that the command continues on the next line for readability.

@@ -1,22 +1,38 @@
-Use Case: Machine learning library  
-Code details and examples:  
-Sample input file: N/A  
-Format required: N/A  
-Specifications: N/A  
+Use Case: For data mining and data analysis. It’s built on NumPy, SciPy, and matplotlib for Python.
 
-Code snippet:
-```python
+Code Details and Examples: 
+
+Code:
+```
 from sklearn import datasets
-from sklearn.ensemble import RandomForestClassifier
+from sklearn import svm
 
-# Load sample dataset
+# load iris dataset as an example
 iris = datasets.load_iris()
-X = iris.data
-y = iris.target
+X_iris = iris.data
+Y_iris = iris.target
 
-# Initialize Random Forest classifier
-clf = RandomForestClassifier()
+# Using the SVC class to perform a Support Vector Classification.
+svc = svm.SVC(kernel='linear')
 
-# Fit the model
-clf.fit(X, y)
+# Split iris data in train and test data
+# A random permutation, to split the data randomly
+np.random.seed(0)
+indices = np.random.permutation(len(X_iris))
+
+X_train = X_iris[indices[:-10]]
+Y_train = Y_iris[indices[:-10]]
+X_test  = X_iris[indices[-10:]]
+Y_test  = Y_iris[indices[-10:]]
+
+# Perform classification 
+svc.fit(X_train, Y_train)
+```
+The data input is done through datasets.load_iris() which is built into scikit. The load_iris function loads the iris dataset in form of a multidimensional array which is then manipulated and used for machine learning with the svc.fit() function.
+
+The format required for scikit is arrays (can be multidimensional), and can be .csv files as well but you also have to use a numpy liner to convert the .csv file into an array.
+
+Command to run it:
+```
+python filename.py
 ```

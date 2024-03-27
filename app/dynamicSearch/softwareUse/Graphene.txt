@@ -1,18 +1,54 @@
-Material graphene, which is a single layer of carbon atoms arranged in a two-dimensional honeycomb lattice structure. Here are some examples of software tools and libraries related to graphene research:
+Use Case: Graphene is a python library that provides tools to build a schema for GraphQL that allows developers to easily and quickly create APIs; 
 
-1. Software: Quantum ESPRESSO
-   - Use Case: Quantum ESPRESSO is an integrated suite of Open-Source computer codes for electronic-structure calculations and materials modeling at the nanoscale. It is widely used for studying the properties of graphene and other materials.
-   
-2. Software: VASP (Vienna Ab initio Simulation Package)
-   - Use Case: VASP is a package for performing ab-initio quantum-mechanical molecular dynamics (MD) simulations using pseudo-potentials and a planewave basis set. It is often used for studying the electronic properties of graphene.
-   
-3. Python Library: Pybinding
-   - Use Case: Pybinding is a Python library for tight-binding calculations in solid-state physics. It can be used to model the electronic structure and transport properties of graphene and other 2D materials.
+Code details and examples: Code 
 
-4. Computational Chemistry Package: Gaussian
-   - Use Case: Gaussian is a widely used computational chemistry software for performing ab initio electronic structure calculations. It can be used to study the bonding, vibrational modes, and electronic properties of graphene.
+To use Graphene, the Python script needs an input file which is basically your models or data in the form of Python objects that the GraphQL schema will be based on. Here is an example of a Python model for a simple Blog app:
 
-5. Bioinformatics Software: GROMACS
-   - Use Case: GROMACS is a molecular dynamics simulation package specifically designed for large biomolecular systems. While not graphene-specific, it can be used to study the interaction of biomolecules with graphene surfaces.
+```python
+from mongoengine import Document
+from mongoengine.fields import StringField
 
-Please let me know if you would like more detailed examples or information on any specific software/tool.
+class BlogPost(Document):
+    title = StringField(required=True)
+    content = StringField(required=True)
+```
+
+In this case, the file `BlogPost.py` contains a model for a blog post with two fields: title and content.
+
+To use Graphene, we first need to install it with the command `pip install "graphene-mongoengine"`. Then, we define a schema for the blog post:
+
+```python
+import graphene
+from graphene_mongo import MongoengineObjectType
+from models import BlogPost as BlogPostModel
+
+class BlogPost(MongoengineObjectType):
+    class Meta:
+        model = BlogPostModel
+
+class Query(graphene.ObjectType):
+    blog_posts = graphene.List(BlogPost)
+
+    def resolve_blog_posts(self, info):
+        return list(BlogPostModel.objects.all())
+
+schema = graphene.Schema(query=Query)
+```
+
+Now, we can run queries against this schema. Here is an example query:
+
+```python
+query = '''
+    query {
+        blogPosts {
+            title
+            content
+        }
+    }
+'''
+
+result = schema.execute(query)
+print(result.data['blogPosts'])
+```
+
+This query will return all blog posts' title and content from the database.

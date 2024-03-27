@@ -1,0 +1,24 @@
+Use Case: Proteinortho is used for orthology detection in a large set of complete genomes, such as comparison of transcriptomic, proteomic data with complete genomes. It is applicable to create and analyze phylogenomic data sets.
+
+Code details and examples:
+
+Code: 
+The input files are fasta files with each entry being a protein/gene of a genome. Here is an example of a fasta file:
+
+    >protein1
+    ACGTACGTACGTACGT
+    >protein2
+    TTGACGTTGACGTTGA
+    >protein3
+    CGTACGTACGTACGTACG
+
+Make sure every protein/gene has a unique identifier after the ">". Proteinortho then takes these fasta files as input:
+
+    proteinortho5.pl genome1.fasta genome2.fasta genome3.fasta
+
+This will produce two output files: orthologous groups (proteinortho-graph) and pairwise orthologs (proteinortho). Each line in the proteinortho-graph file starts with the group size (#:), followed by the group identifier (+:), and then entries of the format speciename:proteinname for each gene in the group. The pairwise orthologs file contains lines in the format speciename1 proteinname1 speciename2 proteinname2 score.
+
+Note: Double check the headers in your fasta files. Headers in FASTA format start with a '>'. The character '|' is often used as a separator. The Proteinortho manual advises users to format their headers like this:
+'>speciesname|proteinname' or '>speciesname|geneid|proteinname', where 'speciesname' is a functional identifier unique to the species set.
+
+Please ensure that you have the suitable computational requirements as performing orthology analysis on large data sets can be a memory-intensive task.

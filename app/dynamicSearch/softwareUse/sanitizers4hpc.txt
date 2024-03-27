@@ -1,0 +1,88 @@
+Use Case: Sanitizers4HPC is used for bug detection in scientific High-Performance Computing (HPC) applications. It checks for data races, memory leaks, undefined behavior and other common bugs.
+
+Code details and examples: Code
+
+Sanitizers4HPC uses a combination of three sanitizers from the LLVM project: AddressSanitizer, ThreadSanitizer, and UndefinedBehaviorSanitizer. The sanitizers are enabled by adding corresponding flags to the compiler command.
+
+For instance:
+
+1) Using the AddressSanitizer
+
+The AddressSanitizer (ASan) is used for detecting memory bugs such as use-after-free and buffer overflows. To use ASan, add the `-fsanitize=address` flag to both the compile and link commands.
+
+Here's an example of using the AddressSanitizer to detect a buffer overflow in a C program.
+
+Sample code (buffer_overflow.c):
+
+    #include <stdlib.h>
+    void main() {
+       int* a = malloc(10 * sizeof(int));
+       a[10] = 0;
+    }
+
+Command to compile:
+
+    gcc -fsanitize=address -g -O1 -fno-omit-frame-pointer buffer_overflow.c -o buffer_overflow
+
+Command to run:
+
+    ./buffer_overflow
+
+2) Using the ThreadSanitizer
+
+The ThreadSanitizer (TSan) is used for detecting data races. To use TSan, add the `-fsanitize=thread` flag to both the compile and link commands.
+
+Here's an example of using the ThreadSanitizer to detect a data race in a C program.
+
+Sample code (data_race.c):
+
+    #include <pthread.h>
+    int g = 0;
+    void *t1(void *arg) {
+      g = 1;
+      return NULL;
+    }
+    void *t2(void *arg) {
+      g = 2;
+      return NULL;
+    }
+    int main() {
+      pthread_t pt1, pt2;
+      pthread_create(&pt1, NULL, t1, NULL);
+      pthread_create(&pt2, NULL, t2, NULL);
+      pthread_join(pt1, NULL);
+      pthread_join(pt2, NULL);
+      return 0;
+    }
+
+Command to compile:
+
+    gcc -fsanitize=thread -g -O1 -fno-omit-frame-pointer data_race.c -o data_race
+
+Command to run:
+
+    ./data_race
+
+3) Using the UndefinedBehaviorSanitizer
+
+The UndefinedBehaviorSanitizer (UBSan) is used for detecting undefined behavior such as integer overflow. To use UBSan, add the `-fsanitize=undefined` flag to both the compile and link commands.
+
+Here's an example of using the UndefinedBehaviorSanitizer to detect undefined behavior in a C program.
+
+Sample code (undefined_behavior.c):
+
+    #include <limits.h>
+
+    int main() {
+      int i = INT_MAX;
+      i = i + 1;
+      return 0;
+    }
+
+Command to compile:
+
+    gcc -fsanitize=undefined -g -O1 -fno-omit-frame-pointer undefined_behavior.c -o undefined_behavior
+
+Command to run:
+
+    ./undefined_behavior

@@ -1,19 +1,26 @@
-Use Case: aiohttp library is used for creating web servers and clients using async/await syntax in Python.
+Use Case: Asynchronous HTTP operations in Python; ideal for building high-concurrency web servers and other I/O-bound programs.
 
 Code details and examples:
+
+Code:
+
 ```python
-import aiohttp
-import asyncio
+from aiohttp import web
 
-async def fetch_url(url):
-    async with aiohttp.ClientSession() as session:
-        async with session.get(url) as response:
-            return await response.text()
+async def hello(request):
+    return web.Response(text="Hello, world")
 
-url = 'http://example.com'
-response_text = asyncio.run(fetch_url(url))
-print(response_text)
+app = web.Application()
+app.router.add_get('/', hello)
+web.run_app(app)
 ```
 
-Command to run:
-This code can be run as a Python script using a Python interpreter.
+To run this script, save it as a Python file (e.g., `server.py`) and run it using the `python` command in the command line:
+
+```
+python server.py
+```
+
+This script sets up a simple web server that responds to HTTP GET requests at the root URL (`/`) with the message "Hello, world". The response is produced by the `hello` function, which uses the `aiohttp.web.Response` class to construct a HTTP response. The `hello` function is a coroutine because it is defined with `async def`, allowing it to perform asynchronous I/O operations.
+
+The `aiohttp.web.Application` class represents a web application. The application's router is used to set up URL routes, with the `add_get` method specifying that the `hello` function should handle GET requests at the root URL. Finally, the `web.run_app` function starts the web server.

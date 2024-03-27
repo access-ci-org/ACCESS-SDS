@@ -1,30 +1,35 @@
-Use Case: Count k-mers in DNA/RNA sequences.
+Use Case: Jellyfish is a bioinformatics software that aids in fast, memory-efficient counting of K-mers in DNA data. Ideal for genome assembly projects.
 
-Code details and examples:
-Jellyfish is a tool for fast counting of k-mers in DNA/RNA sequences. Here is an example of how you can count k-mers in a DNA sequence using Jellyfish:
+Code details and examples: Code 
 
-**Input File (example.fasta):**
-```
->sequence1
-ATGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCT
->sequence2
-CGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATC
-```
+For Jellyfish, an input file is required, preferably in FASTA or FASTQ format. The input files should contain DNA or RNA sequences.
 
-**Counting k-mers using Jellyfish:**
-```bash
-jellyfish count -m 5 -s 100M -o kmer_counts.jf example.fasta
+For example, if you have a FASTA file containing the following sequences:
+
+```sh
+>seq1
+AGTCTAGTAGTCGATGCTAGT
+>seq2
+TGCATAGTCGTACTACGATCT
 ```
 
-In this example:
-- "-m 5" specifies that we are counting 5-mers.
-- "-s 100M" specifies the size of the hash table.
-- "-o kmer_counts.jf" specifies the output file where the counts will be stored.
-- "example.fasta" is the input file containing DNA sequences.
+1. Counting k-mers of size 22 with jellyfish:
 
-**Querying k-mer counts from output:**
-```bash
-jellyfish dump kmer_counts.jf
+```sh
+jellyfish count -m 22 -s 100M -t 10 -C -o output.jf input.fasta
 ```
 
-This will output the k-mer counts stored in the kmer_counts.jf file.
+In this command, `-m` specifies the size of the k-mer (22 in this case), `-s` specifies the initial hash size (100M is 100 million),  `-t` specifies the number of threads, `-C` enables canonical (lexicographically smaller between a k-mer and its reverse complement) counting, `-o` specifies the output file, and finally, the input file.
+
+2. Getting k-mer statistics:
+
+```sh
+jellyfish stats output.jf
+```
+3. Querying a specific k-mer:
+
+```sh
+jellyfish query output.jf AGTCTAGTAGTCGATGCTAGT
+```
+
+In the above command, `output.jf` is the output file from the count process, and `AGTCTAGTAGTCGATGCTAGT` is the k-mer being queried. This would return the count of this specific k-mer.

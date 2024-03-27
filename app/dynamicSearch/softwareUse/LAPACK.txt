@@ -1,50 +1,26 @@
-Use Case: Linear Algebra  
+Use Case: LAPACK is used in scientific computing for solving linear equations, least-square solutions of linear systems of equations, eigenvalue problems, and singular value problems.
 
-Code details and examples:  
-LAPACK (Linear Algebra PACKage) provides routines for solving systems of simultaneous linear equations, least-squares solutions of linear systems of equations, eigenvalue problems, and singular value problems. LAPACK routines are typically called from a high-level interface like BLAS (Basic Linear Algebra Subprograms).
+Code details and examples: Code:
 
-Here is an example of how you can use LAPACK to solve a system of linear equations Ax = b:
+LAPACK contains functions written in Fortran 77 that solve systems of linear equation, linear least squares problems, and eigenvalue problems. Here is an example to solve a system of linear equations:
 
-Sample input files:
-
-Matrix A:
+Sample Input:
 ```
-1.0 2.0 3.0
-4.0 5.0 6.0
-7.0 8.0 10.0
-```
+n = 3; nrhs = 1;
 
-Vector b:
-```
-10.0
-20.0
-30.0
-```
+double A[n*n] = { 1, 1, 1, 1, 2, 4, 1, 3, 9 };
 
-Code snippet in Fortran using LAPACK:
-```fortran
-program solve_linear_system
-    implicit none
-    integer, parameter :: n = 3
-    real(kind=8) :: A(n,n), b(n)
-    integer :: ipiv(n), info
-    
-    A = reshape([1.0d0, 4.0d0, 7.0d0, 2.0d0, 5.0d0, 8.0d0, 3.0d0, 6.0d0, 10.0d0], [n,n])
-    b = [10.0d0, 20.0d0, 30.0d0]
-    
-    call DGESV(n, 1, A, n, ipiv, b, n, info)
-    
-    if (info == 0) then
-        print *, "Solution x:"
-        print *, b
-    else
-        print *, "Failed to solve the system."
-    end if
-end program solve_linear_system
-```
+double b[n*nrhs] = { 1, 0, 0 };
 
-Command to compile and run (assuming LAPACK is linked):
-```bash
-gfortran -o solve_linear_system solve_linear_system.f -llapack -lblas
-./solve_linear_system
+lapack_int ipiv[n];
+
+lapack_int info = LAPACKE_dgesv( LAPACK_ROW_MAJOR, n, nrhs, A, lda, ipiv, b, ldb );
+```
+In the Fortran code described, n is the number of linear equations (= number of variables), nrhs is the number of right-hand sides, A is the matrix of coefficients, b is the right-hand side, ipiv is an integer array of pivots, and info is a return code. LAPACKE_dgesv is the function for solving a double precision general linear equation.
+
+Command to Run:
+The LAPACK routines are usually invoked by including the appropriate function call in your C or Fortran source code, and then linking your program with the LAPACK library. Here's an example of how you might compile and run a C program that calls LAPACKE_dgesv (assuming `gcc` as the compiler and `your_lapack_program.c` as the source code file):
+```
+gcc -o your_lapack_program your_lapack_program.c -llapack
+./your_lapack_program
 ```

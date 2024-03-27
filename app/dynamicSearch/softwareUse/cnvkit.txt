@@ -1,0 +1,29 @@
+Use Case: CNVkit is an open-source Python software library used in bioinformatics to detect copy number variations (CNVs) and alterations in a genomic dataset. This is particularly useful in the field of cancer genomics, as it allows researchers to identify changes in a tumor's genetic makeup that may be driving the disease.
+
+Code details and examples:
+
+Code:
+
+Input file:
+CNVkit requires a combination of tumour and normal sample BAM files as its input. Also, it uses a reference genome, which you usually specify in a .fasta format. 
+
+Format Required:
+It has multiple commands to perform different operations. The base command is always `cnvkit.py`, followed by action command like `batch`, `call`, etc. 
+
+Consider the following example:
+```
+cnvkit.py batch tumour.bam --normal normal.bam --targets exome.bed --fasta hg19.fasta --output-reference my_reference.cnn --output-dir output/
+```
+
+In the above command:
+- `batch` is the action command. 
+- `tumour.bam` is the tumor's sequence file.
+- `normal.bam` is the normal tissue's sequence file for comparison.
+- `--targets exome.bed` specifies the regions of interest. 
+- `--fasta hg19.fasta` is the reference sequence.
+- `--output-reference my_reference.cnn` specifies the output reference file.
+- `--output-dir output/` indicates the directory where the output files will be saved.
+   
+Ensure that all the above files are in the proper format as required by the CNVkit. To run this command, you should install the python package of cnvkit and then execute this command in the appropriate environment. 
+
+Additionally, remember that commands may significantly vary based on various functionalities offered by the CNVkit. Different commands may require different input files and formats. Please refer to the official documentation for the updated list of commands and their explanations.

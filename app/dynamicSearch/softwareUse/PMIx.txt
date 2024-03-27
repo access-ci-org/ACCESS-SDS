@@ -1,21 +1,37 @@
-Use Case: PMIx (Process Management Interface for Exascale)
+Use Case: The PMIx (Process Management Interface Exascale) is an HPC (High-Performance Computing) software library that provides an interface between the application and its potential hosts - providing services such as launching applications across multiple nodes and exchanging messages between them.
 
-Code details and examples:
-PMIx is a process management library used in the HPC community for launching and managing parallel applications at scale. It provides an API for launching processes, exchanging data among processes, and managing process lifecycle.
+Code details and examples: Code
 
-To demonstrate the use of PMIx, we can provide an example where we launch a parallel application using PMIx API.
+Sample Input File:
+```c
+#include <pmix.h>
 
-Sample Input File (input.txt):
+int main(int argc, char **argv)
+{
+    pmix_value_t *val;
+    pmix_proc_t proc;
+
+    PMIx_Init(&proc, NULL, 0);
+    
+    PMIx_Get(&proc, "PMIX_RANK", NULL, 0, &val);
+
+    printf("My rank is %d\n", val->data.uint32);
+    
+    PMIx_Finalize(NULL, 0);
+    
+    return 0;
+}
 ```
-4        # Number of processes
-./myapp  # Application to run
-```
+Format required: The code above needs to be written in a `.c` file.
 
-Code:
+Specifications and details in input files: The code above uses the PMIx library to initialize a process, get its rank, and then finalize the process. libpmix is a standalone implementation of the PMIx standard to provide client and server-side services.
+
+Command to run:
+
 ```bash
-pmixrun -n 4 ./myapp
+mpicc code.c -o code -lpmix
 ```
-
-In this example, we use the `pmixrun` command to launch a parallel application (`myapp`) with 4 processes. The PMIx runtime will handle the process management and communication among the processes.
-
-Please note that the actual usage may vary based on the specific implementation of PMIx and the configuration of the system.
+After we compile code.c, we can run it with:
+```bash
+mpirun -np 3 ./code
+```

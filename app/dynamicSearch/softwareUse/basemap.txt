@@ -1,55 +1,34 @@
-Use Case: Basemap is a Matplotlib toolkit for plotting 2D data on maps. It provides various map projections, coastlines, and political boundaries for creating geographical visualizations.
+Use Case: Basemap is often used for creating geological maps, weather maps, and other types of scientific and geographical plots. You can create a map of the world, a specific region, or even a specific country. You can display this data in the form of a heat map, a contour plot, or any other type of diagram. 
 
 Code details and examples:
-1. Sample code to plot a simple map using Basemap:
+
+Code:
+
 ```python
+# Import necessary libraries
 from mpl_toolkits.basemap import Basemap
 import matplotlib.pyplot as plt
+import numpy as np
 
-# Create a Basemap instance
-map = Basemap(projection='robin', resolution='c', lon_0=0)
+# Create a function to setup a map base object
+def setup_map():
+    plt.figure(figsize=(8,8))
+    # Create a basemap object with specific parameters
+    my_map = Basemap(projection='ortho', lat_0=50, lon_0=-100, resolution='l')
+    # Draw coastlines and continents
+    my_map.drawcoastlines()
+    my_map.fillcontinents(color='coral',lake_color='aqua')
+    # Draw boundary and color of oceans
+    my_map.drawmapboundary(fill_color='aqua')
+    # Draw countries
+    my_map.drawcountries()
+    plt.show()
 
-# Draw coastlines
-map.drawcoastlines()
-
-# Plot and display the map
-plt.show()
+setup_map()
 ```
 
-2. Sample code to plot data points on a map:
-```python
-from mpl_toolkits.basemap import Basemap
-import matplotlib.pyplot as plt
+To run the above code open it in Jupyter Notebook, Python IDE or from command line using specified Python interpreter.
 
-# Create a Basemap instance
-map = Basemap(projection='robin', resolution='c', lon_0=0)
+Command to run:
 
-# Draw coastlines
-map.drawcoastlines()
-
-# Plot data points (longitude, latitude)
-lons = [0, 45, 90]
-lats = [0, 30, 60]
-x, y = map(lons, lats)
-map.scatter(x, y, marker='o', color='r', zorder=5)
-
-# Display the map with data points
-plt.show()
-```
-
-3. Sample code to draw political boundaries on a map:
-```python
-from mpl_toolkits.basemap import Basemap
-import matplotlib.pyplot as plt
-
-# Create a Basemap instance
-map = Basemap(projection='robin', resolution='c', lon_0=0)
-
-# Draw countries' boundaries
-map.drawcountries()
-
-# Display the map with country boundaries
-plt.show()
-```
-
-To run the examples, make sure you have Basemap and Matplotlib installed in your Python environment.
+```python map_script.py```

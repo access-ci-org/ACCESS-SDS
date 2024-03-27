@@ -1,0 +1,34 @@
+Use Case: Libcdms is used to access and manage scientific data and is used for a wide range of applications in climate modeling. It is particularly suited to manage and manipulate netCDF data.
+
+Code details and examples:
+
+Code:
+
+```python
+import cdms2 as cdms
+f=cdms.open('sample.nc')
+s=f('variable_name') # replace variable_name with the actual variable name in the sample.nc file
+print(s)
+f.close()
+```
+This Python snippet will load the 'libcdms' module, open a netCDF file named sample.nc, read a variable named 'variable_name' from this file, print its contents, then close the file.
+
+Sample input files:
+
+In this example, sample.nc is a netCDF file, which is a binary file format that contains a variety of scientific data. The variable 'variable_name' is a placeholder; the actual name of the variable to be read should be substituted in.
+
+Format required:
+
+netCDF is the file format required. The format is binary, that is specifically designed for the storage of scientific data.
+
+Any specifications and details in input files:
+
+The file must have a '.nc' extension and be formatted according to the netCDF specification. One or more 'dimension' definitions must be specified, and 'variable' definitions may refer to these. 'Variable_name' must refer to a valid variable in the netCDF file.
+
+Command to run:
+
+In a Python environment where libcdms is installed, the command to run the above script would simply be:
+
+```python
+python script_name.py # replace script_name.py with the name of your python script file
+```

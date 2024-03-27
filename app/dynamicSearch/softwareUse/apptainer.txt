@@ -1,0 +1,35 @@
+Use Case: Apptainer, formerly Singularity, is a popular software used to perform Operating-System level virtualization, allowing for the creation of application-specific containers. It is widely used in high-performance computing and cloud computing where dependencies can be precisely controlled and isolated. It also enables running of Docker containers in a secure and performant manner.
+
+Code details and examples: Code
+
+Sample Apptainer definition file:
+
+```
+Bootstrap: library
+From: ubuntu:18.04
+
+%help
+    This is a basic ubuntu container image
+
+%post
+    apt-get update && apt-get install -y git vim
+```
+This is an example container definition file. It is used to bootstrap an Ubuntu 18.04 image with the additions of git and vim packages installed.
+
+Save this file as ubuntu.def.
+
+Command to build the container:
+
+`singularity build ubuntu.sif ubuntu.def`
+
+Command to run the container:
+
+`singularity run ubuntu.sif`
+
+You can also shell into the container using:
+
+`singularity shell ubuntu.sif`
+
+Note: To use apptainer, you must have administrative permissions (i.e., root access) to build containers or you can use remote build service to build imgages.
+
+The current version, Apptainer 1.0.0, improves and replaces SingularityCE 3.9. It is backwards and forwards compatible with SingularityCE. This includes seamless conversion between Singularity Image Format (SIF) and Apptainer's new Encrypted Container Images.

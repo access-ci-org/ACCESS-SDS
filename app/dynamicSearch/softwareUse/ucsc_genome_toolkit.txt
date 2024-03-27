@@ -1,0 +1,30 @@
+Use Case: UCSC Genome Browser Toolkit is made up of several tools to manipulate, examine, and view genomics data. One powerful tool in their collection is "bedtools", used to compare, transform, call, etc., BED/VCF/GFF and other interval types files for tasks such as genomic arithmetic, file conversion, intersection, etc.
+
+Code details and examples: 
+
+Code:
+
+Consider a BED file with the name data.bed containing genomic regions of interest (without header):
+
+    chr1    3000000 3002000
+    chr1    4000000 4002002
+    chr3    5000000 5000252
+   
+
+1) To find intersections between interval files. An intersection refers to the overlapping regions between two genomic regions.
+
+   Run `intersectBed` command from bedtools:
+
+   `intersectBed -a data.bed -b other_data.bed > intersection.bed`
+   
+   This will give all regions from data.bed that intersect with regions from other_data.bed in intersection.bed file.
+
+2) To sort a BED file by chromosomal coordinate:
+
+    Run `sortBed` command from bedtools:
+   
+    `sortBed -i data.bed > sorted_data.bed`
+   
+    The sorted_data.bed contains the genomic regions sorted first by chromosome and then by start position.
+
+The input files for bedtools are simply text files in a specific format such as BED, GFF, VCF. For other tools in the UCSC Genome Browser Toolkit, the format will be specified in the tool's documentation. A list of tools and their respective usage can be found on the UCSC Genome Browser Toolkit website. UCSC Genome Browser also provides a handy tool to download genomic data in the required formats.

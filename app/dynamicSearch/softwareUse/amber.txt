@@ -1,27 +1,36 @@
-Use Case: Molecular dynamics simulations in Amber
+Use Case: Molecular dynamics simulations are done with Amber (Assisted Model Building with Energy Refinement), a widely used computational biochemistry suite.
 
-Code details and examples:
-AMBER (Assisted Model Building with Energy Refinement) is a suite of programs for molecular dynamics simulations of biomolecules. Below is an example of running a simple molecular dynamics simulation using Amber.
+Code details and examples: Code
 
-Input files:
-1. A coordinate file in PDB format (e.g., myprotein.pdb)
-2. A parameter file for the force field (e.g., leap.in)
-3. A configuration file specifying simulation parameters (e.g., md.in)
+Amber uses a .in file (input file) for its simulations. Here is a sample of how an input file might look like:
 
-Code:
+```
+# Short MD simulation
+&cntrl
+  imin = 0,
+  ntx = 1,
+  ntb = 1,
+  cut = 10,
+  ntr = 1,
+  ntc = 2,
+  ntf = 2,
+  tempi = 300.0,
+  temp0 = 300.0,
+  ntt = 3,
+  gamma_ln = 1.0,
+  nstlim = 5000, dt = 0.002,
+  ntpr = 500, ntwx = 500, ntwr = 5000
+/
+```
+This example is running a short simulation. `&cntrl` specifies the start of a control parameter list.
+
+Command to run it:
+
+
 ```bash
-# Load the Amber module
-module load amber
-
-# Generate the topology and coordinate files
-tleap -f leap.in
-
-# Run the molecular dynamics simulation
-pmemd -i md.in -o md.out -p myprotein.prmtop -c myprotein.inpcrd -r md.ncrst
+pmemd -O -i inputfile.in -o outputfile.out -p prmtopfile -c inpcrdfile -r restrtfile -x mdcrdfile
 ```
 
-In the above code snippet:
-- `tleap` is used to generate the topology and coordinate files required for the simulation.
-- `pmemd` is used to run the molecular dynamics simulation using the specified input files.
+The above command runs the simulation using pmemd which is part of the Amber suite. The -O flag is for overwriting, -i for the input file, -o for the output file, -p for the parameters file, -c for the coordinates file, -r for the restart file and -x for the coordinates to be opened and appended to. All these files are necessary for a molecular dynamics simulation to run. It takes an input file, a parameters file, a coordinates file and generates an output, restart and coordinates file. 
 
-Please note that the above commands may vary based on the specific setup and requirements of your simulation.
+It is worth mentioning that both the prmtopfile and inpcrdfile are the result of preprocessing input data, such step is crucial for running the simulation. The prmtop file describes the molecule(s) being simulated while the inpcrd file contains the starting coordinates of the molecules in the prmtop file.

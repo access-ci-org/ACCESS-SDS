@@ -1,0 +1,39 @@
+Use Case: Ariba is a Python utility for the detection of genetic variation such as single-nucleotide variants (SNVs) and presence/absence of genes from sequencing reads. It can compare the output of multiple samples for detection of the same variant. 
+ 
+Code details and examples: 
+
+Code:
+
+The first requirement is to have a reference database, which can be generated using 'ariba pubmlstget' or 'ariba refquery'. The command 'ariba run' uses this reference database to find variants in samples. 
+
+1. Download and prepare reference dataset:
+
+```bash
+ariba pubmlstget "streptococcus_pneumoniae" ./pubmlst_spneumoniae
+```
+
+2. Run Ariba on a fastq dataset:
+
+```bash
+ariba run ./pubmlst_spneumoniae/seqs.fa test_sample_R1.fastq test_sample_R2.fastq output_directory
+```
+
+All Ariba commands are run from the terminal, assuming the necessary files are located in the current directory.
+
+Input/Output Details:
+
+1. Reference databse: For 'ariba run', folder with reference genome database files (.fa for genome sequence, .tsv for annotation) is required as the first argument.
+
+2. Sequence input: Paired-end sequence reads in fastq format are used as inputs for 'ariba run'. The first (R1) and the second (R2) of each pair are entered separately.
+
+  - Input file: test_sample_R1.fastq
+  - Format: FASTQ, reads from a sequencing run
+  - Specification: Should be paired with R2 file from the same sequencing run
+
+  - Input file: test_sample_R2.fastq
+  - Format: FASTQ, reads from a sequencing run
+  - Specification: Should be paired with R1 file from the same sequencing run
+
+3. Output Directory: The Ariba run will output multiple files in the specified directory, containing detailed information about detected variants, alignment, and comprehensive summary. The command will also output detailed logs in the terminal. 
+
+Note that Ariba does not accept compressed fastq files. The sequence read files need to be uncompressed before they can be used as input.

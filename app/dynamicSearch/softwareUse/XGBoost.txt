@@ -1,54 +1,36 @@
-XGBoost (Extreme Gradient Boosting) is a popular machine learning library that is known for its speed and performance in gradient boosting framework. It is widely used in machine learning competitions and industry applications.
-
-Use Case: XGBoost can be used for classification and regression tasks.
+Use Case: XGBoost is a scalable and flexible machine learning algorithm that is especially well-suited for structured and tabular datasets. It has both linear model solver and tree learning algorithms. It can handle missing values, and performs well in many machine learning competitions due to its efficiency and speed.
 
 Code details and examples:
 
-**Installation:**
-```
-pip install xgboost
-```
-
-**Sample Input File:**
-```
-# Importing the necessary libraries
+Code:
+```python
 import xgboost as xgb
-from sklearn.datasets import load_breast_cancer
+from sklearn.datasets import load_boston
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error
 
-# Loading the dataset
-data = load_breast_cancer()
-X, y = data.data, data.target
+# Load dataset
+boston = load_boston()
+X_train, X_test, Y_train, Y_test = train_test_split(boston.data, boston.target, test_size=0.2)
 
-# Splitting the dataset into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+# Instantiate XGBRegressor
+xg_reg = xgb.XGBRegressor(objective ='reg:squarederror', colsample_bytree = 0.3, learning_rate = 0.1, max_depth = 5, alpha = 10, n_estimators = 10)
 
-# Converting the data into DMatrix objects
-dtrain = xgb.DMatrix(X_train, label=y_train)
-dtest = xgb.DMatrix(X_test, label=y_test)
+# Fit the model to our training data
+xg_reg.fit(X_train, Y_train)
+
+# Predict
+preds = xg_reg.predict(X_test)
+
+# Compute the rmse
+rmse = np.sqrt(mean_squared_error(Y_test, preds))
+print("RMSE: %f" % (rmse))
 ```
+Input:
 
-**Training a Model:**
+The input can be any tabular dataset. In this example, we have used the Boston Housing dataset, which is provided with the sklearn.datasets module. This dataset has 506 instances and 13 numerical/categorical attributes. The target is the median value of owner-occupied homes in $1000’s. 
+
+Running the script:
+```bash
+python script.py
 ```
-# Defining the parameters for XGBoost model
-params = {
-    'objective': 'binary:logistic',
-    'eval_metric': 'logloss',
-    'max_depth': 3
-}
-
-# Training the XGBoost model
-bst = xgb.train(params, dtrain, num_boost_round=100)
-```
-
-**Making Predictions:**
-```
-# Making predictions on the test set
-predictions = bst.predict(dtest)
-```
-
-**Command to Run:**
-- Since XGBoost is a Python library, the code can be run directly in a Python environment.
-
-**Note:** 
-- For more advanced usage and tuning, refer to the official documentation: https://xgboost.readthedocs.io/en/latest/

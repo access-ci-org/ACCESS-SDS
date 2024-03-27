@@ -1,0 +1,31 @@
+Use Case: Remora is often used for profiling an HPC job by detailing CPU, memory, I/O, and network utilization on a Linux cluster. It is especially useful for understanding where your job's performance bottlenecks are.
+
+Code details and examples:
+
+Code:
+
+First, you need an executable to profile. Let's say you have an MPI-based program called 'myprogram' which you usually run with mpirun (or ibrun, depending on your cluster's specifics) like this:
+
+```
+mpirun ./myprogram
+```
+
+To profile this program with Remora, you would simply prefix the above command with 'remora', like this:
+
+```
+remora mpirun ./myprogram
+```
+
+By default, Remora will print your profiling statistics to STDOUT when your job finishes. Alternatively, you can tell Remora to output profiling data to a specific directory using the -o option. For example:
+
+```
+remora -o ~/remora_data mpirun ./myprogram
+```
+
+This will output a collection of text files summarizing your job's performance to the directory '~/remora_data'.
+
+(Note: If you're running your job via a batch scheduling system like Slurm, and you want to profile the whole job script rather than a single executable, you can do that by calling your job script with remora instead of sbatch.)
+
+Input File:
+
+Remora does not require any input files, but it profiles the execution of a Linux command or script. The input files and their formats depend on the thing being profiled, not on Remora itself.

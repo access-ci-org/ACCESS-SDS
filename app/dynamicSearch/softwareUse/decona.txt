@@ -1,0 +1,31 @@
+Use Case: Decona or Decontaminator is an open-source bioinformatics software tool used for decontaminating DNA/RNA sequence data. It works by identifying and removing sequences that are likely to be contaminants or laboratory artifacts from the actual informative sequences. This is useful in fields such as metagenomics, where researchers are trying to accurately capture the diversity of microbes present in a sample, without distortion from laboratory contaminants. 
+
+Code details and examples: 
+Code.
+
+The input of Decona is a fasta, fastq or sam/bam file. Here is a sample input: 
+
+>Seq1
+ATGGCGCGTTAAGTGATGTAGTAG
+>Seq2
+CGATGCTAGCTCGATGC
+>Seq3
+ATTAGCGCGTAACG
+
+The sequence identifiers and nucleotide sequences should be in separate lines. The identifiers are prefixed by ">" symbol.
+
+To run the Decona with default parameters, use the following command:
+
+```bash
+DeCon.a -i sequence.fas -o decontaminated.fas
+```
+Replace 'sequence.fas' with your input file name, and 'decontaminated.fas' with your desired output file name. The '-i' flag is for input file and '-o' is for output file.
+
+To specify a contamination library (a file of potential contaminant sequences), use the '-l' flag:
+
+```bash
+DeCon.a -i sequence.fasta -o decontaminated.fasta -l contaminants.fasta
+```
+'contaminants.fasta' is a fasta file of potential contaminant sequences. You can create and use your own library, or use one of the libraries precompiled by the DeCon team. 
+
+Note: Bioinformatic software often require that input files be in specific formats, and may not function correctly or may give erroneous results if the input data is incorrect or improperly formatted.

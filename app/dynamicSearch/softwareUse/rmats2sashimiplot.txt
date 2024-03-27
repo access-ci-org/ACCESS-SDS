@@ -1,0 +1,21 @@
+Use Case: The rMATS2sashimiplot software is used for visualizing read distributions, alternative splicing events, and mutation effects using sashimi plots. All processed RNA data should be in the form of BAM files, and junction counts and mutations are optional inputs, but they will enrich the plot if provided.
+
+Code details and examples:
+
+Code: 
+
+First, you will need to create a meta file in a tab delimited format that contains your sample information.
+```
+SampleID    Condition    Label    Color    BAM    Species
+S1    Control    Control    #6495ED    path_to_bam/S1.bam    hg19
+S2    Case    Case    #F08080    path_to_bam/S2.bam    hg19
+```
+After creating the meta file, the rMATS2sashimiplot can be run with the following command:
+```
+python $rMATS2sashimiplot -b1 path_to_bam/S1.bam -b2 path_to_bam/S2.bam -t path_to_rmats/JunctionCountOnly.txt -e chr1:69091:70005:- -l 500 -o path_to_output
+```
+In this command, `-b1` and `-b2` are the BAM files of Control and Case respectively, `-t` is the location of junction counts file derived from rMATS output, `-e` denotes the genomic position of the event with format `chr:start:end:strand`, `-l` specifies the length of flanking region, and `-o` denotes the output directory.
+
+In this use case, the input files required are: BAM files, a junction count file from rMATS output, and optionally mutation files. These should be provided in the correct formats as described. Here, 'path_to_bam', 'path_to_rmats', 'path_to_output' stand for actual paths to the bam files, rmats output and output directory respectively.
+
+Please replace 'path_to_bam', 'path_to_rmats', 'path_to_output' with actual paths in your local system while running the commands.

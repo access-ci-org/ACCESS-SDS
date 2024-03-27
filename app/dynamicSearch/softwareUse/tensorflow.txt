@@ -1,40 +1,44 @@
-Use Case: Training a simple neural network to classify handwritten digits using TensorFlow.
+Use Case: TensorFlow is an open-source machine learning library for research and production. TensorFlow provides a collection of workflows for developing and training models using Python, JavaScript, or Swift, and provides a set of tools for running them on multiple platforms (like Windows, Linux, and MacOS). An application could be to create a deep learning model for image classification.
 
 Code details and examples:
 
+Code:
+
 ```python
 import tensorflow as tf
-from tensorflow.keras.datasets import mnist
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Flatten, Dense
+mnist = tf.keras.datasets.mnist
 
-# Load the MNIST dataset
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
-
-# Normalize the pixel values to be between 0 and 1
 x_train, x_test = x_train / 255.0, x_test / 255.0
 
-# Define the model
-model = Sequential([
-    Flatten(input_shape=(28, 28)),
-    Dense(128, activation='relu'),
-    Dense(10, activation='softmax')
+model = tf.keras.models.Sequential([
+  tf.keras.layers.Flatten(input_shape=(28, 28)),
+  tf.keras.layers.Dense(128, activation='relu'),
+  tf.keras.layers.Dropout(0.2),
+  tf.keras.layers.Dense(10)
 ])
 
-# Compile the model
+predictions = model(x_train[:1]).numpy()
+
+loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
+
 model.compile(optimizer='adam',
-              loss='sparse_categorical_crossentropy',
+              loss=loss_fn,
               metrics=['accuracy'])
 
-# Train the model
 model.fit(x_train, y_train, epochs=5)
 
-# Evaluate the model
-model.evaluate(x_test, y_test)
+model.evaluate(x_test, y_test, verbose=2)
 ```
 
-To run this code, you can simply save it in a Python file (e.g., `mnist_classification.py`) and then execute it using a Python interpreter:
+This program will train a simple neural network on the MNIST dataset, which is a collection of handwritten digits that is commonly used for training image processing systems. 
 
-```bash
-python mnist_classification.py
+You need to provide data in the form of an array with dimensions (samples, pixel_rows, pixel_columns). Images in the dataset must be grayscale and they need to be resized to 28x28 pixels. 
+
+You can run this code using a python interpreter:
+
 ```
+python3 your_program.py
+``` 
+
+Where "your_program.py" is the name of the file containing the above code. The output will include logging information about the training process, including the loss and accuracy on the training set for each epoch, and finally the loss and accuracy on the test set.

@@ -1,54 +1,73 @@
-Use Case: Library for X C Binding (libxcb)
+Use Case: libxcb is an interface to the X Window System protocol, which allows client programs to communicate with an X server. It is mainly used in graphic applications, window managers, and system monitors.
 
-Code details and examples:
-Libxcb is a library used for communicating with the X Window System server. It is typically used by X clients for rendering graphics and handling user input on Unix-like systems.
+Code details and examples: Code: 
 
-Sample code snippet to create a simple X window using libxcb:
+In libxcb, you usually send requests via functions and receive responses via events. Here is an example to open a window:
 
-```C
+```c
 #include <stdio.h>
 #include <xcb/xcb.h>
 
-int main() {
-    xcb_connection_t *connection;
-    xcb_screen_t *screen;
-    xcb_window_t window;
+int
+main ()
+{
+  /* Open the connection to the X server. Use the DISPLAY environment variable */
 
-    // Open connection to the X server
-    connection = xcb_connect(NULL, NULL);
+  int screenNum;
+  xcb_connection_t *connection = xcb_connect (NULL, &screenNum);
 
-    // Get the default screen
-    screen = xcb_setup_roots_iterator(xcb_get_setup(connection)).data;
+  /* Get the screen whose number is screenNum */
 
-    // Create a simple window
-    window = xcb_generate_id(connection);
-    xcb_create_window(connection, XCB_COPY_FROM_PARENT, window, screen->root, 0, 0, 640, 480, 10, XCB_WINDOW_CLASS_INPUT_OUTPUT, screen->root_visual, 0, NULL);
+  const xcb_setup_t *setup = xcb_get_setup (connection);
+  xcb_screen_iterator_t iter = xcb_setup_roots_iterator (setup);
 
-    // Map the window to the screen
-    xcb_map_window(connection, window);
+  for (int i = 0; i < screenNum; ++i) {
+    xcb_screen_next (&iter);
+  }
 
-    // Flush the commands to the X server
-    xcb_flush(connection);
+  xcb_screen_t *screen = iter.data;
 
-    // Main event loop
-    xcb_generic_event_t *event;
-    while ((event = xcb_wait_for_event(connection))) {
-        printf("Received event %d\n", event->response_type & ~0x80);
-        free(event);
-    }
+  /* Create the window */
 
-    return 0;
+  xcb_window_t window;
+  window = screen->root;
+
+  xcb_create_window (connection,                  // Connection
+                     XCB_COPY_FROM_PARENT,        // depth (same as root)
+                     window,                      // window Id
+                     screen->root,                // parent window
+                     0, 0,                        // x, y
+                     150, 150,                    // width, height
+                     10,                          // border_width
+                     XCB_WINDOW_CLASS_INPUT_OUTPUT, // class
+                     screen->root_visual,         // visual
+                     0, NULL);                    // masks, not used yet
+
+  /* Map the window on the screen */
+
+  xcb_map_window (connection, window);
+
+  /* Ensure commands are sent before we pause so that the window gets shown */
+
+  xcb_flush (connection);
+
+  pause ();    /* hold client until Ctrl-C */
+
+  return 0;
 }
-```
-
-To compile the above code using libxcb:
-
-```bash
-gcc -o example example.c -lxcb
-```
-
-To run the compiled executable:
+```   
+To compile this code, you need to include the libxcb library:
 
 ```bash
-./example
+gcc -lxcb -o program program.c
 ```
+
+And to run:
+
+```bash
+./program
+```
+
+This will open a new window. There are no input files or specifications required for this. However, please ensure that your computer is equipped with an X server, e.g., by running a Linux desktop or using XQuartz on a Mac.
+
+Also, the source code file "program.c" needs to be there in the same directory where the gcc command will be run.

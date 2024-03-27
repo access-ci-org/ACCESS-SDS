@@ -1,40 +1,46 @@
-Use Case: Image classification using torchvision
-Code details and examples:
+Use Case: Use torchvision for image and video processing in machine learning projects.
+
+Code details and examples: Code
+
+Torchvision is a python library and part of the PyTorch project. It consists of popular datasets, model architectures, and common image transformations for computer vision. Here is a simple example where torchvision is used for loading an image, pre-process it and run prediction using a pre-trained model.
+
 ```python
+# required libraries
 import torch
-import torchvision.transforms as transforms
-import torchvision.models as models
+from torchvision import models, transforms
 from PIL import Image
 
-# Load a pretrained model
-model = models.resnet50(pretrained=True)
-model.eval()
+# Load the pre-trained model
+model = models.densenet121(pretrained=True) 
 
-# Load an image
-input_image = Image.open("sample_image.jpg")
-
-# Define transformations
-preprocess = transforms.Compose([
+# Image processing transformations
+transform = transforms.Compose([
     transforms.Resize(256),
     transforms.CenterCrop(224),
     transforms.ToTensor(),
     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
 ])
 
-input_tensor = preprocess(input_image)
-input_batch = input_tensor.unsqueeze(0)
+# Load an image
+img = Image.open("image.jpg")
 
-# Make predictions
-with torch.no_grad():
-    output = model(input_batch)
+# Pre-process the image
+img_t = transform(img)
 
-# Get the predicted label
-_, predicted_idx = torch.max(output, 1)
+# Create a mini-batch as expected by the model
+batch_t = torch.unsqueeze(img_t, 0)
 
-print(predicted_idx.item())
+# Set the model to evaluation mode
+model.eval()
+
+# Run the model on the pre-processed image
+out = model(batch_t)
+
+# Print the top 5 predicted labels
+_, indices = torch.topk(out, 5)
+percentage = torch.nn.functional.softmax(out, dim=1)[0] * 100
+for idx in indices[0]:
+    print(classes[idx], percentage[idx].item())
 ```
 
-Command to run (if applicable):
-```bash
-python your_script.py
-```
+Here the input to the torchvision library is an image file, named image.jpg. The preprocessing involves resizing, cropping, tensor conversion, normalizing. This is followed by expanding dimensions of the image tensor to match the input dimension of the image net models, which the dense net model belongs to. After prediction, the top 5 indices with highest probabilities are printed as output.

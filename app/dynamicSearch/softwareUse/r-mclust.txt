@@ -1,0 +1,36 @@
+Use Case: Use r-mclust for Model-Based Clustering and Classification.
+
+Code details and examples: Code.
+
+The following code snippet is an example of how you might use r-mclust to perform a basic clustering operation:
+
+```R
+# R code to use Mclust package
+library(mclust)
+data(iris)
+
+# Choose the numeric columns to use for clustering
+numeric.columns <- iris[ ,sapply(iris,is.numeric)]
+
+# Perform clustering
+clustering <- Mclust(numeric.columns)
+
+# Print summary of the result
+summary(clustering)
+```
+This code will output the Gausian Mixture Model (GMM) that best fits the data. The input for the Mclust function here is a numeric data frame. The iris data set is included in R and is used here as an example. The output is a list that includes the classification of each instance in the input data, parameters of the best GMM, and several statistics and information criteria for every tested model. For running this open R or R studio and paste the code in console or run it as a R script.
+
+Input File
+
+Input file required is a CSV file where the first row should contain variables (column names) and next rows should contain numeric values associated with the variables. Make sure to clean the data before, as in handle missing values or categorical values as required.
+
+Format Required
+
+CSV (Comma Separated Values) format.
+
+Specifications and Details in Input Files
+
+1. The first row of the CSV should be column names or variable names, all in lower case.
+2. The subsequent rows should contain numeric values corresponding to each column or variable.
+3. There should be no null or missing values. If there are any, they must be handled before importing the data into the script.
+4. Categorical variables need to be either dropped or transformed into numeric format (as per one-hot encoding or dummy variable).

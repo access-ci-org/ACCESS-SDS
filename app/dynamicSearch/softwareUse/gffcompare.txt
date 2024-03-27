@@ -1,0 +1,25 @@
+Use Case: 
+GffCompare is used to validate, filter, or compare (including transfrags output with reference annotation data) GFF files (General Feature Format files). 
+
+Code details and examples:
+
+Code:
+```
+gffcompare -r reference_annotations.gtf -o output_prefix input_annotations.gtf
+```
+In the above command, `-r` option specifies the reference annotation file (`reference_annotations.gtf`), `-o` option specifies the output prefix (`output_prefix`) and `input_annotations.gtf` is the input annotation file. 
+
+The input file in this case is in GFF (General Feature Format). Usually, these files contain information about gene structure, such as exon/intron boundaries, gene start and end sites, etc. It is a tab delimited text file. 
+
+Example of GFF3 file format:
+
+```
+##gff-version 3
+ctg123 . mRNA    1300  9000  .  +  .  ID=mRNA00001;Parent=gene00001
+ctg123 . exon    1300  1500  .  +  .  ID=exon00001;Parent=mRNA00001
+ctg123 . exon    1050  1500  .  +  .  ID=exon00002;Parent=mRNA00001
+ctg123 . exon    3000  3902  .  +  .  ID=exon00003;Parent=mRNA00001
+ctg123 . exon    5000  5500  .  +  .  ID=exon00004;Parent=mRNA00001
+ctg123 . exon    7000  9000  .  +  .  ID=exon00005;Parent=mRNA00001
+```
+Each line of the GFF3 file describes a genomic feature. In the above example the second line describes a mRNA, lines 3-7 describe exons which are part of the mRNA.

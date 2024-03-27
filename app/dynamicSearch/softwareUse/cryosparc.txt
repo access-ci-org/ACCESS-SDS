@@ -1,0 +1,30 @@
+Use Case: Cryosparc is a software that provides algorithms for processing noisy images in cryo-electron microscopy (cryo-EM) to yield high-quality 3D reconstructions. It can be used in research work that requires imaging biomolecules at a near-atomic level.
+
+Code details and examples: Code
+
+Input File
+CryoSPARC accepts input files in the format of a .mrcs stack of micrographs for particle picking or a .cs file for other types of job.
+
+Input File Format
+
+Micrographs/Frames:
+In .mrc, .tif, or .dm4 format. If the micrographs are in .dm4 format, they have to be converted to .mrc or .tif format before running CryoSPARC.
+
+Particles:
+CryoSPARC v3 works natively with the .cs file format for particles, but particles can also be imported from STAR files.
+
+Command to Run
+
+`cryosparcm job connect --project P1 --job J2 --type 2Dclass`
+
+This will start a new 2D classification job in project P1, with the output of job J2 as input. 
+
+Note that CryoSPARC uses the concept of 'project' and 'job' to organize data and operations. A project is a set of related jobs, and a job is a single, independent unit of computation. For example, a project can be a structure determination of a particular protein, and jobs can be particle picking, 2D classification, and 3D reconstruction.
+
+In the actual command to run CryoSPARC, the project and job have to replace P1 and J2 with the actual project and job ID.
+
+So the above mentioned command is an example, the real command should include real project ID and job ID. Example -
+
+`cryosparcm job connect --project P12 --job J3 --type 2Dclass`
+
+That will start a new 2D classification job in project P12, with the output of job J3 as input.

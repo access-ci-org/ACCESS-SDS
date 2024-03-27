@@ -1,0 +1,52 @@
+Use Case: libsoup is an HTTP client/server library for GNOME. It can be used to make HTTP(S) requests, send and receive cookies, cache responses etc. 
+
+Code details and examples: Code.
+
+A simple example of a GET request using libsoup in C:
+
+```c
+#include <libsoup/soup.h>
+
+int main (int argc, char **argv)
+{
+  SoupSession *session;
+  SoupMessage *msg;
+  guint status;
+
+  session = soup_session_new();
+  msg = soup_message_new("GET", "http://example.com");
+
+  status = soup_session_send_message(session, msg);
+  if (SOUP_STATUS_IS_SUCCESSFUL(status)) {
+    printf("%s\n", msg->response_body->data);
+  } else {
+    printf("HTTP request failed: %u %s\n", status, soup_status_get_phrase(status));
+  }
+
+  g_object_unref(msg);
+  g_object_unref(session);
+
+  return 0;
+}
+```
+
+To compile and run this program, you will need the development files for libsoup and gtk+. If you're using a Debian-based system, you can install these with:
+
+```sh
+sudo apt-get install libsoup2.4-dev libgtk-2.0-dev
+```
+
+To compile the program, you can use gcc:
+
+```sh
+gcc `pkg-config --cflags --libs libsoup-2.4 gtk+-2.0` -o get get.c
+```
+
+Then you can run the program with:
+
+```sh
+./get
+```
+This is a simplified example and doesn't handle errors properly. In a real program, you should check that the message creation and sending succeeded, and handle possible failures appropriately. The libsoup API has comprehensive documentation and various examples to help with this.
+
+libsoup uses GLib and GObject extensively, so you may need to familiarize yourself with those libraries to use libsoup effectively.

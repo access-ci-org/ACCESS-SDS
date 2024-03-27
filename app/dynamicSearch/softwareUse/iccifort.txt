@@ -1,0 +1,52 @@
+Use Case: iccifort is an Intel compiler toolchain which includes icc (C/C++), ifort (Fortran) and Intel Math Kernel Library (MKL). Often, this toolchain is used in High Performance Computing (HPC) to optimize and parallelize code. The icc and ifort compilers are designed to optimize program performance for Intel processors.
+
+Code Details and Examples:
+
+Consider a simple hello world program in C. 
+
+Code: 
+
+```c
+#include <stdio.h>
+int main() {
+    printf("Hello, World!"
+    return 0;
+}
+```
+
+This is a basic C program that does not require any input from the user. To compile this code using the icc compiler, you would use the following command:
+
+```sh
+icc hello.c -o hello
+```
+
+Where `hello.c` is the name of your c program and `hello` is the name of the output file.
+
+Similarly, for a Fortran program:
+
+Code:
+```fortran
+program hello
+    implicit none
+    write(*,*) 'Hello, World!'
+end program hello
+```
+
+You can compile this Fortran code using ifort with the following command:
+
+```sh
+ifort hello.f90 -o hello
+```
+
+Where `hello.f90` is the name of your Fortran program and `hello` is the name of the executable.
+
+
+On the other hand, for computational and scientific applications that require intensive numerical computations, the MKL library can be utilized. Here is an example to link MKL for a C program:
+
+```sh
+icc -mkl code.c -o code
+```
+
+Where `code.c` is your C program making use of MKL routines. 
+
+ICCIFORT does not have its unique input files but uses programming languages like C or Fortran.

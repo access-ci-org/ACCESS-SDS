@@ -1,5 +1,17 @@
-Use Case: OpenGL Vendor-Neutral Dispatch Library (libglvnd) Library.
+Use Case: Libglvnd is a vendor-neutral dispatch library for arbitrating OpenGL API calls between multiple vendors. It's used if there are multiple graphic drivers installed.
 
-Code details and examples:
-LIBRARY_PATH=/usr/local/lib glxinfo | grep "OpenGL renderer"
-```
+Code details and examples: 
+
+Code: 
+
+This doesn't have a specific input file or a command you can run because it's not an application. It's essentially a library that OpenGL calls are made through, so the only "input" would be the graphics drivers installed on your system.
+
+The key files installed by libglvnd are:
+
+- libOpenGL.so, libGLX.so, libEGL.so, libGLdispatch.so: These are the vendor-neutral dispatch libraries. Most applications should use libOpenGL.so for OpenGL rendering.
+
+- libGL.so, libEGL.so, libGLX.so: These are legacy libraries, They're also used for dispatching, but they expose the old-style GLX and EGL APIs that take a display pointer, a screen number, and so on.
+
+Your graphics drivers will also install libraries with the same names, but installed to a different directory.
+
+When an OpenGL or GLX function gets called, libGLX or libOpenGL (which are actually libglvnd libraries) will intercept the call, figure out which vendor library to use (based on the current context, which was also marked with a vendor when it was created), and then pass the call through to the vendor library.

@@ -1,0 +1,52 @@
+Use Case: utf8proc is a small, clean C library that provides Unicode normalization, case-folding, and other operations for data in the UTF-8 encoding. It's useful for any application that needs to handle text in a way that's aware of Unicode's various features.
+
+Code details and examples:
+
+Code: 
+
+First, include `utf8proc.h` in your C code:
+
+```c
+#include <utf8proc.h>
+```
+
+Consider a program which normalizes a UTF-8 string:
+
+```c
+#include <utf8proc.h>
+#include <string.h> 
+#include <stdio.h>
+
+int main(void) {
+  const char *src = "NFD Normalization needed for this 𝔘𝔫𝔦𝔠𝔬𝔡𝔢 text!";
+  utf8proc_uint8_t *dst;
+  
+  utf8proc_ssize_t dstlen = utf8proc_map(
+    (const utf8proc_uint8_t *) src, strlen(src) + 1,
+    &dst, UTF8PROC_COMPOSE | UTF8PROC_NULLTERM
+  );
+  
+  if (dstlen < 0) {
+    fprintf(stderr, "Error normalizing string: %s\n", utf8proc_errmsg(dstlen));
+    return 1;
+  }
+
+  printf("Normalized string: %s\n", dst);
+
+  free(dst);
+
+  return 0;
+}
+```
+
+In the above code, we're first declaring a source string `src` that will be normalized. Then, we call `utf8proc_map` on the source string (`src`) and the length of the source string with options `UTF8PROC_COMPOSE` and `UTF8PROC_NULLTERM` to get the result. If there's an error during normalization, an error message is printed to `stderr`. Otherwise, the normalized string is printed to stdout. It's important to remember to free `dst` after you're done using it.
+
+You can compile this code with the command:
+```bash
+gcc -o normalize normalize.c -lutf8proc
+```
+
+And then run the compiled program with:
+```bash
+./normalize
+```

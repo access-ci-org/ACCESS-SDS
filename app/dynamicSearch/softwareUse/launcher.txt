@@ -1,20 +1,34 @@
-Use Case: Launcher helps in managing the execution of programs across different computing environments efficiently.
+Use Case: The LAUNCHER is a simple utility HPC software for creating and managing dynamic host lists for simplified distribution of parallel MPI jobs. An example use could be running multiple instances of a script concurrently on different cores of a high performance computer.
 
-Code details and examples:
-Launcher tool requires a configuration file as input to specify the tasks to be executed and their respective commands. Here is an example configuration file format:
+Code Details and Examples: 
 
-```yaml
-tasks:
-  - name: task1
-    command: python script1.py input1.txt
-  - name: task2
-    command: ./executable2 -i input2.txt -o output2.txt
+Code:
+
+Here is a simple example of a paramlist file used with Launcher:
+
+```paramlist.txt
+./myscript.sh argument1
+./myscript.sh argument2
+./myscript.sh argument3
 ```
 
-Once you have the configuration file ready, you can run the launcher tool using the command provided by the tool's documentation. For example:
+Each line contains a separate command which will be distributed to different cores of your HPC system.
 
-```
-launcher run config.yaml
+Now, when using launcher, you would run:
+
+```shell
+export LAUNCHER_PLUGIN_DIR=<PATH_TO_PLUGIN>
+export LAUNCHER_DIR=<PATH_TO_LAUNCHER>
+export LAUNCHER_JOB_FILE=paramlist.txt
+export LAUNCHER_NPROCS=3
+export LAUNCHER_PPN=1
+export LAUNCHER_SCHED=interleaved
+PROMPT_COMMAND=''
+$LAUNCHER_DIR/paramrun
 ```
 
-This command will execute all the tasks specified in the configuration file concurrently or sequentially based on the settings provided.
+These commands will set the necessary environment variables and run launcher with your desired configuration. 'LAUNCHER_NPROCS' should match the number of lines in your paramlist file, and 'LAUNCHER_PPN' can be used to specify how many cores should be used on each node.
+
+There are various other environment variables that can be used to configure how launcher distributes jobs, for example 'LAUNCHER_RMI' can be used to specify the method of inter-node communication, and 'LAUNCHER_JOB_WALLTIME' can be used to set a maximum runtime for the jobs.
+
+Note that the mentioned paths in the export commands need to be replaced with the actual paths in your system where the necessary files and directories reside.

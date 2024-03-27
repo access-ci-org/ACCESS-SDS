@@ -1,0 +1,27 @@
+Use Case: nghttp3 is an open source implementation for HTTP/3, which is used to build HTTP/3 compliant applications. This library is often utilized for developing high performance server applications. Typical input for this library include files to transfer or the request data for a HTTP/3 request. 
+
+Code details and examples:
+
+Code:
+
+```c
+#include <nghttp3/nghttp3.h>
+
+int main(void) {
+  nghttp3_info *info = nghttp3_info();
+  printf("nghttp3 version: %s\n", info->version_str);
+  return 0;
+}
+```
+
+To perform transmission of a document, the typical file format is a text file or any other format that needs to be transferred over HTTP/3, which is interpreted as byte stream. The code example above is a simple program to print the version string of the nghttp3 library.
+
+To compile and run the program, the following commands are used:
+
+Compile:
+```gcc -o test test.c -lnghttp3```
+
+Run:
+```./test```
+
+nghttp3 doesn't have specific input files, it's a library that is linked to the developed application and used via the application's code. The inputs are usually formulated and interpreted programmatically through the application hence there are no specific input formats or file types. It is up to the developed application to interpret the input data and provide it to nghttp3 library calls in the expected format as described in the nghttp3 API documentation.

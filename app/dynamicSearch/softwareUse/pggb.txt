@@ -1,0 +1,29 @@
+Use Case: PGGB is used as a genomics tool that builds pangenomes, helps to explore genome variations and assists in genomic research. It takes as input DNA/RNA sequence files in fasta format, sequence alignment map (SAM), variant call format (VCF) files.
+
+Code details and examples:
+
+Code:
+
+To run pggb, you need to specify different parameters such as sequence alignment method, which includes different weights for sequence alignment, sequence identity value, etc. Following is an example command to run pggb: 
+
+```bash
+pggb -i input.fasta -s 150000 -p 95 -n 10 -t 16 -v -o /output/directory/
+```
+
+In the above command, the options are:
+
+`-i`: Input fasta file
+
+`-s`: Sequence full-length coverage
+
+`-p`: Percentage identity
+
+`-n`: Number of alignments
+
+`-t`: Number of threads
+
+`-v`: Enable verbose mode which will print detailed logs
+
+`-o`: Output directory
+
+In this case, an input file `input.fasta` is needed which is a DNA sequence file in fasta format. The sequence length coverage `-s` is specified as 150000, `-p` percentage identity as 95%, and `-n` alignment numbers as 10. The number of threads `-t` to use for the computation is taken as 16. `-v` is enabled for the verbose mode and the output will be stored in `/output/directory/` noted by `-o`.

@@ -1,0 +1,32 @@
+Use Case: A web proxy, such as Squid, might be used to control internet traffic, to speed-up access to websites by caching web pages or to monitor and log internet usage. 
+
+Code details and examples: 
+
+Code: The configuration file for Squid is typically located at /etc/squid/squid.conf
+
+We will cover here an example to allow only specific sites and block all others:
+
+1. First, you need to define an Access Control List (ACL) for the allowed websites. 
+
+    acl allowed_sites dstdomain "/etc/squid/allowed_sites"
+
+2. Next, you'll have to allow HTTP access for these sites
+
+   http_access allow allowed_sites
+
+3. And then deny all other HTTP traffic
+
+   http_access deny all
+
+In the "/etc/squid/allowed_sites" file, you'd enter the websites you want to allow. The format is one website per line, like so:
+
+    google.com
+    wikipedia.org
+
+To run this you would then restart the squid service:
+
+    sudo systemctl restart squid
+
+Attention: The configuration file ("/etc/squid/squid.conf") must be edited as root and the path "/etc/squid/allowed_sites" might change depending on your installation. 
+
+Note: be aware that changes in the configuration file are only applied after a restart of the service. Also, remember to check syntax and configuration with "squid -k parse" before restarting the service.

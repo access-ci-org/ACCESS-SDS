@@ -1,0 +1,36 @@
+Use Case: MaxBin 2.0 is an automatic binning software used to recover individual genomes from metagenomes. Bin refers to grouping sequences that seem to come from the same community members, which is essential in the process of metagenome sequencing data analysis.
+
+Code Details and Examples:
+
+Code:
+
+Input files:
+1. Abundance file: A tab-delimited file with two columns. The first column is contig name. Remaining columns are counts for each contig.
+2. Sequence file: Fasta format file. Multi-fast file is acceptable (contigs.fasta)
+
+Example of Abundance file (*.abund):
+
+```
+contig1    15
+contig2    59
+contig3    22
+```
+
+Example of Sequence file (contig1.fasta):
+
+```
+>contig1
+GATCCGCGGTTGCGTACTGATCGAGCAGTACTAGTTGACGTGCGTACTAGTGCTAGTCGTGCTG
+>contig2
+CGTACTAGTTGACGTGCGTACTAGTGCTAGTCGTGCTGGATCCGCGGTTGCGTACTGATCGAGC
+>contig3
+AGTTGACGTGCGTACTAGTGCTAGTCGTGCTGGATCCGCGGTTGCGTACTGATCGAGCAGTACT
+```
+
+To run maxBin, use the following command:
+
+```
+run_MaxBin.pl -contig contigs.fasta -abund abund.txt -out bin
+```
+
+This will run MaxBin and output the results to the directory specified in the -out option. There will be a number of files output, including fasta files for each bin, a summary file, marker gene lists for each bin, and a file containing the abundance information for each bin.

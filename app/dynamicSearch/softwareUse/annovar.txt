@@ -1,0 +1,25 @@
+Use Case: ANNOVAR is a powerful tool for functional annotation of genetic variants detected from diverse genomes. It allows users to annotate the functional consequences of a specific chromosome, start position, end position and the reference and observed nucleotides.
+
+Code details and examples:
+
+Code: 
+
+File Format Required: tab-delimited text file, with five columns (chr, start, end, ref, alt). For example:
+
+chr, start, end, ref, alt
+
+chr1,  233848,  233848, T, G 
+
+chr1,  233900,  233900, G, A         
+
+chr1,  234008,  234008, C, T 
+
+chrE,760, 760, C, T
+
+Next, we can run the ANNOVAR program to annotate this input file.
+
+Command to run the program:
+
+$ perl table_annovar.pl example/ex1.avinput humandb/ -buildver hg19 -out myanno -remove -protocol refGene,cytoBand,exac01,avsnp147,dbnsfp30a -operation gx,r,f,f,f -nastring . -csvout -polish -xref example/gene_xref.txt
+
+In this example, myanno is the output prefix. The --protocol option specifies the databases used for annotation, and the --operation option specifies what kind of annotations will be performed. The -nastring option sets the output string for missing values.

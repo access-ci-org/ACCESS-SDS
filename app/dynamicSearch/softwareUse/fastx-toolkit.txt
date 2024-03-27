@@ -1,0 +1,40 @@
+Use Case: Used for preprocessing high-throughput sequencing data.
+
+Code details and examples: 
+
+Code:
+
+FASTQ-to-FASTA conversion:
+
+Command:
+```
+fastq_to_fasta -i input.fastq -o output.fasta
+```
+
+Input File: a FASTQ file named input.fastq 
+
+Output File: a FASTA file named output.fasta
+
+FASTX-Clipper:
+
+Command:
+```
+fastx_clipper -i input.fastq -o clipped.fastq -c -v -l 20 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTC
+```
+
+Input File: a FASTQ file named input.fastq
+
+Output File: a FASTQ file named clipped.fastq
+
+Specifications: -l specifies the minimum length to keep a read. -a specifies the adapter sequence to remove.
+
+FASTX-Collapser:
+
+Command:
+```
+fastx_collapser -i input.fasta -o output.fasta
+```
+
+Input File: a FASTA file named input.fasta
+
+Output File: a FASTA file named output.fasta

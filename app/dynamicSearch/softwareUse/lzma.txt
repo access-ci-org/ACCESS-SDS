@@ -1,0 +1,25 @@
+Use Case: lzma is a compression software often used for compressing large files or directories. 
+
+Code Details and Examples: 
+
+Code:
+The input file for lzma is the file or directory we want to compress. There are no specific format requirements as it is independent of the file content.
+
+To compress a file, the command would be:
+
+```sh
+lzma -z mybigfile.txt
+```
+
+This would create an lzma file named 'mybigfile.txt.lzma'. 
+
+
+To decompress the file, the command would be:
+
+```sh
+lzma -d mybigfile.txt.lzma
+```
+
+This would decompress the lzma file and we would have the original 'mybigfile.txt' back.
+
+The `-z` option specifies to compress and the `-d` option specifies to decompress. The only specification is that the file or directory must be existent and lzma must have the necessary permissions to read/write in their location.

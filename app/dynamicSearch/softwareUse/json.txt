@@ -1,24 +1,27 @@
-Use Case: Parsing JSON file
+Use Case: JSON is a lightweight data-interchange format that is easy for humans to read and write and for machines to parse and generate. It is often used in server to web applications communication, configuration files, data storage, etc. An example use case could be storing information about a book in a .json file.
+
 Code details and examples:
+
+Code: 
+
+```json
+{
+  "Title": "The Catcher in the Rye",
+  "Author": "J.D. Salinger",
+  "Year Published": 1951,
+  "Genres": ["Coming-of-age fiction", "Literary realism"]
+}
 ```
+
+This is a simple json file representing a book. The format is a set of key-value pairs surrounded by `{}`. Each key-value pair is separated by `:` and each separate item is comma separated. Keys are always of string format and values can be various formats, such as numbers, strings, boolean values, objects, or arrays. 
+
+To read in a json file in python you would load it using the `json` library's `load` function. 
+
+```python
 import json
 
-# Sample JSON input file 'data.json'
-# {
-#     "name": "John Doe",
-#     "age": 30,
-#     "city": "New York"
-# }
-
-# Reading data from JSON file
-with open('data.json') as f:
-    data = json.load(f)
-
-# Accessing JSON data
-name = data['name']
-age = data['age']
-city = data['city']
-
-print(f"Name: {name}, Age: {age}, City: {city}")
+with open('<file>.json') as file:
+    data = json.load(file)
 ```
-To run the code, save the JSON input file as `data.json` and run the Python script.
+
+To run it, execute the python script via the command `python <script-name>.py` in a terminal that has Python and the json library installed.

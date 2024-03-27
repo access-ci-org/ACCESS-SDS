@@ -1,25 +1,37 @@
-Use Case: Particle simulation using HOOMD-blue
+Use Case: Molecular Dynamics Simulation.
 
 Code details and examples:
-HOOMD-blue is a general-purpose particle simulation toolkit. Below is an example of a simple Python script that creates a 2D square lattice of particles and runs a simulation using HOOMD-blue.
 
+Code:
+
+First, generate a system configuration with the script `init.py`. HOOMD reads initial condition from xml files.
 ```python
 import hoomd
-import hoomd.md
+from hoomd import md
 
+# Initialize system
 hoomd.context.initialize("")
+system = hoomd.init.create_lattice(unitcell=hoomd.lattice.sc(a=2.0), n=5)
 
-system = hoomd.init.create_lattice(unitcell=hoomd.lattice.square(a=2.0), n=[10, 10])
+# Define interaction potential
+nl = md.nlist.cell()
+lj = md.pair.lj(nlist=nl, r_cut=3.0)
+lj.pair_coeff.set('A', 'A', epsilon=1.0, sigma=1.0)
 
-hoomd.md.integrate.mode_standard(dt=0.005)
-hoomd.md.integrate.brownian(group=hoomd.group.all(), kT=1.0, seed=4)
+# Set up integration
+all = hoomd.group.all()
+md.integrate.mode_standard(dt=0.001)
+md.integrate.langevin(group=all, kT=1.2, seed=42)
 
-hoomd.run(1e4)
+# Run simulation
+hoomd.run(10e3)
+```
+Then, run the simulation:
+```bash
+python3 init.py
+hoomd.run(10e3)
 ```
 
-To run the script, save it as `simulate.py` and execute it using the following command:
-```
-hoomd.python simulate.py
-```
+The input file (init.py) is a Python script and the formatting is specific to Python. The Python script defines the system configuration and parameters for the molecular dynamics simulation. The command to run the simulation is `hoomd.run()`, it takes an integer argument that represents the number of time steps to simulate.
 
-This script initializes a 2D square lattice of size 10x10 with a lattice spacing of 2.0 units, integrates the particles using Brownian dynamics at a temperature of 1.0 and runs the simulation for 1e4 time steps.
+The specifications for the input file is straightforward. HOOMD scripts are just Python scripts, so they follow the normal rules for Python scripts. In the given script, we set up a simple Lennard-Jones fluid simulation. The essential parts are initializing the system (with initial positions, types, etc.), defining the potential, setting up the integrator, and running the simulation. You can of course also output data to files for later analysis, visualize the simulation, and more. It's really as complex as you want to make it.

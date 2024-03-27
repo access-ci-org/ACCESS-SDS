@@ -1,0 +1,26 @@
+Use Case: Using the transformers library by Hugging Face for Natural Language Processing tasks, specifically, for sentiment analysis.
+
+Code details and examples: 
+
+Code:
+
+To use transformers library, you need to import it first. For instance, if you want to use the pipeline for sentiment-analysis:
+
+```python
+from transformers import pipeline
+
+# Initialize the sentiment-analysis pipeline
+review_pipeline = pipeline('sentiment-analysis')
+
+# Apply the pipeline to your text
+result = review_pipeline('I love this movie!')
+print(result)
+```
+
+Input file: 
+
+This example doesn't require an input file, you input a string directly.
+
+Command to run: 
+
+To run this python script you would save it as a .py file and run it through your terminal with python3 keyword followed by the .py file name - `python3 script.py`

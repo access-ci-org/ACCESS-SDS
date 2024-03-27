@@ -1,9 +1,37 @@
-Use Case: FOSS stands for Free and Open Source Software. Below are some examples of FOSS software/tools commonly used in the scientific computing and bioinformatics fields along with sample input files and code snippets.
+Use Case: FOSS is a term that stands for "Free and Open Source Software". It refers to software that is released with a license granting anyone the freedom to use, study, modify, and distribute the software's source code. This has very broad applications, including development of new tools, for scientific computing, and for learning and teaching purposes. 
 
-1. OpenMPI
-2. BLAST
-3. GROMACS
-4. Samtools
-5. Jupyter Notebooks
+Code Details and Examples:
 
-For specific examples, please let me know which software/tool you would like to see in more detail.
+There isn't a specific input file, format, or command to run FOSS because it involves a multitude of different programs, but one example of a FOSS program is the GNU Compiler Collection (GCC).
+
+Code:
+
+One simple example of generating code can be demonstrated through C Programming using GCC. 
+
+1. You'll want to create a C file. Here's an example of what might be included in that file:
+
+```c
+/** Example.c **/
+#include <stdio.h>
+
+int main() {
+   printf("Hello, World!");
+   return 0;
+}
+```
+
+2. After saving the file, open terminal/cmd/PowerShell in the same directory as the file, then compile it using GCC by entering the following command:
+
+```
+gcc Example.c -o Example
+```
+
+3. To run the compiled program, enter:
+
+```
+./Example
+```
+
+The program will then print out `Hello, World!`.
+
+Note that this assumes you have GCC and a C compiler installed on your machine, and that you're running a Unix-based operating system (like Linux or macOS). For Windows users, the process for compiling and running C programs will be different.

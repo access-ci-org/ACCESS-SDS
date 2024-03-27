@@ -1,0 +1,52 @@
+Use Case: Medaka is a tool used to create consensus sequences and variant calling from nanopore sequencing data.
+
+Code Details and Examples:
+
+Code:
+
+1. Preparing Input Files
+
+Medaka operates on the output data from Oxford Nanopore's basecaller software (the 'fastq' type file). The data needs to be aligned using software such as minimap2. The input data should be in either BAM or CRAM format.
+
+Example: 
+```bash
+minimap2 -ax map-ont ref.fa ont_reads.fq.gz | samtools sort -o ont_reads.sorted.bam
+samtools index ont_reads.sorted.bam
+```
+
+2. Running Medaka
+
+Medaka's consensus workflow is then run using the following command: 
+
+```bash
+medaka_consensus -i ont_reads.fq.gz -d draft.fa -o output_directory -t threads
+```
+Where, 
+- “-i” refers to the reads file.
+- “-d” refers to the draft assembly file. 
+- “-o” refers to the output directory. 
+- ”-t” specifies the number of threads.
+
+The main result will be a BAM file of the aligned reads and a FASTA file of the consensus sequence. The consensus result will be a file named `consensus.fasta`.
+
+3. Variant calling
+
+Medaka also accepts candidate region from which variants should be called:
+
+```bash
+medaka_variant -i ont_reads.fq.gz -f ref.fa -r chr20:1-1000 -o output_directory -t threads
+```
+Where, 
+- “-i” refers to the reads file.
+- “-f” refers to the reference file. 
+- “-r” specifies the region in which variants should be called.
+- “-o” refers to the output directory. 
+- ”-t” specifies the number of threads.
+
+The main result will be a VCF file with the list of detected variants.
+
+Notes:
+- The input reads file (specified with -i) must be a BAM format.
+- The input reference file (specified with -f) should be the fasta of the reference against which the reads have been aligned.
+- The region (specified with -r) must be in the format 'chr:start-end'.
+- The output (specified with -o) is the directory within which to store the output file. If it does not exist it will be created. All previous contents will be deleted.

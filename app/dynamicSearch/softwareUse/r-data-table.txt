@@ -1,0 +1,51 @@
+Use Case: The r-data-table package is used for fast aggregation of large data(including 100GB in RAM). It is extremely helpful for manipulating datasets in R programming language.
+
+Code details and examples:
+
+Code:
+
+```R
+# load the data.table package
+library(data.table)
+  
+# Initialize a data table
+DT <- data.table(A = 1:5, B = letters[1:5], C = LETTERS[1:5])
+  
+# print the Data Table
+print(DT)
+```
+
+This script creates a simple data.table and then prints it. Here columns are named `A`, `B` and `C`. The structure of this package allows for faster reading and writing of data, as well as quicker data manipulation.
+
+Column types can be integer (1:5, the column `A`), character (letters[1:5], the column `B`) or character (LETTERS[1:5], the column `C`). The command print(DT) will output the whole data.table.
+
+In the case of files, r-data-table can read them with the fread function, which is much faster than the regular read.table function present in base R.
+
+```R
+DT <- fread("YourData.csv")
+```
+
+Here, the input file format is CSV, which is a preferred choice for data storage. It contains data separated by either a comma (,) or a semi-colon (;), hence it's a good structured data storage candidate. 
+
+After loading data table from csv file, you can then perform operations such as select, filter, and group_by just like you would in SQL:
+
+```R
+# Select only column A
+select = DT[, .(A)] 
+  
+# Filter rows where A > 2
+filter = DT[A > 2,] 
+  
+# Group by column B and calculate the mean of A
+group_by = DT[, mean(A), by = B] 
+```
+
+These command respectively select column `A`, filter rows where `A > 2` and group by column `B` and calculate the mean of `A`.
+
+R scripts can be run using the Rscript command followed by the name of the script:
+
+```sh
+Rscript yourScript.R
+```
+
+In this case, the script should consist exactly of the R commands that have been defined above, with lines starting with a `#` being comments that are ignored by the interpreter. If saved as `yourScript.R`, it can be run with the aforementioned command.

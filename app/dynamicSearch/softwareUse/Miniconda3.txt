@@ -1,17 +1,43 @@
-Use Case: Package management and environment management for Python programming.
+Use Case: Use Miniconda for managing Python packages and environments. It is an open-source package management system and environment management system for installing multiple versions of software packages, their dependencies and software environment.
 
 Code details and examples: 
 
+Code: 
+
+In Miniconda3, the environment and package management is handled by the conda command. Here is a basic example of creating a new environment, installing a package, and running a Python script within that environment.
+
+1) To create a new environment named "envname" with Python 3.6, use the command:
+
 ```bash
-# Create a new conda environment
-conda create --name myenv python=3.7
-
-# Activate the environment
-conda activate myenv
-
-# Install a package 
-conda install numpy
-
-# List all installed packages
-conda list
+conda create -n envname python=3.6
 ```
+
+2) To activate the environment use the command:
+
+```bash
+conda activate envname
+```
+
+3) You might want to install a particular package like NumPy. To do this, use the command:
+
+```bash
+conda install numpy
+```
+
+4) Now suppose you have a python file named "script.py" that uses NumPy. The file might have contents like:
+
+```python
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5])
+
+print("Array: ", arr)
+```
+
+5) To run this file, assuming it's in your current directory, use the Python command:
+
+```bash
+python script.py
+```
+
+This will run the "script.py" file in the environment "envname" with the installed version of NumPy.

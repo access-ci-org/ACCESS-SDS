@@ -1,0 +1,63 @@
+Use Case: The GNU Triangulated Surface Library (GTS) is widely used for manipulating 3D triangulated surfaces. It allows tasks like surface construction, BOoleans operations like intersection and union, simplification, refinement and maintains topological consistency during this process. Here is a code example for reading a .gts file and counting the number of edges. 
+
+Code details and examples: 
+
+Code mainly written in C
+
+```c
+#include <gts.h>
+
+int main (int argc, char * argv[])
+{
+  FILE * fptr;
+  GtsSurface * s;
+  GtsFile * fp;
+  guint nv, ne, nf;
+
+  /* checks command line usage */
+  if (argc != 2) {
+    fprintf(stderr, "usage: %s file.gts\n", argv[0]);
+    return 1;
+  }
+
+  /* opens the file */
+  if ((fptr = fopen(argv[1], "rt")) == NULL) {
+    perror("cannot open file");
+    return 1;
+  }
+
+  /* reads in the surface */
+  s = gts_surface_new (gts_surface_class (),
+		       gts_face_class (),
+		       gts_edge_class (),
+		       gts_vertex_class ());
+  fp = gts_file_new (fptr);
+  if (gts_surface_read (s, fp)) {
+    fprintf (stderr, "file `%s' is not a valid GTS file\n", argv[1]);
+    fprintf (stderr, "line %d: %s\n", fp->line, fp->error);
+    return 1;
+  }
+  gts_file_destroy (fp);
+  fclose (fptr);
+
+  /* count vertices, edges and faces */
+  gts_surface_stats (s, &nv, &ne, &nf);
+  fprintf (stdout, "Number of vertices: %u\n", nv);
+  fprintf (stdout, "Number of edges: %u\n", ne);
+  fprintf (stdout, "Number of faces: %u\n", nf);
+
+  /* destroy the surface */
+  gts_object_destroy (GTS_OBJECT (s));
+
+  return 0;
+}
+```
+
+The command to compile and run this C file is:
+
+```
+gcc main.c -o main -lgts -lglib-2.0
+./main myFile.gts
+```
+
+The command to compile this script includes the path to the GTS library with the -L option and links to the required libraries with -lgts. The resulting executable is run with an argument, which is the path to the GTS file you want to read.

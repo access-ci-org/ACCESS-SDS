@@ -1,26 +1,66 @@
-Use Case: DeepLabCut is a toolbox for markerless pose estimation of animals or objects in videos. It is widely used in neuroscience and behavioral research.
+Use Case: DeepLabCut is a toolbox for markerless tracking of body part movements, which is widely used in different fields, especially behavioral neurosciences. It allows researchers to track and quantify movement patterns in any species they investigate.
 
 Code details and examples:
-- You need to create a project with labeled frames and specify the body parts to track.
-- Use the provided config.yaml file to set up the parameters for training.
-- Run the training using the following command:
-```
-deeplabcut train-network <your-project-path> -c config.yaml
-```
-- Once the model is trained, you can analyze new videos using the following command:
-```
-deeplabcut analyze-videos <your-project-path>/config.yaml <video-file>
-```
-- Finally, you can visualize the results using the following command:
-```
-deeplabcut plot-trajectories <your-project-path>/config.yaml <video-file>
+
+Code:
+```python
+import deeplabcut
+
+# create a new project
+project_name = 'example_project'
+experimenter = 'John Doe'
+videos = ['video1.mp4', 'video2.mp4']
+config_path = deeplabcut.create_new_project(project_name, experimenter, videos)
+
+# extract frames from the video
+deeplabcut.extract_frames(config_path)
+
+# label the frames
+deeplabcut.label_frames(config_path)
+
+# create training dataset
+deeplabcut.create_training_dataset(config_path)
+
+# train the model
+deeplabcut.train_network(config_path)
+
+# evaluate the model
+deeplabcut.evaluate_network(config_path)
+
+# analyze the video
+deeplabcut.analyze_videos(config_path, videos)
+
+# create a labeled video
+deeplabcut.create_labeled_video(config_path, videos)
 ```
 
-Sample input files:
-- config.yaml: Contains parameters for training such as body parts and network architecture.
-- labeled frames: Contains images with labeled body parts for training.
-- video file: Contains the video that you want to analyze.
+Input Files: 
 
-Note: DeepLabCut requires Python to run, and it is recommended to install it through Anaconda.
+- Deeplabcut requires a list of videos that you want to analyze. The video format can be .mp4, .avi, .mov, etc. 
+- Also, a configuration file in the format of .yaml containing all the parameters necessary for the analysis. This file is automatically created when a new project is created.
+ 
+Output Files: 
 
-For more information, you can visit the official DeepLabCut documentation: https://deeplabcut.github.io/DeepLabCut/docs/
+- Generates a .h5 file containing all the coordinates of the tracked points for each frame of the video.
+- A .mp4 video file showing the original video with the labeled points from the analysis. 
+
+Command to Run the Code:
+
+- The program can be executed via an integrated development environment (IDE) like Jupyter Notebook or directly through the command line if the script is saved as a .py file. Here is a sample command to run a python script in a terminal:
+
+    ```
+    python script.py
+    ```
+    Replace "script.py" with the name of your python script.
+
+- There is no specific command to run this as this is a python library, thus it should be included within a python script and run in a python enabled environment. 
+- Please note: the code shown needs to be used as part of a Python script, it will not work in a command line interface as a standalone command.
+
+Specifications: 
+- The input video should be clear with little to no background noise to accurately track the body parts.
+- The body parts of interest should be well defined and distinct from the rest of the objects in the frame.
+- The labeling process requires manual input where the user is to label the points of interest in the frames extracted from the video. Hence accuracy and consistency in labeling determine the effectiveness of the model trained.
+
+Note: 
+- The training step can take some time depending on the complexity of the video and the computational resources as it involves training a Convolutional Neural Network (CNN) on labelled images.
+- The Deeplabcut python library also provides GUI for labelling the images and analyzing videos, which can be invoked via its associated functions.

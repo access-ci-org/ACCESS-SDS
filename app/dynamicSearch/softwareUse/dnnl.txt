@@ -1,36 +1,75 @@
-Use Case: Deep Neural Network Library (DNNL)
-Code details and examples:
-DNNL, also known as oneDNN, is a high-performance deep learning library developed by Intel. DNNL provides optimized primitives for deep learning algorithms. Below is an example of using DNNL for a simple matrix multiplication operation.
+Use Case: Use DNNL to implement a simple neural network model.
 
-```python
-import numpy as np
-import dnnl
+Code Details and Examples: Code
 
-# Create input matrices
-matrix_a = np.random.randn(3, 4).astype(np.float32)
-matrix_b = np.random.randn(4, 5).astype(np.float32)
+In this example, we will define and run a simple fully-connected neural network layer using DNNL, also known as oneDNN. This example uses the DNNL C++ API.
 
-# Define the expected output shape
-output_shape = (3, 5)
+Step 1: Define the layer dimensions
 
-# Create a dnnl memory object for input matrices
-memory_a = dnnl.memory(matrix_a.shape, dnnl.dt.f32, dnnl.memory.format_tag.nc)
-memory_b = dnnl.memory(matrix_b.shape, dnnl.dt.f32, dnnl.memory.format_tag.nc)
-
-# Create a dnnl memory object for the output matrix
-memory_output = dnnl.memory(output_shape, dnnl.dt.f32, dnnl.memory.format_tag.nc)
-
-# Create a dnnl primitive for matrix multiplication
-primitive_desc = dnnl.gemm_desc('T', 'N', output_shape, matrix_a.shape[1], 'F32')
-primitive = dnnl.primitive(primitive_desc, [memory_a, memory_b], [memory_output])
-
-# Execute the primitive
-primitive.execute([memory_a.pointer, memory_b.pointer], [memory_output.pointer])
-
-# Retrieve the result
-result = np.array(memory_output.pointer, copy=True).reshape(output_shape)
-
-print(result)
+```cpp
+const int batch = 32;
+const int input_features = 1000;
+const int output_features = 500;
 ```
 
-To run the code, you can save it in a file (e.g., `dnnl_example.py`) and execute it using Python. Note that you may need to have DNNL library installed and properly set up in your environment to run the code successfully.
+Step 2: Allocate memory for input and output data
+
+```cpp
+std::vector<float> src_data(batch * input_features);
+std::vector<float> wei_data(output_features * input_features);
+std::vector<float> dst_data(batch * output_features);
+```
+
+Step 3: Initialize a DNNL engine and a stream.
+
+```cpp
+dnnl::engine eng(dnnl::engine::kind::cpu, 0);
+dnnl::stream s(eng);
+```
+
+Step 4: Create DNNL memory objects for the input, weights and output data
+
+```cpp
+auto src_mem = dnnl::memory({{batch, input_features}, dnnl::memory::data_type::f32, dnnl::memory::format_tag::ab}, eng);
+auto wei_mem = dnnl::memory({{output_features, input_features}, dnnl::memory::data_type::f32, dnnl::memory::format_tag::ab}, eng);
+auto dst_mem = dnnl::memory({{batch, output_features}, dnnl::memory::data_type::f32, dnnl::memory::format_tag::ab}, eng);
+```
+
+Step 5: Initialize the input and weights data
+
+```cpp
+std::iota(src_data.begin(), src_data.end(), 1);
+std::iota(wei_data.begin(), wei_data.end(), 1);
+
+// Write data to DNNL memory
+write_to_dnnl_memory(src_data.data(), src_mem);
+write_to_dnnl_memory(wei_data.data(), wei_mem);
+```
+
+Step 6: Define and execute a fully-connected layer primitive
+
+```cpp
+dnnl::inner_product_forward::primitive_desc ip_pd({dnnl::prop_kind::forward, src_mem.get_desc(), wei_mem.get_desc(), dst_mem.get_desc()}, eng);
+
+dnnl::inner_product_forward ip(ip_pd);
+ip.execute(s, {{DNNL_ARG_SRC, src_mem}, {DNNL_ARG_WEIGHTS, wei_mem}, {DNNL_ARG_DST, dst_mem}});
+```
+
+Step 7: Wait for all computations to finish and check the results
+
+```cpp
+s.wait();
+
+// Read the output data
+read_from_dnnl_memory(dst_data.data(), dst_mem);
+```
+
+One can compile and run this C++ code with the necessary DNNL libraries linked and the appropriate compilers. The commands to compile and run can be:
+
+```bash
+g++ -std=c++11 -I<path-to-dnnl_include> -L<path-to-dnnl_lib> -ldnnl example.cpp -o example
+export LD_LIBRARY_PATH=<path-to-dnnl_lib>:$LD_LIBRARY_PATH
+./example
+```
+
+Replace `<path-to-dnnl_include>` and `<path-to-dnnl_lib>` with the paths to the DNNL headers and libraries, respectively. After running `./example`, the output data is printed to the console.

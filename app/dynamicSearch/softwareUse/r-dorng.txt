@@ -1,0 +1,25 @@
+Use Case: Generating random numbers using a specific distribution
+
+Code details and examples: The R package "dorng" is useful for generating random numbers according to a specified distribution.
+
+For example, let's say we want to generate random numbers according to a normal distribution.
+
+Code:
+
+```R
+# We first have to install and load the library
+install.packages('dorng')
+library(dorng)
+
+# Set the seed for reproducibility
+set.seed(123)
+
+# Specify the distribution we want (normal), and the other necessary parameters
+r <- dorng(distribution = 'norm', mean = 0, sd = 1, n = 100)
+
+# This will generate 100 random numbers from a normal distribution with mean 0 and standard deviation 1.
+```
+
+Command to run:
+
+This code can be run directly in the R console or using an IDE such as RStudio. If running from the command line, the R script should be saved as "filename.R". The command to run this file would then be `Rscript filename.R`. The function `set.seed(123)` is used to ensure that the random numbers generated are reproducible.

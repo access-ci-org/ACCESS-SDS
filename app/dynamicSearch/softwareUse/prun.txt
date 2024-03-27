@@ -1,53 +1,33 @@
-"prun," as it is a commonly used term in HPC environments for job submission commands. I will provide examples for a few potential interpretations:
+Use Case: "prun" is used for running MPI processes across a cluster in a High-Performance Computing environment. This tool is part of the OpenMPI library. It allows one to manage parallel computations on distributed systems.
 
-1. Use Case: prun MPI job submission command
 Code details and examples:
-Sample input file (mpi_job.sh):
+
+Code: 
+
 ```bash
 #!/bin/bash
-#PBS -l nodes=4:ppn=8
-#PBS -l walltime=01:00:00
-#PBS -N my_mpi_job
-#PBS -o my_mpi_job.out
-#PBS -e my_mpi_job.err
+#SBATCH --job-name=test_mpi
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=8
+#SBATCH --time=10:00
+#SBATCH --mem=2000MB
+#SBATCH --output=output.log
 
-cd $PBS_O_WORKDIR
-mpirun -np $PBS_NP ./my_mpi_executable
-```
+module load openmpi
 
-Command to submit the job:
-```bash
-qsub mpi_job.sh
+prun ./my_program
 ```
+Input File: `my_program` is the MPI executable file. It should be created from a source file using proper MPI commands.
 
-2. Use Case: prun as part of the Valgrind memory debugging tool
-Code details and examples:
-Sample input file (valgrind_job.sh):
-```bash
-#!/bin/bash
-valgrind --tool=memcheck ./my_program
-```
+Command to run: To submit the script to the scheduler, you would run the command `sbatch script.sh` where script.sh is the name of your script. 
 
-Command to run Valgrind:
-```bash
-./valgrind_job.sh
-```
+The `sbatch` command submits the job to the SLURM scheduler. It accepts the `--job-name = test_mpi` parameter which assigns a name to the job for ease of administration and resource allocation. The node settings `--nodes = 2` and `--ntasks-per-node = 8` specify the number of nodes and the number of tasks per node. The `--time = 10:00` parameter sets the maximum time that the job can run and the `--mem = 2000MB` parameter sets the maximum amount of memory the job is allocated. The `--output = output.log` parameters specify where to write the job's standard output.
+ 
+The third section of the script loads the openmpi module with `module load openmpi` and executes the MPI job on the cluster with `prun ./my_program`.
 
-3. Use Case: prun as a command line process runner
-Code details and examples:
-Sample input file (processes.txt):
-```
-./process1
-./process2 arg1 arg2
-./process3
-```
+With SLURM, to specify the number of nodes and tasks, you use the #SBATCH --nodes, #SBATCH --ntasks-per-node directives. The prun command runs the MPI job on the nodes allocated by SLURM. 
 
-Code snippet to run the processes sequentially:
-```bash
-#!/bin/bash
-while read p; do
-  $p
-done < processes.txt
-```
+Each node must have a copy of the MPI program executable `my_program`.
+Before executing the program, `openmpi` module needs to be loaded, which is done using the module load command. The invocation of `prun` command does not require the input filename. 
 
-Please provide more context or a specific example if you were referring to a different software package or tool named "prun."
+Important note: You need to compile your MPI program with mpicc or a similar MPI-aware compiler before running `prun`.

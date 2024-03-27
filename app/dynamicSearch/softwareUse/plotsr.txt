@@ -1,0 +1,38 @@
+Use Case: PlotSR is a Python library that provides a utility to draw scatter and bar plots from summary data. It's commonly used in bioinformatics and computational biology to visualize comparison results, assessment data, or benchmarking studies. 
+
+Code details and examples: Code 
+
+Input File Format:
+CSV or text format is required. Each row should have at least two columns: the first one is the category label, and the second one is the value.
+
+Sample Input File Content:
+`sample_data.txt`
+```
+Category1, 10
+Category2, 30
+Category3, 20
+```
+
+Code Snippet:
+```python
+import matplotlib.pyplot as plt
+import pandas as pd
+from PlotSr import PlotSr
+
+# Read data file
+data_file = "sample_data.txt"
+data_df = pd.read_csv(data_file, sep=",", header=None)
+
+# Initialize PlotSr object
+ps = PlotSr()
+
+# Plot barchart
+fig, ax = plt.subplots()
+ps.barplot(ax, data_df, x_index=0, y_index=1)
+plt.show()
+```
+
+Command to run:
+```bash
+python plot_sr.py
+```

@@ -1,0 +1,48 @@
+Use Case: Maturin is widely used to build and publish rustic Python extensions. You can use it either in the Rust project as a development tool or in a Python project as a build system. 
+
+Code details and examples: 
+
+Firstly, create a new Python package with Rustyn:
+
+Code:
+```
+dbus-python = "0.8.1"
+
+[package.metadata.maturin]
+requires-dist = ["cffi>=1.0"]
+
+[lib]
+name = "dbus_python"
+crate-type = ["cdylib"]
+
+[dependencies]
+cpython = "0.4"
+dbus = "0.8"
+```
+
+This specifies that our package will have the same dependencies as dbus-python, and the Rust library will be named dbus_python. 
+
+As input data, maturin uses the setup.py script, which is required to package the library for PyPi. Here’s how it looks for dbus-python:
+
+Code:
+```python
+from setuptools import setup, find_packages
+
+setup(
+    name="dbus-python",
+    version="0.8.1",
+    packages=find_packages(),
+    install_requires=[
+        "cffi>=1.0",
+    ],
+)
+```
+
+To build the package using maturin you would then use the following command:
+
+Code:
+```bash
+maturin develop
+```
+
+This command builds the package and also installs it to your current python interpreter.

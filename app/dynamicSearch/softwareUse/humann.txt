@@ -1,0 +1,36 @@
+Use Case: HUMAnN is a bioinformatics software that quantifies presence/absence and abundance of microbial pathways in a community from metagenomic data or from other microbial community sequencing data.
+
+Code details and examples: 
+
+Code: 
+
+Typically, the input format is a .fastq file for this tool. Here is a command to run HUMAnN:
+
+```bash
+humann -i input.fastq -o output_folder
+```
+This will take the .fastq file as input and output the results to the specified output folder. 
+
+If 'input.fastq' is the sample input file, then this would be the command. The software will output a variety of files including gene families, pathways, and species abundance in tsv format.
+
+The input.fastq file consists of your metagenomic data. This data includes DNA sequences from the sample you're studying. The FastQ format includes:
+- A sequence identifier with details about the sequence
+- The raw sequence
+- An identifier that's simply a "+"
+- Encoding of the quality of the sequence 
+
+Sample Input: 
+
+```
+@SEQ_ID
+AGTTCCGGTTGTTAGTTAGT
++
+!''*((((***+))%%%++)(%%%%).
+@SEQ_ID
+AGTTCCGGTTGTTAGTTAGT
++
+!''*((((***+))%%%++)(%%%%).
+```
+This snippet is a simplified example of what a FastQ file would look like. They can contain sequences from millions of organisms depending on the sample size.
+
+For 'humann', the sequences would relate to microbiome data. The software will process the file and output the abundance and presence of various organisms and their molecular pathways.

@@ -1,42 +1,75 @@
-wxWidgets is a C++ library that lets developers create applications for Windows, macOS, Linux, and other platforms. 
+Use Case: wxWidgets is a C++ library that lets developers create applications for Windows, macOS, Linux and other platforms with a single code base. It has native look and feel, and it's very flexible. wxWidgets uses the native platform's controls: Windows API on Windows, GTK on Linux, Cocoa on macOS.
 
-Use Case: Creating a simple GUI application
 Code details and examples:
-```cpp
+
+Starting from a happy path scenario, let's take the simplest "Hello world" wxWidgets application with a top-level window having a single menu with a "Quit" item and a status bar.
+
+Below is an example:
+
+Code:
+
+```c++
 #include <wx/wx.h>
 
-class MyFrame : public wxFrame
+class MyApp: public wxApp
 {
-public:
-    MyFrame(const wxString& title) : wxFrame(NULL, wxID_ANY, title)
-    {
-        // Set up the UI components
-        wxPanel* panel = new wxPanel(this);
-        wxStaticText* text = new wxStaticText(panel, wxID_ANY, "Hello, wxWidgets!", wxPoint(10, 10));
-
-        // Set up the layout
-        wxBoxSizer* sizer = new wxBoxSizer(wxVERTICAL);
-        sizer->Add(text, 0, wxALL, 10);
-        panel->SetSizer(sizer);
-    }
+    virtual bool OnInit();
 };
 
-class MyApp : public wxApp
+class MyFrame: public wxFrame
 {
 public:
-    virtual bool OnInit()
-    {
-        MyFrame* frame = new MyFrame("My wxWidgets App");
-        frame->Show(true);
-        return true;
-    }
+    MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size);
+private:
+    void OnQuit(wxCommandEvent& event);
+    wxDECLARE_EVENT_TABLE();
 };
+
+wxBEGIN_EVENT_TABLE(MyFrame, wxFrame)
+    EVT_MENU(wxID_EXIT,  MyFrame::OnQuit)
+wxEND_EVENT_TABLE()
 
 wxIMPLEMENT_APP(MyApp);
+
+bool MyApp::OnInit()
+{
+    MyFrame *frame = new MyFrame( "Hello World", wxPoint(50, 50), wxSize(450, 340) );
+    frame->Show( true );
+    return true;
+}
+
+MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size)
+        : wxFrame(NULL, wxID_ANY, title, pos, size)
+{
+    wxMenu *menuFile = new wxMenu;
+
+    menuFile->Append(wxID_EXIT);
+
+    wxMenuBar *menuBar = new wxMenuBar;
+    menuBar->Append( menuFile, "&File" );
+
+    SetMenuBar( menuBar );
+
+    CreateStatusBar();
+    SetStatusText( "Welcome to wxWidgets!" );
+}
+
+void MyFrame::OnQuit(wxCommandEvent& event)
+{
+    Close( true );
+}
 ```
 
-To compile and run the above code, you can use the following commands (assuming you have wxWidgets installed and set up properly):
-```bash
-g++ -o myapp myapp.cpp `wx-config --cxxflags --libs`
-./myapp
+To run the above simple program, you can compile and link it using g++ on Linux/UNIX in the form of:
+
+```sh
+g++ `wx-config --cxxflags --libs` -o MyApp MyApp.cpp
 ```
+
+And then run it:
+
+```sh
+./MyApp
+```
+
+This snippet assumes that the wxWidgets development package is installed on the system and the wx-config command is available in the PATH. It's a simple "Hello World" program and the complexities would increase for more complex applications requiring more detailed and more extensive inputs.

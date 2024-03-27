@@ -1,0 +1,31 @@
+Use Case: Pplacer is used in phylogenetics for placing reads onto a pre-existing phylogenetic tree. New sequences can be integrated without the need for a full tree-building operation. Useful in metagenomics studies to understand the evolutionary relationship of unidentified organisms within an existing tree framework.
+
+Code details and examples:
+
+Code:
+
+Pplacer uses a variety of file formats including Newick-format tree, multiple sequence alignment, an information file and a query sequence. A Maximum-likelihood reference package compressed as a .tgz file. 
+
+To use Pplacer, you must first create a reference package with taxtastic (a tool of Pplacer), typically from a multiple sequence alignment and a phylogenetic tree.
+
+Command to create a reference package (this is essentially your input file):
+   
+```bash
+taxit create -l [locus name] -P [output reference package file] --aln-fasta [aligned fasta file] --tree-stats [tree with reference stats] --tree-file [treefile] -s [unique taxon identifier]
+```
+After successfully creating your reference package (the input for Pplacer), you can now run Pplacer. Your input would be the reference package and the fasta file with your query sequences to place on the tree.
+
+Command to run Pplacer:
+
+```bash
+pplacer -c [reference package] [query fasta]
+```
+This will place your query sequences on the pre-existing tree and give you several forms of output, including visualization and likelihood files. Other parameters can be specified as per the requirements of your study. 
+
+For example:
+
+```bash
+pplacer -c bacteria.refpkg input.fasta
+```
+
+Where bacteria.refpkg is the reference package and input.fasta is the query sequence.

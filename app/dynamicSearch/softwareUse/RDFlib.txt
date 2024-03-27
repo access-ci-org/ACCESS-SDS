@@ -1,28 +1,31 @@
-Use Case: RDFlib is a Python library for working with RDF data. 
+Use Case: RDFlib is a Python library used for working with RDF, a simple yet powerful language for representing information.The library contains parsers and serializers for RDF/XML, N3, NTriples, Turtle, TriX, and RDFa. RDFlib is also a platform for RDF Applications with SPARQL and Graph Database.
 
-Code details and examples:
+Code Details and Examples:
 
-Sample input file (example.ttl):
-```
-@prefix ex: <http://example.org/> .
-ex:John ex:hasAge "30" .
-```
+Code:
 
-Code snippet to parse an RDF file and print triples:
 ```python
-from rdflib import Graph
+from rdflib import Graph, Namespace, URIRef, Literal
 
+# initialize a graph
 g = Graph()
 
-# Load the RDF data
-g.parse("example.ttl", format="turtle")
+# create a namespace
+n = Namespace("http://example.org/people/")
 
-# Print triples
-for subj, pred, obj in g:
-    print(subj, pred, obj)
+# bind the namespace to a prefix
+g.bind("ppl", n)
+
+# create triple
+g.add((n.john, n.hasAge, Literal(42)))
+
+# save the graph
+g.serialize("example.rdf")
 ```
+
+This code creates a simple RDF graph with a single triple saying that "John has an age of 42". The graph is saved as an rdf file.
 
 Command to run:
-```
-python script.py
-```
+`python3 filename.py`
+
+*Please replace filename.py with the actual filename of your python file.*

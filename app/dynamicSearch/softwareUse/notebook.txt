@@ -1,0 +1,24 @@
+Use Case: Jupyter Notebook is an open-source web application that allows the creation and sharing of documents. This application can contain both the code (e.g., python or R) and rich text elements (paragraphs, equations, figures, links, etc.). The primary use of this system is for data cleaning and transformation, numerical simulation, statistical modeling, data visualization, machine learning, and much more.
+
+Code details and examples: 
+
+Code:
+
+```python
+# This is a python comment
+
+# Importing library
+import pandas as pd
+
+# loading dataset
+dataset = pd.read_csv('data.csv')
+
+# Displaying first 5 rows
+print(dataset.head())
+```
+
+This is a simple Python code snippet for displaying data in a Jupyter notebook. This code first imports the Pandas library, which is used for data analysis and manipulation. Then it loads a dataset using the `read_csv` function of pandas. The dataset is assumed to be in the .csv format and present in the same directory as the notebook. The loaded dataset is stored in the `dataset` variable. Lastly, it prints the first five rows of the dataset using the `head` function.
+
+The command to run this piece of code in a Jupyter notebook is by clicking the 'Run' button from the toolbar or by pressing Shift+Enter when the cell containing this code is in focus.
+
+No specific input file format is needed as long as the data can be imported using Pandas. In our case, we used a .csv file (named `data.csv`).

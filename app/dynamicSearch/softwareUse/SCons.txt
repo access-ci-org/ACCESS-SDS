@@ -1,26 +1,28 @@
-Use Case: Build automation tool
+Use Case: SCons is a software construction tool—think build automation tool—that obviates the need for the old Make build tool. It uses Python scripts as "makefiles." One can use SCons for validating the build by comparing content signatures rather than timestamps to decide whether files are up-to-date.
+
 Code details and examples:
-SCons is a software construction tool that is an alternative to other build tools such as Make. It uses Python scripts as configuration files for software builds. Below is a simple example of a SConstruct file to compile a C program.
 
-SConstruct:
-```python
+Code:
+
+Here’s an example SConstruct. An SConstruct file is the equivalent of a Makefile for use with SCons.
+
+```Python
+Program('hello.c')
+```
+
+In this simple case, SCons scans the 'hello.c' file for dependencies, compiles 'hello.c' into a 'hello.o' file, and links 'hello.o' into a 'hello' executable.
+
+In a more complex scenario, consider this:
+
+```Python
+SourceFile = 'hello.c'
+TargetFile = 'hello'
 env = Environment()
-env.Program('hello', 'hello.c')
+env.Program(target = TargetFile, source = SourceFile)
 ```
 
-hello.c:
-```c
-#include <stdio.h>
+In this example, a source ('hello.c') and target ('hello') file are explicitly declared. An environment is created, and the env.Program command tells SCons to compile and link the program.
 
-int main() {
-    printf("Hello, world!\n");
-    return 0;
-}
-```
+To run SCons, open the terminal, navigate to the directory containing the SConstruct file and type:
 
-To build the program using SCons, you can run the following command:
-```bash
-scons
-```
-
-This will compile the `hello.c` file and generate an executable called `hello`.
+Command: `scons`

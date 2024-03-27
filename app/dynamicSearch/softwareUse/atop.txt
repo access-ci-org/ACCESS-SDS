@@ -1,0 +1,37 @@
+Use Case: Monitor and log system performance and resource usage in real time. It is highly effective for identifying which resources are being heavily utilized and by which processes. Scan system-level statistics, such as CPU, memory, disk I/O, and network utilization.
+
+Code Details and Examples:
+
+Code:
+
+Typically, atop does not require any input files to run. It can be executed directly from the command line using a variety of flags to customize its output. Here are some common examples:
+
+1. Run atop with 10-second intervals:
+```bash
+atop 10
+```
+
+2. Run atop with process filter on command name:
+```bash
+atop -pcmd
+```
+
+3. Write a binary data to a file every 60 seconds:
+```bash
+atop -w outputfilename 60
+```
+
+4. Run atop in the background:
+```bash
+atop -a &
+```
+
+Note: Non-root users may have limited access to certain information.
+
+The default output of atop is a comprehensive overview of system resources, but its output can be customized extensively using command line flags and interactive keys while the program is running. For example, press 'm' to toggle memory related information, press 'd' for disk I/O, and 'n' for network. 
+
+Converted log files can be read using the `-r filename` flag. Example:
+
+```bash
+atop -r outputfilename
+```

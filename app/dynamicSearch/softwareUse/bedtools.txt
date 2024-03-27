@@ -1,30 +1,35 @@
-Use Case: Bedtools is a powerful open-source software for working with genomic intervals.
+Use Case: bedtools is a genome arithmetic toolset that allows users to perform manipulations on genomic data, such as intersecting, merging, counting, complementing, and making histograms.
 
 Code details and examples:
 
-Bedtools intersect - finding overlapping intervals between two BED files
+Code:
+```
+bedtools intersect -a file1.bed -b file2.bed > output.bed
+```
+The above command uses the `intersect` function of bedtools to find overlapping regions of genomic data between file1.bed and file2.bed. The output of this operation is saved in output.bed. 
 
-Input file 1 (file1.bed):
+Input File Format:
+The input files for bedtools are often in BED (Browser Extensible Data) Format. A typical BED file contains several lines, where each line in the file corresponds to a different genomic region. Fields in the BED file are separated by whitespace (tabs are recommended). The first three fields are required and must be provided in the order shown below:
 ```
-chr1 100 200
-chr1 300 400
-```
-
-Input file 2 (file2.bed):
-```
-chr1 150 250
-chr1 350 450
-```
-
-Command:
-```
-bedtools intersect -a file1.bed -b file2.bed
+chrom - name of the chromosome or scaffold. 
+chromStart - start position of the feature in the chromosome or scaffold. The first base in a chromosome is numbered 0.
+chromEnd - end position of the feature in the chromosome or scaffold. The chromEnd base is not included in the display of the feature.
 ```
 
-Output:
+A sample input (`file1.bed`) could look like this: 
 ```
-chr1 150 200
-chr1 350 400
+chr1    100    200
+chr1    150    250
+```
+And `file2.bed` could be:
+```
+chr1    120    220
+chr1    180    280
 ```
 
-There are various other subcommands in bedtools like merging intervals, finding coverage, comparing files, etc.
+The output file after running the intersect operation will be: 
+```
+chr1    120    200
+chr1    180    250
+```
+which are the overlapping regions between file1.bed and file2.bed.

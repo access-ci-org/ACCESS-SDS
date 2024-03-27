@@ -1,0 +1,36 @@
+Use Case: ClustalW is used for multiple sequence alignment of proteins or nucleotides. It's most widely used in bioinformatics for evolutionary studies, function prediction, and structural research. 
+
+Code Details and Examples:
+
+Code:
+ClustalW requires an input file in FASTA format, where each sequence is represented by two lines: a single-line description proceeded by a ">" symbol, and lines of sequence data.
+
+Input File Format (example.fasta):
+
+```
+>Sequence1
+AGTCAAGGTTAGCTAAGTCCTAAGT
+>Sequence2
+GTCAGGTAAGCTACGAGTCCTAGT
+>Sequence3
+GTCAGGTTAGTCAAGGTCCTAAGT
+```
+
+Run Command:
+To run clustal in command line you need to use the following command:
+```
+clustalw2 -INFILE=example.fasta
+```
+This will produce multiple output files with the alignment results. The primary output is in CLUSTAL format (*.aln) but other formats can be specified.
+
+Alignment output (example.aln):
+
+```
+CLUSTALW multiple sequence alignment
+
+
+Sequence1            AGTCAAGGTTAGCTAAGTCCTAAGT
+Sequence2            GTCAGGTAAGCTACGAGTCCTAGT-
+Sequence3            GTCAGGTTAGTCAAGGTCCTAAGT
+```
+The '-' on the second sequence indicates a gap introduced for better alignment.

@@ -1,0 +1,24 @@
+Use Case: Creating a descriptive statistics table in a reproducible way for inclusion in a report; calculating and presenting descriptive statistics for different groups.
+
+Code details and examples:
+
+Code: 
+
+```R
+library(xtable)
+
+# Assuming that the `mtcars` dataset is used
+
+data(mtcars)
+
+# Calculating descriptive statistics
+desc_stat <- summary(mtcars)
+
+# Displaying the descriptive statistics as a table
+desc_stat_table <- xtable(desc_stat)
+
+# Printing the table with xtable style
+print.xtable(desc_stat_table, type = "html")
+```
+
+In this example, the input is the `mtcars` dataset, which comes pre-installed with R. The summary() function is used to calculate the descriptive statistics and the xtable() function from the `xtable` library packages these statistics into an object that can be printed as a table. The print.xtable() function is then used to display this table. The "html" argument tells R to print the table with `html` markup.

@@ -1,0 +1,37 @@
+Use Case:Compute the standard deviation, arithmetic mean, median, minimum and maximum for each column in a matrix.
+
+Code details and examples: 
+Code:
+```R
+# Importing matrixStats package
+library(matrixStats)
+
+# Define a matrix
+m <- matrix(c(2, 4, 3, 1, 5, 7), nrow=2)
+
+# Compute column standard deviations
+colSds <- colSds(m)
+
+# Compute column means
+colMeans <- colMeans2(m)
+
+# Compute column medians
+colMedians <- colMedians(m)
+
+# Compute column minimums
+colMins <- colMins(m)
+
+# Compute column maximums
+colMaxs <- colMaxs(m)
+
+# Print the results
+print(paste("Standard deviations:", colSds))
+print(paste("Means:", colMeans))
+print(paste("Medians:", colMedians))
+print(paste("Minimums:", colMins))
+print(paste("Maximums:", colMaxs))
+
+```
+
+You can run this R script with command: Rscript file.r (replace file.r with your actual filename)
+Please note The functions in the matrixStats package expect matrices as input, and not data frames. If you have a data frame, you should convert it to a matrix using as.matrix() function before passing it to matrixStats functions.

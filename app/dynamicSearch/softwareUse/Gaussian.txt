@@ -1,26 +1,30 @@
-Use Case: Gaussian is a computational chemistry software used for electronic structure calculations.
+Use Case: The Gaussian suite is a quantum chemistry package used for performing density functional theory, molecular dynamics, quantum mechanics, and more. It is widely used in fields like material science, computational chemistry, and biochemistry.
 
-Code details and examples:
+Code details and examples: Code
 
-Input file (example.inp):
-```
-%chk=test.chk
-# HF/6-31G(d) Opt
+The input file for Gaussian is usually a text file with the .gjf or .com extension. The structure of the input file is divided into five parts: Link0 commands, Route section, Title section, Molecular specification section, and optional additional input sections.
 
-Test optimization
+A simple Gaussian input file to run a Hartree-Fock calculation on water molecule would look like this:
+
+%sample gaussian input file - water.gjf
+%chk=water.chk
+%nprocshared=2
+%mem=1GB
+#p HF/6-31G(d) opt
+
+Water Energy
 
 0 1
-C    0.000000    0.000000    0.000000
-H    1.069550    0.000000    0.000000
-H   -0.356518    1.002415    0.000000
-H   -0.713032   -0.877254   -0.602066
-H   -0.713032   -0.877254    0.602066
+O 0.000000 -0.007156 0.965491
+H 0.000000 0.001486 -0.003471
+H 0.000000 0.931026 1.207929
 
-```
+Link0 commands start with % (e.g., %chk and %mem, which specify the checkpoint file name and the memory size to use, respectively). The # symbol begins the Route section, followed by keywords specifying the calculation type (HF), basis set (6-31G(d)), and whether to perform an optimization (“opt”).
 
-Command to run Gaussian (for Gaussian 16):
-```
-g16 example.inp > example.out
-```
+Following this, you provide a title (e.g., "Water Energy"), molecular charge and multiplicity (0 1 for neutral water), and atomic coordinates.
 
-This example input file performs a geometry optimization using HF/6-31G(d) level of theory on a molecule consisting of a carbon atom and four hydrogen atoms. The output file example.out will contain the optimization results. Make sure to modify the input file according to the system and calculation you want to run.
+The calculation can be made to run by passing the input file to Gaussian with the following shell command:
+
+g16 < water.gjf > water.log
+
+Running this command would start the Gaussian 16 calculation as specified in the water.gjf file and write the output to a file named water.log. Before executing, ensure you have set the correct path variables for Gaussian. Check Gaussian's instructions to do this.

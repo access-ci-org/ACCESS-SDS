@@ -1,0 +1,33 @@
+Use Case: The MASS package is one of the most widely used tools for statistical analysis in R. It is useful for generalized linear models, robust regression, discriminant analysis, clustering, etc.
+
+Code Details and Examples:
+
+Code:
+
+```R
+# Load the MASS library
+library(MASS)
+
+# This example demonstrates the use of the 'lda' function for linear discriminant analysis
+# We will use the iris dataset
+data(iris)
+
+# Run linear discriminant analysis using Sepal.Length and Sepal.Width as predictive variables
+result.lda <- lda(Species ~ Sepal.Length + Sepal.Width, data=iris)
+
+# Print the result
+print(result.lda)
+
+# This example showcases the use of the 'rlm' function for robust linear regression
+# Create some sample data with outliers
+x <- 1:10
+y <- c(2, 2, 3, 4, 5, 6, 7, 16, 9, 10)
+
+# Run robust linear regression
+result.rlm <- rlm(y ~ x)
+
+# Print the result
+print(result.rlm)
+```
+
+Command to run: R code can be run in an R environment such as RStudio, or in the command line using the `Rscript` command followed by the script's file name. For instance, if the script above is saved in a file named `example.R`, running it would involve typing `Rscript example.R` in the command line.

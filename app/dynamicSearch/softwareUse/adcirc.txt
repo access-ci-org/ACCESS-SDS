@@ -1,15 +1,41 @@
-Use Case: Tidal and storm surge modeling with ADCIRC
+Use Case: The ADvanced CIRCulation (ADCIRC) is extensively used for predicting storm surge and tidal circulation. It helps researchers to predict the water levels and currents caused by meteorological events like hurricanes or generic storms for oceanographic studies.
+
 Code details and examples:
-ADCIRC is a popular open-source system for solving problems related to water waves, storm surges, tides, and circulation. It is often used for coastal ocean modeling and prediction during extreme events such as hurricanes. Here is an example of how to run ADCIRC for tidal and storm surge modeling with sample input files.
 
-1. Sample input files:
-- fort.15: ADCIRC control file containing simulation parameters
-- nodal_att.dat: Nodal attributes file
-- fort.13: Boundary condition file
+Code:
 
-2. Command to run ADCIRC:
-```bash
-adcirc
+ADCIRC uses an unstructured grid of triangular elements allowing the spatial resolution to be maximized in areas of complex geometry while being minimized in areas of lesser importance. The input file has the .14 extension for ADCIRC, which contains the information of each element's coordinates along with their connectivity.
+
+Sample of a .14 file:
 ```
+! Following are the overview number of nodes and elements
+171959 259634
+! "Node" "x coordinate" "y coordinate" "Depth"
+1 -58667.388000 335647.526000 -0.453800
+...
+171959 -74586.797000 334707.259000 -1.221100
+! "Node ID" "Connection 1" "Connection 2" "Connection 3"
+1 166515 166520 166519
+...
+259634 45491 45846 45847
 
-Note: The specific command may vary depending on the platform and installation of ADCIRC. Please refer to the ADCIRC documentation for more details on running simulations and setting up input files.
+```
+ADCIRC comes with different sets of parameters used for fintuning and describing physical processes involved in a simulation, these parameters are located in a fort.15 file which contains information to perform the simulation and often change based on simulation type and intent.
+
+Sample of a fort.15 file:
+```
+! Following is the name of the model run
+Model Run Test_1
+!Following are the overview parameters of the model
+20., -1.000000, 10.000000, 01/01/2021, 20:00:00, 432000, 0.005000, 0.005000, 0.005000, 0.005000,
+!Following are various flags and values to tune the model
+0, 0, 1.000000, 0, 0, 2, 0, 0,
+0, 10,  270.000000, 1, 0, -1, 26, T, T, T, T, T, F, T, F, F, F, 0.,
+! Units and format related parameters
+F, F, F, F, 1, F, F, F
+```
+To run ADCIRC, navigate to the directory containing the prepared input files:
+
+```command
+./padcirc -ksp_type bcgs
+```

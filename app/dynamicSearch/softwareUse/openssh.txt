@@ -1,23 +1,19 @@
-Use Case: Securely transfer files between two remote servers using OpenSSH.
-Code details and examples:
-1. Transfer a file from the local machine to a remote server:
-```bash
-scp /path/to/local/file username@remote_server:/path/to/destination/directory
-```
+Use Case: Secure shell (SSH) is a program to log into another computer over a network, to execute commands in a remote machine, and to move files from one machine to another. It provides strong password authentication and secure encrypted data communications between two computers connecting over an insecure network such as the internet. OpenSSH is a freely available version of the Secure Shell (SSH).
 
-2. Transfer a file from a remote server to the local machine:
-```bash
-scp username@remote_server:/path/to/remote/file /path/to/destination/directory
-```
+Code details and examples: 
 
-3. Transfer an entire directory from the local machine to a remote server:
-```bash
-scp -r /path/to/local/directory username@remote_server:/path/to/destination/directory
+Code:
 ```
-
-4. Transfer an entire directory from a remote server to the local machine:
-```bash
-scp -r username@remote_server:/path/to/remote/directory /path/to/destination/directory
+ssh -l username host
 ```
+In the command above, `username` is your username on the remote system and `host` is the name of the remote system.
 
-Note: Make sure you have SSH access to the remote server and the appropriate permissions to read and write files.
+Use Case: Secure copy (SCP) is a means of securely transferring computer files between a local and a remote host or between two remote hosts.
+
+Code details and examples: 
+
+Code:
+```
+scp your_username@remotehost.edu:foobar.txt /local/dir
+```
+In the command above, `your_username` is your username on the remote system, `remotehost.edu` is the name of the remote system, `foobar.txt` is the name of the file you wish to copy, and `/local/dir` is the directory to which you want to copy the file. You will be asked for the password for your account on the remote host.

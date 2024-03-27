@@ -1,0 +1,33 @@
+Use Case: OpenACC (Open Accelerators) is a parallel programming model for heterogeneous CPU/GPU systems. It is typically used for accelerating scientific computations by offloading some of the computational work to a GPU or other accelerator. For example, the following code accelerates a loop that performs a vector addition operation.
+
+Code details and examples: Code.
+
+The following is a simple example of vector addition using OpenACC:
+
+```
+# pragma acc parallel loop copyin(a[0:n],b[0:n]) copyout(c[0:n])  
+
+for (int i=0; i<n; ++i)
+   c[i] = a[i] + b[i];
+```
+
+This code is assumed to be embedded in a larger context where arrays a, b, and c are defined, and n is the length of the arrays. The pragma is used to specify directive for the OpenACC compiler, indicating that the subsequent loop should be executed in parallel on the accelerator. 
+
+The `copyin` and `copyout` clauses are used to manage the data transfer between the CPU and the accelerator. The `copyin(a[0:n],b[0:n])` clause tells the compiler to copy the data in arrays a and b from the CPU to the accelerator at the beginning of the parallel region, whereas `copyout(c[0:n])` clause tells the compiler to copy the data in array c from the accelerator back to the CPU at the end of the parallel region.
+
+To compile this code, a compiler that supports OpenACC, like PGI compiler or GCC (version 5.0 or later), is needed. The command to compile the code is:
+
+```
+pgcc -acc -Minfo=accel -o vector_add vector_add.c
+```
+or
+```
+gcc -fopenacc -o vector_add vector_add.c
+```
+In these commands, `-acc` or `-fopenacc` flags enable the compilation of OpenACC directives. `-Minfo=accel` option directs the PGI compiler to print information about the accelerator code generation. `-o vector_add` option specifies the name of the output file to be "vector_add". The last argument `vector_add.c` is the name of the source code file. 
+
+After successfully compiling the code, the resulting executable can be run with command:
+
+```
+./vector_add
+```

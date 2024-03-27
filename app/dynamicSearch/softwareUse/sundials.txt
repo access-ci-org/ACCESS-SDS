@@ -1,29 +1,96 @@
-Use Case: Differential equation solver
+Use Case: SUNDIALS (Suites of Nonlinear and Differential/ALgebraic equation Solvers) provides robust time integrators and nonlinear solvers that can easily be incorporated into existing simulation codes. It is widely used in scientific computing, particularly in modeling physical phenomena.
 
 Code details and examples:
-SUNDIALS (SUite of Nonlinear and DIfferential/ALgebraic equation Solvers) is a suite of advanced numerical solvers for Differential Algebraic Equations (DAE) and Ordinary Differential Equations (ODE) provided by Lawrence Livermore National Laboratory.
 
-One of the components of SUNDIALS is CVODE, which can be used to solve stiff and nonstiff ODEs. Here is an example of how to use CVODE with a simple ODE and Python:
-```python
-from sundials import cvode
+Code:
 
-def ode_func(t, y, ydot, user_data):
-    ydot[0] = -0.5 * y[0]
+Input file example (e.g., testsuites/examples/batch_examples/): 
 
-y0 = [1.0]  # Initial condition
-t0 = 0.0    # Initial time
-tend = 10.0 # Final time
-
-solver = cvode.CVode()
-solver.init(ode_func, t0, y0)
-solver.solve(tend)
-
-solution = solver.get_solution()
-
-print(solution)
+```txt
+# The equations we solve are
+#      dCv/dt = (Tc-Tv)/tr + hv-rv*(c-inf)
+#      dCc/dt = (Tc-Tv)/tc + hv- rc*(c-inf)
+# Here c = Cv + Cc.
+# 
+# The symbols used are
+#   Cv, Cc    ventilated, contagion (resp.) tracer concentrations
+#   Tc, Tv    ventilated, contagion (resp.) clean air fractions
+#   hv, hc    ventilation in resp. rooms
+#   rv, rc    removal in resp. rooms
+#   tr, tc    time constants for resp. rooms
+#   inf       infected fraction
+#
+# The initial conditions are
+#   Cv(t=0) = 1.0,  Cc(t=0) = 0.0
+# and the contamination source has strength q.
 ```
-In this example, we define a simple ODE dy/dt = -0.5*y and solve it using CVODE.
 
-Input file format: No specific input file format is required for this example.
+Code snippet to solve the system of equations:
 
-To run the code, you need to have the SUNDIALS library installed and properly linked with Python. The specific command to run the code will depend on your setup and how SUNDIALS is integrated with Python.
+```cpp
+#include <cvodes/cvodes_direct.h>     /* access to CVDls solver            */
+#include <nvector/nvector_serial.h>  /* access to serial N_Vector         */
+#include <sundials/sundials_types.h> /* definitions of realtype and sunindextype */
+
+/* Functions called by the solver */
+static int f(realtype t, N_Vector y, N_Vector ydot, void *user_data);
+static int Jacobian(sunindextype N, realtype t, N_Vector y, N_Vector fy, SUNMatrix J, void *user_data, N_Vector tmp1, N_Vector tmp2, N_Vector tmp3);
+
+/* Private function to check function return values */
+static int check_flag(void *flagvalue, char *funcname, int opt);
+
+int main()
+{
+  realtype reltol, abstol, t, tout;
+  N_Vector y;
+  SUNMatrix A;
+  SUNLinearSolver LS;
+  void *cvode_mem;
+  int flag;
+
+  y = N_VNew_Serial(NEQ);
+  if(check_flag((void *)y, "N_VNew_Serial", 0)) return(1);
+
+  /* Initialize y */
+  Ith(y,1) = RCONST(1.0);
+  Ith(y,2) = RCONST(0.0);
+
+  /* Call CVodeCreate to initialize the integrator memory and specify the
+   * Backward Differentiation Formula */
+  cvode_mem = CVodeCreate(CV_BDF);
+  if(check_flag((void *)cvode_mem, "CVodeCreate", 0)) return(1);
+  
+  /* Set the pointer to user-defined data */
+  flag = CVodeSetUserData(cvode_mem, data);
+  if(check_flag(&flag, "CVodeSetUserData", 1)) return(1);
+  
+  /* Call CVDlsSetLinearSolver to attach the matrix solver to CVODE */
+  flag = CVDlsSetLinearSolver(cvode_mem, LS, A);
+  if(check_flag(&flag, "CVDlsSetLinearSolver", 1)) return(1);
+  
+  /* Advance the solution in time */
+  while(tout <= T1) {
+    flag = CVode(cvode_mem, tout, y, &t, CV_NORMAL);
+    if(check_flag(&flag, "CVode", 1)) break;
+    tout = tout + DTOUT;
+  }
+
+  /* Free memory */
+  CVodeFree(&cvode_mem);
+  SUNLinSolFree(LS);
+  SUNMatDestroy(A);
+  N_VDestroy(y);
+
+  return(0);
+}
+```
+
+Command to compile the code (using g++ and sundials libraries):
+```
+g++ -o my_program my_program.cpp -lsundials_cvodes -lsundials_nvecserial
+```
+
+To run the program:
+```
+./my_program
+```

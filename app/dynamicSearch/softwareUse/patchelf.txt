@@ -1,0 +1,18 @@
+Use Case: Patchelf is a small utility that is used to modify the dynamic linker and RPATH of ELF executables. It can be used for, say, telling an executable to look for shared libraries at a different path than originally specified.
+
+Code details and examples: Code
+
+Input: ELF format executables
+Specification: The executable should be in ELF format.
+
+For example, if you want to change the interpreter of an ELF executable:
+```
+patchelf --set-interpreter /lib64/ld-linux-x86-64.so.2 ./myexecutable
+```
+
+Or if you want to change the rpath to a different location:
+```
+patchelf --set-rpath /my/custom/lib/ ./myexecutable
+```
+
+No specific input files are needed, you simply need an ELF binary that you want to modify. The changes are made in-place, so be careful not to lose your original binary if things go wrong.

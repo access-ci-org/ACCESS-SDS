@@ -1,0 +1,26 @@
+Use Case: xdusage is a command-line tool within the XSEDE User Portal that allows XSEDE users to view their used compute allocations. It provides an aggregated view of computational usage across all XSEDE resources. 
+
+Code Details and Examples: 
+
+The command to run xdusage is simply 'xdusage', and it takes as inputs your XSEDE username and password. The program will prompt you for these as needed. 
+
+Code: 
+```bash
+$ xdusage
+```
+This command will output a summary report of your usage across all XSEDE resources in the following format: 
+
+```text
+===============================================================
+Allocation Usage Summary Report
+Period Start   : 01/01/2020
+Period End     : 12/31/2020
+Resource       | SU Used  | SU Available | % of Total Allocation
+---------------------------------------------------------------
+Stampede       | 100000   | 400000       | 25%
+---------------------------------------------------------------
+TOTAL          | 100000   | 400000       | 25%
+===============================================================
+```
+
+Note: To access xdusage and other XSEDE User Portal command-line tools, you need to first load the 'xsede' module using the command 'module load xsede'. Also, note that xdusage cannot be run directly on XSEDE resources; instead, it should be run from the XSEDE User Portal command-line interface.

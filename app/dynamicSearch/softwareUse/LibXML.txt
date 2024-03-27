@@ -1,80 +1,44 @@
-Use Case: Parsing XML data using LibXML
+Use Case: Use LibXML for parsing XML and HTML documents; typically used in web scraping or API calling scenarios where HTML or XML data is being returned. 
 
-Code details and examples:
-LibXML is a library for parsing and manipulating XML files. Here is an example of how you can use LibXML in C to parse an XML file.
+Code details and examples: Code for simple XML file parsing. 
 
-Sample Input file (example.xml):
+Sample XML input file (file.xml):
+
 ```xml
-<bookstore>
-  <book>
-    <title>Harry Potter</title>
-    <author>J.K. Rowling</author>
-    <year>2005</year>
-  </book>
-  <book>
-    <title>The Lord of the Rings</title>
-    <author>J.R.R. Tolkien</author>
-    <year>1954</year>
-  </book>
-</bookstore>
+<root>
+  <element1>Text1</element1>
+  <element2>Text2</element2>
+  <element3>Text3</element3>
+</root>
 ```
 
-Code (example.c):
-```c
-#include <stdio.h>
-#include <libxml/parser.h>
-#include <libxml/tree.h>
+Python code snippet using the "libxml2" python library:
 
-int main() {
-    xmlDocPtr doc;
-    xmlNodePtr root, node;
+```python
+import libxml2
 
-    doc = xmlReadFile("example.xml", NULL, 0);
-    if (doc == NULL) {
-        fprintf(stderr, "Failed to parse document\n");
-        return 1;
-    }
+# Parse the XML file
+doc = libxml2.parseFile('file.xml')
 
-    root = xmlDocGetRootElement(doc);
-    for (node = root->children; node != NULL; node = node->next) {
-        if (node->type == XML_ELEMENT_NODE) {
-            printf("Node name: %s\n", node->name);
-            xmlNodePtr child = node->children;
-            while (child != NULL) {
-                if (child->type == XML_ELEMENT_NODE) {
-                    printf("%s: %s\n", child->name, xmlNodeGetContent(child));
-                }
-                child = child->next;
-            }
-            printf("\n");
-        }
-    }
+# Get the root element
+root = doc.children
 
-    xmlFreeDoc(doc);
-    xmlCleanupParser();
-    return 0;
-}
+# Iterate over child elements
+for child in root.children:
+    if child.type == 'element':
+        print('Element name:', child.name)
+        print('Element content:', child.content)
+
+# Clean up
+doc.freeDoc()
 ```
 
-Compile the code:
-```
-gcc example.c -o example -I/usr/include/libxml2 -lxml2
-```
-
-Run the code:
-```
-./example
+Command to run the python script (terminal command): 
+```bash
+python3 script.py
 ```
 
-Output:
-```
-Node name: book
-title: Harry Potter
-author: J.K. Rowling
-year: 2005
+In this Python code snippet, the XML file "file.xml" is parsed, the root element is acquired, and then each child element of the root is iterated through. If the child is an "element" type, its name and content are printed out. 
+The input file is required to be well-formed XML, and at a minimum must have a root element. Other details (such as element names, contents, and structure) will depend on the specifics of the analysis.
 
-Node name: book
-title: The Lord of the Rings
-author: J.R.R. Tolkien
-year: 1954
-```
+Note: for parsing HTML you can use htmlDoc = libxml2.htmlParseFile(filename, None) instead of parseFile.

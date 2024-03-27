@@ -1,13 +1,40 @@
-Use Case: Checkpointing and migration tool for distributed computing
+Use Case: DMTCP (Distributed MultiThreaded Checkpointing) is a tool that can be used to checkpoint a set of threads with minimal intervention. This is particularly useful in long-running computations where a failure could lead to significant loss of computation. 
 
-Code details and examples:
-- DMTCP (Distributed MultiThreaded CheckPointing) is a tool that allows users to transparently checkpoint and restart distributed computations.
-- To checkpoint a program using DMTCP, you can use the following command:
-  ```
-  dmtcp_checkpoint <your_program>
-  ```
-- To restart a program from a checkpoint, you can use the following command:
-  ```
-  dmtcp_restart ckpt_<your_program>_PID_<pid>
-  ```
-- DMTCP can be used with various MPI implementations and other distributed computing frameworks to enable fault tolerance and migration capabilities.
+Code details and examples: 
+
+DMTCP works by intercepting function calls from your program to the operating system. Hence, no modifications to your source code are necessary. For example, consider a simple C program that counts indefinitely:
+
+```
+#include<stdio.h>
+#include<unistd.h>
+
+int main() {
+    int count = 0;
+    while(1) {
+        printf("%d\n", count++);
+        sleep(1);
+    }
+    return 0;
+}
+```
+
+To checkpoint this process, you would first compile and run your program through DMTCP. Here's how you'd do that:
+
+```
+$ gcc -o counter counter.c
+$ dmtcp_launch ./counter
+```
+
+This will run the process and periodically checkpoint it. While the process is running, in a different terminal window, you can do a checkpoint by running:
+
+```
+$ dmtcp_command --checkpoint
+```
+
+This will create a checkpoint image. Now, you can kill the process and later restart it from the last checkpoint:
+
+```
+$ dmtcp_restart ckpt_counter_*.dmtcp
+```
+
+DMTCP restarts the process right where it left off, even though it was previously killed. DMTCP is very robust and works with many programs, and even full-blown applications, out-of-the-box.

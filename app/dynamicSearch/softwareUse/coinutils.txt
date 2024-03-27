@@ -1,43 +1,99 @@
-Use Case: CoinUtils is an open-source collection of utilities and tools used by other COIN-OR projects.
+Use Case: CoinUtils (COIN-OR Utilities) is a library providing classes and functions for handling many of the lower-level tasks that come up in writing optimization algorithms. It can be largely used for operations research, linear programming and constraint programming.
 
-Code details and examples:
+Code details and examples: Code
 
-1. Example input file (example.mps):
-```plaintext
+Sample Input File
+- Create a file named "example.mps" with details of the linear programming problem. The MPS file format is a standardized file format for representing linear optimization problems. 
+
+```
 NAME          EXAMPLE
 ROWS
- N  cost
- L  constraint1
- L  constraint2
+ N  COST
+ L  LIM1
+ G  LIM2
+ E  MYEQN
 COLUMNS
-    cost  constraint1  constraint2
-    -1.0   1.0          1.0
+    XONE      COST                 1   LIM1                 1
+    XONE      LIM2                 1
+    YTWO      COST                 4   LIM1                 1
+    YTWO      MYEQN               -1
+    ZTHREE    COST                 9   LIM2                 1
+    ZTHREE    MYEQN                1
 RHS
-    RHS       10.0
+    RHS1       LIM1                5   LIM2                10
+    RHS1       MYEQN               7
 BOUNDS
- UP BOUND cost 1.0
+ UP BND1       XONE                4
+ LO BND1       YTWO               -1
+ UP BND1       YTWO                1
 ENDATA
 ```
+This file describes the following Linear Programming problem:
 
-2. Code to load and solve the example with CoinUtils in Python:
-```python
-from coinor.cbc import model
-import coinor.coinutil.reader
+minimize x + 4y + 9z
 
-# Load the model from the MPS file
-filename = "example.mps"
-lp = coinor.coinutil.reader.create_bimap_from_mps(filename)
+subject to
 
-# Create and solve the model using CBC
-m = model.Model(lp)
-status = m.optimize()
+- x + y <= 5
+- x + z >= 10
+- y + z = 7
 
-# Print the solution status and objective value
-print("Solution status:", m.get_statistics())
-print("Objective value:", m.objective_value)
+and the bounds
+
+- 0 <= x <= 4
+- -1 <= y <= 1
+- 0 <= z
+
+Code Snippets
+
+To read the MPS file named "example.mps" and solve it,
+
+```
+#include <coin/OsiClpSolverInterface.hpp>
+
+int main()
+{
+  // Create a solver interface pointer
+  OsiClpSolverInterface* si;
+  
+  // Allocate memory for this new instance of OsiClpSolverInterface 
+  si = new OsiClpSolverInterface;
+  
+  // Read in an mps file from the given filename
+  si->readMps("example.mps");
+  
+  // Initialize the solver interface to use primal or dual
+  si->initialSolve();
+  
+  // Get optimal value
+  double obj = si->getObjValue();
+
+  // Get the number of columns (variables)
+  int nColumns = si->getNumCols();
+
+  // Declare a pointer for an array to store the solution 
+  double* solution = new double[nColumns];
+
+  // Get the solution vector
+  si->getColSolution(solution);
+
+  // Now you have the optimal value stored in 'obj' and the solution stored in 'solution'
+  // You can now output the optimal value and the solution
+  
+  // Don't forget to delete the solver interface and the solution array
+  delete si;
+  delete[] solution;
+
+  return 0;
+}
+```
+The command to compile and run the program (named example.cpp for instance) and assuming CLP (COIN-OR Linear Programming) has been installed would be:
+
+```
+$ g++ -o example example.cpp -lCoinUtils -lOsi -lOsiClp
+$ ./example
 ```
 
-3. Command to run the Python script:
-```bash
-python script_name.py
-```
+This command tells the C++ compiler to include the CoinUtils, Osi and OsiClp libraries when compiling the program. The "-o example" option tells the compiler to output the result to a file named "example", and then we run the compiled program with "./example".
+  
+The command for running the code largely depends on the local environment and how the COIN-OR libraries have been installed. The compiler and its flags might need to be adjusted accordingly.

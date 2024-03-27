@@ -1,21 +1,35 @@
-Use Case: SPAdes (St. Petersburg genome assembler) is a genome assembly tool designed for single-cell and multi-cell bacterial genome projects.
+Use Case: SPAdes is used for genome assembly and research. It can handle datasets with only a single short-read library; accepts multiple paired-end and mate-pair libraries.
 
-Code details and examples:
-- Example command to run SPAdes with paired-end Illumina reads:
+Code details and examples: Code
+
+The input file format required is FastQ or FastA. SPAdes works with IonTorrent, PacBio, Oxford Nanopore and Illumina Paired-End data. For paired-end data, a set of left reads and right reads are required. 
+
+Sample input file (FastQ):
+@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
++
+!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
+
+Command to run SPAdes:
+
 ```
-spades.py -1 path/to/reads_R1.fastq -2 path/to/reads_R2.fastq -o output_directory
+spades.py -o output_dir -1 pe_1.fastq -2 pe_2.fastq
 ```
 
-- Example command to run SPAdes with single-end Illumina reads:
+This command will run SPAdes with the output directed to the directory "output_dir". `-1 pe_1.fastq` and `-2 pe_2.fastq` specifies the forward and reverse paired-end reads.
+
+For a hybrid assembly that includes short Illumina reads and long Oxford Nanopore or Pacbio reads, you can use the `--nanopore` or `--pacbio` options.
+
 ```
-spades.py --s1 path/to/reads.fastq -o output_directory
+spades.py -o output_dir -1 illumina_reads_1.fastq -2 illumina_reads_2.fastq --nanopore nanopore_reads.fastq
 ```
 
-- Sample input files for running SPAdes: 
-  - `reads_R1.fastq`: File containing forward paired-end Illumina reads
-  - `reads_R2.fastq`: File containing reverse paired-end Illumina reads
-  - `reads.fastq`: File containing single-end Illumina reads
+The command above represents a hybrid assembly with Illumina (`-1` and `-2` options) and Oxford Nanopore (through the `--nanopore` option) reads. 
 
-- Output will be the assembled contigs in the specified output directory.
+For a single-cell assembly, use the `--sc` option:
 
-For more details and options, you can refer to the SPAdes documentation.
+```
+spades.py --sc -o output_dir -1 sc_reads_1.fastq -2 sc_reads_2.fastq
+```
+
+In the above command, `--sc` specifies that it is a single-cell assembly. The `-1` and `-2` specify forward and reverse reads.

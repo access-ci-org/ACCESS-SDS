@@ -1,0 +1,31 @@
+Use Case: Use r-fdb-infiniummethylation-hg19 for analyzing DNA methylation data to understand gene expression, cellular differentiation, or health and disease states. It provides a platform for users to access well-documented Infinium Methylation data. The methylation data to be analyzed should be in CSV format with the first column as the identifier and subsequent columns as data values. A necessary input file is a text file with hg19 annotations.
+
+Code details and examples: Code
+```r
+# Loading the library
+library(rFDb.InfiniumMethylation.hg19)
+
+# Creating the ff object for large data
+ff_path <- "/path/to/your/input_file.csv"
+data <- read.csv.ffdf(file = ff_path, FUN = "read.csv")
+
+# Creating manifest object from Infinium annotation based on your data file
+anno <- FDb.InfiniumMethylation.hg19()
+
+# You can query the manifest object for particular regions using select() function
+regions_with_data <- select(anno, 
+                            keys = data$probe_id, 
+                            columns = c("UCSC_CpG_Islands_Name", 
+                                        "UCSC_RefGene_Name", 
+                                        "UCSC_RefGene_Group"), 
+                            keytype = "Name")
+
+# Now you can merge your data with the regions using your preferred function,
+# and then perform a variety of analyses on the data.
+```
+Command to run:
+You run the above script using Rscript or inside an R environment.
+```r
+Rscript /path/to/your/code.R
+```
+Please replace "/path/to/your/input_file.csv" and "/path/to/your/code.R" with the path to your input file and your R script, respectively.

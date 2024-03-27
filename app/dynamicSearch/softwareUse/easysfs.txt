@@ -1,0 +1,38 @@
+Use Case: 
+
+EasySFS is a python tool developed to make creating site frequency spectra (SFS) for input into dadi and fastsimcoal easy. It can create 1D and 2D SFSs super fast and much larger matrices than dadi can. 
+
+Code details and examples:
+
+You can run EasySFS on a VCF file format.
+
+Code:
+
+```python
+./easySFS.py -i input.vcf -p pop_file.txt -a -f --proj 20,24
+```
+
+In the above command, `input.vcf` is the input file with Variant Call Format (VCF). `-p` is used to specify a text file, `pop_file.txt`, containing population data, with one population specified per line. `-a` tells the script to keep all sites in the file, `-f` means that overrun values will be excluded. `--proj` is used to project the SFS down to certain sample sizes. In this case, the projection sizes are 20 and 24.
+
+Specifications for the Input Files:
+
+1. The input VCF file should be a standard VCF file, possibly compressed. 
+2. For the population file (`pop_file.txt`), this file contains population names, one per line. These names should match exactly with the names given in the VCF file.
+3. The projection file, as specified with `--proj`, is an optional text file with the same number of populations as in the VCF file but gives the sample sizes to project down to. These should be in the same order as in the populations file.
+
+Sample Input Files :
+
+`input.vcf`:
+
+```
+##fileformat=VCFv4.2
+#CHROM  POS ID  REF ALT QUAL    FILTER  INFO    FORMAT  Sample1   ... 
+chr1    1   .   A   T   227.5   .   AC=5;AF=0.625;AN=8   GT:PL    0/1:255,0,255 ...
+```
+
+`pop_file.txt`:
+```
+population1
+population2
+...
+```

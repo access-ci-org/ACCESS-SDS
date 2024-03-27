@@ -1,0 +1,23 @@
+Use Case: Posix2ime is a python library that allows for the conversion of time expressed in seconds since the Epoch (also known as POSIX time) to a more human readable format, with options for specifying timezone as well.
+
+Code details and examples: 
+
+Code:
+
+```python
+import posix2ime
+
+# Convert POSIX time to human readable time
+time_string = posix2ime.timespec(secs=1591619893, tz='PDT')
+print(time_string)
+```
+
+This code snippet uses the posix2ime library to convert the POSIX time (1591619893) to a more human readable format, adjusted to 'PDT' timezone.
+
+The format of the input file, if any, should include a list or an array of POSIX times separated with line breaks and saved as a txt or csv file.
+
+Command to run (if used as script):
+
+```console
+python script.py
+```

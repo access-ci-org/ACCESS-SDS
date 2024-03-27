@@ -1,29 +1,46 @@
-Use Case: Quantum ATK is a software package that can perform quantum mechanical simulations on materials at the atomic level. It is used in various fields such as materials science, nanotechnology, and catalysis.
+Use Case: Quantumwise's Atomistix Toolkit (ATK) is an advanced atomic-scale modeling software that allows users to study electronic properties at nanostructures. This includes calculating electrical transport properties, total energies, force and stress and more.
 
-Code details and examples:
+Code details and examples: Code
+
+The input files for ATK come in the form of Python scripts that set up the calculation particulars. Here a simple example of an input file for calculating the electronic bandstructure of silicon:
+
 ```python
-# Sample input file for running ATK calculations
-# Input file format: .py
-# Specify the material structure, simulation parameters, and calculation methods
+from ase.lattice.cubic import Diamond
+from QuantumATK import *
 
-# Example input file:
-# Define material structure (e.g. Silicon crystal)
-from NanoLanguage import *
-bulk_silicon = CrystalStructure(Diamond)(5.43, Fease=[2, 2, 2])
+# Setup the silicon crystal structure (diamond lattice)
+silicon_configuration = BulkConfiguration(
+  bravais_lattice=Diamond(5.43*Angstrom),
+  elements=[Silicon],
+  cartesian_coordinates=[[0, 0, 0]]*Angstrom
+)
 
-# Setup simulation parameters
-calculator = ATK()
-calculator_density = EmpiricalPotential("Silicon")
-bulk_silicon.setCalculator(calculator)
+# Set up the calculator (TB09 functional)
+calculator = LCAOCalculator(
+  basis_set=[
+    LCAOBasis.Silicon_DoubleZetaPolarized
+  ],
+  exchange_correlation=TB09LDA(),
+  k_point_sampling=MonkhorstPackGrid(5,5,5),
+  self_consistency={
+    'iterations': 500
+  }
+)
 
-# Perform DFT calculation
-nlprint(bulk_silicon)
-bulk_silicon.update()
-print(bulk_silicon.PotentialEnergy)
+# Attach the calculator
+silicon_configuration.setCalculator(calculator)
+
+# Calculate bandstructure
+bs = calculateBandstructure(silicon_configuration, [[0,0,0], [0.5,0,0], [0.5,0.5,0.5], [0,0,0]])
+
+# Save the results
+nlsave('silicon_bandstructure.hdf5', bs)
 ```
 
-To run the above input file using Quantum ATK, you can execute the python script using the ATK python interpreter. 
+To run the simulation, one would use
+
 ```bash
-atkpython example_input_file.py
+atkpython my_script.py
 ```
-This will run the Quantum ATK calculations based on the specified input file.
+
+where `my_script.py` is the above script file. The results will be stored in the HDF5-formatted `silicon_bandstructure.hdf5` file which can be analyzed using different tools in the ATK software package.

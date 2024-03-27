@@ -1,0 +1,46 @@
+Use Case: Vartrix is often used in genomics and bioinformatics for single cell sequencing checks. Vartrix is a program that generates matrices of read counts, corresponding to each individual variant site, for a given set of cells. The software generate matrices for single nucleotide variant and short indel quantification from single cell RNA-seq data files.
+
+Code Details and Examples:
+Code
+
+Sample Input files:
+
+1. A BAM or SAM file from alignment which is sorted and indexed. The file contains the alignments of the sequenced reads back to the reference genome. For example, CRAM, BAM or SAM files.
+    Format: BAM/SAM file
+    Example:
+```
+@SQ	SN:lnGL877870.1	LN:2623
+@RG	ID:0	SM:
+@PG	ID:0	PN:
+r001       163     lnGL877870.1   1       60      8M4I4M1D3M  =       37      39      TTAGATAAAGAGGATACTG *
+r002       0       lnGL877870.1   2       60      7M5D8M      *       0       0       AAAAGATAAGGGATAAA   *
+r003       0       lnGL877870.1   3       60      9M =    7       39      AAGCTAA    *
+```
+
+2. A VCF file from variant calling. The VCF file contains the variants found in the sample as compared to the reference genome.
+    Format: VCF
+    Example:
+```
+#CHROM POS     ID        REF ALT    QUAL FILTER INFO
+20     14370   rs6054257 G   A        .    PASS   NS=3;DP=14;AF=0.5;DB;H2
+20     17330   .         T   A        .    PASS   NS=3;DP=11;AF=0.017
+20     1110696 rs6040355 A   G,T      .    PASS   NS=2;DP=10;AF=0.333,0.667;AA=T;DB
+```
+
+3. A cell by barcode text file. This file contains the cell barcodes that one wants to generate the matrices for. 
+    Format: TSV (tab-separated values)
+    Example:
+```
+CellBarcode
+AAACCTGAGAAACCTA-1
+AAACCTGAGAAACGAG-1
+AAACCTGAGAAACGCC-1
+```
+
+To generate the matrices, navigate to the directory where these files are stored and run the Vartrix command:
+
+Command to run: 
+```bash
+vartrix -v myvariants.vcf -b sorted.list.bam -c cellBCfile.txt -f ref.fasta --out-matrix mymatrix.txt --umi
+```
+Where 'myvariants.vcf' is your variant file, 'sorted.list.bam' is your aligned reads, 'cellBCfile.txt' is your cell barcode file, 'ref.fasta' is the reference genome, 'mymatrix.txt' is output file with the counts and '--umi' tells Vartrix to generate UMI counts.

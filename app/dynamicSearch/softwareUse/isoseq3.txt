@@ -1,0 +1,21 @@
+Use Case: IsoSeq3 is used for full-length transcript sequencing and data analysis. This package is popular in RNA-Seq studies to identify long non-coding RNAs (lncRNAs), to detect alternative splicing and to study gene fusion events. The input files used by IsoSeq3 are typically generated from PacBio Sequel or RS II systems. The file is in BAM format.
+
+Code details and examples:
+
+Before running IsoSeq3, you must run two previous steps: lima and ccs. They are all part of the software PacBio SMRT Link which contains IsoSeq3.
+
+Code for running lima:
+```
+lima --isoseq --dump-clips --peek-guess input_bamfile.bam primers.fasta demux.bam
+```
+Then, ccs is used to create high-quality consensus sequences:
+```
+ccs --noPolish --minPasses 1 --min-rq 0.99 demux.bam reads.bam
+```
+
+Finally, you can now run IsoSeq3 with the generated reads.bam file:
+```
+isoseq3 cluster reads.bam unpolished.bam
+isoseq3 polish unpolished.bam polished.bam
+```
+The commands should be run in the specified order. The output file `polished.bam` holds full-length, error-corrected ISO-seq transcripts.

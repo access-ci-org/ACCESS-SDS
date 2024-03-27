@@ -1,0 +1,37 @@
+Use Case: Beagle is a software package for phasing genotypes and for imputing ungenotyped markers. This computational tool reads frequency and genotypic data from input files and computes probability estimates. 
+
+Code details and examples: Code:
+
+```
+java -Xmx10000m -jar beagle.jar gt=test.08Jun17.d8b.vcf.gz out=result nthreads=4
+```
+
+In this command, '-Xmx10000m' determines the maximum memory allocated for Java, 'beagle.jar' is the Beagle software, 'gt' denotes the input file in VCF format (test.08Jun17.d8b.vcf.gz), 'out' specifies the prefix for the output file (result), and 'nthreads' shows the number of threads used in the computation (4 in this case).
+
+Input files format: The input files that Beagle uses are in VCF .vcf.gz format, which is a variant call format used in bioinformatics for storing gene sequence variations.
+
+Specifications and details in input files: Beagle input files must contain genotype likelihoods or called genotypes. It recognizes FORMAT fields GT, DS, and GL.
+
+The VCF file format follows the 1000 Genomes project specifications, and typically it includes:
+- Meta-information lines (starting with ##)
+- A header line
+- Data lines consisting of individual genetic variant information. 
+
+Each data line includes: 
+- Chromosome number
+- Position 
+- Identifier 
+- Reference base(s) 
+- Alternate base(s) 
+- Quality 
+- Filter information 
+- Information field 
+- Format field 
+- Sample(s). 
+
+Sample:
+```
+##fileformat=VCFv4.0
+#CHROM POS     ID        REF ALT    QUAL FILTER INFO                              FORMAT      NA00001        NA00002        NA00003
+20     14370   rs6054257 G   A       29   PASS   NS=3;DP=14;AF=0.5;DB;H2           GT:GQ:DP:HQ 0|0:48:1:51,51 1|0:48:8:51,51 1/1:43:5:.,.
+```

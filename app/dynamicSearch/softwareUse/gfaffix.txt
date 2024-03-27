@@ -1,0 +1,37 @@
+Use Case: gfaffix is used in graph theory and algorithmic problems. It is used for attaching unique numerical or textual identifiers to vertices of the graph. 
+
+Code details and examples: 
+
+Code: 
+
+Here is a sample graph definition in gf/spec format that gfaffix might work on:
+
+```
+# This is comment
+GF: network 8
+# Link the vertices
+E: Internet
+E: ISP
+E: HomeNetwork
+E: Server
+E: Workstation
+E: Laptop
+E: Tablet
+E: Smartphone
+# Define edges
+L: Internet ISP
+L: ISP HomeNetwork
+L: HomeNetwork Server
+L: HomeNetwork Workstation
+L: HomeNetwork Laptop
+L: HomeNetwork Tablet
+L: HomeNetwork Smartphone
+```
+
+The conceptual command to run gfaffix might be something like this:
+
+```
+gfaffix network.gf result.net
+```
+
+Note: gfaffix is a fictional software presumed to act like graph-theoretic utility, and the input files and command presented here are equally hypothetical. The actual usage may totally vary depending on the real software functionalities and requirements.

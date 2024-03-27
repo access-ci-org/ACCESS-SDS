@@ -1,0 +1,47 @@
+Use Case: Use `stringr` library in R for data cleaning and formatting.
+
+Code details and examples: Code
+
+Input:
+
+Here, input can be in the form of strings or a data frame with string variables. Sample input will be as follows:
+
+```R
+require(stringr)
+str1 <- "I love Machine Learning. It is very interesting."
+str2 <- c("abc","123","xyz",455)
+```
+
+In the above R code snippet, str1 and str2 are strings and can be used as input for stringr functions.
+
+Example 1: str_length() function
+
+This function is used to find out the number of characters in a string.
+
+```R
+require(stringr)
+str1 <- "I love Machine Learning. It is very interesting."
+print(str_length(str1))
+```
+
+Example 2: str_to_upper() function
+
+This function is used to convert a string to uppercase.
+
+```R
+require(stringr)
+str2 <- c("abc","123","xyz",455)
+print(str_to_upper(str2))
+```
+
+Command to run:
+
+To run the above code snippets in an R environment, you would normally simply type or paste them into an R console or an R script and execute them using the R source command or by clicking on “Run” in RStudio.
+
+You may also run the code from command line using the following command where the file.R is the R script:
+
+```shell
+Rscript file.R
+```
+
+Bear in mind, specific commands may be different based on your system and how it is set up. Be sure to understand these differences before proceeding.

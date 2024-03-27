@@ -1,23 +1,33 @@
-Use Case: PyGObject is a Python module that enables developers to write applications for the GNOME desktop and other GTK-based environments using Python. It provides bindings to GObject, a flexible, object-oriented library used in many software projects, including GTK.
+Use Case: Use PyGObject for creating user interfaces with the GTK toolkit.
 
-Code details and examples:
-```python
-# Example code using PyGObject to create a simple GTK window
+Code details and examples: Code
+
+Input File Format: Python (.py) script
+
+Sample Input File:
+```
 import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
-class MyWindow(Gtk.Window):
-    def __init__(self):
-        Gtk.Window.__init__(self, title="Hello World")
+class HelloWindow(Gtk.Window):
 
-win = MyWindow()
+    def __init__(self):
+        Gtk.Window.__init__(self, title="Hello World - PyGObject version")
+        self.button = Gtk.Button(label="Click Here")
+        self.button.connect("clicked", self.on_button_clicked)
+        self.add(self.button)
+
+    def on_button_clicked(self, widget):
+        print("Hello World")
+
+win = HelloWindow()
 win.connect("destroy", Gtk.main_quit)
 win.show_all()
 Gtk.main()
 ```
+The above python code creates a user interface with a button. On clicking the button it prints "Hello World".
 
-To run the above code, save it in a file (e.g., `gtk_example.py`) and execute it using the Python interpreter:
-```
-python gtk_example.py
-```
+Command to Run: `python filename.py`
+
+Replace `filename` with the name of your python script. The above Python script creates a new window with a label and a button. The clicked signal is connected to the function on_button_clicked, which prints a message in the terminal. The window is shown, and the Gtk main loop is started, so the application stays open until the window is closed.

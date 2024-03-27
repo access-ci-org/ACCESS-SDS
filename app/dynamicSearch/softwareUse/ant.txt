@@ -1,0 +1,37 @@
+Use Case: Ant; a Java library and command-line tool used for automating software build processes. It's very versatile, allowing you to perform tasks related to platform checking, file system operations, and software compilation.
+
+Code details and examples: Code
+
+A simple Ant script uses XML format input file, generally named `build.xml` with the project details.
+
+Sample input file:
+
+```xml
+<project name="Sample" default="info" basedir=".">
+    <property name="src" location="src"/>
+    <property name="build" location="build"/>
+    
+    <target name="info">
+        <echo message="Sample Ant Build"/>
+    </target>
+    
+    <target name="compile">
+        <mkdir dir="${build}"/>
+        <javac srcdir="${src}" destdir="${build}"/>
+    </target>
+    
+    <target name="clean">
+        <delete dir="${build}"/>
+    </target>
+</project>
+```
+
+In this input file, the `project` element outlines the project name, default target, and base directory. The `property` element defines the source (`src`) and objective (`build`) locations for the Java source files. The `target` elements characterize actions to be done, like compiling Java files and cleaning the build directory.
+
+To execute this script, navigate to the directory where the `build.xml` resides, and from command-line, use:
+
+```bash
+ant compile
+```
+
+This command will compile the Java files from the defined source directory (`src`) to the defined destination directory (`build`).

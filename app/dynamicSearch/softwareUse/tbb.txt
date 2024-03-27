@@ -1,66 +1,63 @@
-Use Case: Threading Building Blocks (TBB) is a C++ template library developed by Intel for parallel programming. It allows developers to write parallel programs in a high-level manner without explicitly dealing with threads. 
+Use Case: Use TBB (Threading Building Blocks), a widely used C++ template library developed by Intel Corporation for multi-core parallel programming. It is used in computationally intensive work, like computer games, animation, video editing, and physical simulations.
 
-Code details and examples:
-1. Parallelizing a loop using TBB
-```cpp
-#include <iostream>
-#include <tbb/tbb.h>
+Code Details and Examples: Code
 
-void parallel_square(std::vector<int>& input) {
-    tbb::parallel_for(0, input.size(), [&](int i) {
-        input[i] = input[i] * input[i];
-    });
-}
+1. Sample Vector Sort
+
+Sample Input File: N/A (Direct input)
+
+Input Specifications: An array of integers 
+
+```
+#include "tbb/task_scheduler_init.h"
+#include "tbb/parallel_sort.h"
+#include <vector>
 
 int main() {
-    std::vector<int> data = {1, 2, 3, 4, 5};
-    
-    parallel_square(data);
-    
-    for(int num : data) {
-        std::cout << num << " ";
+    tbb::task_scheduler_init init; 
+    std::vector<int> arr = {1, 3, 5, 7, 2, 4, 6, 8};
+ 
+    tbb::parallel_sort(arr.begin(), arr.end());
+  
+    for(auto& it : arr){
+        std :: cout << it << std :: endl;
     }
-    
+
     return 0;
 }
 ```
 
-2. Parallel reduction using TBB
-```cpp
-#include <iostream>
-#include <vector>
-#include <tbb/tbb.h>
+Command to run: `g++ -std=c++11 sort.cpp -ltbb -o sort; ./sort`
 
-int parallel_sum(const std::vector<int>& input) {
-    return tbb::parallel_reduce(
-        tbb::blocked_range<const int*>(input.data(), input.data() + input.size()),
+2. Parallel Accumulate
+
+Sample Input File: N/A (Direct input)
+
+Input Specifications: Two arrays of integers
+
+```
+#include "tbb/parallel_reduce.h"
+#include "tbb/blocked_range.h"
+
+int main(){
+    const int N = 100;
+    int array[N];
+
+    for(size_t i = 0; i < N; ++i)
+        array[i] = i;
+
+    int sum = tbb::parallel_reduce(
+        tbb::blocked_range<int*>(array, array + N),
         0,
-        [&](const tbb::blocked_range<const int*>& range, int init) {
-            return std::accumulate(range.begin(), range.end(), init);
+        [](const tbb::blocked_range<int*>& r, int value) -> int {
+            return std::accumulate(r.begin(), r.end(), value);
         },
         std::plus<int>()
     );
-}
 
-int main() {
-    std::vector<int> data = {1, 2, 3, 4, 5};
-    
-    int sum = parallel_sum(data);
-    
-    std::cout << "Sum: " << sum << std::endl;
-    
+    std::cout << "sum = " << sum << std::endl;
     return 0;
 }
 ```
 
-To compile the codes:
-```
-g++ -o parallel_square parallel_square.cpp -ltbb
-g++ -o parallel_sum parallel_sum.cpp -ltbb
-```
-
-To run the compiled binaries:
-```
-./parallel_square
-./parallel_sum
-```
+Command to run: `g++ -std=c++11 accumulate.cpp -ltbb -o accumulate; ./accumulate`

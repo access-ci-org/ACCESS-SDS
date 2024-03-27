@@ -1,35 +1,38 @@
-Use Case: Elemental is a high-performance distributed-memory linear algebra library.
-Code details and examples:
-Input file for a sample program:
-```cpp
-// sample_input.txt
-4
-1 2 3 4
-5 6 7 8
-9 10 11 12
-13 14 15 16
+Use Case: Elemental is a distributed-memory dense and sparse-direct linear algebra and optimization library, and it can be used for various purposes such as solving linear systems, factorizing matrices, and computing eigenvalues and singular values, etc.
+
+Code details and examples: 
+
+Input:
+
+You would typically pass a .m file containing the matrix and the command line option to run the software would be similar to:
+
+```terminal
+mpiexec -n 2 ./tests/HermitianGenDefEig
 ```
 
-Sample C++ code using Elemental to perform matrix multiplication:
-```cpp
-#include "El.hpp"
-using namespace El;
+It important to set the MPI -n option to the number of cores on your machine for parallel computation and replace ./tests/HermitianGenDefEig with the correct path of your test file.
 
-int main(int argc, char* argv[]) 
-{
-    Initialize(argc, argv);
-    DistMatrix<double> A, B, C;
-    Read(A, "sample_input.txt");  // Read input matrix A
-    B = A;  // Assign matrix B as a copy of A for multiplication
-    Gemm(NORMAL, NORMAL, 1.0, A, B, 0.0, C); // Compute C = A*B
-    Write(C, "output.txt", ASCII); // Write the result to an output file
-    Finalize();
-    return 0;
-}
+Code:
+```Python
+#!/usr/bin/env python
+import El
+n0 = 100
+n1 = 100
+
+# Start Elmer
+El.Initialize()
+
+# Construct a 2D process grid from the number of processes
+grid = El.Grid(El.mpi.COMM_WORLD)
+n = n0*n1
+A = El.DistMatrix(grid)
+El.HermitianUniformSpectrum(A,n,1,10)
+lambdas = El.DistMatrix(El.mpi.COMM_WORLD)
+El.HermitianGenDefEig(El.AXBX,El.ADJ,El.UPPER,A,A,lambdas)
+El.Zeros(A,n,1)
+El.Multiply(El.NORMAL,El.NORMAL,1,lambdas,A,A)
+
+El.Finalize()
 ```
 
-Command to compile and run the code (assuming the file is named `matrix_mult.cpp`):
-```
-mpicxx matrix_mult.cpp -o matrix_mult -I/path/to/Elemental/include -L/path/to/Elemental/lib -lEl -lblas -llapack
-mpirun -np 4 ./matrix_mult
-```
+By running the command on the command line, it will perform a hermitian generalized definite eigenproblem on a distributed memory and store the result in A.

@@ -1,49 +1,52 @@
-Use Case: Computational Geometry Algorithms Library (CGAL)
+Use Case: CGAL, the Computational Geometry Algorithms Library, is used for the computation of geometric operations like intersection of polygonal surfaces, 3D triangulation, 2D arrangements, etc. It is used in academia and industry for geometric computation. 
 
-CGAL is a C++ library providing a collection of efficient and reliable geometric algorithms. Below is an example of how CGAL can be used to calculate the intersection points of two line segments.
+Code Details and Examples:
 
-Code details and examples:
-```cpp
-#include <CGAL/Exact_predicates_exact_constructions_kernel.h>
-#include <CGAL/Intersect_2/Segment_2_Segment_2.h>
-#include <iostream>
+In this example, a Convex Hull operation, one of the geometric operations provided by CGAL, is performed. The input is a set of points in 2D or 3D.
 
-typedef CGAL::Exact_predicates_exact_constructions_kernel K;
-typedef K::Point_2 Point;
-typedef K::Segment_2 Segment;
+Input File Format:
 
-int main()
-{
-    // Define two line segments
-    Segment s1(Point(0,0), Point(1,1));
-    Segment s2(Point(0,1), Point(1,0));
+The standard file format is OFF (Object File Format). It consists of list of vertices and their coordinates denoted as follows:
 
-    // Calculate intersection points
-    auto result = CGAL::intersection(s1, s2);
+OFF
+# Number of vertices 
+4
+# Points
+1 0 0
+0 1 0
+0 0 1
+1 1 1
+
+Code Snippet:
+
+Here is a code snippet of CGAL in C++. 
+
+```
+#include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
+#include <CGAL/convex_hull_3.h>
+#include <vector>
+
+typedef CGAL::Exact_predicates_inexact_constructions_kernel K;
+typedef K::Point_3 Point_3;
+
+int main() {
+    std::vector<Point_3> points;
+    // Insert points
+    points.push_back(Point_3(1,0,0));
+    points.push_back(Point_3(0,1,0));
+    points.push_back(Point_3(0,0,1));
+    points.push_back(Point_3(1,1,1));
     
-    if(result)
-    {
-        if(const Point* p = boost::get<Point>(&*result))
-        {
-            std::cout << "Intersection point: " << *p << std::endl;
-        }
-        else
-        {
-            std::cout << "Line segments are parallel." << std::endl;
-        }
-    }
-    else
-    {
-        std::cout << "Line segments do not intersect." << std::endl;
-    }
-
+    std::vector<Point_3> result;
+    CGAL::convex_hull_3(points.begin(), points.end(), std::back_inserter(result));
+      
     return 0;
 }
 ```
+To run the code, use g++ compiler:
 
-To compile the code using CGAL, you can use the following command:
-```
-g++ -o intersection intersection.cpp -lCGAL
-```
+``` g++ -std=c++11 -I /path/to/CGAL-4.1/include/code.cpp -o output``` 
 
-Run the compiled executable to see the output.
+Replace `/path/to/CGAL-4.1/include/` with actual path to your CGAL include directory. Then run the output file:
+
+```./output```

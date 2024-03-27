@@ -1,33 +1,24 @@
-Use Case: Document Formatting with Groff
+Use Case: Use Groff (GNU roff) to format and typeset text.
 
-Code details and examples:
-Groff is a typesetting system that is used for formatting documents. It uses a special language to define the layout and appearance of the document.
+Code details and examples: Code
 
-Sample input file ("example.ms"):
-```
-.\" Sample Groff document
-.de Title
-.ft B
-.sp
-\\$1
-.sp
-..
-.de Section
-.ft B
-.sp
-\\$1
-.sp
-..
-Title("Sample Document")
-Section("Section 1")
-This is some text in section 1.
-Section("Section 2")
-This is some text in section 2.
-```
+Input files for groff are typically plain text files that include "roff" commands, which are lines that begin with a period (.). For example:
 
-To process the input file using Groff, you can use the following command:
-```
-groff -ms -Tpdf example.ms > example.pdf
-```
+    .TH SAMPLE 1
+    .SH NAME
+    .PP
+    Sample \- a sample man page
+    .SH SYNOPSIS
+    .PP
+    This is a sample man page. 
+    .SH DESCRIPTION
+    .PP
+    The descriptions should be here.
 
-This command will format the document according to the instructions in the input file "example.ms" using the Groff macro package (-ms) and generate a PDF output file named "example.pdf".
+To use groff, you should save your file with a ".groff" or ".man" extension. For example, you might save the above contents in a file named "sample.man". You can then use the groff command to process the file. For example:
+
+    $ groff -man -Tascii sample.man > sample.txt
+
+In this example, the "-man" option specifies the format, the "-Tascii" option specifies the output format, and "> sample.txt" redirects the output to a text file. If you don't include "> sample.txt", then the output will be printed to the terminal.
+  
+In the file 'sample.man', '.TH' is a macro that marks a title header, '.SH' is a section header, '.PP' begins a new paragraph, and '\' commands are escape sequences. For example, '\-' inserts a hyphen.

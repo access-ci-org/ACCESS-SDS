@@ -1,0 +1,41 @@
+Use Case: MAINMAST(Membrane-Associated Internal symmetric three-dimensional MAtching and pairwise Sequence comparison Tool) is widely used for protein folding, docking, and 3D-QSAR study. Typical uses include protein structure prediction, protein fold recognition, and protein-protein interaction.
+
+Code details and examples: Code.
+
+Input File Format:
+
+- The program primarily requires a PDB (Protein Data Bank) formatted file as input.
+- The PDB file should contain the atomic coordinates of the protein's backbone.
+- The file may also include optional secondary structure information.
+
+Command to run MAINMAST:
+
+There're different commands option based on the analysis requirement. Here is an example.
+
+To predict protein structure:
+
+```
+/path/to/mainmast -i input.pdb -o output
+```
+
+Here, '-i' indicates the input PDB file and '-o' specifies the output directory or file name.
+
+Please replace "/path/to/mainmast" with the actual path to the MAINMAST executable and "input.pdb" with your own PDB file.	Output description: 
+
+After completion, the MAINMAST will create several files in the output directory. The most important one is "mainmast\_out.pdb," which comprises the protein structure predicted by MAINMAST.
+
+Note: Ensure that the PDB file correctly formatted, otherwise MAINMAST won't be able to interpret it and might produce an empty or erroneous output.
+
+Code sample:
+```
+# Load the protein structure
+peptide = loadPDB('input.pdb')
+
+# Compute MAINMAST
+mainmast = MAINMAST(peptide)
+
+# Save the prediction
+savePDB('output.pdb', mainmast)
+```
+
+Note: This is a simplified representation. In true implementation, each PDB file would have multiple protein structures, and each would need to be processed individually. Also, considerations like the presence of X-ray crystallography data or probability distribution across different structures will also need to be taken into account.

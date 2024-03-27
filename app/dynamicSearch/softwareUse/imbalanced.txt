@@ -1,32 +1,32 @@
-I believe you may be asking about dealing with imbalanced datasets in machine learning. There are several techniques and libraries available to address this issue.
+Use Case: Use imbalanced-learn, a Python library that comes handy when handling imbalanced datasets. It provides many methods to undersample, oversample or combine both methods to balance the dataset.
 
-Use Case: Dealing with imbalanced datasets
-Code details and examples:
-1. Python libraries such as `imbalanced-learn` provides various tools to deal with imbalanced datasets. Here is an example on how to use the Random Over Sampler from `imbalanced-learn`:
+Code details and examples: Code:
+
+Python libraries needed:
 ```python
-from imblearn.over_sampling import RandomOverSampler
-
-# Assuming X_train and y_train are your training data
-ros = RandomOverSampler(random_state=0)
-X_resampled, y_resampled = ros.fit_resample(X_train, y_train)
+from sklearn.datasets import load_balloons
+from imblearn.under_sampling import RandomUnderSampler
+from collections import Counter
 ```
 
-2. Another popular technique is SMOTE (Synthetic Minority Over-sampling Technique), which generates synthetic samples to balance the dataset. Here's an example using `imbalanced-learn`:
-```python
-from imblearn.over_sampling import SMOTE
+Sample input files, format: No separate file inputs required. The dataset is fetched with sklearn's load_balloons function, and imblearn is used to balance the dataset.
 
-smote = SMOTE(random_state=0)
-X_resampled, y_resampled = smote.fit_resample(X_train, y_train)
+Specifications: The dataset that loads from load_balloons function is dictionary-like object. The interesting attributes are: data, the data to learn, target, the classification labels, and target_names, the meaning of the labels. 
+
+Code Snippet: This script undersamples the majority class using imblearn's RandomUnderSampler.
+
+```python
+# load balloon dataset
+X, y = load_balloons(return_X_y=True)
+print('Original dataset shape %s' % Counter(y))
+ 
+# apply the random under-sampling
+rus = RandomUnderSampler(random_state=42)
+X_res, y_res = rus.fit_resample(X, y)
+print('Resampled dataset shape %s' % Counter(y_res))
+
 ```
 
-3. If you are using scikit-learn, you can also use the `class_weight` parameter in many classifiers that allows assigning different weights to different classes.
+How to run: This script can be run in a python environment. Simply copy and paste the code into your python environment and run it. The outputs are the counts of each class before and after resampling. 
 
-4. Ensemble methods like BalancedRandomForestClassifier in `imbalanced-learn` can also be used:
-```python
-from imblearn.ensemble import BalancedRandomForestClassifier
-
-brf = BalancedRandomForestClassifier(random_state=0)
-brf.fit(X_train, y_train)
-```
-
-These are just a few examples of how to handle imbalanced datasets in machine learning. Each technique may be more suitable depending on the specific characteristics of your dataset and the problem you are trying to solve.
+There are no specific file requirements for imbalanced-learn. It accepts pandas DataFrame, numpy array, scipy sparse matrices as inputs for X (predictors) and array-like forms for y (target). It automatically handles the file formats underneath and does the required transformations. The module therefore integrates well with sklearn's modules (like the load_balloons function in example), and usually we can fetch the dataset with a single line command from sklearn and input this to imbalanced-learn's functions.

@@ -1,0 +1,29 @@
+Use Case: inStrain is a program for high resolution SNP/variant profiling from deeply sequenced metagenomes. It profile SNPs, genomic coverages and genomic divergencies among population of microbial genomes direct from in situ metagenomes. It also perform strain-level deconvolution of metagenomic data; compute robust statistics describing genome coverage, diversity, and strain heterogeneity; and profile the diversity of non-core genes using gene presence/absence information.
+
+Code details and examples: Code
+
+inStrain typically requires two input files; a bam file and a genome fasta file. The bam file should be sorted and indexed, with each read group tagged and mapping to the same reference genome.
+
+Sample Input Files:
+
+1. Test.sorted.bam (the sorted bam file)
+
+2. Test.fasta (the reference genome fasta file)
+
+Format Required: 
+
+1. BAM file with index (.bam, .bam.bai) - The bam file should be sorted and indexed
+
+2. Genome Assembly in FASTA format (.fasta)
+
+Command to run the inStrain:
+
+```
+instrain profile Test.sorted.bam Test.fasta -p 10 -o IS_output
+```
+
+Here, `-p` specifies the number of processors to use.
+
+Any specifications and details in input files and code:
+
+In the bam file, each read must be associated with a read group. For the reference genome fasta file, the genome must be in single FASTA format (i.e., each contig/scaffold/chromosome must be represented as a single, unbroken line). Also, the headers in the fasta file must match those in the bam file.

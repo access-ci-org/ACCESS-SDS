@@ -1,0 +1,36 @@
+Use Case: SICER (Spatial clustering for Identification of ChIP-Enriched Regions) is a Python-based software used for identifying regions of ChIP-enrichment using ChIP-seq data. It uses a clustering approach to identify enriched domains, making it particularly useful for datasets with broad domains of enrichment, such as histone modification marks.
+
+Code Details and Examples:
+
+Code: 
+
+```python
+python SICER.py -t <ChIP-seq bed file> -c <control bed file> -s <species> -w 200 -g 600
+```
+
+In this command:
+- `<ChIP-seq bed file>`: This is a file storing ChIP-seq data in BED format.
+- `<control bed file>`: This is a file storing control (input) data in BED format.
+- `<species>`: This is the abbreviation of the species. E.g., 'hg38' for human, 'mm10' for mouse. 
+- `-w`: This represents the window size. Default is 200.
+- `-g`: This represents the gap size, which is used for clustering nearby enriched regions into one. Default is 600.
+
+Sample Input Files: 
+
+For `<ChIP-seq bed file>` and `<control bed file>`, the BED format is used, which consists of a minimum of 3 columns: chromosome, start position, and end position. Additional columns for name, score, strand, etc., can also be included.
+
+For instance:
+
+```
+chr1	1000	2000
+chr2	500	1500
+chrX	3000	3500
+```
+
+For `<species>`, a plain text file is used containing just the species name.
+
+For instance:
+
+```
+hg38
+```

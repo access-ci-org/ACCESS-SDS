@@ -1,19 +1,28 @@
-Use Case: Image processing library
-Code details and examples:
-Pillow is a Python Imaging Library that adds image processing capabilities to your Python interpreter. Below is an example of how to use Pillow to open and display an image:
+Use Case: Pillow is a Python Imaging Library which supports opening, manipulating, and saving a wide variety of image file formats. It is useful in scenarios such as cropping an image, resizing the image, drawing on an image, image transformation, and other image processing needs. 
+
+Code Details and Examples: 
+
+Input Files: A sample input file is a .jpg image file, named "example.jpg". 
+
+File Format: JPEG (.jpeg or .jpg), though Pillow supports numerous other image formats such as BMP, PNG, PPM, TIFF, and GIF, etc. 
+
+Specifications/Details in Input Files: The input file is an image file. 
+
+Code Snippet: 
 
 ```python
-from PIL import Image
+from PIL import Image 
 
 # Open an image file
-img = Image.open('image.jpg')
+img = Image.open('example.jpg') 
 
-# Display the image
-img.show()
+# Resize the image
+img.thumbnail((90, 90)) 
+
+# Save the resized image
+img.save('example_resized.jpg') 
 ```
 
-To install Pillow, you can use pip:
+Command to Run: Using a Python interpreter, run the Python script file where the above code is written. For example, if the code is written in a file named `main.py`, you would run `python main.py` from the command line or terminal. 
 
-```
-pip install Pillow
-```
+This code will open the image file 'example.jpg', resize the image to 90x90 pixels, and save the resized image as 'example_resized.jpg'. It is important to note that the image file should be located in the same directory where the python script is running, or a full path to the image file can be specified.

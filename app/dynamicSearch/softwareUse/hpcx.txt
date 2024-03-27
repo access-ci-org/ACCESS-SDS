@@ -1,0 +1,30 @@
+Use Case: HPCX is a comprehensive software suite for High Performance Computing (HPC) environments. It provides an MPI library for parallel computing and various HPC tools. It is often used for performance improvement of HPC systems.
+
+Code details and examples: Code
+
+_Input File:_
+A typical input for HPCX is a script file for running MPI jobs. Below is an example of a job script to run an MPI job using the HPCX's MPI library, which is an implementation of the MPI standard:
+
+```bash
+#!/bin/bash
+#SBATCH --job-name="hpcx_test"
+#SBATCH --output="hpcx_test.out"
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=16
+#SBATCH --time=01:00:00
+
+module load hpcx
+mpirun -np 32 app.exe
+```
+
+_Command to Run:_
+In a SLURM-managed cluster, you can submit this script to the job scheduler with the following command:
+
+```bash
+sbatch filename.sh
+```
+where `filename.sh` is the name of your script file.
+
+Note that the name of the executable (`app.exe` in the above example) and the number of processes (`-np 32` in the above example) should be replaced with the appropriate values for your specific computation.
+
+The bash script is specifying that it wants to use 2 nodes with 16 tasks per node, for a total of 32 cores.

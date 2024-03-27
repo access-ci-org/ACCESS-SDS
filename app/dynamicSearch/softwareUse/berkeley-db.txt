@@ -1,0 +1,27 @@
+Use Case: Use Berkeley DB for data persistence. It introduces fast, scalable, transactional database support to applications.
+
+Code details and examples: Code
+
+Berkeley DB is primarily a C library, though it has APIs for C++, Java, Perl, Python and others. Here is a simple example in Python:
+
+```python
+import bsddb3
+
+# open the database
+db = bsddb3.btopen('test.db', 'c')
+
+# insert a record
+db['key'] = 'value'
+
+# retrieve a record
+print(db['key'])
+
+# and close the database
+db.close()
+```
+
+In this simple Python example, we use BerkeleyDB to store a key-value pair and then retrieve it. The `bsddb3.btopen('test.db', 'c')` opens the database, creating it if it does not exist ('c' option). The `db['key'] = 'value'` stores the key-value pair and `print(db['key'])` fetches and prints the value associated with 'key'. Finally, `db.close()` closes the database.
+
+Since Berkeley DB is a library, rather than a standalone server, it's embedded directly into your application, so there's no separate server process to run/stop/etc. As a database library, Berkeley DB provides cursors, transactions, replication, and other features normally found in a complete database server. 
+
+So, there's no specific "command to run" the software. Rather, you'll run whatever application you write that uses the library.

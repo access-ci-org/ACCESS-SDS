@@ -1,24 +1,40 @@
-Use Case: KaHIP is a parallel graph partitioning software that is used to efficiently partition large-scale graphs. 
+Use Case: Use KaHIP when the requirement is to partition a given graph into k equally sized blocks while minimizing the total edge cut. This technique is particularly useful in getting a balanced load distribution while parallelizing graph algorithms on distributed memory machines. 
 
-Code details and examples: 
-KaHIP requires a METIS graph format (.graph) as input. Below is an example of a sample input file in METIS format:
+Code details and examples: Code. 
 
+KaHIP needs input files in the Metis graph file format.
+
+The general format for the Metis graph file is:
+ [number_of_nodes] [number_of_edges] (optional_edge_weights) (optional_vertex_weights)
+
+e.g.
+3 3 
+1 2 
+2 3 
+3 1 
+
+This represents a graph with 3 nodes and 3 edges. Each line after the first represents an edge in the graph.
+
+Command to run the partitioning using KaHIP is:
+
+```shell
+./kaffpa [graph_filename] [--k=#] 
 ```
-10 15
-2 4 1
-1 3
-2 4 6
-1 3 5
-4 2 6
-5
+where:
+- `graph_filename` is the input graph file.
+- `--k=#` is an optional argument where # is the number of blocks to partition the graph into. By default, the number is set to 2.
+
+For example, to partition a graph contained in the file 'input.graph' into 4 blocks, use:
+
+```shell
+./kaffpa input.graph --k=4
 ```
 
-To run KaHIP on the input file, you can use the following command: 
+The software will output the edge cut of the partition and also write the partition to the file system in a file '[graph_filename].ptn'. So, for the above example, the partition will be in the file 'input.graph.ptn'.
 
-```
-./kaffpa input_file.graph --k 2
-```
+The .ptn file contains one line for each node of the input graph file. This line contains the block ID the node was assigned to. For example, if the input.graph file had 3 nodes and they were partitioned into 2 blocks, the .ptn file may look like:
+0
+0
+1
 
-This command partitions the graph in the input_file.graph into 2 parts.
-
-Please note that the above command is an illustrative example, and the actual command may vary based on the specific options and parameters you want to use with KaHIP.
+This means that the first two nodes were assigned to block 0 and the third node was assigned to block 1.

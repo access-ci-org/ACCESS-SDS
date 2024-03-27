@@ -1,38 +1,61 @@
-lldb (Low Level Debugger) is a debugger similar to gdb, specifically built for debugging programs written in C, C++, and Objective-C languages.
+Use Case: Use LLDB to analyze live programs (debug) or to read core files to understand why a program crashed. LLDB also provides a high-level API for writing debugging scripts in Python.
 
-Use Case: Debugging a C program
-Code details and examples:
-Sample C program (example.c):
+Code details and examples: Code:
+Running a sample program using LLDB. Before we can debug, we will need a sample program. Here's a simple C program that we will compile and then debug with LLDB:
+
 ```c
 #include <stdio.h>
 
+int factorial(int n){
+    if(n == 0)
+        return 1;
+    else
+        return(n * factorial(n-1));
+}
+
 int main() {
-    int num1 = 10;
-    int num2 = 20;
-    int sum = num1 + num2;
-    
-    printf("Sum: %d\n", sum);
-    
-    return 0;
+   int num;
+   printf("Enter a positive integer: ");
+   scanf("%d",&num);
+   printf("Factorial of %d is %d", num, factorial(num));
+   return 0;
 }
 ```
 
-Compile the program with debugging information:
+Save this file as factorial.c. Now, let's compile it with debugging information included (using gcc):
+
 ```bash
-clang -g example.c -o example
+$ gcc -g factorial.c -o factorial
 ```
 
-Run lldb debugger on the compiled program:
+Now we can debug it using LLDB:
+
 ```bash
-lldb example
+$ lldb factorial
 ```
 
-Within lldb prompt, you can set breakpoints, examine variables, and control program execution. For example, setting a breakpoint at a certain line:
-```
-(lldb) breakpoint set --file example.c --line 7
+At the `(lldb)` prompt, you can start the program with the `run` command. To set a breakpoint at a specific line, use `b` command, followed by `line number`:
+
+```bash
+(lldb) b 6
 ```
 
-Run the program with additional arguments:
+This will set a breakpoint at line 6 of your program, which is the first line of the factorial function. Now run the program:
+
+```bash
+(lldb) run
 ```
-(lldb) run arg1 arg2
+
+When the program hits your breakpoint, it will stop, and you can inspect the state of variables, step through the program one line at a time, and perform other debugging operations. For example, to step over the next line of code (run it, stopping at the next line), type `next` or `n`:
+
+```bash
+(lldb) next
 ```
+
+To view the value of a particular variable, use the `frame variable` command, or `fr v` for short:
+
+```bash
+(lldb) frame variable n
+```
+
+This will print the current value of the variable `n`.

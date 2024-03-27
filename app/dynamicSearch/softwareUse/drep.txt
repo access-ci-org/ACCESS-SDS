@@ -1,0 +1,27 @@
+Use Case: dRep is a python program that rapidly compares large sets of genomes. It uses Mash and ANImf to calculate genome distances, performs a greedy clustering algorithm, and uses the scores to pick the best genome.
+
+Code Details and Examples:
+
+Code: 
+
+For dRep compare, you are required to have an output directory and a list of genome files.
+Every genome needs to be a single .fasta or .fa file. 
+
+Code for dRep:
+```
+dRep compare output_directory -g genome_list.txt
+```
+
+Example 'genome_list.txt' file:
+```
+/home/user/genomes/genome1.fna
+/home/user/genomes/genome2.fna
+/home/user/genomes/genome3.fna
+```
+
+Run the command:
+```
+dRep compare ./dRep_comparison -g ./genome_list.txt
+```
+
+This command runs the comparison feature of dRep on the genomes listed in the genome_list.txt and stores the result in the directory 'dRep_comparison'.

@@ -1,0 +1,42 @@
+Use Case: Magrittr is an R package that offers a forward-pipe operator for chaining commands, helping to create cleaner and more readable code. It is very useful in data manipulation tasks, and for writing functional code in R.
+
+Code details and examples:
+
+Code:
+
+1. Create a sequence, add 2 to each element, square the result, and calculate the mean:
+
+```R
+library(magrittr)
+
+1:10 %>%
+  add(2) %>%
+  multiply_by(2) %>%
+  mean()
+```
+
+input file: Not needed; operates on in-memory data structures. 
+
+Specification and details of input files: Not applicable here.
+
+Command to run: The above R code can be run interactively in an R session, or saved to a script file and run from the command line with `Rscript filename.R`.
+
+2. Load data, filter rows and calculate summary statistics:
+
+```R
+library(magrittr)
+library(dplyr)
+
+data("mtcars")
+
+mtcars %>%
+  filter(mpg > 20) %>%
+  summarise(mean_hp = mean(hp))
+
+```
+
+input file: In-built dataset "mtcars". If an external file was to be used, the read.csv function or similar would be used to load in the dataset.
+
+Specification and details in input files: The dataset mtcars is a dataset ships with base R and represents fuel consumption and 10 aspects of automobile design and performance for 32 automobiles, 1973–74 models.
+
+Command to run: This R code can be run interactively in an R session, or save to a script and run from the command line using: `Rscript filename.R`.

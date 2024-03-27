@@ -1,21 +1,39 @@
-Use Case: Abseil, a common collection of C++ code developed and used at Google.
-
-Input file format: N/A
+Use Case: Abseil is a collection of C++ code (compliant to C++11) designed to augment the C++ standard library. Google itself uses Abseil for its production systems. It treats additions as an extension of the standard library, like `std::string` replacements, container types, threading, and synchronization primitives, etc.
 
 Code details and examples:
-Abseil provides various C++ libraries, such as string manipulation, debugging and testing utilities. Here is an example of using Abseil's string manipulation library:
+
+Code:
 
 ```cpp
+#include "absl/strings/str_join.h"
+#include "absl/strings/str_split.h"
 #include <iostream>
-#include "absl/strings/str_cat.h"
+#include <vector>
 
 int main() {
-    std::string str = absl::StrCat("Hello", " ", "World!");
-    std::cout << str << std::endl;
-    return 0;
+   std::vector<std::string> v = {"foo","bar","baz"};
+   std::string s = absl::StrJoin(v, "-");
+
+   std::cout << s << std::endl;     // "foo-bar-baz"
+
+   std::vector<std::string> v2 = absl::StrSplit(s, '-');
+   for (const auto& x : v2) {
+       std::cout << x << std::endl;  // "foo" "bar" "baz"
+   }
+   return 0;
 }
 ```
 
-You would need to have Abseil installed and properly set up in your C++ project to use the code above.
+Input file format: Not applicable as Abseil is a library to be used in C++ code, not a standalone software. 
 
-Note: Abseil's full documentation and detailed usage instructions can be found on the Abseil GitHub page: https://github.com/abseil/abseil-cpp.
+Specifications in input file: Not applicable.
+
+Command to run: Once written, C++ code can be compiled using g++ or any C++ compiler and then run the executable.
+
+```shell
+# to compile the code
+$ g++ -std=c++11 -I /path/to/abseil your_code.cpp -o your_program
+
+# to run the code
+$ ./your_program
+```

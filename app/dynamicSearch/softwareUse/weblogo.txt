@@ -1,0 +1,40 @@
+Use Case: WebLogo is a sequence logo generator. Sequence logos are a graphical representation of an amino acid or nucleic acid multiple sequence alignment.
+
+Code Details and Examples: 
+
+1. A simple example is given below:
+
+Command to run:
+```
+weblogo < input.fa > output.eps
+```
+
+In this case, input.fa is a file with the following fasta format:
+```
+>Sequence1
+AAAGGCTTTGACGTAGC
+>Sequence2
+AAAGGCTTTGACGTAGC
+>Sequence3
+AAAGGCTTTGACGTAGC
+```
+
+2. For more complex cases, you can provide additional options. The `-F` option selects the output format:
+
+Input: same as above
+
+Command to run:
+```
+weblogo -F pdf < input.fa > output.pdf
+```
+
+3. You can also specify the color scheme using the `--color` option:
+
+Input: same as above
+
+Command to run:
+```
+weblogo --color red T thymine --color green C cytosine -F pdf < input.fa > output.pdf
+```
+
+You can consult the documentation for more details on the options that you can use with WebLogo.

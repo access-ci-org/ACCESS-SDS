@@ -1,58 +1,59 @@
-Use Case: PCRE (Perl Compatible Regular Expressions)
+Use Case: PCRE (Perl Compatible Regular Expressions) is a widely used library for implementing regular expression pattern matching. This library is often used in various projects such as PHP, R, etc.
 
-Code details and examples:
-PCRE is a library that implements Perl-compatible regular expressions. It provides a way for pattern matching with regular expressions similar to those used in Perl programming language.
+Code details and examples: 
 
-For example, let's say you have a file named "example.txt" with the following content:
+Code:
+
+Here is a simple example of using PCRE API in C to match a regex pattern (Ref: https://www.pcre.org/original/doc/html/pcreapi.html):
+
 ```
-Hello, World!
-This is a test file.
-```
-
-Here is a sample code snippet in C using PCRE to search for a specific pattern in the file:
-
-```c
-#include <pcre.h>
 #include <stdio.h>
+#include <string.h>
+#include <pcre.h>
 
-int main() {
+int main()
+{
     pcre *re;
-    const char *pattern = "test";
     const char *error;
     int erroffset;
-    int ovector[30];
     int rc;
+    int i;
 
-    re = pcre_compile(pattern, 0, &error, &erroffset, NULL);
-    if (re == NULL) {
-        printf("PCRE compilation failed at offset %d: %s\n", erroffset, error);
-        return 1;
+    // Compile the regular expression
+    re = pcre_compile("a[0-9]",  // the pattern
+            0,             // default options
+            &error,        // for error message
+            &erroffset,    // for error offset
+            NULL);         // use default character tables
+
+    // We compiled successfully, now do the matching
+    rc = pcre_exec(re,         // the compiled pattern
+            NULL,             // no extra data - we didn't study the pattern
+            "a7",             // the subject string
+            strlen("a7"), // the length of the subject
+            0,                // start at offset 0 in the subject
+            0,                // default options
+            NULL,             // output vector for substring information
+            0);               // number of elements (NOT size!) in the output vector
+
+    if (rc >= 0) {
+        printf("Match succeeded!\n");
+    } else {
+        printf("Match failed\n");
     }
-
-    FILE *file = fopen("example.txt", "r");
-    char line[256];
-    while (fgets(line, sizeof(line), file)) {
-        rc = pcre_exec(re, NULL, line, strlen(line), 0, 0, ovector, 30);
-        if (rc >= 0) {
-            printf("Pattern found in: %s", line);
-        }
-    }
-
-    pcre_free(re);
-    fclose(file);
 
     return 0;
 }
 ```
+Command to run:
 
-To compile the code using PCRE library (assuming the file is named "example.c"):
-```
-gcc example.c -lpcre -o example
-```
+You would run the code after saving it to a file (say `match.c`) and compiling it with the PCRE library. If your PCRE library is installed under the `/usr` directory, use
 
-To run the compiled executable:
-```
-./example
+```bash
+gcc -I/usr/include -L/usr/lib match.c -lpcre -o match
+./match
 ```
 
-This will search for the pattern "test" in the file "example.txt" and print the lines where the pattern is found.
+This program tries to match the string "a7" with the regular expression `a[0-9]` i.e., 'a' followed by a digit, and then prints "Match succeeded!" if it matches and "Match failed" if it doesn't match. 
+
+The input here is hardcoded in the C code file. For an actual use case, this would likely be replaced with user interface for input or file reading capabilities.

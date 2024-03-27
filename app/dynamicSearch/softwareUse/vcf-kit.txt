@@ -1,0 +1,37 @@
+Use Case: VCF-kit is a command-line based collection of utilities for performing analysis on Variant Call Format (VCF) files. It allows the user to generate digest for the VCF files, compare different VCF files, convert VCF to different other formats, generate phylogenetic trees and other similar tasks.
+
+Code Details and Examples:
+
+Code 1: Create a VCF digest
+
+Input Files: A VCF file with extension .vcf or .vcf.gz
+File Format: Standard VCF format
+Code:
+```
+vk vcf2digest myfile.vcf > digest.tsv
+```
+This command generates a digest (a unique, short identifying sequence) for each variant in the VCF file and outputs it in a tab-separated file.
+
+Code 2: Convert VCF to a PHYLIP format
+
+Input Files: A VCF file with extension .vcf or .vcf.gz
+File Format: Standard VCF format
+Code:
+```
+vk vcf2phylip -f myfile.vcf > myfile.phy
+```
+This command converts the VCF file to PHYLIP format (a text-based format for representing phylogenetic trees).
+
+Code 3: Generate a dendrogram from a VCF file
+
+Input Files: A VCF file with extension .vcf or .vcf.gz
+File Format: Standard VCF format
+Code:
+```
+vk dendrogram myfile.vcf
+```
+This command analyzes the VCF file and generates a dendrogram (a tree diagram) showing the relationships between the different variants in the file.
+
+Note: For all commands, you must be in the directory containing the VCF file, or provide the full path to the file. 
+
+Moreover, input VCF files can be manipulated with various standard Unix CLI tools, like grep, awk, sed, etc.

@@ -1,0 +1,67 @@
+Use Case: `dbcsr` is commonly utilized in the development of molecular simulation software, and while it was designed for density functional theory (DFT) calculations it can have many more great performance applications.
+
+Code Details and Examples:
+
+To utilize `dbcsr`, some understanding of FORTRAN is necessary. Below is an example of creating a matrix, setting its elements, and then performing a multiplication. 
+
+Code:
+
+```fortran
+PROGRAM demo
+    USE dbcsr_api, ONLY  : dbcsr_init, &
+                          dbcsr_finalize, &
+                          dbcsr_distribution_new, &
+                          dbcsr_distribution_release, &
+                          dbcsr_type, dbcsr_type_no_symmetry, &
+                          dbcsr_create, &
+                          dbcsr_release, &
+                          dbcsr_multiply, &
+                          dbcsr_print, &
+                          dbcsr_set_element
+    USE mpi
+    INTEGER, PARAMETER   :: nblkrows = 4
+    INTEGER, PARAMETER   :: nblkcols = 4
+    INTEGER              :: blksize_row(4) = 4
+    INTEGER              :: blksize_col(4) = 4
+    INTEGER(KIND=MPI_ADDRESS_KIND) :: idist
+    TYPE(dbcsr_type)     :: m_a, m_b, m_c
+    INTEGER              :: i, j
+    INTEGER              :: ierr
+
+    CALL mpi_init(ierr)
+    CALL dbcsr_init()
+
+    CALL dbcsr_distribution_new(idist, 'MPI_COMM_WORLD', &
+                                 nblkrows, nblkcols)
+
+    CALL dbcsr_create(m_a, 'A', idist, dbcsr_type_no_symmetry, &
+                      blksize_row, blksize_col, 'A')
+    CALL dbcsr_create(m_b, 'B', idist, dbcsr_type_no_symmetry, &
+                      blksize_row, blksize_col, 'B')
+    CALL dbcsr_create(m_c, 'C', idist, dbcsr_type_no_symmetry, &
+                      blksize_row, blksize_col, 'C')
+
+    DO j = 1, 4
+        DO i = 1, 4
+            CALL dbcsr_set_element(m_a, i, j, 1.0D0) 
+            CALL dbcsr_set_element(m_b, i, j, 1.0D0)
+        ENDDO
+    ENDDO
+
+    CALL dbcsr_multiply('T', 'N', 1.0D0, m_a, m_b, 0.0D0, m_c)
+    CALL dbcsr_print(m_c)
+
+    CALL dbcsr_release(m_a)
+    CALL dbcsr_release(m_b)
+    CALL dbcsr_release(m_c)
+
+    CALL dbcsr_distribution_release(idist)
+    CALL dbcsr_finalize()
+    CALL MPI_FINALIZE(ierr)
+END PROGRAM demo
+```
+This Fortran code initiates dbcsr and mpi. It creates the matrices 'A', 'B' and 'C', inserts elements into matrices 'A' and 'B', multiplies 'A' and 'B' and puts the result in 'C', and then outputs 'C'.
+
+To run a DBCSR-based code, a user would typically execute it like any other MPI-enabled code - `mpirun -np X ./my_dbcsr_code`, where `X` is the number of MPI ranks to launch (tasks to use), and `my_dbcsr_code` is the compiled binary. 
+
+One major concept in DBCSR is that matrices do not need to be square, and individual blocks in the matrix can be omitted (set to zero) for efficiency of storage and computation. The `dbcsr_set_element` routine is used to set non-zero elements in a block.

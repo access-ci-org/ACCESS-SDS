@@ -1,28 +1,22 @@
-Use Case: GUI application development
-Code details and examples:
+Use Case: Use qt5 toolkit to develop a simple GUI for displaying a "Hello, World" message.
 
-To create a simple GUI application using Qt5, you can use the following code:
-```cpp
-#include <QApplication>
-#include <QPushButton>
+Code details and examples: Code:
+```python
+from PyQt5.QtWidgets import QApplication, QLabel
 
-int main(int argc, char *argv[])
-{
-    QApplication app(argc, argv);
+if __name__ == "__main__":
+    app = QApplication([])
 
-    QPushButton button("Hello World!");
-    button.show();
+    label = QLabel('Hello, World!')
+    label.show()
 
-    return app.exec();
-}
+    app.exec_()
 ```
 
-To compile and run the application:
+For PyQt5, no specific input files or formats are needed. What's needed is the Python code to define the GUI. In this case, a QLabel is used to display a message. QApplications manages the GUI application's control flow and main settings.
+
+To run the PyQt5 program, simply use:
 ```bash
-$ qmake -project
-$ qmake
-$ make
-$ ./your_application_name
+python3 filename.py
 ```
-
-This will create a window with a "Hello World!" button.
+Replace "filename.py" with the actual Python script filename. This assumes that Python 3 and PyQt5 have been installed on the system.

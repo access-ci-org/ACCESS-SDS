@@ -1,0 +1,39 @@
+Use Case: Use hpc-x for high performance computing applications. This software package is used to scale computational workloads across multiple nodes and processors in high-performance computing (HPC) environments.
+
+Code details and examples: Code
+
+Sample input file:
+```
+# Input parameters for hpc-x 
+param1: value1
+param2: value2
+...
+```
+The input file format must be in the form of parameter-value pairs. Each line contains one parameter followed by its value. Comments can be introduced using the '#' symbol.
+
+Command to run:
+```
+> mpirun -np 8 <path to hpc-x program> <path to input file>
+```
+In this command, 'mpirun' is the command for starting the program and '-np 8' specifies the particle processors to be used in the computation, here it's 8. '<path to hpc-x program>' is the location of the hpc-x program and '<path to input file>' is the location of the input file.
+
+For instance,
+```python
+from mpi4py import MPI
+
+def hpcx(inputfile):
+    comm = MPI.COMM_WORLD
+    rank = comm.Get_rank()
+    
+    with open(inputfile, 'r') as file:
+        data = file.read().replace('\n', '')
+
+    if rank == 0:
+        data = comm.recv(source=1)
+    else:
+        data = comm.send(data, dest=0)
+
+    return data
+``` 
+
+This is a simple illustrative example of a Python code utilizing MPI for parallel processing with hpc-x. It reads an input file and uses MPI's send and receive functions for communication between processes. The exact operation to be performed on the input data would depend on the specific problem at hand.

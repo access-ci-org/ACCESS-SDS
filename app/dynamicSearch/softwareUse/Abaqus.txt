@@ -1,40 +1,35 @@
-Use Case: Finite Element Analysis with Abaqus
-Code details and examples:
-Abaqus is a popular software suite for finite element analysis, commonly used in engineering simulations. Here is an example of a simple Abaqus input file to perform a static structural analysis:
+Use Case: Abaqus is used for finite element analysis and computer-aided engineering. It’s a software suited for general purpose analyses as well as advanced problems, such as those involving nonlinear behavior and large transformations. 
 
-Input file (example.inp):
-```
-*Heading
-** Job name: SimpleBeam Model name: SimpleBeam
-**
-*Part, name=Part-1
-*End Part
-*Material, name=Material-1
-*End Material
-*Section, elastoplastic, material=Material-1, name=Section-1
-*End Section
-*Assembly, name=Assembly
-*Instance, name=Part-1-1, part=Part-1
-*End Instance
-*Step, name=Step-1, nlgeom=NO, inc=1000
-*Static
-*Initial conditions, type=STRESS
-** BCs
-** Name: Fixed-1 Type: Displacement/Rotation
-*Boundary
-Part-1, 1, 1
-*End Step
-*Node
-1, 0., 0., 0.
-2, 1., 0., 0.
-3, 2., 0., 0.
-*Element, type=C3D8R
-1, 1, 2, 3
-*End Part
-```
+Code Details and Examples:
 
-To run this simulation using Abaqus, you would typically create the input file as shown above and then run the Abaqus analysis job using the following command:
+Code:
+
+Step 1: Create an Input File for Abaqus.
+
+Typically, Abaqus input files follow a.INP filename extension. A simple format of an input file containing two nodes and one element might look like following:
 
 ```
-abaqus job=example.inp cpus=4 interactive
+** NODE
+*NODENode number, Degrees of freedom, X coordinate, Y coordinate
+1, 0, 0,
+2, 10, 10
+** ELEMENTS
+*ELEMENT, TYPE=B21, ELSET=BEAM
+1, 1, 2
 ```
+
+Step 2: Running Abaqus
+
+To run Abaqus using the created input file, execute the following command in the terminal, where 'inputfile' is replaced with the name of your file:
+
+```
+abaqus job=inputfile
+```
+
+Please do not provide the ".inp" extension when specifying the job name. For example, if your input file is "beam.inp", you should run:
+
+```
+abaqus job=beam
+```
+
+Remember that both these steps need to be followed in the same directory where you have your Abaqus input files. Furthermore, for a detailed usage of Abaqus and its different modules, users are suggested to refer to its software documentation.

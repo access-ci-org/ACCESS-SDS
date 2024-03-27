@@ -1,0 +1,23 @@
+Use Case: Molden is a software package used by computational chemists to aid in the interpretation of quantum chemical calculations, visualize molecular orbitals, electron densities and molecular vibrations.
+
+Code details and examples:
+
+Code: 
+
+Molden Files are the primary files that Molden uses. A sample Molden file for a molecule of water would look like:
+
+[Atoms] Angs
+O     1   8   0.000000   0.000000   0.000000
+H     2   1   0.758602   0.000000   0.504284
+H     3   1  -0.758602    0.000000   0.504284
+
+The file lists the atom type, atom number, atomic number, and XYZ position of each atom in the molecule. More complex molecules would have more entries.
+
+Command to Run: 
+To visualize the molecular structure using Molden, you would use the command:
+
+\molden <inputfile>
+
+Where <inputfile> is the path and name of your molden file. This can be used in Windows, MAC, or on Unix/Linux with proper install. 
+
+Afterwards, Molden presents you with a GUI from which you can interpret your quantum chemical calculations.

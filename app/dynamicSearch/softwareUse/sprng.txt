@@ -1,0 +1,51 @@
+Use Case: SPRNG or Scalable Parallel Random Number Generator Library is an utilized for generating sequences of statistically independent and uniformly distributed pseudo-random numbers. Common use case is in scientific simulations and cryptography contexts where random numbers are required across multiple distributed or parallel processes.
+
+Code details and examples:
+
+The input to the library function sprng is the type of generator to use (e.g., 0 for LC, 1 for LFG, etc.), the total number of streams, an identifier for the current stream, and a parameter specifying the version (0 for non-backwards compatible or 1 for backward compatible).
+
+Here is an example SPRNG code using the simple LCG generator.
+
+Code:
+
+```C
+#include <stdio.h>
+#define SIMPLE SPRNG       /* simple interface                        */
+#include "sprng.h"         /* SPRNG header file                       */
+
+#define SEED 93171         /* arbitrary seed                          */
+#define NGENS 1            /* number of streams                       */
+
+main()
+{
+  long seed = SEED;        /* initialize common seed                  */ 
+  int i, j, init, *idum;   
+
+  /************ sprng version check ***********/
+  if (sprng_version() != SPRNG_VERSION) {
+    sprintf("%s ERROR: SPRNG version mismatch: expected %d, found %d\n", 
+            "main:", SPRNG_VERSION, sprng_version());
+    exit(-1);
+  }
+   
+  /************* initialize one stream,      *********************/
+  /*************                                 non-backward compatible */
+
+  init_sprng(0,NGENS,seed,SPRNG_DEFAULT);
+  printf("Stream %d initialized with seed %d, %d total streams\n", 0, seed, NGENS);
+
+  /************* print five random integers                ********/
+
+  for (i=0; i<5; i++)
+    printf("%d ", isprng());
+
+  printf("\n");
+}
+```
+
+To compile and run this program, you would use the following commands (assuming the SPRNG library has been installed):
+
+```bash
+gcc -o test_sprng test_sprng.c -lsprng
+./test_sprng
+```

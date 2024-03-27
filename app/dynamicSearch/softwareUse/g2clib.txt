@@ -1,0 +1,46 @@
+Use Case: The g2clib is used for encoding and decoding GRIB2 files. GRIB is a WMO format for gridded data. GRIB2 is the second version of this format, significantly enhanced with respect to the previous one.
+
+Code details and examples: 
+
+Code: 
+```
+#include <grib2.h>
+
+int main()
+{
+    unsigned char csec0[72];
+    unsigned char csec1[256];
+    unsigned char *csec2, *csec3, *csec4, *csec5, *csec6, *csec7;
+    g2int numfields, numlocal, numslen;
+    g2int listsec0[3], listsec1[13];
+    g2int *listlocal;
+
+    // File path of the GRIB2 file
+    FILE *ifl1;
+    ifl1=fopen("grib2_file.grb","r");
+
+    // Decoding the GRIB2 message
+    if ( g2_info(ifl1,listsec0,listsec1,&numfields,&numlocal) == 0 )
+        {
+            printf("listsec0=",listsec0[0],listsec0[1],listsec0[2]);
+            printf("listsec1=",listsec1[0],listsec1[1],listsec1[2],listsec1[3],
+                listsec1[10],listsec1[11],listsec1[12]);
+            printf("numfields=",numfields);
+            printf("numlocal=",numlocal);
+        }
+
+    fclose(ifl1);
+    
+    return 0;
+}
+```
+
+Command to compile the above program:
+```
+gcc -o grib2_info grib2_info.c -L/usr/local/lib -lgrib2c
+```
+
+Command to run the compiled program:
+```
+./grib2_info
+```

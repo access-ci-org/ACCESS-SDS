@@ -1,29 +1,27 @@
-Use Case: DCMTK (DICOM Toolkit) is a collection of libraries and applications for medical imaging. It supports the DICOM standard and provides various tools for working with DICOM files.
+Use Case: DCMTK or DICOM Toolkit is a collection of libraries and applications implementing large parts the DICOM standard. It includes software for examining, constructing and converting DICOM image files, handling offline media, sending and receiving images over a network connection, as well as demonstrative image storage and worklist servers.
 
-Code details and examples:
-1. List DICOM tags in a file:
-```bash
-dcmdump input.dcm
+Code details and examples: 
+
+Code:
+
+The DCMTK software uses a command-line interface. For example, the dcm2xml application converts a DICOM file to its equivalent XML representation.
+
+```
+dcm2xml input.dcm output.xml
 ```
 
-2. Convert a DICOM file to a different transfer syntax:
-```bash
-dcmtrans -i input.dcm -o output.dcm +te
-```
+Input file: 
 
-3. Anonymize DICOM files by removing patient information:
-```bash
-dcmodify -nb -de -ie input.dcm -of output.dcm
-```
+- Any DICOM file (example: input.dcm)
+- Input file format: DICOM standard
 
-4. Query a DICOM server for information:
-```bash
-echoscu +r -aec MY_AE_TITLE SERVER_IP SERVER_PORT
-```
+Output file:
 
-5. Send DICOM files to a remote server:
-```bash
-storescu +r -aec MY_AE_TITLE SERVER_IP SERVER_PORT input1.dcm input2.dcm
-```
+- XML file (example: output.xml)
+- Output file format: XML
 
-Note: Replace input.dcm with the path to the DICOM file you want to work with. Adjust the options as needed for your specific use case.
+Specifications and details in input files: 
+
+DICOM files include a header (containing the patient's demographic and examination information) and an image/binary data section. The header section contains several "tags," each associated with a specific piece of information. 
+
+The dcm2xml command reads a DICOM file (input.dcm) and converts it to an XML file (output.xml). This output XML file can then be easily edited or viewed using standard XML tools.

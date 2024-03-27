@@ -1,0 +1,41 @@
+Use Case: T-Coffee is a multiple sequence alignment software. It can align Protein, DNA and RNA sequences. 
+
+Code details and examples: Code
+
+Sample input file:
+```
+>SEQ1
+ACTGCCTGA
+>SEQ2
+ACGCTGA
+>SEQ3
+ACTGCTAGG
+```
+
+This file is a standard FASTA file. Each sequence starts with a '>' symbol, followed by the name of the sequence. Multiple sequences can be included in a single file by starting a new line and adding another sequence, beginning with the '>' and the name.
+
+Command to run T-Coffee:
+`t_coffee fasta_file.txt` 
+
+T-Coffee will take this fasta file as input and produce the alignment as output. The format of the output file is also a FASTA file. The aligned sequences will be printed under the sequence name, like this:
+
+```
+>SEQ1
+ACTGCCTGA---
+>SEQ2
+-AC--GCTGA
+>SEQ3
+ACTGCTAGG---
+```
+
+The dashes '-' represent gaps inserted by the software. The aligned sequences' length will be the same in the FASTA output file.
+
+Code Snippet:
+
+Python code to process the output file:
+```python
+with open('output.fasta', 'r') as file:
+    data = file.readlines()
+    for line in data:
+        print(line)
+```

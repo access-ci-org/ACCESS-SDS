@@ -1,16 +1,43 @@
-Use Case: Kraken2 is a taxonomic sequence classification system that uses exact k-mer matches to rapidly and accurately classify sequences.
+Use Case: Use kraken2 for metagenomic sequence classification using exact k-mer matches. 
 
-Code details and examples:
+Code details and examples: 
 
-Kraken2 requires a database to perform sequence classification. The database can be downloaded from the Kraken2 website.
+For kraken2, the input file format would typically be a standard FASTA sequence file or a FASTQ file. 
 
-To classify sequences using Kraken2, you can use the following command:
-```
-kraken2 --db <database_directory> --report <output_report_file> <input_fasta_file>
-```
-For example, if you have a fasta file named "sequences.fasta" and you want to classify it using the Kraken2 database located at "/path/to/kraken2_db", you would run:
-```
-kraken2 --db /path/to/kraken2_db --report kraken2_report.txt sequences.fasta
+Here's a sample format of a FASTA file:
+
+```shell
+>sequence_1
+GATTACA
+>sequence_2
+TAGACAT
 ```
 
-Kraken2 also provides options to change the output format, filter results, etc. You can explore these options using the `kraken2 --help` command.
+And FASTQ:
+
+```shell
+@sequence_1
+GATTACA
++
+!!!
+@sequence_2
+TAGACAT
++
+!!!
+```
+
+Once you have your input file(s), you can run kraken2 with a command like this:
+
+```shell
+kraken2 --db database_name input_file > output_file
+```
+
+In this command, 'database_name' refers to the name of the database you created or downloaded for kraken2 to use. 'input_file' is your sequence file and 'output_file' is where kraken2 will write its results.
+
+Let's say you have a database called 'mini_kraken2_v1' and an input file called 'test.fasta', with the output going to a file called 'results.txt'. The command would look like this:
+
+```shell
+kraken2 --db mini_kraken2_v1 test.fasta > results.txt
+```
+
+This would search all sequences in 'test.fasta' and write the results to 'results.txt'. Every sequence in the input file will get a line in the output file, with the sequence ID followed by the taxonomy ID of the species most closely matching that sequence.

@@ -1,0 +1,56 @@
+Use Case: DNA Copy Number Variations (CNV) analysis on whole genome sequencing. It is used to predict copy number aberrations (deletions, amplifications, LOH, BAF, ploidy, genotypes) from deep sequencing data.
+
+Code Details and Examples: Code.
+
+Input File Format Required: 
+Control-FREEC requires two types of input files: the file(s) with reads and the file describing the chromosome lengths.
+  
+  A sample of config file:
+
+           [general]
+           chrFiles = /path/ChrFiles
+           ploidy = 2
+           breakPointType = 2
+           chrLenFile = /path/human_g1k_v37_chr.len
+           window = 0
+           telocentromeric = 0
+           maxThreads = 4
+           BedGraphOutput = TRUE
+           
+           [sample]
+           mateFile = /path/WES1.bam
+           inputFormat = BAM
+           mateOrientation = FR
+          
+           [control]
+           mateFile = /path/germline.bam
+           inputFormat = BAM
+           mateOrientation = FR
+
+  Save the above configuration in a text file, e.g., "config_WES1.txt".
+  Then, run:
+
+        freec -conf config_WES1.txt
+
+  The input file "human_g1k_v37_chr.len" can be downloaded from the Control-FREEC website or be generated. It has the format as in the following example:
+
+        chr1    249250621
+        chr2    243199373
+        chr3    198022430
+        chr4    191154276
+        chr5    180915260
+        chr6    171115067
+
+  The "ChrFiles" folder should contain chromosome fasta files, e.g.,
+
+        /path/ChrFiles/chr1.fa
+        /path/ChrFiles/chr2.fa
+        ...
+
+  The results can be viewed in a genome browser, e.g., IGV, after converting them into BedGraph format. You can generate the BedGraph file by enabling "BedGraphOutput" in the configuration file.
+
+  freec2bedgraph Rscript script should be used for normalization and color visualization for normal and tumor sample:
+
+       Rscript freec2bedgraph.R sample.bam_CNVs.p.value.txt
+
+  After that, the file sample.bam_CNVs.p.value.bedGraph can be uploaded into UCSC Genome Browser (use no header lines).

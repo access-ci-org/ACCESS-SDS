@@ -1,28 +1,44 @@
-Use Case: Data processing and analysis in a distributed computing environment
+Use Case: Spark is a lightning-fast cluster computing system. It is designed for fast computation. This powerful tool supports SQL queries, streaming data, machine learning, and graph processing. They all are built-on data sets in Spark, called RDD (Resilient Distributed Dataset). In addition, it is a fail-safe system.
 
-Code details and examples: 
-1. Sample input file (input.txt):
+Code Details and Examples: 
+
+Code:
+
+In Spark, applying transformations and actions to the data is a common task. We'll do a simple exercise. We first load a text file and use transformations and actions to count how many lines contain 'Spark'.
+
 ```
-1,John,Doe
-2,Jane,Smith
-3,Alice,Johnson
+from pyspark import SparkConf, SparkContext
+
+conf = SparkConf().setMaster("local").setAppName("CountSpark") 
+sc = SparkContext(conf = conf) 
+
+def ParseLine(line):
+    words = line.split(' ')
+    return ("Spark", words.count('Spark'))
+
+input = sc.textFile("file:///sparkcourse/SparkBook.txt") 
+parsedLines = input.map(ParseLine) 
+wordCount = parsedLines.reduceByKey(lambda x, y: x + y) 
+results = wordCount.collect();
+
+for word, count in results:
+    cleanedWord = word.encode('ascii', 'ignore')
+    if (cleanedWord):
+        print(cleanedWord.decode() + " " + str(count))
 ```
 
-2. Sample PySpark code (pyspark_script.py) to read the input file and display the data:
-```python
-from pyspark.sql import SparkSession
+Input File:
 
-# Create a Spark session
-spark = SparkSession.builder.appName("ExampleApp").getOrCreate()
+The input file in this case is a .txt file named 'SparkBook.txt'. This file should contain lines of text.
 
-# Read the input file
-df = spark.read.csv("input.txt")
 
-# Show the data
-df.show()
+
+Command to Run:
+
+In the terminal, navigate to your project directory then use this command to run:
+
+```
+spark-submit spark_count.py
 ```
 
-3. Command to run the PySpark script:
-```
-pyspark pyspark_script.py
-```
+This command submits the application to a Spark cluster to run. The cluster can be local or distributed. The application here is a python script. We can just submit and let Spark take care of distributing the computation.

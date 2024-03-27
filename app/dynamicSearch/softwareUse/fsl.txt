@@ -1,0 +1,20 @@
+Use Case: Performing Statistical Analysis of Brain Imaging Data
+
+Code details and examples: Code
+
+In FSL, the software expects input files in NIfTI format. For example,
+
+Input file: brain_image.nii.gz
+
+Specifications: 
+The NIfTI format is a standard for representing 3D (or 4D) brain imaging data. The file is binary, but usually comes with an accompanying .hdr (header) file that describes the data layout, dimensions, and scales. FSL can handle compressed (.gz) or uncompressed files.
+
+For instance, one might want to perform a voxel-wise general linear model (GLM) analysis using fsl_glm. The command for performing this might be:
+
+```console
+fsl_glm -i brain_image.nii.gz -d design.mat -c contrast.con -o output
+```
+
+Here, `design.mat` is a design matrix and `contrast.con` is a contrast matrix. Both are ASCII text files describing the GLM and the hypotheses to be tested, respectively. The output will be a NIfTI file (`output.nii.gz`) containing the GLM coefficients for each voxel, which can be visualized using the FSLview tool. Note that this is just one of many possible use cases for FSL. It contains many other tools for preprocessing, registration, segmentation, etc.
+
+Note: The above commands are executable in Linux shell. The path of the file and the values may vary. The commands will not be executable in Windows Command Prompt or PowerShell.

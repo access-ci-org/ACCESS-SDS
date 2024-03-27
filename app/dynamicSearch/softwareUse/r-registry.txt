@@ -1,0 +1,51 @@
+Use Case: Bioconductor; Bioconductor is an open-source project that provides tools for the analysis and comprehension of high-throughput genomics data. R is a free software environment that runs on a wide variety of UNIX platforms, Linux, Windows and Mac OS X. 
+
+Code Details and Examples: 
+
+Code to install a Bioconductor package:
+
+```R
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("packageName")
+```
+
+Replace "packageName" with the name of the desired package.
+
+Use Case: DESeq2; DESeq2 is an R package available via Bioconductor and is used to analyze count data from high-throughput sequencing assays such as RNA-Seq and ChIP-Seq, and test for differential expression.
+
+Code Details and Examples:
+
+Sample Input File: A matrix of integer values where rows are genes and columns are samples.
+
+```R
+# Load DESeq2 library
+library(DESeq2)
+
+# Read in data
+countData <- read.csv(file="path/to/your/data.csv", header=TRUE, row.names=1)
+
+# Define condition (assuming two conditions)
+condition <- factor(c(rep("cond1", 3), rep("cond2", 3)))
+
+# Create a coldata frame and instantiate the DESeqDataSet
+colData <- DataFrame(condition=condition)
+dds <- DESeqDataSetFromMatrix(countData = countData, colData = colData, design = ~ condition)
+
+# Run the DESeq pipeline
+dds <- DESeq(dds)
+
+# Get differential expression results
+res <- results(dds)
+
+# Order by adjusted p-value
+res <- res[order(res$padj), ]
+```
+
+Command to run the code:
+
+```R
+source("path_to_your_script.R")
+```
+Replace "path_to_your_script.R" with the path to your R script.

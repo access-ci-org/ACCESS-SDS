@@ -1,0 +1,32 @@
+Use Case: Compressing scientific datasets
+
+Code Details and Examples:
+
+Code:
+
+Sample Input File: A TXT file containing numbers (floats or integers). These can be created easily in Python using numpy:
+
+```python
+import numpy as np
+data = np.random.rand(100)
+np.savetxt('dataset.txt', data)
+```
+
+Usage of the Software:
+
+The typical command for using cuSZ from the command line is as follows:
+
+```bash
+cusz -f32 -m r2r -s 3:100:512:512 -i dataset.txt -o output.txt
+```
+In this command, `-f32` and `-m r2r` set the data type and mode respectively. `-s 3:100:512:512` sets the size parameters (dimensions of the tensor), `-i dataset.txt` is the input file and `-o output.txt` is the output file.
+
+Here's a breakdown of the command:
+
+- `-f32`: this sets the data type to 32-bit float. For 64-bit float data, you would use `-f64`.
+- `-m r2r`: this sets the mode to round-trip (compression and decompression). For compression only, you would use `-m c`.
+- `-s 3:100:512:512`: this sets the size parameters for the tensor. In this example, the tensor is 3-dimensional, with dimensions 100x512x512. These need to match the actual dimensions of your data.
+- `-i dataset.txt`: this is the input file, containing your scientific data. It needs to be in binary format.
+- `-o output.txt`: this is the output file, where the compressed data will be written to.
+
+Detailed documentation can be found in the official cuSZ GitHub repository (https://github.com/szcompressor/cuSZ). You should refer to this for exact usage details for your specific needs.

@@ -1,0 +1,23 @@
+Use Case: Open Asset Import Library (assimp) is a library to import various well-known 3D model formats in an uniform manner. It is used for processing data of 3D model file formats and converting those into a shared, in-memory format for easy use in graphics applications.
+
+Code details and examples:
+
+Code:
+```python
+from pyassimp import *
+
+scene = pyassimp.load('./models/3DS/CameraRollAnim.3ds')
+
+#pyassimp export
+pyassimp.export(scene, 'out.x', 'x3d')
+```
+This Python code uses assimp package pyassimp to load a 3D model file (CameraRollAnim.3ds) from local directory. Then it exports the model in another format (x3d).
+
+Command to run above python script (let's say script is named `example.py`): `python example.py`
+
+Input Files: 3D model file (e.g CameraRollAnim.3ds)
+Format: Various 3D model files (e.g 3ds, obj, dae etc.); use tools like Blender to create/modify 3D model files.
+
+Specifications and details in input files: 3D model files contain detailed data that represents the structure of a 3D object. Such data might include vertex positions, the normals at those vertices, and other surface detail.
+
+Assimp supports multiple 3D model formats: https://github.com/assimp/assimp/#supported-file-formats
