@@ -17,9 +17,7 @@ def fix_files(): #used to remove chatgpt fluff from json files
 #fix_files()
 
 def txt_to_json():
-    for filename in os.listdir(directory_path):
-        print(filename)
-        
+    for filename in os.listdir(directory_path):        
         if filename.endswith('.txt'):
             os.rename(directory_path+'/'+filename, directory_path+'/'+filename[:-4]+'.json')
 
@@ -44,7 +42,6 @@ def read_and_transform_json(file_path):
             original_data = json.load(file)
 
         data = {}
-        print(f'filepath: {file_path}')
         software_name_value = None
 
         # Check for nested structure and extract if necessary
@@ -71,18 +68,21 @@ def read_and_transform_json(file_path):
 
         attributes_columns = {
             'software name': ['software_name', 'tool', 'software', 'software name', 'softwareName'],
-            'overview': ['comprehensive_overview', 'overview', 'comprehensiveOverview', 'comprehensive overview'],
-            'core features': ['core_features', 'coreFeatures', 'core features'],
-            'tags': ['general_tags', 'general tags', 'generalTags'],
-            'additional tags': ['additionalTags', 'additional tags', 'additional_tags'],
-            'research area': ['research_area', 'research area', 'researchArea'],
-            'research discipline': ['research_discipline', 'research discipline', 'researchDiscipline'],
-            'software type': ['software_type', 'softwareType', 'software type'],
-            'software class': ['software_class', 'softwareClass', 'software class'],
+            'overview': ['comprehensive_overview', 'overview', 'comprehensiveOverview', 'comprehensive overview', 'Comprehensive Overview'],
+            'core features': ['core_features', 'coreFeatures', 'core features', 'Core Features'],
+            'tags': ['general_tags', 'general tags', 'generalTags', 'General Tags'],
+            'additional tags': ['additionalTags', 'additional tags', 'additional_tags', 'Additional Tags', 'specific_tags'],
+            'research area': ['research_area', 'research area', 'researchArea', 'Research Area'],
+            'research discipline': ['research_discipline', 'research discipline', 'researchDiscipline', 'discipline', 'Research Discipline', 'specific_discipline', 'research_discipline_tags'],
+            'software type': ['software_type', 'softwareType', 'software type', 'Software Type'],
+            'software class': ['software_class', 'softwareClass', 'software class', 'Software Class'],
+            'research field': ['field_of_science', 'specific_field_of_science', 'specific_field', 'Field of Science', 'field of science', 'technology_field', 'subfields', 'research_field']
         }
 
         for attribute, columns in attributes_columns.items():
             value, flattened_data = extract_key_value(flattened_data,columns)
+            if('specific_discipline' in flattened_data):
+                print(f'value: {value}, flat: {flattened_data}')
             if value:
                 flattened_data[attribute]=value
 
@@ -170,7 +170,7 @@ def make_df():
     final_order = column_order + rest_of_columns
     df = df[final_order]
 
-    empty_columns = ['Unnamed: 5']
+    empty_columns = ['Unnamed: 5', 'additional tags', 'other_tags', 'other']
     
     df.drop(empty_columns,axis=1,inplace=True)
 
