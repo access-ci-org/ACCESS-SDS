@@ -1,0 +1,13 @@
+{
+    "software_name": "htstream",
+    "comprehensive_overview": "htstream is a software package that provides scalable, high-throughput tools for processing short-read sequencing data. It is designed to efficiently handle large-scale genomic datasets and perform various data processing tasks for bioinformatics applications.",
+    "core_features": "Key features of htstream include fast and parallel processing of short-read sequencing data, quality control and filtering of reads, mapping reads to reference genomes, generating alignment statistics, and facilitating downstream analysis such as variant calling and differential expression analysis.",
+    "general_tags": ["bioinformatics", "sequencing data", "data processing"],
+    "additional_tags": {
+        "research_discipline": "Biological Sciences",
+        "research_area": "Genetics",
+        "software_class": "Computational tool",
+        "software_type": "Data processing tool",
+        "field_of_science": "Natural Sciences"
+    }
+}

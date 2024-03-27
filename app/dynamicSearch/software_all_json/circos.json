@@ -1,0 +1,26 @@
+```json
+{
+    "software_name": "Circos",
+    "comprehensive_overview": "Circos is a software package for visualizing data in a circular layout. It is widely used in genomics and other biological sciences to create visual representations of complex datasets.",
+    "core_features": [
+        "Circular layout visualization",
+        "Highly customizable graphics",
+        "Support for large datasets",
+        "Integration of multiple data types",
+        "Publication-quality images"
+    ],
+    "general_tags": [
+        "Data visualization",
+        "Genomics",
+        "Biological Sciences",
+        "Circular layout"
+    ],
+    "additional_tags": {
+        "research_discipline": "Bioinformatics",
+        "research_area": "Genomics",
+        "software_class": "Data Visualization",
+        "software_type": "Visualization Tool",
+        "field_of_science": "Biological Sciences"
+    }
+}
+```

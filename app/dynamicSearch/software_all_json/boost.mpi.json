@@ -1,0 +1,13 @@
+{
+  "software_name": "boost.mpi",
+  "comprehensive_overview": "Boost.MPI is a peer-reviewed, free, open-source, portable, and fully-standard library implementation of the Message Passing Interface (MPI) for C++.",
+  "core_features": "Boost.MPI provides an intuitive C++ interface for MPI operations, allowing for seamless integration of parallelism into C++ applications. It offers support for point-to-point and collective communication, synchronizations, and parallel computational operations.",
+  "general_tags": ["MPI", "parallel computing", "C++"],
+  "additional_tags": {
+    "research_discipline": "Other Computer and Information Sciences",
+    "research_area": "Software Engineering, Systems, and Development",
+    "software_class": "Library",
+    "software_type": "Middleware",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

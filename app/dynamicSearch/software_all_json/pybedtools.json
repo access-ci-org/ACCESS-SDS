@@ -1,0 +1,13 @@
+{
+  "software_name": "pybedtools",
+  "comprehensive_overview": "pybedtools is a Python wrapper for BEDTools, a powerful software suite for genomic arithmetic. It allows to manipulate genomic data in multiple file formats and integrate with other Python libraries for bioinformatics analysis.",
+  "core_features": "1. Intersect and perform set operations on genomic intervals\n2. Merge, shuffle, and complement genomic intervals\n3. Retrieve sequence DNA from genomic intervals\n4. Calculate coverage and perform other statistical analyses\n5. Integrate with other Python libraries such as pandas and numpy",
+  "general_tags": ["genomics", "bioinformatics", "Python", "BEDTools"],
+  "additional_tags": {
+    "research_discipline": "Bioinformatics",
+    "research_area": "Genomics",
+    "software_class": "Data Analysis",
+    "software_type": "Library",
+    "field_of_science": "Biological Sciences"
+  }
+}

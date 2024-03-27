@@ -1,0 +1,24 @@
+```json
+{
+  "software_name": "glib-networking",
+  "comprehensive_overview": "Glib-networking is a set of network-related GIO modules for GLib, providing high-level network access, network diagnostic utilities, and TLS support. It is part of the GNOME project and is commonly used in Linux-based systems.",
+  "core_features": [
+    "High-level network access",
+    "Network diagnostic utilities",
+    "TLS support"
+  ],
+  "general_tags": [
+    "GLib",
+    "Network",
+    "Linux",
+    "Library"
+  ],
+  "additional_tags": {
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "",
+    "software_type": "",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}
+```  

@@ -1,0 +1,15 @@
+```json
+{
+	"software_name": "r-digest",
+	"comprehensive_overview": "The 'r-digest' package in R provides a wide range of tools to create hash digests of R objects with various algorithms.",
+	"core_features": "1. Generate hash digests of R objects using a variety of algorithms.\n2. Supports CRC32, MD5, SHA-1, SHA-256, SHA-512 and more.\n3. Efficient computation and verification of hash digests for data validation and security purposes.",
+	"general_tags": ["R package", "Data Security", "Data Validation"],
+	"additional_tags": {
+		"research_discipline": [],
+		"research_area": [],
+		"software_class": "Data Management and Analysis",
+		"software_type": "Library",
+		"field_of_science": "Other"
+	}
+}
+```

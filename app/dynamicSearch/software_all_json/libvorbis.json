@@ -1,0 +1,21 @@
+{
+  "software_name": "libvorbis",
+  "comprehensive_overview": "Libvorbis is a free and open-source software library for encoding and decoding audio data compressed with the Vorbis audio codec. It is part of the Xiph.org Foundation's Ogg project and is used for high-quality audio compression.",
+  "core_features": [
+    "Encoding and decoding audio data",
+    "Support for the Vorbis audio codec",
+    "High-quality audio compression"
+  ],
+  "general_tags": [
+    "audio codec",
+    "compression",
+    "open-source"
+  ],
+  "additional_tags": {
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Library",
+    "software_type": "Audio Processing",
+    "field_of_science": "Engineering and Technology"
+  }
+}

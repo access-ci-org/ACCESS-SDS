@@ -1,0 +1,23 @@
+{
+  "software_name": "Bactopia",
+  "comprehensive_overview": "Bactopia is a bioinformatics pipeline that leverages best practices and state-of-the-art tools to perform bacterial genome analysis. It automates the process of quality control, assembly, annotation, and more, providing researchers with a streamlined workflow for analyzing bacterial genomes.",
+  "core_features": [
+    "Quality control of sequencing data",
+    "Genome assembly",
+    "Functional annotation",
+    "Comparative genomics",
+    "Identification of antibiotic resistance genes",
+    "Phylogenetic analysis"
+  ],
+  "general_tags": [
+    "Bioinformatics",
+    "Genomics",
+    "Bacterial genome analysis",
+    "Pipeline"
+  ],
+  "research_discipline": "Biological Sciences",
+  "research_area": "Genetics",
+  "software_class": "Bioinformatics Tool",
+  "software_type": "Pipeline",
+  "field_of_science": "Biological Sciences"
+}

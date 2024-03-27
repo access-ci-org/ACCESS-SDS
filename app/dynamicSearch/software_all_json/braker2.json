@@ -1,0 +1,13 @@
+{
+  "software_name": "braker2",
+  "comprehensive_overview": "BRAKER2 is a novel tool for unsupervised RNA-Seq-based genome annotation. It combines gene prediction and RNA-Seq alignment in an innovative and computational efficient way to improve genome annotations.",
+  "core_features": "1. Unsupervised training process for gene prediction based on RNA-Seq data. 2. Integration of RNA-Seq data to improve gene prediction accuracy. 3. Support for both eukaryotic and prokaryotic genomes. 4. High computational efficiency compared to traditional genome annotation tools.",
+  "general_tags": ["genome annotation", "RNA-Seq data", "gene prediction"],
+  "additional_tags": {
+    "research_discipline": "Biological Sciences",
+    "research_area": "Bioinformatics",
+    "software_class": "Computational software",
+    "software_type": "Genome annotation tool",
+    "field_of_science": "Biological Sciences"
+  }
+}

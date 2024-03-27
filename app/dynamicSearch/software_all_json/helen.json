@@ -1,0 +1,11 @@
+{
+  "software_name": "Helen",
+  "comprehensive_overview": "Helen is a software tool for analyzing genomic and epigenomic annotations from large-scale sequencing data. It is designed to extract biological insights from high-throughput sequencing data related to DNA modifications and chromatin structure.",
+  "core_features": "Helen offers various features including the ability to perform differential analysis of epigenetic marks, identify enriched regions of histone modifications, visualize genomic annotations, and integrate multiple types of epigenomic data for comprehensive analysis.",
+  "general_tags": ["genomic analysis", "epigenomics", "high-throughput sequencing", "DNA modifications", "chromatin structure"],
+  "research_discipline": "Biophysics",
+  "research_area": "Genetics",
+  "software_class": "Bioinformatics",
+  "software_type": "Tools",
+  "field_of_science": "Biological Sciences"
+}

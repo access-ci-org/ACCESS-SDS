@@ -1,0 +1,14 @@
+{
+  "FOSS": {
+    "overview": "FOSS (Free and Open Source Software) refers to software that is both free to use and distribute, as well as with access to the source code for modification or enhancement by users.",
+    "core_features": "1. Free for distribution and modification. 2. Access to the source code for transparency and customization. 3. Collaboration and community-driven development. 4. Cost-effective and sustainable solutions. 5. Promotes innovation and knowledge sharing.",
+    "general_tags": ["Free Software", "Open Source Software", "Software Development"],
+    "additional_tags": {
+      "research_discipline": [],
+      "research_area": [],
+      "software_class": "Development Tools",
+      "software_type": "Software Library",
+      "field_of_science": "Other Computer and Information Sciences"
+    }
+  }
+}

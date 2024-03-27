@@ -1,0 +1,13 @@
+{
+  "software_name": "py-scikit-learn",
+  "comprehensive_overview": "Scikit-learn is a machine learning library for Python that provides simple and efficient tools for data mining and data analysis. It is built on NumPy, SciPy, and matplotlib.",
+  "core_features": "Scikit-learn provides various supervised and unsupervised learning algorithms, including linear and logistic regression, support vector machines, random forests, k-means clustering, and principal component analysis. It also offers tools for model selection, preprocessing, dimensionality reduction, and evaluation.",
+  "general_tags": ["machine learning", "data analysis", "data mining"],
+  "additional_tags": {
+    "research_discipline": "Artificial Intelligence and Intelligent Systems",
+    "research_area": "Machine Learning",
+    "software_class": "Python Library",
+    "software_type": "Data Science Library",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

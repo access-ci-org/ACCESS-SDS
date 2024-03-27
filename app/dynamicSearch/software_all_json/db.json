@@ -1,0 +1,13 @@
+{
+    "software_name": "db",
+    "comprehensive_overview": "db is a simple and minimalistic database library for Python, designed to provide a lightweight interface for basic database operations.",
+    "core_features": "1. Simple and easy-to-use interface for database operations. 2. Support for common database operations like creating tables, inserting data, querying data, updating records, and deleting records. 3. Lightweight and minimalistic design for quick integration into Python projects.",
+    "general_tags": ["database", "Python library"],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Database Library",
+        "software_type": "Library",
+        "field_of_science": ["Computer and Information Sciences", "Computer Science"]
+    }
+}

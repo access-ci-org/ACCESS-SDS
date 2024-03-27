@@ -1,0 +1,13 @@
+{
+    "software_name": "edlib",
+    "comprehensive_overview": "Edlib is an open-source library for sequence alignment using edit (Levenshtein) distance and pairwise alignment. It includes several alignment algorithms and methods for comparing sequences.",
+    "core_features": "1. Supports various alignment algorithms such as Edit distance, Hamming distance, and NW (Needleman-Wunsch) global alignment.\n2. Provides functions for pairwise alignment of sequences and computing their similarity.\n3. Includes methods for approximate string matching and searching.\n4. Allows users to set custom parameters for alignment and scoring.\n5. Written in C language with bindings available for Python and other programming languages.",
+    "general_tags": ["sequence alignment", "edit distance", "pairwise alignment"],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "library",
+        "software_type": "bioinformatics",
+        "field_of_science": "Biological Sciences"
+    }
+}

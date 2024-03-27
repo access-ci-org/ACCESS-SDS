@@ -1,0 +1,11 @@
+{
+    "software_name": "libgpuarray",
+    "comprehensive_overview": "libgpuarray is a library that provides a common, numpy-like array object to represent GPU data for array-oriented algorithms in Python. It is designed to work with various libraries whose primary focus is on GPU acceleration, such as Theano or PyCUDA.",
+    "core_features": "1. Provides a common array object for representing GPU data.\n2. Designed to work seamlessly with GPU acceleration libraries like Theano and PyCUDA.\n3. Facilitates array-oriented computations on GPUs in Python.\n4. Offers optimized GPU memory management and data transfer operations.",
+    "general_tags": ["GPU acceleration", "array-oriented algorithms", "Python library"],
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Library",
+    "software_type": "Computational Software",
+    "field_of_science": "Computer and Information Sciences"
+}

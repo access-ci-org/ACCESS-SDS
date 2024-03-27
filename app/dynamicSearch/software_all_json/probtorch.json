@@ -1,0 +1,11 @@
+{
+  "software_name": "ProbTorch",
+  "comprehensive_overview": "Probabilistic Torch is a deep probabilistic programming library built on PyTorch that combines the strengths of deep learning and probabilistic graphical models. It enables users to easily specify and train differentiable generative models for uncertainty estimation.",
+  "core_features": "1. Integration of deep learning and probabilistic modeling.\n2. Built on PyTorch for easy integration with existing deep learning projects.\n3. Supports various probabilistic models like Variational Autoencoders (VAEs) and Bayesian Neural Networks (BNNs).\n4. Enables easy specification and training of differentiable generative models.\n5. Provides tools for uncertainty estimation and probabilistic inference.",
+  "general_tags": ["Probabilistic Programming", "Deep Learning", "PyTorch"],
+  "research_discipline": "Artificial Intelligence and Intelligent Systems",
+  "research_area": "Machine Learning",
+  "software_class": "Probabilistic Programming Library",
+  "software_type": "Open Source",
+  "field_of_science": "Computer and Information Sciences"
+}

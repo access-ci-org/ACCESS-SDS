@@ -1,0 +1,11 @@
+{
+    "software_name": "py-openpyxl",
+    "comprehensive_overview": "py-openpyxl is a Python library to read/write Excel 2010 xlsx/xlsm/xltx/xltm files.",
+    "core_features": "1. Supports the xlsx/xlsm/xltx/xltm formats. 2. Allows reading and writing Excel files. 3. Can create new Excel files, edit existing ones, and extract data. 4. Supports formatting options like styles, fonts, colors, etc. 5. Provides support for charts and images within Excel files.",
+    "general_tags": ["Python library", "Excel manipulation", "Data processing"],
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Library",
+    "software_type": "Python Library",
+    "field_of_science": "Computer and Information Sciences"
+}

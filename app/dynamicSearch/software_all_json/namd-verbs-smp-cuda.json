@@ -1,0 +1,24 @@
+{
+  "software_name": "NAMD",
+  "comprehensive_overview": "NAMD (NAnoscale Molecular Dynamics) is a parallel molecular dynamics code designed for high-performance simulation of large biomolecular systems. It is optimized for the simulation of biomolecular systems containing millions of atoms.",
+  "core_features": [
+    "High-performance molecular dynamics simulation",
+    "Parallel computing support",
+    "Optimized for large biomolecular systems",
+    "Compatible with CUDA for GPU acceleration"
+  ],
+  "general_tags": [
+    "molecular dynamics",
+    "biomolecular systems",
+    "parallel computing",
+    "CUDA",
+    "simulation"
+  ],
+  "additional_tags": {
+    "research_discipline": "Biophysics",
+    "research_area": "Molecular Dynamics Simulation",
+    "software_class": "Biomolecular Simulation Software",
+    "software_type": "Computational Software",
+    "field_of_science": "Biological Sciences"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "software_name": "OrthoFinder",
+  "comprehensive_overview": "OrthoFinder is a fast and accurate tool for phylogenomic orthology and gene set inference.",
+  "core_features": "1. Phylogenomic orthology inference\n2. Gene set inference\n3. Fast and accurate results\n4. User-friendly interface",
+  "general_tags": ["bioinformatics", "phylogenomics", "orthology", "gene set inference"],
+  "research_discipline": [],
+  "research_area": ["computational biology", "evolutionary biology"],
+  "software_class": "bioinformatics tool",
+  "software_type": "genome analysis software",
+  "field_of_science": ["Biological Sciences"]
+}

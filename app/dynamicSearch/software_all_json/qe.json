@@ -1,0 +1,11 @@
+{
+    "software_name": "Quantum ESPRESSO",
+    "comprehensive_overview": "Quantum ESPRESSO is an integrated suite of computer codes for electronic-structure calculations and materials modeling based on density-functional theory, plane waves, and pseudopotentials. It is designed for high-performance computing architectures and allows for ab-initio electronic structure calculations.",
+    "core_features": "The software package includes tools for performing ground-state calculations, structural optimization, molecular dynamics simulations, and spectral properties calculations. It also offers interfaces to other software packages for post-processing and data analysis.",
+    "general_tags": ["quantum chemistry", "materials science", "computational physics"],
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "computational software",
+    "software_type": "electronic-structure calculation",
+    "field_of_science": "Physical Sciences"
+}

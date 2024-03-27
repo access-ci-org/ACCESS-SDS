@@ -1,0 +1,26 @@
+{
+  "software_name": "ML Toolkit (CPU) - PyTorch",
+  "comprehensive_overview": "PyTorch is an open-source machine learning library based on the Torch library, primarily developed by Facebook's AI Research lab (FAIR). It is widely used for applications such as natural language processing, computer vision, and deep learning. PyTorch provides a flexible and dynamic computational graph, allowing for easy experimentation and efficient production deployments.",
+  "core_features": [
+    "Dynamic computational graph",
+    "Support for GPU acceleration",
+    "Large collection of neural network layers and activation functions",
+    "Built-in automatic differentiation",
+    "Easy integration with NumPy",
+    "Simple and intuitive API"
+  ],
+  "general_tags": [
+    "Machine Learning",
+    "Deep Learning",
+    "Neural Networks",
+    "Artificial Intelligence",
+    "Computational Graph"
+  ],
+  "additional_tags": {
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Machine Learning Library",
+    "software_type": "Framework",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

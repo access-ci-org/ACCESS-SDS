@@ -1,0 +1,24 @@
+{
+    "software_name": "tmux",
+    "comprehensive_overview": "tmux is a terminal multiplexer that allows users to access multiple separate terminal sessions inside a single terminal window or remote shell. It enables users to switch easily between several programs in one terminal, detach them (leave them running in the background), and reattach them to a different terminal.",
+    "core_features": [
+        "Terminal multiplexing",
+        "Session management",
+        "Multiple windows and panes",
+        "Customization options",
+        "Scriptable configuration"
+    ],
+    "general_tags": [
+        "Terminal",
+        "Multiplexer",
+        "Session Management",
+        "Productivity"
+    ],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Utility",
+        "software_type": "Text-based",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

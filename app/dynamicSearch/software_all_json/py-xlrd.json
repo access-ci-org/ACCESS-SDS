@@ -1,0 +1,19 @@
+{
+	"software_name": "py-xlrd",
+	"comprehensive_overview": "py-xlrd is a Python library for reading data and formatting information from Excel files (xls and xlsx). It helps in extracting data from Excel spreadsheets for various data manipulation and analysis tasks.",
+	"core_features": [
+		"Read data from Excel files",
+		"Support for both older (xls) and newer (xlsx) Excel file formats",
+		"Extract cell data, formatting, formulas, and more",
+		"Handle large Excel files efficiently",
+		"Easy integration with Python data analysis libraries like pandas"
+	],
+	"general_tags": ["Python library", "Excel file manipulation"],
+	"additional_tags": {
+		"research_discipline": "",
+		"research_area": "",
+		"software_class": "Data Analysis",
+		"software_type": "Library",
+		"field_of_science": "Computer and Information Sciences"
+	}
+}

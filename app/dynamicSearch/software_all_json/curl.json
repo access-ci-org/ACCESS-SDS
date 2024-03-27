@@ -1,0 +1,26 @@
+{
+    "software_name": "curl",
+    "comprehensive_overview": "curl is a command-line tool and library for transferring data with URLs. It supports various protocols including HTTP, HTTPS, FTP, FTPS, SCP, SFTP, and more. It is widely used in scripting and automation tasks, as well as for debugging network issues.",
+    "core_features": [
+        "Supports various protocols like HTTP, FTP, SCP, SFTP, etc.",
+        "Allows for easy transfer of data with URLs",
+        "Command-line tool for scripting and automation tasks",
+        "Highly customizable with many options and configurations"
+    ],
+    "general_tags": [
+        "networking",
+        "data transfer",
+        "command-line",
+        "scripting"
+    ],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Command-line tool",
+        "software_type": "Networking tool",
+        "field_of_science": [
+            "Computer and Information Sciences",
+            "Other Computer and Information Sciences"
+        ]
+    }
+}

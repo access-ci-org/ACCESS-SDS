@@ -1,0 +1,13 @@
+{
+  "software_name": "Biobambam",
+  "comprehensive_overview": "Biobambam is a set of tools for processing BAM files, with a focus on high-throughput sequencing data. It provides efficient and multi-threaded algorithms for tasks such as sorting, merging, indexing, and filtering BAM files.",
+  "core_features": "1. Efficient processing of BAM files\n2. Multi-threaded algorithms for improved performance\n3. Sorting, merging, indexing, and filtering BAM files\n4. Focus on high-throughput sequencing data\n5. Compatibility with SAMtools and BAMtools",
+  "general_tags": ["Bioinformatics", "Data Processing", "High-Throughput Sequencing"],
+  "additional_tags": {
+    "research_discipline": "Genetics",
+    "research_area": "Genomics",
+    "software_class": "Tools",
+    "software_type": "Bioinformatics Tools",
+    "field_of_science": "Biological Sciences"
+  }
+}

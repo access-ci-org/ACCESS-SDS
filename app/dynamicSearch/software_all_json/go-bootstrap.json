@@ -1,0 +1,13 @@
+{
+  "software_name": "go-bootstrap",
+  "comprehensive_overview": "go-bootstrap is a Go programming language template project that provides a starting point for building Go applications with a predefined project structure, configuration, and best practices.",
+  "core_features": "1. Predefined project structure for Go applications. 2. Built-in configuration setup. 3. Integration with popular Go libraries. 4. Simplifies starting a new Go project.",
+  "general_tags": ["Go", "Template", "Project Structure", "Best Practices"],
+  "additional_tags": {
+    "research_discipline": "",
+    "research_area": "Software Engineering, Systems, and Development",
+    "software_class": "Development Tools",
+    "software_type": "Template Project",
+    "field_of_science": "Engineering and Technology"
+  }
+}

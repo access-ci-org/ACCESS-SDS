@@ -1,0 +1,13 @@
+{
+  "software_name": "AutoDock-GPU",
+  "comprehensive_overview": "AutoDock-GPU is a molecular modeling tool that allows for molecular docking simulations to predict the binding modes of small molecules with biomacromolecules. It utilizes GPU acceleration to significantly speed up the docking process.",
+  "core_features": "1. Molecular docking simulations for predicting binding modes. \n2. Utilizes GPU acceleration for faster processing. \n3. Allows for virtual screening of large compound libraries. \n4. Effective tool for studying protein-ligand interactions. \n5. Generates detailed reports on docking results.",
+  "general_tags": ["molecular modeling", "molecular docking", "biomolecular interactions", "GPU acceleration"],
+  "additional_tags": {
+    "research_discipline": "Bioinformatics",
+    "research_area": "Structural Biology",
+    "software_class": "Research Tool",
+    "software_type": "Simulation Software",
+    "field_of_science": "Biological Sciences"
+  }
+}

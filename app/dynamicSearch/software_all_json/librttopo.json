@@ -1,0 +1,11 @@
+{
+    "software_name": "librttopo",
+    "comprehensive_overview": "librttopo is a tool for computational topology focusing on persistent homology and topological data analysis.",
+    "core_features": "Features of librttopo include computation of persistent homology, construction of Vietoris-Rips complexes, calculation of barcodes and persistence diagrams, and support for various topological data analysis algorithms.",
+    "general_tags": ["computational topology", "persistent homology", "topological data analysis"],
+    "research_discipline": "Mathematics",
+    "research_area": "Applied Mathematics",
+    "software_class": "Library",
+    "software_type": "Computational Software",
+    "field_of_science": "Mathematics"
+}

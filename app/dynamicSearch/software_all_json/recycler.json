@@ -1,0 +1,13 @@
+{
+	"software_name": "Recycler",
+	"overview": "Recycler is a tool designed for the error correction of nanopore reads using linked reads. It employs a method that combines short and long reads to enhance genome assembly accuracy.",
+	"core_features": "1. Corrects errors in nanopore reads\n2. Utilizes linked reads for error correction\n3. Improves genome assembly accuracy",
+	"general_tags": ["Bioinformatics", "HPC tools"],
+	"additional_tags": {
+		"research_discipline": "Genetics",
+		"research_area": "Genome Assembly",
+		"software_class": "Error Correction",
+		"software_type": "Tool",
+		"field_of_science": "Biological Sciences"
+	}
+}

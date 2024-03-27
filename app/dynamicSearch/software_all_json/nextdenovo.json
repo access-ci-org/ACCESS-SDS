@@ -1,0 +1,13 @@
+{
+  "software_name": "NextDenovo",
+  "comprehensive_overview": "NextDenovo is a software tool designed for de novo transcriptome assembly from RNA-seq data. It leverages de Bruijn graphs and utilizes a hybrid approach combining both OLC (Overlap-Layout-Consensus) and DBG (De Bruijn Graph) strategies to efficiently reconstruct the transcriptome in the absence of a reference genome.",
+  "core_features": "1. De novo transcriptome assembly\n2. Hybrid approach combining OLC and DBG strategies\n3. Utilizes de Bruijn graphs for sequence reconstruction\n4. Suitable for RNA-seq data analysis\n5. Handles data in the absence of a reference genome",
+  "general_tags": ["Bioinformatics", "Transcriptome Assembly", "De Novo Assembly"],
+  "additional_tags": {
+    "research_discipline": "Bioinformatics",
+    "research_area": "Transcriptomics",
+    "software_class": "Transcriptome Assembly",
+    "software_type": "Analysis Tool",
+    "field_of_science": "Biological Sciences"
+  }
+}

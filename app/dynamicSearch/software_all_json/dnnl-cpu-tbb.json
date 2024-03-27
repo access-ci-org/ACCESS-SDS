@@ -1,0 +1,13 @@
+{
+    "software_name": "DNNL (Deep Neural Network Library) CPU with TBB (Threading Building Blocks)",
+    "comprehensive_overview": "DNNL (formerly known as MKL-DNN) is an open-source performance library for deep learning applications. It is optimized for Intel architecture and provides highly optimized, threaded deep learning building blocks. When combined with TBB (Threading Building Blocks), it leverages multicore and multi-socket processors for optimized performance.",
+    "core_features": "1. Highly optimized deep learning building blocks\n2. Multithreaded and parallel execution utilizing threading building blocks (TBB)\n3. Optimized for Intel architecture\n4. Open-source and customizable for specific deep learning applications",
+    "general_tags": ["deep learning", "performance optimization", "multithreading", "Intel architecture"],
+    "additional_tags": {
+        "research_discipline": "Artificial Intelligence and Intelligent Systems",
+        "research_area": "Deep Learning",
+        "software_class": "Library",
+        "software_type": "Performance Library",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

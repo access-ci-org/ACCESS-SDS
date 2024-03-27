@@ -1,0 +1,25 @@
+```json
+{
+    "software_name": "JDK",
+    "comprehensive_overview": "JDK (Java Development Kit) is a software development environment used for developing Java applications. It includes a Java Runtime Environment (JRE), an interpreter/loader (Java), a compiler (javac), an archiver (jar), a documentation generator (Javadoc), and some other tools needed in Java development.",
+    "core_features": [
+        "Java Development",
+        "Compilation",
+        "Documentation Generation",
+        "Runtime Environment",
+        "Archiving"
+    ],
+    "general_tags": [
+        "Development Kit",
+        "Software Development",
+        "Java"
+    ],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Development Tools",
+        "software_type": "Compiler",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}
+```    

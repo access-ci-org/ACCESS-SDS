@@ -1,0 +1,21 @@
+{
+    "software_name": "libepoxy",
+    "comprehensive_overview": "libepoxy is a library for handling OpenGL function pointer management. It makes it easy to call OpenGL functions and to know when extensions are available.",
+    "core_features": [
+        "Handles OpenGL function pointer management",
+        "Facilitates calling OpenGL functions",
+        "Indicates availability of OpenGL extensions"
+    ],
+    "general_tags": [
+        "OpenGL",
+        "Library",
+        "Graphics"
+    ],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Library",
+        "software_type": "Development",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

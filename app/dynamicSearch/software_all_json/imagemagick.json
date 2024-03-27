@@ -1,0 +1,25 @@
+```json
+{
+    "software_name": "ImageMagick",
+    "comprehensive_overview": "ImageMagick is a free and open-source software suite for creating, editing, composing, or converting bitmap images.",
+    "core_features": [
+        "Supports a wide range of image formats",
+        "Batch processing",
+        "Image editing and manipulation",
+        "Conversion between different image formats",
+        "Command-line interface"
+    ],
+    "general_tags": [
+        "Image Processing",
+        "Graphics Editing",
+        "Conversion Tool"
+    ],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Image Processing",
+        "software_type": "Utility",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}
+```

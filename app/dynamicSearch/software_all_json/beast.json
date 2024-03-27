@@ -1,0 +1,19 @@
+{
+  "software_name": "BEAST",
+  "comprehensive_overview": "BEAST is a cross-platform program for Bayesian analysis of molecular sequences using MCMC (Markov Chain Monte Carlo) methods. It is widely used for phylogenetic inference, divergence time estimation, and molecular dating.",
+  "core_features": "1. Bayesian phylogenetic inference\n2. Divergence time estimation\n3. Molecular dating\n4. Cross-platform compatibility\n5. MCMC methods for parameter estimation",
+  "general_tags": [
+    "Bioinformatics",
+    "Computational Biology",
+    "Phylogenetics",
+    "Molecular Evolution",
+    "Bayesian Analysis"
+  ],
+  "additional_tags": {
+    "research_discipline": "Systems Biology",
+    "research_area": "Evolutionary Biology",
+    "software_class": "Statistical Analysis",
+    "software_type": "Tool",
+    "field_of_science": "Biological Sciences"
+  }
+}

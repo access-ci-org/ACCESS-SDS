@@ -1,0 +1,22 @@
+{
+    "software_name": "scvi-tools",
+    "comprehensive_overview": "scvi-tools is a comprehensive toolbox for deep probabilistic modeling, batch effect correction, clustering, differential expression, and visualization in single-cell RNA-seq data analysis. It provides a flexible and scalable framework for integrating multiple data modalities and capturing uncertainty in high-dimensional genomics data.",
+    "core_features": [
+        "Deep probabilistic modeling",
+        "Batch effect correction",
+        "Clustering",
+        "Differential expression analysis",
+        "Visualization tools"
+    ],
+    "general_tags": [
+        "single-cell RNA-seq",
+        "data analysis",
+        "genomics",
+        "bioinformatics"
+    ],
+    "research_discipline": "Bioinformatics",
+    "research_area": "Single-cell RNA-seq data analysis",
+    "software_class": "Data analysis tool",
+    "software_type": "Python library",
+    "field_of_science": "Biological Sciences"
+}

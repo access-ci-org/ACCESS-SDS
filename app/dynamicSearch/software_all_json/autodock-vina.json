@@ -1,0 +1,16 @@
+{
+    "software_name": "AutoDock Vina",
+    "comprehensive_overview": "AutoDock Vina is a molecular docking software program used for predicting the preferred binding modes of small molecule ligands to target proteins. It is widely used in drug discovery and computational biology to study the interactions between ligands and protein targets.",
+    "core_features": "1. Predicting preferred binding modes of small molecules to target proteins\n2. Optimizing ligand binding affinity\n3. High performance and efficiency in docking simulations\n4. User-friendly interface\n5. Supports various file formats for input and output",
+    "general_tags": [
+        "molecular docking",
+        "drug discovery",
+        "computational biology",
+        "binding affinity prediction"
+    ],
+    "research_discipline": "Bioinformatics",
+    "research_area": "Structural Biology",
+    "software_class": "Predictive Modeling",
+    "software_type": "Molecular Docking",
+    "field_of_science": "Biological Sciences"
+}

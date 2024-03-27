@@ -1,0 +1,11 @@
+{
+    "software_name": "Generative Models",
+    "comprehensive_overview": "Generative models are a class of artificial intelligence algorithms used in unsupervised machine learning. They aim to learn and then generate new data instances that closely resemble the training data. Generative models have applications in various fields, including image generation, text generation, and anomaly detection.",
+    "core_features": "1. Learn the underlying structure of the training data\n2. Generate new data instances that mimic the training data\n3. Can be used for data augmentation and anomaly detection\n4. Includes popular models like GANs (Generative Adversarial Networks) and VAEs (Variational Autoencoders)",
+    "general_tags": ["Generative Models", "Unsupervised Learning", "Artificial Intelligence", "Machine Learning"],
+    "research_discipline": "Artificial Intelligence and Intelligent Systems",
+    "research_area": "Machine Learning",
+    "software_class": "Machine Learning Algorithm",
+    "software_type": "Artificial Intelligence",
+    "field_of_science": "Computer and Information Sciences"
+}

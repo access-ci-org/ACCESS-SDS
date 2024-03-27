@@ -1,0 +1,22 @@
+{
+  "software_name": "r-txdb-hsapiens-ucsc-hg19-knowngene",
+  "comprehensive_overview": "The r-txdb-hsapiens-ucsc-hg19-knowngene is a dataset for R that contains known gene annotation information for the human genome assembly GRCh37/hg19. It includes details such as gene names, gene IDs, chromosome locations, exon positions, and transcript IDs.",
+  "core_features": [
+    "Comprehensive gene annotation information",
+    "Highly detailed data on gene names, locations, exons, and transcripts",
+    "Designed for use with R programming language"
+  ],
+  "general_tags": [
+    "Genomics",
+    "Bioinformatics",
+    "Data Analysis",
+    "R Package"
+  ],
+  "additional_tags": {
+    "research_discipline": "Genomics",
+    "research_area": "Bioinformatics",
+    "software_class": "Data Management/Annotation",
+    "software_type": "Dataset",
+    "field_of_science": "Biological Sciences"
+  }
+}

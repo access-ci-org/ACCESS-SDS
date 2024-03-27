@@ -1,0 +1,21 @@
+{
+  "software_name": "r-SummarizedExperiment",
+  "comprehensive_overview": "The SummarizedExperiment container in R is a flexible data structure that integrates assay data, sample information, and experimental metadata. It provides a unified way to store and manipulate high-throughput biological data, such as genomic data, transcriptomic data, proteomic data, and more. SummarizedExperiment is widely used in bioinformatics and computational biology for data organization and analysis.",
+  "core_features": [
+    "Integration of assay data, sample information, and metadata",
+    "Flexible and scalable data structure",
+    "Support for high-throughput biological data analysis",
+    "Compatible with various bioinformatics tools and packages in the Bioconductor ecosystem"
+  ],
+  "general_tags": [
+    "Bioinformatics",
+    "Computational Biology",
+    "Data Analysis",
+    "R Package"
+  ],
+  "research_discipline": "",
+  "research_area": "",
+  "software_class": "",
+  "software_type": "Data Analysis Tool",
+  "field_of_science": "Biological Sciences"
+}

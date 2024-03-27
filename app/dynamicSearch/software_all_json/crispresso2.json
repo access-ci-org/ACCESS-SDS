@@ -1,0 +1,18 @@
+{
+    "software_name": "CRISPResso2",
+    "comprehensive_overview": "CRISPResso2 is a software tool for the analysis of CRISPR-Cas9 genome editing outcomes from deep sequencing data. It provides researchers with a comprehensive and user-friendly platform to quantify editing efficiency, visualize editing patterns, and assess indel formation and repair mechanisms.",
+    "core_features": [
+        "Quantification of editing efficiency",
+        "Visualization of editing patterns",
+        "Assessment of indel formation and repair mechanisms",
+        "Identification of off-target effects"
+    ],
+    "general_tags": ["CRISPR", "Genome Editing", "Sequencing Data Analysis"],
+    "additional_tags": {
+        "research_area": ["Molecular Biology", "Genetics"],
+        "research_discipline": ["Biochemistry and Molecular Biology", "Genetics"],
+        "software_class": "Bioinformatics",
+        "software_type": "Analysis Tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

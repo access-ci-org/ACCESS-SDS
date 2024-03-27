@@ -1,0 +1,15 @@
+```json
+{
+    "software_name": "CMake",
+    "comprehensive_overview": "CMake is an open-source, cross-platform family of tools designed to build, test, and package software. It is used to control the software compilation process using simple platform and compiler-independent configuration files.",
+    "core_features": "1. Cross-platform build system\n2. Automated dependency resolution\n3. Package generation for multiple platforms\n4. Integrated support for popular development environments\n5. Extensible through custom modules\n6. Supports in-place and out-of-place builds\n7. Versatile project configuration options",
+    "general_tags": ["Build System", "Cross-platform", "Software Development"],
+    "additional_tags": {
+        "research_discipline": "Software Engineering, Systems, and Development",
+        "research_area": "Software Development",
+        "software_class": "Build Automation Tools",
+        "software_type": "Developer Tools",
+        "field_of_science": "Engineering and Technology"
+    }
+}
+```  

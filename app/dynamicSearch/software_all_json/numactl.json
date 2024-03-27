@@ -1,0 +1,11 @@
+{
+    "software_name": "numactl",
+    "comprehensive_overview": "Numactl is a set of tools that allows you to have more control over NUMA (Non-Uniform Memory Access) systems. It provides utilities for memory placement and migration of processes and controlling the NUMA policy of a process.",
+    "core_features": "The core features of numactl include setting the NUMA policy for a process, controlling memory placement and binding of processes to specific NUMA nodes, providing NUMA affinity control to specific CPUs, and migrating processes between NUMA nodes.",
+    "general_tags": ["NUMA", "Memory management", "Performance optimization"],
+    "research_discipline": "Other Computer and Information Sciences",
+    "research_area": "Infrastructure and Instrumentation",
+    "software_class": "System Utility",
+    "software_type": "Tool",
+    "field_of_science": "Engineering and Technology"
+}

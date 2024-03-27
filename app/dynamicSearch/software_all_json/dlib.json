@@ -1,0 +1,27 @@
+```json
+{
+    "software_name": "dlib",
+    "comprehensive_overview": "dlib is a modern C++ toolkit containing machine learning algorithms and tools for creating complex software in C++ to solve real world problems. It is used in a wide range of applications including computer vision, face detection, object detection, facial landmarks, pose estimation, and more.",
+    "core_features": [
+        "Machine learning algorithms",
+        "Computer vision",
+        "Face detection",
+        "Object detection",
+        "Facial landmarks",
+        "Pose estimation"
+    ],
+    "general_tags": [
+        "machine learning",
+        "computer vision",
+        "object detection",
+        "facial recognition",
+        "pose estimation"
+    ],
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Toolkit",
+    "software_type": "Library",
+    "field_of_science": "Computer and Information Sciences",
+    "specific_field": "Computer Science"
+}
+```

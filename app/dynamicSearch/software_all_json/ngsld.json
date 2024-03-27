@@ -1,0 +1,23 @@
+{
+    "software_name": "NGSld",
+    "comprehensive_overview": "NGSld is a software package for the analysis of Next-Generation Sequencing (NGS) data. It provides tools for processing and analyzing large-scale sequencing data, with a focus on identifying genetic variations, gene expression patterns, and other genomic features.",
+    "core_features": [
+        "NGS data processing",
+        "Genetic variation analysis",
+        "Gene expression analysis",
+        "Genomic feature identification"
+    ],
+    "general_tags": [
+        "NGS",
+        "Bioinformatics",
+        "Genomics",
+        "Sequencing"
+    ],
+    "additional_tags": {
+        "research_discipline": "Genetics",
+        "research_area": "",
+        "software_class": "NGS Analysis",
+        "software_type": "Bioinformatics Tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

@@ -1,0 +1,13 @@
+{
+   "software_name": "dropest",
+   "overview": "dropest is a statistical software package for carrying out robust power and sample size calculations in two-sample comparisons.",
+   "core_features": "Some core features of dropest include robust power calculations, sample size calculations, adjustment for non-normality in data, and computation of power curves.",
+   "general_tags": ["statistical software", "power calculations", "sample size calculations"],
+   "additional_tags": {
+      "research_discipline": [],
+      "research_area": [],
+      "software_class": "Statistical Software",
+      "software_type": "Tool",
+      "field_of_science": "Statistics and Probability"
+   }
+}

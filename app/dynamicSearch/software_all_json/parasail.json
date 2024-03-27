@@ -1,0 +1,11 @@
+{
+  "software_name": "Parasail",
+  "comprehensive_overview": "Parasail is a SIMD C library for global, semi-global, and local pairwise sequence alignments. It is optimized for typical x86 and x86-64 architectures, automatically detecting and using AVX, AVX2, and/or SSE4.1 vectorization as well as the KNC instruction set when available. Parasail includes the Smith-Waterman-Gotoh algorithm for local alignments and the Needleman-Wunsch algorithm for global alignments.",
+  "core_features": "1. Efficiently performs global, semi-global, and local pairwise sequence alignments.\n2. Utilizes SIMD optimizations for optimized performance.\n3. Supports various sequence alignment algorithms like Smith-Waterman-Gotoh and Needleman-Wunsch.\n4. Written in C for easy integration into existing codebases.",
+  "general_tags": ["bioinformatics", "computational software", "HPC tools"],
+  "research_discipline": [],
+  "research_area": [],
+  "software_class": "computation",
+  "software_type": "library",
+  "field_of_science": "Biological Sciences"
+}

@@ -1,0 +1,13 @@
+{
+    "software_name": "bbmap",
+    "comprehensive_overview": "BBMap is a fast and accurate short-read aligner for mapping DNA sequences to a reference genome. It also includes various bioinformatics tools for sequence alignment, mapping, assembly, and analysis.",
+    "core_features": "1. High-speed short read aligner. 2. Capable of mapping DNA sequences to a reference genome. 3. Includes various bioinformatics tools for sequence analysis and assembly. 4. Supports various file formats.",
+    "general_tags": ["bioinformatics", "DNA sequencing", "sequence alignment"],
+    "additional_tags": {
+        "research_discipline": "Genomics",
+        "research_area": "Sequence analysis",
+        "software_class": "Sequence alignment tool",
+        "software_type": "Bioinformatics tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "software_name": "virtualenv",
+    "comprehensive_overview": "virtualenv is a tool used to create isolated Python environments. These environments can have their own installation directories and can be configured with different versions of Python and packages without affecting the global Python installation on the system.",
+    "core_features": "1. Creation of isolated Python environments\n2. Configuration of different Python versions\n3. Management of package installations within individual environments\n4. Easy to use and set up",
+    "general_tags": ["python", "virtual environment", "package management"],
+    "additional_tags": {
+        "research_discipline": "Informatics, Analytics and Information Science",
+        "research_area": "Software Engineering, Systems, and Development",
+        "software_class": "Development Tools",
+        "software_type": "Environment/Setup Tool",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

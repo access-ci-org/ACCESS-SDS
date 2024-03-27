@@ -1,0 +1,13 @@
+{
+    "software_name": "gfatools",
+    "comprehensive_overview": "gfatools is a suite of tools for working with genomic sequence graphs and genome variation graphs. It provides functionalities for manipulating genomic graphs, performing sequence alignment on graphs, and analyzing variations within graphs.",
+    "core_features": "1. Manipulation of genomic sequence graphs\n2. Sequence alignment on graphs\n3. Analysis of genome variations within graphs",
+    "general_tags": ["genomics", "genome variation graphs", "sequence alignment", "variation analysis"],
+    "additional_tags": {
+        "research_discipline": "Biological Sciences",
+        "research_area": "Genetics",
+        "software_class": "Bioinformatics",
+        "software_type": "Tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

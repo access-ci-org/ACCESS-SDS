@@ -1,0 +1,25 @@
+{
+    "software_name": "PRUN",
+    "comprehensive_overview": "PRUN (Parallel R Utils) is a set of R packages that provide parallel computing tools to support high-performance and distributed computing in R environment. It allows users to parallelize their R code to significantly speed up data analysis and computation tasks.",
+    "core_features": [
+        "Parallel computing support in R",
+        "High-performance computing capabilities",
+        "Distributed computing functionality",
+        "Efficient data analysis and computation",
+        "Integration with existing R workflows"
+    ],
+    "general_tags": [
+        "Parallel Computing",
+        "High-Performance Computing",
+        "Distributed Computing",
+        "Data Analysis",
+        "Computation"
+    ],
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Library",
+    "software_type": "Computational Software",
+    "field_of_science": [
+        "Other Computer and Information Sciences"
+    ]
+}

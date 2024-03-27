@@ -1,0 +1,13 @@
+{
+    "software_name": "Gemma",
+    "comprehensive_overview": "Gemma is a software package for genome-wide association analysis in a mixed model framework. It can efficiently handle large-scale genotype data for a wide range of genetic analysis.",
+    "core_features": "1. Genome-wide association analysis\n2. Mixed model framework\n3. Efficient handling of large-scale genotype data\n4. Wide range of genetic analysis capabilities",
+    "general_tags": ["genome-wide association analysis", "genetic analysis", "mixed model framework"],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Bioinformatics",
+        "software_type": "Genetic Analysis",
+        "field_of_science": ["Biological Sciences"]
+    }
+}

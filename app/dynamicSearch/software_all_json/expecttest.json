@@ -1,0 +1,24 @@
+```json
+{
+  "software": "expecttest",
+  "comprehensive_overview": "expecttest is a versatile testing tool for software developers that allows for the automation of interactive applications, system administration tasks, and more. It provides a simple scripting language for driving applications and processes under test, making it easy to automate testing workflows.",
+  "core_features": [
+    "Automating interactive applications",
+    "Scripting language for testing",
+    "Automation of system administration tasks"
+  ],
+  "general_tags": [
+    "Testing tool",
+    "Automation",
+    "Scripting",
+    "Software development"
+  ],
+  "additional_tags": {
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Testing tool",
+    "software_type": "Automation tool",
+    "field_of_science": []
+  }
+}
+```  

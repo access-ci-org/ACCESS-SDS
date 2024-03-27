@@ -1,0 +1,13 @@
+{
+    "software_name": "MutMap",
+    "comprehensive_overview": "MutMap is a computational tool used in genetics and genomics research for identifying mutations through bulked segregant analysis. It is commonly used in plant genetics to map mutations associated with phenotypic traits.",
+    "core_features": "1. Identify mutations linked to phenotypic traits through bulked segregant analysis. 2. High-throughput sequencing data analysis. 3. SNP calling and variant analysis for mapping mutations. 4. Visualization of genomic data and mutation mapping results.",
+    "general_tags": ["genetics", "genomics", "mutation mapping", "bulk segregant analysis"],
+    "additional_tags": {
+        "research_discipline": "Genetics",
+        "research_area": "Plant Genetics",
+        "software_class": "Bioinformatics",
+        "software_type": "Tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

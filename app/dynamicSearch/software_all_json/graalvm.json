@@ -1,0 +1,25 @@
+{
+    "software_name": "GraalVM",
+    "comprehensive_overview": "GraalVM is a high-performance runtime providing significant improvements in application performance and efficiency. It is designed to run applications written in Java, JavaScript, LLVM-based languages, Python, Ruby, R, and other dynamic languages.",
+    "core_features": [
+        "Support for multiple languages like Java, JavaScript, Python, Ruby, R, and LLVM-based languages",
+        "High-performance runtime with enhanced application performance",
+        "Just-in-time compilation for improved efficiency",
+        "Polyglot capabilities allowing interoperability between different languages",
+        "Native image generation for faster startup and lower memory consumption"
+    ],
+    "general_tags": [
+        "Software Development",
+        "Runtime Environment",
+        "Polyglot Programming",
+        "Just-in-Time Compilation",
+        "Native Image Generation"
+    ],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Development Tools",
+        "software_type": "Compiler/Runtime",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

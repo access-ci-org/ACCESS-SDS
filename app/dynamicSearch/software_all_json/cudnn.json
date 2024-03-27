@@ -1,0 +1,19 @@
+{
+  "software_name": "cudnn",
+  "comprehensive_overview": "The NVIDIA CUDA Deep Neural Network library (cuDNN) is a GPU-accelerated library for deep neural networks. It provides highly optimized implementations of common deep learning operations.",
+  "core_features": "1. GPU-accelerated deep neural network library\n2. Optimized implementations of deep learning operations\n3. Supports frameworks like TensorFlow, PyTorch, and MXNet\n4. Enables faster training of deep learning models\n5. Includes functions for convolution, pooling, normalization, and activation layers",
+  "general_tags": [
+    "deep learning",
+    "artificial intelligence",
+    "machine learning",
+    "GPU acceleration",
+    "neural networks"
+  ],
+  "additional_tags": {
+    "research_discipline": "Artificial Intelligence and Intelligent Systems",
+    "research_area": "Deep Learning",
+    "software_class": "Library",
+    "software_type": "Deep Learning Accelerator",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

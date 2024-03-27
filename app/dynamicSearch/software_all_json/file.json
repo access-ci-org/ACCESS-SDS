@@ -1,0 +1,19 @@
+{
+    "software_name": "File",
+    "comprehensive_overview": "File is a command-line utility that performs file type identification. It is commonly used to determine the file type and content of a given file or set of files.",
+    "core_features": [
+        "Identifying file types",
+        "Determining file content"
+    ],
+    "general_tags": [
+        "File Management",
+        "Command-Line Utility"
+    ],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Utility",
+        "software_type": "Command Line Tool",
+        "field_of_science": []
+    }
+}

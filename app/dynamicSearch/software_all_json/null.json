@@ -1,0 +1,50 @@
+```json
+{
+    "tools": [
+        {
+            "software_name": "BLAST",
+            "comprehensive_overview": "Basic Local Alignment Search Tool (BLAST) is a widely used bioinformatics software for comparing primary biological sequence information. The software helps in identifying sequence similarities between nucleotide or protein sequences.",
+            "core_features": "Sequence alignment, database searching, sequence comparison, similarity searching",
+            "general_tags": ["bioinformatics", "computational biology", "sequence analysis"],
+            "research_discipline": "Biological Sciences",
+            "research_area": "Genetics",
+            "software_class": "Bioinformatics tool",
+            "software_type": "Software",
+            "field_of_science": "Biological Sciences"
+        },
+        {
+            "software_name": "GROMACS",
+            "comprehensive_overview": "GROMACS is a versatile package used to perform molecular dynamics simulations, energy minimization, and other related tasks in computational chemistry. It is designed for biochemical molecules like proteins, lipids, and nucleic acids.",
+            "core_features": "Molecular dynamics simulations, energy minimization, trajectory analysis, force field calculations",
+            "general_tags": ["computational chemistry", "molecular dynamics", "simulation"],
+            "research_discipline": "Chemical Sciences",
+            "research_area": "Physical Chemistry",
+            "software_class": "Computational software",
+            "software_type": "Package",
+            "field_of_science": "Chemical Sciences"
+        },
+        {
+            "software_name": "Python NumPy",
+            "comprehensive_overview": "NumPy is a powerful Python library for numerical computations, especially for handling large arrays and matrices. It provides support for linear algebra, random number capabilities, and Fourier transform functions.",
+            "core_features": "Array operations, linear algebra operations, random number generation, Fourier transforms",
+            "general_tags": ["Python library", "numerical computing", "linear algebra"],
+            "research_discipline": "Computer and Information Sciences",
+            "research_area": "Computer Science",
+            "software_class": "Python library",
+            "software_type": "Library",
+            "field_of_science": "Computer and Information Sciences"
+        },
+        {
+            "software_name": "Matlab",
+            "comprehensive_overview": "Matlab is a high-performance language for technical computing. It integrates computation, visualization, and programming in an easy-to-use environment where problems and solutions are expressed in familiar mathematical notation.",
+            "core_features": "Data visualization, numerical computation, algorithm development, data analysis",
+            "general_tags": ["computational software", "data analysis", "numerical computation"],
+            "research_discipline": "Engineering and Technology",
+            "research_area": "Electrical, Electronic, and Information Engineering",
+            "software_class": "Computational software",
+            "software_type": "Language",
+            "field_of_science": "Engineering and Technology"
+        }
+    ]
+}
+```

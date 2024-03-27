@@ -1,0 +1,13 @@
+{
+  "software_name": "rmats2sashimiplot",
+  "comprehensive_overview": "rmats2sashimiplot is a software tool used for visualizing RNA-Seq data analysis results, particularly in the context of alternative splicing events. It is designed to provide detailed and interactive visual representations of splicing events identified by rMATS, a widely used differential alternative splicing analysis tool.",
+  "core_features": "1. Visualization of alternative splicing events identified by rMATS. 2. Interactive and customizable plots for better data exploration. 3. Integration with rMATS output files for seamless analysis workflow. 4. Support for various file formats commonly used in RNA-Seq data analysis.",
+  "general_tags": ["RNA-Seq", "Alternative Splicing", "Data Visualization", "Bioinformatics"],
+  "additional_tags": {
+    "research_discipline": "Bioinformatics",
+    "research_area": "Transcriptomics",
+    "software_class": "Visualization Tool",
+    "software_type": "Analysis and Visualization",
+    "field_of_science": "Biological Sciences"
+  }
+}

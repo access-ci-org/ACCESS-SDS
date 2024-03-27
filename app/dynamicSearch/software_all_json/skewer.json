@@ -1,0 +1,24 @@
+{
+    "Skewer": {
+        "overview": "Skewer is a fast and accurate adapter trimmer for next-generation sequencing paired-end reads. It analyzes the patterns of quality scores at the ends of reads and identifies the beginning of the adapter sequences with high sensitivity and specificity.",
+        "core_features": [
+            "Adapter trimming",
+            "Paired-end reads processing",
+            "Quality score analysis",
+            "High sensitivity and specificity"
+        ],
+        "general_tags": [
+            "NGS analysis",
+            "Bioinformatics",
+            "Sequence data processing",
+            "Adapter trimming"
+        ],
+        "additional_tags": {
+            "research_discipline": "Bioinformatics",
+            "research_area": "Genomics",
+            "software_class": "NGS data analysis",
+            "software_type": "Tool",
+            "field_of_science": "Biological Sciences"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "software_name": "ismapper",
+    "comprehensive_overview": "Ismapper is a software for isomiR identification and differential expression analysis from small RNA-seq data. It is designed to accurately map and quantify isomiRs, which are isoforms of microRNAs resulting from alternative precursor processing and post-transcriptional modifications.",
+    "core_features": [
+        "Accurate mapping and quantification of isomiRs",
+        "Identification of differentially expressed isomiRs",
+        "Analysis of small RNA-seq data",
+        "Visualization of isomiR expression patterns"
+    ],
+    "general_tags": [
+        "Bioinformatics",
+        "Computational Biology",
+        "Small RNA-seq",
+        "miRNA analysis"
+    ],
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Bioinformatics tools",
+    "software_type": "Analysis tool",
+    "field_of_science": "Biological Sciences"
+}

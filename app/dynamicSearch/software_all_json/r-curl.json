@@ -1,0 +1,25 @@
+{
+    "software_name": "r-curl",
+    "comprehensive_overview": "The r-curl package is an R interface to the libcurl library, a highly customizable and feature-rich library for transferring data with various types of protocols. This package allows users to easily access and interact with URLs using a wide range of protocols.",
+    "core_features": [
+        "Allows sending and receiving data over HTTP, FTP, IMAP, POP3, etc.",
+        "Supports HTTPS and SSH secure connections",
+        "Enables file uploads and downloads",
+        "Provides functionalities for handling cookies and user authentication",
+        "Offers flexibility for customizing requests and responses"
+    ],
+    "general_tags": [
+        "r package",
+        "data transfer",
+        "web scraping",
+        "HTTP requests",
+        "data retrieval"
+    ],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Library",
+        "software_type": "Data Transfer",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

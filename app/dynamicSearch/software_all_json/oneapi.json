@@ -1,0 +1,21 @@
+{
+  "software_name": "OneAPI",
+  "comprehensive_overview": "OneAPI is a unified programming model that aims to simplify development across diverse architectures such as CPUs, GPUs, FPGAs, and other accelerators. It provides a single programming interface for developers to efficiently target and deploy applications in heterogeneous computing environments.",
+  "core_features": [
+    "Unified programming model for heterogeneous computing",
+    "Support for CPUs, GPUs, FPGAs, and accelerators",
+    "Optimized performance and productivity",
+    "Cross-architecture development and deployment"
+  ],
+  "general_tags": [
+    "Heterogeneous Computing",
+    "Unified Programming Model",
+    "Accelerated Computing",
+    "Performance Optimization"
+  ],
+  "research_discipline": [],
+  "research_area": [],
+  "software_class": "Development Tools",
+  "software_type": "Unified Programming Model",
+  "field_of_science": "Computer and Information Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "software_name": "CISTEM",
+    "comprehensive_overview": "CISTEM is a computational framework designed for the prediction of dual phase RNA secondary structures.",
+    "core_features": "CISTEM uses a double-layered classification system that combines features from primary sequence and secondary structure contexts to predict accurate RNA secondary structures.",
+    "general_tags": ["computational framework", "RNA secondary structures prediction"],
+    "research_discipline": "Bioinformatics",
+    "research_area": "Computational Biology",
+    "software_class": "Prediction software",
+    "software_type": "Bioinformatics tool",
+    "field_of_science": "Biological Sciences"
+}

@@ -1,0 +1,11 @@
+{
+  "software_name": "seaborn",
+  "comprehensive_overview": "Seaborn is a Python data visualization library based on matplotlib. It provides a high-level interface for creating attractive and informative statistical graphics.",
+  "core_features": "1. Integration with Pandas data structures for easy data manipulation.\n2. Customizable themes and color palettes for improving the visual aesthetics of plots.\n3. Built-in functionalities for visualizing univariate and bivariate analyses.\n4. Support for a variety of plot types, including strip plots, violin plots, bar plots, and more.\n5. Seamless integration with matplotlib for fine-tuning plot details.",
+  "general_tags": ["data visualization", "Python library"],
+  "research_discipline": [],
+  "research_area": [],
+  "software_class": "Data Visualization",
+  "software_type": "Library",
+  "field_of_science": "Computer and Information Sciences"
+}

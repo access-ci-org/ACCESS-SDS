@@ -1,0 +1,13 @@
+{
+	"software_name": "util-linux-uuid",
+	"comprehensive_overview": "util-linux-uuid is a command-line utility that allows users to generate universally unique identifiers (UUIDs) in various formats. UUIDs are 128-bit numbers used as identifiers for entities in computer systems with a high probability of being unique.",
+	"core_features": "1. Generation of UUIDs in different formats (time-based, random-based, name-based, and more).\n2. Flexible output options for customizing the UUID format.\n3. Efficient and lightweight command-line tool for generating unique identifiers.\n4. Support for both standard UUID versions (including UUIDv1 and UUIDv4) and non-standard variants.",
+	"general_tags": ["UUID generator", "command-line utility", "unique identifier", "data management"],
+	"additional_tags": {
+		"research_discipline": "Computer Science",
+		"research_area": "Informatics, Analytics, and Information Science",
+		"software_class": "Utility",
+		"software_type": "Command-line tool",
+		"field_of_science": "Computer and Information Sciences"
+	}
+}

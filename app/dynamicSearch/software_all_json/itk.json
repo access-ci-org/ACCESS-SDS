@@ -1,0 +1,13 @@
+{
+    "software_name": "itk",
+    "comprehensive_overview": "The Insight Segmentation and Registration Toolkit (ITK) is an open-source, cross-platform library that provides advanced image processing algorithms for registering and segmenting multidimensional scientific images.",
+    "core_features": "ITK offers a wide range of tools for image analysis, including image filtering, segmentation, registration, and visualization. It provides support for N-dimensional images and is designed to be extensible, facilitating the integration of new algorithms.",
+    "general_tags": ["image processing", "medical imaging", "scientific images"],
+    "additional_tags": {
+        "research_discipline": "Medical and Health Sciences",
+        "research_area": "Biomedical Imaging",
+        "software_class": "Library",
+        "software_type": "Image Analysis",
+        "field_of_science": "Engineering and Technology"
+    }
+}

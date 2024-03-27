@@ -1,0 +1,11 @@
+{
+    "software_name": "IDL",
+    "comprehensive_overview": "IDL (Interactive Data Language) is a programming language used for data analysis, visualization, and application development. It provides a comprehensive set of tools for scientific research and data processing.",
+    "core_features": "IDL offers a wide range of mathematical functions, statistical analysis tools, image processing capabilities, and interactive graphics for data visualization. It supports data input/output operations, array handling, and extensive libraries for various scientific and engineering applications.",
+    "general_tags": ["software", "data analysis", "data visualization", "scientific research"],
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Data Analysis and Visualization",
+    "software_type": "Programming Language",
+    "field_of_science": "Physical Sciences"
+}

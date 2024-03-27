@@ -1,0 +1,15 @@
+```json
+{
+    "software_name": "r-png",
+    "comprehensive_overview": "r-png is an R package that provides an interface to read and write PNG images.",
+    "core_features": "Reading and writing PNG images in R environment, flexible and easy-to-use functions for handling PNG files.",
+    "general_tags": ["R package", "Image Processing"],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Library",
+        "software_type": "Image Processing",
+        "field_of_science": "Other Mathematics"
+    }
+}
+```

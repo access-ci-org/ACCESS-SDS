@@ -1,0 +1,28 @@
+{
+    "software_name": "Py-Scipy",
+    "comprehensive_overview": "Py-Scipy is a Python library used for scientific computing and technical computing. It builds on NumPy and provides a large number of functions that operate on NumPy arrays and are useful for different types of scientific and engineering applications.",
+    "core_features": [
+        "Optimization",
+        "Linear Algebra",
+        "Integration",
+        "Interpolation",
+        "Fast Fourier Transforms",
+        "Signal Processing"
+    ],
+    "general_tags": [
+        "Scientific Computing",
+        "Technical Computing",
+        "Python Library",
+        "NumPy Extension"
+    ],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Library",
+        "software_type": "Computational Software",
+        "field_of_science": [
+            "Computer and Information Sciences",
+            "Natural Sciences"
+        ]
+    }
+}

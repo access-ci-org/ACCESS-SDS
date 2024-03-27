@@ -1,0 +1,13 @@
+{
+    "software_name": "r-stringr",
+    "comprehensive_overview": "The 'stringr' package in R provides a cohesive set of tools for working with strings in R. It offers a wide range of functions for pattern matching, string manipulation, and extraction, making it easier to work with character data in R.",
+    "core_features": "1. Powerful string manipulation functions\n2. Pattern matching capabilities for text processing\n3. Easy extraction of substrings and text manipulation\n4. Seamless integration with other R packages for data analysis tasks",
+    "general_tags": ["R Package", "String Manipulation", "Text Processing"],
+    "additional_tags": {
+        "research_discipline": null,
+        "research_area": null,
+        "software_class": "Data Analysis",
+        "software_type": "Library",
+        "field_of_science": "Other Computer and Information Sciences"
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "modulefiles": {
+        "overview": "Modulefiles are a system for managing and loading software packages and their dependencies on computing clusters and HPC systems. They allow users to easily switch between different versions of software and environments.",
+        "core_features": [
+            "Managing software packages",
+            "Loading software and dependencies",
+            "Enabling multiple versions of software",
+            "Managing environments"
+        ],
+        "general_tags": [
+            "Software Management",
+            "Dependency Management",
+            "Environment Management"
+        ],
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "HPC Tools",
+        "software_type": "Computational Software",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

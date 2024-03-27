@@ -1,0 +1,13 @@
+{
+    "software_name": "Tornado",
+    "comprehensive_overview": "Tornado is a Python web framework and asynchronous networking library. It is designed for handling asynchronous processes and is commonly used for building web applications.",
+    "core_features": ["Asynchronous web server", "Web application framework", "Supports websockets", "High performance"],
+    "general_tags": ["Python", "Web Framework", "Asynchronous", "Networking"],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Web Development Framework",
+        "software_type": "Application Development",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

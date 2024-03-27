@@ -1,0 +1,61 @@
+```json
+{
+    "tools": [
+        {
+            "software_name": "Anaconda",
+            "comprehensive_overview": "Anaconda is a free and open-source distribution of the Python and R programming languages for scientific computing, that aims to simplify package management and deployment.",
+            "core_features": "Package management, Environment management, Data visualization, Multiprocessing, Machine learning.",
+            "general_tags": ["Data Science", "Data Analysis", "Machine Learning", "Statistics", "Data Visualization"],
+            "research_discipline": [],
+            "research_area": [],
+            "software_class": "Package Management",
+            "software_type": "Distribution",
+            "field_of_science": "Computer and Information Sciences"
+        },
+        {
+            "software_name": "NumPy",
+            "comprehensive_overview": "NumPy is the fundamental package for scientific computing with Python, providing support for large, multi-dimensional arrays and matrices, along with a collection of mathematical functions to operate on these arrays.",
+            "core_features": "N-dimensional array object, Broadcasting functions, Linear algebra, Fourier transforms, Random number capabilities.",
+            "general_tags": ["Data Science", "Data Analysis", "Numerical Computing", "Linear Algebra", "Statistics"],
+            "research_discipline": [],
+            "research_area": [],
+            "software_class": "Mathematics Library",
+            "software_type": "Library",
+            "field_of_science": "Computer and Information Sciences"
+        },
+        {
+            "software_name": "SciPy",
+            "comprehensive_overview": "SciPy is an open-source library for mathematics, science, and engineering, providing modules for optimization, linear algebra, integration, interpolation, and other numerical routines.",
+            "core_features": "Numerical integration, Optimization, Interpolation, Fourier Transforms, Signal Processing.",
+            "general_tags": ["Data Science", "Data Analysis", "Scientific Computing", "Optimization", "Signal Processing"],
+            "research_discipline": [],
+            "research_area": [],
+            "software_class": "Mathematics Library",
+            "software_type": "Library",
+            "field_of_science": "Computer and Information Sciences"
+        },
+        {
+            "software_name": "Pandas",
+            "comprehensive_overview": "Pandas is a fast, powerful, and flexible open-source data manipulation and data analysis library for Python, built on top of NumPy.",
+            "core_features": "Data manipulation, Data structures, Time series analysis, Data alignment, Missing data handling.",
+            "general_tags": ["Data Science", "Data Analysis", "Data Manipulation", "Time Series Analysis", "Data Wrangling"],
+            "research_discipline": [],
+            "research_area": [],
+            "software_class": "Data Analysis Library",
+            "software_type": "Library",
+            "field_of_science": "Computer and Information Sciences"
+        },
+        {
+            "software_name": "Matplotlib",
+            "comprehensive_overview": "Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python, used for publication-quality plots and graphics.",
+            "core_features": "2D plotting, 3D plotting, Line plots, Scatter plots, Bar plots.",
+            "general_tags": ["Data Science", "Data Analysis", "Data Visualization", "Plotting", "Graphs"],
+            "research_discipline": [],
+            "research_area": [],
+            "software_class": "Visualization Library",
+            "software_type": "Library",
+            "field_of_science": "Computer and Information Sciences"
+        }
+    ]
+}
+```

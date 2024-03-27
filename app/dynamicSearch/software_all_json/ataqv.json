@@ -1,0 +1,11 @@
+{
+  "software_name": "ataqv",
+  "comprehensive_overview": "ataqv is a software tool designed for comparing ATAC-seq and DNase-seq data to identify signal quality metrics and differential accessibility profiles.",
+  "core_features": "ataqv provides quality control metrics, differential accessibility analysis, peak calling, and signal enrichment analysis for ATAC-seq and DNase-seq data.",
+  "general_tags": ["Quality Control", "Differential Accessibility Analysis", "Peak Calling", "Signal Enrichment Analysis"],
+  "research_discipline": ["Bioinformatics"],
+  "research_area": ["Genomics", "Epigenetics"],
+  "software_class": ["Computational Biology"],
+  "software_type": ["Tool"],
+  "field_of_science": ["Biological Sciences"]
+}

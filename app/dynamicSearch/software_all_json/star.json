@@ -1,0 +1,23 @@
+{
+    "software": "STAR",
+    "comprehensive_overview": "STAR (Spliced Transcripts Alignment to a Reference) is a RNA-seq read aligner that maps RNA-seq data to a reference genome to identify splice junctions between exons. It is particularly useful for mapping reads that span multiple exons, thereby aiding in the analysis of alternative splicing events.",
+    "core_features": [
+        "Alignment of RNA-seq reads to a reference genome",
+        "Identification of splice junctions",
+        "Analysis of alternative splicing events"
+    ],
+    "general_tags": [
+        "software",
+        "RNA-seq",
+        "read aligner",
+        "splice junctions",
+        "alternative splicing"
+    ],
+    "additional_tags": {
+        "research_discipline": "Genetics",
+        "research_area": "Transcriptomics",
+        "software_class": "Bioinformatics",
+        "software_type": "Alignment Tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

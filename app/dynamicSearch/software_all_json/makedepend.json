@@ -1,0 +1,11 @@
+{
+  "software_name": "makedepend",
+  "comprehensive_overview": "makedepend is a tool used in software development to automatically generate dependencies of C source files. It is commonly used in projects utilizing makefiles to track dependencies and streamline the build process.",
+  "core_features": "1. Automatically generates dependencies for C source files.\n2. Improves build process efficiency by tracking source file dependencies.\n3. Integrates seamlessly with makefiles.\n4. Facilitates tracking of changes in source files.",
+  "general_tags": ["software development", "build automation", "dependency management"],
+  "research_discipline": "Software Engineering, Systems, and Development",
+  "research_area": "Software Development",
+  "software_class": "Build Tools",
+  "software_type": "Utility",
+  "field_of_science": "Engineering and Technology"
+}

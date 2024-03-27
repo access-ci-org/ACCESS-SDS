@@ -1,0 +1,15 @@
+```json
+{
+    "software_name": "python-isal",
+    "overview": "Python bindings for Intel Storage Acceleration Library (ISAL) that provides optimized functions for storage protocols and data transformation.",
+    "core_features": "1. Optimized functions for storage protocols\n2. Data transformation capabilities\n3. Python bindings for easy integration\n4. Utilizes Intel Storage Acceleration Library (ISAL)",
+    "general_tags": ["Python Library", "Data Transformation", "Storage Protocols"],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Library",
+        "software_type": "Python Library",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}
+```

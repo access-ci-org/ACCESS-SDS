@@ -1,0 +1,8 @@
+```json
+{
+    "software_name": "libdrm",
+    "comprehensive_overview": "Direct Rendering Manager (DRM) library for interacting with kernel mode-setting (KMS) drivers, particularly the Direct Rendering Infrastructure (DRI) modules in the Linux kernel.",
+    "core_features": "1. Provides the basic interface for accessing the kernel's graphics subsystem.\n2. Supports various functionalities such as mode-setting, buffer sharing, and direct rendering.\n3. Facilitates communication between user space programs and the Linux kernel's graphics subsystem.\n4. Essential for enabling hardware acceleration and managing graphics devices on Linux systems.",
+    "general_tags": ["graphics", "linux", "kernel", "driver"]
+}
+```

@@ -1,0 +1,11 @@
+{
+    "software_name": "X11",
+    "comprehensive_overview": "X11 is a windowing system for bitmap displays, common on Unix-like operating systems and desktop environments. It provides the basic framework for building GUI applications on these systems, handling graphical elements such as windows, menus, and user input.",
+    "core_features": "1. Window management\n2. Graphics rendering\n3. User input handling\n4. Networking support for remote display\n5. Extensible through various extensions and toolkits",
+    "general_tags": ["windowing system", "GUI applications", "Unix-like operating systems"],
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Windowing System",
+    "software_type": "System Software",
+    "field_of_science": "Computer and Information Sciences"
+}

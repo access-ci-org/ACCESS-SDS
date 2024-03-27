@@ -1,0 +1,17 @@
+{
+  "software_name": "r-rsamtools",
+  "comprehensive_overview": "The r-rsamtools package provides an interface to the 'samtools' library, allowing users to interact with SAM (Sequence Alignment/Map) files. It enables the reading, writing, and manipulation of sequence data from next-generation sequencing experiments.",
+  "core_features": [
+    "Accessing and parsing SAM files",
+    "Generating alignments and sequence data",
+    "Quality control and manipulation of NGS data"
+  ],
+  "general_tags": ["NGS data analysis", "Bioinformatics"],
+  "additional_tags": {
+    "research_discipline": "Bioinformatics",
+    "research_area": "NGS data analysis",
+    "software_class": "Bioinformatics tool",
+    "software_type": "Library",
+    "field_of_science": "Biological Sciences"
+  }
+}

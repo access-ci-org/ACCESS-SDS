@@ -1,0 +1,13 @@
+{
+    "software_name": "cyvcf2",
+    "comprehensive_overview": "CyVCF2 is a fast and efficient Python interface for reading and writing Variant Call Format (VCF) files. It provides a high-level API that simplifies the manipulation and analysis of genetic variants.",
+    "core_features": "1. Read and write VCF files efficiently.\n2. Extract genetic variants and associated information.\n3. Filter variants based on user-defined criteria.\n4. Perform complex genomic analyses and comparisons.\n5. Integrate seamlessly with other Python libraries for genomics.",
+    "general_tags": ["genomics", "VCF", "variant calling", "Python"],
+    "additional_tags": {
+        "research_discipline": "Bioinformatics",
+        "research_area": "Genomics",
+        "software_class": "Computational",
+        "software_type": "Library",
+        "field_of_science": "Biological Sciences"
+    }
+}

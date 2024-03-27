@@ -1,0 +1,13 @@
+{
+    "software_name": "rising",
+    "comprehensive_overview": "RISING (Rapidly Installed Systems Engineering) is an open-source systems engineering tool that focuses on automating the system development process. It provides a framework for designing, integrating, and verifying complex systems with an emphasis on modularity, reusability, and maintainability.",
+    "core_features": "Key features of RISING include system modeling, requirement management, architecture design, simulation and analysis, verification and validation, and documentation generation. It offers a set of tools and libraries to support the entire systems engineering lifecycle.",
+    "general_tags": ["systems engineering", "automation", "modularity", "reusability", "maintainability"],
+    "additional_tags": {
+        "research_discipline": "Software Engineering, Systems, and Development",
+        "research_area": "",
+        "software_class": "Tool",
+        "software_type": "Systems Engineering",
+        "field_of_science": "Engineering and Technology"
+    }
+}

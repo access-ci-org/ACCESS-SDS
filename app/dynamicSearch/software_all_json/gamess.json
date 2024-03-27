@@ -1,0 +1,13 @@
+{
+  "software_name": "GAMESS",
+  "comprehensive_overview": "The General Atomic and Molecular Electronic Structure System (GAMESS) is a suite of ab initio quantum chemistry programs designed for electronic structure calculations of molecules and molecular reactions. It provides a wide range of methods for both molecules and periodic solids.",
+  "core_features": "GAMESS offers an extensive variety of quantum chemistry methods, including Hartree-Fock, density functional theory (DFT), Moller-Plesset perturbation theory, configuration interaction, coupled cluster, and more. It also supports a variety of basis sets, including Gaussian basis functions and Slater-type basis sets. GAMESS is highly configurable and enables users to perform geometry optimizations, vibrational frequency calculations, transition state searches, and other advanced electronic structure calculations.",
+  "general_tags": ["quantum chemistry", "electronic structure calculations", "ab initio calculations"],
+  "additional_tags": {
+    "research_discipline": "Physical Sciences",
+    "research_area": "Chemical Sciences",
+    "software_class": "Computational Software",
+    "software_type": "Quantum Chemistry",
+    "field_of_science": "Chemical Sciences"
+  }
+}

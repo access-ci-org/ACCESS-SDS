@@ -1,0 +1,23 @@
+{
+	"software": "Structure",
+	"overview": "Structure is a software package for using multi-locus genotype data to investigate population structure. Its main purpose is to assign individuals to populations, by analyzing multilocus genotype data. It can also be used to evaluate how well the data fit a particular number of populations, to help discover hierarchical population structure, to detect the presence of barriers to gene flow, and to identify migrants and hybrids.",
+	"core_features": [
+		"Population structure analysis",
+		"Genotype data analysis",
+		"Population assignment",
+		"Hierarchical structure detection",
+		"Barriers to gene flow identification",
+		"Migrant and hybrid detection"
+	],
+	"general_tags": [
+		"population genetics",
+		"population structure",
+		"genotype analysis",
+		"data analysis"
+	],
+	"research_discipline": "Ecology",
+	"research_area": "Population Genetics",
+	"software_class": "Genomics",
+	"software_type": "Analysis Tool",
+	"field_of_science": "Biological Sciences"
+}

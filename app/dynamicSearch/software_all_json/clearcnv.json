@@ -1,0 +1,24 @@
+```json
+{
+    "software_name": "clearcnv",
+    "overview": "ClearCNV is a software tool designed for accurate copy number variation (CNV) detection from whole-exome sequencing (WES) data. It employs a Bayesian model-based approach to identify CNVs with high sensitivity and specificity.",
+    "core_features": [
+        "Copy number variation (CNV) detection",
+        "Whole-exome sequencing (WES) data analysis",
+        "Bayesian model-based approach",
+        "High sensitivity and specificity"
+    ],
+    "general_tags": [
+        "CNV detection",
+        "Genomic analysis",
+        "Sequencing data analysis"
+    ],
+    "additional_tags": {
+        "research_discipline": "Genomics",
+        "research_area": "Genomic variations",
+        "software_class": "Genomic analysis tool",
+        "software_type": "Bioinformatics tool",
+        "field_of_science": "Biological Sciences"
+    }
+}
+```  

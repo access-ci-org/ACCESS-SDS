@@ -1,0 +1,17 @@
+{
+    "tools": [
+        {
+            "software_name": "Links",
+            "comprehensive_overview": "Links is a text-based web browser with support for rendering tables and frames, background downloading, font styles, colors, and SSL connections. It is customizable and highly configurable for browsing the web in a terminal or console environment.",
+            "core_features": "Text-based browsing, rendering tables and frames, background downloading, SSL connections, customization options",
+            "general_tags": ["web browser", "text-based", "console-based", "terminal-based"],
+            "additional_tags": {
+                "research_discipline": [],
+                "research_area": [],
+                "software_class": "Web Browsers",
+                "software_type": "Utility",
+                "field_of_science": "Computer and Information Sciences"
+            }
+        }
+    ]
+}

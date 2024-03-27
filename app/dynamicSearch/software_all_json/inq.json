@@ -1,0 +1,18 @@
+{
+    "software": "inq",
+    "comprehensive_overview": "inq is a command-line tool for managing and querying inventory data in YAML format. It allows users to easily manipulate and search inventory data for system administration tasks.",
+    "core_features": [
+        "Create and manage inventory data in YAML format",
+        "Query inventory data using a simple command-line interface",
+        "Use filters and search queries to extract specific information",
+        "Facilitates system administration tasks related to inventory management"
+    ],
+    "general_tags": ["inventory management", "system administration"],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Tools",
+        "software_type": "Command-line Interface",
+        "field_of_science": ["Computer and Information Sciences", "Other Computer and Information Sciences"]
+    }
+}

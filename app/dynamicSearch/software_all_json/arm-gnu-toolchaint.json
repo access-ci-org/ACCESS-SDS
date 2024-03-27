@@ -1,0 +1,22 @@
+{
+  "software_name": "arm-gnu-toolchain",
+  "comprehensive_overview": "The ARM GNU Toolchain is a collection of tools/libraries used to create applications for embedded ARM processors. It includes the GNU Compiler Collection (GCC) for compiling C/C++ code, GNU Binutils for creating/executing binary files, and GDB for debugging.",
+  "core_features": [
+    "Support for compiling C/C++ code for ARM processors",
+    "Assembly language support",
+    "Highly optimized code generation for embedded systems",
+    "Debugging capabilities with GDB",
+    "Open-source tools with strong community support"
+  ],
+  "general_tags": [
+    "Compiler",
+    "Embedded Systems",
+    "ARM Processor",
+    "Toolchain"
+  ],
+  "research_discipline": "",
+  "research_area": "",
+  "software_class": "Development Tool",
+  "software_type": "Compiler",
+  "field_of_science": "Engineering and Technology"
+}

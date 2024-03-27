@@ -1,0 +1,11 @@
+{
+	"software_name": "fftw.mpi",
+	"comprehensive_overview": "FFTW is a comprehensive collection of fast C routines for computing the Discrete Fourier Transform (DFT) and various generalizations, used in a wide range of applications in computational mathematics, physics, and engineering.",
+	"core_features": "The mpi version of FFTW provides parallel computing capabilities using the Message Passing Interface (MPI) standard, enabling high-performance computations of Fourier transforms across distributed computing resources. This allows for efficient processing of large datasets and complex simulations in parallel.",
+	"general_tags": ["computational software", "HPC tools"],
+	"research_discipline": [],
+	"research_area": [],
+	"software_class": "Computational Mathematics",
+	"software_type": "Tool",
+	"field_of_science": "Mathematics"
+}

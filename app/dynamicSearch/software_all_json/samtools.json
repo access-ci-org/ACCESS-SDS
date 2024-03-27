@@ -1,0 +1,13 @@
+{
+    "software_name": "samtools",
+    "comprehensive_overview": "Samtools is a suite of programs for interacting with high-throughput sequencing data generated in sequence alignment/map (SAM) format, such as those produced by the Short Read Mapping (SHRiMP) or Burrows-Wheeler Aligner (BWA) aligners. It allows various operations on SAM/BAM files, including indexing, sorting, merging, and manipulating sequence alignments.",
+    "core_features": "1. Efficient manipulation of SAM/BAM files\n2. Sorting and indexing of sequence alignments\n3. Merging, filtering, and converting between different file formats\n4. Detection of and working with various flags in the alignment data\n5. Calculation of various statistics, such as depth, alignment quality, and mapping coverage",
+    "general_tags": ["sequence analysis", "genomics", "bioinformatics"],
+    "additional_tags": {
+        "research_discipline": "Bioinformatics",
+        "research_area": "Genomics",
+        "software_class": "Bioinformatics Tool",
+        "software_type": "Command Line Tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

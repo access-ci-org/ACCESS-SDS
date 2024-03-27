@@ -1,0 +1,26 @@
+{
+    "software_name": "Firefox",
+    "comprehensive_overview": "Mozilla Firefox, commonly known as Firefox, is a free and open-source web browser developed by the Mozilla Foundation and its subsidiary, Mozilla Corporation. It is available for Windows, macOS, Linux, and mobile devices. Firefox focuses on privacy, speed, and customization.",
+    "core_features": [
+        "Cross-platform web browser",
+        "Open-source software",
+        "Highly customizable with add-ons and themes",
+        "Enhanced privacy features like tracking protection",
+        "Built-in password manager and popup blocker",
+        "Frequent updates for security and performance improvements"
+    ],
+    "general_tags": [
+        "Web Browser",
+        "Internet",
+        "Privacy",
+        "Open-source",
+        "Cross-platform"
+    ],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Web Browser",
+        "software_type": "Web Browser",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

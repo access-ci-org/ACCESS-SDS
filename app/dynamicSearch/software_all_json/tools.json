@@ -1,0 +1,69 @@
+{
+  "tools": [
+    {
+      "software_name": "Python",
+      "comprehensive_overview": "Python is a high-level, general-purpose programming language known for its simplicity and readability.",
+      "core_features": "Python supports multiple programming paradigms, has a large standard library, and is widely used for web development, scientific computing, data analysis, artificial intelligence, and more.",
+      "general_tags": ["programming language", "scripting language"],
+      "additional_tags": {
+        "research_discipline": ["Computer Science", "Artificial Intelligence and Intelligent Systems", "Other Computer and Information Sciences"],
+        "research_area": [],
+        "software_class": "Programming Language",
+        "software_type": "Development",
+        "field_of_science": "Computer and Information Sciences"
+      }
+    },
+    {
+      "software_name": "GCC Compiler",
+      "comprehensive_overview": "The GNU Compiler Collection (GCC) is a compiler system produced by the GNU Project supporting various programming languages.",
+      "core_features": "GCC provides frontends for C, C++, Objective-C, Fortran, Ada, Go, and other languages, and can generate executables for different platforms.",
+      "general_tags": ["compiler", "development tool"],
+      "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Compiler",
+        "software_type": "Development",
+        "field_of_science": "Computer and Information Sciences"
+      }
+    },
+    {
+      "software_name": "Bioconda",
+      "comprehensive_overview": "Bioconda is a channel for the conda package manager specializing in bioinformatics software.",
+      "core_features": "Bioconda simplifies the installation of over 4,000 bioinformatics tools and packages, enabling reproducible research workflows in genomics, proteomics, and computational biology.",
+      "general_tags": ["bioinformatics", "package management"],
+      "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Package Manager",
+        "software_type": "Tool",
+        "field_of_science": "Biological Sciences"
+      }
+    },
+    {
+      "software_name": "GROMACS",
+      "comprehensive_overview": "GROMACS is a versatile package for molecular dynamics simulations, notably focused on bio-molecular systems.",
+      "core_features": "GROMACS offers high performance, support for various force fields, parallelization using MPI and OpenMP, and extensive analysis tools.",
+      "general_tags": ["molecular dynamics", "simulation software", "computational chemistry"],
+      "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Simulation Software",
+        "software_type": "Tool",
+        "field_of_science": "Biological Sciences"
+      }
+    },
+    {
+      "software_name": "TensorFlow",
+      "comprehensive_overview": "TensorFlow is an open-source machine learning framework developed by Google.",
+      "core_features": "TensorFlow provides tools for building and deploying machine learning models at scale, with support for neural networks, natural language processing, and deep learning applications.",
+      "general_tags": ["machine learning", "deep learning", "neural networks"],
+      "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Machine Learning Framework",
+        "software_type": "Development",
+        "field_of_science": "Computer and Information Sciences"
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+    "software_name": "Grace",
+    "comprehensive_overview": "Grace is a WYSIWYG 2D plotting tool for the X Window System and M*tif. The program renders high-quality plots for scientific and engineering applications.",
+    "core_features": "Some core features of Grace include the ability to create both 2D and 3D plots, support for various plot types (e.g., line, scatter, bar), customizable plot properties (e.g., colors, labels, legends), interactive plot manipulation, export options for different file formats, and scripting capabilities for automation.",
+    "general_tags": ["plotting tool", "scientific visualization", "2D plotting", "engineering applications"],
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Data Visualization/Plotting",
+    "software_type": "Graphing/Plotting",
+    "field_of_science": "Physical Sciences"
+}

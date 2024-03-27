@@ -1,0 +1,21 @@
+{
+    "software_name": "OpenJPEG",
+    "comprehensive_overview": "OpenJPEG is an open-source JPEG 2000 codec written in C language. It aims to provide an open-source toolkit for JPEG 2000 encoding and decoding. OpenJPEG is free software licensed under the BSD-2-Clause.",
+    "core_features": [
+        "Supports encoding and decoding of JPEG 2000 images",
+        "High-performance codec with efficient memory usage",
+        "Compliant with part 1 of the JPEG 2000 standard (ITU-T T.800 | ISO/IEC 15444-1)"
+    ],
+    "general_tags": [
+        "JPEG 2000 codec",
+        "Image processing software",
+        "Open-source software"
+    ],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Library",
+        "software_type": "Codec",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

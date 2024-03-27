@@ -1,0 +1,24 @@
+{
+    "software_name": "molmod",
+    "comprehensive_overview": "MolMod is a versatile python library designed for molecular modeling and simulation. It provides a wide range of tools and functionalities for molecular dynamics simulations, quantum chemistry calculations, and biomolecular analysis.",
+    "core_features": [
+        "Molecular dynamics simulations",
+        "Quantum chemistry calculations",
+        "Biomolecular analysis",
+        "Visualization tools"
+    ],
+    "general_tags": [
+        "molecular modeling",
+        "simulation",
+        "python library",
+        "quantum chemistry",
+        "biomolecular analysis"
+    ],
+    "additional_tags": {
+        "research_discipline": "Biological Sciences",
+        "research_area": "Biophysics",
+        "software_class": "Computational software",
+        "software_type": "Library",
+        "field_of_science": "Natural Sciences"
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "software": "dal",
+    "overview": "DAL is a library for collision avoidance in robotics applications.",
+    "core_features": ["Collision avoidance algorithms", "Robotics applications"],
+    "general_tags": ["Robotics", "Collision Avoidance"],
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Library",
+    "software_type": "Collision Avoidance Software",
+    "field_of_science": "Engineering and Technology"
+}

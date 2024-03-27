@@ -1,0 +1,15 @@
+```json
+{
+    "software": "devel",
+    "comprehensive_overview": "Devel is a software development tool for managing software projects and version control. It provides features for tracking changes in source code, managing multiple versions, and collaborating with other developers.",
+    "core_features": "Version control, project management, collaboration tools",
+    "general_tags": ["software development", "version control", "collaboration"],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Development Tools",
+        "software_type": "Version Control",
+        "field_of_science": "Engineering and Technology"
+    }
+}
+```

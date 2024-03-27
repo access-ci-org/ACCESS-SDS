@@ -1,0 +1,13 @@
+{
+    "software_name": "darshan-runtime",
+    "comprehensive_overview": "Darshan is a lightweight I/O characterization tool for high-performance computing (HPC) applications. It allows users to understand and improve the I/O behavior of their applications by collecting I/O access patterns and performance metrics.",
+    "core_features": "1. I/O access pattern analysis\n2. Performance metrics collection\n3. Lightweight and easy-to-use\n4. Designed for HPC applications",
+    "general_tags": ["I/O characterization", "High-performance computing", "Performance analysis"],
+    "additional_tags": {
+        "research_discipline": "Infrastructure and Instrumentation",
+        "research_area": "High-performance computing",
+        "software_class": "Performance analysis",
+        "software_type": "Tool",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

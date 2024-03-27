@@ -1,0 +1,11 @@
+{
+    "software_name": "ABySS",
+    "comprehensive_overview": "ABySS (Assembly By Short Sequences) is a de novo, parallel, paired-end sequence assembler that is designed for large genomes and also works well on smaller genomes.",
+    "core_features": "ABySS can assemble very large genomes using paired-end sequencing data. It supports a wide range of input read lengths and allows users to specify the insert size of the library. ABySS is parallelized to run efficiently on High-Performance Computing (HPC) clusters.",
+    "general_tags": ["assembly", "de novo assembly", "sequence assembler", "large genomes"],
+    "research_discipline": "Biological Sciences",
+    "research_area": "Genetics",
+    "software_class": "Bioinformatics",
+    "software_type": "HPC tool",
+    "field_of_science": "Biological Sciences"
+}

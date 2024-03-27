@@ -1,0 +1,18 @@
+{
+    "software_name": "tcsh",
+    "comprehensive_overview": "Tcsh is a command language interpreter that is based on and compatible with the C shell (csh). It offers extensive customization options and interactive features for command-line users.",
+    "core_features": "1. Command-line editing and history mechanism. 2. Programmable completion of user commands. 3. Spelling correction. 4. Job control features. 5. Customizable prompts and aliases. 6. Scripting capabilities. 7. Modular and extensible through plugins and extensions.",
+    "general_tags": [
+        "command-line interpreter",
+        "shell scripting",
+        "Unix-like operating systems"
+    ],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Interpreter",
+        "software_type": "Language interpreter",
+        "field_of_science": "Computer and Information Sciences",
+        "specific_field": "Computer Science"
+    }
+}

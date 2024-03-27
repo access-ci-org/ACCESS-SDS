@@ -1,0 +1,11 @@
+{
+    "software_name": "qtlseq",
+    "comprehensive_overview": "qtlseq is a software tool for mapping and identifying quantitative trait loci (QTL) from next-generation sequencing data. It is specifically designed for the analysis of data from populations with low levels of linkage disequilibrium, such as the F2 populations.",
+    "core_features": "1. Mapping and identifying quantitative trait loci (QTL) from next-generation sequencing data\n2. Analysis of data from populations with low levels of linkage disequilibrium\n3. Designed for F2 populations",
+    "general_tags": ["QTL mapping", "Next-generation sequencing", "Linkage disequilibrium"],
+    "research_discipline": "Genetics",
+    "research_area": "Quantitative genetics",
+    "software_class": "Bioinformatics",
+    "software_type": "Tool",
+    "field_of_science": "Biological Sciences"
+}

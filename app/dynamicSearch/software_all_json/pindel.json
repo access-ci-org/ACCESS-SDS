@@ -1,0 +1,13 @@
+{
+  "software_name": "Pindel",
+  "comprehensive_overview": "Pindel is a comprehensive tool for the detection of structural variants (SVs) in mapped sequencing data.",
+  "core_features": "1. Detects various types of structural variants such as insertions, deletions, duplications, inversions, and translocations.\n2. Utilizes split-read and paired-end mapping information for accurate SV detection.\n3. Supports various sequencing platforms including Illumina, SOLiD, 454, and Ion Torrent.\n4. Provides visualization options for reported variants and breakpoints.\n5. Allows customization for specific analysis requirements through various parameters.",
+  "general_tags": ["Structural Variant Detection", "Sequencing Data Analysis"],
+  "additional_tags": {
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Bioinformatics",
+    "software_type": "Tool",
+    "field_of_science": "Biological Sciences"
+  }
+}

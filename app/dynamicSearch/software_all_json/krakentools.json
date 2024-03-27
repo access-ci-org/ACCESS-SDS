@@ -1,0 +1,19 @@
+{
+    "software_name": "KrakenTools",
+    "overview": "KrakenTools is a collection of tools for taxonomic sequence classification and validation of metagenomics and metatranscriptomics sequencing data. It is designed to be fast, accurate, and efficient for analyzing large-scale sequencing datasets.",
+    "core_features": "1. Taxonomic sequence classification\n2. Validation of metagenomics and metatranscriptomics data\n3. Fast and accurate analysis of large-scale sequencing datasets\n4. Supports various input formats for sequencing data",
+    "general_tags": [
+        "bioinformatics",
+        "metagenomics",
+        "computational biology",
+        "sequence classification",
+        "metatranscriptomics"
+    ],
+    "additional_tags": {
+        "research_discipline": "Bioinformatics",
+        "research_area": "Metagenomics",
+        "software_class": "Tools",
+        "software_type": "Bioinformatics tools",
+        "field_of_science": "Biological Sciences"
+    }
+}

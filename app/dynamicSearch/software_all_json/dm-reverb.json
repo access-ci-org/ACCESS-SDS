@@ -1,0 +1,25 @@
+{
+    "software_name": "dm-reverb",
+    "comprehensive_overview": "dm-reverb is a Python library for efficient data loading and storage in deep learning and machine learning projects, particularly designed for use with TensorFlow. It provides a simple and flexible API for managing large datasets by storing data on disk and loading it into memory in a suitable format for training models.",
+    "core_features": [
+        "Efficient data loading and storage",
+        "Designed for deep learning and machine learning projects",
+        "Flexible API",
+        "Supports storing data on disk",
+        "Suitable for use with TensorFlow"
+    ],
+    "general_tags": [
+        "Python library",
+        "Data loading",
+        "Data storage",
+        "Machine learning",
+        "Deep learning"
+    ],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Library",
+        "software_type": "Python library",
+        "field_of_science": "Computer Science"
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "software_name": "r-nor1mix",
+    "comprehensive_overview": "r-nor1mix is an R package that provides tools for fitting a normal mixture distribution to data using the expectation-maximization (EM) algorithm. It allows users to estimate the parameters of a mixture of normal distributions from univariate data.",
+    "core_features": "1. Fitting normal mixture distributions to data\n2. Estimating parameters using the EM algorithm\n3. Support for univariate data\n4. Visualization of mixture components and density functions\n5. Statistical inference and analysis",
+    "general_tags": [
+        "R package",
+        "Mixture Model",
+        "Data Analysis",
+        "Statistical Modeling",
+        "Expectation-Maximization Algorithm"
+    ],
+    "additional_tags": {
+        "research_discipline": "Statistics and Probability",
+        "research_area": "Statistical Modeling",
+        "software_class": "Statistical Analysis Software",
+        "software_type": "Library/Package",
+        "field_of_science": "Mathematics"
+    }
+}

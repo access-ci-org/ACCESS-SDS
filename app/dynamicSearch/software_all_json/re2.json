@@ -1,0 +1,23 @@
+{
+  "software_name": "re2",
+  "comprehensive_overview": "RE2 is a fast, safe, thread-friendly, and efficient regular expression library. It provides better performance than many widely used regular expression libraries by using automata theory, generating linear-time matching algorithms.",
+  "core_features": [
+    "High-performance regular expression library",
+    "Thread-friendly and safe",
+    "Efficient and scalable",
+    "Optimized using automata theory for linear-time matching algorithms"
+  ],
+  "general_tags": [
+    "Regular Expression",
+    "Library",
+    "Performance",
+    "Thread-Safe"
+  ],
+  "additional_tags": {
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Library",
+    "software_type": "Tool",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

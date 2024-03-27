@@ -1,0 +1,13 @@
+{
+  "software_name": "modtree",
+  "comprehensive_overview": "ModTree is a software tool for the reconstruction of modular trees of mRNA transcripts and alternative splicing events. It is designed to identify and visualize the modular organization of alternative splicing events within a transcriptome.",
+  "core_features": "1. Reconstruction of modular trees of mRNA transcripts \n2. Identification of alternative splicing events \n3. Visualization of modular organization of alternative splicing events \n4. Analysis of transcriptome data \n5. Modular representation of splicing events",
+  "general_tags": ["transcriptomics", "alternative splicing", "modular trees", "data analysis"],
+  "additional_tags": {
+    "research_discipline": "Genetics",
+    "research_area": "Transcriptomics",
+    "software_class": "Bioinformatics",
+    "software_type": "Computational Software",
+    "field_of_science": "Biological Sciences"
+  }
+}

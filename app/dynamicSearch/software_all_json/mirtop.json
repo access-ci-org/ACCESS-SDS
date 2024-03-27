@@ -1,0 +1,13 @@
+{
+    "software_name": "mirtop",
+    "comprehensive_overview": "Mirtop is a software tool for the annotation and quantification of microRNAs in small RNA sequencing data. It assists in the identification of microRNA sequences and their corresponding gene targets.",
+    "core_features": "1. Annotation of microRNAs in small RNA sequencing data\n2. Quantification of microRNA expression levels\n3. Identification of microRNA-gene target interactions\n4. Visualization of microRNA expression profiles",
+    "general_tags": ["microRNA annotation", "small RNA sequencing", "gene regulation", "bioinformatics"],
+    "additional_tags": {
+        "research_discipline": "Genetics",
+        "research_area": "Bioinformatics",
+        "software_class": "Bioinformatics tool",
+        "software_type": "Annotation tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

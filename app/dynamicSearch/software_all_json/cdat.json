@@ -1,0 +1,23 @@
+{
+  "software": "CDAT",
+  "overview": "The Climate Data Analysis Tools (CDAT) is an open-source software package that provides capabilities for accessing, analyzing, and visualizing climate and weather data. CDAT is designed to help researchers in the atmospheric and climate sciences analyze large datasets and perform complex data tasks.",
+  "core_features": [
+    "Accessing climate and weather data",
+    "Analyzing large datasets",
+    "Visualizing data",
+    "Performing complex data tasks"
+  ],
+  "general_tags": [
+    "climate data",
+    "weather data",
+    "data analysis",
+    "data visualization"
+  ],
+  "additional_tags": {
+    "research_discipline": "Atmospheric Sciences",
+    "research_area": "Climate and Global Dynamics",
+    "software_class": "Data Analysis and Visualization",
+    "software_type": "Tool",
+    "field_of_science": "Earth and Environmental Sciences"
+  }
+}

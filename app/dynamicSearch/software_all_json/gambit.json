@@ -1,0 +1,13 @@
+{
+    "software_name": "Gambit",
+    "comprehensive_overview": "Gambit is an open-source software package for carrying out computational game theory analysis. It provides tools for the representation, numerical solution, and strategic analysis of games, including extensive support for the computation of Nash equilibria.",
+    "core_features": "1. Representation of games in extensive and strategic form\n2. Computation of Nash equilibria and other solution concepts\n3. Analysis of strategic interaction and decision-making\n4. Visualization of game theoretic solutions\n5. Support for various game types and player settings",
+    "general_tags": ["Game Theory", "Computational Analysis", "Nash Equilibria"],
+    "additional_tags": {
+        "research_discipline": "Economics and Business",
+        "research_area": "Game Theory",
+        "software_class": "Computational Game Theory Tool",
+        "software_type": "Software Package",
+        "field_of_science": "Social Sciences"
+    }
+}

@@ -1,0 +1,13 @@
+{
+  "software_name": "T-Coffee",
+  "comprehensive_overview": "T-Coffee is a versatile multiple sequence alignment software tool that is widely used in bioinformatics. It provides a range of alignment methods and features for accurately aligning protein and nucleotide sequences.",
+  "core_features": "T-Coffee offers various alignment algorithms such as progressive alignment, consistency-based alignment, and pattern-driven strategies. It supports the integration of external information sources for alignment refinement and consensus alignment generation. T-Coffee also includes tools for assessing alignment quality and visualizing the results.",
+  "general_tags": ["bioinformatics", "multiple sequence alignment", "protein alignment", "nucleotide alignment"],
+  "additional_tags": {
+    "research_discipline": "Bioinformatics",
+    "research_area": "Sequence Alignment",
+    "software_class": "Bioinformatics tool",
+    "software_type": "Bioinformatics software",
+    "field_of_science": "Biological Sciences"
+  }
+}

@@ -1,0 +1,21 @@
+{
+    "software_name": "dnaio",
+    "comprehensive_overview": "dnaio is a Python library for reading and writing DNA sequences efficiently. It provides high-performance I/O operations for DNA sequence data, allowing for seamless integration into bioinformatics workflows.",
+    "core_features": [
+        "Efficient reading and writing of DNA sequences",
+        "Compatibility with various sequence file formats",
+        "Optimized for high performance",
+        "Integration with bioinformatics pipelines"
+    ],
+    "general_tags": [
+        "Python Library",
+        "Bioinformatics",
+        "DNA Sequences",
+        "Sequence Data"
+    ],
+    "research_discipline": "Bioinformatics",
+    "research_area": "Genetics",
+    "software_class": "Library",
+    "software_type": "Python Library",
+    "field_of_science": "Biological Sciences"
+}

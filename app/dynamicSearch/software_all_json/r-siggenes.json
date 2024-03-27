@@ -1,0 +1,23 @@
+```json
+{
+    "software_name": "r-siggenes",
+    "comprehensive_overview": "r-siggenes is an R package specifically designed for the analysis of transcriptomic and genomic data. It provides a variety of methods for identifying differentially expressed genes and pathways, as well as tools for visualization and interpretation of results.",
+    "core_features": [
+        "Identification of differentially expressed genes",
+        "Pathway analysis",
+        "Visualization tools"
+    ],
+    "general_tags": [
+        "Transcriptomic data analysis",
+        "Genomic data analysis",
+        "Gene expression analysis"
+    ],
+    "additional_tags": {
+        "research_discipline": "Genomics and Transcriptomics",
+        "research_area": "Gene Expression Analysis",
+        "software_class": "Bioinformatics",
+        "software_type": "R package",
+        "field_of_science": "Biological Sciences"
+    }
+}
+```  

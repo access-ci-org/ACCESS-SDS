@@ -1,0 +1,13 @@
+{
+    "software_name": "Gurobi",
+    "comprehensive_overview": "Gurobi Optimization is a high-performance mathematical programming solver for linear programming (LP), mixed-integer programming (MIP), and other related optimization problems.",
+    "core_features": "Some core features of Gurobi include advanced performance (fast and scalable algorithms), support for a variety of programming languages (Python, MATLAB, C++, etc.), ability to handle complex optimization models, interactive visualizations, and extensive documentation and user support.",
+    "general_tags": ["optimization", "mathematical programming", "linear programming", "mixed-integer programming"],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Optimization Software",
+        "software_type": "Solver",
+        "field_of_science": "Mathematics"
+    }
+}

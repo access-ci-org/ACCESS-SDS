@@ -1,0 +1,23 @@
+{
+  "software_name": "Chopper",
+  "comprehensive_overview": "Chopper is a tool designed for efficient removal of adapter sequences from high-throughput sequencing data. It helps in preprocessing raw sequencing reads by trimming adapter sequences to ensure high-quality downstream analysis.",
+  "core_features": [
+    "Adapter sequence removal",
+    "Preprocessing of raw sequencing data",
+    "Quality control",
+    "High-throughput sequencing support"
+  ],
+  "general_tags": [
+    "Bioinformatics",
+    "NGS data analysis",
+    "Sequence trimming",
+    "High-throughput sequencing"
+  ],
+  "additional_tags": {
+    "research_discipline": "Bioinformatics",
+    "research_area": "NGS data analysis",
+    "software_class": "Sequence analysis tool",
+    "software_type": "Bioinformatics tool",
+    "field_of_science": "Biological Sciences"
+  }
+}

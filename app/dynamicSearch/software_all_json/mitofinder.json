@@ -1,0 +1,24 @@
+{
+  "software_name": "MitoFinder",
+  "comprehensive_overview": "MitoFinder is a bioinformatics tool designed for the identification and annotation of mitochondrial genomes from next-generation sequencing data. It facilitates the assembly, annotation, and comparative analysis of mitochondrial genomes.",
+  "core_features": [
+    "Identification and assembly of mitochondrial genomes",
+    "Mitogenome annotation",
+    "Comparative analysis of mitochondrial genomes",
+    "Visualization tools for mitochondrial genome data"
+  ],
+  "general_tags": [
+    "Bioinformatics",
+    "Genomics",
+    "Mitochondrial genomes",
+    "Next-generation sequencing",
+    "Annotation"
+  ],
+  "additional_tags": {
+    "research_discipline": "Genomics",
+    "research_area": "Mitochondrial genomics",
+    "software_class": "Bioinformatics tool",
+    "software_type": "Annotation tool",
+    "field_of_science": "Biological Sciences"
+  }
+}

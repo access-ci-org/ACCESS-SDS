@@ -1,0 +1,13 @@
+{
+    "software_name": "r-multtest",
+    "comprehensive_overview": "r-multtest is an R package that provides multiple testing procedures for controlling the false discovery rate or family-wise error rate.",
+    "core_features": "Some core features of r-multtest include various methods for adjusting p-values, including the Benjamini-Hochberg method, Bonferroni correction, and more. It also offers functions for calculating adjusted p-values, q-values, and performing multiple testing corrections.",
+    "general_tags": ["R package", "Multiple Testing", "Statistical Analysis"],
+    "additional_tags": {
+        "research_discipline": "Statistics and Probability",
+        "research_area": "Biostatistics",
+        "software_class": "Statistical Software",
+        "software_type": "Library",
+        "field_of_science": "Mathematics"
+    }
+}

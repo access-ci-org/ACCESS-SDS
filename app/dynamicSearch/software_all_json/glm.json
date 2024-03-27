@@ -1,0 +1,19 @@
+{
+    "software_name": "glm",
+    "comprehensive_overview": "glm is a Python library for Generalized Linear Models (GLM) with support for exponential family distributions.",
+    "core_features": [
+        "Implementation of Generalized Linear Models (GLM)",
+        "Support for various exponential family distributions",
+        "Estimation of model parameters",
+        "Prediction and inference",
+        "Model evaluation and diagnostics"
+    ],
+    "general_tags": ["Python library"],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "Statistics and Probability",
+        "software_class": "Statistical Analysis",
+        "software_type": "Library",
+        "field_of_science": "Mathematics"
+    }
+}

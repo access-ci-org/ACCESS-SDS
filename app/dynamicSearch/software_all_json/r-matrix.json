@@ -1,0 +1,22 @@
+{
+    "software_name": "R-Matrix",
+    "comprehensive_overview": "R-Matrix is a widely used computational method for solving the Schroedinger's equation in quantum mechanics, particularly in atomic and molecular physics. It is based on the R-matrix theory which divides space into two regions and the wave function into inner and outer regions, allowing the solution of the wave function to be determined separately in each region and then matched at the boundary. This method is commonly used to study electron-ion collisions, atomic photoionization, and other atomic and molecular processes.",
+    "core_features": [
+        "Solves the Schroedinger's equation using the R-matrix theory",
+        "Divides space into inner and outer regions for separate solutions",
+        "Used in atomic and molecular physics for studying electron-ion collisions and other processes"
+    ],
+    "general_tags": [
+        "Quantum Mechanics",
+        "Computational Physics",
+        "Atomic Physics",
+        "Molecular Physics"
+    ],
+    "additional_tags": {
+        "research_discipline": "Atomic and Molecular Physics",
+        "research_area": "Quantum Mechanics",
+        "software_class": "Computational Method",
+        "software_type": "Quantum Physics Software",
+        "field_of_science": "Physical Sciences"
+    }
+}

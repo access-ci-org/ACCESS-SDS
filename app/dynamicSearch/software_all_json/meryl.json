@@ -1,0 +1,11 @@
+{
+  "software_name": "meryl",
+  "comprehensive_overview": "Meryl is a software tool for k-mer counting and analysis in bioinformatics applications. It efficiently handles large-scale genomic data to provide insights into genome characteristics.",
+  "core_features": "1. Efficient k-mer counting\n2. Analysis of genomic data\n3. Scalable for large datasets\n4. Insight generation for genome characteristics",
+  "general_tags": ["bioinformatics", "genomics", "k-mer counting"],
+  "research_discipline": "Bioinformatics",
+  "research_area": "Genomics",
+  "software_class": "Utility tool",
+  "software_type": "Bioinformatics tool",
+  "field_of_science": "Biological Sciences"
+}

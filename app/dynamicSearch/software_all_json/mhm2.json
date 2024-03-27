@@ -1,0 +1,16 @@
+{
+    "software_name": "mhm2",
+    "comprehensive_overview": "mhm2 is a tool for simulating liquid crystal membranes using Monte Carlo techniques. It allows users to model complex lipid bilayers and study their properties in various conditions.",
+    "core_features": [
+        "Monte Carlo simulations for lipid bilayers",
+        "Simulation of liquid crystal membranes",
+        "Study of membrane properties",
+        "Modeling complex systems"
+    ],
+    "general_tags": ["Monte Carlo Simulation", "Liquid Crystal Membranes", "Bilayer Simulation"],
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Simulation Tool",
+    "software_type": "Computational Software",
+    "field_of_science": "Physical Sciences"
+}

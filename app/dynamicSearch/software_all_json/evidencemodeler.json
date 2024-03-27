@@ -1,0 +1,26 @@
+```json
+{
+    "software_name": "EvidenceModeler",
+    "comprehensive_overview": "EvidenceModeler (EM) is a flexible and customizable pipeline for generating gene structure annotations by integrating evidence from various prediction programs and transcriptomic data.",
+    "core_features": [
+        "Combines evidence from multiple sources to generate accurate gene structures",
+        "Supports integration of predicted gene models, transcriptome alignments, protein homology evidence, and more",
+        "Allows customization of evidence weightings and parameters for gene structure prediction",
+        "Ability to incorporate user-defined gene models and evidence sources"
+    ],
+    "general_tags": [
+        "Gene prediction",
+        "Annotation",
+        "Bioinformatics",
+        "Transcriptomics",
+        "Genomics"
+    ],
+    "additional_tags": {
+        "research_discipline": "Bioinformatics",
+        "research_area": "Genomics",
+        "software_class": "Gene prediction tool",
+        "software_type": "Pipeline",
+        "field_of_science": "Biological Sciences"
+    }
+}
+```

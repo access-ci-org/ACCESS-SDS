@@ -1,0 +1,18 @@
+{
+    "software_name": "readr",
+    "comprehensive_overview": "readr is a R package used for reading flat/tabular text files into R easily and efficiently. It provides a high-performance and user-friendly way to import structured data from files.",
+    "core_features": [
+        "Efficient reading of delimited files",
+        "Support for various file formats like CSV, TSV, FWF",
+        "Consistent and predictable behavior for column types",
+        "Easy handling of file encoding and column specification"
+    ],
+    "general_tags": ["data import", "data processing", "data manipulation"],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Data Analysis",
+        "software_type": "R Package",
+        "field_of_science": "Other Mathematics"
+    }
+}

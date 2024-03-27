@@ -1,0 +1,11 @@
+{
+   "software_name": "libidn2",
+   "comprehensive_overview": "Libidn2 is a library that implements the Stringprep, Punycode and IDNA specifications defined by the IETF Internationalized Domain Names (IDN) working group.",
+   "core_features": "Libidn2 provides support for Internationalized Domain Names (IDNs), which allows domain names containing non-ASCII characters to be translated into a valid format that can be used in the Domain Name System (DNS). It includes functionality for converting domain names to and from Punycode, as well as performing string preparation according to the Stringprep protocol.",
+   "general_tags": ["domain names", "IDNs", "stringprep", "Punycode"],
+   "research_discipline": "",
+   "research_area": "",
+   "software_class": "Library",
+   "software_type": "Utility",
+   "field_of_science": "Computer and Information Sciences"
+}

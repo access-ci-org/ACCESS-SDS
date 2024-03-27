@@ -1,0 +1,21 @@
+{
+    "software_name": "libxcb",
+    "comprehensive_overview": "libxcb is a C language library for the X Window System's X protocol, providing a replacement for the traditional Xlib API. It allows for more efficient communication between X clients and the X server by reducing round-trip requests.",
+    "core_features": [
+        "Efficient communication with the X server",
+        "Replacement for Xlib API",
+        "Reduces round-trip requests"
+    ],
+    "general_tags": [
+        "X Window System",
+        "C library",
+        "X protocol"
+    ],
+    "additional_tags": {
+        "research_discipline": "Computer Science",
+        "research_area": "Systems Programming",
+        "software_class": "Library",
+        "software_type": "Programming",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

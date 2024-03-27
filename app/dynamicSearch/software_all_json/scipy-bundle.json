@@ -1,0 +1,13 @@
+{
+  "software_name": "scipy-bundle",
+  "comprehensive_overview": "The scipy-bundle is a comprehensive collection of scientific computing tools built on top of the SciPy library. It includes a wide range of modules and packages for numerical processing, optimization, statistics, integration, interpolation, signal processing, and more.",
+  "core_features": "1. Numerical processing tools\n2. Optimization algorithms\n3. Statistical functions and distributions\n4. Interpolation and integration methods\n5. Signal processing techniques\n6. Linear algebra and sparse matrix operations",
+  "general_tags": ["scientific computing", "numerical processing", "statistics", "optimization", "signal processing"],
+  "additional_tags": {
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Library",
+    "software_type": "Scientific Computing",
+    "field_of_science": ["Computer and Information Sciences", "Other Computer and Information Sciences"]
+  }
+}

@@ -1,0 +1,15 @@
+```json
+{
+    "software_name": "GeneMark",
+    "comprehensive_overview": "GeneMark is a gene prediction software for prokaryotic and eukaryotic genomes. It uses state-of-the-art algorithms to accurately identify protein-coding genes.",
+    "core_features": "1. Prediction of protein-coding genes in prokaryotic and eukaryotic genomes.\n2. Utilizes advanced algorithms for accurate gene prediction.\n3. Provides annotations for predicted genes.",
+    "general_tags": ["gene prediction", "prokaryotic genomes", "eukaryotic genomes"],
+    "additional_tags": {
+        "research_discipline": "Bioinformatics",
+        "research_area": "Genomics",
+        "software_class": "Gene Prediction",
+        "software_type": "Algorithm",
+        "field_of_science": "Biological Sciences"
+    }
+}
+```  

@@ -1,0 +1,24 @@
+{
+    "software_name": "Scanpy",
+    "comprehensive_overview": "Scanpy is a scalable toolkit for analyzing single-cell gene expression data. It provides a wide range of functionalities for quality control, preprocessing, visualization, clustering, trajectory inference, differential expression testing, and integration with other omics data.",
+    "core_features": [
+        "Quality control of single-cell data",
+        "Preprocessing and normalization of gene expression data",
+        "Dimension reduction and visualization techniques",
+        "Clustering of cell populations",
+        "Trajectory inference for cell development processes",
+        "Differential gene expression analysis",
+        "Integration of single-cell data with other omics datasets"
+    ],
+    "general_tags": [
+        "Single-cell RNA sequencing analysis",
+        "Bioinformatics",
+        "Data visualization",
+        "Machine learning"
+    ],
+    "research_discipline": "Bioinformatics",
+    "research_area": "Single-cell RNA sequencing analysis",
+    "software_class": "Analysis tool",
+    "software_type": "Python library",
+    "field_of_science": "Biological Sciences"
+}

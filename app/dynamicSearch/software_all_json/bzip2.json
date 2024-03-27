@@ -1,0 +1,13 @@
+{
+    "software_name": "bzip2",
+    "comprehensive_overview": "bzip2 is a free and open-source file compression program that uses the Burrows-Wheeler algorithm for compression and Huffman coding for decompression. It is designed to be fast and efficient in compressing large files while retaining a high compression ratio.",
+    "core_features": "1. High compression ratio\n2. Fast compression and decompression speeds\n3. Open-source and free to use\n4. Cross-platform compatibility\n5. Efficient use of system resources",
+    "general_tags": ["file compression", "data compression", "utility software"],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Utility",
+        "software_type": "Compression tool",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

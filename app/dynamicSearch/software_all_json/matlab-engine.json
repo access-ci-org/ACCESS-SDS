@@ -1,0 +1,26 @@
+{
+  "software_name": "Matlab Engine",
+  "comprehensive_overview": "The Matlab Engine API for Python provides a Python interface to the MATLAB engine. It enables you to call MATLAB functions and evaluate MATLAB expressions from within your Python environment.",
+  "core_features": [
+    "Allows calling MATLAB functions and evaluating expressions from Python",
+    "Enables integration of MATLAB algorithms into Python scripts and applications",
+    "Facilitates data sharing between MATLAB and Python environments"
+  ],
+  "general_tags": [
+    "Matlab",
+    "Python",
+    "Integration",
+    "Data sharing"
+  ],
+  "additional_tags": {
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Interfacing Systems",
+    "software_type": "API",
+    "field_of_science": [
+      "Engineering and Technology",
+      "Computer and Information Sciences",
+      "Other Computer and Information Sciences"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+    "software_name": "ICU",
+    "comprehensive_overview": "ICU (International Components for Unicode) is a mature, widely used set of C/C++ and Java libraries providing Unicode and Globalization support for software applications. ICU is utilized in a vast array of applications, operating systems, and devices to provide multilingual support.",
+    "core_features": "1. Comprehensive Unicode support for wide character and locale data.\n2. String handling, collation, parsing, formatting, and transliteration capabilities.\n3. Time zone and calendar functionality.\n4. Text layout and bi-directional text support.\n5. Language-specific support for various functionalities.\n6. ICU data includes support for over 300 languages.",
+    "general_tags": [
+        "Unicode support",
+        "Globalization",
+        "Localization",
+        "Internationalization",
+        "Unicode libraries"
+    ],
+    "additional_tags": {
+        "software_type": "Libraries",
+        "software_class": "Utility",
+        "field_of_science": "Computer and Information Sciences",
+        "research_area": "Software Engineering, Systems, and Development"
+    }
+}

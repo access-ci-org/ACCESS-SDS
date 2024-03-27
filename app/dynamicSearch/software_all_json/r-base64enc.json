@@ -1,0 +1,22 @@
+{
+    "software_name": "r-base64enc",
+    "comprehensive_overview": "The r-base64enc package provides functions for encoding and decoding binary data using base64 encoding. Base64 encoding is commonly used for encoding binary data, such as images or files, to be transmitted over text-based protocols like HTTP.",
+    "core_features": [
+        "Base64 encoding and decoding functions",
+        "Support for encoding and decoding binary data",
+        "Integration with R environment"
+    ],
+    "general_tags": [
+        "Base64",
+        "Encoding",
+        "Decoding",
+        "Binary Data"
+    ],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Library",
+        "software_type": "Data Encoding/Decoding",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

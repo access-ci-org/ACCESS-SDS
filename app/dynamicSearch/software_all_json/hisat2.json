@@ -1,0 +1,21 @@
+{
+    "software_name": "HISAT2",
+    "comprehensive_overview": "HISAT2 is a fast and sensitive alignment program for mapping next-generation sequencing reads (both DNA and RNA) against the general human population (as well as against a single reference genome). It builds on HISAT and Bowtie, allowing for significantly improved performance and new capabilities.",
+    "core_features": [
+        "Fast and sensitive alignment of NGS reads",
+        "Mapping of DNA and RNA reads",
+        "Alignment against general human population or a single reference genome",
+        "Improved performance and new capabilities compared to HISAT and Bowtie"
+    ],
+    "general_tags": [
+        "Alignment",
+        "NGS",
+        "Genomics",
+        "Transcriptomics"
+    ],
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Bioinformatics",
+    "software_type": "Alignment tool",
+    "field_of_science": "Biological Sciences"
+}

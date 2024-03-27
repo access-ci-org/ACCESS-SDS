@@ -1,0 +1,20 @@
+{
+    "software_name": "Greenlet",
+    "comprehensive_overview": "Greenlet is a lightweight library that allows micro-threads to be utilized in a concurrent programming fashion within a single process. It provides a simple way to implement coroutines in Python.",
+    "core_features": [
+        "Efficient micro-threads (coroutines)",
+        "Concurrency within a single process",
+        "Context switching between greenlets",
+        "Simple API for implementing coroutines"
+    ],
+    "general_tags": [
+        "Python Library",
+        "Concurrency",
+        "Coroutines"
+    ],
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Library",
+    "software_type": "Programming",
+    "field_of_science": "Computer and Information Sciences"
+}

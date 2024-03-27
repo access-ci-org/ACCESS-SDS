@@ -3,6 +3,14 @@ import json
 import os
 
 
+directory_path = "./dynamicSearch/software_all_json"
+def txt_to_json():
+    for filename in os.listdir(directory_path):
+        print(filename)
+        
+        if filename.endswith('.txt'):
+            os.rename(directory_path+'/'+filename, directory_path+'/'+filename[:-4]+'.json')
+
 def extract_key_value(data, key_columns):
     """
     Extracts a value based on a list of potential key columns from the given data.
@@ -30,6 +38,8 @@ def read_and_transform_json(file_path):
         if isinstance(original_data, dict) and len(original_data.items()) == 1:
             software_name_value, nested_data = next(iter(original_data.items()))
             data = nested_data
+            print(f'software name: {software_name_value}, data: {nested_data}')
+            #if (data['software_name']):
             data['software name'] = software_name_value
         else:
             data = original_data
@@ -122,7 +132,7 @@ def combine_dfs(df, rpAndSoftware, linksOnly):
     return(merged_df)
 
 
-directory_path = "./dynamicSearch/softwareInfoJSON"
+directory_path = "./dynamicSearch/software_all_json"
 data_dicts=[]
 def make_df():
     for filename in os.listdir(directory_path):
@@ -134,7 +144,8 @@ def make_df():
 
     df = pd.DataFrame(data_dicts)
     df.fillna('',inplace=True)
-
+    return df
+'''
     rpAndSoftware = pd.read_csv('./dynamicSearch/rpAndSoftwares.csv')
     rpAndSoftware.rename(columns={'Software': 'software name'}, inplace=True)
 
@@ -154,9 +165,8 @@ def make_df():
     df.drop(empty_columns,axis=1,inplace=True)
 
     df.rename(columns={'overview':'Description'},inplace=True)
-
-    return df
-
+'''
+   # return df
 
 df = make_df()
 

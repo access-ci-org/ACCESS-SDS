@@ -1,0 +1,20 @@
+{
+    "software_name": "Genrich",
+    "comprehensive_overview": "Genrich is a tool designed for analyzing ChIP-seq data, specifically focused on identifying significant regions of enrichment in datasets.",
+    "core_features": [
+        "Identification of enriched regions in ChIP-seq data",
+        "Statistical analysis for significance assessment",
+        "Integration with genomic coordinates and sequence data",
+        "Visualization of results for interpretation"
+    ],
+    "general_tags": [
+        "ChIP-seq analysis",
+        "Enriched regions identification",
+        "Bioinformatics tool"
+    ],
+    "research_discipline": "Genomics and Bioinformatics",
+    "research_area": "Chromatin biology",
+    "software_class": "Bioinformatics",
+    "software_type": "Tool",
+    "field_of_science": "Biological Sciences"
+}

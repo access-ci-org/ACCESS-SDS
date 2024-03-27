@@ -1,0 +1,13 @@
+{
+    "software_name": "maeparser",
+    "comprehensive_overview": "maeparser is a Python library for reading and writing molecular data stored in Maestro files. It provides a simple interface for extracting structural information from Maestro files commonly used in molecular modeling and computational chemistry.",
+    "core_features": "1. Read and write Maestro files efficiently.\n2. Extract molecular structures and properties from Maestro files.\n3. Compatible with various molecular modeling tools and software.\n4. Facilitates data extraction and manipulation for further analysis.",
+    "general_tags": ["Python library", "Molecular data", "Maestro files"],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "Computational Chemistry",
+        "software_class": "Data Processing",
+        "software_type": "Library",
+        "field_of_science": "Chemical Sciences"
+    }
+}

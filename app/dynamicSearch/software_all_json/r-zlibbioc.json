@@ -1,0 +1,13 @@
+{
+  "software_name": "r-zlibbioc",
+  "comprehensive_overview": "r-zlibbioc is an R interface to zlib and a BioConductor package for handling zlib.",
+  "core_features": "1. Provides an R interface to zlib, a software library used for data compression. 2. Integrates functionality for handling zlib within BioConductor workflows. 3. Supports various compression and decompression operations.",
+  "general_tags": ["R package", "Bioinformatics", "Data Compression"],
+  "additional_tags": {
+    "research_discipline": "Bioinformatics",
+    "research_area": "Computational Biology",
+    "software_class": "Library",
+    "software_type": "Utility",
+    "field_of_science": "Biological Sciences"
+  }
+}

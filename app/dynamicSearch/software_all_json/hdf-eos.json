@@ -1,0 +1,16 @@
+{
+    "software_name": "HDF-EOS",
+    "comprehensive_overview": "HDF-EOS (Hierarchical Data Format - Earth Observing System) is a software library developed by NASA for managing and processing Earth science data in the HDF (Hierarchical Data Format) format.",
+    "core_features": "1. Provides tools for managing and processing Earth science data.\n2. Supports a wide range of data formats and metadata.\n3. Includes libraries for data visualization, extraction, and manipulation.\n4. Optimized for handling large volumes of geospatial data.\n5. Designed specifically for the storage and retrieval of Earth science data.",
+    "general_tags": [
+        "data management",
+        "data processing",
+        "Earth science",
+        "geospatial data"
+    ],
+    "research_discipline": "Earth and Environmental Sciences",
+    "research_area": "Atmospheric Sciences",
+    "software_class": "Computational Software",
+    "software_type": "Library",
+    "field_of_science": "Physical Sciences"
+}

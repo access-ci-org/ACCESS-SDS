@@ -1,0 +1,19 @@
+{
+  "software_name": "tcltk",
+  "comprehensive_overview": "Tcl (Tool Command Language) is a high-level, dynamic programming language widely used for embedding into applications, as well as building standalone applications. Tk is a GUI (Graphical User Interface) toolkit for Tcl that provides a robust set of GUI elements and widgets for creating interactive, cross-platform graphical applications.",
+  "core_features": "1. Simple and easy-to-learn syntax\n2. Cross-platform compatibility\n3. Extensive standard library\n4. Support for object-oriented programming\n5. Seamless integration with C/C++ via extensions\n6. Rich set of GUI elements for building graphical interfaces",
+  "general_tags": [
+    "programming language",
+    "GUI toolkit",
+    "scripting language",
+    "cross-platform",
+    "object-oriented programming"
+  ],
+  "additional_tags": {
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Programming Language/Library",
+    "software_type": "IDE/Toolkit/Library",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

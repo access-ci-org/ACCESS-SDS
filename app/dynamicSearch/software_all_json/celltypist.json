@@ -1,0 +1,20 @@
+{
+  "software_name": "CellTypist",
+  "comprehensive_overview": "CellTypist is a computational framework for unbiased cell type classification of single-cell RNA sequencing data. It integrates marker gene detection, cell type identification, and cluster-based classification to provide accurate and interpretable cell type annotations.",
+  "core_features": [
+    "Marker gene detection",
+    "Cell type identification",
+    "Cluster-based classification",
+    "Unbiased classification"
+  ],
+  "general_tags": [
+    "single-cell RNA sequencing",
+    "cell type classification",
+    "computational framework"
+  ],
+  "research_discipline": "Bioinformatics",
+  "research_area": "Single-cell omics",
+  "software_class": "Analysis tool",
+  "software_type": "Bioinformatics tool",
+  "field_of_science": "Biological Sciences"
+}

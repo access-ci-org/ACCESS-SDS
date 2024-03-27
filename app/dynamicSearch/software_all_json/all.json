@@ -1,0 +1,69 @@
+{
+	"software": [
+		{
+			"name": "Matlab",
+			"overview": "MATLAB is a high-performance language for technical computing. It integrates computation, visualization, and programming in an easy-to-use environment where problems and solutions are expressed in familiar mathematical notation.",
+			"core_features": "Mathematical functions, data visualization, algorithm development, modeling and simulation, application development.",
+			"general_tags": ["math", "programming", "computation"],
+			"additional_tags": {
+				"research_discipline": ["Applied Mathematics"],
+				"research_area": ["Computational Mathematics"],
+				"software_class": ["Scientific Computing"],
+				"software_type": ["Software Tool"],
+				"field_of_science": ["Mathematics", "Applied Mathematics"]
+			}
+		},
+		{
+			"name": "GCC",
+			"overview": "The GNU Compiler Collection (GCC) is a compiler system produced by the GNU Project supporting various programming languages.",
+			"core_features": "Supports several programming languages, optimizations, various platforms, and strong community support.",
+			"general_tags": ["programming", "development", "compiler"],
+			"additional_tags": {
+				"research_discipline": ["Software Development"],
+				"research_area": ["Programming Languages"],
+				"software_class": ["Compiler"],
+				"software_type": ["System Tool"],
+				"field_of_science": ["Computer and Information Sciences", "Software Engineering, Systems, and Development"]
+			}
+		},
+		{
+			"name": "NumPy",
+			"overview": "NumPy is the fundamental package for scientific computing with Python. It contains among other things a powerful N-dimensional array object, linear algebra functions, Fourier transforms, and tools for integrating with other low-level languages.",
+			"core_features": "N-dimensional array objects, linear algebra operations, Fourier transforms, random number capabilities, and integration with C/C++ and Fortran code.",
+			"general_tags": ["python", "scientific computing", "linear algebra"],
+			"additional_tags": {
+				"research_discipline": ["Computational Mathematics"],
+				"research_area": ["Numerical Analysis"],
+				"software_class": ["Library"],
+				"software_type": ["Python Library"],
+				"field_of_science": ["Computer and Information Sciences", "Applied Computer Science"]
+			}
+		},
+		{
+			"name": "GROMACS",
+			"overview": "GROMACS is a versatile package to perform molecular dynamics simulations, which include a wide range of features.",
+			"core_features": "Molecular dynamics simulations, energy minimization, trajectory analysis, parallel computing support.",
+			"general_tags": ["bioinformatics", "computational chemistry", "molecular dynamics"],
+			"additional_tags": {
+				"research_discipline": ["Chemical Sciences"],
+				"research_area": ["Theoretical and Computational Chemistry"],
+				"software_class": ["Simulation Software"],
+				"software_type": ["Bioinformatics Tool"],
+				"field_of_science": ["Chemical Sciences"]
+			}
+		},
+		{
+			"name": "PyTorch",
+			"overview": "PyTorch is an open-source machine learning library for Python, based on Torch, used for applications such as natural language processing.",
+			"core_features": "Tensor computation, dynamic computation graphs, deep neural networks, GPU acceleration.",
+			"general_tags": ["machine learning", "deep learning", "neural networks"],
+			"additional_tags": {
+				"research_discipline": ["Artificial Intelligence and Intelligent Systems"],
+				"research_area": ["Machine Learning"],
+				"software_class": ["Library"],
+				"software_type": ["Machine Learning Framework"],
+				"field_of_science": ["Computer and Information Sciences", "Artificial Intelligence and Intelligent Systems"]
+			}
+		}
+	]
+}

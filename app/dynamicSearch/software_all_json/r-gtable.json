@@ -1,0 +1,15 @@
+{
+	"software_name": "R-gtable",
+	"comprehensive_overview": "R-gtable is a layout engine for the 'grid' graphics system in R. It is designed to assist in creating complex table-like layouts with rows and columns of varying sizes.",
+	"core_features": "1. Allows for the creation of complex table-like layouts in R.
+2. Supports rows and columns of varying sizes.
+3. Provides control over alignment and sizing of elements within the layout.",
+	"general_tags": ["R package", "layout engine", "grid graphics system"],
+	"additional_tags": {
+		"research_discipline": "Statistics and Probability",
+		"research_area": "Data Visualization",
+		"software_class": "Data Visualization Tools",
+		"software_type": "Package/Library",
+		"field_of_science": "Mathematics"
+	}
+}

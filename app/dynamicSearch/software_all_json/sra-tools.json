@@ -1,0 +1,25 @@
+{
+    "software_name": "SRA-tools",
+    "comprehensive_overview": "SRA-tools is a set of software tools developed by the National Center for Biotechnology Information (NCBI) to assist with the download and analysis of high-throughput sequencing data from the Sequence Read Archive (SRA).",
+    "core_features": [
+        "Download and extract sequencing data from the SRA database",
+        "Convert SRA data to a more usable format such as FASTQ",
+        "Perform quality control and filtering of sequencing data",
+        "Align and map sequencing reads to a reference genome",
+        "Analyze and visualize sequencing data for various bioinformatics applications"
+    ],
+    "general_tags": [
+        "Bioinformatics",
+        "HPC tools",
+        "Sequence analysis",
+        "Data processing",
+        "High-throughput sequencing"
+    ],
+    "additional_tags": {
+        "research_discipline": "Bioinformatics",
+        "research_area": "Genomics",
+        "software_class": "Utility",
+        "software_type": "Analysis tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

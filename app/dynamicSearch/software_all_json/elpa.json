@@ -1,0 +1,23 @@
+{
+  "software_name": "elpa",
+  "comprehensive_overview": "ELPA (Eigenvalue SoLvers for Petaflop Applications) is a library for solving the standard and generalized eigenvalue problems for dense Hermitian matrices. It is designed for high-performance computing systems and utilizes highly scalable algorithms to achieve high efficiency.",
+  "core_features": [
+    "Solves standard and generalized eigenvalue problems for dense Hermitian matrices",
+    "Optimized for high-performance computing systems",
+    "Utilizes highly scalable algorithms for efficiency",
+    "Suitable for parallel computing"
+  ],
+  "general_tags": [
+    "linear algebra",
+    "eigenvalue problems",
+    "high-performance computing",
+    "scalable algorithms"
+  ],
+  "additional_tags": {
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Numerical Library",
+    "software_type": "Library",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

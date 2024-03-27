@@ -1,0 +1,21 @@
+{
+    "software_name": "pysam",
+    "comprehensive_overview": "Pysam is a Python module that provides access to read, write, manipulate, and analyze SAM/BAM files used in bioinformatics. It allows seamless integration of SAMtools, a set of utilities for interacting with and post-processing short DNA sequence read alignments in SAM, BAM, or CRAM format.",
+    "core_features": [
+        "Read and write SAM/BAM files",
+        "Manipulate read alignments",
+        "Analyze sequence data",
+        "Integration with SAMtools utilities"
+    ],
+    "general_tags": [
+        "bioinformatics",
+        "sequence analysis",
+        "SAM/BAM files",
+        "Python module"
+    ],
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "bioinformatics tool",
+    "software_type": "library",
+    "field_of_science": "Biological Sciences"
+}

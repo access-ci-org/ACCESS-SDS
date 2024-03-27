@@ -1,0 +1,13 @@
+{
+  "software_name": "r-later",
+  "comprehensive_overview": "r-later is a command-line tool that enables users to delay the execution of a command until a specified time in the future.",
+  "core_features": "Delay the execution of commands, Schedule commands to run at a specific time, Easy to use command-line interface",
+  "general_tags": ["command-line tool", "scheduler", "task automation"],
+  "additional_tags": {
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Utility Tool",
+    "software_type": "Command-line Interface",
+    "field_of_science": "Engineering and Technology"
+  }
+}

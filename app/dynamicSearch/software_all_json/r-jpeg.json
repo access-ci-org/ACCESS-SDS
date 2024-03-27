@@ -1,0 +1,11 @@
+{
+   "software_name": "r-jpeg",
+   "comprehensive_overview": "r-jpeg is an R package that provides a simple and powerful interface to read and write JPEG images. It allows users to manipulate and analyze JPEG images within the R environment.",
+   "core_features": "1. Read and write JPEG images in R\n2. Manipulate and analyze JPEG images\n3. Simple and powerful interface\n4. Integration with R environment",
+   "general_tags": ["Image Processing", "Data Analysis", "Visualization"],
+   "research_discipline": [],
+   "research_area": [],
+   "software_class": "Library",
+   "software_type": "Package",
+   "field_of_science": "Other Computer and Information Sciences"
+}

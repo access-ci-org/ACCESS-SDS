@@ -1,0 +1,11 @@
+{
+    "software_name": "muparser",
+    "comprehensive_overview": "muparser is a fast mathematical expression parser library written in C++.",
+    "core_features": "muparser allows users to easily parse and evaluate mathematical expressions involving variables, functions, and operators. It supports a wide range of mathematical functions, custom-defined functions, and user-defined operators. muparser provides high performance and efficiency in parsing mathematical expressions.",
+    "general_tags": ["mathematical expression parser", "math library", "C++ library"],
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Library",
+    "software_type": "Mathematical Expression Parser",
+    "field_of_science": "Other Mathematics"
+}

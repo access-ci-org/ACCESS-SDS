@@ -1,0 +1,15 @@
+```json
+{
+    "software_name": "GitPython",
+    "comprehensive_overview": "GitPython is a python library used to interact with Git repositories. It provides a high-level API that allows for interfacing with Git commands and repositories directly from Python scripts.",
+    "core_features": "1. Ability to interface with Git repositories within Python scripts\n2. Supports common Git operations like cloning, committing, pushing, and pulling\n3. Provides access to Git's objects (commits, trees, blobs) and references (branches, tags)\n4. Offers options for working with submodules and managing repository information",
+    "general_tags": ["version control", "source code management", "python library"],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Library",
+        "software_type": "Development",
+        "field_of_science": "Computer Science"
+    }
+}
+```

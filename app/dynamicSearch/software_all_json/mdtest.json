@@ -1,0 +1,13 @@
+{
+  "software_name": "mdtest",
+  "comprehensive_overview": "MDTest is a file system metadata benchmark that includes tests to measure metadata operations, such as file creates, stat operations, and directory operations. It is often used to assess the metadata performance of parallel file systems.",
+  "core_features": "1. Measures metadata performance of parallel file systems. 2. Includes tests for file creates, stat operations, and directory operations.",
+  "general_tags": ["benchmarking", "file system", "metadata"],
+  "additional_tags": {
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Benchmarking Tool",
+    "software_type": "Tool",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

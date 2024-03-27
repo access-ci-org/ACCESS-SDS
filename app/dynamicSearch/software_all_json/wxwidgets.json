@@ -1,0 +1,22 @@
+{
+    "software_name": "wxWidgets",
+    "comprehensive_overview": "wxWidgets is a C++ library that lets developers create applications for Windows, macOS, Linux and other platforms with a single code base. It is a mature and comprehensive framework that allows for native user interfaces with a wide range of widgets.",
+    "core_features": [
+        "Cross-platform GUI library",
+        "Native look and feel",
+        "Extensive widget set",
+        "Support for various platforms",
+        "Open-source and licensed under the wxWindows Library Licence"
+    ],
+    "general_tags": [
+        "GUI library",
+        "Cross-platform development",
+        "Native user interfaces",
+        "Open-source software"
+    ],
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Development Tools",
+    "software_type": "Library/Framework",
+    "field_of_science": "Engineering and Technology"
+}

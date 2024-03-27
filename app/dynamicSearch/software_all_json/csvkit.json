@@ -1,0 +1,15 @@
+```json
+{
+  "software_name": "csvkit",
+  "comprehensive_overview": "csvkit is a suite of command-line tools for converting and working with CSV files in various ways.",
+  "core_features": "1. Convert CSV files between different formats.\n2. Query CSV files using SQL.\n3. Clean and manipulate CSV files.\n4. Combine and merge CSV files.\n5. Summarize, analyze, and visualize CSV data.\n6. Work with large CSV files efficiently.",
+  "general_tags": ["CSV", "Command-line", "Data manipulation", "Data analysis"],
+  "additional_tags": {
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Data manipulation tools",
+    "software_type": "Command-line tool",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}
+```  

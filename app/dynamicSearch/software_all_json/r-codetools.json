@@ -1,0 +1,22 @@
+{
+  "software_name": "R codetools",
+  "comprehensive_overview": "R codetools is a collection of tools to check and analyze code in R packages or R sessions. It provides functions for static code analysis, profiling, and interactive code debugging.",
+  "core_features": [
+    "Static code analysis",
+    "Profiling",
+    "Interactive code debugging"
+  ],
+  "general_tags": [
+    "R",
+    "Code analysis",
+    "Profiling",
+    "Debugging"
+  ],
+  "additional_tags": {
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Development Tools",
+    "software_type": "Library",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

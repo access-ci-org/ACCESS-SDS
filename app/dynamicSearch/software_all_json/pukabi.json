@@ -1,0 +1,11 @@
+{
+    "software_name": "pukabi",
+    "comprehensive_overview": "Pukabi is a bioinformatics tool used for analyzing and visualizing phylogenetic trees.",
+    "core_features": "Pukabi provides various options for exploring and customizing phylogenetic trees, such as node coloring, branch styling, and tree rooting. It supports different tree file formats and offers interactive features for tree manipulation and data visualization.",
+    "general_tags": ["bioinformatics", "phylogenetics", "tree visualization"],
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "",
+    "software_type": "",
+    "field_of_science": "Biological Sciences"
+}

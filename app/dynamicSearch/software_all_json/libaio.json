@@ -1,0 +1,21 @@
+{
+    "software_name": "libaio",
+    "comprehensive_overview": "libaio is a library that provides a Linux-native asynchronous I/O facility to applications. It allows applications to perform I/O operations without being blocked, thus improving performance by enabling concurrent I/O operations.",
+    "core_features": [
+        "Linux-native asynchronous I/O support",
+        "Enables non-blocking I/O operations",
+        "Improves performance by allowing concurrent I/O operations"
+    ],
+    "general_tags": [
+        "I/O library",
+        "Linux library",
+        "Asynchronous I/O"
+    ],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Library",
+        "software_type": "Operating System Library",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

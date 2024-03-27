@@ -1,0 +1,22 @@
+{
+  "software_name": "IOMKL",
+  "comprehensive_overview": "IOMKL is a high-performance Mathematical Kernel Library (MKL) for Intel's Math Kernel Library developed for modern Intel CPUs. It is optimized for various mathematical operations and linear algebra computations.",
+  "core_features": [
+    "Optimized for modern Intel CPUs",
+    "High-performance mathematical operations",
+    "Efficient linear algebra computations"
+  ],
+  "general_tags": [
+    "Math Kernel Library",
+    "High-performance Computing",
+    "Linear Algebra",
+    "Mathematical Operations"
+  ],
+  "additional_tags": {
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Computational Software",
+    "software_type": "Library",
+    "field_of_science": "Mathematics"
+  }
+}

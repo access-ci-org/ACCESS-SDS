@@ -1,0 +1,11 @@
+{
+  "software_name": "cudf",
+  "comprehensive_overview": "CUDF is part of the RAPIDS suite of open-source software libraries and APIs built on CUDA. It provides a DataFrame manipulation library leveraging GPU acceleration for loading, joining, aggregating, filtering, and otherwise manipulating tabular data.",
+  "core_features": "1. Distributed DataFrames for larger-than-memory datasets\n2. GPU-accelerated DataFrame operations such as sorting, filtering, joining, and aggregating\n3. Easily integrates with other RAPIDS components like cuML for machine learning tasks\n4. Can handle complex data operations on large datasets efficiently and effectively\n5. Supports a wide variety of file formats for data ingestion and export",
+  "general_tags": ["DataFrame", "GPU acceleration", "Data manipulation"],
+  "research_discipline": [],
+  "research_area": [],
+  "software_class": "Data Processing and Analysis",
+  "software_type": "Library",
+  "field_of_science": ["Computer and Information Sciences", "Artificial Intelligence and Intelligent Systems"]
+}

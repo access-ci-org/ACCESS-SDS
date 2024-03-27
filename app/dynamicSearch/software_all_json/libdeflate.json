@@ -1,0 +1,13 @@
+{
+    "software_name": "libdeflate",
+    "comprehensive_overview": "libdeflate is a library for fast, flexible, and memory-efficient DEFLATE-based compressed data decompression.",
+    "core_features": "1. High-speed decompression for DEFLATE-compressed data.\n2. Flexibility to allow multiple decompression strategies.\n3. Memory-efficiency for handling large volumes of compressed data.",
+    "general_tags": ["compression", "data decompression"],
+    "additional_tags": {
+        "research_discipline": "Computer and Information Sciences",
+        "research_area": "Software Engineering, Systems, and Development",
+        "software_class": "Library",
+        "software_type": "Compression",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

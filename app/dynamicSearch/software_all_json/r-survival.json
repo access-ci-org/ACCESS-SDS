@@ -1,0 +1,11 @@
+{
+	"software_name": "R-survival",
+	"comprehensive_overview": "R-survival is a package in R for survival analysis, including Cox models, parametric survival regression models, and nonparametric methods.",
+	"core_features": "1. Survival analysis tools for evaluating time-to-event data\n2. Cox models for proportional hazards regression analysis\n3. Parametric survival regression models for analyzing survival data based on specific distribution assumptions\n4. Nonparametric methods such as Kaplan-Meier estimator and Nelson-Aalen estimator for estimating survival functions\n5. Tools for handling censored data and time-dependent covariates",
+	"general_tags": ["survival analysis", "statistical analysis", "R package"],
+	"research_discipline": "Statistics and Probability",
+	"research_area": "Survival Analysis",
+	"software_class": "Statistical Analysis",
+	"software_type": "R Package",
+	"field_of_science": "Other Mathematics"
+}

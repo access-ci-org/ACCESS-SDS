@@ -1,0 +1,23 @@
+{
+    "software_name": "Kalign",
+    "comprehensive_overview": "Kalign is a fast and accurate multiple sequence alignment algorithm that utilizes the Wu-Manber approximate string matching algorithm to efficiently align large sets of sequences. It is commonly used in bioinformatics for aligning DNA, RNA, and protein sequences.",
+    "core_features": [
+        "Fast and accurate multiple sequence alignment",
+        "Utilizes the Wu-Manber approximate string matching algorithm",
+        "Suitable for aligning large sets of sequences",
+        "Supports DNA, RNA, and protein sequences"
+    ],
+    "general_tags": [
+        "bioinformatics",
+        "sequence alignment",
+        "DNA",
+        "RNA",
+        "protein",
+        "Wu-Manber algorithm"
+    ],
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Algorithm",
+    "software_type": "Bioinformatics Tool",
+    "field_of_science": "Biological Sciences"
+}

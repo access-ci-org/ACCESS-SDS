@@ -1,0 +1,13 @@
+{
+    "software_name": "graphviz-python",
+    "comprehensive_overview": "graphviz-python is a Python library for creating and rendering graph visualizations using Graphviz. It provides a simple interface to create and manipulate graphs and visualize them in various formats.",
+    "core_features": "1. Generate and customize graphs programmatically. 2. Render graphs in various formats such as PNG, PDF, SVG, etc. 3. Support for complex graph structures and layouts.",
+    "general_tags": ["graph visualization", "Python library", "network analysis"],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Library",
+        "software_type": "Visualization tool",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

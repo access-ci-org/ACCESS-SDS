@@ -1,0 +1,13 @@
+{
+    "software_name": "udunits",
+    "comprehensive_overview": "UDUNITS supports conversion of unit specifications between formatted, human-readable strings and machine-friendly structures. In addition, UDUNITS defines functions that can be used to identify whether pairs of units are conformable for mathematical operations, to convert numerical values from one unit to another, and to generate strings representing the units of quantities.",
+    "core_features": "1. Conversion of unit specifications between human-readable strings and machine-friendly structures. 2. Identification of conformable pairs of units for mathematical operations. 3. Conversion of numerical values from one unit to another. 4. Generation of strings representing the units of quantities.",
+    "general_tags": ["units", "unit conversion", "UDUNITS"],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Utilities",
+        "software_type": "Conversion Tool",
+        "field_of_science": "Other Natural Sciences"
+    }
+}

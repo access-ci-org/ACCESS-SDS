@@ -1,0 +1,22 @@
+{
+  "software_name": "ftp",
+  "comprehensive_overview": "FTP (File Transfer Protocol) is a standard network protocol used for the transfer of computer files between a client and server on a computer network. It allows users to upload or download files and directories, as well as perform other file operations such as renaming, deleting, and creating directories.",
+  "core_features": [
+    "File transfer between client and server",
+    "Upload and download files and directories",
+    "Rename, delete, and create directories",
+    "Authentication and security features"
+  ],
+  "general_tags": [
+    "Network Protocol",
+    "File Transfer",
+    "Client-Server Communication"
+  ],
+  "additional_tags": {
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Networking and Communication",
+    "software_type": "Tool",
+    "field_of_science": []
+  }
+}

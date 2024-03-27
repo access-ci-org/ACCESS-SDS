@@ -1,0 +1,21 @@
+{
+  "software_name": "PadicoTM",
+  "comprehensive_overview": "PadicoTM is a parallel discrete element method software package tailored for large-scale simulations of granular and multiphase flows. It is designed to efficiently model the behavior of particulate materials in various engineering and scientific applications.",
+  "core_features": [
+    "Parallel discrete element method (DEM) simulations",
+    "Modeling of granular and multiphase flows",
+    "Large-scale simulation capabilities",
+    "Suitable for engineering and scientific applications"
+  ],
+  "general_tags": [
+    "DEM",
+    "Granular flows",
+    "Multiphase flows",
+    "Simulation software"
+  ],
+  "research_discipline": [],
+  "research_area": [],
+  "software_class": "Simulation software",
+  "software_type": "Computational software",
+  "field_of_science": "Engineering and Technology"
+}

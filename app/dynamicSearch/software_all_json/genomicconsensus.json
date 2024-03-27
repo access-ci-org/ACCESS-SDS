@@ -1,0 +1,21 @@
+{
+  "software_name": "GenomicConsensus",
+  "comprehensive_overview": "GenomicConsensus is a tool for refining consensus sequence calls produced by bioinformatics applications, primarily focusing on long and error-prone Third Generation Sequencing (TGS) platforms such as PacBio Single Molecule, Real-Time (SMRT) sequencing.",
+  "core_features": [
+    "Refining consensus sequence calls",
+    "Optimizing error correction",
+    "Focused on long and error-prone TGS platforms",
+    "Integration with bioinformatics workflows"
+  ],
+  "general_tags": [
+    "Bioinformatics",
+    "Genomics",
+    "Sequence Analysis",
+    "Error Correction"
+  ],
+  "research_discipline": "Genomics",
+  "research_area": "Sequence Analysis",
+  "software_class": "Genome Analysis",
+  "software_type": "Bioinformatics Tool",
+  "field_of_science": "Biological Sciences"
+}

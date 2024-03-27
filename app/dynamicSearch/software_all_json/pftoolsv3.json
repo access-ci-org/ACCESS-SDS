@@ -1,0 +1,24 @@
+{
+    "software_name": "pftoolsv3",
+    "comprehensive_overview": "pftoolsv3 is a software suite that provides a collection of tools for analyzing and visualizing data related to particle filtering methods. It is designed to assist researchers and practitioners in the field of statistical signal processing and Bayesian inference.",
+    "core_features": [
+        "Implementation of particle filtering algorithms",
+        "Data analysis and visualization tools",
+        "Support for Bayesian inference",
+        "Statistical signal processing capabilities"
+    ],
+    "general_tags": [
+        "particle filtering",
+        "statistical signal processing",
+        "Bayesian inference",
+        "data analysis",
+        "visualization"
+    ],
+    "additional_tags": {
+        "research_discipline": "Statistics and Probability",
+        "research_area": "Statistical Signal Processing",
+        "software_class": "Data Analysis and Visualization",
+        "software_type": "Research Tool",
+        "field_of_science": "Mathematics"
+    }
+}

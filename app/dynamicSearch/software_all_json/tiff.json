@@ -1,0 +1,13 @@
+{
+  "software_name": "TIFF",
+  "comprehensive_overview": "TIFF (Tagged Image File Format) is a widely used file format for storing raster graphics images and other data. It supports various types of data like images, photographs, and scanned documents. The format is versatile and can store multiple layers, color spaces, and metadata.",
+  "core_features": "1. Support for multiple layers\n2. Versatile color space support\n3. Metadata storage capabilities\n4. Preservation of image quality\n5. Wide compatibility with imaging software",
+  "general_tags": ["image format", "graphics", "data storage"],
+  "additional_tags": {
+    "research_discipline": "Other Natural Sciences",
+    "research_area": "Infrastructure and Instrumentation",
+    "software_class": "File Format",
+    "software_type": "Data Storage",
+    "field_of_science": "Other Natural Sciences"
+  }
+}

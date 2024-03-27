@@ -1,0 +1,23 @@
+{
+    "software_name": "webkitgtk+",
+    "comprehensive_overview": "WebKitGTK+ is an open-source web browser engine. It is a GTK+ port of the WebKit engine. It offers a framework for rendering web content in applications built with GTK+.",
+    "core_features": [
+        "Rendering web content in GTK+ applications",
+        "Support for modern web standards",
+        "High performance and efficiency",
+        "Integration with GTK+ applications"
+    ],
+    "general_tags": [
+        "web browser engine",
+        "GTK+ port",
+        "open-source",
+        "web content rendering"
+    ],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Web Browser Engine",
+        "software_type": "Rendering Engine",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

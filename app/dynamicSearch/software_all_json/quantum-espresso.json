@@ -1,0 +1,23 @@
+{
+    "software_name": "Quantum ESPRESSO",
+    "comprehensive_overview": "Quantum ESPRESSO is an integrated suite of open-source computer codes for electronic-structure calculations and materials modeling at the nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials. The software package aims to provide a range of tools for quantum mechanical modeling of materials and nanostructures.",
+    "core_features": [
+        "Electronic-structure calculations",
+        "Density-functional theory",
+        "Plane-wave basis sets",
+        "Pseudopotentials",
+        "Materials modeling",
+        "Nanoscale simulations"
+    ],
+    "general_tags": [
+        "Electronic-structure calculations",
+        "Materials modeling",
+        "Nanoscale simulations",
+        "Quantum mechanics"
+    ],
+    "research_discipline": "Condensed Matter Physics",
+    "research_area": "Materials Science",
+    "software_class": "Scientific Computing",
+    "software_type": "Simulation software",
+    "field_of_science": "Physical Sciences"
+}

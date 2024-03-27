@@ -1,0 +1,13 @@
+{
+  "software_name": "r-askpass",
+  "comprehensive_overview": "r-askpass is an R package that provides a cross-platform approach to prompting the user for credentials when working with secure data in R scripts. It allows users to securely enter passwords without displaying them on the console.",
+  "core_features": "1. Cross-platform credential prompting\n2. Secure password entry\n3. Credential handling for R scripts\n4. Console password masking",
+  "general_tags": ["R package", "User authentication", "Security"],
+  "additional_tags": {
+    "research_discipline": "Computer and Information Sciences",
+    "research_area": "Software Engineering, Systems, and Development",
+    "software_class": "Library",
+    "software_type": "Package",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

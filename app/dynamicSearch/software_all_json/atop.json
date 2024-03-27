@@ -1,0 +1,28 @@
+```json
+{
+    "software_name": "atop",
+    "comprehensive_overview": "Atop is an advanced interactive system monitor that includes a variety of functionalities for monitoring and analyzing system performance. It provides a real-time overview of system performance, resource utilization, and process activity.",
+    "core_features": [
+        "Real-time system monitoring",
+        "Resource utilization tracking",
+        "Dynamic and interactive display",
+        "Process-level monitoring",
+        "Detailed system statistics",
+        "Ability to log data for future analysis"
+    ],
+    "general_tags": [
+        "system monitor",
+        "performance analysis",
+        "resource utilization",
+        "process activity",
+        "system statistics"
+    ],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Monitoring",
+        "software_type": "System Monitoring Tool",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}
+```  

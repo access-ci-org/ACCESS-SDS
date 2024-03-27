@@ -1,0 +1,19 @@
+{
+    "software_name": "CuPy",
+    "comprehensive_overview": "CuPy is an open-source library that provides GPU-accelerated computing with Python. It is built as a drop-in replacement for NumPy and works seamlessly with other libraries in the Python ecosystem.",
+    "core_features": [
+        "GPU-accelerated computing with Python",
+        "Drop-in replacement for NumPy",
+        "Seamless integration with Python libraries"
+    ],
+    "general_tags": [
+        "Python library",
+        "GPU computing",
+        "NumPy replacement"
+    ],
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Library",
+    "software_type": "GPU Computing",
+    "field_of_science": "Computer and Information Sciences"
+}

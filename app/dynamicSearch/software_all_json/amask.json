@@ -1,0 +1,13 @@
+```json
+{
+    "software_name": "amask",
+    "comprehensive_overview": "Amask is a high-level molecular visualization program that is designed to create and manipulate atomic structures for research and educational purposes. It provides a user-friendly interface for visualizing complex molecular structures and interactions.",
+    "core_features": "1. Interactive manipulation of molecular structures\n2. Visualization of atomic interactions and bonds\n3. Rendering quality images and animations of molecular simulations\n4. Support for various file formats commonly used in molecular modeling\n5. User-friendly interface for easy navigation and editing",
+    "general_tags": ["molecular visualization", "atomic structures", "molecular modeling", "research tool"],
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Visualization",
+    "software_type": "Molecular visualization software",
+    "field_of_science": "Biological Sciences"
+}
+```  

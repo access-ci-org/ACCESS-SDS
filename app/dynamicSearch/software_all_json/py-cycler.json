@@ -1,0 +1,13 @@
+{
+  "software_name": "py-cycler",
+  "comprehensive_overview": "Py-cycler is a Python library that provides tools for creating and manipulating cycle objects. It allows users to easily cycle through a sequence of elements and perform various operations on cycles.",
+  "core_features": "1. Creation of cycle objects\n2. Iterating through cycles\n3. Selecting elements from cycles\n4. Manipulating and transforming cycle objects\n5. Combining multiple cycles",
+  "general_tags": ["Python Library", "Cycle Operations", "Data Manipulation"],
+  "additional_tags": {
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Data Processing and Manipulation",
+    "software_type": "Library",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

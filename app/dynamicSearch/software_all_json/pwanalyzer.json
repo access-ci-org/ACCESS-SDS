@@ -1,0 +1,13 @@
+{
+    "software_name": "PWAnalyzer",
+    "comprehensive_overview": "PWAnalyzer is a software tool for analyzing protein-ligand interactions through molecular docking simulations. It allows users to study the binding modes and affinity of small molecules to target proteins, aiding in drug discovery and design.",
+    "core_features": "1. Molecular docking simulations for protein-ligand interactions\n2. Analyzes binding modes and affinity of small molecules\n3. Helps in drug discovery and design research",
+    "general_tags": ["protein-ligand interactions", "molecular docking", "drug discovery", "bioinformatics"],
+    "additional_tags": {
+        "research_discipline": "Bioinformatics",
+        "research_area": "Drug discovery and design",
+        "software_class": "Computational software",
+        "software_type": "Bioinformatics tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

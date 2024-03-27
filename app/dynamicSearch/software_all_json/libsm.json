@@ -1,0 +1,13 @@
+{
+  "software_name": "libsm",
+  "comprehensive_overview": "Libsm is a library that provides a set of common utilities for scientific computing in C++.",
+  "core_features": "Libsm offers functionalities such as matrix operations, linear algebra computations, statistical operations, and random number generation.",
+  "general_tags": ["library", "scientific computing", "C++"],
+  "additional_tags": {
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Utility Library",
+    "software_type": "Library",
+    "field_of_science": "Other Natural Sciences"
+  }
+}

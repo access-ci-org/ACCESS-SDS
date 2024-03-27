@@ -1,0 +1,23 @@
+{
+  "software_name": "json-c",
+  "comprehensive_overview": "Json-c is a C library for encoding, decoding, and manipulating JSON data. It provides functions for parsing JSON input, creating JSON output, manipulating JSON data structures, and validating JSON data.",
+  "core_features": [
+    "Parsing JSON input",
+    "Creating JSON output",
+    "Manipulating JSON data structures",
+    "Validating JSON data"
+  ],
+  "general_tags": [
+    "C library",
+    "JSON encoding",
+    "JSON decoding",
+    "Data manipulation"
+  ],
+  "additional_tags": {
+    "research_discipline": "Computer Science",
+    "research_area": "Software Engineering, Systems, and Development",
+    "software_class": "Library",
+    "software_type": "Data processing",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

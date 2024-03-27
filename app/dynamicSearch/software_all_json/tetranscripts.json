@@ -1,0 +1,11 @@
+{
+    "software_name": "tetranscripts",
+    "comprehensive_overview": "tetranscripts is a Python package for transcriptomics analysis. It provides functionalities for processing and analyzing RNA-Seq data to uncover insights into gene expression patterns and regulatory mechanisms.",
+    "core_features": "1. Preprocessing of RNA-Seq data\n2. Differential gene expression analysis\n3. Visualization of gene expression patterns\n4. Gene ontology enrichment analysis\n5. Pathway analysis",
+    "general_tags": ["transcriptomics", "RNA-Seq", "gene expression", "bioinformatics"],
+    "research_discipline": "Molecular Biology",
+    "research_area": "Transcriptomics",
+    "software_class": "RNA-Seq analysis tool",
+    "software_type": "Python library",
+    "field_of_science": "Biological Sciences"
+}

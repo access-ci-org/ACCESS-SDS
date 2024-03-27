@@ -1,0 +1,22 @@
+{
+    "software_name": "Graphviz",
+    "comprehensive_overview": "Graphviz is open source graph visualization software. It is used for creating structured diagrams such as flowcharts, network diagrams, and more.",
+    "core_features": [
+        "Automatic layout algorithms for visualization",
+        "Support for various input formats including DOT language",
+        "Customizable node shapes, colors, and styles",
+        "Ability to render graphs in various output formats such as PNG, PDF, SVG"
+    ],
+    "general_tags": [
+        "Graph Visualization",
+        "Diagramming",
+        "Open Source Software"
+    ],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Visualization Tool",
+        "software_type": "Data Visualization",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

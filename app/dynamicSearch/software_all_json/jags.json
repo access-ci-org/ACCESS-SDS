@@ -1,0 +1,11 @@
+{
+  "software_name": "jags",
+  "comprehensive_overview": "JAGS (Just Another Gibbs Sampler) is a program for analysis of Bayesian hierarchical models using Markov Chain Monte Carlo (MCMC) simulation. It is similar to WinBUGS and provides a flexible environment for specifying complex statistical models.",
+  "core_features": "1. Bayesian hierarchical modeling\n2. Markov Chain Monte Carlo (MCMC) simulation\n3. Model specification\n4. Posterior inference\n5. Parameter estimation",
+  "general_tags": ["Bayesian statistics", "Hierarchical modeling", "MCMC simulation"],
+  "research_discipline": "Statistics and Probability",
+  "research_area": "Bayesian Statistics",
+  "software_class": "Statistical Analysis Software",
+  "software_type": "Statistical Modeling",
+  "field_of_science": "Mathematics"
+}

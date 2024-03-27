@@ -1,0 +1,11 @@
+{
+  "software_name": "tcl",
+  "comprehensive_overview": "Tool Command Language (Tcl) is a dynamic programming language often used for creating scripts, applications, and embedded control systems. It provides a simple scripting language and a powerful code execution environment for various platforms.",
+  "core_features": "1. Simple syntax\n2. Extensible with C\n3. Cross-platform\n4. Extensive library support\n5. Suitable for rapid prototyping",
+  "general_tags": ["scripting language", "dynamic programming language", "cross-platform", "scripting"],
+  "research_discipline": "",
+  "research_area": "",
+  "software_class": "Programming Language",
+  "software_type": "Language Interpreter",
+  "field_of_science": "Computer and Information Sciences"
+}

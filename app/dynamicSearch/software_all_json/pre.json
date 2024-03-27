@@ -1,0 +1,48 @@
+{
+    "tools": [
+        {
+            "software_name": "GCC",
+            "comprehensive_overview": "GCC, or GNU Compiler Collection, is a set of programming language compilers developed by the GNU Project. It supports various programming languages and is commonly used to compile C, C++, and Fortran code.",
+            "core_features": "Support for multiple programming languages, optimization options, standard compliance, open-source collaboration.",
+            "general_tags": ["compiler", "software development", "programming"],
+            "research_discipline": [],
+            "research_area": [],
+            "software_class": "Compiler",
+            "software_type": "Programming tool",
+            "field_of_science": "Computer and Information Sciences"
+        },
+        {
+            "software_name": "BLAST",
+            "comprehensive_overview": "BLAST, or Basic Local Alignment Search Tool, is a program for comparing primary biological sequence information such as the amino-acid sequences of proteins or the nucleotides of DNA.",
+            "core_features": "Sequence similarity searching, comparison of biological sequences, local alignment analysis.",
+            "general_tags": ["bioinformatics", "sequence analysis", "molecular biology"],
+            "research_discipline": ["Biological Sciences"],
+            "research_area": ["Bioinformatics"],
+            "software_class": "Bioinformatics tool",
+            "software_type": "Sequence analysis tool",
+            "field_of_science": "Biological Sciences"
+        },
+        {
+            "software_name": "Matplotlib",
+            "comprehensive_overview": "Matplotlib is a plotting library for the Python programming language and its numerical mathematics extension NumPy. It provides a MATLAB-like interface for creating static, animated, and interactive visualizations in Python.",
+            "core_features": "2D plotting, publication-quality figures, support for various file formats, interactive visualization.",
+            "general_tags": ["data visualization", "Python library", "plotting"],
+            "research_discipline": [],
+            "research_area": [],
+            "software_class": "Data visualization library",
+            "software_type": "Python library",
+            "field_of_science": "Computer and Information Sciences"
+        },
+        {
+            "software_name": "GROMACS",
+            "comprehensive_overview": "GROMACS is a versatile package used to perform molecular dynamics simulations, with a focus on biomolecular systems. It is designed for high performance on parallel machines.",
+            "core_features": "Molecular dynamics simulations, biomolecular systems, parallel computing efficiency, extensive analysis tools.",
+            "general_tags": ["computational chemistry", "molecular dynamics", "biophysics"],
+            "research_discipline": ["Biological Sciences", "Chemical Sciences"],
+            "research_area": ["Biophysics"],
+            "software_class": "Molecular dynamics simulation software",
+            "software_type": "Computational software",
+            "field_of_science": "Physical Sciences"
+        }
+    ]
+}

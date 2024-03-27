@@ -1,0 +1,23 @@
+{
+  "software_name": "GTK3",
+  "comprehensive_overview": "GTK3 is a widely-used toolkit for building graphical user interfaces and desktop applications. It provides a comprehensive set of tools and libraries for creating interactive and visually appealing applications across multiple platforms.",
+  "core_features": [
+    "Cross-platform compatibility",
+    "Extensive widget toolkit",
+    "Customizable themes and styles",
+    "Support for various programming languages"
+  ],
+  "general_tags": [
+    "GUI toolkit",
+    "Desktop application development",
+    "Cross-platform development",
+    "User interface design"
+  ],
+  "additional_tags": {
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Framework/Library",
+    "software_type": "Development Toolkit",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

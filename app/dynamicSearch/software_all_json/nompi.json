@@ -1,0 +1,14 @@
+{
+  "software_name": "Nompi",
+  "comprehensive_overview": "Nompi is a Python library that allows users to run existing MPI-based applications in a non-MPI environment, enabling quick testing and debugging without the need for a full MPI setup.",
+  "core_features": "1. Simulating MPI environments without actual MPI installation. 2. Facilitates testing and debugging of MPI applications without requiring a full MPI setup. 3. Maintains compatibility with MPI interfaces. 4. Seamless integration with Python applications.",
+  "general_tags": ["MPI", "Python library"],
+  "additional_tags": {
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Simulation/Testing",
+    "software_type": "Library",
+    "field_of_science": "Computer and Information Sciences",
+    "specific_field_of_science": "Other Computer and Information Sciences"
+  }
+}

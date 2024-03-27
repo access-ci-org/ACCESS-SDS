@@ -1,0 +1,25 @@
+{
+  "software_name": "ml-toolkit-cpu/keras",
+  "comprehensive_overview": "Keras is a high-level neural networks API, written in Python, that is capable of running on top of TensorFlow, CNTK, or Theano. It is designed for enabling fast experimentation with deep neural networks and focuses on being user-friendly, modular, and extensible.",
+  "core_features": [
+    "High-level neural networks API",
+    "Integration with TensorFlow, CNTK, and Theano",
+    "User-friendly and modular design",
+    "Support for both CPU and GPU computations",
+    "Easy and fast prototyping of deep learning models"
+  ],
+  "general_tags": [
+    "Machine Learning",
+    "Deep Learning",
+    "Neural Networks",
+    "Python"
+  ],
+  "additional_tags": {
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Deep Learning Library",
+    "software_type": "Library",
+    "field_of_science": "Computer and Information Sciences",
+    "specific_field": "Artificial Intelligence and Intelligent Systems"
+  }
+}

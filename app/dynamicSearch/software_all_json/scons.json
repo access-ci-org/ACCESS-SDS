@@ -1,0 +1,17 @@
+{
+    "software_name": "SCons",
+    "comprehensive_overview": "SCons is an open-source software construction tool implemented in Python. It is designed to replace traditional build tools like Make with a more powerful and flexible build system.",
+    "core_features": [
+        "Automated build scripts",
+        "Dependency analysis",
+        "Parallel builds",
+        "Cross-platform support",
+        "Extensibility through Python scripts"
+    ],
+    "general_tags": ["build tool", "software construction", "automation", "Python"],
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Software development",
+    "software_type": "Build tool",
+    "field_of_science": "Engineering and Technology"
+}

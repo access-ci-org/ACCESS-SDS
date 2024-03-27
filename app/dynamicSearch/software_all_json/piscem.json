@@ -1,0 +1,22 @@
+{
+    "software_name": "PISCES",
+    "overview": "PISCES (Practical Instructor for SCience Education Simulations) is a suite of interactive computer simulations for introductory college physics. It provides a platform for students to engage in virtual experiments and explore basic concepts in physics.",
+    "core_features": [
+        "Interactive virtual experiments",
+        "Engaging simulations for introductory physics concepts",
+        "Visualization of physics principles",
+        "Educational tool for college-level physics"
+    ],
+    "general_tags": [
+        "Physics",
+        "Simulation",
+        "Education",
+        "Science",
+        "Virtual Experiments"
+    ],
+    "research_discipline": "Science and Engineering Education",
+    "research_area": "",
+    "software_class": "Education",
+    "software_type": "Simulation Software",
+    "field_of_science": "Science and Engineering Education"
+}

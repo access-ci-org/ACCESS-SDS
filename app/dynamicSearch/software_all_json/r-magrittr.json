@@ -1,0 +1,23 @@
+{
+    "software_name": "r-magrittr",
+    "comprehensive_overview": "Magrittr is an R package that provides a powerful and expressive syntax for data manipulation. It enables users to create pipelines for easier and more readable code, allowing for a more efficient workflow in data analysis and manipulation tasks.",
+    "core_features": [
+        "Piping operator %>% for chaining functions together",
+        "Improving code readability and maintainability",
+        "Facilitating data manipulation and transformation tasks",
+        "Integration with other tidyverse packages"
+    ],
+    "general_tags": [
+        "R package",
+        "Data manipulation",
+        "Workflow optimization",
+        "Syntax improvement"
+    ],
+    "additional_tags": {
+        "research_discipline": "Statistics and Probability",
+        "research_area": "Data Science",
+        "software_class": "Library",
+        "software_type": "Data analysis",
+        "field_of_science": "Mathematics"
+    }
+}

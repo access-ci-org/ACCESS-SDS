@@ -1,0 +1,18 @@
+{
+    "software_name": "QJson",
+    "comprehensive_overview": "QJson is a Qt-based library that maps JSON data to QVariant objects. It allows for easy JSON serialization and deserialization in Qt applications.",
+    "core_features": [
+        "Parsing JSON data into QVariant objects",
+        "Generating JSON data from QVariant objects",
+        "Error handling for JSON parsing",
+        "Integration with Qt applications"
+    ],
+    "general_tags": ["JSON", "Qt", "serialization", "deserialization"],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Library",
+        "software_type": "Serialization/Deserialization",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

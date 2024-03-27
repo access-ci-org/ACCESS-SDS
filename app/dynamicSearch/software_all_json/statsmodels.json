@@ -1,0 +1,21 @@
+{
+    "software_name": "statsmodels",
+    "comprehensive_overview": "Statsmodels is a Python module that provides classes and functions for the estimation of many different statistical models, as well as for conducting statistical tests, and statistical data exploration. It also includes machine learning algorithms, such as clustering algorithms and supervised learning models.",
+    "core_features": [
+        "Estimation of statistical models",
+        "Statistical tests",
+        "Data exploration",
+        "Machine learning algorithms"
+    ],
+    "general_tags": [
+        "Statistics",
+        "Data Analysis",
+        "Machine Learning",
+        "Python"
+    ],
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Library",
+    "software_type": "Data Analysis and Statistics",
+    "field_of_science": "Statistics and Probability"
+}

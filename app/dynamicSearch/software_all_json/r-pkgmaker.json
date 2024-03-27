@@ -1,0 +1,21 @@
+{
+    "software_name": "r-pkgmaker",
+    "comprehensive_overview": "r-pkgmaker is an R package that helps in building R packages. It assists in automating various aspects of the package creation process, including creating the package structure, writing package documentation, and running package tests.",
+    "core_features": [
+        "Automates package creation process",
+        "Assists in creating package structure",
+        "Facilitates package documentation writing",
+        "Supports running package tests"
+    ],
+    "general_tags": [
+        "R package development",
+        "Automation",
+        "Package documentation",
+        "Testing"
+    ],
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Development Tools",
+    "software_type": "Library/Tool",
+    "field_of_science": "Other Natural Sciences"
+}

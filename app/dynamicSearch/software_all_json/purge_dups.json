@@ -1,0 +1,13 @@
+{
+    "software_name": "purge_dups",
+    "comprehensive_overview": "purge_dups is a tool designed for the elimination of duplicate or repetitive DNA sequences in genomes. It is particularly useful in analyzing and cleaning up repetitive elements in genomic sequences.",
+    "core_features": "1. Identification and removal of duplicate DNA sequences. 2. Efficient cleaning of repetitive sequences within genomes. 3. Improved genome assembly by eliminating redundancy. 4. Customizable parameters for tailored sequence analysis.",
+    "general_tags": ["bioinformatics", "genomics", "DNA sequences"],
+    "additional_tags": {
+        "research_discipline": "Genomics",
+        "research_area": "Genomic sequencing",
+        "software_class": "Sequence Analysis",
+        "software_type": "Bioinformatics Tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

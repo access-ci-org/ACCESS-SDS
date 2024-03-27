@@ -1,0 +1,28 @@
+{
+    "software_name": "Qt5",
+    "comprehensive_overview": "Qt is a comprehensive cross-platform C++ application framework that is widely used for developing application software with a graphical user interface (GUI), and also used for developing non-GUI programs such as command-line tools and consoles for servers. It allows developers to write code once and deploy it across various desktop, mobile, and embedded operating systems without rewriting the codebase. Qt5 is the latest version of the Qt development framework.",
+    "core_features": [
+        "Cross-platform development", 
+        "Graphical User Interface (GUI) development", 
+        "Application development", 
+        "Object-oriented programming in C++", 
+        "Signal-slot mechanism", 
+        "Threading support", 
+        "OpenGL integration", 
+        "Localization and internationalization", 
+        "Qt Quick for rapid UI development"
+    ],
+    "general_tags": [
+        "Software Development", 
+        "Cross-Platform", 
+        "GUI Development", 
+        "C++ Framework"
+    ],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Development Framework",
+        "software_type": "Application Development",
+        "field_of_science": "Engineering and Technology"
+    }
+}

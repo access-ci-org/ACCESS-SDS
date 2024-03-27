@@ -1,0 +1,23 @@
+{
+  "software_name": "r-maptools",
+  "comprehensive_overview": "r-maptools is an R package that provides various tools for reading and handling spatial data in R. It offers functions to read, write, and manipulate spatial data formats commonly used in geographic information systems (GIS).",
+  "core_features": [
+    "Read and write spatial data in various formats (Shapefiles, KML, GeoJSON, etc.)",
+    "Perform spatial data manipulations and transformations",
+    "Overlay spatial data layers and conduct spatial operations",
+    "Visualize spatial data and create maps"
+  ],
+  "general_tags": [
+    "R package",
+    "Spatial data handling",
+    "Geographic Information Systems (GIS)",
+    "Data visualization"
+  ],
+  "additional_tags": {
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Data processing, analysis, and visualization",
+    "software_type": "Library/Package",
+    "field_of_science": "Other Natural Sciences"
+  }
+}

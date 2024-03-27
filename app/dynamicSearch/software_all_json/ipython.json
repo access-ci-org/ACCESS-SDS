@@ -1,0 +1,25 @@
+{
+    "software_name": "IPython",
+    "comprehensive_overview": "IPython is a powerful interactive command shell that provides a robust and flexible environment for interactive computing. It offers features such as easy-to-use, high-performance tools for parallel computing, data visualization, and data analysis.",
+    "core_features": [
+        "Interactive Python shell with enhancements",
+        "Support for data visualization and data analysis",
+        "Parallel computing capabilities",
+        "Rich media integration",
+        "Integration with other programming languages"
+    ],
+    "general_tags": [
+        "Command Shell",
+        "Interactive Computing",
+        "Data Visualization",
+        "Parallel Computing",
+        "Data Analysis"
+    ],
+    "additional_tags": {
+        "research_discipline": "Computer Science",
+        "research_area": "Software Engineering, Systems, and Development",
+        "software_class": "Interpreter",
+        "software_type": "Development Tools",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

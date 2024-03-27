@@ -1,0 +1,13 @@
+{
+  "software_name": "VTune",
+  "comprehensive_overview": "VTune Profiler is a performance profiling tool for optimizing application performance on Intel architecture. It provides deep insights to help you understand and improve performance and power characteristics of your application.",
+  "core_features": "Some core features of VTune include hardware event-based sampling collection, advanced hotspots analysis, threading and memory analysis, platform power and energy analysis, and integration with popular IDEs.",
+  "general_tags": ["performance optimization", "profiling", "Intel architecture"],
+  "additional_tags": {
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Development Tools",
+    "software_type": "Profiling Tool",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

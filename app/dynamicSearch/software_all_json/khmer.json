@@ -1,0 +1,24 @@
+```json
+{
+    "software_name": "Khmer",
+    "comprehensive_overview": "Khmer is a set of tools for working with DNA sequence data that is extremely efficient both in terms of speed and memory consumption. It is designed to pre-process sequencing data to reduce the memory requirements of de Bruijn graph based assemblers for metagenome data. The tools can be used for counting k-mers and finding k-mers that occur many times, trimming and error-trimming data, digital normalization of reads, and partitioning large data sets.",
+    "core_features": [
+        "K-mer counting",
+        "Data trimming and error-trimming",
+        "Digital normalization of reads",
+        "Partitioning large data sets"
+    ],
+    "general_tags": [
+        "Bioinformatics",
+        "HPC tools",
+        "Computational software"
+    ],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Research Tools",
+        "software_type": "Bioinformatics Tool",
+        "field_of_science": "Biological Sciences"
+    }
+}
+```

@@ -1,0 +1,24 @@
+{
+    "software_name": "PAX",
+    "comprehensive_overview": "PAX is a lightweight container tool for packaging container images in a single archive. It aims to simplify the process of building and distributing application containers.",
+    "core_features": [
+        "Packaging container images",
+        "Building application containers",
+        "Distributing containerized applications"
+    ],
+    "general_tags": [
+        "Containerization",
+        "Packaging",
+        "Distributed Computing"
+    ],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Containerization tool",
+        "software_type": "DevOps tool",
+        "field_of_science": [
+            "Computer and Information Sciences",
+            "Engineering and Technology"
+        ]
+    }
+}

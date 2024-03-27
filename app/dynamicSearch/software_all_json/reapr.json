@@ -1,0 +1,13 @@
+{
+    "software_name": "reapr",
+    "comprehensive_overview": "Reapr is a software tool for genome assembly evaluation and improvement, specifically designed to work with de novo assemblies. It provides evaluation metrics to identify errors in assemblies and offers tools to correct these errors for improved genome assembly quality.",
+    "core_features": "1. Genome assembly evaluation using various metrics.\n2. Error correction tools to improve assembly quality.\n3. Visualization of assembly errors and corrections.\n4. Compatible with various assembly formats.\n5. Command-line interface for easy usage.",
+    "general_tags": ["Genome Assembly", "Assembly Evaluation", "Error Correction", "Bioinformatics"],
+    "additional_tags": {
+        "research_discipline": "Genomics",
+        "research_area": "Genome Assembly",
+        "software_class": "Quality Assessment and Improvement",
+        "software_type": "Tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

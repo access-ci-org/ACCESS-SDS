@@ -1,0 +1,17 @@
+{
+    "software_name": "Ray Project",
+    "comprehensive_overview": "Ray is a high-performance distributed execution framework that enables applications to run seamlessly across a distributed cluster of resources. It offers a simple API for parallel and distributed Python and remote execution capabilities.",
+    "core_features": "1. Scalable and high-performance distributed computing\n2. Supports parallel and distributed Python applications\n3. Remote execution capabilities\n4. Simple API for ease of use\n5. Task parallelism and actor-based programming model",
+    "general_tags": [
+        "distributed computing",
+        "parallel computing",
+        "Python"
+    ],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Distributed Computing Framework",
+        "software_type": "Framework",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

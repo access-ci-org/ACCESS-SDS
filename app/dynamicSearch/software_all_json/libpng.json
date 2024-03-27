@@ -1,0 +1,23 @@
+{
+  "software_name": "libpng",
+  "comprehensive_overview": "Libpng is the official PNG reference library, used to support the PNG (Portable Network Graphics) format for storing raster images. It provides a set of functions for creating, reading, and manipulating PNG image files.",
+  "core_features": [
+    "Support for reading and writing PNG images",
+    "RGBA, indexed-color, grayscale, and bit-depth transformations",
+    "Compression and decompression support",
+    "Interlacing and filtering options",
+    "Integration with various programming languages and platforms"
+  ],
+  "general_tags": [
+    "Image Processing",
+    "Graphics Library",
+    "Raster Images"
+  ],
+  "additional_tags": {
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Library",
+    "software_type": "Data Handling",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

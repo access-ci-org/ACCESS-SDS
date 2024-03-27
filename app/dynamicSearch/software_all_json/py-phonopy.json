@@ -1,0 +1,13 @@
+{
+    "software_name": "py-phonopy",
+    "comprehensive_overview": "Py-phonopy is a Python library for performing phonon calculations using the finite displacement method. It is specifically designed for calculating phonon properties in materials using the supercell approach.",
+    "core_features": "1. Calculation of phonon band structures.\n2. Generation of density of states (DOS) and phonon dispersion curves.\n3. Calculation of phonon thermal properties such as specific heat and thermal conductivity.\n4. Handling of thermal properties at different temperatures.",
+    "general_tags": ["phonon calculations", "materials science", "supercell approach"],
+    "additional_tags": {
+        "research_discipline": "Condensed Matter Physics",
+        "research_area": "Materials Science",
+        "software_class": "Computational software",
+        "software_type": "Python library",
+        "field_of_science": "Physical Sciences"
+    }
+}

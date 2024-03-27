@@ -1,0 +1,24 @@
+{
+   "software_name": "CellRank",
+   "comprehensive_overview": "CellRank is a Python library for identifying cell transitions and their drivers in single-cell RNA sequencing data. It provides a comprehensive framework for modeling cell fate decisions using RNA velocity, transition matrices, and attractor inference.",
+   "core_features": [
+      "Cell fate decision modeling",
+      "Identification of cell transitions",
+      "Driver analysis of transitions",
+      "RNA velocity analysis",
+      "Transition matrices",
+      "Attractor inference"
+   ],
+   "general_tags": [
+      "Single-cell RNA sequencing",
+      "Cell fate decisions",
+      "Cell transitions",
+      "Transcriptional dynamics",
+      "Python library"
+   ],
+   "research_discipline": "Bioinformatics",
+   "research_area": "Computational Biology",
+   "software_class": "Library",
+   "software_type": "Python Library",
+   "field_of_science": "Biological Sciences"
+}

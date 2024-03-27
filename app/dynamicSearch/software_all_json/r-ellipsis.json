@@ -1,0 +1,17 @@
+{
+  "software_name": "r-ellipsis",
+  "overview": "The r-ellipsis package provides tools for working with the "...", which can be used to enforce lazy-load package dependency and avoid unnecessary loading. It is particularly useful for optimizing the loading of packages within R scripts and functions.",
+  "core_features": [
+    "Enables lazy-loading of package dependencies",
+    "Avoids unnecessary loading of packages",
+    "Optimizes loading of packages within R scripts and functions"
+  ],
+  "general_tags": ["R package", "Package Management", "Optimization"],
+  "additional_tags": {
+    "research_discipline": "Statistics and Probability",
+    "research_area": "Statistical Computing",
+    "software_class": "Package",
+    "software_type": "Library",
+    "field_of_science": "Mathematics"
+  }
+}

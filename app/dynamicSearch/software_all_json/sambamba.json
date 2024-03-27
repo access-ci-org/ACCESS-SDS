@@ -1,0 +1,13 @@
+{
+	"software_name": "sambamba",
+	"comprehensive_overview": "Sambamba is a high-performance tool and library for working with SAM/BAM files. It provides efficient and parallel processing of SAM and BAM files for tasks such as sorting, merging, indexing, and querying, with a focus on speed and reduced memory footprint.",
+	"core_features": "1. Sorting BAM files with minimal memory usage.\n2. Merging BAM files efficiently.\n3. Indexing and querying BAM files quickly.\n4. Parallel processing for improved performance.\n5. Support for various operations on SAM/BAM files.",
+	"general_tags": ["SAM/BAM files", "High-performance tool", "Parallel processing", "Genomics"],
+	"additional_tags": {
+		"research_discipline": [],
+		"research_area": [],
+		"software_class": "Bioinformatics and HPC tools",
+		"software_type": "Computational software",
+		"field_of_science": "Biological Sciences"
+	}
+}

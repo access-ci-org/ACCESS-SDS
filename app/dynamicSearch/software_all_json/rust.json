@@ -1,0 +1,24 @@
+```json
+{
+  "software_name": "Rust",
+  "comprehensive_overview": "Rust is a multi-paradigm system programming language focused on safety, speed, and concurrency.",
+  "core_features": [
+    "Memory safety without garbage collection",
+    "Concurrency without data races",
+    "Minimal runtime",
+    "Low-level control like C",
+    "Strong type system",
+    "Pattern matching",
+    "Traits for code reuse",
+    "Cargo - the package manager and build system"
+  ],
+  "general_tags": ["Programming Language", "System Programming", "Concurrency"],
+  "additional_tags": {
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Programming Language",
+    "software_type": "Compiler",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}
+```  

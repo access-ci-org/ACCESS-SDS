@@ -1,0 +1,24 @@
+{
+  "software_name": "BioContainers",
+  "comprehensive_overview": "BioContainers is a project that provides bioinformatics tools and workflows in a containerized format, making it easier to package, distribute, and run bioinformatics software in a reproducible manner.",
+  "core_features": [
+    "Containerized bioinformatics tools and workflows",
+    "Facilitates reproducibility in bioinformatics analyses",
+    "Enables easy packaging and distribution of bioinformatics software",
+    "Supports multiple container technologies like Docker and Singularity"
+  ],
+  "general_tags": [
+    "bioinformatics",
+    "containers",
+    "reproducibility",
+    "software packaging",
+    "workflow management"
+  ],
+  "additional_tags": {
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Bioinformatics Tools",
+    "software_type": "Containerization",
+    "field_of_science": "Biological Sciences"
+  }
+}

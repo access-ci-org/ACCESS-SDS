@@ -1,0 +1,23 @@
+{
+    "software_name": "FastTree",
+    "comprehensive_overview": "FastTree is a tool for inferring approximately-maximum-likelihood phylogenetic trees from alignments of nucleotide or protein sequences. FastTree can handle alignments with up to a few thousand sequences and has been designed to make trees with the minimum scale up to 100,000 sequences faster by approximating maximum-likelihood with heuristics.",
+    "core_features": [
+        "Inference of approximately-maximum-likelihood phylogenetic trees",
+        "Support for both nucleotide and protein sequences",
+        "Efficient handling of alignments with thousands of sequences",
+        "Speed optimization for large-scale datasets"
+    ],
+    "general_tags": [
+        "Phylogenetics",
+        "Bioinformatics",
+        "Computational Biology",
+        "Sequence Analysis"
+    ],
+    "additional_tags": {
+        "research_discipline": "Bioinformatics",
+        "research_area": "Phylogenetics",
+        "software_class": "Phylogenetic Tree Inference",
+        "software_type": "Bioinformatics Tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

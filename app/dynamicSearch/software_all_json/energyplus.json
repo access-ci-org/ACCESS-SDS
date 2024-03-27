@@ -1,0 +1,25 @@
+{
+    "software_name": "EnergyPlus",
+    "comprehensive_overview": "EnergyPlus is a whole building energy simulation program that engineers, architects, and researchers use to model both energy consumption and water use in buildings. It allows users to evaluate the combined performance of building energy and environmental control systems.",
+    "core_features": [
+        "Detailed building energy and environmental simulation",
+        "Support for various HVAC systems and control strategies",
+        "Advanced fenestration modeling capabilities",
+        "Weather data integration for accurate simulations",
+        "Parametric analysis and optimization features"
+    ],
+    "general_tags": [
+        "energy simulation",
+        "building performance",
+        "environmental control",
+        "parametric analysis",
+        "building energy consumption"
+    ],
+    "additional_tags": {
+        "research_discipline": "Environmental Engineering",
+        "research_area": "Building Energy Efficiency",
+        "software_class": "Building Performance Simulation",
+        "software_type": "Simulation Software",
+        "field_of_science": "Engineering and Technology"
+    }
+}

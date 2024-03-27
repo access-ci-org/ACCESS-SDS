@@ -1,0 +1,13 @@
+{
+  "software_name": "Amphora2",
+  "comprehensive_overview": "Amphora2 is a bioinformatics tool designed for the accurate and rapid estimation of phylogenetic placement of metagenomic reads. It facilitates the taxonomic classification of microbial sequences within complex environmental samples.",
+  "core_features": "1. Phylogenetic placement of metagenomic reads\n2. Taxonomic classification of microbial sequences\n3. Accurate estimation of phylogenetic relationships\n4. Rapid analysis of complex environmental samples",
+  "general_tags": ["bioinformatics", "metagenomics", "phylogenetics"],
+  "additional_tags": {
+    "research_discipline": "Biological Sciences",
+    "research_area": "Ecology",
+    "software_class": "Bioinformatics tool",
+    "software_type": "Computational software",
+    "field_of_science": "Biological Sciences"
+  }
+}

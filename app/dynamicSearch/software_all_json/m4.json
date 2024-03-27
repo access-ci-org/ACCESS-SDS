@@ -1,0 +1,24 @@
+{
+    "software_name": "m4",
+    "comprehensive_overview": "m4 is a general-purpose macro processor designed to be used with any programming language or data file format. It is commonly used to generate source code or text files and is often used as part of the build process for software development.",
+    "core_features": [
+        "Macro processing capabilities",
+        "Text manipulation and generation",
+        "Support for defining and calling macros",
+        "Conditional processing",
+        "Loop constructs"
+    ],
+    "general_tags": [
+        "macro processor",
+        "text processing",
+        "software development",
+        "build process"
+    ],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Development Tools",
+        "software_type": "Compiler",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

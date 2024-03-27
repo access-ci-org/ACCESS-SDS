@@ -1,0 +1,24 @@
+{
+    "software_name": "tqdm",
+    "comprehensive_overview": "tqdm is a fast, extensible progress bar for loops and pipelines in Python. It provides a visual and text-based progress bar to indicate the progress of iterations.",
+    "core_features": [
+        "Easy to integrate and use in Python scripts",
+        "Customizable progress bar with different styles and features",
+        "Supports both vertical and horizontal bars",
+        "Allows nested progress bars in loops",
+        "Can be used with any iterable in Python"
+    ],
+    "general_tags": [
+        "Progress Bar",
+        "Python",
+        "Data Visualization",
+        "Productivity Tool"
+    ],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Utility",
+        "software_type": "Package",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

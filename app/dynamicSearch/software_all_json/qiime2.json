@@ -1,0 +1,23 @@
+{
+    "software_name": "QIIME 2",
+    "comprehensive_overview": "QIIME 2 is a powerful and extensible microbiome analysis platform that is free, open-source, and community-driven. It provides tools for microbial community analysis and interpretation from raw DNA sequencing data.",
+    "core_features": [
+        "Quality control and data preprocessing",
+        "Microbial diversity analysis",
+        "Taxonomic classification",
+        "Metagenomics and functional prediction",
+        "Interactive visualizations",
+        "Machine learning workflows"
+    ],
+    "general_tags": [
+        "Microbiome analysis",
+        "Bioinformatics",
+        "DNA sequencing",
+        "Microbial ecology"
+    ],
+    "research_discipline": "Bioinformatics",
+    "research_area": "Microbiome research",
+    "software_class": "Analysis tool",
+    "software_type": "Bioinformatics software",
+    "field_of_science": "Biological Sciences"
+}

@@ -1,0 +1,13 @@
+{
+    "software_name": "glew",
+    "comprehensive_overview": "The OpenGL Extension Wrangler Library (GLEW) is a cross-platform open-source C/C++ extension loading library. It assists in accessing OpenGL extensions and functions dynamically, providing a simple and lightweight solution for managing OpenGL extensions.",
+    "core_features": "1. Cross-platform support\n2. Dynamic loading of OpenGL extensions\n3. Lightweight and easy to use\n4. Simplifies managing OpenGL extensions\n5. Open-source with a permissive license",
+    "general_tags": ["OpenGL", "Extension Loader", "C/C++ Library"],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Library",
+        "software_type": "Tool",
+        "field_of_science": "Computer Science"
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "software_name": "Velvet",
+    "comprehensive_overview": "Velvet is a de novo genomic assembler specially designed for short read sequencing technologies, such as those produced by the Illumina platform. It is efficient in handling large volumes of data and is widely used for assembling genomes, transcriptomes, and metagenomes.",
+    "core_features": [
+        "De novo genome assembly",
+        "Designed for short read sequencing data",
+        "Efficient handling of large datasets",
+        "Suitable for assembling genomes, transcriptomes, and metagenomes"
+    ],
+    "general_tags": [
+        "Genomics",
+        "Bioinformatics",
+        "Sequencing",
+        "Assembly"
+    ],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Genome Assembler",
+        "software_type": "Bioinformatics Tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

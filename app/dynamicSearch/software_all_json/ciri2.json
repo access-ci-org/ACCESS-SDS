@@ -1,0 +1,13 @@
+{
+    "software_name": "CIRI2",
+    "comprehensive_overview": "CIRI2 (CircRNA Identifier 2) is a comprehensive computational tool designed to efficiently and accurately identify circular RNAs (circRNAs) from high-throughput sequencing data. CircRNAs are a type of non-coding RNA with crucial functions in gene regulation and various biological processes.",
+    "core_features": "1. Detection of circRNAs: CIRI2 employs an algorithm that utilizes back-spliced reads to detect circRNAs within RNA-Seq data.\n2. High accuracy: The tool integrates multiple strategies to enhance the accuracy of circRNA identification.\n3. Multiple-file input: CIRI2 supports the analysis of multiple RNA-Seq samples simultaneously.\n4. Visualization capabilities: Users can visualize the identified circRNAs and their characteristics through graphical outputs.\n5. Customizable parameters: The tool offers flexibility in adjusting parameters based on user requirements.",
+    "general_tags": ["Bioinformatics", "Computational Biology", "RNA-Seq", "Circular RNA"],
+    "additional_tags": {
+        "research_discipline": "Genetics",
+        "research_area": "Molecular Biology",
+        "software_class": "Bioinformatics Tool",
+        "software_type": "Analysis Tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

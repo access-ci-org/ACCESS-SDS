@@ -1,0 +1,13 @@
+{
+  "software_name": "OpenPMIX",
+  "comprehensive_overview": "OpenPMIX is an open-source package specifically designed for multi-party computation (MPC) applications, providing efficient and secure protocols for combining data from multiple parties without revealing individual inputs. It supports a range of MPC protocols and functionalities for privacy-preserving computations.",
+  "core_features": "Supports various MPC protocols, efficient and secure data combination, privacy-preserving computations, open-source and customizable for different applications.",
+  "general_tags": ["MPC", "privacy-preserving computations", "data security", "open-source"],
+  "additional_tags": {
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Privacy-Preserving Computation Framework",
+    "software_type": "Library/Toolkit",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

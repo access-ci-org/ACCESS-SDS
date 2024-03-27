@@ -1,0 +1,13 @@
+```json
+{
+    "software_name": "Pythia",
+    "comprehensive_overview": "Pythia is a software package for event generation for high-energy collisions, implementing a number of hard scattering models for hadron collisions. It is commonly used in theoretical physics and high-energy physics research.",
+    "core_features": "Event generation for high-energy collisions, implementation of hard scattering models, simulation of hadron collisions.",
+    "general_tags": ["Event Generation", "High-Energy Collisions", "Theoretical Physics", "Particle Physics"],
+    "research_discipline": "Particle and High-Energy Physics",
+    "research_area": "",
+    "software_class": "Simulation",
+    "software_type": "Scientific Software",
+    "field_of_science": "Physical Sciences"
+}
+```

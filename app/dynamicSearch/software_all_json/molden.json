@@ -1,0 +1,13 @@
+{
+  "software_name": "Molden",
+  "comprehensive_overview": "Molden is a molecular visualization program specifically designed for the display and analysis of molecular structures. It provides various tools for visualizing molecular orbitals, electron densities, and other properties of chemical systems.",
+  "core_features": "Molden allows users to visualize molecular structures in 3D, display molecular orbitals, electron densities, and electrostatic potential maps, analyze vibrational modes and frequencies, and perform various types of molecular calculations.",
+  "general_tags": ["molecular visualization", "chemistry", "molecular modeling"],
+  "additional_tags": {
+    "research_discipline": "Physical Chemistry",
+    "research_area": "Quantum Chemistry",
+    "software_class": "Visualization Software",
+    "software_type": "Molecular Visualization Tool",
+    "field_of_science": "Chemical Sciences"
+  }
+} 

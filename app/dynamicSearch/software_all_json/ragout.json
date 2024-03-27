@@ -1,0 +1,21 @@
+{
+  "software_name": "Ragout",
+  "comprehensive_overview": "Ragout is a reference-assisted assembly tool that reconstructs a set of genomic sequences using a reference genome and a set of related genomes.",
+  "core_features": [
+    "Reference-assisted genome assembly",
+    "Reconstruction of genomic sequences",
+    "Utilizes a reference genome and related genomes"
+  ],
+  "general_tags": [
+    "genome assembly",
+    "genomic analysis",
+    "bioinformatics"
+  ],
+  "additional_tags": {
+    "research_discipline": "Biological Sciences",
+    "research_area": "Genetics",
+    "software_class": "Genome Assembly",
+    "software_type": "Tool",
+    "field_of_science": "Biological Sciences"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "software_name": "ml-toolkit-cpu",
+  "comprehensive_overview": "The ml-toolkit-cpu is a machine learning toolkit that runs on central processing units (CPUs). It provides a collection of algorithms and tools for tasks such as classification, regression, clustering, and more.",
+  "core_features": "1. Support for various machine learning algorithms. 2. Easy integration with CPU-based systems. 3. Scalability for handling large datasets. 4. Performance optimization for CPU execution.",
+  "general_tags": ["machine learning", "CPU-based", "toolkit"],
+  "additional_tags": {
+    "research_discipline": "Computer and Information Sciences",
+    "research_area": "Artificial Intelligence and Intelligent Systems",
+    "software_class": "Machine Learning",
+    "software_type": "Toolkit",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

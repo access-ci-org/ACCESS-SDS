@@ -1,0 +1,22 @@
+{
+    "software_name": "FoldSeek",
+    "overview": "FoldSeek is a Python package for predicting RNA secondary structures using deep learning models. It utilizes Convolutional Neural Networks (CNNs) to learn the complex patterns in RNA sequences and predict the secondary structures.",
+    "core_features": [
+        "Prediction of RNA secondary structures",
+        "Utilizes deep learning models, specifically CNNs",
+        "Python-based package",
+        "Allows for training custom models"
+    ],
+    "general_tags": [
+        "RNA secondary structure prediction",
+        "Deep learning models",
+        "Python package"
+    ],
+    "additional_tags": {
+        "research_discipline": "Biological Sciences",
+        "research_area": "Bioinformatics",
+        "software_class": "Computational Biology",
+        "software_type": "Library",
+        "field_of_science": "Biological Sciences"
+    }
+}

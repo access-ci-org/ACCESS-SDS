@@ -1,0 +1,23 @@
+{
+  "software_name": "PhyloFishEr",
+  "comprehensive_overview": "PhyloFishEr is a software tool designed for the computational inference of evolutionarily conserved elements in non-coding RNA sequences. It employs a phylogenetic approach to identify conserved regions that are likely to have functional importance.",
+  "core_features": [
+    "Identifying evolutionarily conserved elements in non-coding RNA sequences",
+    "Phylogenetic approach for accurate inference",
+    "Detection of functional elements within RNA sequences",
+    "Visualization of conservation patterns"
+  ],
+  "general_tags": [
+    "Bioinformatics",
+    "Computational Biology",
+    "Phylogenetics",
+    "Non-coding RNA"
+  ],
+  "additional_tags": {
+    "research_discipline": "Genetics",
+    "research_area": "Bioinformatics",
+    "software_class": "Bioinformatics Tool",
+    "software_type": "Analysis Tool",
+    "field_of_science": "Biological Sciences"
+  }
+}
