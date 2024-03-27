@@ -1,4 +1,3 @@
-```json
 {
     "software_name": "pytest",
     "comprehensive_overview": "Pytest is a testing framework that makes it easy to write simple and scalable tests in Python. It is a popular testing framework used for testing Python programs and libraries.",
@@ -20,4 +19,3 @@
     "software_type": "Testing framework",
     "field_of_science": "Computer and Information Sciences"
 }
-```

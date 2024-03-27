@@ -1,6 +1,6 @@
 {
   "software_name": "py-cftime",
-  "comprehensive_overview": "py-cftime is a Python library that provides functions to manipulate dates and times in various calendars, including the Gregorian, "Julian, proleptic Gregorian, and 360-day calendars. It is designed to work with the time scales used in climate and weather sciences.",
+  "comprehensive_overview": "py-cftime is a Python library that provides functions to manipulate dates and times in various calendars, including the Gregorian, Julian, proleptic Gregorian, and 360-day calendars. It is designed to work with the time scales used in climate and weather sciences.",
   "core_features": "1. Conversion of dates and times between different calendars\n2. Arithmetic operations on dates and times\n3. Handling time intervals and durations\n4. Support for common date and time formats\n5. Timestamp manipulation and formatting",
   "general_tags": ["Python library", "Date and Time manipulation", "Calendar conversion"],
   "additional_tags": {

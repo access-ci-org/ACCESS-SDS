@@ -1,4 +1,3 @@
-```json
 {
     "software_name": "ucsctools",
     "comprehensive_overview": "UCSC Genome Browser Utilities, a set of tools that interact with the UCSC Genome Browser database. These tools facilitate various genomic data manipulation tasks.",
@@ -12,4 +11,3 @@
         "field_of_science": "Biological Sciences"
     }
 }
-```

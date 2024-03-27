@@ -1,4 +1,3 @@
-```json
 {
   "software_name": "TargetP",
   "comprehensive_overview": "TargetP is a bioinformatics tool used for predicting the subcellular localization of eukaryotic proteins.",
@@ -16,4 +15,3 @@
   "software_type": "Prediction Software",
   "field_of_science": "Biological Sciences"
 }
-```  

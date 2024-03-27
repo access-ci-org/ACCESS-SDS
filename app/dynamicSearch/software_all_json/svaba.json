@@ -1,4 +1,3 @@
-```json
 {
     "software_name": "SVABA",
     "comprehensive_overview": "SVABA is a structural variation (SV) detection tool that identifies complex genomic rearrangements from sequencing data including tumor-normal comparisons. It is designed to capture deletions, insertions, inversions, duplications, and translocations in a wide range of organisms.",
@@ -21,4 +20,3 @@
         "field_of_science": "Biological Sciences"
     }
 }
-```

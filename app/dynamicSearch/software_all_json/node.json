@@ -1,4 +1,3 @@
-```json
 {
     "software_name": "Node",
     "overview": "Node.js is an open-source, cross-platform JavaScript runtime environment that executes JavaScript code outside of a web browser. It allows developers to use JavaScript for server-side scripting and runs scripts server-side to produce dynamic web page content before returning this content to the client's web browser.",
@@ -12,4 +11,3 @@
         "field_of_science": "Computer and Information Sciences"
     }
 }
-```

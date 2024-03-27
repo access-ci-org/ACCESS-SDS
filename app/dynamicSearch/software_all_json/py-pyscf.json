@@ -1,10 +1,7 @@
 {
   "software_name": "PySCF",
   "comprehensive_overview": "PySCF is an open-source Python library for quantum chemistry computations. It provides a wide range of quantum chemistry methods to solve the electronic structure of molecules and solids.",
-  "core_features": "1. Implements various quantum chemistry methods such as Hartree-Fock, DFT, CCSD(T), MP2, etc.
-2. Allows for efficient calculations of molecular properties like energies, gradients, and frequencies.
-3. Offers interfaces to popular quantum chemistry packages like NWChem, Gaussian, and Molpro.
-4. Supports parallel computation for large systems using MPI.",
+  "core_features": "1. Implements various quantum chemistry methods such as Hartree-Fock, DFT, CCSD(T), MP2, etc.\n2. Allows for efficient calculations of molecular properties like energies, gradients, and frequencies.\n3. Offers interfaces to popular quantum chemistry packages like NWChem, Gaussian, and Molpro.\n4. Supports parallel computation for large systems using MPI.",
   "general_tags": ["quantum chemistry", "computational chemistry", "quantum mechanics"],
   "research_discipline": "Physical Chemistry",
   "research_area": "Quantum Chemistry",

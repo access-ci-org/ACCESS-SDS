@@ -1,4 +1,3 @@
-```json
 {
     "software_name": "STREAM",
     "comprehensive_overview": "STREAM (STreaming SIMD Extensions 2 through Array Manipulation) is a synthetic benchmark program that measures sustainable memory bandwidth and the corresponding computation rate for simple vector kernels.",
@@ -16,4 +15,3 @@
         "field_of_science": "Engineering and Technology"
     }
 }
-```

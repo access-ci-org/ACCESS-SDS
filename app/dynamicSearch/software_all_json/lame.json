@@ -1,4 +1,3 @@
-```json
 {
     "software": "LAME",
     "comprehensive_overview": "LAME is a high-quality MPEG Audio Layer III (MP3) encoder licensed under the GNU Lesser General Public License (LGPL). It is considered one of the best MP3 encoders available.",
@@ -10,4 +9,3 @@
     "software_type": "Encoder",
     "field_of_science": "Other Engineering and Technologies"
 }
-```

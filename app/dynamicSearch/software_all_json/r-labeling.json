@@ -1,4 +1,3 @@
-```json
 {
     "software_name": "r-labeling",
     "comprehensive_overview": "An R package for efficient graph-based ad-hoc labeling of nodes and edges in the context of network visualizations.",
@@ -17,4 +16,3 @@
         "field_of_science": "Computer and Information Sciences"
     }
 }
-```

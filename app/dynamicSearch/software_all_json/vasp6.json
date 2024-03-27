@@ -1,4 +1,3 @@
-```json
 {
     "software_name": "VASP6",
     "comprehensive_overview": "Vienna Ab initio Simulation Package (VASP) is a package for performing ab initio quantum-mechanical molecular dynamics (MD) using pseudopotentials and a plane wave basis set.",
@@ -19,4 +18,3 @@
     "software_type": "Quantum Chemistry Software",
     "field_of_science": "Chemical Sciences"
 }
-```

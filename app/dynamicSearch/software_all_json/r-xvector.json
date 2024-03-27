@@ -1,4 +1,3 @@
-```json
 {
     "software_name": "r-xvector",
     "comprehensive_overview": "r-xvector is an R package that provides a compact and efficient data structure for storing sequences, generally DNA and RNA, with a focus on memory efficiency and a range of operations optimized for large-scale genomic data.",
@@ -12,4 +11,3 @@
         "field_of_science": "Biological Sciences"
     }
 }
-```  

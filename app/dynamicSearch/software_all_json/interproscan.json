@@ -1,4 +1,3 @@
-```json
 {
   "software_name": "InterProScan",
   "comprehensive_overview": "InterProScan is a software tool that allows the functional analysis of protein sequences by classifying them into families and predicting domains and important sites. It combines different protein signature recognition methods in one resource.",
@@ -22,4 +21,3 @@
     "field_of_science": "Biological Sciences"
   }
 }
-```

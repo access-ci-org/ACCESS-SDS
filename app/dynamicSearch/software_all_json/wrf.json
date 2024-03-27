@@ -1,4 +1,3 @@
-```json
 {
     "software_name": "WRF",
     "comprehensive_overview": "The Weather Research and Forecasting (WRF) model is a next-generation mesoscale numerical weather prediction system designed to serve both atmospheric research and operational forecasting needs. It features multiple options for parameterizations, data assimilation techniques, and model domains, allowing for simulations at various spatial and temporal scales.",
@@ -20,4 +19,3 @@
     "software_type": "Meteorological modeling software",
     "field_of_science": "Earth and Environmental Sciences"
 }
-```

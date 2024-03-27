@@ -1,4 +1,3 @@
-```json
 {
     "software_name": "pullseq",
     "comprehensive_overview": "pullseq is a tool for extracting sequence data from a multi-FASTA file based on sequence identifiers. It can extract sequences by exact match, partial match, regular expression, and invert match. It is particularly useful for subsetting sequences from large sequence datasets.",
@@ -10,4 +9,3 @@
     "software_type": "Sequence Analysis Tool",
     "field_of_science": "Biological Sciences"
 }
-```

@@ -1,4 +1,3 @@
-```json
 {
     "software_name": "minizip",
     "comprehensive_overview": "Minizip is a minimalistic, open-source library that provides a simple API to create, read, and update zip files. It is a lightweight solution for working with zip archives in C or C++ projects.",
@@ -23,4 +22,3 @@
         "field_of_science": ""
     }
 }
-```

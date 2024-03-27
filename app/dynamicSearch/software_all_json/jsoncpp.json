@@ -1,4 +1,3 @@
-```json
 {
     "software_name": "jsoncpp",
     "comprehensive_overview": "JsonCpp is a C++ library that allows manipulating JSON data structures. It provides features for parsing, generating, and manipulating JSON data in C++ applications.",
@@ -22,4 +21,3 @@
         "field_of_science": "Computer and Information Sciences"
     }
 }
-```

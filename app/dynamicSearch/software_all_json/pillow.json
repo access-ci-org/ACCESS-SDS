@@ -1,4 +1,3 @@
-```json
 {
   "software_name": "Pillow",
   "comprehensive_overview": "Pillow is a powerful Python Imaging Library (PIL) replacement that adds image processing capabilities to your Python interpreter.",
@@ -15,4 +14,3 @@
     ]
   }
 }
-```

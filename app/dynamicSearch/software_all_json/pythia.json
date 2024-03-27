@@ -1,4 +1,3 @@
-```json
 {
     "software_name": "Pythia",
     "comprehensive_overview": "Pythia is a software package for event generation for high-energy collisions, implementing a number of hard scattering models for hadron collisions. It is commonly used in theoretical physics and high-energy physics research.",
@@ -10,4 +9,3 @@
     "software_type": "Scientific Software",
     "field_of_science": "Physical Sciences"
 }
-```

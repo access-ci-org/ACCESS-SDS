@@ -1,4 +1,3 @@
-```json
 {
     "software_name": "Entrez Direct",
     "comprehensive_overview": "Entrez Direct is a set of UNIX command line tools that provides users with efficient and advanced access to the NCBI's suite of interconnected molecular biology databases, including PubMed, GenBank, BLAST, and more.",
@@ -12,4 +11,3 @@
         "field_of_science": "Natural Sciences"
     }
 }
-```  

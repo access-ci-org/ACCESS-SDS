@@ -1,4 +1,3 @@
-```json
 {
     "software_name": "Pandora",
     "comprehensive_overview": "Pandora is a bioinformatics software tool designed for the sequence-based inference of gene function from large-scale biological data sets. It uses a statistical model to identify gene functions by integrating various types of data, such as gene expression profiles, protein-protein interactions, and evolutionary conservation.",
@@ -10,4 +9,3 @@
     "software_type": "Bioinformatics Tool",
     "field_of_science": "Biological Sciences"
 }
-```

@@ -1,4 +1,3 @@
-```json
 {
     "software_name": "r-htmltable",
     "comprehensive_overview": "r-htmltable is an R package that provides functionality to easily create HTML tables from R objects, allowing users to customize the appearance and style of tables for publication-ready output.",
@@ -17,4 +16,3 @@
         "field_of_science": "Other Computer and Information Sciences"
     }
 }
-```

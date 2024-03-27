@@ -1,92 +1,11 @@
 {
-    "software": [
-        {
-            "name": "Python",
-            "comprehensive_overview": "Python is a high-level, interpreted programming language known for its readability and versatility. It supports multiple programming paradigms and has a comprehensive standard library.",
-            "core_features": "Python's features include dynamic typing, automatic memory management, support for multiple programming paradigms (object-oriented, procedural, functional), extensibility through modules, and a large standard library.",
-            "general_tags": ["programming language", "interpreted language", "scripting language"],
-            "research_discipline": [],
-            "research_area": [],
-            "software_class": "programming language",
-            "software_type": "development tool",
-            "field_of_science": "Computer and Information Sciences"
-        },
-        {
-            "name": "GCC (GNU Compiler Collection)",
-            "comprehensive_overview": "GCC is a compiler system developed by the GNU Project that supports various programming languages. It provides frontends for languages like C, C++, Objective-C, and Fortran.",
-            "core_features": "GCC provides a suite of compilers for different programming languages, optimization options, support for multiple platforms, and a well-established ecosystem.",
-            "general_tags": ["compiler", "development tool", "GNU"],
-            "research_discipline": [],
-            "research_area": [],
-            "software_class": "compiler",
-            "software_type": "development tool",
-            "field_of_science": "Computer and Information Sciences"
-        },
-        {
-            "name": "NumPy",
-            "comprehensive_overview": "NumPy is a Python library for numerical computing that provides support for large, multi-dimensional arrays and matrices, along with a collection of mathematical functions to operate on these arrays.",
-            "core_features": "NumPy facilitates efficient operations on arrays, supports broadcasting, integrates with C/C++ and Fortran code, and is widely used in scientific computing.",
-            "general_tags": ["numerical computing", "array manipulation", "mathematics"],
-            "research_discipline": [],
-            "research_area": [],
-            "software_class": "library",
-            "software_type": "development tool",
-            "field_of_science": "Computer and Information Sciences"
-        },
-        {
-            "name": "BLAST (Basic Local Alignment Search Tool)",
-            "comprehensive_overview": "BLAST is a bioinformatics software used to search for similarities between biological sequences. It identifies regions of similarity that may indicate functional, structural, or evolutionary relationships.",
-            "core_features": "BLAST allows for rapid comparison of biological sequences, can search large databases efficiently, supports various algorithm options, and provides statistical significance measures.",
-            "general_tags": ["bioinformatics", "sequence analysis", "homology search"],
-            "research_discipline": [],
-            "research_area": [],
-            "software_class": "computational software",
-            "software_type": "bioinformatics tool",
-            "field_of_science": "Biological Sciences"
-        },
-        {
-            "name": "GROMACS",
-            "comprehensive_overview": "GROMACS is a versatile package for molecular dynamics simulations in computational chemistry. It is specifically designed for simulations of proteins, lipids, and nucleic acids.",
-            "core_features": "GROMACS provides high performance, parallelization support, integration with various force fields, extensive analysis tools, and compatibility with different platforms.",
-            "general_tags": ["molecular dynamics", "computational chemistry", "simulation software"],
-            "research_discipline": [],
-            "research_area": [],
-            "software_class": "computational software",
-            "software_type": "bioinformatics tool",
-            "field_of_science": "Chemical Sciences"
-        },
-        {
-            "name": "MATLAB",
-            "comprehensive_overview": "MATLAB is a proprietary programming platform and computing environment for scientific computing. It includes functions for data analysis, visualization, and numerical computations.",
-            "core_features": "MATLAB offers an extensive library of functions, toolboxes for specific applications, visualization capabilities, interactive tools, and integration with external languages.",
-            "general_tags": ["scientific computing", "numerical analysis", "data visualization"],
-            "research_discipline": [],
-            "research_area": [],
-            "software_class": "programming environment",
-            "software_type": "development tool",
-            "field_of_science": "Engineering and Technology"
-        },
-        {
-            "name": "TensorFlow",
-            "comprehensive_overview": "TensorFlow is an open-source machine learning framework developed by Google that offers tools for building and training neural networks.",
-            "core_features": "TensorFlow provides flexible deployment options, scalable architecture, support for deep learning tasks, visualization tools, and integration with cloud platforms.",
-            "general_tags": ["machine learning", "neural networks", "deep learning"],
-            "research_discipline": [],
-            "research_area": [],
-            "software_class": "library",
-            "software_type": "development tool",
-            "field_of_science": "Computer and Information Sciences"
-        },
-        {
-            "name": "R",
-            "comprehensive_overview": "R is a programming language and software environment designed for statistical computing and graphics. It provides a wide variety of statistical and graphical techniques.",
-            "core_features": "R offers comprehensive statistical tools, data manipulation capabilities, extensive graphical capabilities, a vibrant community for package development, and reproducibility in research.",
-            "general_tags": ["statistical computing", "data analysis", "graphics"],
-            "research_discipline": [],
-            "research_area": [],
-            "software_class": "programming language",
-            "software_type": "development tool",
-            "field_of_science": "Statistics and Probability"
-        }
-    ]
+    "name": "PROJ",
+    "overview": "PROJ is a standard Unix filter function designed to convert geographic longitude and latitude coordinates into Cartesian coordinates. It is widely used in geospatial applications for coordinate transformation and map projection.",
+    "core_features": "Coordinate transformation, Map projection, Geospatial data processing",
+    "general_tags": ["geospatial", "coordinate transformation", "map projection"],
+    "research_discipline": "Geography",
+    "research_area": "Geospatial analysis",
+    "software_class": "Geospatial software",
+    "software_type": "Coordinate transformation tool",
+    "field_of_science": "Earth Sciences"
 }

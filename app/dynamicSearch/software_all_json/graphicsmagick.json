@@ -1,4 +1,3 @@
-```json
 {
     "software_name": "GraphicsMagick",
     "comprehensive_overview": "GraphicsMagick is a robust collection of tools and libraries that offers a comprehensive range of image processing capabilities. It provides a powerful utility for dynamically reading, writing, and modifying images for over 88 major formats.",
@@ -21,4 +20,3 @@
     "software_type": "Image Processing Software",
     "field_of_science": "Other Computer and Information Sciences"
 }
-```

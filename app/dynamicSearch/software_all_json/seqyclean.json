@@ -1,4 +1,3 @@
-```json
 {
     "software_name": "SeqyClean",
     "comprehensive_overview": "SeqyClean is a tool for fastq preprocessing and quality filtering optimized for Next-Generation Sequencing (NGS) data. It provides various modules for read filtering, quality control, and adapter trimming to improve the quality of sequencing data before downstream analysis.",
@@ -20,4 +19,3 @@
     "software_type": "NGS data processing tool",
     "field_of_science": "Biological Sciences"
 }
-```

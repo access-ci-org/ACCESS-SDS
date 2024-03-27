@@ -1,4 +1,3 @@
-```json
 {
     "software_name": "MATLAB (unlicensed)",
     "comprehensive_overview": "MATLAB is a high-level language and interactive environment that enables you to perform computationally intensive tasks faster than with traditional programming languages such as C, C++, and Fortran. It combines computation, visualization, and programming in a simple, easy-to-use interface.",
@@ -21,4 +20,3 @@
         "field_of_science": "Engineering and Technology"
     }
 }
-```

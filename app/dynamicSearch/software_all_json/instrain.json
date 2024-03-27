@@ -1,4 +1,3 @@
-```json
 {
     "software_name": "instrain",
     "comprehensive_overview": "instrain is a python package for identifying strains in metagenomic data. It allows users to infer strain-level composition of metagenomes and identify variants specific to different strains within a microbial community.",
@@ -10,4 +9,3 @@
     "software_type": "Python Library",
     "field_of_science": "Biological Sciences"
 }
-```

@@ -1,4 +1,3 @@
-```json
 {
     "software_name": "VCFtools",
     "comprehensive_overview": "VCFtools is a software package for manipulating and analyzing genetic variation data stored in Variant Call Format (VCF) files. It provides a wide range of tools for quality control, filtering, summarization, and other analyses of genetic variants.",
@@ -21,4 +20,3 @@
     "software_type": "Data analysis tool",
     "field_of_science": "Biological Sciences"
 }
-```

@@ -1,4 +1,3 @@
-```json
 {
   "software": "expecttest",
   "comprehensive_overview": "expecttest is a versatile testing tool for software developers that allows for the automation of interactive applications, system administration tasks, and more. It provides a simple scripting language for driving applications and processes under test, making it easy to automate testing workflows.",
@@ -21,4 +20,3 @@
     "field_of_science": []
   }
 }
-```  

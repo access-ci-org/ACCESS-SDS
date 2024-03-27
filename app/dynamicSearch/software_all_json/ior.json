@@ -1,48 +1,11 @@
 {
-    "Software": [
-        {
-            "name": "GROMACS",
-            "overview": "GROMACS is a versatile package for molecular dynamics simulations. It is designed for proteins, lipids, and nucleic acids.",
-            "core_features": "Molecular dynamics simulations, Protein-ligand docking, Free energy calculations, Trajectory analysis",
-            "general_tags": ["molecular dynamics", "simulations", "bioinformatics"],
-            "research_discipline": "Biochemistry and Molecular Biology",
-            "research_area": "Protein structure prediction",
-            "software_class": "Bioinformatics tool",
-            "software_type": "Simulation software",
-            "field_of_science": "Biological Sciences"
-        },
-        {
-            "name": "Tinker",
-            "overview": "Tinker is a software tool for molecular modeling and simulations. It is widely used for many biomolecular systems and materials.",
-            "core_features": "Force field calculations, Molecular dynamics simulations, Quantum chemistry calculations, Energy minimization",
-            "general_tags": ["molecular modeling", "simulations", "quantum chemistry"],
-            "research_discipline": "Physical Chemistry",
-            "research_area": "Material science",
-            "software_class": "Computational chemistry software",
-            "software_type": "Simulation software",
-            "field_of_science": "Chemical Sciences"
-        },
-        {
-            "name": "AmberTools",
-            "overview": "AmberTools is a suite of programs for molecular dynamics simulations, energy minimization, and structure analysis. It is widely used in the field of computational chemistry.",
-            "core_features": "Molecular dynamics simulations, Energy minimization, Molecular mechanics calculations, Structure visualization",
-            "general_tags": ["molecular dynamics", "computational chemistry"],
-            "research_discipline": "Physical Chemistry",
-            "research_area": "Drug discovery",
-            "software_class": "Computational chemistry software",
-            "software_type": "Simulation software",
-            "field_of_science": "Chemical Sciences"
-        },
-        {
-            "name": "Biopython",
-            "overview": "Biopython is a collection of tools for computational biology and bioinformatics. It provides functionalities for DNA and protein sequence analysis.",
-            "core_features": "Sequence alignment, Genetic sequence manipulation, Phylogenetic analysis, Protein structure analysis",
-            "general_tags": ["computational biology", "bioinformatics", "sequence analysis"],
-            "research_discipline": "Genetics",
-            "research_area": "Evolutionary genomics",
-            "software_class": "Python library",
-            "software_type": "Bioinformatics tool",
-            "field_of_science": "Biological Sciences"
-        }
-    ]
+    "name": "ior",
+    "overview": "ior is a versatile software tool for analyzing and optimizing input/output (I/O) performance in high-performance computing (HPC) systems. It is designed to assess and improve the efficiency of data transfer operations in parallel computing environments.",
+    "core_features": "I/O performance analysis, Parallel I/O optimization, Benchmarking, Profiling",
+    "general_tags": ["high-performance computing", "parallel computing", "I/O optimization"],
+    "research_discipline": "Computer Science",
+    "research_area": "High-performance computing",
+    "software_class": "Performance analysis tool",
+    "software_type": "Utility software",
+    "field_of_science": "Computer Science"
 }

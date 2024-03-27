@@ -1,4 +1,3 @@
-```json
 {
     "software_name": "libedit",
     "comprehensive_overview": "libedit is an open-source library that provides a readline-like interface for line editing in command-line applications. It is a replacement for GNU Readline used in many Unix-like systems, providing similar functionality but with a more permissive open-source license (BSD-style license).",
@@ -12,4 +11,3 @@
         "field_of_science": "Computer and Information Sciences"
     }
 }
-```

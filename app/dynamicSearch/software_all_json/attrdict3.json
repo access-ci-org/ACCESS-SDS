@@ -1,4 +1,3 @@
-```json
 {
     "software_name": "attrdict3",
     "comprehensive_overview": "attrdict3 is a Python library that provides a dictionary-like object that allows accessing keys like attributes, providing a more convenient way to work with nested dictionaries.",
@@ -12,4 +11,3 @@
         "field_of_science": "Computer and Information Sciences"
     }
 }
-```  

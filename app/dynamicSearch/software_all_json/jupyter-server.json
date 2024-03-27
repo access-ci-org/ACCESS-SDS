@@ -1,4 +1,3 @@
-```json
 {
     "software_name": "jupyter-server",
     "comprehensive_overview": "Jupyter server is a flexible and extensible tool that allows users to run interactive computational environments in various programming languages. It provides a web-based interface for running Jupyter notebooks, code, and data analysis.",
@@ -10,4 +9,3 @@
     "software_type": "Compiler",
     "field_of_science": "Computer and Information Sciences"
 }
-```  

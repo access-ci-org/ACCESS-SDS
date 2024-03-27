@@ -1,4 +1,3 @@
-```json
 {
     "software_name": "ExaBayes",
     "comprehensive_overview": "ExaBayes is a software package for Bayesian inference on large phylogenetic trees using parallel computing techniques.",
@@ -10,4 +9,3 @@
     "software_type": "Phylogenetic software",
     "field_of_science": "Biological Sciences"
 }
-```    

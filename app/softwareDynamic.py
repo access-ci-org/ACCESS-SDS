@@ -2,8 +2,20 @@ import pandas as pd
 import json
 import os
 
-
 directory_path = "./dynamicSearch/software_all_json"
+def fix_files(): #used to remove chatgpt fluff from json files
+    for filename_ in os.listdir(directory_path):
+        filename = directory_path+'/'+filename_
+        with open(filename, 'r') as file:
+            text = file.readlines()
+            if (text[0].startswith('`')):
+                del text[0]  # Remove the first line
+                del text[-1]  # Remove the last line
+
+        with open(filename, 'w') as file:  # Open the file in 'w' mode to clear it
+            file.writelines(text)
+#fix_files()
+
 def txt_to_json():
     for filename in os.listdir(directory_path):
         print(filename)
@@ -32,14 +44,13 @@ def read_and_transform_json(file_path):
             original_data = json.load(file)
 
         data = {}
+        print(f'filepath: {file_path}')
         software_name_value = None
 
         # Check for nested structure and extract if necessary
         if isinstance(original_data, dict) and len(original_data.items()) == 1:
             software_name_value, nested_data = next(iter(original_data.items()))
             data = nested_data
-            print(f'software name: {software_name_value}, data: {nested_data}')
-            #if (data['software_name']):
             data['software name'] = software_name_value
         else:
             data = original_data
@@ -50,7 +61,7 @@ def read_and_transform_json(file_path):
         aTags_columns = ['additionalTags', 'additional tags', 'additional_tags']
 
         for key, value in data.items():
-            if key in aTags_columns:
+            if key in aTags_columns and isinstance(value, dict):
                 for inner_key, inner_value in value.items():
                     flattened_data[inner_key] = ', '.join(inner_value) if isinstance(inner_value, list) else inner_value
             elif isinstance(value, list):

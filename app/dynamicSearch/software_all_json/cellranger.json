@@ -1,4 +1,3 @@
-```json
 {
     "software_name": "cellranger",
     "comprehensive_overview": "Cell Ranger is a set of analysis pipelines that process Chromium Single Cell 3’ RNA-seq data. It includes software for demultiplexing, mapping, filtering, and counting single-cell RNA-Seq data.",
@@ -12,4 +11,3 @@
         "field_of_science": "Biological Sciences"
     }
 }
-```

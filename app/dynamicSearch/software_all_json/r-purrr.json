@@ -1,4 +1,3 @@
-```json
 {
     "software_name": "r-purrr",
     "comprehensive_overview": "The 'purrr' package in R is a functional programming toolkit that provides a consistent and easy-to-use set of tools for working with functions and vectors. It simplifies common tasks using functional programming patterns and allows for cleaner, more readable code.",
@@ -22,4 +21,3 @@
         "field_of_science": "Computer and Information Sciences"
     }
 }
-```

@@ -1,4 +1,3 @@
-```json
 {
   "software_name": "pytesseract",
   "comprehensive_overview": "Pytesseract is a Python wrapper for Google's Tesseract-OCR Engine. It allows for easy integration of Tesseract OCR functionality in Python scripts.",
@@ -18,4 +17,3 @@
   "software_type": "OCR Library",
   "field_of_science": "Computer and Information Sciences"
 }
-```  
