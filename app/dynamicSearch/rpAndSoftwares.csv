@@ -793,7 +793,7 @@ kblas-gpu,aces
 kbproto,delta
 kcachegrind,darwin
 kentutils,anvil
-keras,"aces, faster"
+keras,"aces, faster, anvil"
 khmer,anvil
 kim-api,"aces, faster"
 kineto,aces
@@ -1030,12 +1030,6 @@ mitofinder,anvil
 mkl,"stampede3, ookami, kyric"
 mkl-service,faster
 mkl32,kyric
-ml-toolkit-cpu/keras,anvil
-ml-toolkit-cpu/nltk,anvil
-ml-toolkit-cpu/onnx,anvil
-ml-toolkit-cpu/opencv,anvil
-ml-toolkit-cpu/pytorch,anvil
-ml-toolkit-cpu/tensorflow,anvil
 mlnx,ookami
 mlst,anvil
 mmseqs2,anvil
@@ -1141,7 +1135,7 @@ nibabel,aces
 ninja,"darwin, expanse, aces, faster, ookami"
 nlohmann_json,"aces, faster"
 nlopt,"aces, faster"
-nltk,faster
+nltk,"faster, anvil"
 nmad,aces
 node,delta
 nodejs,"aces, faster"
@@ -1177,7 +1171,7 @@ ogdf,faster
 ohpc,kyric
 omb,kyric
 oneapi,"faster, ookami"
-onnx,"aces, faster"
+onnx,"aces, faster, anvil"
 onnx-runtime,"aces, faster"
 opari2,aces
 open-data-cube-core,faster
@@ -1186,7 +1180,7 @@ openai-gym,faster
 openbabel,"expanse, aces, faster"
 openblas,"delta, anvil, darwin, expanse, aces, faster, ookami, kyric"
 opencensus-python,faster
-opencv,"delta, darwin, aces, faster"
+opencv,"delta, darwin, aces, faster, anvil"
 openexr,"aces, faster"
 openfoam,"anvil, expanse, aces, faster, ookami"
 openfold,"aces, faster"
@@ -1447,7 +1441,7 @@ python-bundle-pypi,"aces, faster"
 python-isal,"aces, faster"
 python-parasail,faster
 python_cacher,stampede3
-pytorch,"aces, faster, ookami"
+pytorch,"aces, faster, ookami, anvil"
 pytorch-geometric,"aces, faster"
 pytorch-lightning,"aces, faster"
 pytorch3d,faster
@@ -1893,7 +1887,7 @@ tcsh,"aces, faster"
 template,ookami
 tensorboard,"aces, faster"
 tensorboardx,"aces, faster"
-tensorflow,"darwin, aces, faster"
+tensorflow,"darwin, aces, faster, anvil"
 tensorflow-probability,"aces, faster"
 tensorrt,"aces, faster"
 tesseract,aces

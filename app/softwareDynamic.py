@@ -36,7 +36,7 @@ def extract_key_value(data, key_columns):
 
     return extracted_value, data
 
-def read_and_transform_json(file_path):
+def read_and_transform_json(file_path, filename):
     try:
         with open(file_path, 'r') as file:
             original_data = json.load(file)
@@ -93,10 +93,10 @@ def read_and_transform_json(file_path):
 
                 if column in flattened_data.keys() and column is not attribute:
                     temp = flattened_data[column]
-                    print(f'data: {flattened_data[attribute]} temp: {temp}')
                     flattened_data[attribute] = flattened_data[attribute] + ', ' + temp
                     flattened_data.pop(column)
 
+        flattened_data['software name'] = filename[:-5]
 
         return flattened_data
     except json.JSONDecodeError:
@@ -161,7 +161,7 @@ def make_df():
     for filename in os.listdir(directory_path):
         if filename.endswith('.json'):
             file_path = os.path.join(directory_path, filename)
-            data = read_and_transform_json(file_path)
+            data = read_and_transform_json(file_path, filename)
             if data is not None:
                 data_dicts.append(data)
 

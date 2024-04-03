@@ -1,7 +1,7 @@
 {
     "software_name": "ONNX",
     "comprehensive_overview": "ONNX (Open Neural Network Exchange) is an open-source format for AI models. It enables interoperability between different frameworks, making it easier to move models between various tools and platforms.",
-    "core_features": "1. Model Interoperability: ONNX allows AI models to be exchanged between different frameworks such as PyTorch, TensorFlow, Scikit-learn, and more.\n2. Efficient Inference: ONNX provides optimized runtimes for deploying models on various hardware platforms.\n3. Extensible Ecosystem: The ONNX community continuously develops new tools and libraries that support the format.\n4. Model Versioning: ONNX supports different versions of the model, making it easier to maintain and update models.",
+    "core_features": "1. Model Interoperability: ONNX allows AI models to be exchanged between different frameworks such as PyTorch, TensorFlow, Scikit-learn, and more. 2. Efficient Inference: ONNX provides optimized runtimes for deploying models on various hardware platforms. 3. Extensible Ecosystem: The ONNX community continuously develops new tools and libraries that support the format. 4. Model Versioning: ONNX supports different versions of the model, making it easier to maintain and update models.",
     "general_tags": ["AI", "Machine Learning", "Deep Learning"],
     "additional_tags": {
         "research_discipline": "Artificial Intelligence and Intelligent Systems",
