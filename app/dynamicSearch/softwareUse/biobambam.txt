@@ -1,0 +1,22 @@
+Use Case: Use biobambam for sorting BAM files, marking duplicates and other operations.
+
+Code details and examples: Code
+
+Input File: A BAM file. Here's an example of a BAM file format:
+
+```
+@HD VN:1.3  SO:coordinate
+@SQ SN:ref  LN:45
+r001   99  ref 7   30  8M2I4M1D3M  =   37  39  TTAGATAAAGGATACTG  *
+
+```
+This file represents a single sequencing read aligned to a reference sequence "ref".
+
+Command to run the biobambam's duplicates marking:
+
+```bash
+bammarkduplicates2 index=1 I=input.bam O=output.bam M=dupmetric.txt
+```
+Here, `I` specifies the input file, `O` specifies the output file where the duplicates marked BAM file will be written, and `M` specifies a txt file where the duplicated metrics will be written. "index=1" tells the tool to create an indexed BAM file as output.
+
+Please note that details about input and output files, their formats, and how to use these parameters are given in detail on the official documentation and each software will have its recommended formats.

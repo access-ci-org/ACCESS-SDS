@@ -1,0 +1,49 @@
+Use Case: QGIS (Quantum GIS) is an open-source geographic information system (GIS) that allows users to analyze and edit spatial information, as well as create and export maps. The software supports multiple types of data, and it is used among data analysts and researchers in the field of geography.
+
+Code details and examples: 
+
+The input file for QGIS is a Shapefile or GeoTIFF, typically with file extensions .shp or .tif, which are standard formats for geospatial vector data and raster graphics data respectively.
+
+Format Required: The Shapefile format contains geometry, and attributes of that geometry. The GeoTIFF format contains image data with embedded georeferencing information.
+
+1. Simple example of loading a Shapefile into QGIS: 
+
+Code
+```python
+# Start QGIS application
+from qgis.core import *
+qgs = QgsApplication([], False)
+
+# Supply path to where is your qgis installed
+QgsApplication.setPrefixPath("/path/to/your/app", True)
+qgs.initQgis()
+
+# Set project instance
+project = QgsProject.instance()
+
+# Set layer
+layer = QgsVectorLayer('path/to/your/shapefile/map.shp', 'sample_layer', 'ogr')
+if not layer.isValid():
+    print('Layer failed to load!')
+else:
+    QgsProject.instance().addMapLayer(layer)
+```
+
+2. Display a GeoTIFF file in QGIS: 
+
+Code
+```python
+# Set the path for the GeoTIFF file
+path_to_tiff = 'path/to/your/geotiff/sample.tif'
+
+# Create the layer
+rlayer = QgsRasterLayer(path_to_tiff, 'myGeoTiff')
+
+# Check whether the layer has been loaded
+if not rlayer.isValid():
+    print('Layer failed to load!')
+else:
+    QgsProject.instance().addMapLayer(rlayer)
+```
+
+To run the above Python scripts, you would typically place them in a .py file and run them using a Python interpreter with the QGIS libraries installed. This could be done on the command line with 'python yourfile.py'.

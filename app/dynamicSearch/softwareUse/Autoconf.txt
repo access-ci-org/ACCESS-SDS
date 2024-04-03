@@ -1,19 +1,37 @@
-Use Case: Use Autoconf to automatically configure source code packages.
+Use Case: Autoconf is a tool used for producing shell scripts that automatically configure software source code packages to adapt to many kinds of POSIX-like systems. The configuration scripts produced by Autoconf are standalone and are independent of Autoconf when they are run, making them ideal for distribution.
+
 Code details and examples:
-Autoconf is typically used in conjunction with Automake and Libtool to generate configure scripts. Here is an example of how a simple configure.ac file might look:
+
+Code:
+
+Sample Input File:
+
+You need to create a configuration script for your software. In that script, Autoconf macros and shell code can coexist. 
+
+For instance, if your software relies on a C compiler, your configuration script, configure.ac, might look as follows:
 
 ```
-AC_INIT([hello], [1.0], [bug-hello@example.com])
-AM_INIT_AUTOMAKE
+AC_INIT([My Program], [1.0], [bug-my-program@example.com])
 AC_PROG_CC
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
 ```
 
-To generate the configure script, you would run:
+You define the programs, header files, libraries, etc. that your software package requires in the configure.ac file. 
 
-```
+Autoconf replaces each AC_MACRO in the file with a test that will run on the system where the software will be compiled.
+
+Command to run:
+
+Once this file is made, it is used to generate the configure script via the autoconf command.
+
+```bash
 autoconf
 ```
 
-This would generate the configure script from the configure.ac file.
+This command produces a `configure` script, which, in turn, is used to generate the Makefile for your software:
+
+```bash
+./configure
+make
+```

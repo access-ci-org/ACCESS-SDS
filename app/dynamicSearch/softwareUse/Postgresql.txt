@@ -1,23 +1,35 @@
-Use Case: Database management
-Code details and examples: 
-```sql
--- Create a new database
-CREATE DATABASE mydatabase;
+Use Case: PostgreSQL is a powerful, open source object-relational database system. It can handle workloads ranging from small single-machine applications to large internet-facing applications with many concurrent users. 
 
--- Create a new table
-CREATE TABLE users (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(50),
-    age INT
-);
+Code Details and Examples: 
 
--- Insert data into the table
-INSERT INTO users (name, age) VALUES ('Alice', 30), ('Bob', 25);
+PostgreSQL sets a client_encoding for each client on connection. This poses a problem when data is input that is in a different encoding from set by the client. Here's how PostgreSQL deals with it.
 
--- Query data from the table
-SELECT * FROM users;
-```
-Command to run PostgreSQL: 
-```
-psql -U username -d database_name -f script.sql
-```
+First, ensure that PostgreSQL server accepts UTF-8:
+
+    SHOW SERVER_ENCODING;
+
+Also, ensure that your client accepts UTF-8:
+
+    SHOW CLIENT_ENCODING;
+
+If the client encoding is different, you can set the client encoding to UTF-8:
+
+    SET CLIENT_ENCODING = 'UTF-8';
+
+A simple SQL command can be run on PostgreSQL to create a database:
+
+    CREATE DATABASE test;
+
+A table in the database can be created as:
+
+    CREATE TABLE users(id SERIAL PRIMARY KEY, username VARCHAR(50), email VARCHAR(50));
+
+The data can be entered into the table as:
+
+    INSERT INTO users (username, email) VALUES ('tester1', 'tester1@gmail.com');
+
+The command to run a SQL script file with the psql command line interface is:
+
+    psql -f filename.sql
+
+Here, filename.sql is the file with the SQL commands.

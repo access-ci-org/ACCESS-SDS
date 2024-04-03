@@ -1,19 +1,23 @@
-Use Case: Identify gene fusions in RNA-seq data
+Use Case: Use STARFusion for detecting fusion transcripts from RNA-Seq data. 
+
 Code details and examples:
-STAR-Fusion is a software tool that can detect fusion transcripts from RNA-seq data. It can also identify known and novel fusion transcripts.
 
-Sample input files format:
-- Input: RNA-seq reads in FASTQ format
-- Output: Fusion gene predictions in a tabular format
-
-Command to run STAR-Fusion:
-```bash
-STAR-Fusion --left_fq sample_R1.fq.gz --right_fq sample_R2.fq.gz --genome_lib_dir my_genome_lib_dir --output_dir fusion_output
+Code:
+```
+STAR-Fusion --genome_lib_dir $CTAT_GENOME_LIB/GRCh37_gencode_v19_CTAT_lib_Apr032020.plug-n-play/ctat_genome_lib_build_dir/ -J Chimeric.out.junction --output_dir star_fusion_outdir
 ```
 
-In the above command:
-- `--left_fq` and `--right_fq` specify the paths to the left and right FASTQ files respectively
-- `--genome_lib_dir` specifies the path to the directory containing the STAR genome index files
-- `--output_dir` specifies the directory where the fusion output will be stored
+* `$CTAT_GENOME_LIB/GRCh37_gencode_v19_CTAT_lib_Apr032020.plug-n-play/ctat_genome_lib_build_dir/` - This represents the genome library directory. The user should replace this path with the path to their own genome library directory. 
 
-After running STAR-Fusion, you can find the fusion predictions in the output directory specified.
+* `Chimeric.out.junction` - Represents the Junctions file. This file must be in the Star-Fusion junction reads format. 
+
+* `star_fusion_outdir` - Represents the output directory. The user should replace this with the path to their own desired output directory.
+
+Please note that the parameters specified are not exhaustive and optional parameters might be needed depending on the specifics of the project.
+
+The command to run the STAR-Fusion would generally look something like this:
+```
+./STAR-Fusion [options]
+```
+
+Where `[options]` represent the input and output directories, paths to the necessary reference files, parameters for the algorithm among others.

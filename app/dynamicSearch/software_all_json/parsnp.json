@@ -1,0 +1,24 @@
+{
+    "software_name": "parsnp",
+    "comprehensive_overview": "parsnp is a software tool used for rapid core-genome alignment and SNP detection in whole-genome sequencing data. It is particularly designed for comparative genomics studies to identify genetic variations and evolutionary relationships among bacterial genomes.",
+    "core_features": [
+        "Core-genome alignment",
+        "SNP detection",
+        "Whole-genome sequencing data analysis",
+        "Comparative genomics studies",
+        "Evolutionary relationship analysis"
+    ],
+    "general_tags": [
+        "Genomics",
+        "Bioinformatics",
+        "Sequencing",
+        "Evolutionary Biology"
+    ],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Bioinformatics tool",
+        "software_type": "Genomics analysis tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

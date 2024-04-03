@@ -1,0 +1,25 @@
+{
+  "software_name": "R-Studio Server",
+  "comprehensive_overview": "R-Studio Server is a web-based integrated development environment (IDE) for the R programming language. It provides a collaborative and centralized platform for data analysis, visualization, and reporting.",
+  "core_features": [
+    "Web-based IDE for R programming language",
+    "Collaborative environment for data analysis",
+    "Visualization tools for data exploration",
+    "Supports R packages and libraries",
+    "Centralized platform for sharing code and projects"
+  ],
+  "general_tags": [
+    "R programming language",
+    "Web-based IDE",
+    "Data analysis",
+    "Visualization",
+    "Collaboration"
+  ],
+  "additional_tags": {
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Integrated Development Environment (IDE)",
+    "software_type": "Web-based",
+    "field_of_science": "Other Computer and Information Sciences"
+  }
+}

@@ -1,0 +1,26 @@
+Use Case: Nextalign is a piece of software used in the field of bioinformatics. It performs pairwise alignment of viral sequences. In the case of SARS-CoV-2, it aligns input sequences against the reference Wuhan-Hu-1 genome sequence to facilitate the detection of mutations and other genomic alterations.
+
+Code details and examples:
+
+Input file: nucleotide sequence file in FASTA format.
+
+Example input file contents:
+```
+>sequence1
+ATTAAAGGTTTATACCTTCCCAGGTAACAAACCAACCAACTTTCGATCTCTTGTAGATCTGTTCTCTAAACGAACTTTAAAATCTGTGTGGCTGTCACTCGGCTGCATGCTTAGTGCACTCACGCAGTATAATTAATAACTAATTACTGTCGTTGACAGGACACGAGTAACTCGTCTATCTTCTGCAGG
+>sequence2
+ATTAAAGGTTTATACCCTCACCAAGGTAACAAACGAACCAAATTATGATCTTCTTAGTTCTATTCGTTACGTTTAAAATTTATGTGGTTCCATCCTTGGCTGAATATTAGTACGCTCACGCAGTGTGATTAATAACTTATCAGTATTTGACAGGACACGAGTTTTTATCTTCTCTGCAGG
+```
+
+Command to run it:
+```
+nextalign --sequences=sequences.fasta --reference=reference.fasta --output-dir=output --output-basename=aligned
+```
+The `--sequences` flag points to the input FASTA file, the `--reference` flag points to a reference sequence file, and the `--output-dir` and `--output-basename` flags specify the location and name for the output files.
+
+Specifications:
+- The input FASTA file should contain nucleotide sequences only.
+- Sequences should be in 5'-3' orientation.
+- No formatting or special characters are needed, other than the ">" character to indicate sequence identifiers.
+
+Output: The alignment of the input sequences against the reference sequence, including any detected mutations or variations and an alignment score for each sequence. The output format is a FASTA file with identifiers changed to reflect the alignment results.

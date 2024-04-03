@@ -1,0 +1,34 @@
+Use Case: DIAMOND is a high-performance sequence aligner for protein and translated DNA searches, designed for high-throughput sequencing data. It performs sequence alignment tasks such as BLASTX, BLASTP and RAPSearch.
+
+Code details and examples: 
+
+Code:
+
+A typical usage of DIAMOND to align against a protein database would look approximately like this:
+
+```
+diamond blastx -d nr.dmnd -q reads.fna -o matches.m8
+```
+
+In this case, `nr.dmnd` is the protein database you're aligning against, `reads.fna` is your FASTA file containing the sequences you're aligning, and `matches.m8` is the file where DIAMOND will output the match results.
+
+The required input file format for DIAMOND is FASTA or FASTQ for the query sequences, and a DIAMOND database file for alignment.
+
+A SAM (Sequence Alignment/Map) file is created with the `-f sam` option.
+
+A simple FASTA file could look approximately like this:
+
+```
+>sequence1
+AGTCTAGTCTAGCGTACGTAGCT
+>sequence2
+CGTACGTACGATCGTACG
+```
+
+To create a DIAMOND database from a FASTA file:
+
+```
+diamond makedb --in reference_proteins.fasta -d reference_proteins
+```
+
+This creates a DIAMOND database named `reference_proteins.dmnd` from the input FASTA file `reference_proteins.fasta`. The `-d` option specifies the basename of the output file.

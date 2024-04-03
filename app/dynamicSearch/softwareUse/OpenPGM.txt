@@ -1,41 +1,49 @@
-Use Case: Reliable multicast protocol library 
-Code details and examples: 
-OpenPGM is a reliable multicast protocol library. Below is a sample code snippet to use OpenPGM in C++.
+Use Case: OpenPGM is a reliable network transport layer protocol in multicasting, optimized for applications ranging from financial platforms to large scale multicast file transfers. 
 
-```cpp
+Code details and examples: 
+
+OpenPGM does not typically utilize user-produced input files, since it operates on a protocol level, below direct end-user interaction. However, applications that use OpenPGM may use it as follows:
+
+You could set up the PGM socket like:
+
+Code:
+```
 #include <pgm/pgm.h>
 
-int main() {
-    pgm_init();
-    
-    // Create PGM socket
-    int socket = pgm_socket(PGM_IP_UDP);
-    
-    // Set socket options
-    pgm_setopt(socket, PGM_RECV_SOCKBUFF, 1024);
-    
-    // Join a PGM group
-    pgm_join(socket, "239.192.16.16");
-    
-    // Receive PGM messages
-    char buffer[1024];
-    pgm_recv(socket, buffer, sizeof(buffer), 0);
-    
-    // Process the received message
-    
-    // Close the socket
-    pgm_close(socket);
-    
-    return 0;
+pgm_error_t* err = NULL;
+pgm_sock_t* sock = NULL;
+if (!pgm_init (&err)) {
+    /* handle error "err" */
+}
+
+struct pgm_sockaddr_t sa;
+memset (&sa, 0, sizeof(sa));
+sa.sa_port = 7500;
+sa.sa_addr.sport = pgm_gsi_create_from_hostname();
+
+if (!pgm_sock_create (&sock, &sa, 16, &err)) {
+    /* handle error "err" */
+}
+
+pgm_sock_start (sock, FALSE, &err)
+```
+
+To read from the socket, you do something like:
+Code:
+```
+size_t len;
+struct pgm_msgv_t msgv[10];
+int status = pgm_recvmsgv (sock, msgv, 10, 0, &len)
+if (status == PGM_IO_STATUS_NORMAL) {
+  for (int i = 0; i < 10 && len > 0; ++i) {
+    /* can read "msgv[i].iov_len" bytes from "msgv[i].iov_base" */
+    len -= msgv[i].iov_len; 
+  }
+} else {
+  /* handle error */
 }
 ```
 
-To compile the code:
-```
-$ g++ -o my_program my_program.cpp -lpgm
-```
+The code snippets were written following the OpenPGM C API guide: http://openpgm.googlecode.com/svn/trunk/doc/html/index.html
 
-To run the compiled program:
-```
-$ ./my_program
-```
+There are no commands to run the code as it all depends on how you compile your C program. If you have a Makefile, it will look something like `make yourprogram`.

@@ -1,0 +1,47 @@
+Use Case: Libmatheval is a library designed for parsing and evaluating mathematical expressions. It allows users to build their own symbolic or numerical calculations for scientific and engineering purposes.
+
+Code details and examples: Code
+
+INPUT FILES: There are no input files required for libmatheval. The functions and expressions are directly written into your C/C++ code.
+
+FORMAT REQUIRED: Libmatheval uses standard algebraic notation for mathematical expressions, such as "+" for addition, "-" for subtraction, "*" for multiplication, "/" for division, and "^" for exponentiation. Function calls and variable names are also permitted.
+
+SPECIFICATIONS AND DETAILS IN INPUT FILES: Since there are no input files required, this section is not applicable. 
+
+CODE SNIPPETS:
+
+Here is an example code snippet which parses and evaluates a mathematical expression using libmatheval:
+
+```C
+#include <matheval.h>
+void * evaluator;
+double x = 5.0, y = 3.0;
+double result;
+const char *expression = "3*x^2 + 2*y + 1";
+
+// Initialize evaluator
+evaluator = evaluator_create(expression);
+
+// Set variables
+evaluator_set_variable(evaluator, "x", x);
+evaluator_set_variable(evaluator, "y", y);
+
+// Evaluate expression
+result = evaluator_evaluate(evaluator, 0, NULL);
+
+// Destroy evaluator
+evaluator_destroy(evaluator);
+```
+
+In this example, the mathematical expression is "3*x^2 + 2*y + 1", where x=5 and y=3. The result of evaluating this expression is stored in the variable "result". 
+
+COMMAND TO RUN THEM:
+
+To compile and run a program using libmatheval, you would use gcc and pass in the necessary flags. For example:
+
+```bash
+gcc -o calc calc.c -lmatheval
+./calc
+```
+
+Here, "calc.c" is the name of your C/C++ code file and "calc" is the name of the output executable file. The flag "-lmatheval" tells the compiler to link against the libmatheval library.

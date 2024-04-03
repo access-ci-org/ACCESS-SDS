@@ -1,0 +1,33 @@
+Use Case: Analysis of Next-Generation Sequencing (NGS) data; 
+
+Software: SAMtools, Bedtools, BCFtools mainly used in NGS data analysis; 
+
+Code details and examples: 
+Firstly, SAMtools, Bedtools, BCFtools need to be installed and available in your PATH. The bash command 'which' or 'command -v' can test if software is in the PATH.
+```
+which samtools bedtools bcftools
+```
+Should return something like 
+```
+/usr/local/bin/samtools
+/usr/local/bin/bedtools
+/usr/local/bin/bcftools
+```
+These software tools accept a variety of file formats, but mainly the SAM/BAM/CRAM for aligned sequencing data and VCF/BCF for variant calling data.
+
+The file formats consist of header section and data section. The SAM/BAM/CRAM formats include fields like read name, flag, reference, read sequence, base quality, and so on. The VCF/BCF formats include fields like reference, position, ID, reference base, alternate base, quality, filter, information, format, sample level data, and so on.
+
+A simple example to use SAMtools to view BAM file (replace 'example.bam' with your actual file):
+```
+samtools view example.bam | head -n 10
+```
+A simple example to use Bedtools to get the genome coverage from a BAM file:
+```
+bedtools genomecov -ibam example.bam -bg > example.bedgraph
+```
+A simple example to use BCFtools to view VCF file (replace 'example.vcf' with your actual file):
+```
+bcftools view example.vcf | head -n 10
+```
+
+Note: It assumes the input files are SAM/BAM/CRAM for aligned sequencing data or VCF/BCF for variant calling data. The files are under the right format, and 'head -n 10' here is just used to limit the output lines for demonstration.

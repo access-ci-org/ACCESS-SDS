@@ -1,0 +1,21 @@
+{
+    "software_name": "Pilon",
+    "overview": "Pilon is a software package that automates the improvement of draft assemblies of microbial genomes, using information from multiple sources to correct draft assemblies.",
+    "core_features": [
+        "Error correction in draft assemblies",
+        "Utilizes multiple sources of information (e.g. read mapping, alignments, and a reference genome)",
+        "Automatic implementation of corrections",
+        "Support for various file formats such as SAM/BAM, VCF, and FASTA"
+    ],
+    "general_tags": [
+        "Genome Assembly",
+        "Genomics",
+        "Bioinformatics",
+        "Computational Biology"
+    ],
+    "research_discipline": "Genomics",
+    "research_area": "Genome Assembly",
+    "software_class": "Genome Assembly Correction",
+    "software_type": "Tool",
+    "field_of_science": "Biological Sciences"
+}

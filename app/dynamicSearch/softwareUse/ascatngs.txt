@@ -1,0 +1,34 @@
+Use Case: Use ASCATngs for Allele-Specific Copy number Analysis of Tumors. 
+
+Code details and examples: Code
+
+The ASCATngs tool is used for whole genome allelic-specific copy number from next gen sequencing data, particularly from tumor samples. 
+
+Sample Input File:
+The input files needed are usually in BAM format, and you can also include SNPs positions file. 
+
+An example of an input file could be:
+
+```
+Tumor_sample.bam
+Normal_sample.bam
+SNPs_position.txt
+```
+
+In the SNP_positions file, the format required is BED (Browser Extensible Data), which could look like this:
+
+```
+chromosome start end name score strand
+chr1    713984  713985  SNP1    0   +
+chr1    714026  714027  SNP2    0   +
+chr1    714057  714058  SNP3    0   +
+```
+
+Command to Run:
+The basic command to run ASCATngs would be: 
+
+```
+ASCAT.pl -o ASCAT_output -tumour Tumor_sample.bam -normal Normal_sample.bam -snp_gc SNPs_position.txt -gender XX
+```
+
+Adjust parameters as necessary according to the specifications of your files.

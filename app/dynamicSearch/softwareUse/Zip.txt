@@ -1,10 +1,19 @@
-Use Case: Compression and decompression of files 
-Code details and examples: 
-To compress a file:
+Use Case: Archiving a group of files into a compressed zip file.
+
+Code details and examples:
+
+Code:
+
+```bash
+zip archive_name.zip file1.txt file2.txt file3.txt
 ```
-zip compressed_file.zip input_file.txt
+
+This command zips the files file1.txt, file2.txt, and file3.txt into an archive named archive_name.zip. The input files could be any type of file and there are no specific file format requirements.
+
+To unzip the files, you would use:
+
+```bash
+unzip archive_name.zip
 ```
-To extract a zip file:
-```
-unzip compressed_file.zip
-```
+
+This will extract the files contained in the zip archive into the current directory.

@@ -1,0 +1,32 @@
+Use Case: libXdmcp is a library that allows for the manipulation of X Display Manager Control Protocol (XDMCP) messages, which is used to start remote X sessions.
+
+Code details and examples: The library doesn't offer a direct interface for user interaction, therefore any code showing usage has to be a part of a more complex X windows program. Below is an example from the X server source code, representing how the library is used -
+
+Code:
+
+```c
+#include <X11/Xdmcp.h>
+
+void example() {
+    XdmcpBuffer buffer;
+    CARD16 displayNumber;
+
+    /* Initialize the buffer. This would be where a message is received from. */
+    XdmcpInitBuffer(&buffer, some_data, some_data_length);
+
+    /* Read out a CARD16 (16-bit value) from the buffer. This could be the display number from the packet */
+    XdmcpReadCARD16(&buffer, &displayNumber);
+}
+```
+
+The above example initializes an XDMCP buffer and reads a 'CARD16' type value from it. This is roughly analogous to reading a 16-bit integer from a packet of network data. The real packets would contain much more information.
+
+The command to build a file `x.c` using libXdmcp:
+
+```
+gcc -o x x.c -lXdmcp
+```
+
+The -lXdmcp option tells gcc to link against libXdmcp. The resulting executable file can be run by typing `./x`.
+
+Remember this is a very minimal example and usage of libXdmcp in actual programs will be more advanced and complex, like in Xorg, the open source implementation of the X Window System.

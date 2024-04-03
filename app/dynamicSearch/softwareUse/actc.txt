@@ -1,0 +1,35 @@
+Use Case: Use actc to convert triangle strips from multiple indexed input files to a single indexed output file with a reduced number of draw calls.
+
+Code details and examples:
+
+Code: 
+
+Input file format: 
+
+The input file should be in .ply format. A ply file includes vertices and faces of the polygon mesh.
+It starts with the list of vertices denoted by the keyword "vertex", where each vertex is represented by X, Y, Z values.
+Then, the list of faces is given, each represented by the vertex indices that form the face. 
+
+A sample could be:
+
+ply
+format ascii 1.0
+element vertex 3
+property float x
+property float y
+property float z
+element face 1
+property list uchar int vertex_indices
+end_header 
+0 0 0
+0 1 1
+1 0 0
+3 0 2
+
+Code:
+
+actc -o output.ply input1.ply input2.ply
+
+The above command takes input1.ply and input2.ply files, combines them and reduces the number of draw calls, then writes the output into output.ply. 
+
+NOTE: Make sure the .ply files should be in the same directory as of actc.

@@ -1,0 +1,31 @@
+Use Case: Use opari2 to instrument OpenMP programs with POMP2 constructs. The opari2 tool outputs an instrumented version of the given file. The instrumented file executes performance events using the POMP2 interface. The POMP2 interface can be further linked to performance libraries to trigger behavior on these performance events (timing, tracing, profiling, performance modeling, etc.)
+
+Code details and examples: Code
+
+Input File Format for opari2:
+The input for opari2 is a standard OpenMP source code, in C, C++, or Fortran. The source code needs to have OpenMP pragmas that can be instrumented by the opari2 tool.
+
+Sample Input:
+This is a small sample C code with OpenMP pragmas:
+```c
+#include <omp.h>
+
+void main () {
+    #pragma omp parallel
+    {
+        int ID = omp_get_thread_num();
+        printf("Hello World\n", ID);
+    }
+}
+```
+Save this file as 'helloWorld.c'.
+
+Code Details and Execution:
+To run opari2, execute the following commands on the command line:
+
+```shell
+opari2 ./helloWorld.c ./instrumentedHelloWorld.c
+gcc -fopenmp -o helloWorld ./instrumentedHelloWorld.c
+./helloWorld
+```
+The first command runs opari2 on the input file helloWorld.c and generates an instrumented version instrumentedHelloWorld.c. The second command compiles the instrumented version using gcc with the OpenMP library, generating an executable named helloWorld. The third command runs the executable. POMP2 constructs are silently executed in the background, and can be further used for profiling and performance measurement.

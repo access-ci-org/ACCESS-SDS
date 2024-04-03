@@ -1,0 +1,25 @@
+Use Case: The Subread software package is often utilized for the analysis of next-generation sequencing data, including both RNA-seq and DNA-seq data. This package has capabilities that range from read alignment and quantification to variant calling and mutation discovery.
+
+Code Details and Examples:
+
+For instance, one common utility of the Subread package is to align RNA-seq reads to a reference genome using its fast and accurate read aligner, Subjunc. 
+
+Code:
+
+Assuming you have a reference genome (in FASTA format, e.g., "genome.fa") and your RNA-seq reads (in FASTQ format, e.g., "reads.fq"), the command to perform the alignment would be:
+
+```
+subjunc -i genome.fa -r reads.fq -o output.bam
+```
+
+Here "-i" will specify the input reference genome file, "-r" is for the input reads and "-o" is for the name of the output BAM file in which the alignment results will be stored.
+
+For mutation discovery, featureCounts, another tool in the Subread package, can be used. If you have an alignment results file (in BAM format) and a file annotating genomic features (in GTF format, e.g., "genes.gtf"), the command line would be like:
+
+```
+featureCounts -a genes.gtf -o count.txt aligned.bam
+```
+
+Here "-a" will specify the genomic feature file (GTF format), "-o" will be the output file storing the read count results per gene, and at the end, there is the input alignment results file.
+
+Please note that the above commands are just examples. Always refer to the manual of Subread for the complete list of options and their usage.

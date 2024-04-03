@@ -1,25 +1,40 @@
-Use Case: SAMtools is a suite of programs for interacting with high-throughput sequencing data in SAM/BAM format.
+Use Case: SAMtools is a suite of software applications used for interacting with high-throughput sequencing data. It can be used for a variety of tasks such as viewing, sorting and indexing sequence alignment/map files, calling SNPs, aligning sequence reads and more.
 
 Code details and examples:
-1. View the content of a BAM file: 
-```bash
-samtools view input.bam
+
+Code: 
+
+Input file Format: The file format required for SAMtools is SAM/BAM.
+Specifications: The SAM/BAM file should contain the aligned sequencing data.
+
+Sample Input File:
+
+Here's a snippet from a BAM file:
+
 ```
-2. Sort a BAM file by coordinates: 
-```bash
-samtools sort input.bam -o sorted.bam
-```
-3. Index a sorted BAM file: 
-```bash
-samtools index sorted.bam
-```
-4. Call variants from a sorted and indexed BAM file:
-```bash
-samtools mpileup -uf reference.fa sorted.bam | bcftools call -cv - > variants.vcf
+@SQ SN:chrM LN:16571
+D3NB8ACXX120302:7:1207:5722:57044 163 chrM 3107 37 76M = 3222 191 AGATACATTAGAAGCCTTCTAAGTCAAAGTATCACCCTATTAACCACTCACGGGAGCTCTCCATGCATTTGGTATTTTCGTCTGGGGGGTGTGCACGCGATAGCATTGCGAGACGCTGGAGCCGGAGCACCCTATGTCGCAGTATCTGTCTTTGATTCCTGCCTCATCCTATTATTTATCGCACCTACGTTCAATATTACAGGCGAACATACTTACTAAAGTGTGTTAATTTAAAACAACCCTCGGGCGTGGCGCGGTCTGAACAAACCAACAGTGCGTCATATTATCGAGCTGAATGCCCTTGCCTCTGGCGTCTGACCTATCAGTTACACGGCCGTCATAAACTTAGGACAACCTTAGGATACTGCCCCCGCTTTCACCACGTGG
+D3NB8ACXX120302:7:1207:5722:57044 83 chrM 3222 37 76M = 3107 -191 AGATTTCACCGGCGCAACCCTTGTATCGAGGAAAGCACACGTTCTTTGAACAATTAAGTCAGTGTTAAATACGAACGAGGAATTCCCAGTAAGCGTGAGCTTGTACTGACATTAGCCAGGCGGCCTATGCGGTCACACCTTTCGCTGATACTACCAGCTAAAATGAGAGGTAGGAACACGTTACACCCTTCCCAGTGCTGGGATTACAGACCGGATAAACCTAAAGAGGTCTAACAGTCCGTTAGGTTTGGAACCTGATCCTTGGCGGCTGCCGCACGAACCCCCCGGTTAAGAGCTAACATCTTCTGTGCCAGCCACCGCGGTCACACGATTAACCCAAGTCAATAGAACCGCGAAGGGGGCGGCGACTTCTTGCCGCCAGGGTTTTCCCAGTCACGACGTTGTAAAACGACGGCCAGTGA
 ```
 
-Input files:
-- BAM file: Binary Alignment/Map format file containing aligned sequencing reads.
-- Reference.fa: Reference genome file in FASTA format.
+Running the command in SAMtools to view a BAM file:
 
-Make sure to replace `input.bam` and `reference.fa` with the actual file paths in the above commands.
+Code: 
+
+`samtools view input.bam`
+
+This command will display the contents of the 'input.bam' file in the terminal.
+
+Note: Replace 'input.bam' with your BAM file's actual name. 
+
+Using SAMtools to Sort and index a BAM file:
+
+Code to sort:
+
+`samtools sort input.bam -o sorted.bam`
+
+Code to Index:
+
+`samtools index sorted.bam`
+
+These commands will create a sorted version of the 'input.bam' file and will generate an index for it. Replace 'input.bam' with the name of your unsorted BAM file and 'sorted.bam' with the name you want for your sorted BAM file.

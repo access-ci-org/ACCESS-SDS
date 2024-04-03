@@ -1,0 +1,15 @@
+Use Case: qcat is commonly used for demultiplexing Oxford Nanopore sequencing data and converting base-calling files format;
+
+Code details and examples: 
+
+Code:
+
+In this example, the qcat tool is used to demultiplex sequencing data and convert base-calling files from .fast5 to .fastq format. The input files need to be in .fast5 or .fastq format, and the specifications of the input files include barcodes for demultiplexing and base-called sequence data. The exact format of the input files will depend on the sequencing platform and the base-calling software used. 
+
+```bash
+qcat -f input.fast5 -b output_directory --kit SQK-LSK109
+```
+
+In this command, "input.fast5" is the nanopore sequencing data in .fast5 format. "output_directory" is the directory where the demultiplexed .fastq files will be stored, and SQK-LSK109 specifies the nanopore sequencing kit used for base-calling.
+
+The '-f' flag specifies the input file, '-b' specifies the output directory, and '--kit' is used to specify the nanopore sequencing kit used. The exact kit will depend on what was used for sequencing and base-calling.

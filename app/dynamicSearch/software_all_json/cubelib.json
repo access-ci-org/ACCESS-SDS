@@ -1,0 +1,13 @@
+{
+  "software_name": "cubelib",
+  "comprehensive_overview": "cubelib is a C++ library for parallel reduction operations on multi-dimensional arrays using CUDA.",
+  "core_features": "cubelib provides efficient implementations of parallel reduction operations such as sum, min, max, and custom-defined reduction operators on multi-dimensional arrays. It is optimized for CUDA-enabled GPUs and supports various data types and reduction strategies for improved performance.",
+  "general_tags": ["software library", "C++", "CUDA", "parallel computing", "multi-dimensional arrays"],
+  "additional_tags": {
+    "research_discipline": "Computer Science",
+    "research_area": "Parallel Computing",
+    "software_class": "Library",
+    "software_type": "Computational Software",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

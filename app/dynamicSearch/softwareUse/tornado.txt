@@ -1,0 +1,31 @@
+Use Case: Tornado is a Python web framework and asynchronous networking library. It can handle thousands of open connections, making it ideal for long polling, WebSockets, and other applications that require a long-lived connection to each user. 
+
+Code Details and Examples: 
+
+To create a simple Tornado web server, prepare the server.py:
+
+```python
+import tornado.ioloop
+import tornado.web
+
+class MainHandler(tornado.web.RequestHandler):
+    def get(self):
+        self.write("Hello, world")
+
+def make_app():
+    return tornado.web.Application([
+        (r"/", MainHandler),
+    ])
+
+if __name__ == "__main__":
+    app = make_app()
+    app.listen(8888)
+    tornado.ioloop.IOLoop.current().start()
+```
+
+In this code snippet, `tornado.ioloop` is the core Tornado's I/O loop, `tornado.web` provides the web framework and HTTP server. The `MainHandler` is defined inside the application to respond with a "Hello, world" message to HTTP requests on the root ("/") path. Application runs on port 8888.
+
+Command to run the code:
+python server.py
+
+This will start the server at http://localhost:8888/ and on navigating to the address in a web browser, you should see the text "Hello, world".

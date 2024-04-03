@@ -1,25 +1,40 @@
-Use Case: re2c is a tool for generating fast lexers.
-Code details and examples:
-re2c input file format:
+Use Case: re2c is a tool for writing flexible lexer scanners.  It is targeted at generating C code, but it can also output C++ compatible code.
+
+Code details and examples: 
+
+Code: In re2c, we create a .re file which contains all the regular expressions and corresponding C code that needs to be executed when it matched.
+
+Here is a snippet from a file named "sample.re":
+
+```re2c
+/*!re2c
+    re2c:define:YYCTYPE = "char";
+    re2c:yyfill:enable = 0;
+
+    space        = ' ' | '\t' ;    // matches space or tab character
+    digit        = [0-9] ;          // matches digit
+    newline      = '\n' ;           // matches newline character
+
+    "++"         { return ADD; }
+    "--"         { return SUB; }
+
+    digit+       { return INT_LITERAL; }
+
+    space+       { /* ignore white space */ }
+
+    newline      { return NEWLINE; }
+
+    *            { return ERROR; }
+*/
 ```
-re2c:yyfill:enable = 0;
-use 'namespace';
 
-re2c:define:YYCTYPE = 'unsigned char';
-re2c:define:YYCURSOR = '*p';
-re2c:define:YYLIMIT = 'pe';
+As seen above, we have regular expressions to match certain patterns and each pattern has a corresponding return code when it matches. We need to also define rules for white spaces or line breaks as we see fit.
 
-re2c:api:style = free-form;
-
-number = [0-9]+;
-ws = [ \t]+;
-
-%%
-{ws}      { /* skip whitespace */ }
-{number}  { printf("NUMBER: %s\n", yytext); }
+Command to convert "sample.re" to "sample.c"
+```
+re2c -o sample.c sample.re
 ```
 
-Command to run re2c:
-```
-re2c input_file.re -o output_file.c
-```
+This command will output a lexer scanner in C named sample.c 
+
+We may then include this sample.c in our main program which calls the lexer to tokenize inputs. Please note that re2c only generates the scanner, other components of a compiler like a parser would have to be written manually or with other specific tools or libraries. Furthermore, any regular expression matches will be executed when the lexer reaches that particular token and will not backtrack once it has moved past it.

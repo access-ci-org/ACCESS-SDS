@@ -1,0 +1,38 @@
+Use Case: RepeatMasker is a program that screens DNA sequences for interspersed repeats and low complexity DNA sequences. The output of the program is a detailed annotation of the repeats that are present in the query sequence as well as a modified version of the query sequence in which all the annotated repeats have been masked (default: replaced by Ns).
+
+Code Details and Examples:
+
+## Code
+The command used to run it typically looks like this:
+
+```
+RepeatMasker -pa 4 -s -lib /path/to/Repeatmaskerlibraries/Dfam.h5 /path/to/your/Genome.fasta
+```
+
+In this command:
+
+- "-pa 4" means the program will use 4 processors
+
+- "-s" tells the program to run in small/slow search mode
+
+- "-lib /path/to/Repeatmaskerlibraries/Dfam.h5" is the path to the repeat library you want to use. 
+
+- "/path/to/your/Genome.fasta" is the path to the genome sequence file which has to be in FASTA format.
+
+## Input File Format
+The input to RepeatMasker is a FASTA file representing the DNA sequences to be screened. This file has the extension .fasta or .fa.  Here is an example of the format of a FASTA file:
+
+```
+>Sequence1
+AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGCTTCTGA
+ACTGGTTACCTGCCGTGAGTAAATTAAAATTTTATTGACTTAGGTCACTAAATACTTTAACCAATATAGGCATAGCG
+CACAGACAGATAAAAATTACAGAGTACACAACATCCATGAAACGCATTAGCACCACC
+>Sequence2
+GGGTTGCGCTCGTTGCGGGACTTAACCCAACATCTCACGACACGAGCTGACGACAGCCATGCAGCACCTTTTTTTCG
+TGCGCGTCCAAAAACCCGAAA
+```
+
+Each DNA sequence in the file begins with a single-line description, followed by lines of sequence data. The description line (defline) is distinguished from the sequence data by a greater-than (">") symbol at the beginning. It is often called the "FASTA header". The part of the description following the ">" symbol is the identifier of the sequence, and the rest of the line is an optional description of the entry. There should be no space between the ">" and the first letter of the identifier.
+
+## Output File Format
+The output is a .out file which contains the detailed annotation of the repeats that are present in the query sequence. In the modified version of the query sequence, all the annotated repeats have been masked (default: replaced by Ns). The .mask file contains the masked genome sequence.

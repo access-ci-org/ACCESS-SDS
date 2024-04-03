@@ -1,0 +1,36 @@
+Use Case: BEAST2 is a widely used bioinformatics software for Bayesian evolutionary analysis by sampling trees. Specifically, it is used to estimate phylogenetic trees using molecular sequence data.
+
+Code Details and Examples:
+
+File: A standard input file for BEAST2 is a Molecular Evolutionary Genetics Analysis (MEGA) tool XML file format. 
+
+Sample of the input file (filename: input.xml)
+```
+<beast xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://beast.community beast2.xsd">
+  <taxa id="taxa">
+    <taxon id="taxon1">
+      <date value="0.0" direction="forwards"/>
+    </taxon>
+    ...
+  </taxa>
+  ...
+  <run id="MCMC" spec="MCMC" chainLength="10000000">
+    <state id="state" storeEvery="1000">
+      ...
+    </state>
+    ...
+  </run>
+</beast>
+```
+
+Command to run BEAST2: 
+
+```
+beast input.xml
+```
+
+This will run BEAST2 with the options set in the input.xml file. 
+
+Note: This XML file and the run command are overly simplified examples. The real file will contain more settings corresponding to the researcher's specific research question.

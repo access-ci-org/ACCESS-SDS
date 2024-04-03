@@ -1,0 +1,23 @@
+{
+    "software_name": "mapdamage2",
+    "comprehensive_overview": "mapdamage2 is a software package that assesses DNA damage patterns from ancient DNA sequencing data. It is designed to identify and quantify post-mortem DNA damage patterns, such as nucleotide misincorporations and DNA fragmentation, to aid in distinguishing authentic ancient DNA sequences from modern contamination.",
+    "core_features": [
+        "Assessment of DNA damage patterns",
+        "Identification of post-mortem nucleotide misincorporations",
+        "Quantification of DNA fragmentation",
+        "Differentiation between ancient DNA and modern contamination"
+    ],
+    "general_tags": [
+        "Bioinformatics",
+        "Genomics",
+        "Ancient DNA",
+        "DNA Damage"
+    ],
+    "additional_tags": {
+        "research_discipline": "Genomics",
+        "research_area": "Ancient DNA analysis",
+        "software_class": "Bioinformatics tool",
+        "software_type": "Analysis tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

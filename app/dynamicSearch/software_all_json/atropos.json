@@ -1,0 +1,13 @@
+{
+    "software_name": "Atropos",
+    "comprehensive_overview": "Atropos is a software tool designed for read trimming and adapter detection in Next Generation Sequencing (NGS) data. It aims to accurately identify and remove adapter sequences, poly-A tails, and other types of unwanted sequences from NGS reads.",
+    "core_features": "1. Adapter detection and trimming\n2. Quality filtering and read trimming\n3. Support for multiple sequencing platforms\n4. Parallel processing for improved efficiency",
+    "general_tags": ["NGS", "read trimming", "adapter detection"],
+    "additional_tags": {
+        "research_discipline": "Bioinformatics",
+        "research_area": "Genomics",
+        "software_class": "NGS Analysis",
+        "software_type": "Trimming Tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

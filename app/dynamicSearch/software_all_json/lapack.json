@@ -1,0 +1,22 @@
+{
+  "software_name": "LAPACK",
+  "comprehensive_overview": "LAPACK (Linear Algebra PACKage) is a software library for numerical linear algebra that provides routines for solving systems of simultaneous linear equations, least-squares solutions of linear systems of equations, eigenvalue problems, and singular value problems.",
+  "core_features": [
+    "Solving systems of simultaneous linear equations",
+    "Least-squares solutions of linear systems of equations",
+    "Eigenvalue problems",
+    "Singular value problems"
+  ],
+  "general_tags": [
+    "Numerical Linear Algebra",
+    "Software Library",
+    "Mathematics"
+  ],
+  "additional_tags": {
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Computational Software",
+    "software_type": "Library",
+    "field_of_science": "Mathematics"
+  }
+}

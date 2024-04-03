@@ -1,0 +1,35 @@
+Use Case: Globus CLI is a command line interface to the Globus service, allowing you to interact with the service directly from a command prompt. Users can perform operations like transferring files between endpoints, sharing data with others, and setting up a personal Globus Connect endpoint.
+
+Code details and examples:
+
+Code:
+
+First, you need to authenticate with Globus:
+
+```shell
+globus login
+```
+
+After successful authentication, you can perform operations like listing endpoints. Here is an example of listing endpoints:
+
+```shell
+globus endpoint search --filter-scope all --limit 10 'your_endpoint'
+```
+
+This command must be replaced with 'your_endpoint' is the name or ID of your endpoint. In the output of the command, you can see the endpoint's ID, name, owner, and other details.
+
+For data transferring between two endpoints using their ids:
+
+```shell
+globus transfer 'endpoint_source_id' 'endpoint_destination_id' --label "Example transfer" --sync-level checksum
+```
+
+Replace 'endpoint_source_id' with the Endpoint ID you want to transfer data from. Replace 'endpoint_destination_id' with the Endpoint ID you want to send data to. The `--label` option allows you to add a descriptive name for your transfer, and the `--sync-level checksum` option ensures that a checksum is calculated for each file before it is transferred, and then re-calculated at the destination to ensure data integrity.
+
+For sharing data with others, use command:
+
+```shell
+globus share create --permissions=read 'endpoint_id' 'pathname'
+```
+
+Replace 'endpoint_id' with the Endpoint ID of the Endpoint you want to use for sharing. Replace 'pathname' with the path you want share. The resulting shared endpoint can be accessed by any user who has been granted read permissions.

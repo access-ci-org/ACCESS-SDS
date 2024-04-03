@@ -1,0 +1,34 @@
+Use Case: The `xfun` package in R provides several utility functions used by other packages like 'tinytex'. It helps in checking the output format of R markdown files.
+
+Code details and examples: Code:
+
+Example Use Case:
+Checking the knitr output format of an R Markdown document
+
+```r
+## Load the xfun package
+library(xfun)
+
+## Function to check the output format
+output_format <- function(rmd) {
+  out_fmt <- knitr:::knit_output_format(rmd)
+  xfun::sans_ext(basename(rmd)) <- out_fmt$str
+  return(out_fmt)
+}
+
+## Test the function with an R markdown file
+rmd_file <- "my_report.Rmd"
+output_format(rmd_file)
+
+## If the output format is HTML, it will print "my_report.html"
+```
+
+Command to run the R script:
+
+```shell
+$ Rscript xfun_example.R
+```
+
+Format Required: The input R Markdown document should be a valid .Rmd file with the right structure.
+
+Specifications and Details in Input Files: The R Markdown document can contain code chunks written in R and explanations written in markdown. The final output format (html, pdf, word, etc.) should be specified in the header of the document.

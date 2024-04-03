@@ -1,0 +1,33 @@
+Use Case: OpenHPC is a software stack that provides various tools for HPC system software developers. It includes provisioning tools, resource management, I/O clients, development tools, and a variety of scientific libraries. 
+
+Code Details and Examples:
+
+Code: 
+
+The OpenHPC system does not require input files as such as it's a software stack providing a variety of tools for HPC system software development.
+
+The code for running an operation using OpenHPC's tools will vary depending on the specific tool being used, but a general job submission using Slurm (a core part of OpenHPC) is as follows:
+
+```bash
+#!/bin/bash
+#SBATCH --job-name=test_job
+#SBATCH --ntasks=16
+#SBATCH --time=10:00
+#SBATCH --partition=compute
+
+echo "Running job $SLURM_JOB_ID on $SLURM_JOB_NODELIST"
+
+srun hostname
+```
+
+This script will submit a job named "test_job" to the cluster, requesting 16 tasks (CPU cores) and a maximum time of 10 minutes. The `srun hostname` command just runs the `hostname` command across all the requested cores, returning the host name of each core.
+
+Save this script as a .sh file, say job.sh, and submit the job to the cluster with:
+
+```bash
+sbatch job.sh
+``` 
+
+`sbatch` is the command used in the Slurm workload manager to submit a job to the cluster. 
+
+Again, this is a fairly basic example, and the specific invocation will depend heavily on the exact task you're trying to accomplish.

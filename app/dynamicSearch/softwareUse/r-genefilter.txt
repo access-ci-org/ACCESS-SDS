@@ -1,0 +1,26 @@
+Use Case: "genefilter" is an R package used for gene filtering, which is a critical pre-processing step in the use of probe-level data. It is particularly useful for eliminating uninformative features in high-dimensional datasets, such as those produced by microarray or RNA-seq experiments.
+
+Code details and examples: 
+
+Input Data: The input to "genefilter" typically takes the form of an ExpressionSet object which is a data container for microarray data. ExpressionSet objects often contain normalized microarray data, phenotypic data about the samples, and perhaps additional feature data. 
+
+An example ExpressionSet object might look similar to "exampleData", an object available within the "genefilter" package.
+
+The format for ExpressionSet objects is specific, with the main component being a matrix of expression values. The rows of this matrix correspond to features (often genes), and the columns correspond to samples.
+
+The command to run a basic genefilter with an ExpressionSet, using a threshold of 0.5 might look like this:
+
+```
+# Load genefilter library
+library(genefilter)
+
+# Define the function to use for filtering
+filter_func <- function(x) max(x) > 0.5
+
+# Run genefilter
+filtered_data <- genefilter(exampleData, filter_func)
+```
+
+Here, filter_func is a user-defined function that takes vector x of expression values for a single gene. The function returns TRUE for genes where the maximum expression value across all samples is greater than 0.5 and FALSE otherwise. These genes are then filtered out of the dataset using the genefilter function.
+
+Please note that 'exampleData' is used as an example here, the actual ExpressionSet object from user's data should be used.

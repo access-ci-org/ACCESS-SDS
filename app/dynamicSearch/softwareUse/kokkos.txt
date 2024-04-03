@@ -1,43 +1,53 @@
-Kokkos is a C++ performance portability programming model and library developed at Sandia National Laboratories. It allows users to write code that can run efficiently on different types of hardware architectures.
-
-Use Case: Parallelizing a matrix-vector multiplication using Kokkos.
+Use Case: Kokkos is a C++ performance portability programming model that is widely used in high-performance explicitly parallel applications. It's been used for porting a performance-critical, finite-volume kernels for a CFD application from CUDA to multi-node/multi-core CPUs and GPUs. 
 
 Code details and examples:
-```cpp
-#include <Kokkos_Core.hpp>
 
-int main() {
-    const int N = 1000;
-    Kokkos::initialize();
+Code:
+
+```C++
+#include<Kokkos_Core.hpp>
+ 
+int main(int argc, char* argv[]) {
+  Kokkos::initialize(argc,argv);  {
+    const int N = 40;
+    const int M = 50;
+    const int repetitions = 1000;
+
+    Kokkos::View<double**> A("A",N,M);
+
+    Kokkos::parallel_for( "FillArray", N, KOKKOS_LAMBDA (const int i) {
+      for (int j = 0; j<M; j++) {
+        A(i,j) = 1.0*(i+j);
+      }
+    });
     
-    Kokkos::View<double*> x("x", N);
-    Kokkos::View<double*> y("y", N);
-    Kokkos::View<double**> A("A", N, N);
+    Kokkos::fence();
 
-    Kokkos::parallel_for("initialize_x", N, KOKKOS_LAMBDA(const int i) {
-        x(i) = 1.0;
-    });
+    Kokkos::Timer timer;
 
-    Kokkos::parallel_for("initialize_A", N, KOKKOS_LAMBDA(const int i, const int j) {
-        A(i, j) = 2.0;
-    });
-
-    Kokkos::parallel_for("matvec", N, KOKKOS_LAMBDA(const int i) {
-        double sum = 0.0;
-        for (int j = 0; j < N; j++) {
-            sum += A(i, j) * x(j);
+    for (int r=0; r<repetitions; r++) {
+      Kokkos::parallel_for( "ScaleArray", N, KOKKOS_LAMBDA (const int i) {
+        for (int j=0; j<M; j++) {
+          A(i,j) = 1.01*A(i,j);
         }
-        y(i) = sum;
-    });
+      });
+    }
 
-    Kokkos::finalize();
+    Kokkos::fence();
 
-    return 0;
+    double time = timer.seconds();
+
+    printf("Time taken for array scaling: %lf [s]\n",time);
+    printf("Performance: %lf [GFlop/s]\n",1.0e-9*N*M*repetitions/time);
+  }
+  Kokkos::finalize();
 }
 ```
 
-To compile and run the code:
+Command line input: 
 ```
-g++ -std=c++11 -I/path/to/kokkos/include -L/path/to/kokkos/lib program.cpp -o program -lkokkos
-./program
+g++ -I /path/to/kokkos/include -L /path/to/kokkos/lib -lkokkos -fopenmp main.cpp -o main
+./main
 ```
+
+In this code, a 2D array is first filled with values, then it is scaled 1000 times. Kokkos::View is used to represent the 2D array. Kokkos::parallel_for is used to perform operations on the 2D array. The time for the operations and the performance (in GFlop/s) are then printed out.

@@ -1,36 +1,37 @@
-Use Case: Generates documentation from source code
+Use Case : Doxygen is used to generate documentation from source code in a very easy and convenient way. You can use it with practically any programming language like C++, Python, Java, etc. It can generate both HTML and LaTeX documentation.
+
 Code details and examples:
+
+Code:
+
+For instance, let's consider the below C++ example.
+
 ```cpp
-/**
- * @file main.cpp
- *
- * @brief A simple program to demonstrate Doxygen
+/*!
+ * \brief Performs a division.
+ * \param[in] numerator The numerator of the division.
+ * \param[in] denominator The denominator of the division. Must not be zero.
+ * \return The result of the division.
+ * \throws std::invalid_argument If denominator is zero.
  */
-
-#include <iostream>
-
-/**
- * @brief A simple function to add two numbers
- * @param a First number
- * @param b Second number
- * @return Sum of a and b
- */
-int add(int a, int b) {
-    return a + b;
-}
-
-int main() {
-    int num1 = 5;
-    int num2 = 10;
-    int result = add(num1, num2);
-    std::cout << "The sum of " << num1 << " and " << num2 << " is: " << result << std::endl;
-    return 0;
+double divide(double numerator, double denominator) {
+    if (denominator == 0) {
+    throw std::invalid_argument{"Denominator cannot be zero"};
+    }
+    return numerator / denominator;
 }
 ```
 
-To generate documentation using Doxygen, you would typically create a configuration file (Doxyfile) and run the doxygen command in the terminal:
+To generate documentation for this code, Doxygen needs a configuration file that can easily generate using the below command:
+
+```
+doxygen -g
+```
+
+This creates a file called Doxyfile in your working directory. Now, you can run Doxygen on this configuration file to generate the documentation:
+
 ```
 doxygen Doxyfile
 ```
 
-Make sure the Doxyfile is properly configured with the necessary settings based on your project requirements.
+The specific inputs here are the source codes for which the documentation has to be generated. The format required is just the source code files. A specific Doxyfile needs to be created to specify rules for the documentation. Then Doxygen should be run on this configuration file to produce the documentation.

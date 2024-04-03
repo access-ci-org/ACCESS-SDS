@@ -1,52 +1,52 @@
-Use Case: Infernal is a software suite for searching DNA and RNA sequence databases for homologs of RNA structure and sequence motifs. It includes programs for aligning, searching, and annotating RNA homologs.
+Use Case: Infernal (INFERence of RNA ALignment) software package is used for analyzing RNA sequences. Infernal builds models of the primary and secondary structure consensus of a set of similar RNAs. 
 
-Code details and examples:
-1. cmsearch (search a CM against a sequence database):
-   - Input file format (CM file): 
-     ```
-     # STOCKHOLM 1.0
-     # EXAMPLE CM
-     // structure
-     <HMMER3/f -> INFERNAL>
-     EXAMPLE  CM
-     ACC   1.0
-     #=GF SQ SS_cons  :::::::::::::::
-     #=GF TP      rf
-     ```
+Code Details and Examples: 
 
-   - Command to run cmsearch:
-     ```
-     cmsearch example.cm sequences.fa
-     ```
+Format Required: Files in Stockholm (.sto or .stk) format, which is a multiple sequence alignment format. 
 
-2. cmalign (align sequences to a CM):
-   - Input file format (CM file and sequences to align):
-     ```
-     # STOCKHOLM 1.0
-     # EXAMPLE CM
-     // structure
-     <HMMER3/f -> INFERNAL>
-     EXAMPLE  CM
-     ACC   1.0
-     #=GF SQ SS_cons  :::::::::::::::
-     #=GF TP      rf
-     ```
+Sample Input Files: 
 
-   - Command to run cmalign:
-     ```
-     cmalign example.cm sequences.fa > aligned_sequences.sto
-     ```
+A simple example of a Stockholm format file would be the following:
 
-3. cmbuild (build a CM from a multiple sequence alignment):
-   - Input file format (Multiple sequence alignment):
-     ```
-     >seq1
-     ACUGAUGCUAGC
-     >seq2
-     ACUGAUGCUAGC
-     ```
+```
+# STOCKHOLM 1.0
+# =GF ID Infernal-1.1.1 
+#=GF AC IPR003122
+#=GF DE tRNA
+#=GF AU Infernal
+# =GF SE Infernal
+# =GF GA 25.00 25.00;
+# =GF TC 30.00 30.00;
+# =GF NC 25.00 25.00;
+#=GF BM cmbuild -F CM SEED
+#=GF SM cmsearch --cpu 4 -E 1000 --max --nohmmonly
+#=GF TP tRNA
+#=GF RN [1]
+#=GF RM 9822976
+#=GF RT Infernal documentation
+#=GF RA Eddy SR;
+#=GF RL Infernal Working Paper. 2006
+#=GS AF001958/997-1068 AC AF001958.1
+#=GS AF001958/997-1068 DR PDB; 1EHZ A;
+#=GS AF001958/997-1068 OS Homo sapiens
+AF001958/997-1068       GUACGCGGCUUCUCUUCGGCAGCGCUAGUCUGGAGUGGCACGCGGAUUCGAUUCCUUCGAACGGGGGUGCGGUUCGAAGUAGUAGAGUGGGT
+#=GC SS_cons               :::::::::::::::::: ..:::::::::::       :::::::::::::::::::: <<<<<<<<<<<  ....  >>>>>>  ::::::::: <<<<<<<<<<  ...  >>>>>>>>>>>.Stdout.inf ::::::::::
+#=GC RF                   gcuacgcggcuucucuucggcaggcguagucuggaguggcacgcggauucgauuccuucgaacgggggugcgguucgaagguagugaguggggt
+#=GF NC 25.00 25.00
+#=GF TC 30.00 30.00
+#=GF GA 25.00 25.00
+//
+```
 
-   - Command to run cmbuild:
-     ```
-     cmbuild example.cm aligned_sequences.sto
-     ```
+Command to Run: 
+
+It is very simple to run Infernal. You just need to have a fasta file with your sequences. Here's an example of how you might run it:
+
+```
+cmbuild output.cm input.sto
+csearch output.cm input.fasta
+```
+
+This will output a .cm file, which is the covariance model of the RNA. 
+
+This will then be used to search against other sequences in the fasta file. The results of this search can then be analyzed further.

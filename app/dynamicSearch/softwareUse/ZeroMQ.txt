@@ -1,43 +1,46 @@
-Use Case: ZeroMQ is a high-performance messaging library for distributed or concurrent systems.
+Use Case: ZeroMQ is used for high-speed, low-latency communication between distributed and/or concurrent applications. It supports multiple types of exchange patterns, such as request–reply and publish–subscribe.
 
 Code details and examples:
-ZeroMQ does not require input files for basic messaging scenarios. Below is an example of a simple ZeroMQ publisher and subscriber in Python:
 
-Publisher:
+Code:
+
+A simple request and reply pattern in Python using `pyzmq`, the Python binding for ZeroMQ.
+
+Server side code:
+
 ```python
 import zmq
-
+import time
 context = zmq.Context()
-socket = context.socket(zmq.PUB)
+socket = context.socket(zmq.REP)
 socket.bind("tcp://*:5555")
-
 while True:
-    msg = input("Enter message to publish: ")
-    socket.send(msg.encode())
+    #  Wait for next request from client
+    message = socket.recv()
+    print("Received request: %s" % message)
+    #  Do some 'work'
+    time.sleep(1)
+    #  Send reply back to client
+    socket.send(b"World")
 ```
 
-Subscriber:
+Client side code:
+
 ```python
 import zmq
-
 context = zmq.Context()
-socket = context.socket(zmq.SUB)
+print("Connecting to hello world server...")
+socket = context.socket(zmq.REQ)
 socket.connect("tcp://localhost:5555")
-socket.setsockopt_string(zmq.SUBSCRIBE, "")
-
-while True:
-    msg = socket.recv()
-    print(f"Received: {msg.decode()}")
+for request in range(10):
+    print("Sending request %s ..." % request)
+    socket.send(b"Hello")
+    message = socket.recv()
+    print("Received reply %s [ %s ]" % (request, message))
 ```
 
-To run the above scripts, you can launch the publisher and subscriber in separate terminals.
+To run the server, use the command: `python server.py`
 
-Publisher command:
-```
-python publisher.py
-```
+To run the client, use the command: `python client.py` 
 
-Subscriber command:
-```
-python subscriber.py
-```
+The input here is a hardcoded string "Hello". The server receives this string, waits for a second and then responds with the string "World"

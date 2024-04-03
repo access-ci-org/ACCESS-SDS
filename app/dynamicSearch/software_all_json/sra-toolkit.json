@@ -1,0 +1,24 @@
+{
+    "software_name": "SRA Toolkit",
+    "comprehensive_overview": "SRA Toolkit is a collection of tools and libraries for accessing the Sequence Read Archive (SRA) and related genomic data formats. It provides command-line utilities for downloading, browsing, and converting high-throughput sequencing data stored in the SRA database maintained by the National Center for Biotechnology Information (NCBI).",
+    "core_features": [
+        "Download high-throughput sequencing data from the SRA database",
+        "Convert data between different file formats (e.g., SRA to FASTQ)",
+        "Query metadata and access sequence read data efficiently",
+        "Integrate easily into bioinformatics pipelines"
+    ],
+    "general_tags": [
+        "Bioinformatics",
+        "High-Throughput Sequencing",
+        "Genomic Data",
+        "Data Conversion",
+        "Sequence Analysis"
+    ],
+    "additional_tags": {
+        "research_discipline": "Genomics",
+        "research_area": "High-Throughput Sequencing",
+        "software_class": "Data Management and Analysis",
+        "software_type": "Tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

@@ -1,0 +1,32 @@
+Use Case: BEAST (Bayesian Evolutionary Analysis Sampling Trees) is a cross-platform program for Bayesian analysis of molecular sequences using Markov chain Monte Carlo (MCMC). It is used predominantly for analyses of phylogeny and evolution.
+
+Code Details and Examples:
+
+Code:
+
+An example of an input file for BEAST would be an XML file consisting of the following:
+
+```
+<beast version="1.10.4" namespace="beast.evolution.alignment:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.tree.coalescent:beast.core:beast.math">
+  <run id="mcmc" spec="beast.core.MCMC" chainLength="1000000">
+    <!-- ... other specifications ... -->
+  </run> 
+</beast>
+```
+This XML file might specify things like the model of nucleotide substitution, the site model, and the tree prior.
+
+Input file specifications: 
+
+BEAST generally takes an XML file as input, the XML file describes the model to be run. 
+
+File extension is .xml.
+
+Command to run it:
+
+When BEAST is installed in your system, you can use the command via terminal with:
+
+```
+beast filename.xml
+```
+
+Where filename.xml is the BEAST XML file you want to run.

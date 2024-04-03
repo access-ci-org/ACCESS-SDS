@@ -1,0 +1,20 @@
+Use Case: R-later is an R package that provides functions to schedule R commands to run after a specified delay. It is useful when you need to defer the execution of long-running or scheduled tasks.
+
+Code details and examples:
+
+Code:
+
+```R
+library(later)
+
+# Print "Hello, world!" 5 seconds from now.
+later(function() print('Hello, world!'), delay = 5.0)
+
+# Print "Hello, world!" Also 5 seconds from now. But if the system is busy and it has to choose between running these two, it'll run function2
+later(function2() print('Hello, world!'), delay = 5.0, loop = function2)
+
+```
+
+There is no external input file is required. The arguments to the function 'later' are the function to be executed after delay and the delay time in seconds. 
+
+To run the code, save it in a '.R' file and call it from the R command line with the command: Rscript filename.R.

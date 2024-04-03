@@ -1,0 +1,25 @@
+Use Case: Hypothesis testing in development and unit testing of software. Hypothesis (hypo for short) is a Python library for creating unit tests, which simplifies the process of creating complex data structures for testing your Python code. It works on the basis of property-based testing. 
+
+Code Details and Examples:
+
+Code:
+
+```python
+from hypothesis import given
+import hypothesis.strategies as st
+
+# that's how we define that our function should be tested with integers
+@given(st.integers())
+def test_negation(x):
+    assert x == -(-x)
+```
+
+This script defines the function `test_negation` which will be tested with random integers. If the assertion `x == -(-x)` would not be true for any integer, then we say that this test has found a bug.
+
+If no command is specified, Hypothesis will run the test with a wide range of random inputs. To run the tests, you typically put the tests in a file and run it using a testing command line tool such as pytest. 
+
+Command to run:
+
+`pytest filename.py` 
+
+where filename.py is the Python file containing your Hypothesis tests.

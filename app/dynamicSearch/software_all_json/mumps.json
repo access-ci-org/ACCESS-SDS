@@ -1,0 +1,11 @@
+{
+    "software_name": "MUMPS",
+    "comprehensive_overview": "MUMPS (MUltifrontal Massively Parallel sparse direct Solver) is a software package for the parallel solution of large sparse systems of linear equations arising from computational science and engineering applications.",
+    "core_features": "1. Direct solver for large sparse linear systems.\n2. Parallel processing for efficient computation.\n3. Scalable for high-performance computing environments.\n4. Suitable for a wide range of scientific and engineering applications.\n5. Compatible with various platforms and architectures.",
+    "general_tags": ["linear algebra", "sparse matrices", "computational science", "engineering"],
+    "research_discipline": "Applied Mathematics",
+    "research_area": "Numerical Analysis",
+    "software_class": "Numerical Software",
+    "software_type": "Solver",
+    "field_of_science": "Mathematics"
+}

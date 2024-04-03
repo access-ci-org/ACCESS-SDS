@@ -1,0 +1,40 @@
+Use Case: r-cli, a package for Python language, provides a system for creating command line interfaces. It offers a simple way to write scripts that are easy to use, easy to read, and easy to maintain. 
+
+Code Details and Examples: 
+
+Code Sample: 
+
+To use r-cli, you normally write simple JSON files that describe your command's function and it reads these files to generate code. 
+
+rcli.json:
+
+```json
+{
+  "prog": "HelloWorld",
+  "description": "Greet the world",
+  "args": [
+    "name"
+  ]
+}
+```
+
+This tells r-cli that you have a command named HelloWorld that takes one argument, name. When this file is read by r-cli, it will generate a function like this:
+
+```python
+def HelloWorld(name):
+    print(f'Hello, {name}!')
+```
+
+You can run this program as follows:
+
+```shell
+python HelloWorld.py World
+```
+
+And it will print: 
+
+```
+Hello, World!
+```
+
+This is a very simple example and r-cli supports a lot more features, including optional arguments, argument types, sub-commands, and user-defined functions.

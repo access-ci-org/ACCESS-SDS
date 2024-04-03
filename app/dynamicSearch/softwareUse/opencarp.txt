@@ -1,13 +1,44 @@
-Use Case: Finite element library for simulating electromagnetic fields in accelerator physics and engineering applications.
+Use Case: OpenCarp is a powerful simulation software package for electrocardiographic (ECG) simulations. The main application is prediction of ECG signals from patient specific heart models.
 
-Code details and examples: 
-```cpp
-// Example input file for OpenCARP
-mesh_file = mesh_file.msh
-material_file = material_file.mat
-stimulus_file = stimulus_file.stim
-solver_params = solver_params.cfg
+Code details and examples:
 
-// Code snippet to run OpenCARP
-opencarp -i input_file.cfg
-```
+**Code:**
+
+To run opencarp we need a settings file (typically a .cfg file) and an anatomy file representing the heart geometry (typically .vtk files). These files are highly specific to the application and are usually created by experts based on medical imagery.
+
+*ECG simulation:*
+
+sample cfg for a ventricle activation sequence:
+  
+    [stimulus]
+    start = 0
+    duration = 1
+    strength = 50
+
+    [grid]
+    name = ventricle
+    dx = 0.1 
+    dy = 0.2
+    dz = 0.2
+
+    [tissue]
+    class = eikonal
+    velocity = 1
+
+    [solver]
+    diffusion_tensor = uniform
+    use_steady_state = yes
+
+    [output]
+    output_prefix = ventricle
+
+    [monodomain]
+    solve_ground_problem = no
+
+To run the simulation you might use command: 
+
+`./openCarp ventricle_stim.cfg`
+
+Please note, You will need a suitable dataset to run this command. The dataset required would include specification of heart geometry in vtk file format along side the cfg file containing the simulation parameters.
+
+**NOTE:** Due to the complexities involved in medical image processing and the creation of heart models, these are provided or created by professionals in the field. Imagery data is subject to strict privacy laws and is therefore not included here.

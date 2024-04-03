@@ -1,0 +1,32 @@
+Use Case: Use musl for building a static "Hello, World!" program.
+
+Code details and examples:
+
+Code:
+```c
+// This is a simple Hello World program in C.
+#include <stdio.h>
+int main() {
+    printf("Hello, World!");
+    return 0;
+}
+```
+Save the code in a file called `hello.c`.
+
+The input file for musl compiler is the C source file. The format required is a standard C source code file (.c extension).
+
+Additional specifications and details for the input file are not applicable for this use case as it is a very simple program.
+
+To compile the code using Musl as the C library, here is a sample command:
+
+```bash
+$ musl-gcc -static -o hello hello.c
+```
+The `-static` flag is used for static linking, `-o hello` is used to specify the output file name, and `hello.c` is the input C source file. 
+
+To run the compiled program:
+
+```bash
+$ ./hello
+```
+This will output: "Hello, World!"

@@ -1,21 +1,29 @@
-Use Case: PLUMED is an open-source library for free energy calculations in molecular systems.
+Use Case: PLUMED is a plugin used for free-energy calculations and molecular dynamics simulations. It can be incorporated into several different molecular dynamics software packages. 
 
 Code details and examples:
-PLUMED requires a configuration file (usually named plumed.dat) to specify the collective variables and biases to be used in the simulation.
 
-Sample plumed.dat file:
+## Code:
+
+Here is an example of an input file for PLUMED, which is used to specify the free-energy calculation that it performs. This file is called 'plumed.dat':
+
 ```
-# Compute the distance between atoms 1 and 2
-d: DISTANCE ATOMS=1,2
+# make sure PLUMED is working
+PRINT STRIDE=100 ARG=* FILE=COLVAR 
 
-# Harmonic bias potential along the distance
-kappa: KAPPA ...
-BIASVALUE=5.0
+# define collective variable as distance between atoms 1 and 2
+d1: DISTANCE ATOMS=1,2
+# define another collective variable as distance between atoms 1 and 3
+d2: DISTANCE ATOMS=1,3 
 
-# Output the distance and bias energy
-PRINT ARG=d,kappa FILE=COLVAR
+# specify metadynamics biasing using collective variables d1 and d2
+METAD ARG=d1,d2 SIGMA=0.2,0.2 HEIGHT=1.2 PACE=500 FILE=HILLS 
+
+# print out collective variables and metadynamics bias every 100 steps
+PRINT STRIDE=100 ARG=d1,d2,metad.bias FILE=COLVAR 
 ```
+## Command:
+The command to run PLUMED depends on the molecular dynamics software package it's plugged into. For instance, if it's plugged into the GROMACS package, the command might be:
 
-To run a simulation with PLUMED, you would typically launch your MD simulation code (e.g., GROMACS, LAMMPS) with PLUMED as a plugin. The command to run the simulation would depend on the specific simulation code you are using.
+`gmx mdrun -plumed plumed.dat -s input.tpr -o output.xtc -e output.edr -g output.log`
 
-It's important to note that PLUMED is typically used in conjunction with molecular dynamics simulation software, so the exact command to run would vary depending on the simulation package being employed.
+In terms of input files, PLUMED requires an input file (in this scenario 'plumed.dat') with detailed instructions for its calculations and based on these details the software decides how to interact with the data gathered from simulation over the course of the dynamics.

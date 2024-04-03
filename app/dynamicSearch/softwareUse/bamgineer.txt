@@ -1,0 +1,23 @@
+Use Case: BAMgineer is a tool used in bioinformatics to introduce artificial copy number variations (CNVs) and single nucleotide variations (SNVs) into existing BAM files. This can assist in better understanding how the body responds to various changes in gene expression. The input required is an original BAM file to be modified along with BED files indicating the target regions for introduction of CNVs or SNVs.
+
+Code details and examples: 
+
+Code:
+
+```bash
+bamgineer -t pool -c chr22 -o ${out} -s NA12878 --frac 0.3 -b ${beds}/ -n --sex f -r ${bwa_index} -f hg19_chr22.fna -g ${bamgineer}/refGene_hg19.txt --picard ${picard} --samtools ${samtools} --samtools_v1 ${samtools_v1}
+```
+
+Input Files:
+1. Original BAM file: This is a binary version of a SAM file, a sequenced list of nucleotide alignments.
+2. BED Files: These are text files used to define data tracks.
+
+Specifications and Details in Input Files:
+1. BAM File: Contains read sequences, quality scores, and alignment information.
+2. BED Files: Contains genomic region data, each line describing a different region. The columns are chrom, chromStart, chromEnd, name, score, strand by default.
+
+Command: 
+```bash
+bamgineer -t pool -c chr22 -o ${out} -s NA12878 --frac 0.3 -b ${beds}/ -n --sex f -r ${bwa_index} -f hg19_chr22.fna -g ${bamgineer}/refGene_hg19.txt --picard ${picard} --samtools ${samtools} --samtools_v1 ${samtools_v1}
+``` 
+Here the command is used to introduce a 30% fraction of copy number variations into chromosome 22 of sample NA12878. The output is directed to the location specified by ${out} and the BED files are located in the directory specified by ${beds}. The option '--sex f' is indicating the sample is female and -r uses BWA index for realignment. '--picard ${picard}' specifies path to picard tool, similarly '--samtools ${samtools}' and '--samtools_v1 ${samtools_v1}' specify paths to samtools v1 and v2.

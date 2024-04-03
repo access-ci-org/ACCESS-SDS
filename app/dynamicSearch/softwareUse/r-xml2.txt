@@ -1,0 +1,42 @@
+Use Case: r-xml2 is used for parsing and manipulating XML within R and it supports both reading XML files into R structures, and creating R structures which can then be written into XML strings or files.
+
+Code details and examples:
+
+Code:
+
+```r
+library(xml2)
+
+# To read XML data from a URL or a file
+xml <- read_xml("http://www.w3schools.com/xml/note.xml")
+
+# To find all of the nodes that have a certain name. Returns a list of XML nodes
+xml_find_all(xml, "to")
+
+# To find the first node that has a certain name. Returns a single XML node
+xml_find_first(xml, "//title")
+
+# To get or set the name of a node
+xml_name(xml)
+
+# Get the text of a node
+xml_text(xml)
+
+# To convert an XML document to a character vector
+as.character(xml)
+
+# To write an xml document to a file
+write_xml(xml, "file.xml")
+```
+
+Input file format and requirements:
+
+The input file would be an XML document and must be a text file in XML format compliant with XML syntax rules.
+
+Command to run:
+
+This file can be run in an R environment. For an R script file named `script.R` you would use:
+
+```shell
+Rscript script.R
+```

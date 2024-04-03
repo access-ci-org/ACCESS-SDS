@@ -1,0 +1,45 @@
+Use Case: Salmon is a bioinformatics tool typically used for estimating expression levels based on RNA-seq data. It quantifies the abundances of transcripts or genes from RNA-seq data. 
+
+Code details and examples: 
+
+Code:
+
+For the sake of this demonstration example, let's pick one sample RNA-Seq data file `reads_1.fastq` and `reads_2.fastq` (a pair-ended run). The command below will index the reference transcriptome:
+
+```
+salmon index -t transcriptome.fasta -i salmon_index
+```
+
+After building the indices, we can then quantify the expressions in the sample using the command below:
+
+```
+salmon quant -i salmon_index -l A -1 reads_1.fastq -2 reads_2.fastq -o salmon_output
+```
+
+In the command above, `-l A` is used to automatically detect the library type. `-1 and -2` are used to specify the files containing the left and the right pair of reads.
+
+File Format Required:
+
+Input files for Salmon include the transcriptome file which should be in FASTA format (a text-based format for representing nucleotide sequences or peptide sequences) and RNA-Seq data files which should be in FASTQ format.
+
+For transcriptome FASTA file, it might look something like:
+
+```
+>transcript1
+ATGGCCGGGCTCTTGAGTTG
+>transcript2
+ATGGCGCGGCTCTTGAGTTG
+```
+
+While FASTQ file carrying sequencing reads could look like:
+
+```
+@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
++
+!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
+```
+
+Specifications in Input Files:
+
+In Salmon particularly, read files should be specified in pairs and they must correspond (i.e., the ith read in the first file must come from the same sample as the ith read in the second file). For the reference transcriptome file, the headers of the sequences need to uniquely identify each transcript.

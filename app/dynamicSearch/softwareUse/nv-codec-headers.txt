@@ -1,0 +1,70 @@
+Use Case: This package is for NVIDIA Video Codec SDK, a powerful API that allows developers to leverage the power of NVIDIA hardware for video encoding and decoding. It can be used in applications like video editing software, video streaming, and data augmentation for machine learning.
+
+Code Details and Examples: 
+
+The use of `nv-codec-headers` is mostly for linking with other software, and doesn't involve running any direct commands with it. However, the `ff_nvcodec` header file is used in FFMPEG's GPU-accelerated video decoding and encoding.
+
+Here is a simple example of how you would decode a H264 video using NVIDIA's hardware acceleration with the FFMPEG, which makes use of `nv-codec-headers`.
+
+Code:
+
+```c++
+extern "C" {
+    #include <libavcodec/avcodec.h>
+}
+
+int main() {
+    AVCodec* codec = avcodec_find_decoder_by_name("h264_cuvid");
+    if (!codec) {
+        fprintf(stderr, "Codec not found\n");
+        exit(1);
+    }
+
+    AVCodecContext* codecContext = avcodec_alloc_context3(codec);
+    if (!codecContext) {
+        fprintf(stderr, "Could not allocate video codec context\n");
+        exit(1);
+    }
+
+    if (avcodec_open2(codecContext, codec, nullptr) < 0) {
+        fprintf(stderr, "Could not open codec\n");
+        exit(1);
+    }
+
+    // Assuming AVPacket* packet has been filled with compressed video data
+    int ret = avcodec_send_packet(codecContext, packet);
+    if (ret < 0) {
+        fprintf(stderr, "Error sending a packet for decoding\n");
+        exit(1);
+    }
+
+    while (ret >= 0) {
+        AVFrame* frame = av_frame_alloc();
+        ret = avcodec_receive_frame(codecContext, frame);
+        if (ret == AVERROR(EAGAIN) || ret == AVERROR_EOF) {
+            av_frame_free(&frame);
+            break;
+        } else if (ret < 0) {
+            fprintf(stderr, "Error during decoding\n");
+            av_frame_free(&frame);
+            exit(1);
+        }
+
+        // Use the decoded frame data...
+        av_frame_free(&frame);
+    }
+
+    avcodec_free_context(&codecContext);
+
+    return 0;
+}
+```
+
+Command to compile and run using g++:
+```
+g++ decode.cpp -lavcodec -o decode
+./decode
+```
+This code first retrieves the H264 decoder ("h264_cuvid") using the libavcodec library from FFMPEG, then decodes incoming video data packets using NVIDIA's hardware acceleration.
+
+The `av_frame_alloc`, `av_frame_free`, `avcodec_send_packet`, and `avcodec_receive_frame` functions are used to manage memory and decode video data. The details of how to fill the `AVPacket` instance with your specific video data depend on the source of your data, such as a video file or a network stream. Only the proper header files of NVIDIA codec SDK and the FFMPEG library is needed. All the work is done using the APIs provided by the FFMPEG library.

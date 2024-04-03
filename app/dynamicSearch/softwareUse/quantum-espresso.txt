@@ -1,0 +1,44 @@
+Use Case: Quantum ESPRESSO is used for performing quantum mechanical calculations, particularly electronic-structure calculations and density-functional theory (DFT). The system you want to study is totally defined in its input file, therefore the specification of the input file is extremely crucial.
+
+Code details and Examples: Code
+
+Here is a core snippet of an input file for Quantum ESPRESSO performing a calculation of the energy of a silicon crystal:
+
+This is the sample PWscf input file:
+
+```
+&CONTROL
+                 calculation = 'scf' ,
+                restart_mode = 'from_scratch' ,
+                      outdir = '/scratch/' ,
+                  pseudo_dir = '/home/username/pseudo/' ,
+                      prefix = 'si' ,
+                     tstress = .true. ,
+                     tprnfor = .true. ,
+ /
+ &SYSTEM
+                       ibrav =  2,
+                   celldm(1) = 10.20,
+                         nat =  2,
+                        ntyp =  1,
+                     ecutwfc = 14.0 ,
+ /
+ &ELECTRONS
+                    conv_thr =  1.0d-8 ,
+                 mixing_beta = 0.7 ,
+ /
+ATOMIC_SPECIES
+ Si  28.086  Si.pz-vbc.UPF
+ATOMIC_POSITIONS 
+ Si 0.00 0.00 0.00 
+ Si 0.25 0.25 0.25
+K_POINTS automatic 
+  4 4 4   0 0 0 
+```
+
+Command to run this input file: 
+
+```
+pw.x < input.in > output.out
+```
+Quantum Espresso input file (input.in in the above command) has several namelists (starts with &NAME and ends with /) and cards (starts with a keyword). For example, calculation='scf' in &CONTROL namelist is for 'self-consistent field' which specifies that a ground state calculation is to be done. In &SYSTEM namelist nat=2 specifies the number of atoms in the unit cell, ntyp=1 specifies number of atomic types. ecutwfc specifies the energy cut-off for wavefunctions. In &ELECTRONS conv_thr specifies the convergence threshold for the electronic optimization. ATOMIC_SPECIES card indicates the atomic species, its atomic weight and the pseudopotential file. ATOMIC_POSITIONS specifies the positions of the atoms in crystal coordinates (fractional of the lattice constant). K_POINTS specifies the k-points grid for Brillouin zone integration.

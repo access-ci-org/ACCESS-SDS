@@ -1,0 +1,17 @@
+{
+    "software_name": "SimUG",
+    "Comprehensive Overview": "SimUG is a simulation software designed for educational purposes that enables users to create and analyze dynamic models. It provides a user-friendly interface for building simulation models and running simulations to visualize the behavior of the system.",
+    "Core Features": "1. Intuitive interface for model building\n2. Simulation capabilities to visualize system behavior\n3. Educational tool for understanding dynamic systems\n4. Analysis tools for interpreting simulation results",
+    "General Tags": [
+        "Simulation Software",
+        "Educational Software",
+        "Modeling and Analysis"
+    ],
+    "Additional Tags": {
+        "Research Discipline": "Science and Engineering Education",
+        "Research Area": "Training",
+        "Software Class": "Scientific Software",
+        "Software Type": "Simulation Tool",
+        "Field of Science": "Engineering and Technology"
+    }
+}

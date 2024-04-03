@@ -1,45 +1,80 @@
-I'll provide information based on the assumption that you are referring to the MUMPS (Multi-User Multi-Processing System) software package commonly used for solving large sparse linear systems. 
+Use Case: MUMPS is a software package providing direct methods for solving large-scale sparse systems of linear equations. 
 
-Use Case: Solving a sparse linear system using MUMPS
-Code details and examples:
+Code details and examples: 
 
-1. Input file format:
-    MUMPS accepts sparse matrices in the Matrix Market format (.mtx). Here is an example of a sparse matrix in Matrix Market format:
-    
-    ```
-    %%MatrixMarket matrix coordinate real general
-    % Example matrix
-    5 5 8
-    1 1 1.0
-    2 2 2.0
-    2 3 3.0
-    3 2 4.0
-    3 3 5.0
-    4 4 6.0
-    5 4 7.0
-    5 5 8.0
-    ```
+Code:
 
-2. Code snippet to solve the linear system using MUMPS in Python with SciPy:
-   
-   ```python
-   import scipy.io
-   import scipy.sparse as sp
-   from scipy.sparse.linalg import spsolve
-   
-   # Load the matrix from the .mtx file
-   matrix = scipy.io.mmread("example_matrix.mtx")
-   A = sp.csc_matrix(matrix)
-   
-   # Assuming the right-hand side vector is b
-   b = np.array([1.0, 2.0, 3.0, 4.0, 5.0])
-   
-   # Solve the linear system using MUMPS
-   x = spsolve(A, b)
-   print(x)
-   ```
+Suppose we have a sparse matrix described in Matrix Market format (.mtx). It can be used as input for MUMPS.
 
-3. Command to run (command-line):
-   MUMPS can be used through libraries like PETSc, Trilinos, or directly from Fortran/C code. The command to run depends on the specific application using MUMPS.
+Example of a .mtx file:
 
-Please adjust the code according to your specific matrix and linear system requirements.
+```
+%%MatrixMarket matrix coordinate real general
+5 5 8
+1 1  4.000000e+00
+1 2  1.000000e+00
+2 1  1.000000e+00
+2 2  -4.000000e+00
+2 3  1.000000e+00
+3 2  1.000000e+00
+3 3  4.000000e+00
+4 4  2.500000e-01
+```
+
+This represents the sparse matrix:
+
+```
+4 1 0 0
+1 -4 1 0
+0 1 4 0
+0 0 0 0.25
+```
+
+To solve a linear system with MUMPS, you write a driver calling MUMPS. Below is an example in Fortran:
+
+```f90
+PROGRAM test
+USE dmumps_struc_def
+USE mpi
+IMPLICIT NONE
+INTEGER :: myid, ierr
+TYPE(DMUMPS_STRUC) :: id
+
+CALL MPI_INIT(ierr)
+CALL MPI_COMM_RANK(MPI_COMM_WORLD, myid, ierr)
+
+id%COMM = MPI_COMM_WORLD
+id%SYM = 0
+id%PAR = 1
+id%JOB = -1
+CALL DMUMPS(id) ! Initialize a MUMPS instance. Use a distributed version.
+
+READ(*,*) id%N, id%NZ ! Read the number of equations and number of non-zero entries of the matrix
+ALLOCATE(id%IRN(id%NZ), id%JCN(id%NZ))
+READ(*,*) id%IRN, id%JCN ! Read the entries id%NZ in the coordinate format
+READ(*,*) id%RHS(id%N) ! Read the right-hand side of the system equation
+
+id%JOB = 6
+CALL DMUMPS(id) ! Call MUMPS to solve the system. 
+
+IF (myid .EQ. 0) THEN
+    PRINT*, 'Solution is :'
+    PRINT*, id%RHS
+ENDIF
+
+id%JOB = -2
+CALL DMUMPS(id) ! Terminate instance
+
+CALL MPI_FINALIZE(ierr)
+END PROGRAM test
+```
+
+Run this Fortran program with: 
+
+```
+mpirun -np 4 a.out < input.dat
+```
+
+Where `input.dat` is a plain text file containing the values for `N`, `NZ`, `IRN`, `JCN`, and `RHS` in that order. The values should be space-separated. 
+
+Note: Always ensure MUMPS libraries and the MPI libraries are both correctly linked while compiling. The number "4" in the `mpirun` command is the number of CPUs to be used by the program – replace with your preference.

@@ -1,0 +1,11 @@
+{
+    "software_name": "R-nnet",
+    "comprehensive_overview": "R-nnet is an R package that provides an implementation of feedforward neural networks, which are widely used in various machine learning tasks.",
+    "core_features": "Key features include the ability to train neural networks with multiple hidden layers, customizable activation functions, and options for regularization techniques such as weight decay.",
+    "general_tags": ["machine learning", "neural networks", "R package"],
+    "research_discipline": null,
+    "research_area": null,
+    "software_class": null,
+    "software_type": null,
+    "field_of_science": "Computer and Information Sciences"
+}

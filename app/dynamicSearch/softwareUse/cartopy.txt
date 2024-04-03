@@ -1,0 +1,31 @@
+Use Case: Plotting a simple global map using Cartopy, a Python package used for geographic data processing in order to produce maps and other geospatial data analyses. 
+
+Code details and examples:
+
+Code:
+```python
+# Import necessary libraries
+import matplotlib.pyplot as plt
+import cartopy.crs as ccrs
+
+# Create a new figure, and set its projection
+fig = plt.figure()
+ax = fig.add_subplot(1, 1, 1, projection=ccrs.Robinson())
+
+# Set the title for the figure
+ax.set_title("A Global Map")
+
+# Draw coastlines onto the figure
+ax.coastlines()
+
+# Display the figure
+plt.show()
+```
+
+The above code uses inbuilt functions, scripts, and datasets provided by Cartopy. There will not be any specific input file formats as Cartopy primarily works with standard GIS formats. 
+
+To run the code, it's the standard Python command: 
+```bash
+python filename.py
+```
+Where filename.py is the filename of your Python script containing the above Cartopy code.

@@ -1,0 +1,26 @@
+Use Case: Manta is a rapid structural variant discovery for germline and cancer sequencing applications. It discovers genome structural variations and indels with high sensitivity and speed, including large insertions and deletions, distant inversions, translocations.
+
+Code details and examples: 
+Code:
+
+To run manta, you first need to configure your analysis with the 'configManta.py' script. The key input is the BAM or CRAM file from your analysis. Here is an example of how to configure your analysis:
+
+```
+configManta.py --bam tumor.bam --referenceFasta human_g1k_v37_decoy.fasta --runDir mantaRunDir
+```
+
+After configuration, you can initiate the analysis run with the 'runWorkflow.py' script present in the run directory:
+
+```
+mantaRunDir/runWorkflow.py -m local -j 8
+```
+
+The -m local option specifies that the workflow is to be run on the local machine, and the -j 8 flag specifies that the workflow should use eight cores.
+
+Specifications and details in input files:
+
+- tumor.bam: This is the BAM file representing your input data. This file should be sorted and indexed, with the index file in the same directory.
+
+- human_g1k_v37_decoy.fasta: This is the reference genome file. It should be the same file that was used to align the reads into the BAM file. It should be indexed, with the index file (.fai) in the same directory.
+
+Both the BAM and the reference FASTA files should be complete and not truncated or otherwise incomplete. Incorrect or incomplete input files can cause the program to fail or produce incorrect results.

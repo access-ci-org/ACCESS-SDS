@@ -1,0 +1,13 @@
+{
+    "software_name": "pyro-api",
+    "comprehensive_overview": "Pyro-API is a Python package that provides an Application Programming Interface (API) for interacting with the Pyro library. Pyro is a flexible, scalable deep probabilistic programming library built on PyTorch. Pyro-API simplifies the process of building and training probabilistic models using Pyro by providing an intuitive and high-level API.",
+    "core_features": "1. Simplifies building and training probabilistic models in Pyro.\n2. Provides a high-level API for interacting with Pyro library.\n3. Supports various deep probabilistic programming tasks.\n4. Built on top of PyTorch, enabling seamless integration with PyTorch's functionality.",
+    "general_tags": ["python library", "probabilistic programming", "deep learning"],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "API",
+        "software_type": "Library",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

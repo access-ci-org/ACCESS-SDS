@@ -1,0 +1,41 @@
+Use Case: Fastp is an ultra-fast all-in-one FASTQ preprocessor. It provides thorough raw read QC, adapter/triangle/cutting, quality trimming, polyG tail trimming, polyX tail trimming and correction, and UMI processing.
+
+Code Details and Examples:
+
+Code:
+The input files for fastp should be in FastQ format, which is a common format for storing high-throughput sequencing data. FastQ files typically have the file extension .fq or .fastq.
+
+Here is a tiny example of a FastQ file:
+
+@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
++
+!''*((((***+))%%%++)(%%%%).
+The file is composed of groups of four lines:
+
+1. Line 1: Begins with a '@' character and is followed by a sequence identifier.
+2. Line 2: The raw sequence.
+3. Line 3: Begins with a '+' character and is optionally followed by the same sequence identifier (and any description) again.
+4. Line 4: Encoding quality scores for the sequence in line 2.
+
+Fastp command line is:
+
+```
+fastp -i in.fq -o out.fq
+```
+Where `-i` specifies the input file and `-o` specifies the output file.
+
+For paired end data, the command is:
+
+```
+fastp -i in1.fq -I in2.fq -o out1.fq -O out2.fq
+```
+Here `-I` specifies the second input file for paired end data, `-o` specifies the output file for read1 and `-O` specifies the output file for read2. 
+
+Also, an HTML report and a JSON report can be generated with `-h` and `-j` option.
+
+```
+fastp -i in.fq -o out.fq -h report.html -j report.json
+``` 
+
+In this case, `report.html` would be an HTML report providing information on data quality, and `report.json` is a JSON formatted report with the same information.

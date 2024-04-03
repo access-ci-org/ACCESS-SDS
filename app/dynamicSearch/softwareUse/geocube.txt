@@ -1,0 +1,28 @@
+Use Case: GeoCube provides a Python interface to turn xarray.DataArrays into a geotiff/raster file. This can be commonly used by geographers or GIS professionals to prepare spatial data.
+
+Code details and examples:
+
+Code:
+
+```python
+import rioxarray
+import geocube
+
+# Read your data using xarray
+xds = rioxarray.open_rasterio("path_to_your_raster_file.tif")
+
+# Use geocube to write the raster extracted with rioxarray to a new Geotiff
+out_grid = geocube.make_geocube(
+    xds,
+    measurements=["band"],
+)
+
+out_grid.rio.to_raster("path_to_output_file.tif")
+```
+Above code reads an input geotiff file and rewrites it to a new geotiff file.
+
+The format of the input file is a Geotiff. Geotiff is a raster file format which is commonly used for storing georeferenced imagery. The input data array holds the pixel values of the raster and, equivalent to image data, these values can range according to the color depth of the dataset but is typically of the int or float data type.
+
+The `rioxarray.open_rasterio` function allows for the reading of the input raster file. Here, the argument "path_to_your_raster_file.tif" must be replaced with the path to the .tif file you intend to use.
+
+The output file will also be in Geotiff format, as specified in the `rio.to_raster` function, where "path_to_output_file.tif" should be replaced with your desired output file path.

@@ -1,0 +1,19 @@
+{
+  "software_name": "Parallel-NetCDF",
+  "comprehensive_overview": "Parallel-NetCDF is a library providing high-performance I/O in parallel environments for big data applications with large scientific datasets. It offers parallel I/O capabilities for NetCDF files, which are commonly used in climate modeling, weather forecasting, and other scientific disciplines.",
+  "core_features": [
+    "Parallel I/O for NetCDF files",
+    "High-performance I/O in parallel environments",
+    "Optimized for big data applications with large datasets",
+    "Supports parallel reads and writes",
+    "Scalable and efficient storage and retrieval of data"
+  ],
+  "general_tags": ["High-performance I/O", "Big Data", "Parallel Computing"],
+  "additional_tags": {
+    "research_discipline": "Earth and Environmental Sciences",
+    "research_area": "Climate and Global Dynamics",
+    "software_class": "Library",
+    "software_type": "I/O Library",
+    "field_of_science": "Physical Sciences"
+  }
+}

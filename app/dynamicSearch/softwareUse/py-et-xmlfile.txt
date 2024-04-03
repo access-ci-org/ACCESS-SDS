@@ -1,0 +1,30 @@
+Use Case: Use for creating large XML files in Python. A Python library to create XML using an excel like manner, it creates large XML reports quickly.
+
+Code details and examples: Code.
+
+Sample Input File: It could be a large dataset which users want to convert to XML.
+
+Format Required: Usually, a dataframe format or tabular format would work best. This gets converted into XML.
+
+Specifications and details in input files: The input data needs to be in rows and columns format, where each column is an attribute and each row is a data entity.
+
+Code Snippet:
+```python
+from et_xmlfile import xmlfile, XMLWriter
+
+def create_large_xml(filename):
+    with xmlfile(filename) as xf:
+        with xf.element('root'):
+            writer = XMLWriter(xf)
+            for i in range(50000):
+                writer.start('item')
+                writer.element('field1', 'Data1')
+                writer.element('field2', 'Data2')
+                writer.element('fieldn', 'Datan')
+                writer.end('item')
+create_large_xml('large.xml')
+```
+
+In this code, the function `create_large_xml()` creates an XML file named 'large.xml', and for that, it uses the `XMLWriter()` function from the 'et_xmlfile' library in a loop for generating 50000 'item' elements each having multiple 'field' subelements.
+
+Command to run the code: This is a Python script, and can be executed from the command line with: `python script.py`. 'script.py' should be replaced with the actual filename of the script.

@@ -1,0 +1,32 @@
+Use Case: Use CDAT to read, slice, and manipulate your data formats such as netCDF, HDF, GRIB, etc. 
+
+Code Details and Examples: Code
+
+CDAT doesn't have specific input files. However, it is used mainly to manipulate and visualize scientific data, most commonly stored in netCDF format (self-describing, machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data). 
+
+For example, let's say you have a NetCDF data file (e.g., 'sample.nc') and you want to open it and view a summary:
+
+```python
+import cdms2
+
+# Open the dataset
+f = cdms2.open('sample.nc')
+
+# Get the variable in dataset
+slp = f('slp')
+
+# Check the shape of variable
+print(slp.shape)
+
+# Print the data summary
+print(slp)
+
+f.close()
+```
+
+To run the python file (assuming 'cdat_script.py' contains the code):
+```sh
+$ python cdat_script.py
+```
+
+You should preciously set your datasets to variables and call methods on them to manipulate them as per need. If the dataset has time as a dimension, there are methods provided by the CDAT library to slice and dice data across time, levels, latitude, longitude etc.

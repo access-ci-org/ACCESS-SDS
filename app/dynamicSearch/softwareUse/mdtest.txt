@@ -1,0 +1,39 @@
+Use Case: Use mdtest to benchmark a file system.
+
+Code details and examples: Code
+
+mdtest, a metadata benchmark tool, operates on files and directories. This tool uses POSIX commands to test the file system performance.
+
+Mdtest allows file creation, stat, read, and removal tests for sequential and random operations, measuring the IOPS and throughput.
+
+Sample Input File Creation Command:
+
+```
+$ mdtest -n 1000 -u -F
+```
+
+In the above command,
+    
+-n 1000 : means 1000 files/directories will be created by each task (it's the number of items per directory in the tree)
+
+-u : means unique working directories for tasks
+
+-F : means file tests only, no directories.
+
+Running mdtest:
+
+```
+$ mpirun -np 4 mdtest -d /tmp -i 10 -y
+```
+
+In the above command, 
+    
+-np 4 : Means you're running the test on 4 processors.
+    
+-d /tmp : means that you're doing the test in the /tmp directory.
+    
+-i 10 : means that you are doing 10 iterations of the test.
+    
+-y : signifies to sync the file system after each operation.
+
+The results would be printed to the terminal upon completion of the tests. These will include metrics like number of files/directories created, removed in the file system, and number of statistical checks on file/directory done with their corresponding times recorded.

@@ -1,0 +1,60 @@
+Use Case: RevBayes is software for Bayesian phylogenetic inference using probabilistic graphical models and an interpreted language. It can be used to generate a tree based on a multiple sequence alignment of DNA or amino acids. 
+
+Code details and examples:
+
+Code:
+
+The RevBayes command line can be started from the terminal with the command:
+```
+rb
+```
+
+Sample input file:
+ 
+Create a .rev file (e.g. mcmc_DNA.rev) with the following content, assuming you have an alignment DNA sequence file named "primates_cytb.nex":
+
+```
+# Read the data
+data <- readDiscreteCharacterData("primates_cytb.nex")
+ 
+# Create a constant node that defines the size of the tree
+ntaxa <- data.ntaxa()
+
+# Define a constant node and name it a (for alpha)
+a <- 1.0 
+
+# Define a stochastic node called br_len 
+br_len ~ dnExponential(1.0)
+
+# Define a stochastic node called topology which use a uniform topology distribution
+topology ~ dnUniformTopology(taxa)
+
+# set the moves using the mvScale and mvNNI functions which they move randomly a single parameter and the topology of the tree respectively.
+moves[mvi++] = mvScale(br_len, lambda=1.0, tune=true, weight=3.0)
+moves[mvi++] = mvNNI(topology, weight=1.0)
+
+# create a model using model() function 
+my_model = model(br_len)
+
+# Create a monitors to keep track of the sampling progress, with the filename “output/mcmc_DNA.log” and the printgen of 10.
+monitors[mni++] = mnModel(filename="output/mcmc_DNA.log", printgen=10)
+
+# Create the MCMC. 
+mymcmc = mcmc(my_model, monitors, moves)
+
+# Execute the MCMC for 10000 generations
+mymcmc.run(generations=10000)
+
+# Print the resulting tree
+treetrace.tree(filename="output/mcmc_DNA.trees", burnin=0.10)
+```
+
+This script reads an alignment from the file "primates_cytb.nex", which includes DNA sequences from different species. It uses a uniform tree topology and an exponential distribution for the branch lengths. It then applies MCMC (Markov Chain Monte Carlo) to infer the best tree.
+
+The command to run this script is:
+
+```
+source("mcmc_DNA.rev")
+```
+
+Please note, the details of this script may vary based on the usage and the specifications provided by the users. Please check the official RevBayes documentation for thorough and detailed guidance.

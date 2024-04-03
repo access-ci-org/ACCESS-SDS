@@ -1,0 +1,33 @@
+Use Case: Parliament2 is a structural variant calling software that takes in BAM or CRAM files that have already been aligned to a reference genome and produces a VCF of structural variants. The tool makes use of multiple algorithms to achieve robust structural variant detection.
+
+Code details and examples: 
+
+Input File: There are main two input files: BAM file (or CRAM file) and Reference genome file. The BAM or CRAM file should have already been aligned to the reference genome. The reference genome file should be in FASTA format.
+
+Format required: BAM or CRAM for the aligned reads file. FASTA for the reference genome file.
+
+Code snippet on how to run the software below:
+
+```bash
+docker run \
+-v /path/to/input/data:/data \
+quay.io/biocontainers/parliament2:0.1.8--py36_1 \
+parliament2 \
+--bam /data/my_aligned_reads.bam \
+--bai /data/my_aligned_reads.bai \
+--ref /data/my_reference_genome.fa \
+--fai /data/my_reference_genome.fa.fai \
+--breakdancer \
+--cnvnator \
+--delly \
+--lumpy \
+--genotype \
+--manta \
+--outputdir /data/my_output_directory
+```
+
+This command runs Parliament2 through a docker container. Input data is mounted on the docker container under /data. The BAM file, its index (BAI), the reference genome file, the reference genome index (FAI) are all required as parameters. The example also shows the integration of optional algorithms: BreakDancer, CNVnator, Delly, Lumpy, Genotype, and Manta with Parliament2; if any of these algorithms are not required, they can be omitted from the command line. The output directory is also specified.
+
+Specifications and Details in input files: BAM or CRAM files are binary files that store sequence data. Fasta files are plain-text based and store nucleotide sequences of the reference genome. BAI and FAI are index files for BAM and Fasta files respectively, and they facilitate quicker access to the data when running the tool.
+
+Command to run them: Replace "/path/to/input/data" in the above bash script with the directory where you have stored your input files such as the BAM file, the BAM index, the reference genome, and its index. Replace '/data/my_output_directory' with the directory where you want to store your output.

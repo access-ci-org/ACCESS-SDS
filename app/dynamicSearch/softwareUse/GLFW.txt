@@ -1,27 +1,39 @@
-Use Case: GLFW
-GLFW is a library for creating windows with OpenGL contexts and managing input. It provides a simple API for creating windows, contexts and surfaces, receiving input and events.
+Use Case: Use GLFW for creating windows with OpenGL contexts and managing input. This is useful when you need a simple way to create a window in a high-performance system, such as a game or a 3D application, and handle user input in a convenient way.
 
 Code details and examples:
-```C
+
+Code:
+
+```C++
+#define GLFW_INCLUDE_NONE
 #include <GLFW/glfw3.h>
 
-int main() {
+int main(void)
+{
     GLFWwindow* window;
-    
-    if (!glfwInit()) {
-        return -1;
-    }
 
-    window = glfwCreateWindow(640, 480, "Example", NULL, NULL);
-    
-    if (!window) {
+    /* Initialize the library */
+    if (!glfwInit())
+        return -1;
+
+    /* Create a windowed mode window and its OpenGL context */
+    window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
+    if (!window)
+    {
         glfwTerminate();
         return -1;
     }
 
+    /* Make the window's context current */
     glfwMakeContextCurrent(window);
 
-    while (!glfwWindowShouldClose(window)) {
+    /* Loop until the user closes the window */
+    while (!glfwWindowShouldClose(window))
+    {
+        /* Swap front and back buffers */
+        glfwSwapBuffers(window);
+
+        /* Poll for and process events */
         glfwPollEvents();
     }
 
@@ -29,11 +41,10 @@ int main() {
     return 0;
 }
 ```
+This is a simple example of using GLFW to create a window, make it the current context, and enter a loop that continues until the user closes the window. The glfwSwapBuffers call is used to swap the front and back buffers, and glfwPollEvents is used to check for any pending events, such as user input.
 
-To compile the code with GLFW, you may need to link against the GLFW library. Here is an example compilation command using gcc:
+You can save this file with a .c extension and it can be compiled with any C compiler. No particular format or specifications in the input file are required, it just needs to be a valid C source file.
 
-```bash
-gcc example.c -o example -lglfw -lGL -lm
-```
+For compile this program you can use the command: gcc main.c -lGL -lGLU -lglut -o hello_glfw
 
-This assumes that the GLFW library is installed on your system and can be found by the compiler.
+And for run the program: ./hello_glfw

@@ -1,46 +1,31 @@
-Use Case: gdbm - GNU dbm database library
+Use Case: Use gdbm (GNU dbm) is a database storing key-value pairs. It's a simple data storage format commonly used in Unix-based systems due to its simplicity and efficiency.
 
-Code details and examples:
-GNU dbm is a library for manipulating hash databases. Here is an example of how to create and manipulate a gdbm database with sample input files:
+Code Details and Examples: Code
 
-1. Create a new gdbm database file:
-```bash
-$ gdbmtool -c mydatabase.db
+In Python, the gdbm library can be used as follows:
+
+```Python
+import gdbm
+
+# Create a new database or open an existing one
+d = gdbm.open('mydatabase', 'c')
+
+# Store a key-value pair
+d['key'] = 'value'
+
+# Retrieve the value of a key
+value = d['key']
+print(value) # Outputs: value
+
+# Close the database
+d.close()
 ```
 
-2. Add key-value pairs to the database:
-```bash
-$ gdbmtool -a mydatabase.db
-> add key1 value1
-> add key2 value2
-> exit
-```
+The `open` method requires a filename and a flag as input parameters. The filename refers to the file to be used as the database. The flag specifies the mode in which to open the file: 'r' for read-only, 'w' for read and write, 'c' for create (opens the file for reading and writing, and creates it if it does not exist), and 'n' for new (always creates a new database).
 
-3. Retrieve a value from the database using a key:
-```bash
-$ gdbmtool -r mydatabase.db
-> fetch key1
-```
+Command to run the file:
 
-4. Update a value in the database:
-```bash
-$ gdbmtool -u mydatabase.db
-> store key1 new_value
-> exit
-```
-
-5. Delete a key from the database:
-```bash
-$ gdbmtool -d mydatabase.db
-> delete key1
-```
-
-6. Dump the contents of the database to a text file:
-```bash
-$ gdbm_dump mydatabase.db > mydatabase_dump.txt
-```
-
-7. Restore the database from a dump file:
-```bash
-$ gdbm_load mydatabase.db < mydatabase_dump.txt
+If the above Python code is saved in a file named `gdbm_example.py`, it can be run with the following shell command:
+```Shell
+python3 gdbm_example.py
 ```

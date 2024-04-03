@@ -1,0 +1,25 @@
+Use Case: Using r-glue for a simple concatenation of strings
+
+Code details and examples:
+
+Code:
+
+```R
+#input data
+name <- "John Doe"
+birth_year <- 1990
+
+# using glue() function for concatenation
+library(glue)
+output <- glue("My name is {name} and I was born in {birth_year}.")
+print(output)
+```
+
+This R code concatenates the strings from the variables "name" and "birth_year" into a complete sentence. The glue() function in the glue package is a simple and flexible way to combine strings.
+
+Command to run it:
+
+```R
+Rscript filename.R
+```
+Where "filename.R" is the name of the R file that contains the above script.

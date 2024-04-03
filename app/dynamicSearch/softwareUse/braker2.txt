@@ -1,0 +1,29 @@
+Use Case: BRAKER2 is a pipeline for fully automated prediction of protein coding genes in novel eukaryotic genomes. It uses GeneMark-ES, GeneMark-ET, and GeneMark-EP plus mapping of proteins (using BLAST and GeneWise) onto the genome, as evidence for gene prediction with AUGUSTUS.
+
+Code Details and Examples: 
+
+Code:
+
+The most basic command to run BRAKER2, given that you have a genome fasta file and a protein sequence database:
+
+```bash
+braker.pl --species=SPECIES --genome=genome.fa --prot_seq=proteins.fa --prg=gth --workingdir=$PWD/braker --cores 8
+```
+
+In this example:
+
+- `--species=SPECIES` helps in defining the species. `SPECIES` is a unique identifier for the current species to be annotated.
+- `--genome=genome.fa` is the Genome sequence file in FASTA format.
+- `--prot_seq=proteins.fa` indicates the protein sequences in fasta format.
+- `--prg=gth` enables gene prediction with GenomeThreader.
+- `--workingdir=$PWD/braker` specifies the working directory.
+- `--cores 8` specifies that the program can use 8 processors for processing.
+
+Please refer to the BRAKER2 manual (https://github.com/Gaius-Augustus/BRAKER) to understand the different options and to learn more about how to prepare your input files.
+
+Input Files:
+
+1. Genome sequence file (genome.fa) in FASTA format.
+2. Protein sequences (proteins.fa) are required for Evidence Modeler in FASTA format.
+
+Note: To perform an annotation, BRAKER2 requires that genome containing masked interspersed repeats and correctly formatted species-specific configuration files for AUGUSTUS are provided.

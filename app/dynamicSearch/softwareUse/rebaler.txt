@@ -1,0 +1,41 @@
+Use Case: Rebaler is a tool used for performing fast and accurate reference-based alignments for long-read sequences. It may be used, for instance, in bioinformatics for genome assembly where it realigns reads to match the reference genome.
+
+Code details and examples:
+
+Code: 
+
+For execution, Rebaler requires as input a FASTA file with the reference genome and a FASTQ or FASTA file with the input reads. As an example, suppose the reference file is named 'reference.fasta' and the reads file is named 'reads.fastq'. 
+
+Run the following command:
+
+```
+rebaler reference.fasta reads.fastq > output.fasta
+```
+
+Here, 'output.fasta' is the output file which will contain your assembled genome.
+
+Input Specifications:
+
+1. 'reference.fasta' - This file should contain your reference genome in FASTA format. 
+
+Sample Input:
+
+```fasta
+>Sequence1
+ATGCATGCATGCATGCATGCATGCATGCATGCATGCATGC
+```
+
+2. 'reads.fastq' - This file contains your input reads. These can be in either FASTA or FASTQ format, and can be either uncompressed, or compressed with gzip (.gz) or bzip2 (.bz2).
+
+Sample Input:
+
+```fasta
+@Read1
+ATGCATTTTTTGCATGCATGCATGCATGCATGC
++`
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+```
+
+This encodes a single read. The '+' separates the read sequence (above) from its quality string (below). Here, each 'I' character represents a base call quality of 30 (in Phred+33 encoding). 
+
+Please be aware that your own input files will be significantly longer and more complex than these simplified examples.

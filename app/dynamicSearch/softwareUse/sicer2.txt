@@ -1,0 +1,38 @@
+Use Case: SICER2 is a tool used in ChIP-Seq analysis and it stands for Spatial clustering for Identification of ChIP-Enriched Regions. It can be employed for the identification of enriched genomic regions from ChIP-Seq data.
+
+Code details and examples: 
+
+Code:
+
+Input File 1: ChIP-Seq reads file (Bed format)
+```
+chr1	10003	10004
+chr1	10004	10005
+chr1	10005	10006
+...
+```
+Input File 2: Control reads file (Bed format)
+```
+chr1	12003	12004
+chr1	12004	12005
+chr1	12005	12006
+...
+```
+Command to run SICER2:
+```
+python SICER2/SICER.py -rt reads.bed -ct control.bed -g hg38 -w 200 -g 200 -f 0.01 -ns 3 -es 1 -e 100 -tfr 1 -o outputfolder
+```
+
+In the command: 
+  -rt specifies the path to the read tag file
+  -ct specifies the path to the control file
+  -g specifies the genome
+  -w specifies the window size
+  -g specifies the gap size
+  -f specifies the E-value
+  -ns specifies the normalized minimum score
+  -es specifies the effective genome space 
+  -e specifies the size of end regions  
+  -tfr specifies a threshold for reporting. 
+   
+The output will be written to the specified outputfolder.

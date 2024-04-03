@@ -1,17 +1,33 @@
-Use Case: BEDOPS: BEDOPS is a suite of tools to address common questions raised by large-scale genomic studies by intersecting, merging, and comparing genomic intervals.
+Use Case: Bedops is commonly applied for genome analysis. One use case is to use Bedops for doing operations like union, intersect, difference, partition, merge, etc. on genomic data. This can be used to compare different genes, predict gene expressions, or tracking the process.
 
-Code details and examples:
-1. Intersect two BED files:
-```bash
-bedops file1.bed file2.bed > intersected.bed
+Code details and examples: 
+
+Code:
+
+To use Bedops, you need to have two BED (Browser Extensible Data) files. 
+
+A BED file is a TAB-delimited text file that defines a feature track. The first three fields are required, which are "chr", "start", and "end". Here is an example of a BED file:
+
+```
+chr7  127471196  127472363  Pos1  0  +
+chr7  127472363  127473530  Pos2  0  +
+chr7  127473530  127474697  Pos3  0  +
 ```
 
-2. Merge overlapping intervals in a BED file:
+Suppose you have two BED files, 'foo.bed' and 'bar.bed', and you want to find the intersection between these two:
+
 ```bash
-bedops --merge file.bed > merged.bed
+bedops --intersect foo.bed bar.bed > answer.bed
 ```
 
-3. Find intervals in A (file1.bed) that are not present in B (file2.bed):
+This command will write the intersections to the 'answer.bed' file.
+
+If you want to merge the intervals from both files:
+
 ```bash
-bedops --difference file1.bed file2.bed > diff.bed
+bedops --merge foo.bed bar.bed > answer.bed
 ```
+
+This command will merge the intervals from both 'foo.bed' and 'bar.bed' and save the result into 'answer.bed'.
+
+Note: Besides the commands above, Bedops provide more operations including union, difference, symmetric difference, partition, chop, sort, etc. The details of these commands can be found on their official documentation site.

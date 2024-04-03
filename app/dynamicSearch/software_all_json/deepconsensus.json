@@ -1,0 +1,13 @@
+{
+  "software_name": "deepconsensus",
+  "comprehensive_overview": "DeepConsensus is a tool for variant calling in MinION nanopore sequencing data. It uses deep learning to increase accuracy and sensitivity in detecting single nucleotide variants (SNVs) and insertion/deletion (indel) mutations.",
+  "core_features": "1. Variant calling in MinION nanopore sequencing data\n2. Utilizes deep learning for improved accuracy and sensitivity\n3. Detection of single nucleotide variants (SNVs) and insertion/deletion (indel) mutations",
+  "general_tags": ["variant calling", "MinION nanopore sequencing", "deep learning"],
+  "additional_tags": {
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Bioinformatics",
+    "software_type": "Tool",
+    "field_of_science": "Biological Sciences"
+  }
+}

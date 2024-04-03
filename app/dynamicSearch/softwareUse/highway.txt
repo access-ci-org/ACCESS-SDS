@@ -1,0 +1,33 @@
+Use Case: HighWay is a software package used for performing ab initio molecular dynamics. It allows for the study of molecular systems over an extended time period. 
+
+Code details and examples: 
+
+HighWay works by taking a particular molecular system as input. The input file needs to have certain specifications, which include the coordinates of the atoms, the type of calculations to be carried out and computational details like the type of basis set to be used. The file extension for highway input file is ".inp".
+
+The input file has to be structured like this:
+
+1. Title - (Single line)
+2. List of elements
+3. List of coordinates
+4. Method of calculation
+5. Other computational details such as basis set, etc.
+
+An example of an input file is as follows:
+
+```
+Water molecule
+H  O  H
+0.0 0.0 0.0 
+0.969 0.0 0.0 
+-0.233 -0.967 0.0 
+HF
+sto-3g
+```
+
+This input file describes a water molecule. It specifies the type of atoms (Hydrogen and Oxygen) in the molecule and their relative positions in Cartesian coordinates. The method of calculation is Hartree-Fock and the basis set used is sto-3g.
+
+To run the HighWay code with the input file, the following command is used from the terminal provided 'filename.inp' is your input file:
+
+`highway filename.inp > filename.out` 
+
+This command takes the input file "filename.inp", runs the HighWay software, and outputs the results to "filename.out".

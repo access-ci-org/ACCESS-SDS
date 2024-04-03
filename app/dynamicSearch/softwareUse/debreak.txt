@@ -1,0 +1,26 @@
+Use Case: DeBreak is a bioinformatics tool that uses read depth and paired-end mapping information to accurately identify genomic structural variations, making it particularly useful in the field of genomics and personalized medicine.
+
+Code Details and Examples:
+Code:
+
+Running DeBreak requires a list of potential breakpoints as the input file, which typically has the tab-separated format of: Chromosome, Start, End, Strand, Read Depth. The other required file is the BAM formatted alignment file. 
+
+Here is a simple example of a breakpoint list for a fictional DNA sequence:
+
+```
+chr1    10001   10002   +   20
+chr1    20001   20002   -   15
+```
+And a small extract from a BAM file:
+
+```
+ref1	16	chr1	120073	60	75M	*	0	0	AACTTGAAGAG...	<<<<<<<<<...
+ref2	0	chr1	130073	60	75M	*	0	0	ACTTGAAGAG...	<<<<<<<<<...
+ref3	0	chr1	140073	60	75M	*	0	0	TGAAGAG...	<<<<<<<<<...
+```
+To run DeBreak, the command line input may look something like the following:
+
+```
+deb.py -b <BAM file> -i <Input breakpoint list> -o <Output directory>
+```
+Note: Replace `<BAM file>`, `<Input breakpoint list>`, and `<Output directory>` with the paths to your respective files and the desired output directory.

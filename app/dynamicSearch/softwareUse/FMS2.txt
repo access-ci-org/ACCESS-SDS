@@ -1,31 +1,24 @@
-Use Case: Scientific tools  
-Code details and examples:  
-FMS2 is a software package for computational chemistry. It requires input files in FMS format to run simulations.
+Use Case: FMS2 is a software package under The Modular Ocean Model (MOM), a numerical simulation framework for ocean circulation and biogeochemical models. It is especially useful for climate modeling and simulations.
 
-Example input file (input.fms):
-```
-title
-This is a sample input file for FMS2
-end
+Code details and examples: 
 
-geometry
-O 0.0 0.0 0.0
-H 1.0 0.0 0.0
-H 0.0 1.0 0.0
-end
+Input files: The input files for FMS2 are mainly text files. They contain parameters and data for the operation of the program.
 
-basis
-O
-cc-pVDZ
-H
-cc-pVDZ
-end
+Parameter "ocean_model_nml"":
 
-energy
-end
+```txt
+&ocean_model_nml
+  dt_cpld=1800.,
+  dt_ocean=1800.,
+/
 ```
 
-To run FMS2 with the input file, you can use the following command:
+The above text files should be ended with "/".
+
+Command to run:
+
+```sh
+mpirun -np 64 ./MOM6
 ```
-fms2 input.fms
-```
+
+The above command is to run the MOM6 model (which includes FMS2) using 64 processors.

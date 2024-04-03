@@ -1,0 +1,18 @@
+{
+  "software_name": "ATAC-seq pipeline",
+  "comprehensive_overview": "ATAC-seq pipeline is a computational workflow designed for the analysis of Assay for Transposase-Accessible Chromatin using sequencing (ATAC-seq) data. It includes processing steps for quality control, alignment, peak calling, and downstream analysis of chromatin accessibility data.",
+  "core_features": [
+    "Quality control of sequencing data",
+    "Alignment of reads to the reference genome",
+    "Identification of open chromatin regions (peaks)",
+    "Annotation and visualization of ATAC-seq results"
+  ],
+  "general_tags": ["Bioinformatics", "HPC tools"],
+  "additional_tags": {
+    "research_discipline": "Genetics",
+    "research_area": "Epigenetics",
+    "software_class": "Computational biology",
+    "software_type": "Analysis tool",
+    "field_of_science": "Biological Sciences"
+  }
+}

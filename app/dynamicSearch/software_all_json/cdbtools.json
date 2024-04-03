@@ -1,0 +1,13 @@
+{
+  "software_name": "cdbtools",
+  "comprehensive_overview": "cdbtools is a set of command-line utilities for manipulating and working with Constant Database (CDB) files. These utilities provide functionality for creating, reading, updating, and deleting records in CDB files.",
+  "core_features": "Key features of cdbtools include the ability to efficiently store and retrieve key-value pairs, support for fast lookups and searches within CDB files, and tools for managing and maintaining CDB databases.",
+  "general_tags": ["CDB", "command-line", "data manipulation"],
+  "additional_tags": {
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Database Management",
+    "software_type": "Command-line Utility",
+    "field_of_science": []
+  }
+}

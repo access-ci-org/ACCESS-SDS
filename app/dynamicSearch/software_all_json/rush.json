@@ -1,0 +1,20 @@
+{
+    "software_name": "Rush",
+    "comprehensive_overview": "Rush is a programming language designed for high-performance computing with a focus on parallel and distributed computing.",
+    "core_features": [
+        "Support for parallel computing",
+        "Distributed computing capabilities",
+        "High-performance computing focus"
+    ],
+    "general_tags": [
+        "programming language",
+        "high-performance computing",
+        "parallel computing",
+        "distributed computing"
+    ],
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Programming Language",
+    "software_type": "Open-Source Software",
+    "field_of_science": "Computer and Information Sciences"
+}

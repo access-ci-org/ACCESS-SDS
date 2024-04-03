@@ -1,0 +1,61 @@
+Use Case: Use NMAD (N-in-One Mesh Adaptive Direct Search) for solving a constrained optimization problem as a part of high performance computing.
+
+Code details and examples: Code
+
+An optimization problem is typically defined in a Python script with NMAD. The problem can be defined as follows:
+
+```
+from pygmo import problem
+from pyOpt import Optimization, Problem, nmad
+import numpy as np
+
+# Define the problem
+def rosenbrock(x):
+    """
+    Objective function
+    """
+    y = np.sum(100.0*(x[1:]-x[:-1]**2.0)**2.0 + (1-x[:-1])**2.0, axis=0)
+    return y
+
+# Constraint function
+def constraint(x):
+    """
+    Constraint function
+    """
+    return np.sum(x)-2
+
+# Initialize the Optimization problem
+opt_prob = Optimization('Rosenbrock Problem', nmad.solve) 
+
+# define decision variables
+opt_prob.addVar('x1','c',lower=-100,upper=100,value=0)
+opt_prob.addVar('x2','c',lower=-100,upper=100,value=0)
+opt_prob.addObj('f') 
+opt_prob.addCon('g',type='e')
+
+# Define a problem instance
+prob = problem(opt_prob)
+
+# Solving the problem, command to run the script
+nmad = nmad()
+sol = nmad.solve(prob)
+
+print(sol)
+
+```
+
+In this script, we have defined a Rosenbrock function as the objective. The constraint is that the sum of the elements in the decision variable x must be equal to 2. We are looking to find the values of x1 and x2 that minimize the Rosenbrock function subject to this constraint.
+
+The lower and upper arguments in addVar define the range of the decision variables.
+
+The 'c' argument in addVar indicates that the variable is continuous.
+
+The 'f' in addObj is the objective function.
+
+The 'g' in addCon is the constraint function.
+
+The ‘e’ in addCon indicates that this is an equality constraint.
+
+After defining the problem, we provide it to NMAD’s solve function to find the solution.
+
+The script could be run on a Python environment. Once the script runs successfully, it prints the optimal solution.

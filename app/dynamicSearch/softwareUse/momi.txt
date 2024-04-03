@@ -1,0 +1,45 @@
+Use Case: 
+momi, short for "model-based inference of recent population history", allows you to both simulate genetic data under a range of demographic scenarios, and also to infer demographic parameters based on observed patterns of genetic variation. It's primary use is to study the demographic history of a population.
+
+Code details and examples: 
+
+Code:
+
+First, it is necessary to read in a dataset. In this case, the data comes in the form of SFS, or site frequency spectra. This is the distribution of the frequency of derived alleles among a sample.
+
+```
+sfs = momi.Sfs.load("data.sfs.gz")
+```
+
+Then, a model needs to be defined. This is done using the `DemographicModel` objects in momi. 
+
+```
+model = momi.DemographicModel(N_e=1e4, gen_time=29, muts_per_gen=2.35e-8)
+```
+
+The parameters of the model are defined in the command above, including the effective population size (`N_e`), the generation time (`gen_time`), and the mutation rate (`muts_per_gen`).
+
+Then, additions can be made to the model. For instance, a population bottleneck 5000 years ago can be simulated with:
+
+```
+model.set_size("pop1", t=5000, N=1e3)
+```
+
+This command sets the size of the population "pop1" to `N=1e3` at time `t=5000`.
+
+Data can then be simulated from this model using the following command,
+
+```
+sfs = model.simulate_sfs()
+```
+
+And parameters can be inferred based on the simulated data,
+
+```
+model.infer_params(sfs)
+```
+
+The command to run the Python script which contains these codes, say "momi_script.py" should be:
+```
+python momi_script.py
+```

@@ -1,0 +1,60 @@
+Use Case: Centrifuge is a highly versatile software tool that allows for rapid, simultaneous, and sensitive classification of metagenomic sequences from microbiomes. It can analyze DNA, RNA, whole metagenome and metatranscriptome sequencing data, achieving high precision and recall even with data sets having coverage as low as 0.1%.
+
+Code details and examples: Code.
+
+Input File Formatting: Centrifuge utilizes fastq or fasta formatted files as its primary input.
+The input should contain the entire set of raw reads obtained from the sequencing machine. You can compress the files with gzip, and Centrifuge will work with them seamlessly.
+
+Example: 
+
+FASTQ Files:
+
+```
+@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
++
+!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
+```
+
+FASTA Files:
+
+```
+>SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
+```
+
+Code Required:
+
+```
+# Build the index (if not already done)
+centrifuge-build [options] <sequence_file> <taxonomy_file> <index_base>
+```
+
+Options being:
+
+```  
+-p <int>: number of threads to use for parallel parts of the build. Default: 1.
+```
+Sequence file can be in fasta format, taxonomy file format is a specific format required by Centrifuge, and index base is the name of the output index file.
+
+```
+# The command to classify sequences
+centrifuge [options]* -x <idx> {-1 <m1> -2 <m2> | -U <r> | --12 <r12>}
+
+```
+
+Options* being:
+
+```
+--report-file <filename>. Default: write to stdout.
+```
+Idx refers to pre-made indexes coded by Centrifuge's database. -1 represents a file with forward paired reads, -2 represents a file with reverse paired reads, -U represents the file with unpaired reads and --12 represents both the forward and reverse paired reads combined in a single file.
+
+```
+# Command to visualize the results
+centrifuge-kreport [options]* <sorted-1.out> > results.kraken
+
+```
+Options are sort -k1,1 -k2,2n -have to be performed on the output file before you run the command.
+
+The output file will provide comprehensive results of the metagenomic composition of the originally sequenced organism.

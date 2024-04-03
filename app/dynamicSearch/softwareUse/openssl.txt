@@ -1,19 +1,39 @@
-Use Case: Secure data transmission with OpenSSL
+Use Case: OpenSSL is a robust, fully-featured open-source toolkit that implements the Secure Sockets Layer (SSL v2/v3) and Transport Layer Security (TLS v1) protocols and provides cryptographic functionality used to secure communication over networks. 
 
 Code details and examples:
-- Encrypt a file using OpenSSL:
-```sh
-openssl enc -aes-256-cbc -salt -in input.txt -out encrypted.txt
+
+Code: 
+To generate a new private key and Certificate Signing Request (CSR), you can use the following OpenSSL command:
+
+```bash
+openssl req -new -newkey rsa:2048 -nodes -keyout private.key -out CSR.csr
 ```
-- Decrypt a file using OpenSSL:
-```sh
-openssl enc -d -aes-256-cbc -in encrypted.txt -out decrypted.txt
+Sample Input: During the execution of this command, OpenSSL will prompt you for several pieces of information related to the certificate, such as country name, state, organization name.
+
+Format Required: Outputs a `.key` private key file and a `.csr` certificate request file.
+
+Specifications in Input Files: The `req` command primarily creates and processes certificate requests in PKCS#10 format. It can additionally create self-signed certificates for use as root CAs for example.
+
+Code:
+To check a key file:
+
+```bash
+openssl rsa -check -in private.key
 ```
-- Generate a new RSA private key:
-```sh
-openssl genpkey -algorithm RSA -out private_key.pem
+Sample Input: private.key file path.
+
+Format Required: Input should be a `.key` file.
+
+Specifications in Input Files: The file should be a private key file generated with openssl commands and usually used alongside with a certificate.
+
+Code:
+To verify a certificate:
+
+```bash
+openssl x509 -noout -text -in certificate.pem
 ```
-- Generate a new RSA public key from the private key:
-```sh
-openssl rsa -in private_key.pem -pubout -out public_key.pem
-```
+Sample Input: certificate.pem file path.
+
+Format Required: Input should be a .pem file.
+
+Specifications in Input Files: The file should be a X509 certificate in `.pem` format, a standard format for SSL certificates.

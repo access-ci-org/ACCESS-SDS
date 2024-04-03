@@ -1,0 +1,35 @@
+Use Case: Bio-DB-HTS is a high throughput sequencing (HTS) library for common bioinformatics tasks. This module provides a Perl interface to HTSlib, a library for manipulation of binary formats including BAM/CRAM, BCF, and VCF.
+
+Code details and examples:
+
+Code:
+Load the module and retrieve basic statistics from a bamfile.
+
+```Perl
+use strict;
+use Bio::DB::HTS;
+
+# open the bam file
+my $hts = Bio::DB::HTS->new(-htsfile => 'file.bam');
+
+# get the header
+my $header = $hts->hts_file->header_read;
+
+# output header information (references and lengths)
+for my $target_name (@$header) {
+    printf("%s\t%s\n", $target_name, $hts->length($target_name));
+}
+# output some basic statistics
+printf("Mapped reads: %d\n", $hts->mapped_reads);
+printf("Unmapped reads: %d\n", $hts->unmapped_reads);
+printf("No. of contigs: %d\n", $hts->n_targets);
+printf("Reference length: %d\n", $hts->length);
+printf("No. of reads: %d\n", $hts->n_reads);
+```
+
+To run this script, it could be something like this:
+
+```bash
+perl script.pl
+```
+Please note that the Bio::DB::HTS Perl module must be installed beforehand and this is assuming the bam file is named 'file.bam' and is in the same directory as the script. The bam file is a binary file that is produced by many bioinformatics tools that align sequencing reads to reference sequences. Nearly all sequence alignment tools produce this format. The output are the statistics such as mapped reads, unmapped reads and number of contigs.

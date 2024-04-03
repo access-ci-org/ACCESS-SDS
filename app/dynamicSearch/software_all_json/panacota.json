@@ -1,0 +1,23 @@
+{
+    "software_name": "panacota",
+    "comprehensive_overview": "Panacota is a tool for analyzing and visualizing positional data of single molecules in chromosomes. It allows users to create heatmaps and perform various statistical analyses to understand the spatial organization of chromatin.",
+    "core_features": [
+        "Analysis of single molecule positional data",
+        "Creation of heatmaps",
+        "Statistical analysis",
+        "Visualization of chromatin organization"
+    ],
+    "general_tags": [
+        "Chromatin analysis",
+        "Single molecule analysis",
+        "Statistical analysis",
+        "Visualization"
+    ],
+    "additional_tags": {
+        "research_discipline": "Cell Biology",
+        "research_area": "Chromatin structure and function",
+        "software_class": "Data Analysis and Visualization",
+        "software_type": "Bioinformatics tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

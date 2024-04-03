@@ -1,0 +1,34 @@
+Use Case: The SHADOW software package is used for ray-tracing simulations in optical systems. It is typically used in the design and optimization of synchrotron radiation sources and beamline optics.
+
+Code Details and Examples:
+
+Code:
+
+Sample input file (start.00):
+
+```shadow
+# Start.00
+# SHADOW Input File
+# 
+# 
+# BEAM DEFINITION
+#
+OASYS_BEAMFILE START.00
+BEAM        50000         0 0.001000000000000000 1.000000000000000000 0.001000000000000000 1.000000000000000000 
+# 
+# SCREEN/PLOT DEFINITION
+#
+HISTO        1        0 0.000000000000000000   -0.005000000000000000   0.005000000000000000   -0.005000000000000000   0.005000000000000000  
+POSITIONS        30        1        10        10
+XY_PLOT        0        0        0        0        0        0        20        20
+```
+
+Command to run the SHADOW program with 'start.00' as the input file:
+
+```shell
+shadow3 run start.00
+```
+
+In the example input file above, the "BEAM" line is used to define the characteristics of the beam, including the number of rays, the mode, and other parameters. The "HISTO" and "POSITIONS" lines are used to define the properties of the plot and the positions to be plotted, respectively. The "XY_PLOT" line is used to select the type of plot and the options for it. 
+
+This input file describes a simple scenario where a beam with 50,000 rays is created. Then some plots are created using the generated rays. The generated rays can then be used in subsequent simulations, where other optics elements are added in.

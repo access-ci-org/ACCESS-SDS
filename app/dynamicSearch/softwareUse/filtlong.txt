@@ -1,0 +1,32 @@
+Use Case: Filtlong is a tool used for quality filtering long reads. It is especially used in genome sequencing, where it helps in removing undesirable long reads based on low-quality score, low length, and high percentile of a bad region. 
+
+Code details and examples:
+
+Before running Filtlong, you should have a FASTA or FASTQ file from a long-read sequencing platform. For instance, here is a fictitious example of a sequence in a FASTQ file.
+
+```
+@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATTCGTATAATGTATGCTATAAACAATTAAACAACAAC
++
+!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
+```
+
+Once you have this file, you can run certain commands below. To calculate statistics about your set of reads, such as coverage and read length, you can use the following command:
+
+Code: 
+```bash
+filtlong --min_length 1000 --keep_percent 90 input.fastq > output.fastq
+```
+In this command, `--min_length 1000` means only keep reads that are at least 1000 bases long. `--keep_percent 90` means keep the top 90% of reads based on quality.
+
+You can adjust the parameters according to your requirement. 
+
+To filter reads using an external assembly as a reference, use the following command:
+
+Code: 
+```bash
+filtlong --min_length 1000 --target_bases 50000000 --reference reference.fasta input.fastq > output.fastq
+```
+Here,  `--target_bases 50000000` means output approximately 50 million bases of best reads. `--reference reference.fasta` means bases will be weighted by their match to the reference.
+ 
+Note: You may replace `input.fastq`, `output.fastq`, and `reference.fasta` with your respective input and output file names. Please replace `1000` and `50000000` with your desired minimum length of reads and target bases.

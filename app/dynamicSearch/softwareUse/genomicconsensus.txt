@@ -1,0 +1,33 @@
+Use Case: GenomicConsensus is a software package that is used for generating consensus sequences from the alignments of high quality, long, and short DNA reads.
+
+Code details and examples:
+
+Code:
+```
+# Sample input files
+# Example of a BAM file (input file for read alignments)
+# "sample.bam"
+
+# Example of a FASTA file (reference sequence)
+# "reference.fasta"
+
+# note: these files are usually large and complex in structure, 
+# so they're not practically reproduced here.
+
+# Input Format Specification
+# GenomicConsensus requires alignments in a BAM file for the reads and 
+# a reference sequence in a FASTA file.
+
+# Details in Input Files
+# The BAM file should contain the aligned reads from any sequence alignment
+# tool, and the FASTA file should have the reference sequences the reads 
+# were aligned against.
+
+# Example Command
+# Quiver is one of the modules of GenomicConsensus for generating 
+# consensus sequence from Pac Bio reads. 
+
+pbtools genomicconsensus quiver sample.bam -r reference.fasta -o "output.fasta"
+```
+
+This will produce a consensus sequence "output.fasta", which is base-called from your "sample.bam" according to the "reference.fasta". Output will be in FASTA format. If required, other consensus algorithms like `Arrow` and `Plurality` can be used in place of `Quiver`. Remember, the "sample.bam" and "reference.fasta" files used here are not included because these files are complex and large, they are just used to show how the command line works.

@@ -1,0 +1,22 @@
+{
+    "software_name": "GraphicsMagick",
+    "comprehensive_overview": "GraphicsMagick is a robust collection of tools and libraries that offers a comprehensive range of image processing capabilities. It provides a powerful utility for dynamically reading, writing, and modifying images for over 88 major formats.",
+    "core_features": [
+        "Support for over 88 major image formats",
+        "Image processing capabilities",
+        "Extensive command-line tools",
+        "Efficient handling of large images",
+        "Color management and color space conversion"
+    ],
+    "general_tags": [
+        "Image Processing",
+        "Graphics",
+        "Media Editing",
+        "Command-Line Tools"
+    ],
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": [],
+    "software_type": "Image Processing Software",
+    "field_of_science": "Other Computer and Information Sciences"
+}

@@ -1,38 +1,60 @@
-Use Case: libevent is a library that provides a mechanism to execute a callback function when a specific event occurs on a file descriptor or after a timeout. It is commonly used in network programming for creating event-driven programs.
+Use Case: Libevent is an asynchronous event notification library that is used to build and scale high performance event-driven network servers in C or C++. This library provides a mechanism to execute a callback function when a specific event occurs on a file descriptor or after a timeout has been reached. 
 
 Code details and examples:
-```c
-#include <event2/event.h>
 
-void event_callback(evutil_socket_t fd, short events, void *arg) {
-    // Callback function to handle events
-    // You can write your custom logic here
+Code:
+```C
+#include <event2/event.h>
+#include <event2/bufferevent.h>
+#include <sys/socket.h>
+#include <string.h>
+
+void eventcb(struct bufferevent *bev, short events, void *ptr)
+{
+    if (events & BEV_EVENT_CONNECTED) 
+    {
+        /* We're connected to 127.0.0.1:8080. Ordinarily we'd do
+           something here, like start reading or writing. */
+    } 
+    else if (events & BEV_EVENT_ERROR) 
+    {
+        /* An error occurred while connecting. */
+    }
 }
 
-int main() {
-    struct event_base *base = event_base_new();
-    
-    struct event *ev = event_new(base, /* file descriptor */, EV_READ | EV_PERSIST, event_callback, NULL);
-    // Add the event to the event base
-    event_add(ev, NULL);
+int main(int argc, char **argv)
+{
+    struct event_base *base;
+    struct bufferevent *bev;
+    struct sockaddr_in sin;
 
-    // Start the event loop
+    base = event_base_new();
+
+    memset(&sin, 0, sizeof(sin));
+    sin.sin_family = AF_INET;
+    sin.sin_addr.s_addr = htonl(0x7f000001); /* 127.0.0.1 */
+    sin.sin_port = htons(8080); /* Port 8080 */
+
+    bev = bufferevent_socket_new(base, -1, BEV_OPT_CLOSE_ON_FREE);
+
+    bufferevent_setcb(bev, NULL, NULL, eventcb, NULL);
+
+    if (bufferevent_socket_connect(bev,
+        (struct sockaddr *)&sin, sizeof(sin)) < 0) 
+    {
+        /* Error starting connection */
+        bufferevent_free(bev);
+        return -1;
+    }
+
     event_base_dispatch(base);
-
-    // Cleanup
-    event_free(ev);
-    event_base_free(base);
-
     return 0;
 }
 ```
 
-To compile the code:
-```bash
-gcc -o my_program my_program.c -levent
-```
+To compile and run this code, the following command can be used:
 
-To run the compiled program:
-```bash
-./my_program
-```
+gcc -o test test.c -levent
+./test
+
+The input for this is in the form of networking data. The data is processed when some specific networking event occurs like when data is ready to be read from the network or when the network is ready to write data, etc. This specific example connects to localhost on port 8080.

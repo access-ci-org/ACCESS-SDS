@@ -1,0 +1,36 @@
+Use Case: Use case for the CLCK (Intel Cluster Checker) could be to evaluate and determine the health of a cluster system. This tool is commonly used by system administrators, technical support staff, software developers etc. to analyse and diagnose various cluster-level issues.
+
+Code details and examples:
+
+Code snippet:
+
+CLCK works with a command-line interface. A sample command line could look something like this:
+
+```
+clck -f configuration.yaml
+```
+
+In this case, "configuration.yaml" is the configuration file that contains all the details about the cluster to be evaluated. The format of the configuration file can be YAML or JSON and it should specify the structure of the cluster, including the nodes and their roles, the interconnect etc. It is noted that the configuration file must be prepared manually.
+
+For example consider this yaml configuration file:
+```yaml
+cluster:
+  name: my_cluster
+  nodes:
+  - role: master
+    hostname: node01.my_cluster.com
+  - role: compute
+    hostname: node02.my_cluster.com
+  …
+```
+
+This would represent a cluster `my_cluster` with one master node (node01.my_cluster.com) and multiple compute nodes (node02.my_cluster.com, ...) is given.
+
+Another example command that checks fabric connectivity:
+
+```
+clck -F configfile.xml
+```
+In this case, 'configfile.xml' is an XML file describing the expected fabric topology.
+
+Note: The user should have the permissions to access and execute commands on all nodes of the cluster either by ssh or by the clck distribution method.

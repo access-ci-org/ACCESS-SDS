@@ -1,0 +1,11 @@
+{
+    "software_name": "iimpic",
+    "comprehensive_overview": "iimpic is a Python library for multi-scale modeling of porous materials using the lattice Boltzmann method (LBM). It provides a versatile platform for simulating flow and transport phenomena in complex porous media.",
+    "core_features": "1. Implementation of the lattice Boltzmann method for porous media simulations. 2. Multi-scale modeling capabilities. 3. User-friendly Python interface for easy implementation and customization. 4. Support for various boundary conditions and fluid-solid interactions.",
+    "general_tags": ["Python Library", "Porous Materials", "Lattice Boltzmann Method"],
+    "research_discipline": ["Physical Sciences"],
+    "research_area": ["Condensed Matter Physics"],
+    "software_class": ["Computational Software"],
+    "software_type": ["Simulation Software"],
+    "field_of_science": ["Physical Sciences"]
+}

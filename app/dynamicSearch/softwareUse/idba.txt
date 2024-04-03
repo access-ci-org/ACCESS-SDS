@@ -1,0 +1,25 @@
+Use Case: IDBA is a practical iterative De Bruijn Graph De Novo Assembler for sequencing data with highly uneven depth. It is useful for metagenomic data which are complex not only for the co-existing of lots of species but also for the uneven abundance ratio.
+
+Code details and examples: 
+
+Code:
+filename.fasta is the input file required. The input file should be in fasta format.
+
+For paired-end reads, two files are required:
+
+1) filename_read1.fasta - This file should contain the first read from each pair
+2) filename_read2.fasta - This file should contain the second read from each pair
+
+Example command:
+```
+idba_ud -r filename.fasta -o output_dir --mink 20 --maxk 100 --step 20
+```
+In this command, `-r` specifies the filename where the reads are contained; `-o` specifies the directory where the output will be written; `--mink`, `--maxk`, and `--step` specify the minimum, maximum, and step size for the kmer size used for assembly. Each kmer size will be used in turn for iterative assembly. 
+
+For paired-end reads:
+```
+idba_ud -r filename_read1.fasta,filename_read2.fasta -o output_dir --mink 20 --maxk 100 --step 20
+```
+In this case, the two input files are specified by `-r`, separated by a comma.
+
+Note: It's essential to ensure that each pair of reads appear in the same order in both files. There should be no unpaired reads interspersed with the paired reads.

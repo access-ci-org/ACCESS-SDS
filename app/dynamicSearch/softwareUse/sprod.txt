@@ -1,0 +1,67 @@
+Use Case: Parallel computing of scalar products between two vectors.
+
+Code details and examples: 
+
+Code: 
+
+The sprod program works with input files containing two vectors. The input file should be a text file containing numbers of a vector on each line. An example of an input file is:
+
+```
+3
+4
+5
+6
+7
+```
+
+This could represent two vectors: (3,4,5) and (6,7). 
+
+To run the command you can use the following command:
+
+```bash
+$ sprod input_file.txt
+```
+
+This will calculate the scalar product between the two vectors in the input file. Output will be printed in the terminal. 
+
+Please note that sprod works only with numerical input. If you provide other types of input, you will get unexpected results or errors. 
+
+Here's a sample code snippet to represent the basic functionality of sprod:
+
+```
+# Include the necessary libraries
+#include <stdio.h>
+#include <mpi.h>
+
+# Initialize MPI 
+MPI_Init(NULL, NULL);
+
+# Create MPI Communicator
+MPI_Comm world = MPI_COMM_WORLD;
+int world_size, my_rank;
+MPI_Comm_size(world, &world_size);
+MPI_Comm_rank(world, &my_rank);
+
+# Define the vectors
+# In reality, you will read these from the input file
+int a[] = {3, 4, 5};
+int b[] = {6, 7};
+
+int sprod = 0;
+
+# Calculate the scalar product
+for (int i = 0; i < 3; i++) {
+  sprod += a[i] * b[i];
+}
+
+printf("Scalar product: %d\n", sprod);
+
+# Finalize MPI 
+MPI_Finalize();
+```
+
+This code initializes MPI, calculates the scalar product of two vectors and finally finalizes MPI. 
+
+Please replace array values and their respective lengths according to your input data. In production, you will want to handle error conditions, edge cases and handle dynamic length vectors. 
+
+Feel free to modify the provided sample code to handle dynamic vectors and adapt it to your needs.

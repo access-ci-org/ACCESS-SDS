@@ -1,0 +1,26 @@
+Use Case: Rasterio is used in geographical information systems for handling raster data. It could be employed for reading raster files, metadata and plotting raster files.
+
+Code Details and Examples:
+Code:
+
+```python
+import rasterio
+from rasterio.plot import show
+
+# Open the raster file
+src = rasterio.open('example.tif')
+
+# Print the metadata of the raster file
+print(src.meta)
+
+# Plot the raster file
+show(src)
+```
+
+**Sample Input Files:** The expected input is a raster file, for example, a .tif file (example.tif).
+
+**Input File Specifications:** Rasterio reads files with formats: GeoTIFF (.tif), Erdas Imagine Images (.img), and others. The file must be properly formatted, and the data inside should follow the GIS standards for raster data.
+
+**Command Running:** Save the above code into a Python file, say `rasterio_example.py`, and run the python file using the command: `python rasterio_example.py`
+
+**Code Explanation:** The code first imports the necessary module. It then opens the raster file with `rasterio.open()`. After that, the metadata of the raster file is printed using the `meta` property of a rasterio object. Finally, the raster file is plotted to visualize it.

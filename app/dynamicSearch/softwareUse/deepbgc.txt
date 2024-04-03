@@ -1,0 +1,36 @@
+Use Case: deepBGC is a bioinformatic software for the discovery and classification of biosynthetic gene clusters (BGCs) in bacterial genomes and metagenomes.
+
+Code details and examples: 
+
+The deepBGC pipeline accepts any of these following formats:
+- A single GenBank (.gbk) file
+- A directory with GenBank (.gbk) files
+- A single FASTA (.fasta) file
+- A directory with FASTA files (.fasta)
+
+For example, let's consider you have a .fasta file named "cluster1.fasta".
+
+Code:
+
+```python
+from deepbgc import DeepBGC
+
+# Initialize the model
+model = DeepBGC()
+
+# Load the database file
+model.load("cluster1.fasta")
+
+# Predict BGCs
+bgcs = model.predict()
+
+# Show the results
+for bgc in bgcs:
+    print(bgc)
+```
+
+You would then run the Python script with the command `python script.py`.
+
+The output would be the predicted BGCs in the input genome. The software makes use of a trained recurrent neural network (RNN) model to predict and classify the BGCs.
+  
+Please Note: The `deepbgc` python package must be properly installed and available in your Python environment to run this code. The above 'load()', 'predict()' functions are hypothetical and they entirely depend on how the deepBGC package is built and should be used. Please refer to the respective package documentation for the actual usage of methods.

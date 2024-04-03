@@ -1,11 +1,35 @@
-Use Case: Visualizing netCDF files  
-Code details and examples:  
-```python
-import panoply
+Use Case: Panoply is a cross-platform software that plots geo-gridded data from netCDF, HDF and GRIB datasets. It is used predominantly in climatology, meteorology, and geography for visualising data. 
 
-# Sample input file: Example.nc (netCDF file)
-# Format required: netCDF
-# Specifications: Contains scientific data in netCDF format
-# Code snippet:
-panoply.netcdf_plot('Example.nc')
-```  
+Code Details and Examples:
+
+Code:
+
+To use Panoply, you first have to have a data file in a compatible format (NetCDF, HDF, GRIB).   
+
+Here is an example of a NetCDF file structure:
+
+``` 
+netcdf sample {
+dimensions:
+    lon = 6 ;
+    lat = 6 ;
+    time = UNLIMITED ; // (10 currently)
+variables:
+    int lat(lat) ;
+      lat:units = "degrees_north" ;
+    int lon(lon) ;
+      lon:units = "degrees_east" ;
+    double time(time) ;
+      time:units = "hours since 1900-01-01 00:00:0.0" ;
+    short temperature(time, lat, lon) ;
+      temperature:units = "°C" ;
+```
+
+Once the compatible file is ready, we can open it with Panoply. There is no command line for Panoply, the process is GUI based.
+
+- Open Panoply and go to File -> Open -> select your NetCDF (or .nc) file.
+- Click "Create Plot". 
+- Select "Lon-Lat", then click "Create".
+- Pick a variable on the left side (example: temperature) and click "Create".
+
+Output will be the visualisation of your dataset. How to view and manipulate this visualisation is beyond the scope of this question and more information can be found on the official Panoply website.

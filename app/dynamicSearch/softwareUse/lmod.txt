@@ -1,47 +1,47 @@
-Use Case: Lmod is a tool for dynamically managing the user environment in a modular fashion on HPC systems.
+Use Case: Use of Lmod for Environment Modules management. This tool is typically used to manage the environment variables for different software packages installed on HPC systems. Users can load and unload modules (software packages), and get information about installed modules.
 
 Code details and examples:
-1. Listing available modules:
+
+Code:
+
+First, it may be necessary to initialize the Lmod system, which can usually be done using a bash shell:
+
+```bash
+source /usr/local/lmod/lmod/init/bash
+```
+
+1. List all available modules:
+
 ```bash
 module avail
 ```
+2. Load a specific module (e.g. python/3.7.0):
 
-2. Loading a specific module:
 ```bash
-module load <module_name>
+module load python/3.7.0
 ```
+3. Unload a module (e.g. python/3.7.0):
 
-3. Unloading a module:
 ```bash
-module unload <module_name>
+module unload python/3.7.0
 ```
+4. Show currently loaded modules:
 
-4. Searching for a module:
-```bash
-module spider <search_keyword>
-```
-
-5. Display loaded modules:
 ```bash
 module list
 ```
+5. Search for a specific module:
 
-6. Getting help on module command:
 ```bash
-module help
+module spider python
 ```
+This will show all available versions of python.
 
-7. Saving current environment as a collection to easily reload later:
-```bash
-module save <collection_name>
-```
+Input files: Not applicable, as Lmod functions primarily as a command-line tool for managing environment modules on an HPC system.
 
-8. Restoring a saved collection:
-```bash
-module restore <collection_name>
-```
+Format required: Not applicable
 
-9. Purging all loaded modules:
-```bash
-module purge
-```
+Specifications and details in input files: Not applicable
+
+Commands to run: 
+For a module to be available, it first needs to be installed and its environment modulefile needs to be created by the system administrator. The general command syntax is 'module [command] [module_name/module_version]'. For instance, to load a module called 'gcc' with version '4.8.1', the command would be 'module load gcc/4.8.1'.

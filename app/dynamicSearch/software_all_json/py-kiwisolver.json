@@ -1,0 +1,18 @@
+{
+  "software_name": "py-kiwisolver",
+  "comprehensive_overview": "Py-kiwisolver is a fast and efficient C library for solving linear programming problems. It provides an interface to the Kiwi library, which is a constraint solver that can be used for various optimization tasks.",
+  "core_features": "1. Solves linear programming problems efficiently.\n2. Provides an interface to the Kiwi constraint solver library.\n3. Supports various optimization tasks.\n4. Fast and reliable performance.",
+  "general_tags": [
+    "linear programming",
+    "constraint solver",
+    "optimization",
+    "library"
+  ],
+  "additional_tags": {
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Library",
+    "software_type": "Python package",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

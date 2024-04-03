@@ -1,0 +1,31 @@
+Use Case: MATLAB Compiler Runtime (MCR) is a standalone set of shared libraries that enables the execution of compiled MATLAB applications or components on computers that do not have MATLAB installed. For example, you can use MCR to run a MATLAB-based machine learning model on a new system.
+
+Code details and examples: 
+
+Code: 
+
+Before running your code, ensure that the MCR is included in your system PATH:
+
+```bash
+export LD_LIBRARY_PATH=:/usr/local/MATLAB/MATLAB_Runtime/v98/runtime/glnxa64:/usr/local/MATLAB/MATLAB_Runtime/v98/bin/glnxa64:/usr/local/MATLAB/MATLAB_Runtime/v98/sys/os/glnxa64:/usr/local/MATLAB/MATLAB_Runtime/v98/extern/bin/glnxa64
+```
+
+The v98 means the version of MCR, and it should match your MATLAB version when compiling MATLAB code.
+
+You would typically compile a MATLAB application using the Application Compiler app in MATLAB or the mcc command-line tool. This will provide you with a standalone application or shared library/DLL (that require the MCR) or a CTF file (which can be run with the MCRInstaller). 
+
+Once compiled, the application can be called using the system command:
+
+```bash
+./your_compiled_application
+```
+
+This assumes your_app is a MATLAB script compiled with mcc and turned into a standalone executable (which is contained in the same directory). You also may need to ensure that the system you're running on has compatible architecture with the MCR your MATLAB code was compiled with.
+
+For specifying the Input files (assuming you have input file 'input.txt'):
+
+```bash
+./your_compiled_application input.txt
+```
+
+Note: The input file's format and specifications depend on the MATLAB application you're running. The input files should be identical to what the MATLAB application expects if you were running it in an MATLAB environment. Your application may also require specific formatting, data types, or structures, which should be reflected in the input files.

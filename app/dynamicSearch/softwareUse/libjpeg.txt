@@ -1,54 +1,55 @@
-Use Case: Image Compression with libjpeg
+Use Case: libjpeg is a widely used software library which implements a JPEG image codec (a method of compression and decompression). It is used when there is need to decode, encode or transform JPEG image data. The basic usage of libjpeg toolkit is to convert, compress and decompress JPEG format files.
 
-Code details and examples:
-```c
+Code Details and Examples:
+
+Code:
+
+```C
 #include <stdio.h>
 #include <jpeglib.h>
+#include <stdlib.h>
 
 int main() {
-    struct jpeg_compress_struct cinfo;
-    struct jpeg_error_mgr jerr;
+  struct jpeg_decompress_struct cinfo;
+  struct jpeg_error_mgr jerr;
 
-    FILE *outfile;
-    JSAMPROW row_pointer[1];
-    int image_width = 800;
-    int image_height = 600;
-    int quality = 75;
+  /* More stuff */
+  FILE * infile;                /* source file */
+  JSAMPARRAY buffer;            /* Output row buffer */
+  int row_stride;               /* physical row width in output buffer */
 
-    cinfo.err = jpeg_std_error(&jerr);
-    jpeg_create_compress(&cinfo);
+  /* In this example we open the input file before doing anything else,
+   * so that the setjmp() error recovery below can assume the file is open.
+   * VERY IMPORTANT: use "b" option to fopen() if you are on a machine that
+   * requires it in order to read binary files.
+   */
 
-    if ((outfile = fopen("output.jpg", "wb")) == NULL) {
-        fprintf(stderr, "Error opening output file\n");
-        return 1;
-    }
-
-    jpeg_stdio_dest(&cinfo, outfile);
-
-    cinfo.image_width = image_width;
-    cinfo.image_height = image_height;
-    cinfo.input_components = 3;
-    cinfo.in_color_space = JCS_RGB;
-
-    jpeg_set_defaults(&cinfo);
-    jpeg_set_quality(&cinfo, quality, TRUE);
-
-    jpeg_start_compress(&cinfo, TRUE);
-
-    while (cinfo.next_scanline < cinfo.image_height) {
-        row_pointer[0] = (JSAMPROW)(&image_data[cinfo.next_scanline * image_width * 3]);
-        jpeg_write_scanlines(&cinfo, row_pointer, 1);
-    }
-
-    jpeg_finish_compress(&cinfo);
-    fclose(outfile);
-    jpeg_destroy_compress(&cinfo);
-
+  if ((infile = fopen("test.jpg", "rb")) == NULL) {
+    fprintf(stderr, "can't open %s\n", "test.jpg");
     return 0;
+  }
+  
+  /* Step 1: allocate and initialize JPEG decompression object */
+  
+  /* We set up the normal JPEG error routines, then override error_exit. */
+  cinfo.err = jpeg_std_error(&jerr);
+  /* Now we can initialize the JPEG decompression object. */
+  jpeg_create_decompress(&cinfo);
+
+  /* Step 2: specify data source (eg, a file) */
+
+  jpeg_stdio_src(&cinfo, infile);
+
+  /* More to write: decompression part, check libjpeg official documentation for more info*/
+
+  return 0;
 }
+
 ```
+Command to run:
+gcc libjpeg_example.c -ljpeg -o libjpeg_example
+./libjpeg_example
 
-Make sure to replace `image_data` array with the actual RGB image data. Compile the code with libjpeg library (e.g., `gcc -o compress_image compress_image.c -ljpeg`) and run the executable to compress the image file.
+In this example, we are trying to use the libjpeg to decode a jpeg file named "test.jpg". The input file is a standard jpeg file and opened with file mode "rb" (read binary). 
 
-Command to compile: `gcc -o compress_image compress_image.c -ljpeg`
-Command to run: `./compress_image`
+The output buffer is defined as JSAMPARRAY, which is equivalent to JSAMPLE[][] in standard C. The row_stride is the physical row width in output buffer, which is often important in image processing because the row width in the image file (defined by the number of image columns) is not always the same as the row width in memory (defined by memory allocation considerations). In this example, the output buffer is a single-dimensional array of pixels, where each pixel is a JSAMPLE value.

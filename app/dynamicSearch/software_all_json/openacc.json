@@ -1,0 +1,24 @@
+{
+    "software_name": "OpenACC",
+    "comprehensive_overview": "OpenACC is a directive-based programming model designed to simplify parallel programming of heterogeneous CPU/GPU systems. It allows developers to accelerate applications through directives without the need for low-level programming of accelerators.",
+    "core_features": [
+        "Directive-based programming model",
+        "Heterogeneous CPU/GPU systems support",
+        "Accelerates applications without low-level programming of accelerators",
+        "Portable across different platforms and compilers"
+    ],
+    "general_tags": [
+        "Parallel Programming",
+        "Heterogeneous Systems",
+        "Accelerated Computing"
+    ],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Programming Model",
+        "software_type": "Compiler/Tool",
+        "field_of_science": "Computer and Information Sciences",
+        "specific_field_of_science": "Computer Science",
+        "technology_field": "Engineering and Technology"
+    }
+}

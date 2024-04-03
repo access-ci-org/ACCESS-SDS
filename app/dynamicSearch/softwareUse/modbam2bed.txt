@@ -1,0 +1,39 @@
+Use Case: modbam2bed is a perl script tool that is often used to convert .bam files (binary sequence alignment/map format) to .bed files (Browser Extensible Data), essentially converting the mapping data of a genome to a simplified format that can be utilized by genomic visualization softwares such as UCSC genome browser.
+
+Code details and examples: 
+
+Code: 
+```
+#!/usr/bin/env perl
+use strict; 
+use warnings; 
+use File::Basename; 
+my $script = basename($0); 
+my $usage = "USAGE:\n  perl $script in.bam\n"; 
+
+!@ARGV and die $usage; 
+
+while (<>) {
+    /^@/ and next; 
+    my @ta=split(/\t/, $_); 
+    $ta[1] & 0x4 and next; 
+    header($ta[2], length($ta[9]), 1+$ta[3],$ta[5]=~/(\d+)M/,$1+1+$ta[3]); 
+}
+
+sub header {
+    my ($chr, $length, $start, $match, $end) = @_; 
+    if ($length==$match) {
+        print join("\t", $chr, $start-1, $end)."\n"; 
+    }
+}
+```
+
+Sample Input File: The input file format for this tool is .bam files, which can be reated by mapping reads of sequences to a reference genome using mapping tools such as BWA or Bowtie2.
+ 
+Command: The command to run the script mentioned above on a .bam file named "sample.bam" would look like this
+```
+perl modbam2bed.pl sample.bam > output.bed
+```
+This command converts the "sample.bam" file to a "output.bed" file.
+
+Notes: This is a basic version of the tool which only converts full matches. There exists multiple versions of this script that can handle specific cases such as split reads, softclip reads etc, depending on the requirement of the research.

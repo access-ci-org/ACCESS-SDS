@@ -1,35 +1,26 @@
-Use Case: Einops is a Python library for tensor operations and reshaping.
+Use Case: A minimal example of average pooling operation in a machine learning tensorflow application using the einops python library. 
 
-Code details and examples:
-1. Reshape a 2D array into a 3D array:
+Code details and examples: 
+
+**Code:**
+
 ```python
-import einops
+import tensorflow as tf
 
-input_array = [[1, 2, 3],
-               [4, 5, 6]]
-output_array = einops.rearrange(input_array, 'h w -> h w 1')
-print(output_array)
+from einops import rearrange, reduce
+
+# input tensor
+x = tf.random.normal((1,64,75,75))
+
+# average pooling operation
+pooled_tensor = reduce(x, 'b c (h h2) (w w2) -> b c h w', 'mean', h2=2, w2=2)
+
 ```
 
-2. Permute dimensions of a 3D array:
-```python
-import einops
+- b, c, h, w stands for batch, channels, height and width respectively. 
+- The tensor ‘x’ is reduced along the height and width axes by a factor of 2, averaging the values.
+- 'b c (h h2) (w w2) -> b c h w' is the reduction recipe.
 
-input_array = [[[1], [2]],
-               [[3], [4]],
-               [[5], [6]]]
-output_array = einops.rearrange(input_array, 'h w c -> w c h')
-print(output_array)
-```
+The command to run the code is:
 
-3. Merge two dimensions in a tensor:
-```python
-import einops
-import torch
-
-input_tensor = torch.randn(2, 3, 4)
-output_tensor = einops.rearrange(input_tensor, 'b c h w -> b (c h w)')
-print(output_tensor)
-```
-
-For more information and detailed examples, you can refer to the official documentation: https://einops.rocks/
+In a jupyter notebook, you can run your cell with SHIFT + ENTER. If it's a ".py" file you can run it from the terminal with the command: `python filename.py`

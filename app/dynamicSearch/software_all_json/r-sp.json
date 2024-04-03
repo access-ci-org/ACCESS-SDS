@@ -1,0 +1,15 @@
+{
+    "software_name": "R-SP",
+    "comprehensive_overview": "R-SP is a software package that combines the statistical computing language R with the spatial statistics capabilities of R to provide a comprehensive tool for analyzing spatial data.",
+    "core_features": "Key features of R-SP include geospatial data visualization, spatial autocorrelation analysis, spatial interpolation, spatial regression modeling, cluster analysis, and spatial point pattern analysis.",
+    "general_tags": [
+        "R",
+        "Spatial Statistics",
+        "Geospatial Analysis"
+    ],
+    "research_discipline": "Spatial Statistics",
+    "research_area": "",
+    "software_class": "Statistical Computing",
+    "software_type": "Tool",
+    "field_of_science": "Statistics and Probability"
+}

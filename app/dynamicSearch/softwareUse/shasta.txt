@@ -1,0 +1,27 @@
+Use Case: Use Shasta for rapid de novo assembly of long, noisy DNA sequences, typically generated in high-throughput sequencing (HTS) experiments. Shasta is used in bioinformatics pipelines for assembling genomes and other large DNA constructs.
+
+Code details and examples: Code 
+
+As input, Shasta uses a read file in FASTQ format. The format required for the input file is as follows:
+
+```
+@<sequence identifier>
+<sequence>
++<quality scores identifier>
+<quality scores>
+```
+An example of a FASTQ input file:
+```
+@Sequence1
+AGCTTAGCTAGCTACCTGGTCTTCTGGCGCGCATTAACC
++Sequence1
+!"""""""""""""""""""""""""""""""""""""
+```
+
+To run Shasta with an input file, you would use the following command:
+
+```bash
+shasta --input reads.fastq
+```
+
+This command will run Shasta with the default parameters and the provided input file "reads.fastq". This commad will generate a.fasta output file containing the assembled sequences.

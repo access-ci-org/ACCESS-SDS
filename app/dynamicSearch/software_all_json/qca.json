@@ -1,0 +1,13 @@
+{
+    "software_name": "QCA",
+    "comprehensive_overview": "QCA (Qualitative Comparative Analysis) is a comparative analytical method primarily used in the social sciences to analyze data sets involving categorical variables. It is a method for studying the relationships between the presence and absence of conditions and an outcome of interest.",
+    "core_features": "1. Boolean minimization: QCA uses Boolean algebra to reduce complex data sets into simpler forms for analysis.\n2. Truth tables and logical operations: It generates truth tables to represent the relationships between variables and performs logical operations on them.\n3. Consistency and coverage analysis: QCA evaluates the consistency and coverage of configurations of conditions related to outcomes.\n4. Calibration and fuzzy set analysis: It allows for fuzzy set analysis to account for cases where conditions are not strictly present or absent.\n5. Interpretation and visualization: QCA provides tools for interpreting results and visualizing complex relationships between variables.",
+    "general_tags": ["qualitative data analysis", "comparative analysis", "social sciences"],
+    "additional_tags": {
+        "research_discipline": "Social Sciences",
+        "research_area": "Comparative Analysis",
+        "software_class": "Data Analysis Tool",
+        "software_type": "Analytical Software",
+        "field_of_science": "Social Sciences"
+    }
+}

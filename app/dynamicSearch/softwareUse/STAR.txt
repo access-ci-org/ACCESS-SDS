@@ -1,9 +1,25 @@
-Use Case: RNA-seq read alignment with STAR
-Code details and examples: 
-```
-# Create an index from a reference genome
-STAR --runMode genomeGenerate --genomeDir /path/to/genomeDir --genomeFastaFiles /path/to/genome.fasta --runThreadN 8
+Use Case: The Spliced Transcripts Alignment to a Reference (STAR) tool is extensively used in bioinformatics for aligning RNA-sequencing reads to a reference genome for downstream analysis.
 
-# Align RNA-seq reads to the reference genome
-STAR --genomeDir /path/to/genomeDir --readFilesIn /path/to/read1.fastq /path/to/read2.fastq --outFileNamePrefix output_ --runThreadN 8
+Code details and examples: 
+
+Input Files:
+1. Reference genome: Specific to the organism being studied, typically in FASTA format.
+2. Gene annotations: A GTF/GFF file that contains the known genes and their locations for the reference genome.
+3. RNA-seq reads: Raw sequencing reads from the RNA-seq experiment, typically in FASTQ format.
+
+Command to generate genome index (genomeDir is the directory storing the output files):
+
 ```
+STAR --runMode genomeGenerate --genomeDir /path/to/genomeDir --genomeFastaFiles /path/to/genome.fasta --sjdbGTFfile /path/to/annotations.gtf --runThreadN [numThreads]
+```
+
+Command to align RNA-seq reads:
+
+```
+STAR --genomeDir /path/to/genomeDir --readFilesIn /path/to/read1.fastq /path/to/read2.fastq --runThreadN [numThreads] --outSAMtype BAM SortedByCoordinate --outFileNamePrefix /path/to/output
+```
+
+Specifications:
+- Adjust `[numThreads]` to the number of threads you wish to use.
+- For genome index generation, the genome FASTA file and the GTF file must correspond to the same version of the genome.
+- For alignment, the RNA-seq reads can be single-end or paired-end; provide one file path for single-end or two file paths for paired-end.

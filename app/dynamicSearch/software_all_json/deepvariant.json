@@ -1,0 +1,13 @@
+{
+  "software_name": "DeepVariant",
+  "comprehensive_overview": "DeepVariant is a deep learning-based variant caller developed by Google Brain that accurately identifies genetic variants from next-generation DNA sequencing data.",
+  "core_features": "1. Utilizes deep neural networks for variant calling\n2. Provides accurate and reliable variant identification\n3. Supports germline and somatic variant calling\n4. Optimized for identifying small variants like single nucleotide polymorphisms (SNPs) and insertions/deletions (indels)\n5. Employs a peer-reviewed, open-source methodology for variant calling",
+  "general_tags": ["variant calling", "genetic variants", "deep learning", "DNA sequencing"],
+  "additional_tags": {
+    "research_discipline": "Genomics",
+    "research_area": "Bioinformatics",
+    "software_class": "Genomics",
+    "software_type": "Variant Caller",
+    "field_of_science": "Biological Sciences"
+  }
+}

@@ -1,67 +1,23 @@
-I will provide examples for different software tools that have "map" in their name or related functionalities. 
+Use Case: MapReduce in Python is a data processing tool for handling large amounts of data that cannot fit into the memory of a single computer. The map function applies a given function to each item of an iterable and outputs a list of results while the reduce function applies a function of two arguments cumulatively to the elements of an iterable, so as to reduce the iterable to a single output. 
 
-Use Case: GNU Parallel
-Code details and examples:
-GNU Parallel is a command-line tool for running parallel jobs. It can be used to run multiple jobs in parallel on a single machine or on multiple machines. Here is an example of how you can use GNU Parallel to run a command in parallel:
+Code Details and Examples:
 
-Sample input file (input.txt):
-```
-file1.txt
-file2.txt
-file3.txt
-```
+Code: 
 
-Code:
-```
-cat input.txt | parallel echo Processing {}
-```
+```python
+from functools import reduce
+  
+# defining the list
+lis = [ 1 , 3, 5, 6, 2, ]
+  
+# using reduce to compute maximum element from the list
+print ("The maximum element of the list is : ",end="")
+print (reduce(lambda a,b : a if a > b else b,lis))
 
-Command to run:
-```
-parallel --jobs 3 < input.txt
-```
+# using map to find the square of all numbers in the list
+print ("The squares of all elements of the list are : ",end="")
+print (list(map(lambda x: x**2,lis)))
 
-Use Case: BWA (Burrows-Wheeler Aligner)
-Code details and examples:
-BWA is a software package for mapping low-divergent sequences against a large reference genome. Here is an example of how you can use BWA to align sequencing reads to a reference genome:
-
-Sample input files:
-- Reference genome: ref_genome.fa
-- Fastq file with sequencing reads: reads.fq
-
-Code:
-```
-bwa index ref_genome.fa
-bwa mem ref_genome.fa reads.fq > alignment.sam
 ```
 
-Command to run:
-This command aligns the reads to the reference genome and outputs the alignment in SAM format.
-```
-bwa mem ref_genome.fa reads.fq > alignment.sam
-```
-
-Use Case: MapReduce
-Code details and examples:
-MapReduce is a programming model and processing technique for parallel data processing. Hadoop is a popular framework that implements the MapReduce model. Here is an example of how you can use MapReduce with Hadoop:
-
-Sample input files:
-- Input data file: input.txt
-
-Code:
-```
-// Map function
-function map(key, value):
-    for word in value.split():
-        emit_intermediate(word, 1)
-
-// Reduce function
-function reduce(key, values):
-    emit(key, sum(values))
-```
-
-Command to run:
-To run this MapReduce job using Hadoop, you would typically package your code into a JAR file and submit it to the Hadoop cluster.
-```
-hadoop jar your_mapreduce.jar input.txt output
-```
+`lis` is the input list containing numbers. For the `reduce` function, the input file must be a list of elements and the specifications of that elements are that they must be capable of being processed by the reducing function being used. The `map` function also takes in a list of elements and these elements must be capable of being processed by the mapping function being used. The output for the reduce part would be 6 (the maximum element) and for the map part would be [1, 9, 25, 36, 4] (the squares of the elements).

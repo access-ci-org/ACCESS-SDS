@@ -1,0 +1,42 @@
+Use Case: Macrel is a software used for gene prediction in metagenomics data. It is predominantly applied in the field of bioinformatics to appropriately identify antimicrobial resistance genes (ARGs) and predict peptides and small genes. These findings are integral to understanding bacterial resistance mechanisms, potentially uncovering new therapeutic strategies.
+
+Code details and examples:
+
+Code:
+
+A core command for running Macrel might look something like this:
+
+```
+macrel contigs \
+    --infile INPUT.fasta \
+    --outfile OUTDIR
+```
+
+In this code:
+
+`INPUT.fasta` would be replaced with the filename of your input, which must be in Fasta format.
+
+`OUTDIR` is the name of the directory where you'd like the output saved. The directory is created if it does not exist.
+
+A more specific command, for example in predicting small peptides, might look like:
+
+```
+macrel peptides \
+    --infile INPUT.fasta \
+    --outfile OUTDIR
+```
+
+For these commands, the input file, here `INPUT.fasta`, needs to be in Fasta format, which is a text-based format for nucleotide (DNA/RNA) or peptide (protein) sequences. An example of Fasta file format would be:
+
+```
+>seq0
+ATGTGGGAAGTGAAGTGGTTGA
+>seq1
+ATGTGGGAAGAGAAGTGGTTGA
+```
+
+Here `>seq0` and `>seq1` are identifiers for the sequences that follow on the next line.
+
+Macrel does not require any other specific details in the input file, just the sequence data.
+
+Remember Macrel is run from the command line, so you would first navigate to the directory containing your input file (using `cd /path/to/directory`) and then input the command there.

@@ -1,0 +1,26 @@
+{
+    "software_name": "py-pandas",
+    "comprehensive_overview": "pandas is a fast, powerful, and flexible open-source data analysis and data manipulation library built on top of the Python programming language. It provides data structures such as DataFrame and Series that are designed to make working with structured data seamless.",
+    "core_features": [
+        "Data manipulation", 
+        "Data analysis", 
+        "Data cleaning", 
+        "Data transformation", 
+        "Time series analysis", 
+        "Handling missing data", 
+        "Grouping, merging, and reshaping data"
+    ],
+    "general_tags": [
+        "Python library",
+        "Data analysis",
+        "Data manipulation",
+        "Data cleaning",
+        "Data transformation",
+        "Time series analysis"
+    ],
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Data Analysis Tool",
+    "software_type": "Library",
+    "field_of_science": "Computer and Information Sciences"
+}

@@ -1,0 +1,22 @@
+Use Case: antismash is a bioinformatics software used for the identification, annotation and analysis of secondary metabolite biosynthesis gene clusters in microbial genomes. It can be used to predict potential secondary metabolite (e.g. antibiotics, pigments and toxins) producing genes in microbial genome data.
+
+Code details and examples: Code 
+
+Input Format: Files in FASTA, EMBL or GenBank format can be used as input. A single  bacterial or fungal genome sequence is required for analysis. 
+
+Sample Input File: A sample input file (in FASTA format) might look as follows:
+
+```
+>seq1
+ATGCCAACACCTTGAAACCTACAACTTCCTATTTATTTAAAGTATATAATATAAATAGTAAAGAATTTGAATGGAGAAGAAGGA...
+>seq2
+GTGAAACTTATTAATTAACCATCCAAATCCTTCTCCHCCCTTCTTCATCCTCCCTCCTCCTCCCTCCCTCCCTTCCTCTCAAG...
+```
+In this example, `seq1` and `seq2` represent individual microbial genomes. 
+
+Command Line usage: If you have antismash installed and an input file named `input.fna`, you could run antismash as follows:
+
+```
+run_antismash input.fna
+```
+This will run antismash with default parameters on the sequences in `input.fna`. The output files will be saved in a directory named "antismash_output".

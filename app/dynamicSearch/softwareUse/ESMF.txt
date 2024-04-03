@@ -1,35 +1,40 @@
-Use Case: ESMF (Earth System Modeling Framework) is a flexible and scalable software infrastructure for building and coupling climate, weather, and data assimilation applications. It provides a set of tools and libraries that facilitate the coupling of different models and data sources.
+Use Case: ESMF (Earth System Modeling Framework) is a software with large set of capabilities related to geospatial gridding, more specifically regridding and interpolation of data onto different grids, in addition to many other capabilities related to modeling and managing geospatial data, like:
+
+- Creating Grid objects and arrays on them
+- Creating and manipulating fields
+- Interpolating data from one grid to another (regridding)
+- Reading data from and writing data to various types of file formats
 
 Code details and examples:
-- ESMF generally requires the creation of configuration files and scripts to run coupled models. Below is a basic example of a Python script using ESMF to create a simple grid, regrid data, and output the results to a NetCDF file.
 
-Sample input files:
-1. input_data.nc (NetCDF file containing input data)
-2. output_data.nc (NetCDF file to store the results)
+Code to create a grid, a field on the grid, and then write this field out to a file:
 
 ```python
+# import ESMF library
 import ESMF
+import numpy as np
 
-grid = ESMF.Grid(filename='input_data.nc', filetype=ESMF.FileFormat.GRIDSPEC)
+# Create a global latlon grid with shape (10, 20)
+latlon = ESMF.Grid(np.array([10, 20]))
 
-srcfield = ESMF.Field(grid, name='source_field')
-dstfield = ESMF.Field(grid, name='destination_field')
+# create a field on the centers of the grid
+field = ESMF.Field(latlon, "centerfield")
 
-regrid = ESMF.Regrid(srcfield, dstfield)
+# Initialize the field data to a constant value
+field.data[:] = 42
 
-regrid()
+# create a field_scriber object to write the field data
+fs = ESMF.FieldScriber("output.nc")
 
-dstfield.write(filename='output_data.nc', filetype=ESMF.FileFormat.GRIDSPEC)
+# write the field data
+fs.write(field, "centerfield")
+
+# close the field_scriber object
+fs.close()
 ```
 
-This script defines a grid from an input NetCDF file, creates source and destination fields, performs a regridding operation, and writes the output to a new NetCDF file.
+Command to run this python script (assuming script name is script.py): `python script.py` 
 
-Note: The above script is a basic example and may need modifications based on the specific requirements of the coupled models.
+Input file is not necessary in this example as we're creating a field from scratch, and the output file is an ordinary NetCDF file, which will contain a single variable "centerfield", defined on the centers of a lat-lon grid with shape (10, 20), filled with the value 42. 
 
-To run the script, save it in a file (e.g., esmf_example.py) and execute it using Python:
-
-```
-python esmf_example.py
-```
-
-This will run the ESMF script and generate the output file with the regridded data.
+This is a very basic example of what can be done with ESMF, and many other complex and sophisticated operations can be achieved using this powerful library.

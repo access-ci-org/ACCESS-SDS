@@ -1,0 +1,20 @@
+{
+    "software_name": "singlem",
+    "comprehensive_overview": "SingleM is a standalone toolkit for microbial population genomics that enables the assembly, annotation, and variant calling of individual microbial genomes from metagenomes.",
+    "core_features": [
+        "Assembly of individual microbial genomes from metagenomic data",
+        "Annotation of microbial genomes",
+        "Variant calling within microbial populations"
+    ],
+    "general_tags": [
+        "microbial genomics",
+        "metagenomics",
+        "genome assembly",
+        "variant calling"
+    ],
+    "research_discipline": "Genomics",
+    "research_area": "Microbial Genomics",
+    "software_class": "Analysis and Visualization",
+    "software_type": "Bioinformatics",
+    "field_of_science": "Biological Sciences"
+}

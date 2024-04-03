@@ -1,0 +1,26 @@
+Use Case: Use seaborn for plotting and visualization in Python.
+
+Code details and examples: Code.
+
+Seaborn is a Python data visualization library based on matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics.
+
+Sample input:
+
+```
+# import required packages
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Load dataset from seaborn
+data = sns.load_dataset("iris")
+
+# Create a pairplot
+sns.pairplot(data)
+
+# Show the plot
+plt.show()
+```
+
+The data used here is the iris dataset available from seaborn. The iris dataset is a classic and very easy multi-class classification dataset. The iris dataset consists of 50 samples from each of three species of Iris flowers (Iris setosa, Iris virginica and Iris versicolor). Four features were measured from each sample: the lengths and the widths of the sepals and petals, in centimeters.
+
+To run the code, simply copy the code into a python script and run the python script. If using an interactive environment like Jupyter notebook, simply run the cell containing the code.

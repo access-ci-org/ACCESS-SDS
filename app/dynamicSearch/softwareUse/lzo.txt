@@ -1,0 +1,32 @@
+Use Case: LZO is a data compression library that emphasizes on speedy operations. It is mostly used for fast compression and decompression of data, for instance, in network communication or file compression.
+
+Code details and examples:
+    
+Code in C:
+
+```
+#include <stdio.h>
+#include <lzo/lzoconf.h>
+#include <lzo/lzo1x.h>
+
+int main()
+{ 
+    if(lzo_init() != LZO_E_OK)
+    {
+        printf("internal error - lzo_init() failed !!!\n");
+        printf("(this usually indicates a compiler bug - try recompiling\nwithout optimizations, and enable `-DLZO_DEBUG' for diagnostics)\n");
+    return 1;
+}
+```
+
+In this example, the lzo_init() function is called to initialize the LZO library. If the initialization is unsuccessful, it prints an error message. Note, there are no input files in this case.
+
+Command to compile and run:
+
+To compile the C code with LZO, you would need to link the LZO library. It is usually done in this way:
+
+`gcc my_file.c -llzo2 -o my_program`
+
+To run the program, use the following:
+
+`./my_program`

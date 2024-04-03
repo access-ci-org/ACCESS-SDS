@@ -1,0 +1,53 @@
+Use Case: DPL (Definitive Programming Language) is a powerful simulation modeling language with an integrated environment that provides the tools to complete a wide range of simulation model development tasks. With DPL, you can quickly and efficiently develop models that provide clear insight into complex, real-world problems.
+
+Code details and examples:
+
+Code:
+
+This is a DPL Code for running the optimal timing of a single exploration well.
+
+```
+decision Drilling_Decision 'Drilling Decision'= {Drill, Not Drill};
+
+chance Initial_Tests 'Initial Tests' = {Promising, Not Promising};
+
+chance Detailed_Tests 'Detailed Tests' = {Promising, Not Promising};
+
+chance Drilling_Outcome 'Drilling Outcome' = {Discovery, Dry Hole};
+
+sequence Timing_Sequence 'Timing Sequence'= Interest_Rate_Forecast;
+
+value Discovery_Value 'Discovery Value';
+
+value Cost_of_Detailed_Survey 'Cost of Detailed Survey'=10;
+value Cost_of_Drill 'Cost of Drill'=30;
+
+Drilling_Decision = {simulate}
+
+Initial_Tests = 
+{	Promising	0.6,
+Not Promising	0.4*Initial_Tests.True};
+
+Detailed_Tests = 
+{	Promising	0.8*Initial_Tests.Promising,
+Not Promising	1-Initial_Tests.Promising*Detailed_Tests.Promising};
+
+Drilling_Outcome =
+{	Discovery	 	0.4*Detailed_Tests.Promising + 0.2*(1-Detailed_Tests.Promising),
+Dry Hole	 	1-Drilling_Outcome.Discovery};
+
+Timing_Sequence = 
+{	Interest_Rate_Forecast,
+	Drilling_Decision after Interest_Rate_Forecast,
+	Initial_Tests after Drilling_Decision.Drill,
+	Detailed_Tests after Initial_Tests.Promising,
+	Drilling_Outcome after Drilling_Decision.Drill };
+
+Discovery_Value = 80*Drilling_Outcome.Discovery;
+
+Cost_of_Detailed_Survey = 10*Detailed_Tests.Promising;
+
+Cost_of_Drill= 30*Drilling_Decision.Drill;
+```
+
+To run this file, you need to use the operations research software that supports DPL, such as Syncopation Software. Because DPL is used in Syncopation software you don't technically run a command to execute it.

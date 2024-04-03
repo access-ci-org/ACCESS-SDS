@@ -1,23 +1,66 @@
-Use Case: SLEPc is a software library for the solution of large scale sparse eigenvalue problems. It is built on top of PETSc, the Portable, Extensible Toolkit for Scientific Computation. 
+Use Case: Use SLEPc for solving large scale sparse eigenvalue problems in parallel high-performance computing (HPC) environments.
 
-Code details and examples:
-SLEPc does not have a standalone executable, it needs to be used in conjunction with PETSc in your own C, C++, or Fortran code. Below is an example of using SLEPc and PETSc together in a C code for solving a dense Hermitian eigenvalue problem.
+Code Details and Examples:
 
-```c
+Code:
+
+```C
 #include <slepceps.h>
-#include <petscksp.h>
 
-int main(int argc, char **args)
+static char help[] = "Solves a standard eigensystem Ax=kx with the matrix loaded from a file.\n\a\n Usage:\n mpiexec -n <np> ex2 -f <binary_file>\a\n";
+
+int main(int argc,char **argv)
 {
-    SlepcInitialize(&argc, &args, NULL, NULL);
+  Mat            A;              
+  EPS            eps;            
+  ST             st;
+  KSP            ksp;
+  PC             pc;
+  PetscInt       nconv;
+  PetscReal      error;
+  char           filename[PETSC_MAX_PATH_LEN];
+  PetscViewer    viewer;
+  PetscBool      flg;
 
-    // Create matrices, vectors, and solve eigenvalue problem using SLEPc and PETSc functions
+  SlepcInitialize(&argc,&argv,(char*)0,help);
+  EPSCreate(PETSC_COMM_WORLD,&eps);
 
-    SlepcFinalize();
-    return 0;
+  PetscOptionsGetString(NULL,NULL,"-f",filename,PETSC_MAX_PATH_LEN,&flg);
+  if (!flg) SETERRQ(PETSC_COMM_WORLD,1,"Must indicate binary file with the -f option");
+
+  PetscViewerBinaryOpen(PETSC_COMM_WORLD,filename,FILE_MODE_READ,&viewer);
+  MatCreate(PETSC_COMM_WORLD,&A);
+  MatSetFromOptions(A);
+  MatLoad(A,viewer);
+  PetscViewerDestroy(&viewer);
+
+  EPSSetOperators(eps,A,NULL);
+  EPSSetFromOptions(eps);
+  EPSSolve(eps);
+  EPSGetConverged(eps,&nconv);
+  EPSGetST(eps,&st);
+  STGetKSP(st,&ksp);
+  KSPGetPC(ksp,&pc);
+
+  if (nconv>0) {
+    EPSGetEigenpair(eps,0,NULL,NULL,NULL,NULL);
+    EPSComputeError(eps,0,EPS_ERROR_RELATIVE,&error);
+    PetscPrintf(PETSC_COMM_WORLD," Error = %g\n",(double)error);
+  }
+
+  EPSDestroy(&eps);
+  MatDestroy(&A);
+  SlepcFinalize();
+  return 0;
 }
 ```
 
-For detailed documentation and examples, please refer to the SLEPc documentation: https://slepc.upv.es/documentation/
+In this program, a binary file (given as argument `-f`) is read using PETSc viewers and loaded into the matrix `A`. This matrix is used to define the eigenvalue problem. Before calling `EPSSolve()`, the user can set options from the command-line such as select solver type, the problem type, the dimensions of the problem and other solver options. Then, the number of converged eigenpairs is queried with `EPSGetConverged()`, and the first eigenvalue is printed if some eigenpair has converged. 
 
-Note: SLEPc is primarily used through the PETSc interface and does not have standalone command-line tools.
+Command to run this program:
+
+`mpiexec -n 2 ./a.out -f A.dat`
+
+where `A.dat` is the PETSc binary file storing the sparse matrix `A`.
+
+Note that the input file should be a PETSc binary file which stores a matrix. The binary file can be created with PETSc binary viewer `PetscViewerBinaryOpen()` in WRITE mode.

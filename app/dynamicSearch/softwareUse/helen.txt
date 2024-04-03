@@ -1,0 +1,20 @@
+Use Case: HELEN is a deep learning based error correction and consensus module to refine noisy predictions of tools like MarginPolish. This functionality is essential in scientific and research fields that require a high fidelity output from their data sets, particularly in bioinformatics and the like, be it reading a genome for further investigation, sequence alignment, or making predictions about potential genetic conditions.
+
+Code details and examples:
+
+Code: 
+```
+# This command applies HELEN's error correction using your input model and saving the output to a file of your choice.
+helen polish --image_dir images.hdf --model_path model.pkl --num_workers 10 --output_dir output
+```
+Input Specifications:
+
+"images.hdf" is the HDF file created by MarginPolish, which contains the draft base calls, per base features, and true labels for a specific task.
+
+"model.pkl" is the model that has been trained to predict from the MarginPolish HDF files.
+
+"output" is the directory/output file where the polished assembly will be written.
+
+The output directory must not exist before running the command and will be created by HELEN. 
+
+Remember to replace "images.hdf", "model.pkl" and "output" with the actual paths to your input files and desired output directory/file.

@@ -1,0 +1,21 @@
+Use Case: use Lustre for creating a distributed file system in high-performance computing (HPC). Lustre is widely used to store and retrieve large amounts of data in a parallel and distributed manner across clusters.
+
+Code details and examples:
+Lustre uses command-line tools for managing and maintaining the Lustre filesystem. Here's an example of creating a new Lustre filesystem:
+
+Code:
+```
+# create a new MGS and MDT for the filesystem
+mkfs.lustre --fsname=myfs --mgs --mdt /dev/sdb
+
+mount -t lustre /dev/sdb /mnt/mdt
+
+# create a new OST
+mkfs.lustre --fsname=myfs --ost --mgsnode=@tcp:/ip@tcp0 /dev/sdc
+
+mount -t lustre /dev/sdc /mnt/ost
+```
+
+In this example, `/dev/sdb` and `/dev/sdc` are the devices you're using for your MDT and OST, respectively. Replace `myfs` with the name of your filesystem. Replace `/ip@tcp0` with the IP or hostname of your MGS.
+
+Note: The actual commands and input formats can change based on the type of storage devices, network configuration, and Lustre version used. As Lustre is a complex storage solution primarily designed for HPC environments, a correctly configured environment and careful planning are required to use Lustre effectively.

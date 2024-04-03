@@ -1,0 +1,43 @@
+Use Case: Use r-annotate to analyze the genes associated with each weighted KEGG pathway and also to evaluate the statistical significance of the association between the genes and the weighted KEGG pathway.
+
+Code details and examples: Code
+
+The input file required for r-annotate is a comma-separated file (CSV) with gene lists (gene symbols).
+
+Example input file (genes.csv):
+
+```
+GeneSymbol
+BRCA1
+BRCA2
+TP53
+EGFR
+```
+
+R Script to use R-Annotate:
+
+```R
+# Load the necessary libraries
+require('annotate')
+require('org.Hs.eg.db')
+
+# Read the gene list
+genes <- read.csv("genes.csv", header = TRUE)
+
+# Get the Entrez IDs of the genes using the org.Hs.eg.db package 
+EntrezIDs <- unlist(mget(genes$GeneSymbol, org.Hs.egSYMBOL2EG))
+
+# Generate a basic annotation
+basicAnnot <- basicAnnot(EntrezIDs)
+
+# Print the basic annotation
+print(basicAnnot)
+```
+
+Command to run: The above code can be run in an R environment. Save the script as r_annotate.r and the command to run it is:
+
+```R
+Rscript r_annotate.r
+```
+
+Specifications: The input file contains a header named "GeneSymbol" followed by symbols of genes of interest. It accepts gene symbols which will be converted to Entrez IDs using the org.Hs.eg.db R package. The script then generates a basic annotation of the gene list using the R-Annotate package.

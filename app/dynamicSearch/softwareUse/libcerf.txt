@@ -1,12 +1,30 @@
-Use Case: Error function, Faddeeva function
-Input files format: Accepts real or complex numbers
-Command to run: Not available
+Use Case: libcerf is a high-precision library providing complex error functions, also denoted as w, Faddeeva or plasma dispersion functions that are used in mathematical physics for computations involving complex numbers.
 
 Code details and examples:
-```python
-from scipy.special import wofz
 
-z = 1.0 + 1.0j
-result = wofz(z)
-print(result)
+Code:
+
+```c
+#include <stdio.h>
+#include <complex.h>
+#include <math.h>
+#include <cerf.h>
+
+int main() {
+    double complex z = 1.0 - 2.0*I;
+    printf("cerf(%g + %gi) = %g + %gi\n", creal(z), cimag(z), creal(cerf(z)), cimag(cerf(z)));
+    printf("cerfc(%g + %gi) = %g + %gi\n", creal(z), cimag(z), creal(cerfc(z)), cimag(cerfc(z)));
+    printf("dawson(%g + %gi) = %g + %gi\n", creal(z), cimag(z), creal(cdawson(z)), cimag(cdawson(z)));
+    return 0;
+}
 ```
+In this code snippet, we are making use of the library libcerf to compute the complex error functions `cerf()`, `cerfc()` and `cdawson()`. The `printf()` functions are used to print the resultant complex numbers. The input to these functions is a complex number stored in the variable `z` which is `1.0 - 2.0*I` where `I` is the imaginary unit. 
+
+To compile and run the program, use the following commands in the terminal:
+
+```bash
+gcc -o test -I/path/to/libcerf test.c -L/path/to/libcerf -lcerf
+./test
+```
+
+Replace `/path/to/libcerf` with the actual path where libcerf is located in your system. The `-I` option specifies the include directory where the header file `cerf.h` is located while the `-L` option specifies the directory of the library to be linked, libcerf in this case. The `-l` option specifies the name of the library without the `lib` prefix and extension.

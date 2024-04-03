@@ -1,0 +1,24 @@
+Use Case: DBG2OLC is a package used for ultra-long third-generation sequencing and is capable of generating high-quality consensus sequences. It is especially useful in genomics and bioinformatics.
+
+Code Details and Examples:
+
+Code:
+
+For this tool, the input files are in FASTA or FASTQ format. Here is an example command to run DBG2OLC:
+
+    DBG2OLC k 17 AdaptiveTh KmerCovTh 2 MinOverlap 20 RemoveChimera 1 Contigs NGS.fa LongReads 3GS.fasta
+
+The code takes several parameters:
+- 'k' is the size of the kmer used, in this case 17.
+- 'AdaptiveTh' specifies that the threshold for solid kmers is adaptive.
+- 'KmerCovTh' denotes the cutoff for solid kmers, set to 2 here.
+- 'MinOverlap' represents the minimum overlap between sequences, set to 20 here.
+- 'RemoveChimera' is a flag indicating whether to remove chimeras, set to 1 to enable.
+- 'NGS.fa' is the filename of the input next-generation sequencing data in.fasta format.
+- '3GS.fasta' is the filename of the input third-generation sequencing data in .fasta format.
+
+The exact parameter values will vary depending on your data and the specific results you are trying to achieve. Always refer to the tool's manual for detailed explanations.
+
+After running, the output includes a consensus sequence and several statistical summaries of the results. The files produced are 'backbone_raw.fasta' which is the base output, and possibly several '.paf' files which are Pairwise mApping Format files storing the mapping details used in the assembly.
+
+Note: Make sure you have the appropriate permissions to read and write files in the directory where you are running this program. You may need to adjust file paths depending on your specific system setup and data location.

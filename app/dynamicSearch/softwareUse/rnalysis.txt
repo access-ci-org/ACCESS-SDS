@@ -1,0 +1,58 @@
+Use Case: RNA-seq data analysis using the rnaSeqMap library in R; the purpose is to create a gene expression map from RNA-seq reads files and align them to the genomic map. 
+
+Code details and examples: 
+
+Required Input File: 
+1. A gene annotation file in GFF3 or GTF format; 
+2. .bam or .sam files containing the sequence reads. 
+
+Sample Input File:
+1. Annotation file might look something like this:
+```
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+#!genome-build GRCh37.p13
+#!genome-build-accession NCBI_Assembly:GCA_000001405.14
+#!annotation-date 13 March 2014
+#!annotation-source Homo sapiens Annotation Release 104
+chr1 HAVANA  gene    11869   14409   .   +   .   ID=gene0;Name=DDX11L1;biotype=lincRNA
+chr1 HAVANA  transcript  11869   14409   .   +   .   ID=transcript0;Parent=gene0;Name=DDX11L1-002;biotype=lincRNA
+```
+2. .bam file, it is a binary format file, so it can't be read and displayed straightforwardly.
+
+Here are the command steps you may consider in R:
+
+- Load the package 
+```R
+library(rnaSeqMap)
+```
+
+- Import your organism and the base genome:
+```R
+genome <- seqInfo(BSgenome.Hsapiens.UCSC.hg19)
+```
+
+- Load and process the .bam file:
+```R
+bamFilenames <- c("yourBamFile.bam")
+reads <- dba(sampleSheet=bamFilenames)
+```
+
+- Load the GTF/GFF file:
+```R
+gtfFilenames <- c("yourGTFFile.gtf")
+annot <- importGFF3(gtfFilenames)
+```
+
+- Map the reads to the genes:
+```R
+mappedReads <- exonsByGene(reads)
+```
+
+- Generate a count matrix:
+```R
+counts <- countOverlaps(mappedReads)
+```
+
+The use of the commands depends on the specific details and requirements of the RNA-seq analysis. Different analyses might need different approaches. Users should refer to the rnaSeqMap package manual for more details and customization.

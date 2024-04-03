@@ -1,0 +1,37 @@
+Use Case: Use "r-plyr" for data manipulation tasks such as sorting, filtering, and aggregating data; 
+
+Code details and examples:
+
+Code:
+
+```R
+# Load the library
+library(plyr)
+
+# Sample Input data
+df <- data.frame(
+  group = c(rep('A', 4), rep('B', 5), rep('C', 3)),
+  value = c(1:4, 5:9, 2:4)
+)
+
+# Applying a function to each piece
+ddply(df, .(group), transform, rank = rank(-value))
+
+# Join function
+df1 <- data.frame(
+  id = 1:4, 
+  group = c(rep('A', 2), rep('B', 2)),
+  data1 = runif(4)
+)
+
+df2 <- data.frame(
+  id = 3:6, 
+  group = c(rep('B', 2), rep('C', 2)),
+  data2 = runif(4)
+)
+
+join(df1, df2, by = c("id","group"), type = "full")  
+```
+Command to run:
+
+The code runs inside an R environment. If you are working in an R console or Rstudio, just press enter to run the code or Copy and Paste the code into the R console and hit Enter.

@@ -1,0 +1,21 @@
+{
+	"software": "meme",
+	"overview": "The Multiple Em for Motif Elicitation (MEME) software is used for discovering motifs in a group of related DNA or protein sequences.",
+	"core_features": [
+		"Motif discovery",
+		"Sequence analysis",
+		"Statistical modeling",
+		"Pattern recognition"
+	],
+	"general_tags": [
+		"Bioinformatics",
+		"Sequence Analysis",
+		"Motif Discovery",
+		"Biological Data Analysis"
+	],
+	"research_discipline": "Bioinformatics",
+	"research_area": "Genetics",
+	"software_class": "Computational Biology Tool",
+	"software_type": "Sequence Analysis Tool",
+	"field_of_science": "Biological Sciences"
+}

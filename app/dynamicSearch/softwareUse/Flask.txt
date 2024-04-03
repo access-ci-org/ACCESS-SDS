@@ -1,11 +1,11 @@
-Flask is a web framework for Python. 
+Use Case: Build a simple web app to display 'Hello, World!'
 
-Use Case: Creating a simple Flask web application
-Code details and examples:
+Code details and examples: Code:
+
+You will need a python file (app.py) with the following content:
+
 ```python
-# app.py
 from flask import Flask
-
 app = Flask(__name__)
 
 @app.route('/')
@@ -13,12 +13,33 @@ def hello_world():
     return 'Hello, World!'
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
 ```
 
-To run the Flask application, you can use the following command:
-```
-python app.py
-```
+This simple Flask app has one route ('/') that returns 'Hello, World!' when accessed. 
 
-This will start a development server and you can access the web application from your browser at `http://127.0.0.1:5000/`.
+Command to run this Flask app:
+
+1. Set the FLASK_APP environment variable to the name of your python file. This can be done using the command:
+   ```shell
+   export FLASK_APP=app.py
+   ```
+2. Run your app with the command:
+   ```shell
+   flask run
+   ```
+When you access the domain (typically http://127.0.0.1:5000/ for local development) on a web browser, 'Hello, World!' should be displayed.
+
+Use Case: Implement URL Routes
+
+Code details and examples: Code:
+
+Flask lets you use route parameters. Here's how to create a user profile page.
+
+```python
+@app.route('/user/<username>')
+def show_user_profile(username):
+    # Show the user profile for that user
+    return 'User %s' % escape(username)
+```
+The '<username>' part of the URL is dynamic.

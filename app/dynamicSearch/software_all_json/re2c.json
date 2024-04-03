@@ -1,0 +1,23 @@
+{
+    "software_name": "re2c",
+    "comprehensive_overview": "re2c is a tool for writing fast and flexible lexer/scanner programs. It translates regular expressions into deterministic finite automata (DFA) and compiles them into C/C++ code. This allows for efficient lexical analysis of input streams.",
+    "core_features": [
+        "Efficient generation of lexer/scanner programs",
+        "Translation of regular expressions into DFA",
+        "Compilation into C/C++ code",
+        "Support for various lexing/scanning tasks"
+    ],
+    "general_tags": [
+        "lexer",
+        "scanner",
+        "regular expressions",
+        "DFA"
+    ],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Compiler",
+        "software_type": "Tool",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

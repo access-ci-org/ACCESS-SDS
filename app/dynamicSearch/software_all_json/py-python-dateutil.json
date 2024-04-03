@@ -1,0 +1,15 @@
+{
+  "software_name": "py-python-dateutil",
+  "comprehensive_overview": "python-dateutil is a Python library that provides powerful extensions to the standard datetime module. It aims to help perform complex date and time calculations with ease and simplicity.",
+  "core_features": [
+    "Parsing and formatting date and time strings",
+    "Calculating time differences and dealing with timezones",
+    "Support for advanced date and time operations, such as recurring events"
+  ],
+  "general_tags": ["Python", "Date and Time", "Library"],
+  "research_discipline": "",
+  "research_area": "Informatics, Analytics and Information Science",
+  "software_class": "Library",
+  "software_type": "",
+  "field_of_science": "Computer and Information Sciences"
+}

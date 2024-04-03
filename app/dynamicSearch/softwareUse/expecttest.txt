@@ -1,0 +1,33 @@
+Use Case: expecttest is a Python library used for testing interactive command line applications. It is often used when the user wants to automate the process of interacting with a command line program; by writing both the input to and expected output from the program in a Python script.
+
+Code details and examples:
+
+Code:
+
+Here is a simple example of how to use expecttest to test a command line calculator program.
+
+```python
+from expecttest import ExpectTest
+
+# Initialize ExpectTest with the command line application to test.
+et = ExpectTest('./calculator')
+
+# Use 'send' to send inputs to the application.
+et.send('2+2\n')
+
+# Use 'expect' to verify the application's output.
+et.expect('4\n')
+
+# Close the application.
+et.close()
+```
+
+This script will start the calculator program, input '2+2', and expect the output to be '4'. If the output matches the expected text, the script will complete without error.
+
+Command to run:
+
+To run the script, simply execute the Python file with python or python3 command.
+
+```bash
+python expecttest_example.py
+```

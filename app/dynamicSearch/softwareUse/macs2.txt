@@ -1,0 +1,51 @@
+Use Case: MACS2 (Model-based Analysis of ChIP-Seq) is a computational algorithm that identifies genome-wide locations of transcription/DNA-binding factors and histone modifications in ChIP-Seq experiments. This software captures the influence of genome complexity to evaluate the significance of ChIP-Seq data.
+
+Code details and examples:
+
+Code:
+
+Input File: The input file requires sequence reads in BED or BAM format, which is the standard format for ChIP-seq data. Control/input sample data is optional but recommended. Here, BED/BAM files for ChIP and control samples are represented as `treatment.bam` and `control.bam`
+
+Command to Run:
+
+`macs2 callpeak -t treatment.bam -c control.bam -f BAM -g hs -n treatment -B -q 0.01`
+
+where:
+
+-t specifies the treatment file(s) in BED/BAM format.
+
+-c specifies the control file(s) in BED/BAM format (optional).
+
+-f specifies the format of input files.
+
+-g specifies the size of the genome (hs=human).
+
+-n specifies the name string of the experiment/prefix of output files.
+
+-B to save fragment pileup and control lambda for every chromosome to bedGraph files.
+
+-q specifies the q-value cutoff to call significant regions.
+ 
+Code Snippets:
+
+The following is a potential example of a portion of BAM format file that may be given as input:
+
+```
+HWI-ST1423:80:D1FMTACXX:3:1305:9649:87420       67      chr1    10583   29      73M     =       10583   0       *
+HWI-ST1423:80:D1FMTACXX:3:1305:9649:87420       131     chr1    10583   29      73M     =       10583   0       *
+HWI-ST1423:80:D1FMTACXX:3:1311:4792:52509       99      chr1    10583   29      36M     =       10651   104     *
+```
+
+Please note that actual input files would be much larger.
+
+Output:
+
+MACS2 produces several types of output files for each dataset:
+
+- `treatment_peaks.xls`: A tabular file which contains information about detected peaks. Columns include: chromosome name, start position of peak, end position of peak, length of peak, summit positions of peak, tags count at peak, -10*log10(pvalue), fold_enrichment, and -log10(qvalue).
+
+- `treatment_peaks.narrowPeak`: A BED6+4 format file. The additional four columns are: fold-enrichment, -log10(pvalue), -log10(qvalue), and relative summit position to peak start.
+
+- `treatment_model.r`: This file describes the model based on the data provided. It's an R script and contains instruction to recreate the model.
+
+- `treatment_treat_pileup.bdg`, `treatment_control_lambda.bdg`: These are the fragment pileup and scaled control lambda tracks in bedGraph format for the genome browser.

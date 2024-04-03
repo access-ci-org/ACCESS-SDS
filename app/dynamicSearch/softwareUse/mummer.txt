@@ -1,28 +1,27 @@
-Use Case: Whole genome alignment with MUMmer
+Use Case: MUMmer is a sequence alignment software useful for comparing the genomes of different species or individuals. It can align entire genomes, whether in protein or DNA sequences. For this example, we'll show how to align two DNA sequence files in FASTA format.
 
-Code details and examples:
-MUMmer is a system for rapidly aligning entire genomes, whether in complete or draft form. It can often find the best global alignment between two genomes very quickly; other alignments are also available. MUMmer can also align incomplete genomes; it is capable of handling the 100s or 1000s of contigs produced by current sequencing technologies.
+Code Details and Examples:
 
-To perform a whole genome alignment using MUMmer, you can use the 'nucmer' utility to align two DNA sequences and the 'dnadiff' utility to generate a summary report of the differences between the sequences.
+Input Files Format: Two sequence files in FASTA format are required. Let's use `sequence1.fasta` and `sequence2.fasta` as examples. Their format should be similar to the following:
 
-1. Align two DNA sequences using nucmer:
+    >seq1
+    GATCGATCGAT
+    ATCGATCGATC
+    GATCGATCGAT
 
-Create two fasta files containing the sequences to be aligned, for example:
-- sequence1.fasta
-- sequence2.fasta
+    >seq2
+    GGCTGCTGCTG
+    CTCGATCGATC
+    GATCGATCGAT
 
-```
-nucmer sequence1.fasta sequence2.fasta -p output_prefix
-```
+Command to run the alignment:
 
-This will generate multiple output files with the specified output prefix.
+    nucmer --prefix=out sequence1.fasta sequence2.fasta
 
-2. Generate a summary report of the differences using dnadiff:
+This command will create two output files: `out.delta` which contains the alignment information and `out.snps` which contains all identified SNPs.
 
-```
-dnadiff output_prefix.delta
-```
+For visual representation of the alignment, you can generate a plot using the 'mummerplot' tool:
 
-This will generate a report detailing the differences between the two sequences.
+    mummerplot out.delta --png --large -p out
 
-Please refer to the MUMmer documentation for more options and details on using the tool.
+This will generate a file called `out.png` which is a graphical representation of the alignment.

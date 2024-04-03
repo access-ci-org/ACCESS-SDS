@@ -1,0 +1,46 @@
+Use Case: Use gapit software for genome-wide association studies in R. It's used to find associations between genetic markers (like single nucleotide polymorphisms, or SNPs) and traits of interest.
+
+Code details and examples:
+
+Input file:
+
+The phenotypic data, genotypic data and map files are required. 
+
+The data files are imported as CSV or TXT format.
+
+Phenotypic data file would be a CSV where each line represents a different individual, and columns represent different traits. The first column should be a unique identifier for each individual. 
+
+Example: 
+ID, height, weight
+ind1,1.8,80
+ind2,1.6,60
+
+The genotypic file would be a CSV where each line represents a different individual, and each column represents a different genetic marker. The first column should be a unique identifier for each individual. 
+
+Example:
+ID, snp1, snp2
+ind1, 0, 2
+ind2, 2, 2
+
+Map file would be a three column CSV which includes chromosome, SNP and genetic position. 
+
+example
+chromosome, SNP, genetic position
+1, snp1, 1.23
+1, snp2, 1.56
+
+Code:
+
+# Load necessary libraries
+library(GAPIT)
+
+# Import data
+myY <- read.csv("phenotypic_data.csv")
+myGM <- read.csv("genotypic_data.csv")
+myM <- read.csv("map.csv")
+
+# perform GWAS using mixed linear model
+myGAPIT <- GAPIT(Y=myY, GD=myGM, GM=myM)
+
+Command:
+Run from R after loading the library using library(GAPIT).

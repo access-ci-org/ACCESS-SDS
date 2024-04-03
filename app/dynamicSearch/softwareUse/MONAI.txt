@@ -1,28 +1,83 @@
-Use Case: MONAI is a PyTorch-based, open-source framework for deep learning in healthcare imaging. It provides domain-optimized neural networks, pre-processing transforms, evaluation metrics, and other utilities for medical image analysis tasks.
+Use Case: Use MONAI to perform 3D medical image segmentation. 
 
-Code details and examples:
+Code details and examples: Code
 
-Sample input files: Medical images in DICOM format
-Format required: DICOM or NIfTI files
-Specifications: Input images should be in the appropriate medical imaging format supported by MONAI.
+Firstly, import required libraries
 
 ```python
+import monai
+from monai.data import Dataset, DataLoader
+from monai.networks.nets import UNet
+from monai.transforms import (
+    LoadImage, AddChannel, ScaleIntensity, 
+    ToTensor, Compose
+)
 import torch
-from monai.data import Dataset
-from monai.transforms import Compose, LoadImaged, AddChanneld, Resized
-
-# Define a Dataset with transforms
-data = [{"image": "path_to_image1.nii.gz"}, {"image": "path_to_image2.nii.gz"}]
-transforms = Compose([LoadImaged(image_only=True), AddChanneld(), Resized(keys="image", spatial_size=(128, 128))])
-dataset = Dataset(data, transform=transforms)
-
-# Access and preprocess image data
-for idx in range(len(dataset)):
-    data_dict = dataset[idx]
-    image = data_dict["image"]
-    print(image.shape)
 ```
 
-To run the above example, save it in a Python script and execute it using a Python interpreter.
+Then create input files and specify their format:
 
-Command to run: `python your_script.py`
+Input files:
+```python
+images = [
+    '/path/to/image1.nii.gz',
+    '/path/to/image2.nii.gz',
+    '/path/to/image3.nii.gz',
+]
+seg_labels = [
+    '/path/to/label1.nii.gz',
+    '/path/to/label2.nii.gz',
+    '/path/to/label3.nii.gz',
+]
+data = [{'image': im, 'label': lb} for im, lb in zip(images, seg_labels)]
+```
+where '/path/to/image#.nii.gz' is the path to the image file and '/path/to/label#.nii.gz' is the path to the corresponding label file. They are in Nifti (.nii) format.
+
+Transforms and DataLoader:
+```python
+transforms = Compose([
+    LoadImage(image_only=True),
+    AddChannel(),
+    ScaleIntensity(),
+    ToTensor()
+])
+
+ds = Dataset(data, transforms)
+loader = DataLoader(ds, batch_size=2, num_workers=2)
+```
+
+Create UNet model, loss function and optimizer:
+```python
+device = torch.device('cuda:0')
+model = UNet(
+    dimensions=3, 
+    in_channels=1, 
+    out_channels=1, 
+    channels=(16, 32, 64, 128, 256),
+    strides=(2, 2, 2, 2)
+).to(device)
+
+loss_function = torch.nn.BCEWithLogitsLoss()
+optimizer = torch.optim.Adam(model.parameters(), 1e-4)
+```
+
+Training Process:
+```python
+max_epochs = 600
+for epoch in range(max_epochs):
+    print(f'Epoch {epoch + 1}/{max_epochs}')
+    model.train()
+    epoch_loss = 0
+    step = 0
+    for batch in loader:
+        step += 1
+        inputs, labels = batch['image'].to(device), batch['label'].to(device)
+        optimizer.zero_grad()
+        outputs = model(inputs)
+        loss = loss_function(outputs, labels)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+    epoch_loss /= step
+    print(f'epoch {epoch + 1} average loss: {epoch_loss:4f}')
+``` 

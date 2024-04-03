@@ -1,0 +1,24 @@
+{
+    "software_name": "MariaDB",
+    "comprehensive_overview": "MariaDB is a popular open source relational database management system (RDBMS) that is a drop-in replacement for MySQL. It is known for its high performance, scalability, and robust SQL support. MariaDB is developed by the original creators of MySQL and is designed for enterprise environments, web applications, and mission-critical systems.",
+    "core_features": [
+        "High performance",
+        "Scalability",
+        "Enterprise-ready",
+        "Robust SQL support",
+        "Open source"
+    ],
+    "general_tags": [
+        "Database Management System",
+        "RDBMS",
+        "Open Source",
+        "SQL"
+    ],
+    "additional_tags": {
+        "research_discipline": "Computer and Information Sciences",
+        "research_area": "Software Engineering, Systems, and Development",
+        "software_class": "Database Management System",
+        "software_type": "Application Software",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

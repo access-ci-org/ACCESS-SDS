@@ -1,36 +1,64 @@
-Use Case: Serialization and deserialization of data with FlatBuffers
-Code details and examples:
-Input file format (example schema file):
-```flatbuffers
+Use Case: FlatBuffers is a tool used for serializing and deserializing structured data in a manner that is highly efficient both in terms of speed and memory footprint. It is often used in game development and communication protocols to minimize overhead.
+
+Code Details and Examples: 
+Code:
+
+The following code exemplifies how to create a FlatBuffer (.in a new file monster.fbs):
+
+```c++
+namespace MyGame.Sample;
+
+enum Color:byte { Red = 0, Green, Blue = 2 }
+
+union Equipment { Weapon, Armor } // Optionally add more tables.
+
+struct Vec3 {
+  x:float;
+  y:float;
+  z:float;
+}
+
 table Monster {
-  name: string;
-  hp: int;
+  pos:Vec3;
+  mana:short = 150;
+  hp:short = 100;
+  name:string;
+  friendly:bool = false (deprecated, remove);
+  inventory:[ubyte]; 
+  color:Color = Blue; 
+  weapons:[Weapon];
+  equipped:Equipment;
 }
 
 root_type Monster;
 ```
-Code snippet to compile the schema file to generate code:
+In above code, a union is defined and tables and structs are present. Once defined, you can build it using the following command:
 ```bash
-flatc --python monster.fbs
+./flatc -c -b monster.fbs
 ```
-Input data format (example Python script to create and serialize data):
-```python
-import flatbuffers
-from MyGame.Example import Monster
+This command will generate both a binary file and C++ headers that you can include in your project.
 
-builder = flatbuffers.Builder(0)
-name = builder.CreateString("Orc")
-Monster.MonsterStart(builder)
-Monster.MonsterAddName(builder, name)
-Monster.MonsterAddHp(builder, 100)
-orc = Monster.MonsterEnd(builder)
+Now, you can create a buffer in your application like so:
 
-builder.Finish(orc)
-buf = builder.Output()
+```c++
+flatbuffers::FlatBufferBuilder builder;
+
+auto weapon_one_name = builder.CreateString("Sword");
+short weapon_one_damage = 3;
+auto weapon_two_name = builder.CreateString("Axe");
+short weapon_two_damage = 5;
+
+// Use the `CreateWeapon` shortcut to create Weapons with all fields set.
+auto sword = CreateWeapon(builder, weapon_one_name, weapon_one_damage);
+auto axe = CreateWeapon(builder, weapon_two_name, weapon_two_damage);
+
+// Create a `vector` representing the inventory of the Orc. Each number
+// could correspond to an item that can be claimed after he is slain.
+std::vector<uint8_t> inventory { 3, 7, 1 };
+
+...
+
+// Deserialize to verify it worked
+auto monster = GetMonster(builder.GetBufferPointer());
 ```
-Code snippet to deserialize data:
-```python
-monster = Monster.Monster.GetRootAsMonster(buf, 0)
-print(monster.Name())  # Output: Orc
-print(monster.Hp())  # Output: 100
-```
+This example shows you how to create a `Weapon` table, build a vector, and reverse the endianness of the serialized data.

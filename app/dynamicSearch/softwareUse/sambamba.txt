@@ -1,0 +1,28 @@
+Use Case: Sambamba is a high performance, modern variant of the SAMtools in the D programming language. It can be used to filter, convert, merge, sort, index, and view Sam and BAM files.
+
+Code details and examples:
+
+Command:
+```
+sambamba sort -o sorted.bam unsorted.bam
+```
+
+Input files: It requires at least one SAM or BAM file as an input. These are binary files that contain genomic sequence data. A sample file (unsorted.bam in this case) can be downloaded from the SAMtools test data page.
+
+Command:
+```
+sambamba view -f bam -l 0 -o extracted_reads.bam original.bam
+```
+
+This command writes out all reads with mapping quality 0 from the file original.bam to the file extracted_reads.bam.
+
+Command:
+```
+sambamba markdup input.bam output.bam
+```
+
+This command removes duplicate reads from the given input BAM file, writing the new data to an output file.
+
+Input File Format: Sambamba requires binary SAM (BAM) or CRAM files for input. These files contain compressed genomic sequence data. The BAM format is binary, and is not human-readable, but can be converted to the human-readable SAM format using tools like SAMtools or Sambamba itself. Similarly, CRAM files can be converted to BAM or SAM formats using Sambamba.
+
+Specification in Input Files: The input BAM or CRAM files contain sequence alignments of genomic data, along with various flags, scores, and identifiers for each alignment. The format of these files is strictly defined by the SAM format specification. Each line of a SAM file represents a single sequence alignment and contains fields for the query template name, bitwise flag, reference sequence name, leftmost mapping position, mapping and base qualities, and more. These fields are typically filled in by the genome aligner that was used to generate the alignments.

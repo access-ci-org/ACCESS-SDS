@@ -1,0 +1,43 @@
+Use Case: HPL is a software package that solves a (random) dense linear system in double precision (64 bits) arithmetic on distributed-memory computers.
+
+Command to run: mpirun -np 4 xhpl
+
+Code Details and Examples:
+
+Code:
+```shell
+HPLinpack 2.3  --  High-Performance Linpack benchmark  --   December 2, 2018
+Written by A. Petitet and R. Clint Whaley,  Innovative Computing Laboratory, UTK
+Modified by Piotr Luszczek, Innovative Computing Laboratory, UTK
+Modified by Julien Langou, University of Colorado Denver
+
+An explanation of the input/output parameters follows:
+T/V    : Wall time / encoded variant.
+N      : The order of the coefficient matrix A.
+NB     : The partitioning blocking factor.
+P      : The number of process rows.
+Q      : The number of process columns.
+Time   : Time in seconds to solve the linear system.
+Gflops : Rate of execution for solving the linear system.
+
+The following parameter values will be used:
+
+N      :  1000  2000  5000 10000
+NB     :   150 
+PMAP   : Row-major process mapping
+P      :     1 
+Q      :     1 
+PFACT  :   1.0 
+NBMIN  :     4 
+NDIV   :     2 
+RFACT  :   1.0 
+BCAST  :   1ringM 
+DEPTH  :     1 
+SWAP   : Mix (threshold = 64)
+L1     : transposed form
+U      : transposed form
+EQUIL  : yes
+ALIGN  : 8 double precision words
+```
+
+In the above HPL.dat input file, N is the problem size, NB is the block size, P and Q are the dimensions of the process grid, Time is the execution time in seconds, and Gflops is the speed. Other parameters are used to adjust the performance. The input parameters should be adjusted according to the specific needs of your particular use case. Always refer to the official HPL documentation for up-to-date and detailed information about the parameters.

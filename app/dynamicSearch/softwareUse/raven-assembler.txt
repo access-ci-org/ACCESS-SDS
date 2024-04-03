@@ -1,0 +1,29 @@
+Use Case: Raven assembler is used for assembling long, error-prone reads produced by third-generation sequencing platforms. It can be used for de novo genome assembly of plant, animal, or microbial genomes.
+
+Code details and examples:
+
+Dataset:
+Raven uses Fastq files as input. Fastq files record a DNA sequence and the corresponding quality scores. A Fastq file might look like this:
+
+```
+@SRR001666.1 071112_SLXA-EAS1_s_7:5:1:817:345 length=60
+GGGTGATGGCCGCTGCCGATGGCGTCAAATCCCACCAAGTTACCCTTAACAACTTAAGGG
++SRR001666.1 071112_SLXA-EAS1_s_7:5:1:817:345 length=60
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII9IG9ICIIIIIIIIIIIIIIIIIIDIII
+```
+
+Each read consists of four lines:
+
+1. Unique identifier of the read
+2. DNA sequence
+3. Delimiter (always a '+')
+4. Quality scores for each base in the DNA sequence
+
+Command:
+To run the Raven assembler, use the command `raven` followed by the Fastq files that you want to assemble. For example, if you have a Fastq file named `reads.fastq`, you would run:
+
+```
+raven reads.fastq > assembly.fasta
+```
+
+This command produces a Fastq file named `assembly.fasta` that contains the assembled sequences.

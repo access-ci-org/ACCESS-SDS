@@ -1,0 +1,36 @@
+Use Case: Bioinformatics data processing
+
+Code details and examples:
+
+HTStream is a stream based data processing suite, intended to be used in bioinformatics pipelines. It can work off piping in between steps for reduction in data I/O. It supports FASTQ format.
+
+Code:
+
+# Input File: fastqc sequence data
+# Input File Format: FASTQ
+# Specifications: Paired end sequence data 
+
+## Sample Input:
+```
+@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
++
+!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
+```
+
+# Super-Deduper: Removes PCR duplicates
+```
+hts_SuperDeduper -1 Sample_R1.fastq -2 Sample_R2.fastq -o outputprefix
+```
+
+# Overlapper: Merges paired end reads
+```
+hts_Overlapper -1 Sample_R1.fastq -2 Sample_R2.fastq -o outputprefix
+```
+
+# Quality trimmer: Trim low quality reads
+```
+hts_QWindowTrim -1 Sample_R1.fastq -2 Sample_R2.fastq -o outputprefix
+```
+
+The prefix for the naming of the output files has to be added in the `-o` parameter. The command syntax `-1` and `-2` is for paired end sequence data. If working with single end data, then `-U` can be used. All commands require specification of input and output file formats.

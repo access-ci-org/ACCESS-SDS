@@ -1,10 +1,40 @@
-Use Case: Dsuite is a software for detecting natural selection from population genomic data.
+Use Case: Dsuite is used to analyze SNP data from multiple samples, for instance, to detect signs of natural selection.
 
 Code details and examples:
-Dsuite can be run from the command line with the following command:
+
+Code:
+
+Assuming we have three input files; a VCF file, a PED file and a SAMPLE file. 
+
+The VCF file contains the genotype information. Lastly, the SAMPLE file contains information on which samples in the VCF file should be analyzed together.
+
+VCF file (input.vcf):
 
 ```
-python Dsuite.py
+#CHROM POS ID REF ALT QUAL FILTER INFO FORMAT Sample1 Sample2 Sample3
+chr1 100 rs1 A T . PASS . GT 0/0 0/1 1/1
+chr1 200 rs2 G C . PASS . GT 1/0 0/0 1/1
 ```
 
-For detailed usage and options, refer to the Dsuite documentation: https://github.com/millanek/Dsuite
+Pedigree file (input.ped):
+
+```
+Sample1 Father1 Mother1
+Sample2 Father2 Mother2
+Sample3 Father3 Mother3
+```
+
+SAMPLE file (input.sample):
+
+```
+Sample1
+Sample2
+```
+
+Sample command for Dsuite:
+
+```
+Dsuite Dtrios input.vcf input.ped input.sample
+```
+
+This command will perform the analysis with all trios in the pedigree file that are included in the SAMPLE file. The output is a set of D-statistics for each trio, indicating whether there are significant deviations from the expected allele frequencies under the null hypothesis of no gene flow.

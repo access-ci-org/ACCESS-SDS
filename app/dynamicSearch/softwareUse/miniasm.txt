@@ -1,0 +1,56 @@
+Use Case: Miniasm is a very fast OLC-based de novo assembler for noisy long reads, such as those produced by PacBio or Oxford Nanopore technologies. It takes all-vs-all raw read alignment information as input and outputs an assembly graph in the GFA format. Different from mainstream assemblers, miniasm does not have a consensus step. It simply concatenates pieces of read sequences to generate the final unitig sequences. Thus the per-base error rate is similar to the raw input reads.
+
+Code details and examples:
+
+To run miniasm, you need a set of all-vs-all alignment records in PAF format and a set of reads in FASTA/FASTQ format.
+
+Code:
+
+1. Run minimap2 to perform all-vs-all raw read overlapping:
+
+```
+minimap2 -x ava-pb -t8 pb-reads.fq.gz pb-reads.fq.gz | gzip -1 > overlaps.paf.gz
+```
+This command will generate a file called `overlaps.paf.gz` that contains all-vs-all overlapping information of the input reads.
+
+2. Run miniasm program to generate the assembly graph in GFA format:
+
+```
+miniasm -f pb-reads.fq.gz overlaps.paf.gz > output.gfa
+```
+This command will generate a file called `output.gfa` that contains the assembly graph of the input reads.
+
+Input Files Formatting: Input files should be in FASTA/FASTQ format or PAF format.
+
+Input File Formatting for FASTA/FASTQ: FASTA/FASTQ is a text-based format for representing either nucleotide sequences or peptide sequences, in which nucleotides or amino acids are represented using single-letter codes. 
+
+Code Sample:
+
+\>sequence1                
+ATCGATCGATCGATCGTACGTACGTACGTACGTACG
+
+Input File Formatting for PAF: PAF is a text format describing the alignment of two sets of sequences that could be long, such as several kilobases or a chromosome.
+
+Code Sample:
+
+utg000001l    4361    678     1582    +       utg000002l    5906    105     768     1194    904     60
+
+Where each column represents the following:
+
+1. Query sequence name
+2. Query sequence length
+3. Query start
+4. Query end
+5. Strand
+6. Target sequence name
+7. Target sequence length
+8. Target start
+9. Target end
+10. Number of residue matches
+11. Alignment block length
+12. Mapping quality.
+
+The command to run them:
+
+```minimap2 -x ava-pb -t8 pb-reads.fq.gz pb-reads.fq.gz | gzip -1 > overlaps.paf.gz```
+```miniasm -f pb-reads.fq.gz overlaps.paf.gz > output.gfa```

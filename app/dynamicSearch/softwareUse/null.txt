@@ -1,0 +1,89 @@
+Use Case: OpenFOAM 
+OpenFOAM is a popular open-source software aimed at numerical simulations in fluid dynamics. You can use OpenFOAM to simulate aerodynamics of a car, water flow in a pipe, shock waves, etc. It requires an input file containing the parameters of the simulation.
+
+Code Details and Examples: Code
+Input file example (system/controlDict):
+```
+application     pisoFoam;
+startFrom       startTime;
+startTime       0;
+stopAt          endTime;
+endTime         0.5;
+deltaT          0.005;
+writeControl    timeStep;
+writeInterval   20;
+purgeWrite      0;
+writeFormat     binary;
+writePrecision  6;
+writeCompression compressed;
+timeFormat      general;
+timePrecision   6;
+runTimeModifiable true;
+```
+Command to run: `pisoFoam`
+
+Use Case: NumPy
+NumPy is a Python library that provides a multidimensional array object, various derived objects, and an assortment of routines for fast operations on arrays, including mathematical, logical, shape manipulation, sorting, selecting, I/O, discrete Fourier transforms, basic linear algebra, and basic statistical operations, etc.
+
+Code Details and Examples: Code
+Python snippet using numpy:
+```python
+import numpy as np
+
+# Create an array of ten zeros
+a = np.zeros(10)
+
+print(a)
+```
+Run with: `python script.py`
+
+Use Case: GROMACS
+GROMACS is a molecular dynamics package mainly designed for simulations of proteins, lipids, and nucleic acids. It requires an input file that contains the molecular coordinates and parameters for the simulation.
+
+Code Details and Examples: Code
+GROMACS input file example (topol.top):
+```
+; Include forcefield parameters
+#include "amber99sb-ildn.ff/forcefield.itp"
+
+; Include chain topology
+#include "protein_chain_A.itp"
+
+; Include water topology
+#include "amber99sb-ildn.ff/tip3p.itp"
+
+#if FLEXIBLE
+#include "flexspc.itp"
+#else
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+; Include topology for ions
+#include "amber99sb-ildn.ff/ions.itp"
+
+[ system ]
+; Name
+Protein in water
+
+[ molecules ]
+; Compound        #mols
+Protein_chain_A     1
+SOL               4760
+```
+Command to run: `gmx mdrun -deffnm my_sim`
+
+Use Case: PyTorch
+PyTorch is an open-source machine learning library for Python, based on Torch. It is used for applications such as natural language processing. 
+
+Code Details and Examples: Code
+Python snippet using PyTorch:
+```python
+import torch
+
+x = torch.rand(5, 3)
+print(x)
+```
+Run with: `python script.py`

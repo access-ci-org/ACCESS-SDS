@@ -1,0 +1,27 @@
+Use Case: CoverM is a software package designed for comparing and analyzing microbial genomes. It computes and compares relative abundance measures from metagenomic or metatranscriptomic sequence alignment data.
+
+Code Details and Examples: Code
+
+Input files: Sequence alignment data in BAM or CRAM files. Also requires a list of reference genome FastA files for genome-filtered mode.
+
+Format Required: BAM/CRAM for read data, FastA for genome data. 
+
+Specifications and Details in Input Files: The input data needs to be sequence alignment data representing the sequences in your sample. The reference genome files represent known genomes you want to compare the sample to. Both should be appropriately formatted and valid.
+
+Command to run: 
+
+```
+coverm genome --bam-files sample1.sort.bam sample2.sort.bam --reference ref.fasta
+```
+This is a simple coverm command which will calculate statistics for the two input BAM files (`sample1.sort.bam` and `sample2.sort.bam`) against the reference FastA file (`ref.fasta`).
+- The `--bam-files` flag specifies the input BAM files.
+- The `--reference` flag specifies the reference FastA file. 
+
+For a command using genome filtering, a `--genome-fasta-directory` option should be provided, such as:
+
+```
+coverm genome --bam-files sample1.sort.bam sample2.sort.bam --genome-fasta-directory ./genomes/
+```
+This command will run coverm in "genome-filtered" mode, where it will only consider contigs that belong to genomes specified by the FastA files in the directory specified by `--genome-fasta-directory` (`./genomes/` in this example). 
+
+Note: Ensure the reference genomes and the aligned sequences are related, or the results will lack biological significance.

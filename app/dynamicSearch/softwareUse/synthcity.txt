@@ -1,0 +1,38 @@
+Use Case: synthcity is a Python-based tool used for Synthetic City generation for computer graphics, games, and urban planning. It can generate synthetic cities using input parameters such as city size, city type, and randomness factor.
+
+Code details and examples:
+
+Code:
+
+```python
+from synthicity import synthicitymodel
+
+# Instantiate a model
+model = synthicitymodel.SynthicityModel()
+
+# Set the parameters
+model.set_city_size(size=1000)
+model.set_city_type(type='modern')
+model.set_randomness_factor(factor=0.5)
+
+# Generate the city
+model.generate_city()
+
+# Save the city to a CSV file
+model.save_city_to_csv('synthetic_city.csv')
+```
+
+This script will generate a synthetic city with 1000 entities, of type 'modern', with a randomness factor of 0.5. The generated city is then saved to a CSV file named 'synthetic_city.csv'.
+
+Input file Details:
+None in this case, as the city parameters are provided directly in the code.
+
+Command:
+You can execute the script with the following command in the terminal.
+
+```bash
+python script_name.py
+```
+Replace 'script_name.py' with the name of your Python script.
+
+Note: This code is just for understanding purposes, 'synthicity' does not provide any official public API or library for Python.

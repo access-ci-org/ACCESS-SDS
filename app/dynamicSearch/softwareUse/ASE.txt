@@ -1,30 +1,31 @@
-Use Case: ASE (Atomic Simulation Environment) is a set of tools and Python modules for setting up, manipulating, running, visualizing, and analyzing atomistic simulations.
+Use Case: Atomic Simulation Environment (ASE) is a python package and an open source tool designed to help physicists, chemists, and materials scientists to set up, control, and implement the results of atomic-scale simulations.
 
 Code details and examples:
-1. Reading and analyzing a trajectory file:
-```python
-from ase.io import read
-traj = read('trajectory.xyz', index=':')
-print(traj)
+
+Sample Input file:
+
+An example of a simple Bismuth crystal, here is a python code:
+
+```
+from ase.build import bulk
+bismuth = bulk("Bi", crystalstructure="rhombohedral", a=4.543, c=11.866)
+print(bismuth.get_positions())
 ```
 
-2. Creating a simple crystal structure and visualizing it:
-```python
-from ase import Atoms
-from ase.visualize import view
-atoms = Atoms('Au', positions=[(0, 0, 0)], cell=(4, 4, 4))
-view(atoms)
+This script sets up a Bismuth crystal according to the specified parameters, `a` and `c`, which are lattice constants.
+
+It's not a file input but direct input to the script. The `print()` statement will return the position of each atom.
+
+Command to run the program:
+
+You can save the script above in a python file, e.g., myscript.py. Use this command to run the script in a terminal:
+```
+python myscript.py
 ```
 
-3. Optimizing the geometry of a molecule using ASE's built-in calculators:
-```python
-from ase.optimize import BFGS
-from ase.calculators.emt import EMT
+Specifications and any additional Information:
 
-atoms = read('molecule.xyz')
-atoms.set_calculator(EMT())
-dyn = BFGS(atoms)
-dyn.run(fmax=0.05)
-```
-
-For more information and detailed documentation, you can visit the ASE website: https://wiki.fysik.dtu.dk/ase/
+- `bulk()` : this is a function to generate a bulk crystal of the desired element and crystal structure.
+- `"Bi"` : symbol for Bismuth.
+- `crystalstructure="rhombohedral"` : the type of crystal structure.
+- `a=4.543, c=11.866` : these are the specific lattice parameters for Bismuth in Ångström units.

@@ -1,0 +1,13 @@
+{
+    "software_name": "nibabel",
+    "comprehensive_overview": "NiBabel is a Python library that provides read and write access to some common medical and neuroimaging file formats, including NIfTI-1, NIfTI-2, and Analyze. It aims to simplify the process of working with neuroimaging data in Python.",
+    "core_features": "1. Read and write NIfTI-1 and NIfTI-2 image files.\n2. Access to Analyze (SPM99, SPM2, and MRIcro) image files.\n3. Compatible with both Python 2 and Python 3.\n4. Provides tools for working with header information and metadata in the imaging files.\n5. Integration with NumPy for array manipulation and data processing.",
+    "general_tags": ["Python library", "Neuroimaging", "Medical imaging", "File format", "NIfTI"],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Library",
+        "software_type": "Imaging and visualization",
+        "field_of_science": ["Biological Sciences"]
+    }
+}

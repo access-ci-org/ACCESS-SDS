@@ -1,0 +1,11 @@
+{
+    "software_name": "hiredis",
+    "comprehensive_overview": "Hiredis is a minimalistic C client library for the Redis database, offering a simple interface to interact with Redis servers from C-based applications. It aims to maintain an API that is both high-performance and easy to use, providing basic functionality to communicate with Redis servers.",
+    "core_features": "1. Support for connecting to Redis servers\n2. Commands to execute Redis commands like SET, GET, INCR, etc.\n3. Asynchronous operation support\n4. Pipelining support for performing multiple commands in a single round trip",
+    "general_tags": ["Redis", "Database", "C Library"],
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Client Library",
+    "software_type": "Library",
+    "field_of_science": "Computer and Information Sciences"
+}

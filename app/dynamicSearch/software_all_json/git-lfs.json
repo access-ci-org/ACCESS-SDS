@@ -1,0 +1,22 @@
+{
+  "software_name": "git-lfs",
+  "comprehensive_overview": "Git Large File Storage (LFS) is a Git extension that reduces the impact of large files in your repository by replacing them with text pointers while storing the actual file content on a remote server. It seamlessly integrates with Git and provides efficient handling of large files, making it easier to work with version-controlled repositories containing large assets.",
+  "core_features": [
+    "Efficient handling of large files",
+    "Reduced impact of large files in repositories",
+    "Text pointers for large files while storing in remote server",
+    "Seamless integration with Git"
+  ],
+  "general_tags": [
+    "version control",
+    "file storage",
+    "Git extension"
+  ],
+  "additional_tags": {
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Version Control System",
+    "software_type": "Development Tool",
+    "field_of_science": "Engineering and Technology"
+  }
+}

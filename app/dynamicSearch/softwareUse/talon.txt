@@ -1,0 +1,44 @@
+Use Case: Talon software is employed for the detection of transcripts in long-read transcriptomic data. It is especially beneficial for annotating novel isoforms and identifying transcript diversity.
+
+Code details and examples: Code
+
+Input:
+
+Talon requires two primary input files:
+
+1. A GTF annotation file: This file summarizes the gene transcripts feature like start and end position on chromosome, coding/non-coding genes, exon number and their positions.
+
+2. A SAM or BAM alignment file: These files contain the mapping of sequence reads from transcript data against a reference genome. 
+
+An example of a GTF file is as follows:
+
+```
+chr1	ENSEMBL	gene	65419	71585	.	+	.	gene_id "ENSG00000282827.1_2"; gene_name "MIR6723"; gene_type "miRNA";
+chr1	ENSEMBL	transcript	65419	71585	.	+	.	gene_id "ENSG00000282827.1_2"; transcript_id "ENST00000624652.1_1"; gene_name "MIR6723"; gene_type "miRNA"; transcript_name "MIR6723-201"; transcript_type "miRNA";
+chr1	Esemblel	exon	65419	65433	.	+	.	gene_id "ENSG00000282827.1_2"; transcript_id "ENST00000624652.1_1"; exon_number "1"; gene_name "MIR6723"; gene_type "miRNA"; transcript_name "MIR6723-201"; transcript_type "miRNA";
+```
+
+An example of a SAM file is as follows:
+
+```
+ERR688524.100007104	0	1	10001	60	50M	*	0	0	CAGCCATCCTTCTTCCTCTTTTCACAAGGAATGAGAGGCACAGACTCAT	AAFFFJJJJJFJJJJJJAJFJJJFFFJJJFFJJJAFJ-AAAFJ<FJJJJ	AS:i:0	XS:i:0
+ERR688524.100014906	0	1	10001	60	50M	*	0	0	CAGCCATCCTTCTTCCCTTTTTTACAAGGAATGAGAGGCATAGACTCAC	AAFFFJFJJJJFJJJJJFJFJJJJJJFFJJJFFJFJAJJAJJJJJFJAJ	AS:i:-3	XS:i:-3
+```
+
+Command to run:
+
+Talon requires two steps to run: initialization of the genome and read dataset, followed by actual processing:
+
+```
+talon_initialize_genome --f <GTF file> --g <genome name> --a <annotation name>
+talon --f <alignment file> --db <database file> --build <genome build>  --o <output prefix>
+```
+
+Where, 
+- "<GTF file>" is the path to your input GTF file,
+- "<genome name>" is the name you want to assign to this genome build,
+- "<annotation name>" is the name you want to assign to this annotation build,
+- "<alignment file>" is the path to your input SAM/BAM file,
+- "<database file>" is the path to the TALON database created during initialization,
+- "<genome build>" is the name of your genome build as specified during the initialization,
+- "<output prefix>" is the prefix you want to use for your output files.

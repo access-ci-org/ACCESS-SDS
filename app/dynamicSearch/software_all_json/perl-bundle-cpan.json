@@ -1,0 +1,13 @@
+{
+    "software_name": "Perl Bundle CPAN",
+    "comprehensive_overview": "Perl Bundle CPAN is a collection of Perl modules available on CPAN (Comprehensive Perl Archive Network). It provides a convenient way to install a set of related Perl modules together.",
+    "core_features": "1. Collection of Perl modules from CPAN\n2. Simplifies installation of related Perl modules\n3. Enables easy management of dependencies\n4. Facilitates rapid development of Perl applications",
+    "general_tags": ["Perl", "CPAN", "module management"],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Library",
+        "software_type": "Software",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

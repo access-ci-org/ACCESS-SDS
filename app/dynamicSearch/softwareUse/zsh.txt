@@ -1,0 +1,32 @@
+Use Case: Use for streamline command line interface operations such as auto completion, path expansion, extended file globes and other scripting functions.
+
+Code details and examples: Code
+
+zsh is a shell designed for interactive use, although it is also a powerful scripting language. 
+
+Scripting File: myfile.zsh
+```
+#!/bin/zsh
+# My first script
+
+echo "Hello World!"
+```
+
+To make the shell script executable, run this command:
+
+```
+chmod +x myfile.zsh
+```
+
+To execute the shell script, use this command:
+
+```
+./myfile.zsh
+```
+
+zsh also provides extensive auto-completion. For example, one could use command:
+
+```
+ls /usr/<TAB>
+```
+This command will list every file and folder in `/usr`.

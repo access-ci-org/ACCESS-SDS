@@ -1,0 +1,24 @@
+Use Case: Blosc2 can be used as a high performance multithreaded lossless compressor library ideal for binary data in general thanks to its high compression ratio. It is especially useful for compressing NumPy arrays. 
+
+Code details and examples: 
+
+Code:
+
+```python
+import numpy as np
+import blosc
+
+# Create a numpy array
+data = np.arange(10000000, dtype=np.float64)
+
+# Using blosc compress the numpy array
+compressed = blosc.pack_array(data)
+
+#  Decompress
+decompressed = blosc.unpack_array(compressed)
+
+print("Original array:", data)
+print("Decompressed array:", decompressed)
+```
+
+In the above python script, it demonstrates the use of blosc2 Python bindings which provides a high-level interface for compressing and decompressing NumPy arrays using Blosc. The sample input files for this program are numpy arrays. There are no specific specifications or formats required for the input files in this case except that it should be a ndarray. The command to run this Python script is `python3 script_name.py`

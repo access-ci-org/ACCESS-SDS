@@ -1,0 +1,11 @@
+{
+  "software_name": "canu",
+  "comprehensive_overview": "Canu is a software tool that is used for assembling genomes using nanopore sequencing data. It is designed to be efficient and scalable, making it suitable for large and complex genomes.",
+  "core_features": "Some of the key features of Canu include error correction, trimming, assembling, and visualization of long-read sequencing data. It also includes support for multi-genome assembly and variant calling.",
+  "general_tags": ["genome assembly", "nanopore sequencing", "long-read sequencing", "bioinformatics"],
+  "research_discipline": ["Genomics", "Bioinformatics"],
+  "research_area": ["Genome Assembly", "Long-read Sequencing"],
+  "software_class": "Genome Assembler",
+  "software_type": "Bioinformatics Tool",
+  "field_of_science": ["Biological Sciences"]
+}

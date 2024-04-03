@@ -1,0 +1,25 @@
+{
+  "software_name": "Freesurfer",
+  "comprehensive_overview": "FreeSurfer is a software suite used for the analysis and visualization of structural and functional neuroimaging data from MRI and CT scans. It is widely used in the field of neuroscience and neuroimaging research.",
+  "core_features": [
+    "Automatic segmentation of brain MRI data",
+    "Cortical surface reconstruction",
+    "Volume measurements of brain structures",
+    "Functional MRI analysis tools",
+    "Visualization of neuroimaging data"
+  ],
+  "general_tags": [
+    "Neuroimaging",
+    "MRI analysis",
+    "Brain segmentation",
+    "Functional MRI",
+    "Image visualization"
+  ],
+  "additional_tags": {
+    "research_discipline": "Neuroscience",
+    "research_area": "Neuroimaging",
+    "software_class": "Imaging Analysis",
+    "software_type": "Scientific",
+    "field_of_science": "Biological Sciences"
+  }
+}

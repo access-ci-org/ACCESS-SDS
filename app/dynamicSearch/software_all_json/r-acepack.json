@@ -1,0 +1,13 @@
+{
+    "software_name": "R-acepack",
+    "comprehensive_overview": "R-acepack is a collection of R functions for regression analysis, especially linear and quantile regression.",
+    "core_features": "Some core features of R-acepack include functions for linear regression, quantile regression, subset selection, and nonparametric regression.",
+    "general_tags": ["regression analysis", "linear regression", "quantile regression"],
+    "additional_tags": {
+        "research_discipline": "Statistics and Probability",
+        "research_area": "Regression Analysis",
+        "software_class": "Statistical Software",
+        "software_type": "Library",
+        "field_of_science": "Mathematics"
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "software_name": "multichoose",
+    "comprehensive_overview": "multichoose is a Python library that implements the concept of multichoose, which calculates the number of ways to choose a certain number of items from a set where each item can be chosen multiple times.",
+    "core_features": [
+        "Calculates the number of combinations for choosing items with repetition from a set",
+        "Handles scenarios where each item can be chosen multiple times",
+        "Supports efficient computation for large numbers of items and repetitions"
+    ],
+    "general_tags": [
+        "Python Library",
+        "Combinatorics",
+        "Mathematics"
+    ],
+    "additional_tags": {
+        "research_discipline": "Pure Mathematics",
+        "research_area": "Combinatorics",
+        "software_class": "Library",
+        "software_type": "Mathematical Calculation Tool",
+        "field_of_science": "Mathematics"
+    }
+}

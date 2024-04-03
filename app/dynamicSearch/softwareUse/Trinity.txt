@@ -1,11 +1,31 @@
-Use Case: Trinity is a de novo RNA-Seq transcriptome assembler.
+Use Case: Trinity is a software for de novo reconstruction of transcriptomes from RNA-seq data. It assembles transcript sequences from Illumina RNA-Seq data. 
 
 Code details and examples:
-- Example input files:
-  - Sample_1.fastq
-  - Sample_2.fastq
 
-- Command to run Trinity:
+Input File Format Required: FASTQ or FASTA. These files contain sequencing reads. They must be pre-processed and quality trimmed before input. 
+
+Command to run: 
+
 ```
-Trinity --seqType fq --left Sample_1.fastq --right Sample_2.fastq --output trinity_output
+Trinity --seqType fq --left reads_1.fq --right reads_2.fq --CPU 6 --max_memory 20G --output trinity_output
+```
+In this command, --seqType specifies that the input files are in FASTQ format. --left and --right represent the pair of input files containing forward and reverse sequences, respectively. --CPU specifies the number of computational cores to use, and --max_memory sets the maximum amount of memory for the job. --output specifies the directory for output files.
+
+Code Snippets:
+
+Here's a Python snippet that might be used to run Trinity as part of a larger pipeline:
+```python
+import subprocess
+
+def run_trinity(left_file, right_file, output_dir):
+    command = [
+        'Trinity',
+        '--seqType', 'fq',
+        '--left', left_file,
+        '--right', right_file,
+        '--CPU', '6',
+        '--max_memory', '20G',
+        '--output', output_dir
+    ]
+    subprocess.run(command, check=True)
 ```

@@ -1,0 +1,34 @@
+Use Case: Dragonflye is a bioinformatics software that is used for the de-novo assembly of long noisy reads, such as those from Oxford Nanopore. It employs a novel voting-based consistent long-read overlap algorithm for error correction and a simplified de bruijn graph for the assembly.
+
+Code Details and Examples:
+
+Format Required: Input files must be in FASTQ or FASTA format, which is a text-based format for representing either nucleotide sequences or peptide sequences, along with optional annotations.
+
+Code:
+
+Input file: Mydata.fasta
+
+```
+>sequence1
+ATGGCGAGCTCTTACGAG
+>sequence2
+TTGCCGTGCTTACAG
+>sequence3
+CTCGATTCCGGACT
+```
+
+To run Dragonflye, the basic command line format is:
+
+```
+dragonflye -s <input.fasta> -o <output.fasta> -t <num_threads>
+```
+
+So, an example command could be:
+
+```
+dragonflye -s Mydata.fasta -o Output.fasta -t 12
+```
+
+This command will use the reads in Mydata.fasta to build the assembly, and output the assembly to Output.fasta. The "-t" option specifies how many threads to use, in this case, 12. 
+
+Note: In actual use, you would replace "Mydata.fasta" and "Output.fasta" with the actual names of your input and output files.

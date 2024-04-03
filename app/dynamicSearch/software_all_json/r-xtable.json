@@ -1,0 +1,13 @@
+{
+  "software_name": "r-xtable",
+  "comprehensive_overview": "The r-xtable package in R provides an interface for exporting data frames or matrices to LaTeX and HTML tables. It allows users to easily create publication-quality tables for use in research papers, reports, or presentations.",
+  "core_features": "1. Exporting data frames or matrices to LaTeX and HTML tables\n2. Customizing table appearance and formatting\n3. Support for adding captions and footnotes\n4. Integration with R Markdown for seamless table generation\n5. Compatibility with various LaTeX packages for advanced table features",
+  "general_tags": ["R package", "Data visualization", "Table generation"],
+  "additional_tags": {
+    "research_discipline": "Statistics and Probability",
+    "research_area": "Data Analysis",
+    "software_class": "Data Visualization",
+    "software_type": "Tool",
+    "field_of_science": "Mathematics"
+  }
+}

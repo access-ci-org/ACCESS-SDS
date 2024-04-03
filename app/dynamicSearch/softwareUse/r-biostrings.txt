@@ -1,0 +1,34 @@
+Use Case: The Biostrings package in R provides memory-efficient storage and manipulation facilities for large biological sequences or sets of sequences. It is typically used in bioinformatics for sequence alignment and other sequence analysis tasks.
+
+Code details and examples:
+
+Here is a simple use case involving DNA sequences.
+
+Code:
+
+```R
+# Import necessary library
+library(Biostrings)
+
+# Create DNA sequences
+seq1 = DNAString("GAATTC")
+seq2 = DNAString("GAGTTC")
+
+# Print sequences
+print(seq1)
+print(seq2)
+
+# Compute pairwise distance between sequences
+dist = pairwiseAlignment(seq1, seq2)
+
+# Print result
+print(dist)
+```
+
+The input for this software package doesn't need a file. Any DNA or RNA sequence in string format can be input directly in the R script.
+
+To run the code, open up an R or RStudio session and simply paste the code into the console and press enter. If this is in a script file, it can be run within R or RStudio with the source command:
+
+```R
+source("your_script.R")
+```

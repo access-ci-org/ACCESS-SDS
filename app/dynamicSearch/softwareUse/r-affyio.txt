@@ -1,0 +1,24 @@
+Use Case: affyio is an R Bioconductor package focusing on parsing Affymetrix files. It's generally used in bioinformatics or computational biology for the preprocessing, quality assessment and analysis of microarray data.
+
+Code Details and Examples:
+
+The input file for Affyio would be Affymetrix cell intensity file (.CEL file).
+
+Code:
+```R
+library(affyio)
+
+# Reading the .CEL file
+data <- read.celfile("file.CEL")
+
+# Displaying the data
+print(data)
+```
+
+Command to Run: You just need to replace "file.CEL" with your file name and run the script on R console. 
+
+In case your file is located in a directory other than your current working directory, you would need to set the directory to where your CEL data file is located using function `setwd()`. You can pass the directory path as a parameter to this function before reading the CEL file. 
+
+```R
+setwd("path/to/your/directory")
+```

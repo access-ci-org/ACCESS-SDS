@@ -1,0 +1,17 @@
+Use Case: Pure stress testing and benchmarking for High-Performance computation and for demonstrating performance differences between job scheduling systems.
+
+Code details and examples: Code.
+
+The NoStack tool allows you to construct multi-process, multi-threaded compute-bound workloads to run on different job scheduling systems. One of the fundamental tests that NoStack can be used for is to demonstrate the significant differences between job scheduling systems with and without backfill capabilities.
+
+Given that it is a compute-bound workload, there ideally shouldn't be any input files. The workload should be constructed to run for a specific duration (usually long, for proper testing) depending on the number of tasks specified.
+
+Here is an example of how to construct such a workload:
+
+```
+mpirun -np 4 ./nostack 1000000
+```
+
+In this instance, mpirun is the MPI execution command, -np 4 specifies that four processes should be run, ./nostack is the command to run the NoStack executable, and 1000000 is the argument that specifies how long the workload should run for.
+
+The above command would run four instances of NoStack, each running for roughly 1,000,000 microseconds. NoStack will output to stderr the actual time each instance took to complete.

@@ -1,0 +1,32 @@
+Use Case: CNVnator is a tool used for CNV (copy number variation) discovery and genotyping from depth of read mapping. It uses a mean-shift approach and works on the principle of analyzing the read-depth signal.
+
+Code details and examples: 
+
+Input file format: 
+CNVnator requires sorted BAM files as an input. Example filename: input.bam
+
+Code snippet: 
+
+CNVnator typically involves three steps - Extraction, Binning and Calling. 
+
+Extraction:
+This step extracts read mapping from the BAM file and generates a histogram.
+The command is:
+```bash
+cnvnator -root out.root -tree input.bam
+```
+Binning:
+This analyses read depth signal in bins of specified size.
+The command is:
+```bash
+cnvnator -root out.root -his 100 -d directory_containing_chromosome_files
+```
+Calling:
+This calls the CNV.
+The command is:
+```bash
+cnvnator -root out.root -call 100
+```
+Each set of commands will create output files respectively. The generated CNV can then be evaluated. Please note that the size of bins in '-his' and '-call' commands should be the same. The "directory_containing_chromosome_files" needs to contain the chromosome files in fasta format with the .fa extension (genome.fa).
+
+Please remember that you need to adjust bin sizes depending on your depth of coverage for optimal results. In general, lower coverage sequencing projects require larger bins to capture significant signal whereas deeper sequencing projects can use smaller bins to provide higher resolution.

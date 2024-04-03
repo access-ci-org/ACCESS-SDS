@@ -1,0 +1,13 @@
+{
+    "software_name": "NCL",
+    "comprehensive_overview": "The NCAR Command Language (NCL) is a scripting language designed specifically for the analysis and visualization of scientific data. It is widely used in the atmospheric and related sciences.",
+    "core_features": "NCL provides a comprehensive set of functions for data analysis, visualization, and interpolation. It supports a wide range of data formats and has powerful plotting capabilities, including maps, contour plots, and animations.",
+    "general_tags": ["scientific data analysis", "data visualization", "atmospheric sciences"],
+    "additional_tags": {
+        "research_discipline": "Environmental Sciences",
+        "research_area": "Atmospheric Sciences",
+        "software_class": "Data Analysis and Visualization",
+        "software_type": "Scripting Language",
+        "field_of_science": "Earth and Environmental Sciences"
+    }
+}

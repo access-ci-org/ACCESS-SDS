@@ -1,0 +1,27 @@
+Use Case: Use `r-iterators` for iterating over R objects in a memory-efficient way. This is especially useful when working with large datasets that could potentially exceed the available memory.
+
+Code details and examples:
+
+Code:
+```R
+# load the iterators package
+library(iterators)
+
+# create a vector
+x <- c(1, 2, 3, 4, 5)
+
+# create an iterator from the vector
+iter <- iter(x)
+
+# use the nextElem function to iterate over the elements
+while(hasNext(iter)) {
+  print(nextElem(iter))
+}
+```
+Input Files: No input files required for this code snippet. This code works directly with data available within the R environment.
+
+Format Required: N/A.
+
+Specifications and Details in Input Files: N/A.
+
+Command to run: Run the script file in any R environment (like RStudio) as per your convenience and need.

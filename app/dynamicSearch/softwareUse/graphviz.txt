@@ -1,0 +1,26 @@
+Use Case: Graphviz is used for creating diagrams of abstract graphs and networks in a variety of formats. It is commonly used in areas like networking, bioinformatics, software engineering, database and web design.
+
+Code Details and Examples:
+
+Code: 
+
+File Name - simple.dot
+
+```
+digraph G {
+    A -> B;
+    B -> C;
+    C -> D;
+    D -> A;
+}
+```
+This input file defines a directed graph `G` with four nodes (A, B, C, and D) and four directed edges (A -> B, B -> C, C -> D, D -> A).
+
+Command to run Graphviz with this input file:
+
+```
+dot -Tpng simple.dot -o simple.png
+```
+This command instructs Graphviz to create a PNG image (`-Tpng`) from the input file `simple.dot`, and save it as `simple.png`. Different formats like SVG, PDF can also be specified.
+
+Note: The file name and image output type can be changed accordingly. The structure and relationship of nodes can also be defined in the input file as required.

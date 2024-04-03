@@ -1,0 +1,13 @@
+{
+    "software_name": "souporcell",
+    "comprehensive_overview": "souporcell is a tool for unsupervised clustering of single-cell RNA-seq data, helping identify and genotype mosaic cell populations.",
+    "core_features": "1. Unsupervised clustering of single-cell RNA-seq data. 2. Detection and genotyping of mosaic cell populations. 3. Identification of cell type-specific genetic variants. 4. Utilizes genotype likelihoods for accurate cell identification and clustering.",
+    "general_tags": ["single-cell RNA-seq", "clustering", "mosaic cell populations"],
+    "additional_tags": {
+        "research_discipline": "Bioinformatics",
+        "research_area": "Genetics",
+        "software_class": "Genomic Analysis",
+        "software_type": "Tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

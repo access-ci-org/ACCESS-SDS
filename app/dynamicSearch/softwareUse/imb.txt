@@ -1,0 +1,22 @@
+Use Case: IMB or Intel MPI Benchmarks are primarily used to measure performance of MPI by executing a suite of MPI calls such as point-to-point and collective calls. Offen used for analyzing the performance of high performance computing systems and clusters.
+
+Code details and examples:
+Here is an example of an execution command using the IMB-MPI1 binary, which is part of the Intel MPI Benchmark suite. The MPI Standard Version is selected with the "mpi1" option by linking with the IMB-MPI1 binary. The suite includes all the standard MPI-1 Benchmark calls.
+
+Code to run:
+
+```bash
+mpirun -np 4 ./IMB-MPI1
+```
+
+This command will initiate the IMB-MPI1 benchmark with 4 processes.
+
+The input file is not needed because all parameters and specifications are included in the commands line and code itself. In the above command, `-np 4` indicates that the benchmarks will be run using 4 threads or processors. 
+
+For specific MPI benchmarks or a custom subset, you can specify the tests to run in a command line argument. For example, the following command will only run the PingPong and Barrier tests:
+
+```bash
+mpirun -np 4 ./IMB-MPI1 PingPong Barrier
+```
+
+At the start, IMB-MPI1 prints a header with some information about the MPI environment and the message lengths that will be used in the benchmark. For each individual benchmark, it prints out the name of the benchmark and the used communication pattern. For each message length, the benchmark prints out the number of repetitions, and the calculated communication rate.

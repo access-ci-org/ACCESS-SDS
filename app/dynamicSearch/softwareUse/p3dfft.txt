@@ -1,53 +1,52 @@
-Use Case: p3dfft is a library of parallel 3-dimensional Fast Fourier Transforms (FFT) for large-scale scientific applications in distributed-memory environments.
+Use Case: P3DFFT is a software library performing Fast Fourier Transform (FFT) operations for 3D data-sets in parallel. It is particularly targeted at large-scale simulations run on supercomputers. 
 
-Code details and examples:
-Sample input file (input.dat):
-```
-16 16 16
-```
+Code details and examples: Code
 
-Sample code snippet in C for 3D FFT using p3dfft:
-```c
-#include <stdio.h>
-#include <stdlib.h>
-#include "p3dfft.h"
+Sample Input File: A three-dimensional grid of data, usually defined in a distribution format. Note: the library supports input data in a complex format and also a real format. The number of grid points along each axis (nx, ny, nz), should be divisible by the total number of tasks(in process grid - Px, Py), else FFT cannot be performed. 
 
-int main(int argc, char **argv) {
-    p3dfft_plan *plan;
-    int n[3] = {16, 16, 16};
+Input Data Format: (nx, ny, nz) array of either complex or real numbers. 
 
-    p3dfft_init();
-
-    plan = p3dfft_create_default_plan(n, P3DFFT_FORWARD, P3DFFT_COMPLEX, MPI_COMM_WORLD);
-
-    // Allocate memory for input data
-    double complex *data = (double complex *) malloc(plan->local_naftertrans * sizeof(double complex));
-
-    // Load input data from file
-    // Assuming the file contains a list of 16x16x16 complex numbers
-
-    // Transform
-    p3dfft_exec_dft(plan, data, P3DFFT_FORWARD);
-
-    // Process transformed data
-
-    free(data);
-    p3dfft_destroy_plan(plan);
+    #Input array 
+    double input[nx][ny][nz];
+    ...
+    // Initialize the array with data.
+    ...
     
-    p3dfft_shutdown();
+Command to run: 
 
-    return 0;
-}
-```
+    #include 
+    #include "p3dfft.h"
+    int main(int argc,char **argv) {
+        ...
+        // Initialize MPI
+        MPI_Init(&argc,&argv);
+        // Get the size and the rank of the process
+        MPI_Comm_size(MPI_COMM_WORLD,&numtasks);
+        MPI_Comm_rank(MPI_COMM_WORLD,&rank);
+        
+        // Create 3D Decomposition with Nx x Ny x Nz.
+        int dim[3] = {Nx, Ny, Nz};
+        ...
+        // Call P3DFFT setup routines (Plan creation)
+        p3dfft_setup();
+        p3dfft_plan_forward_c2c(P3DFFT_PLAN, dim, nnodes, comm, input);
+        ...
+        // Perform forward transform.   
+        p3dfft_exec_c2c(P3DFFT_PLAN, input, output, -1);
+        ...
+        MPI_Finalize();
+    }
 
-To compile the code (assuming the code above is saved in fft_example.c) using mpicc:
-```
-mpicc -o fft_example fft_example.c -lp3dfft -lfftw3_mpi -lfftw3 -lm
-```
+Commands to compile the code include either using MPI compiler directly or using Makefile given in P3DFFT library.
 
-To run the compiled code (assuming the executable is named fft_example):
-```
-mpiexec -n <num_procs> ./fft_example
-```
+    mpicc -o fftcode fftcode.c -lp3dfft -lm
 
-Make sure to replace `<num_procs>` with the desired number of MPI processes for the parallel computation.
+To Run the Code:
+
+    mpirun -np total_processors fftcode.exe 
+
+(total_processors is the total number of processors to be used. This must be the multiplication of Px and Py.) 
+
+For example, if we are considering a global dataset of 512x512x512 grid points, Px=64 and Py=8, then we can run:
+    
+    mpirun -np 512 fftcode.exe

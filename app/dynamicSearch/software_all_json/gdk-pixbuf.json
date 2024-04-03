@@ -1,0 +1,13 @@
+{
+    "software_name": "gdk-pixbuf",
+    "comprehensive_overview": "The GdkPixbuf library provides a way to load images into a program and manipulate those images. It is used by GTK and GNOME applications to handle images. GdkPixbuf supports loading, saving, scaling, compositing, and transforming images, allowing various graphical operations to be performed on the images.",
+    "core_features": "1. Image loading and saving capabilities.\n2. Image scaling and transformations.\n3. Image compositing.\n4. Support for various image formats.",
+    "general_tags": ["image processing", "graphics", "library"],
+    "additional_tags": {
+        "research_discipline": null,
+        "research_area": null,
+        "software_class": "library",
+        "software_type": "image processing",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

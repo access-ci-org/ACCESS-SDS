@@ -1,26 +1,59 @@
-Use Case: Computational Chemistry
+Use Case: Mesa (Modules for Experiments in Stellar Astrophysics) involves modeling, testing and simulating stars throughout their life cycles. A use case could be tracking the changes in a star's luminosity and temperature during its evolution. 
 
-Code details and examples:
-Mesa is an open-source quantum chemistry software package. It can perform various electronic structure calculations on molecules.
+Code details and examples: 
 
-Sample input file for Mesa (input.dat):
+Code:
+
+File: inlist_project
+
 ```
-molecule {
-  O
-  H 1 0.96
-  H 1 0.96 2 104.5
-}
+&star_job
 
-basis {
-  assign primary {O H}
-  O library def2-TZVP
-  H library def2-TZVP
-}
+    save_model_filename = 'models/model'
+    save_model_when_ever_true = .true.
 
-task scf
-```
+/
 
-Command to run Mesa:
+&controls
+
+   log_directory = 'logs'
+
+   initial_mass = 1
+   initial_z = 0.02
+
+   use_Type2_if_possible = .false.
+   use_massive_prescriptions = .false.
+
+   rgb_wind_scheme = 'Reimers'
+   agb_wind_scheme = 'VW'
+
+   cool_wind_RGB_scheme = 'Blocker'
+   cool_wind_AGB_scheme = 'Wannier'
+   ...
+   hot_wind_scheme = 'Reimers'
+
+   do_composition_gradient = .false.
+
+   PGstar_flag = .true.
+
+/
+
+&pgstar
+
+   HR_win_flag = .true.
+   HR_file_flag = .true.
+   photo_file_flag = .true.
+
+   Profile_win_flag = .true.
+   Profile_win_file_flag = .true.
+   ...
+
+/
 ```
-mesa input.dat
-```
+To run a mesa star job, use:
+
+`./rn`
+
+Command to run the MESA code may differ depending on your setup and version of the MESA code. 
+
+This input file starts a star evolution job, saving a model whenever possible and logging data to a specific directory. It sets initial conditions for the star, including mass and metallicity, and it uses specific wind schemes for different phases of stellar evolution. It does not account for a composition gradient. It plots results in a Hertzsprung-Russell diagram (HR diagram) and outputs photo and profile data.

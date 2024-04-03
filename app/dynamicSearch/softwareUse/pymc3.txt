@@ -1,0 +1,36 @@
+Use Case: Creating a simple Bayesian model using pymc3 for a given dataset to discern the underlying distribution.
+
+Code details and examples:
+
+Code:
+```python
+import pymc3 as pm
+import numpy as np
+
+# Sample Data
+np.random.seed(123)
+n_experiments = 4
+theta_real = 0.35  # unknown value in a real experiment
+data = pm.Bernoulli.dist(p=theta_real).random(size=n_experiments)
+
+# Bayesian Model
+with pm.Model() as our_first_model:
+    # a priori
+    theta = pm.Beta('theta', alpha=1, beta=1)
+    # likelihood
+    y = pm.Bernoulli('y', p=theta, observed=data)
+    start = pm.find_MAP()
+    step = pm.Metropolis()
+    trace = pm.sample(1000, step=step, start=start)
+```
+
+The input in this case is the 'data' array which is a Bernoulli distributed random variable with probability theta_real. The output is the Bayesian model’s estimation of the distribution of theta, the Bernoulli parameter.
+
+The command used to run this Python file differs based on the environment:
+
+If it's a Python script (let's say named script.py), you'd run it via a terminal as:
+```bash
+python script.py
+```
+
+If it's a Jupyter notebook cell, simply running the cell would execute it.

@@ -1,0 +1,17 @@
+Use Case: Thermo-Calc is a powerful software that can be used for complex thermodynamic and phase diagram calculations, materials property calculations, and simulations of diffusion. It is utilized in areas such as materials design, development, and optimization.
+
+Code details and examples: Code
+
+In using Thermo-Calc, the input files required are in proprietary .TCI format, and a small example of the input code needed to run a basic calculation would look like this:
+
+```
+DEFINE_SYSTEM NIST/Fe-C
+GET_SYSTEM
+SET_AXIS_1 T 300.0 1800.0 10.0
+COMPUTE_PHASE_DIAGRAM
+```
+This would compute the phase diagram for the Fe-C system, over a temperature range from 300 to 1800 K.
+
+The results are then made available through the graphical interface or can be directly exported to Excel. 
+
+For command line execution, you would need to run `Thermo-Calc your_input_file.TCI`

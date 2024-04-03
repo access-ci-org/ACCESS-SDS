@@ -1,0 +1,13 @@
+{
+  "software_name": "at-spi2-core",
+  "comprehensive_overview": "AT-SPI (Assistive Technology Service Provider Interface) is a protocol that allows assistive technologies to interact with and control applications.",
+  "core_features": "1. Provides accessibility support for people with disabilities.\n2. Allows assistive technologies to query and interact with GUI applications.\n3. Enables developers to make their applications accessible to assistive technologies.",
+  "general_tags": ["Accessibility", "Assistive Technology", "GUI Applications"],
+  "additional_tags": {
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Accessibility Software",
+    "software_type": "Library",
+    "field_of_science": "Computer Science"
+  }
+}

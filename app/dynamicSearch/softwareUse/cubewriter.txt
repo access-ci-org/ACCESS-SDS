@@ -1,0 +1,35 @@
+Use Case: Use Cubewriter as a Python library used for generating .cube files which are a standard format for representing 3D scalar fields such as electrostatic potential or electron density in computational chemistry.
+
+Code details and examples: Code 
+
+The CubeFile class can be used to create, access and manipulate .cube files.
+
+```
+from cubewriter import CubeFile
+
+# Create a new cube file
+c = CubeFile()
+
+# Set some properties
+c.comment1 = 'This is a comment.'
+c.comment2 = 'This is another comment.'
+c.origin = [0.0, 0.0, 0.0]
+
+# Load data from numpy array
+import numpy as np
+data = np.random.rand(3, 3, 3)
+c.data = data
+
+# Save to a file
+c.to_file('output.cube')
+```
+The input for cubewriter is just set inside the code. It should have these properties set: comment1, comment2, origin, and data. Origin is a list of three coordinates that represent the origin of the grid. Data is a numpy array that contains the values of the grid points.
+
+To run:
+
+If you are using it as a script then from the terminal/command prompt:
+```
+python filename.py
+```
+
+If you are executing this inside an IDE or Jupyter Notebook, then no specific command is required, it's executed as the cells are run.

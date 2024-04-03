@@ -1,0 +1,20 @@
+Use Case: Library for spatial SQL functions, it allows storing and manipulating GIS data.
+
+Code details and examples: 
+
+For libspatialite, we mostly use SQL queries. An SQL file containing the queries is generally used as the input, while the spatialite shell is used to run the SQL file. Here are examples of what the file and commands might look like:
+
+Content of input.sql file:
+```sql
+SELECT AsText(GeomFromText('POINT(1 1)'));
+SELECT MbrMinX(GeomFromText('LINESTRING(1 1,2 2,3 3)'));
+```
+The format required is SQL. In the above example, we're creating a point (1,1) and a line ((1,1),(2,2),(3,3)) using WKT (Well Known Text). We then return the points as text and MBR (Minimum Bounding Rectangle) minimum x coordinate respectively.
+
+Command to run:
+```bash
+spatialite input.sql
+```
+The spatialite shell takes the file name as argument and then runs the file, outputting the results of the SQL queries. To simplify it, you can create a bash file (run.sh) to run the command so you can simply do `bash run.sh`.
+
+The shell commands need to be in a bash file (named run.sh in this case). The SQL commands need to be in a .sql file (named input.sql in this case). The bash file calls the .sql file which contains the SQL queries that get executed.

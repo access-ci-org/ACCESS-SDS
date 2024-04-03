@@ -1,0 +1,35 @@
+Use Case: Motus is a bioinformatics tool often used for the estimation of operational taxonomic units' (OTUs) abundance in metagenomic datasets and it leverages precompiled microbial gene catalogs for a more accurateDNA taxonomic profiling. 
+
+Code details and examples: Code 
+
+Inputs: metagenomic shotgun sequencing data in fastq format.
+
+Create an input directory and place your fastq files in it.
+```
+mkdir input
+cp your_sample.fastq input/
+```
+
+Command to run Motus:
+
+`motus mOTU -o output_file.txt -i input/your_sample.fastq`
+
+Samples of input files: 
+Fastq file (an extremely simplified version)
+
+```
+@SEQ_ID
+GATTTGGGGTTCAAAGCAG
++
+!''*((((***+))%%%+
+@SEQ_ID2
+TATTTGGGGTTCAAAGTAG
++
+!''*((((***+))%%%
+```
+
+Specific specifications and details: The fastq files should contain sequencing data and will usually have millions of lines like the one shown above. Each sequence has an ID line starting with '@', a sequence line containing bases (ACTGs), a '+' line, and a quality score line containing ASCII characters. 
+
+Note: The command to run Motus shown above is quite simple, but usually additional arguments and parameters would be used for a real dataset. 
+
+Moreover, I just give a very brief example here. Actual running need to follow the exact instruction on the Motus official github page (https://github.com/motu-tool/mOTUs_v2) and need to install other dependencies and databases.

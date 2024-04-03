@@ -1,0 +1,18 @@
+{
+    "software_name": "FragGeneScanRS",
+    "comprehensive_overview": "FragGeneScanRS is a robust tool for gene prediction in metagenomes and fragmented assemblies, specifically designed to accurately predict protein-coding genes in short reads and incomplete assemblies.",
+    "core_features": [
+        "Accurate gene prediction in metagenomic data",
+        "Suitable for short reads and fragmented assemblies",
+        "Improved performance in predicting protein-coding genes",
+        "Support for various input formats"
+    ],
+    "general_tags": ["gene prediction", "metagenomics", "fragmented assemblies"],
+    "additional_tags": {
+        "research_discipline": "Biological Sciences",
+        "research_area": "Bioinformatics",
+        "software_class": "Bioinformatics",
+        "software_type": "Tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

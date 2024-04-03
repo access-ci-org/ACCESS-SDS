@@ -1,0 +1,17 @@
+{
+  "software_name": "TargetP",
+  "comprehensive_overview": "TargetP is a bioinformatics tool used for predicting the subcellular localization of eukaryotic proteins.",
+  "core_features": "Predicts the presence of N-terminal signal and transit peptides, secretion pathways, subcellular locations, and cleavage sites in proteins.",
+  "general_tags": [
+    "Bioinformatics",
+    "Protein Localization",
+    "Subcellular Localization",
+    "Eukaryotic Proteins",
+    "Prediction Tool"
+  ],
+  "research_discipline": "Cell Biology",
+  "research_area": "Proteomics",
+  "software_class": "Bioinformatics Tool",
+  "software_type": "Prediction Software",
+  "field_of_science": "Biological Sciences"
+}

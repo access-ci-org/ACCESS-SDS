@@ -1,0 +1,15 @@
+Use Case: Node.js is a JavaScript runtime built on Chrome's V8 javascript engine. It allows for the development of scalable network applications. An example could be a simple HTTP server which responds to every request to return "Hello, World!"
+
+Code details and examples:
+```javascript
+var http = require('http');
+
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello World\n');
+}).listen(8080, '127.0.0.1');
+
+console.log('Server running at http://127.0.0.1:8080/');
+```
+
+To run this script, save the above code in a file called `server.js` and run it with node using the command: `node server.js`. If it runs successfully, it will output: `Server running at http://127.0.0.1:8080/`, and you should be able to visit this address with a web browser to see the message `Hello, World!`. The input in this case is just the HTTP request made to the server.

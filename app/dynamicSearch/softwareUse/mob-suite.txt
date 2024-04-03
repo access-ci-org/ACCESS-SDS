@@ -1,0 +1,49 @@
+Use Case: MOB-suite is a software tool suited for fast bacterial plasmid typing from whole-genome sequence (WGS) reads. This tool can be used to do de-novo plasmid assembly, MOB typing (predict the relaxase and conjugal transfer proteins), and perform matching to a database of reference plasmids.
+
+Code Details and Examples: Code
+
+Input files format required: mob-suite tool requires two types of input files for execution. The input files are in FASTA or FASTQ format which includes the genomic sequencing data.
+
+Here's an example of how you would provide sequence data in FASTA format.
+
+Input file `sequence.fasta`:
+
+```
+>seq1
+ATTGGCCATTGGCCATTGGCCA
+>seq2
+TGGCCAATTGGCCAATTGCCA
+```
+
+Command to run the tool: 
+
+First command is for initial setup for first time user and database creation.
+
+```
+mob_init
+export MOB_BLAST=$(mob_init --show_mob_suite_path)
+```
+
+Then for MOB-Recon, you would use input sequence in FASTA or FASTQ format as shown below.
+
+```
+mob_recon -i input.fasta -t <number_of_threads>
+```
+
+Extras: If using own reference database, then specify the path as shown,
+
+```
+mob_recon -i input.fasta -t <number_of_threads> --db /path/to/own/database
+```
+
+Similarly to use MOB-typer, you can use the below command:
+
+```
+mob_typer --infile input/sequence.fasta --run_typer
+```
+
+Finally for plasmid reconstruction and typing you can use,
+
+```
+mob_typer --run_typer --infasta input.fasta --outdir output_directory
+```

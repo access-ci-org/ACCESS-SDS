@@ -1,7 +1,54 @@
-Use Case: Gene prediction using AUGUSTUS
-Input File: DNA sequence file in FASTA format
-Code details and examples:
-```bash
-augustus --species=<species_name> --strand=both <input_sequence.fasta>
+Use Case: AUGUSTUS is a bioinformatics software for predicting genes in eukaryotic genomes. 
+
+Code Details and Examples: 
+
+Code:
+
+An example of how you might use AUGUSTUS is by providing it with a sequence file, specifying the organism. In its simplest form, the command might look something like this:
+
 ```
-Replace `<species_name>` with the appropriate species name and `<input_sequence.fasta>` with the name of the input DNA sequence file in FASTA format.
+augustus --species=SPECIES FASTA_FILE
+```
+
+In this example, replace "SPECIES" with the name of the organism's gene you're predicting (for instance 'human') and "FASTA_FILE" with the path to a fasta file containing your sequence (for instance, 'sequence.fasta').
+
+Here's a sample input file in FASTA format:
+
+``` 
+>seq1
+AGTCCGTCTACAAGAGTACACGAGCTACGTAGCTACTGAGCTAGTCGATCGATCGT
+```
+
+You would then save it in a file named 'sequence.fasta' or similar and run a command like the one provided above. 
+
+Furthermore, the species parameter can be included in a config file. Suppose 'config.txt' is a config file which includes the line: 
+
+´´´ 
+species = human
+´´´ 
+
+Then, the command would look like this: 
+
+``` 
+augustus config.txt 
+``` 
+
+If the sequence file is 'sequence.fasta', it should be mentioned in the config.txt file:
+
+´´´ 
+genome = sequence.fasta 
+´´´ 
+
+Then, it is enough to run: 
+
+``` 
+augustus config.txt
+``` 
+
+The output will print the predicted gene structures for each sequence included in your FASTA file. If you want to save this output to a file, you can redirect it using the '>' character, like this:
+
+``` 
+augustus --species=SPECIES FASTA_FILE > OUTPUT_FILE
+``` 
+
+Where "OUTPUT_FILE" is the path to the file where you want to save the output (for instance, 'predictions.txt').

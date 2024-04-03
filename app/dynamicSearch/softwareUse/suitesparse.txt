@@ -1,91 +1,97 @@
-Use Case: SuiteSparse is a suite of sparse matrix algorithms in the form of libraries and tools.
- 
+Use Case: SuiteSparse is a collection of libraries in C/C++ that provide routines for handling sparse matrices. For example, SuiteSparse can be used to solve systems of linear equations, conduct mathematical operations with sparse matrices, and so on. It's often used in scientific computing environments where dealing with large, sparse matrices is common.
+
 Code details and examples:
 
-1. **Sparse Matrix Multiplication**: To perform sparse matrix multiplication using SuiteSparse's `cs_multiply` function.
-   
-   **Sample Input Files**: 
-   
-   Matrix A (in Matrix Market format):
-   ```
-   %%MatrixMarket matrix coordinate real general
-   % Rows Columns NonZeros
-   3 3 4
-   1 1 1.0
-   2 2 2.0
-   3 2 3.0
-   3 3 4.0
-   ```
-   
-   Matrix B (in Matrix Market format):
-   ```
-   %%MatrixMarket matrix coordinate real general
-   % Rows Columns NonZeros
-   3 2 3
-   1 2 1.0
-   3 2 2.0
-   3 1 3.0
-   ```
+The SuiteSparse package contains many libraries. Here, we will discuss about two of them: KLU and CHOLMOD
 
-   **Code**:
-   ```c
-   #include "suite_sparse/Include/cs.h"
+1. KLU can be used to solve a set of linear equations.
+
+Code:
+```c
+#include "klu.h"
+
+int main()
+{
+   klu_common Common;
+   klu_symbolic *Symbolic;
+   klu_numeric *Numeric;
+
+   // Specify the size of your matrix
+   int n = 5;
+
+   /* Sparse Matrix
+   [1 0 2 0 0]
+   [4 5 0 0 0]
+   [0 0 3 0 1]
+   [0 0 0 2 0]
+   [0 1 0 5 0]
+   */
+   int Ap [] = {0, 2, 4, 6, 7, 8};
+   int Ai [] = { 0, 2, 0, 1, 2, 4, 3, 1};
+   double Ax [] = {1, 2, 4, 5, 3, 1, 2, 1};
    
-   int main(){
-       cs A = cs_load("matrix_A.mtx");
-       cs B = cs_load("matrix_B.mtx");
-       cs C = cs_multiply(A, B);
-       // Further processing or output of C
-       cs_free(A);
-       cs_free(B);
-       cs_free(C);
-       return 0;
-   }
-   ```
+   klu_defaults(&Common);
+   Symbolic = klu_analyze(n, Ap, Ai, &Common);
+   Numeric = klu_factor(Ap, Ai, Ax, Symbolic, &Common);
 
-   **Command** (Compile and run):
-   ```bash
-   gcc my_program.c -o my_program -lsuitesparse
-   ./my_program
-   ```
-
-2. **Sparse Cholesky Decomposition**: Using SuiteSparse's `cholmod_analyze` and `cholmod_factorize` functions for Cholesky decomposition of a sparse matrix.
-
-   **Sample Input Files**:
+   double b[] = {8, 3, 4, 5, 6}, x[5];
+   klu_solve(Symbolic, Numeric, 5, 1, b, &Common);
    
-   Matrix A (in Matrix Market format):
-   ```
-   %%MatrixMarket matrix coordinate real general
-   % Rows Columns NonZeros
-   3 3 3
-   1 1 4.0
-   2 2 5.0
-   3 3 6.0
-   ```
+   klu_free_symbolic(&Symbolic, &Common);
+   klu_free_numeric(&Numeric, &Common);
 
-   **Code**:
-   ```c
-   #include "suite_sparse/Include/cholmod.h"
-   
-   int main(){
-       cholmod_common Common, *cm;
-       cm = &Common;
-       cholmod_start(cm);
-       cholmod_sparse *A;
-       A = cholmod_read_sparse("matrix_A.mtx", 1, 1, cm);
-       cholmod_factor *L;
-       L = cholmod_analyze(A, cm);
-       cholmod_factorize(A, L, cm);
-       // Further processing or use of L
-       cholmod_free_factor(&L, cm);
-       cholmod_free_sparse(&A, cm);
-       cholmod_finish(cm);
-       return 0;
-   }
-   ```
+   return 0;
+}
+```
 
-   **Command** (Compile and run):
-   ```bash
-   gcc my_program.c -o my_program -lsuitesparse
-   ./my_program
-   ```
+2. CHOLMOD: CHOLMOD is another library part of SuiteSparse which provides routines to solve systems of linear equations using the CHOLesky MODification.
+
+Code:
+```c
+#include "cholmod.h"
+
+int main (void)
+{
+   cholmod_sparse *A;
+   cholmod_dense *x, *b, *r;
+   cholmod_factor *L;
+   cholmod_common c;
+   double one [2] = {1, 0}, m1 [2] = {-1, 0} ;
+
+   // Start CHOLMOD
+   cholmod_start (&c) ;
+
+   // load A
+   A = cholmod_read_sparse (stdin, &c) ;
+
+   b = cholmod_ones (A->nrow, 1, A->xtype, &c) ; // b = ones(n,1)
+
+   L = cholmod_analyze (A, &c) ; // analyze
+   cholmod_factorize (A, L, &c) ; // factorize
+
+   x = cholmod_solve (CHOLMOD_A, L, b, &c) ; // solve Ax=b
+
+   // Free everything and finish CHOLMOD
+   cholmod_free_factor (&L, &c) ;
+   cholmod_free_dense (&r, &c) ;
+   cholmod_free_dense (&x, &c) ;
+   cholmod_free_dense (&b, &c) ;
+   cholmod_free_sparse (&A, &c) ;
+   cholmod_finish (&c) ;
+   return (0) ;
+}
+```
+
+Running the programs:
+
+After writing a program that uses SuiteSparse, it can be compiled with the GCC compiler (or any C/C++ compiler). It's important to include the correct library flags when compiling. For example:
+
+```
+gcc -o my_program my_program.c -I/path/to/suitesparse/include -L/path/to/suitesparse/lib -lcholmod -lamd -lcolamd -lcamd -lsuitesparseconfig
+```
+
+Then the programs can be run using:
+
+```
+./my_program
+```

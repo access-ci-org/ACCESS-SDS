@@ -1,0 +1,13 @@
+{
+    "software_name": "eccodes",
+    "comprehensive_overview": "eccodes is a software package for encoding/decoding and manipualting meteorological data in GRIB format. It provides a large number of functionalities to work with data in meteorology, oceanography, and climatology.",
+    "core_features": "1. Encode and decode GRIB data\n2. Manipulate meteorological data\n3. Support for various meteorological data formats\n4. Extensive functionalities for data processing and analysis",
+    "general_tags": ["GRIB data", "meteorology", "oceanography", "climatology"],
+    "additional_tags": {
+        "research_discipline": "Atmospheric Sciences",
+        "research_area": "Meteorology",
+        "software_class": "Data Processing",
+        "software_type": "Data Encoding/Decoding",
+        "field_of_science": "Earth and Environmental Sciences"
+    }
+}

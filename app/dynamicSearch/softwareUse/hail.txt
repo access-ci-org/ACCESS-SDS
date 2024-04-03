@@ -1,0 +1,56 @@
+Use Case: Hail is an open-source, scalable framework for exploring and analyzing genomic data using Python. The main use case is in large scale genomics research, where it's used to carry out genome-wide association studies (GWAS). 
+
+Code details and examples: 
+
+Code: 
+
+A regular workflow in Hail involves the following steps: importing data, annotating data, querying data, and exporting data. Here's an example using a GWAS workflow:
+
+```python
+import hail as hl
+hl.init()
+
+# import genotype data
+mt = hl.import_vcf('data.vcf.bgz')
+
+# import phenotype data
+table = hl.import_table('phenotypes.tsv', impute=True).key_by('Sample')
+
+# annotate genotype data with phenotype data
+mt = mt.annotate_cols(pheno = table[mt.s])
+
+# filter out variants not in Hardy-Weinberg equilibrium
+mt = mt.filter_rows(hl.hardy_weinberg_test(mt.GT).p_value < 1e-50)
+
+# run genome-wide association study
+gwas = hl.linear_regression_rows(y=mt.pheno.y, x=mt.GT.n_alt_alleles(), covariates=[1.0, mt.pheno.x])
+
+# show top 20 associations
+gwas.order_by(gwas.p_value).show(20)
+```
+
+Input Files:
+
+1. `data.vcf.bgz` – a compressed VCF file containing genotype data. Each line represents a variant, and each column represents a sample. 
+
+2. `phenotypes.tsv` – a tab-separated values file containing phenotype data. Each line represents a sample, and each column (except the first one) represents a phenotype.
+
+Command to run them: 
+
+```shell
+python gwas_script.py
+```
+
+This command assumes that the script is saved as `gwas_script.py` in the current directory. 
+
+Specifications and details: 
+
+In the phenotypes.tsv file, the 'Sample' column should contain the sample IDs in the same format as in the VCF file. 
+
+In the code, the `key_by('Sample')` method sets the 'Sample' column as the primary key in the phenotype table. 
+
+The `annotate_cols` method adds new column fields to the matrix table `mt`. 
+
+The `linear_regression_rows` method performs a linear regression for each row, testing whether `x` (number of alternate alleles) explains some of the phenotypic variation. 
+
+The covariates are an intercept term (1.0) and another phenotype included as a covariate (mt.pheno.x).

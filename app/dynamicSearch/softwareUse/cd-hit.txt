@@ -1,0 +1,30 @@
+Use Case: CD-HIT is a very widely used bioinformatics software for clustering and comparing large sets of protein or nucleotide sequences. CD-HIT is often used to build non-redundant sequence databases or to identify and remove redundant sequences.
+
+Code details and examples:
+
+Code:
+
+First, you will require an input file in FASTA format. FASTA is a text-based format for representing nucleotide or peptide sequences, using single-letter codes. A sample file could look like this:
+
+>seq0
+ATGGCGAACCCT
+>seq1
+ATGGCGAACCCT
+
+Let's call this file "input.fasta".
+
+Now, to run cd-hit and generate clusters of similar sequences, you could use:
+
+```
+cd-hit -i input.fasta -o output.fasta -c 0.9 -n 5
+```
+
+Here -i denotes the input file, -o is the output file, -c is the sequence identity threshold (0.9 means 90% similarity), -n is the word length (a good value could be 5 for proteins or 10 for DNAs). Output files will contain the representative sequences of each newly created cluster.
+
+Note, when files are huge it might be required to increase otherwise limited memory usage. This can be done through a specific parameter:
+
+```
+cd-hit -i input.fasta -o output.fasta -c 0.9 -n 5 -M 0
+```
+
+In this case, -M 0 means that there is no memory limit, and all available memory can be used. You should use this flag wisely, and always in accordance with your available resources.

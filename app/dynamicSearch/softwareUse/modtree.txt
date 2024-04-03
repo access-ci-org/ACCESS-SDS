@@ -1,0 +1,19 @@
+Use Case: Modtree is commonly used to predict protein post-translational modification (PTM) sites and can be used to predict the likeliness of a segment of protein being a PTM site. The input required for Modtree is a protein sequence in fasta format.
+
+Code Details and Examples:
+
+Code: Below is an example of the input file (example.fasta):
+
+```  
+>protein1
+MTEYKLVVVGAGGVGKSALTIQLIQNHFVDEYDPTIEDSYRKQVVIDGETCLLDILDTAGQEEY
+```
+You just need to save your protein sequence in fasta format. The file name can be any name of your choosing. 
+
+Command to use Modtree:
+
+```
+python2 modtree.py -i example.fasta
+```
+
+Please note that the modtree.py is the main script of modtree and '-i' flag is used to specify the input fasta file. Sample output would be the prediction of potential PTM sites in the protein sequence and the score indicating the likeliness.

@@ -1,0 +1,23 @@
+{
+    "software_name": "intel_ipp_intel64",
+    "comprehensive_overview": "Intel Integrated Performance Primitives (Intel IPP) provides high-performance software libraries that are designed to help developers improve the performance of their applications. Intel IPP offers a wide range of functions that are optimized for Intel architecture, including signal, imaging, cryptography, and data processing algorithms.",
+    "core_features": "1. Optimized functions for signal processing, imaging, cryptography, and data processing. 2. Support for various data formats and algorithms. 3. High performance on Intel architecture. 4. Multi-threading and SIMD support for parallel processing. 5. Integration with popular development environments and languages.",
+    "general_tags": [
+        "software development",
+        "performance optimization",
+        "data processing",
+        "signal processing",
+        "image processing",
+        "cryptography"
+    ],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "library",
+        "software_type": "commercial",
+        "field_of_science": [
+            "Computer and Information Sciences",
+            "Software Engineering, Systems, and Development"
+        ]
+    }
+}

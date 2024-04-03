@@ -1,0 +1,43 @@
+Use Case: Atropos is used for adapter removal and quality trimming in high-throughput sequencing data. This tool can help in cleans up reads and removes any adapter sequences, N bases, and low-quality reads for producing high-quality reads.
+
+Code details and examples:
+
+Code: 
+
+Atropos takes as input a set of sequence reads and a set of adapter sequences. The adapter sequences need to be provided in a FASTA format.
+
+Sample Input File: 
+
+Reads:
+FASTQ format file (can be in Gzipped form)
+```
+@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
++
+!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
+```
+
+Adapter sequences: 
+```
+>Prefix/1 
+TACACTCTTTCCCTACACGACGCTCTTCCGATCT
+```
+The output of Atropos will be the reads that have been trimmed. 
+
+Command to run Atropos:
+
+- Simple command-line execution for single-end reads:
+
+```bash
+atropos -a ADAPTER_FWD -se reads.fq.gz > trimmed_reads.fq.gz
+```
+
+- For paired-end reads, use the -A flag to specify the reverse complement of the 3' adapter for the second read in the pair.
+
+```bash
+atropos -a ADAPTER_FWD -A ADAPTER_REV --op1 trimmed1.fq.gz --op2 trimmed2.fq.gz -se reads1.fq.gz reads2.fq.gz
+``` 
+
+where ADAPTER_FWD is the sequence of the adapter that was ligated to the 3' end of the read (or the reverse complement of the 5' adapter), and ADAPTER_REV is the reverse complement of the adapter that was ligated to the 5' end of the second read in a pair (or equivalently, the 3' adapter on the second read). 
+
+Note: 'atropos' command is case-sensitive. It must be lower-case. Output files are in FASTQ format (can also be Gzipped). There is no specific limitation in the input files except that they should be in the proper format (FASTQ/FASTA) for reads and adapter files. Improper formatting may cause errors in the execution.

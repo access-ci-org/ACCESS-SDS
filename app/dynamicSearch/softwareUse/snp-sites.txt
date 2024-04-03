@@ -1,0 +1,24 @@
+Use Case: Snp-sites is a software that can quickly extract SNP sites from multi-FASTA alignments. In population genomics, it's often useful to examine and study the individual sites that are variable. 
+
+Code details and examples: 
+
+Code:
+
+Input file: 
+snp-sites uses multi-FASTA (.msa) alignments as input files. An MSA file contains multiple sequences which are all aligned so that each column corresponds to homologous sites. 
+
+Here is a sample excerpt of what an .msa file looks like:
+```
+>seq1
+ATGGCA
+>seq2
+AT-GCA
+>seq3
+ATAGCA
+```
+In this case, there is one SNP site at the 3rd position. 
+
+Running the command (assuming input file name is my_alignment.msa): 
+`snp-sites -v my_alignment.msa`
+
+This command will quickly extract the SNP sites from the alignment and print them to stdout. The -v flag is for printing to VCF format, which can be further piped or redirected as needed.

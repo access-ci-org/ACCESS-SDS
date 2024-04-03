@@ -1,0 +1,25 @@
+Use Case: Kmergenie is a tool used in genomics to predict the best k-mer length for genome de novo assembly.
+
+Code Details and Examples:
+
+Code:
+
+First, prepare an input file. Kmergenie takes as input a list of read files containing short-read sequences (DNA sequences) with a file extension ".fastq", ".fasta", ".gz" (gzipped). The input files can be prepared as:
+
+Input File(Reads.txt):
+
+```
+file1.fastq
+file2.fastq
+```
+With this input file at hand, you can run the Kmergenie tool like this, where Reads.txt is the input file:
+
+Command to Run:
+
+```
+kmergenie Reads.txt
+```
+
+This command will produce a histogram of k-mer frequencies, and will predict an optimal k-mer value for de novo assembly. The output report.html will have further summary of the analysis, including the recommended k-mer size. Note, please ensure your file paths are correct when providing input files.
+
+In the code above, `file1.fastq` and `file2.fastq` should be replace with the actual fastq files paths that contain the genome sequences for assembly. The command `kmergenie Reads.txt` should be run on the command line terminal.

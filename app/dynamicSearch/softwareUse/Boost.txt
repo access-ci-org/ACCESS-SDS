@@ -1,54 +1,70 @@
-Use Case: Boost is a collection of peer-reviewed C++ libraries that are widely used in the industry.
-Code details and examples: 
-Boost is a collection of C++ libraries that can be used for various purposes such as utilities, data structures, algorithms, and more. Here are some examples of how you can use Boost libraries:
+Use Case: Using Boost C++ Library for Scientific Computations and Problem Solving;
 
-1. Boost Filesystem:
-Boost Filesystem library provides facilities for performing operations on files and directories. Here is a sample code snippet using Boost Filesystem to list files in a directory:
+Code Details and Examples: Code;
+
+In this example we will demonstrate use of the Boost C++ library to find the Root of a function using the Newton-Raphson method.
+
+Consider a function f(x) = x^3- x- 1 and we are to find the root of this function with an initial guess of x=1. We will use Boost's newton_raphson_iterate function to solve this.
+
+First, we need to write the function f(x) and its derivative.
+
+Input File: None
+
+Specifications: C++ compiler
+
+Code Snippet:
 
 ```cpp
-#include <boost/filesystem.hpp>
 #include <iostream>
+#include <boost/math/tools/minima.hpp>
 
-namespace fs = boost::filesystem;
+// Function
+double func(const double& x)
+{
+    return (x*x*x - x - 1);
+}
 
-int main() {
-    fs::path directory_path("/path/to/directory");
+// Derivative of function
+double funcPrime(const double& x)
+{
+    return (3 * x*x - 1);
+}
 
-    for (const auto& entry : fs::directory_iterator(directory_path)) {
-        std::cout << entry.path().filename() << std::endl;
-    }
+/****************************************************************************
+Main Function
+****************************************************************************/
+int main()
+{
+    using namespace boost::math::tools;
 
-    return 0;
+   // The Brackets
+    double min = 1, max = 2;
+
+   // The tolerance
+    const double Tol = 0.000001;
+
+   //Initial Guess
+    double guess = 1.3f;
+
+   // The result
+    double minima = newton_raphson_iterate(func, guess, min, max, Tol);
+
+   //Print out the result
+   std::cout << "Root found: " << minima << std::endl;
+    
+   return 0;
 }
 ```
 
-2. Boost Regex:
-Boost Regex library provides support for regular expressions in C++. Here is an example of using Boost Regex to search for a pattern in a string:
+The procedure newton_raphson_iterate takes 5 parameters: Function for which we need to find root, initial guess, bracket minimum, bracket maximum, and the tolerance level, and recursively applies Newton-Raphson method until required tolerance is achieved or maximum iterations are exceeded. 
 
-```cpp
-#include <boost/regex.hpp>
-#include <iostream>
-#include <string>
+Command to Run:
 
-int main() {
-    std::string text = "Hello, World!";
-    boost::regex pattern("W[a-z]+d");
-
-    if (boost::regex_search(text, pattern)) {
-        std::cout << "Pattern found in the text." << std::endl;
-    } else {
-        std::cout << "Pattern not found in the text." << std::endl;
-    }
-
-    return 0;
-}
+Compile:
+```shell
+g++ -o main main.cpp -lboost_system
 ```
-
-These are just a couple of examples, and Boost provides many more libraries for different purposes like date/time manipulation, serialization, math, and more.
-
-To compile the above examples using g++, you can use the following command:
+Run:
+```shell
+./main
 ```
-g++ example.cpp -o example -lboost_filesystem -lboost_regex
-```
-
-Replace `example.cpp` with the filename of the example code you want to compile.

@@ -1,0 +1,22 @@
+{
+	"software_name": "r-registry",
+	"comprehensive_overview": "r-registry is a package registry for the R programming language. It provides a central repository for discovering, sharing, and reusing R packages within the R community.",
+	"core_features": [
+		"Central repository for R packages",
+		"Discovery of R packages",
+		"Sharing and reusing R packages"
+	],
+	"general_tags": [
+		"package registry",
+		"R programming language",
+	"R packages"
+	],
+	"additional_tags": {
+		"research_discipline": "",
+		"research_area": "",
+		"software_class": "Package Registry",
+		"software_type": "Tool",
+		"field_of_science": "Computer and Information Sciences",
+		"specific_field_of_science": "Computer Science"
+	}
+}

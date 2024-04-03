@@ -1,8 +1,30 @@
-Use Case: Unzip files
+Use Case: Use UnZip to extract files from a .zip archive. This tool supports archives created by various programs such as PKZIP and WinZip. It also supports decompressing files encrypted with standard (weak) PKZip 2.0 encryption. 
 
-Code details and examples:
-```
-unzip file.zip
-```
+Code details and examples: Code.
 
-You can simply use the "unzip" command followed by the name of the zip file you want to extract.
+Sample Input File: A .zip file named `archive.zip` located in the user's current directory.
+
+Format Required: .zip file  
+
+Commands:
+UnZip offers a wide range of commands and options. Below are a few examples: 
+
+1) To extract all files from the archive, the command would be:
+```
+unzip archive.zip
+```
+Specifications and details in the input files: The `.zip` file can contain different types of files such as .txt, .exe, .jpg, .png etc. There's no need to define the type of file inside the zip, as UnZip would handle it automatically.
+
+2) To test the integrity of the compressed archive file, the command would be:
+```
+unzip -t archive.zip
+```
+This command validates the integrity of the zip file before extracting it.
+
+3) To list the contents of the archive without extracting, you can use the following command: 
+```
+unzip -l archive.zip
+```
+This command is helpful when you want to see the contents of the .zip file without extracting it. 
+
+These are just a few examples. UnZip offers many more options and commands to use depending on the requirements.

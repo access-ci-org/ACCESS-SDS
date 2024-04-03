@@ -1,0 +1,48 @@
+Use Case: Bioawk is an extension to Brian Kernighan's awk, which adds support for several common biological data formats used in bioinformatics. An example use case could be getting a count of the number of sequences in a FASTA file.
+
+Code details and examples: Code
+
+Bioawk requires inputs files to be in a format like FASTA, fastq, sam, BED, GFLASH, vcf etc. A common use might be to count sequences in a FASTA file, the standard format for DNA sequences.
+
+For that, the fasta file content could be like:
+
+```
+>seq0
+ATGGCGTAGCAGTAGCTAGTCTCAGTACGTA
+>seq1
+ACGTACGTACGTACGTAGCTAGCATGCTAGC
+>seq2
+ACGTTTACGTACGTAGC
+```
+
+The FASTA format starts with a single-line description, followed by lines of sequence data. The description line is distinguished from the sequence data by a greater-than (">") symbol at the beginning of the line. 
+
+The first character of the FASTA sequence identifier is ">". The rest of the line is a description of the sequence. The sequence follows on as many lines as necessary.
+
+In this case, with your simple fasta file, you can get a count of the number of sequences in the fasta file using:
+
+```bash
+bioawk -c fastx '{ print $name, $seq }' input.fasta
+```
+
+Here `$name` and `$seq` represent the name and sequence fields from the fasta file.
+
+The result will be:
+
+```
+seq0 ATGGCGTAGCAGTAGCTAGTCTCAGTACGTA
+seq1 ACGTACGTACGTACGTAGCTAGCATGCTAGC
+seq2 ACGTTTACGTACGTAGC
+```
+
+Also, to get the count of sequences, you can use:
+
+```bash
+bioawk -c fastx 'END{print NR}' input.fasta
+```
+
+Result will be:
+
+```
+3
+```

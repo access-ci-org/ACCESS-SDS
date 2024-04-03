@@ -1,0 +1,54 @@
+Use Case: Py-Phonopy is a set of Python scripts implementing phonon calculations in the framework of density functional perturbation theory. It's applied in the computation of phonon DOS, dispersion relation and specific heat capacity;
+
+Code Details and Examples:
+
+Code: An example of the calculation with the Si system could be like this:
+
+1. Prepare input files for quantum ESPRESSO for harmonic phonon calculations.
+Here you would create `Si.pw.in` as the following:
+
+```
+&control
+  calculation = 'scf',
+  restart_mode='from_scratch',
+  prefix='si',
+  outdir = './out',
+/
+&system
+  ibrav=  2, 
+  celldm(1)=10.20, 
+  nat=  1, 
+  ntyp= 1,
+  ecutwfc =30.0,
+/
+&electrons
+  conv_thr =  1.0d-8,
+  mixing_beta = 0.7,
+/
+ATOMIC_SPECIES
+  Si  28.086  Si.pbe-van_ak.UPF
+ATOMIC_POSITIONS (alat)
+  Si 0.0 0.0 0.0
+K_POINTS (automatic)
+  6 6 6 0 0 0
+```
+
+2. Run phonopy --qe -d --dim="2 2 2" --pa="0 1/2 1/2 1/2 0 1/2 1/2 1/2 0" -c si.pw.in
+
+Here, `--qe` flag is used for Quantum ESPRESSO displacement generation and `--dim="2 2 2" --pa="0 1/2 1/2 1/2 0 1/2 1/2 1/2 0"` are used for supercell generation.
+
+3. After run, supercell `Si-supercell-001.pw.in` is generated. Run Quantum ESPRESSO with Si-supercell-001.pw.in.
+
+4. Then, run phonopy --qe -f Si-supercell-001.pw.out
+
+This will generate the `FORCE_SETS` file which is used for the main phonon calculation.
+
+5. Finally, run phonopy -p mesh.conf, where mesh.conf file content could be:
+
+```
+ATOM_NAME = Si
+DIM = 2 2 2
+MP = 10 10 10
+FORCE_CONSTANTS = READ
+```
+The resulting band structure and DOS can be plotted using matplotlib or another graphical package.

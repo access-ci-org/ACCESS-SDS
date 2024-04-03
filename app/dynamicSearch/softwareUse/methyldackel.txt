@@ -1,0 +1,30 @@
+Use Case: MethylDackel is used to process a sorted, indexed bam or cram file (from BSMAP or Bismark) in order to produce per-base methylation metrics. It also produces metrics aggregated by CpG methylation or across the entire genome. 
+
+Code Details and Examples: Code 
+
+Sample Input Files: sorted and indexed bam or cram files.
+
+File Format Required: bam or cram.
+
+Specifications and Detail in Input Files: Inputs must be PCR-duplicated marked reads from a Bisulfite-Seq experiment, in a bam or cram file format which has been sorted and indexed.
+
+Example:
+The input files should look like the following:
+```
+@HD     VN:1.6  SO:coordinate
+@SQ     SN:chr1 LN:249250621
+@SQ     SN:chr2 LN:243199373
+...
+@PG     ID:Bismark     VN:v0.22.1       CL:"bismark --bowtie2 ... "
+```
+
+Command to Run:
+The basic command to run MethylDackel is:
+```bash
+MethylDackel extract -o output_prefix reference_genome.fa input.bam
+```
+Here, 'output_prefix' is the file name for the output files, 'reference_genome.fa' is the reference genome file, and 'input.bam' is the input sorted and indexed bam file.
+
+This command will output multiple files with methylation metrics, including a bedGraph file with per-CpG methylation metrics. Specific options can be used for different requirements.
+
+Note: You will need to replace 'output_prefix', 'reference_genome.fa', and 'input.bam' with your actual file names.

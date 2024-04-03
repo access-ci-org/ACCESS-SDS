@@ -1,0 +1,24 @@
+Use Case: rnaQUAST is a tool for evaluating RNA-Seq assemblies using reference genome and gene database. 
+
+Code details and examples:
+Code: This tool requires multiple input files such as reference genome, gene database file and transcript (assembly) file.
+
+Reference genome file (.fasta format required)
+
+Gene database file (.gff3 or .gff or .gtf format)
+
+Transcript (Assembly) file (.fasta, .fa, .fq, .fastq)
+
+Command to run rnaQUAST:
+
+```
+rnaQUAST.py --transcripts transcripts.fasta --reference reference.fasta --features genes.gff3
+```
+  
+  
+In this command:
+* --transcripts : this is the assembled transcript file; 
+* --reference : this is the reference genome file;
+* --features : this is the genes file in gff3, gff or gtf format.
+
+This command will generate the rnaQUAST output in the current directory with the default output folder name 'rnaQUAST_results'.

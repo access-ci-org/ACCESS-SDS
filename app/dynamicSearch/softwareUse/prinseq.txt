@@ -1,0 +1,24 @@
+Use Case: Use case of prinseq is for rapid pre-filtering of high-throughput sequence data. Prinseq can be used to filter, reformat, or trim genomic and metagenomic sequence data. It enables the user to deal with various sequence formats, filter based on quality scores, trim the sequences based on different criteria, and generate basic statistics about the sequences read or processed.
+
+Code details and examples: Code 
+
+Prinseq is run from the command line. For example, to filter and trim a FASTQ file input.fastq, using a minimum quality score of 20, and only keep sequences of a length of 50 or more, the following line would be used:
+
+```bash
+perl prinseq-lite.pl -fastq input.fastq -min_qual_mean 20 -min_len 50 -out_good output
+```
+
+The input for Prinseq must be in a valid FASTQ or FASTA format. The output will be in the same format as the input.
+
+For this example, the input file (input.fastq) should be in the following format:
+
+```txt
+@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
++
+!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
+```
+
+The sequence identifier starts with a '@', followed by the sequence, a '+' line, and then the quality line, which contains ASCII characters representing the quality scores. The '>' shows the end of one sequence and the start of another one.
+
+The minimum quality score is 20, and the minimum length for sequences to be kept is 50. The output file 'output' will be in the same format as the input file.

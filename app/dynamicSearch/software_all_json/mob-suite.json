@@ -1,0 +1,13 @@
+{
+    "software_name": "MOB-Suite",
+    "comprehensive_overview": "MOB-Suite is a toolset for comparative genomics and metagenomics studies, focusing on the analysis of mobility and mobilome evolution in bacterial genomes.",
+    "core_features": "MOB-Suite offers a range of modules for detecting and analyzing mobile genetic elements (MGEs) such as plasmids, integrative and conjugative elements (ICEs), and prophages. It includes tools for MGE detection, classification, visualization, and comparative genomics.",
+    "general_tags": ["bioinformatics", "computational biology", "genomics", "metagenomics"],
+    "additional_tags": {
+        "research_discipline": "Genomics",
+        "research_area": "Comparative Genomics",
+        "software_class": "Bioinformatics tool",
+        "software_type": "Analysis tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

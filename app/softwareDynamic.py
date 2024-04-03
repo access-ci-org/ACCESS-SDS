@@ -2,6 +2,24 @@ import pandas as pd
 import json
 import os
 
+directory_path = "./dynamicSearch/software_all_json"
+def fix_files(): #used to remove chatgpt fluff from json files
+    for filename_ in os.listdir(directory_path):
+        filename = directory_path+'/'+filename_
+        with open(filename, 'r') as file:
+            text = file.readlines()
+            if (text[0].startswith('`')):
+                del text[0]  # Remove the first line
+                del text[-1]  # Remove the last line
+
+        with open(filename, 'w') as file:  # Open the file in 'w' mode to clear it
+            file.writelines(text)
+#fix_files()
+
+def txt_to_json():
+    for filename in os.listdir(directory_path):        
+        if filename.endswith('.txt'):
+            os.rename(directory_path+'/'+filename, directory_path+'/'+filename[:-4]+'.json')
 
 def extract_key_value(data, key_columns):
     """
@@ -18,7 +36,7 @@ def extract_key_value(data, key_columns):
 
     return extracted_value, data
 
-def read_and_transform_json(file_path):
+def read_and_transform_json(file_path, filename):
     try:
         with open(file_path, 'r') as file:
             original_data = json.load(file)
@@ -40,7 +58,7 @@ def read_and_transform_json(file_path):
         aTags_columns = ['additionalTags', 'additional tags', 'additional_tags']
 
         for key, value in data.items():
-            if key in aTags_columns:
+            if key in aTags_columns and isinstance(value, dict):
                 for inner_key, inner_value in value.items():
                     flattened_data[inner_key] = ', '.join(inner_value) if isinstance(inner_value, list) else inner_value
             elif isinstance(value, list):
@@ -49,21 +67,36 @@ def read_and_transform_json(file_path):
                 flattened_data[key] = value
 
         attributes_columns = {
-            'software name': ['software_name', 'tool', 'software', 'software name', 'softwareName'],
-            'overview': ['comprehensive_overview', 'overview', 'comprehensiveOverview', 'comprehensive overview'],
-            'core features': ['core_features', 'coreFeatures', 'core features'],
-            'tags': ['general_tags', 'general tags', 'generalTags'],
-            'additional tags': ['additionalTags', 'additional tags', 'additional_tags'],
-            'research area': ['research_area', 'research area', 'researchArea'],
-            'research discipline': ['research_discipline', 'research discipline', 'researchDiscipline'],
-            'software type': ['software_type', 'softwareType', 'software type'],
-            'software class': ['software_class', 'softwareClass', 'software class'],
+            'software name': ['software_name', 'tool', 'software', 'softwareName', 'software name'],
+            'overview': ['comprehensive_overview', 'overview', 'comprehensiveOverview', 'comprehensive overview', 'Comprehensive Overview'],
+            'core features': ['core_features', 'coreFeatures', 'core features', 'Core Features'],
+            'tags': ['general_tags', 'general tags', 'generalTags', 'General Tags'],
+            'additional tags': ['additionalTags', 'additional tags', 'additional_tags', 'Additional Tags', 'specific_tags'],
+            'research area': ['research_area', 'research area', 'researchArea', 'Research Area'],
+            'research discipline': ['research_discipline', 'research discipline', 'researchDiscipline', 'discipline', 'Research Discipline', 'specific_discipline', 'research_discipline_tags'],
+            'software type': ['software_type', 'softwareType', 'software type', 'Software Type'],
+            'software class': ['software_class', 'softwareClass', 'software class', 'Software Class'],
+            'research field': ['field_of_science', 'specific_field_of_science', 'specific_field', 'Field of Science', 'field of science', 'technology_field', 'research_field', 'Scientific Field', 'subfield_of_science']
         }
 
         for attribute, columns in attributes_columns.items():
             value, flattened_data = extract_key_value(flattened_data,columns)
+
             if value:
-                flattened_data[attribute]=value
+                if isinstance(value, dict):
+                    flattened_data.update(value)
+                else:
+                    flattened_data[attribute] = value
+
+        for attribute, columns in attributes_columns.items():
+            for column in columns:
+
+                if column in flattened_data.keys() and column is not attribute:
+                    temp = flattened_data[column]
+                    flattened_data[attribute] = flattened_data[attribute] + ', ' + temp
+                    flattened_data.pop(column)
+
+        flattened_data['software name'] = filename[:-5]
 
         return flattened_data
     except json.JSONDecodeError:
@@ -122,13 +155,13 @@ def combine_dfs(df, rpAndSoftware, linksOnly):
     return(merged_df)
 
 
-directory_path = "./dynamicSearch/softwareInfoJSON"
+directory_path = "./dynamicSearch/software_all_json"
 data_dicts=[]
 def make_df():
     for filename in os.listdir(directory_path):
         if filename.endswith('.json'):
             file_path = os.path.join(directory_path, filename)
-            data = read_and_transform_json(file_path)
+            data = read_and_transform_json(file_path, filename)
             if data is not None:
                 data_dicts.append(data)
 
@@ -149,14 +182,13 @@ def make_df():
     final_order = column_order + rest_of_columns
     df = df[final_order]
 
-    empty_columns = ['Unnamed: 5']
+    empty_columns = ['Unnamed: 5', 'additional tags', 'other_tags', 'other']
     
     df.drop(empty_columns,axis=1,inplace=True)
 
     df.rename(columns={'overview':'Description'},inplace=True)
-
+    
     return df
-
 
 df = make_df()
 

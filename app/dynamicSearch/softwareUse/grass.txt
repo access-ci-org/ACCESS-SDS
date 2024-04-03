@@ -1,0 +1,26 @@
+Use Case: Spatial data analysis and geoprocessing in Geographic Information Systems (GIS)
+
+Code details and examples: 
+
+With GRASS GIS, geographic data are typically imported with the `r.in.gdal` or `v.in.ogr` modules. For example, to import a GeoTIFF file:
+
+Code:
+
+    #Import the raster file
+    r.in.gdal input=DEM.tif output=dem
+
+To perform a slope aspect analysis on the imported raster data:
+
+Code:
+
+    # Calculate slope and aspect
+    r.slope.aspect elevation=dem slope=slope aspect=aspect
+
+The output format is auto detected from the output file's extension or can be manually set with the format option. To export the result as a GeoTIFF:
+
+Code:
+
+    # Export the result
+    r.out.gdal input=slope output=slope.tif
+
+To run these commands, GRASS GIS should be opened in a GRASS GIS session with the appropriate location and mapset.

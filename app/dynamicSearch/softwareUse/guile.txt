@@ -1,0 +1,37 @@
+Use Case: Guile is a portable, embeddable Scheme implementation written in C. It provides a machine independent execution platform that can be linked in as a library during execution to add a powerful Scripting language to a program.
+
+Code details and examples: Code
+
+In Guile, typical "Hello, World!" program can be written as:
+
+```scheme
+(display "Hello, World!")
+(newline)
+```
+
+This can be placed in a plain text file (with .scm extension), and run with the following command in a Unix-like operating system:
+
+```bash
+guile hello-world.scm
+```
+
+Specification and Details: Guile uses the Scheme programming language. The input file required is a script file (.scm) containing Scheme code.
+
+Input File Format: The input file is a text-based source code written in the Scheme language. Guile also provides support for loading code in compiled form (.go files), but .scm is the common case for scripts. 
+
+Input File Example: 
+
+Here's a simple file example, hello-world.scm:
+
+```scheme
+(display "Hello, World!")
+(newline)
+```
+
+Command to run them: To run the script file use the following command:
+
+```bash
+guile hello-world.scm
+```
+
+Here, "hello-world.scm" is the filename of the Scheme Script to run. It will display the text: "Hello, World!" on the standard output.

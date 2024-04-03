@@ -1,0 +1,47 @@
+Use Case: Using R and Bioconductor to perform bioinformatics analyses, process high-throughput genomics data, or download and install bioconductor packages.
+
+Code details and examples: 
+
+Code:
+
+```r
+# Loading Bioconductor Manager
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+# Installing needed package
+BiocManager::install("edgeR")
+
+# Loading the package
+library("edgeR")
+
+# Sample data input
+group <- factor(c(1,1,2,2,3,3)) # Three groups with two replicates each
+counts <- matrix(rnbinom(600,size=20,mu=10), 100, 6)  # Random counts for 100 genes and 6 samples
+
+# Setting up the DGEList object which is required for input
+y <- DGEList(counts=counts, group=group)
+
+# Applying normalization
+y <- calcNormFactors(y)
+
+# Design matrix 
+design <- model.matrix(~group)
+
+# Estimating dispersion
+y <- estimateDisp(y, design)
+
+# Applying Exact Test for differences between groups
+et <- exactTest(y, pair=c("1","2"))
+
+# Displaying top tags
+topTags(et)
+```
+
+In this code, we create a sample inputs (group and counts) for a differential expression analysis using edgeR package. The counts are normalized using the `calcNormFactors` function, dispersion is estimated with `estimateDisp` and exactTest is performed.
+
+Running the R script above can be done on a command line (assuming R is installed and the script is saved as script.R) with this command: 
+
+```bash
+Rscript script.R
+```

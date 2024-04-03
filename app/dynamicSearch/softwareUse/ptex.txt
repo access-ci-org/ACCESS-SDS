@@ -1,0 +1,35 @@
+Use Case: The ptex library is a Python wrapper for the LaTex typesetting system. It allows users to write and compile LaTex documents directly from Python scripts or applications, offering a flexible environment for scientific writing, presenting mathematical formulae and structured documents.
+
+Code details and examples:
+Code:
+
+```py
+from pylatex import Document, Section, Subsection, Command
+from pylatex.utils import italic, NoEscape
+
+doc = Document("mydocument")
+
+doc.preamble.append(Command('title', 'Awesome Title'))
+doc.preamble.append(Command('author', 'Anonymous author'))
+doc.preamble.append(Command('date', NoEscape('\\today')))
+doc.append(NoEscape('\\maketitle'))
+
+# Adding sections, subsections and text to the document
+with doc.create(Section('A section')):
+    doc.append('Some regular text and some ')
+    doc.append(italic('italic text. '))
+    doc.append('\nAlso some crazy characters: $&#{}')
+   
+    with doc.create(Subsection('A subsection')):
+        doc.append('Some more text.')
+    
+doc.generate_pdf(clean_tex=False)
+```
+
+The Python script above creates a LaTeX document named "mydocument.tex". In this .tex file, a title, author, and the current date are set. Regular and italic text is added in a section, along with some characters regularly used in LaTeX. A subsection is added with some more text. 
+
+Then, the .tex is compiled into a PDF. Without cleanup, both the .tex and .pdf files will be left in the directory.
+
+Run command: python create_document.py
+
+Please note that the Python environment should have the pylatex installed.

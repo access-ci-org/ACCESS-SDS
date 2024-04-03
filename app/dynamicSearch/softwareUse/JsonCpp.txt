@@ -1,49 +1,43 @@
-JsonCpp is a C++ library used for parsing and formatting JSON data. Below are examples of how to use JsonCpp for reading and writing JSON files:
+Use Case: JsonCpp is a C++ library for reading and writing JSON files. This can be used in the creation of configuration files, web data exchange, data serialization and deserialization, and more. 
 
-Use Case: Read JSON file
-Code details and examples:
+Code details and examples: 
+
+Code example:
+
 ```cpp
-#include <iostream>
-#include <fstream>
 #include "json/json.h"
+#include <iostream>
 
 int main() {
-    Json::Value root;
-    Json::Reader reader;
-    
-    std::ifstream jsonFile("input.json", std::ifstream::binary);
-    bool parsingSuccessful = reader.parse(jsonFile, root);
-    
-    if (parsingSuccessful) {
-        std::cout << "JSON file successfully parsed:\n" << root << std::endl;
-    } else {
-        std::cout << "Failed to parse JSON file\n" << reader.getFormattedErrorMessages() << std::endl;
-    }
-    
-    jsonFile.close();
-    
+    Json::Value data;
+    data["name"] = "John Doe";
+    data["age"] = 30;
+    data["isDeveloper"] = true;
+    data["skills"].append("C++");
+    data["skills"].append("Python");
+
+    Json::StreamWriterBuilder writer;
+    std::cout << Json::writeString(writer, data) << std::endl;
+
     return 0;
 }
 ```
 
-Use Case: Write JSON file
-Code details and examples:
-```cpp
-#include <iostream>
-#include <fstream>
-#include "json/json.h"
+This CPP file creates a JSON object with some data and outputs it. The output will be:
 
-int main() {
-    Json::Value root;
-    root["name"] = "John Doe";
-    root["age"] = 30;
-    
-    std::ofstream jsonFile("output.json");
-    jsonFile << root;
-    jsonFile.close();
-    
-    std::cout << "JSON file successfully written\n";
-    
-    return 0;
+```json
+{
+    "name" : "John Doe",
+    "age" : 30,
+    "isDeveloper" : true,
+    "skills" : [ "C++", "Python" ]
 }
 ```
+
+Run the cpp file with g++:
+```
+g++ main.cpp -ljsoncpp -std=c++11 -o main
+./main
+```
+
+This method uses autolinking to the JsonCpp library `-ljsoncpp` and uses the C++11 standard `-std=c++11`.

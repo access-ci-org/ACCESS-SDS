@@ -1,0 +1,18 @@
+{
+    "software_name": "pybind11",
+    "comprehensive_overview": "pybind11 is a lightweight header-only library that exposes C++ types in Python and vice versa, mainly to create Python bindings for C++ libraries. It provides seamless interoperability between C++11 and Python without the need for boilerplate code or external tools.",
+    "core_features": "1. Efficient inter-process communication between C++ and Python. 2. Direct access to C++ data structures and functions in Python. 3. Simplified interface for exposing C++ code to Python by binding native types, functions, and classes. 4. Support for various Python versions including 2.7 and 3.x.",
+    "general_tags": [
+        "software development",
+        "python library",
+        "C++ integration",
+        "header-only library"
+    ],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Library",
+        "software_type": "Interoperability",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

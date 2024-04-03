@@ -1,37 +1,36 @@
-QuantumATK is a premium software package for atomic-scale modeling of materials, nanostructures, and devices. It is widely used in research areas such as solid-state physics, chemistry, and materials science.
+Use Case: QuantumATK is used for atomic-scale modeling and simulations in materials science and nanotechnology. It provides a complete suite of features for studying both periodic and non-periodic systems, with a particular focus on nanoscale devices.
 
-Use Case: Electronic structure calculation
-Code details and examples:
+Code Details and Examples:
 
-Input file format (example input file for DFT calculation):
-```
-# QuantumATK input file for DFT calculation
-# Define the physical system
-PhysicalSystem(
-    name = "bulk_si",
-    valence_electrons = 8,
-    atomic_coordinates = [[0.0, 0.0, 0.0], [0.25, 0.25, 0.25]],
-    elements = [14, 14],
-    initial_spin_guess = [1.0, 1.0],
-    k_point_sampling = MonkhorstPackGrid(4, 4, 4),
-    k_point_interpolator = Kerker(epsilon=1.0e-6)
+Code: For QuantumATK, the input file can be in the python scripting language. Here is a sample of code to run a script file with the name "MyScript.py" in QuantumATK.
+
+```python
+# -*- coding: utf-8 -*-
+from NL.Computer import *
+from NL.Job import *
+from NL.IO import *
+atom_config = BulkConfiguration(
+    bravais_lattice=FaceCenteredCubic(4.05 * Angstrom),
+    elements=[Aluminum],
+    fractional_coordinates=[(0, 0, 0)]
 )
-
-# Define the calculator (e.g., DFTB, ATK-DFT, etc.)
-Calculator(
-    name = "DFT",
-    method = DFTB(
-        k_point_sampling = {"path" : "automatic"}
-    )
+nonlocal_psp = ProjectorAugmentedWave(
+    kinetic_energy_cutoff=75 * Hartree,
+    electronic_temperature=300 * Kelvin
 )
-
-# Run the calculation
-results = ATKCalculators.DFTB(bulk_si)
-energy = results.total_energy
-print(f"Total energy: {energy} eV")
+calculator = LCAOCalculator(pseudopotential=nonlocal_psp)
+atom_config.setCalculator(calculator)
+bulk_configuration = calculate(atom_config)
+nlsave('Aluminum.py', bulk_configuration)
 ```
 
-Command to run the calculation:
+To run this QuantumATK python script one could use the following command line option:
+
+```bash
+atkpython MyScript.py
 ```
-quantumatk input.in > output.out
-```
+
+Here 'MyScript.py' is python script file which is used as the input file for QuantumATK.
+
+The python script file requires the definition of the atomic configuration, pseudopotential, and calculator setup. The 'nlsave' method is used to save the results in the 'Aluminum.py' file.
+This script runs an LCAO calculation on a bulk Aluminum system, and the output is saved in a file named "Aluminum.py".

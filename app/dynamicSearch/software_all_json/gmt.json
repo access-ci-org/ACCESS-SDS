@@ -1,0 +1,25 @@
+{
+    "software_name": "GMT",
+    "comprehensive_overview": "The Generic Mapping Tools (GMT) is an open-source collection of command-line tools for manipulating geographic and Cartesian data sets (including filtering, trend fitting, gridding, projecting, etc.) and producing PostScript illustrations ranging from simple x-y plots through contour maps to artificially illuminated surfaces and 3-D perspective views. GMT supports over 40 map projections and transformations and comes with support data such as coastlines, rivers, and political boundaries.",
+    "core_features": [
+        "Manipulating geographic and Cartesian data sets",
+        "Producing PostScript illustrations",
+        "Supports over 40 map projections and transformations",
+        "Includes coastlines, rivers, and political boundaries data"
+    ],
+    "general_tags": [
+        "mapping",
+        "geographic data",
+        "cartesian data",
+        "illustration",
+        "PostScript",
+        "map projections"
+    ],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Visualization and Modeling",
+        "software_type": "Command Line Tool",
+        "field_of_science": "Earth and Environmental Sciences"
+    }
+}

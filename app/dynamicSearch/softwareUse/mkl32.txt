@@ -1,34 +1,37 @@
-Use Case: Mathematical Kernel Library for 32-bit (MKL32)
+Use Case: Intel Math Kernel Library (MKL) is a computational package used extensively for high performance computing tasks. It involves utilizing computing resources for tasks requiring mathematical computations like matrix multiplication, Fourier transforms, vector statistics, amongst others.
 
-Code details and examples:
-MKL32 is a highly optimized math library for 32-bit applications. It provides a set of routines for linear algebra, Fourier transforms, vector math, and more.
+Code details and examples: Code
 
-Example of a simple C code using MKL32 to perform matrix-vector multiplication:
+Firstly, let's write a simple C code which uses MKL for matrix multiplication.
+
+Complexity (Input & Output File details): The sample file here is a C program (.c file). It needs a compiler and MKL library installed on the machine. The output will be presented on the console (stdout).
+
 ```c
-#include <stdio.h>
-#include <mkl.h>
+#include "mkl.h"
 
-int main() {
-    double A[4] = {1.0, 2.0, 3.0, 4.0};
-    double x[2] = {1.0, 2.0};
-    double y[2];
-
-    cblas_dgemv(CblasRowMajor, CblasNoTrans, 2, 2, 1.0, A, 2, x, 1, 0.0, y, 1);
-
-    for(int i=0; i<2; i++) {
-        printf("%f\n", y[i]);
-    }
-
-    return 0;
+void main()
+{
+   double A[6] = {1.0, 2.0, 1.0, -3.0, 4.0, -1.0};
+   double B[6] = {1.0, 2.0, 1.0, -3.0, 4.0, -1.0};
+   double C[9] = {.5, .5, .5, .5, .5, .5, .5, .5, .5};
+   cblas_dgemm(CblasRowMajor, CblasNoTrans, CblasTrans, 
+               3, 3, 2, 1, A, 2, B, 2, 2, C, 3);
+   
+   for(int i=0; i<9; i++)
+      printf("%lf ", C[i]);
 }
 ```
 
-Compilation command (assuming MKL32 libraries are properly linked):
-```bash
-gcc -o matrix_vector_multiply matrix_vector_multiply.c -lmkl_rt
+Command to Run: To compile and run the program first compile the C file with intel C compiler and MKL linking as:
+
+```
+icc -o my_program my_program.c -I/opt/intel/mkl/include -L/opt/intel/mkl/lib/intel64 -lmkl_rt -lpthread -lm -ldl
 ```
 
-Run the compiled executable:
-```bash
-./matrix_vector_multiply
+Then, you can run the program as:
+
 ```
+./my_program
+```
+
+This should show the resulting matrix after the matrix multiplication operation is performed.

@@ -1,35 +1,49 @@
-Use Case: PyCUDA is a Python library that allows you to access Nvidia's CUDA parallel computation API from Python.
+Use Case: PyCUDA is a Python library often used in scientific applications to execute simple, low-level GPU computations that require high-performance computation. It essentially provides a user-friendly interface to NVIDIA's CUDA parallel computation API.
 
 Code details and examples:
+
+Code:
+
 ```python
+# Start PyCUDA import process and GPU setup
 import pycuda.autoinit
 import pycuda.driver as drv
-import numpy as np
+import numpy
 
+# Define a simple kernel function in CUDA C
 from pycuda.compiler import SourceModule
-
-# Example kernel function to add two arrays
 mod = SourceModule("""
-    __global__ void add(int *a, int *b, int *c) {
-        int idx = threadIdx.x;
-        c[idx] = a[idx] + b[idx];
+    __global__ void multiply_them(float *dest, float *a, float *b)
+    {
+      const int i = threadIdx.x;
+      dest[i] = a[i] * b[i];
     }
-""")
+    """)
 
-add = mod.get_function("add")
+# Set up our CPU array
+a = numpy.random.randn(400).astype(numpy.float32)
+b = numpy.random.randn(400).astype(numpy.float32)
 
-a = np.array([1, 2, 3, 4]).astype(np.int32)
-b = np.array([10, 20, 30, 40]).astype(np.int32)
-c = np.zeros_like(a)
+# Set up our destination GPU array
+dest = numpy.zeros_like(a)
 
-block_size = 4
-grid_size = 1
+# Obtain function pointer to our 'multiply_them' kernel
+multiply_them = mod.get_function("multiply_them")
 
-add(drv.In(a), drv.In(b), drv.Out(c), block=(block_size, 1, 1), grid=(grid_size, 1))
+# Call the function, specifying grid and block dimensions, and input
+multiply_them(drv.Out(dest), drv.In(a), drv.In(b), block=(400,1,1), grid=(1,1))
 
-print("Result:", c)
+print(dest-a*b)
 ```
 
-Note: The above code snippet demonstrates how to add two arrays using a simple CUDA kernel function.
+The command to run them:
 
-To run the code, you need to have an Nvidia GPU with CUDA installed. You can execute the code in a Python environment where PyCUDA is installed.
+```bash
+python pycuda_sample.py
+```
+
+Specifications and details in input files:
+
+PyCUDA requires input to be in the form of numpy arrays. The numpy arrays a and b are created and filled with random numbers. The numpy array dest is created to hold the result of the multiplication of a and b on the device.
+
+The command block=(400,1,1), grid=(1,1) tells the GPU how to subdivide the data. In this case, array a and b, which are of length 400, are divided into 400 blocks, each of which contains 1 thread. Since each thread corresponds to one element in the array, each block thus has 1 element. For larger problem sizes, one would typically make use of multiple blocks, each of which contains several threads.

@@ -1,10 +1,60 @@
-Use Case: gperf is a perfect hash function generator. It transforms key values into perfect hash functions by generating C code for a hash table. 
+Use Case: gperf is used to generate perfect hash functions. User provides an input file containing keywords as input and gperf produces a C/C++ code that implements a perfect hash function. The produced function takes advantage of the fact that the keywords are known in advance;
 
-Code details and examples:
-```bash
-$ gperf input_file.txt > output_file.c
+Code details and examples: 
+
+Input file format: 
+* % - Start a declaration or a structure.
+* %% - Mark the beginning or end of a list.
+* Struct - Indicate that an additional structure should be output.
+
+Sample Input file (keywords): 
+```
+%{
+#include <string.h>
+%}
+%%
+one, 1
+two, 2
+three, 3
+four, 4
+%%
+int
+keyword_code (register const char *str, register size_t len)
+{
+  static struct keyword_struct wordlist[] =
+  {
+    {"one",    1},
+    {"two",    2},
+    {"three",  3},
+    {"four",   4},
+  };
+
+.
+.
+.
+```
+The file should save as .gperf for example keywords.gperf
+
+Command to compile:
+```sh
+$ gperf < keywords.gperf > keywords.h
 ```
 
-In this command:
-- `input_file.txt` is a text file containing a list of keys.
-- `output_file.c` will contain the generated C code for the hash table.
+The generated C/C++ code "keywords.h" can then be used in your application to get perfect hashing.
+
+C++ code snippet:
+
+```cpp
+#include "keywords.h"
+
+int main() {
+    keyword_struct *result = in_word_set("one", strlen("one"));
+    if (result) {
+        std::cout << "Keyword one found, code is: " << result->code << "\n";
+    } else {
+        std::cout << "Keyword not found.\n";
+    }
+
+    return 0;
+}
+```

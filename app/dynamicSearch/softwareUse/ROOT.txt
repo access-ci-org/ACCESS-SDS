@@ -1,32 +1,27 @@
-Use Case: ROOT is a data analysis framework widely used in the field of high-energy physics.
+Use Case: ROOT is a scientific software framework that provides all functionalities needed to deal with big data processing, statistical analysis, visualization and storage. It's used in high energy physics and other natural sciences. 
 
-Code details and examples:
-```cpp
-#include <iostream>
-#include "TFile.h"
-#include "TH1F.h"
+Input File: A data file, say myfile.root, to be analyzed
 
-void createROOTHistogram() {
-    TFile *file = new TFile("output.root", "RECREATE");
-    TH1F *histogram = new TH1F("histogram", "Example ROOT histogram", 100, 0, 10);
+Code Details and Examples:
 
-    for (int i = 0; i < 1000; i++) {
-        double randNum = gRandom->Uniform(0, 10);
-        histogram->Fill(randNum);
-    }
+Code: 
 
-    histogram->Write();
-    file->Close();
+```
+TFile *hfile = new TFile("myfile.root");
+TTree *tree = (TTree*)hfile->Get("T");
+Int_t nentries = (Int_t)tree->GetEntries();
+
+for (Int_t i=0; i<nentries; i++) {
+  tree->GetEntry(i);
+  //analysis code here
 }
 
-int main() {
-    createROOTHistogram();
-    return 0;
-}
+hfile->Close();
 ```
 
-To compile and run the code:
-```bash
-g++ -o createROOTHistogram createROOTHistogram.cpp $(root-config --cflags --libs)
-./createROOTHistogram
+Command to Run: ROOT scripts can be executed with the root command followed by the script name:
+
 ```
+root script.C
+```
+In the above example, the code is reading a ROOT file containing a TTree 'T' and looping over its entries. The user should replace "//analysis code here" with code to actually do something with the data contained in the TTree. Each entry in a TTree corresponds to a "row" or "event" in the data. Each event contains several variables, which could include things like particle energies and momenta, for example. How the user gets and uses these variables depends on the structure of the TTree, which is normally defined when the TTree is first created.

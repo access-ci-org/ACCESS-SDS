@@ -1,22 +1,75 @@
-Apache Portable Runtime (APR) library which provides a predictable and consistent interface to underlying platform-specific implementations. 
+Use Case: The Apache Portable Runtime (APR) is a software library which provides a predictable and consistent interface to underlying platform-specific implementations. It is used to create and maintain software systems, achieving high productivity for both small and large projects.
 
-Use Case: Use Apache Portable Runtime for developing C/C++ applications that are intended to be portable across different platforms.
+Code details and examples: 
 
-Code details and examples:
+Code Example 1: Basic APR file open and close
+
+#Code snippet:
 ```c
-#include <stdio.h>
-#include <apr-1/apr_general.h>
+#include <apr_general.h>
+#include <apr_file_io.h>
 
-int main() {
-    apr_initialize();
-    
-    // Your code here
-    
-    apr_terminate();
-    return 0;
+int main(void) {
+   apr_pool_t *pool;
+   apr_file_t *file;
+   apr_status_t status;
+
+   // Initialize APR library
+   apr_initialize();
+
+   // Create memory pool
+   apr_pool_create(&pool, NULL);
+
+   // Open a file
+   status = apr_file_open(&file, "myfile.txt", APR_FOPEN_CREATE | APR_FOPEN_WRITE, APR_OS_DEFAULT, pool);
+
+   if (status == APR_SUCCESS) { 
+      // Successfully opened the file
+      // Close the file
+      apr_file_close(file);
+   }
+
+   // Destroy the pool and terminate the APR
+   apr_pool_destroy(pool);
+   apr_terminate();
+
+   return 0;
 }
 ```
+Command to compile and run: 
+```bash
+gcc -o test test.c -lapr-1
+./test
+```
 
-For sample input files and further details specific to the application being developed, you would need to refer to the documentation and examples provided by the Apache Portable Runtime library.
+Example 2: Code snippet to generate a random number:
 
-Note: The above code is just a simple example to demonstrate the initialization and termination of the APR library.
+```c
+#include <apr_general.h>
+#include <apr_random.h>
+
+int main(void) {
+   apr_pool_t *p;
+   apr_random_t *r;
+   unsigned char buf[4];
+
+   apr_initialize();
+   apr_pool_create(&p, NULL);
+
+   r = apr_random_standard_new(p);
+   apr_random_insecure_bytes(r, buf, sizeof buf);
+
+   apr_pool_destroy(p);
+   apr_terminate();
+
+   return 0;
+}
+```
+Command to compile and run: 
+
+```bash
+gcc -o test test.c -lapr-1
+./test
+```
+
+In both the cases, there are no specific input files. The code snippets interface directly with the system resources.

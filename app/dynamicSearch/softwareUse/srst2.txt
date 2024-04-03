@@ -1,0 +1,22 @@
+Use Case: Use srst2 for determining antibiotic resistance genes in bacterial sequences, as well as for multi locus sequence typing (MLST).
+
+Code details and Examples: Code
+
+To use srst2, you'll require FastQ files as your input and databases of reference sequences.
+
+Input Files:
+1) Paired end FastQ files: `reads_1.fastq.gz` and `reads_2.fastq.gz`
+2) Resistance database file in fasta format: `ARGannot_r2.fasta`
+3) MLST loci in fasta format: `salm_mlst.fasta`
+4) MLST scheme definition file (tab delimited): `senterica.txt`
+
+Sample srst2 command:
+```
+srst2 --input_pe reads_1.fastq.gz reads_2.fastq.gz --output results --log --gene_db ARGannot_r2.fasta --mlst_db salm_mlst.fasta --mlst_definitions senterica.txt --mlst_delimiter '_'
+```
+
+The `--input_pe` flag specify the input paired end reads (FastQ files), `--output` is for the output results,  `--log` generates the log file, `--gene_db` defines the resistance database fasta, `--mlst_db` specifies fasta file for multi-locus sequence typing  , `--mlst_definitions` is tab delimited file for gene definitions, and `--mlst_delimiter` is delimiter in gene names.
+
+Output File: results.[function].txt, where function is either 'genes' or 'mlst'. The 'genes' output file contains details about the antibiotic resistance genes identified. The 'mlst' file holds details about the multi locus sequence typing.
+
+Note: The command examples provided here are basic and may require modifications based on your specific use case. Always refer to the official documentation or help command (`srst2 -h`) for more detailed guidance.

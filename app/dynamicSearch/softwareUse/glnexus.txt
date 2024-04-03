@@ -1,0 +1,31 @@
+Use Case: GLnexus is used for joint variant calling, where data from multiple sequencing runs are processed together to accurately detect genetic variants. Its applications are extensive, involving population-scale genomic studies, disease association studies, and personalized medicine research. 
+
+Code Details and Examples: Code
+
+The GLnexus command-line utility reads datasets in htslib-compatible genomic format (BAM, CRAM, VCF etc.) It also expects an input YAML file that describes the datasets. Here is an example of input YAML file:
+
+```
+project:
+  name: Test Project
+datasets:
+- name: Sample 1
+  genotypes: /path/to/dataset/sample1.genotypes.bcf
+  alignments: /path/to/dataset/sample1.alignments.bam
+- name: Sample 2
+  genotypes: /path/to/dataset/sample2.genotypes.bcf
+  alignments: /path/to/dataset/sample2.alignments.bam
+- name: Sample 3
+  genotypes: /path/to/dataset/sample3.genotypes.bcf
+  alignments: /path/to/dataset/sample3.alignments.bam
+```
+
+The GLnexus command-line utility can be invoked with the following basic command:
+
+`GLnexus_cli --config DeepVariant_unfiltered input.yaml output.bcf`
+
+Where:
+- DeepVariant_unfiltered is a built-in configuration suitable for "gVCF" datasets produced by Google's DeepVariant variant caller without '--make_examples_run_with_buffer' option.
+- input.yaml is the input datasets' descriptors file.
+- output.bcf is the output file in BCF format that will contain the joint-called variants.
+
+Note: The specific paths to the BAM/CRAM and BCF files in `input.yaml` will need to be replaced with the appropriate paths pointing to the actual input files on the user's local filesystem or network, and that the file paths and names are case-sensitive.

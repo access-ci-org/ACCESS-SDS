@@ -1,0 +1,31 @@
+Use Case: Strique is a bioinformatics software used for analyzing the striation pattern in striated muscle cells in microscopical images.
+
+Code details and examples: Code
+
+Input file format: A grayscale or color image in a standard format like .jpg, .png etc. 
+
+Input file specifications: The image should be of striated muscle cells under a microscope. 
+
+Example input file: 'muscle.jpg'
+
+Code Snippet to run the Software:
+
+```
+# Importing the required modules
+from strique.code.strique import Strique
+
+# Creating the Strique object
+s = Strique("path/to/muscle.jpg")
+
+# Executing the analyze function
+s.analyze()
+
+# Display results
+print(s.report)
+```
+The command to run the software depends on the context in which the code is being executed. A command line prompt might look like this:
+
+```bash
+python3 script_using_strique.py
+```
+Where `script_using_strique.py` is a python script using strique for analysis as shown above. The path to the image analyzed ('path/to/muscle.jpg') is expected to be replaced with the actual path to the image file.

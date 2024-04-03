@@ -1,0 +1,27 @@
+Use Case: The DFT-D3 program is used for calculating Grimme's dispersion correction for Density Functional Theory(DFT). It can be used for the accurate assessment of the London dispersion interactions in conjunction with standard DFT methods as needed in computational chemistry. 
+
+Code Details and Examples: 
+
+Code: 
+
+Typically, the input file for DFT-D3 contains only a standard XYZ-format geometry section. 
+
+Example input file (for a water molecule):
+
+```bash
+3
+H2O example
+O   0.0000000  0.0000000  0.0000000
+H   0.0000000  0.7586020  0.5042840
+H   0.0000000 -0.7586020  0.5042840
+```
+
+The DFT-D3 program is typically run as a post-processing step to a normal DFT calculation. The required specifications are the XYZ coordinates of the molecular structure which is usually the output of an initial DFT calculation. 
+
+Code to run it, assuming the input file is named input.xyz and the executable is in the system PATH:
+
+```bash
+dftd3 input.xyz -func b3lyp 
+```
+
+In this example, we're using the B3LYP function for the calculation. The calculations depend on the system and the specifications given, -func is the functional we're applying here. This command will calculate the dispersion corrections for the given molecular system.

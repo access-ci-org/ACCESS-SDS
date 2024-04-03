@@ -1,18 +1,25 @@
-Use Case: Convert a text file from DOS format to UNIX format.
-Code details and examples: 
-Input file (dos_file.txt)
+Use Case: Use dos2unix to convert a text file from DOS (CR/LF) format to Unix (LF) format.
+
+Code details and examples: Code 
+
+Sample Input File:
+A text file in DOS format. In DOS format, every line ends with a Carriage Return (CR) and a Line Feed (LF).
+
+For example, a file named "example_dos.txt" containing these lines:
 ```
-Hello world\r\n
-This is a test\r\n
+Hello, World!
+This is a sample file in DOS format.
 ```
 
-Command to convert DOS to UNIX:
+Command to run dos2unix:
 ```
-dos2unix dos_file.txt unix_file.txt
+dos2unix example_dos.txt example_unix.txt
 ```
 
-Output file (unix_file.txt)
-```
-Hello world\n
-This is a test\n
-```
+This command takes in the file "example_dos.txt", converts it to Unix format, and saves the result to "example_unix.txt". 
+
+Note:
+- dos2unix does not require specific data types or format specifications beyond the need for the input to be in DOS format. 
+- This command does not require any code snippets to run. 
+- The input file should be in text format (e.g., .txt, .csv, .log, etc.). Non-text files may not convert properly.
+- In Unix format, each line ends with just a Line Feed (LF).

@@ -1,27 +1,20 @@
-Use Case: Securely transfer large files between HPC systems.
+Use Case: Secure file transfer over a network using a client/server model;
 
 Code details and examples: 
-bbftp is a tool that enables secure and efficient file transfer between HPC systems. Below is an example of how to use bbftp to transfer a file from a source to a destination:
 
-1. Prepare a configuration file (`bbftprc`) with the following content:
-```plaintext
-[bbftp]
-srcaddr = source_address
-srcport = 10000
-srcrlg = source_path
-[bbftp]
-dstaddr = destination_address
-dstport = 10000
+For using bbftp, you would typically need the software installed on both the client and server side. Here is an example on how you can use the tool for transferring files from a client to a server:
+
+Command: 
+In order to send a file from the client you would need to issue the following command:
+
 ```
-
-2. Start the bbftpd server on the destination machine:
-```bash
-bbftpd
+bbftp -u username -p password -i file_to_send server_address
 ```
+Where:
 
-3. Transfer the file using bbftp from the source machine:
-```bash
-bbftp -s -m -e bbftprc
-```
+- "username" is the name of the user on the server
+- "password" is the user's password on the server
+- "file_to_send" is the file you want to send
+- "server_address" is the address of the server.
 
-This will transfer the file specified in the source path to the destination address.
+There are no specified input files or formats necessary, you can send any file over the network using this software.

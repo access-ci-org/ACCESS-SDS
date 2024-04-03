@@ -1,42 +1,54 @@
-Use Case: Generate a command line parser in C/C++.
+Use Case: Gengetopt is a tool to write command line option parsing code for C programs. It assists in creating a skeleton main.c containing code for parsing and validating command line options, which can then be filled in by the developer. 
 
-Code details and examples:
-```c
-// sample.ggo
-package "sample"
+Code details and examples: 
+
+Code: 
+ cmd-line.ggo file:
+
+```
 version "1.0"
-purpose "Example of gengetopt usage"
+package "demonstration"
 
-option "verbose"      v "Be verbose"
-option "output-file"  o "Name of the output file" string
+option "help" h "Display this help and exit" flag off
+option "output" o "Output to this file" string required
+option "verbosity" v "Verbosity level" int default="0"
+option "name" n "Insert a name" string default="Gengetopt"
+option "include" I "Additional include directory" string array
+```
 
-// After compiling the gengetopt file
-// Run the following command to generate the C code
-gengetopt --input=sample.ggo
+Command to generate C files:
 
-// Include the generated header file in your C/C++ code
-#include "sample_cmdline.h"
+```
+gengetopt < cmd-line.ggo
+```
 
-int main(int argc, char** argv) {
-    struct cmdline_parser_params params;
-    struct gengetopt_args_info args_info;
+This will create cmdline.c and cmdline.h, which can be included in your C project.
 
-    params.initialize = 1;
-    if (cmdline_parser_ext(argc, argv, &args_info, &params) != 0) {
-        exit(1);
-    }
+Then, in your C code:
 
-    if (args_info.verbose_flag) {
-        printf("Verbose mode enabled.\n");
-    }
+```
+#include <stdio.h>
+#include "cmdline.h"
 
-    if (args_info.output_file_given) {
-        printf("Output file specified: %s\n", args_info.output_file_arg);
-    }
+int main (int argc, char **argv) {
+  struct gengetopt_args_info args_info;
 
-    cmdline_parser_free(&args_info);
-    return 0;
+  if (cmdline_parser (argc, argv, &args_info) != 0)
+    exit(1) ;
+
+  printf ("Provide name is %s\n", args_info.name_arg);
+  printf ("Verbosity level is %d\n", args_info.verbosity_arg);
+
+  for (int i = 0; i < args_info.include_given; ++i)
+    printf ("Include path %d is %s\n", i, args_info.include_arg[i]);
+
+  cmdline_parser_free (&args_info);
 }
 ```
 
-To run the compiled code, use the appropriate compiler command for your system.
+To compile and run the program:
+
+```
+gcc main.c cmdline.c -o main
+./main --name "Gengetopt" --verbosity 5
+```

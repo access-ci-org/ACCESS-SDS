@@ -1,0 +1,32 @@
+Use Case: 
+Use ngs-bits for quality control, variant calling, and variant annotation for Next-generation sequencing data.
+
+Code details and examples:
+
+Code:
+
+1. Sample input file: Say we have a Fastq file as an input.
+   File Format: Fastq file (genomic reads)
+   Filename: sample1.fq
+
+2. Command to convert Fastq to Bam:
+   `Fastq2Bam -in sample1.fq -out sample1.bam`
+   
+   This generates a Bam file from Fastq file.
+
+3. Command to perform Quality Control:
+   `BamQC -in sample1.bam -out qc_short.html`
+
+   This generates a quality control (QC) report in HTML format.
+
+4. Command to perform Variant Calling:
+   `BamToFastq -in sample1.bam -out sample1.fq`
+
+   This generates a Fastq file from the Bam file, to perform variant calling subsequently.
+
+5. Command to perform Variant annotation:
+   `VariantAnnotate -in variant.vcf -out variant_annotated.vcf`
+
+   This generates an annotated variant file from the variant call format (vcf) file.
+
+Note: The commands and usage heavily depend on the actual data files and tools available.

@@ -1,20 +1,58 @@
-Use Case: Single-cell RNA-seq analysis with Velocyto
+Use Case: Use Velocyto to analyze spliced and unspliced mRNA in single-cell RNA-Seq data.
 
-Code details and examples:
-Velocyto is a tool for the analysis of single-cell RNA sequencing data. It can be used to estimate RNA velocity, which measures the rate of change of gene expression levels at the single-cell level. Velocyto requires processed single-cell RNA-sequencing data as input to analyze the spliced and unspliced reads.
+Code Details and Examples:
 
-Example input files format:
-- Velocyto requires a BAM file containing mapped reads, a GTF file containing genomic annotations, and a gene whitelist file.
+Code:
 
-Code example to run Velocyto:
+Step 1: Prepare an annotation file (GTF format) and Barcoded .bam file
+
+GTF file format example:
+
 ```
-velocyto run10x -b path/to/possorted_genome_bam.bam -m path/to/genes.gtf -o output_dir --samtools-threads 8
+chr1	HAVANA	gene	36869	40237	.	-	.	gene_id "ENSG00000280131.1"; gene_type "lncRNA"; gene_name "AC074212.1"; level 2; hgnc_id "HGNC:54599"; tag "basic";
+chr1	HAVANA	transcript	36869	40237	.	-	.	gene_id "ENSG00000280131.1"; transcript_id "ENST00000624542.1"; gene_type "lncRNA"; gene_name "AC074212.1"; transcript_type "lncRNA"; transcript_name "AC074212.1-201"; level 2; transcript_support_level "NA"; tag "basic"; havana_gene "OTTHUMG00000194707.1"; havana_transcript "OTTHUMT00000499821.1";
 ```
-In this command:
-- `run10x` specifies the type of data being analyzed (10x Genomics data).
-- `-b` specifies the path to the BAM file.
-- `-m` specifies the path to the GTF file.
-- `-o` specifies the output directory.
-- `--samtools-threads` specifies the number of threads to use for running samtools.
 
-Note: The actual command may vary based on the type of single-cell RNA-seq data and the file formats used. Be sure to check the Velocyto documentation for more detailed instructions and options.
+.bam file metadata example:
+
+```
+@SQ	SN:1	LN:195471971
+@SQ	SN:2	LN:182113224
+@SQ	SN:3	LN:160039680
+@RG	ID:CNTRL5.2	SM:CNTRL5
+@PG	ID:STAR	PN:STAR	VN:2.5.2a	CL:STAR   --runThreadN 1   --genomeDir ./STAR_genome_index   --readFilesIn CNTRL5_2.fastq   --outFileNamePrefix ./STAR/CNTRL5.2.   --outSAMtype BAM   SortedByCoordinate
+```
+
+Step 2: Run velocyto commands
+
+1. Run the velocyto run command with the .bam file and the .gtf file. 
+
+```bash
+velocyto run -b barcodes.tsv -o ./velocyto_out -m repeat_mask.gtf possorted_genome_bam.bam hg19.gtf
+```
+
+2. Run the velocyto analysis in Python with the output .loom file.
+
+```python
+import velocyto as vcy
+vlm = vcy.VelocytoLoom("my_counts.loom")
+vlm.normalize("S", size=True, log=True)
+vlm.perform_PCA()
+```
+
+Sample input: 
+
+- A .gtf (Gene Transfer Format) file from Ensembl, UCSC, etc. 
+- A sorted .bam file with cell barcodes.
+
+Format Required:
+
+- .gtf file with gene information
+- Sorted .bam file with cell barcodes
+
+Specifications and Details in Input Files:
+
+- .gtf file needs to have the current annotations for the genome used in the RNA-Seq experiment.
+- .bam file needs to be sorted and have the barcodes of all the cells used in the experiment. These are usually taken from the Cell Ranger output. 
+
+Command to Run: first the bash command, then the python analysis.

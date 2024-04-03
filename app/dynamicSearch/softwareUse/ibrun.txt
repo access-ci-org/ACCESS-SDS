@@ -1,48 +1,59 @@
-Use Case: Job submission on HPC cluster using ibrun
+Use Case: ibrun is a wrapper script typically used on high performance computing (HPC) environments to run parallel programs which use MPI (Message Passing Interface) for communication between processes. Here, an MPI program written in C is profiled.
 
 Code details and examples:
 
-`ibrun` is a job launcher typically used on HPC clusters to distribute parallel jobs across multiple nodes. The specific usage of `ibrun` can vary depending on the HPC system you are using, as it is part of the Intel MPI library.
+Code:
 
-Here is an example of running a simple MPI program using `ibrun`:
+1. Create a sample MPI program written in C, say hello_world_mpi.c as follows:
 
-Sample MPI program (hello_mpi.c):
-```c
-#include <stdio.h>
-#include <mpi.h>
+   ```c
+   #include <mpi.h>
+   #include <stdio.h>
 
-int main(int argc, char** argv) {
-    int rank, size;
-    
-    MPI_Init(&argc, &argv);
-    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-    MPI_Comm_size(MPI_COMM_WORLD, &size);
-    
-    printf("Hello from rank %d out of %d processes\n", rank, size);
-    
-    MPI_Finalize();
-    
-    return 0;
-}
-```
+   int main(int argc, char* argv[]) {
+       MPI_Init(NULL, NULL);
 
-Compile the MPI program:
-```bash
-mpicc hello_mpi.c -o hello_mpi
-```
+       int world_size;
+       MPI_Comm_size(MPI_COMM_WORLD, &world_size);
 
-Sample input file (input.txt):
-```
-1 2 3
-4 5 6
-7 8 9
-```
+       int world_rank;
+       MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
 
-Submit the MPI job using `ibrun`:
-```bash
-ibrun ./hello_mpi
-```
+       printf("Hello world from processor %d out of %d processors\n", world_rank, world_size);
 
-This will execute the MPI program across multiple nodes specified by the job scheduler on the HPC system.
+       MPI_Finalize();
+       return 0;
+   }
+   ```
+   
+   This sample code basically lets each processor print its rank and the total number of processors.
 
-Please note that the exact command and options for `ibrun` may vary depending on the specific MPI library and HPC system being used.
+2. Next, compile the mpi C program using the mpicc compiler as follows:
+
+   ```bash
+   mpicc -o hello_world_mpi hello_world_mpi.c
+   ```
+
+   This command compiles the code and generates an executable named `hello_world_mpi`.
+
+3. Create a job script, say job.sh which looks like the following:
+
+   ```bash
+   #!/bin/bash
+   #SBATCH -n 64
+   #SBATCH -o output.txt
+
+   ibrun ./hello_world_mpi
+   ```
+
+   This script requests 64 processors (-n 64) and writes the standard output to output.txt (-o output.txt). Ibun runs the hello_world_mpi executable.
+
+4. Then submit the job to the scheduler using sbatch command:
+
+   ```bash
+   sbatch job.sh
+   ```
+
+   This command schedules the job for execution and returns a job id.
+
+   Note that the job submission and ibrun command might differ based on the specific HPC environment and MPI version. Please refer to the specific documentations if error occurs.

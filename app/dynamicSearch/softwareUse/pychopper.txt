@@ -1,0 +1,29 @@
+Use Case: Pychopper is used for identifying and removing adaptors from Oxford Nanopore reads. Specifically, it excises full length cDNAs in nanopore direct RNA or cDNA sequencing data sets. This includes identifying the orientation of reads, whether they are full length, or contain 5' or 3' primer sequence.
+
+Code details and examples: Code
+
+Typically Pychopper takes as input a FASTA or FASTQ file:
+
+```
+@SRR1583722.1 1 length=300
+NAGTTCGTCGGCAGCGTCAGTGTGTGGAATT...
+```
+
+The primary function of Pychopper is executed with the `cdna_classifier.py` command. Here is the general command line syntax for Pychopper:
+
+Command:
+
+```
+cdna_classifier.py -b output_report_barcodes.tsv -r output_report.tsv -u unclassified_output.fasta -w rescue_debug.fasta input.fasta output.fasta
+```
+
+In the above command:
+     
+- `input.fasta` is the input file being processed
+- `output.fasta` is the classified sequences
+- `output_report.tsv` is full report on how sequences were classified
+- `output_report_barcodes.tsv` is the barcode extraction report
+- `unclassified_output.fasta` are sequences that could not be classified
+- `rescue_debug.fasta` is the debug information for rescue process
+
+The output is another FASTQ/FASTA file with the reads oriented 5' to 3' direction irrespective of the original orientation of sequences in the input file.

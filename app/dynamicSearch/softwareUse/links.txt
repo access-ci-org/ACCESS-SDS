@@ -1,0 +1,15 @@
+Use Case: Links is a HPC software, a text-based web browser, used primarily in the console or terminal. Ideal for fast browsing sans images and HTML.
+
+Code details and examples:
+
+Code: To visit a particular website in Links web browser, the following command is used in the terminal.
+
+```bash
+links www.google.com
+```
+
+Input: The only input Links need is the website address. There is no need of an input file. 
+
+Output: The output will be a text-based version of the website you have inputted.
+
+Additional details: Links also has the feature to display tables, frames, downloads on background, and use HTTP/1.1 and HTTP proxy. Images can be displayed in graphics mode.

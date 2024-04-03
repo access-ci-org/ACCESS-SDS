@@ -1,0 +1,13 @@
+{
+  "software_name": "nvcomp",
+  "comprehensive_overview": "nvcomp is a CUDA library providing GPU-accelerated compression and decompression algorithms. It aims to provide fast and efficient data compression techniques for GPU computing.",
+  "core_features": "1. GPU-accelerated compression and decompression algorithms.\n2. Support for multiple compression formats such as LZ4, Zstandard, and Snappy.\n3. Optimized for NVIDIA GPUs to leverage parallel processing power.\n4. High performance and low latency compression and decompression.",
+  "general_tags": ["compression", "GPU-accelerated", "CUDA", "data processing"],
+  "additional_tags": {
+    "research_discipline": "Computer Science",
+    "research_area": "Applied Computer Science",
+    "software_class": "Library",
+    "software_type": "Compression",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

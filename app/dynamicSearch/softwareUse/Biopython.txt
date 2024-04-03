@@ -1,30 +1,49 @@
-Use Case: Biopython
+Use Case: Finding motifs in DNA sequences using the Bio motif module in BioPython. This could help in identifying reoccurring patterns in the sequences and possibly identifying certain functions of the sequence.
+
+Specification: 
+1. Input DNA sequences are required in FASTA format. 
+2. The motif we are looking for. 
+
 Code details and examples:
-Biopython is a set of freely available tools for biological computation written in Python. It provides functionalities for DNA and protein sequence analysis, biological database handling, and various bioinformatics tasks.
 
-Example Code:
+Code:
 ```python
+from Bio import motifs
 from Bio.Seq import Seq
+from Bio.Alphabet import IUPAC
 
-# Creating a DNA sequence
-my_dna = Seq("AGTACACTGGT")
+instances = [Seq("TACAA"), Seq("TACGA"), Seq("TACAA")]
 
-# Transcribing DNA to RNA
-my_rna = my_dna.transcribe()
-print(my_rna)
+m = motifs.create(instances)
 
-# Translating RNA to protein
-my_protein = my_rna.translate()
-print(my_protein)
+print(m.counts)
+
+motif_length = len("TAC")
+
+for pos, seq in m.instances.search(Seq('ATCAATACAAGGTCCTATCACGATC', IUPAC.unambiguous_dna)):
+    print("%i : %s" % (pos, seq))
 ```
 
-Example input file (input.txt):
-```
->sequence1
-AGTACACTGGT
+Command to run: `python motif_search.py`
+
+Use Case: Multiple Sequence Alignment using Bio.AlignIO module in BioPython. Useful in studying sequence conservation across species, finding regions of importance, etc.
+
+Specification:
+1. Multi-Fasta File containing protein or nucleotide sequences for alignment. 
+
+Code details and examples:
+
+Code:
+```python
+from Bio import AlignIO
+
+alignment = AlignIO.read("example.fasta", "fasta")
+print("Alignment length %i" % alignment.get_alignment_length())
+
+for record in alignment:
+    print(record.seq + " " + record.id)
 ```
 
-Command to run:
-```
-python my_script.py < input.txt
-```
+Command to run: `python alignment.py` 
+
+Note: Assume "example.fasta" and "alignment.py" are in the same directory. Replace "example.fasta" and "alignment.py" with correct file paths if different.

@@ -1,0 +1,53 @@
+Use Case: CGI-1;
+CGNS is used for storing and retrieving computational fluid dynamics (CFD) data. It facilitates the exchange of data between sites and applications, and enhances the preservation and readability of aerodynamics data.
+
+Code details and examples: Code;
+The CGNS system provides a collection of sample codes that demonstrate the use of various features of the system. Here is an example of creating a basic CGNS file using the C API:
+
+```
+#include "cgnslib.h"
+#define SIZE 3  /* dimension of physical array */
+int main()
+{
+    int i, j, k, index_file, index_base;
+    int index_zone, index_coord;
+    double x[SIZE][SIZE][SIZE], y[SIZE][SIZE][SIZE], z[SIZE][SIZE][SIZE];
+    /* CREATE X, Y, AND Z COORDINATES FOR A SIMPLE 3x3x3 GRID */
+    for (k=0; k<SIZE; k++)
+    {
+        for (j=0; j<SIZE; j++)
+        {
+            for (i=0; i<SIZE; i++)
+            {
+                x[k][j][i]=(double)i;
+                y[k][j][i]=(double)j;
+                z[k][j][i]=(double)k;
+            }
+        }
+    }
+    /* CREATE CGNS FILE FOR 3-D STRUCTURED LGRID TEST */
+    cg_open("grid3d.cgns",CG_MODE_WRITE,&index_file);
+    /* CREATE BASE (TOP NODE OF CGNS BINARY TREE) */
+    cg_base_write(index_file,"Base",3,3,&index_base);
+    /* WRITE GRID COORDINATES (NO USER INTERFACE CONTROL STRINGS) */
+    cg_zone_write(index_file,index_base,"Zone",*
+                  (int[3][3])SIZE,Structured,&index_zone);
+    cg_coord_write(index_file,index_base,index_zone,RealDouble,
+                   "CoordinateX",&x[0][0][0],&index_coord);
+    cg_coord_write(index_file,index_base,index_zone,RealDouble,
+                   "CoordinateY",&y[0][0][0],&index_coord);
+    cg_coord_write(index_file,index_base,index_zone,RealDouble,
+                   "CoordinateZ",&z[0][0][0],&index_coord);
+    /* CLOSE CGNS FILE */
+    cg_close(index_file);
+    return 0;
+}
+```
+
+This code will create a CGNS file named "grid3d.cgns" with a 3-dimensional structured grid of size 3x3x3. The grid points are (x,y,z) with x,y,z from 0 to 2. The command to run will be:
+
+```gcc -o write_grid3d write_grid3d.c -lcgns```
+
+To execute the file:
+
+```./write_grid3d```

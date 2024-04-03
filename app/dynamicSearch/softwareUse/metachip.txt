@@ -1,0 +1,23 @@
+Use Case: Metachip is a powerful tool used for meta-analysis of gene-based rare variants.
+
+Code details and examples: Code
+
+For Metachip, the main input file is in association result format. The association file is a space/comma/tab delimited text file.
+
+Here's an example of the format required:
+
+```
+CHROM AMB RAF INFO  EFFECT_STDERR  BETA    P
+16    1   0.00    10.78   0.0012  -0.01   4.52E-28
+2     1   0.00    2.45    0.0008  -0.01   4.56E-29
+9     1   0.00    1.93    0.0011  -0.02   9.11E-29
+3     1   0.00    3.25    0.0007  -0.01   1.22E-27
+```
+
+In this case, CHROM refers to Chromosome, AMB is the ambiguous indictor, RAF refers to minor allele frequency, INFO is the value of imputation info, EFFECT is the variant effect size, STDERR is the standard error of effect.
+
+The command to run the analysis is relatively simple:
+
+`MetaCHIP.py --meta --assoc example.assoc --covar example.covar --out example.out`
+
+In this example, `example.assoc` is the association result file name, `example.covar` would be the name of your covariate file, and `example.out` would be your desired output file name. The `--meta` flag indicates you want to conduct a meta-analysis.

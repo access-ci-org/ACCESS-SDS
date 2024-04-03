@@ -1,19 +1,47 @@
-LSMS (Locally Self-consistent Multiple Scattering) is an electronic structure software package that uses the Korringa-Kohn-Rostoker (KKR) multiple scattering theory to calculate the electronic structure of materials. It is commonly used in the field of computational materials science.
+Use Case: Use LSMS (Locally Self-consistent Multiple Scattering) for running large-scale electronic structure simulations based on density functional theory, especially designed for materials studies.
 
-Use Case: Electronic structure calculation with LSMS
-Code details and examples:
-Sample input file (input.in):
+Code details and examples: Code
+
+Sample Input File – LSMS:
+To start with, create a file named `ctrl_lsms`.
+
+Content example:
+
 ```
-LSMS Calculation
-30 30 30   ! Grid dimensions
-1 1 1      ! Lattice constant
-Fe          ! Element
-1           ! Atom type
-0.0001      ! Energy convergence criterion
+% const
+  alat=7.50
+  ecut=2.0
+%
+
+% set
+  ngrid=1
+  nx=1
+  ny=1
+  nz=2
+%  
+
+% include
+  family=’alCu’
+%
+
+% set
+  family = fcc001r10.inp
+  evec = 0.2 0.1 0.3
+%
+
+% species
+  z=13.  al=1. vtot=’al.vtotal’
+  z=29.  cu=1. vtot=’cu.vtotal’
+%
+
 ```
 
-Sample code snippet to run LSMS (assuming LSMS executable is lsms.x):
-```
-lsms.x < input.in > output.out
-```
-In this case, the LSMS calculation is performed using the input file "input.in" and the output is redirected to "output.out".LSMS does not use a standard input file format, and the parameters in the input file may vary depending on the specific calculation being performed.
+Command to run: 
+
+LSMS runs on HPC systems using MPI. Assuming your executable is named "lsms", the command to run would look something like that:
+
+`mpirun -np 32 lsms`
+
+Where "-np 32" indicates the number of processor cores to be used. The actual command and number of cores would depend on the specific HPC environment and the size of the problem. 
+
+Please make sure you have all your input files in the right directory before you run the command.

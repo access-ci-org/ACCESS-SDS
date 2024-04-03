@@ -1,0 +1,25 @@
+Use Case: PyCharm is a Python IDE providing a toolset for Python development. It is used for large scale Python application development to offer easy navigation, intelligent code assistance, and automatic error detection tools.
+
+Code details and examples:
+
+Code: 
+
+```python
+# The example code is a simple python code for the factorial of a number
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+n=int(input("Enter a number: "))
+print("Factorial:")
+print(factorial(n))
+```
+
+Input: The input will be an integer number from the user which will be used to calculate the factorial. The input prompt appears in the PyCharm built-in terminal after running the code.
+
+Format required: Integer number
+
+Specifications and details: This is a straightforward python program to calculate a factorial of a number. You need to enter an integer number after running the code in PyCharm. PyCharm provides an intelligent code completion tool that makes coding easy and efficient.
+
+Command to Run: To run the code in PyCharm, click the 'play' button in the top right-hand corner, or right-click anywhere in the code editor and select 'Run'. The input prompt will appear in the built-in terminal. Enter your number and then hit Return. Emails, passwords and domain names are all acceptable inputs.

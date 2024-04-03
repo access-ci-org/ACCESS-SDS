@@ -1,13 +1,25 @@
-Use Case: CheckM is a software used for assessing the quality of genomes recovered from isolates, single cells, or metagenomes by identifying and estimating the completeness and contamination of the genome.
+Use Case: CheckM is used for assessing the quality of genomes recovered from isolates, single cells, or metagenomes. It provides a set of tools for identifying, correcting, and removing contamination in publicly available genomes. 
+
 Code details and examples:
-```bash
-checkm lineage_wf --genome input.fa -t 4 -x fasta output_dir
+
+Code:
+
+1. CheckM taxon_set: Generate a file containing a set of lineage-specific marker genes.
+Input File Format: 
+This command does not require any input file but it needs the name of a lineage included in the CheckM tree.
+
+Command to run: 
 ```
+checkm taxon_set checkm_data/lineage tree_name output_folder
+```
+'checkm_data/lineage' is the directory of the CheckM data, 'tree_name' is the name of a lineage in the CheckM tree (e.g., 'k__Bacteria', 'p__Proteobacteria'), and 'output_folder' is the directory where the output files are saved. 
 
-In this command:
-- `--genome input.fa` specifies the input genome file in fasta format.
-- `-t 4` specifies the number of threads to use for the analysis.
-- `-x fasta` specifies the input genome file format.
-- `output_dir` specifies the output directory where the results will be stored.
+2. CheckM lineage_wf: Run a workflow to assess the completeness and contamination of a set of bins (constructed genomes) using a set of lineage-specific marker genes.
+Input File Format: 
+This command requires an input folder containing fasta files of the bins.
 
-Make sure to replace `input.fa` with the actual path to your input genome file.
+Command to run: 
+```
+checkm lineage_wf bins_folder output_folder
+```
+'bins_folder' is the directory of the input fasta files, and 'output_folder' is the directory where the output files are saved.

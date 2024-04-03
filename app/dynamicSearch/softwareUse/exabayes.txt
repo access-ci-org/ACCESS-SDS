@@ -1,0 +1,39 @@
+Use Case: ExaBayes is a software package for Bayesian phylogenetic analysis. It is able to solve large scale phylogenetic problems on supercomputers through MPI parallelization.
+
+Code Details and Examples:
+
+The ExaBayes tool operates on a variety of input file types, including common formats for phylogenetic data like nexus and phylip.
+
+Input File Format: Nexus (.nex) or Phylip (.phy).
+
+Input File Specifications: The input file consists of DNA or protein sequence alignments in the specified formats.
+
+Code Snippets:
+
+Consider a simple Nexus file ‘myseq.nex’:
+
+```
+#NEXUS
+BEGIN DATA;
+DIMENSIONS NTAX=2 NCHAR=4;
+FORMAT DATATYPE=dna INTERLEAVE=no GAP=- MISSING=? ;
+MATRIX
+taxon1 AGCT
+taxon2 CGTA
+;
+END;
+```
+
+Command to Run:
+
+To run ExaBayes, you typically supply the alignment and parameters via command-line arguments:
+
+```
+exabayes -f myseq.nex -n run1
+```
+
+This command will run ExaBayes on the alignment contained in the file ‘myseq.nex’; the output files of the run will be prefixed with 'run1'.
+
+ExaBayes will then output a variety of files detailing the phylogenetic analysis, including traces of the model parameters, the inferred trees, and log files. 
+
+Note: The `-n` parameter is used to name the run, and it is highly recommended for organizing multiple runs.

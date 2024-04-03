@@ -1,0 +1,31 @@
+Use Case: Quantum Computer Aided (QCA) is a software package designed for quantum chemistry calculations, including energy, gradient, and hessian calculations, vibrational frequency analysis, transition state searches, scanning potential energy surfaces, geometry optimization, and much more. It supports various types of calculations (HF, DFT, MP2, CC, CI, MCSCF, etc.) and various basis sets.
+
+Code details and Examples: Code 
+
+Firstly, a user must create an input file, such as ‘jobname.inp’, which composes of five main keywords, including %chk=., %mem=., %nprocshared=., #, and a blank line to separate Molecule Specification section.
+
+A sample input file may appear as:
+
+```
+%chk=jobname.chk
+%mem=14GB
+%nprocshared=14
+#p b3lyp/6-311++G** opt freq
+
+Title 
+Comment to identify job record in the output file
+
+0 1
+O       0.000000    0.000000   -0.075791
+H       0.866812    0.000000    0.601435
+H      -0.866812    0.000000    0.601435
+
+```
+
+Then, to run the calculation:
+
+```./g16 jobname.inp```
+or 
+```g16 < jobname.inp```
+
+Where “./g16” is the path to the executable Gaussian 16 program and “jobname.inp” is your input file. The job could be submitted through a job scheduling system, like SLURM or PBS, using similar lines in your batch script.

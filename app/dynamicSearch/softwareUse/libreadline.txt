@@ -1,23 +1,42 @@
-Use Case: Read input from the user with readline library in Python
+Use Case: libreadline is used for providing line input editing and history features, typically used in command-line user interfaces and shell programs. It also allows users to move the cursor, search in the history, or kill the line or part of it. 
 
-Code details and examples:
-```python
-import readline
+Code details and examples: 
 
-def completer(text, state):
-    options = ['hello', 'world', 'python', 'code']
-    matches = [x for x in options if x.startswith(text)]
-    if state < len(matches):
-        return matches[state]
-    else:
-        return None
+Code:
 
-readline.parse_and_bind("tab: complete")
-readline.set_completer(completer)
+The following is an example of a C code that reads a line from the console using libreadline:
 
-while True:
-    user_input = input('Enter a word: ')
-    print('You entered:', user_input)
+```c
+#include <stdio.h>
+#include <readline/readline.h>
+#include <readline/history.h>
+
+int main()
+{
+    char *line;
+
+    line = readline("Enter text: ");
+    if(line == NULL) {
+        printf("No input entered.\n");
+        return -1;
+    }
+
+    add_history(line);
+
+    printf("You entered: '%s'\n", line);
+
+    free(line);
+
+    return 0;
+}
 ```
+The command to compile and run this code:
+ 
+gcc readline_example.c -lreadline -o readline_example
+./readline_example
 
-In this example, the `readline` library is used to enable tab-completion for user input. The `completer` function provides a list of options for autocompletion based on the user's input. The `parse_and_bind` function is used to bind the tab key for autocompletion, and `set_completer` is used to set the completer function. User input is read using the `input` function, and the program will continuously prompt the user for input until exited.
+Here, "-lreadline" tells GCC to link the readline library with your program, and "-o" specifies the name of the output file. readline_example is the name of the binary after it’s been compiled.
+
+The input needed for this program: Any text user wants to enter. After running the program, it will ask "Enter text: ", then user needs to enter the input and press enter.
+
+For example, if user enters "Hello World", the program will return "You entered: 'Hello World'".

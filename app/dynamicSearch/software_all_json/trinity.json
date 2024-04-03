@@ -1,0 +1,25 @@
+{
+  "software_name": "Trinity",
+  "comprehensive_overview": "Trinity is a de novo RNA-Seq assembly software that reconstructs transcriptomes from short RNA-Seq reads using a novel method for de novo transcriptome assembly from RNA-Seq data. It combines efficient full-length transcript assembly and full-length isoform reconstruction to result in high-sensitivity and high-accuracy transcriptomes.",
+  "core_features": [
+    "De novo transcriptome assembly",
+    "RNA-Seq data analysis",
+    "Isoform expression quantification",
+    "Gene fusion detection",
+    "Chimeric transcript identification"
+  ],
+  "general_tags": [
+    "Bioinformatics",
+    "Computational Biology",
+    "Transcriptomics",
+    "RNA-Seq",
+    "De novo assembly"
+  ],
+  "additional_tags": {
+    "research_discipline": "Biological Sciences",
+    "research_area": "Genomics",
+    "software_class": "Genomic Analysis Tool",
+    "software_type": "Bioinformatics Tool",
+    "field_of_science": "Biological Sciences"
+  }
+}

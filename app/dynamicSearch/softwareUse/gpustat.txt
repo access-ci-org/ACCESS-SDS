@@ -1,15 +1,20 @@
-Use Case: Monitoring GPU utilization and memory usage on a Linux system.
+Use Case: gpustat is a Python library that allows you to monitor the utilization of NVIDIA GPUs. It can be useful in various computational tasks such as machine learning, high performance computing, and graphic design.
 
 Code details and examples:
 Code:
-```bash
-gpustat
 ```
+import gpustat
 
-Sample output:
+gpustat.print_gpustat()
 ```
-[2J[H[u[33m[0][0m GeForce GTX 1080 Ti | [31m66'C,  0 %[0m | [37m[41m 1943 / 11178 MB[0m | [32musername[0m([33m1M,[0m [33m1M[0m)
-[33m[1][0m GeForce GTX 1080 Ti | [31m65'C,  0 %[0m | [37m[41m  7157 / 11178 MB[0m | [32musername[0m([33m1M,[0m [33m1M[0m)
-```
+This straight-forward code will fetch the GPU status and print it. No input file is needed, and the format required is simply a working Python environment with the gpustat package installed.
 
-Note: The `gpustat` command provides a summary of the GPU(s) in the system, including temperature, utilization, memory usage, and the user running the process.
+Sample output may look something like this:
+```
+[1] Tesla K80        | 30'C,   0 % |   109 / 11441 MB | smith(107MB)
+```
+This indicates that the server has a Tesla K80 GPU, which is currently at a temperature of 30 degrees Celsius and uses 109 megabytes of its total 11441 megabytes of memory. The user 'smith' is currently using 107 megabytes of GPU memory.
+
+The command to run this Python code depends on your Python installation, but is generally either 'python filename.py' or 'python3 filename.py' where 'filename.py' is the name of your Python file containing the above code.
+
+Please note that the use of this package requires an installation of NVIDIA drivers and nvidia-smi command line utility.

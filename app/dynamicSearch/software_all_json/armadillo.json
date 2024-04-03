@@ -1,0 +1,11 @@
+{
+    "software_name": "Armadillo",
+    "comprehensive_overview": "Armadillo is a high-quality linear algebra library for the C++ programming language. It aims to provide efficient and easy-to-use classes for common linear algebra operations, with a particular focus on real and complex matrices and vectors.",
+    "core_features": "1. Fast matrix operations including decomposition, factorization, and vectorization.\n2. Seamless integration with C++ programming.\n3. Various advanced features such as sparse matrices, expression templates, and delayed evaluation.\n4. Extensive documentation and examples for users' convenience.\n5. Portable and compatible with various operating systems.",
+    "general_tags": ["linear algebra", "C++ library"],
+    "research_discipline": "Computer Science",
+    "research_area": "Software Engineering, Systems, and Development",
+    "software_class": "Library",
+    "software_type": "Linear Algebra Library",
+    "field_of_science": "Computer and Information Sciences"
+}

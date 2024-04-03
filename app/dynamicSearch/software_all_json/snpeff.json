@@ -1,0 +1,11 @@
+{
+  "software_name": "SnpEff",
+  "comprehensive_overview": "SnpEff is a genetic variant annotation and functional effect prediction tool designed to annotate and predict the effects of genetic variants within genomic sequences.",
+  "core_features": ["Variant annotation", "Functional effect prediction", "Genomic sequence analysis"],
+  "general_tags": ["Genetic variants", "Annotation", "Functional prediction"],
+  "research_discipline": [],
+  "research_area": [],
+  "software_class": "Bioinformatics",
+  "software_type": "Tool",
+  "field_of_science": "Biological Sciences"
+}

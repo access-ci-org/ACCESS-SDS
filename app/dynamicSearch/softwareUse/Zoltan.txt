@@ -1,41 +1,59 @@
-Zoltan is a software library for parallel partitioning, load balancing, and parallel adaptive mesh refinement.
+Use Case: Zoltan is a software package created by Sandia National Laboratories that provides services for parallel applications such as dynamic load balancing, unstructured communication, and ordering. It is mainly used for computational mechanics, computational chemistry, computational biology, and computational geometry.
 
-Use Case: Parallel partitioning and load balancing
-Code details and examples:
-```c++
-#include "zoltan.h"
+Code Details and Examples:
 
-int main(int argc, char *argv[]) {
-    float x[5] = {0.0, 1.0, 2.0, 3.0, 4.0};
-    float y[5] = {0.0, 1.0, 2.0, 3.0, 4.0};
-    int global_ids[5] = {0, 1, 2, 3, 4};
-    
-    int num_objs = 5;
-    int num_dims = 2;
-    
-    float *partition_measure = NULL; // Array used to pass partitioning constraints
-    
-    struct Zoltan_Struct *zz = Zoltan_Create(MPI_COMM_WORLD);
-    
-    Zoltan_Set_Param(zz, "LB_METHOD", "GRAPH");
-    
-    int changes, numGidEntries, numLidEntries, numImport, numExport;
-    ZOLTAN_ID_PTR importGlobalGids = NULL, importLocalGids = NULL;
-    int *importProcs = NULL, *importToLocal = NULL;
-    
-    Zoltan_LB_Partition(zz, num_dims, num_objs, 0, 0, partition_measure, 
-                        &changes, &numGidEntries, &numLidEntries, 
-                        &numImport, &importGlobalGids, &importLocalGids, 
-                        &importProcs, &importToLocal);
+Code:
 
-    Zoltan_Destroy(&zz);
-    
-    return 0;
-}
+Here's a simplified Fortran example on how you can apply Zoltan library functions to rebalance a mesh decomposition.
+```Fortran
+PROGRAM Zoltan_example
+
+  include "zoltan_types.h"
+  
+  REAL*8 SIMPLE_BOX(3), CEN_PNT(3)
+  INTEGER IERR, NUM_GID_ENTRIES, NUM_LID_ENTRIES
+  INTEGER*8 NUM_GLOBAL_POINTS, NUM_GLOBAL_BOXES
+  INTEGER*8 MY_GID(10000), POINT_GIDS(10000)
+  INTEGER*8 OCT_GID, POINT_GID
+  INTEGER OCT_OWNER, POINT_OWNER
+  INTEGER*8 GLOBAL_NUM_OCT, LOCAL_NUM_OCT
+  INTEGER*8 OCTANT_DATA(NUM_DATA_FIELDS, 10000), POINT_DATA(1000)
+  INTEGER*8 NUM_IMP, NUM_EXP, OCT_IMP_GIDS(10000), OCT_EXP_GIDS(10000)
+  INTEGER*8 IMP_PROC(10000), EXP_PROC(10000), OCT_IMP_GIDS(10000)
+  INTEGER*8 OCT_EXP_GIDS(10000)
+  INTEGER*4 MY_PROC_ID, CONFIG_FLAGS
+  INTEGER*4 OBJ_WEIGHT_DIM, EDGE_WEIGHT_DIM
+  INTEGER*4 NUM_IMP, NUM_EXP, NUM_GID_ENTRIES
+  INTEGER*8 OCTANT_GIDS(10000)
+  INTEGER*8 NUM_IMP, NUM_EXP, NUM_GID_ENTRIES, NUM_GID_ENTRIES
+  INTEGER*8 OCT_IMP_GIDS(10000), OCT_EXP_GIDS(10000)
+  INTEGER*8 GID(10000), LID(10000), LIDS(10000)
+  INTEGER*8 NUM_DATA_FIELDS, NUM_GLOBAL_POINTS, NUM_GLOBAL_BOXES
+  INTEGER*8 GIDS(10000), NUM_GLOBAL_POINTS
+  INTEGER*8 NUM_DATA_FIELDS, OCT_IMP_GIDS(10000), OCT_EXP_GIDS(10000)
+  INTEGER*8 OCT_IMP_GIDS(10000)
+
+  CALL MPI_INIT(IERR)
+  CALL MPI_COMM_RANK(MPI_COMM_WORLD, MY_PROC_ID, IERR)
+  CALL MPI_COMM_SIZE(MPI_COMM_WORLD, NUM_PROC_ID, IERR)
+
+  IERR = Zoltan_Initialize(argc, argv, version);
+  IERR = Zoltan_Query_Object_Size(ZOLTAN_OBJ_LIST, myGID, myLID)
+
+  CALL ZOLTAN_LB_PARTITION(ZZ, NUM_GID_ENTRIES, NUM_LID_ENTRIES,
+   &     NUM_IMPORT, IMPORT_GLOBAL_GIDS, IMPORT_LOCAL_GIDS, IMPORT_PROCS,
+   &     IMPORT_TO_PART, NUM_EXPORT, EXPORT_GLOBAL_GIDS,
+   &     EXPORT_LOCAL_GIDS, EXPORT_PROCS, EXPORT_TO_PART, IERR)
+      …
+  END PROGRAM Zoltan_example
 ```
 
-To run the code, you would typically compile it with the Zoltan library included. For example, if you have a file named `example.cpp`, you could compile it with a command like:
-```bash
-mpicxx example.cpp -I/your/zoltan/include/path -L/your/zoltan/lib/path -lzoltan -o example
-```
-where `/your/zoltan/include/path` and `/your/zoltan/lib/path` should be replaced with the actual paths to the Zoltan library on your system.
+In this code, MPI is used to initialize and specify the inter-process communications model. Zoltan_Initialize is used to initialize the Zoltan library. Zoltan_LB_PARTITION is used to perform dynamic load balancing.
+
+To compile this code, you'll typically use something like:
+`mpif77 zoltan_example.f -I<path_to_zoltan_include> -L<path_to_zoltan_lib> -lzoltan -o zoltan_example`
+
+To run the program, you might use:
+`mpirun -np 4 zoltan_example`
+
+Please make sure that the directories you use in your compile command match the location where you've installed the Zoltan library.

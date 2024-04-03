@@ -1,0 +1,49 @@
+Use Case: 
+The R Bioconductor package GenomicAlignments is primarily used for representing and manipulating short genomic alignments and assigned sequence data. This can be particularly useful for research in fields such as bioinformatics and computational biology, where genomic dataset manipulations and computations are needed.
+
+Code details and examples:
+
+1. Code:
+```R
+# load library
+library(GenomicAlignments)
+
+# load read alignment file in BAM format
+fl <- "path_to_bam_file"
+bam <- readGAlignments(fl)
+
+# access to the aligned sequences
+sequences <- mcols(bam)$seq
+print(sequences)
+
+# calculate coverage
+cov <- coverage(bam)
+print(cov)
+
+# summarize alignments over reference sequences
+seqinfo(bam)
+```
+For the above snippet, the input file is a BAM file (`path_to_bam_file`) that provides binary versions of sequence alignment map data (SAM format). The `readGAlignments()` function reads the file and stores the data as a GenomicAlignments object. The `seqinfo()` function can be used to get detailed information about the alignements.
+
+2. Code:
+```R
+# load library
+library(GenomicAlignments)
+
+# read from a fastq file
+fastq <- readFastq("path_to_fastq_file")
+
+# quality scores for all sequences
+qs <- quality(fastq)
+print(qs)
+
+# base composition for all sequences
+bc <- alphabetFrequency(fastq, baseOnly=TRUE)
+print(bc)
+```
+For the above snippet, the input file is a FASTQ file that contains raw sequence data and corresponding qualities. The sequences, quality scores, and base compositions are then read and printed.
+
+Command to run:
+The scripts should be run in R environment. 
+
+Note: Replace `path_to_bam_file` and `path_to_fastq_file` with actual file paths.

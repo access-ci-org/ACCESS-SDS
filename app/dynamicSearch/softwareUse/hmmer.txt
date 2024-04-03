@@ -1,25 +1,25 @@
-Use Case: HMMER is a software suite for protein sequence analysis using profile hidden Markov models (HMMs).
+Use Case: HMMER is used for searching sequence databases for homologs of protein sequences, and for making protein sequence alignments. 
 
 Code details and examples:
-1. **Create an HMM profile**: 
-```bash
-hmmbuild my_profile.hmm my_sequence.fasta
-```
-Input: A multiple sequence alignment file in fasta format (my_sequence.fasta)
-Output: The created HMM profile file (my_profile.hmm)
+Code:
 
-2. **Search for sequences using an HMM profile**:
-```bash
-hmmsearch my_profile.hmm my_database.fasta
-```
-Input: HMM profile file (my_profile.hmm) and a database of protein sequences in fasta format (my_database.fasta)
-Output: List of sequences from the database that match the HMM profile
+To run an HMMER search, you need to specify the query sequence and the database to be searched. Query sequences are provided in FASTA format. A typical command might look like this:
 
-3. **Scan a sequence using an HMM profile**:
-```bash
-hmmscan my_profile.hmm my_sequence.fasta
 ```
-Input: HMM profile file (my_profile.hmm) and a single sequence in fasta format (my_sequence.fasta)
-Output: Match statistics for the sequence against the HMM profile
+hmmscan --tblout results.txt Pfam-A.hmm seqs.fasta
+```
 
-Note: These are just basic examples, and HMMER provides various other functionalities and options for advanced usage. Make sure to check the HMMER documentation for more details.
+Here, `hmmscan` is the command to run the search, `--tblout results.txt` specifies that the output should be written to the file `results.txt`, `Pfam-A.hmm` is the database to search, and `seqs.fasta` is the file containing the query sequences.
+
+The input file (`seqs.fasta`) might look like this:
+
+```
+>sequence1
+MTEYKLVVVGAGGVGKSALTIQLIQNHFVDEYDPTIEDSYRKQVVIDGETCLLDILDTAGQEEYSAMRDQYMRTGEG
+FLCVFAINNTKSFEDIHQYREQIKRVKDSDDVPMVLVGNKCDLAARTVESRQAQDLARSYGIPYIETSAKTRQGVEDA
+FMLESLDSDYSLKGDIGSREKAKFAAELGIPFLETSAKTRQGVEDAFYTLVREIRLH
+```
+
+This is a standard FASTA format, with each sequence preceded by a line starting with a `>` character, which specifies the sequence identifier, and followed by the sequence itself. Multiple sequences can be included in the same file.
+
+As for the `Pfam-A.hmm` file, it would contain a collection of HMM profiles. This could be downloaded from online protein databases like Pfam.

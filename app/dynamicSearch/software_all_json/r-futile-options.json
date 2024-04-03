@@ -1,0 +1,11 @@
+{
+    "software_name": "R futile.options",
+    "comprehensive_overview": "The futile.options package is a lightweight R package that provides a variety of options settings for controlling the behavior of other R packages and functions.",
+    "core_features": "Allows users to customize and control various behavior aspects of R packages and functions through option settings. Enables fine-tuning of R package functionalities. Provides flexibility in managing R package behavior.",
+    "general_tags": ["R package", "Options settings", "Customization"],
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Research Tool",
+    "software_type": "Library",
+    "field_of_science": "Other Natural Sciences"
+}

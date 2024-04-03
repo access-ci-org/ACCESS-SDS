@@ -1,0 +1,11 @@
+{
+  "software_name": "libunistring",
+  "comprehensive_overview": "libunistring is a C library that provides functions to manipulate Unicode strings and includes functions for encoding conversion, case mapping, normalization, and more.",
+  "core_features": "1. Unicode string manipulation\n2. Encoding conversion\n3. Case mapping\n4. Normalization\n5. Regular expression matching",
+  "general_tags": ["Unicode", "Encoding", "String Manipulation", "Localization"],
+  "research_discipline": [],
+  "research_area": [],
+  "software_class": "Library",
+  "software_type": "Computational Software",
+  "field_of_science": "Computer and Information Sciences"
+}

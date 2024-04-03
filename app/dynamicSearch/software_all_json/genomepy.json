@@ -1,0 +1,24 @@
+{
+    "software_name": "genomepy",
+    "comprehensive_overview": "Genomepy is a Python package for downloading reference genomes and associated annotation files from various sources. It simplifies the process of obtaining genomic data required for bioinformatics analysis.",
+    "core_features": [
+        "Automatic download of reference genomes",
+        "Support for multiple genome sources such as NCBI, Ensembl, UCSC",
+        "Integration with popular bioinformatics tools",
+        "Ability to update and manage local genome databases"
+    ],
+    "general_tags": [
+        "Genomics",
+        "Bioinformatics",
+        "Python",
+        "Reference genomes",
+        "Sequence analysis"
+    ],
+    "additional_tags": {
+        "research_discipline": "Genomics",
+        "research_area": "Bioinformatics",
+        "software_class": "Data management",
+        "software_type": "Python library",
+        "field_of_science": "Biological Sciences"
+    }
+}

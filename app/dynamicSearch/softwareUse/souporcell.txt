@@ -1,17 +1,13 @@
-souporcell is a tool for single-cell RNA sequencing data analysis. Here is an example of how you can use souporcell:
+Use Case: Souporcell is a tool for clustering scRNA-seq reads from multiple diploid individuals. It also determines the genotype of each cluster and assigns reads based on that genotype, providing a fast and accurate method for multiplexing and demultiplexing cells from different individuals. This can be especially useful in cases where multiplexing is necessary due to a limited number of cells from each individual, such as in the case of rare cell types or in studies involving time series or dose response curves.
 
-Use Case: Assign cell genotypes using souporcell
-Code details and examples:
-1. Prepare your input data:
-- Generate a counts matrix (e.g., in CSV format) from your single-cell RNA sequencing data.
-- Prepare a whitelist file containing a list of known cell barcodes.
+Code details and examples: 
 
-2. Run souporcell to assign cell genotypes:
-```bash
-souporcell -i counts_matrix.csv -w whitelist.txt -o output_directory
-```
+Code:
 
-3. Interpret the results:
-- The output will contain assigned cell genotypes based on the input data.
+`souporcell_pipeline.py -i input.bam -b barcodes.tsv -f ref.fasta -t 4 -o output_dir --common_variants common_variants.vcf`
 
-Note: Make sure to check the souporcell documentation for additional parameters and details on the input file formats.
+The input for Souporcell consists of a BAM file sorted by the query name (`input.bam`), a TSV file containing the cell barcodes (`barcodes.tsv`), and a reference file in FASTA format (`ref.fasta`). If known, common variants can also be supplied in a VCF file (`common_variants.vcf`), which can help in identifying the individual origin of each cell.
+
+The `-t` option specifies the number of threads to use, while `-o` specifies the output directory. By default, the output will be written to the current directory.
+
+The output includes files such as `clusters.tsv`, which contains the cluster assignments for each cell, and `genotypes.vcf`, which contains the genotype information for each cluster.

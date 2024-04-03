@@ -1,0 +1,19 @@
+Use Case: The primary use case of CFFI is in Python to call C code. It makes interfacing with C easier for Python programmers by automating tedious tasks such as manipulating C data types.
+
+Code Details And Examples: 
+
+Code:
+
+```python
+from cffi import FFI
+ffi = FFI()
+ffi.cdef("""
+    int printf(const char *format, ...);   // copy-pasted from the man page 
+""")
+C = ffi.dlopen(None)  # loads the entire C namespace
+arg = ffi.new("char[]", b"world")  # equivalent to C code: char arg[] = "world";
+C.printf(b"hello %s\n", arg)  # call printf
+```
+As you can see, the first step is to provide a C definition of the function you want to call. This should be a direct lift from the C header file. dlopen opens the shared library (if None given then it opens main program). You can then call functions from the library. `ffi.new()` is to instantiate a C data type.
+
+To run the code, you can use the command: `python filename.py` where filename.py contains your script. 

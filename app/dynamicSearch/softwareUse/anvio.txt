@@ -1,0 +1,37 @@
+Use Case: Anvi'o is a comprehensive software platform to visualize, manipulate, do stats and reporting on metagenomics and metatranscriptomics data. It is used in bacterial genomics, metagenomics, and metatranscriptomics areas. 
+
+Code details and examples:
+
+Code: 
+
+To generate a contigs database with the contig sequences in contigs.fa,
+
+```bash
+anvi-gen-contigs-database -f contigs.fa -o contigs.db
+```
+
+In this, `-f` is for the input FASTA file and `-o` is for the name of the contigs database to be created.
+
+
+To profile a BAM file and generate a single profile database,
+
+```bash
+anvi-profile -i sample01.bam -c contigs.db
+```
+
+`-i` specifies the location of your BAM file, and `-c` specifies the contigs database.
+
+You can visualize your data using the anvi'o interactive interface,
+
+```bash
+anvi-interactive -p PROFILE.db -c CONTIGS.db
+```
+
+where `-p` specifies the profile database and `-c` the contigs database.
+
+
+Input files,
+1. contigs.fa: This is a multi-FASTA file that contains the contig sequences. 
+2. sample01.bam: This is a binary version of a SAM file that contains aligns 'short' DNA sequences against reference sequences.
+
+Files should be in the specified formats and all sequence IDs must be unique across all FASTA files. You need to follow all prerequisites before running anvio commands like you must have a contigs database before running anvi-profile.

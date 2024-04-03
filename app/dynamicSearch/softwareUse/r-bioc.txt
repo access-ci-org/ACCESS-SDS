@@ -1,0 +1,33 @@
+Use Case: Use Bioconductor to analyze array data; extracting probe level data, normalizing the array and finally plotting and reordering the heatmap.
+
+Code details and examples: 
+
+Code: In R, the minimum required packages are hthgu133plus2cdf and affy. Therefore, the dataset we will use is a subset of the hthgu133plus2 data from GEO, curated by Edward Curry.
+
+```R
+# Load necessary libraries from Bioconductor
+library(affy)
+library(hthgu133plus2cdf)
+
+# Load data
+data = ReadAffy(celfile.path = "C:/path/input/dataset")
+
+# Normalize the array data using RMA
+data_rma = rma(data)
+
+# Extract data for gene of interest
+gene = data_rma$ENTREZID$EGFR
+
+# Plot heatmap of the data
+heatmap(as.matrix(gene), scale="row")
+```
+
+Input file format and details required: The input file format for most Bioconductor packages is generally raw microarray data files such as CEL files, which contain intensities for each probe on the array. A metadata file (.csv or .txt) describing the samples may also be required.
+
+Command to run: After you have written and saved your script as a .R file, from the command line, navigate to the directory containing the script and use the following command to run the script:
+
+```R
+Rscript script_name.R
+```
+
+Note: Instead of the full directory path, relative paths can also be used in R if the working directory has been properly set.

@@ -1,0 +1,59 @@
+Use Case: kbproto, a part of the X Window System that provides definitions for X input event management API. The X Keyboard (XKB) extension provides advanced keyboard capabilities, including switching between multiple layouts, querying state, generating commands when keyboard state changes, etc.
+
+Code Details and Examples:
+
+Code: While kbproto doesn't usually have standalone executable programs, it provides support for building and interacting with the X parts of the keyboard configuration. There isn't a specific input file for kbproto itself, but its API is used by other parts of the X.Org system. Here is an example of how the kbproto is used to set keyboard layout to Russian:
+
+```
+#include <X11/XKBlib.h>
+
+Display* dpy;
+int event, error, reason;
+int major = XkbMajorVersion;
+int minor = XkbMinorVersion;
+
+dpy = XkbOpenDisplay(NULL, &event, &error, &major, &minor, &reason);
+
+XkbDescPtr kbdesc;
+kbdesc = XkbAllocKeyboard();
+
+if (kbdesc == NULL) {
+    printf("Failed to get keyboard description.\n");
+    return -1;
+}
+
+// Extract keyboard layout
+XkbStateRec xkbState;
+Status status = XkbGetState(dpy, XkbUseCoreKbd, &xkbState);
+if (status != Success) {
+    printf("Failed to get current keyboard state.\n");
+    return -1;
+}
+
+if (XkbGetNames(dpy, XkbAllNamesMask, kbdesc) == Success) {
+    if (kbdesc->names->keys) {
+        XkbKeyNamePtr keyName = &(kbdesc->names->keys[XkbKeycodeToKeysym(dpy, xkbState.base_keycode, 0, 0)]);
+        printf("Current base layout: %s\n", keyName);
+    }
+}
+
+// Set layout to Russian
+XkbRF_VarDefsRec vd;
+XkbRF_GetNamesProp(dpy, NULL, &vd);
+
+vd.layout = "ru";
+XkbRF_SetNamesProp(dpy, "_XKB_RULES_NAMES", &vd);
+
+XkbLockModifiers(dpy, XkbUseCoreKbd, LockMask, LockMask);
+
+XCloseDisplay(dpy);
+```
+
+To compile the code, it needs to be saved in a file (for example, `kbproto_example.c`). It can be compiled and run with these commands:
+
+```bash
+gcc -lX11 -lXtst kbproto_example.c -o kbproto_example
+./kbproto_example
+``` 
+
+This example involves triggering the XKB switch to the Russian keyboard layout. Since kbproto is low-level, you would usually use a higher-level library or tool to interact with the XKB system rather than directly using kbproto.

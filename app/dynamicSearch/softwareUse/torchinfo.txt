@@ -1,0 +1,21 @@
+Use Case: `torchinfo` is a python library that is used in many deep learning tasks to visualize the structure and the parameters of a PyTorch model at different levels of abstraction. We can use this library after the creation of the model and before the training process to understand the number of trainable parameters, output shape at each layer, and the total memory footprint of the model.
+
+Code details and examples: For torchinfo, the input file is not applicable as it works directly on pytorch models. You can use it on any existing pytorch model. Assuming you have a PyTorch model named `model`, below is how you can use torchinfo.
+
+Code:
+
+```python
+from torchinfo import summary
+
+# replacing with your PyTorch model object
+model = ...
+
+# get the summary of the model
+summary(model, input_size=(1, 3, 224, 224))
+```
+
+This will print out information about each layer in your model.
+
+In the `summary(...)` function, `input_size` specifies the size of input that your model takes in. In this case, `(1, 3, 224, 224)` specifies a single color image (with 3 color channels) of size 224x224. You should modify this argument to match the actual input size that your model expects.
+
+In order to run this, you just need to execute the python script via command line through `python3 scriptname.py` command or simply run the cell if you are using a Jupyter notebook.

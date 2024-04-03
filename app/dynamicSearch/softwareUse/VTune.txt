@@ -1,11 +1,33 @@
-Use Case: Performance profiling and optimization tool for HPC applications. 
+Use Case: VTune Profiler, developed by Intel, is widely used to analyze the runtime and performance of applications.
 
 Code details and examples:
-* Sample input files: N/A
 
-* Format required: N/A
+Code: The following steps explain the usage of VTune Profiler.
 
-* Command to run: 
-```bash
-amplxe-cl -collect hotspots ./my_application
+Step 1: Obtain a binary file that supports VTune output. You can use the Intel Compiler to compile your source code with the -g option:
+
+```shell
+$ icc -g myfile.c -o myfile
 ```
+
+This will output a binary "myfile" that contains all the debugging information needed by VTune.
+
+Step 2: Open VTune Profiler.
+
+Step 3: In the VTune project navigator, click the "New Project" button. This will bring up a dialog box. Enter a project name and browse to the location of your binary file. Click "OK."
+
+Step 4: Now you can create a new Analysis Activity. Select the binary for analysis and set the Analysis type to "Hotspots by CPU Utilization," then click the "Start" button.
+
+```shell
+$ amplxe-cl -collect hotspots ./myfile
+```
+
+VTune Profiler will then run your binary and collect data about CPU Utilization.
+
+Step 5: Once VTune Profiler has finished running your binary, it will display a summary of the analysis results. 
+
+The input file is the binary executable created from your original source code, and the format used for the input file is a standard binary executable format, usually .exe or .out.
+
+The specifications in the input files include standard debugging information produced by the Intel Compiler.
+
+Running the Intel VTune Profiler requires the binary executable file (produced from the source code by the Intel Compiler icc). Therefore the binary file is a prerequisite to running the application.

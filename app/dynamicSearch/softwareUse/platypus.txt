@@ -1,0 +1,21 @@
+Use Case: Platypus is a tool for variant detection in high-throughput sequencing datasets. It aims to provide an easy-to-use, fast and sensitive variant caller. It can be used to discover and genotype germline or somatic variants. 
+
+Code details and examples: The input file for Platypus is in BAM format, which is a binary version of Sequence Alignment/Map (SAM) format. The input file contains read information i.e., where and how individual reads map to the reference genome. 
+
+Here is an example of using Platypus to call variants:
+
+Code:
+
+```bash
+python Platypus.py callVariants --bamFiles=input.bam --refFile=reference.fasta --output=variants.vcf
+```
+
+In the above command:
+
+- `input.bam` is the name of your BAM file which contains aligned DNA sequences.
+- `reference.fasta` is the name of your reference genome that your DNA sequences were aligned against. 
+- `variants.vcf` is the output where Platypus will write the called variants in VCF format.
+
+Here, the input file should be indexed in BAI format. `.bai` file for the given input BAM file should be in the same directory for sequential processing.
+
+This tool does not provide code snippets or any special specifications. It simply reads from a BAM file and produces a VCF file.

@@ -1,0 +1,42 @@
+Use Case: Hatchling is a high-performance parallel computing software, often used for molecular dynamics simulations. It can simulate the behavior of a system of particles in a way that takes into account the interactions between all the particles in the system.
+
+Code details and examples: Code
+
+Input file format:
+Hatchling works with two types of input files: a "system" file, that describes the system to be simulated, and a "parameter" file, which provides the parameters for the simulation.
+
+System File:
+The system file is in the PDB (Protein Data Bank) format. This format is text-based and provides information about the atoms in the system, such as their types, positions, velocities, and acceleration.
+
+Example system file (water.pdb):
+
+```
+ATOM      1  O   HOH     1      -0.007  -0.002   0.001  0.00  0.00      WAT  OW  1
+ATOM      2  H1  HOH     1      -0.757  -0.002   0.001  0.00  0.00      WAT  H   1
+ATOM      3  H2  HOH     1       0.243  -0.002   0.001  0.00  0.00      WAT  H   1
+END
+```
+
+Parameter File:
+The parameter file uses a custom text-based format to specify the parameters of the simulation. These include, for example, the duration of the simulation, the time step size, and the temperatures.
+
+Example parameter file (params.in):
+
+```
+# Hatchling input file
+
+# Simulation parameters
+timestep = 1.0 # in fs
+duration = 10000 # in fs
+temperature = 300 # in K
+
+# System parameters
+system = water.pdb
+```
+
+Command to Run:
+To run a simulation with Hatchling, you launch the program from the command line, providing the system file and parameter file as arguments.
+
+```
+hatchling water.pdb params.in
+```

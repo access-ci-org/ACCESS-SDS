@@ -1,0 +1,19 @@
+{
+  "software_name": "hdf-eos5",
+  "comprehensive_overview": "HDF-EOS5 is a software library developed by NASA that provides tools and interfaces for working with EOS (Earth Observing System) data in the Hierarchical Data Format (HDF5) format. It is specifically designed for the management and analysis of Earth science data collected by various NASA missions.",
+  "core_features": "1. Tools for reading, writing, and manipulating HDF5 files\n2. Support for EOS data structures and metadata\n3. APIs for accessing and processing EOS datasets\n4. Integration with popular programming languages like C, Fortran, and Python\n5. Visualization capabilities for Earth science data",
+  "general_tags": [
+    "NASA",
+    "Earth Observing System",
+    "Data management",
+    "Data analysis",
+    "HDF5 format"
+  ],
+  "additional_tags": {
+    "research_discipline": "Earth and Environmental Sciences",
+    "research_area": "Atmospheric Sciences",
+    "software_class": "Library",
+    "software_type": "Data Management and Analysis",
+    "field_of_science": "Natural Sciences"
+  }
+}

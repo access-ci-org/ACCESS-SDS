@@ -1,0 +1,51 @@
+Use Case: The Arcade Learning Environment (ALE) is a software framework designed for developing and testing artificial intelligence (AI) agents in the domain of Atari 2600 games. It is used by AI researchers as a benchmark to evaluate the performance of AI algorithms.
+
+Code details and examples:
+Code:
+
+The following example details how to use the ALE to control an Atari 2600 game, specifically "Pong".
+
+First, import the necessary libraries and initialize the ALE.
+
+```python
+from ale_py import ALEInterface
+ale = ALEInterface()
+```
+
+Next, load the ROM of the Atari 2600 game you wish to play. ALE comes with several game ROMs preloaded.
+
+```python
+rom = 'path/to/your/ROM'  # e.g. /path_to_ROMs/pong.bin
+ale.loadROM(rom)
+```
+
+Now, we can retrieve the possible actions for this game and select one to perform.
+
+```python
+list_of_actions = ale.getMinimalActionSet()
+a = list_of_actions[0] # Choose the first action
+```
+
+We can also perform the selected action in the game.
+
+```python
+reward = ale.act(a)
+```
+
+In a typical setup, you would replace the action selection with your own AI agent's action. You can then loop over the steps above to continuously play the game until it is over.
+
+```python
+while not ale.game_over():
+    a = my_agent.select_action()  # Replace this with your AI agent
+    reward = ale.act(a)
+```
+
+The `ale.act()` function returns the reward for the performed action, which can be used to update your AI agent.
+
+Lastly, remember to reset the game environment when the game is over.
+
+```python
+ale.reset_game()
+```
+
+Here, the ROM file is the input file required, which should be of the format as per ALE Atari 2600 Game ROMs guidelines.

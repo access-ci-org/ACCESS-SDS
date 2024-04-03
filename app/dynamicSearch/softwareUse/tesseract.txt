@@ -1,14 +1,33 @@
-Use Case: Text recognition from images using Tesseract OCR
+Use Case: Use Tesseract for extracting text from images. 
 
-Code details and examples:
-Sample input file (image): image.png
+Code details and examples: Code.
 
-Code:
-```bash
-tesseract image.png output -l eng
+Tesseract is a powerful Optical Character Recognition engine that supports a wide variety of languages. Here is an example usage.
+
+In your image input, you should ensure that the text is clearly legible and the resolution is high enough that characters can be distinguished. It should be free from image noise and distortion as much as possible.
+
+Input File Specifications: It accepts PNG, JPG, or TIFF files.
+
+Sample Input File: An image file named 'text.png' which contains the text "This is a sample text."
+
+Code Snippet:
+
+```python
+from PIL import Image
+import pytesseract
+
+# Open an image file
+img = Image.open('text.png')
+
+# Use Tesseract to do OCR on the image
+text = pytesseract.image_to_string(img)
+
+# print the text
+print(text)
 ```
 
-Command to run:
-```bash
-tesseract image.png output -l eng
-```
+The output in this case would be the string, "This is a sample text."
+
+To run the code above in a python script named `test.py`, you use the command:
+
+`python test.py`

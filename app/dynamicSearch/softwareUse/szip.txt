@@ -1,17 +1,27 @@
-Use Case: Data compression with szip  
-Code details and examples:  
-szip is a compression program used for compressing and decompressing data. It is typically used in conjunction with HDF files to reduce the storage space required for large datasets.
+Use Case: Szip is an implementation of the extended-Rice lossless compression algorithm. It provides lossless compression of scientific data, and is provided with HDF software products and in HDF releases. 
 
-To compress a file using szip, you can use the following command:
+Code details and examples: Code
 
-```bash
-szip input_file.txt
+The following is a simple example of how Szip can be used to compress a file. In this case, the input file is an image file in Portable Network Graphics (PNG) format, and the output file is a compressed file in Szip format.
+
+Input File: 
+Any file can be used as an input file for Szip. For example, an image file "image.png".
+
+Command to run them: 
+To compress a file using Szip, navigate to the directory containing the file in your command line interface and use the command:
+
+```
+szip -o output.sz image.png
 ```
 
-To decompress a file using szip, you can use the following command:
+This command tells Szip to compress "image.png" and output the result to "output.sz". The "-o" option specifies the output file. 
 
-```bash
-szip -d input_file.txt.sz
+To decompress a file using Szip, use the command:
+
+```
+szip -d output.sz
 ```
 
-Please note that szip works with HDF files by default and may require the HDF library to be installed for full functionality.
+This command tells Szip to decompress "output.sz". The "-d" option specifies the file to decompress.
+
+Please note that this is an example usage and may vary as per real Szip application and implementation. The Szip library is mostly used in NASA HDF (Hierarchical Data Format) products. HDF products are used in many NASA and scientific data packages. The Szip library provides the capability for lossless compression of data, and is freely available for non-profit use.

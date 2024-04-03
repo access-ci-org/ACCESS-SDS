@@ -1,31 +1,43 @@
-Use Case: Assembler tool for x86 and x86-64 architectures
+Use Case: Use YASM to compile an assembly file.
 
-Code details and examples:
-Yasm is an assembler tool commonly used for x86 and x86-64 architectures. Here is an example of using Yasm to assemble an x86-64 code file.
+Code details and examples: Code
 
-Sample x86-64 code file (hello.asm):
-```asm
+Input File: asm_file.asm - assembly programming file.
+Format required: .asm - Assembly language file format, which contains low level programming code.
+
+Sample input file (asm_file.asm - Hello World in Assembly Language):
+
+```assembly
 section .data
-    msg db 'Hello, World!', 0
+    hello db 'Hello, world!',0
 
 section .text
     global _start
 
 _start:
-    mov rax, 1          ; syscall number for sys_write
-    mov rdi, 1          ; file handle 1 is stdout
-    mov rsi, msg        ; message to print
-    mov rdx, 13         ; length of the message
-    syscall
+    ; write our string to stdout
+    mov eax, 4           
+    mov ebx, 1           
+    mov ecx, hello       
+    mov edx, 13          
+    int 0x80             
 
-    mov rax, 60         ; syscall number for sys_exit
-    xor rdi, rdi        ; exit code 0
-    syscall
+    ; exit
+    mov eax, 1           
+    xor ebx, ebx         
+    int 0x80             
 ```
 
-To assemble the code using Yasm:
-```bash
-yasm -f elf64 hello.asm -o hello.o
-```
+Command to Run: YASM
 
-This command will assemble the `hello.asm` file using Yasm, specifying the output format as `elf64` and producing the object file `hello.o`.
+```shell
+yasm -f elf asm_file.asm
+ld -m elf_i386 -o asm_file asm_file.o
+./asm_file    # Runs the compiled binary from the asm_file.asm assembly language file.
+``` 
+
+Here;
+-f specifies the output file format
+elf is for linking.
+ld -m elf_i386 specifies the i386 architecture for the linker and -o specifies the output file name.
+./asm_file runs the compiled binary.

@@ -1,0 +1,29 @@
+Use Case: Hypothesis is a Python library for property-based testing. It simplifies the process of creating complex data structures for tests. Property-based testing is a method of software testing where tests are performed based on the mathematical principles of properties.
+
+Code Details and Examples: 
+
+Code: 
+
+```python
+from hypothesis import given, strategies as st
+
+@given(st.integers(), st.integers())
+def test_ints_are_commutative(x, y):
+    assert x + y == y + x
+```
+
+In this example, the hypothesis library is used to generate pairs of integers x and y, and then test that addition is commutative - that is, changing the order of the operands does not change the result.
+
+The test function in this case does not need manual input preparation. Instead, Hypothesis will generate and run the test with many different pairs of integers (e.g., zero, positive and negative integers, very large and very small integers).
+
+The `@given(...)` decorator tells Hypothesis what kind of input data to generate for the test function. `st.integers()` creates a strategy that generates integers.
+
+Command to run it: 
+
+Use the following command in the terminal:
+
+```shell
+pytest test_file.py
+```
+
+Replace `test_file.py` with the name of your python file.

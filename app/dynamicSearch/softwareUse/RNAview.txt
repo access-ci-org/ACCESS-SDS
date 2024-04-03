@@ -1,15 +1,18 @@
-Use Case: Visualize RNA secondary structure
+Use Case: RNAview is a popular software tool used extensively to determine secondary structure of RNA molecules from the 3D coordinate data in a PDB file. It reveals detailed base-pairing and base-stacking interactions in the structure, which are necessary for the function of RNA.
 
-Code details and examples:
-RNAview is a software tool for visualizing RNA secondary structures. It takes RNA secondary structure in dot-bracket notation as input and generates a graphical representation of the structure.
+Code details and examples: 
 
-Example input file (input.dot):
-```
-((((....)))).(((...)))
-```
+Code:
 
-To visualize the RNA secondary structure using RNAview, you can run the following command:
+To use RNAview, you will first need to format your input files correctly. The input to the RNAview program is a file in PDB format, that contains the 3D coordinates of the RNA molecule.
 
+You will simply call the RNAview command followed by the filename of your PDB file, like so:
+
+```bash
+RNAbc -i example.pdb
 ```
-RNAview input.dot
-```
+In this case, 'example.pdb' is the PDB file containing the parameters for your specific RNA molecule. A pdb file is just a simple text file that contains the atom names and their positional coordinates of the RNA molecule.
+
+The output of running RNAbc will be two files, one is 'example.pdb.out' file showing the base-pairing information in the RNA structure, and the other is 'example.pdb.psc' file for its postscript graphic output.
+
+Note: The above provided code samples are much simplified for the purpose of this task. The actual implementation might need additional flags or parameters based on specific requirements.

@@ -1,35 +1,48 @@
-Use Case: Security and cryptography library
-Code examples: 
-```c
-#include <stdio.h>
+Use Case: libsodium is a modern, portable, easy-to-use software library for encryption, decryption, signatures, password hashing, and more. It is based on a proven framework (NaCl) and provides a high level of security.
+
+Code details and examples: 
+
+Code:
+
+Suppose we want to encrypt a string "Hello, World!"
+
+Step 1: Including the libsodium library in C.
+
+```
 #include <sodium.h>
+```
 
-int main() {
-    if (sodium_init() < 0) {
-        return 1;
-    }
+Step 2: Generate a random key and nonce
 
-    unsigned char public_key[crypto_box_PUBLICKEYBYTES];
-    unsigned char secret_key[crypto_box_SECRETKEYBYTES];
-    crypto_box_keypair(public_key, secret_key);
+```
+unsigned char key[crypto_secretbox_KEYBYTES];
+unsigned char nonce[crypto_secretbox_NONCEBYTES];
+randombytes_buf(nonce, sizeof nonce);
+randombytes_buf(key, sizeof key);
+```
 
-    printf("Public key: ");
-    for (int i = 0; i < crypto_box_PUBLICKEYBYTES; i++) {
-        printf("%02x", public_key[i]);
-    }
-    printf("\n");
+Step 3: Encrypt the message
 
-    printf("Secret key: ");
-    for (int i = 0; i < crypto_box_SECRETKEYBYTES; i++) {
-        printf("%02x", secret_key[i]);
-    }
-    printf("\n");
-
-    return 0;
+```
+unsigned char ciphertext[crypto_secretbox_MACBYTES + MESSAGE_LEN];
+if (crypto_secretbox_easy(ciphertext, message, MESSAGE_LEN, nonce, key) != 0) {
+   /* panic! the nonce is too short */
 }
 ```
-To compile and run:
-```bash
-gcc example.c -o example -lsodium
-./example
+
+Step 4: Decrypt the message
+
 ```
+unsigned char decrypted[MESSAGE_LEN];
+if (crypto_secretbox_open_easy(decrypted, ciphertext, CIPHERTEXT_LEN, nonce, key) != 0) {
+   /* panic! the ciphertext was tampered with */
+}
+```
+
+Command to run the code:
+
+```gcc -o encrypt_and_decrypt encrypt_and_decrypt.c -lsodium```
+
+The output formatted file: The output of this code will be in RAM (in 'ciphertext' and 'decrypted' arrays), not in a file. To save it to a file, you have to use file operations specific to the language you are writing the code in.
+
+This library is quite low level but it's good for applications that need performant crypto operations. For common security concerns, like hashing passwords, use higher-level libraries that are easier to use correctly.

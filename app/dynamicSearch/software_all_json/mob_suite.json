@@ -1,0 +1,13 @@
+{
+  "software_name": "mob_suite",
+  "comprehensive_overview": "mob_suite is a modular platform for annotating, visualizing, and analyzing genomic and metagenomic data for the detection of mobile genetic elements (MGEs) such as plasmids, integrative and conjugative elements (ICEs), and genomic islands.",
+  "core_features": "1. Annotates and visualizes mobile genetic elements in genomic and metagenomic data.\n2. Identifies antibiotic resistance genes, virulence genes, and other key genomic features associated with mobile elements.\n3. Provides tools for comparative genomics and phylogenetic analysis of mobile genetic elements.\n4. Allows for the detection of potential horizontal gene transfer events in microbial genomes.",
+  "general_tags": ["bioinformatics", "genomics", "metagenomics"],
+  "additional_tags": {
+    "research_discipline": "Genomics",
+    "research_area": "Mobile Genetic Elements",
+    "software_class": "Annotation and Visualization Tool",
+    "software_type": "Bioinformatics Tool",
+    "field_of_science": ["Biological Sciences"]
+  }
+}

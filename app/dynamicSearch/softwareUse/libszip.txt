@@ -1,73 +1,86 @@
-Use Case: Data compression and decompression using Libszip
+Use Case: Libszip is an optimization codec for the HDF family of data formats. It provides lossless compression and is generally employed for scientific data.
 
 Code details and examples:
-Libszip is a library for reading, writing, and manipulating data in Zip files. Below is an example of compressing and decompressing a file using libszip:
 
-Input file (sample.txt):
-```
-Hello, this is a sample text file for compression.
-```
+Code:
 
-Compression code snippet:
-```C
-#include <stdio.h>
-#include <libz/libz.h>
+```bash
+#include "szlib.h"
 
-int main() {
-    gzFile file = gzopen("sample.gz", "wb");
-    FILE *input = fopen("sample.txt", "rb");
+void compress(char* inputfile, char* outputfile) {
+    sz_stream c_stream;
+    FILE* inhandle;
+    FILE* outhandle;
+    int err;
+    int bytes_in;
+    int bytes_out;
+    
+    inhandle = fopen(inputfile, "r");
+    outhandle = fopen(outputfile, "w");
 
-    char buffer[1024];
-    int num_read;
+    c_stream.hidden = SZ_BufftoBuffCompress;
+    c_stream.bits_per_pixel = 8; /* 8 bits/pixel for GRIB data */
+    c_stream.pixels_per_line = 512; /* pixels per line for your data */
+    c_stream.options_mask = SZ_MSB_OPTION_MASK; /* options... */
+    c_stream.sz_mode = SZ_DEFAULT_OPTION; /* compression mode... */
+    c_stream.endian = SZ_LITTLE_ENDIAN; /* machine endian-ness... */
+     
+    err = SZ_CompressInit(&c_stream);
+    if (err != SZ_OK) {
+        fprintf(stderr, "SZ_CompressInit error: %d\n", err);
+        exit(1);
+    }
+    
+    do {
+        c_stream.next_in = fread(inhandle, 1, c_stream.avail_out, &bytes_in);
+        if (ferror(inhandle)) {
+            (void)SZ_CompressEnd(&c_stream);
+            fprintf(stderr, "read error\n");
+            exit(1);
+        }
+        c_stream.avail_in = bytes_in;
 
-    while ((num_read = fread(buffer, 1, sizeof(buffer), input)) > 0) {
-        gzwrite(file, buffer, num_read);
+        if (bytes_in != 0) {
+            err = SZ_Compress(&c_stream, SZ_FINISH);
+            if (err != SZ_STREAM_END) {
+                fprintf(stderr, "SZ_Compress error: %d\n", err);
+                exit(1);
+            }
+        }
+        c_stream.next_out = fwrite(outhandle, 1, c_stream.avail_out - c_stream.avail_in, &bytes_out);
+        if (bytes_out != c_stream.avail_out) {
+            fprintf(stderr, "write error\n");
+            exit(1);
+        }
+    } while (bytes_in != 0);
+    
+    err = SZ_CompressEnd(&c_stream);
+    if (err != SZ_OK) {
+        fprintf(stderr, "SZ_CompressEnd error: %d\n", err);
+        exit(1);
     }
 
-    gzclose(file);
-    fclose(input);
-
-    return 0;
+    fclose(inhandle);
+    fclose(outhandle);
 }
 ```
 
-Decompression code snippet:
-```C
-#include <stdio.h>
-#include <libz/libz.h>
+The input file should be in binary format. The output file will be in compressed binary format.
 
-int main() {
-    gzFile file = gzopen("sample.gz", "rb");
-    FILE *output = fopen("sample_decompressed.txt", "wb");
+Please note that this is a sample code, and you may need to adjust it according to your specific case.
 
-    char buffer[1024];
-    int num_read;
+Command to run:
 
-    while ((num_read = gzread(file, buffer, sizeof(buffer))) > 0) {
-        fwrite(buffer, 1, num_read, output);
-    }
+This file can be compiled with a C compiler such as gcc. Suppose the file is named "compress.c", then you can compile it with:
 
-    gzclose(file);
-    fclose(output);
-
-    return 0;
-}
+```bash
+gcc compress.c -o compress -lsz
 ```
 
-To compile the above code using libszip, you can use a command like:
-```
-gcc compress.c -o compress -lz
-```
+And then run it with:
 
-```
-gcc decompress.c -o decompress -lz
-```
-
-And to run the compiled executables:
-```
+```bash
 ./compress
 ```
 
-```
-./decompress
-```
+This commands will execute the program and it will compress the input file.

@@ -1,34 +1,36 @@
-Use Case: Dask is a flexible parallel computing library for analytic computing.
+Use Case: Dask is used for parallel computing in Python. It provides advanced parallelism directly into native Python APIs like Numpy, Pandas, and Scikit-Learn. It enables efficient computation on large datasets that do not fit into memory.
 
 Code details and examples:
-Dask can be used to parallelize operations across multiple cores or nodes in a cluster to handle larger-than-memory datasets efficiently. 
 
-Here is an example of using Dask to load and perform operations on a large CSV file:
+Code:
 
-Sample Input File (data.csv):
-```
-name,age,salary
-Alice,25,50000
-Bob,30,60000
-Charlie,35,70000
-David,40,80000
-```
-
-Sample Code:
 ```python
-import dask.dataframe as dd
+import dask.array as da
 
-# Load the CSV file into a Dask DataFrame
-df = dd.read_csv('data.csv')
+# Create a 10000x10000 array of random numbers, represented as many small arrays
+array = da.random.random((10000, 10000), chunks=(1000, 1000))
 
-# Perform operations on the Dask DataFrame
-df['adjusted_salary'] = df['salary'] * 1.10
+# Now operate on this array as you would a numpy array
+result = array + array.T
 
-# Compute the result
-result = df.compute()
-
-print(result)
+# Call .compute() when you want your result as a NumPy array.
+total = result.mean().compute()
 ```
+In this code, we are creating a large array that is split into smaller chunks, and performing some computations. The `compute()` function is used to get the result.
 
 Command to run:
-This code can be run using a Python interpreter.
+
+To run this script, save it as a .py file and use the Python interpreter from the terminal:
+
+```bash
+$ python dask_example.py
+```
+
+Command to run Dask interactively (Jupyter notebook or Python shell):
+
+```bash
+from dask.distributed import Client, progress
+client = Client(processes=False)  # Start Dask Client
+
+# Now use Dask as normally done.
+```

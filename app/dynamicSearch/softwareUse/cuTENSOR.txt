@@ -1,46 +1,62 @@
-Use Case: cuTENSOR is a GPU-accelerated library for tensor operations on NVIDIA GPUs.
+Use Case: cuTENSOR is a first-of-its-kind, GPU-accelerated tensor linear algebra library that allows software developers to perform tensor contractions and reductions at the speed of GPUs.
 
-Code details and examples:
-cuTENSOR requires CUDA-enabled GPUs to function properly.
+Code details and examples: Code
 
-Example code snippet for tensor multiplication using cuTENSOR:
+To use cuTENSOR, you'll need code that defines your tensor data and handles. For instance, here's a basic sample using single-precision complex numbers (Complex float). Let's assume we have three complex float tensors A, B, and C with the same dimensions (3, 3, 3).
+
+Input files:
+
+# Include the cuTENSOR header
 ```cpp
-#include <iostream>
-#include <cutensor.h>
-
-int main() {
-    cutensorHandle_t handle;
-    cutensorInit(&handle);
-
-    // Define input tensors
-    float* A; // Assuming A is initialized with data
-    float* B; // Assuming B is initialized with data
-    float* C; // Result tensor
-
-    // Define tensor descriptors
-    cutensorTensorDescriptor_t descA;
-    cutensorInitTensorDescriptor(&handle, &descA, ...); // Specify tensor dimensions, data type, etc.
-    cutensorTensorDescriptor_t descB;
-    cutensorInitTensorDescriptor(&handle, &descB, ...); // Specify tensor dimensions, data type, etc.
-    cutensorTensorDescriptor_t descC;
-    cutensorInitTensorDescriptor(&handle, &descC, ...); // Specify tensor dimensions, data type, etc.
-
-    // Define alpha and beta for output scaling
-    float alpha = 1.0f;
-    float beta = 0.0f;
-
-    // Perform tensor multiplication
-    cutensorMatmul(&handle, &alpha, A, descA, B, descB, &beta, C, descC, C, descC, C, descC, C, descC, CUTENSOR_ALGO);
-
-    cutensorStatus_t status = cutensorGetErrorString(cutensorDestroy(handle));
-
-    if (status != CUTENSOR_STATUS_SUCCESS) {
-        std::cerr << "Error: cuTENSOR operation failed." << std::endl;
-        return 1;
-    }
-
-    return 0;
-}
+#include <cutensor/cutensor.h>
 ```
 
-Please refer to the cuTENSOR documentation for detailed information on how to set up tensor operations using cuTENSOR.
+```cpp
+cutensorHandle_t handle;
+cutensorCreate(&handle);
+
+uint32_t rankA = 3;
+uint32_t extentA[3] = {3, 3, 3};
+cuComplex* A_d;
+cudaMalloc((void**)&A_d, sizeof(cuComplex) * extentA[0] * extentA[1] * extentA[2]);
+
+uint32_t rankB = 3;
+uint32_t extentB[3] = {3, 3, 3};
+cuComplex* B_d;
+cudaMalloc((void**)&B_d, sizeof(cuComplex) * extentB[0] * extentB[1] * extentB[2]);
+
+uint32_t rankC = 3;
+uint32_t extentC[3] = {3, 3, 3};
+cuComplex* C_d;
+cudaMalloc((void**)&C_d, sizeof(cuComplex) * extentC[0] * extentC[1] * extentC[2]);
+```
+
+To execute a tensor operation, you'd first define the tensor descriptors and fill them with your chosen data:
+
+```cpp
+cutensorTensorDescriptor_t descA;
+cutensorCreateTensorDescriptor(&handle, &descA, rankA, extentA, NULL, CUDA_C_32F, CUTENSOR_OP_IDENTITY);
+
+cutensorTensorDescriptor_t descB;
+cutensorCreateTensorDescriptor(&handle, &descB, rankB, extentB, NULL, CUDA_C_32F, CUTENSOR_OP_IDENTITY);
+
+cutensorTensorDescriptor_t descC;
+cutensorCreateTensorDescriptor(&handle, &descC, rankC, extentC, NULL, CUDA_C_32F, CUTENSOR_OP_IDENTITY);
+```
+
+Then, to perform the contractions, you'd use the cuTensorContraction API as such:
+
+```cpp
+cutensorContractionDescriptor_t desc;
+cutensorInitContractionDescriptor(&handle, &desc,
+                                  &descA, "ijk", &descB, "ijk", &descC, "ijk",
+                                  &descC, "ijk", COMPLEX_ACCUMULATE);
+```
+This code will perform the contraction of tensors A and B, and accumulate the result into tensor C.
+
+Command to run: Provided that you have the CUDA SDK, NVCC compiler, and cuTENSOR properly installed and set up, typical commands to compile and run a cuTENSOR code can end in:
+```
+nvcc -I/path/to/cutensor/include -L/path/to/cutensor/lib64 -lcutensor -lcudart -o sample sample.cu
+./sample
+```
+The "/path/to/cutensor" would be the path where you have cuTENSOR installed. The -I and -L flags specify the include and library paths respectively for the NVCC compiler. The -l flags specify the libraries to link against. You would compile your file (here named "sample.cu") with `nvcc` and then run the compiled executable named "sample".

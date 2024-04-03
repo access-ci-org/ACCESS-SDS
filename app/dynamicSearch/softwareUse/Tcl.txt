@@ -1,16 +1,28 @@
-Use Case: Scripting language for automation, testing, and rapid prototyping.
+Use Case: Tcl (Tool Command Language) is a dynamic programming language that is suitable for a variety of uses, from web and desktop applications development to being embedded in devices such as routers. It is also popular in the scientific community for data analysis and simulation. 
 
 Code details and examples:
-Tcl (Tool Command Language) is a powerful scripting language that can be used for various purposes such as automation, testing, and rapid prototyping.
 
-Sample Input files:
-1. script.tcl
+Code:
+
 ```
-# Hello World program in Tcl
-puts "Hello, World!"
+#Sample Tcl script that calculates the factorial of a number
+proc factorial {number} {
+    set result 1
+    for {set i 2} {$i <= $number} {incr i} {
+        set result [expr {$result*$i}]
+    }
+    return $result
+}
+
+# Use the procedure
+set num 5
+puts "The factorial of $num is [factorial $num]"
 ```
 
-Command to run:
-```
-tclsh script.tcl
+The input file specification in this example is a plain text file with Tcl code. The Tcl interpreter is used to read and execute this file. In this example, `factorial` is a procedure defined in Tcl that calculates the factorial of a number. We can call this procedure with a number as an argument to get the factorial of that number.
+
+The command to run this script (named example.tcl) in a Unix-like system is:
+
+```bash
+tclsh example.tcl
 ```

@@ -1,0 +1,86 @@
+Use Case: libev is used as a high-performance event loop that is meant to be used both as an event loop in standalone programs and as a secondary event loop in programs that already integrate event loops. It supports I/O, timers and signals and child events, handle time and control events at a fine-grained level, and plenty more. 
+
+Code details and examples:
+
+Code:
+
+This is a simple echo server using libev:
+
+```c
+#include <ev.h>
+#include <stdio.h>
+#include <netdb.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include libev.h 
+ 
+
+static void cb(EV_P_ ev_io *w, int revents){
+    char buffer[1024] ={0};
+    ssize_t nbytes = recv(w->fd, buffer, sizeof(buffer), 0);
+    if (nbytes > 0) {
+       send(w->fd, buffer, nbytes, 0);
+    }else if (nbytes == -1){
+       perror("recv");
+    }
+ }
+
+ 
+int main(void){
+    int s;
+    int o;
+    struct addrinfo hints ={0};
+    struct addrinfo *res;
+    struct ev_loop *loop = EV_DEFAULT;
+    ev_io watcher;
+ 
+    
+    hints.ai_family = AF_UNSPEC;
+    hints.ai_socktype = SOCK_STREAM;
+    hints.ai_protocol = IPPROTO_TCP;
+    
+    if (getaddrinfo(NULL, "8005", &hints, &res)){
+       perror("getaddrinfo");
+       return -1;
+    }
+ 
+    s = socket(res->ai_family, res->ai_socktype, res->ai_protocol);
+    if (s < 0){
+       perror("socket");
+       return -1;
+    }
+ 
+     o = 1;
+     setsockopt(s, SOL_SOCKET, SO_REUSEADDR, &o, sizeof(o));
+     fcntl(s, F_SETFL, O_NONBLOCK);
+ 
+    if (bind(s, res->ai_addr, res->ai_addrlen) < 0){
+       close(s);
+       perror("bind");
+       return -1;
+    }
+ 
+    if (listen(s, 5) < 0){
+       close(s);
+       perror("listen");
+       return -1;
+    }
+ 
+    ev_io_init(&watcher, cb, s, EV_READ);
+    ev_io_start(loop, &watcher);
+ 
+    ev_run(loop, 0);
+ 
+    return 0;
+ } 
+```
+
+Running the Code:
+
+The normal way to compile a libev program is by using the pkg-config utility, you can see an example below:
+
+```shell
+gcc `pkg-config --cflags --libs libev` my_program.c
+```
+
+Please note that C code must be written in a file with a .c extension and then compiled with gcc or a similar compiler before it can be run.

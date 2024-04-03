@@ -1,0 +1,36 @@
+Use Case: Circlator is a software tool that combines the functionalities of several existing methods to generate the best possible de novo genome assembly. It is useful in the processing of genome sequences, specifically for circularizing them. This requires input files in assembly and BAM formats, such as those created during sequence alignment and variant calling processes.
+
+Code details and examples: Code
+
+Input: 
+The primary inputs for Circlator are an assembled genome sequence in FASTA format and one or more sets of paired-end reads in BAM format that have been aligned to the assembly. Assume that we have the following files:
+
+- Assembly file: assembly.fasta
+- Aligned reads: reads.bam
+
+Command: 
+To run Circlator using these files, the following command would be utilized:
+
+```
+circlator all --threads 4 assembly.fasta reads.bam output_directory
+```
+
+Note: The --threads 4 option indicates that Circlator should use 4 CPU cores.
+
+Output: 
+The primary output of this step is a new assembly (in the output directory specified) where contigs determined to be circular have been linearized, and any contigs duplicated in the assembly have been consolidated.
+
+Input File Specifications:
+
+- The assembly file must be in FASTA format. This is a text-based format for representing either nucleotide sequences or peptide sequences, in which nucleotides or amino acids are represented using single-letter codes.
+
+- The BAM file contains the aligned paired-end reads. BAM is a binary version of the Sequence Alignment/Map (SAM) format. 
+
+Additional file details: 
+
+- The assembly file is a single FASTA containing all contigs to be assembled. 
+- The BAM file should have an index file (bai) in the same directory.
+- All sequences need to have a unique header in the FASTA file.
+- Circlator will not work correctly if the assembly has identical sequences. 
+
+Circlator creates several intermediate files and directories during a run. These are kept and not deleted because they can be useful when trying to understand why a particular result was, or was not, found.

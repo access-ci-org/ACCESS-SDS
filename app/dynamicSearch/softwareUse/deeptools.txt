@@ -1,24 +1,32 @@
-Use Case: DeepTools is a package for visualization and analysis of high-throughput sequencing data.
+Use Case:
+DeepTools is a suite of bioinformatics tools primarily used for deep-sequencing data processing, such as NGS data. These tools help in visualizing data, normalize data biases, and help interpret and manipulate deep-sequencing data using compute matrix operations and heatmaps.
 
 Code details and examples:
-1. Compute matrix of ChIP-seq signal around transcription start sites:
-```bash
-computeMatrix reference-point --referencePoint TSS -b 1000 -a 1000 -R genes.bed -S signal.bw -o signal_matrix.gz
-```
+The computeMatrix command of deepTools, for example, creates a matrix of values for plotting heatmaps from the alignment of read files (BAM or bigWig formats typically) over intervals in a BED/GTF file. The reference-point mode centers every region to a specific point (such as a transcription start site).
 
-2. Plot heatmap of ChIP-seq signal around transcription start sites:
-```bash
-plotHeatmap -m signal_matrix.gz -out heatmap.png --colorMap RdBu
-```
+Command: 
 
-3. Generate profile plot of ChIP-seq signal at specific regions:
-```bash
-computeMatrix scale-regions -S signal.bw -R regions.bed -b 2000 -a 2000 -m 10000 -out profile_matrix.gz
 ```
-
-4. Plot profile of ChIP-seq signal at specific regions:
-```bash
-plotProfile -m profile_matrix.gz -out profile.png
+computeMatrix reference-point --referencePoint TSS -b 1000 -a 1000 -R test_regions.bed -S test.bw -o matrix_test.mat.gz
 ```
+The command above produces a gzip compressed matrix file (matrix_test.mat.gz).
 
-For more information and additional usage examples, refer to the official DeepTools documentation: https://deeptools.readthedocs.io/en/latest/
+Heatmaps can later be generated from the created matrix.
+
+Command to create a Heatmap:
+
+```
+plotHeatmap -m matrix_test.mat.gz -out test.png
+```
+This command generates a heatmap (named test.png) from the matrix file.
+
+Input File Format:
+- Alignment files: BAM or bigWig
+- Reference files: BED/GTF 
+
+Specifications:
+The BAM (Binary Alignment Map) file contains information about the aligned sequence data while the bigWig file is a binary version of Wiggle (WIG) format, used to display dense, continuous data. The BED and GTF files provide the regions of the genome for alignment.
+
+In the example command presented, '-b 1000' refers to 'upstream' distance from the reference point and '-a 1000' refers to 'downstream' distance from the reference point. The 'test.bw' is the BAM or bigWing file, and the 'test_regions.bed' is the BED file.
+
+DeepTools are based in Python but since they work primarily with command line, previous knowledge of Python is not necessary. Instead, familiarity with bash and command line interfaces is more essential.

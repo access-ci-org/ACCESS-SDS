@@ -1,40 +1,54 @@
-Use Case: autotools is a set of tools designed to help create portable and platform-independent build systems for Unix-like systems. It includes tools like autoconf, automake, and libtool.
+Use Case: Autotools is a suite of programming tools designed to assist in making source code packages portable to many Unix-like systems. It can be used to automatically configure software source code packages; process Makefile.in inputs to help create a portable Makefile; and create portable shell scripts.
 
 Code details and examples:
-1. autoconf:
-Autoconf is used to generate configure scripts from a configure.ac input file. Here is an example of a simple configure.ac file:
+
+Code:
+
+Let's assume you have a simple C program i.e., `main.c`:
+
+```c
+#include <stdio.h>
+
+int main() {
+   printf("Hello, World!");
+   return 0;
+}
 ```
-AC_INIT([hello], [1.0], [hello@example.com])
-AC_PREREQ([2.69])
-AC_CONFIG_SRCDIR([hello.c])
-AC_CONFIG_HEADERS([config.h])
-AM_INIT_AUTOMAKE
+
+1. Create a file named `configure.ac`:
+
+```shell
+AC_INIT([Hello], [1.0])
+AM_INIT_AUTOMAKE([-Wall -Werror foreign])
 AC_PROG_CC
+AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
 ```
-To generate the configure script:
-```
-autoconf
-```
 
-2. automake:
-Automake is used to generate Makefile.in files from Makefile.am input files. Here is an example of a simple Makefile.am file:
-```
+2. Create a file named `Makefile.am`:
+
+```shell
 bin_PROGRAMS = hello
-hello_SOURCES = hello.c
-```
-To generate Makefile.in:
-```
-automake --add-missing
+hello_SOURCES = main.c
 ```
 
-3. libtool:
-Libtool is used to manage shared libraries on various Unix-like systems. Here is an example of using libtool to compile a shared library:
-```
-libtool --mode=compile gcc -c -o example.lo example.c
-libtool --mode=link gcc -o libexample.la example.lo
+3. Generate `configure` script and `Makefile.in`:
+
+```shell
+autoreconf --install
 ```
 
-Note: The commands provided above are just examples and may need to be adjusted based on the specific project requirements.
+Your project is now ready to be built and installed.
 
-Please refer to the official documentation for more details and advanced usage.
+Command to run: 
+
+```shell
+./configure
+make 
+make install
+``` 
+
+Input files: `configure.ac`, `Makefile.am` and your C source code file(s).
+Format required: Text file.
+Any specifications: It requires proper install of `M4`, `Autoconf`, `Automake` and `Autotools`.
+Details in input file: It specifies your project name, version, necessary compiler and configure file.

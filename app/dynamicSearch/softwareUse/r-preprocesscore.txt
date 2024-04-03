@@ -1,0 +1,28 @@
+Use Case: PreprocessCore is a library in R used for preprocessing data and providing certain advanced analytics functionalities and pre-processing tasks. 
+
+Code details and examples: 
+Code:
+
+1. Load the library:
+```R
+library(preprocessCore)
+```
+2. Depending on the use-case, we can use one of the several methods available in preprocessCore. For example, using normalize.quantiles for quantile normalization.
+```R
+# Create an input matrix
+data_matrix <- matrix(rexp(200, rate=.1), ncol=2)
+
+# Perform quantile normalization
+normalized_matrix <- normalize.quantiles(data_matrix)
+```
+
+In this example, the input is a data matrix where each column is an observation and each row is a variable. The function normalize.quantiles() from the preprocessCore library is used to perform quantile normalization.
+
+Command to run the code:
+
+The above script can be run in R console, R script or in RStudio. 
+Remember `normalize.quantiles` function interprets the data in the matrix columns as observations and rows as variables. 
+
+input file: none
+format required: matrix is created within R environment. 
+The example here is a small 2 column matrix, in real use cases the matrix can have hundreds or thousands of columns each typically representing different samples or conditions.

@@ -1,0 +1,42 @@
+Use Case: CellPhoneDB is a publicly available repository of curated receptors, ligands and their interactions. Subunit architecture is considered for both ligands and receptors, representing hetero-dimeric ligands and both hetero-dimeric and hetero-multimeric receptors. It is typically used for inferring cell-cell communication from scRNA-Seq data.
+
+Code details and examples:
+
+Code:
+
+Input File: A typical input file is a text file containing counts in a genes (rows) x cells (columns) format. The first row should contain cell type identification, and the first column should contain gene names.
+
+Example:
+```
+    Cell1 Cell2 Cell3
+Gene1    10   20   30
+Gene2    40   50   60
+Gene3    70   80   90
+```
+
+In addition, a metadata file with cell type identification per cell is required.
+
+Example:
+```
+Cell    Cluster
+Cell1   Type1
+Cell2   Type2
+Cell3   Type3
+```
+
+Command to Run: Below is a simple command on how to run cell phone DB with a significant threshold of 0.05.
+
+```
+$ cellphonedb method statistical_analysis yourmetafile yourcountsfile --threshold=0.05
+```
+
+In the command, replace `yourmetafile` with the name of your metadata file and `yourcountsfile` with the name of your counts file.
+
+In the case of Python, you must first import the necessary cellphonedb module. An example of how to do this is shown below:
+
+```python
+from cellphonedb.src.app.app_logger import app_logger
+from cellphonedb.src.app.cellphonedb_app import cellphonedb_app
+
+cellphonedb_app.create_app(app_logger).run(meta_filename='yourmetafile', count_filename='yourcountsfile', iterations=1000, threshold=0.05)
+```

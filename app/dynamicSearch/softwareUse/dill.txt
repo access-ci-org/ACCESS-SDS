@@ -1,24 +1,30 @@
-Use Case: Serialization tool for Python objects. Can serialize almost any Python object.
-Code details and examples:
+Use Case: Dill is a Python library that can be used for serializing and deserializing Python objects to the majority of the built-in Python types. Serialization is the process of converting an object's state to a string of bytes, while deserialization does the opposite. 
+
+Code details and examples: 
+
+Code:
+
 ```python
+# Import the dill library
 import dill
 
-# Sample data
-data = {
-    'name': 'Alice',
-    'age': 30,
-    'city': 'New York'
-}
+# Define a sample function
+def add_nums(x, y):
+    return x + y
 
-# Serialize data
-with open('data.pkl', 'wb') as f:
-    dill.dump(data, f)
+# Pickle the function to a file
+with open('add_nums.pkl', 'wb') as file:
+    dill.dump(add_nums, file)
+  
+# Now the function can be loaded back from the file
+with open('add_nums.pkl', 'rb') as file:
+    add_nums_loaded = dill.load(file)
 
-# Deserialize data
-with open('data.pkl', 'rb') as f:
-    loaded_data = dill.load(f)
-
-print(loaded_data)
+print(add_nums_loaded(5, 7))  # Outputs: 12
 ```
-Command to run: python script.py
-```
+
+In this example, we define a function `add_nums` which takes two arguments and returns their sum. We use `dill.dump` to write the function to a file `add_nums.pkl`. Later, we use `dill.load` to load the function back from the file and call it with the arguments 5 and 7, which outputs 12.
+
+The input file in this case is 'add_nums.pkl' which stores the serialized version of the function `add_nums`. The format required is the pickle file format, i.e., a binary file format for storing Python objects. There are no specific requirements or specifications in the input file, as the dill library handles the serialization and deserialization of the Python object.
+
+To run this Python script, the command would be `python script.py`, assuming that the script's filename is 'script.py'.

@@ -1,0 +1,19 @@
+Use Case: CPE (Common Platform Enumeration) is not actually a software or a library, but a structured naming scheme, employed in the IT industry to uniformly and uniquely label software and hardware platforms. CPE is used in various cybersecurity databases and tools to facilitate the correlation and sharing of information about identified vulnerabilities, configurations, and patches across different databases.
+
+Code details and examples: Code
+
+Since CPE is not a software or tool, it doesn't have an executable program or commands. It's used as a naming convention within system information/security databases like NVD (National Vulnerability Database), and individual CPE names are represented as strings. Here's an example of a CPE Name:
+
+cpe:2.3:a:microsoft:internet_explorer:8.0.6001:beta:*:*:*:*:*:*
+
+This CPE name indicates: Microsoft's Internet Explorer version 8.0.6001 in its beta release. The "*" characters are wildcards, meaning any value is acceptable for the corresponding attribute.
+
+The format of the CPE Name above is detailed as follows:
+
+- cpe: This is the CPE URI binding syntax indicator.
+- 2.3: This is the version of the CPE Specification being used.
+- a: This stands for 'application', indicating the type of the component. Other possible values are 'o' for 'operating system' and 'h' for 'hardware'.
+- microsoft: This is the vendor attribute, indicating the maker of the component.
+- internet_explorer: This is the product attribute, indicating the specific software or hardware.
+- 8.0.6001: This is the version of the product.
+- beta: This indicates the update, version or edition of the product.

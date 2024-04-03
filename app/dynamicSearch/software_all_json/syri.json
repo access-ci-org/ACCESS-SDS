@@ -1,0 +1,13 @@
+{
+    "software_name": "Syri",
+    "comprehensive_overview": "Syri is a software tool used for analyzing and visualizing complex networks and performing various network analysis tasks. It provides a wide range of functionalities for studying network structures and behaviors.",
+    "core_features": "Syri offers capabilities for network visualization, community detection, centrality analysis, small-world analysis, and motif detection. It allows users to interactively explore and analyze networks, identify key network components, and extract important insights from network data.",
+    "general_tags": ["network analysis", "visualization", "complex networks"],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "data visualization and analysis",
+        "software_type": "network analysis tool",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

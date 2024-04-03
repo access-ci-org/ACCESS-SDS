@@ -1,0 +1,13 @@
+{
+    "software_name": "Pyomo",
+    "comprehensive_overview": "Pyomo is an open-source software package for formulating and solving mathematical optimization problems. It is a Python-based modeling language that allows users to formulate optimization problems in a natural, algebraic syntax.",
+    "core_features": "Pyomo provides a powerful modeling language for expressing optimization problems, supports a wide range of optimization solvers, offers interfaces to popular optimization tools like GLPK, CPLEX, and Gurobi, enables the use of advanced modeling constructs like piecewise-linear and SOS constraints, and allows for easy integration with Python libraries for data manipulation and visualization.",
+    "general_tags": ["optimization", "mathematical modeling", "Python library"],
+    "additional_tags": {
+        "research_discipline": "Applied Mathematics",
+        "research_area": "Optimization",
+        "software_class": "Computational Software",
+        "software_type": "Modeling and Optimization Tool",
+        "field_of_science": "Mathematics"
+    }
+}

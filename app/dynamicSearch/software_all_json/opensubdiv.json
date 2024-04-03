@@ -1,0 +1,11 @@
+{
+    "software_name": "OpenSubdiv",
+    "comprehensive_overview": "OpenSubdiv is an open-source library that provides high-performance subdivision surface evaluation on massively parallel hardware. It generates high-quality surfaces, enabling detailed and complex geometry to be efficiently rendered and animated.",
+    "core_features": "1. High-performance subdivision surface evaluation\n2. Support for complex and detailed geometry\n3. Open-source and actively maintained\n4. Efficient rendering and animation capabilities",
+    "general_tags": ["subdivision surface", "rendering", "animation"],
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Library",
+    "software_type": "Graphics",
+    "field_of_science": "Computer and Information Sciences"
+}

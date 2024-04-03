@@ -1,14 +1,29 @@
-Use Case: Structural variant analysis
-Code details and examples:
-MELT is a software package used for detecting structural variants (SVs) from next-generation sequencing data. It can identify insertions, deletions, inversions, and translocations.
+Use Case: MELT (Mobile Element Locator Tool) is a software that is used for discovering, annotating and genotyping Transposable Elements (TE) in high-throughput sequencing data. It can be used to study genetic variation caused by TE insertions in a population.
 
-Sample input files:
-- Input BAM file(s) containing aligned sequencing reads
-- Reference genome FASTA file
+Code details and examples: 
 
-Format required: BAM, FASTA
+The configuration and command line specification to run MELT-SPLIT and MELT-DELETION are given below.
 
-Code:
-melt -B input.bam -R ref_genome.fasta -o output_folder
+MELT-SPLIT
 
-Note: This is a simplified example. Please refer to the MELT documentation for more detailed command options and input file specifications.
+INPUT format required: BAM file (for the samples) and a VCF file (for the reference).
+
+Specifications and details in input files: the input files must be sorted and must have a corresponding index file in the same directory.
+
+Command to run:
+
+`java -Xmx2G -jar MELT.jar Split -w <working directory> -t <transposons.bed> -c <ME_sequence_file.fasta> -h <reference_genome_file.fasta> -n <sample_file.bam>`
+
+MELT-DELETION
+
+Input format required: BAM files (for the samples) and a VCF file (for the reference).
+
+Specifications and details in input files: The input files must be sorted and must have a corresponding index file in the same directory.
+
+Command to run:
+
+`java -Xmx2G -jar MELT.jar Deletion -w <working directory> -l <indel_file.vcf> -h <reference_genome_file.fasta> -n <sample_file.bam>`
+
+Note: Replace `<...>` with your own values.
+
+Please be sure to include the full path to your files if they are not in your working directory. The `-Xmx2G` specifies the maximum memory allocation pool for a Java Virtual Machine (JVM), in this case, 2GB. Please adjust this according to the specification and requirements of your system and task. The `-jar MELT.jar` indicates that MELT is run from a compiled jar file.

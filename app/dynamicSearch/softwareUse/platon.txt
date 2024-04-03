@@ -1,0 +1,33 @@
+Use Case: Platon is a versatile tool that can be used for several applications in crystallography. Its role includes Structure Validation checks to detect any problems in your Crystal Structure Analysis data and files, shows you 2D-projections along the preferred directions in reciprocal space and Fourier maps, and can be used to transform a given set of hkl data to another setting. 
+
+Code details and examples: 
+
+Code: 
+
+The main `platon` program takes an `.ins`, `.hkl` or `.res` file as input, and outputs to standard output. A sample `.ins` file: 
+
+```
+TITL Guanidinium Hydrogen Sulfate
+CELL 0.71073 5.6520 9.5150 9.5150 90.000 90.000 90.000
+ZERR 1 0.0004 0.0007 0.0007 0.000 0.000 0.000
+LATT -1 
+SYMM   x      ,  y      ,  z      
+SFAC   H  C  N  S  O  
+UNIT 180 60 24 2 8
+L.S.    15
+BOND    0.050
+PLAN    0.02
+LIST 6
+ACTA
+size 0.18 0.10
+temp -183.0
+…
+```
+
+Your `platon` executable must be in your PATH environment variable. Command to run them with a `.ins` file (`str.ins`) would be:
+
+```bash
+platon -o str.ins
+```
+
+The `-o` option is for standard output, otherwise it will display in a .ps (postscript) window. "-c" is used for checkCIF generation and Platon will generate a .lst file containing outputs. You may specify multiple input files at the command line, but just the first one will be accepted and processed.

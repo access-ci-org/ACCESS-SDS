@@ -1,0 +1,23 @@
+Use Case: Differential methylation analysis in whole-genome bisulfite sequencing (WGBS) data.
+
+Code details and examples:
+
+Code:
+
+```
+./metilene -a INPUT_SAMPLE_A.bismark.cov -b INPUT_SAMPLE_B.bismark.cov -o OUTPUT_BASENAME
+```
+
+Metilene inputs are bisulfite sequencing data format, which can come from Bismark or other bisulfite software. The data should be in the format: chromosome, start, end, percentage of methylated CpG, count of methylated reads, count of unmethylated reads.
+
+For example:
+
+```
+chr1    10468   10470   50.000000    1    1
+chr1    10470   10472   50.000000    1    1
+chr1    10483   10485   50.000000    1    1
+chr1    10492   10494   50.000000    1    1
+chr1    10497   10499   50.000000    1    1 
+```
+
+In the command line execution, the `-a` and `-b` flags represent the comparison groups, and `-o` represents the output file name. The output will contain many metrics, including mean methylation difference and q-value which can be used to check for significant differentially methylated regions (DMRs).

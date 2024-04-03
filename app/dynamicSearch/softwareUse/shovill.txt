@@ -1,0 +1,46 @@
+Use Case: Shovill is a pipeline that uses SPAdes to assemble bacterial genomes from short-read sequencing data(low-overlap). It uses FastQC, Trimmomatic, FLASH or other software to preprocess the reads. 
+
+Code Details and Examples: 
+
+Sample input files: The input files required are forward and reverse pair of reads.
+
+forward_reads.fasta
+reverse_reads.fasta
+
+Command to run the Shovill pipeline:
+```
+shovill --outdir /path/to/output_dir --R1 /path/to/forward_reads.fasta --R2 /path/to/reverse_reads.fasta
+```
+Note: Replace "/path/to/output_dir" with your desired path for output directory and "/path/to/forward_reads.fasta" and "/path/to/reverse_reads.fasta" with the paths to your input files.
+
+The pipeline uses several parameters for the execution. The key ones are: 
+
+--outdir : Give the output directory, the pipeline will die if the directory already exists
+
+--R1 and --R2 : The forward and reverse reads. The pipeline expects them to be in Fastq format(.fasta/.fq).
+
+Optional Parameters:
+
+--depth : The depth to aim when doing the initial read subsampling (default: 100)
+
+--minlen : Minimum length contig to return (default: 500)
+
+--asm : Which assembler to to use. It defaults to 'spades', but can be switched to use 'megahit', 'skesa' or 'velvet'. 
+
+--trim : Enable read trimming (default: enabled)
+
+--opts : Pass custom options to the assembler. 
+
+The output from Shovill includes: 
+1. contigs.fa – The final contigs in FASTA format.
+2. contigs.gfa – The assembly graph in GFA format.
+3. spades.fasta – The raw assembly as produced by SPAdes without any of Shovill's post-processing.
+4. shovill.log – The log file which may be useful to diagnose problems.
+
+Shovill package also includes several small utility scripts which are helpful for sequence data preprocessing and postprocessing. Some of them include 'sealer', 'cleanup', 'corrections' etc. 
+
+For example, to use 'corrections' script, the command should look like:
+
+```
+corrections --outdir /path/to/output_dir --R1 /path/to/corrected_forward_reads.fasta --R2 /path/to/corrected_reverse_reads.fasta
+```

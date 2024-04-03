@@ -1,0 +1,13 @@
+{
+    "software_name": "libxml2",
+    "comprehensive_overview": "Libxml2 is a software library for parsing, validating, and manipulating XML and HTML documents. It provides a tree-based API for working with XML data and supports various standards such as XML 1.0, XPath, XInclude, XPointer, and XML Catalogs.",
+    "core_features": "1. Parsing and validating XML and HTML documents\n2. Manipulating XML content using a tree-based API\n3. Supporting standards like XML 1.0, XPath, XInclude, XPointer, and XML Catalogs\n4. Handling namespaces and schema validation\n5. Cross-platform compatibility and portability",
+    "general_tags": ["XML", "HTML", "Parsing", "Validation", "Manipulation"],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Library",
+        "software_type": "Parsing",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

@@ -1,0 +1,37 @@
+Use Case: LaTex is a high-quality typesetting system which includes features designed for the production of technical and scientific documentation. It is most often used for medium-to-large technical or scientific documents and can be used for almost any form of publishing.
+
+Code details and examples: Code
+
+Sample input file: (example.tex)
+
+```
+\documentclass{article}
+
+\title{Sample Document}
+\author{John Doe}
+\date{March 2019}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+Here is the text of your introduction.
+
+\section{Conclusion}
+
+Here is the text of your conclusion.
+
+\end{document}
+```
+
+Format required: LaTex code in .tex format.
+
+Specifications and details in input files: The .tex file begins with the `documentclass` command, followed by a series of commands that provide metadata about the document (title, author, date, etc.). The document contents are enclosed in the `begin{document}` and `end{document}` commands. Specific sections and subsections can be denoted with the `section` and `subsection` commands respectively.
+
+Command to run them:
+```
+pdflatex example.tex
+```
+This command creates the PDF file example.pdf from your LaTeX code in example.tex.

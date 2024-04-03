@@ -1,17 +1,50 @@
-Use Case: pytesseract is a Python wrapper for Google's Tesseract-OCR Engine, which is used for optical character recognition.
+Use Case: PyTesseract is a python library that makes use of Tesseract's OCR (Optical Character Recognition) capabilities to convert the text in images into a string form. This can be used in a variety of applications including Image to Text conversion, Data mining and extraction, and many others.
 
 Code details and examples:
+
+Code Example 1: Basic usage of PyTesseract
+
 ```python
 from PIL import Image
 import pytesseract
 
-# Load an image from file
-image = Image.open('sample_image.png')
+# Open an image file
+img = Image.open('test_image.png')
 
-# Use pytesseract to extract text from the image
-text = pytesseract.image_to_string(image)
+# Use pytesseract to convert the image into text
+text = pytesseract.image_to_string(img)
 
+# Print the result
 print(text)
 ```
+The input file here is an image file ('test_image.png') with readable text in it. PyTesseract works best with clear, high-resolution images.
 
-Note: You need to have Tesseract-OCR installed on your system for pytesseract to work properly.
+Command to run it (on a console):
+```bash
+python filename.py
+```
+where filename.py should be replaced with the name of the Python script that contains the above code.
+
+Code Example 2: Using a different language with PyTesseract
+
+```python
+from PIL import Image
+import pytesseract
+
+# Open an image file
+img = Image.open('test_image.png')
+
+# Use pytesseract to convert the image into text
+# Using French as the language
+text = pytesseract.image_to_string(img, lang='fra')
+
+# Print the result
+print(text)
+```
+The input is the same as the previous example, but now we're specifying the 'lang' parameter as 'fra' (French). PyTesseract and Tesseract itself support a wide variety of languages, which can be specified using the 'lang' parameter.
+
+Command to run it (on a console):
+```bash
+python filename.py
+```
+where filename.py should be replaced with the name of the Python script that contains the above code.

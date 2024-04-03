@@ -1,0 +1,22 @@
+{
+    "software_name": "fastcore",
+    "comprehensive_overview": "fastcore is a utility library that provides a set of core functions and classes to improve the productivity and readability of Python code. It includes various utilities for data manipulation, functional programming, and general-purpose task optimization.",
+    "core_features": [
+        "Provides core functions and classes for Python programming",
+        "Includes utilities for data manipulation and functional programming",
+        "Optimizes general-purpose tasks for improved productivity"
+    ],
+    "general_tags": [
+        "Python library",
+        "Utility library",
+        "Data manipulation",
+        "Functional programming"
+    ],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "library",
+        "software_type": "Python library",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

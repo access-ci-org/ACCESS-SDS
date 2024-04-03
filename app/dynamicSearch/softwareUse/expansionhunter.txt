@@ -1,0 +1,36 @@
+Use Case: ExpansionHunter is a software that is used in bioinformatics for identifying repeat expansions in short-read sequencing data, which is common in various genetic disorders like Fragile X syndrome or Huntington's disease.
+
+Code details and examples: Code
+
+ExpansionHunter requires a BAM or CRAM file format, a reference genome, and a repeat catalog as inputs. Here is a sample input file, and the command to run it. 
+
+Input files:
+
+1. A BAM or CRAM file for any individual.
+Format: BAM takes a binary format, while CRAM is more compressed. Both contain sequences, qualities, and other information regarding an individual's DNA.
+Command:
+```
+samtools view -C -T reference.fa -o filename.cram filename.bam
+```
+
+2. A reference genome, such as hg19 or hg38.
+Format: The reference genome format is FASTA and named reference.fa.
+Command:
+```
+gunzip -c reference.fa.gz > reference.fa
+```
+
+3. A repeat catalog is a JSON file listing the names, sequence, and location of all the possible repeat expansions.
+Format: The JSON file is something like this but the information is gene-specific:
+```json
+{
+  "VariantId": "STR",
+  "LocusStructure": "(ACAG)n",
+  "ReferenceRegion": "19:43296966-43296980"
+}
+```
+Perform a simple run of ExpansionHunter:
+```bash
+ExpansionHunter --reads input.bam --reference reference.fa --catalog repeat.json --output-prefix output
+```
+The command specifies the input BAM file (--reads), reference genome (--reference), the repeat catalog (--catalog), and the prefix for the output files (--output-prefix). The primary output file will be in VCF format.

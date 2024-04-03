@@ -1,0 +1,22 @@
+{
+    "software_name": "bustools",
+    "comprehensive_overview": "bustools is a software package for manipulating single-cell RNA-seq data and performing various analysis tasks such as mapping, quantification, error correction, and filtering. It is specifically designed for analyzing droplet-based single-cell RNA-seq data generated from technologies like 10X Genomics' Chromium platform.",
+    "core_features": [
+        "Mapping reads to a reference genome",
+        "Quantifying unique molecular identifiers (UMIs)",
+        "Filtering input data based on quality metrics",
+        "Error correcting UMIs for greater accuracy",
+        "Clustering cells and analyzing expression profiles"
+    ],
+    "general_tags": [
+        "Single-cell RNA-seq",
+        "Data analysis",
+        "Bioinformatics",
+        "Computational biology"
+    ],
+    "research_discipline": "Bioinformatics",
+    "research_area": "Genomics",
+    "software_class": "Data analysis tool",
+    "software_type": "Bioinformatics tool",
+    "field_of_science": "Biological Sciences"
+}

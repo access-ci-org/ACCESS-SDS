@@ -1,0 +1,36 @@
+Use Case: Tobias is a script-based computational tool used for the analysis of high-throughput data, which provides functions such as differential binding, footprinting, and peak calling for ChIP-seq data and Study of transcription factor DNA-binding thermodynamics. 
+
+Code details and examples: Code.
+
+Example Input File Format:
+The key inputs for running Tobias are: BAM-files: mapped and filtered ChIP-seq and Input (control) reads, ATAC-seq reads; BED-file: peak-regions; Reference genome: genome sequence file in FASTA format.
+
+BAM files should look something like this:
+
+@SQ	SN:chr1	LN:1000
+r001	163	chr1	100	30	*	=	349	249	CTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAG
+r002	163	chr1	200	30	*	=	449	249	CTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAG
+
+The peak file (BED format) should look something like this:
+
+chr1    10      20
+chr1    30      40
+chr2    10      20
+chr2    30      40
+
+And the genome reference file (FASTA format) should look something like this:
+
+>chr1
+CTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAG
+>chr2
+CTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAG
+
+To run Tobias, you can use a command like this:
+
+TOBIAS ATACorrect --bam <input.bam> --genome <genome.fa> --peaks <peaks.bed> --outdir atacorrect
+
+TOBIAS ScoreBigwig --bam <input.bam> --genome <genome.fa> --peaks <peaks.bed> --outdir scorebigwig
+
+where <input.bam> is the file name of the BAM file, <genome.fa> is the file name of the genome reference file, and <peaks.bed> is the file name of the peak file. The --outdir argument indicates the directory in which the output files will be saved. 
+
+Some specific options for ScoreBigwig are --cores which determines how many CPU cores to use, and --start/--end which sets the range (in base pairs) around the peak summit TOBIAS will consider.

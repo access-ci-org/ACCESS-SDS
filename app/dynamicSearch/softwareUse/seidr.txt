@@ -1,0 +1,39 @@
+Use Case: Seidr is a software package used for gene network inference provided in the format of an R package. It unifies a number of popular network inference techniques under a unified syntax and data structure. Seidr is useful in pangenomics, genomics, genomics data analysis and bioinformatics environments.
+
+Code Details and Examples:
+
+Code:
+
+In Seidr, there are various methods each having standard input and output. One common method is using the ARACNe algorithm. Below is an example of input and output for the ARACNe method.
+
+- Input files: Expression matrix file (example_file.tsv), which has samples in columns and genes in rows.
+
+To use the Aracne algorithm:
+
+```bash
+seidr aracne -i example_file.tsv -o output.aracne
+```
+
+To view the adjacency matrix:
+
+```bash
+seidr view -i output.aracne -d 0.05 > adj.tsv
+```
+
+To convert to El-Ma format:
+
+```bash
+seidr convert -i output.aracne -o elma.aracne -f elma
+```
+
+- Output files: Network file in Seidr format (output.aracne), adjacency matrix view file (adj.tsv), EL-Ma format file (elma.aracne).
+
+Note: The "-d 0.05" in seidr view command line limits the view to edges with scores larger or equal to 0.05. The "-f elma" in seidr convert is the format flag to specify the output format, here EL-Ma.
+
+Command to run:
+
+To run Seidr, you would use the following command line in the terminal:
+
+```bash
+Rscript Seidr.R input_file.tsv.
+```

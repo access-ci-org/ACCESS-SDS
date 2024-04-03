@@ -1,0 +1,34 @@
+Use Case: PCAngsd is a Python tool primarily used for Principal Component Analysis (PCA) on genotypic data, ancestry inference, and other statistical genetic data analyses 
+
+Code details and examples: 
+
+The input file format is.plink, with -beagle/-beagle.gprobs for genotype probabilities, -vcf/-vcf.gprobs for genotype probabilities, -bfile for binary file,  `-sfs` for site frequency spectrums, and -geno/-post for numpy matrices. 
+
+Sample input file (named sample.plink):
+```
+1 rs3094315 0 742429 A G
+1 rs12562034 0 758311 G A
+1 rs3934834 0 995669 T C
+1 rs9442372 0 1008567 C T
+1 rs3737728 0 1011278 G A
+```
+
+PCA calculation can have specifications like -e '1' to set number of eigenvectors to compute (default is 2), `-i` for an input file, and `-o` for output file. General flags like -threads, -sites and -manual_seed can be used to set number of threads, limit calculation to specific sites and set seed for random generator respectively. 
+
+Code to run PCA using PCAngsd:
+
+```shell
+python pcangsd.py -beagle sample.plink -threads 10
+```
+
+For posterior covariance matrix calculation, the major parameters include -gs that specifies SFS calculation with genotype statistics and -selection that does a scan for positive selection. 
+
+Code to run PCA with posterior covariance matrix calculation:
+
+```shell
+python pcangsd.py -beagle sample.plink -threads 10 -selection 1.0
+```
+
+Link to the manual: http://www.popgen.dk/software/index.php/PCAngsd
+
+Link to the source code: https://github.com/Rosemeis/pcangsd/

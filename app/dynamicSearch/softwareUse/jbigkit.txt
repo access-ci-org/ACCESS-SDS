@@ -1,14 +1,32 @@
-Use Case: Lossless image compression tool
+Use Case: The jbigkit software package is used for lossless compression of binary images. It is especially effective for bi-level images such as scanned documents, faxes and screenshots.
 
-Code details and examples:
-Input file format: Input images in any standard image format like PNG, JPEG, etc.
-Code:
+Code details and examples: Code
+
+Input File: A PBM (portable bitmap) or TIFF (tagged image file format) file is required. For instance, you can have a file named file.pbm or file.tif.
+
+Command to use:
+
+To convert a PBM file to a JBIG file:
+
+```bash
+pbmtojbg < file.pbm > output.jbg
 ```
-jbgtopbm input.jbg > output.pbm
-pbmtojbg output.pbm > output.jbg
+
+This command reads the PBM file from the standard input and writes the resulting JBIG file to the standard output.
+
+For reversing this process, i.e., converting a JBIG file back to a PBM file:
+
+```bash
+jbgtopbm < output.jbg > original.pbm
 ```
-Command to run:
+
+This command reads the JBIG file from the standard input and writes the resulting PBM file to the standard output.
+
+To decode a JBIG file into a TIFF file:
+
+```bash
+jbgtopbm < output.jbg | pbmtotiff -g3 > original.tif
 ```
-jbgtopbm input.jbg > output.pbm
-pbmtojbg output.pbm > output.jbg
-```
+This command reads the JBIG file from the standard input, converts it into a PBM file, and then transforms it into a TIFF file using the pbmtotiff tool from the netpbm package, with group 3 fax encoding.
+
+It's important to note that jbigkit does not support color images directly. If you need to compress a color image, you will need to split the color channels and compress them independently.

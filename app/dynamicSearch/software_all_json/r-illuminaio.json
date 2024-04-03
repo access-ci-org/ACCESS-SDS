@@ -1,0 +1,13 @@
+{
+  "software_name": "r-illuminaio",
+  "overview": "The r-illuminaio package is designed for parsing Illumina's Basecalls Files (BCL) data into the efficient Run-Length encoded format used in the albacore basecalling software.",
+  "core_features": "1. Parses Illumina's Basecalls Files (BCL) data. 2. Converts data into the efficient Run-Length encoded format for use in albacore basecalling software.",
+  "general_tags": ["bioinformatics", "data processing", "Illumina sequencing"],
+  "additional_tags": {
+    "research_discipline": "Genetics",
+    "research_area": "Genomics",
+    "software_class": "Data Processing and Analysis",
+    "software_type": "Bioinformatics Tool",
+    "field_of_science": "Biological Sciences"
+  }
+}

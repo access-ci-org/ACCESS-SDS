@@ -1,0 +1,51 @@
+Use Case: Rust is a systems programming language that can be used to build game engines, operating systems, file systems, browser components and simulation engines for virtual reality. It is particularly useful in situations where performance, reliability and memory safety are important. Rust can also be used to create web applications, command line tools and even writing other programming languages.
+
+Code details and examples:
+
+Code:
+```rust
+// Hello World in Rust
+fn main(){
+    println!("Hello, world!");
+}
+```
+
+To run the code above, you simply need to compile the .rs file using the Rust compiler (rustc). The command to run is as follows:
+
+```bash
+$ rustc file_name.rs
+$ ./file_name
+```
+
+Important specifications are that, while writing a Rust program, you must define a main function, and the program execution begins from the function main. The println! is a macro that prints text to the console.
+
+Input File: No input files required for this particular code.
+
+Format: Code should be written in a .rs (Rust) file.
+  
+Programs can accept arguments directly from the command line, in which case they would be stored in a vector and passed to your main function. For example:
+
+Code:
+```rust
+// Command Line Args in Rust
+fn main() {
+    let args: Vec<String> = std::env::args().collect();
+
+    println!("{:?}", args);
+}
+```
+
+This program will print the list of command line arguments that were passed to it.
+
+To run the code, you would use the command as follows:
+
+```bash
+$ rustc file_name.rs
+$ ./file_name arg1 arg2 arg3
+```
+
+Output will be ["file_name","arg1","arg2","arg3"]
+
+Input File: No input file, arguments passed via command line. 
+
+Format: Code should be written in a .rs (Rust) file.

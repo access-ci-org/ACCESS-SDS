@@ -1,10 +1,48 @@
-Use Case: Interactive Genomics Viewer (IGV)
+Use Case: The Integrative Genomics Viewer (IGV) is a high-performance viewer that can be used for interactive exploration of large, integrated datasets. It provides real-time visualization of multiple sample types, such as genomic data, RNA-Seq, structural variations, and others.
+
 Code details and examples:
-Interactive Genomics Viewer (IGV) is a high-performance visualization tool for interactive exploration of large, integrated datasets. It supports a variety of data types such as BAM, BED, VCF, and other genomic file formats.
 
-Sample command to launch IGV:
+Code:
+
+To load a genome in the IGV, you can use a simple text file called a .genome file. This file defines the genome sequence, chromosome lengths, cytoband file, and optionally, URLs for downloading sequence data. Each line in the file follows the format name=value. Here is an example .genome file:
+
 ```
-igv.sh
+id=hg19
+name=Human hg19
+sequence=/path/to/sequence.fasta
+cytoband=/path/to/cytoband.txt
+chromSizes=/path/to/chrom.sizes
+
 ```
 
-To load a dataset in IGV, you can use the "File" > "Load from File" option and select the appropriate file type and file.
+To load this genome, open the IGV software and select `Genomes -> Load Genome from File...`
+
+Next, to load a track data file, simply select `File -> Load from File...` and choose your data file (.bam, .vcf, .bed, etc).
+
+**Note**: The IGV commands for running are generally performed over a GUI and not typically executed over command line.
+
+The input data files, like .bam, .vcf, .bed, etc., vary in format but they can be generalized as below:
+
+1. BAM format: Binary version of SAM, a sequence alignment map format.
+
+2. VCF format: It is a format for storing gene sequence variations.
+
+3. BED format: It defines a feature (a specific region or regions) in the genome.
+Example:
+
+```
+chr22  1000  5000  cloneA  960  +
+chr22  2000  6000  cloneB  900  -
+chr22  3000  7000  cloneC  760  +
+chr22  4000  8000  cloneD  700  +
+chr22  5000  9000  cloneE  600  +
+chr22  6000 10000  cloneF  500  +
+chr22  7000 15000  cloneG  100  +
+```
+Each field is separated by a whitespace and the columns represent chrom, chromStart, chromEnd, name, score, strand respectively. This is just one way of representing a BED format, there might be additional fields.
+
+Command to run them:
+
+The IGV software is typically interacted with via a GUI and does not have command line commands for general use. However, it can be launched from the command line with a command similar to: 
+
+`igv.sh -g hg19 filename.vcf`

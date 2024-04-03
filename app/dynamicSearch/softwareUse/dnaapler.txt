@@ -1,0 +1,29 @@
+Use Case: DNApeler is used for assembling sequences of DNA, from complex genomes to single cells. 
+
+Code details and examples: Code
+
+For example, consider this FASTQ file with the following content, named `sample.fastq`:
+
+```
+@SEQ_ID
+AGTTTGGGTTTACAGGTTTGGGATTAAAGG
++
+!''*((((***+))%%%++))(++))(---),,)
+
+@SEQ_ID2
+TGAATTGCTTGTGTACTTGTGCTGTTGTGTGTTAGTGCTGTTGTGTGCTTTGTTAGTGTG
++
+!''*((((***+))%%%++))(!!'))%%%((!'))%%%++))(!!'))%%%((!'))%%%++))(!''*((((***+))%%%++))
+```
+
+To assemble the sequences using DNApeler, your command would look something like this in the terminal:
+
+```
+dnaspeler -i sample.fastq -o output.fasta
+```
+
+This command takes the input file `sample.fastq`, assembles the sequences and then outputs the assembled sequences to `output.fasta`.
+
+The input file should be in FASTQ format, a text-based format for storing both a biological sequence (usually nucleotide sequence) and its corresponding quality scores. Both the sequence character and quality score are each encoded with a single ASCII character for brevity. It was originally developed at the Wellcome Trust Sanger Institute to bundle a sequence and its quality data, but has now become the de facto standard for storing the output of high-throughput sequencing machines.
+
+Please note that this is a made-up software and command for educational purposes. The actual software and commands may not work as described.

@@ -1,0 +1,28 @@
+Use Case: SNPGenie is a collection of Perl and R scripts for estimating nonsynonymous (dN), synonymous (dS), and total mutation (N) rates for next-generation sequencing (NGS) data. Specifically designed for within-host NGS data obtained from viral or bacterial infections.
+
+Code details and examples: Code
+
+SNPGenie has two required inputs:
+1. A GTF (Gene transfer format) file specifying the genes and CDS regions.
+2. A pileup file from the aligned reads.
+
+A. Input GTF file (genbank.gtf):
+   
+```
+ACCN    Genbank CDS 4818    8661    .   +   .   gene_id "env"; p_id "P0"; transcript_id "env";
+```
+
+B. Input Pileup file (aligned_reads.pileup):
+
+```
+gi|9626243|ref|NC_001422.1|    34  G   2   .^!,    I
+gi|9626243|ref|NC_001422.1|    35  C   3   ...,    III
+```
+
+C. Running SNPGenie:
+
+```
+path/to/snipgenie.pl --vcfformat=pileup --snpreport=aligned_reads.pileup --gtffile=genbank.gtf
+```
+
+This command will take in the GTF and pileup file and output the dN, dS, and N rates calculated by SNPGenie. Note that the path to the snpgenie.pl script will need to be specified, or it can be run from the current directory if snpgenie.pl is located there.

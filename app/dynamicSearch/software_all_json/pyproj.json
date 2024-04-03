@@ -1,0 +1,11 @@
+{
+  "software_name": "Pyproj",
+  "comprehensive_overview": "Pyproj is a Python interface to the PROJ library for cartographic projections and coordinate transformations.",
+  "core_features": "Pyproj provides a set of functions for converting coordinates between different coordinate reference systems, performing cartographic transformations, and calculating geodesic distances and bearings.",
+  "general_tags": ["Python Library", "Geospatial Analysis", "Cartographic Projections", "Coordinate Transformations"],
+  "research_discipline": [],
+  "research_area": [],
+  "software_class": "Library",
+  "software_type": "Geospatial Analysis software",
+  "field_of_science": "Earth and Environmental Sciences"
+}

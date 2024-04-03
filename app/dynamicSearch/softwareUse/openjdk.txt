@@ -1,24 +1,43 @@
-OpenJDK is an open-source implementation of the Java Platform, Standard Edition. Below are some examples and details for using OpenJDK:
+Use case: Use OpenJDK to run a Java program
 
-Use Case: Compile and run a Java program using OpenJDK
-Code details and examples:
-- Sample Java program (HelloWorld.java):
+Code details and examples: Code 
+
+1. Java Program (Sample.java)
+
+Sample Java code (Sample.java) file:
+
 ```java
-public class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-    }
+public class Sample {
+	public static void main(String[] args) {
+		System.out.println("Hello, World!");
+	}
 }
 ```
 
-- Compilation command:
+The input file here is Sample.java and it follows the standard java file syntax. It has a public class which contains a main method. The println method inside main is used to output text to the console.
+
+2. Command to Compile
+
+Open a terminal in the same directory as the java file and run the following command:
+
 ```bash
-javac HelloWorld.java
+javac Sample.java
 ```
 
-- Run command:
+This command tells OpenJDK's compiler (javac) to compile the Java code in the Sample.java file. No additional specifications are required for the input file other than it being a valid java file.
+
+3. Command to Run
+
+After compiling successfully, an output file Sample.class is generated. This is a bytecode file that Java can run. Running the java file:
+
 ```bash
-java HelloWorld
+java Sample
 ```
 
-- Note: Make sure you have OpenJDK installed on your machine before running the commands.
+This command tells OpenJDK's Java runtime (java) to run the bytecode in the Sample.class file. The java command followed by the filename excluding the .class extension is all that's required for OpenJDK's runtime. 
+
+Output:
+
+```
+Hello, World!
+```

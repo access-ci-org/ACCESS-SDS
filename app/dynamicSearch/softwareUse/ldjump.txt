@@ -1,0 +1,23 @@
+Use Case: ldjump is a bioinformatics software package used for joint estimation of recombination and mutation rates. It detects the presence of recombinant sequences and also estimates the rates of recombination and mutation events. This can be done on a variety of datasets like population genetics, evolution research, or genomics.
+
+Code Details and Examples: 
+Code Input File: An input file for ldjump is a simple text file that describes the sequences you want to analyze. The first line specifies the number of sequences (n) and the length of sequences (l). Each of the following n lines denotes a single sequence. Only binary sequences (sequences consisting of 0 and 1) can be processed.
+
+Here is an example of an input file:
+```
+5 100
+0101001010
+0110001110
+0101110001
+1110001110
+0010010101
+```
+
+Command to Run: After preparing your input file, say "sequences.txt", you can run ldjump as follows (assuming the file is in the same directory where the command is run):
+
+```
+./ldjump sequences.txt
+```
+The results will be written to standard output.
+
+Please note that the actual command to run may be more complex, depending on the installed version of ldjump, and the additional arguments you may want to provide for fine-tuning the analysis process.

@@ -1,43 +1,41 @@
-"tbb32" refers to, the Intel Threading Building Blocks (TBB) library. 
+Use Case: TBB (Threading Building Blocks) is a widely used C++ library for shared-memory parallel programming and heterogeneous computing. It is frequently used for tasks that need to be executed concurrently, such as in image and video processing.
 
-Use Case: Parallelize a simple loop using Intel TBB
 Code details and examples:
 
-Input: No specific input file required
 Code:
 ```cpp
+#include "tbb/parallel_invoke.h"
+#include <cstdlib>
 #include <iostream>
-#include <tbb/tbb.h>
 
+using namespace std;
 using namespace tbb;
 
-class ParallelLoop {
-public:
-    void operator()(const blocked_range<int>& range) const {
-        for (int i = range.begin(); i != range.end(); ++i) {
-            std::cout << "Iteration: " << i << std::endl;
-        }
-    }
-};
+void fibonacci(int n, int& result) {
+  if (n < 2)
+    result = n;
+  else {
+    int x, y;
+    parallel_invoke([&]{fibonacci(n - 1, x);}, [&]{fibonacci(n - 2, y);});
+    result = x + y;
+  }
+}
 
-int main() {
-    ParallelLoop pl;
-    parallel_for(blocked_range<int>(0, 10), pl);
-    
-    return 0;
+int main(int argc, char* argv[]) {
+  int n = 10;  // Compute the 10th fibonacci number
+  int result;
+  fibonacci(n, result);
+  cout << "Fibonacci number " << n << " is " << result << endl;
+  return EXIT_SUCCESS;
 }
 ```
 
-In this example, we create a simple parallel loop using Intel TBB to print out the iteration number. The `parallel_for` function will automatically parallelize the loop across the available CPU cores.
+This simple program computes the nth Fibonacci number using thread-based parallelism provided by the TBB library. The main function gets the value of n and output result. The fibonacci function uses divide-and-conquer to compute the nth Fibonacci number. When n is less than 2, the number itself is returned. When n is greater than or equal to 2, the function uses TBB’s `parallel_invoke` function to compute the (n-1)th and (n-2)th Fibonacci numbers in parallel.
 
-Compile the code using the Intel compiler (assuming it is installed) and link against the TBB library if necessary. For example:
-```
-icpc -o parallel_loop parallel_loop.cpp -ltbb
-```
-
-Run the executable:
-```
-./parallel_loop
+Command to compile and run:
+```cpp
+g++ -I/path/to/tbb/include -L/path/to/tbb/lib -ltbb -o Fib Fibonacci.cpp
+./Fib
 ```
 
-Please note that the specifics of how to compile and run an Intel TBB program may vary based on your system and environment.
+In the compile command line, `-I/path/to/tbb/include` and `-L/path/to/tbb/lib` are used to include the TBB headers and link against the TBB library, respectively. The `-o Fib` option is used to name the output executable file. The `./Fib` command is used to run the output file.

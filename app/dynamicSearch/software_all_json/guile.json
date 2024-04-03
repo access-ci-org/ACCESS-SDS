@@ -1,0 +1,11 @@
+{
+    "software_name": "Guile",
+    "comprehensive_overview": "Guile is an implementation of the Scheme programming language, providing a flexible and embeddable scripting environment for applications. It aims to be a platform for creating applications and libraries that require customizations and extensibility.",
+    "core_features": "Guile offers a powerful Scheme interpreter, a reliable extension language for C and C++ programs, an interactive environment for Scheme development, a large standard library, and a module system that supports extension scripts and plugins.",
+    "general_tags": ["programming language", "scripting language", "embeddable", "customizable"],
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "programming language",
+    "software_type": "interpreter",
+    "field_of_science": "Computer and Information Sciences"
+}

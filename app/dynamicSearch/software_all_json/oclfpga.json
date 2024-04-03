@@ -1,0 +1,17 @@
+{
+  "software_name": "oclfpga",
+  "comprehensive_overview": "oclfpga is an OpenCL framework for FPGA acceleration. It allows users to utilize the power of Field-Programmable Gate Arrays (FPGAs) for accelerating applications through OpenCL programming.",
+  "core_features": [
+    "OpenCL framework for FPGA acceleration",
+    "Utilizes the power of Field-Programmable Gate Arrays (FPGAs)",
+    "Accelerates applications through OpenCL programming"
+  ],
+  "general_tags": ["OpenCL", "FPGA", "Acceleration"],
+  "additional_tags": {
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Computational tool",
+    "software_type": "Framework",
+    "field_of_science": "Engineering and Technology"
+  }
+}

@@ -1,0 +1,33 @@
+Use Case: The clever-toolkit (CTK) consists of bioinformatics software tools that aid in deciphering biological data. It incorporates some key software including BWA, GATK, SAMtools, and Picard. 
+
+Code details and examples: 
+
+Code 1: Run BWA alignment
+Input required: Paired end sequencing data in fastq.gz format, Reference genome in fasta format
+
+```bash
+bwa mem ref-genome.fa sample_R1.fastq.gz sample_R2.fastq.gz > aln-sampe.sam
+```
+
+Code 2: SAMtools view and sort
+Input required: Aligned sequencing data file in SAM format
+
+```bash
+samtools view -Su aln-sampe.sam | samtools sort -o aln-sampe.bam
+```
+
+Code 3: Picard MarkDuplicates
+Input required: Sorted BAM file, Output file name for duplicates marked BAM file, Log file name
+
+```bash
+picard MarkDuplicates I=aln-sampe.bam O=marked_duplicates.bam M=marked_dup_metrics.txt
+```
+
+Code 4: GATK HaplotypeCaller
+Input required: Reference genome in fasta format, Input BAM file with marked duplicates, Output file name for generated GVCF file
+
+```bash
+gatk HaplotypeCaller -R ref-genome.fa -I marked_duplicates.bam -O output.g.vcf -ERC GVCF
+```
+
+Note: These command lines need to be executed in a Linux environment and are meant to be run in the command line terminal of this Linux environment. The data files (ref-genome.fa, sample_R1.fastq.gz, sample_R2.fastq.gz) need to be in the same directory where the commands are run, or the full path of the files needs to be specified in the command lines.

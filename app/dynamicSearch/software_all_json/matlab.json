@@ -1,0 +1,29 @@
+{
+    "software_name": "MATLAB",
+    "comprehensive_overview": "MATLAB is a high-performance language for technical computing and visualization. It integrates computation, visualization, and programming in an easy-to-use environment where problems and solutions are expressed in familiar mathematical notation.",
+    "core_features": [
+        "Algorithm development",
+        "Data analysis",
+        "Data visualization",
+        "Mathematical modeling",
+        "Simulation"
+    ],
+    "general_tags": [
+        "programming language",
+        "technical computing",
+        "visualization",
+        "mathematical notation"
+    ],
+    "additional_tags": {
+        "research_discipline": [
+            "Applied Mathematics"
+        ],
+        "research_area": [],
+        "software_class": "Integrated Development Environment (IDE)",
+        "software_type": "Computational software",
+        "field_of_science": [
+            "Mathematics",
+            "Applied Mathematics"
+        ]
+    }
+}

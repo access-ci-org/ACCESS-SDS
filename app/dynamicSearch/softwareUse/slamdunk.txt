@@ -1,0 +1,37 @@
+Use Case: Slamdunk is a tool designed for the identification and quantification of nucleotide-conversions in any kind of alignable sequence dataset using Next Generation Sequencing. It can be applied in targeted sequencing datasets derived from Ultraviolet Cross-Linking and ImmunoPrecipitation (CLIP) methodologies. It quantifies mutation rates, inspects low sequence complexity regions and also investigates sequence coverage and mutational load within genomic intervals/regions of interest.
+
+Code details and examples: Code
+
+The following examples illustrate the key functionalities of slamdunk
+
+Input file format: BAM or SAM for alignments of NGS reads, a .bed file for regions of interest, and .fasta or .fa for the reference genome.
+
+1. Counting nucleotide-conversions in a given BED file region with filtered BAM/SAM file.
+
+Example command to run:
+
+```bash
+slamdunk count -r filtered.bed -b filtered.bam -o output.tsv
+```
+
+Here, `-r` option is for the BED file, `-b` option is for the BAM file and `-o` option is to specify the output file.
+
+2. Generating a Slamdunk plot showing mutation rate:
+
+Example command to run:
+
+```bash
+slamdunk plot -i output.tsv -o plot.png
+```
+
+Here, `-i` option is for the input file generated in the previous step and `-o` option is to specify the output file.
+
+3. Running all-in-one slamdunk pipeline:
+
+Example command to run:
+
+```bash
+slamdunk all -r genome.fa -b regions.bed -o output_folder -t 8 input.fastq
+```
+
+Here, `-r` option is for the reference genome file, `-b` option is for the BED regions file, `-o` option is to specify the output folder, `-t` option is to specify the number of threads, and `input.fastq` is the input reads.

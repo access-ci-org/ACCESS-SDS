@@ -1,35 +1,34 @@
-Use Case: Perl is a high-level, general-purpose, interpreted, dynamic programming language.
+Use Case: Perl is a high-level, general-purpose and interpreted scripting language. It is useful in a variety of tasks such as system administration, web development, network programming, GUI development, etc.
 
-Code details and examples:
-- Below is a simple Perl script that reads a text file and prints its contents:
-```perl
+Code Details and Examples:
+
+Code:
+```
 #!/usr/bin/perl
-use strict;
-use warnings;
 
-my $file = "input.txt";
+# Here is a simple perl script to print "Hello World"
+print "Hello, World!\n";
+```
 
-open(my $fh, '<', $file) or die "Cannot open file $file: $!";
-while (my $line = <$fh>) {
-    chomp $line;
-    print "$line\n";
+Input files are not required specifically for Perl scripts. However, file handling can be done in Perl like in any other language. 
+Below is a simple example of reading from a text file named 'sample.txt' in Perl:
+
+```
+#!/usr/bin/perl
+
+# Open the file in read-only mode
+open(DATA, "<sample.txt") or die "Couldn't open file file.txt, $!";
+
+# Read the file line by line
+while(<DATA>){
+   print "$_";
 }
-close($fh);
-```
 
-- Sample input file "input.txt":
+# Close the file
+close(DATA)
 ```
-Hello, this is sample text file.
-This is line 2.
-```
-
-- To run the Perl script:
+The command to run the Perl script:
 ```
 perl script.pl
 ```
-
-- Output will be:
-```
-Hello, this is sample text file.
-This is line 2.
-```
+This command will execute the script named 'script.pl'. Make sure the script has execute permission.

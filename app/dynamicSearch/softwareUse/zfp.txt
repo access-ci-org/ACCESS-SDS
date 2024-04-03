@@ -1,0 +1,27 @@
+Use Case: zfp is a compressed floating-point array library. It is particularly beneficial when deploying large scientific data sets that are too big to be processed or stored on a single desktop machine. 
+
+Code details and examples:
+
+Code:
+
+zfp compresses and decompresses the 3D pressure dataset that resides (in ASCII text format) in the current working directory, using a command-line utility. 
+
+```
+./zfp -i pressure.txt -z pressure.zfp -f -3 100 100 100 -a 0.1 
+```
+
+In this command:
+
+    -i pressure.txt is the input, a 3D data on a 100x100x100 grid.
+    -z pressure.zfp is the compressed file that will be output.
+    -f indicates that the input data is single-precision floating point.
+    -3 100 100 100 specifies that the data dimensions.
+    -a 0.1 is the desired compression accuracy. 
+
+To decompress the file, you would use:
+
+```
+./zfp -z pressure.zfp -o decompress.txt -f -3 100 100 100 
+```
+
+It should be noted that when decompressing, zfp requires you to know the exact dimensions and type of the data in the compressed file.

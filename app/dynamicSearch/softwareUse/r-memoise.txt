@@ -1,0 +1,35 @@
+Use Case: The `memoise` package in R programming language is used when a function, which can be computationally expensive, is to be run multiple times with the same input. By using the memoise function, the package stores the results of function calls so if the function is called again with the same inputs, it returns the stored result, thus speeding up the computation process. 
+
+Code details and examples:
+
+Code: 
+
+```
+library(memoise)
+
+# Create a slow function
+slow_function <- function(x) {
+  Sys.sleep(2)
+  x * 2
+}
+
+# Run slow function
+system.time(slow_function(4)) # Takes about 2 sec
+
+# Memoise slow function
+fast_function <- memoise::memoise(slow_function)
+
+# Run memoised function for the first time
+system.time(fast_function(4)) # Takes about 2 sec
+
+# Run memoised function for the second time with same input
+system.time(fast_function(4)) # Very fast, result is returned from memory
+```
+
+Command to run:
+
+Just copy and paste the above code into a R script and execute the script. There is no additional command to run it.
+
+Specifications:
+
+The input file for a memoised function can be of any format as long as the function that is being memoised can handle it. The output is not stored in any specific format, it is simply saved in memory and returned when the function is called with the same inputs.

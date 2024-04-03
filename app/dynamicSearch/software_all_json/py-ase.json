@@ -1,0 +1,21 @@
+{
+  "software_name": "py-ase",
+  "comprehensive_overview": "py-ase is a Python library designed for simulating and analyzing atomic structures and processes using the atomic simulation environment (ASE). It provides a wide range of tools for molecular dynamics simulations, structure optimization, visualization, and analysis of atomic systems.",
+  "core_features": [
+    "Molecular dynamics simulations",
+    "Structure optimization",
+    "Atomic structure analysis",
+    "Visualization tools"
+  ],
+  "general_tags": [
+    "Python library",
+    "Atomic structures",
+    "Molecular dynamics",
+    "Structure analysis"
+  ],
+  "research_discipline": "Materials Science",
+  "research_area": "Computational Materials Science",
+  "software_class": "Simulation and Modeling",
+  "software_type": "Python Library",
+  "field_of_science": "Physical Sciences"
+}

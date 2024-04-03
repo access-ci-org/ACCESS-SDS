@@ -1,0 +1,28 @@
+Use Case: SNPeff is used to analyze variants in a genome sequence. It can annotate and predict the effects of variants on genes (such as amino acid changes). 
+
+Code details and examples: 
+
+To use SNPeff, the user input must be a genome variant file in .vcf format. The first few lines of this file (from the website) look like:
+
+```
+#CHROM POS_ID_REF_ALT_QUAL_FILTER_INFO_FORMAT
+20 14370 rs6054257 G A 29 PASS NS=3;DP=14;AF=0.5;DB;H2 GT:GQ:DP:HQ 0|0:48:1:51,51 1|0:48:8:51,51 1/1:43:5:.,.
+20 17330 . T A 3 q10 NS=3;DP=11;AF=0.017 GT:GQ:DP:HQ 0|0:49:3:58,50 0|1:3:5:65,3 0/0:41:3
+20 1110696 . A G 67 PASS NS=2;DP=10;AF=0.333;DB GT:GQ:DP:HQ 1|2:21:6:23,27 0|0:35:4
+```
+
+To annotate these variants with SNPeff, run the following command:
+
+```bash
+java -Xmx4g -jar snpEff.jar GRCh37.75 input.vcf > output.vcf
+```
+
+This command uses SNPeff to annotate the `input.vcf` file with the genome database `GRCh37.75` (which you must download separately). The java `-Xmx4g` flag gives SNPeff 4 gigabytes of memory to use (you can change this depending on your system). The output will be in the `output.vcf` file.
+
+You can also generate a summary html report by running:
+
+```bash
+java -Xmx4g -jar snpEff.jar -s results.html GRCh37.75 input.vcf > output.vcf
+```
+
+The predicted variant effects will be added to the INFO column of the vcf file in a field labeled 'ANN'.

@@ -1,0 +1,16 @@
+{
+  "software_name": "Pillow",
+  "comprehensive_overview": "Pillow is a powerful Python Imaging Library (PIL) replacement that adds image processing capabilities to your Python interpreter.",
+  "core_features": "1. Image processing and manipulation\n2. Image file format support\n3. Basic drawing and graphics operations\n4. Color manipulation\n5. Image enhancement\n6. Image filtering\n7. Image transformations",
+  "general_tags": ["image processing", "Python library"],
+  "additional_tags": {
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Image Processing Library",
+    "software_type": "Library",
+    "field_of_science": [
+      "Computer and Information Sciences",
+      "Software Engineering, Systems, and Development"
+    ]
+  }
+}

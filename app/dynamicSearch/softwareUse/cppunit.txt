@@ -1,0 +1,62 @@
+Use Case: CppUnit is the C++ port of the famous JUnit framework for unit testing. Test suites are comprised of test cases. Test cases are created by subclassing the TestCase class and defining a method that begins with "test". 
+
+Code Details and Examples:
+
+Code: 
+
+```cpp
+#include <cppunit/extensions/HelperMacros.h>
+
+class MathTest : public CppUnit::TestFixture
+{
+  CPPUNIT_TEST_SUITE(MathTest);
+  CPPUNIT_TEST(testAddition);
+  CPPUNIT_TEST(testSubtraction);
+  CPPUNIT_TEST_SUITE_END();
+  
+public:
+  void setUp() {}
+  void tearDown() {}
+
+  void testAddition()
+  {
+    CPPUNIT_ASSERT_EQUAL(5, 2+3);
+  }
+
+  void testSubtraction()
+  {
+    CPPUNIT_ASSERT_EQUAL(2, 5-3);
+  }
+};
+
+CPPUNIT_TEST_SUITE_REGISTRATION(MathTest);
+```
+
+In this example, class `MathTest` will have two cases to test: `testAddition` and `testSubtraction`. 
+
+To run the tests with the default TextTestRunner:
+
+```cpp
+#include <cppunit/ui/text/TestRunner.h>
+
+int main()
+{
+  CppUnit::TextUi::TestRunner runner;
+  
+  CPPUNIT_TEST_SUITE_REGISTRATION(MathTest);
+  runner.addTest(CppUnit::TestFactoryRegistry::getRegistry().makeTest());
+  
+  runner.run();
+  
+  return 0;
+}
+```
+
+These files don't need any specific input files. It's pure code where the user declares the tests that he wants to run.
+
+Command to run them (assuming the file is named "mathTest.cpp"):
+
+```shell
+g++ mathTest.cpp -o mathTest -lcppunit
+./mathTest
+```

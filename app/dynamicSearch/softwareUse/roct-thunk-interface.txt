@@ -1,0 +1,45 @@
+Use Case: The ROCr Thunk Interface (ROCt) is a utility library used in HPC environments. It provides interfaces for exposing AMD’s Radeon GPU hardware capabilities for runtime over HSA (Heterogeneous System Architecture). ROCt is used to program and manage the capabilities of GPU kernels, and is specifically designed for managing resources in parallel computing environments.
+
+Code details and examples: 
+
+ROCt does not have a specific input format as it's a low-level interface component of ROCm (Radeon Open Compute) which provides infrastructure for building tasks for AMD GPUs.
+
+Instead, a high-level programming language like OpenCL or HIP is used to write tasks, which ROCm then compiles and manages using ROCt and other components. 
+
+However, here is a simple example of creating a queue for dispatching tasks to a GPU using HIP, a high-level language that uses ROCt:
+
+Code:
+```
+#include <hip/hip_runtime.h>
+
+int main() {
+    hipDevice_t device;
+    hipCtx_t context;
+    hipStream_t stream;
+    
+    // Get the first device
+    hipGetDevice(&device, 0);
+    
+    // Create a context on the device
+    hipCtxCreate(&context, 0, device);
+    
+    // Create a stream on the context
+    hipStreamCreate(&stream, context);
+  
+    // ... dispatch tasks on stream ...
+  
+    // Clean up
+    hipStreamDestroy(stream);
+    hipCtxDestroy(context);
+
+    return 0;
+}
+```
+This can be compiled using hipcc (the HIP compiler):
+```
+hipcc -o example example.cu
+```
+And run as:
+```
+./example
+```

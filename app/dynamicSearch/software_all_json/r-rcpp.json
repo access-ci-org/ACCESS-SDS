@@ -1,0 +1,24 @@
+{
+  "software_name": "Rcpp",
+  "comprehensive_overview": "Rcpp is a package for R that provides a seamless integration of R and C++. It allows for easy writing of C++ functions to be called from R, providing high-performance capabilities to R programmers.",
+  "core_features": [
+    "Integration of R and C++ for high performance",
+    "Easy creation of C++ functions callable from R",
+    "Efficient data processing and manipulation",
+    "Access to C++ libraries from R environment"
+  ],
+  "general_tags": [
+    "R Integration",
+    "C++ Programming",
+    "High Performance Computing",
+    "Data Processing"
+  ],
+  "additional_tags": {
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Programming Language Integration",
+    "software_type": "Library",
+    "field_of_science": "Computer and Information Sciences",
+    "other": ""
+  }
+}

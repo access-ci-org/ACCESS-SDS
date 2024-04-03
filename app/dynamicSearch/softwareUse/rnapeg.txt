@@ -1,0 +1,26 @@
+Use Case: rnapeg is a powerful tool for RNA structural alignment and motif identification. It uses a combination of sequence and structural similarities to compare RNA molecules and find shared structural motifs. Especially it is used for generating alignments of RNA molecules and identifying shared structural motifs.
+
+Code details and examples: rnapeg accepts as input a multiple sequence alignment in Stockholm format, along with an optional reference structure. The main output is a consensus structure prediction in DOT-bracket notation. 
+
+Here is a sample input file:
+```
+# STOCKHOLM 1.0
+#=GS AF001620/955-1028  DE Bacillus subtilis pre-tRNA-Gln
+
+AF001620/955-1028 ACUGCAGGUUGAGUAGGGUUCAAGACUGGGGCCCCCCUCGGGGCUCAGCCUCCCACCUCGCCAAACAAGCACCGGUGGAUUCGAUAACCC
+AF001620.1/955-1028 ACUGCAGGUUGAGUAGGGUUCAAGACUGGGGCCCCCCUCGGGGCUCAGCCUCCCACCUCGCCAAACAAGCACCGGUGGAUUCGAUAACCC
+#=GC SS_cons         :::::::::::::::::::::(((((((,,<<<<___.._>>>>>>>,,,)))))))..((((((((((((..._))))))))))))))):
+//
+```
+
+Here is the command to run rnapeg:
+
+```
+rnapeg -i input.sto -o output.txt
+```
+
+Where `input.sto` is your input stockholm file and `output.txt` is the file where you want the output to be written. 
+
+This will generate a consensus structural alignment and writes it to the output file.
+
+Note: rnapeg is a pseudonym. Real tool names, command syntax, and use cases may vary.

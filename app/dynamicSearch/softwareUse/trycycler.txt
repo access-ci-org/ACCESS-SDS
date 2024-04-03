@@ -1,0 +1,35 @@
+Use Case: Trycycler is used for long-read de novo assembly reconciliation. It is often used in bioinformatics to reconcile multiple genome assemblies.
+
+Code Details and Examples:
+
+Code:
+
+---An example of a TryCycler workflow---
+
+1. Cluster: grouping together assemblies that are substantially similar.
+
+```python
+trycycler cluster --reads reads.fastq --assemblies assemblies/*.fasta --out_dir trycycler
+```
+i. Reads.fastq is the input file containing sequencing reads.
+ii. assemblies/*.fasta contains all assembly outputs to compare, they should be complete circular genomes.
+iii. trycycler is the output directory.
+
+2. Reconcile: performs a multiple-sequence alignment for each cluster.
+
+```python
+trycycler reconcile --reads reads.fastq --reads2 reads.fastq --cluster_dir clusters/mash0.05_4 --threads 10 --out_dir reconcile
+```
+i. Reads.fastq, reads2.fastq are the input files containing sequencing reads. The first files contains forward reads. The second file contains reverse reads.
+ii. clusters/mash0.05_4 is the directory of clusters output from the 'trycycler cluster' command.
+iii. Reconcile is the output directory.
+iv. threads 10, number of threads to use.
+
+3. Consensus: uses the multiple-sequence alignment to create a consensus assembly.
+
+```python
+trycycler consensus --cluster_dir clusters/mash0.05_4 --msa_file msa.fasta --out_dir consensus
+```
+i. clusters/mash0.05_4 is the directory of clusters output from the 'trycycler cluster' command.
+ii. msa is the multiple-sequence alignment file output from the 'trycycler reconcile' command.
+iii. consensus is the output directory.

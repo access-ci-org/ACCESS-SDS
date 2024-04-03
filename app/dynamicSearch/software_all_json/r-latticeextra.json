@@ -1,0 +1,17 @@
+{
+    "software_name": "r-latticeextra",
+    "comprehensive_overview": "The 'latticeExtra' package provides extra graphical displays based on lattice. It is a set of extensions to the 'lattice' package to improve its functionality and make it easier to use.",
+    "core_features": "Some core features include additional graph types such as levelplots, using custom panel functions and options, and easier plotting of subgroups within a dataset.",
+    "general_tags": [
+        "R package",
+        "Data Visualization",
+        "Graphical Displays"
+    ],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Data Visualization Library",
+        "software_type": "Package",
+        "field_of_science": "Other Mathematics"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "software_name": "librsvg",
+    "comprehensive_overview": "Librsvg is a free software library to render SVG files and convert them to other formats using the Cairo rendering engine.",
+    "core_features": [
+        "Rendering SVG files",
+        "Converting SVG files to other formats",
+        "Utilizes the Cairo rendering engine"
+    ],
+    "general_tags": [
+        "software library",
+        "free software",
+        "SVG rendering",
+        "file conversion"
+    ],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Library",
+        "software_type": "Rendering and Conversion",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

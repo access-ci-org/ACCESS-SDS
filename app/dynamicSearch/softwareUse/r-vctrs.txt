@@ -1,0 +1,28 @@
+Use Case: The "vctrs" R-package is handy for creating and dealing with new vector classes. It is a part of the tidyverse ecosystem, and its routine revolve around vector classes. For example, it provides methods to combine vectors (unequal length recycling, list-columns), and to cast and coerce them.
+
+Code details and examples:
+
+Code:
+
+```R
+# Load the library
+library(vctrs)
+
+# Create a vector 
+grades <- c("A", "B", "A", "B", "C")
+class(grades)
+
+# Convert to factor and then to ordered factor with vctrs package
+grades_factor <- factor(grades, levels = c("A","B","C"))
+grades_ord <- new_ordered(grades_factor)
+  
+grades_ord
+```
+
+Input files: Not applicable. Inputs provided directly within the code, no external files required. 
+
+Format required: Not applicable, no specific format required given the nature of the vector data.
+
+Specifications in input files: Not applicable, direct vector data manipulation in code, no external file input specifications.
+
+Command to run: The R script can be run in RStudio or any R environment by selecting and running the script lines. No specific command to run is needed if you are in an R environment.

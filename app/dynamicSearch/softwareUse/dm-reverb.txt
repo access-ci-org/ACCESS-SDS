@@ -1,0 +1,38 @@
+Use Case: DeepMind's Reverb is an efficient, easy-to-use, scalable, and stable distributed system meant for use in reinforcement learning applications. It is used for the collection, storage, and replay of experience data in deep reinforcement learning tasks where there is a necessity to store, update, and replay chunks of data.
+
+Code details and examples:
+
+Code:
+```
+import reverb
+import tensorflow as tf
+
+# Create a reverb replay server.
+server = reverb.Server(
+  tables=[
+    reverb.Table(
+      name='my_table',
+      sampler=reverb.selectors.Uniform(),
+      remover=reverb.selectors.Fifo(),
+      max_size=1000000,
+      rate_limiter=reverb.rate_limiters.MinSize(1)),
+  ],
+  port=None  # Let gRPC choose the port.
+)
+
+# Create a TensorFlow op that adds data to the replay server.
+data_spec = tf.TensorSpec(shape=(), dtype=tf.float32)
+data = tf.constant(1.0)
+tf_client = reverb.TFClient(server_address=server.address)
+insert_op = tf_client.insert([data], {'my_table': 1.0})
+
+# Run the insert op.
+with tf.Session() as session:
+  session.run(insert_op)
+```
+
+This Python snippet creates a Reverb server and a TensorFlow op that adds data into it. The server manages a single table named 'my_table' with plenty of configurations such as the uniform selector for choosing which items to sample, and the FIFO (first-in-first-out) strategy for choosing which items to remove when the max size is exceeded. It uses the MinSize rate limiter with target size 1, which allows sampling after a minimum of 1 item is in the table (i.e., immediately after the first insert).
+
+In the TensorFlow op, the data of 1.0 is inserted into 'my_table' the table with priority 1.0, in a TensorFlow session environment.
+
+Command to run: This Python code can be run directly in any Python environment that has the necessary packages (Reverb and TensorFlow) installed. The runtime environment will automatically execute the code upon receiving the command.

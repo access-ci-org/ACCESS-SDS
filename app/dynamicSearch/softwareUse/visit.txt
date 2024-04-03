@@ -1,0 +1,58 @@
+Use Case: VisIt is an Open Source, interactive, scalable, visualization, animation and analysis tool. It can be used for visualizing 2D/3D data from simulations and experiments
+
+Code Details and Examples:
+
+Code:
+
+```python
+# Import the VisIt module
+import visit
+
+# Connect to the VisIt server
+visit.Launch()
+
+# Open a database
+visit.OpenDatabase("localhost:./wave.visit")
+
+# Add a plot
+visit.AddPlot("Pseudocolor", "pressure")
+
+# Draw the plot
+visit.DrawPlots()
+
+# Set the view
+v = visit.GetView3D()
+v.viewNormal = (-0.897, 0.395, 0.199)
+v.focus = (5, 0, 30)
+v.viewUp = (0.213, 0.917, -0.337)
+v.viewAngle = 30
+v.parallelScale = 16.3789
+v.nearPlane = 1.20711
+v.farPlane = 70.153
+v.imageZoom = 1
+v.perspective = 1
+v.eyeAngle = 2
+visit.SetView3D(v)
+
+# Save the image
+visit.SaveWindow()
+```
+
+Command to run:
+
+```batch
+visit -cli -s script.py
+```
+
+Input file format required:
+
+- The .visit file is an ASCII file specifying a list of VTK files (or other types)
+
+Note: 
+
+- The python script must be accompanied by a .visit file, which is a text file that lists one or more files that should be considered to be part of the same logical dataset. For example, the wave.visit file might include: wave0.vtk, wave1.vtk, wave2.vtk, etc.
+- The .vtk files contain the actual data to be visualized. These files can contain scalar, vector, or tensor data, grid definitions, and additional metadata. The VTK file format supports a variety of data types, and it is scalable to support large datasets. 
+
+Please refer to the official VTK file format specification for detailed instructions on creating .vtk files:
+
+[VTK File Format](https://lorensen.github.io/VTKExamples/site/VTKFileFormats/)

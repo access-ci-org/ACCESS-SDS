@@ -1,0 +1,27 @@
+Use Case: When handling next-generation sequencing data, Chopper can be used to reduce the size of input files before storing or transmitting. Chopper is designed to chop and compress FASTQ files into smaller, manageable chunks.
+
+Code Details and Examples: 
+
+Code: Chopper uses a command-line interface. An example of its usage would be:
+
+```bash
+chopper -i input.fastq -o output.txt -s 10000 -l 1000
+```
+
+This command will chop the input.fastq file into sequences of length 1000 bases and compress these into a file named output.txt that has maximum size of 10000 bytes.
+
+The input file, input.fastq, is in the FASTQ format: it contains sequences and quality scores. 
+
+```bash
+@SEQ_ID
+AGTTTACTTTGTCATTATTGAGGCGAACGACATACGCGCAAAGCAACGCGGATTTAGCAGTGTGAGCTTGTGTGGTGA
++
+!!!''*((((***++))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
+```
+This file should contain at least one full sequence (with corresponding quality scores). If the last sequence is not complete, it will be ignored.
+
+The output file, output.txt, is a compressed file containing the chopped sequences. This file can be decompressed using Chopper:
+
+```bash
+chopper -d -i output.txt -o decompressed.fastq
+```

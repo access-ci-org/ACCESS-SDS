@@ -1,19 +1,32 @@
-Use Case: Debugging parallel programs
-Code Details and Examples: 
-TotalView is a debugger tool used for debugging parallel programs running on clusters or distributed systems. TotalView allows users to inspect variables, set breakpoints, and analyze the behavior of parallel applications.
+Use Case: TotalView is a debugger used for multi-process, multi-threaded, high performance computing (HPC) applications. It can be used to debug serial, parallel (both MPI and OpenMP), and GPU-accelerated codes. It helps to inspect and manage variables, look at source code, set breakpoints, and control the execution of an application.
 
-To use TotalView for debugging, you typically need to compile your program with debugging symbols enabled. Here is an example of compiling a C program using mpicc with debugging symbols:
+Code Details and Examples: Code
 
-```bash
-mpicc -g -o my_program my_program.c
+A sample for an MPI application in C language:
+
+```c
+#include <mpi.h>
+#include <stdio.h>
+
+int main(int argc, char** argv) {
+    MPI_Init(NULL, NULL);
+    int rank;
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+    int world_size;
+    MPI_Comm_size(MPI_COMM_WORLD, &world_size);
+    char processor_name[MPI_MAX_PROCESSOR_NAME];
+    int name_len;
+    MPI_Get_processor_name(processor_name, &name_len);
+    printf("Hello world from processor %s, rank %d out of %d processors\n", processor_name, rank, world_size);
+    MPI_Finalize();
+}
 ```
 
-To start debugging a parallel program using TotalView, you can use the following command:
+To run this MPI sample with the TotalView debugger use the following command:
 
-```bash
-totalview mpirun -np <num_processes> ./my_program
+```shell
+mpirun -np 2 totalview ./a.out
 ```
+With `-np 2` to specify the number of MPI's processes to be used.
 
-This command will launch the TotalView debugger and attach to the parallel program specified.
-
-Please note that the exact command syntax may vary based on your specific setup and the version of TotalView you are using.
+TotalView then pops up a dialog asking if you want to stop at main, say Yes, then go to the Process window and set MPIR_being_debugged variable to 1. This allows the execution of processes to be synchronized with the debugger.

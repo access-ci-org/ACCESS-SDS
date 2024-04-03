@@ -1,0 +1,13 @@
+{
+  "software_name": "GEMoma",
+  "comprehensive_overview": "GEMoma (Gene Mapper for RNA-Seq Data) is a tool designed for rapid and accurate mapping of RNA-Seq data to a reference genome.",
+  "core_features": "GEMoma utilizes a fast and memory-efficient seed-and-extend algorithm to map RNA-Seq reads effectively. It supports various parameters customization for mapping precision. The tool also provides visualization options for mapped reads and gene expression levels.",
+  "general_tags": ["RNA-Seq", "genome mapping", "gene expression", "bioinformatics"],
+  "additional_tags": {
+    "research_discipline": "Bioinformatics",
+    "research_area": "Computational Biology",
+    "software_class": "Bioinformatics Tool",
+    "software_type": "Genome Mapping Tool",
+    "field_of_science": "Biological Sciences"
+  }
+}

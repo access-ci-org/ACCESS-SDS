@@ -1,17 +1,40 @@
-Use Case: fribidi (FRI BiDi) is a library that implements the Unicode Bidirectional Algorithm. It is useful for displaying text and is commonly used in software applications with user interfaces that support multiple languages and complex text layouts.
+Use Case: The FRIBIDI library is a free implementation of the Unicode Bidirectional Algorithm. It is useful when dealing with right-to-left languages like Arabic and Hebrew, or left-to-right languages such as English and Latin.
 
 Code details and examples:
-Sample input file (input.txt):
-```
-Hello, שלום, مرحبا
+
+FRIBIDI is a library, thus programs and applications utilize this library during the development phase. On a system level, you are unlikely to interact directly with it. However, below is an example of using FRIBIDI in a small C code.
+
+Code:
+
+```C
+#include <fribidi.h>
+
+int main() {
+  FriBidiChar *str = fribidi_utf8_to_unicode("Hello, World!", 13);
+  
+  /* Create a bidi string. */
+  FriBidiCharType *bidiStr = (FriBidiCharType *) malloc (sizeof (FriBidiCharType) * (13) + 1);
+  
+  /* Do the conversion. */
+  FriBidiStrIndex *map = fribidi_log2vis (str, 13, FRIBIDI_TYPE_ON, bidiStr, NULL, NULL, NULL);
+  
+  /* Now bidiStr is the visual string and map is an index map into the original string. */
+  free(map);
+  free(str);
+  free(bidiStr);
+  return 0;
+}
 ```
 
-Code snippet:
-```
-fribidi -d input.txt
+To compile and run this code (assuming FRIBIDI library is installed appropriately):
+
+```bash
+gcc -o example example.c -lfribidi
+./example
 ```
 
-Command to run:
-```
-fribidi -d input.txt
-```
+Input files: The above C code uses the "Hello, World!" string as an example.
+
+Format required: As a library, there are various data types expected for using FRIBIDI. For example, `fribidi_utf8_to_unicode` takes in a UTF-8 string and the length of the string as inputs and returns a pointer to an array of unicode-compliant `FriBidiChar` characters. Other functions require different types of inputs based on their need.
+
+Any specifications and details in input files: Since FRIBIDI deals with strings, no explicit file format is required. However, the strings to be used must be Unicode-compliant. Any string that needs to be visualized using right-to-left or left-to-right rules can be used with FRIBIDI. The input strings must be encoded in UTF-8. The length of the string should be taken into account to ensure no buffer overflows occur.

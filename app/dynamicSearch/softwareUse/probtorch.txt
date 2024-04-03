@@ -1,0 +1,42 @@
+Use Case: ProbTorch is a PyTorch-based Scriptable Probabilistic Programming (SPP) library. It allows us to build probabilistic models using PyTorch's tensor library.
+
+Code Details and Examples:
+
+Code: 
+
+```python
+import torch
+from probtorch import probtorch
+
+# Initialize PyTorch and ProbTorch
+pytorch_seed = 1
+probtorch_seed = 2
+torch.manual_seed(pytorch_seed)
+probtorch.manual_seed(probtorch_seed)
+
+# Define a simple probabilistic model
+def model():
+    weight = probtorch.Parameter(torch.tensor(0.5))  
+    heads = probtorch.bernoulli(weight)  
+    return heads
+print(model())  # Outputs: 1 (with 50% probability) or 0 (with 50% probability)
+
+# Define a simple guide (approximate posterior)
+def guide():
+    weight_q = probtorch.Parameter(torch.tensor(0.8))  
+    heads_q = probtorch.bernoulli(weight_q)
+    return heads_q
+
+# Get an enumeration of samples from the guide
+num_samples = 1000
+for s in guide().enumerate_support():
+    print(s)
+```
+
+This model and guide define a simple Bernoulli random variable (a coin flip) with a probability of being Heads. The model has a 50% chance of being Heads, while the guide has an 80% chance of being Heads. The guide is used for variational inference, and it is supposed to be a good approximation of the model's posterior distribution. In this case, the guide is a poor approximation because it overestimates the probability of Heads. The `.enumerate_support()` function generates a list of all possible outcomes of a discrete random variable, which are 0 (Tails) and 1 (Heads) for a Bernoulli random variable.
+
+Command to run:
+
+```bash
+$ python probtorch_example.py
+```

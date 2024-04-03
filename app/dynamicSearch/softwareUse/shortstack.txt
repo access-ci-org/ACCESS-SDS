@@ -1,0 +1,41 @@
+Use Case: ShortStack is a tool suite developed for annotation and quantification of small RNAs (sRNA-seq) from high throughput sequencing data. It can be used to discover sRNA production from genes, transposons, repeats etc., and also for small RNA alignment, sRNA locus definition, and quantification.
+
+Code details and examples: 
+
+Code:
+
+ShortStack uses a command-line interface and the basic input is a set of sRNA-seq reads in FASTQ format, and a reference genome (both in fasta format). 
+
+Input File Format:
+
+FASTQ file format for the small RNA sequences.
+FASTA file format for the reference genome. 
+
+Sample input file:
+
+1: sRNA-seq
+
+```
+@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTT
++
+!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
+```
+2: reference genome
+
+```
+>seq0
+AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGCTTCTGAACTGGTTACCTGCCGTGAGTAAATTAAAATTTTATTGACTTAGGTCACTAAATACTTTAACCAATATAGGCATAGCGCACAGACAGATAAAAATTACAGAGTACACAACATCCATGAAACGCATTAGCACCACC
+```
+
+Command to run:
+
+Suppose you have a fastq file named `reads.fastq` and a reference genome named `genome.fa`. Then, the command to run ShortStack would be:
+
+```
+ShortStack --bowtie_cores 16 --readfile reads.fastq --genomefile genome.fa --outdir results
+```
+
+This command will align the reads in 'reads.fastq' to the reference genome 'genome.fa', and output the results to the directory 'results'. It uses 16 cores for Bowtie alignments.
+
+The output data given by ShortStack is in a format that includes annotated sRNA clusters, abundances of each small RNA, alignments and much more in both text and track files that are compatible with genome browsers such as GBrowse and IGV.

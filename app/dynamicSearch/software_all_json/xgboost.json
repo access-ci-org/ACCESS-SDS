@@ -1,0 +1,13 @@
+{
+  "software_name": "XGBoost",
+  "comprehensive_overview": "XGBoost is an open-source software library which provides a gradient boosting framework for efficient and high-performance machine learning.",
+  "core_features": "Some core features of XGBoost include regularized learning objectives for regression, classification, and ranking problems, parallel and distributed computing for faster training, support for custom optimization objectives and evaluation criteria, and cross-validation to help prevent overfitting.",
+  "general_tags": ["machine learning", "gradient boosting", "ensemble learning"],
+  "additional_tags": {
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Machine Learning Library",
+    "software_type": "Library",
+    "field_of_science": ["Computer and Information Sciences", "Artificial Intelligence and Intelligent Systems"]
+  }
+}

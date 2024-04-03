@@ -1,0 +1,23 @@
+{
+	"software_name": "WebLogo",
+	"comprehensive_overview": "WebLogo is a web-based application designed to create sequence logos from biological sequence alignments. Sequence logos are graphical representations of the patterns within a multiple sequence alignment, where each position in the alignment is represented by a stack of symbols reflecting the conservation at that position.",
+	"core_features": [
+		"Generate sequence logos from multiple sequence alignments",
+		"Customize the appearance of sequence logos with various options",
+		"Interact with the generated logos to explore the sequence conservation patterns",
+		"Download the logos in various formats for use in publications or presentations"
+	],
+	"general_tags": [
+		"sequence analysis",
+		"bioinformatics",
+		"data visualization",
+		"web-based tool"
+	],
+	"additional_tags": {
+		"research_discipline": "Biological Sciences",
+		"research_area": "Genetics",
+		"software_class": "Data Visualization",
+		"software_type": "Web Application",
+		"field_of_science": "Biological Sciences"
+	}
+}

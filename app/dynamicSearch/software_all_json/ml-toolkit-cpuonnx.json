@@ -1,0 +1,25 @@
+redundant
+{
+  "software_name": "ML Toolkit CPU",
+  "comprehensive_overview": "ML Toolkit CPU is a set of tools for machine learning and deep learning tasks that support the ONNX format. It provides functionalities for model inference, optimization, and deployment on CPU-based systems.",
+  "core_features": [
+    "Model inference on CPU",
+    "Optimization of ONNX models",
+    "Deployment of ONNX models on CPU-based systems"
+  ],
+  "general_tags": [
+    "machine learning",
+    "deep learning",
+    "model inference",
+    "ONNX",
+    "deployment",
+    "optimization"
+  ],
+  "additional_tags": {
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Machine Learning",
+    "software_type": "Toolkit",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

@@ -1,0 +1,32 @@
+Use Case: Use r-snow for executing R codes in parallel. This saves time for computationally expensive tasks; it can be used in machine learning, data analysis and modeling in almost all scientific disciplines that use R for computation.
+
+Code details and examples: Code
+We can perform computations by distributing tasks to different cores or nodes using snow package in R. 
+
+1. First, you need to create a cluster of certain size, i.e. how many cores/nodes you need for your computation:
+
+```R
+library(snow)
+cl <- makeCluster(4, type = "SOCK") # here 4 signifies 4 cores/nodes.
+```
+
+2. Now, you can use your cluster to compute a task. We will use a simple task here - square of numbers from 1 to 20:
+
+```R
+numbers <- 1:20
+results <- parLapply(cl, numbers, function(x) x^2)
+```
+
+3. You always should stop your cluster after you don't need it anymore:
+
+```R
+stopCluster(cl)
+```
+
+4. To run this code save it into a .R file and then you can run it in R with the following command:
+
+```bash
+Rscript your_file.R
+```
+
+This is how you can use the r-snow package to perform parallel computations with R. Please ensure that you run your tasks on a multi-core machine to achieve the desired result.

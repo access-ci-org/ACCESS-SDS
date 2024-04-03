@@ -1,16 +1,19 @@
-Use Case: Downloading a file from a URL
+Use Case: Use curl to send a GET request to a specific URL.
 
-Code details and examples:
-To download a file from a URL using curl, you can simply use the following command:
-
-```bash
-curl -O [URL]
-```
-
-For example, to download a file named example.txt from a website:
+Code details and examples: Code
 
 ```bash
-curl -O https://www.example.com/example.txt
+# Create a text file named 'example.txt'. This will be our sample input file.
+echo "This is an example text file." > example.txt
+
+# Use 'curl' to send a GET request to a specific URL and save the response to 'response.html'.
+curl https://example.com -o response.html
 ```
 
-This will download the file and save it in the current directory with the same name as the file on the server.
+Format required: The input is a command line argument that specifies the URL of the web page you want to get. The output is saved in a file given in the -o option.
+
+Specifications and details in input files and command: An HTTP or HTTPS URL is expected as the input. The -o option tells curl to write the output to a file instead of stdout. If the server returns HTTP redirects (3xx status codes), curl will by default follow them.
+
+Command to run it: It's a one-liner that you can run in your terminal.
+
+Note: Replace 'https://example.com' with the actual URL you want to access. Also, make sure that you have the necessary permissions to read/write the files and that the URL is accessible.

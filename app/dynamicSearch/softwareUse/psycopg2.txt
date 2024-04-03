@@ -1,0 +1,60 @@
+Use Case: Use psycopg2 to connect to a PostgreSQL database, execute SQL queries and fetch results.
+
+Code details and examples: Code 
+
+1. Import the library:
+
+    ```python
+    import psycopg2
+    ```
+
+2. Establish a connection:
+
+    ```python
+    connection = psycopg2.connect(
+        database="your_database",
+        user="your_username",
+        password="your_password",
+        host="127.0.0.1",
+        port="5432"
+    )
+    ```
+
+    Note: Replace "your_database",  "your_username", "your_password", "host" and "port" with your PostgreSQL database details.
+
+3. Create a cursor object:
+
+    ```python
+    cursor = connection.cursor()
+    ```
+
+4. Execute a SQL query:
+
+    ```python
+    cursor.execute("SELECT * FROM your_table")
+    ```
+
+    Note: Replace "your_table" with the name of your table.
+
+5. Fetch all rows:
+
+    ```python
+    rows = cursor.fetchall()
+    ``` 
+
+6. Close the cursor and the connection:
+
+    ```python
+    cursor.close()
+    connection.close()
+    ```
+
+Command to run the entire Python code:
+
+    ```sh
+    python your_file.py
+    ```
+
+Note: Replace "your_file.py" with the name of your Python file.
+
+File requirements: No specific input files are required to run psycopg2. The inputs are taken from the connected PostgreSQL database.

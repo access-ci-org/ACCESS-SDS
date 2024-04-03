@@ -1,0 +1,30 @@
+Use Case: Edlib is a C/C++ library for sequence alignment using edit distance. It's commonly used in bioinformatics for comparing two biological sequences, finding similarity or assessing how different they are.
+
+Code details and examples:
+
+Code:
+
+The library comes with a command-line tool for simple sequence alignment. To align two sequences, you could use the following command in your terminal:
+
+```bash
+edlib-aligner sequence1.fasta sequence2.fasta
+```
+
+Where `sequence1.fasta` and `sequence2.fasta` are your input files in FASTA format. These files contain the sequences to be aligned. For example, a FASTA file may look like this:
+
+```
+>sequence1
+ATCGATCGATCGATCGATCGATCGATCGATCG
+```
+
+The greater-than symbol (`>`) indicates the start of a new sequence record, following by the sequence identity (sequence1 in this case). The next lines show the nucleotide sequence.
+
+In this case, no specific format or additional specifications are required for the input file, except that it must be in FASTA format. 
+
+To run the code, simple input this command on your terminal to compare sequences and get the alignment:
+
+```bash
+edlib-aligner sequence1.fasta sequence2.fasta
+``` 
+
+Please note that the `edlib-aligner` is a separate command line application that uses the `edlib` library and needs to be installed separately.

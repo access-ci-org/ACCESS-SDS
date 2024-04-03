@@ -1,0 +1,25 @@
+Use Case: Mashtree is a bioinformatics software used to create a Mash distance matrix and then construct a phylogenetic tree using those distances. It can be used with whole-genome sequences for a variety of organisms, including bacteria, viruses, etc. ;
+
+Code details and examples:
+Code 1:
+Input format: Mashtree takes as input FASTA or compressed FASTA files with the extension .gz.
+
+Input file: Sample1.fna, Sample2.fna, Sample3.fna
+
+Code:
+```bash
+mashtree --numcpus 2 Sample1.fna Sample2.fna Sample3.fna > output.dnd
+```
+
+In this code, `--numcpus` flag is optional and specifies the number of CPUs to use in the process. Outputs are in Newick format (.dnd)
+
+Code 2:
+Input file: input_files.txt (A list of input files, one per line)
+
+```bash
+cat input_files.txt | mashtree --numcpus 2 > output.dnd
+```
+
+In this command, mashtree consumes a list of input files from a .txt file containing paths to the fasta files. It computes the Mash distances and outputs the resulting tree in Newick format. Input files should be sequence data in FASTA format. The output.dnd can be visualized using any Newick compatible tree viewer software.
+
+Please note, to run these commands you need to have Mashtree installed in your system and the relevant linux shell or terminal to write and execute these commands.

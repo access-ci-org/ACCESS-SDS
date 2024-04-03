@@ -103,13 +103,13 @@ $(document).ready(function(){
                 targets:[0,1,2,3,4,5,6,7,8,9,10,11,12]
             },
             {   // show use case
-                targets:9,
+                targets:10,
                 render: function(data, type, row){
                     return '<button class="btn btn-info example-use-btn" type="button">Use Example</button>';
                 }
             },
             {   // columns with links
-                targets: [10,11,12],
+                targets: [10,11,12,13],
                 render: function(data, type, row){
                     if (type=='display' && data){
                         return makeLinkClickable(data);

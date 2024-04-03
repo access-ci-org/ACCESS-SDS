@@ -1,0 +1,46 @@
+Use Case: Use augur to infer phylogenetic trees from sequence data;
+
+Code details and examples: Code
+
+The augur software is written in Python and is designed to work with Fasta sequence files and CSV metadata files. To use augur, you need to have a sequence alignment in a Fasta file and some associated metadata, like sample dates, in a CSV file. 
+
+1. Sample Input Files:
+
+The sequence Fasta file should be in this format:
+
+```
+>Sequence1
+ATGCTAGCTAGCTAGCTAGCTAGC
+>Sequence2
+ATGCTAGCTAGCTGGCTAGCTAGC
+```
+
+The CSV file should be in this format:
+
+```
+strain, date
+Sequence1, 2020-01-01
+Sequence2, 2020-02-01
+```
+
+2. Key Commands:
+
+To build a tree using augur, you would first align your sequences with the `augur align` command:
+
+```
+augur align --sequences sequences.fasta --output sequences_aligned.fasta
+```
+
+Once aligned, you can build a preliminary tree using the `augur tree` command:
+
+```
+augur tree --alignment sequences_aligned.fasta --output tree.nwk
+```
+
+Then finally refine the tree including temporal information using `augur refine`:
+
+```
+augur refine --tree tree.nwk --metadata metadata.csv --output tree_time_resolved.nwk
+```
+
+Note: Above commands and files are just samples and can vary based on the actual data and requirements.

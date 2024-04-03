@@ -1,0 +1,44 @@
+Use Case: The MOE (Molecular Operating Environment) is a software system designed for Computational Chemistry, Molecular Modeling, Bioinformatics, Virtual Screening, Structure-Based-Design and Homology Modelling. It is routinely used to predict properties such as solubility and logD for small molecules.
+
+Code details and examples: 
+
+Code:
+Below is a theoretical example of running a MMFF94 energy minimization on a benzene molecule using MOE:
+
+```
+/*************************************************
+* MOE main program 
+* MMFF94 energy minimization of benzene in gas phase
+* 
+* Created:  January 1, 2022
+**************************************************/
+//create a benzene molecule
+c := Chain[];
+r := Residue[c,'UNL'];
+Atom[r,'C',[-1.2094,0.6993,0.0000]];
+Atom[r,'C',[-0.0000,1.3986,0.0000]];
+Atom[r,'C',[1.2094,0.6993,0.0000]];
+Atom[r,'C',[1.2094,-0.6993,0.0000]];
+Atom[r,'C',[-0.0000,-1.3986,0.0000]];
+Atom[r,'C',[-1.2094,-0.6993,0.0000]];
+Atom[r,'H',[-2.1476,1.2433,0.0000]];
+Atom[r,'H',[-0.0000,2.4866,0.0000]];
+Atom[r,'H',[2.1476,1.2433,0.0000]];
+Atom[r,'H',[2.1476,-1.2433,0.0000]];
+Atom[r,'H',[-0.0000,-2.4866,0.0000]];
+Atom[r,'H',[-2.1476,-1.2433,0.0000]];
+
+$bdisplay_chains={c};
+
+//run an MMFF94 energy minimization
+e := MOE_minimize[':-mmff.partial'][];
+writeln['Output energy: ', e];
+```
+
+Command to execute the script in MOE:
+
+Assuming the script is saved as script.svl, you would run it from the command line with
+
+``` moebatch -exec script.svl ```
+
+Please note that this script only works in the MOE software, it will not work in a regular python or c++ interpreter as MOE has its own scripting language (svl).

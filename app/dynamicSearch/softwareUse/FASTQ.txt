@@ -1,26 +1,28 @@
-Use Case: A commonly used file format in bioinformatics for storing sequences and their corresponding quality scores.
+Use Case: FASTQ format is a text-based format for storing both a biological sequence and its corresponding quality scores. It is often used in bioinformatics pipelines for sequencing and aligning.
 
-Code details and examples:
-FASTQ format example:
+Code Details and Examples: 
+
+Code:
+FastQ files do not require any specific command to run them. They are input files used for various tools. Here is a sample FastQ file format and description:
+
 ```
 @SEQ_ID
 GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
 +
 !''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
 ```
+Each FastQ entry consists of four lines:
+1. Sequence identifier, starting with @.
+2. Nucleotide sequence.
+3. Line starting with '+' and optionally, the same sequence identifier.
+4. Quality scores of the nucleotide sequence.
 
-Commands to manipulate FASTQ files:
-1. View the first few records in a FASTQ file:
-```bash
-head -n 8 input.fastq
+These files are primarily used for sequence analysis programs like BLAST, BWA, etc.
+
+For example, if you were to map these reads to a reference using BWA:
+
+```
+bwa mem reference.fasta sample.fastq > output.sam
 ```
 
-2. Count the number of records in a FASTQ file:
-```bash
-grep -c "^@" input.fastq
-```
-
-3. Convert a FASTQ file to a FASTA file:
-```bash
-awk '(NR%4==1){printf ">%s\n",substr($0,2)} (NR%4==2){print}' input.fastq > output.fasta
-```
+This command aligns the sequences in sample.fastq to the reference genome stored in reference.fasta. The resulting alignments are saved in the SAM format file output.sam. BWA is a widely used program in bioinformatics for aligning sequencing reads to a reference genome.

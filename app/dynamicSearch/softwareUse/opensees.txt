@@ -1,29 +1,34 @@
-Use Case: Finite element analysis with OpenSees  
-Code details and examples:  
-Input file format:
+Use Case: OpenSees (Open System for Earthquake Engineering Simulation) is an open-source software framework for conducting finite element simulations of structural and geotechnical systems subjected to earthquakes. The application allows users to build complex models using a simple scripting language. 
+
+Code details and examples: 
+
+Code:
+```tcl
+# This is your OpenSees script.
+# create a simple 2 node system
+
+model BasicBuilder -ndm 2 -ndf 3  
+
+node 1   0.0 0.0
+node 2  144.0 0.0 
+
+fix 1 1 1 1
+fix 2 0 1 0
+
+uniaxialMaterial Elastic 1 3000.0
+element truss 1 1 2 10.0 1
+
+pattern Plain 1 "Series -dt 0.01 -filePath GM1.txt -factor 1.0" {
+    load 2 1.0 0.0 0.0
+}
 ```
-# define nodes
-node 1 0.0 0.0
-node 2 0.0 5.0
-node 3 5.0 5.0
-node 4 5.0 0.0
 
-# define elements
-element quad 1 1 2 3 4 $matTag thick
-element quad 2 5 6 7 8 $matTag thick
+This example TCL script creates a simple two-node model with a uniaxial elastic material. The nodes are fixed against movement in both the X and Y directions. The script also specifies a load pattern for the analysis, with a series from a file named "GM1.txt" scaled by a factor of 1. The load is applied to node 2 in the X direction.
 
-# define material
-uniaxialMaterial Elastic 1 30000
+The "GM1.txt" should be placed in the same directory as the TCL script. The GM1.txt file should contain a single column of values representing ground motion recordings.
 
-# define section
-section Elastic 1 10 10
+To run this script, you would use the command:
 
-# define thick
-set thick 0.1
-```
+`$ OpenSees <your_example_script.tcl>` 
 
-Command to run OpenSees:
-```
-$ OpenSees filename.tcl
-```  
-Make sure to replace `filename.tcl` with the actual name of your OpenSees script file.
+The "<your_example_script.tcl>" should be replaced with the name of your TCL file. Your script and all needed files should be in the same working directory.

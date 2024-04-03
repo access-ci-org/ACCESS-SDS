@@ -1,0 +1,26 @@
+Use Case: ADVNTR is a bioinformatics software that is used to model and study variable number tandem repeats (VNTRs). VNTRs are areas of a genome that have a certain sequence of nucleotides that occur in a repeating pattern. This software can analyze these repeating patterns and help scientists understand their function and role in the genome. 
+
+Code details and examples: 
+
+Code: 
+
+To analyze a VNTR, you need to first have the sequence of the VNTR in a fasta format. The input file should look like this:
+
+```
+>sequence1
+AGCTAGCTAGCTAGCTAGCT
+>sequence2
+GATCGATCGTC
+```
+
+The command to analyze a VNTR with ADVNTR is as follows: 
+
+```
+advntr model -i sequence.fasta -o output.pred
+```
+
+The `-i` option specifies the input file, which in this case is `sequence.fasta`. The `-o` option specifies the output file, which in this case is `output.pred`. 
+
+The output file will contain the predicted VNTR model, which can then be used for further analysis.
+
+Please ensure your sequence file is formatted correctly, as the software may not work as expected with incorrectly formatted files.

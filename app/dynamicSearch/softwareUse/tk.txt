@@ -1,22 +1,49 @@
-Tkinter Python GUI toolkit. 
+Use Case: Tkinter is a standard Python interface to the Tk GUI toolkit. It is one of the most commonly used packages for creating graphical user interfaces (GUIs) in Python.
 
-Use Case: Creating a simple GUI window using Tkinter
-Code details and examples:
+Code details and examples: 
+
+Code: The following example creates a simple Tkinter window with a label:
+
 ```python
 import tkinter as tk
 
-# Create a main window
-root = tk.Tk()
+window = tk.Tk()
 
-# Add a label to the window
-label = tk.Label(root, text="Hello, World!")
+label = tk.Label(window, text="Hello, Tkinter")
 label.pack()
 
-# Run the application
-root.mainloop()
+window.mainloop()
 ```
 
-To run the script, save it in a file (e.g., `simple_gui.py`) and run it using a Python interpreter:
+Command to run: Python script can be run using python command in the terminal i.e. `python filename.py`
+
+Input File: No such input file is needed as Tkinter runs directly within the script. The format and specification of the code are text and Python-specific commands. It doesn't require any specific input file.
+
+Additional details in Code: The keyword `import` is used to include the Tkinter module in the script. The `Tk()` function creates a new window. The `Label()` function creates a new label, and the argument specifies which window the label should belong to, as well as what text the label should display. The `pack()` function is called on the label to ensure it's visible. Finally, the `mainloop()` function keeps the window visible.
+
+
+Use Case: Caffe is a deep learning framework made with expression, speed, and modularity in mind.  It is developed by Berkeley AI Research (BAIR) and by community contributors.
+
+Code details and examples: 
+
+Code: The following example describes the training process:
+
+```shell
+./build/tools/caffe train --solver=examples/mnist/lenet_solver.prototxt
 ```
-python simple_gui.py
+In this case, `--solver` argument takes in the solver configuration file (`lenet_solver.prototxt`). This file contains various configurations that are used by Caffe during the training process. 
+
+Input File: The input file (usually named ending as .prototxt) describes the layers and parameters for model training. The format is Protocol Buffer text format. The specifications of the input data are described in the file. For example, `lenet_solver.prototxt` can contain something like:
+
+```shell
+train_net: "examples/mnist/lenet_train_test.prototxt"
+test_net: "examples/mnist/lenet_train_test.prototxt"
+test_iter: 100
+test_interval: 500
+base_lr: 0.001
+momentum: 0.9
+weight_decay: 0.0005
+...
 ```
+
+Additional details in Code: The `base_lr` parameter controls the learning rate, and the `momentum` and `weight_decay` parameters help to prevent model overfitting during the training process. A solver file, like `lenet_solver.prototxt`, is typically used to specify such parameters.

@@ -1,0 +1,31 @@
+Use Case: MaxQuant is a software package used for proteomics data analysis. It's primarily designed to analyze large mass spectrometric data sets. 
+
+Code details and examples:
+
+Code: 
+
+MaxQuant is not typically run through a code script but through an interactive user interface. However, it does accept input files, the main ones being the raw files of mass spectrometry data.
+
+Format required: 
+
+MaxQuant accepts a range of file formats but the most common ones are .RAW files (outputted from Thermo Fisher's mass spectrometers).
+
+Specifications and details in input files: 
+
+The .RAW files contain the raw data from the mass spectrometer, including the masses and charges of the detected ions. In addition, a fasta file with the sequence database against which the data is searched is needed. 
+
+Command to run: 
+
+As noted above, MaxQuant is generally run through a user interface rather than a command line. A typical use case would involve:
+
+1. Open MaxQuant
+
+2. Provide the directory for the .RAW files
+
+3. Specify the fasta file 
+
+4. Configure other parameters as desired (e.g. variable modifications, fixed modifications, enzyme specificity)
+
+5. Click "Start" to run the analysis
+
+Note: MaxQuant does have a command line version, but the use is quite complex and typically not used in a day-to-day analysis.

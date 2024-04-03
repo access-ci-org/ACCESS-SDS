@@ -1,42 +1,34 @@
-Use Case: Sparse linear algebra solver
+Use Case: UMFPACK is primarily used for solving unsymmetric sparse linear systems Ax=b using the Unsymmetric MultiFrontal method.
 
-Code details and examples: 
-UMFPACK is a collection of routines for solving sparse linear systems Ax = b using direct methods based on LU factorization. It is commonly used in computational science and engineering applications.
-
-Input file format:
-The input matrix A and right-hand side vector b can be provided in Matrix Market (.mtx) format. Here is an example of how you can create a sparse matrix in Matrix Market format:
-
-```
-%%MatrixMarket matrix coordinate real general
-% Example 3x3 sparse matrix
-3 3 5
-1 1 1.0
-2 2 2.0
-3 3 3.0
-1 2 4.0
-2 3 5.0
-```
+Code details and examples:
 
 Code:
-Here is an example code snippet in Python using `scipy` to solve a sparse linear system using UMFPACK:
+
+Here's an example of basic usage of `umfpack` in Python with the `scipy` library. The code solves the following system of equations:
+    
+```python
+2x + 3y = 9
+x - 4y = -13
+```
 
 ```python
 import numpy as np
-from scipy.sparse import coo_matrix
-from scipy.sparse.linalg import spsolve
-from scipy.io import mmread
+from scipy.sparse import csc_matrix
+from scikits.umfpack import spsolve
 
-# Load the sparse matrix A and the right-hand side vector b from Matrix Market files
-A = mmread("matrixA.mtx")
-b = mmread("vectorB.mtx")
+# Create a sparse matrix in CSC format
+A = csc_matrix(np.array([[2.0, 3.0], [1.0, -4.0]]))
 
-# Convert the matrix A to CSR format for UMFPACK
-A_csr = A.tocsr()
+# Create a RHS vector
+b = np.array([9.0, -13.0])
 
-# Solve the linear system Ax = b using UMFPACK
-x = spsolve(A_csr, b)
+# Solve the system
+x = spsolve(A, b)
 
+# Print the solution
 print(x)
 ```
 
-Note: UMFPACK is part of SuiteSparse and is commonly used in conjunction with other sparse linear algebra libraries like SuperLU and CHOLMOD.
+The input to the `spsolve` function are the sparse matrix `A` and the right-hand side vector `b`, both defined in the code as numpy arrays. The system of equations is solved and the solution is printed.
+
+The above code should be saved as a Python script (i.e., with a .py extension), and can be run with the command `python script.py` (with script.py being the name of your Python file).

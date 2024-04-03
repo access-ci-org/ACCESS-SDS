@@ -1,0 +1,23 @@
+{
+  "software_name": "ccache",
+  "comprehensive_overview": "ccache is a compiler cache tool designed to speed up C and C++ compilation by caching previous compilations. It acts as a caching proxy for compilers, storing compiled object files in a cache directory, which can be reused when the same compilation is done again. This reduces compilation times significantly, especially during iterative development processes.",
+  "core_features": [
+    "Caching compiled object files for faster compilation times",
+    "Transparently intercepting compiler calls",
+    "Support for various compilers and build systems",
+    "Customizable cache size and behavior",
+    "Tracking dependencies to invalidate outdated cache entries"
+  ],
+  "general_tags": [
+    "Compiler Cache",
+    "C/C++ Compilation",
+    "Build Optimization"
+  ],
+  "additional_tags": {
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Development Tools",
+    "software_type": "Compiler Utility",
+    "field_of_science": "Engineering and Technology"
+  }
+}

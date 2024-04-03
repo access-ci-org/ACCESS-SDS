@@ -1,31 +1,28 @@
-Use Case: Version control system for tracking changes in code  
-Code details and examples:  
-To initialize a git repository in a folder:
+Use Case: git is used for version control, which allows developers to save versions of their code and retrieve them when necessary. For instance, the following demonstrates the way to commit changes to the repository and push to the remote server.
+
+Code details and examples: 
+
+Code:
 ```
+# Navigate to the Project directory
+cd /path/to/project
+
+# Initialize empty git repository
 git init
-```
 
-To add files to the staging area:
-```
-git add <file_name>
-```
+# Add all new and modified files to the git
+git add .
 
-To commit changes to the repository:
-```
-git commit -m "Commit message"
-```
+# Commit changes to the repository
+git commit -m "Initial commit"
 
-To push changes to a remote repository:
-```
-git push <remote_name> <branch_name>
-```
+# Add the remote repository
+git remote add origin http://github.com/user/repo.git
 
-To pull changes from a remote repository:
+# Push commits to the on the master branch
+git push origin master 
 ```
-git pull <remote_name> <branch_name>
-```
-
-To clone a repository from a remote:
-```
-git clone <repository_url>
-```
+Input files: N/A (The code functions on the project directory.)
+Required format: N/A (This tool works on any formatter as it is a version control system.)
+Specifications in input files: N/A (No specific requirements for input files are applicable here.)
+Command to run them: Mentioned in the provided code.

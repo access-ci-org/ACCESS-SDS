@@ -1,0 +1,11 @@
+{
+    "software_name": "Dragonflye",
+    "comprehensive_overview": "Dragonflye is a computational software package designed for the analysis and visualization of biological networks and pathways. It offers tools for studying the interactions between genes, proteins, and other biological molecules to gain insights into complex biological processes.",
+    "core_features": "Some of the core features of Dragonflye include network visualization, pathway analysis, gene expression data integration, network clustering, and network motif identification. It allows users to explore and analyze large-scale biological networks to identify key regulatory elements and functional modules.",
+    "general_tags": ["biology", "network analysis", "pathway analysis"],
+    "research_discipline": "Bioinformatics",
+    "research_area": "Systems Biology",
+    "software_class": "Analysis and Visualization Tools",
+    "software_type": "Computational Software",
+    "field_of_science": "Biological Sciences"
+}

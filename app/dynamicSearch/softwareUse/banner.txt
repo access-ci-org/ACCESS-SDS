@@ -1,0 +1,29 @@
+Use Case: The Banner software suite is an enterprise resource planning (ERP) solution primarily used by higher education institutions. It is composed of various web applications handling different kinds of administrative tasks like student information system, human resources, finance, and more.
+
+Code details and examples:
+
+This software typically does not involve code snippets or input files as it is a fully-fledged ERP system requiring extensive setup and configuration tied to the specific needs of the institution deploying it.
+
+However, it does offer a graphical user interface for users to interact with the software and perform the necessary administrative tasks. Command to run the program will depend on the specific module and action user wants to perform in the Banner application.
+
+In certain cases, where there are tasks needing automated scripting, such as periodic data uploads, institutions sometimes use technologies such as Java or Groovy to interact with the Banner database using standard SQL commands. 
+
+Example Groovy script (This requires a standard JDBC SQL connection setup):
+
+```groovy
+import groovy.sql.Sql
+
+def sql = Sql.newInstance('jdbc:h2:mem:testDB', 'sa', '', 'org.h2.Driver')
+
+sql.execute '''
+CREATE TABLE STUDENT (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(255),
+    MAJOR VARCHAR(255)
+)
+'''
+
+sql.execute "INSERT INTO STUDENT(NAME, MAJOR) VALUES('John Doe', 'Computer Science')"
+```
+
+Please note that this example is significantly simplified and does not represent the complexity of manipulating real data in such system. In reality, setup, permissions, data validation, error checking and other considerations would need to be accounted for.

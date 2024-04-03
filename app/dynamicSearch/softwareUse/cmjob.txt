@@ -1,0 +1,30 @@
+Use Case: Running a computational job using CmJob Python module for task scheduling in high-performance computing (HPC) environments. You might use CmJob to queue a task that runs a heavy computational simulation.
+
+Code details and examples: Code
+
+Input file: (myscript.py)
+```python
+def my_function(a, b):
+    result = a * b
+    return result
+
+if __name__ == "__main__":
+    my_function(3, 5)
+```
+
+In this simple script, the function my_function performs a multiplication of two numbers, and then it is being run in the main body of the script.
+
+Command-line invocation:
+
+```bash
+cmjob run -f myscript.py -a "3 5"
+```
+
+This command runs the Python script "myscript.py" with the command line arguments "3" and "5". The -f flag denotes the file to run, while the -a flag denotes the arguments to pass to the script.
+
+Specifications:
+- The CmJob command takes a Python script as an argument.
+- The Python script should define a function that performs the desired task.
+- The Python script should have a __name__ == "__main__" guard that calls the function.
+
+The desired functionality (a heavy computational simulation in a high-performance computing environment, in this case) should be encapsulated within the function being defined in the Python script. The CmJob command then schedules this function for execution in the HPC environment.

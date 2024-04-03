@@ -1,0 +1,13 @@
+{
+    "software_name": "amd-uprof",
+    "comprehensive_overview": "AMD uProf is a performance analysis tool suite for AMD processors that provides detailed insights into application performance and power usage. It allows developers to analyze code performance, identify bottlenecks, and optimize applications for AMD platforms.",
+    "core_features": "1. Performance analysis tools for AMD processors.\n2. Detailed insights into application performance.\n3. Power usage analysis.\n4. Code optimization capabilities.\n5. Identify performance bottlenecks.",
+    "general_tags": ["performance analysis", "application optimization", "AMD processors"],
+    "additional_tags": {
+        "research_discipline": "Computer Science",
+        "research_area": "Software Engineering, Systems, and Development",
+        "software_class": "Performance Analysis Tool",
+        "software_type": "Compiler/Profiler",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

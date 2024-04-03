@@ -1,13 +1,44 @@
-Use Case: Protein structure prediction and design
+Use Case: Use Rosetta for protein structure prediction and design.
 
 Code details and examples:
-Rosetta is a suite of software tools for protein structure prediction and design. One of the common tasks performed using Rosetta is protein structure prediction or ab initio folding.
 
-Example of running ab initio folding with Rosetta:
+Code: The Rosetta commands are generally present in a Rosetta script (.xml). You will definitely need a PDB file (Protein Data Bank file format), where the protein sequence and structure are described. The PDB format is a text file describing the names, positions, and connectivity of atoms in a protein.
+
+Here is an example of a simple Rosetta script for protein structure prediction using the `rosetta_scripts.default.linuxgccrelease` executable.
+
+```sh
+./rosetta_scripts.default.linuxgccrelease -s input.pdb -parser:protocol protocol.xml
 ```
-$ROSETTA3/bin/AbinitioRelax.default -s input.pdb -nstruct 10
+
+In this case, `input.pdb` is your initial structure file and `protocol.xml` is your Rosetta script. 
+
+Here's an example of format in the `input.pdb` file:
+
+```pdb
+ATOM      1  N   ALA A   1      12.106  13.225   5.622  1.00  0.00           N
+ATOM      2  CA  ALA A   1      12.901  14.320   5.211  1.00  0.00           C
+ATOM      3  C   ALA A   1      14.286  13.791   5.466  1.00  0.00           C
+ATOM      4  O   ALA A   1      15.021  14.369   6.226  1.00  0.00           O
+ATOM      5  CB  ALA A   1      12.203  15.316   6.101  1.00  0.00           C
 ```
 
-In the example above, input.pdb is the input PDB file of the protein structure for which ab initio folding will be performed. The -nstruct flag specifies the number of structures to generate during the folding process.
+The `protocol.xml` might look like this:
 
-Please note that the actual command may vary slightly depending on the version of Rosetta and the specific task you are performing.
+```xml
+<ROSETTASCRIPTS>
+  <SCOREFXNS>
+  </SCOREFXNS>
+  <RESIDUE_SELECTORS>
+  </RESIDUE_SELECTORS>
+  <TASKOPERATIONS>
+  </TASKOPERATIONS>
+  <FILTERS>
+  </FILTERS>
+  <MOVERS>
+  </MOVERS>
+  <PROTOCOLS>
+  </PROTOCOLS>
+</ROSETTASCRIPTS>
+```
+
+If more detailed examples are required, please refer directly to the Rosetta documentation. All the necessary details and commands should be described there.

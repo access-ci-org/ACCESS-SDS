@@ -1,26 +1,52 @@
-Use Case: JAX (NumPy compatible numerical computing library)
+Use Case: Differentiable Machine Learning research. 
+
+Jax is a Python library for high-performance numerical computing. It is built on XLA (Accelerated Linear Algebra) which is a high-performance linear algebra compiler from Google. Jax allows operations on its array-like objects to be just-in-time (JIT) compiled into highly optimized XLA code. 
+
+Models and computations in Jax can be run on either CPU, GPUs, or TPUs without code changes. Jax's ability to take derivatives, gradients, and even higher order gradients of functions (automatic differentiation) is essential for many machine learning algorithms, especially in deep learning where backpropagation is one of the key computations. 
+
+1-D array of length 10, filled with zeros
+
 Code details and examples: 
-JAX is a numerical computing library that is compatible with NumPy but can automatically differentiate native Python and NumPy functions. Here is an example code snippet to demonstrate how to use JAX:
+
+Code:
 
 ```python
 import jax.numpy as jnp
+
+x = jnp.zeros(10)
+print(x)
+```
+
+Jax provides two main tools:
+
+1. jit, for speeding up your code. It stands for “just-in-time compilation”. 
+
+Finding square of the elements of a 1D array
+
+Code:
+
+```python
+from jax import jit
+
+square = jit(lambda x: x ** 2)
+
+x = jnp.arange(10)
+
+print(square(x))
+```
+
+2. grad, for taking derivatives. Using the same code, we get the derivative of a function.
+
+Code:
+
+```python
 from jax import grad
 
-def squared_loss(x, y):
-    return jnp.sum((x - y) ** 2)
+derivative_of_square = grad(lambda x: x ** 2)
 
-grad_squared_loss = grad(squared_loss)
+x = 3.0
 
-x = jnp.array([1.0, 2.0, 3.0])
-y = jnp.array([2.0, 4.0, 6.0])
-
-gradient = grad_squared_loss(x, y)
-print(gradient)
+print(derivative_of_square(x))  # Evaluates to 6.0
 ```
 
-In this code, we define a squared loss function and then use JAX to compute the gradient of the loss function with respect to the input `x`.
-
-To run the code, you can save it to a file (e.g., `jax_example.py`) and execute it using a Python interpreter that has JAX installed:
-```
-python jax_example.py
-```
+To run the above python codes, simply write the code in a python file and use the command `python filename.py` from the command line, or use an interactive Python environment like Jupyter notebooks.

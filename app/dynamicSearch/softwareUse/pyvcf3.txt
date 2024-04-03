@@ -1,0 +1,37 @@
+Use Case: pyVCF library is used for parsing and manipulating VCF (Variant Call Format) and BCF (Binary Call Format) files. It works with Python 3.
+
+Code Details and Examples: Here is a basic usage of pyVCF library:
+
+Import the library and create a `VCFReader` object:
+
+```python
+from Bio.VCF import Reader
+
+vcf_reader = Reader(filename='sample.vcf')
+```
+
+The `sample.vcf` is a VCF formatted file. VCF files have a specified format which is header containing metadata and a body containing the variant data. Here's an example for the start of a VCF file:
+
+```
+##fileformat=VCFv4.2
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Approximate read depth (reads with MQ=255 or with bad mates are filtered)">
+#CHROM POS     ID        REF ALT    QUAL FILTER INFO
+20     14370   rs6054257 G   A      29   PASS   NS=3
+```
+
+Determining the variants:
+
+```python
+for record in vcf_reader:
+    print(record.CHROM, record.POS, record.ID, record.REF, record.ALT)
+```
+
+The code above prints out the chromosome, position, id, reference, and alternate for each record in the VCF file. 
+
+Also, there is no conventional way to run pyVCF. You just need to execute your python script containing pyVCF code using python command:
+
+```bash
+python3 script.py
+``` 
+
+Take note that there's no binary or command-line tool named `pyvcf` or similar that you would run directly from your shell.

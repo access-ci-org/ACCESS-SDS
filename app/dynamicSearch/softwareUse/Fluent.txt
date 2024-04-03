@@ -1,33 +1,57 @@
-I can provide information on ANSYS Fluent, a computational fluid dynamics (CFD) software commonly used in the industry for simulating fluid flow and heat transfer. 
+Use Case: Fluent is a Computational Fluid Dynamics (CFD) software for modeling fluid flow and heat transfer in complex geometries. It has a broad range of multi-physics capabilities, including fluid-structure interaction and multiphase flow. 
 
-Use Case: Simulating flow over a cylinder
-Code details and examples:
-```text
-% ANSYS Fluent input file for simulating flow over a cylinder
-% Define geometry, mesh, boundary conditions, and solver settings
+Code Details and Examples: 
 
-/case/cylinderflow
+Code:
 
-/grid/import meshfile "cylinder_mesh.msh"
+Sample Fluent Input File:
 
-/solve/set/discretization-scheme "second-order"
+Steps to generate this input file:
+1. Choose File > Write > Case 
+2. Enter filename.cas in the File Name field
+3. Click OK.
 
-/bc/velocity-inlet
-0.2 0 0
+To run the simulation:
 
-/bc/pressure-outlet
-0
+Command to run fluent:
 
-/solve/initialize/initialize-flow
-/solve/iterate 1000
+`fluent 3ddp -g -i input.jou > output.log &`
 
-/report/force-drag-lift
+where 
+- '3ddp' specifies the version (3D double precision)
+- '-g' starts it without the graphics window,
+- '-i' specifies the input journal file.
 
-/solve/dual-time-iterate 1000 0.001
+The output is sent to output.log. This is just a basic command. Fluent has numerous options and possibilities when it comes to problem setup and solving, post-processing, etc. It hugely depends on the physics of the problem.
 
-/display/contour velocity-magnitude
+This input file essentially has a list of Fluent commands that are executed in sequence. They can specify the problem setup, solver settings, and even when to write results and end the simulation.
+
+Here is an example of a basic input (journal) file:
+
+```
+; Read the mesh file
+/file/read-case myMesh.msh
+
+; Setup the models, materials, boundary conditions etc
+/define/models/steady
+/define/materials/change-create airIdealGas airIdealGas constant 287
+/define/boundary-conditions/wall wallHeatFlux 0 heat-flux 50
+/define/boundary-conditions/pressure-outlet outlet 0 gauge-pressure 0
+
+; Initialize the flow field
+/solve/initialize/compute-defaults/velocity-inlet inlet
+
+; Setup solver settings
+/solve/set/discretization-scheme pressure second-order
+/solve/set/discretization-scheme momentum second-order-upwind
+/solve/set/under-relaxation pressure 0.2
+/solve/set/under-relaxation momentum 0.5
+
+; Run the calculation for 200 time steps
+/solve/iterate 200
+
+; Write the results
+/file/write-data myResults.dat
 ```
 
-To execute the ANSYS Fluent simulation with the provided input file, you would typically launch the Fluent graphical user interface (GUI), open the input file, set the appropriate solver options, and click on the "Compute" button to start the simulation iteration process.
-
-Note: The above input file is a simplified example and may need adjustments based on the actual simulation requirements.
+In this example, the mesh is read from the file 'myMesh.msh'. The simulation is set up for steady-state, the air is set as an ideal gas with a specific heat capacity ratio of 287 J/kgK. Walls are specified with a heat flux of 50 W/m^2, and the outlet is set to be a pressure outlet with gauge pressure 0. Flow field is initialized from the inlet conditions. Pressure and momentum equations are discretized using second-order schemes, and under-relaxation factors are set. The simulation is iterated for 200 steps, and results are written to 'myResults.dat'.

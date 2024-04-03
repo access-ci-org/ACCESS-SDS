@@ -1,0 +1,30 @@
+Use Case: Forge is a popular python library used for creating and validating command line interfaces (CLI). Often used in developing command-line based applications or utilities. 
+
+Code Details and Examples:
+In Forge, you can define a function and annotate it with the '@forge.command()' annotation. This function will now be exposed as a command within the CLI. Here's a simple example:
+
+Code:
+
+```python
+import forge
+
+@forge.command()
+def greet(name: str='World'):
+    """Greet someone"""
+    print(f'Hello, {name}!')
+
+if __name__ == '__main__':
+   forge.execute()
+```
+
+In this case, the input file parameters or format are not explicitly required as the command line inputs are expected to be passed as parameters to the application.
+
+Command to run:
+
+This script can be run directly from the command line with the 'python filename.py' command, along with any arguments that need to be passed to the functions defined within. Here's how to call the 'greet' function:
+
+```
+python filename.py greet --name John
+```
+
+This command calls the 'greet' function and passes 'John' as the 'name' argument. The script will then print 'Hello, John!'. If 'name' argument is not provided, it defaults to 'World', and the script will print 'Hello, World!'.

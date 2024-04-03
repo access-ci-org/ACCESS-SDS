@@ -1,0 +1,13 @@
+{
+  "software_name": "x265",
+  "comprehensive_overview": "x265 is a free and open-source software library and application for encoding video streams into the H.265/MPEG-H HEVC (High Efficiency Video Coding) format. It is widely used for efficient video compression and playback on various platforms.",
+  "core_features": "1. Encoding video streams into the H.265/HEVC format\n2. Efficient video compression\n3. High-quality playback on multiple devices\n4. Configurable encoding settings for optimization\n5. Support for parallel encoding for faster processing",
+  "general_tags": ["video encoding", "compression", "HEVC"],
+  "additional_tags": {
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Encoding Software",
+    "software_type": "Library and Application",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

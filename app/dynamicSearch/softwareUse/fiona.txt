@@ -1,0 +1,46 @@
+Use Case: Use fiona package to read geometrical objects and their associated attributes from a shapefile.
+
+Code details and examples: Code 
+
+Here is an example of how to read from a shapefile and write to a GeoJSON file using Fiona:
+
+```
+import fiona
+from fiona.crs import from_epsg
+
+# Input file
+in_file_path = "path/to/your/input.shp"
+
+# Open the input file
+src = fiona.open(in_file_path)
+
+# Output file
+out_file_path = "path/to/your/output.json"
+
+# Create a sink for processed features with the same format and
+# coordinate reference system as the source.
+sink_schema = src.schema.copy()
+sink_crs = from_epsg(4326)
+
+with fiona.open(
+        out_file_path, 'w',
+        crs=sink_crs,
+        driver="GeoJSON",
+        schema=sink_schema
+    ) as sink:
+
+    # Process each feature
+    for f in src:
+        try:
+            sink.write(f)
+        except Exception as e:
+            # Writing failed, likely because the geometry is invalid.
+            print("Failed to write feature {} to output. {}".format(f['id'], e))
+
+Command to run the Fiona Python code:
+```bash
+python your_python_file.py
+```
+In the above code, your_python_file.py is the python script where you have written your code. Replace 'your_python_file' with your actual python filename.
+
+Note: This example assumes you have fiona installed in your python environment and shapefile and json file in the correct directory. The `.shp` file and `.json` file path in the code should be replaced with the actual file path of your input and output file. Also, the EPSG:4326 represents WGS84 coordinate system, but you can replace this with the EPSG code that matches your data's coordinate system.

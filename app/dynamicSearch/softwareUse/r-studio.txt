@@ -1,0 +1,29 @@
+Use Case: RStudio is commonly used for data analysis, statistics, and machine learning tasks. It can also be used for creating R packages, graphics and interactive applications. 
+
+Code details and examples: The following example demonstrates a simple analysis of the built-in dataset mtcars in RStudio. We will showcase a basic regression analysis on this dataset.
+
+The input file for this task is already the built-in dataset mtcars.
+
+```
+# Load the dataset
+data(mtcars)
+
+# Display the first few rows of the dataset
+head(mtcars)
+```
+
+The top 6 rows of the mtcars dataset is displayed. This dataset is available in the form of a dataframe with 32 rows and 11 variables like mpg, cyl, disp, etc.
+
+Using the function lm(), we compute the linear model using dataset mtcars, and then summarize the model.
+
+```
+# Compute the linear model
+lm_model <- lm(mpg ~ cyl, data = mtcars)
+
+# Provide a summary of the model
+summary(lm_model)
+```
+
+This will output the summary of the linear model in the console.
+
+Command to Run: To run this code, you can simply load it in an RStudio script (.R file), and press the "Run" button or press Ctrl+Enter on a selected line of code. A dataset of mtcars is built into RStudio, so no further steps are needed to access it.

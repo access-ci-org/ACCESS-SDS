@@ -1,0 +1,13 @@
+{
+    "software_name": "circompara2",
+    "comprehensive_overview": "circompara2 is a tool for circular comparison of genomes. It allows for the visualization and comparison of genomic sequences in a circular representation, enabling the identification of similarities and differences between genomes.",
+    "core_features": "Features of circompara2 include circular genome visualization, comparative genomics analysis, identification of genomic rearrangements, annotation comparison, and gene synteny analysis.",
+    "general_tags": ["genomics", "comparative genomics", "genome visualization", "gene synteny"],
+    "additional_tags": {
+        "research_discipline": "Genomics",
+        "research_area": "Comparative Genomics",
+        "software_class": "Bioinformatics",
+        "software_type": "Tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

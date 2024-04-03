@@ -1,0 +1,11 @@
+{
+    "software_name": "Magics",
+    "comprehensive_overview": "Magics is a software library for visualizing meteorological data. It provides a wide range of graphical elements for the simultaneous representation of 2D and 3D data, including maps, wind fields, trajectories, symbols, etc. Magics is commonly used in weather forecasting, climate research, and meteorological data analysis.",
+    "core_features": "1. Visualization of meteorological data in 2D and 3D.\n2. Offers various graphical elements like maps, wind fields, trajectories, symbols, etc.\n3. Customizable features for creating publication-quality weather maps.\n4. Supports interpolation methods for smooth data representation.",
+    "general_tags": ["visualization", "meteorology", "meteorological data", "weather forecasting"],
+    "research_discipline": "Atmospheric Sciences",
+    "research_area": "Meteorology",
+    "software_class": "Visualization Tool",
+    "software_type": "Library",
+    "field_of_science": "Earth and Environmental Sciences"
+}

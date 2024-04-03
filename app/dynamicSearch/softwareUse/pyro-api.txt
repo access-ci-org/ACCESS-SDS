@@ -1,0 +1,43 @@
+Use Case: Pyro API is useful for probabilistic programming applications. It allows flexible modelling and inference of probabilistic models.
+  
+Code details and examples:
+
+Code:
+
+First, import necessary functions and libraries.
+
+```python
+import torch
+from pyroapi import pyro_backend
+from pyroapi import distributions as dist
+from pyroapi import handlers
+from pyroapi import infer
+from pyroapi import optim
+from pyroapi import pyro
+```
+Now, we define a simple probabilistic model using the Pyro modeling language.
+```python
+def weather():
+    cloudy = pyro.sample('cloudy', dist.Bernoulli(0.3))
+    cloudy = 'cloudy' if cloudy.item() == 1.0 else 'sunny'
+    mean_temp = {'cloudy': 55.0, 'sunny': 75.0}[cloudy]
+    scale_temp = {'cloudy': 10.0, 'sunny': 15.0}[cloudy]
+    temp = pyro.sample('temp', dist.Normal(mean_temp, scale_temp))
+    return cloudy, temp.item()
+```
+From the above model we can generate some samples in this way :
+```python
+print(weather())
+```
+The "weather" is a straightforward function that returns two objects under different circumstances.
+    
+Command to run:
+
+You would typically run this in a python environment. The command to run would be:
+
+```bash
+python filename.py
+``` 
+Make sure to replace "filename.py" with the name of your python file.
+
+Please note that Pyro does not take specific input files. The input to the model is defined within the code itself.

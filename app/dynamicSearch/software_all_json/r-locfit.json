@@ -1,0 +1,13 @@
+{
+  "software_name": "r-locfit",
+  "comprehensive_overview": "r-locfit is a robust, flexible, and powerful package in R for local regression, likelihood, and density estimation. It provides a wide range of functionalities for non-parametric modeling and estimation.",
+  "core_features": "1. Local regression\n2. Likelihood estimation\n3. Density estimation\n4. Non-parametric modeling\n5. Data visualization capabilities",
+  "general_tags": ["R package", "Non-parametric estimation", "Data visualization"],
+  "additional_tags": {
+    "research_discipline": "Statistics and Probability",
+    "research_area": "Applied Statistics",
+    "software_class": "Statistical Analysis Software",
+    "software_type": "Data Analysis and Visualization Tool",
+    "field_of_science": "Mathematics"
+  }
+}

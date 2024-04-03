@@ -1,0 +1,31 @@
+Use Case: cafe (Computational Analysis of gene Family Evolution) is used for statistical analysis of gene family evolution using a stochastic birth and death model. 
+
+Code Details and Examples: Code 
+
+Let's say we have an example data file ("families.txt") that holds gene family sizes in four species. Each line corresponds to one gene family.
+
+Content of "families.txt":
+
+```
+Desc    Fam0 Fam1 Fam2
+Sp1 4   2   2   
+Sp2 4   2   2   
+Sp3 3   2   2   
+Sp4 1   1   1
+```
+
+Command line to run cafe:
+
+```bash
+cafe param.txt
+```
+
+In param.txt:
+
+```
+-load -i families.txt -t 3 -l reports/log.txt -p 0.05
+```
+
+Details about the parameters available in this software can be found in the user manual online.
+
+The output is a report detailing the results of the analysis, including estimates of lambda (gene gain and loss rate), the number of gene families expanding, and contracting in each lineage.

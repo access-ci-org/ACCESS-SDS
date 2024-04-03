@@ -1,0 +1,34 @@
+Use Case: FastTree is a tool for inferring phylogenies or evolutionary trees. The input file is usually in fasta format and contains a multiple sequence alignment. 
+
+Code Details and Examples:
+
+Code:
+
+Typically, data is piped into FastTree using UNIX pipe operator (|). The example below shows how an alignment file in fasta format, "aligned.fasta", is piped into FastTree to construct a maximum likelihood tree, which FastTree then prints to standard output.
+
+Command:
+```
+cat aligned.fasta | FastTree > tree.newick
+```
+
+This command reads a MSA (Multiple Sequence Alignment) from "aligned.fasta", calculates a phylogenetic tree using FastTree, and then output the tree structure in Newick format to a file named "tree.newick". Note that FastTree only supports sequential fasta format (with no line breaks within a sequence.)
+
+In the input file "aligned.fasta", each line should begin, in order, with:
+
+- A '>', indicating the beginning of a new sequence
+- The sequence ID
+- The sequence itself. 
+
+Example of input file:
+```
+>seq1
+AGCTAGCTAGCTAGCTAG
+>seq2
+AGCTAGCTTGCTAGCTTG
+>seq3
+CGCTAGCTGGCTAGCTGG
+```
+
+Sequence IDs must be unique and can contain any printable ASCII character except for newline and '>'.
+
+The resulting "tree.newick" file will contain a phylogenetic tree in Newick format describing the evolutionary relationships between the input sequences.

@@ -1,0 +1,29 @@
+Use Case: RSeQC is an RNA-seq quality control package that gives users a rapid and comprehensive quality control report. In biology and familiar fields, it is employed for quality control in the RNA-seq data.
+
+Code details and examples: 
+
+Code: 
+The input file for RSeQC is a BAM or SAM file, sort of alignments obtained from aligning sequencing reads to a reference genome.
+
+Input file example:
+
+```
+HS2000-940_146:2:2307:18952:82214#49/1	99	chr1	13802	1	50M	=	13878	126	AGGGTTTTCCCATGATTGCGCGTGTTTCCGCTCCCCCCGTGGGGAGGAAGGA	BC@
+```
+The command to run the most common RSeQC scripts is simple:
+
+`read_distribution.py -i input.bam -r hg19.bed > output.txt`
+
+This command calculates the distribution of reads over features defined in the BED file. The result is outputted to the terminal and can be redirected to the file output.txt. 
+
+In this command:
+
+-i denotes the input BAM file.
+-r denotes the reference BED file. 
+
+Specifications and details in input files:
+
+- The first column in the file should be 'chr' followed by chromosome number.
+- The columns should be tab-separated.
+- The file should have a.bam or .sam extension and be in the appropriate format.
+- For paired end reads, the two reads should have identical names.

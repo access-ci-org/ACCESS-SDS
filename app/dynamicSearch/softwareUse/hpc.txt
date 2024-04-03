@@ -1,0 +1,57 @@
+Use Case: Running a parallel computation using MPI (Message Passing Interface) in a High Performance Computing (HPC) environment;
+
+Code details and examples: Code:
+
+Sample Input File (hello.c):
+```c
+#include <mpi.h>
+#include <stdio.h>
+
+int main(int argc, char** argv) {
+    // Initialize the MPI environment
+    MPI_Init(NULL, NULL);
+
+    // Get the number of processes
+    int world_size;
+    MPI_Comm_size(MPI_COMM_WORLD, &world_size);
+
+    // Get the rank of the process
+    int world_rank;
+    MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
+
+    // Print off a hello world message
+    printf("Hello world from rank %d out of %d processors\n",
+           world_rank, world_size);
+
+    // Finalize the MPI environment.
+    MPI_Finalize();
+}
+```
+The .c file above accepts no command-line inputs and requires a C compiler and MPI installation that is standard in HPC systems.
+
+To compile the code using mpicc (the MPI C compiler), the following command is used:
+
+```bash
+mpicc -o hello hello.c
+```
+
+To run the compiled code within an allocated set of nodes, the following command is used:
+
+```bash
+mpirun -np 4 ./hello
+```
+In this command, `-np 4` indicates that the program should be run using 4 cores. This number needs to be adjusted based on the available resources.
+
+Alternative HPC schedulers such as Slurm or Torque would use a slightly different command to initiate the program:
+
+```bash
+sbatch --ntasks=4 myscript.sh
+```
+
+Where `myscript.sh` is a bash script file containing the mpirun command:
+
+```bash
+#!/bin/bash
+mpirun ./hello
+``` 
+This instructs the Slurm scheduler to run the hello executable across 4 cores.

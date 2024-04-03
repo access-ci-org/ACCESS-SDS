@@ -1,0 +1,41 @@
+Use Case: HiCExplorer is used for processing and visualization of Hi-C data. It takes in a Hi-C matrix file in .h5 format and a minimum resolution value for processing.
+
+Code details and examples: Code
+
+To generate and correct Hi-C matrix, a typical command line can be written as:
+
+```bash
+hicBuildMatrix --samFiles sample1.sam sample2.sam \
+--binSize 10000 \
+--restrictionCutFile rg.txt \
+--restrictionSequence GATC \
+--minDistance 500 \
+--maxDistance 20000 \
+--outFileName matrix.h5 \
+--QCfolder HiCQC
+```
+
+The restriction cut file (rg.txt) includes sequences with restriction enzyme recognition sites. The sam files are the alignment results of Hi-C sequencing data. The binSize parameter sets the resolution of Hi-C map.
+
+To normalize Hi-C matrix, a simple normalization (like Knight-Ruiz) can be applied as follows:
+
+```bash
+hicCorrectMatrix correct --matrix matrix.h5 --correctionMethod KR --chromosomes chr1 --outFileName matrix_corrected.h5
+```
+
+It normalizes the matrix file generated in the previous step. The chromosome to be processed is indicated by "--chromosomes".
+
+Visualization of Hi-C matrix can be done by plotting the matrix
+
+```bash
+hicPlotMatrix --matrix matrix_corrected.h5 --outFileName matrix_plot.png
+```
+
+This will generate a plot of the normalized Hi-C matrix. The format is a PNG image. 
+
+For interacting with the Hi-C spots, a Hi-C matrix coordinate file (in BED format) is required. An example coordinate file can have lines such as:
+
+chr1    10000    20000
+chr1    30000    40000
+
+This represents two genomic regions on chromosome 1, each is 10kb in size.

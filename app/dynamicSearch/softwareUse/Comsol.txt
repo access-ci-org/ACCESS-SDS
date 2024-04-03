@@ -1,9 +1,47 @@
-Use Case: Multiphysics simulation software
-Code details and examples: 
-- COMSOL is a multiphysics simulation software that allows for the simulation of various physical phenomena such as heat transfer, structural mechanics, fluid dynamics, and electromagnetics. 
-- Sample input files for a heat transfer simulation in a rectangular domain may include geometry specifications, material properties, boundary conditions, and physics settings.
-- The input file format for COMSOL simulations is typically in a proprietary file format specific to the COMSOL Multiphysics software.
-- While specific input file examples are not provided due to proprietary format, users can use the COMSOL GUI to set up simulations by defining the geometry, selecting physics modules, specifying boundary conditions, and running the simulation.
-- To run a COMSOL simulation from the command line (for batch processing), users can use the following command:
-  `comsol batch -inputfile input_file.mph -outputfile output_file`
-- This command will run the COMSOL simulation using the input file `input_file.mph` and generate the results in the output file specified.
+Use Case: Use Comsol for solving partial differential equations (PDE) using finite element methods. It's extensively used in the field of engineering for simulations and modeling.
+
+Code details and examples: Code 
+
+The input file for Comsol is typically a .mph file, which is a binary file format that contains the model details, geometry, physics settings, study steps, and results. You cannot manually modify or create this file. However, it can be created using the Comsol User Interface, or by using a .m script file (Matlab script) via the Comsol API. 
+
+Example: 
+
+Consider a PDE in the form of a heat equation which states that the change in heat U in an object is a result of heat diffusion - 
+
+∂U/∂t = ∇.([k*∇U] + Q)
+
+where k is the diffusion coefficient and Q is the heat sources or sinks.
+
+Creating the PDE in Comsol:
+
+1. Define geometry. In this case, lets consider a 1D model with length as 1m. 
+
+```code
+model.geom('geom1').create('blk1', 'Block');
+model.geom('geom1').feature('blk1').set('size', [1]);
+model.geom('geom1').run('blk1');
+```
+
+2. Select the physics. In this case, let's use the heat transfer in solids.
+
+```code
+model.physics.create('ht', 'HeatTransfer', 'geom1');
+```
+
+3. Set the boundary conditions and values for k and Q. Here k is assumed to be 0.5 and Q as 500.
+
+```code
+model.physics('ht').feature('init1').set('Tinit', 500); 
+model.physics('ht').feature('hs1').set('k_mat', 'userdef');
+model.physics('ht').feature('hs1').set('k', 0.5);
+model.physics('ht').feature('hs1').set('Q0_src', 'root.beam.Q_heat');
+model.physics('ht').feature('hs1').set('Q0', 500);
+```
+
+To run the Comsol model, use the following command in Comsol runtime or use the GUI to run the simulation.
+
+```code
+model.study('std1').run;
+```
+
+Please note that these codes are ran on Comsol GUI or Comsol run-time after creating the "model" object.

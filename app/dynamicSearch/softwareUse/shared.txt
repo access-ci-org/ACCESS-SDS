@@ -1,0 +1,55 @@
+Use Case: Shared is a widely-used scientific computational library used for solving computational problems, particularly in the field of linear algebra. It can be used in conjunction with various programming languages such as C, C++, and Fortran.
+
+Code Details and Examples: Code
+
+C++ code using the shared library for solving a linear system of equations:
+
+```C++
+#include <iostream>
+#include "shared.h"  // assuming that shared.h is in the current directory
+
+int main() {
+    std::vector<double> A = {1, 2, 3, 4}; // coefficients matrix
+    std::vector<double> b = {5, 6};       // right-hand side vector
+    std::vector<double> x;                // solution vector
+
+    shared::linear_solve(A, b, x);        // call to subroutine in the shared library
+
+    // print solution vector
+    for (auto &i : x) {
+        std::cout << i << ' ';
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
+```
+
+The input files required for this example would be as follows:
+
+shared.h
+In this file, you would need to declare the linear_solve function which is part of the shared library and would have the prototype similar to the following.
+
+```C++
+#ifndef SHARED_H
+#define SHARED_H
+
+#include <vector>
+
+namespace shared {
+    void linear_solve(std::vector<double> A, std::vector<double> b, std::vector<double> &x);
+}
+
+#endif // SHARED_H
+```
+
+The format of the input files would be a standard header file (.h for C++) delineating the interface to the shared library. 
+
+The command to run this code (assuming the program file is named main.cpp and that the shared library is already compiled and linked correctly) would be:
+
+```bash
+g++ -o main main.cpp -lshared
+./main
+``` 
+
+This command first compiles the C++ code and links it against the shared library, it then runs the resulting executable file. The results will be printed to the console.

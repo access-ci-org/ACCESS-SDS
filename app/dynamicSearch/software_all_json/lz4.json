@@ -1,0 +1,13 @@
+{
+  "software_name": "lz4",
+  "comprehensive_overview": "LZ4 is a lossless data compression algorithm that offers extremely fast compression and decompression speeds. It is designed to be very efficient in terms of both processing power and memory usage.",
+  "core_features": "1. Very high-speed compression and decompression\n2. Low memory usage\n3. Single-pass mode for very fast compression at slightly reduced compression ratio\n4. Frame format for data integrity checking\n5. Block-independent compression for parallel decompression\n6. Support for in-place decompression",
+  "general_tags": ["compression", "data compression", "lossless compression"],
+  "additional_tags": {
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Compression Algorithm",
+    "software_type": "Utility",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

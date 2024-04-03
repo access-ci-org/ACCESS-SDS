@@ -1,15 +1,35 @@
-Use Case: tqdm is a Python library that provides a fast, extensible progress bar for loops and other iterable tasks.
+Use Case: tqdm is a Python library that allows you to output a smart progress bar by wrapping around any iterable. A simple use case is when you want to track the progress of a loop.
 
-Code details and examples:
+Code details and examples: Code
+
+Sample code to demonstrate a simple progress bar:
+
 ```python
 from tqdm import tqdm
 import time
 
-# Example of using tqdm to show a progress bar for a loop
-for i in tqdm(range(10)):
-    time.sleep(0.5)
+for i in tqdm(range(100)):
+    time.sleep(0.01)
 ```
 
-This code snippet will output a progress bar that updates as the loop iterates through the range of 10.
+In this example, tqdm wraps around the range(100) iterable. Every time the loop progresses, tqdm updates the progress bar.
 
-Command to run: None, as this is a Python library and does not require a separate run command.
+The progress bar by default contains information about:
+
+- The number of iterations completed
+- The elapsed time 
+- The estimated remaining time
+- The estimated iterations per second
+
+In the terminal, it looks something like this:
+
+```
+78%|████████████████████████████      | 78/100 [00:01<00:00, 77.67it/s]
+```
+Run the file by the command:
+
+```python
+python filename.py
+```
+
+It's important that the range inside tqdm's parentheses to represent the total iterations for the progress bar. The time.sleep function is there to simulate a task that takes time to complete. You can include your own tasks in place of time.sleep.

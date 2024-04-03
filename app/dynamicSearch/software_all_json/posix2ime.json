@@ -1,0 +1,21 @@
+{
+  "software_name": "posix2ime",
+  "comprehensive_overview": "posix2ime is a software tool that converts POSIX timestamp to IME-mode timestamp in Linux systems. It is particularly useful for converting timestamps in the Input Method Editor (IME) mode, commonly used for inputting non-Latin characters in Asian languages.",
+  "core_features": [
+    "Converts POSIX timestamp to IME-mode timestamp",
+    "Facilitates conversion of timestamps in Input Method Editor (IME) mode",
+    "Designed for Linux systems"
+  ],
+  "general_tags": [
+    "timestamp conversion",
+    "Linux software",
+    "IME-mode timestamp"
+  ],
+  "additional_tags": {
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Utility",
+    "software_type": "Conversion tool",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

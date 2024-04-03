@@ -1,32 +1,49 @@
-Use Case: Workflow management system for creating reproducible and scalable data analyses.
+Use Case: Snakemake is primarily used to create reproducible and scalable bioinformatic workflows.
 
 Code details and examples:
 
-**Sample input files:**
-- `inputs.txt`: 
-```
-file1.txt
-file2.txt
-```
+Code:
+Here's an example Snakefile, which serves as the input file for snakemake. This Snakefile is designed to convert a set of fastq files to bam files using BWA, then sort them using samtools:
 
-**Snakefile:**
 ```python
 rule all:
     input:
-        "output.txt"
+        "mapped_reads/A.sorted.bam",
+        "mapped_reads/B.sorted.bam"
 
-rule create_output:
+rule bwa_map:
     input:
-        expand("{file}.txt", file=open('inputs.txt').read().strip().splitlines())
+        "data/genome.fa",
+        "data/samples/A.fastq"
     output:
-        "output.txt"
+        "mapped_reads/A.bam"
     shell:
-        "cat {input} > {output}"
+        "bwa mem {input} | samtools view -Sb - > {output}"
+
+rule samtools_sort:
+    input:
+        "mapped_reads/A.bam"
+    output:
+        "mapped_reads/A.sorted.bam"
+    shell:
+        "samtools sort {input} > {output}"
 ```
 
-**Command to run the workflow:**
-```
-snakemake -s Snakefile
+Command to run the code:
+
+```bash
+snakemake --cores 1
 ```
 
-This will create an `output.txt` file by concatenating the contents of `file1.txt` and `file2.txt`. The input files are specified in `inputs.txt` and the rules for creating the output file are defined in the Snakefile.
+This command will start a Snakemake run with 1 core in the current working directory. The --cores flag allows you to specify how many CPU cores Snakemake is allowed to use for its computations. 
+
+The snakefile serves as an input for the snakemake command. It describes the steps to go from one set of files to another.
+
+The format required for the snakefile is python-like syntax but does not allow the full set of python syntax. It requires a list of rules, with each rule having an input list, an output list, and a shell command to run.
+
+Specifications in the input files:
+
+- The fastq file in this example should contain short DNA or RNA sequences
+- The fasta file should contain a reference genome
+- The bam file contains the mapped DNA or RNA sequences. This file is both an output of the bwa rule and an input of the samtools rule.
+- The sorted.bam file contains the same data as the bam file but sorted by location on the genome. This file is an output of the samtools rule.

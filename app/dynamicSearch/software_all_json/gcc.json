@@ -1,0 +1,13 @@
+{
+    "software_name": "gcc",
+    "comprehensive_overview": "GNU Compiler Collection (GCC) is a free and open-source compiler system that supports various programming languages and platforms. It is widely used for compiling high-level programming languages into executable code for a variety of computer architectures.",
+    "core_features": "1. Supports multiple programming languages such as C, C++, Fortran, Ada, and Objective-C.\n2. Optimizes code for better performance with various optimization levels.\n3. Generates executable code for different target architectures.\n4. Includes preprocessor for handling macro definitions and conditional compilation.\n5. Provides extensive error and warning messages for code analysis.\n6. Supports various platforms including Linux, Windows, macOS, and BSD.",
+    "general_tags": ["compiler", "software development", "programming"],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Compiler",
+        "software_type": "Development Tools",
+        "field_of_science": "Computer Science"
+    }
+}

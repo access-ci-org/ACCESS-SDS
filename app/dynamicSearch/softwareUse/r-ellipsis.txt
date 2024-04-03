@@ -1,0 +1,37 @@
+Use Case: Use `r-ellipsis` for efficient management of arguments in R functions.
+
+Code Details and Examples: Code 
+
+For instance, let's say that we have a function `foo` which has three arguments `bar1`, `bar2`, and `bar3`. We want to make `bar2` and `bar3` optional. Instead of checking for whether `bar2` and `bar3` are present in every single function that calls `foo`, we can use `ellipsis` to manage this for us.
+
+Here is the function definition:
+
+```R
+foo <- function(bar1, ..., .before = NULL, .after = NULL) {
+  dots <- ellipsis:::check_dots_empty()
+  if (!is.null(.before)) {
+    bar2 <- .before
+  }
+  if (!is.null(.after)) {
+    bar3 <- .after
+  }
+  cat(bar1, bar2, bar3)
+}
+```
+
+Here are some examples of how to call this function:
+
+```R
+foo("Hello", .before = "world", .after = "!")
+# Outputs: Hello world !
+foo("Hello", .before = "there")
+# Outputs: Hello there 
+foo("Hello")
+# Outputs: Hello
+```
+
+Command to run the above example:
+
+In an R environment (like RStudio or the R console), you can just copy and paste the function definition and the function calls. Then hit enter to run them. 
+
+If you want to run this from a script, you could save the function definition and the function calls in a file (let's call it `script.R`). Then use the command `Rscript script.R` in the terminal to run it.

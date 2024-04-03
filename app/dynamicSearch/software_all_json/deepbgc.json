@@ -1,0 +1,13 @@
+{
+    "software_name": "deepbgc",
+    "comprehensive_overview": "DeepBGC is a tool for the detection and classification of biosynthetic gene clusters in microbial genomes using deep learning techniques. It focuses on identifying gene clusters responsible for the production of specialized metabolites.",
+    "core_features": "1. Detection of biosynthetic gene clusters (BGCs) in microbial genomes. 2. Classification of BGCs based on the type of specialized metabolites they produce. 3. Utilizes deep learning algorithms for improved accuracy in BGC prediction. 4. Allows for the exploration and visualization of identified BGCs.",
+    "general_tags": ["biosynthetic gene clusters", "microbial genomes", "deep learning", "metabolites"],
+    "additional_tags": {
+        "research_discipline": "Biological Sciences",
+        "research_area": "Bioinformatics",
+        "software_class": "Computational Tool",
+        "software_type": "Bioinformatics Tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

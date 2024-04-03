@@ -1,0 +1,21 @@
+{
+  "software_name": "udbuild",
+  "comprehensive_overview": "udbuild is a simple build tool written in Python that allows users to specify dependencies and build targets through a simple YAML configuration file. It is designed to automate the build process for software projects.",
+  "core_features": [
+    "Automates the build process",
+    "Allows users to specify dependencies and targets in a YAML configuration file",
+    "Simple and easy-to-use tool for building projects"
+  ],
+  "general_tags": [
+    "Build Automation",
+    "Dependency Management",
+    "Python Tool"
+  ],
+  "additional_tags": {
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Build Tool",
+    "software_type": "Automated Build Tool",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

@@ -1,0 +1,38 @@
+Use Case: Use;
+SpeedSeq is an open-source genome analysis platform designed for fast processing of sequencing reads. It is capable of performing tasks such as alignment, variant detection, and functional annotation of variants.
+
+Code Details and Examples: Code;
+
+1. Example for genome alignment with SpeedSeq:
+
+Input Files: This requires two files - the reference genome file (in FASTA format) and the sequence reads file (in FASTQ format).
+
+```
+# Input files
+ref_genome.fasta
+sequence_reads.fastq
+```
+
+Command to run:
+
+```
+speedseq align -o output -R "@RG\tID:id\tSM:samplename\tLB:lib" ref_genome.fasta sequence_reads.fastq
+```
+
+2. Example for variant calling with SpeedSeq:
+
+Input Files: This requires the aligned reads file (in BAM format) and the reference genome file (in FASTA format).
+
+```
+# Input files
+aligned_reads.bam
+ref_genome.fasta
+```
+
+Command to run:
+
+```
+speedseq var -o output.vcf ref_genome.fasta aligned_reads.bam 
+```
+
+Please note that in the above examples, `output`, `output.vcf` , `id`, `samplename`, `lib`, `ref_genome.fasta` and `sequence_reads.fastq` are placeholder names and should be replaced with actual file names/path and appropriate values as per user requirement.

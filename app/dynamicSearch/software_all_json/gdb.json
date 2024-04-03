@@ -1,0 +1,13 @@
+{
+    "software_name": "gdb",
+    "comprehensive_overview": "GDB, the GNU Project debugger, allows you to see what is going on 'inside' another program while it executes or what another program was doing at the moment it crashed.",
+    "core_features": "1. Source-level debugging: Supports multiple languages and allows debugging programs written in C, C++, Ada, Fortran, Go, and more. \n2. Breakpoint management: Set breakpoints to pause the program execution at a specified point for inspection. \n3. Watchpoints and catchpoints: Monitor and halt program execution when certain memory locations are accessed or when specific exception conditions occur. \n4. Call stack and variables: View and manipulate the call stack, examine variables, and evaluate expressions. \n5. Reverse debugging: Allows stepping backward through program execution to understand the causes of unexpected behavior.",
+    "general_tags": ["debugger", "programming", "software development"],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Software Development Tools",
+        "software_type": "Debugger",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

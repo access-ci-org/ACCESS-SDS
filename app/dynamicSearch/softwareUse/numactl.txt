@@ -1,15 +1,34 @@
-Use Case: Controlling NUMA policy for processes
+Use Case: numactl is primarily used for running processes with a specific CPU or memory placement in the Node NUMA(controlled memory and CPUs) architecture.
 
-Code details and examples:
-NUMA (Non-Uniform Memory Access) is a technique used in multiprocessor systems to improve performance by having each processor access its own local memory. `numactl` is a tool that can be used to run programs with a specific NUMA policy, controlling which memory nodes processes or threads can access.
+Code Details and Examples:
+Code:
 
-Sample Input files:
-- Specify the memory allocation policy for a command:
-  - Node interleaving policy: `numactl --interleave=all command`
-  - Bind a command to a specific node: `numactl --cpunodebind=0 --membind=0 command`
+The command syntax for numactl is:
+numactl [options] [--] [programs args]
 
-Command to run:
+1. Running a program on specific CPUs
+```console
+numactl --cpubind=1 program_name
 ```
-numactl --interleave=all ./my_program
+This command will run your 'program_name' specifically on CPU 1.
+
+2. Allocating memory on a specific node
+```console
+numactl --membind=0 program_name
 ```
-This command will run `my_program` with an interleaved memory node policy, allowing it to access memory across all available NUMA nodes.
+This command will run 'program_name' with memory allocation from node 0.
+
+3. Running a program on a particular cpu and memory node
+```console
+numactl --cpubind=0 --membind=0 program_name
+```
+This command will run 'program_name' specifically on CPU 0 with memory allocated from node 0.
+
+4. Displaying NUMA policy settings    
+```console
+numactl --show
+```
+This command shows current NUMA policy settings.
+
+Input File:
+The input file format and specifications are specific to the program that you are running, and not specific to numactl itself.

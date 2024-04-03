@@ -1,0 +1,11 @@
+{
+    "software_name": "pyfr",
+    "comprehensive_overview": "PyFR is an open-source Python-based framework for solving fluid dynamics problems on many-core architectures.",
+    "core_features": "PyFR enables the solution of the compressible fluid dynamics equations using high-order finite element spatial discretization and high-order time-stepping techniques. It supports a wide range of computational platforms and accelerators, including CPUs, GPUs, and Intel Xeon Phi processors. PyFR also includes robust parallelization strategies and efficient implementation of algorithms to achieve high-performance computing.",
+    "general_tags": ["fluid dynamics", "finite element method", "computational fluid dynamics", "high-performance computing"],
+    "research_discipline": "Fluid Dynamics",
+    "research_area": "Computational Fluid Dynamics",
+    "software_class": "Simulation Software",
+    "software_type": "Framework",
+    "field_of_science": "Physical Sciences"
+}

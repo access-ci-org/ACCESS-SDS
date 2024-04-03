@@ -1,0 +1,62 @@
+Use Case: Creating a PDF document with embedded graphics and text in C/C++ using the libHaru library. 
+
+Code details and examples:
+
+Code:
+```
+#include <hpdf.h>
+
+int main (int argc, char **argv)
+{
+    HPDF_Doc  pdf;
+    HPDF_Page page;
+    char fname[256];
+    HPDF_Font font;
+
+    strcpy (fname, argv[0]);
+    strcat (fname, ".pdf");
+
+    pdf = HPDF_New (NULL, NULL);
+    if (!pdf) {
+        printf ("error: cannot create PdfDoc object\n");
+        return 1;
+    }
+
+    /* Add a new page object. */
+    page = HPDF_AddPage (pdf);
+
+    font = HPDF_GetFont (pdf, "Helvetica", NULL);
+
+    HPDF_Page_SetFontAndSize (page, font, 24);
+
+    HPDF_Page_BeginText (page);
+    HPDF_Page_TextOut (page, 60, 750, "Hello, World!");
+    HPDF_Page_EndText (page);
+
+    /* Save the document to a file */
+    HPDF_SaveToFile (pdf, fname);
+
+    /* Clean up */
+    HPDF_Free (pdf);
+
+    return 0;
+}
+```
+To compile and run this code, use the gcc compiler with `-lhpdf` to link the libharu library:
+
+Compile command:
+```
+gcc main.c -lhpdf -o testpdf
+```
+
+Run command:
+```
+./testpdf
+```
+This will generate a PDF file named 'testpdf.pdf' in the same directory. 
+
+Input files: There are no input files required directly by the libharu library in this use case. 
+
+Format required: In this use case, the format/input is C/C++ source code and user's need to compile it with gcc compiler including libharu library.
+
+Specifications and details in input files: In this use case, the input is a C/C++ source code file, which uses the libHaru API functions to create and write a simple PDF document with static text. The .c file should be written according to C/C++ syntax and semantics. The libHaru API functions should be called as per the official libHaru documentation.

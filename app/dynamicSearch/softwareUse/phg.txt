@@ -1,0 +1,23 @@
+Use Case: Use phg (Parallel Hypergraph Partitioning) for graph partitioning in scientific computing, large-scale optimization, and large-scale data analytics.
+
+Code details and examples: 
+
+Code: 
+
+Suppose we have a hypergraph file 'test.hgr', which represents a hypergraph that you want to partition. In this file, the nodes and hyperedges are represented as follows:
+
+```
+4 2   (four nodes and two edges)
+1 1 2 (first edge contains nodes 1 and 2)
+2 3 4 (second edge contains nodes 3 and 4)
+```
+
+This represents a hypergraph with 4 nodes (1, 2, 3, 4) and 2 edges ([(1,2), (3,4)]). 
+
+To partition this hypergraph into two roughly equal parts with minimum edge cut, you can run the phg command as follows:
+
+```bash
+phg -h test.hgr -n 2
+```
+
+This will partition the graph into two parts (sub-graphs) such that the number of edges crossing from one part to another is minimized. The output will be stored in a file with ".part.n" extension where n is the number of partitions.

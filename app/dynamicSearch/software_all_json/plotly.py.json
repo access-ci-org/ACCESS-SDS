@@ -1,0 +1,23 @@
+{
+    "software_name": "plotly.py",
+    "comprehensive_overview": "Plotly.py is an open-source Python graphing library that makes interactive, publication-quality graphs online. It allows users to create interactive plots and dashboards using Python, with a high degree of customization and interactivity.",
+    "core_features": [
+        "Interactive plotting capabilities",
+        "Publication-quality graphs",
+        "Support for various plot types like scatter plots, line charts, bar charts, and more",
+        "Ability to create dashboards and web-based visualizations",
+        "Integration with Jupyter notebooks for interactive data visualization"
+    ],
+    "general_tags": [
+        "Data Visualization",
+        "Graphing Library",
+        "Python Library"
+    ],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Data Visualization Tool",
+        "software_type": "Graphing Library",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

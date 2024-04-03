@@ -1,0 +1,34 @@
+Use Case: Use r-dplyr for data manipulation tasks in R programming language. This is very useful for handling, processing and analysis of structured data.
+
+Code details and examples: Code
+
+To use 'dplyr' in R, you first need to install it (once) and load it (each time you use R): 
+```R
+install.packages("dplyr") 
+library(dplyr) 
+```
+
+A simple use case of the `filter()` function in the dplyr package. Here we are taking input in the form of a csv file having three columns (for example), filtering out the rows where the value in the second column is less than or equal to 4:
+
+```R
+data <- read.csv("data.csv")
+filtered_data <- dplyr::filter(data, Column2 <= 4)
+```
+
+In this particular scenario, data.csv is our input file with the required format. It must be a csv file with data in tabular form. 
+
+Another use case is the `group_by()` function combined with `summarise()`. Here we are grouping the data by "column1" and calculating the mean of "column3" for each group:
+
+```R
+grouped_data <- data %>%
+  group_by(Column1) %>%
+  summarise(avg = mean(Column3, na.rm = TRUE))
+```
+
+This example assumes that the input CSV file contains a column named "Column1" and "Column3".
+
+To run these scripts, you would simply call the R runtime with the script you want to execute:
+
+```shell
+Rscript your_script.R
+```

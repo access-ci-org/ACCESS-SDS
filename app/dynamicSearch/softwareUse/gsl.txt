@@ -1,66 +1,63 @@
-Use Case: GNU Scientific Library (GSL)
+Use Case: Use GSL (GNU Scientific Library) for statistical analysis and mathematical computation.
 
-Code details and examples:
-GSL is a numerical library for C and C++ programmers that provides a wide range of mathematical routines. Here is an example of how you can use GSL to solve a system of linear equations:
+Code details and examples: Code
 
-Sample input file (input.txt):
-```
-3
-1 2 3
-4 5 6
-7 8 10
-1
-2
-3
-```
+The Harper Adams University provided a detailed guide on how to use GSL using an example in finding roots of non-linear equations. Here is a short modification of their code:
 
-Code (C code to solve the system of linear equations using GSL):
 ```c
 #include <stdio.h>
-#include <gsl/gsl_linalg.h>
+#include <gsl/gsl_errno.h>
+#include <gsl/gsl_math.h>
+#include <gsl/gsl_roots.h>
 
-int main() {
-    gsl_matrix *A = gsl_matrix_alloc(3, 3);
-    gsl_vector *b = gsl_vector_alloc(3);
-    gsl_vector *x = gsl_vector_alloc(3);
-    
-    FILE *file = fopen("input.txt", "r");
-    
-    int size;
-    fscanf(file, "%d", &size);
-    
-    for (int i = 0; i < size; i++) {
-        for (int j = 0; j < size; j++) {
-            double val;
-            fscanf(file, "%lf", &val);
-            gsl_matrix_set(A, i, j, val);
-        }
-    }
-    
-    for (int i = 0; i < size; i++) {
-        double val;
-        fscanf(file, "%lf", &val);
-        gsl_vector_set(b, i, val);
-    }
-    
-    gsl_linalg_HH_solve(A, b, x);
-    
-    for (int i = 0; i < size; i++) {
-        printf("x[%d] = %g\n", i, gsl_vector_get(x, i));
-    }
-    
-    gsl_matrix_free(A);
-    gsl_vector_free(b);
-    gsl_vector_free(x);
-    
-    fclose(file);
+struct quadratic_params
+{
+  double a, b, c;
+};
 
-    return 0;
+double quadratic (double x, void *params)
+{
+  struct quadratic_params *p = 
+    (struct quadratic_params *) params;
+
+  double a = p->a;
+  double b = p->b;
+  double c = p->c;
+
+  return (a * x + b) * x + c;
+}
+
+int main (void)
+{
+  struct quadratic_params params = {1.0, -7.0,  12.0};
+
+  gsl_root_fsolver *s = gsl_root_fsolver_alloc (gsl_root_fsolver_brent);
+  gsl_function F = {&quadratic, &params};
+
+  double r = 9.0;
+  gsl_root_fsolver_set (s, &F, 2.0, 4.0);
+
+  printf ("using Brent's method: \n");
+
+  do
+    {
+      gsl_root_fsolver_iterate (s);
+      r = gsl_root_fsolver_root (s);
+      printf ("%5d x= %.7f \n", iter, r);
+    }
+  while (gsl_root_test_delta (r, 4.0,  0, 0.001) == GSL_CONTINUE);
+
+  printf ("Brent algorithm is successful");
+
+  gsl_root_fsolver_free (s);
+  return 0;
 }
 ```
+This code tries to find the roots of the quadratic equation using the Brent method. Parameters are passed through the `quadratic_params` struct, and the `quadratic` function calculates the value accordingly. Results are iterated on the Brent's method until a root is found within the precision requirement. 
 
-Command to compile and run (assuming the GSL library is linked properly):
+Command to run it would be (given that 'gcc' is used to compile C files):
 ```
-gcc -o gsl_example gsl_example.c -lgsl -lgslcblas -lm
-./gsl_example
+gcc -Wall -I/usr/local/include  -c -o root_finding.o root_finding.c
+gcc -L/usr/local/lib root_finding.o -lgsl -lgslcblas -lm
 ```
+'root_finding' being a placeholder label for the name of the .c file containing your code.

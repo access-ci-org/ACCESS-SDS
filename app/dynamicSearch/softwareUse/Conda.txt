@@ -1,27 +1,61 @@
-Use Case: Conda allows users to easily manage libraries and dependencies in various environments.
+Use Case: Conda is an open source package management and environment management system that supports multiple languages including Python, R, Ruby, Lua, Scala, Java, JavaScript, C/ C++, FORTRAN. It is used to install, run and update packages and their dependencies. You can also create new environments and switch between them.
 
 Code details and examples:
-1. Create a conda environment:
-```bash
-conda create --name myenv python=3.8
+
+Code
+
+Creating a new Conda environment:
+
+```
+conda create --name my_env
 ```
 
-2. Activate the conda environment:
-```bash
-conda activate myenv
+This command creates a new environment named "my_env". No specific input file is required.
+
+Activating the created environment:
+
+```
+conda activate my_env
 ```
 
-3. Install a package in the conda environment:
-```bash
+This command will enable the environment 'my_env' for use. It doesn't need any input file.
+
+Installing a package:
+
+```
 conda install numpy
 ```
 
-4. List installed packages in the conda environment:
-```bash
+This command will install the numpy package in the current active conda environment. No input file is needed.
+
+Deactivating the current environment:
+
+```
+conda deactivate
+```
+
+This command will deactivate the current environment and you will return to the base Conda environment. No input file is required.
+
+Updating a package:
+
+```
+conda update numpy
+```
+
+This command will update the numpy package to the latest version in the current active Conda environment. No input file is needed.
+
+Listing installed packages:
+
+```
 conda list
 ```
 
-5. Export environment to a YAML file:
-```bash
-conda env export > environment.yml
+This command lists all the packages installed in the current activated environment. It does not need an input file.
+
+Removing an environment:
+
 ```
+conda env remove --name my_env
+```
+
+This command will remove the environment 'my_env'. No input file is needed for this.

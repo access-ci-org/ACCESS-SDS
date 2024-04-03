@@ -1,27 +1,37 @@
-NVSHMEM (NVIDIA Scalable Hierarchical Memory Management) is a communication library that provides efficient data movement and synchronization mechanisms for NVIDIA GPUs in parallel computing applications.
+Use Case: NVSHMEM (Nvidia OpenSHMEM) is utilized for message passing in parallel computing. It enables direct communication between multiple GPUs in a single node or across various nodes. 
 
-Use Case: Communication library for NVIDIA GPUs.
-Code details and examples:
-NVSHMEM is typically used in conjunction with CUDA programs to improve data communication and synchronization among GPUs. Here is an example of how you can use NVSHMEM in a CUDA program:
+Code details and examples: 
 
-**Sample Input Files:** N/A
+Sample input file format may include parallel processing commands. 
 
-**Format Required:** N/A
+In NVSHMEM, after initialization with `shmem_init()`, processes can then call OpenSHMEM operations. For instance, `shmem_put(dest, source, nelems, pe)` can be used to add elements from a local variable to a remote variable.
 
-**Code Snippet:**
-```cpp
-#include <cuda.h>
+Command to run:
+
+To run an NVSHMEM program, commands similar to the below would be used.
+
+```
+$ nvcc -o hello_world hello_world.cu
+$ ./hello_world
+```
+
+Code:
+
+```C
+#include <stdio.h>
 #include <nvshmem.h>
 
-int main() {
-    cuInit(0);  // initialize the CUDA runtime API
-    nvshmem_init();  // initialize NVSHMEM
+__global__ void hello_world() {
+    printf("Hello, World from GPU %d of %d!\n",
+           nvshmem_my_pe(), nvshmem_n_pes());
+}
 
-    // NVSHMEM code here
-
-    nvshmem_finalize();  // finalize NVSHMEM
+int main(int argc, char **argv) {
+    nvshmem_init();
+    hello_world<<<1,1>>>();
+    cudaDeviceSynchronize();
+    nvshmem_finalize();
     return 0;
 }
 ```
-
-**Command to Run:** N/A
+In this example, the function `nvshmem_my_pe()` returns the PE number of the calling PE and `nvshmem_n_pes()` returns the total number of PEs in the job. Upon successful initialization with `nvshmem_init()`, an NVSHMEM job comprises one or more symmetric heaps equal in size that span all execution Processing Elements (PEs), and each PE is assigned a unique 0-based PE number.

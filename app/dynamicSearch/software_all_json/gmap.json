@@ -1,0 +1,22 @@
+{
+    "software_name": "GMAP",
+    "comprehensive_overview": "GMAP (Genomic Mapping and Alignment Program) is a highly efficient and accurate software for mapping and aligning cDNA sequences to a genome, particularly useful in the analysis of RNA-seq data. It is designed to identify and map exon junctions in large genomes.",
+    "core_features": [
+        "Efficient mapping and alignment of cDNA sequences to genomes",
+        "Identification of exon junctions",
+        "Suitable for analyzing RNA-seq data",
+        "Highly accurate mapping results"
+    ],
+    "general_tags": [
+        "Bioinformatics",
+        "Computational Biology",
+        "Genomics",
+        "Transcriptomics",
+        "RNA-seq"
+    ],
+    "research_discipline": "Genomics",
+    "research_area": "Transcriptomics",
+    "software_class": "Alignment Tool",
+    "software_type": "Bioinformatics Tool",
+    "field_of_science": "Biological Sciences"
+}

@@ -1,0 +1,45 @@
+Use Case: gseapy is utilized to perform Gene Set Enrichment Analysis (GSEA). GSEA can be deployed for various biological data such as proteomics and genomics to identify where defined list of genes shows statistical significance between two biological states.
+
+Code details and examples:
+
+Code: 
+
+The input files required for gseapy are: 
+1. Gene Expression Matrix File, typically a csv with gene symbols in first column and further columns representing different samples/conditions. Sample input format:
+```
+"","Control1","Control2","Control3","Experimental1","Experimental2","Experimental3"
+"Gene1",0.125,0.15,0.127,0.4,0.37,0.41
+"Gene2",0.321,0.35,0.328,0.3,0.32,0.323
+```
+2. GSEA Ranking file: A two column csv where column one has gene symbols and column two has corresponding ranking metric score. Sample format:
+```
+Gene_symbol   escore
+Gene1234  0.56
+Gene5678  -0.45
+```
+3. Gene sets file: File with gene symbols grouped into sets. Typically a gmt file. Sample format:
+```
+SetName1 gene1 gene2 gene3 gene4 gene5
+SetName2 gene2 gene3 gene5 gene6 gene7
+```
+An example of using gseapy with these input files is shown below.
+
+```python
+import gseapy as gp
+from gseapy.plot import barplot, dotplot
+
+# Run GSEA
+gsea_res = gp.gsea(data='expression_matrix.csv', # expression dataset
+                   gene_sets='gene_set.gmt', # gene set database
+                   cls='control.vs.experimental.cls', # cls file
+                   permutation_num=1000, # permutations
+                   outdir='gseapy_out',  # output directory
+                   min_size=10,
+                   max_size=1500,
+                   verbose=True)
+
+# Plot results
+barplot(gsea_res.res2d,title='GSEA',ofname='GSEA.png')
+```
+
+To run the script you could run the command: `python gseapy_script.py` assuming the script code is saved in `gseapy_script.py` file.

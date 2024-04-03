@@ -1,0 +1,29 @@
+Use Case: Abricate is widely used to scan a series of DNA sequences or genomes against a set of databases to detect the presence of certain genes. For example, bacterial genomes can be screened to detect resistance genes. The input consists of a multi-FASTA file of gene sequences or FASTA format of genome sequences. The FASTA format is as follows:
+>header 
+sequence 
+  
+Code details and examples: 
+
+```bash
+# command to run abricate scan, for example on a fasta file named myseqs.fasta
+abricate --db resfinder --quiet myseqs.fasta 
+```
+
+The output will contain tab-separated values with each line representing one hit. It will include the contig name, gene name, coverage, and many more details about the hit. Here is an example of the output format:
+
+```
+SEQUENCE  START   END      GENE    COVERAGE  COVERAGE_MAP  GAPS  %COVERAGE  %IDENTITY  DATABASE      ACCESSION  PRODUCT  RESISTANCE
+myseq1     1        1200   geneX      100        0+0+0       0       100        99.7        resfinder   ABC123     toxin    -
+```
+
+Sequence is the input sequence ID, Start, and End is the coordinates of the geneX on sequence myseq1. Gene is the identity of the gene detected. Coverage and Coverage_map is indicating that the geneX is present in full length on sequence myseq1. Gaps give the number of gaps in the alignment. %Coverage and %Identity are giving the quality of the alignment. Database is the databse used for search (resfinder in this case). Accession, Product, and Resistance provide more information about the geneX. 
+
+Note: Abricate requires the path of local copies of the databases to be stored in an environment variable. So, you will need to download the relevant databases first and set the respective paths. 
+
+The next section is for the example only and should be ignored. There are no installation instructions and the above information should be enough to accomplish any tasks with Abricate. 
+
+npm supports curated database packages that are simple to install via npm package management and system-wide packages are also supported. It is recommended to install databases through CONDA as it places databases in your conda environment, which is then automatically identifiable by abricate. It is easier to manage databases this way and nothing is installed system-wide, so you can have different sets of databases for different versions of abricate. 
+
+The `abricate --help` command will provide more examples. 
+
+Please replace "myseqs.fasta" with an appropriate fasta file and make sure the path to the database is set.

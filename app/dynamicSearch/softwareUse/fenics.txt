@@ -1,39 +1,61 @@
-Use Case: FEniCS is an automated system for the finite element method. It provides a collection of tools for automated solution of differential equations.
+Use Case: FEniCS is an extensive platform for computational mathematics, which mainly focuses on the automation of mathematical methods for numerical solutions of differential equations. It is extensively used in various fields of computational mathematics such as fluid dynamics, structural mechanics, electromagnetics, heat transfer, and more.
 
 Code details and examples:
-Sample input file (poisson.py):
-```python
-from fenics import *
 
+Code:
+
+First, we define the mesh and function space
+
+```
+from fenics import *
 # Create mesh and define function space
 mesh = UnitSquareMesh(8, 8)
 V = FunctionSpace(mesh, 'P', 1)
+```
 
+Next, we specify the boundary condition
+
+```
 # Define boundary condition
 u_D = Expression('1 + x[0]*x[0] + 2*x[1]*x[1]', degree=2)
-
 def boundary(x, on_boundary):
     return on_boundary
-
 bc = DirichletBC(V, u_D, boundary)
+```
 
+Then, we define the variational problem
+
+```
 # Define variational problem
 u = TrialFunction(V)
 v = TestFunction(V)
 f = Constant(-6.0)
-a = dot(grad(u), grad(v)) * dx
-L = f * v * dx
+a = dot(grad(u), grad(v))*dx
+L = f*v*dx
+```
 
+Finally, we compute the solution
+
+```
 # Compute solution
 u = Function(V)
 solve(a == L, u, bc)
 
-# Save solution to file
-file = File('poisson.pvd')
-file << u
 ```
 
-To run the code:
-```bash
-python poisson.py
+To run the program, if you have a Python script named `fenics_script.py`, you can execute it by typing:
+
 ```
+python3 fenics_script.py
+```
+
+Into the command line. 
+
+Please note:
+
+- The function `UnitSquareMesh` defines a uniform finite element mesh over the unit square.
+- The class `FunctionSpace` is used to define the function space on the defined mesh.
+- The `Expression` class allows a user to define an Expression from a string of C++ code.
+- The `Constant` class is a very simplified version of `Expression` for scalar or vector constants.
+- The forms `a` and `L` are defined using TrialFunction, TestFunction, and `Constant` by integrating over the domain using functions `dot`, `grad`, and `dx` from FEniCS.
+- The `solve` function is used to solve the variational problem with the given boundary condition.

@@ -1,28 +1,29 @@
-Use Case: PHYLIP is a free package of programs for inferring phylogenies. It includes programs for phylogenetic inference using various methods, such as distance matrix, parsimony, likelihood, and Bayesian.
+Use Case: PHYLIP is a suite of programs for inferring phylogenies (evolutionary trees). It is widely used in evolutionary biology research to generate phylogenetic trees from molecular data.
 
 Code details and examples:
-- Example of using the "neighbor" program in PHYLIP:
+
+Code:
+The input file for most of the PHYLIP programs is a text file in a specific format. The first line of the file contains two integers separated by spaces. The first integer is the number of taxa, and the second integer is the number of characters in the sequence. This is followed by a list of sequences, one line per taxon. Each line begins with the name of the taxa (up to 10 characters), followed by the sequence. Spaces and numbers are ignored.
+
+For example, an input for the "dnaml" program, which infers phylogenies from nucleotide sequences using maximum likelihood, could look like this:
+
 ```
-$ neighbor < input_file
-```
-- Example of input file for the "neighbor" program:
-```
-5
-SpeciesA  0.0  0.3  0.4  0.7
-SpeciesB  0.3  0.0  0.5  0.8
-SpeciesC  0.4  0.5  0.0  0.45
-SpeciesD  0.7  0.8  0.45 0.0
+5 13
+Taxon_1    AACGTAGTCACAC
+Taxon_2    AACGTAGGCACAC
+Taxon_3    AAGGTAAACATAA
+Taxon_4    AAGGTAAGCATTA
+Taxon_5    AAGATTATTAATA
 ```
 
-- Example of using the "dnaml" program in PHYLIP:
-```
-$ dnaml < input_file
-```
-- Example of input file for the "dnaml" program:
-```
-5  500
-1
-( (SpeciesA:0.1,SpeciesB:0.2):0.3,(SpeciesC:0.15,SpeciesD:0.25):0.4);
+In this example, '5' is the number of taxa and '13' is the number of characters in the sequence. Each line after this represents a taxon (species or individual) and its DNA sequence.
+
+Note that the sequences don't have to be DNA. PHYLIP includes programs for protein sequences and distance matrices too.
+
+To run the "dnaml" program with this input, you could use the following command in the terminal:
+
+```bash
+dnaml < input.txt > output.txt
 ```
 
-Please note that these are just examples and the actual input files may vary based on the specific program and analysis you are conducting within the PHYLIP package.
+In this command, 'input.txt' is the name of your input file, and 'output.txt' will be the name of the output file that PHYLIP creates.

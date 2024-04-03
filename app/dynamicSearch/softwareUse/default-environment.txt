@@ -1,0 +1,78 @@
+Use Case: Running a python script that implements some mathematical computations;
+
+Code details and examples: Code
+
+Python is a high-level, interpreted, interactive, and object-oriented scripting language. Python is designed to be highly readable which makes it great for complex scientific computations. 
+
+A simple python program to add two numbers:
+
+```python
+#python program to add two numbers
+
+#input two numbers
+num1 = 1.5
+num2 = 6.3
+
+# Add two numbers
+sum = num1 + num2
+
+# Display the sum
+print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
+```
+
+You simply need to have python installed in your shell to run the above program. Let's say the above python script is saved with the name `add.py` on your local system. Then you can run it with `python add.py` from your terminal.
+
+---
+
+Use Case: Writing a parallel code with MPI (Message Passing Interface);
+
+Code details and examples: Code
+
+MPI is a library specification for message-passing, proposed as a standard by a broadly based committee of vendors, implementors, and users.
+
+Here, is a simple example of an MPI program written in C where multiple processes are used to say "hello world".
+
+```c
+#include "mpi.h"
+#include <stdio.h>
+
+int main(argc,argv)
+int argc;
+char *argv[];
+{
+    int rank, size;
+
+    MPI_Init(&argc,&argv);
+    MPI_Comm_size(MPI_COMM_WORLD, &size);
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+    printf("Hello world from process %d of %d\n", rank, size);
+    MPI_Finalize();
+}
+```
+
+After compiling the program with an MPI-compatible compiler (e.g., `mpicc main.c -o main`), the program can be run in parallel across multiple processes using an MPI-compatible environment (e.g., `mpirun -np 4 ./main`, where 4 is the number of processes).
+
+---
+
+Use Case: Using the pandas library in Python for data analysis;
+
+Code details and examples: Code
+
+pandas is a Python package that provides fast, flexible, and expressive data structures designed to make working with 'relational' or 'labeled' data both easy and intuitive.
+
+A handy tool within pandas is the ability to read various file formats such as CSV:
+
+```python
+#importing pandas as pd
+import pandas as pd
+
+#Reading the csv file
+data = pd.read_csv('file.csv')
+
+# Printing the first 10 rows of the data
+print(data.head(10))
+```
+
+The above python script can be run just like the first python script in a python installed shell. If the script is saved as `data.py`, you can run it in your terminal with `python data.py`.
+
+Ensure that the csv file is in the same directory as your script or provide the exact location of the file in the `read_csv()` function.

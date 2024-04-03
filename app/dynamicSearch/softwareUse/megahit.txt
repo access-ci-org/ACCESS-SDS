@@ -1,0 +1,26 @@
+Use Case:
+MEGAHIT is an application for assembling large and complex metagenomic data in an efficient, high-quality manner.
+
+Code details and examples:
+
+Input file format required: .fq, .fastq,.fa,.fasta,.fq.gz,.fa.gz,.fastq.gz
+
+Sample input file:
+A file with sequence reads in FASTQ format. 
+
+```
+@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
++
+!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
+```
+
+Command to run:
+
+```
+megahit -1 pe_1.fq -2 pe_2.fq -o out
+```
+Where -1 and -2 parameters are specifying the pair-end reads files, and -o specifies the output directory.
+
+Code:
+No detailed code is revealed to the user. Megahit is a standalone software package written in C++. The user interacts with it through the command line, using commands and parameters to specify input files and adjust settings. The above command initiates Megahit with default settings on your input files. You can also add additional parameters to customize the assembly process.

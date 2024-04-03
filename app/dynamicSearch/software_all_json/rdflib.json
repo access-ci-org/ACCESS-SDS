@@ -1,0 +1,19 @@
+{
+    "software_name": "rdflib",
+    "comprehensive_overview": "RDFLib is a Python library for working with RDF (Resource Description Framework) data. It allows users to create, parse, modify, serialize, and query RDF graphs.",
+    "core_features": [
+        "Creating RDF graphs",
+        "Parsing RDF data",
+        "Modifying RDF graphs",
+        "Serializing RDF data",
+        "Querying RDF graphs"
+    ],
+    "general_tags": ["RDF", "Python library"],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Library",
+        "software_type": "Data Management",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

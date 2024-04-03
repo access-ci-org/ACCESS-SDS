@@ -1,0 +1,28 @@
+{
+  "software_name": "GrADS",
+  "comprehensive_overview": "GrADS (Grid Analysis and Display System) is an interactive desktop tool that is used for easy access, manipulation, and visualization of earth science data. It is particularly popular in meteorology and climatology for analyzing and plotting meteorological data.",
+  "core_features": [
+    "Data visualization",
+    "Data analysis",
+    "Grid analysis",
+    "Time series analysis",
+    "Meteorological data processing",
+    "Customizable plots"
+  ],
+  "general_tags": [
+    "Data Visualization",
+    "Meteorology",
+    "Climatology",
+    "Earth Science",
+    "Data Analysis"
+  ],
+  "additional_tags": {
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Visualization software",
+    "software_type": "Desktop application",
+    "field_of_science": [
+      "Earth and Environmental Sciences"
+    ]
+  }
+}

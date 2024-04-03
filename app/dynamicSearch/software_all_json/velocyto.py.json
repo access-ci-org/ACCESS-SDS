@@ -1,0 +1,18 @@
+{
+    "software_name": "velocyto.py",
+    "comprehensive_overview": "velocyto.py is a Python library for the analysis of single-cell RNA-sequencing data that focuses on the characterization of RNA velocity, which provides valuable insight into the dynamics of gene expression changes within individual cells over time.",
+    "core_features": "Key features of velocyto.py include the ability to estimate RNA velocities, quantify splicing kinetics, and identify transcriptionally active cell subpopulations. It offers visualization tools for trajectory analysis, gene expression dynamics, and transcriptomic states.",
+    "general_tags": [
+        "single-cell RNA-sequencing",
+        "RNA velocity analysis",
+        "gene expression dynamics",
+        "transcriptomic analysis"
+    ],
+    "additional_tags": {
+        "research_discipline": "Bioinformatics",
+        "research_area": "Genetics",
+        "software_class": "Computational Biology",
+        "software_type": "Library",
+        "field_of_science": "Biological Sciences"
+    }
+}

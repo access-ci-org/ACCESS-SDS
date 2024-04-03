@@ -1,0 +1,77 @@
+Use Case: STRUMPACK is a library for computations of the linear system Ax = b. It provides support for sparse and dense direct, iterative and hybrid solvers and it can be used with MPI-enabled applications. It is also well-suited for solving problems with a large number of unknown variables.
+
+Code details and examples:
+Let's assume you have a matrix in market matrix format (mm format) and a matching vector. You want to solve the system using the gmres solver. 
+
+Sample input files:
+
+matrixA.mtx (Matrix Market format)
+```
+%%MatrixMarket matrix coordinate real general
+%  
+4 4 4
+1 1 4.0
+2 2 3.0
+3 3 2.0
+4 4 1.0
+```
+
+vectorB.txt
+```
+1.0
+1.0
+1.0
+1.0
+```
+Code:
+```c++
+#include <iostream>
+#include <fstream>
+#include <strumpack/StrumpackSparseSolver.hpp>
+using namespace strumpack;
+
+int main(int argc, char* argv[]) {
+  MPI_Init(&argc, &argv);
+
+  int n = 4;
+  std::vector<int> row_ptr(n + 1), col_ind(4);
+  std::vector<double> val(4), b(n), x(n);
+
+  // Load matrix values from file
+  std::ifstream fileA("matrixA.mtx");
+  for (int i = 0; i < n; i++) {
+    for (int j = row_ptr[i]; j < row_ptr[i+1]; j++) {
+      fileA >> val[j] >> col_ind[j]; // Not exactly how you parse MM format
+    }
+  }
+
+  // Load vector values from file
+  std::ifstream fileB("vectorB.txt");
+  for (int i = 0; i < n; i++) {
+    fileB >> b[i];
+  }
+
+  StrumpackSparseSolver<double, int> sp;
+  sp.set_reordering_method(ReorderingStrategy::GEOMETRIC);
+  sp.set_Krylov_solver(KrylovSolver::GMRES);
+
+  auto ret = sp.solve(&row_ptr[0], &col_ind[0], &val[0], n, 1, x.data(), &b[0]);
+
+  if (ret == ReturnCode::SUCCESS) {
+    std::cout << "Solver succeeded!";
+  } else {
+    std::cout << "Solver failed!";
+  }
+
+  MPI_Finalize();
+
+  return 0;
+}
+```
+To compile above C++ code use g++ or any other gcc compiler. Then to run the compiled program use `mpirun` or `mpiexec`:
+```
+mpirun -np 4 ./program
+```
+This uses 4 MPI processes (adjust as needed), and `program` is the name of your compiled program. 
+
+NOTE: The code above is for illustration purposes, the specific loading of matrix and vector from file might be different depending on the MM format parsing etc. Please follow the specific documentation of Strumpack for detailed and correct implementation.

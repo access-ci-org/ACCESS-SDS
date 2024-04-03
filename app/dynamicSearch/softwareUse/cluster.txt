@@ -1,0 +1,43 @@
+Use Case: Clustering is a technique in data mining that groups similar items together. Suppose you have a dataset of customer buying habits and want to find patterns or segments in that data. The 'cluster' library in Python provides a set of functions for conducting cluster analysis, and it can be used to investigate the inherent grouping in such data.
+
+Code details and examples: Code
+
+Importing Required Libraries:
+
+```python
+from sklearn.cluster import KMeans
+import matplotlib.pyplot as plt
+import pandas as pd
+```
+
+Loading Dataset:
+
+```python
+data = pd.read_csv('customers.csv')
+```
+
+The input file here would be a csv format file containing customer buying habits with different columns for different attributes.
+
+KMeans Clustering:
+
+```python
+kmeans = KMeans(n_clusters=3)
+kmeans.fit(data)
+```
+
+This will create 3 clusters from the data. 
+
+To run this code, you can simply copy the required parts and run them in a Python environment. Ensure you have the required libraries (sklearn, matplotlib, pandas) installed and the data file "customers.csv" is available in your working directory.
+
+Command to run:
+
+If the code is saved as a .py file, it can be run from a command line with the following command:
+
+```shell
+python3 filename.py
+```
+
+Where "filename.py" would be replaced with the name of your Python file.
+ 
+
+

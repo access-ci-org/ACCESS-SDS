@@ -1,36 +1,23 @@
-Use Case: Image compression and manipulation with the OpenJPEG library
+Use Case: Use OpenJPEG to encode and decode JPEG 2000 files. 
 
-Code details and examples:
-1. Compress image using OpenJPEG:
-```bash
-opj_compress -i input_image.ppm -o compressed_image.j2k
+Code details and examples: 
+
+Code:
+
+You can use OpenJPEG's utility `opj_compress` to compress an image to JPEG 2000 file format.
+```
+opj_compress -i input.ppm -o output.jp2
 ```
 
-2. Decompress image using OpenJPEG:
-```bash
-opj_decompress -i compressed_image.j2k -o output_image.ppm
+The input file should be in the PPM format (a simple color image format) and the output file will be in the JP2 (JPEG 2000) format. 
+
+Use `opj_decompress` to decompress a JPEG 2000 file back into an image.
+```
+opj_decompress -i input.jp2 -o output.ppm
 ```
 
-3. Convert image format using OpenJPEG:
-```bash
-opj_transform -i input_image.ppm -o output_image.jp2
-```
+This will convert a JP2 file back into a PPM image. The input file for this command needs to be in the JPEG 2000 file format and the output file will be in the PPM format.
+ 
+These utilities are part of the OpenJPEG library and they provide basic examples of how to use the OpenJPEG library to encode and decode JPEG 2000 files. The OpenJPEG library also provides an API for more fine-tuned control over the encoding and decoding process. 
 
-4. Extract image information using OpenJPEG:
-```bash
-opj_dump -i input_image.jp2
-```
-
-Input file (PPM format) sample:
-```
-P3
-# Image Comments
-4 4
-255
-255 255 255 0
-255 255 255 0
-255 0 0 255
-255 0 0 255
-```
-
-Command to run the OpenJPEG tools may vary depending on the installation method and the specific version of the library. The examples provided assume the tools are available in the system PATH.
+The OpenJPEG library reads and writes several image file formats (not just PPM), including TIFF, PNG, and others. It also provides options to specify the quality and other parameters of the JPG 2000 compression.

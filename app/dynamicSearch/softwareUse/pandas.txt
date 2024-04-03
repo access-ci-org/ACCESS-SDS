@@ -1,0 +1,52 @@
+Use Case: Data manipulation and analysis
+
+Code details and examples:
+
+Code:
+
+The pandas library provides high-performance, easy-to-use data structures and data analysis tools in Python.
+
+This simple example demonstrates using a dataframe in pandas.
+
+```python
+# Import pandas library
+import pandas as pd
+
+# Create a simple dataframe
+data = {'Name': ['Tom', 'Nick', 'John', 'Tom'],
+        'Age': [20, 21, 19, 20]}
+
+df = pd.DataFrame(data)
+
+# Display the DataFrame
+print(df)
+
+# Output:
+#   Name  Age
+# 0  Tom   20
+# 1  Nick  21
+# 2  John  19
+# 3  Tom   20
+```
+
+The dataframe is the primary data structure in pandas. It is essentially a table, like an Excel spreadsheet.
+
+In this code, we create a dataframe from a Python dictionary, and print it.
+
+For reading a CSV file into a DataFrame we can use the read_csv function.
+
+```python
+# Read CSV file into DataFrame
+df = pd.read_csv('file.csv')
+
+# Show the first 5 records
+print(df.head())
+
+# The output will depend on the CSV file
+```
+
+Command to run:
+
+In order to run the above python code snippets:
+
+You would save the python code as a `.py` file and run `python filename.py` in your command line terminal. Of course, this assumes that you have Python installed on your machine and pandas installed in your current Python environment.

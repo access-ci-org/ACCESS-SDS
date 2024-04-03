@@ -1,16 +1,35 @@
-Use Case: RNA-Seq transcript assembly software
+Use Case: Cufflinks is used to assemble transcripts, estimate their abundances, and test for differential expression and regulation in RNA-Seq samples. It assembles aligned RNA-Seq reads into transfrags and quantifies their expression.
+
 Code details and examples: 
-Sample input file (in FASTQ format) for Cufflinks:
-```
-@SEQ_ID
-GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCA
-+
-!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF)))**
-```
+Code:
 
-Command to run Cufflinks for RNA-Seq transcript assembly:
-```
-cufflinks -p 8 -o output_folder input_alignment.bam
-```
+Cufflinks accepts aligned RNA-Seq reads in SAM (Sequence Alignment/Map) or BAM (Binary Alignment/Map) format, preferentially sorted.
 
-In this example, Cufflinks is used to assemble transcripts from RNA-Seq data stored in the `input_alignment.bam` file using 8 threads and the output will be stored in the `output_folder`.
+Input File Format: The input file should be in sorted SAM or BAM format. Here's an example of a SAM file:
+
+```
+@SQ SN:chr1 LN:249250621
+@SQ SN:chr2 LN:243199373
+r001   99  chr1  1000    60  50M =   10000   9058  ATTTAGCTCACTCTGTGTCACTTACACTGTGTCATTCACGTGTCGTGCT  +   100000
+r002   73  chr2  2000    23  14M1D36M  *   0   0   ACTGACTGACTGACTGACTGACTGACTGACTGACTGACTG-CTGACTGACTG  E   720
+```
+Command to run:
+```
+cufflinks -p 8 -o /home/user/cufflinks_out /home/user/aligned_reads.bam
+```
+-p specifies the number of processor threads to use, -o specifies the output directory, and the final argument is the path to the SAM or BAM file.
+
+In this example, Cufflinks will assemble the reads in the input file `aligned_reads.bam` and write the output files into the folder `cufflinks_out`.
+
+Specifications and Details in Input Files:
+The input file should contain aligned next-generation sequencing reads in BAM or SAM format. It is commonly sorted by coordinate or queryname. It could have been produced by a software like TopHat, Bowtie or BWA. 
+
+Output Files: 
+The main output of Cufflinks are .gtf files including `transcripts.gtf`, `isoforms.fpkm_tracking`, `genes.fpkm_tracking` and `skipped.gtf`. These files follow the `General Transfer Format (gtf)` and contain details of the assembled transcripts along with their expression measurements. An individual transcript report in a .gtf file looks like: 
+
+```
+chr1 Cufflinks  transcript  12010  13670  1000  +  . gene_id "CUFF.1"; transcript_id "CUFF.1.1"; FPKM "0.849679966182375"; frac "1.000000"; conf_lo "0.633337"; conf_hi "1.066020"; cov "0.055419";
+```
+This implies a transcript was found on chromosome 1, spanning base pair 12010 to 13670, with Normalised expression level of 0.8496 FPKM. 
+
+Please always refer cufflinks manual for latest parameters and usage instructions.

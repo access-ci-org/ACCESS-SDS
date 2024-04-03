@@ -1,11 +1,36 @@
-Use Case: Xorg
+Use Case: Xorg Server is a public, open-source implementation of the X Window System. It provides the basic framework for a GUI environment: drawing and moving windows on the screen and interacting with a mouse and keyboard. 
 
 Code details and examples:
-Xorg is an open-source implementation of the X Window System. It is commonly used as the display server for Unix-like operating systems.
 
-To start Xorg:
+For Xorg, usually no explicit input files are needed as many settings are automagically discovered at runtime. However, a configuration file can be used to set various parameters. This file is typically named xorg.conf and located at /etc/X11/ or /usr/X11R6/lib/X11/.
 
-Code:
-```bash
-startx
+Contents of a Sample xorg.conf file:
+
 ```
+Section "Device"
+ Identifier "Videocard0"
+ Driver "vesa"
+EndSection
+
+Section "Monitor"
+ Identifier "Monitor0"
+ HorizSync 30.0 - 70.0
+ VertRefresh 50.0 - 160.0
+ Option "DPMS"
+EndSection
+
+Section "Screen"
+ Identifier "Screen0"
+ Device "Videocard0"
+ Monitor "Monitor0"
+ DefaultDepth 24
+ SubSection "Display"
+ Depth 24
+ Modes "1024x768"
+ EndSubSection
+EndSection
+```
+
+To run xorg, it is usually started with a display manager like GDM or manually with the `startx` command. To specify a config file:
+
+`Xorg -config /etc/X11/xorg.conf`

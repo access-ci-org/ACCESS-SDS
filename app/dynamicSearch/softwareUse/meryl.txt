@@ -1,0 +1,46 @@
+Use Case: Meryl is a k-mer counting software used in bioinformatics to measure the abundance of strings of DNA of length k in sequencing data. It's frequently used for genome assembly and error correction in next-generation sequencing projects.
+
+Code details and examples:
+
+Code:
+
+First, we generate meryl databases from input fastq files:
+
+```bash
+meryl count k=21 output=merylDB1 inputfile1.fastq.gz &
+meryl count k=21 output=merylDB2 inputfile2.fastq.gz &
+wait
+```
+In this example, k indicates the length of the k-mer, in this case, 21. The `output` argument specifies the output meryl database and the `input` argument specifies the input fastq files. The command is run in background and the `wait` command is used to wait for all background processes to finish before proceeding.
+
+Next, combine the two meryl databases:
+
+```bash
+meryl union-sum output=merylDBsum merylDB1 merylDB2
+```
+This command combines the two previously generated meryl databases `merylDB1` and `merylDB2` into a new database `merylDBsum`.
+
+You can also find k-mers of certain frequencies using the `meryl greater-than` command:
+
+```bash
+meryl greater-than 10 output=over10.meryl merylDBsum
+```
+This command filters out all k-mers in `merylDBsum` that have a frequency of less than 10 and outputs them into a new meryl database `over10.meryl`.
+
+Command to run:
+For running a Meryl command, navigate to the directory where the Meryl executable is located. Use the following command to run the program: 
+
+```bash
+./meryl count k=21 output=merylDB [inputfile].fastq.gz
+```
+You will need to replace [inputfile] with the name of your input file.
+
+Input File Format:
+Meryl can take as input a variety of file formats including fastq, fasta and bam.
+
+Specifications and Details in Input Files:
+In the case of fastq files, each entry requires four lines: 
+- Line 1: begins with '@' character and is followed by the sequence identifier 
+- Line 2: contains the nucleotide sequence
+- Line 3: begins with '+' character and is optionally followed by the same sequence identifier as line 1
+- Line 4: encodes the quality values for the sequence in line 2, and must contain the same number of symbols as letters in the sequence.

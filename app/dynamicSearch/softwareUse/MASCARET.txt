@@ -1,40 +1,41 @@
-Use Case: MASCARET is a software for 1D river hydraulic modeling. It is used for simulation of flow, sediment transport, and water quality in rivers.
+Use Case: Use Mascaret for studying river hydraulics which includes 1D free surface flow, transient and steady flow conditions, and transport of dissolved substances in natural or manmade watercourses.
 
-Code details and examples:
-MASCARET input files are typically formatted in the MASCARET input file format. Below is an example of a MASCARET input file:
+Code details and examples: Code
 
-```
-! Example MASCARET Input File
-! Comments start with !
+The primary input file required for MASCARET is the .opt file.
 
-RUN
-  NAME Example_Run
+ASCII format of .opt file:
 
-TITLE
-  This is an example MASCARET input file
+```text
+[MODEL]
+CASE_TITLE = case_mascaret
+DEBUG_LEVEL = 0
+RESIDUE = 0.001
 
-DATA
-  START_DATE 01/01/2022
-  END_DATE 01/03/2022
-  TIME_STEP 3600
-  OUTPUT_STEP 3600
+[INITIAL_STATE]
+BOTTOM_VERSION = 1
 
-BOUNDARIES
-  LEFT
-    TYPE Flow
-    FLOW_DATA 100
-  RIGHT
-    TYPE Flow
-    FLOW_DATA 150
+[HYDRAULIC]
+HYD_TYPE = Sf   # subcritical flow
 
-END
+[INPUT_FILE]
+WATER_QUALITY = Computed    # inputs for the transport of dissolved substances
+
+[PARAMETERS]
+HYD_STEADY_FLOW = Yes   # steady flow conditions
+
+[OUTPUT]
+OUTPUT_RESULTS = Listing
 ```
 
-To run MASCARET with the input file above, you would typically use the MASCARET command line interface with the input file as an argument. The exact command may vary depending on your system setup and installation method.
+The secondary input file is the .lig file which contains initialization for hydraulic computation and cross-section for the temporal and spatial discretization.
 
-Code example:
-```
-mascaret example_input_file.txt
+Run the software as follows:
+
+```bash
+mascaret.py -f case.opt
 ```
 
-This command would run MASCARET with the provided input file.
+The above command runs the Mascaret for a case defined in `case.opt` file in the same directory.
+
+This command is used to run the python script `mascaret.py` which is a wrapper around the binary `mascaret`. The `-f` flag is used to specify the `.opt` file (e.g., `case.opt`). The specified `.opt` file should outline the problem to be solved and where to find all necessary input files. The program will then execute the simulation based on the specifications of the problem described, using the default values for the unspecified parameters.

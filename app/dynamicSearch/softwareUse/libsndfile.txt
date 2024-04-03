@@ -1,47 +1,45 @@
-Use Case: Read and write sound files using libsndfile library.
+Use Case: Use libsndfile to open, read, write, and close audio files.
 
-Code details and examples:
-Sample input files:
-- Input sound file: sample.wav
+Code details and examples: Code
+
+libsndfile is a C library for reading and writing files containing sampled audio data. Its API is easy to use and understand, and it supports a wide variety of audio formats. Here is a simple example of how to use it to open a Wave file, read its contents, and close the file.
+
+First, you will need to include the libsndfile header file and create a SF_INFO struct that will hold information about the file:
 
 ```c
-#include <stdio.h>
-#include <stdlib.h>
 #include <sndfile.h>
+SF_INFO info;
+info.format = 0;
+```
 
-int main() {
-    SF_INFO info;
-    SNDFILE *file = sf_open("sample.wav", SFM_READ, &info);
-    if (!file) {
-        printf("Error opening the file\n");
-        return 1;
-    }
+Then, you can use the sf_open function to open the file. This function takes a filename, a mode (such as SFM_READ for reading), and a pointer to an SF_INFO struct. It returns a SNDFILE* that you can use to read from or write to the file:
 
-    printf("Sample rate: %d\n", info.samplerate);
-    printf("Channels: %d\n", info.channels);
-
-    // Read the data
-    int sampleCount = info.frames * info.channels;
-    float *data = (float *)malloc(sampleCount * sizeof(float));
-    sf_read_float(file, data, sampleCount);
-
-    // Process the data here
-
-    sf_close(file);
-    free(data);
-
-    return 0;
+```c
+SNDFILE* file = sf_open("sample.wav", SFM_READ, &info);
+if (file == NULL) {
+    printf("Error reading file\n");
+    return 1;
 }
 ```
 
-Compile the code using:
-```bash
-gcc read_sound_file.c -o read_sound_file -lsndfile
+sf_read_float is a function that reads audio data from the file as floating-point samples. You would typically call this function in a loop until it returns 0, indicating that it has reached the end of the file:
+
+```c
+float buffer[1024];
+while (sf_read_float(file, buffer, 1024) > 0) {
+    // process samples
+}
 ```
 
-Run the executable:
-```bash
-./read_sound_file
+Finally, you can use the sf_close function to close the file when you're done with it:
+
+```c
+sf_close(file);
 ```
 
-Note: This is a simple example of reading a sound file using libsndfile. Remember to handle errors and add more functionalities as needed in a real-world application.
+If you are using a Unix-based system, you can compile and run C files with libsndfile using the gcc and a command such as:
+
+```bash
+gcc -o readwave readwave.c -lsndfile
+./readwave
+```

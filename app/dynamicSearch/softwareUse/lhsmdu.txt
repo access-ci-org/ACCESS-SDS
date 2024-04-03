@@ -1,0 +1,31 @@
+Use Case: lhsmdu is a Python library that can be used for enhancing the deterministic modeling on hidden Markov model and time series analysis. It can be used to generate random floating numbers of any dimensions, perform operations with the Markov Chains, calculate permutation entropy and analyze time a series.
+
+Code details and examples: Code
+
+Sample input file:
+No special input file is necessary for this package as it directly takes the arguments in code.
+
+Required file format: 
+N/A
+
+Specifications in input file:
+N/A
+
+Here is a sample illustration for generating Markov chains:
+
+```python
+from lhsmdu import kde, createRandomStandardNormal
+kde(createRandomStandardNormal(10000),"output.png")
+```
+
+This code generates 10,000 random numbers and plots their kernel density function.
+
+To run the python script, use the following command:
+
+```bash
+python script.py
+```
+
+This should be run in a terminal where script.py is the python script containing the lhsmdu code.
+
+It is to be noted that, the `createRandomStandardNormal` method creates a standard normal variate whereas the `kde` method computes and plots a one-dimensional kernel density estimation from the given samples. All the generated plots are saved to the file path.

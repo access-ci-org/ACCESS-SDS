@@ -1,0 +1,45 @@
+Use Case: SNAP (Scalable Nucleotide Alignment Program) is a tool for aligning short reads from next generation sequencing output. It is used in bioinformatics applications such as transcriptomics, genomics, and epigenomics. 
+
+Code details and examples: Code 
+
+The input for SNAP is a reference genome (in FASTA format) and a set of short reads (in FASTQ format) that you wish to align to the reference genome.
+
+Sample Input Files: 
+
+1) Reference genome (genome.fasta):
+
+```
+>chr1
+ATGCGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGT
+>chr2
+ATGCGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGT
+```
+
+2) Short reads (reads.fastq):
+
+```
+@read1
+ATGCGTACGT
++
+IIIIIIIIII
+@read2
+CGTACGTACG
++
+IIIIIIIIII
+```
+
+To align the reads to the reference genome using SNAP, you first need to index the reference genome using the 'index' command, and then align the reads using the 'single' or 'paired' commands (for single-end or paired-end reads, respectively).
+
+Here are the commands:
+
+```sh
+# Index the genome
+snap index genome.fasta genomeIndex
+
+# Align the reads
+snap single genomeIndex reads.fastq alignedReads.sam
+```
+
+In the above commands, 'genome.fasta' is the reference genome, 'genomeIndex' is the output index file, 'reads.fastq' is the input reads, and 'alignedReads.sam' is the output alignment file in SAM format.
+
+Note: This example assumes that the FASTA and FASTQ files are properly formed. The indexing step can take several hours or even days, depending on the size of the genome. The alignment step can also take a long time, depending on the number of reads and the performance of the computer.

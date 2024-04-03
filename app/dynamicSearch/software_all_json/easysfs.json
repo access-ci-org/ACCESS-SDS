@@ -1,0 +1,11 @@
+{
+  "software_name": "easysfs",
+  "overview": "easysfs is a software tool designed for population genomics analysis, specifically focusing on Site Frequency Spectrum (SFS) data.",
+  "core_features": "The software allows users to estimate basic population genetic parameters such as theta and Tajima's D, perform neutrality tests, and visualize and analyze the SFS data.",
+  "general_tags": ["population genomics", "genetic analysis", "SFS data analysis"],
+  "research_discipline": ["Genomics"],
+  "research_area": ["Population Genomics"],
+  "software_class": ["Genomic Analysis"],
+  "software_type": ["Tool"],
+  "field_of_science": ["Biological Sciences"]
+}

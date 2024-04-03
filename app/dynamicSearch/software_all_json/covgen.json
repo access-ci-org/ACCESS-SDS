@@ -1,0 +1,11 @@
+{
+  "software_name": "CovGen",
+  "comprehensive_overview": "CovGen is a software tool designed for generating coverage statistics from sequencing data, particularly useful in the field of bioinformatics for analyzing the depth and distribution of sequencing coverage across the genome.",
+  "core_features": "1. Calculates sequencing coverage statistics\n2. Visualizes coverage data in graphical format\n3. Facilitates comparison of coverage between samples\n4. Supports various sequencing platforms and data formats\n5. Automates the process of calculating coverage metrics\n6. Intuitive and user-friendly interface for ease of use",
+  "general_tags": ["sequencing data analysis", "coverage statistics", "bioinformatics"],
+  "research_discipline": "",
+  "research_area": "",
+  "software_class": "Bioinformatics tool",
+  "software_type": "Analysis tool",
+  "field_of_science": "Biological Sciences"
+}

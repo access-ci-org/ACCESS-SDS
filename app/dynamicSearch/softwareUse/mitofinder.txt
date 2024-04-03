@@ -1,0 +1,35 @@
+Use Case: Mitofinder is a program used in bioinformatics to reconstruct and annotate mitochondrial genomes directly from raw sequence data.
+
+Code details and examples: 
+
+Code: 
+
+Mitochondrial genome reconstruction command:
+
+```
+Mitofinder -1 input_R1.fq -2 input_R2.fq -r reference.fasta -o output_directory -n organism_name
+```
+
+Here's the example of input sequence data in FastQ format (input_R1.fq):
+
+```
+@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
++
+!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
+```
+
+Where `@SEQ_ID` is the unique identifier for the sequence, the second line is the sequence itself, the "+" symbol is the separator, and the last line is the quality score of the sequencing.
+
+The reference genom (reference.fasta) format is:
+
+```
+>sequence_1
+ATCGATCGATCGATCGAT
+>sequence_2
+ATCGATCGATCGATCGAT
+```
+
+Where `>sequence_1` and `>sequence_2` are the unique identifiers for each sequence and the following lines are the sequences themselves.
+
+The program will automatically generate a directory with the specified output_directory name, which will contain the reconstructed and annotated mitochondrial genome. The name of the organism is specified with `-n`.

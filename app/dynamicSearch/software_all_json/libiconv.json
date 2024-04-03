@@ -1,0 +1,13 @@
+{
+  "software_name": "libiconv",
+  "comprehensive_overview": "libiconv is a library that provides character set conversion support. It converts text data between different character encoding schemes.",
+  "core_features": "1. Character set conversion support\n2. Conversion between different encoding schemes\n3. Wide range of supported character encodings",
+  "general_tags": ["character set conversion", "text data", "encoding"],
+  "additional_tags": {
+    "research_discipline": "Other Computer and Information Sciences",
+    "research_area": "Informatics, Analytics and Information Science",
+    "software_class": "Library",
+    "software_type": "Conversion tool",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

@@ -1,0 +1,32 @@
+Use Case: Use Intel Inspector to understand threading issues like deadlocks, race conditions, and memory issues like memory leaks. It helps improve the performance, correctness and reliability of applications in a C, C++, and Fortran environment.
+
+Code details and examples: 
+
+Code:
+```c
+// Test.c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    char* ptr = (char*)malloc(10);
+    ptr[10] = 100;  // Out-of-bounds access
+    return 0;
+}
+```
+In the program above, there is a mistake where we try to access memory that is out of bounds. 
+
+To run Intel Inspector, you need to first compile your application with debug info (which is usually a `-g` flag)
+
+Command to compile:
+```
+gcc -g -o Test Test.c
+```
+
+Next, we can run Intel Inspector.
+
+Command to run Intel Inspector:
+```
+inspxe-cl -collect mi3 -- Test
+```
+When the command execution is finished, Intel Inspector will output a list of memory and threading errors found in your application.

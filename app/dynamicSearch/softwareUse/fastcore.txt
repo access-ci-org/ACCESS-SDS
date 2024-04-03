@@ -1,0 +1,28 @@
+Use Case: Fastcore is a python library used for Reconstruction of metabolic network models. It is specifically designed for large-scale metabolic networks, and enables fast to addition and deletion operation on the network.
+
+Code details and examples:
+
+Code:
+
+```python
+from fastcore import Fastcore
+
+# input model in SBML format (BioModels database)
+input_file = "sample_model.sbml"
+# list of core reactions (a list of reaction ids in the input model)
+core = ['R1', 'R2', 'R3', 'R4', 'R5']
+
+# create Fastcore object
+fc = Fastcore(input_file)
+
+# perform fastcore algorithm
+result = fc.fast(core)
+```
+
+The format of the input files for Fastcore is SBML. This is a standard format for systems biology models and contains a detailed representation of the metabolic network, including all the reactions, metabolites and genes.
+
+Fastcore also requires a list of core reactions. This is a list of reaction ids from the input model that are known to be active in the condition of interest.
+
+The output of the function is a list of reactions that are included in the context-specific model.
+
+Command to run the Fastcore algorithm is as given in the python code snippet above. Just run this python script after replacing "sample_model.sbml" with your actual model file and ['R1', 'R2', 'R3', 'R4', 'R5'] with your actual core reactions.

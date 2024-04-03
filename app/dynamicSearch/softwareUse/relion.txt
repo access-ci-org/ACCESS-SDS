@@ -1,9 +1,22 @@
-Use Case: RELION is a image processing software for cryo-electron microscopy. 
+Use Case: Relion (for REgularised LIkelihood OptimisatioN) is used for refinement of 3D reconstructions or 2D class averages in cryo-electron microscopy (cryo-EM).
 
-Code details and examples:
-Sample input file format for RELION is typically a set of cryo-EM micrographs in MRC format. The software also requires a configuration file in STAR format. 
+Code details and examples: Sample input file formats can be *.mrcs, *.star, among others. The main input is often the micrographs (raw images) themselves, particle coordinates, and sometimes an initial model. 
 
-An example command to run RELION is as follows:
+Code:
+
+Consider the input files are:
+1. Particles.star : A STAR file that contains the information about the particles
+2. InitialModel.mrc : An MRC file used as the initial model
+
+In the command line,
 ```
-relion_refine --i micrographs.star --ref 3D_initial_model.mrc --o refined_structure --gpu
+relion_refine --o Refine3D/run1 --auto_refine --split_random_halves --i Particles.star --ref InitialModel.mrc --ini_high 60
 ```
+- `--o`: The name of the directory where the output files will be saved.
+- `--auto_refine`: Perform automated refinement, including generation of the resolution and FSC calculation.
+- `--split_random_halves`: Split the data randomly in two half-datasets. 
+-  `--i`: Name of the STAR file that contains your particle images.
+-  `--ref`: The name of reference map
+- `--ini_high`: This flag is used to downsample the images. The number passed is the resolution in angstroms that you expect your final structure to have.
+
+In addition, preparation of input files is crucial in cryo-EM processing, and therefore might need pre-processing stages. Please refer to Relion's official tutorial for more information: https://relion.readthedocs.io/en/latest/Manuals/user_manual.html

@@ -1,0 +1,30 @@
+Use Case: Varlociraptor is used for rigorous variant calling. Providing a Bayesian framework for calling variants, Varlociraptor can be used to detect somatic variants, germline variants, and even subclonal mutations in cancer genomes. It's great for use in bioinformatics, particularly in relation to genomics and genetic research.
+
+Code details and examples:
+
+Code: 
+```
+varlociraptor preprocess variants --reference human_g1k_v37.fasta.gz --candidates variants.vcf --output preprocessed.bcf
+varlociraptor call variants tumor-normal --purity 0.6 --tumor bam1.bam -normal bam2.bam --candidates preprocessed.bcf --output called.bcf
+```
+The above commands first preprocess the variant candidates (in VCF format), against a reference genome (in FASTA format). This is then followed by variant calling. The `--purity` parameter is an estimate of the cancer cell content in the tumor sample, it should be between 0 and 1.
+
+Input Files:
+
+1. Reference Genome: human_g1k_v37.fasta.gz (FASTA format)
+2. Candidate Variants: variants.vcf (VCF format)
+3. Tumor Sample: bam1.bam (BAM format)
+4. Normal Sample: bam2.bam (BAM format)
+
+Specifications and Details in Input Files:
+
+Reference Genome: This is a sequence of the entire genome used for alignment. It needs to be in FASTA format. 
+Candidate Variants: This is a list of possible variant sites. It needs to be in VCF format. 
+Tumor and Normal Samples: These are the sequences to be analyzed. They need to be in BAM format. They are usually derived from NGS sequencing. The normal sample is used to differentiate between germline and somatic mutations. 
+
+Run Command:
+
+1. `varlociraptor preprocess variants --reference human_g1k_v37.fasta.gz --candidates variants.vcf --output preprocessed.bcf`
+2. `varlociraptor call variants tumor-normal --purity 0.6 --tumor bam1.bam --normal bam2.bam --candidates preprocessed.bcf --output called.bcf`
+
+Please note that these commands are run on a command line interface and require installation and setup of Varlociraptor.

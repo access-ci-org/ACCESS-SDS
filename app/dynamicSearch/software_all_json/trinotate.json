@@ -1,0 +1,23 @@
+{
+    "software_name": "Trinotate",
+    "comprehensive_overview": "Trinotate is a comprehensive annotation suite designed for functional annotation of de novo assembled transcriptomes, particularly for non-model organisms. It provides tools for sequence homology searches, protein domain predictions, functional annotation, and visualization of annotation results.",
+    "core_features": [
+        "Sequence homology searches (BLAST)",
+        "Protein domain predictions (HMMER)",
+        "Functional annotation",
+        "Visualization of annotation results"
+    ],
+    "general_tags": [
+        "Bioinformatics",
+        "Computational Biology",
+        "Transcriptomics",
+        "Functional Annotation"
+    ],
+    "additional_tags": {
+        "research_discipline": "Bioinformatics",
+        "research_area": "Transcriptomics",
+        "software_class": "Annotation Suite",
+        "software_type": "Functional Annotation Tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

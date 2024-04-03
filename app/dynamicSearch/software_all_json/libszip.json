@@ -1,0 +1,23 @@
+{
+  "software_name": "libszip",
+  "comprehensive_overview": "libszip is a compression library for large datasets used in scientific computing and research. It provides support for efficient and high-speed compression and decompression of large data files, particularly in formats commonly used in scientific applications.",
+  "core_features": [
+    "Efficient compression and decompression of large datasets",
+    "Optimized for scientific computing and research",
+    "Support for common scientific data formats",
+    "High-speed compression for performance-critical applications"
+  ],
+  "general_tags": [
+    "compression library",
+    "scientific computing",
+    "data compression",
+    "research tools"
+  ],
+  "additional_tags": {
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Library",
+    "software_type": "Compression",
+    "field_of_science": "Other Natural Sciences"
+  }
+}

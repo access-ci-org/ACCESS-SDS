@@ -1,0 +1,28 @@
+Use Case: ARCS (Algorithms for Reproducibility, Completeness, and Speed) is a software package that is designed to assemble genome sequence data. It takes an assembly in FASTA format and a file of paired-end or single-end alignments in SAM/BAM format, and then determines the relative order of the scaffolds in the assembly based on the number of links between them.
+
+Code Details and Examples: 
+The ARCS package contains several scripts but the most commonly used one is 'arcs'. You need two files: a SAM/BAM file of your aligned reads, and an assembly file in FASTA format. 
+
+Command to run the ARCS:
+
+```
+arcs -f yourAssembly.fasta -a yourAlignment.sam -s 98 -c 5 -l 0 -z 500 -m 50-10000 -d 0 -e 30000 -r 0.05 -v 1 > arcs_output.tsv
+```
+
+The input files required:
+1. 'yourAssembly.fasta': This is your assembly file in FASTA format that you want to scaffold.
+2. 'yourAlignment.sam': This is the file of your aligned reads in SAM/BAM format.
+
+The specifications in the input files:
+1. The assembly file and the SAM/BAM file should have corresponding chromosome/scaffold names, and the orientations of the alignments in the SAM/BAM file should match the orientations of the chromosomes/scaffolds in the assembly file.
+2. The SAM/BAM file should be sorted by read name.
+
+In the command to run the ARCS:
+1. '-f': This flag is followed by the name of your assembly file in FASTA format.
+2. '-a': This flag is followed by the name of your SAM/BAM file.
+3. '-s': This option sets the minimum number of links (default is 5) needed to create an edge between two nodes in the graph.
+4. '-c': This option sets the minimum size (default is 5) of the barcode set to consider (in terms of number of reads).
+5. '-l': This option sets the minimum length (default is 0) of sequences to consider.
+6. '-z': This option sets the minimum size of the contig (in terms of length) to consider.
+7. '-m': This option sets the minimum and maximum length for the read alignment.
+8. '-d', '-e', '-r', '-v': These are other options to fine-tune the link creation process.

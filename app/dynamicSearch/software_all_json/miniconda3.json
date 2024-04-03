@@ -1,0 +1,21 @@
+{
+    "software_name": "Miniconda3",
+    "comprehensive_overview": "Miniconda is a free minimal installer for conda. It is a package management system that simplifies the installation and management of software packages. Miniconda allows users to create environments containing dependencies from a specified list of packages, making it easier to manage different projects with conflicting package requirements.",
+    "core_features": [
+        "Package management system",
+        "Environment creation and management",
+        "Dependency resolution"
+    ],
+    "general_tags": [
+        "Package Management",
+        "Dependency Management",
+        "Software Installation"
+    ],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Environment and Package Management",
+        "software_type": "Package Manager",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

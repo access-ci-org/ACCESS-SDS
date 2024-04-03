@@ -1,33 +1,52 @@
-I am assuming you are asking for information regarding the 'libx11' library used for X Window System protocol support.
+Use Case: Use LIBX11 for interaction with the X Window System, a windowing system for bitmap displays. The Xlib library allows for clients to interface with the X server, which communicates with the host system's hardware to create graphical displays.
 
-Use Case: X11 Programming 
-Code details and examples:
-The libx11 library provides functions for X Window System protocol support. A sample program using libx11 to create a simple window is shown below:
+Code Details and Examples: Code
+
+The following example demonstrates how to create a simple window on the screen using the libX11 package:
 
 ```c
 #include <X11/Xlib.h>
 
 int main() {
-    Display *display = XOpenDisplay(NULL);
-    Window window = XCreateSimpleWindow(display, DefaultRootWindow(display), 0, 0, 200, 100, 0, 0, 0);
-    XMapWindow(display, window);
-    XFlush(display);
-    sleep(10);
-    XCloseDisplay(display);
+    Display  *d;
+    Window   w;
+    XEvent   e;
+
+    d = XOpenDisplay(NULL);
+    if (d == NULL) {
+         fprintf(stderr, "Cannot open display\n");
+         exit(1);
+    }
+
+    int s = DefaultScreen(d);
+    w = XCreateSimpleWindow(d, RootWindow(d, s), 10, 10, 200, 200, 1,
+                           BlackPixel(d, s), WhitePixel(d, s));
+   
+    XSelectInput(d, w, ExposureMask | KeyPressMask);
+    XMapWindow(d, w);
+   
+    while (1) {
+        XNextEvent(d, &e);
+        if (e.type == Expose) { }
+        if (e.xkey.keycode == 9) break;
+    }
+   
+    XCloseDisplay(d);
     return 0;
 }
 ```
+Execute this program by compiling it with gcc and link it against libX11. 
 
-To compile the program, you can use the following command (assuming the file is named 'sample.c'):
+The command to compile the code is:
 
-```bash
-gcc sample.c -lX11 -o sample
+```
+$ gcc -I /usr/include/X11 -L /usr/X11R6/lib -lX11 -o create_window create_window.c
 ```
 
-To run the compiled program, simply execute:
+Then execute it by running
 
-```bash
-./sample
+```
+$ ./create_window
 ```
 
-This will create a simple X Window with a dimensions of 200x100 pixels. The window will be displayed for 10 seconds before closing.
+The code will generate a simple window of size 200x200 at coordinates (10,10) on the screen. The X-server is responsible for the display, and Xlib client applications communicate these display protocols via the Xlib library. Please make sure that the X-server is running properly on your machine. If the X-server is not running, then XOpenDisplay function will fail.

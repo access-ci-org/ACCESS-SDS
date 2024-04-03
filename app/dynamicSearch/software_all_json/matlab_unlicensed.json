@@ -1,0 +1,22 @@
+{
+    "software_name": "MATLAB (unlicensed)",
+    "comprehensive_overview": "MATLAB is a high-level language and interactive environment that enables you to perform computationally intensive tasks faster than with traditional programming languages such as C, C++, and Fortran. It combines computation, visualization, and programming in a simple, easy-to-use interface.",
+    "core_features": [
+        "High-level programming language",
+        "Interactive environment for algorithm development, data visualization, and data analysis",
+        "Extensive library of mathematical functions for linear algebra, statistics, Fourier analysis, filtering, optimization, and numerical integration."
+    ],
+    "general_tags": [
+        "Computational Software",
+        "Mathematics",
+        "Applied Mathematics",
+        "Engineering and Technology"
+    ],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Proprietary Software",
+        "software_type": "Mathematical Software",
+        "field_of_science": "Engineering and Technology"
+    }
+}

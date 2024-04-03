@@ -1,0 +1,56 @@
+Use Case: INQ is a software for computational material physics which can be used for performing quantum mechanics based simulations. It computes electronic structures and energies of systems, as well as other properties.
+
+Code and examples:
+
+1. Here is a sample INQ input file for a silicon-like system, where the primitive cell contains two atoms, each at the origin.
+
+Code:
+```bash
+BEGIN_PROJECT
+  PROJECT_NAME si
+  SAVEWAVE true
+  RESTART false
+END_PROJECT
+
+BEGIN_CONTROL
+  TIMESTEP 0.05_recentime
+  RUNTYPE GS
+  TOLINTEG 1.0e-4
+  NUMSTEP 20000
+  WFTOL 1.0e-6
+END_CONTROL
+
+BEGIN_GEOMETRY
+  NATOM 2
+  NTYPE 1
+  ATOMIC_SPECIES si 28.085 Si_RECPOT
+  BEGIN_UNIT_CELL_BOHR
+  0.0 2.715 2.715
+  2.715 0.0 2.715
+  2.715 2.715 0.0
+  END_UNIT_CELL_BOHR
+  TOTAL_ELECTRON 8.0 
+  BEGIN_POS_BOHR
+  si 0.0 0.0 0.0
+  END_POS_BOHR
+END_GEOMETRY
+
+BEGIN_PSEUDO_POTENTIAL
+  PSEUDO_TYPE norm_conserving
+  ZVALENCE 1.0
+  LMAX 1
+  RCUT 2.0
+END_PSEUDO_POTENTIAL
+```
+To run the simulation, the following command can be used:
+```bash
+mpiexec -n [number-of-cores] inq input.inq > output.log
+```
+Here, "[number-of-cores]" has to be replaced with the number of CPU cores one wishes to use for the simulation.
+
+Specifications: 
+
+- For the project section, "project_name" corresponds to the name of the project, "savewave" is the flag to save the wavefunction or not, and "restart" is the flag to start from a previous wave function or not.
+- For the control section, users can set the calculation parameters such as timestep, runtype (GS for ground state), numer of steps, etc.
+- For the geometry section, users have to provide details about the system such as number of atoms (natom), atomic species, unit cell parameters, etc.
+- The pseudopotential section contains parameters for the pseudopotential used on the atoms.

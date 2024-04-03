@@ -1,21 +1,71 @@
-Use Case: Wannier90 is a tool for generating maximally-localized Wannier functions from a set of Bloch states, typically obtained from DFT calculations.
+Use Case: Wannier90 is used for obtaining and utilizing maximally-localized Wannier functions.
 
-Code details and examples:
-Input files (example_hr.dat):
+Code details and examples: 
+
+The Wannier90 program requires two input files: the .win main input file, and several .xsf structure files corresponding each k-point. The following example is for a simple Si (silicon) structure.
+
 ```
-&input
-    hr_file = 'wannier90_hr.dat'
-    output_dir = './'
-    prefix = 'silicon'
-    postproc = True
-    write_hr = True
-    write_xyz = True
-/
+Si.win file:
+! Si.win
+num_wann = 8
+num_bands = 8
+num_iter = 100
+dis_froz_max = 7.0
+dis_num_iter = 100
+
+begin unit_cell_cart
+3.8669752  0.0000000  3.8669752
+0.0000000  3.8669752  3.8669752
+3.8669752  3.8669752  0.0000000
+end unit_cell_cart
+
+begin atoms_frac
+Si 0.00 0.00 0.00
+Si 0.25 0.25 0.25
+end atoms_frac
+
+begin projections
+random
+end projections
+
+mp_grid: 4 4 4
+
+begin kpoints
+0.125  0.125  0.125
+0.375  0.375  0.125
+0.625  0.625  0.125
+...
+end kpoints
 ```
 
-Code to run Wannier90:
+For each kpoint, we also have an .xsf file:
 ```
-wannier90.x -pp silicon
+Si_001.xsf file:
+CRYSTAL
+PRIMVEC
+3.8669752  0.0000000  3.8669752
+0.0000000  3.8669752  3.8669752
+3.8669752  3.8669752  0.0000000
+CONVVEC
+3.8669752  0.0000000  3.8669752
+0.0000000  3.8669752  3.8669752
+3.8669752  3.8669752  0.0000000
+PRIMCOORD
+2 1
+14 0.000000 0.000000 0.000000 0 0 0
+14 0.250000 0.250000 0.250000 0 0 0
+
+BANDGRID_3D_BANDS
+4 4 4
+8
+0.1  -0.1 0.2 ...
+0.2  -0.1 0.3 ...
+...
 ```
 
-This command will run Wannier90 with the specified input file (example_hr.dat) to generate maximally-localized Wannier functions. Make sure to have the required input files (e.g., wannier90_hr.dat) and DFT output files ready before running Wannier90.
+To run the code, navigate to the directory with these input files and execute:
+```
+wannier90.x Si
+```
+
+This will compute the Wannier functions for the system, save in .chk and .wout output files, and show progress in the terminal.

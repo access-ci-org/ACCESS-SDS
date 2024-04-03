@@ -1,0 +1,38 @@
+Use Case: HTSeq is a Python library used widely in bioinformatics for parsing file formats such as SAM/BAM and GFF/VCF files, The main use of HTSeq is to facilitate the processing of data from high-throughput sequencing projects. 
+
+Code details and examples:
+
+Command to run htseq-count:
+
+Code: 
+`htseq-count [options] <alignment_file> <gff_file>`
+
+Sample input file formats:
+
+Alignment file: SAM/BAM format
+GFF/VCF file: GFF/VCF format
+
+Code snippet:
+
+In this example, HTSeq is used to count the number of reads per gene in a SAM file, "aligned.sam", with annotation file "genes.gff".
+
+Code:
+`htseq-count -f sam -s no aligned.sam genes.gff`
+
+Here, "-f sam" specifies that the input file is in SAM format, "-s no" indicates that the sequencing library is not strand-specific. The "aligned.sam" is the input file and "genes.gff" is the annotation file.
+
+Note: The SAM/BAM file must be sorted by coordinate and for paired-end data, it must be sorted by name. This can be done using the `samtools sort` function before running `htseq-count`.
+
+Return value: The function returns a list of gene names and associated read counts.
+
+Specifics and details in input files: 
+
+SAM/BAM files: It is a tabular format for storing biological sequence data. Each row represents a read alignment.
+
+GFF file: The General Feature Format (GFF) is a file format for describing genes and other features associated with DNA, RNA and protein sequences. It includes the name of a feature, its type, start, end, and strand orientation.
+
+Specifications for running HTSeq:
+
+1. The sequencing library must be either strand-specific or not. This must be specified using the "-s" option.
+2. The input alignment file must be sorted by coordinate for single-end data or by name for paired-end data.
+3. The input files must be in SAM/BAM format and GFF/VCF format for HTSeq to properly parse them.

@@ -1,0 +1,38 @@
+Use Case: ShigEIFinder is a HPC software that enables genome-based surveillance and discovery of Shiga toxin-producing E. coli. It's particularly useful in genome-scale investigations of pathogenicity factors in E. coli.
+
+Code details and examples: Code
+
+Input files and formats: ShigEIFinder accepts a FASTA format as an input file that contains the E.coli genome sequences. An example genome sequence in FASTA format would look like this:
+
+```
+>SCU49845
+ATGTCTGGAAAGCGGGCGGCACGCTGGCGGCGCGCTGCTGG
+```
+Specifications and details in input files: Each segment of the genome sequence is represented as a separate FASTA record in the input file. Each FASTA record must begin with a single-line description, followed by lines of sequence data.
+
+Command to run: ShigEIFinder is typically run from the command line like this:
+
+```
+shigEIFinder.py -i E_coli_Fasta.fa -o Output_Directory
+```
+
+Here -i represents the input file (E_coli_Fasta.fa) and -o represents the output directory (Output_Directory).
+
+Code snippets:
+```python
+from shigetools import shigeifinder
+
+def run_shigeifinder(input_file, output_dir):
+    args = {
+        "fasta": input_file,
+        "outdir": output_dir,
+    }
+
+    shigeifinder.Main(args)
+
+run_shigeifinder("E_coli_Fasta.fa", "Output_Directory")
+```
+
+In this code snippet, `run_shigeifinder()` is a function that takes the path of the input FASTA file and the name of the output directory as arguments, and runs ShigEIFinder. This function can be used in larger Python applications or scripts for automating sequence analysis.
+
+Make sure that the output directory exists before running the script. The output files will include detailed genome analysis, gene profiles, and other results.

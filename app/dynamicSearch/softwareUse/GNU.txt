@@ -1,67 +1,44 @@
-Use Case: GNU Compiler Collection (GCC)
+Use Case: Program Compilation
+
 Code details and examples:
-```bash
-# Compiling a C program with GCC
-gcc -o output_program input_program.c
 
-# Running the compiled program
-./output_program
-```
+Code:  
+GCC (GNU Compiler Collection) is an integral part of GNU Project that provides compilers for several programming languages like C, C++, Fortran etc.
 
-Use Case: GNU Debugger (GDB)
-Code details and examples:
-```bash
-# Debugging a program with GDB
-gdb executable_name
+Sample Input File, Format Required: 
+You need a source file in C, C++ or Fortran to use GCC. File extension depends on the programming language used (.c for C, .cpp for C++, .f for Fortran).
 
-# Setting breakpoints and stepping through the program
-break main
-run
-next
-```
-
-Use Case: GNU Make
-Code details and examples:
-```make
-# Sample Makefile
-all: program
-
-program: main.o functions.o
-        gcc -o program main.o functions.o
-
-main.o: main.c
-        gcc -c main.c
-
-functions.o: functions.c
-        gcc -c functions.c
-
-clean:
-        rm -rf *.o program
-```
-To build the program using the Makefile:
-```bash
-make
-```
-
-Use Case: GNU Scientific Library (GSL)
-Code details and examples:
+Example using C:
 ```c
+// hello.c
 #include <stdio.h>
-#include <gsl/gsl_sf_bessel.h>
 
-int main()
-{
-    double x = 5.0;
-    double result = gsl_sf_bessel_J0(x);
-    printf("J0(%f) = %f\n", x, result);
-    return 0;
+int main() {
+   printf("Hello, World!");
+   return 0;
 }
 ```
-Compile with:
-```bash
-gcc -o bessel_example bessel_example.c -lgsl -lgslcblas -lm
+
+And then in the terminal, you'd run:
+
 ```
-Run the compiled program:
-```bash
-./bessel_example
+gcc hello.c -o hello
+```
+
+This tells gcc to take hello.c as input and output it as an executable named hello. If there are no errors in your code, you can then run your program with:
+
+```
+./hello
+```
+
+Specifications and Details in Input Files:
+The input files would be any valid C, C++, Fortran etc files, which follow the language-specific syntax and semantics. An example is provided above for a C program. Note that the code must not contain any syntax errors, otherwise the compilation process will fail and the compiler will output error messages. 
+
+You can use various options with gcc command to customize the compilation process. For example, you could use -Wall to get all warning messages, -o to specify the output file name etc.
+
+
+Command to Run It:
+The general format is:
+```
+gcc [options] [source files] [object files] [-o output file]
 ```

@@ -1,0 +1,106 @@
+Use Case: High Performance Computing (HPC) Software
+
+; Software: OpenMPI
+
+Code details and examples: Code
+
+OpenMPI is a library that enables programs to communicate data between distributed processes using message passing. Here's how to use it with a C program.
+
+Sample Input File: `hello_world.c`
+
+```c
+#include <stdio.h>
+#include <mpi.h>
+
+int main(int argc, char** argv) {
+    MPI_Init(NULL, NULL);
+
+    int world_size;
+    MPI_Comm_size(MPI_COMM_WORLD, &world_size);
+
+    int world_rank;
+    MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
+
+    char processor_name[MPI_MAX_PROCESSOR_NAME];
+    int name_len;
+    MPI_Get_processor_name(processor_name, &name_len);
+
+    printf("Hello world from processor %s, rank %d out of %d processors\n",
+           processor_name, world_rank, world_size);
+
+    MPI_Finalize();
+}
+```
+To compile this program, save it to a file called `hello_world.c` and then run:
+
+```bash
+mpicc hello_world.c -o hello_world
+```
+
+To execute the program using 4 processes:
+
+```bash
+mpirun -np 4 ./hello_world
+```
+
+--------------------------------------
+
+Use Case: Python Libraries for Scientific Computing
+
+; Software: NumPy
+
+Code details and examples: Code 
+
+Consider the below program to create an array and perform the dot product.
+
+```python
+import numpy as np
+
+# create two arrays
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+
+# perform dot product
+result = np.dot(a, b)
+
+print("Dot Product: ", result)
+```
+
+To run the program, save it to a file called `numpy_dot.py` and then run:
+
+```bash
+python numpy_dot.py
+```
+
+---------------------------------------
+
+Use Case: Bioinformatics Software 
+
+; Software: BLAST - Basic Local Alignment Search Tool.
+
+Code details and examples: Code 
+
+Sample Input File: `sequence.fasta`
+
+The command to run BLAST with a sample input file and the default database (nt) is:
+
+```bash
+blastn -query sequence.fasta -db nt -out results.txt
+```
+
+The input file sequence.fasta should be in FASTA format, which looks like this:
+
+```fasta
+>sequence1
+ATCGATCGATCGATCGAT
+>sequence2
+ATCGATCGATCGATCGAT
+```
+
+The sample output would be written to `results.txt`.
+
+Note: The nt database is not included with the BLAST+ software, it needs to be downloaded separately from the NCBI website.
+
+---------------------------------------
+
+For computational chemistry packages, scientific libraries, compiler tools further examples would be accordingly needed.

@@ -1,24 +1,38 @@
-Use Case: Data compression and decompression with zstd
+Use Case: zstd, short for Zstandard, is a real-time compression algorithm designed to offer a high compression ratio and speed. Zstandard can be used to compress a file or a stream of data. It is most useful in scenarios where speed and high compression are needed, such as for backups, network transfers, or as a component in bigger systems to reduce their size.
 
-Code details and examples:
-Zstd is a fast compression algorithm that provides high compression ratios. It is commonly used for compressing and decompressing data efficiently. Below is an example of how to use zstd for compression and decompression:
+Code Details and Examples:
+Code:
 
-1. Compression:
-```bash
-zstd -19 input_file.txt -o compressed_file.zst
+To compress a file using zstd, you need a file as input. The command zstd accepts a file name as argument, and outputs a compressed file with the .zst extension.
+
+Command to run:
+
 ```
-This command compresses the input_file.txt into compressed_file.zst with compression level 19.
-
-2. Decompression:
-```bash
-zstd -d compressed_file.zst -o decompressed_file.txt
+ zstd file.txt
 ```
-This command decompresses the compressed_file.zst into decompressed_file.txt.
 
-3. Information about compressed file:
-```bash
-zstd -l compressed_file.zst
+This will output a compressed file named file.txt.zst. 
+
+To decompress a .zst file, use command unzstd or zstd -d . For instance:
+
 ```
-This command provides information about the compressed file such as compression ratio, original size, compressed size, etc.
+unzstd file.txt.zst
+```
 
-For more options and details, you can refer to the zstd documentation.
+or 
+
+```
+zstd -d file.txt.zst
+```
+
+Both commands will recreate the original file.txt from file.txt.zst. 
+
+Zstandard also supports a variety of options to customize the execution, such as setting a specific compression level with the -# flag, where # is the compression level from 1 (fastest) to 19 (smallest). For example:
+
+```
+zstd -19 file.txt
+```
+
+This will compress file.txt using level 19, which provides a smaller output at the expense of speed.
+
+Zstandard supports a wide range of file formats, without specific requirements for the input file's format or structure. Any binary or text file can be provided, and Zstandard will attempt to compress it. The input files do not require specific details or formats, other than being accessible by the zstd command.

@@ -1,0 +1,23 @@
+Use Case: Use MegaDepth -a versatile bioinformatics tool for generating high-quality coverage maps from sequencing data. It supports BAM and CRAM files with or without an index. 
+
+Code details and examples:
+
+- **Code**
+```bash
+megadepth sample.bam --out sample_output
+```
+
+- **Input format required**: Binary Alignment Map (BAM) or CRAM file.
+
+- **Specifications and details in input files**: The input should be BAM or CRAM file representing reads alignments against a reference genome.
+
+- **Command to run the script**: Use the command 'megadepth <input.bam> --out output'. 
+
+Before running 'megadepth', BAM or CRAM file should be indexed using SAMtools if it is not.
+
+```bash
+samtools index sample.bam
+```
+
+- **Sample input file**
+A file sample.bam containing binary sequence alignment data.

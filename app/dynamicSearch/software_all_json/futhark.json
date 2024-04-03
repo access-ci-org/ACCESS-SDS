@@ -1,0 +1,24 @@
+{
+    "software_name": "Futhark",
+    "comprehensive_overview": "Futhark is a purely functional data-parallel programming language that aims to make high-performance GPU programming approachable to a wider audience. It is designed for efficiently running complex computations on modern GPUs.",
+    "core_features": [
+        "Purely functional programming language",
+        "Data-parallel programming model",
+        "Designed for GPU programming",
+        "High-performance computing capabilities"
+    ],
+    "general_tags": [
+        "Programming Language",
+        "Data-Parallel Programming",
+        "GPU Programming",
+        "High-Performance Computing"
+    ],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Programming Language",
+        "software_type": "Compiler",
+        "field_of_science": "Computer and Information Sciences",
+        "other_tags": []
+    }
+}

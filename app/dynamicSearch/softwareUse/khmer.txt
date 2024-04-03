@@ -1,0 +1,31 @@
+Use Case: khmer is a library and suite of command line tools for working with DNA sequence data. It is primarily aimed at short-read sequencing data such as that produced by the Illumina platform. khmer takes a k-mer-centric approach and provides a built-in k-mer counting and graph traversal, and a variety of utility scripts for common tasks.
+
+Code details and examples:
+
+Code:
+
+1. Fastq to Fasta conversion
+Command: `interleave-reads.py read1.fq read2.fq -o reads.interleaved.fq`
+Input File Format: FastQ
+Sample Input File: Reads are in FastQ format, e.g., read1.fq read2.fq
+Specifications: Each read in a FastQ file starts with '@' followed by a sequence identifier and an optional description. It's then followed by the sequence and '+' that separates the sequence from the quality scores.
+
+2. Normalize the reads
+Command: `normalize-by-median.py -k 20 -C 20 -p -o reads.normalized.fq reads.interleaved.fq`
+Input File Format: FastQ
+Sample Input File: Reads are in FastQ format, e.g., reads.interleaved.fq
+Specifications: The command is useful for eliminating highly abundant reads and keeping the less abundant ones for analysis.
+
+3. Count the k-mers
+Command: `load-into-counting.py -x 1e9 -k 20 reads.kh reads.normalized.fq`
+Input File Format: FastQ
+Sample Input File: Reads are in FastQ format, e.g., reads.normalized.fq
+Specifications: The command will count unique k-mers and load them into data structure.
+
+4. Extract k-mer abundance
+Command: `abundance-dist-single.py reads.kh reads.normalized.fq reads.hist`
+Input File Format: FastQ and .kh
+Sample Input File: Reads are in FastQ format, e.g., reads.normalized.fq and counting table file reads.kh
+Specifications: The command allows you to know how many k-mers occur with a certain frequency.
+
+Note: khmer works with DNA sequences as input and output is often in graphical or tabular format depending upon the command used. Make sure to have ample disk space as sequence data usually requires large storage.

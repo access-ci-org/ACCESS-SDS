@@ -1,0 +1,28 @@
+Use Case: R-Sys is a biostatistics software especially noteworthy for its exploratory and descriptive tools. Thus, it is predominantly used in biological and biotechnical research sectors for sequence analysis, gene expression, proteomics and evolutionary analysis
+
+Code details and examples:
+
+Code:
+```R
+# Importing data in R
+mydata <- read.csv("examples.csv")
+
+# Displaying structure of data
+str(mydata)
+
+# Occurrence of factors in the data
+table(mydata$factor)
+
+# Basic descriptive statistics
+summary(mydata)
+
+# Generating a histogram
+hist(mydata$var1, breaks=20, main="Histogram", xlab="Variable 1")
+```
+Input files: "examples.csv" - This is the name of a sample input file that contains the data that needs to be imported. It must be a CSV file with rows and columns of data. Each row represents a case while each column represents a variable.
+
+Specifications and details: The structure of the data shows the type and the first few instances of each variable in the dataframe. The 'table' function provides us with a simple frequency table, while the 'summary' function provides a handful of descriptive statistics that provide an immediate summary of the typical values and spread of each variable. The 'hist' function generates a histogram to provide a visual illustration of the spread and center of a single variable.
+
+Command to run the code: The code can be run by pasting it into the R console and hitting enter. Alternatively, if it's in a script file you can execute it with Rscript or source.
+
+This is assumed the closest possible use for R-Sys. It is not recommended to use this response as an absolute source for R-Sys as it is one of the generic uses of any statistical software.

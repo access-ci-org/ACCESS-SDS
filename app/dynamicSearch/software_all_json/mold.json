@@ -1,0 +1,13 @@
+{
+    "software_name": "Mold",
+    "comprehensive_overview": "Mold is a computational software tool developed for conducting molecular dynamics simulations in the field of biophysics and computational chemistry. It is designed to model the behavior of biomolecules and study their interactions at the atomic level.",
+    "core_features": "1. Molecular dynamics simulations for biomolecular systems\n2. Protein-ligand interactions analysis\n3. Visualization of molecular structures and trajectories\n4. Calculation of thermodynamic properties\n5. Analysis of protein folding and dynamics",
+    "general_tags": ["computational software", "molecular dynamics", "biophysics", "chemistry"],
+    "additional_tags": {
+        "research_discipline": "Biophysics",
+        "research_area": "Computational Chemistry",
+        "software_class": "Computational tool",
+        "software_type": "Molecular dynamics simulator",
+        "field_of_science": "Biological Sciences"
+    }
+}

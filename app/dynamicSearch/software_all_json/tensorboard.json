@@ -1,0 +1,16 @@
+{
+  "software_name": "TensorBoard",
+  "comprehensive_overview": "TensorBoard is a suite of web applications for inspecting and understanding the TensorFlow runs and graphs. It enables visualization of TensorFlow graphs, as well as monitoring of training progress and evaluation metrics.",
+  "core_features": "1. Visualization of TensorFlow graphs\n2. Monitoring of training progress\n3. Tracking and visualizing evaluation metrics\n4. Debugging and profiling TensorFlow models\n5. Integration with TensorFlow for deep learning tasks",
+  "general_tags": [
+    "TensorFlow",
+    "Deep Learning",
+    "Visualization",
+    "Model Monitoring"
+  ],
+  "research_discipline": [],
+  "research_area": [],
+  "software_class": "Visualization Tools",
+  "software_type": "Web Application",
+  "field_of_science": "Computer and Information Sciences"
+}

@@ -1,0 +1,22 @@
+{
+    "software_name": "NeuSomatic",
+    "comprehensive_overview": "NeuSomatic is a computational framework for detecting somatic mutations in single cell and bulk sequencing data. It utilizes a neural network model trained on both single-cell and bulk sequencing data to accurately identify somatic mutations.",
+    "core_features": [
+        "Detection of somatic mutations",
+        "Single-cell and bulk sequencing data analysis",
+        "Utilizes neural network model for classification",
+        "High accuracy in mutation identification"
+    ],
+    "general_tags": [
+        "Computational Biology",
+        "Genomics",
+        "Bioinformatics",
+        "Data Analysis",
+        "Somatic Mutations"
+    ],
+    "research_discipline": "Genomics",
+    "research_area": "Computational Genomics",
+    "software_class": "Bioinformatics Tool",
+    "software_type": "Detection Tool",
+    "field_of_science": "Biological Sciences"
+}

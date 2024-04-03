@@ -1,0 +1,23 @@
+{
+    "software_name": "lhsmdu",
+    "comprehensive_overview": "LHSMDU (Latin Hypercube Sampling Multivariate Data Uncertainty) is a Python library for generating Latin hypercube samples with multivariate data uncertainty. Latin hypercube sampling is a statistical method for generating a sample of plausible scenarios by dividing the input variables into equally probable intervals and sampling once from each interval. LHSMDU extends this concept to incorporate uncertainty in the multivariate data.",
+    "core_features": [
+        "Latin hypercube sampling",
+        "Multivariate data uncertainty",
+        "Python library"
+    ],
+    "general_tags": [
+        "Latin hypercube sampling",
+        "Multivariate data",
+        "Uncertainty quantification",
+        "Statistical sampling",
+        "Python library"
+    ],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Statistical Sampling",
+        "software_type": "Python Library",
+        "field_of_science": "Other Mathematics"
+    }
+}

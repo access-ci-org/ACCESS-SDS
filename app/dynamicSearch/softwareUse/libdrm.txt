@@ -1,8 +1,46 @@
-Use Case: Graphics hardware control and memory mapping library for Direct Rendering Manager (DRM)
+Use Case: libdrm is a userspace library designed to interact with the DRM subsystem of the Linux kernel, enabling applications to interact with GPUs on the machine. It provides support for creating and managing GPU resources, executing commands on the GPUs, and handling GPU related events. 
 
-Code details and examples:
-libdrm is a low-level library designed to allow Direct Rendering Manager (DRM) clients to interface with the kernel DRM services.
+Code details and examples: 
 
-Sample input file format details: N/A
+Code:
 
-Command to run: N/A
+```c
+#include <stdio.h>
+#include <xf86drm.h>
+#include <xf86drmMode.h>
+
+int main() {
+   int fd;
+   drmModeRes *resources;
+
+   fd = open("/dev/dri/card0", O_RDWR | O_CLOEXEC);
+
+   if (fd < 0) {
+      printf("Cannot open /dev/dri/card0\n");
+      return -1;
+   }
+
+   resources = drmModeGetResources(fd);
+
+   if (!resources) {
+      printf("Cannot retrieve DRM resources\n");
+      return -1;
+   }
+
+   printf("Resolution %dx%d\n", resources->min_width, resources->min_height);
+
+   return 0;
+}
+```
+
+This code attempts to open the primary GPU (usually `/dev/dri/card0`), and prints out the minimum supported resolution. Use `gcc -o test libdrm-example.c -ldrm` to compile this code. Run it with `./test`.
+
+The input file is not needed in this case. The libdrm accesses the DRM subsystem directly. The device file `/dev/dri/card0` is used for drawing the card, which will use the current card’s settings and your own kernel for execution, therefore it is expected that this filename might be different on different systems.
+
+Specifications:
+
+1. Device file: The device file to be used is determined by the specific hardware and configuration of the system.
+
+2. Resolution: The resolution printed is of the smallest framebuffer that would be accepted as a mode, rather than a displayable resolution. 
+
+In terms of specifications, the libdrm mainly interacts directly with the Linux kernel's DRM subsystem, without requiring any input files. As such, the main part to keep in consideration is ensuring the appropriate DRM devices are available and accessible on the system.

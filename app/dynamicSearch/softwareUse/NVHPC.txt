@@ -1,47 +1,48 @@
-Use Case: NVHPC Software Suite
-Code details and examples:
-NVHPC is Nvidia's suite of compilers and libraries for high-performance computing. It includes NVCC (Nvidia's CUDA Compiler), NVFORTRAN (Nvidia Fortran Compiler), NVCOMPILER (Nvidia C/C++ Compiler), and GPU-accelerated libraries like cuBLAS, cuFFT, cuSPARSE, etc.
+Use Case: The NVHPC (NVIDIA HPC SDK) is a comprehensive suite of compilers and libraries for developing high-performance computing applications. A use case might be to compile and run a simple Fortran program that calculates the Fibonacci sequence up to a given number.
 
-Sample input files:
-- For compiling CUDA code with NVCC:
-```cuda
-#include <stdio.h>
+Code Details and Examples: 
 
-__global__ void add(int a, int b, int *c) {
-    *c = a + b;
-}
+Code:
 
-int main() {
-    int a = 5, b = 10, c;
-    int *d_c;
+This is a simple Fortran program called `fibonacci.f90`:
 
-    cudaMalloc((void**)&d_c, sizeof(int));
-
-    add<<<1,1>>>(a, b, d_c);
-
-    cudaMemcpy(&c, d_c, sizeof(int), cudaMemcpyDeviceToHost);
-
-    printf("Result: %d\n", c);
-
-    cudaFree(d_c);
-
-    return 0;
-}
-```
-
-- For compiling Fortran code with NVFORTRAN:
 ```fortran
-program hello
-    print *, "Hello, World!"
-end program hello
+program fibonacci
+implicit none
+integer :: n, res
+print *, 'Enter a positive integer:'
+read *, n
+res = fib(n)
+print *, 'The', n, 'th Fibonacci number is:', res
+end program fibonacci
+
+function fib(n)
+implicit none
+integer, intent(in) :: n
+integer :: fib 
+if (n == 0) then
+  fib = 0
+else if (n == 1) then
+  fib = 1
+else
+  fib = fib(n-1) + fib(n-2)
+end if
+return
+end function fib
 ```
 
-Command to compile CUDA code using NVCC:
+Command to compile and run:
+
+First, compile the Fortran program with `nfort`:
+
 ```
-nvcc -o add_cuda add.cu
+nfort -o fibonacci fibonacci.f90
 ```
 
-Command to compile Fortran code using NVFORTRAN:
+After successful compilation, an executable file `fibonacci` is created. This can be run with:
+
 ```
-nvfortran -o hello_fortran hello.f90
-```
+./fibonacci
+``` 
+
+The program will then ask for input (a positive integer), calculate the Fibonacci number in that position, and print it to standard output.

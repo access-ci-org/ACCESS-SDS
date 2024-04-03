@@ -1,0 +1,13 @@
+{
+    "software_name": "bwameth",
+    "comprehensive_overview": "Bwameth is a software tool designed for aligning bisulfite-treated sequencing reads (BS-Seq) from targeted bisulfite sequencing experiments with DNA methylation analysis.",
+    "core_features": "The core features of bwameth include alignment of BS-Seq reads, detection of 5-methylcytosine bases, calculation of DNA methylation levels, and visualization of methylation patterns.",
+    "general_tags": ["DNA methylation", "Bisulfite sequencing", "Alignment", "Bioinformatics"],
+    "additional_tags": {
+        "research_discipline": "Genetics",
+        "research_area": "Epigenetics",
+        "software_class": "Sequence alignment tool",
+        "software_type": "Bioinformatics tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

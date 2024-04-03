@@ -1,19 +1,28 @@
-As you mentioned "graphite2," here is some information on it:
+Use Case: Use Graphite2 for rendering 2D shapes to a bitmap with anti-aliasing. Graphite2 is a font engine that support complex non-Roman script rendering. It can handle scripts that have complex behaviors such as Arabic where characters can change shape depending on context, or Indic scripts where characters can interact and re-arrange.
 
-Use Case: Graphite2 is a text layout and rendering system that can be used for complex scripts and languages in computing. It is often used in software applications to handle different writing systems and typographic features.
+Code details and examples: Code
 
-Code details and examples:
-```python
-# Sample input file (text.txt)
-This is a sample text for Graphite2 rendering.
+The Graphite engine does not come with an interface for preparing input documents. Nonetheless, you can prototype writing and font rendering with the 'gr2fonttest' test suite included in Graphite2.
 
-# Sample code snippet in Python for using Graphite2
-import graphite2
+If you have a FreeType font that uses Graphite rendering and a Graphite description of a script (GDL) file, you could run:
 
-text = "This is a sample text for Graphite2 rendering."
-graphite_output = graphite2.render(text)
+./gr2fonttest /path/to/font.ttf /path/to/input.text
 
-print(graphite_output)
+This will output a bitmap of the typeface’s rendering of the input text.
+
+An input file must be a plain text file encoded in UTF-8.
+
+Minimal example:
+
+Input file (input.text):
+```
+Hello, world!
 ```
 
-Please note that this is a hypothetical example, as Graphite2 is typically used as a library within software applications.
+With a valid TTF font file at the specified path, you'd run:
+
+```bash
+./gr2fonttest /path/to/font.ttf input.text
+```
+
+This will produce a PNG image of the text "Hello, world!" as it would render using the Graphite engine, with rules as specified by your input GDL file and the font.ttf. Note that this doesn't reveal all the magic Graphite can offer, but it's a start to visualise text through this complex rendering.

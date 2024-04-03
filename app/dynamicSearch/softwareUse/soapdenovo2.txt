@@ -1,0 +1,43 @@
+Use Case: SOAPdenovo2 is designed to assemble short reads from NGS platforms like Illumina GA. It is widely used for creating de novo drafts of large genomes.
+
+Code details and examples: 
+
+Code: 
+
+An implementation of SOAPdenovo2 would involve running the config file and executing the following commands:
+
+```
+SOAPdenovo-63mer all -s config_file -K 63 -R -o graph_prefix 1>ass.log 2>ass.err 
+```
+In this case, -s specifies the configuration file, -K is the k-mer size, -R resolves repeats by reads, -o is the output prefix.
+
+Specifications and details in input files:
+
+The config file is used to specify configuration details for SOAPdenovo2. A sample config file might look like this:
+
+```
+#maximal read length
+max_rd_len=100
+[LIB]
+#average insert size
+avg_ins=200
+#if sequence needs to be reversed
+reverse_seq=0
+#in which part(s) the reads are used
+asm_flags=3
+#use only first 100 bps of each read
+rd_len_cutoff=100
+#in which order the reads are used while scaffolding
+rank=1
+# cutoff of pair number for a reliable connection (at least 3 for short insert size)
+pair_num_cutoff=3 
+#minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=32
+#a pair of fastq file, read 1 file should always be followed by read 2 file
+q1=lib1.R1.fq
+q2=lib1.R2.fq
+```
+
+Please take it into account, links in the config file are specified under the [LIB] flag.
+
+There are not specific input files for this software as it uses fastq files generated from sequencing, the configuration file is written in plain-text format.

@@ -1,0 +1,24 @@
+{
+    "software_name": "SMRT Link",
+    "comprehensive_overview": "SMRT Link is a software suite designed for the analysis of Single-Molecule Real-Time (SMRT) sequencing data obtained from PacBio sequencers. It serves as a central hub for data processing, analysis, visualization, and storage in bioinformatics applications.",
+    "core_features": [
+        "Centralized platform for PacBio sequencing data analysis",
+        "Data processing and quality control tools",
+        "Variant detection and genome assembly",
+        "Interactive visualization tools",
+        "Support for long-read sequencing data analysis"
+    ],
+    "general_tags": [
+        "Bioinformatics",
+        "High-Throughput Sequencing",
+        "Data Analysis",
+        "Genomics"
+    ],
+    "additional_tags": {
+        "research_discipline": "Biological Sciences",
+        "research_area": "Genetics",
+        "software_class": "Bioinformatics",
+        "software_type": "Data Analysis Tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

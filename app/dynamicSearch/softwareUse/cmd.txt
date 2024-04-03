@@ -1,0 +1,14 @@
+Use Case: cmd is not a scientific or research software, but a built-in Windows command line interpreter used to execute commands or scripts batch by batch.
+
+Code details and examples: Code
+
+Input Format:
+cmd commands do not need an input file, rather input is provided through commands directly inputted into the prompt.
+
+Example Command: The "dir" command is used to list all files and directories in the current directory.
+
+```
+C:\>dir
+```
+
+When executed, the above command will list all files and directories in the current directory.

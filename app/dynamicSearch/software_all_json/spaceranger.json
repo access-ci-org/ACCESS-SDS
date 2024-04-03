@@ -1,0 +1,13 @@
+{
+    "software_name": "spaceranger",
+    "comprehensive_overview": "Space Ranger is a software package developed by 10x Genomics for analysis, visualization, and interpretation of spatially resolved transcriptomics data. It enables the processing of spatially resolved transcriptomics data generated using the 10x Genomics Visium platform.",
+    "core_features": "1. Preprocessing of raw image and spatially resolved transcriptomics data. 2. Gene expression quantification for spatially resolved transcriptomics data. 3. Spatial mapping of gene expression data onto tissue sections. 4. Visualization tools for spatial transcriptomics data. 5. Integration with Seurat for downstream analysis and interpretation.",
+    "general_tags": ["bioinformatics", "HPC tools"],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Analysis and Visualization",
+        "software_type": "Bioinformatics Tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

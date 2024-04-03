@@ -1,14 +1,14 @@
-Use Case: ngmlr is a long-read mapper designed to align PacBio or Nanopore long reads. 
+Use Case: NGMLR is a long-read mapper designed to accurately align sequenced DNA from unknown genomes to a reference. Here we show the process of aligning a long read file with the reference genome.
 
 Code details and examples:
-```
-# Command to align PacBio/Nanopore reads to a reference genome
-ngmlr -t 8 -r reference.fasta -q reads.fastq -o alignments.sam
+
+The input files required are the read file in FASTQ or FASTA format and the reference genome in FASTA format.
+
+For example, if your read file is 'reads.fasta' and the reference is 'reference.fasta', 
+
+Code: 
+```shell
+ngmlr -r reference.fasta -q reads.fasta -o output.sam
 ```
 
-Input files:
-- reference.fasta: Reference genome in FASTA format
-- reads.fastq: PacBio or Nanopore reads in FASTQ format
-
-Output file:
-- alignments.sam: SAM file containing the alignments of reads to the reference genome
+In the above code, '-r' represents the reference file, '-q' represents the query file and '-o' specifies the output file name.

@@ -1,0 +1,79 @@
+Use Case: Calculate the Mean of a List of Numbers Using Numpy in Python
+Numpy is a scientific computation library in Python. It is particularly useful for handling large data sets.
+
+Code details and examples: Code.
+You need to provide a list of numbers as input.
+
+Sample Input file:
+[1, 2, 3, 4, 5]
+
+Code snippet:
+
+```python
+import numpy as np
+
+my_list = [1, 2, 3, 4, 5]
+mean = np.mean(my_list)
+
+print(mean)
+```
+
+This script uses the numpy library to compute the mean (average) of the numbers in the list my_list. It should print the result 3.0 when run.
+
+The command to run the code:
+`python mean.py`
+
+if your file is saved as mean.py. 
+
+The Mean is a measure of central tendency of a probability distribution.
+
+----
+
+Use Case: Calculate a Sequence Alignment Using the Biopython Library
+Biopython is a suite of freely available tools for biological computation written in Python by an international team of developers.
+
+Code details and examples: Code
+You need to provide two sequences in a file as input. The sequences need to be in FASTA format.
+
+Sample Input file:
+```
+>seq1
+ATGCGATAGCGTATATACGA
+>seq2
+ATGAATAGCGTA
+```
+
+Code snippet:
+
+```python
+from Bio import SeqIO
+from Bio.Seq import Seq
+from Bio.Alphabet import IUPAC
+from Bio.SeqRecord import SeqRecord
+from Bio import pairwise2
+
+def read_fasta_file(file):
+    sequence_data_dict = {}
+    for record in SeqIO.parse(file, "fasta"):
+        description = record.description.split()
+        sequence_data_dict[description[0]] = str(record.seq).upper()
+    return sequence_data_dict
+
+sequences = read_fasta_file("seq.fasta")
+seq1 = sequences['seq1']
+seq2 = sequences['seq2']
+
+alignments = pairwise2.align.globalxx(seq1, seq2)
+
+for alignment in alignments:
+    print(alignment)
+```
+
+This code uses the Biopython library to calculate a global sequence alignment between two sequences in the input file. 
+
+The command to run the code:
+`python alignment.py`
+
+if your file is saved as alignment.py. 
+
+Pairwise sequence alignment uses the dynamic programming algorithm where the algorithm finds the best alignment (including indels) between two sequences. This is the key to many more sophisticated pairwise algorithms in bioinformatics.

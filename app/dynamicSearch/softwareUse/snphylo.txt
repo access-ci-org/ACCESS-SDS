@@ -1,0 +1,26 @@
+Use Case: SNP genotyping data analysis for constructing maximum-likelihood phylogenetic trees.  
+
+Code details and examples:  
+SNP genotyping data are generally available as CSV files indicating the presence (1) or absence (0) of the respective SNP at each genome position for each individual or sample. Files for SNPhylo generally require a header line indicating the sample identifiers.
+
+Sample input file (CSV):
+
+    ,sample1,sample2,sample3
+    rs001,1,0,0
+    rs002,0,1,0
+    rs003,1,1,1
+    rs004,1,1,0
+
+In this case, 'rs001', 'rs002', etc. represent the SNP positions, and 'sample1', 'sample2', etc. represent the individual samples.
+
+For running SNPhylo pipeline, the main script is `snphylo.sh`. Running the pipeline generally follows the format shown below:
+
+`snphylo.sh -d input_file.csv`
+
+where `input_file.csv` is your SNP genotyping dataset.
+
+In case you want to specify a different output directory, you can use the -o (output directory) parameter:
+
+`snphylo.sh -d input_file.csv -o /path/to/output/directory`
+
+SNPhylo provides several other parameters to customize the analysis, but these form the basics of running SNPhylo on a SNP genotyping dataset.

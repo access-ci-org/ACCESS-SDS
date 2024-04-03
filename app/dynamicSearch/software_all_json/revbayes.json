@@ -1,0 +1,11 @@
+{
+    "software_name": "RevBayes",
+    "comprehensive_overview": "RevBayes is a probabilistic programming framework for Bayesian inference of phylogenetic trees and evolutionary parameters.",
+    "core_features": "RevBayes provides a flexible and customizable environment for specifying complex phylogenetic models, performing Bayesian inference using Markov chain Monte Carlo (MCMC) algorithms, and incorporating various evolutionary models and priors.",
+    "general_tags": ["phylogenetics", "Bayesian inference", "evolutionary biology"],
+    "research_discipline": "Systematics and Population Biology",
+    "research_area": "Phylogenetics",
+    "software_class": "Computational Biology",
+    "software_type": "Probabilistic Programming Tool",
+    "field_of_science": "Biological Sciences"
+}

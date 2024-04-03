@@ -1,0 +1,13 @@
+{
+    "software_name": "MuJoCo",
+    "comprehensive_overview": "MuJoCo is a physics engine for detailed, efficient and accurate simulation of complex dynamical systems. It is designed for high-fidelity modeling and simulation of computational and robotic systems in various domains.",
+    "core_features": "1. Fast and efficient physics simulation\n2. Support for complex dynamical systems\n3. High-fidelity modeling capabilities\n4. Integration with various domains such as robotics and computational systems\n5. Advanced control algorithms\n6. Real-time simulation capabilities",
+    "general_tags": ["physics engine", "simulation", "robotics"],
+    "additional_tags": {
+        "research_discipline": "Artificial Intelligence and Intelligent Systems",
+        "research_area": "Robotics",
+        "software_class": "Simulation Software",
+        "software_type": "Physics Engine",
+        "field_of_science": "Engineering and Technology"
+    }
+}

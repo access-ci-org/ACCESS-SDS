@@ -1,0 +1,23 @@
+{
+  "software_name": "RNAQuast",
+  "comprehensive_overview": "RNAQuast is a quality assessment tool for de novo transcriptome assembly pipelines. It evaluates the quality of transcriptome assemblies by comparing them to a reference genome and measures various metrics to assess the completeness, correctness, and compatibility of the assembly.",
+  "core_features": [
+    "Quality assessment of de novo transcriptome assemblies",
+    "Comparison to a reference genome",
+    "Evaluation of completeness, correctness, and compatibility",
+    "Generation of detailed quality reports"
+  ],
+  "general_tags": [
+    "Bioinformatics",
+    "Transcriptome Analysis",
+    "Quality Assessment",
+    "Genomics"
+  ],
+  "additional_tags": {
+    "research_discipline": "Biological Sciences",
+    "research_area": "Genetics",
+    "software_class": "Bioinformatics Tool",
+    "software_type": "Quality Assessment Tool",
+    "field_of_science": "Biological Sciences"
+  }
+}

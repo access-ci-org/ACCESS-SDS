@@ -1,0 +1,25 @@
+Use Case: OrthoFinder is a software package for phylogenetic analysis of protein sequences. It computes ortholog groups, a rooted species tree, and gene trees for all ortholog groups, as well as pairwise sequence alignments, and it uses these to infer orthologs and paralogs. 
+
+Code details and examples: Code
+
+Input File Format: The input file should be a directory containing fasta files (.fa or .fasta), one per species. The names of the fasta files will be used as the species identifiers in the results files.
+
+Sample Input File:
+Each fasta file should contain protein sequences for one species. Each sequence should have a unique identifier within that species. Here is a short example of what an input file (Let's call it species1.fasta) might look like:
+```
+>protein1
+MTEYKLVVVGAGGVGKSALTIQLIQNHFVDEYDPTIEDSYR
+
+>protein2
+MTEYKLVVVGAGGVGKSALTIQLIQNHFVDEYDPTIEDAKF
+
+>protein3
+MTEYKLVVVGAGGVGKSALTIQLIQNHFVDEYDPTIEDYRD
+```
+Command to Run:
+In order to run OrthoFinder you should navigate to the directory containing the input files, and run the following command:
+
+```bash
+orthofinder -f ExampleDataset
+```
+This command says to run orthofinder on the directory "ExampleDataset". This directory should contain one fasta file for each species.

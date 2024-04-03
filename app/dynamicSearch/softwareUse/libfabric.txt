@@ -1,48 +1,54 @@
-Use Case: libfabric is a high-performance networking API that is used to build efficient, portable, and scalable high-performance applications. 
+Use Case: Use of Libfabric for message-passing between nodes and managing multiple network connections within HPC environments. Its aim is to provide a low-latency and high bandwidth interface to meet the needs of the sophisticated network applications of today.
 
-Code details and examples:
-Sample input files:
-- input.txt: A simple text file with some sample content.
+Code details and examples: 
 
 Code:
-1. Writing a simple program using libfabric to read a file:
+
+Libfabric does not ship with sample code. Typically, code using libfabric will make use of the libfabric API, which provides functions for setting up and managing fabrics (network topologies), domains (isolated communication spaces), ep’s (endpoints for data transfer), cq’s (completion queues for async operations), and other network resources. An example of an endpoint setup and message send using the libfabric API might look like this:
 
 ```c
-#include <stdio.h>
-#include <stdlib.h>
-#include <rdma/fabric.h>
+#include <rdma/fi_domain.h>
+#include <rdma/fi_endpoint.h>
+#include <rdma/fi_cm.h>
+#include <rdma/fi_errno.h>
 
-#define FILENAME "input.txt"
+// setup hints, info
+struct fi_info *hints, *info;
 
-int main() {
-    struct fi_info *hints, *info;
-    fi_info(FT_UNSPEC, "psm2", hints, &info);
-    
-    FILE* file = fopen(FILENAME, "r");
-    
-    if (file == NULL) {
-        printf("Error opening file.\n");
-        return 1;
-    }
-    
-    char buffer[256];
-    while (fgets(buffer, sizeof(buffer), file) != NULL) {
-        printf("%s", buffer);
-    }
-    
-    fclose(file);
-    
-    fi_freeinfo(info);
-    
-    return 0;
+hints = fi_allocinfo();
+hints->ep_attr->type = FI_EP_RDM;          // reliable datagrams
+hints->caps = FI_MSG;                      // messaging capability
+hints->domain_attr->mr_mode = FI_MR_LOCAL; // local memory registration
+
+// get provider
+if (fi_getinfo(FI_VERSION(1,5), NULL, NULL, 0, hints, &info) != 0) {
+  fprintf(stderr, "Could not get provider info\r\n");
+  exit(1);
 }
+
+// setup domain
+struct fid_fabric *fabric;
+struct fid_domain *domain;
+fi_fabric(info->fabric_attr, &fabric, NULL);
+fi_domain(fabric, info, &domain, NULL);
+
+// setup endpoint
+struct fid_ep *ep;
+fi_endpoint(domain, info, &ep, NULL);
+
+// set up send buffer
+void *sendbuf;
+fi_mr_reg(domain, sendbuf, bufsize, FI_SEND, 0, 0, 0, &mr, NULL);
+
+// send a message
+fi_send(ep, sendbuf, sendlen, fi_mr_desc(mr), 0, &context);
 ```
 
-2. Compiling and running the program:
+Command to run:
 
-```bash
-gcc -o read_file read_file.c -lpsm2 -lfi
-./read_file
-```
+gcc -o myprogram myprogram.c -lfabric
 
-This is a simple example of how libfabric can be used in a program to read a file. The program opens a file called "input.txt" and prints its contents to the console.
+./myprogram
+
+Inputs: C source files with API calls to libfabric.
+Outputs: Any information sent/received over the network using the libfabric endpoints.

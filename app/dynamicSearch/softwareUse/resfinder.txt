@@ -1,0 +1,30 @@
+Use Case: ResFinder is used for finding antibiotic resistance genes in bacterial genomes.
+
+Code details and examples: Code
+
+ResFinder uses FASTA formatted files as input. A typical FASTA file begins with a single-line description, followed by lines of sequence data.
+
+Sample Input File (FASTA Format):
+
+    >Seq1
+    ATGGCCGGCTTGCTGAACGG...
+    >Seq2
+    AACGGCGGCCGCCTGGTCG...
+
+The command to run ResFinder is:
+
+    ./resfinder.py -i input.fasta -o output_folder
+
+Here, the `-i` flag specifies the input file and the `-o` flag specifies the output directory.
+
+Sample Code Snippet:
+
+# Please replace "input.fasta" and "output_folder" with your actual file and folder names.
+
+```
+./resfinder.py -i input.fasta -o output_folder
+```
+
+This example assumes that you're in the ResFinder directory. If not, you may need to provide the full path to the `resfinder.py` executable.
+
+This will output a list of potential antibiotic resistance genes found in the input file, along with their locations and other relevant information. Each identified gene is listed once per sequence in which it is found. Resistance genes are sorted by the resistance phenotype they confer.

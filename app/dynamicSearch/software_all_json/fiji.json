@@ -1,0 +1,13 @@
+{
+  "software_name": "Fiji",
+  "comprehensive_overview": "Fiji is an image processing package, a distribution of ImageJ, bundling a lot of plugins which facilitate scientific image analysis. It is open-source software extensively used in scientific research for image visualization and processing.",
+  "core_features": "Key features of Fiji include a user-friendly interface, support for a wide range of image file formats, a large collection of built-in plugins for image enhancement and analysis, customizable scripting with a macro language, and the ability to create custom plugins.",
+  "general_tags": ["image processing", "scientific research", "image analysis"],
+  "additional_tags": {
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Image Processing Software",
+    "software_type": "Analysis Tool",
+    "field_of_science": "Other Natural Sciences"
+  }
+}

@@ -1,0 +1,24 @@
+{
+    "software_name": "cellbender",
+    "comprehensive_overview": "CellBender is a Python package for processing, denoising, and removing technical variation from single-cell RNA-seq data. It offers methods for the removal of ambient RNA contamination, batch effects, and other technical artifacts commonly found in single-cell RNA-seq datasets.",
+    "core_features": [
+        "Denoising single-cell RNA-seq data",
+        "Removing ambient RNA contamination",
+        "Correcting batch effects",
+        "Addressing technical artifacts in scRNA-seq datasets"
+    ],
+    "general_tags": [
+        "single-cell RNA-seq",
+        "data processing",
+        "denoising",
+        "batch effects",
+        "bioinformatics"
+    ],
+    "additional_tags": {
+        "research_discipline": "Genetics",
+        "research_area": "Single-cell RNA-seq data analysis",
+        "software_class": "Data Processing",
+        "software_type": "Python library",
+        "field_of_science": "Biological Sciences"
+    }
+}

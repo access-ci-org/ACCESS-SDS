@@ -1,17 +1,29 @@
-Use Case: Imageio is a Python library that provides an easy interface to read and write a wide range of image data. It supports formats such as PNG, JPEG, GIF, BMP, TIFF, and many more.
+Use Case: Use Imageio for reading and writing image data. It supports a wide variety of image types, including animated images, volumetric data, and scientific formats. 
 
 Code details and examples:
-```python
+
+Code:
+
+```
 import imageio
 
 # Reading an image
-image = imageio.imread('sample_image.png')
+image = imageio.imread('/path/to/image.png')
 
-# Displaying image shape
-print(image.shape)
+# Displaying the image
+import matplotlib.pyplot as plt
+plt.imshow(image)
+plt.show()
 
 # Writing an image
-imageio.imwrite('output_image.jpg', image)
+output_image = function_that_manipulates_image(image)  # This could be any function that returns a numpy array
+imageio.imsave('/path/to/output.png', output_image)
 ```
 
-Command: N/A - Since imageio is a Python library, you can run the Python script directly using a Python interpreter.
+Input files: The input for imageio.imread and imageio.imsave are strings that specify the path to the image file. The path can be either relative or absolute. The mentioned image files can be in various formats like jpg, png, tif etc.
+
+Command to run:
+
+In a python environment where imageio is installed, this script can just be run as a regular python script:
+
+`python script.py`

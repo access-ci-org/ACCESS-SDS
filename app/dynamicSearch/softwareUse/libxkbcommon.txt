@@ -1,49 +1,41 @@
-Use Case: libxkbcommon;  
-Code details and examples:  
-libxkbcommon is a library for handling keyboard descriptions, including loading them from disk, parsing them, and handling key press events. The library is commonly used in desktop environments and window systems for handling keyboard input.
+Use Case: libxkbcommon is a package often used by developers to handle keyboard descriptions, including loading them from disk, parsing them, and handling their state. It's used in virtual keyboard systems like Wayland or in some cases X.Org 
 
-Sample Input:  
-- Keyboard layout description file (e.g., my_keyboard_layout.xkb)
+Code Details and Examples: Here is a simple example of how to use libxkbcommon to interpret raw keycodes into keysyms (the symbols your keyboard produces, like 'a' or 'Esc').
 
-Code:  
+Code:
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <xkbcommon/xkbcommon.h>
 
-int main() {
+int main()
+{
     struct xkb_context *context = xkb_context_new(XKB_CONTEXT_NO_FLAGS);
-    if (!context) {
-        printf("Error creating xkb context\n");
-        return 1;
+
+    struct xkb_keymap *keymap;
+    keymap = xkb_keymap_new_from_names(context, NULL, XKB_KEYMAP_COMPILE_NO_FLAGS);
+    
+    xkb_keysym_t keysym;
+    const char *keysym_name;
+
+    for (xkb_keycode_t i = 9; i < 255; i++) {
+        keysym = xkb_state_key_get_one_sym(state, i);
+        keysym_name = xkb_keysym_get_name(keysym);
+        printf("keysym %s produced by keycode %u\n", keysym_name, i);
     }
 
-    // Load keymap from file
-    struct xkb_keymap *keymap = xkb_keymap_new_from_file(context, "my_keyboard_layout.xkb",
-                                                         XKB_KEYMAP_FORMAT_TEXT_V1, XKB_KEYMAP_COMPILE_NO_FLAGS);
-    if (!keymap) {
-        printf("Error loading keymap\n");
-        xkb_context_unref(context);
-        return 1;
-    }
-
-    // Create a state from the keymap
-    struct xkb_state *state = xkb_state_new(keymap);
-    if (!state) {
-        printf("Error creating key state\n");
-        xkb_keymap_unref(keymap);
-        xkb_context_unref(context);
-        return 1;
-    }
-
-    // Example: Handling a key press event
-    xkb_keycode_t keycode = 30;  // Example keycode
-    xkb_keysym_t sym = xkb_state_key_get_one_sym(state, keycode);
-    const char *keyname = xkb_keysym_get_name(sym);
-
-    printf("Pressed key: %s\n", keyname);
-
-    // Clean up
-    xkb_state_unref(state);
-    xkb_keymap_unref(keymap);
     xkb_context_unref(context);
-
     return 0;
 }
+```
+To compile this code, it would be required to link against libxkbcommon. This can be done via gcc using the following command:
+
+`gcc -o test test.c $(pkg-config --libs --cflags xkbcommon)`
+
+And to run:
+
+`./test`
+
+This command will print the keysyms associated with each keycode on your current keyboard layout, from 9 to 254. The input is the keycodes provided in the loop, and the output is the key symbol name and the key code.

@@ -1,0 +1,31 @@
+Use Case: KiwiSolver is a fast and efficient implementation of the Cassowary constraint solving algorithm in Python. One effective use could be in using constraints to layout UI elements
+
+Code details and examples:
+
+```python
+from kiwisolver import Variable, Solver
+
+# Create a new variable
+x = Variable("x")
+
+# Create a new solver
+solver = Solver()
+
+# Add a constraint for the value of `x`
+solver.addConstraint((x == 50))
+
+# Update the solver
+solver.updateVariables()
+
+print(x.value())
+```
+
+This code snippet defines a variable `x` with the constraint that it must be equal to `50`, adds this constraint to the solver, updates the variables of the solver, and then prints the value of `x`. No input files are required for this minimal example.
+
+Command to run:
+
+```shell
+python kiwi_example.py
+```
+
+Where `kiwi_example.py` is the python file containing the above sample code.

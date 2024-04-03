@@ -1,0 +1,26 @@
+Use Case: The prettyunits r package is used to formats time and byte units in human readable format. For example, it can convert a time in milliseconds into a string represented in minutes.
+
+Code Details and Examples: 
+
+Code: 
+
+```R
+# Import the package
+library(prettyunits)
+
+# Use the package to convert 60000 milliseconds into minutes.
+pretty_dt(60000)
+
+# Use the package to convert 1e+06 bytes into megabytes.
+pretty_bytes(1e+06)
+```
+
+Sample Input Files: No sample input files are needed for this software.
+
+Format Required: The pretty_dt and pretty_bytes functions take numeric values as input. The data type of the numeric value is double.
+
+Specifications and Details in Input Files: There is no input file required for the prettyunits package. All data is passed directly through the function parameters.
+
+Command to Run the Package: After writing the above code into a file (say script.R), the package can be run using the following command on the terminal:
+
+`Rscript script.R`

@@ -1,0 +1,44 @@
+Use Case: Taichi is a high-performance programming language for computer graphics and simulations. It is used for developing high-performance applications, particularly those involving physical simulations, such as fluid dynamics, solid mechanics, and computer graphics rendering.
+
+Code details and examples: Taichi uses a Python-based syntax, but its execution model allows for highly efficient computation on both CPUs and GPUs. A simplified code example of a physical simulation in Taichi might look something like this:
+
+Code:
+
+```python
+import taichi as ti
+
+ti.init(arch=ti.gpu) 
+
+n = 320
+pixels = ti.var(dt=ti.f32, shape=(n * 2, n))
+
+@ti.func
+def complex_sqr(z):
+  return ti.Vector([z[0]**2 - z[1]**2, 2 * z[0] * z[1]])
+
+@ti.kernel
+def paint(t: ti.f32):
+  for i, j in pixels: 
+    freq = ti.Vector([0.8, t])
+    c = freq + ti.Vector([i / n - 1, j / n - 0.5]) * 2
+    z = ti.Vector([0.0, 0.0])
+    iterations = 0
+    while z.norm() < 20 and iterations < 50:
+      z = complex_sqr(z) + c
+      iterations += 1
+    pixels[i, j] = 1 - iterations * 0.02
+
+gui = ti.GUI("Fractal", (n * 2, n))
+
+for i in range(1000000):
+  paint(i * 0.03)
+  gui.set_image(pixels)
+  gui.show()
+```
+Run Command
+
+The Taichi program can be run using Python command. If the file name is example.py, it can be run using:
+
+```shell
+python3 example.py
+```

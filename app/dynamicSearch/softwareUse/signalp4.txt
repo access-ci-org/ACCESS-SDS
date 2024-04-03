@@ -1,0 +1,33 @@
+Use Case: SignalP 4.0 tool is used to predict signal peptide sequences and the cleavage sites in gram-positive bacteria, gram-negative bacteria, and eukaryote data.
+
+Code details and examples:
+
+Code:
+
+The input file can have any name, but must be in FASTA format (.fasta or .fa). Suppose our file is named as "test.fasta":
+
+```
+>sequence1
+MSTAAAVSRVNSFRTIGIGKGGSNSVKVSAAVAAAAPAAVAAPALETQG
+>sequence2
+MKGIEVLLOATGLSAVR.
+```
+
+To run the code:
+```bash
+signalp -fasta test.fasta
+```
+
+In the above code, "signalp" is the command to run SignalP, "-fasta" is used to specify the FASTA format file to be used, and "test.fasta" is the input file containing the sequences to be analyzed.
+
+The tool will then provide a prediction of the presence and location of signal peptide cleavage sites in the amino acid sequences from 'test.fasta' file. 
+
+The output will be in tabular format like:
+
+```
+SeqID   Prediction  SeqName     Organism  Begin  End 
+sequence1    YES    sequence1   Eukaryotes  1    18 
+sequence2    NO     sequence2   Bacteria    -    -  
+```
+
+This output table indicates the sequence ID, whether a signal peptide was predicted (YES/NO), the type of organism (Eukaryotes/Bacteria), and the beginning and end amino acid positions of the predicted signal peptide. If no signal peptide is predicted, the Begin and End fields will contain a dash.

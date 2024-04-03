@@ -1,32 +1,35 @@
-Use Case: Graphical User Interface Development
-Code details and examples: 
-GTK3 is a popular toolkit for creating graphical user interfaces. Below is a simple example of a GTK3 window written in Python:
+Use Case: Use GTK3 for creating graphical user interfaces in applications.
+
+Code details and examples: Code
+
+GTK3, or GIMP Toolkit, is a library for creating graphical user interfaces. It's primarily used for developing applications for Linux, but it's also compatible with other platforms, such as Windows and Mac OS X.
+
+For instance, say we want to create a simple application that shows a window with a button. When the button is clicked, the application prints "Button clicked" to the console. 
+
+In Python, using PyGObject (the Python bindings for GTK3), the code would look like this:
 
 ```python
 import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
-class MyWindow(Gtk.Window):
-    def __init__(self):
-        Gtk.Window.__init__(self, title="GTK3 Example")
-        self.set_default_size(200, 100)
+class ButtonWindow(Gtk.Window):
 
+    def __init__(self):
+        Gtk.Window.__init__(self, title="Button Example")
         self.button = Gtk.Button(label="Click Here")
         self.button.connect("clicked", self.on_button_clicked)
         self.add(self.button)
 
     def on_button_clicked(self, widget):
-        print("Button was clicked!")
+        print("Button was clicked")
 
-win = MyWindow()
+win = ButtonWindow()
 win.connect("destroy", Gtk.main_quit)
 win.show_all()
 Gtk.main()
 ```
 
-To run the above code, save it in a file (e.g., `gtk3_example.py`) and execute it using Python:
+In this code, `gi.require_version('Gtk', '3.0')` is used to specify that we want to use GTK3. 'ButtonWindow' is a custom class that inherits from GTK's 'Window' class. The '__init__' method is used to initialize the window with a title, and add a button to it. The `self.button.connect("clicked", self.on_button_clicked)` is used to connect the "clicked" signal of the button to the 'on_button_clicked' method of our 'ButtonWindow' class, which prints "Button was clicked" to the console. Lastly, `Gtk.main()` is used to start the GTK main loop, which processes input and redraw events.
 
-```
-python gtk3_example.py
-```
+Run this program with Python on the command line by saving it to a file (say, "button_example.py"), and then running `python button_example.py`. It will display a GTK window with a button that prints "Button was clicked" when clicked.

@@ -1,50 +1,43 @@
-Use Case: libdap is a C++ implementation of the OPeNDAP protocol, allowing clients to access scientific data remotely.
+Use Case: libdap provides a mechanism to download, explore, and manipulate scientific data using the DAP protocol. This library makes it easy for you to interact with scientific data in a programmatic way. 
 
-Code details and examples:
-```cpp
-// Sample code to access a remote dataset using libdap
+Code details and examples: 
 
-#include <cstdlib>
-#include <iostream>
-#include "dodsclient.h"
+Code:
 
-int main() {
-    // URL of the OPeNDAP dataset
-    std::string url = "http://test.opendap.org/dap/data/nc/fnoc1.nc";
+```
+#include "Connect.h"
+#include "BaseTypeFactory.h"
+#include "DDS.h"
 
-    // Create a DODSClient object
-    DODSClient client;
+using namespace libdap;
 
-    // Connect to the remote dataset
-    if (!client.open(url)) {
-        std::cerr << "Error connecting to the dataset." << std::endl;
-        return 1;
-    }
+int main(int argc, char **argv) {
+    string url;
+    if (argc == 2) 
+        url = string(argv[1]);
+    else
+        url = "http://test.opendap.org/opendap/hyrax/data/nc/sample.nc";
 
-    // Fetch the data
-    DAS das;
-    DDS dds;
-    DataDDS data;
+    Connect connect(url);
+    BaseTypeFactory factory;
+    DDS dds(&factory);
+    connect.request_data(dds);
 
-    client.getDDS(dds);
-    client.getDAS(das);
-    client.getData(data);
-
-    // Print the data
-    for (int i = 0; i < data.dimensions()[0]; ++i) {
-        std::cout << data.getValue(0, i) << std::endl;
-    }
+    for (DDS::Vars_iter vi = dds.var_begin(); vi != dds.var_end(); vi++)
+        cout << (*vi)->FQNname() << ": " << (*vi)->type_name() << endl;
 
     return 0;
 }
 ```
 
-To compile the above code:
-```bash
-g++ -o my_opendap_client my_opendap_client.cpp -ldap -lnetcdf_c++
-```
+In this code, libdap is used to connect to an OpenDAP server and read a sample `.nc` file. The variables and their types are then printed.
 
-To run the compiled program:
-```bash
-./my_opendap_client
-```
+Run with:
+
+`g++ -o run_program program_name.cc -lldapclient -lpthread`
+
+Then:
+
+`./run_program sample_url_while_running` 
+
+where 'sample_url_while_running' is the URL of the data to be processed and 'program_name.cc' is the name of the c++ code file.

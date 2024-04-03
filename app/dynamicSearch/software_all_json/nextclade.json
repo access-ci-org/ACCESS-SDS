@@ -1,0 +1,24 @@
+{
+  "software_name": "Nextclade",
+  "comprehensive_overview": "Nextclade is a bioinformatics tool designed for the analysis of SARS-CoV-2 viral genomes. It provides a range of functionalities to help in the understanding of the genetic diversity and mutations in the virus, aiding in tracking its spread and evolution.",
+  "core_features": [
+    "- Alignment of SARS-CoV-2 genomes",
+    "- Mutation analysis and identification",
+    "- Phylogenetic tree generation",
+    "- Clade assignment",
+    "- Quality control checks",
+    "- Visualization of results"
+  ],
+  "general_tags": [
+    "Bioinformatics",
+    "Genomics",
+    "Viral Genomes",
+    "Phylogenetics",
+    "SARS-CoV-2"
+  ],
+  "research_discipline": "Bioinformatics",
+  "research_area": "Genomics",
+  "software_class": "Bioinformatics Tool",
+  "software_type": "Analysis Tool",
+  "field_of_science": "Biological Sciences"
+}

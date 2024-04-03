@@ -1,0 +1,20 @@
+Use Case: PhyloFisher is a bioinformatics software for inferring deep-level phylogeny and lineage-specific gene/protein families. 
+
+Code details and examples: 
+
+Code:
+```bash
+aquatic_methods select_refs -r transcriptomes -o <my_outgroup>
+aquatic_methods pull_SRA_data
+aquatic_methods homology_search -t <number of threads>
+aquatic_methods homology_search_v2 -t <number of threads>
+aquatic_methods MSA_trim -s <your_subject_species> -t <number of threads>
+aquatic_methods RAxML_tree -s <your_subject_species> -o <your_outgroup>
+```
+Input files: 
+Phylofisher requires reference datasets (of transcriptomes) as input and an outgroup picked for phylogenetic tree production. The first line selects this reference set, the second line pulls relevant data from the NCBI Sequence Read Archive, the third and fourth lines perform homology searches. The fifth line performs multiple sequence alingment and masking, and the sixth line generates a phylogenetic tree. 
+
+The `<my_outgroup>`, `<number of threads>`, `<your_subject_species>`, and `<your_outgroup>` arguments need to be replaced with user-specific values. For instance, `<my_outgroup>` could be "plants" and `<your_subject_species>` might be "moss".
+
+Specifications:
+PhyloFisher is best run on Linux or MacOS systems as it has not been tested extensively on Windows operating systems. The software also requires Perl, Python (version 3 or higher), and the installations of several other bioinformatics tools for full functionality.

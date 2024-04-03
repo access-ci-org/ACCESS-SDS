@@ -1,0 +1,38 @@
+Use Case: The double-conversion library provides binary-decimal and decimal-binary routines for IEEE doubles. It is used to convert floating point numbers to decimal strings and vice versa. 
+
+Code details and examples: 
+
+Code:
+
+```cpp
+#include <double-conversion/double-conversion.h>
+
+int main() {
+    double_conversion::StringToDoubleConverter converter(
+        double_conversion::StringToDoubleConverter::ALLOW_TRAILING_JUNK,
+        0.0, 
+        0.0, 
+        "inf", 
+        "nan"
+    );
+
+    int processed_characters_count;
+    double result = converter.StringToDouble("123.45", 6, &processed_characters_count);
+
+    printf("%f", result);
+    return 0;
+}
+```
+
+This C++ code uses the `StringToDoubleConverter` class from the double-conversion library. The constructor of this class takes several arguments: flags that determine the behavior of the conversion, a default value to return in case the conversion was not possible, a value to return in the event of overflow, and alternative strings to use for infinity and NaN. 
+
+The `StringToDouble` method of this class actual does the conversion. It takes a string, its length, and an output parameter that will hold the number of processed characters.
+
+The command `printf` then prints the result of the conversion.
+
+Command to run the code: Assuming that the file is named `example.cpp`, and the necessary libraries are linked, one can compile and run the file using a C++ compiler like g++. Here is an example of how to do it:
+
+```bash
+g++ -o Example example.cpp -ldouble-conversion
+./Example
+```

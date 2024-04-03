@@ -1,0 +1,36 @@
+Use Case: VESTA is a 3D visualization program for structural models, volumetric data such as electron/nuclear densities and crystal morphologies. 
+
+Code details and examples: 
+
+Code: 
+
+First, you need the crystal file, let's call it `crystal.cif`. 
+
+```
+data_global
+_chemical_name_mineral 'Example'
+loop_
+_symmetry_space_group_name_H-M 'P 1'
+_cell_length_a 8.4567
+_cell_length_b 8.4567
+_cell_length_c 8.4567
+_cell_angle_alpha 90
+_cell_angle_beta 90
+_cell_angle_gamma 90
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_U_iso_or_equiv
+Si 0 0 0 0.01
+O  0.257 0.257 0.257 0.01
+```
+
+Then, you run VESTA with the CIF file:
+
+```
+VESTA crystal.cif
+```
+
+The program opens a GUI where you visualize the crystal structure.

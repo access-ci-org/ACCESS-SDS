@@ -1,0 +1,11 @@
+{
+    "software_name": "TALON",
+    "comprehensive_overview": "TALON (Transcript Annotation Long-read ONtology) is a software package for identifying and quantifying full-length mRNA isoforms in long-read RNA sequencing data. It leverages the unique advantages of long-read sequencing to provide comprehensive and accurate gene expression analysis at the isoform level.",
+    "core_features": "1. Identification of full-length mRNA isoforms\n2. Quantification of gene expression at the isoform level\n3. Annotation of novel isoforms\n4. Detection of alternative splicing events\n5. Integration with short-read RNA-seq data for comprehensive analysis",
+    "general_tags": ["long-read RNA sequencing", "transcript isoform analysis", "gene expression quantification"],
+    "research_discipline": "Bioinformatics",
+    "research_area": "Transcriptomics",
+    "software_class": "Analysis Tool",
+    "software_type": "Bioinformatics Tool",
+    "field_of_science": "Biological Sciences"
+}

@@ -1,0 +1,60 @@
+Use Case: popt is a command line option parsing library. It's a staple in many Linux based systems, used to parse command line arguments of C programs, thus allowing users to pass parameters to applications.
+
+Code details and examples:
+
+Code:
+
+```c
+#include <stdio.h>
+#include <popt.h>
+
+int main(int argc, const char *argv[]) {
+    int integer_arg = 0;
+    char *str_arg = NULL;
+
+    struct poptOption optionsTable[] = {
+        { "integer", 'i', POPT_ARG_INT, &integer_arg, 0, "an integer argument", "INT" },
+        { "string", 's', POPT_ARG_STRING, &str_arg, 0, "a string argument", "STR" },
+        POPT_AUTOHELP
+        { NULL, 0, 0, NULL, 0 }
+    };
+
+    poptContext optCon = poptGetContext(NULL, argc, argv, optionsTable, 0);
+
+    int c;
+    while ((c = poptGetNextOpt(optCon)) >= 0) {
+        switch (c) {
+            case 'i':
+                printf("integer argument: %d\n", integer_arg);
+                break;
+            case 's':
+                printf("string argument: %s\n", str_arg);
+                break;
+        }
+    }
+
+    return 0;
+}
+```
+
+In this code snippet:
+
+- "integer" and "string" are the command line options that can be passed.
+- 'i' and 's' are their corresponding characters.
+- POPT_ARG_INT and POPT_ARG_STRING are macros defining their data types.
+- &integer_arg and &str_arg are the pointers where the passed values are stored.
+
+The application can be run with these commands to pass parameters:
+```bash
+./app --integer 123
+./app --string "test"
+```
+
+It is required to install the popt library and include its header in the C program. The sample application needs to be compiled with a GCC compiler to create an executable.
+
+The format of the command to run these:
+```bash
+gcc -o app app.c -lpopt
+./app --integer 123
+./app --string "test"
+```

@@ -1,0 +1,38 @@
+Use Case: Use Leveldb for fast key-value storage. It can be used as a building block to create higher-level storage systems.
+
+Code details and examples: Code
+
+Language: Python
+
+Sample Input Files: Not applicable as leveldb operates on key-value pairs directly.
+
+Format Required: Key-value pairs
+
+Specifications in Input Files: Key-value pairs should be strings or bytes.
+
+Command to Run: Not applicable as leveldb operates through Python library functions.
+
+Code Snippet:
+
+```python
+import leveldb
+
+# Create or open a database
+db = leveldb.LevelDB('./my_database')
+
+# Add a couple key-value pairs
+db.Put('key1', 'value1')
+db.Put('key2', 'value2')
+
+# Fetch a value
+print(db.Get('key1'))
+
+# It should print: value1
+
+# Iterate over data
+it = db.RangeIter(key_from='key1', key_to='key2')
+for k, v in it:
+    print(k,v)
+
+# It should print: key1 value1, key2 value2
+```

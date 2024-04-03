@@ -1,0 +1,21 @@
+Use Case: "blob" is an R package used to represent BLOBs (Binary Large OBjects). It's frequently used in conjunction with DBI (Database Interface) package for reading and writing BLOBs to databases.
+
+Code details and examples:
+
+Code:
+
+```R
+# Load blob package
+library(blob)
+
+# Create a blob object with raw vector
+b = blob::blob(list(as.raw(1:10)))
+
+# Access the raw vectors
+as.raw(b)
+```
+
+The input is a list of raw vectors (binary data), and a blob object is returned. This operation doesn't have a specific input file format as it works with in-memory binary data.
+
+Command to run: just execute the R script either via an IDE like RStudio, R command line or using Rscript from the command line.
+e.g. `Rscript script.R`

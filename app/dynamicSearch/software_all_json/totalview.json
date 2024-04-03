@@ -1,0 +1,24 @@
+{
+    "software_name": "TotalView",
+    "comprehensive_overview": "TotalView is a comprehensive parallel debugging and performance analysis solution. It provides developers with advanced tools to effectively find and fix bugs, optimize code, and improve application performance for HPC, big data, and machine learning applications.",
+    "core_features": [
+        "Parallel debugging tools",
+        "Performance analysis capabilities",
+        "Support for HPC, big data, and machine learning applications",
+        "Code optimization features"
+    ],
+    "general_tags": [
+        "debugging",
+        "performance analysis",
+        "HPC",
+        "big data",
+        "machine learning"
+    ],
+    "additional_tags": {
+        "research_discipline": "Infrastructure and Instrumentation",
+        "research_area": "Performance Evaluation and Benchmarking",
+        "software_class": "Debugging and Performance Analysis",
+        "software_type": "Development and Optimization Tools",
+        "field_of_science": "Engineering and Technology"
+    }
+}

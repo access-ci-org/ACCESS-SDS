@@ -1,32 +1,57 @@
-Use Case: Build and test software of any size correctly and quickly.
+Use Case: Bazel is an open-source build and test tool which is similar to Make, Maven, and Gradle. It uses a human-readable, high-level build language. Bazel supports projects in multiple languages and builds outputs for multiple platforms.
 
-Code details and examples: 
-1. Sample input files:
-   - WORKSPACE file:
-   ```
-   workspace(name = "my_workspace")
-   load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+Code Details and Examples: 
 
-   http_archive(
-       name = "rules_python",
-       urls = ["https://github.com/bazelbuild/rules_python/archive/3.0.0.tar.gz"],
-       sha256 = "5179c44bb1951e6d33413e3749b5b180f4fd3f2569b76986546f9aca2edff4ec",
-   )
+Example Input:
 
-   load("@rules_python//python:repositories.bzl", "rules_python_dependencies", "ules_p")
-   rules_python_dependencies()
-   ```
+A sample basic BUILD file for a java project might look like this:
 
-2. Code snippet to build and test:
-   To build an application:
-   ```
-   bazel build //path/to:target
-   ```
+```twirl
+java_library(
+    name = "foo-lib",
+    srcs = ["MyClass.java"],
+    deps = [
+        ":bar-lib",
+        "//third_party:foo_dependencies",
+    ],
+)
+```
+In this case, `"MyClass.java"` is the source file and dependencies (`deps`) mentioned could be another java library or third party dependencies.
 
-   To run tests:
-   ```
-   bazel test //path/to:target_test
-   ```
+---
 
-3. Execute the code:
-   Replace `//path/to:target` and `//path/to:target_test` with your actual targets and run the respective commands in the terminal.
+Example Code to run:
+
+You can build the software using the following command in the terminal:
+
+`bazel build //main:hello-world`
+
+In this case, `//main:hello-world` is the label of the build target. The `//` part represents the workspace directory and `main:hello-world` is the path to the BUILD file in the workspace directory.
+
+---
+
+Example Java Test:
+
+A sample basic BUILD file for a java test might look like this:
+
+```twirl
+java_test(
+    name = "my_test",
+    size = "small",
+    srcs = ["MyTest.java"],
+    deps = [
+        ":foo-lib",
+        "//third_party:foo_dependencies",
+    ],
+)
+```
+
+You can run the test using the following command:
+
+`bazel test //java/com/google/example:my_test`
+
+In this case, `//java/com/google/example:my_test` is the label of the test target.
+
+---
+
+These are simple examples and the use of Bazel can become deeply complex depending on the multi-language, multi-platform project one is building or testing.

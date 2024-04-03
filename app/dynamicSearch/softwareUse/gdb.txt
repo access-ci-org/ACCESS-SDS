@@ -1,35 +1,44 @@
-Use Case: GNU Debugger (gdb)
+Use Case: Debugging a C++ program that crashes during runtime.
+
 Code details and examples:
-GNU Debugger (gdb) is used to debug programs written in C, C++, and other programming languages. It allows users to inspect what a program is doing at different stages and helps in identifying and fixing bugs in the code.
 
-Example:
-Assume we have a C program named "example.c" which contains a logical error. To debug this program using gdb, we can follow these steps:
+Code:
 
-1. Compile the program with debugging symbols:
-```bash
-gcc -g -o example example.c
+The file with C++ code (buggy_code.cpp):
+
+```cpp
+#include <vector>
+
+int main() {
+    std::vector<int> numbers;
+    numbers[0] = 1;  // This line will cause a crash.
+    return 0;
+}
 ```
+Command to compile with debugging information: `g++ -g buggy_code.cpp -o buggy_code`
 
-2. Start gdb and load the executable:
-```bash
-gdb ./example
-```
+Usage of GDB:
 
-3. Set breakpoints, run the program, and analyze variables:
-```bash
-break main
-run
-```
+First, start the debugger with the program:
 
-4. Step through the program to identify the issue:
-```bash
-next
-print variable_name
-```
+`gdb buggy_code`
 
-5. Analyze the program flow and fix the bug.
+At the GDB prompt, run the program:
 
-Command to run:
-```bash
-gdb <executable_name>
-```
+`(gdb) run`
+
+After the crash, you can inspect the state of the program. For example, to see the line that caused the crash, enter: 
+
+`(gdb) where`
+
+You can also inspect variables. For example, to print the value of the variable `numbers`, enter:
+
+`(gdb) print numbers`
+
+To quit GDB, enter:
+
+`(gdb) quit`
+
+Please replace the command 'buggy_code' with your respective filename where required. Above lines of code may not work if you do not replace 'buggy_code' with your filename.
+
+Remember, this is a simple example. GNU Debugger (gdb) is a powerful tool with many features for debugging. It supports programming languages like C, C++, Rust, Go, etc. It allows you to inspect what the program is doing at a certain point during execution.

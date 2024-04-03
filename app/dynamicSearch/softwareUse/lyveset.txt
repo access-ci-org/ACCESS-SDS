@@ -1,0 +1,23 @@
+Use Case: Lyve-SET is an open-source bioinformatics package developed by the Centers for Disease Control and Prevention (CDC) for high-quality SNP calling. It aligns hundreds to thousands of high throughput sequencing datasets, identifies single nucleotide polymorphisms (SNPs), reconstructs phylogenomics with RAxML or FastTree, and provides genotypes. 
+
+Code details and examples: Code
+
+Required Input Files:
+1) Fastq file or other sequence files for genomes
+
+Sample Input File Format: 
+- Fastq files each containing short-read sequences. 
+
+Code Snippet: 
+
+```
+#Go to lyveset directory
+cd Lyve-SET
+#Run lyveset
+perl lyve-SET.pl --numcpus 8 --run speed --make_tree --mask_everywhere --min_alt_frac 1 --min_coverage 10 --reads_dir datasets/raw_fastq --out_dir sets_out
+```
+This command runs Lyve-SET from the command line; the code utilizes 8 central processing units (CPUs). It's a speedy mode, making a tree while masking everywhere. The minimum alternate fraction and minimum coverage are set to 1 and 10, respectively. The reads_directory is set to the raw_fastq files in the datasets directory, and out_directory is set to sets_out.
+Cmd to run: 
+```
+perl lyve-SET.pl --numcpus 8 --run speed --make_tree --mask_everywhere --min_alt_frac 1 --min_coverage 10 --reads_dir datasets/raw_fastq --out_dir sets_out
+```

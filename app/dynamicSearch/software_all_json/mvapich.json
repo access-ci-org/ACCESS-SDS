@@ -1,0 +1,25 @@
+{
+  "software_name": "MVAPICH",
+  "comprehensive_overview": "MVAPICH (MPI for MVAPICH2) is an open-source MPI implementation that delivers high performance, scalability, and fault tolerance for parallel computing on large HPC systems. It is specifically designed for InfiniBand and Omni-Path architectures.",
+  "core_features": [
+    "High performance MPI implementation",
+    "Scalability for large parallel computing",
+    "Fault tolerance",
+    "Support for InfiniBand and Omni-Path architectures"
+  ],
+  "general_tags": [
+    "HPC",
+    "MPI",
+    "Parallel Computing",
+    "High Performance Computing"
+  ],
+  "additional_tags": {
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Library",
+    "software_type": "Parallel Computing",
+    "field_of_science": [
+      "Engineering and Technology"
+    ]
+  }
+}

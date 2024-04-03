@@ -1,0 +1,27 @@
+Use Case: AdapterRemoval is a program that primarily focuses on the removal of the corrupt adapter sequences from High-Throughput Sequencing (HTS) data. It searches for and removes any residual adapter sequences from the sequences, corrects any forward and reverse pairs, corrects the shift and handles overlapping reads.
+
+Code Details and Examples:
+
+Input File Format: The tool requires paired-end sequencing data as input files. They should be in FastQ format. 
+
+For instance: 
+    File 1: forward.fastq 
+    File 2: reverse.fastq
+    
+The files should contain DNA sequences from paired-end sequencing.
+
+Details in Input file: 
+FASTQ format follows this structure:
+    @Sequence_identifier
+    Nucleotide_sequence
+    +
+    Corresponding_quality_scores
+
+Code:
+```
+AdapterRemoval --file1 forward.fastq --file2 reverse.fastq --output1 forward.cleaned.fastq --output2 reverse.cleaned.fastq --singleton singleton.fastq --settings settings.log
+```
+
+In the above line of command, --file1 and --file2 specify the paired input FastQ files. --output1 and --output2 specify the cleaned forward and reverse output files. --settings stores the runtime settings, statistics and potential error reports of the run.
+--singleton is used for output file name containing pair1 reads without a corresponding pair2 read. 
+

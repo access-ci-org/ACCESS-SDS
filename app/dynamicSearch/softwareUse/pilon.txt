@@ -1,0 +1,23 @@
+Use Case: Pilon is a software tool to improve draft assemblies of genomes, specifically designed for bacterial genomes. It can correct bases, fix mis-assemblies or fill gaps in the assembly.
+
+Code details and examples: 
+
+Code:
+
+Firstly, create the input files such as FASTA file and then BAM file. Let's assume the names of those files are 'sample.fasta' and 'sample.bam' respectively.
+
+Input: sample.fasta, sample.bam
+
+```
+java -Xmx16G -jar pilon-1.23.jar --genome sample.fasta --frags sample.bam --output sample_pilon
+```
+
+This command will generate an improved assembly file called 'sample_pilon.fasta'. 
+
+The --genome parameter specifies the input FASTA file, --frags specifies the alignment file in BAM format, and --output specifies the prefix for output files. You can replace these filenames with your actual filenames.
+
+The 'java -Xmx16G' part of the command tells Java to use up to 16GB of RAM for Pilon. The amount of RAM required will depend on the size of your genome, but 16GB should be sufficient for most bacteria. If you have less RAM available, you can reduce this number accordingly.
+
+Pilon requires the SAMTools package to be installed in your system and also Java Runtime Environment. So, ensure you have them installed before running Pilon.
+
+Note: You must replace "pilon-1.23.jar" with the actual path where Pilon jar file is located in your computer. Don't forget to ensure that the jar file is executable before you run the command.

@@ -1,0 +1,23 @@
+Use Case: r-rpart is an R package designed for recursive partitioning, a fundamental operation for constructing predictive models in machine learning and data mining. It can be used to perform classification and regression tree analysis; a common application includes prediction of a species of iris from a set of measurements.
+
+Code details and examples:
+
+Code:
+
+```
+# Load the necessary library
+library(rpart)
+
+# Load the iris dataset
+data(iris)
+
+# Create a model using rpart. This model will predict Species based on variables Sepal.Length and Petal.Length
+model <- rpart(Species ~ Sepal.Length + Petal.Length, data = iris)
+
+# Print the created model
+printcp(model)
+```
+
+Command to run: Once you've written your script (say, "script.R"), you can run it on R with the following command: `Rscript script.R`
+
+The data input for this model is the iris dataset, a popular dataset in R, which is loaded using the `data(iris)` command. The format required is a dataframe. The specifications in the input file include several columns with the variables you're interested in ("Sepal.Length", "Petal.Length", and "Species" in this case). This script fits a classification tree model that can predict the species of an iris using its sepal length and petal length.

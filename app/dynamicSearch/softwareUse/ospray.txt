@@ -1,33 +1,30 @@
-Use Case: Ray tracing visualization with OSPRay from the Intel oneAPI Rendering Toolkit.
+Use Case: OSPRay is an open source, scalable, and portable ray tracing engine for high-performance, high-fidelity visualization on Intel Architecture CPUs. OSPRay is part of the Intel oneAPI Rendering Toolkit and is released under the permissive Apache 2.0 license. 
 
 Code details and examples:
-- Sample input file (input.json):
-```
-{
-  "api_version": "2.0",
-  "renderer": "scivis",
-  "camera": {
-    "eye": [0, 0, 5],
-    "center": [0, 0, 0],
-    "up": [0, 1, 0]
-  },
-  "film": {
-    "width": 800,
-    "height": 600
-  },
-  "world": {
-    "type": "group",
-    "children": [
-      {
-        "type": "sphere",
-        "radius": 1
-      }
-    ]
-  }
+
+OSPary can be linked to the applications as the rendering engine. It does not have a command line utility to use directly. However, the following code snippet shows how you may use OSPRay in a C++ program. Consider the following example:
+
+Code:
+
+```c++
+#include "ospray/ospray.h"
+OSPDevice device = ospNewDevice("default");
+ospDeviceCommit(device);
+ospSetCurrentDevice(device);
+OSPFrameBuffer frameBuffer = ospNewFrameBuffer(/*dimensions*/, OSP_FB_SRGBA, OSP_FB_COLOR | OSP_FB_ACCUM);
+ospFrameBufferClear(frameBuffer, OSP_FB_COLOR | OSP_FB_ACCUM);
+OSPWorld world = ospNewWorld();
+// set up your world
+ospCommit(world);
+OSPRenderer renderer = ospNewRenderer("scivis"); 
+ospSetObjectAsData(renderer, "world", OSP_WORLD, world);
+ospCommit(renderer);
+
+for(int frameId = 0; frameId < numFrames; ++frameId) {
+    ospRenderFrame(frameBuffer, renderer, OSP_FB_COLOR | OSP_FB_ACCUM);
 }
 ```
 
-- Command to run OSPRay:
-```
-ospray --osp:load-modules all --osp:log-level 2 input.json output.png
-```
+As OSPRay is an API, it does not have a sample input file per se; All the necessary information is passed through function calls. The functions ospNewDevice, ospNewFrameBuffer, ospNewWorld, and ospNewRenderer are used to set up OSPRay. Then the world and renderer settings are finalized by calling ospCommit. Finally, the actual ray tracing is performed by calling ospRenderFrame.
+ 
+The only specifications needed is that OSPRay has to be linked to the user's own C++ application through the OSPRay headers. The user also has to set "default" as the active device. The above sample input is run from the user's own C++ application that uses OSPRay and then is compiled and run with their favorite C++ compiler and development tools.

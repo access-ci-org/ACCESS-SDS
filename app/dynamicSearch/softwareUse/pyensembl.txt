@@ -1,0 +1,24 @@
+Use Case: PyEnsembl is a Python library for programmatically extracting gene, transcript, and protein annotations from Ensembl.
+
+Code details and examples:
+
+Code:
+
+```python
+# import the library
+from pyensembl import EnsemblRelease
+
+# Specify the Ensembl release
+data = EnsemblRelease(75)
+
+# List all the gene names
+gene_names = data.gene_names()
+
+# Find a specific gene by its name
+gene = data.genes_by_name("BRCA2")
+```
+Input: No input files are required for the given example. The library uses online resources to perform its operations.
+
+Command to run: Since the PyEnsembl library is used inside a Python script, you can run the script using a Python interpreter by invoking the command `python script.py` from the command line (where `script.py` is the name of your python file). You will need to have the `pyensembl` library installed via pip install.
+
+Output: The output for the first `gene_names` call would be a list of all gene names available in EnsemblRelease 75. The output of the `genes_by_name` function would be a list of all genes with the name "BRCA2".

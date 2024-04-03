@@ -1,0 +1,65 @@
+Use Case: GraalVM is a high-performance runtime that provides significant improvements in application performance and efficiency which is ideal for cloud native environments. It's used for running programs written in JavaScript, Python, Ruby, R, and JVM-based languages like Java, Scala, Groovy, Kotlin, Clojure, and LLVM-based languages such as C and C++. It can run standalone or embedded in OpenJDK, Node.js or Oracle Database.
+
+Code details and examples: 
+
+Code: 
+Here's a simple example to showcase the usage of GraalVM with a small JavaScript program:
+
+```JavaScript
+console.log('Hello, GraalVM!');
+```
+This script will print "Hello, GraalVM!" to the console. You can run it with node or with GraalVM's JavaScript.
+
+To run this with GraalVM, save above JavaScript code into a file, say `HelloGraal.js`. To run it, use this command from the terminal:
+
+```bash
+/path/to/graalvm/bin/node HelloGraal.js
+```
+
+/path/to/graalvm is the installed GraalVM directory.
+
+---
+
+Cloud Native Applications with GraalVM:
+
+This bit of code is a simple 'Hello, world!' app in Spring Boot, which is a Java-based framework. GraalVM can compile this app into a native image, which starts up faster and uses less memory.
+
+```Java
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@SpringBootApplication
+public class DemoApplication {
+	public static void main(String[] args) {
+		SpringApplication.run(DemoApplication.class, args);
+	}
+
+	@RestController
+	class HelloWorldController {
+		@GetMapping("/hello")
+		String hello() {
+			return "Hello, GraalVM!";
+		}
+	}
+}
+```
+To compile this with GraalVM, first build it as a standard Java app with Maven:
+
+```bash
+mvn package
+```
+Then build it into a native image with GraalVM:
+
+```bash
+/path/to/graalvm/bin/native-image -jar target/demo-0.0.1-SNAPSHOT.jar demo
+```
+/path/to/graalvm is the installed GraalVM directory.
+
+To run it, use this command:
+
+```bash
+./demo
+```
+This will start the app, and you can access it at http://localhost:8080/hello, where you should see the message 'Hello, GraalVM!'.

@@ -1,0 +1,26 @@
+Use Case: PDT (Parallel Debugging Tool) is generally used for testing parallel programs. It applies to MPI, OpenMP, SMPs, or heterogeneous systems.
+
+Code Details and examples: 
+Code: A simple C program: 
+
+```c
+#include <stdio.h>
+int main() 
+{
+    printf("Hello, World!");
+    return 0;
+}
+```
+
+Save the above program as test.c
+
+For PDT, Coordinates file (c file), Listing file (l file) and standard output file (A file) are needed for debugging. The c file mainly contains the declaration and definition of variables, the l file mainly contains source code, and the A file is mainly debug information output by various analysis tools.
+
+Command to run them:
+Compile the code with `cc -g -o test test.c` command to have debug information in the file test. 
+
+Generate the PDT parse, run `pdt-parse C test.c`
+
+Note: The name of the output parse file is based on the name of the source code, such as test.c.1.1. Do not rename these files, otherwise, the debugger cannot find the corresponding source code.
+
+Run the debugger with `pdt-otf C test.c` command.

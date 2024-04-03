@@ -1,0 +1,18 @@
+Use Case: System Profiling, Performance Optimization, Bottleneck Identification and Debugging. amd-uprof provides an extensive set of performance counters for tracking CPU events. It allows to monitor one or multiple executing programs in order to analyze and understand why the software behaves as it does. 
+
+Code details and examples: 
+
+Sample Input file:
+Programs on Linux are often stored in /usr/bin. Let's use /usr/bin/foo as our sample program. 
+
+File Format: binary executable
+
+Specifications: Do make sure the binary has debug symbols added to it for a more detailed profile. 
+
+Command to Run with Sample:
+
+Code: amd-uprof --collect=sample --binary /usr/bin/foo
+
+If you want to generate a report on the collected data, you would call:
+
+Code: amd-uprof --report=summary

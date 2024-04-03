@@ -1,13 +1,69 @@
-Use Case: libarchive library for working with archives
+Use Case: libarchive is a programming library that can create, read, and write streaming archives in a variety of different formats including tar, pax, cpio, ISO 9660, zip, lha, AR, cab, mtree, rar, and others. It also supports reading variety of formats like 7-Zip, zip, lzh, rar, and others. The package is used in many open-source projects like FreeBSD, libvirt, rpm, The Python, C++, and Perl bindings.
 
-Code details and examples:
-libarchive is a C library that can read and write archives in various formats. Here is an example of how to use libarchive to extract files from a zip archive using its command-line utility `bsdtar`. 
+Code details and examples: Code
 
-Sample input file: test.zip (a zip archive containing several files)
+```c++
+#include <archive.h>
+#include <archive_entry.h>
+#include <stdio.h>
 
-Command to extract files:
-```bash
-bsdtar -xvf test.zip
+
+static void
+write_archive(const char *outname, const char **filename)
+{
+  struct archive *a;
+  struct archive_entry *entry;
+  struct stat st;
+  char buff[8192];
+  int len;
+  FILE *fd;
+
+  a = archive_write_new();
+  archive_write_add_filter_gzip(a);
+  archive_write_set_format_pax_restricted(a); // Note 1
+  archive_write_open_filename(a, outname);
+
+  while (*filename) 
+  {
+    stat(*filename, &st);
+    entry = archive_entry_new(); // Note 2
+    archive_entry_set_pathname(entry, *filename);
+    archive_entry_set_size(entry, st.st_size); // Note 3
+    archive_entry_set_filetype(entry, AE_IFREG);
+    archive_entry_set_perm(entry, 0644);
+    archive_write_header(a, entry);
+    fd = fopen(*filename, "rb");
+    len = fread(buff, 1, sizeof(buff), fd);
+    while ( len > 0 ) {
+      archive_write_data(a, buff, len);
+      len = fread(buff, 1, sizeof(buff), fd);
+    }
+    fclose(fd);
+    archive_entry_free(entry);
+    filename++;
+  }
+  archive_write_close(a); 
+  archive_write_free(a);
+}
+
+
+int
+main(int argc, const char **argv)
+{
+  const char *outname = "archive.tar.gz";
+  argv++;
+  argc--;
+  write_archive(outname, argv);
+  return 0;
+}
 ```
 
-This command will extract the contents of the test.zip archive in the current directory.
+In the above code, 
+
+- Note 1: Here we set the format to pax, the POSIX standard tar format. We then add the gzip filter.
+- Note 2: Next, we create an archive_entry. We give it the filename, and structure elements size, filetype, and, permission to mimic a regular file. 
+- Note 3: For each file to be archived, we read each file's data and write it to the archive.
+
+This application can be built with gcc (using the -larchive option to link with libarchive): `gcc -o main main.c -larchive` 
+
+Command to run it: `./main test1 test2` which will create an archive `archive.tar.gz` containing `test1` and `test2` files.

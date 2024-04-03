@@ -1,0 +1,35 @@
+Use Case: Use r-nnet for creating neural networks in the R programming environment. Particularly useful for prediction analysis like prediction of house prices, weather conditions, and customer segment prediction based on their buying behavior.
+
+Code details and examples: Code
+
+Sample Input for r-nnet:
+
+```R
+# Load libraries
+library(nnet)
+library(caret)
+# Data
+data(iris)
+# Create model 
+model <- nnet(Species ~ ., data = iris, size = 10, rang = 0.1, decay = 5e-4, maxit = 200)
+# Predict
+predicted <- predict(model, iris[,1:4], type = "class")
+```
+
+Sample Output format for r-nnet:
+
+```R
+# Output
+[1] setosa setosa setosa setosa setosa setosa ...
+Levels: setosa versicolor virginica
+```
+
+Command to run the R file:
+
+If suppose the R code is saved in a file called `nnet_example.R` then the command to run the file would be:
+
+```bash
+Rscript nnet_example.R
+```
+
+This command is to be executed in the terminal. Rscript ensures that the R script file runs in the command line mode.

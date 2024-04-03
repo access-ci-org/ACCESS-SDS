@@ -1,0 +1,37 @@
+Use Case: OpenMX (Open source package for Material eXplorer) is widely used to conduct electronic structure calculations and molecular dynamics for material design. It is particularly popular in the field of condensed matter physics research.
+
+Code details and examples: Code
+
+The input files for OpenMX computations typically have an .dat extension.
+
+Sample input file - Si.dat
+
+```
+#
+# Si bulk calculation
+#
+System.CurrrentDirectory ./
+System.Name  Si
+level.of.theory    DFT   LSDA
+
+Atoms.Number                  2
+<Definition.of.Atomic.Species
+Si      Si7.0-s2p2d1  Si_LDA7.0-s2p2d1
+>
+Atoms.SpeciesAndCoordinates.Unit    Ang # e.g., Bohr, Ang, fractional
+<Atoms.SpeciesAndCoordinates
+1    Si      0.0    0.0    0.0
+2    Si      1.357  1.357  1.357
+>
+
+scf.XcType         VWN
+scf.SpinPolarization       off
+```
+
+In the first line, current directory stands for where the calculation is going to be held. `System.Name` represents the root name of output files. `level of theory` specifies the type of calculation method being used. `Atoms.Number` indicates how many atoms are included in this calculation. `Definition.of.Atomic.Species` gives the name of the pseudo potential file for the atoms. `Atoms.SpeciesAndCoordinates.Unit` designates the unit for atom coordinates. `scf.XcType` specifies the exchange-correlation functional and `scf.SpinPolarization` denotes the spin polarization option.
+
+Command to run it:
+
+`openmx Si.dat`
+
+Note that this command needs to be run on a terminal configured with OpenMX package.

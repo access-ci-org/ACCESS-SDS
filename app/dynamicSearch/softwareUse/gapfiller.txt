@@ -1,0 +1,48 @@
+Use Case: GapFiller is widely used in bioinformatics to close gaps within pre-assembled scaffolds. It makes use of read pairing information to provide more reliable results.
+
+Code details and examples:
+
+Code: 
+
+The input files for GapFiller are .fasta file containing scaffold sequences and a .txt file containing paired end reads.
+
+Example of a .fasta file:
+
+```
+>Scaffold1
+ATCGATCGATCGXXATCGATCGATCG
+>Scaffold2
+ATCGATCGATCGXXATCGATCGATCG
+```
+
+Example of .txt file:
+
+```
+>Lane1
+F	fastq1_1.fq
+R	fastq1_2.fq
+```
+
+Then, GapFiller can be run with the following command:
+
+```
+perl GapFiller.pl -l library.txt -s scaffolds.fasta -o output -m 50 -r 0.7 -n 10
+```
+
+In above command:
+
+-l: Library file
+
+-s: Scaffold file
+
+-m: Minimum overlap required
+
+-r: Maximum valid alignment ratio
+
+-n: Number of threads
+
+-o: Prefix for output files 
+
+Please note the 'XX' is usually an indication of a gap in the DNA sequence which needs to be filled. The goal here would be to fill those gaps using the information from the paired end reads.
+
+Also, the above discussed is generally the structure of the input files but it can vary depending on the sequence or the data available. Please refer to the software documentation for more specific details for each command or parameter.

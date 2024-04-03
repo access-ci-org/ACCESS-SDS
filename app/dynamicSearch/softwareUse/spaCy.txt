@@ -1,8 +1,6 @@
-Use Case: Natural Language Processing with spaCy
-Code details and examples:
-spaCy is a popular natural language processing library in Python that provides efficient NLP functionalities. It can be used for tasks such as tokenization, part-of-speech tagging, named entity recognition, dependency parsing, and more.
-
-Sample code for tokenization using spaCy:
+Use Case: Use spaCy for Named Entity Recognition (NER) and get the named entities of a document; The text file input format Requirement: A .txt file with a simple paragraph as raw
+ 
+Code details and examples: Code 
 
 ```python
 import spacy
@@ -10,33 +8,20 @@ import spacy
 # Load English tokenizer, tagger, parser, NER and word vectors
 nlp = spacy.load("en_core_web_sm")
 
-# Process a text
-doc = nlp("Apple is looking at buying U.K. startup for $1 billion")
+# File reading 
+with open('input.txt', 'r') as file:
+    data = file.read().replace('\n', '')
 
-# Print token text and token index
-for token in doc:
-    print(token.text, token.i)
+# Process whole documents
+text = (data)
+doc = nlp(text)
+
+# Find named entities, phrases and concepts
+for entity in doc.ents:
+    print(entity.text, entity.label_)
 ```
+Command to run:
 
-Sample code for named entity recognition using spaCy:
-
-```python
-import spacy
-
-# Load English NER model
-nlp = spacy.load("en_core_web_sm")
-
-# Process a text
-doc = nlp("Apple is looking at buying U.K. startup for $1 billion")
-
-# Print named entities
-for ent in doc.ents:
-    print(ent.text, ent.label_)
 ```
-
-To install spaCy, you can use pip:
+$ python3 spacy_example.py   
 ```
-pip install spacy
-```
-
-You can find more information and documentation on spaCy's official website: https://spacy.io/

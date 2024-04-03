@@ -1,0 +1,31 @@
+Use Case: Variant Graph (vg) is a bioinformatics software tool designed to analyze genome variations in the context of a graphical model. It promotes scalable, efficient genome analysis and is especially useful in research of population genetics, genomics and bioinformatics. 
+
+Code Details and Examples: 
+
+Code:
+
+Input file required for vg is a vcf file (Variant Call Format). It includes meta-information lines, a header line, and then data lines each containing information about a position in the genome.
+
+Format of VCF File:
+```
+#CHROM  POS     ID      REF     ALT     QUAL    FILTER  INFO
+20      14370   rs605   G       A       29      PASS    NS=3
+```
+
+Command to construct graph with vg:
+```
+vg construct -r small/x.fa -v small/x.vcf.gz > x.vg
+```
+The -r flag specifies the reference sequence and -v is for the variant call format file. The final output x.vg is the variant graph.
+
+Command to visualize this graph:
+```
+vg view -d x.vg | dot -Tpng -o x.png
+```
+The vg view -d command is used to convert the graph to dot format for visualization and the dot -Tpng -o x.png command converts this to a png image.
+
+Command to index the graph for mapping:
+```
+vg index -x x.xg -g x.gcsa x.vg
+```
+The vg index command is used to create an index of the graph. -x specifies the xg index and -g is for the gcsa index, which are used for graph operations and alignment respectively.

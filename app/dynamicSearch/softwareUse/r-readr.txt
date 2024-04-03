@@ -1,0 +1,22 @@
+Use Case: Read a CSV file in R for further processing
+
+Code details and examples:
+
+Code:
+```R
+# Required Packages
+library(readr)
+
+# Specify the file path
+file_path <- "your_file_path.csv"
+
+# Read the CSV file
+data_frame <- read_csv(file_path)
+
+# Print the data_frame
+print(data_frame)
+```
+In the example above, 'your_file_path.csv' should be replaced with the path to the CSV file you wish to read. The data in the CSV file should be organized in columns which may or may not have headers. The CSV file should be a text file containing comma-separated values. After the CSV file is read, the contents are stored in a DataFrame which can be manipulated using R.
+
+Command to run:
+If the above R code is saved in a file named `read_csv_example.R`, it can be run from the command line with the command `Rscript read_csv_example.R`.

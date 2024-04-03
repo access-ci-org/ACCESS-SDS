@@ -1,0 +1,35 @@
+Use Case: r-survival is a highly used package in R for performing survival analysis, which is used to model time-to-event data, a concept which arises frequently in medical fields and other research areas where scientists are looking at how long it takes for an event of interest to occur.
+
+Code details and examples: Code
+
+Below is a simple example of how the r-survival package can be used to perform a survival analysis. This example uses the 'lung' dataset, which is available in R. The dataset is pre-processed and then a survival model is fitted using the 'survfit' function.
+
+Input file format: CSV 
+Specifications and details in input files: The required format for the input data is a dataframe with event times and censoring information included.
+
+```
+# Load the survival package
+library(survival)
+
+# Load the Lung Cancer dataset from the survival package
+data("lung")
+
+# We are interested in the 'time' to event and the 'status' (event occurred or not)
+surv_object <- with(lung, Surv(time, status))
+
+# Fit Kaplan-Meier survival model
+surv_model <- survfit(surv_object ~ 1, data = lung)
+
+# Print the model output
+print(surv_model)
+```
+
+The command to run the script:
+
+```
+Rscript survival_analysis.R
+```
+
+This would be assuming that you saved your script as "survival_analysis.R" and you run this command in a terminal that has Rscript accessible. The name of the file can be changed based on your preference.
+
+Note: This code example is for illustration purposes only and may need modification based on the actual data and analysis requirements.

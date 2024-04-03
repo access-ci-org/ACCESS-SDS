@@ -1,32 +1,48 @@
-Use Case: netCDF
+Use Case: NetCDF (Network Common Data Form) is a set of software libraries and machine-independent data formats used to create, access, and share array-oriented scientific data. This is particularly used within meteorology, oceanography and earth science communities.
+
 Code details and examples:
 
-netCDF (Network Common Data Form) is a set of software libraries and machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. Here, I will provide an example of how to create a simple netCDF file using the NCO (NetCDF Operators).
+Code:
 
-1. Sample input file example.nc
-```
-netcdf example {
-dimensions:
-    lat = 3 ;
-    lon = 4 ;
-variables:
-    float temperature(lat, lon) ;
-data:
- temperature =
-  {22.0, 23.0, 24.0, 25.0,
-   26.0, 27.0, 28.0, 29.0,
-   30.0, 31.0, 32.0, 33.0} ;
-}
-```
+A sample NetCDF file can be created using python's netCDF4 module.
 
-2. Code snippet to create a netCDF file using the NCO:
+```python
+#```python
+from netCDF4 import Dataset
+import numpy as np
+
+# create a dataset object
+rootgrp = Dataset('test.nc', 'w', format='NETCDF4')
+
+# Create dimensions
+level = rootgrp.createDimension('level', None)
+time = rootgrp.createDimension('time', None)
+lat = rootgrp.createDimension('lat', 73)
+lon = rootgrp.createDimension('lon', 144)
+
+# Create variables
+times = rootgrp.createVariable('time', 'f8', ('time',))
+levels = rootgrp.createVariable('level', 'i4', ('level',))
+latitudes = rootgrp.createVariable('lat', 'f4', ('lat',))
+longitudes = rootgrp.createVariable('lon', 'f4', ('lon',))
+temp = rootgrp.createVariable('temp', 'f4', ('time', 'level', 'lat', 'lon',))
+
+# Assign data
+latitudes[:] = np.arange(-90, 91, 2.5)
+longitudes[:] = np.arange(-180, 180, 2.5)
+levels[:] = [1000., 850., 700., 500., 300., 200., 100., 50., 10.]
+temp[0:10, :, :, :] = np.random.uniform(size=(10, len(levels), len(latitudes), len(longitudes)))
+
+# Close the dataset
+rootgrp.close()
+#```
+
+Command to run:
+
+This will be a Python script, so it can be directly called from the terminal using the following command,
+
 ```bash
-ncap2 -S create_netcdf_file.nco -v -o output.nc
+python create_netcdf.py
 ```
 
-In the above code snippet:
-- `ncap2` is a command-line tool included in the NCO package for NetCDF arithmetic processing.
-- `-S create_netcdf_file.nco` specifies the script file containing the operations to perform to create the netCDF file. You can define the dimensions, variables, and data manipulation in this script.
-- `-v -o output.nc` specifies the output file name where the resulting netCDF file will be saved.
-
-This is a basic example to demonstrate the creation of a netCDF file using NCO. NetCDF supports more advanced features for scientific data storage and manipulation.
+This will generate an output file, 'test.nc' which is a netCDF file.

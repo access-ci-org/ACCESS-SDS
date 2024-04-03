@@ -1,11 +1,17 @@
-Use Case: GObject for object-oriented programming in C.
+Use Case: GObject is a library that provides a versatile object system including the tools to create, use, and manage objects and object types in the software. It's largely used in software projects to provide structure and common functionality. It's common to use it in GUI applications where you have different custom widgets interacting with each other.
 
-Code details and examples:
+The programming languages supported by GObject are C, Vala, and any language that has bindings for GObject including Python and JavaScript.
+
+Code details and examples: Code. 
+
+In GObject, objects are instances of a GObject type. A type usually corresponds to a class which is defined with the `G_DECLARE_DERIVABLE_TYPE` or `G_DECLARE_FINAL_TYPE` macros.
+
+Below is an example of a GObject object in C:
+
 ```c
 #include <glib-object.h>
 
 #define MY_TYPE_OBJECT (my_object_get_type ())
-
 G_DECLARE_FINAL_TYPE (MyObject, my_object, MY, OBJECT, GObject)
 
 struct _MyObject {
@@ -14,21 +20,51 @@ struct _MyObject {
 
 G_DEFINE_TYPE (MyObject, my_object, G_TYPE_OBJECT)
 
-static void my_object_class_init (MyObjectClass *klass) {
-  // Class initialization code here
+void
+my_object_class_init (MyObjectClass *klass) {
+  /* Do nothing */
 }
 
-static void my_object_init (MyObject *self) {
-  // Object initialization code here
+void
+my_object_init (MyObject *self) {
+  /* Do nothing */
 }
 
-int main () {
-  MyObject *obj = g_object_new (MY_TYPE_OBJECT, NULL);
-  // Object usage code here
+int main (void) {
+  MyObject *my_object;
+
+  my_object = g_object_new (MY_TYPE_OBJECT, NULL);
+  
+  g_object_unref (my_object);
 
   return 0;
 }
 ```
-Note: This is a basic example of how to create and use a GObject object in C. Please see the GObject documentation for more advanced usage.
 
-Command to compile: `gcc -o myprogram myprogram.c $(pkg-config --cflags --libs glib-2.0)`
+The command to compile and run it would be:
+
+```bash
+gcc my_object.c $(pkg-config --cflags --libs gobject-2.0) -o my_object
+./my_object
+```
+
+If you want to use GObject in Python you have to use the PyGObject library. Here is the same example in Python:
+
+```python
+from gi.repository import GObject
+
+class MyObject(GObject.Object):
+    pass
+
+def main():
+    my_obj = MyObject()
+    
+if __name__ == "__main__":
+    main()
+```
+
+Here no compile command is needed, you can simply run the Python file with:
+
+```bash
+python my_object.py
+```

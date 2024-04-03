@@ -1,0 +1,13 @@
+{
+    "software_name": "root",
+    "comprehensive_overview": "ROOT is an open-source data analysis framework used by high-energy physics (HEP) experiments. It provides a range of tools for data manipulation, visualization, statistical analysis, and storage. ROOT is written in C++ and offers a scripting language called ROOT/CINT that allows for quick prototyping and interactive analysis.",
+    "core_features": "1. Data manipulation and analysis tools\n2. Visualization capabilities for 2D and 3D plots\n3. Statistical analysis functions\n4. Storage solutions for large datasets\n5. Support for parallel processing and distributed computing",
+    "general_tags": ["data analysis", "visualization", "high-energy physics", "data manipulation", "statistical analysis"],
+    "additional_tags": {
+        "research_discipline": "Particle and High-Energy Physics",
+        "research_area": "Experimental Particle Physics",
+        "software_class": "Data Analysis Framework",
+        "software_type": "Library",
+        "field_of_science": "Physical Sciences"
+    }
+}

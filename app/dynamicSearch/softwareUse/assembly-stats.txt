@@ -1,0 +1,30 @@
+Use Case: assembly-stats is a software tool to accurately provide the basic statistics regarding sequence data and read assembly. It computes the number of sequences, total size, minimum, maximum, average and N50 sequence length.
+
+Code details and examples: 
+Code: 
+
+Your input file would be a FASTA or FASTQ file, generally this can be the output from a sequencing read assembly or read data.
+
+Here is an example of a FASTA file, just an excerpt of what an input file could look like:
+
+    >seq0
+    ACTGACTGACTGACTGACTGACTGACTGACTGACTGACTGACTGACTGACTGACTG
+    >seq1
+    GCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTA
+
+To use assembly-stats, the command would be assembly-stats followed by the name of your data file on the command line. For example, if your file is named 'data.fasta', you would run the following command in your Unix terminal:
+
+    assembly-stats data.fasta
+
+The output is printed to standard out (the terminal) and can be redirected to a file if needed. The output for our example matching the sequences provided would look something like the following:
+
+    stats for data.fasta
+    sum = 114, n = 2, ave = 57.00, largest = 60
+    N50 = 60, n = 1
+    N60 = 60, n = 1
+    N70 = 60, n = 1
+    N80 = 60, n = 1
+    N90 = 54, n = 2
+    N100 = 54, n = 2
+    N_count = 0
+    Gaps = 0

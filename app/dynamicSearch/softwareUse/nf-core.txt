@@ -1,0 +1,28 @@
+Use Case: The nf-core is used for creating reproducible, collaborative and world-leading pipelines.    
+
+Code details and examples: Code:
+
+Taking the example of nf-core/rnaseq pipeline, your input files could look something like this:
+
+You have two directories `reads/` and `results/`
+
+The `reads/` directory should contain the FastQ files for your project. For example: 
+
+```
+- reads
+  - sample1_R1.fq.gz
+  - sample1_R2.fq.gz
+  - sample2_R1.fq.gz
+  - sample2_R2.fq.gz
+  ...
+```
+
+Command to run the pipeline:
+
+```
+nextflow run nf-core/rnaseq --input 'reads/*_R{1,2}.fq.gz' --genome GRCh37 -profile docker
+```
+
+This command will run the pipeline on every pair of FastQ files it finds in the `reads/` directory. The `{1,2}` syntax is used to specify the forward and reverse reads respectively. The `--genome` parameter is used to specify the reference genome for alignment (in this case, the human genome GRCh37), and `-profile docker` is used to run the pipeline in a containerized environment with Docker. The result will be saved in the 'results/' directory.
+
+Please note that the above input file is just an example and input parameters could vary according to the specific pipeline being used.

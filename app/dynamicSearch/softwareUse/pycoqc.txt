@@ -1,0 +1,25 @@
+Use Case: PycoQC is used for processing and visualizing data from Oxford Nanopore sequencing runs and quality control. It calculates a number of statistics and develops interactive HTML reports with plots and tables.
+
+Code details and examples: 
+
+Code:
+
+For pycoQC, you first need a sequencing summary file produced by an Oxford Nanopore basecaller like albacore or guppy.
+
+Sample input file (data sequencing_summary.txt) format should be as follows: 
+
+```
+filename_fastq  read_id run_id  batch_id channel mux start_time duration num_events passes_filtering ...
+filename1.fastq read1_1 run1    1       34      1   2          3        4          True ...
+filename2.fastq read2_2 run2    1       35      1   14         6        8          False ...
+```
+
+Each row represents a sequenced read and columns contain summary info about time of sequencing, read length, quality and so on and so forth.
+
+Command to run it:
+
+```bash
+pycoQC -f sequencing_summary.txt -o pycoQC_output.html
+```
+
+In this command, "-f" option is used to specify the input filename (sequencing_summary.txt here) and "-o" option is used to specify the output filename (pycoQC_output.html). The output is an HTML file with the Quality Control report for the input sequencing data.

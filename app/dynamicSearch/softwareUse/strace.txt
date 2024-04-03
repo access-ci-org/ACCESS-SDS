@@ -1,0 +1,43 @@
+Use Case: Strace is a powerful command-line tool for process troubleshooting and debugging in Linux. It provides a system call trace, signal-related information and other data about the processes running on a Linux system.
+
+Code Details and Examples:
+
+Code:
+Strace monitors the system calls and signals of a particular program. Here is an example of how it works. Suppose we have a simple C program:
+
+```c
+#include <stdio.h>
+
+int main() {
+    printf("Hello, World!");
+    return 0;
+}
+```
+
+This program can be compiled with gcc with the following command:
+
+```bash
+gcc program.c -o program
+```
+
+To monitor the system calls of this program using strace, the following command can be used:
+
+```bash
+strace ./program
+```
+
+This will output a list of all system calls invoked by the program. For instance:
+
+```bash
+execve("./program", ["./program"], 0x7ffeaa650880 /* 47 vars */) = 0
+brk(NULL)                               = 0x561a823d5000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+...
+write(1, "Hello, World!", 13Hello, World!) = 13
+...
++++ exited with 0 +++
+```
+
+where each line represents a system call with its parameters, return value and errno status. The output thus provides a trace of all system calls that are used by the process.
+
+Since strace works on binary executables, there is no specific input file format required. The only requirement is to have a runnable binary that can be passed as an argument to strace.

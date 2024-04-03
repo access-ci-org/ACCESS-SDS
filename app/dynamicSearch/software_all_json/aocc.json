@@ -1,0 +1,19 @@
+{
+    "software_name": "aocc",
+    "comprehensive_overview": "The AMD Optimizing C/C++ Compiler (AOCC) is a high performance compiler suite with support for C, C++, and Fortran programming languages.",
+    "core_features": "AOCC is designed to provide high performance on AMD processors by leveraging advanced optimizations and features specific to AMD architectures. It offers enhanced vectorization, link-time optimization, and improved code generation.",
+    "general_tags": [
+        "compiler",
+        "C",
+        "C++",
+        "Fortran",
+        "optimization"
+    ],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Compiler",
+        "software_type": "",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "software_name": "axl",
+    "comprehensive_overview": "The Application Exchange Library (Axl) is a software framework that provides a comprehensive suite of tools for collaborating with ASE (Atomic Simulation Environment) in Python. Axl facilitates the exchange of python objects for interacting with different computational materials science software packages.",
+    "core_features": "1. Enable seamless collaboration with ASE in Python. 2. Provides tools for exchanging Python objects. 3. Facilitates interaction with various computational materials science software packages in a unified framework.",
+    "general_tags": [
+        "computational software",
+        "Python library",
+        "materials science",
+        "software collaboration"
+    ],
+    "research_discipline": "Other Natural Sciences",
+    "research_area": "Atomic Simulation Environment",
+    "software_class": "Scientific Computing",
+    "software_type": "Framework",
+    "field_of_science": "Physical Sciences"
+}

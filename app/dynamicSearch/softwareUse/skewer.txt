@@ -1,0 +1,24 @@
+Use Case: Skewer is an HPC software package often used in bioinformatics for preprocessing next-generation sequencing (NGS) paired-end sequences. It's particularly useful for adapter trimming and other quality control measures.
+
+Code details and examples:
+
+Code:
+
+Sample input file (FASTQ format):
+
+```
+@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
++
+!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
+```
+
+Command to run Skewer:
+
+```
+skewer -x AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -y AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA -l 18 -q 15 -o output file.fastq inputfile.fastq
+```
+
+In the above example, the command first specifies adapter sequences (-x and -y options), the minimum allowed length for trimmed reads (-l option), and the minimum allowed trimming quality score (-q option), to produce a new file named 'output-file.fastq' (-o option) all from the 'inputfile.fastq'. 
+
+This output file can then be used for further downstream analysis in the NGS data pipeline.

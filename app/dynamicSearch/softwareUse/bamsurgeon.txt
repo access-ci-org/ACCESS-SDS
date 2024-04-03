@@ -1,0 +1,33 @@
+Use Case: BamSurgeon is used to add mutations to existing .bam files, either at random positions or at user-defined positions specified in a .bed file. It can be used to create synthetic tumor/normal pairs, given a real normal. This tool is useful for testing variant calling pipelines.
+
+Code Details and Examples:
+
+Code:
+
+Main files required are input bam file and a region defined in bed file.
+
+1. Input Bam file: alignment.bam
+   Alignments in the BAM format.
+
+2. Mutation regions BED file:  regions.bed 
+
+A sample bed file looks like:
+
+```
+chr1    1000    2000
+chr1    3000    4000
+chr2    5000    6000
+...
+```
+Command to add mutations:
+
+```bash
+addsnv.py -v mutations.bed -f input.bam -r reference.fasta -o output.bam
+```
+Where,
+-v: BED file with the regions of the mutations
+-f: input BAM file
+-r: reference fasta file
+-o: output BAM file
+
+Note that, the command adds SNVs to input.bam in regions specified by mutations.bed, with reference genome reference.fasta. Output is written to output.bam. Please replace the placeholders with the actual file paths before running this command.

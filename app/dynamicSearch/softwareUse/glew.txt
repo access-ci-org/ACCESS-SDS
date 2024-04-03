@@ -1,0 +1,64 @@
+Use Case: GLEW (OpenGL Extension Wrangler Library) is a cross-platform open-source C/C++ extension loading library. GLEW provides efficient run-time mechanisms for determining which OpenGL extensions are supported on the target platform. OpenGL developers use this tool to access OpenGL capabilities beyond the regular API.
+
+Code Details and Examples:
+
+Code:
+
+```C
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
+
+int main(void)
+{
+    GLFWwindow* window;
+
+    /* Initialize the library */
+    if (!glfwInit())
+        return -1;
+
+    /* Create a windowed mode window and its OpenGL context */
+    window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
+    if (!window)
+    {
+        glfwTerminate();
+        return -1;
+    }
+
+    /* Make the window's context current */
+    glfwMakeContextCurrent(window);
+
+    /* Loop until the user closes the window */
+    while (!glfwWindowShouldClose(window))
+    {
+        /* Render here */
+        glClear(GL_COLOR_BUFFER_BIT);
+
+        // Draw a triangle
+        glBegin(GL_TRIANGLES);
+        glVertex2f(-0.5f, -0.5f);
+        glVertex2f(0.0f, 0.5f);
+        glVertex2f(0.5f, -0.5f);
+        glEnd();
+
+        /* Swap front and back buffers */
+        glfwSwapBuffers(window);
+
+        /* Poll for and process events */
+        glfwPollEvents();
+    }
+
+    glfwTerminate();
+    return 0;
+}
+```
+
+Note: This is a simple application that creates a window and renders a triangle using OpenGL. GLEW must be correctly installed and linked to the project.
+
+Command to compile and run (Linux/Unix):
+
+```bash
+gcc -lGLEW -lglfw example.c -o example
+./example
+```
+
+Note: This command assumes GLEW and GLFW are installed in the system. The `-lGLEW -lglfw` flags tell the linker to link against these libraries. The `gcc` command compiles the C file, `example.c`, and produces an output executable called `example`. The `./example` command runs the produced executable.

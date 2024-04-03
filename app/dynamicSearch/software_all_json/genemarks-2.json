@@ -1,0 +1,26 @@
+{
+  "software_name": "GeneMarkS-2",
+  "comprehensive_overview": "GeneMarkS-2 is a gene prediction software that utilizes a self-training algorithm to predict genes in prokaryotic genomes. It identifies protein-coding genes, ribosomal RNA genes, and tRNA genes based on hidden Markov models.",
+  "core_features": [
+    "Gene prediction in prokaryotic genomes",
+    "Self-training algorithm",
+    "Identification of protein-coding genes, ribosomal RNA genes, and tRNA genes",
+    "Utilizes hidden Markov models"
+  ],
+  "general_tags": [
+    "gene prediction",
+    "prokaryotic genomes",
+    "hidden Markov models"
+  ],
+  "research_discipline": "",
+  "research_area": "",
+  "software_class": "Bioinformatics",
+  "software_type": "Gene Prediction",
+  "field_of_science": "Biological Sciences",
+  "additional_tags": {
+    "research_discipline": "Genomics",
+    "research_area": "Gene Annotation",
+    "software_class": "Genome Annotation",
+    "software_type": "Prokaryotic Gene Prediction"
+  }
+}

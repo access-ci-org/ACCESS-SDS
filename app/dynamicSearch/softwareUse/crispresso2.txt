@@ -1,0 +1,21 @@
+Use Case: CRISPResso2 is often used to quantify and analyze the outcomes of experiments using the CRISPR-Cas9 gene editing system.
+
+Code details and examples: 
+
+Code:
+
+For analysing a sample dataset one needs the files of sequencing reads, the amplicon sequence and the list of sgRNA sequences with the following CRISPResso command.
+
+```
+CRISPResso -r1 reads_1.fastq.gz -r2 reads_2.fastq.gz -a amplicon.fa -g guide.fa
+```
+
+Input Files:
+
+1. reads_1.fastq.gz and reads_2.fastq.gz - These are typically sequencing reads produced by a next-generation sequencing machine. They are in FASTQ format with each sequence and its quality score.
+
+2. amplicon.fa - This is the reference amplicon sequence in the FASTA format.
+
+3. guide.fa - This contains the guide RNA sequence(s) for the CRISPR-Cas9 system used in FASTA format.
+
+The command can be run from a terminal window and provides detailed output on insertions, deletions, and substitutions occurring in the given experimental data.

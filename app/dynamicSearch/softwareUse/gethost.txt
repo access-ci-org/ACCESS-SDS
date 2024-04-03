@@ -1,0 +1,29 @@
+Use Case: The GetHost is a function found in many programming languages such as C# and JavaScript. It retrieves the host name of the local machine on which the code is being executed.
+
+Code details and examples: Code
+
+If using the GetHost function in C#, it would be within the System.Net namespace and could be invoked like this:
+
+```
+using System;
+using System.Net;
+
+class Program 
+{
+    static void Main() 
+    {
+        string hostName = Dns.GetHostName();
+        Console.WriteLine("Host Name: " + hostName);
+    }
+}
+```
+
+This code does not require any input file. It simply uses the GetHostName() method from the Dns class, which is a part of the .Net library in C#. The output would be the name of the local machine where this code is executed.
+
+To run the code, it would need to be compiled and run from a C# environment or compiler. Depending on the development environment used, the command to run might differ. In a simple command line environment, you can use the following commands to compile and run the program:
+
+```
+csc Program.cs
+Program.exe
+```
+Here, csc is the C# compiler provided by .Net, Program.cs is the input file with the C# code and Program.exe is the executable that the compiler generates.

@@ -1,40 +1,34 @@
-Use Case: libunistring is a C library for manipulating Unicode strings and for processing textual data in different encoding forms.
+Use Case: libunistring is an internationalized application as it provides functions for manipulating Unicode strings and for manipulating C strings according to the Unicode standard.
 
 Code details and examples:
-libunistring provides various functions for manipulating Unicode strings, such as converting between different encoding forms, case conversion, normalization, and more. Below is a simple example of how to use the libunistring library to convert a UTF-8 string to a UTF-16 string.
+
+Code:
+
+For instance, you may want to capitalize the first character of a string. Here's how to do it:
 
 ```c
-#include <stdio.h>
-#include <string.h>
-#include <unistr.h>
+#include <unistr.h> 
+#include <unicase.h>
+#include <locale.h>
 
-int main() {
-    const char *utf8_string = "Hello, World!"; // Input UTF-8 string
-    int utf16_length = 2 * strlen(utf8_string) + 2;
-    uint16_t utf16_string[utf16_length]; // Output UTF-16 string
+int main () {
 
-    u8_strto32(utf8_string, utf16_string, utf16_length); // Convert UTF-8 to UTF-16
+    uint8_t input[] = "hello, world!"; 
+    uint8_t output[256]; 
+    size_t length; 
+    u8_toupper (input, u8_strlen (input), NULL, NULL, output, &length); 
+    output[length] = '\0';
 
-    // Print the UTF-16 string
-    for (int i = 0; utf16_string[i] != 0; i++) {
-        printf("%04X ", utf16_string[i]);
-    }
-    printf("\n");
+    printf("%s\n", output); 
 
-    return 0;
+    return 0; 
 }
 ```
 
-To compile the above program, you can use a command similar to the one below (the exact command may vary based on your system):
+This program uses the `u8_toupper` function to convert the string to uppercase and print the result. The command to run this program: `gcc -o my_program my_program.c -lunistring`, then `./my_program`.
 
-```bash
-gcc example.c -o example -lunistring
-```
+Also note, this library is written in C and uses GNU's libtool, which will give a .la file, however, you can also get a .so file by building this library with --disable-static and --enable-shared while running `./configure`.
 
-Then, you can run the compiled executable:
+You can manipulate strings in more ways, such as, finding length, converting entire string to uppercase or lowercase, comparing strings etc. 
 
-```bash
-./example
-```
-
-This is a simple example to demonstrate the basic usage of libunistring for converting a UTF-8 string to a UTF-16 string. The library provides many more functions for Unicode string manipulation, and you can refer to the official documentation for more details and examples.
+The input format would be a uint8_t array and if result is to be stored that is also a uint8_t array. We also have to provide length of string either with precalculated length or using inbuilt library function to calculate length. There are no specific specifications apart from the fact that the library works with Unicode strings. Because of this, it can support a much wider range of characters than ASCII or UTF-8 alone.

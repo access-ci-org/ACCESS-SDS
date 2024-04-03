@@ -1,29 +1,31 @@
-Use Case: Trim adapters from sequencing reads.
+Use Case: Cutadapt finds and removes adapter sequences, primers, poly-A tails and other types of unwanted sequence from your high-throughput sequencing reads.
 
-Code details and examples:
-```
-# Install cutadapt (if not already installed)
-# pip install cutadapt
+Code Details and Examples: 
 
-# Trim adapters from paired-end sequencing reads
-cutadapt -a ADAPTER_FWD -A ADAPTER_REV -o output_fwd.fastq -p output_rev.fastq input_fwd.fastq input_rev.fastq
+Code #1:
 
-# Trim adapters from single-end sequencing reads
-cutadapt -a ADAPTER -o output.fastq input.fastq
-```
+Input file:
+FASTQ file with sequencing reads
 
-Input file format:
-- For paired-end reads:
-  - input_fwd.fastq: FASTQ file containing forward reads
-  - input_rev.fastq: FASTQ file containing reverse reads
-- For single-end reads:
-  - input.fastq: FASTQ file containing sequencing reads
+Example:
+@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
++
+!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
 
-Specifications:
-- ADAPTER_FWD, ADAPTER_REV, ADAPTER: The sequences of the adapters to be trimmed.
+Command to run Cutadapt:
+cutadapt -a ADAPTER_SEQUENCE -o output.fastq input.fastq
 
-Note:
-- Replace ADAPTER_FWD, ADAPTER_REV, ADAPTER with the actual adapter sequences.
+ADAPTER_SEQUENCE in the command must be replaced with the actual adapter sequence. 'input.fastq' is the raw data file, 'output.fastq' is the name of the file that will be created with trimmed sequences.
 
-Command to run:
-- Replace the input and output file names and adapter sequences, then run the provided command in the terminal.
+Code #2:
+
+Another use case of Cutadapt is to remove sequences from the ends of reads. This is useful when the quality of the bases decreases towards the end of the reads.
+
+Input file:
+FASTQ file with sequencing reads
+
+Command to run Cutadapt:
+cutadapt -u 5 -u -3 -o output.fastq input.fastq
+
+In this command, '-u 5' removes bases from the beginning (5' end) of each read and '-u -3' removes bases from the end (3' end). The numbers following '-u' can be adjusted according to the number of bases to be removed.

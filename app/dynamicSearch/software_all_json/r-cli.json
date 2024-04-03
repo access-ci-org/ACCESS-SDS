@@ -1,0 +1,13 @@
+{
+    "software_name": "r-cli",
+    "comprehensive_overview": "r-cli is a command-line interface for the R programming language, allowing users to interact with R directly from the terminal.",
+    "core_features": "1. Command-line interface for R\n2. Allows users to execute R code from the terminal\n3. Supports interactive R sessions in a terminal environment\n4. Easy installation and setup\n5. Useful for quick data analysis and scripting tasks in R",
+    "general_tags": ["R programming language", "command-line interface", "data analysis", "scripting"],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Development tools",
+        "software_type": "Command-line interface",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

@@ -1,49 +1,35 @@
-NiBabel is a Python package that provides read and write access to neuroimaging file formats. It allows users to manipulate neuroimaging data in formats such as NIfTI and ANALYZE.
+Use Case: Using NiBabel for reading imaging data from formats such as Nifti1, Nifti2, Analyze and many more. 
 
-Use Case: Load a NIfTI file using NiBabel
 Code details and examples:
+
+Code:
+
 ```python
 import nibabel as nib
 
-# Load a NIfTI file
-img = nib.load('example_data.nii.gz')
-
-# Access the image data
-data = img.get_fdata()
-
-# Get the shape of the data
-print(data.shape)
+image = nib.load("example_image.nii")
+image_header = image.header
+image_data = image.get_fdata()
 ```
 
-Use Case: Save data to a NIfTI file using NiBabel
-Code details and examples:
-```python
-import nibabel as nib
-import numpy as np
+This code will load an image file named "example_image.nii" with nibabel, and then pull out the header and data. The header contains metadata about the image, such as the dimensions and pixel spacing, whereas the data contains the pixel values for the image. 
 
-# Create some example data
-data = np.random.rand(64, 64, 64)
+Command:
 
-# Create a NIfTI object
-nifti_img = nib.Nifti1Image(data, np.eye(4))
+Since this is a python library, commands are executed in a python environment. Ensure you have installed nibabel using pip:
 
-# Save the NIfTI object to a file
-nib.save(nifti_img, 'example_output.nii.gz')
+``` 
+pip install nibabel
 ```
 
-Use Case: Get metadata information from a NIfTI file using NiBabel
-Code details and examples:
-```python
-import nibabel as nib
+Then run your python script using:
 
-# Load a NIfTI file
-img = nib.load('example_data.nii.gz')
-
-# Get the header information
-header = img.header
-
-# Print the header information
-print(header)
+``` 
+python your_script.py
 ```
 
-For more advanced usage and documentation, refer to the NiBabel official documentation at https://nipy.org/nibabel/.
+Requirements:
+
+The input file format needs to be an imaging format such as Nifti1, Nifti2, or Analyze. The image file in the example code is called "example_image.nii" but you would replace this with your specific image file. For example, if your image file was called "brain_scan.nii", the line of code would be `image = nib.load('brain_scan.nii')`.
+
+Importantly, whichever image file you use must be stored in the same directory as your python script, or else you must provide the relative path to the file.

@@ -1,15 +1,27 @@
-Use Case: Protein structure prediction
+Use Case: AlphaFold is used for predicting protein structure from sequence. It conditions an autoregressive model on evolutionary covariation through two feedforward neural networks.
 
-Code details and examples: 
-Input file format: Protein sequence in FASTA format
+Code details and examples: Code
+
+Sample input format:
+
+Running AlphaFold generally requires two files, a FASTA file and an MSA (Multiple Sequence Alignment) file.
+
+The FASTA file should look like this:
 ```
->protein_sequence
-MADQLTEEQIAEFKEAFSLFDKDGDGTITTKELGTVMRSLGQNPTEAELRDICLARFADKILKRLG
-DYKDDDDMKKKKDKVVKDSGVRFKVIGNGFGLFEVGEAEFKKEHEQLLSAVDYVNTMKTPEDVQAH
-DYKKEMPSSGAEAKPPQ
+>sequence
+MENSDSNDKGSDQSAAQRRSQMDRLDREEAFYQFVNNLSEEDYRLMRDNNLLGTPGESTEEELLRMLSACQD
 ```
 
-Command to run AlphaFold:
+The MSA file should look like this (generated using a tool like HHblits or JackHMmer against a database like Uniref or BFD):
 ```
-python3 run_alphafold.py --fasta protein.fasta --output_dir output
+>sequence
+MENSDSNDKGSDQSAAQRRSQMDRLDREEAFYQFVNNLSEEDYRLMRDNNLLGTPGESTEEELLRMLSACQD
 ```
+
+Sample command line to run:
+
+```
+python run_alphafold.py --fasta_paths=my_fasta.fasta --msa_paths=my_msa.a3m --max_template_date=2020-05-14
+```
+
+This command tells alphafold to take in the sequences located in `my_fasta.fasta`, the corresponding MSAs located in `my_msa.a3m` and not to use any templates that were released after `2020-05-14`. Note that the `--max_template_date` argument is optional.

@@ -1,0 +1,49 @@
+Use Case: Use cxxopts to parse command-line arguments in a C++ project.
+
+Code details and examples: Code.
+
+Sample Code
+
+```c++
+#include <cxxopts.hpp>
+
+int main(int argc, char* argv[])
+{
+    try
+    {
+        cxxopts::Options options(argv[0], " - example command-line options");
+        options
+            .positional_help("[optional args]")
+            .show_positional_help();
+
+        options
+            .add_options()
+          ("b,bind", "bind to address", cxxopts::value<std::string>()->default_value("0.0.0.0"))
+          ("p,port", "port to listen on", cxxopts::value<int>()->default_value("12345"))
+          ("v,verbose", "Set verbosity", cxxopts::value<int>()->default_value("0"));
+        
+        auto result = options.parse(argc, argv);
+
+        std::cout << "Option verbose is: " << result["verbose"].as<int>() << std::endl;
+        std::cout << "Listening on: " << result["bind"].as<std::string>() << ":" << result["port"].as<int>() << std::endl;
+    }
+    catch (const cxxopts::OptionException& e)
+    {
+        std::cout << "error parsing options: " << e.what() << std::endl;
+        return 1;
+    }
+
+    return 0;
+}
+```
+
+Command to compile and run the program:
+
+```bash
+g++ -std=c++14 main.cpp -o main
+./main --bind=127.0.0.1 --port=8080 --verbose=1
+```
+
+This script is used to parse command-line arguments (bind, port, verbose). The script reads the values from the command line. If no values are given, it uses the default values specified. The options can also have a short alias (b for bind, p for port, v for verbose).
+
+In this example, we are using the g++ compiler to compile the script and execute it with some command-line arguments. After running the script, it prints the values of the options. The options are given like --bind=127.0.0.1 --port=8080 and also the verbosity like --verbose=1

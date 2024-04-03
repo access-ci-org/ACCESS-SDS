@@ -1,0 +1,13 @@
+{
+    "software_name": "Geos",
+    "comprehensive_overview": "Geos is an open-source geometry engine that provides C++ software libraries and tools for processing spatial data. It is a key component of the PostGIS spatial database extender and is used in various GIS software applications.",
+    "core_features": "Geos offers robust support for geometric operations such as buffering, intersection, union, and difference. It provides functionalities for handling various geometric objects like points, lines, polygons, and collections. Geos also includes algorithms for validating geometries and simplifying complex geometric structures.",
+    "general_tags": ["geometry engine", "spatial data processing", "GIS", "open-source"],
+    "additional_tags": {
+        "research_discipline": "Other Computer and Information Sciences",
+        "research_area": "Geographic Information Systems",
+        "software_class": "Library",
+        "software_type": "Geospatial Software",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

@@ -1,0 +1,48 @@
+Use Case: ANANSE is a tool used in genomics and bioinformatics for predicting the genome-wide effect of transcription factors from gene expression data.
+
+***Code details and examples:***
+
+***Code:***
+
+When running ANANSE, there are two main steps: influence and binding
+
+1. Influence
+
+Command: 
+```bash
+ananse influence -R enhancer.bed -T <transcription_factors_file.txt>
+output_file -O outputfile.txt
+```
+In this command, `-R` represents the region file, `-T` the transcription factors file, `output_file` your output file to write results to, `-O` the name of the output file.
+
+The region BED file (`enhancer.bed`) should be in the following format:
+
+```
+chr1    3061354 3061554 enhancer_1    1.00    .
+chr1    3397659 3397859 enhancer_2    1.00    .
+chr1    4651559 4651759 enhancer_3    1.00    .
+......
+```
+The transcription factor file (`transcription_factors_file.txt`) could look like this:
+
+```
+MAX
+MYC
+```
+This lists the transcription factors to be included in the analysis. One transcription factor per line.
+
+2. Binding
+
+Command:
+```bash
+ananse binding -R enhancerFile.bed -A globin1.bam -B globin2.bam -O bindingOutput
+```
+In this command, `-R` represents the region file, `-A` the bam file globin1, `-B` the bam file globin2, `-O` the name of the output file.
+
+The `-A` and `-B` files are bam files. The format of a bam file usually looks like this:
+
+```
+SN7001180:447:H2VFVBCXX:1:1101:1487:1946 163 chr1    35505
+SN7001180:447:H2VFVBCXX:1:1101:1533:1953 99  chr1    35505
+```
+The `-R` needs to be formatted like mentioned earlier under Influence.

@@ -1,32 +1,42 @@
-Use Case: Electronic structure calculations with GPAW
-Code details and examples:
-GPAW (Grid-based Projector-Augmented Wave method) is a software package for DFT (Density Functional Theory) calculations. Here is an example of running GPAW for a simple electronic structure calculation.
+Use Case: GPAW is a Python-based Plane-Wave Density-Functional Theory code used in the quantification and analysis of the electronic structure of many-electron systems.
 
-Sample input file (input.py):
-```python
+Code Details and Examples:
+
+Code: 
+
+```
+# Import necessary module
 from gpaw import GPAW, PW
-from ase import Atoms
 
-# Define the structure (e.g., hydrogen molecule)
-atoms = Atoms('H2', positions=[(0, 0, 0), (0, 0, 0.74)])
+# Define computational parameters
+parameters = {'mode': PW(600),
+              'xc': 'PBE',
+              'kpts': (8, 8, 8),
+              'parallel': {'band': 1},
+              'occupations': {'name': 'fermi-dirac', 'width': 0.05}}
 
-# Set up the calculator
-calc = GPAW(mode=PW(300),
-            xc='PBE',
-            setups='sg15',
-            kpts=(4, 4, 4))
+# Define structure (e.g., diamond)
+from ase.build import bulk
+structure = bulk('C', 'diamond')
 
-atoms.set_calculator(calc)
+# Set calculator with parameters defined
+structure.set_calculator(GPAW(**parameters))
 
-# Run the calculation
-atoms.get_potential_energy()
+# Perform single point calculation
+structure.get_potential_energy()
+
+# Save results
+structure.calc.write('diamond.gpw', 'all')
 ```
 
-To run the GPAW calculation using the input file above, you can use the following command:
-```bash
-gpaw-python input.py
+Command to run: 
+
+```
+$ gpaw python diamond.py
 ```
 
-This will perform a DFT calculation for a hydrogen molecule using the PBE exchange-correlation functional, a plane-wave energy cutoff of 300 eV, and a 4x4x4 k-point grid.
+Input file format: The input to GPAW is a Python script with embedded parameters and computational details, such as the test case 'diamond.py' created above.
 
-Please note that the input file and parameters can be modified based on the specific system and calculation details.
+Specifications and detail in input files: The Python script file as input should contain the definition of the chemical system, the computational parameters such as exchange-correlation functional, the type of basis set, the computational mode, k-points, etc., and necessary computational steps (e.g., single point calculation, geometry optimization, etc.).
+  
+Output file format: The output file ('diamond.gpw') is in binary format which contains all the required data from the run, including the wave functions. This file can be later read by GPAW for further computations or by other computational tools for analysis.

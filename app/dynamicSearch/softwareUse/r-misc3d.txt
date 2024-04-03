@@ -1,0 +1,23 @@
+Use Case: Use the R package `misc3d` to create three dimensional kernel density estimates, contours, surfaces, volumes, scatter plots, point clouds, and individual points. It also provides functionality to interact with the created graphics.
+
+Code details and examples: Code
+
+To use `misc3d`, the function you will call depends on what you want to plot. Here is a sample use case where we will create a Kernel Density Estimate of a set of 3D points:
+
+```R
+# Load package
+library(misc3d)
+
+# Create some random data
+set.seed(0)
+dat <- matrix(rnorm(30000), ncol = 3)
+
+# The KDE3D function creates a 3D density estimate
+kde <- kde3d(dat, n = 50, lims = c(-3, 3, -3, 3, -3, 3))
+
+# Render the 3D kernal density estimate
+renderd3d(kde)
+```
+
+To run this in R, simply save the code in a file and use the source command `source("yourfile.R")` in R console.
+The inputs here are the 3d points in a n x 3 matrix format where n is the number of points and each row represents a 3D point (x, y, z). The `lims` argument for the `kde3d` function defines the limits of the x, y, and z coordinates.

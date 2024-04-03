@@ -1,0 +1,26 @@
+Use Case: Phred is commonly used in bioinformatics for base calling. It processes the output from DNA sequencers to predict the sequence of bases and their quality scores.
+
+Code details and examples:
+
+Input File: 
+Phred requires a chromatogram file, standard formats being ABI or SCF format.
+
+Code:
+Phred does not directly take code input; it is operated via command line using command arguments to specify the details required. 
+
+Sample command to run Phred:
+```sh
+phred -id . -sd . -qd . -trim_cutoff 0.05 -trim_fasta -trim_alt "" -trim_phd
+```
+In this command
+- -id indicates the input directory.
+- -sd specifies the directory to store the .seq and .qual files.
+- -qd specifies the directory to store the .phd.1 files.
+- -trim_cutoff 0.05 sets the trimming error probability cut-off.
+- -trim_fasta generates FASTA files of the trimmed sequences.
+- -trim_alt "" sets the name of alternate output file format.
+- -trim_phd generates PHD files for the trimmed sequences. 
+
+There's no standard input file, as it depends on the sequence being processed. However, it should be in either ABI or SCF format.
+
+Note: actual usage may vary depending on the version and particular requirements. For all options and more information please refer to the manual/documentation provided with the software.

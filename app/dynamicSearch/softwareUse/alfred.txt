@@ -1,0 +1,33 @@
+Use Case: Alfred is used to simultaneously process multiple data types like WGS, WES, RNA-Seq, ChIP-Seq, ATAC-Seq, etc. for high-throughput analysis in genome biology and personalized medicine.
+
+Code details and examples:
+
+Code: 
+
+Input file format: .fastq or fastq.gz (compressed); Sequencing quality scores in Illumina 1.8+ Phred scale (+33).
+
+Specifications: Paired-end or single-end sequenced data.
+
+Sample input files: 
+
+  R1.fastq:
+  
+  @read1
+  ACGTACGT
+  +
+  JJJJJJJJ
+  
+  R2.fastq:
+  
+  @read1
+  TGCATGCA
+  +
+  HHHHHHHH
+  
+Command to run:
+
+```bash
+alfred qc -o output.tsv.gz R1.fastq R2.fastq
+```
+
+This code generates quality control metrics from input files R1.fastq and R2.fastq and outputs to output.tsv.gz.

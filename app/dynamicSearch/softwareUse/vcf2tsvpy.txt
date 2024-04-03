@@ -1,0 +1,35 @@
+Use Case: vcf2tsvpy is a python script used to convert VCF files into a tab-separated values (TSV) format. This can be useful in genomic data analysis where VCF files contain variant calls and their information. The converted TSV files are easier to manipulate and analyze with traditional data analysis tools. 
+
+Code details and examples:
+
+Code: 
+```python
+import vcf2tsvpy
+
+# Create a Converter object with input and output file paths
+converter = vcf2tsvpy.Converter("input.vcf", "output.tsv")
+
+# Convert the vcf to tsv
+converter.convert()
+```
+Input Format: The required input is a VCF (Variant Call Format) file. The VCF file contains metadata lines, a header line, and then data lines each containing information about a position in the genome.
+
+Sample Input File: 
+
+```
+##fileformat=VCFv4.2
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Total Depth">
+##INFO=<ID=AF,Number=A,Type=Float,Description="Allele Frequency">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+#CHROM  POS     ID      REF     ALT     QUAL    FILTER  INFO    FORMAT  Sample
+20      14370   rs6054257       G       A       29      PASS    DP=14;AF=0.5   GT      0/1
+20      17330   .       T       A       3       q10     DP=11;AF=0.017  GT      0/0
+```
+
+Command to run:
+You can execute the script using the python command line.
+
+```bash
+python vcf2tsv.py -i input.vcf -o output.tsv
+```
+In this command, '-i' is used to specify the input VCF file and '-o' is used to specify the output TSV file.

@@ -1,0 +1,57 @@
+Use Case: Use of R-Limma for analyzing microarray data and identifying differentially expressed genes.
+
+Code details and examples:
+
+To use R-Limma, you first need to import the microarray data and this is typically in .CEL format:
+
+```
+# Import necessary library
+library(affy)
+
+# Read in CEL files
+data <- ReadAffy(filenames = list.celfiles())
+
+```
+
+Next, normalize the data using RMA (Robust Multi-chip Average) normalization provided by the affy package:
+
+```
+# Normalize data
+data_normalized <- rma(data)
+```
+
+Then, design the experiment matrix. The design matrix for a very basic experiment with a control and a treatment group would look like the following:
+
+``` 
+# Example design matrix
+group <- factor(c(rep("control",5), rep("treatment",5)))
+design <- model.matrix(~0+group)
+```
+
+Perform linear modeling and calculate statistics using the limma package:
+
+```
+# Import library
+library(limma)
+
+# Fit model
+fit <- lmFit(data_normalized, design)
+
+# Perform eBayes moderation
+fit_eBayes <- eBayes(fit)
+
+# Output results
+results <- topTable(fit_eBayes, adjust="fdr", sort.by="B", number=Inf)
+```
+
+Command to run:
+
+Since the above sample is a R script, to run it, save it as a '.R' file (example: `limma_example.R`) and execute it in the command line using Rscript:
+
+```
+Rscript limma_example.R
+```
+
+Input file required: Microarray data file(s) in .CEL format. Importantly, each row represents a separate gene and each column represents a different sample. Samples are labeled as belonging to either a control or treatment group in the design matrix.
+
+Specifications of input files: The .CEL files should come from the Affymetrix GeneChip array platform. The order of filenames passed to `ReadAffy()` should match the order of sample groups defined in the design matrix. Your group variable definitions should match the actual groups in your design matrix.

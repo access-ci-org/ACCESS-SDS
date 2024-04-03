@@ -1,0 +1,36 @@
+Use Case: dnaio is used for reading and writing FASTQ and FASTA files. Useful for tasks related to genomics or bioinformatics where manipulation of these types of files is required.
+
+Code Details and Examples: 
+
+Input File: A FASTA file, example.fa with following content:
+
+```
+>SEQUENCE_1
+ATGC
+>SEQUENCE_2
+AGCT
+```
+
+Code:
+
+``` python
+import dnaio
+with dnaio.open('example.fa') as file:
+    for record in file:
+        print(record)
+```
+
+Command to run:
+
+``` bash
+python script.py
+```
+
+This will output:
+
+```
+SEQUENCE_1 ATGC
+SEQUENCE_2 AGCT
+```
+
+The script will open the FASTA file and print each record. Each record is a tuple containing the sequence name and the actual sequence. The input file needs to be in FASTA format - a text-based format for representing either nucleotide sequences or peptide sequences, in which nucleotides or amino acids are represented using single-letter codes.

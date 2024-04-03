@@ -1,0 +1,13 @@
+{
+    "software_name": "APR",
+    "comprehensive_overview": "The Apache Portable Runtime (APR) is a software library that provides a predictable and consistent interface to underlying platform-specific implementations.",
+    "core_features": "APR provides a set of APIs that abstract many operating system-specific functionalities, such as file I/O, networking, threading, and inter-process communication. It aims to simplify the development of cross-platform applications by providing a common API for various operating system functions.",
+    "general_tags": ["software library", "cross-platform development", "operating system abstraction"],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Library",
+        "software_type": "Development",
+        "field_of_science": "Engineering and Technology"
+    }
+}

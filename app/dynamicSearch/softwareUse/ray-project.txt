@@ -1,0 +1,27 @@
+Use Case: Ray is an open-source project for parallel and distributed Python that unifies mainstream distributed computing patterns into a single, flexible programming model. The use case of ray-project is to define computational workflows in Python using Tasks and Actors. 
+
+Code Details and Examples:
+
+Code:
+
+```python
+import ray
+ray.init()
+
+@ray.remote
+def f(x):
+    return x * x
+
+futures = [f.remote(i) for i in range(10)]
+print(ray.get(futures))
+```
+
+In this sample, ray.get is used to fetch the results of a remote function. The output should be: `[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]`
+
+Command to run the code: 
+
+If you're running on a Jupyter notebook, you directly run. If running from a python file, you save the code in a python file and run `python filename.py`. The filename.py is the python file where you saved the code. 
+
+Input files, format and specifications:
+
+No input files or specific format required. Ray takes input as function arguments which you provide while calling the function. In the above case, numbers 0 to 9 are input to function `f`.

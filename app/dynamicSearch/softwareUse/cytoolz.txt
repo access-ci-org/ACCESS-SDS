@@ -1,0 +1,28 @@
+Use Case: Use cytoolz, a python library that offers utility functions for fast, memory-efficient toolz like set, list, dict, and other iterables. This is beneficial when working with large datasets that cannot all load into memory. 
+
+Code details and examples: 
+
+Code: 
+
+```python
+from cytoolz import itertoolz
+
+# Create an iterable
+iterable = range(10)
+
+# Create an iterable of pairs.
+pairs = itertoolz.pairwise(iterable)
+
+# Print all pairs
+print(list(pairs))
+```
+
+Input files: No input file is needed.
+
+Format required: N/A
+
+Any specifications and details in input files: N/A
+
+Command to run the code: This code can be run in a Python environment by invoking the Python interpreter and running the code. E.g. `python3 filename.py` 
+
+Note that output will be `[(0, 1), (1, 2), (2, 3), (3, 4), (4, 5), (5, 6), (6, 7), (7, 8), (8, 9)]`.

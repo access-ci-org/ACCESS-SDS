@@ -1,36 +1,55 @@
-Use Case: Linear algebra library for high-performance computing.
+Use Case: Intel Math Kernel Library (MKL) is a library of optimized math routines for science, engineering, and financial applications. Core math functions include BLAS, LAPACK, ScaLAPACK, Sparse Solvers, Fast Fourier Transforms, Vector Math, and more; 
 
-Code details and examples: 
-MKL (Math Kernel Library) is a mathematical library that provides optimized routines for linear algebra, fast Fourier transforms, vector math, and more. It is commonly used in high-performance computing applications to accelerate mathematical computations.
+Code details and examples: Code
 
-Example of using MKL to perform matrix multiplication in C:
+Input: Text file with a matrix for matrix multiplication. 
+
+Here is an example of multiplying two square matrices using the DGEMM routine in Intel MKL:
 
 ```c
-#include <stdio.h>
-#include <mkl.h>
+#include "mkl.h"
+
+#define SIZE 4 
+
+double a[SIZE][SIZE] = {{1.0, 2.0, 3.0, 4.0},
+                        {1.0, 2.0, 3.0, 4.0},
+                        {1.0, 2.0, 3.0, 4.0},
+                        {1.0, 2.0, 3.0, 4.0}};
+
+double b[SIZE][SIZE] = {{1.0, 2.0, 3.0, 4.0},
+                        {1.0, 2.0, 3.0, 4.0},
+                        {1.0, 2.0, 3.0, 4.0},
+                        {1.0, 2.0, 3.0, 4.0}};
+
+double c[SIZE][SIZE] = {0.0};
 
 int main() {
-    double A[2][2] = {{1.0, 2.0}, {3.0, 4.0}};
-    double B[2][2] = {{4.0, 3.0}, {2.0, 1.0}};
-    double C[2][2];
+  char trans = 'N';
+  int dim = SIZE;
+  double alpha = 1.0;
+  double beta = 0.0;
+  int incx = 1, incy = 1;
+  int lda = SIZE, ldb = SIZE, ldc = SIZE;
 
-    cblas_dgemm(CblasRowMajor, CblasNoTrans, CblasNoTrans, 2, 2, 2, 1.0, *A, 2, *B, 2, 0.0, *C, 2);
+  dgemm(&trans, &trans,
+        &dim, &dim, &dim,
+        &alpha,
+        *a, &lda,
+        *b, &ldb,
+        &beta,
+        *c, &ldc);
 
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 2; j++) {
-            printf("%f ", C[i][j]);
-        }
-        printf("\n");
-    }
-
-    return 0;
+  return 0;
 }
 ```
 
-To compile the code using MKL in C, use the following command:
+Command to compile the program:
 
+```shell
+icc -o matrix_multiplication matrix_multiplication.c  -lmkl_rt 
 ```
-icc -o matmul matmul.c -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -lpthread -lm -ldl
-```
+Command to run the compiled program:
 
-This command assumes you have Intel's C compiler (icc) and MKL installed on your system.
+```shell
+./matrix_multiplication
+```

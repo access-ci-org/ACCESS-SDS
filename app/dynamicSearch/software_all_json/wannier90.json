@@ -1,0 +1,11 @@
+{
+  "software_name": "wannier90",
+  "comprehensive_overview": "Wannier90 is a tool used for the computation of maximally-localized Wannier functions, which are spatially compact and localized functions that provide a natural description of the electronic structure of a solid. These functions are often used in condensed matter physics calculations to study the electronic properties of materials.",
+  "core_features": "1. Computation of maximally-localized Wannier functions\n2. Calculation of Wannier centers and spreads\n3. Generation of Wannier interpolation grids\n4. Interface with various electronic structure codes\n5. Post-processing and analysis functionalities",
+  "general_tags": ["computational chemistry", "solid state physics", "electronic structure", "materials science"],
+  "research_discipline": ["Condensed Matter Physics"],
+  "research_area": ["Electronic Structure Theory"],
+  "software_class": "Computational Software",
+  "software_type": "Library",
+  "field_of_science": "Physical Sciences"
+}

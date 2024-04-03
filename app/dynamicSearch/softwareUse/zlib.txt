@@ -1,26 +1,33 @@
-Use Case: Data compression using zlib
+Use Case: zlib is an essential library required for most compression/decompression utilities. Mainly, it is used for gzip file decompression.
 
-Code details and examples:
+Code Details and Examples: 
+
+Code
+Input files: should be in byte form or string which would be converted to bytes.
+
+Format required: an executable command using a UTF-8 compatible terminal incorporating the zlib library 
+- If compressing: String - byte sequence
+- If decompressing: bytes - String
+
+Specifications: 
+- When compressing, the input file must be a string of bytes you want to compress.
+- While decompressing, the input file must be of type bytes already compressed.
+
+Code examples:
+
+Example 1: Compressing data in Python using zlib
+
 ```python
 import zlib
+source_data = b"This is some data that requires compression"
+compressed_data = zlib.compress(source_data)
+```
+Example 2: Decompressing data using zlib
 
-# Input data to be compressed
-data = b'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-
-# Compressing data using zlib
-compressed_data = zlib.compress(data)
-
-# Decompressing data
+```python
+import zlib
+compressed_data = b'x\x9c+\xc9\xc8,V\x00\xa2D\xf6\x01I\x06^\x00\xa4\xefz\x0e'
 decompressed_data = zlib.decompress(compressed_data)
-
-print("Original data:", data)
-print("Compressed data:", compressed_data)
-print("Decompressed data:", decompressed_data)
 ```
 
-To run the above code, save it in a Python script (e.g., `zlib_example.py`) and execute it using a Python interpreter.
-
-Command to run:
-```bash
-python zlib_example.py
-```
+Command to run: python filename.py (Replace filename.py with your python file name)

@@ -1,0 +1,56 @@
+Use Case: Pyfaidx is a Python library used in bioinformatics for generating and retrieving slices of FASTA files. This library is designed to provide methods for indexing and extracting sequences and sub-sequences from FASTA files.
+
+Code details and examples: Code
+
+Indexing:
+
+To index a file you can use the Fasta function.
+
+```python
+from pyfaidx import Fasta
+genes = Fasta('genes.fasta')
+```
+
+Fetching Sequences:
+
+To fetch the sequence of a gene you can use the following:
+
+```python
+seq = genes['gene_name']
+print(seq)
+```
+
+Slicing:
+
+If you want to slice a sequence of a gene you can use the following:
+
+```python
+seq_slice = genes['gene_name'][0:500]
+print(seq_slice)
+```
+
+Subsequences:
+
+To fetch subsequences you can use the following:
+
+```python
+sub_seq = genes['gene_name'][::-1]
+print(sub_seq)
+```
+
+Though it isn't a command-line tool, Pyfaidx can be run as a command-line as follows:
+
+Command to run: `python script.py` (Assuming the script file is script.py)
+
+Input and Format: Pyfaidx requires an input file in FASTA format (`.fasta` file).
+
+Details in Input Files: Input FASTA files should follow the standard format where each sequence is represented by two lines - one starting with '>' and the identifier of the sequence, the other with the sequence itself. For example:
+
+```
+>gene1
+ATGCATGCATGCATGC
+>gene2
+TGCACTGCACTGCATG
+```
+
+This means that Pyfaidx is working with already-analyzed and segmented genome data, rather than a raw sequencer output.

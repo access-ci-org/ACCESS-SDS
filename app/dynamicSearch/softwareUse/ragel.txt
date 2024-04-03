@@ -1,0 +1,38 @@
+Use Case: Use Ragel to compile finite state machines into executable C or C++ code for fast and robust pattern matching in text processing applications.
+
+Code details and examples: Code 
+Ragel takes as input a .rl file describing the finite state machine. The machine specifies a set of possible states, the events that trigger transitions between states, and the actions that are taken as a result of these transitions.
+
+Sample '.rl' file
+
+```
+%%{
+  machine lexer;
+
+  space     = ' ' | '\t';
+  newline   = '\n';
+  punctuation = ',' | '.' ;
+  word      = (any - space - newline - punctuation)+;
+  token     = space | newline | word | punctuation;
+  main := |* token *|;
+}%%
+```
+In this sample, a machine (lexer) is defined. 
+- 'space' includes space or tab characters, 
+- 'newline' is represented by the newline character,
+- 'word' includes any character not included in 'space', 'newline' or 'punctuation',
+- 'punctuation' includes either a comma or a period,
+- 'token' can be either a 'word', 'space', 'newline' or 'punctuation'.
+- The main machine reads any number of tokens.
+
+To generate the C code from the Ragel file:
+
+`ragel -C lexer.rl`
+
+This will create a C file `lexer.c` with the finite state machine encoded inside. To compile this C file, you would use your preferred C or C++ compiler (e.g., gcc).
+
+`gcc lexer.c -o lexer`
+
+This will create an executable called 'lexer' that you can run with your input file:
+
+`./lexer < input.txt`

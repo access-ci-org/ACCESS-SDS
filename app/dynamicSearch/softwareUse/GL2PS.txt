@@ -1,55 +1,44 @@
-Use Case: GL2PS (GL to PostScript/PDF converter)
+Use Case: GL2PS is a C library providing high quality vector output for any OpenGL application. The main difference between GL2PS and other similar libraries is the use of sorting algorithms capable of handling intersecting and stretched polygons, as well as non manifold objects. It's perfect for exporting screenshots of scientific graphics and also creating high quality typesetting.
 
-Code details and examples:
-GL2PS is a C library providing high-quality vector output for OpenGL applications. It converts OpenGL/GLU primitives and standard vector graphics into PostScript or PDF.
-
-Input:
-- GL2PS accepts OpenGL draw calls as input, so you need to have an OpenGL application or code that generates graphics.
-
-Code:
-Example code snippet:
-
-```c
-#include <GL/glut.h>
+Code Details and Examples: GL2PS is most often used within a larger application code, but as a standalone, it could be used as:
+```C
 #include "gl2ps.h"
 
-void renderScene() {
-    // OpenGL draw calls to render scene
+int main()
+{
+  FILE * fp;
+  int state = GL2PS_OVERFLOW, buffsize = 0;
+  GLint viewport[4];
+
+  fp = fopen("out.eps", "wb");
+
+  glGetIntegerv(GL_VIEWPORT, viewport);
+
+  while( state == GL2PS_OVERFLOW )
+  {
+    buffsize += 1024*1024;
+    gl2psBeginPage("Title", "Creator", viewport,
+                   GL2PS_EPS, GL2PS_BSP_SORT, GL2PS_SILENT |
+                   GL2PS_SIMPLE_LINE_OFFSET | GL2PS_NO_BLENDING |
+                   GL2PS_OCCLUSION_CULL | GL2PS_BEST_ROOT,
+                   GL_RGBA, 0, NULL, 0, 0, 0, buffsize,
+                   fp, "out.eps");
+    // Here goes rendering code. 
+    // This is an example where rendering is done using SDL & hello triangle.
+    SDL_GL_SwapBuffers ();
+    state = gl2psEndPage();
+  }
+
+  fclose(fp);
+    
+  return EXIT_SUCCESS;
 }
-
-int main(int argc, char** argv) {
-    // Initialize OpenGL context
-
-    // Set GL2PS options
-    GLint buffsize = 0;
-    FILE* file = fopen("output.ps", "wb");
-    GLint format = GL2PS_PS;
-    GLint sort = GL2PS_SIMPLE_SORT;
-    GLint options = GL2PS_LANDSCAPE | GL2PS_COMPRESS | GL2PS_BEST_ROOT | GL2PS_SIMPLE_LINE_OFFSET;
-    GLint viewport[4];
-
-    // Capture OpenGL output to PostScript
-    gl2psBeginPage("Example", "GL2PS Test", viewport, format, sort, options, buffsize, file, NULL);
-    renderScene();
-    gl2psEndPage();
-
-    // Clean up resources
-    fclose(file);
-
-    return 0;
-}
 ```
+In this example, GL2PS is used to generate an EPS file ("out.eps") from the current OpenGL context. Note that the actual rendering code would replace the comment `// Here goes rendering code`.
 
-To compile the code above with GL2PS, you need to link against the GL and GLU libraries and include the GL2PS library:
-
+To compile this sample code, you would use a command like this:
 ```bash
-gcc -o myapp myapp.c -lGLU -lGL -lgl2ps
-```
+gcc -o gl2psexample gl2psexample.c -lGL -lgl2ps
+``` 
 
-To run the compiled code, you simply execute the binary:
-
-```bash
-./myapp
-```
-
-This will generate a PostScript file (output.ps) with the rendered scene from the OpenGL application.
+This command compiles the code in 'gl2psexample.c' to the output file 'gl2psexample', linking with the OpenGL and GL2PS libraries.

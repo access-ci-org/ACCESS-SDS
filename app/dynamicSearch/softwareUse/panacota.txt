@@ -1,0 +1,30 @@
+Use Case: Pangenome analysis of a set of bacterial genomes.
+
+Code Details and Examples: 
+
+Code:
+
+Input Files: Pangenome analysis requires files in FASTA format, and these are the genomes to be analyzed. Each file should represent a single genome, and different genomes should have unique file names.
+
+Example of a FASTA file (filename.fasta):
+
+```
+>Sequence1
+ATGCGAAGTTATATGCTGGAACAGGTGTTG
+>Sequence2
+ATGCGAAGTTATATGCTGGAACAGGTGTTG
+>Sequence3
+ATGCGAAGTTATATGCTGGAACAGGTGTTG
+```
+
+Command to run PanACoTA:
+
+ `panacota all -n name -d GENOME_FILES_DIRECTORY -o OUTPUT_DIRECTORY`
+
+Replace 'name' with a custom name for the pangenome, 'GENOME_FILES_DIRECTORY' with the path to the directory containing the genome files, and 'OUTPUT_DIRECTORY' with the path to the desired output directory.
+
+The '-n' flag specifies the name of the pangenome. The '-d' flag is used to specify the directory containing the genome files in FASTA format. The '-o' flag is used to specify the output directory where the results will be stored. 
+
+Output: The output will be a pangenome, made of 'name'.pgbk file, present in the OUTPUT_DIRECTORY. The software also generates other intermediate files that can be used for subsequent analysis. 
+
+Specifications: PanACoTA assumes that all the sequences in one file belong to the same genome. MiSeq, HiSeq, or PacBio sequencing technology should be used to sequence the genomes. The sequencing coverage should be at least 30X. Genomes should be in 'fasta' format.

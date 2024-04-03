@@ -1,0 +1,20 @@
+Use Case: Use CCS (Circular consensus sequencing) to generate highly accurate single-molecule sequence data from SMRT sequencing. The input data format is typically in BAM or XML format. 
+
+Code details and examples:
+
+Input File (example.bam):
+
+    @HD VN:1.5 SO:coordinate
+    @SQ SN:chr1 LN:248956422
+    @RG ID:foo  PL:ILLUMINA LB:bar SM:sample
+    @PG ID:BWA  VN:0.7.17 CL:bwa mem ref.fa read.fq
+    chr1    272420  .   T   <*>, G .   DP irnpG
+    chr1    276013  rs549449033 A   G   .   PASS
+
+Command to run ccs: 
+
+    ccs --noPolish --minPasses 1 --minPredictedAccuracy 0.8 example.bam output.ccs.bam
+
+The output would be a new BAM file with the consensus sequences.
+
+Note: Please ensure the examples provided are in the correct format for the specific tool/software in use. Do not use faulty or incorrect examples as this will potentially lead to errors in your script.

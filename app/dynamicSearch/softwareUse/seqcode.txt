@@ -1,0 +1,29 @@
+Use Case: SeqCode is an open-source R-based framework designed for the analysis of sequencing data. It is frequently used in genomic signal processing, capable of differential analysis and visualization. 
+
+Code details and examples: 
+
+Code:
+
+```R
+# Load SeqCode library
+library(SeqCode)
+
+# Load in sequences
+myResult <- computeMatrix(samplesvector=c("Sample1.bam","Sample2.bam"), 
+                          regionsvector=c("regions.bed"), 
+                          namesvector=c("Sample 1","Sample 2"), 
+                          deepTools2executable="/myPath/deepTools/bin/computeMatrix")
+
+# Plot the heat map
+seqplots(myResult,"Differential Analysis", colors = c("blue","white","red"))
+```
+
+Input files: The inputs for this SeqCode library include a BAM file ("Sample1.bam", "Sample2.bam") and a BED file ("regions.bed"). The corresponding names for the samples have to be given in namesvector.
+
+Format: BAM files are binary versions of Sequence Alignment/Map (SAM) format, which store large nucleotide sequence alignments. BED format is a text file format used to store genomic regions as coordinates and associated annotations.
+
+Command to run: You can run the script in R, usually by sourcing the file containing the script or running line by line.
+
+```R
+source("your_script.R")
+```

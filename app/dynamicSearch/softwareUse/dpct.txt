@@ -1,35 +1,38 @@
-It seems like "dpct" might refer to the Intel DPC++ Compatibility Tool, which is used for translating CUDA code to DPC++ code. 
+Use Case: Use dpct to integrate an Intel DPC++ project into a project.
 
-Use Case: Conversion of CUDA code to DPC++ code
-Code Details and Examples:
-1. Sample CUDA code (`kernel.cu`):
-```cuda
-#include <stdio.h>
+Code details and examples: Code.
 
+Specifications for input file: 
+The input file for DPCT is a .cpp or .cu file which is written in CUDA. The file should contain CUDA kernels, function calls, and variables.
+
+Sample Input file:
+```shell
+#include<stdio.h>
 __global__ void add(int a, int b, int *c) {
-    *c = a + b;
+*c = a + b;
 }
-
 int main() {
-    int c;
-    int *d_c;
-    cudaMalloc(&d_c, sizeof(int));
-
-    add<<<1,1>>>(2, 7, d_c);
-
-    cudaMemcpy(&c, d_c, sizeof(int), cudaMemcpyDeviceToHost);
-    
-    printf("2 + 7 = %d\n", c);
-
-    cudaFree(d_c);
-
-    return 0;
+int c;
+int *dev_c;
+cudaMalloc((void**)&dev_c, sizeof(int));
+add<<<1,1>>>(2,7,dev_c);
+cudaMemcpy(&c, dev_c, sizeof(int), cudaMemcpyDeviceToHost);
+printf("2 + 7 = %d\n",c);
+cudaFree(dev_c);
+return 0;
 }
 ```
 
-2. Convert the CUDA code to DPC++ using `dpct`:
-```bash
-dpct kernel.cu
+Code:
+```shell
+dpct <input-file>.cu [--out-root=<out-root>]
+```
+Replace <input-file> with the name of your source CUDA file and <out-root> with the directory name where your new DPC++ code will be stored.
+
+For example:
+
+```shell
+dpct add.cu --out-root=dpcpp_project
 ```
 
-This command will use the Intel DPC++ Compatibility Tool to convert the CUDA code in `kernel.cu` to DPC++ code. Make sure to have all necessary dependencies and setup for using Intel DPC++.
+The command 'dpct' will convert CUDA code into DPC++ code. The output will be a .cpp file which can then be compiled and run using the DPC++/SYCL compiler.

@@ -1,24 +1,20 @@
-Use Case: Converting VCF (Variant Call Format) files to MAF (Mutation Annotation Format) files.
+Use Case: Converting VCF into MAF files for further analysis in bioinformatics.; 
 
-Code details and examples:
-```bash
-vcf2maf my_input.vcf -o my_output.maf
-```
+Code details and examples: 
 
-SAMPLE INPUT (VCF file - my_input.vcf):
-```
-##fileformat=VCFv4.2
-##INFO=<ID=DP,Number=1,Type=Integer,Description="Read depth">
-#CHROM  POS ID  REF ALT QUAL    FILTER  INFO
-1   1001    .   A   T   20  PASS    DP=30
-2   2001    .   C   G   30  PASS    DP=40
-3   3001    .   G   A   25  PASS    DP=35
-```
+- Code details: The VCF (Variant Call Format) files, which are outputs from whole exome/genome sequencers, can be tricky to handle and translate. The input file needs to be a properly formatted VCF file along with a reference fasta file. 
 
-SAMPLE OUTPUT (MAF file - my_output.maf):
-```
-Hugo_Symbol Entrez_Gene_Id Center  NCBI_Build  Chromosome  Start_Position  End_Position    Strand  Variant_Classification  Variant_Type    Reference_Allele    Tumor_Seq_Allele1    Tumor_Seq_Allele2    dbSNP_RS    dbSNP_Val_Status    Match_Norm_Seq_Allele1   Match_Norm_Seq_Allele2   Tumor_Sample_Barcode    Matched_Norm_Sample_Barcode    Tumor_Sample_UUID   Matched_Norm_Sample_UUID
-GeneA   123 Center1 GRCh37  1   1001    1001    +   Missense_Mutation   SNP A   A   T   .   dbSNP   A   A   Tumor1  Normal1  UUID_Tumor1 UUID_Normal1
-GeneB   456 Center2 GRCh37  2   2001    2001    +   In_Frame_Ins   INS C   C   CG  .   dbSNP   C   C   Tumor2  Normal2  UUID_Tumor2 UUID_Normal2
-GeneC   789 Center3 GRCh37  3   3001    3001    +   Silent  SNP G   G   A   .   dbSNP   G   G   Tumor3  Normal3  UUID_Tumor3 UUID_Normal3
-```
+    Here is a minimal example of VCF file content:
+
+    ```text
+    #CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	
+    20	14370	rs6054257	G	A	29	PASS	DP=14;HQ=52,51
+    20	17330	.	T	A	3	q10	DP=11;HQ=.,.
+    ```
+
+- Code: To convert a VCF into a MAF format, you will need to execute a command like the one below which points to your installation of vcf2maf:
+
+    ```bash
+    perl vcf2maf.pl --input-vcf tests/test.vcf --output-maf tests/test.maf
+    ```
+This command will output a .maf file with the same name in the specified location.

@@ -1,0 +1,66 @@
+Use Case: MOOSE (Multiphysics Object-Oriented Simulation Environment) is a computational framework that provides a high-level interface to some of the most sophisticated nonlinear solvers, mesh generators, and time-stepping algorithms available. It's typically used for solving complex 3D physical models, with numerous simultaneous physical phenomena such as thermal effects, phase changes, and mechanical stresses.
+
+Code details and examples: 
+
+Code: 
+
+Here is an example to solve for the diffusion of a quantity `u` with a diffusion coefficient `D`, where initially the quantity `u` is held at zero everywhere on the domain except in a small sphere where it's held at one.
+
+The MOOSE input file would look like:
+
+```
+[Mesh]
+  type = GeneratedMesh
+  dim = 2
+  nx = 50
+  ny = 50
+  xmin = 0
+  xmax = 1
+  ymin = 0
+  ymax = 1
+[]
+
+[Variables]
+  [./u]
+  [../]
+[]
+
+[Kernels]
+  [./diff]
+    type = Diffusion
+    variable = u
+  [../]
+[]
+
+[ICs]
+  [./IC]
+    type = FunctionIC
+    variable = u
+    function = 'if(x*x+y*y<=1.0e-4,1,0)'
+  [../]
+[]
+
+[Executioner]
+  type = Steady
+[]
+
+[BCs]
+  [./all]
+    type = DirichletBC
+    variable = u
+    boundary = '0 1 2 3'
+    value = 0
+  [../]
+[]
+
+[Outputs]
+  console = true
+  [./exodus]
+    type = Exodus
+    execute_on = 'timestep_end final'
+  [../]
+[]
+```
+To run the example, use the command `moose_test-opt -i input_file.i` where `moose_test-opt` is the executable and `input_file.i` is the MOOSE input file.
+
+This code sets up a 2D 50x50 generated mesh between 0 and 1 in the x and y directions. The quantity 'u' is defined with a Diffusion kernel and a spherical initial condition is set to `1` in the immediate vicinity of the origin. Dirichlet boundary conditions are applied to 'u' on all boundaries of the domain (`boundary = '0 1 2 3'`). Finally, the system is solved for steady state and output in ExodusII format.

@@ -1,0 +1,22 @@
+{
+	"software_name": "AnchorWave",
+	"comprehensive_overview": "AnchorWave is a computational software for the analysis and prediction of RNA secondary structures. It uses statistical thermodynamics and dynamic programming algorithms to calculate the minimum free energy structure of RNA sequences.",
+	"core_features": [
+		"Prediction of RNA secondary structures",
+		"Calculation of minimum free energy structures",
+		"Utilizes statistical thermodynamics",
+		"Incorporates dynamic programming algorithms"
+	],
+	"general_tags": [
+		"Computational Software",
+		"Bioinformatics",
+		"RNA Secondary Structures",
+		"Thermodynamics",
+		"Dynamic Programming"
+	],
+	"research_discipline": "Bioinformatics",
+	"research_area": "Biophysics",
+	"software_class": "Prediction Tool",
+	"software_type": "Computational Tool",
+	"field_of_science": "Biological Sciences"
+}

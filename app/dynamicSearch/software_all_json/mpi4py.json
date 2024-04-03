@@ -1,0 +1,22 @@
+{
+  "software_name": "mpi4py",
+  "comprehensive_overview": "MPI for Python (mpi4py) provides bindings of the Message Passing Interface (MPI) standard for the Python programming language. It allows Python programs to directly interact with MPI parallel computation functionalities.",
+  "core_features": [
+    "Enables parallel computing in Python",
+    "Supports MPI operations and functionalities",
+    "Facilitates communication between processes in parallel applications"
+  ],
+  "general_tags": [
+    "Parallel Computing",
+    "Message Passing Interface",
+    "Python Library"
+  ],
+  "research_discipline": [],
+  "research_area": [],
+  "software_class": "Library",
+  "software_type": "Python Library",
+  "field_of_science": [
+    "Computer and Information Sciences",
+    "Other Computer and Information Sciences"
+  ]
+}

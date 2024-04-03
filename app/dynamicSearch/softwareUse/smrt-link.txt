@@ -1,0 +1,64 @@
+Use Case: SMRT Link is a suite of PacBio software for data management, secondary analysis, and visualization. The suite includes tools for viewing and analyzing PacBio Sequencing data, including: DataSet Management and Analysis Job Management, SMRT View genome browser and variants analysis.
+
+Code details and examples: Code
+
+1. Input files required: Fasta file for reference, PacBio reads in .bam or .xml format.
+
+Sample fasta file (`sample.fasta`):
+
+```
+>sequence_1
+ACTGACTGACTGACTGACTGACTGACTGACTGACTGACTGACTGACTGACTGACTG
+>sequence_2
+ACTGACTGACTGACTGACTGACTGACTGACTGACTGACTGACTG
+```
+
+A tutorial on how to generate PacBio reads in .bam or .xml format can be found on the official PacBio website.
+
+2. To run the analysis:
+
+```bash
+# Launches SMRT Link and returns a JOB ID
+$ smrtcli.py submit-job --debug --preset-xml preset.xml <job_type>
+
+# e.g. for a resequencing job:
+$ smrtcli.py submit-job --debug --preset-xml preset_resequencing.xml Resequencing
+```
+
+where `<job_type>` specifies the type of job that SMRT Link will run with the given inputs. The available job types are listed in the `smrt-link-jobtypes.txt` file in the `$SMRT_ROOT/jobs/types/` directory.
+
+Some job types require a `--reference` argument to specify a reference genome.
+
+Sample `preset.xml` file:
+
+```xml
+<preset>
+  <data>
+    <barcoded>true</barcoded>
+    <movies>
+      <movie>movie1</movie>
+      <movie>movie2</movie>
+    </movies>
+  </data>
+</preset>
+``` 
+
+In the xml file:
+- `<barcoded>` is a boolean indicating whether the sequencing was barcoded.
+- `<movies>` is a list of PacBio movie names.
+
+3. Once an analysis job is launched, you can monitor its progress:
+
+```bash
+$ smrtcli.py get-status --debug <job_id>
+```
+
+This will return the status of the job (`<job_id>`), such as `Submitted`, `Running`, or `Completed`.
+
+4. To get the results of a completed job:
+
+```bash
+$ smrtcli.py get-results --debug <job_id>
+```
+
+This will return a URL to a report indicating the success or failure of the job, as well as any generated output files.

@@ -1,0 +1,42 @@
+Use Case: Mauve is a bioinformatics software used for alignment of multiple genomes. It's particularly useful for identifying large-scale changes and events such as rearrangements, insertions, and deletions in the genome.
+
+Code Details and Examples: 
+
+In order to use Mauve, the input format is as DNA sequences and the format required is FASTA or multi-FASTA. However, the program can also accept GenBank or EMBL files with some additional annotations.
+
+Input Example:
+
+The FASTA input format for Mauve would have the following structure:
+```
+>Sequence1
+ATGGCGCAAGTTGATCCAAGGCTTTCTTGCCTGACC
+TGGCCATGGAGAACTTCACCACCCATCTCTACCACCA
+>Sequence2
+TGGAAGGCGCAAGTCTACCCTTTTCTGCCTGACCGAG
+ATGGAAAAGCTTCACCACCATCTCTACCACCACCGTA
+```
+
+Command to run:
+
+The command to run Mauve is straightforward: you simply call the program and supply your input file. Here is an example of how you might inititate a Mauve alignment through the command line.
+
+```
+./mauveAligner sequence1.fasta sequence2.fasta
+```
+
+Mauve also provides a graphic user interface (GUI) that simplifies the alignment process. With the GUI, you can import your sequence files, visualize the results, and export the alignments for further analysis.
+
+[String] genomes are first passed as input to initialize the bioinformatics software in the command line. To create a multiple sequence alignment, you just drag and drop your genome sequence files into the correct area in the software's GUI. 
+
+For analysis using Command-line Mauve in Linux, Unix, Windows:
+```Shell
+progessiveMauve --output=alignmentfile.xmfa genome1.fasta genome2.fasta genome3.fasta
+```
+After complete, We can use the script stripSubsetLCBs (provided with Mauve) to separate the colinear blocks (LCBs) from the xmfa file and concatenate the aligned blocks. This will create a FASTA .aligned file:
+
+```Shell
+stripSubsetLCBs alignmentfile.xmfa alignmentfile.xmfa.bbcols progressive_alignment.fasta 500
+```
+This command will output a .fasta alignment file with all blocks of 500bp or larger. 
+
+Please check output file: progressive_alignment.fasta: this file has the aligned genome sequences from which to estimate divergence between input genomes.

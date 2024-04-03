@@ -1,23 +1,29 @@
-Use Case: Visualization of scientific data using gnuplot
+Use Case: Plotting a curve from a data file in gnuplot.
 
-Code details and examples:
-Sample input file (data.txt):
-```
-1 1
-2 4
-3 9
-4 16
-5 25
-```
+Code details and examples: 
 
-Sample gnuplot code (script.gp):
+Input File Format: The input file should be a text file, with one datum per line. For plotting a 2D curve, each line should have two fields, the x-coordinate and the y-coordinate, separated by a space.
+
+Input File Specifications: Let name the file as `datafile.dat`, and imagine it as follows,
+
 ```
-set terminal png
-set output 'output.png'
-plot 'data.txt' with lines
+1 2
+2 3
+3 4
+4 5
+5 6
 ```
 
-Command to run:
+Code Snippet:
+
+```gnuplot
+plot "datafile.dat" using 1:2 with linespoints
 ```
-gnuplot script.gp
+
+This will generate a plot using the data in the 'datafile.dat', using the first column for the X-axis and the second column for the Y-axis. The keyword 'with' decides how the data will be portrayed ('lines', 'points', 'linespoints', 'dots', etc.)
+
+Command to run the code: First, launch gnuplot by typing `gnuplot` in your terminal. Once inside the gnuplot interactive shell, you can run the above command. Alternatively, you could save the above command in a file (say `script.gpl`), and then run gnuplot with this file as an argument, like so:
+
+```bash
+gnuplot script.gpl
 ```

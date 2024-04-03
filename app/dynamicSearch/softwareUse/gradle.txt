@@ -1,0 +1,41 @@
+Use Case: Gradle is an open-source build automation system that is designed to be flexible and efficient. It uses the best ideas from Ant, Maven, and other tools and introduces a Groovy-based domain-specific language (DSL) for describing builds. Gradle is primarily used by developers to compile and test codebases, making it easier to integrate changes and ensure that different projects work together effortlessly.
+
+Code details and examples:
+
+Code:
+
+To begin creating a new Gradle-based project, initialize Gradle from the terminal with:
+
+```bash
+gradle init
+```
+
+This creates a new directory with an empty project, including a `build.gradle` file. This file is where you will be defining tasks. Let’s start by adding a simple task to print "Hello, World!" in this `build.gradle` file.
+
+```groovy
+task hello {
+    doLast {
+        println 'Hello, world!'
+    }
+}
+```
+
+To run this task, you would use the following command.
+
+```bash
+gradle hello
+```
+
+Sample input/output:
+
+The task `hello` prints the string 'Hello, world!' to the console.
+
+Specification and details:
+
+The `build.gradle` file is a Groovy script that uses a DSL provided by Gradle to declare the build logic for your project. The sample provided defines a single task named `hello` that prints a message when run. 
+
+Each `task` block defines a new Gradle task. The `doLast` method adds an action to be executed at the end of the task. In this case, the action is a Groovy closure that prints a message. 
+
+Commands to run:
+
+After creating the `build.gradle` file in your project directory, you run the build script with `gradle taskname` where `taskname` is the name you've used to define your task.

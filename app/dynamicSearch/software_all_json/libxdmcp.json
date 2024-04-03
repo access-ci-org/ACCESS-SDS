@@ -1,0 +1,21 @@
+{
+    "software_name": "libxdmcp",
+    "comprehensive_overview": "libxdmcp is the X Display Manager Control Protocol library. It provides an API for the X Display Manager Control Protocol (XDMCP) for both the client and server side.",
+    "core_features": [
+        "Implementation of the XDMCP protocol",
+        "Client-side and server-side functionality",
+        "Facilitates remote graphical login sessions"
+    ],
+    "general_tags": [
+        "X11",
+        "Display Manager",
+        "Network Protocol"
+    ],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Library",
+        "software_type": "Networking",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

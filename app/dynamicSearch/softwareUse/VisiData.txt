@@ -1,31 +1,22 @@
-Use Case: VisiData is a terminal-based spreadsheet multitool for discovering and manipulating data.
-Code details and examples:
-1. Open a CSV file:
-```
-vd my_data.csv
-```
+Use Case: VisiData is a command-line application that can be used to quickly open, explore, and analyze datasets, including CSV, JSON, and SQLite files. VisiSoC can be used by a data analyst or a scientist who wants a fast and convenient way to inspect a large dataset without loading it into a more powerful, but slower, application like Excel or a SQL database.
 
-2. Perform a simple transformation on a column:
-```
-c5.replace('old_value', 'new_value')
-```
+Code details and examples: 
 
-3. Filter rows based on a condition:
-```
-f my_column > 10
-```
+Code:
 
-4. Sort the data based on a column:
-```
-:s my_column
-```
+    vd sample.csv
 
-5. Save the changes:
-```
-:w
-```
+Here, "sample.csv" is a .csv file. In this file, you should have the data to be analyzed. The columns of the CSV file can be any data, and VisiData will automatically detect the type of each column (integer, string, date, etc).
 
-6. Exit VisiData:
-```
-:q
-```
+Then, VisiData provides many commands to explore and modify the dataset. For example, you can sort the table by a column with the '[' and ']' keys, or you can filter rows with the '=' key.
+
+For a more complex example, let's say that you have a CSV file with two columns, "name" and "age", and you want to count the number of people with the same age. You could do that with the following commands:
+
+Code:
+
+    vd sample.csv
+    frequency-age
+
+Here, "frequency-age" is a command in VisiData that creates a new table with the unique values of the "age" column and their frequencies. Then, you can sort this new table by frequency with the '[' key.
+
+So, in summary, the format required for the input file when using VisiData is any format of a dataset (like CSV, JSON, SQLite, etc.), and there are no specific specifications or details required in the input files. You just need to have the data that you want to analyze.

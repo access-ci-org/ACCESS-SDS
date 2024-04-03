@@ -1,0 +1,22 @@
+{
+    "software_name": "r-colorspace",
+    "comprehensive_overview": "The 'r-colorspace' package is a collection of color models and color conversion functions for R. It provides a flexible and easy-to-use environment for working with colors in various color spaces, including HCL (Hue-Chroma-Luminance), HSL (Hue-Saturation-Luminance), HSV (Hue-Saturation-Value), CIELAB, RGB, and more. This package facilitates color manipulation, transformation, and visualization for data analysis and visualization tasks.",
+    "core_features": [
+        "Support for multiple color models and spaces",
+        "Color conversion functions",
+        "Color manipulation and transformation capabilities",
+        "Data visualization support",
+        "Integration with R environment"
+    ],
+    "general_tags": [
+        "Color Models",
+        "Color Conversion",
+        "Data Visualization",
+        "R Package"
+    ],
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Data Analysis and Visualization",
+    "software_type": "Package",
+    "field_of_science": "Other Mathematics"
+}

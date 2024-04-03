@@ -1,15 +1,27 @@
-Use Case: Computational mathematics, symbolic computation, data analysis, visualization.
+Use Case: Mathematica can be used to process complex mathematical equations and algorithms. For instance, a scientist may want to solve a differential equation using Mathematica. 
 
-Code details and examples:
+Code details and examples: 
+
+Code: 
 ```mathematica
-(* Sample input file: input.txt *)
-3 + 4
+(*Define the differential equation*)
+eq = y'[x] == y[x] Cos[x + y[x]];
 
-(* Code snippet *)
-Get["input.txt"]
+(*Define the initial condition*)
+ic = y[0] == 1;
+
+(*Solve the differential equation*)
+sol = NDSolve[{eq, ic}, y, {x, 0, 30}][[1]]
+
+(*Plot the solution*)
+Plot[Evaluate[y[x] /. sol], {x, 0, 30}, 
+ PlotRange -> All, 
+ PlotLabel -> "Solution of the differential equation"]
 ```
 
-Command to run (if available):
-```bash
-math -script scriptFile.wl
+In this example input file the differential equation y'=y Cos[x+y], with the initial condition y(0)=1, is being solved. This file is in plain text format. It is creating a solution for values of x from 0 to 30. 
+
+Simply save the above code in a Mathematica notebook or plaintext file with '.m' extension, then it can be run via command line using the following command inside a Mathematica kernel:
+```
+MathematicaScript -script yourfile.m
 ```

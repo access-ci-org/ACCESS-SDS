@@ -1,24 +1,48 @@
-Use Case: Visualization of meteorological data
-Magics is a meteorological plotting software that can be used to visualize meteorological data in various formats.
+Use Case: Magics is the ECMWF's software for meteorological visualization. It assists in creating meteorological data visualizations like contours, wind fields or symbols over maps.
 
-Code details and examples:
-```python
-from Magics import macro as magics
+Code Details and Examples: 
 
-# Define the input data file
-input_file = 'input_data.grib'
+To use Magics, you need to have specific input data in the form of meteorological GRIB or NetCDF files or the BUFR format for observations.
 
-# Set up the Magics plot parameters
-projection = magics.mmap(
-    subpage_map_projection='mollweide',
-)
+Sample GRIB file (only a representation due to the binary format):
 
-contour = magics.mcont(contour_automatic_setting='ecmwf')
-
-legend = magics.mlegend()
-
-# Generate the plot
-magics.plot(projection, contour, legend, input_file, 'output_plot.png')
+```
+GRIB1|0|24|T|2|200|10|180|10|0|0
 ```
 
-To run the code, you can save it in a Python script file and execute it using a Python interpreter. Ensure that you have Magics installed and configured properly to use this code.
+Here's how to use sample python code to generate a meteorological contour plot using Magics:
+
+```python
+import Magics.macro as magics
+
+#defining the projection
+projection = magics.mmap(
+    subpage_map_library_area = "on",
+    subpage_map_area_name = "europe",
+    page_id_line = "off"
+)
+
+#Loading GRIB file
+temperature = magics.mgrib(grib_input_file_name = 'sample.grib')
+
+#Defining the contour
+contour = magics.mcont(
+    contour_level_selection_type = 'interval',
+    contour_interval = 2.00,
+    contour_shade = 'on',
+    contour_shade_method = 'area_fill',
+    contour_label = 'off'
+)
+
+#Defining the coastlines
+coastlines = magics.mcoast()
+
+#Plotting
+magics.plot(projection, temperature, contour, coastlines)
+
+```
+
+To Run command: Typically, python files can be run using the command `python filename.py`. For the given python script saved as `sample.py`, the run command would be:
+
+```bash
+python sample.py

@@ -1,58 +1,49 @@
-Use Case: Linear algebra library for dense matrix computations
+Use Case: libflame is a high-performance library for dense matrix computations providing a complete LAPACK API. It can be used for scenarios such as solving systems of linear equations, least-squares solutions of linear systems of equations, eigenvalue problems, and singular value problems.
 
-Code details and examples:
-- Sample input file format:
-```
-4 4
-1.0 2.0 3.0 4.0
-5.0 6.0 7.0 8.0
-9.0 10.0 11.0 12.0
-13.0 14.0 15.0 16.0
-```
+Code Details and Examples: 
 
-- Code snippet for matrix-matrix multiplication using libflame:
+The typical input for libflame operations are matrix data. The library has in-built functions for handling matrix data and operations.
+
+In order to use this library, we first include the necessary header file:
+
 ```c
-#include <stdio.h>
-#include <flame.h>
-
-int main() {
-    int m = 4; // rows of A
-    int n = 4; // cols of B
-    int k = 4; // cols of A and rows of B
-
-    FLA_Init();
-
-    FLA_Obj A, B, C;
-    FLA_Obj_create(FLA_DOUBLE, m, k, 1, &A);
-    FLA_Obj_create(FLA_DOUBLE, k, n, 1, &B);
-    FLA_Obj_create(FLA_DOUBLE, m, n, 1, &C);
-
-    // Initialize A, B matrices
-    FLA_Random_matrix(A);
-    FLA_Random_matrix(B);
-
-    // Perform matrix multiplication C = A * B using libflame
-    FLA_Gemm(FLA_NO_TRANSPOSE, FLA_NO_TRANSPOSE, FLA_ONE, A, B, FLA_ZERO, C);
-
-    // Print the result matrix C
-    FLA_Obj_show("Result C:", C, "%9.2f", "");
-
-    FLA_Obj_free(&A);
-    FLA_Obj_free(&B);
-    FLA_Obj_free(&C);
-
-    FLA_Finalize();
-
-    return 0;
-}
+#include "FLAME.h"
 ```
 
-- Command to compile (assuming file is named `matrix_mult.c`):
-```
-gcc matrix_mult.c -o matrix_mult -lflame -lblas -llapack
+The following is an example for creating a simple matrix and performing an operation on it:
+
+```c
+FLA_Obj_create( FLA_DOUBLE, m, n, 0, 0, &A );
+FLA_Random_matrix( A );
 ```
 
-- Command to run:
+Here we are creating a matrix `A` of size `m` x `n` with double data type and filling it with random values.
+
+An operation like LU factorization with partial pivoting can be performed with:
+
+```c
+FLA_Obj_create( FLA_INT, n, 1, 0, 0, &p );
+FLA_LU_piv( A, p ); 
 ```
-./matrix_mult
+
+Here, a matrix `p` is created to store the pivot indices for the LU factorization.
+
+Similarly, operations like Singular value decomposition can be performed with:
+
+```c
+FLA_Obj_create( FLA_DOUBLE, minmn, 1, 0, 0, &s );
+FLA_Obj_create( FLA_DOUBLE, m, n, 0, 0, &U );
+FLA_Obj_create( FLA_DOUBLE, minmn, n, 0, 0, &V );
+FLA_SVD( A, s, U, V );
 ```
+
+This creates matrices `s`, `U`, `V` to store the singular values and singular vectors respectively after the SVD operation.
+
+To compile and run the code, use commands like:
+
+```shell
+gcc -o example example.c -lflame -lblas
+./example
+```
+
+This will compile the source code file `example.c` with libflame and, the given BLAS library and create the executable `example`, which can then be run.

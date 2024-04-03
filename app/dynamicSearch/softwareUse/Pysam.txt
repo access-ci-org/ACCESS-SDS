@@ -1,50 +1,29 @@
-Use Case: Pysam is a Python module for reading, manipulating, and writing genomic data in BAM (Binary Sequence Alignment/Map) format.
+Use Case: Pysam is a python library for reading, manipulating and writing genetic data sets. Pysam is a wrapper of the htslib C-API and provides facilities to read and write SAM/BAM/VCF/BCF and GFF/GTF/FASTA variant files as well as access to the command line functionality of the SAMtools package.
 
 Code details and examples:
-1. Reading a BAM file:
+
+Code:
+
 ```python
 import pysam
 
-bam_file = pysam.AlignmentFile("input.bam", "rb")
-for read in bam_file.fetch():
+# Open a BAM file
+samfile = pysam.AlignmentFile("/path/to/my.bam", "rb")
+
+# Fetch a region from the BAM file
+for read in samfile.fetch('chr1', 10, 102100):
     print(read)
-bam_file.close()
+
+samfile.close()
 ```
 
-2. Writing a BAM file:
-```python
-import pysam
+Input file: The above code snippet requires a BAM format file as input. BAM is a binary format for storing sequence data.
 
-bam_in = pysam.AlignmentFile("input.bam", "rb")
-bam_out = pysam.AlignmentFile("output.bam", "wb", header=bam_in.header)
+File format: The alignment file my.bam has to be in BAM format. More details on the format are available on the SAMtools website.
 
-for read in bam_in.fetch():
-    bam_out.write(read)
+No explicit specifications are needed for the input files apart from them being in the correctly formatted BAM file.
 
-bam_in.close()
-bam_out.close()
-```
-
-3. Fetch reads in a specific region:
-```python
-import pysam
-
-bam_file = pysam.AlignmentFile("input.bam", "rb")
-for read in bam_file.fetch("chromosome_name", start_position, end_position):
-    print(read)
-bam_file.close()
-```
-
-4. Get basic statistics from a BAM file:
-```python
-import pysam
-
-bam_file = pysam.AlignmentFile("input.bam", "rb")
-total_reads = 0
-for read in bam_file.fetch():
-    total_reads += 1
-
-print("Total number of reads: ", total_reads)
-
-bam_file.close()
+Command to run: If the python script is saved as script.py, it can be run using the command:
+```bash
+python script.py
 ```

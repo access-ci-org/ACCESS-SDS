@@ -1,0 +1,17 @@
+{
+    "software_name": "ChimeraX",
+    "comprehensive_overview": "ChimeraX is a software tool for the visualization and analysis of molecular structures, density maps, and related data. It is widely used in the field of structural biology and computational chemistry for studying complex biomolecular systems.",
+    "core_features": [
+        "Interactive visualization of molecular structures and density maps",
+        "Molecular modeling and analysis tools",
+        "Integration with various structural biology data formats",
+        "Support for virtual reality visualization",
+        "Scripting capabilities for automation and customization"
+    ],
+    "general_tags": ["Molecular Visualization", "Structural Biology", "Computational Chemistry"],
+    "research_discipline": "Bioinformatics",
+    "research_area": "Structural Biology",
+    "software_class": "Molecular Visualization",
+    "software_type": "Analysis and Visualization Tool",
+    "field_of_science": "Biological Sciences"
+}

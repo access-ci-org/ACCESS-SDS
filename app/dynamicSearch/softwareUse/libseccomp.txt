@@ -1,40 +1,53 @@
-Use Case: libseccomp is a library providing an easy to use interface for working with the Linux Kernel's syscall filtering mechanism.
+Use Case: 
+The libseccomp library provides an easy to use, platform independent, interface to the Linux Kernel's syscall filtering mechanism: seccomp. The libseccomp API allows an application to specify a filter for incoming syscalls made by the application itself. 
 
 Code details and examples:
-Sample input file for defining syscalls to allow:
-```
-open
-read
-write
-close
-```
 
-Sample code snippet to load a filter with the desired syscalls:
-```c
+Code:
+
+```
 #include <seccomp.h>
 
-int main() {
+int main(int argc, char * argv[])
+{
     scmp_filter_ctx ctx;
+    int rc = 0;
+
     ctx = seccomp_init(SCMP_ACT_ALLOW);
-    
-    seccomp_rule_add(ctx, SCMP_ACT_ALLOW, SCMP_SYS(open), 0);
-    seccomp_rule_add(ctx, SCMP_ACT_ALLOW, SCMP_SYS(read), 0);
-    seccomp_rule_add(ctx, SCMP_ACT_ALLOW, SCMP_SYS(write), 0);
-    seccomp_rule_add(ctx, SCMP_ACT_ALLOW, SCMP_SYS(close), 0);
-    
-    seccomp_load(ctx);
-    // Your code here
+    if (ctx == NULL)
+        goto out;
+
+    rc = seccomp_rule_add(ctx, SCMP_ACT_KILL, SCMP_SYS(mkdir), 0);
+    if (rc < 0)
+        goto out;
+
+    rc = seccomp_load(ctx);
+    if (rc < 0)
+        goto out;
+
+    rc = mkdir(argv[1], 0755);
+    /* expect a SECCOMP_RET_KILL */
+
+ out:
     seccomp_release(ctx);
-    return 0;
+    return -rc;
 }
 ```
 
-Command to compile the code:
-```
-gcc seccomp_example.c -o seccomp_example -lseccomp
-```
+This code will prohibit the mkdir system call from being made by this process (and its child). If the mkdir system call is made, the Kernel will terminate the process as instructed by SECCOMP_RET_KILL.
 
-Command to run the compiled code:
+Save the above code in a file named main.c To compile and run this code use the below commands:
 ```
-./seccomp_example
+gcc -o test main.c -lseccomp
+./test dirname
 ```
+If the seccomp rule was successfully loaded, attempting to create a directory will result in the program being terminated by the Kernel, rather than creating a new directory.
+
+Note:
+Any input file or format is not required for this program. However, a directory name (does not have to exist) is needed as a command line argument while running the executable.
+
+Here's what the command for running the program looks like:
+```
+./test <directory-name>
+```
+Replace <directory-name> with any directory name as per your need. This directory should anyway not be created as the program is expected to terminate with the Kernel's intervention before the mkdir system call completes.

@@ -1,0 +1,24 @@
+{
+    "software_name": "xarray",
+    "comprehensive_overview": "Xarray is an open source Python library that provides data structures and functions for working with labelled multidimensional arrays. It aims to bring the labeled data power of pandas to the physical sciences, by providing N-dimensional variants of the core pandas data structures.",
+    "core_features": [
+        "Efficient handling of N-dimensional arrays",
+        "Label-based indexing and broadcasting",
+        "Interoperability with NumPy, pandas, and Dask",
+        "Support for labeled datasets",
+        "Ability to perform complex operations on multidimensional arrays"
+    ],
+    "general_tags": [
+        "Python Library",
+        "Data Analysis",
+        "Scientific Computing",
+        "Multidimensional Arrays"
+    ],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Data Processing and Analysis",
+        "software_type": "Library",
+        "field_of_science": "Other Natural Sciences"
+    }
+}

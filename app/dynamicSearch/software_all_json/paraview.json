@@ -1,0 +1,28 @@
+{
+    "software_name": "Paraview",
+    "comprehensive_overview": "ParaView is an open-source, multi-platform data analysis and visualization application. It is designed to handle large data sets and offers a wide range of visualization techniques to analyze and interact with the data.",
+    "core_features": [
+        "Supports various data formats including VTK, XML, HDF5, and several others",
+        "Render large data sets with interactive exploration capabilities",
+        "Offers advanced visualization techniques like volume rendering, contouring, and vector field visualization",
+        "Support for scripting with Python",
+        "Parallel processing capabilities for faster computation"
+    ],
+    "general_tags": [
+        "visualization",
+        "data analysis",
+        "open-source",
+        "multi-platform"
+    ],
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Visualization Software",
+    "software_type": "Data Visualization",
+    "field_of_science": [
+        "Physical Sciences",
+        "Engineering and Technology",
+        "Natural Sciences",
+        "Computer and Information Sciences",
+        "Other Natural Sciences"
+    ]
+}

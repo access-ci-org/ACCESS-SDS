@@ -1,0 +1,26 @@
+Use Case: Use PyPy for executing Python scripts that require significant computation time and memory optimization. 
+
+Code details and examples: 
+
+Code:
+
+```python
+# test.py
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+print(factorial(5))
+```
+
+Input File:
+No input file required for this code, the data is hardcoded.
+
+Command to run:
+```bash
+pypy test.py
+```
+
+This command runs the test.py script with pypy interpreter and outputs the calculated factorial of 5. The performance advantage of PyPy is typically more evident for larger, more complex programs, but this simple example still demonstrates the basic usage.

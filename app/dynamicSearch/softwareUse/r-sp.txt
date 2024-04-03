@@ -1,0 +1,25 @@
+Use Case: R-SP is used for performing a variety of tasks in spatial data analysis, such as importing/exporting spatial data, manipulating spatial objects, and conducting spatial operations. 
+
+Code Details and Examples:
+
+1. Importing spatial data
+```R
+library(sp)
+# load North Carolina map data in R
+data(meuse)
+coordinates(meuse) = ~x+y
+plot(meuse)
+```
+
+2. Spatial operations - calculating the area of polygons
+```R
+library(raster)
+# create a SpatialPolygons object
+sp <- SpatialPolygons(list(Polygons(list(Polygon(cbind(c(2,4,4,1,2),c(2,3,5,4,2)))), 's1'),
+Polygons(list(Polygon(cbind(c(5,4,2,5),c(2,3,2,2)))), 's2')))
+
+# calculate area
+area(sp)
+```
+
+Command to run - In RStudio or any other R-environment, code snippets need to be run in the console line by line.

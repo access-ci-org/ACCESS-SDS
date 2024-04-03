@@ -1,0 +1,36 @@
+Use Case: p11-kit is used to load and enumerate PKCS#11 modules automatically as well as provides a way for storing keys, certificates, and other data. PKCS#11 is a standard that defines an API for working with cryptographic tokens, such as smart cards and hardware crypto devices.
+
+Code details and examples:
+
+Code: 
+
+1. To use p11-kit, first, you need to have a PKCS#11 module that p11-kit can use. This .module file contains the path to the actual PKCS#11 library. Here is an example of a .module file:
+
+```
+# trust.module
+module: /usr/lib/pkcs11/p11-kit-trust.so
+managed: yes
+```
+This simple .module file specifies a path to the actual PKCS#11 library and enables p11-kit to manage this library.
+
+2. Once the .module file is in place, you can use the p11-kit commands to interact with it. For example, to list the available tokens, you can use the 'p11-kit list-tokens' command:
+
+```bash
+$ p11-kit list-tokens
+```
+
+3. To extract a public key from the token, you can use the 'p11tool' command, which is part of the GNUTLS package:
+
+```bash
+$ p11tool --login --list-all 'pkcs11:'
+```
+
+Note that the 'pkcs11:' in the command above is a URL which can be used to filter what keys and certificates are listed. It could be adjusted to match specific tokens or objects.
+
+4. To write data to a token, you would again use the 'p11tool' command, but this time with the '--write' flag:
+
+```bash
+$ echo "Hello, World!" | p11tool --login --write 'pkcs11:'
+```
+
+Again, note that the 'pkcs11:' in the command above is a URL. This time it specifies the token and object where the data will be written. If you wanted to specify a particular object, you could adjust it like so: 'pkcs11:token=MyToken;object=MyObject'

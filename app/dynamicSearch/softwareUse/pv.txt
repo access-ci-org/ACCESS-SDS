@@ -1,0 +1,17 @@
+Use Case: Use "pv", the Pipe Viewer, as a tool to monitor the progress of data moving through a pipeline. It can be used when dealing with large data transfers, as it provides a progress bar and additional information such as current speed and estimated time remaining.
+
+Usage would typically be when transferring big files through a pipeline, for instance, backing up a large database.
+
+Code details and examples: Code.
+
+Assuming there's a large file "file.dat" and you want to compress it and monitor the progress using pv:
+
+```bash
+pv file.dat | gzip > file.dat.gz
+```
+
+In this command, `pv` will read the input "file.dat" from the pipeline, at the same time showing a progress bar, current speed of transfer, estimated time left, and the amount of data transferred. The output of the `pv` command goes to `gzip` command via the pipe (`|`), and it compresses the data and writes it to "file.dat.gz". The ">" operator is used to redirect the output of the pipe into a file.
+
+The input file for this example is "file.dat", and there is no specific format or specifications for the input file except that it can be read as a stream of bytes.
+
+The result will be a gzipped file "file.dat.gz" and the progress information will be displayed in the terminal.

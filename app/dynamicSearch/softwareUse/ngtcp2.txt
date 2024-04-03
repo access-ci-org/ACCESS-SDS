@@ -1,0 +1,58 @@
+Use Case: Use NGTCP2 as a client to establish a QUIC connection to a server and send a HTTP request.
+
+Code Details and Examples: Code
+
+A basic example of NGTCP2 as a client is demonstrated in client.c in the examples directory of the NGTCP2 repository. The input files required include the client's TLS private key and certificate in PEM format, and the trusted CA certificates in PEM format. The host and port of the server should also be provided as command-line arguments.
+
+A shortened version of the necessary code:
+
+```c
+#include <ngtcp2/ngtcp2.h>
+#include <ngtcp2/ngtcp2_crypto.h>
+/* Other necessary includes omitted for brevity */
+
+int main(int argc, char **argv) {
+  ngtcp2_path_storage ps;
+  int rv; 
+  int64_t stream_id;
+  ngtcp2_conn *conn;
+  struct sockaddr_in peer_addr, local_addr;
+  /* Fill in local_addr and peer_addr structures with client and server info,
+     and ps structure with path info... */
+
+  /* Initialize an ngtcp2_conn struct to represent the QUIC connection */
+  rv = ngtcp2_conn_client_new(&conn, &ps.path, /*timestamp_from_your_system*/, init_dcid, &callbacks, &settings, /*user_data*/);
+  if (rv != 0) {
+    /* handle error */
+  }
+
+  /* Begin the QUIC handshake by sending packets to the server */
+  rv = ngtcp2_conn_handshake(conn, NULL, /*timestamp_from_your_system*/);
+  if (rv != 0) {
+    /* handle error */
+  }
+
+  /* Send an HTTP request after the handshake is completed (not shown) */
+
+  /* Remember to destroy the ngtcp2_conn struct when it's no longer needed */
+  ngtcp2_conn_del(conn);
+
+  return 0;
+}
+```
+
+At this stage, this code attempts to establish a QUIC connection to a server that is specified in the sockaddr structure. If the handshake is successful, it provides a foundation from which HTTP requests can then be sent.
+
+To compile this code, include the NGTCP2 and OpenSSL libraries in your flags, for example with gcc:
+
+```
+$ gcc -o client client.c -lngtcp2 -lssl -lcrypto
+```
+
+To run the program, you would typically specify your certificates and key in the command line. For instance:
+
+```
+$ ./client -k client_key.pem -c client_cert.pem -r ca_cert.pem server.com 4433
+```
+
+Here, client_key.pem is the client's private key, client_cert.pem is the client's certificate, and ca_cert.pem is the trusted CA certificate. The server's hostname and port are also indicated. This example assumes the server is running at server.com on port 4433.

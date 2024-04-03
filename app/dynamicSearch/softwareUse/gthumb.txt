@@ -1,0 +1,23 @@
+Use Case: Use gThumb for managing, viewing, and editing digital images and photos.
+
+Code details and examples: Code
+
+gThumb does not support traditional command-line interaction, it primarily interacts with a graphical user interface.
+
+Input Files: Images (.jpeg, .png, .bmp etc.)
+
+Specifications of Input Files: Mostly any image file is acceptable for gthumb.
+
+For interaction, a user can manually open the program and then follow on-screen prompts to view and manage image files.
+
+However, a sample use-case via command line to open gThumb and view a particular image would be:
+```bash
+gthumb /path/to/image.jpg
+```
+And, to browse a particular directory, you could do:
+```bash
+gthumb /path/to/directory/
+```
+Here "/path/to/image.jpg" or "/path/to/directory/" must be replaced with the actual path of the image or directory you want to open with gThumb. 
+
+Note: gThumb does not require any particular format or specifications in the input files apart from being valid image files. Since it functions as a viewer, it can display any image acceptable to it.

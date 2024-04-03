@@ -1,21 +1,89 @@
-Use Case: High Energy Astrophysics Software (HEASoft)
+Use Case: HEASOFT is a uniform, self-contained software for High Energy Astrophysics (X-ray and Gamma-Ray Astronomy). The tasks in this software package allows for the reduction and analysis of event data from uhuru, Einstein, EXOSAT, ROSAT, EUVE, ASCA, RXTE, XTE, XMM-Newton, and Chandra, as well as several sets of High Energy Astrophysics data, like WMAP.
+
 Code details and examples:
-HEASoft is a software package commonly used in high energy astrophysics for the analysis of data from various telescopes such as Chandra, XMM-Newton, and Suzaku. Below is an example of running the tool `xspec` to fit a spectral model to a sample X-ray spectrum file.
 
-Sample input file (`sample_spectrum.pha`):
-```
-XSPEC 12.11.0
-statistic chi
-data 1:1 sample_spectrum.pha
-response 1 arf.rmf
-background 1 sample_spectrum_bkg.pha
-ignore 1: **-0.5 7.0-**
-model powerlaw
+1. Code to analyze data:
+
+```bash
+# Set the input and output FITS files
+fitsinfile=Xadesvt.fits
+fitsoutfile=srcimage.fits
+
+# Run ximage to perform the imaging
+ximage <<EOF
+read/size=512 $fitsinfile
+disp
+scale log
+save_image $fitsoutfile
+exit
+EOF
 ```
 
-Code:
-```
-xspec - sample_spectrum.pha
+2. Code to detect sources:
+
+```bash
+# Set the input and output FITS files
+fitsinfile=srcimage.fits
+fitsoutfile=srclist.fits
+thresh=3.e-3
+
+# Run wavdetect to detect the sources
+wavdetect infile=$fitsinfile outfile=$fitsoutfile scellfile=skycell.fits imagefile=sourceim.fits defnbkgfile=bkgmap.fits scales="1.0 2.0 4.0 6.0 8.0 12.0 16.0 24.0" clobber=yes threshold=$thresh
 ```
 
-This command will open the `xspec` tool and load the sample spectrum file `sample_spectrum.pha` for spectral fitting using a power-law model.
+3. Code to extract spectra:
+
+```bash
+# Set the input and output FITS files
+eventfile=events.fits
+srcx=4146.5
+srcy=4028.5
+radius=47.5
+
+# Run dmextract to extract the source spectra
+dmextract "circular($srcx,$srcy,$radius)[$time=::1000]" spectrum.fits
+```
+
+4. Code to generate response files:
+
+```bash
+# Set the input and output FITS files
+eventfile=events.fits
+srcx=4146.5
+srcy=4028.5
+radius=47.5
+
+# Run mkarf to generate the Ancillary Response File (ARF)
+mkarf "circular($srcx,$srcy,$radius)[$time=::1000]" arf.fits
+```
+
+5. Code to fit a spectral model:
+
+```bash
+# Load the data
+load_data('spectrum.fits')
+
+# Load the ARF
+load_arf('arf.fits')
+
+# Define the model
+set_source(powlaw1d.p1)
+
+# Fit the model to the data
+fit()
+
+# Save the model parameters
+save_model('model.fits')
+```
+
+Note:
+- The above commands are to be executed on the bash (Unix shell) command line.
+- Input and Output files are in FITS format
+- The specifications in the input file contain information like time, spectral data, instrument response, etc. for X-ray and gamma-ray astronomical observation. The event data is a collection of photons, each with an energy, time, and a location in the sky. For a sky image, the input FITS file will contain these attributes for each photon, represented parent solar ray data.
+- The source (srcx, srcy) are the coordinates of the src in the eventfile.
+- The "powlaw1d.p1" in the "set source" command line is the model to fit the power-law to the source spectrum. It has a photon index and thereafter normalizes at 1 keV.
+- The time specification [time=::1000] in the code is to select time ranges in units of seconds.
+- The scales "1.0 2.0 4.0 6.0 8.0 12.0 16.0 24.0" are the wavelet scales to be used to detect sources for the wavdetect tool.
+- The threshold (thresh) is for the detection algorithm. The value continues until there are no peaks above the threshold.
+
+These are high-level examples and the details might differ depending on the actual dataset and the precise objective of the analysis.

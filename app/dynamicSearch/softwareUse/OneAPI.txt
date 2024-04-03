@@ -1,19 +1,56 @@
-Use Case: Compiling a simple C++ code using the Intel oneAPI DPC++ compiler
+Use Case: Intel oneAPI is a toolkit that is used for developing high-performance and data-centric applications across diverse architectures. It contains compilers, libraries, analyzers, debuggers, and more. One of the key components is the DPC++ Compiler that enables developers to write applications once and deploy them across various hardware such as CPUs, GPUs, and FPGAs.
 
 Code details and examples:
+
+Code:
+Let's assume you have a file called `vector_addition.cpp` which uses DPC++ to perform vector addition.
+
 ```cpp
-// Sample C++ code (hello.cpp)
-#include <iostream>
+#include <CL/sycl.hpp>
+using namespace sycl;
 
 int main() {
-    std::cout << "Hello, oneAPI!" << std::endl;
-    return 0;
+  queue q;
+  std::cout << "Running on " << q.get_device().get_info<info::device::name>() << "\n";
+
+  const int size = 1024;
+  std::array<int, size> A, B, C;
+
+  for(int i = 0; i < size; i++) {
+    A[i] = i;
+    B[i] = i*2;
+  }
+
+  {
+    buffer<int, 1> bufferA(A.data(), A.size());
+    buffer<int, 1> bufferB(B.data(), B.size());
+    buffer<int, 1> bufferC(C.data(), C.size());
+
+    q.submit([&](handler& h) {
+      auto accessorA = bufferA.get_access<access::mode::read>(h);
+      auto accessorB = bufferB.get_access<access::mode::read>(h);
+      auto accessorC = bufferC.get_access<access::mode::write>(h);
+
+      h.parallel_for<class vector_add>(range<1>(size), [=](id<1> i) {
+        accessorC[i] = accessorA[i] + accessorB[i];
+      });
+    });
+  }
+
+  for(int i = 0; i < size; i++) {
+    assert(C[i] == i + i*2);
+  }
+
+  std::cout << "Success\n";
+  return 0;
 }
 ```
 
-```sh
-# Command to compile the C++ code using the Intel oneAPI DPC++ compiler
-dpcpp hello.cpp -o hello
+To compile and run the above code, you will need to enter the following commands:
+
+```
+dpcpp vector_addition.cpp -o vector_addition
+./vector_addition
 ```
 
-Note: This example assumes you have set up the oneAPI development environment and have the necessary tools installed. This code can be compiled using the `dpcpp` command, which is the Intel oneAPI DPC++ compiler.
+The `dpcpp` command will compile the code and the `./vector_addition` command will run the resulting binary. Your terminal should then print the name of the device that is used and a success message if all elements in C are the sum of the corresponding elements in A and B as intended.

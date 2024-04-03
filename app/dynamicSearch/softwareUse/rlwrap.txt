@@ -1,0 +1,19 @@
+Use Case: When working with command-line programs that do not provide line editing, command history, and tab completion, rlwrap can be used to enable these features.
+
+Code details and examples:
+
+Code:
+
+Sample Input:
+
+`rlwrap -a -c -N2 -r -t dumb python`
+
+The `-a` enables autocompletion, the `-c` option enables command completion, `-N2` sets the history length to 2, `-r` enables readline support, and `-t dumb` sets the terminal type to "dumb", which ignores terminal control sequences.
+
+The second part `python` is the name of the program to be wrapped by rlwrap.
+
+Specifications and Details in Input files:
+
+There are no input files required for rlwrap. It is a command-line tool that accepts commands directly via stdin (standard input).
+
+To run the code mentioned above, just type it on the command prompt and hit enter. The exact command may vary depending upon the Unix shell being used and the specific options provided to rlwrap.

@@ -1,0 +1,33 @@
+Use Case: Use the r-png library in R to create a PNG file from a plot.
+
+Code details and examples: Code
+
+Before you start, make sure the r-png library is loaded into your R environment with the command: `library(png)`
+
+1. For creating a PNG file from a plot, we will use the base R functions `png()` and `dev.off()`. The png function requires a filename as a mandatory parameter, and it has several optional parameters like width, height, units, pointsize etc. After the png() function, you define your plot and then use dev.off() to tell R that you are done plotting, and it should write the result to the file:
+
+```
+# Create a filename for the output.
+output_filename <- "plot.png"
+
+# Start the PNG device.
+png(filename = output_filename, width = 800, height = 600, res = 96)
+
+# Create a plot.
+plot(c(1, 2, 3, 4, 5), c(1, 4, 9, 16, 25), xlab = "X-axis", ylab = "Y-axis", main = "Simple Plot")
+
+# Close the PNG device. This will save the plot.
+dev.off()
+```
+
+2. If you want to load a PNG image and read it into an R array, below is an example:
+
+```
+# Load the image
+img <- readPNG(system.file("img", "Rlogo.png", package="png"))
+
+# Now img is a array that can be plotted using grid.raster in the grid package
+library(grid)
+grid.raster(img)
+```
+In the example above, `readPNG()` function is used to load a png image. The `system.file()` function is used to find the full file name of the png image within the R package directory. The loaded image can be displayed using `grid.raster()` function in the `grid` package.

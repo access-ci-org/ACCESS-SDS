@@ -1,7 +1,40 @@
-Use Case: Anaconda3 is a distribution of the Python and R programming languages for scientific computing. It includes many libraries and tools commonly used in the field.
+Use Case: Anaconda is a package manager, an environment manager, and a distribution of scientific computing and data science related Python and R packages. It simplifies package management and deployment, and is used by millions of developers around the world for machine learning, data analysis etc.
 
-Code details and examples:
-1. Sample input files and format: No specific input files required.
-2. Command to run Anaconda3: Once installed, you can simply open a terminal and type `anaconda-navigator` to launch the Anaconda Navigator GUI. Alternatively, you can use the command `python` in the terminal to start a Python session using Anaconda.
+Code Details and Examples:
 
-Note: Anaconda3 is primarily a distribution that comes with a variety of libraries and tools pre-installed. No specific input files or code snippets are provided as it depends on the specific libraries or tools being used within Anaconda3.
+Code:
+
+Firstly, create a new environment in Anaconda using the command:
+
+```
+conda create -n myenv python=3.6
+```
+
+Then, activate the environment:
+
+```
+conda activate myenv
+```
+
+Once the environment is created and activated, you can now move on to using Python in Anaconda. Here is a simple Python code that uses the Pandas library to read a csv file and implement some data analysis tools:
+
+```python
+import pandas as pd
+
+#The csv file input and the format should be as per pandas.read_csv specification
+# https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html
+
+df = pd.read_csv('your_directory/your_file.csv')
+
+#Describe gives the central tendency, dispersion and shape of dataset’s distribution
+print(df.describe())
+
+#Check for any null values in the dataset
+print(df.isnull().sum())
+```
+
+To run this code, save it into a .py file, say, 'data_analysis.py', then you can run this python file using below command in the Anaconda terminal:
+
+```
+python data_analysis.py
+```

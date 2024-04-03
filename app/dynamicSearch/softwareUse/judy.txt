@@ -1,0 +1,42 @@
+Use Case: Judy is a high-performance dynamic array library. It allows developers to work with very large data arrays with high efficiency, making it ideal for programs handling large amounts of data.
+
+Code details and examples:Code
+
+Consider we have an array named `my_array` that we would like to insert numbers and corresponding addresses.
+
+First, include the necessary header file:
+
+```c
+#include <Judy.h>
+```
+
+Next, declare a Judy array:
+
+```c
+Pvoid_t my_array = (Pvoid_t) NULL;  // initializes a Judy array with no index.
+```
+
+Insert a value into the array:
+
+```c
+Word_t index = 123; // The index where the value will be stored.
+Word_t value = 456; // The value to be stored.
+
+PPvoid_t PValue = JudyHSIns(&my_array, &index, sizeof(Word_t), PJE0);
+*PValue = (Pvoid_t) value;
+```
+
+And finally, to find a value in the array with index:
+
+```c
+PPvoid_t PValue = JudyHSGet(my_array, &index, sizeof(Word_t));
+if (PValue == PJERR) exit(1); // exit if error occurs
+printf("The value at index '%lu' is '%lu'", index, *(Word_t *)PValue);
+```
+
+The command to run this file is:
+
+```shell
+gcc main.c $(pkg-config --cflags --libs judy) -o main && ./main
+```
+This command uses `pkg-config` to fetch the compiler and linker flags necessary for Judy, then compiles and runs the program.

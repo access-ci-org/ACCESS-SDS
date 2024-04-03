@@ -1,0 +1,38 @@
+Use Case: AnchorWave is used for pairwise local alignment of Wavelet transformed DNA sequences. 
+
+Code Details and Examples: 
+
+AnchorWave has a simple command line interface to calculate pairwise wavelet based local alignment.
+
+Command to run: 
+`anchorwave sequences.fasta output.align`
+
+Format Required:
+
+For input, Anchorwave requires a fasta file format with information about the sequences to be aligned. 
+
+Here's an example of Fasta file:
+
+```
+>sequence1
+AGTCTGACGTAGCT
+>sequence2
+AGTCGGGTGTA
+```
+
+Specifications and Details in Input Files:
+
+Fasta files begin with a description line, which starts with ">", followed by the sequence itself, on one line or multiple lines. The actual sequences are represented with upper case letters such as A, T, G, and C. 
+
+Code snippet:
+
+```python
+from Bio import SeqIO
+from anchorwave import pairwise
+
+sequences = SeqIO.parse('sequences.fasta', 'fasta')
+
+aligned = pairwise.align(sequences)
+```
+
+This script will read sequences from "sequences.fasta", performs pairwise alignment, and stores the result in the variable aligned.

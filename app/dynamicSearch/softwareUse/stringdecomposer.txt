@@ -1,0 +1,37 @@
+Use Case: StringDecomposer is a Python Library for string decomposition.
+
+Code details and examples: Code
+
+Package: `stringdecomposer`
+
+1. Splitting a string into its constituent letters:
+
+Input File Format: No input file is needed as the input to the function is a string. A Python string can be easily declared and initialized. 
+
+Input Details: Any string
+
+```python
+from stringdecomposer import decompose
+
+string = "Hello World!"
+pieces = decompose(string)
+print(pieces)
+```
+
+Command to run: `python filename.py` 
+
+2. Decomposing a string into constituent UNICODE characters:
+
+Input File Format: No input file is needed as the input to the function is a unicode string. A Python unicode string can be easily declared and initialized.
+
+Input Details: Any unicode string
+
+```python
+from stringdecomposer import decompose_unicode
+
+unicode_string = u"Hello World! 你好，世界！"
+pieces = decompose_unicode(unicode_string)
+print(pieces)
+```
+
+Command to run: `python filename.py` 

@@ -1,0 +1,33 @@
+Use Case: The at-spi2-core package is primarily meant for desktop applications and software developers who seek to achieve software or platform interoperability via accessibility functions. This often sees use in the development and deployment of keyboard and mouse emulators, screen readers for the visually impaired, automated user interface testing, and conversion applications generating Braille or text-to-speech (TTS) outputs.
+
+Code Details and Examples: 
+
+Code:
+
+AT-SPI2 pertains to a restructuring of the Assistive Technologies Service Provider Interface, where it operates on a per-user basis, with relevant environment variables being set as services running under the same user accounts. 
+
+For developers seeking to utilize AT-SPI2 for testing or debugging purposes, they are advised to start with disabling any running AT-SPI2 services and launching at-spi2-registry with the "--no-daemon" option.
+
+A batch script to orchestrate these steps might look something like this:
+
+### BEGIN SCRIPT ###
+
+#!/bin/bash
+
+# Terminate existing AT-SPI2 services
+pkill at-spi2-registry
+
+# Launch a new AT-SPI2 service in non-daemon mode
+export ATSPI_REGISTRY_WRAPPERS_DIR=/usr/lib/at-spi2-core/at-spi2-registryd
+export ATSPI_REGISTRY_MANAGER_OBJECT_PATH=/org/a11y/atspi/registry
+export ATSPI_BUS_ADDRESS=$(dbus-daemon --session --print-address --fork)
+/usr/lib/at-spi2-core/at-spi2-registryd --no-daemon
+
+### END SCRIPT ###
+
+To run, you might use the command:
+
+chmod +x run-atspi2.sh
+./run-atspi2.sh
+
+Anyone using the GNOME platform for development purposes ought to keep in mind the potential for GNOME Shell or other GNOME-related processes to re-spawn AT-SPI2 services, even after termination. Disabling these services in your GNOME session is advised if testing of AT-SPI2 compatibility is your primary objective.

@@ -1,0 +1,51 @@
+Use Case: Use r-tidyr for data cleaning in R. This library helps in 'tidying' your data, simplifying it for visualization, modeling, and downstream analysis. The standard functions within the tidyr package include separate(), unite() and spread() which are used widely for manipulating the structure of data.
+
+Code details and examples: Code
+
+Assuming that you have a data.frame in R, where columns indicate variables and rows indicate observations. 
+
+```r
+# Load the tidyr and dplyr libraries
+library(tidyr)
+library(dplyr)
+
+# Create a sample data frame 
+myData <- data.frame(Name = c("John", "Jane", "Mary", "Mark", "Amy"), 
+                     Test1 = c(85, 78, 90, 92, 88),
+                     Test2 = c(80, 75, 88, 95, 89))
+
+# Print the data frame
+print(myData)
+```
+The data frame would look like this:
+
+   Name Test1 Test2
+1  John    85    80
+2  Jane    78    75
+3  Mary    90    88
+4  Mark    92    95
+5   Amy    88    89
+
+To 'gather' these columns and convert the data to long format, tidyr's gather() function can be used:
+
+```r
+# Use tidyr's gather function to convert to long format
+longData <- gather(myData, Test, Score, Test1:Test2)
+
+# Print the long format data
+print(longData)
+```
+
+When you print 'longData', you'll see the new structure:
+
+   Name  Test Score
+1  John Test1    85
+2  Jane Test1    78
+3  Mary Test1    90
+4  Mark Test1    92
+5   Amy Test1    88
+6  John Test2    80
+7  Jane Test2    75
+8  Mary Test2    88
+9  Mark Test2    95
+10 Amy  Test2    89

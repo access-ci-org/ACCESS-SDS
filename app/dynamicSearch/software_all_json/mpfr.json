@@ -1,0 +1,15 @@
+{
+    "software_name": "MPFR",
+    "comprehensive_overview": "The GNU MPFR (Multiple Precision Floating-Point Reliable) library is a C library for arbitrary-precision arithmetic on floating-point numbers that guarantees correctly rounded results.",
+    "core_features": "1. Provides high-precision floating-point computation. 2. Guarantees accurate results with correct rounding. 3. Supports all IEEE 754 floating-point formats. 4. Offers functions for elementary mathematical functions for high precision computation.",
+    "general_tags": [
+        "arbitrary-precision arithmetic",
+        "floating-point computation",
+        "mathematical library"
+    ],
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Library",
+    "software_type": "Computational Software",
+    "field_of_science": "Mathematics"
+}

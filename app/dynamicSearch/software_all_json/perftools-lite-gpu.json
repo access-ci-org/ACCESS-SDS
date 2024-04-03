@@ -1,0 +1,20 @@
+{
+  "software_name": "perftools-lite-gpu",
+  "comprehensive_overview": "Perftools-lite-gpu is a lightweight performance analysis tool designed for GPU applications. It allows developers to analyze the performance of their GPU-accelerated applications by providing insightful metrics and visualizations.",
+  "core_features": [
+    "Performance analysis for GPU applications",
+    "Insightful metrics for optimization",
+    "Visualization tools for performance data"
+  ],
+  "general_tags": [
+    "Performance Analysis",
+    "GPU Applications",
+    "Metrics",
+    "Visualization"
+  ],
+  "research_discipline": [],
+  "research_area": [],
+  "software_class": "Development Tool",
+  "software_type": "Performance Analysis Tool",
+  "field_of_science": "Engineering and Technology"
+}

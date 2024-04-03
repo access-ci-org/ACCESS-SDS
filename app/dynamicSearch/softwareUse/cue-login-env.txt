@@ -1,0 +1,7 @@
+Use Case: The cue-login-env is a capability of Job submission system to set up the user's environment correctly so that many commonly used applications and tools are readily available for use.
+
+Code details and examples: There is no code snippet or input file required for this tool. It is a part of a job submission system, so when a user logs in, this tool is run automatically to set up the user's environment. A user simply logs into the system with their username and password, and this tool runs in the background to load the necessary software environments.
+
+Command to run: N/A
+
+This is an automatic step completed during login, so there is no need for the user to manually run this command.

@@ -1,0 +1,16 @@
+Use Case: Bazam is a tool designed to extract paired end reads from a BAM file in a format suitable for de novo assembly, while maintaining the original orientation of the pairs. The usual use case is to preprocess the BAM for input to a program such as MEGAHIT.
+
+Code Details and Examples:
+Code:
+
+```
+bazam -Xmx8g -bam example.bam | megahit -r /dev/stdin
+```
+
+Input: Your input file is a Binary Alignment Map (BAM) file which is a binary version of a Sequence Alignment Map (SAM) file. The BAM file contains aligned sequence data along with the quality scores and genomic information. 
+
+Format required: BAM File format.
+
+Specifications and Details in Input Files: The input is a binary file in BAM format, which contains the genomic sequence data. It is a binary version of a Sequence Alignment Map (SAM) file and is used for storing large nucleotide sequence alignments. The BAM file includes a header section and an alignment section, where the header section starts with the magic string BAM1. Each alignment begins with a fixed length of 36 bytes, followed by variable-length data and then by optional fields.
+
+Command to Run: The command to run Bazam is simple, it accepts the BAM file name as an argument as shown in the example code. The '-Xmx8g' argument instructs the Java Virtual Machine (JVM) to use a maximum of 8 GB of the heap. It is advised to adjust this according to the available machine resources. The output is given to the MEGAHIT tool for de novo assembly via a pipe.

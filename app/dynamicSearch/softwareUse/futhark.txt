@@ -1,0 +1,31 @@
+Use Case: Use futhark for parallel programming especially for data-parallel algorithms that will be executed on GPUs.
+
+Code details and examples: 
+
+Code: 
+
+```
+-- futhark example.fut
+let main (n: i32) = reduce (+) 0 (iota n)
+```
+
+This example computes the sum of all numbers below n. 
+
+Input file:
+
+```
+10
+```
+The input file contains one integer that specifies the upper limit.
+
+Command to run:
+
+```
+futhark c example.fut
+echo 10 | ./example
+```
+
+In this case, the input file isn't a file, but data piped through the command line. The output will be "45", the sum of all numbers below 10.
+
+Note: 
+Futhark is not normally used with input files but instead embedded into larger applications. However, for testing you may provide input from the command line or a file. Also, Futhark compiles to an executable that reads input from standard input and writes output to standard output. You can therefore use the generated binary as any other Unix-style filter.

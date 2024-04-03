@@ -1,0 +1,35 @@
+Use Case: Advisor is a software tool used for dynamic-analysis and vectorization optimization particularly beneficial to HPC performance developers who aim to optimize and parallelize their applications. The software assists in identifying hotspots, imbalance of workload, and ineffective usage of hardware resources in the program. It can provide recommendations on how to overcome these issues.
+
+Code details and examples: Code
+
+A. Sample Input File
+
+You will need a script file to run Advisor. Here is a sample one that runs a program named 'myApp':
+
+    #!/bin/bash
+    ./myApp
+
+B. Format Required
+
+The script file usually follows the .sh file format.
+
+C. Command to run
+
+To run the advisor, follow these steps:
+
+    1. First execute the script file that runs your application:
+    
+         chmod +x myScript.sh
+         ./myScript.sh
+     
+    2. Then run the Advisor on your application:
+    
+         advixe-cl --collect=roofline -project-dir=./adv_project -- ./myApp 
+
+D. Code Snippets
+
+Advisor does not directly interact with your program's code but analyzes it. No sample code snippets provided. However, the output from Advisor can be used to modify and optimize your existing code.
+
+E. Specifications and details in input files
+
+The most important thing is your script must run the program you want Advisor to analyze. It should compile all the necessary files and call the main method of your program.

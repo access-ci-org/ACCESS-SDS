@@ -1,19 +1,30 @@
-Use Case: Parsing Geotiff file using libgeotiff
+Use Case: libgeotiff is used often used in Geographic Information Systems (GIS) applications for manipulating GeoTIFF data. GeoTIFFs are essentially TIFF files embedded with geographic metadata.
 
 Code details and examples:
+
+The sample input file required for this library would be a TIFF file with geographic metadata (GeoTIFF). The format for GeoTIFF includes, but is not limited to: geographic coordinates, datums, map projections, etc.
+
+An example of how to use the libgeotiff library in a C program:
+
+Code:
 ```c
 #include "geotiff.h"
-#include "xtiffio.h"
-#include <stdio.h>
+#include "geo_normalize.h"
 
-int main() {
+int main()
+{
+    GeoTIFFDirectory *dir;
     GTIF *gtif;
-    TIFF *tif = XTIFFOpen("sample.tif", "r");
+    TIFF *tif;
+    // open TIF file
+    tif = XTIFFOpen("sample.tif", "r");
     if (tif) {
+        // create GeoTIFF structure
         gtif = GTIFNew(tif);
         if (gtif) {
-            // Reading geotiff tags
+            // print all key-value pairs
             GTIFPrint(gtif, 0, 0);
+            // cleanup
             GTIFFree(gtif);
         }
         XTIFFClose(tif);
@@ -21,15 +32,11 @@ int main() {
     return 0;
 }
 ```
+This code simply opens a sample GeoTIFF file `sample.tif`, creates a GeoTIFF structure from it, prints all key-value pairs in the metadata, and then cleans up its resources.
 
-Sample input file "sample.tif" is needed for this code snippet to read geotiff tags from it.
+Command to run for the code written in a `main.c`:
 
-To compile the code:
-```bash
-gcc read_geotiff.c -lgeotiff -ltiff -o read_geotiff
-```
-
-To run the compiled code:
-```bash
-./read_geotiff
+```sh
+gcc -o main main.c -lgeotiff
+./main
 ```

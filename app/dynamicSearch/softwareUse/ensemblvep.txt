@@ -1,20 +1,36 @@
-Use Case: Ensembl Variant Effect Predictor (VEP) is a tool for annotating and predicting the effects of genetic variants.
+Use Case: Variant Effect Predictor (VEP) is a Perl script that uses the Ensembl API to access the Ensembl data for variant annotation. It annotates the input variants with the consequence, predictive scores, and other relevant information.
 
-Code details and examples:
+Code Details and Examples: 
+
+Code: 
+To run the basic version of VEP use the following command (Single line command)
+
 ```
-# Example input file for VEP in VCF format
-# sample.vcf
-#CHROM  POS     ID      REF     ALT     QUAL    FILTER  INFO
-1       1001    .       C       T       30      PASS    .
-1       2001    .       G       A       40      PASS    .
-
-# Command to run VEP on the input VCF file
-vep -i sample.vcf --cache --dir_cache /path/to/vep_cache --assembly GRCh38 --output_file output.vcf
+./vep -i input.vcf --cache
 ```
+Where "input.vcf" is the name of your input file.
 
-In this code snippet:
-- Replace `/path/to/vep_cache` with the path to the VEP cache directory.
-- `--assembly` flag specifies the genome assembly version (GRCh38 in this example).
-- The output will be saved to `output.vcf` file with annotated variant information.
+Below is the outline of a typical VCF file (input file)
 
-Note: The actual VEP command may vary based on the VEP version and specific requirements.
+```
+##fileformat=VCFv4.1
+#CHROM  POS ID  REF ALT QUAL    FILTER  INFO
+20  14370   rs6054257 G   A   29  PASS    NS=3;DP=14;AF=0.5;DB;H2
+20  17330   .   T   A   3   q10 NS=3;DP=11;AF=0.017
+20  1110696 .   A   G,T 67  PASS    NS=2;DP=10;AF=0.333,0.667;AA=T;DB
+```
+In this file, the columns are `#CHROM`, `POS`, `ID`, `REF`, `ALT`, `QUAL`, `FILTER`, `INFO`. These columns contain the chromosome name, start and end positions, ID, reference allele, alternative allele, quality scores, filters and other information respectively. 
+
+The `AF` under the `INFO` column denotes Allele Frequencies, where multiple values are separated by commas which correspond to multiple alternative alleles.
+
+Please prepare the input vcf file following this format.
+
+Code:
+To run VEP with the additional options for filtering and format conversion:
+
+```
+./vep -i input.vcf --cache --filter "Consequence is missense_variant" --vcf
+```
+Note:
+`--filter` command is used to filter the results based on the consequences.
+`--vcf` command converts the output into VCF format.

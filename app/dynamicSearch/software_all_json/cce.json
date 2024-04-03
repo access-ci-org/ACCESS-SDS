@@ -1,0 +1,13 @@
+{
+    "software": "cce",
+    "comprehensive_overview": "Compiler Construction Engine (CCE) is a software tool used for building compilers and interpreters. It provides a set of tools and libraries to assist in the creation of programming language implementations.",
+    "core_features": "1. Lexical analysis and parsing tools\n2. Abstract Syntax Tree (AST) generation\n3. Code generation and optimization capabilities\n4. Integrated development environment for language design and compiler construction\n5. Support for various programming languages and target architectures",
+    "general_tags": ["compiler", "interpreter", "programming language", "compiler construction"],
+    "additional_tags": {
+        "research_discipline": "Computer Science",
+        "research_area": "Software Engineering",
+        "software_class": "Development Tools",
+        "software_type": "Compiler/Interpreter",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

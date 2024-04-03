@@ -1,46 +1,48 @@
-Use Case: Details about libXinerama library.
+Use Case: Use libXinerama for obtaining information about the Xinerama environment. This library could be used to determine the size and position of monitors, and how they're physically arranged relative to each other.
 
 Code details and examples:
-libXinerama is an X Window System extension library that provides functionality for querying information about Xinerama (X11R6) extension. It is typically used in X Window System related programs to obtain information about the available screens.
 
-Example code snippet for querying Xinerama information in C:
-
+Code:
 ```c
 #include <X11/extensions/Xinerama.h>
 #include <stdio.h>
 
-int main() {
-    int num_screens;
-    XineramaScreenInfo *screens;
+int main(void)
+{
+    Display *dpy;
+    Window root;
+    int event_base, error_base;
+    int screen_number;
 
-    Display *dpy = XOpenDisplay(NULL);
-    if (dpy == NULL) {
-        fprintf(stderr, "Error: could not open display\n");
-        return 1;
-    }
+    dpy = XOpenDisplay(NULL);
+    root = DefaultRootWindow(dpy);
+    screen_number = DefaultScreen(dpy);
 
-    if (XineramaQueryExtension(dpy, &num_screens) && 
-        (screens = XineramaQueryScreens(dpy, &num_screens)) != NULL) {
-        for (int i = 0; i < num_screens; i++) {
-            printf("Screen %d: %dx%d+%d+%d\n", i+1, screens[i].width, screens[i].height, 
-                   screens[i].x_org, screens[i].y_org);
+    if (XineramaQueryExtension(dpy, &event_base, &error_base)) {
+        if (XineramaIsActive(dpy)) {
+            int heads, i;
+            XineramaScreenInfo *info = XineramaQueryScreens(dpy, &heads);
+
+            for (i = 0; i < heads; i++) {
+                printf("head %d: %d,%d  %dx%d\n", i,
+                info[i].x_org, info[i].y_org,
+                info[i].width, info[i].height);
+            }
+            XFree(info);
         }
-        XFree(screens);
-    } else {
-        fprintf(stderr, "Error: Xinerama extension not available\n");
     }
 
     XCloseDisplay(dpy);
     return 0;
 }
 ```
+This example code will print out the information about Xinerama heads (basically screens if you monitor is split into several parts or you have several monitors). You can compile and run this code using any C compiler.
 
-To compile the above code using gcc:
+Command to run (Assuming gcc compiler):
+
 ```bash
-gcc -o xinerama_example xinerama_example.c -lXinerama -lX11
+gcc filename.c -lX11 -lXinerama
+./a.out
 ```
 
-To run the compiled code:
-```bash
-./xinerama_example
-```
+Input format: The libXinerama does not require an explicit input file. Instead, it's drawing its information from the X server's current configuration. So the input and results are essentially based on the current monitor (multi-head) configuration rather than a static input file.

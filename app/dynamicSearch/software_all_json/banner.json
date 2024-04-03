@@ -1,0 +1,13 @@
+{
+    "software_name": "Banner",
+    "comprehensive_overview": "Banner is a comprehensive administrative software solution designed for higher education institutions to manage student information, academic records, financial aid, human resources, and other key administrative functions.",
+    "core_features": "Banner offers modules for student registration, course management, academic advising, billing and payments, financial aid processing, human resources management, reporting and analytics, and more. It provides integration with various systems to streamline administrative processes.",
+    "general_tags": ["administrative software", "higher education", "student information system", "academic records", "financial aid management", "human resources management"],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Administrative Software",
+        "software_type": "Commercial",
+        "field_of_science": "Social Sciences"
+    }
+}

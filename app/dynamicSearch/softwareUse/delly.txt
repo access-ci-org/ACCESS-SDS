@@ -1,0 +1,29 @@
+Use Case: DELLY is a software package for large-scale discovery and genotyping of structural variants using paired-end sequencing data. It's used for genome-wide discovery of structural variants at single-nucleotide resolution.
+
+Code details and examples:
+
+Code:
+
+To use DELLY, you first need to create a sorted, duplicate-marked and indexed BAM file. 
+
+Here is a sample command to run DELLY:
+
+```bash
+delly call -g human_hg19.fasta -o sample.bcf -x human_hg19.excl.tsv sample.sorted.bam
+```
+
+In this command, `call` is the command to call structural variants. The `-g` option specifies the reference genome FASTA file, and the `-o` option specifies the output file in BCF format. The `-x` option specifies a BED file of regions to exclude from analysis. Finally, `sample.sorted.bam` is the input BAM file.
+
+File Formats:
+
+The input file is a BAM file from paired-end sequencing data. This BAM file must be sorted, have duplicates marked, and be indexed. You also need a reference genome in FASTA format, and you can optionally provide a BED file of regions to exclude.
+
+Specifications and Details:
+
+The BAM file must have read pair information and be sorted by coordinates. It should only contain high quality reads, so duplicate reads and reads with a mapping quality of 0 should generally be removed.
+
+Delly utilizes paired-ends, split-reads and read depth to fully capture all possible types and sizes of structural variants. Output of Delly is generated in BCF format. It is suggested to filter and genotype at the exact breakpoints with bcftools. 
+
+The reference genome FASTA file must be indexed with samtools faidx, and the BAM file must be indexed with samtools index.
+
+No installation instructions are required. Delly is available as a binary, so it can be run directly from the command line.

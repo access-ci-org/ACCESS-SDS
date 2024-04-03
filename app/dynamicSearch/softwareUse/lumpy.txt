@@ -1,0 +1,38 @@
+Use Case: Lumpy is an HPC software that is used extensively for structural variant discovery in high-throughput sequencing data. It leverages read-pair, split-read, and read-depth evidence to accurately call structural variants.
+
+Code Details and Examples:
+
+Code:
+
+To execute Lumpy, it requires BAM files as input which must be sorted by coordinate and must have the SO:coordinate field in the header. Apart from BAM files, Lumpy also requires a separate BEDPE file containing breakpoint probabilities.
+
+Sample input command to execute Lumpy:
+```
+lumpyexpress -B sample.bam -S sample.splitters.bam -D sample.discordants.bam -o sample.vcf
+```
+
+Where:
+* sample.bam is the input BAM file
+* sample.splitters.bam is the BAM file that contains the split reads
+* sample.discordants.bam is the BAM file that contains the discordant read pairs
+* sample.vcf is the output VCF file containing the called structural variants
+
+Input files:
+1. BAM File (sample.bam): It is a binary version of a SAM file which is used to store sequencing reads along with their alignments to a reference sequence. BAM files must be sorted by coordinates and must have the SO:coordinate field in the header.
+
+2. BAM File (sample.splitters.bam and sample.discordants.bam): These are special BAM files that contain only split reads (reads that map to more than one place) and discordant read pairs (read pairs that do not align properly as per the library preparations) respectively.
+
+Output files:
+VCF File (sample.vcf): It is a text file used in bioinformatics for storing gene sequence variations. In this case, it contains the structural variants called by Lumpy.
+
+Another way to execute Lumpy is by providing a configuration file:
+```
+lumpy -mw 4 -tt 0 -pe bam_file:pe.id:sample,normal,histo_file:500,50 read_pair:bam_file:pe.id:store,genome,weight:1,1 discordant_z:5 -o sample.vcf
+```
+In this command, the configuration file (histo_file) contains mate pair insert size statistics in histogram format. This is used by Lumpy to model the expected distribution of mate pair insert sizes. The file is a tab-delimited file and each line contains the following two fields: insert size and corresponding frequency. 
+
+Code for creating the configuration file:
+```
+samtools view sample.bam | tail -n+500000 | head -n500000 |  awk '{print $9}' | sort | uniq -c | awk '{print $2,$1}' > sample.histo
+```
+In this command, tail -n+500000 | head -n500000 is used to select a random subset of 500,000 read pairs from the BAM file. The file created (sample.histo) is then used as input to Lumpy.

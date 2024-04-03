@@ -1,0 +1,13 @@
+{
+    "software_name": "BBTools",
+    "comprehensive_overview": "BBTools is a suite of bioinformatics tools designed for use with high-throughput DNA sequencing data. It includes various programs for read trimming, error correction, reference mapping, metagenomics analysis, and more.",
+    "core_features": "Some core features of BBTools include read trimming to remove adapters and low-quality bases, error correction to improve read accuracy, reference mapping for aligning reads to a reference genome, metagenomics analysis for taxonomic classification of sequences, and various utility programs for filtering and manipulating sequencing data.",
+    "general_tags": ["bioinformatics", "sequencing", "high-throughput", "DNA", "metagenomics"],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Bioinformatics",
+        "software_type": "Tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

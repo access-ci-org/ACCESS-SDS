@@ -1,7 +1,34 @@
-Use Case: FastQC is a quality control tool for high throughput sequence data.
+Use Case: FastQC is a quality control tool for high throughput sequence data. It reads in sequence data and provides a modular set of analyses which can identify potential problems with the data.
 
-Code details and examples:
-- Sample input file: fastq file
-- Command to run FastQC: fastqc input.fastq
+Code Details and Examples:
 
-When you run FastQC with the provided fastq file, it will generate an HTML report containing quality control results such as per base sequence quality, per sequence quality scores, sequence length distribution, overrepresented sequences, etc.
+The main input file for FastQC is a sequence file in FastQ format.
+
+Sample Input File:
+Below is a valid FastQ file. Each entry in a FastQ file consists of 4 lines. The first line begins with '@' character and is followed by the sequence identifier. The second line is the raw sequence letters. The third line begins with a '+' character and is optionally followed by the same sequence identifier again. The fourth line encodes the quality values for the sequence in the second line.
+    
+    @SEQ_ID
+    GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
+    +
+    !''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
+
+Command to Run:
+The command to run FastQC is:
+    
+    fastqc some_file.fastq
+
+Code Snippets:
+
+There is no need to write code to run FastQC as it is a standalone executable software. One simply needs to install it and run it from the command line with the proper input file. 
+
+You can however incorporate it into a shell script or a pipeline. For example,
+
+    #!/bin/bash
+    # This is a script to automate running FastQC on multiple files
+
+    for file in *.fastq
+    do
+      fastqc "$file"
+    done
+
+This shell script will run FastQC on all files in the current directory that have a .fastq extension.

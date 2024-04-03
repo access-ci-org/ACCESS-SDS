@@ -1,0 +1,35 @@
+Use Case: MarginPolish is a nanopore consensus pipeline that uses a neural network for improving draft assemblies. Its use case involve scientific and biomedical applications such as genomic sequence analysis and identifying novel genetic variants.
+
+Code details and examples: Code
+
+MarginPolish operates on hdf5 files which provide a succinct representation of the multiple sequence alignment between reads and a reference sequence, and any feature values computed on them.
+
+Input files:
+1. Reads in fasta/fastq format.
+2. Alignment in BAM format. 
+3. Reference genome in FASTA format.
+
+Command Line to Execute:
+```
+marginPolish assembly_draft.fa reads.sorted.bam params.json polishingDraft.fa
+```
+In this command,
+- `assembly_draft.fa` is the draft assembly
+- `reads.sorted.bam` is the alignment of your reads to draft assembly 
+- `params.json` is a parameter file in JSON format that specifies program settings
+- `polishingDraft.fa` is the output polished draft file.
+
+The settings in parameter file (`params.json`) include information like the number of threads to use, gap scoring parameters, and information about the neural network model to use. A sample `params.json` file might look like:
+```
+{
+    "polish" : {
+        "align" : {
+            "command" : "bwa mem -x ont2d -t 1 REF INPUT | samtools view -Sb - | samtools sort -T tmp - | samtools view -h -o OUTPUT -",
+            "chunkSize" : 10000000,
+            "sanityCheck" : false,
+            "verbose" : false
+        }
+}
+```
+
+For detailed instructions and more examples, check the official github page: https://github.com/UCSC-nanopore-cgl/marginPolish

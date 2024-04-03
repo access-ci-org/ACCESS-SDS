@@ -1,0 +1,47 @@
+Use Case: libROM is a library that interfaces with application codes to autonomously create highly accurate and efficient reduced order models, which are used for generalized ROM parameters and quantities of interest. 
+
+Code Details and Examples: Code 
+
+Firstly, the code should be compiled using the C++ compiler. Here is a simple example of how libROM is used to construct a reduced order model. This is done using singular value decomposition (SVD) and a time domain sample mesh:
+
+```c++
+#include "libROM.h"
+using namespace std;
+using namespace CAROM;
+
+int main(int argc, char* argv[]) {
+    // The dimension of the system.
+    int dim = 3;
+
+    // The number of samples.
+    int num_samples = 4;
+
+    // Define sample mesh in time domain
+    double dt = 0.1;
+    double T[num_samples*dim] = {0.0, dt, 2*dt, 3*dt, 0.5, dt+0.5, 2*dt+0.5, 3*dt+0.5, 1.0, dt+1.0, 2*dt+1.0, 3*dt+1.0};
+
+    // Initialize the SVD model.
+    BasisGenerator* generator = new SVD(dim, true);
+
+    // Process the sample mesh to construct the reduced order model.
+    for (int i = 0; i < num_samples * dim; i++) {
+        // The snapshot of the system at time t.
+        double* sol = new double[dim];
+        for (int j = 0; j < dim; j++) {
+            sol[j] = sin(T[i] + j*0.1);
+        }
+        generator->takeSample(sol, T[i], i);
+        delete[] sol;
+    }
+
+    generator->endSamples();
+
+    return 0;
+}
+```
+
+In this example, the SVD method is used to decompose the system into higher and lower modes of operation. The system snapshot at each time point is taken by calling `takeSample()` multiple times. 
+
+After all samples are taken, the `endSamples()` method is then called to complete the sample-taking procedure. This then results in the creation of the reduced order model for the system.
+
+Command to run: `g++ filename.cpp -lrom -o output` [When compiled with g++ compiler and librom is installed system-wide.]

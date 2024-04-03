@@ -1,0 +1,41 @@
+Use Case: Pscom is a software library used in High Performance Computing (HPC) for efficient communication in parallel systems. It is primarily used for transferring data between different nodes in a cluster.
+
+Code details and examples:
+
+Code for initializing Pscom:
+
+```c
+#include <pscom.h>
+
+int main() {
+    pscom_init(0);
+
+    return 0;
+}
+```
+In this code snippet, `pscom_init(0);` is the function that initializes the pscom library. This function needs to be called before using any other functions from this library.
+
+For Pscom, input data format can be almost anything as it just moves the data from one node to another. The key requirement is that the data must be saved in memory which can be referenced using pointers.
+
+Here is a simple example of sending integer data from one node to another using Pscom:
+
+```c
+#include <pscom.h>
+
+int main() {
+    pscom_init(0);
+
+    pscom_socket_t *socket;
+
+    socket = pscom_open_socket(0, 0);
+
+    int data_to_send = 12345;
+    pscom_send(socket, &data_to_send, sizeof(data_to_send));
+
+    return 0;
+}
+```
+
+In this code, `pscom_open_socket(0, 0);` opens a new socket using pscom. `pscom_send` function sends the integer data '12345' over this socket to another node.
+
+The command to run this code would be the standard way of running any C code, first compiling the code with a C compiler like gcc (`gcc code.c -o output -lpscom`), and then running the compiled code (`./output`). The `-lpscom` part in the compilation command is required to link the pscom library to the code. The command can be different based on the setup of the HPC system that you are using. This is just a simple and basic example to illustrate how pscom can be used. In actual usage, the code will be much more complex and the communication will be between two different programs possibly running on two different nodes.

@@ -1,30 +1,25 @@
-Use Case: PLINK is a widely used software for performing genetic association analysis in large-scale genomic datasets.
+Use Case: PLINK is a free, open-source whole genome association analysis toolset, used to perform a range of basic, large-scale analyses in a computationally efficient manner. It is often used in bioinformatics analysis for processing genotypic and phenotypic data in bioinformatics research.
 
 Code details and examples:
-1. Checking the version of PLINK:
-```bash
-plink --version
-```
 
-2. Performing a basic association analysis:
-```bash
-plink --file mydata --assoc
-```
-- In this example, "mydata" is the prefix of the PLINK data files (e.g., mydata.bed, mydata.bim, mydata.fam).
+Code:
 
-3. Generating a genome-wide identity by state (IBS) matrix:
-```bash
-plink --bfile mydata --make-rel
-```
+Input Files:
+1. Pedigree files in .ped format: Each line of a pedigree file corresponds to a single (diploid) individual in the following simple format: 
+"Family ID"
+"Individual ID"
+"Paternal ID"
+"Maternal ID"
+"Sex (1=male; 2=female; other=unknown)"
+"Phenotype"
 
-4. Running a principal component analysis (PCA):
-```bash
-plink --bfile mydata --pca
-```
+2. Map Files in .map format: These are very simple tab (or space) delimited files (i.e., each column represents a distinct field) listing variant information. In single-marker formats, this information must include which chromosome each variant is on, and where.
+"Chromosome"
+"Variant Identifier"
+"Genetic Distance"
+"Base-pair position"
 
-5. Conducting a case-control association study:
-```bash
-plink --bfile mydata --logistic
-```
+Command to run:
+plink --file mydata
 
-Note: The input files for PLINK have specific formats (e.g., .bed, .bim, .fam for binary PED format). It is important to ensure the input files are correctly formatted before running the commands.
+In this command, 'mydata' is the name of the dataset without the extension. 'plink' commands would look for mydata.ped and mydata.map files.

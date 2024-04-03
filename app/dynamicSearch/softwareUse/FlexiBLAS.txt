@@ -1,42 +1,35 @@
-Use Case: BLIS matrix-matrix multiplication
-Code details and examples:
-```c
+Use Case: FlexiBLAS is a software interface that enables the dynamic switching of the actual BLAS (Basic Linear Algebra Subprograms) library used in scientific applications. It may be used for dynamic performance tuning of a linear algebra-based application.
+
+Details and Specifications: FlexiBLAS operates on the basis of BLAS and LAPACK interfaces. Therefore, any programs that use those standards can directly call FlexiBLAS. The input and output will depend on what specific subroutine is being called; however, generally, it operates on vectors and matrices. 
+
+Code Details and Examples: Here's an example of master wrapper functions in C/C++ to call a subroutine from the BLAS library using FlexiBLAS:
+
+Code
+
+```C++
+#include <stdlib.h>
 #include <stdio.h>
-#include "blis.h"
+#include "flexiblas.h"
 
-#define N 3
-#define M 3
-#define K 3
+int main(){
+   int n = 3;
+   double x[] = {1, 2, 3};
+   double y[] = {4, 5, 6};
+   double result;
 
-int main()
-{
-    double alpha = 1.0;
-    double beta = 0.0;
-    double A[N][K] = {{1.0, 2.0, 3.0},
-                      {4.0, 5.0, 6.0},
-                      {7.0, 8.0, 9.0}};
-    double B[K][M] = {{1.0, 0.0, 0.0},
-                      {0.0, 1.0, 0.0},
-                      {0.0, 0.0, 1.0}};
-    double C[N][M] = {{0.0, 0.0, 0.0},
-                      {0.0, 0.0, 0.0},
-                      {0.0, 0.0, 0.0}};
+   // Call a BLAS routine through FlexiBLAS
+   result = FLEXIBLAS_DDOT(&n, x, &INCX, y, &INCY);
+   printf("The dot product is: %f\n", result);
 
-    bli_dgemm(BLIS_NO_TRANSPOSE, BLIS_NO_TRANSPOSE, N, M, K,
-              &alpha, (double*)A, 1, K, (double*)B, 1, M,
-              &beta, (double*)C, 1, M);
-
-    // Print result matrix C
-    for (int i = 0; i < N; i++) {
-        for (int j = 0; j < M; j++) {
-            printf("%lf ", C[i][j]);
-        }
-        printf("\n");
-    }
-
-    return 0;
+   return 0;
 }
 ```
-To run the above code using BLIS, you need to link against the BLIS library during compilation. The specific compiler command may vary depending on your system setup and BLIS installation.
+Command to Run: g++ <filename>.cpp -l:libflexiblas.so.2 -o <outputfile> and then ./<outputfile>
 
-Please make sure you have BLIS installed and configured correctly before attempting to compile and run the above code.
+Where,
+- `g++ <filename>.cpp -l:libflexiblas.so.2 -o <outputfile>` compiles the code and links it to the FlexiBLAS library.
+- `./<outputfile>` runs the compiled program. 
+
+The exact command would depend on the specific BLAS routine being called and the arguments it takes. In the sample above, FLEXIBLAS_DDOT computes the dot product of two vectors x and y. This code must be linked against FlexiBLAS when compiling.
+
+Do not provide any setup/installation instructions. Instead, consider any environment as FlexiBLAS-ready. Kindly note different routines in the BLAS library will require different arguments, and hence different input data sets. Just assume the data provided in the code snippet is an example, not a standard. The nature of the data to be provided varies depending on the requirements of the specific routine being used.

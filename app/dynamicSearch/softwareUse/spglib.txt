@@ -1,33 +1,50 @@
-Use Case: Crystal symmetry operations determination using spglib
+Use Case: Spglib is used for finding and handling crystal symmetries. The software can be utilized to simplify the computations of band structure by reducing the k-points and the matrices size of Hamiltonian for electronic structure calculations.
 
-Code details and examples:
+Code details and examples: Code
 
-Input files format:
-- Crystal structure file in Crystallographic Information File (CIF) format
-- Space group symbol
+Here is a sample python program that uses spglib to find the symmetries in a given crystal. The program requires the following input:
 
-Code to determine symmetry operations:
+- `lattice`: an array representing the crystal's lattice vectors.
+- `positions`: an array representing the positions of the atoms in the crystal.
+- `numbers`: an array representing the atomic numbers of the atoms.
+
+Sample Input File:
+
+The data input format can be any acceptable structure file (CIF, POSCAR, etc.), and then the data needs to be mapped to the required input as per spglib requirement.
+
+```
+# CIF File
+data_Vesta
+
+_cell_length_a  3.567
+_cell_length_b  3.567
+_cell_length_c  3.567
+
+loop_
+_atom_site_label    
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Si  0  0  0
+Si  0.50  0.50  0
+```
+
+Python Code Snippet:
+
 ```python
 import spglib
 import numpy as np
 
-# Load crystal structure from CIF file
-lattice, positions, atomic_numbers = spglib.read_cif("example.cif")
+lattice = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
+positions = [[0, 0, 0], [0.5, 0.5, 0]]
+numbers = [14, 14]
 
-# Define space group symbol
-space_group_symbol = "Pnma"
+dataset = spglib.get_symmetry_dataset((lattice, positions, numbers))
 
-# Get symmetry operations
-symmetry = spglib.get_symmetry(lattice, positions, atomic_numbers, spacegroup_type=space_group_symbol)
-
-print("Space group number:", symmetry["number"])
-print("Rotation matrices:")
-for rotation in symmetry["rotations"]:
-    print(rotation)
-print("Translations:")
-for translation in symmetry["translations"]:
-    print(translation)
+print("space group type: ", dataset['international'])
 ```
 
-Command to run:
-This code can be run using a Python interpreter with spglib installed.
+To run this code, simply execute it in a Python environment with spglib and numpy installed.
+
+Command to Run:
+`python spglib_example.py`

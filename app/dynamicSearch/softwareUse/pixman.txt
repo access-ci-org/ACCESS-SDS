@@ -1,35 +1,42 @@
-Use Case: Rendering library for pixel manipulation and compositing.
+Use Case: Pixman is a software library used for manipulating pixel images. It is often used as a backend for rendering in graphics APIs and server software, where it handles tasks such as compositing and scaling.
 
-Code details and examples: 
-Pixman is a low-level software library for pixel manipulation, providing pixel region userspace, accommodating image compositing. Below is an example of how to use Pixman with sample input files.
+Code details and examples:
 
-```c
+Code:
+Pixman doesn't have a standalone command line interface, and is typically used as a library within code. Here is a simple example in C that uses Pixman to perform a 2D rotation on an image:
+
+```C
 #include <stdio.h>
+#include <stdlib.h>
+#include <fenv.h>
 #include <pixman.h>
 
-int main() {
-    // Create a new image surface
-    pixman_image_t *image = pixman_image_create_bits(PIXMAN_a8r8g8b8, 100, 100, NULL, 400);
+int main (void)
+{
+    pixman_image_t *src, *dest;
+    pixman_transform_t transform;
 
-    // Fill the image with a red color
-    pixman_image_fill_rect(image, 0xff0000ff, 0, 0, 100, 100);
+    src = pixman_image_create_solid_fill (&color);
+    dest = pixman_image_create_bits (PIXMAN_a8r8g8b8, 100, 100, NULL, 0);
 
-    // Save the image to a PNG file
-    pixman_image_write_to_file(image, PIXMAN_a8r8g8b8, "output.png", 0);
+    pixman_transform_init_rotate (&transform, pixman_int_to_fixed (30),
+                                  pixman_int_to_fixed (30));
 
-    // Destroy the image
-    pixman_image_unref(image);
+    pixman_image_set_transform (src, &transform);
+    pixman_image_composite (PIXMAN_OP_OVER, src, NULL, dest,
+                            0, 0, 0, 0, 0, 0, 1, 1);
+
+    // Now 'dest' contains the rotated image.
+
+    pixman_image_unref (src);
+    pixman_image_unref (dest);
 
     return 0;
 }
 ```
 
-To compile the code, you can use the following command:
-```
-gcc example.c -o example -lpixman-1
-```
+Format required: The software accepts input in standard image file formats like JPEG, PNG etc. Convert them to the `pixman_image_t` structure before applying operations.
 
-And to run the executable:
-```
-./example
-```
+Specifications and details: The `color` variable in the code should be of type `pixman_color_t` and can be initialized as a solid color unit. For example, a solid red color can be initialized like `pixman_color_t color = { 0xffff, 0x0000, 0x0000, 0xffff };`. The image rotation is 30 degrees in the example, this can be adjusted according to need.
+
+No sample input files and command to run because Pixman is a low-level library primarily used in graphical contexts or server software, and C code typically needs to be compiled before running.

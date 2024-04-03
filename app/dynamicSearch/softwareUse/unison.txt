@@ -1,0 +1,40 @@
+Use Case: Unison is a file-synchronization tool for Unix and Windows. It allows two replicas of a collection of files and directories to be stored on different hosts (or different disks on the same host), modified separately, and then brought up to date by propagating the changes in each replica to the other.
+
+Code details and examples: Code
+
+Unison uses a configuration file (usually named `.prf`) to determine which files to synchronize. An example of a Unison profile file:
+
+```
+# Roots of the synchronization
+root = /home/user1
+root = ssh://user2@host//home/user2
+
+# Paths to synchronize
+path = current
+path = common
+path = .netscape/bookmarks.html
+
+# Some regexps specifying names and paths to ignore
+ignore = Name temp.*
+ignore = Name .*~
+ignore = Name *.tmp
+ignore = Path {Archives,Mail}/tmp
+```
+
+The `root` directives specify the two directories to synchronize. The `path` directive is for specifying subdirectories of the roots to be synchronized and the `ignore` directives specify files that shouldn’t be synchronized.
+
+To launch a synchronization you have to type unison followed by the name of the profile file without the `.prf` extension, so in the example above, you would use:
+
+```bash
+unison profilename
+```
+
+The synchronization is interactive, meaning that after executing the command, Unison will calculate the changes to make and then ask for your approval before synchronizing the files. 
+
+You can automate the process with the `-batch` option:
+
+```bash
+unison profilename -batch
+```
+
+With this option, Unison will automatically accept "non-conflicting" changes (i.e., changes in which the file was updated only on one side), but it will still ask for user intervention when a file has been updated on both sides.

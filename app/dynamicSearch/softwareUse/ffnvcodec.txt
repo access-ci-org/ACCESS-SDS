@@ -1,57 +1,27 @@
-NVIDIA CUDA Toolkit, which includes the `nvcc` compiler for CUDA programming. 
+Use Case: FFmpeg is a collection of libraries and tools that can decode, encode, transcode, multiplex, and demultiplex video and audio content. It can be used to support hardware acceleration. FFNV_CODEC is a part of FFmpeg which provides headers defining structures and function prototypes needed by the NVIDIA hardware accelerated codecs. A major use case is when you want to transcode a video file to a different format, applying filters or changing its properties such as resolution, framerate and more. 
 
-Use Case: NVIDIA CUDA Toolkit
-Code details and examples:
-- Sample CUDA code file (e.g., `vector_addition.cu`):
-```c
-#include <stdio.h>
+Code details and examples: 
 
-__global__ void vectorAdd(int *a, int *b, int *c, int n) {
-    int index = blockIdx.x * blockDim.x + threadIdx.x;
-    if (index < n) {
-        c[index] = a[index] + b[index];
-    }
-}
+Code: 
+The following FFmpeg command uses the FFNV_CODEC to hardware-accelerate a H.264 video encoding. 
 
-int main() {
-    int n = 10;
-    int a[n], b[n], c[n];
-    int *d_a, *d_b, *d_c;
-
-    for (int i = 0; i < n; i++) {
-        a[i] = i;
-        b[i] = i*2;
-    }
-
-    cudaMalloc(&d_a, n * sizeof(int));
-    cudaMalloc(&d_b, n * sizeof(int));
-    cudaMalloc(&d_c, n * sizeof(int));
-
-    cudaMemcpy(d_a, &a, n * sizeof(int), cudaMemcpyHostToDevice);
-    cudaMemcpy(d_b, &b, n * sizeof(int), cudaMemcpyHostToDevice);
-
-    vectorAdd<<<1, n>>>(d_a, d_b, d_c, n);
-
-    cudaMemcpy(&c, d_c, n * sizeof(int), cudaMemcpyDeviceToHost);
-
-    for (int i = 0; i < n; i++) {
-        printf("%d + %d = %d\n", a[i], b[i], c[i]);
-    }
-
-    cudaFree(d_a);
-    cudaFree(d_b);
-    cudaFree(d_c);
-
-    return 0;
-}
+```bash
+ffmpeg -i input.mp4 -c:v h264_nvenc -profile:v high -preset:v fast output.mp4
 ```
 
-- Compilation command using `nvcc`:
-```
-nvcc vector_addition.cu -o vector_addition
-```
+Input requirements and specifications:
+The above command takes an MP4 video file as input (input.mp4) and generates an output file (output.mp4) encoded using the h264_nvenc codec.
 
-- Execution command:
-```
-./vector_addition
+For using FFNV_CODEC, the system needs to have the compatible NVIDIA Video Codec SDK installed. There are specific version requirements depending on the codec to be used. 
+
+It involves the following:
+
+- `-i input.mp4` specifies the input file. It must be a valid video file that FFmpeg can decode.
+- `-c:v h264_nvenc` specifies the video codec to use for the output file, in this case, h264_nvenc which is a H.264 codec provided by NVENC (NVIDIA's hardware video encoder).
+- `-profile:v high -preset:v fast` specifies the profile and preset for the video encoding process. The 'high' profile provides a higher quality output video, and the 'fast' preset speeds up the encoding process.
+
+The command to run this specific Use Case:
+
+```bash
+ffmpeg -i input.mp4 -c:v h264_nvenc -profile:v high -preset:v fast output.mp4
 ```

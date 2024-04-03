@@ -1,0 +1,34 @@
+Use Case: Exonerate is a software tool for sequence alignment, specifically designed for comparing protein sequences and whole genomes. It can perform both gapped and ungapped alignment and handles splice site prediction for genomic annotation. Here is an example of how to execute a protein to genomic DNA alignment using Exonerate. 
+
+Input File : You will need a protein sequence in FASTA format and a genomic DNA sequence in FASTA format. 
+
+Format Required: The protein sequence and the genomic DNA sequence must be in FASTA format. Here is an example of a protein sequence for TTN gene in FASTA :
+
+File: protein.fasta
+```
+>TTN
+MNEVSVIKEGWLHKRGEYIKTWRPRYFLLKNDGTFIGYKERPQDVDQREAPLNNFSVAQCQLMKTERPRPNTFIIRCLQWTTVIERTFV
+```
+
+Here is an example of a similar genomic DNA sequence in FASTA :
+
+File: genomic.fasta
+```
+>TITIN_DNA
+ATGACCAACTCTGTTAGTGATCAAAGGATGGTTTTCACATAAGAGAGGGAAGAATATAAAACCTGGCGTCGACGCTACTTCTTTCTTAAGAACGATGGCACCTTTATAGGC
+```
+
+Code details and examples: Code
+To execute the alignment between the protein sequence and the genomic DNA sequence using Exonerate that does not produce scores for suboptimal alignments nor consider protein frameshifts:
+
+```
+exonerate --model protein2genome protein.fasta genomic.fasta
+```
+
+This command generates an alignment between the protein sequence contained in 'protein.fasta' and the genomic DNA sequence contained in 'genomic.fasta' considering splice sites.
+
+To save it in an output file:
+
+```
+exonerate --model protein2genome protein.fasta genomic.fasta > output.txt
+```

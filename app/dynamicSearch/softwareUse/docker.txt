@@ -1,0 +1,87 @@
+Use Case: Docker is a platform that helps in developing, deploying, and running applications in containers. Containers are stand-alone packages that contain all the necessary prerequisites like libraries and settings.
+
+Code Details and Examples: 
+
+Code
+
+To have a Docker container run a simple Hello, World! program in Python: 
+
+We first need to create a file called Dockerfile. We will use Python 3.7 for this example. 
+
+```Dockerfile
+#Use an official Python runtime as a parent image
+FROM python:3.7-slim
+
+# Set the working directory in the container to /app
+WORKDIR /app
+
+# Copy the current directory contents into the container at /app
+ADD . /app
+
+# Install any needed packages specified in requirements.txt
+RUN pip install --trusted-host pypi.python.org -r requirements.txt
+
+# Make port 80 available to the world outside this container
+EXPOSE 80
+
+# Define environment variable
+ENV NAME World
+
+# Run app.py when the container launches
+CMD ["python", "app.py"]
+```
+
+Then, the requirements.txt file would be something like this:
+
+```txt
+Flask==1.0.2
+Redis==3.2.0
+```
+
+And then, a simple Flask app in app.py:
+
+```python
+from flask import Flask
+from redis import Redis, RedisError
+import os
+import socket
+
+# Connect to Redis
+redis = Redis(host="redis", db=0, socket_connect_timeout=2, socket_timeout=2)
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+    try:
+        visits = redis.incr("counter")
+    except RedisError:
+        visits = "<i>cannot connect to Redis, counter disabled</i>"
+
+    html = "<h3>Hello {name}!</h3>" \
+           "<b>Hostname:</b> {hostname}<br/>" \
+           "<b>Visits:</b> {visits}"
+    return html.format(name=os.getenv("NAME", "world"), hostname=socket.gethostname(), visits=visits)
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=80)
+```
+
+To build the Docker image from your Dockerfile:
+
+```docker
+docker build -t friendlyhello .
+```
+
+Print out the new Docker image:
+
+```docker
+docker images
+```
+You can now run the build docker image with the following command:
+
+```docker
+docker run -p 4000:80 friendlyhello
+```
+
+Then, visit http://localhost:4000, you should see the hello message.

@@ -1,0 +1,56 @@
+Use Case: Use r-hmisc for calculating descriptive statistics, creating high-level graphics, imputing missing values, performing transformations on data frames, and more. 
+
+Code details and examples: Code
+
+Example of calculating basic statistical elements with r-hmisc package:
+
+```
+# Load Hmisc library
+library(Hmisc)
+
+# Create a data frame
+data <- data.frame(
+   score = c(56, 75, 67, 82, 64, 81, 72, 88, 76, 61)
+)
+
+# Describe the data
+d <- describe(data)
+
+print(d)
+```
+
+In this example, the input is a data frame with a single column, "score", containing numerical values. The describe function from the Hmisc package is used for analyzing this data.
+
+The output will be a detailed statistical summary of the data; like the mean, number of valid (non-missing) observations, number of missing observations, median, values at each quantile, and so on.
+
+Command to run this on R console:
+
+Either run the code line by line on the R console or save the code in a .R file and then run source("filename.R") on the R console. The specify the path to the file in place of filename.R if the file is not in the working directory.
+
+```
+source("filename.R")
+``` 
+
+Example of drawing a high-level scatter plot using r-hmisc:
+
+```
+# Load Hmisc library
+library(Hmisc)
+
+# Create two variables
+x <- rnorm(100)
+y <- rnorm(100)
+
+# Create a scatter plot with lowess line
+scatterplot(x, y, main="Scatter plot with lowess line")
+```
+
+In this example, x and y are two numeric vectors created using rnorm function. We are drawing a scatter plot of y versus x and adding a lowess (locally weighted scatterplot smoothing) curve.
+
+Command to run this on R console:
+
+Either run the code line by line on the R console or save the code in a .R file and then run source("filename.R") on the R console. The specify the path to the file in place of filename.R if the file is not in the working directory.
+
+```
+source("filename.R")
+```

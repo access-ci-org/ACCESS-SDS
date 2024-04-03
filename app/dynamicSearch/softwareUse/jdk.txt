@@ -1,0 +1,31 @@
+Use Case: JDK (Java Development Kit) is a software development environment used for creating Java applications and applets. It includes the Java Runtime Environment (JRE), an interpreter (JVM - Java Virtual Machine), a compiler (javac), an archiver (jar), and other tools needed in Java development.
+
+Code details and examples:
+
+Code:
+
+```java
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+
+The above example is a simple Java code saved as .java file that prints "Hello, World!" when run.
+
+To compile and run this Java file in the Terminal (command-line), first navigate to the directory where the .java file is saved. The file should be saved with a .java extension.
+
+Then, use the following command to compile:
+```shell
+javac HelloWorld.java
+```
+
+This will create a HelloWorld.class file, the bytecode equivalent of your Java code. 
+
+Finally, use the following command to execute:
+```shell
+java HelloWorld
+```
+
+If the code executes without any errors, "Hello, World!" will be printed on the Terminal.

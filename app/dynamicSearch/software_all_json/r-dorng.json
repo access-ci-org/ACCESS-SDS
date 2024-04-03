@@ -1,0 +1,13 @@
+{
+  "software_name": "R-DIFtree",
+  "comprehensive_overview": "R-DIFtree is an R package for learning differential item functioning (DIF) trees to identify sources of measurement bias in psychometric tests.",
+  "core_features": "1. Constructs DIF trees to detect item bias in psychometric assessments\n2. Provides graphical and tabular summaries of DIF detection\n3. Generates visualizations for interpretation of the results\n4. Allows for comprehensive analysis of measurement bias in assessments",
+  "general_tags": ["psychometrics", "measurement bias", "statistical analysis"],
+  "additional_tags": {
+    "research_discipline": "Psychometrics",
+    "research_area": "Educational Sciences",
+    "software_class": "R package",
+    "software_type": "Statistical Analysis",
+    "field_of_science": "Social Sciences"
+  }
+}

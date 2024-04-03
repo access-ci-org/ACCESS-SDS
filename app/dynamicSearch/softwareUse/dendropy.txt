@@ -1,0 +1,22 @@
+Use Case: DendroPy is a python library for phylogenetic computing. It provides classes and functions for the simulation, processing, and manipulation of phylogenetic trees and character matrices.
+
+Code details and examples:
+
+Code:
+```python
+from dendropy import Tree
+
+#sample input
+newick_str = "[&R] ((T7:0.455597,(T6:0.340045,(T5:0.282584,(T4:0.231497,T1:0.105282):0.171707):0.069373):0.195328):0.514728);"
+tree = Tree.get(data=newick_str, schema="newick")
+
+print(tree.as_string(schema='newick'))
+
+```
+Command to Run:
+```bash
+python dendropy_example.py
+```
+In this example, a tree is created from a Newick-formatted string. The string is passed as the 'data' argument and the 'schema' argument is set as "newick" to specify the format of the string. We then print the tree in newick format using 'as_string' method.
+
+It's to be noted that the newick datatype represents trees as a series of nested parentheses- The format is widely used as many phylogeny programs incorporate parsers for this format.

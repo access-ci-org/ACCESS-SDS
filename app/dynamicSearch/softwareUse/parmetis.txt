@@ -1,48 +1,40 @@
-Use Case: Graph partitioning and parallel computing with ParMETIS 
+Use Case: ParMETIS is a parallel graph partitioning and fill-reducing matrix ordering 
+library. It is commonly used for partitioning unstructured graphs, meshes, and for computing fill-reducing orderings of sparse matrices.
 
-Code details and examples: 
-ParMETIS is a parallel graph partitioning and fill-reducing ordering package. Below is an example of how to partition a graph using ParMETIS.
+Code details and examples:
 
-```c
-#include <parmetis.h>
-
-int main(int argc, char *argv[]) {
-    // Initialize MPI
-    MPI_Init(&argc, &argv);
-
-    int num_vertices = 6;
-    int num_edges = 7;
-    idx_t *xadj = {0, 2, 5, 7, 9, 12, 14};
-    idx_t *adjncy = {1, 3, 0, 2, 4, 1, 3, 5, 0, 4, 2, 6, 1, 5};
-    idx_t num_parts = 2;
-    idx_t *part = (idx_t*) malloc(sizeof(idx_t) * num_vertices);
-    
-    idx_t options[METIS_NOPTIONS];
-    METIS_SetDefaultOptions(options);
-
-    // Call ParMETIS
-    idx_t edgecut;
-    MPI_Comm comm = MPI_COMM_WORLD;
-    idx_t nparts = num_parts;
-    idx_t objval;
-    ParMETIS_V3_PartKway(xadj, adjncy, NULL, NULL, NULL, &wgtflag, &num_parts, NULL, options, &edgecut, part, &comm);
-
-    // Clean up
-    free(part);
-    MPI_Finalize();
-
-    return 0;
-}
+Code:
 ```
+idx_t options[METIS_NOPTIONS];
+options[METIS_OPTION_CTYPE]    = METIS_CTYPE_SHEM;
+options[METIS_OPTION_IPTYPE]   = METIS_IPTYPE_RANDOM;
+options[METIS_OPTION_RTYPE]    = METIS_RTYPE_GREEDY;
+options[METIS_OPTION_NO2HOP]   = 0;
+options[METIS_OPTION_MINCONN]  = 0;
+options[METIS_OPTION_CONTIG]   = 0;
+options[METIS_OPTION_SEED]     = 0;
+options[METIS_OPTION_NITER]    = 10;
+options[METIS_OPTION_NCUTS]    = 1;
 
-To compile the code, you can use the following command:
+idx_t nvtxs = 8; // number of vertices in the graph
+idx_t ncon  = 1; // number of balancing constraints (1 means only weight constraint)
 
-```bash
-mpicc partition_graph.c -o partition_graph -lparmetis -lmetis
+idx_t xadj[nvtxs + 1];
+idx_t adjncy[14];
+
+/* Fill up xadj and adjncy. xadj is of size number of vertices plus 1. 
+adjncy is the nodes connected to a vertex. More about the format can be found 
+on metis' manuals*/
+
+idx_t objval;
+idx_t part[nvtxs];
+
+ParMETIS_V3_PartKway(xadj, adjncy, NULL, NULL, &ncon, &nvtxs, 
+  NULL, NULL, NULL, &objval, part, &comm);
 ```
+input_file: none
+commands to run: none
 
-And to run the compiled code:
+Format required: The graph needs to be converted into two arrays: xadj and adjncy. xadj[i] is the index where the nodes connected to node 'i' in adjncy start. adjncy is the array where the nodes connected to a vertex are stored continuously. 
 
-```bash
-mpiexec -n <num_procs> ./partition_graph
-```
+Specifications and details in input files: none

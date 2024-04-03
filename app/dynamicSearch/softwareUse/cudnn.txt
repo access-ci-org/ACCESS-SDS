@@ -1,12 +1,67 @@
-Use Case: Deep learning framework for NVIDIA GPUs
+Use Case: Use cuDNN (NVIDIA CUDA Deep Neural Network library) to accelerate deep learning libraries like PyTorch and TensorFlow. This software provides a highly optimized implementation for primitive functions, such as convolution and normalization, that are regularly used in deep learning. 
 
-Code details and examples:
+Code details and examples: Code
+
+In general terms, cuDNN is utilized directly by higher-level libraries, rather than being used directly. However, if needed, here is an example of how you could use cuDNN's functions:
+
+For convolution:
+
+```c++
+#include <cudnn.h>
+
+// Initialize cuDNN
+cudnnHandle_t cudnn;
+cudnnCreate(&cudnn);
+
+// Define tensors (input and output for example)
+cudnnTensorDescriptor_t input_descriptor, output_descriptor;
+cudnnCreateTensorDescriptor(&input_descriptor);
+cudnnSetTensor4dDescriptor(input_descriptor,
+                           /*format=*/CUDNN_TENSOR_NCHW,
+                           /*dataType=*/CUDNN_DATA_FLOAT,
+                           /*batch_size=*/1,
+                           /*channels=*/1,
+                           /*image_height=*/input_height,
+                           /*image_width=*/input_width);
+...
+
+// Define convolution operation
+cudnnConvolutionDescriptor_t convolution_descriptor;
+cudnnCreateConvolutionDescriptor(&convolution_descriptor);
+cudnnSetConvolution2dDescriptor(convolution_descriptor,
+                                /*pad_height=*/0,
+                                /*pad_width=*/0,
+                                /*vertical_stride=*/1,
+                                /*horizontal_stride=*/1,
+                                /*dilation_height=*/1,
+                                /*dilation_width=*/1,
+                                /*mode=*/CUDNN_CONVOLUTION,
+                                /*computeType=*/CUDNN_DATA_FLOAT);
+...
+
+// Perform Convolution
+cudnnConvolutionForward(cudnn,
+                        &alpha,
+                        input_descriptor,
+                        input_data,
+                        kernel_descriptor,
+                        kernel_data,
+                        convolution_descriptor,
+                        convolution_algorithm,
+                        workspace,
+                        workspace_size,
+                        &beta,
+                        output_descriptor,
+                        output_data);
 ```
-import torch
-import torch.backends.cudnn as cudnn
 
-# Enable cuDNN for better performance
-cudnn.benchmark = True
+To compile and execute the cuDNN code you need a compiler that supports CUDA such as nvcc (Nvidia's CUDA Compiler). The command to compile and run the C++ program would look something like this:
 
-# Your deep learning model code here
-```
+```shell
+nvcc main.cu -o main -lcudnn
+./main
+``` 
+
+Remember: This is a simplified example of using cuDNN and you need to take care of memory allocation, error checking etc. Also, cuDNN is usually used indirectly through higher level libraries like PyTorch, TensorFlow etc.
+
+Note: In terms of input file formats, they depend on your actual deep learning models and data. Generally, PyTorch and TensorFlow uses data like images, text, CSV files and more, and convert them into tensors for use in the training and inference processes.

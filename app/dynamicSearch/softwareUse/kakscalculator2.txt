@@ -1,0 +1,38 @@
+Use Case: The KAKSCalculator2 is used to determine the Ka/Ks ratio, a common measurement in molecular evolution studies. This ratio indicates the balance between nonsynonymous (Ka) and synonymous (Ks) mutations in protein-coding DNA sequences. A Ka/Ks ratio greater than 1 indicates positive selection, equal to 1 means neutral selection, and less than 1 implies negative or purifying selection.
+
+Input File:
+The input file for KAKSCalculator2 is a pair of protein-coding DNA sequences. This can be in FASTA, GenBank, EMBL, or GCG format. The first two sequences in your file will be analyzed.
+
+Sample Input File:
+
+```
+>Sequence1
+ATGGCCATTGTAATGGGCCGCTGAAAGGGTGCCCGATAG
+>Sequence2
+ATGGCCACTGTTATGGGCCCCTGAAAAGGCTCCCGATAG
+```
+
+Code Details and Examples: 
+
+Command:
+``` 
+KAKSCalculator2 -i inputfile -o outputfile
+```
+
+In the above command, replace "inputfile" with the path to your input file and "outputfile" with the desired path to your output file. This command will calculate the Ka/Ks ratio for the input sequences and output the result to your specified output file.
+
+Code snippet of using KAKSCalculator2 in Python:
+
+```python
+import subprocess
+
+def run_KAKSCalculator(inputfile, outputfile):
+    cmd = ["KAKSCalculator2", "-i", inputfile, "-o", outputfile]
+    p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    out, err = p.communicate()
+    if p.returncode == 0:
+        print("KAKSCalculator2 run successfully")
+    else:
+        print(f"KAKSCalculator2 run failed, STDERR: {err}")
+```
+In the above code, replace "inputfile" and "outputfile" with your desired file paths. This code will print "KAKSCalculator2 run successfully" if the command executed successfully, else it will print the error messages.

@@ -1,0 +1,19 @@
+{
+  "software_name": "Clair3",
+  "comprehensive_overview": "Clair3 is a variant caller for Illumina deep sequencing data. It is designed to detect germline and somatic variants in a flexible, scalable, and efficient manner.",
+  "core_features": [
+    "Variant calling for Illumina deep sequencing data",
+    "Detection of germline and somatic variants",
+    "Scalable and efficient performance"
+  ],
+  "general_tags": [
+    "variant calling", 
+    "Illumina", 
+    "sequencing data"
+  ],
+  "research_discipline": null,
+  "research_area": null,
+  "software_class": "Genomic Analysis Tool",
+  "software_type": "Variant Caller",
+  "field_of_science": "Biological Sciences"
+}

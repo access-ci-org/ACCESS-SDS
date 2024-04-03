@@ -1,0 +1,13 @@
+{
+    "software_name": "Autotools",
+    "comprehensive_overview": "Autotools is a suite of programming tools designed to assist in making source code packages portable across different Unix-like systems. It includes autoconf, automake, libtool, and others and is commonly used in open-source software projects.",
+    "core_features": "1. Configuration scripts generation for software builds\n2. Dependency tracking and handling\n3. Portable Makefiles generation\n4. Simplified cross-platform compilation\n5. Integration with various programming languages and build systems",
+    "general_tags": ["programming", "software development", "build automation"],
+    "additional_tags": {
+        "research_discipline": "Software Engineering, Systems, and Development",
+        "research_area": "Software Development",
+        "software_class": "Development Tools",
+        "software_type": "Build Automation",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

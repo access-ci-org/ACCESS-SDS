@@ -1,0 +1,19 @@
+{
+    "software_name": "odgi",
+    "comprehensive_overview": "odgi is a succinct graphical representation of variation graphs. It provides methods for dynamic histogram-based organization and interactive visualization of large-scale structural variant graphs.",
+    "core_features": [
+        "Efficient graphical representation of variation graphs",
+        "Dynamic histogram-based organization",
+        "Interactive visualization of large-scale structural variant graphs"
+    ],
+    "general_tags": [
+        "Graph Visualization",
+        "Structural Variation Analysis",
+        "Genomics"
+    ],
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Analysis Tool",
+    "software_type": "Bioinformatics",
+    "field_of_science": "Biological Sciences"
+}

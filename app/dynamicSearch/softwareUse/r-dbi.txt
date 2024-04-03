@@ -1,0 +1,33 @@
+Use Case: Connecting to a remote database using R-DBI to perform data analysis.
+
+Code details and examples:
+
+Code:
+
+```R
+library(DBI)
+
+# Connect to a remote PostgreSQL database
+con <- dbConnect(RPostgres::Postgres(), 
+                 dbname = "database_name", 
+                 host = "host_url or IP_address", 
+                 port = "port_number",
+                 user = "username",
+                 password = "password")
+
+# Grab some data from a database and store it in an R data frame
+data <- dbGetQuery(con, "SELECT * FROM schema.table_name")
+
+# Disconnect from the database
+dbDisconnect(con)
+```
+
+Input Files: Not applicable as it connects directly to a database.
+
+Format Required: Connections can be to any SQL based database such as MySQL, SQLite, PostgreSQL, or others. The connection string varies depending on the specific database.
+
+Specifications and Details in Input Files: The SQL request should be based on the structure of the database it's querying.
+
+Command to run this code: This code can be run from any R interactive environment, such as RStudio or command line R interface. To run this, simply paste the code into the R interface and press enter. 
+
+This code doesn’t require user-provided input files to run. The inputs ("database_name", "host_url or IP_address", "port_number", "username", "password", "schema.table_name") should be replaced with the actual values pertaining to the database to connect to and the specific query to run.

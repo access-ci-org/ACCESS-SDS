@@ -1,35 +1,53 @@
-Use Case: Mathematical optimization using Gurobi
+Use Case: Gurobi is a commercial optimization solver for several mathematical problems. It can be used for solving linear programming problems, quadratic programming problems, quadratically constrained programming problems, mixed integer programming problems, etc.
 
-Code details and examples:
+Code details and examples: 
+
+Files: Gurobi can solve models defined in Python, C++, Java, .NET, and a few more languages. Here’s a Python example of a simple linear problem:
+
 ```python
-# Sample input file (problem.lp)
-Maximize
- obj: x1 + 2 x2 + 3 x3
-Subject To
- c1: x1 + x2 + x3 <= 5
- c2: x1 + 2 x2 + 3 x3 <= 10
-Bounds
- 0 <= x1 <= 4
- 0 <= x2 <= 3
- 0 <= x3 <= 2
-General
- x1 x2 x3
-End
+from gurobipy import *
 
-# Python code to solve the optimization problem
-import gurobipy as gp
+try:
 
-# Read the LP file
-model = gp.read('problem.lp')
+    # Create a new model
+    m = Model("mip1")
 
-# Optimize the model
-model.optimize()
+    # Create variables
+    x = m.addVar(vtype=GRB.BINARY, name="x")
+    y = m.addVar(vtype=GRB.BINARY, name="y")
+    z = m.addVar(vtype=GRB.BINARY, name="z")
 
-# Print the optimal solution
-if model.status == gp.GRB.OPTIMAL:
-    for v in model.getVars():
-        print(f'{v.varName}: {v.x}')
-    print(f'Objective Value: {model.objVal}')
+    # Set objective
+    m.setObjective(x + y + 2 * z, GRB.MAXIMIZE)
+
+    # Add constraint: x + 2 y + 3 z <= 4
+    m.addConstr(x + 2 * y + 3 * z <= 4, "c0")
+
+    # Add constraint: x + y >= 1
+    m.addConstr(x + y >= 1, "c1")
+
+    m.optimize()
+
+    for v in m.getVars():
+        print('%s %g' % (v.varName, v.x))
+
+    print('Obj: %g' % m.objVal)
+
+except GurobiError as e:
+    print('Error code ' + str(e.errno) + ": " + str(e))
+
+except AttributeError:
+    print('Encountered an attribute error')
 ```
+This script provides input data as variables within the code itself. To run the above script, save it to a file, say `model.py` and run `python model.py` in your command line.
 
-To run the code snippet with Gurobi installed, save the LP file as 'problem.lp' and run the Python script.
+Input Files: In the Python API, Gurobi also supports reading and writing models from and to the following file formats: MPS, LP, and RELAX types. Here is the documentation on how to import a model from a file: https://www.gurobi.com/documentation/9.1/refman/py_model2.html
+
+To read and solve a file, use the following Python script:
+```python
+from gurobipy import read
+
+m = read("file.mps")
+m.optimize()
+```
+To run the script, save it to a file, say `read_model.py` and run `python read_model.py` in your command line. The input file `file.mps` should be in the same directory as the script.

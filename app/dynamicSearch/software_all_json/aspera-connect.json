@@ -1,0 +1,23 @@
+{
+  "software": "Aspera Connect",
+  "overview": "Aspera Connect is a high-speed file transfer software that enables users to securely and reliably transfer large files and data sets over the internet.",
+  "core_features": [
+    "High-speed data transfer",
+    "Secure file transfer",
+    "Reliable delivery",
+    "Cross-platform compatibility"
+  ],
+  "general_tags": [
+    "File transfer",
+    "Data transfer",
+    "Internet transfer",
+    "Secure transfer"
+  ],
+  "additional_tags": {
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "File Transfer Software",
+    "software_type": "Data Transfer",
+    "field_of_science": "Other Computer and Information Sciences"
+  }
+}

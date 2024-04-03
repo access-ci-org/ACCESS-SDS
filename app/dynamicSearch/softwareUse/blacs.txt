@@ -1,0 +1,74 @@
+Use Case: BLACS (Basic Linear Algebra Communication Subprograms) is useful in performing parallel computations in linear algebra. It provides key operations like broadcasting, combining, and matrix transposing.
+
+Code details and examples:
+
+The input to a BLACS program is usually in the form of a matrix of numbers, often stored in a file.
+
+In the case of a program that performs a matrix multiplication, the input could be in the form of two text files, each containing a square matrix.
+
+File `matrixA.txt`:
+
+```
+1 2
+3 4
+```
+
+File `matrixB.txt`:
+
+```
+2 0
+1 2
+```
+
+The C code to read these files into arrays and perform the matrix multiplication is as follows:
+
+Code:
+
+```c
+#include "blacsCinit.h"
+#include "blacs.h"
+#include "blacs_barrier.h"
+#define MAXN 100000
+
+int main(int argc, char **argv)
+{
+    int descA[MAXN], descB[MAXN], descC[MAXN];
+    int matA[MAXN], matB[MAXN], matC[MAXN];
+    int i, j, k, nprow, npcol, ictxt;
+    double alpha = 1.0, beta = 0.0;
+    FILE *fpA, *fpB;
+    int dimsA[2], dimsB[2], dimsC[2];
+    
+    blacs_pinfo_(&nprow, &npcol);
+    blacs_get_(&nprow, &npcol, &ictxt);
+    blacs_gridinit_(&ictxt, "Row", &nprow, &npcol);
+    
+    fpA = fopen("matrixA.txt", "r");
+    fpB = fopen("matrixB.txt", "r");
+    for (i = 0; i < nprow; i++)
+        for (j = 0; j < npcol; j++)
+            fscanf(fpA, "%d", &matA[i*npcol+j]);
+    for (i = 0; i < nprow; i++)
+        for (j = 0; j < npcol; j++)
+            fscanf(fpB, "%d", &matB[i*npcol+j]);
+        
+    descinit_(descA, &nprow, &npcol, &nprow, &npcol, &zero, &zero, &ictxt, &nprow, &info);
+    descinit_(descB, &nprow, &npcol, &nprow, &npcol, &zero, &zero, &ictxt, &nprow, &info);
+    dgemm_("N", "N", &nprow, &npcol, &nprow, &alpha, matA, &one, descA, matB, &one, descB, &beta, matC, &one, descC);
+    
+    fclose(fpA);
+    fclose(fpB);
+    
+    blacs_gridexit_(&ictxt);
+    blacs_exit_(&zero);
+    
+    return 0;
+}
+```
+
+To compile and run the file use the following commands (assuming the compiler is MPICC):
+
+```bash
+mpicc -o blacs_example blacs_example.c -lblacs
+mpirun -np 4 ./blacs_example
+```

@@ -1,27 +1,32 @@
-Use Case: BUSCO is a software package used for assessing genome assembly and annotation completeness based on evolutionarily-informed expectations of gene content.
+Use Case: BUSCO (Benchmarking Universal Single-Copy Orthologs) is a quality assessment tool for genomic and annotated data. It's predominantly used for measuring the completeness of the assembled genome, transcriptome, or proteome in terms of their expected gene content.
 
-Code details and examples:
+Code Details and Example: 
 
-Input file format:
-- Genome assembly file in FASTA format
+Code: The BUSCO assessment is performed by running the program by providing it the genome file and the lineage dataset. Here is an example command:
 
-Command to run BUSCO:
-```
-busco -i genome.fasta -l lineage_dataset -o output_name -m genome
+```bash
+busco -i input.fasta -o output_dir -l lineage_dataset
 ```
 
-In this command:
-- -i: input file (genome assembly in FASTA format)
-- -l: lineage dataset to be used for benchmarking (e.g., eukaryota_odb10 for eukaryotic genomes)
-- -o: output name prefix
-- -m: mode (genome for genome assembly assessment)
+Sample Input File: The primary input for BUSCO is genome sequence data provided in a FASTA format. 
 
-Output:
-BUSCO will generate an output folder containing various files with statistics on the completeness of the genome assembly and annotation.
-
-Note: The specific lineage dataset to be used (-l option) may differ based on the type of genome being assessed (e.g., eukaryotic, bacterial, archaeal).
-
-Example:
 ```
-busco -i genome.fasta -l eukaryota_odb10 -o genome_busco -m genome
+>seq1
+AACTAGGTACCGTTGAGATCGATCGATG
+>seq2
+AGCTAGCTAGCTAGCTAGCTAGTAGCTAGT
+>seq3
+ACGTACGTAGCTAGTAGCTGACTAGCATG
 ```
+
+Format Required: FASTA file format.
+
+Specifications & Details in Input Files: The input genome sequence data should be in the .fasta format having sequence identifier starting with ">" followed by sequence data in the new line.
+
+Command to run them: 
+
+```bash
+busco -i genome.fasta -o busco_out -l bacteria_odb9
+``` 
+
+This command runs BUSCO on the genome.fasta file, creates an output folder named busco_out, and uses the bacteria lineage dataset for comparison.

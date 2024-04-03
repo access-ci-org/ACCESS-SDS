@@ -1,0 +1,63 @@
+Use Case: JCVI is a Python library used for biological sequence analysis and computational genomics. 
+
+Code details and examples: 
+
+Code:
+
+```python
+from jcvi.formats.base import must_open
+from jcvi.utils.range import range_interleave
+from jcvi.apps.base import OptionParser, ActionDispatcher, need_update
+​
+def main():
+​
+    actions = (
+        ('makesingle', 'unmerge a blast file with multiple HSPs per pair to single HSPs'),
+            )
+    parser = ActionDispatcher(actions)
+    parser.dispatch(globals())
+​
+def makesingle(args):
+    """
+    %prog makesingle blastfile
+​
+    unmerge a blast file with multiple HSPs per pair to single HSPs.
+    """
+    p = OptionParser(makesingle.__doc__)
+    opts, args = p.parse_args(args)
+​
+    if len(args) != 1:
+        sys.exit(not p.print_help())
+​
+    blastfile = args[0]
+    reader = BlastLineParser(blastfile)
+​
+    for query, subject, pident, length, mismatch, gapopen, qstart, qend, sstart, send, evalue, bitscore in reader:
+        print "\t".join(str(x) for x in (query, subject, pident, length, mismatch, gapopen, qstart, qend, sstart, send, evalue, bitscore))
+​
+if __name__ == '__main__':
+    main()
+```
+Sample Input File:
+
+Input File Format: Tab separated values file with the following columns:
+
+- query
+- subject
+- percent identity
+- align length
+- mismatches
+- gap opens
+- query start
+- query end
+- subject start
+- subject end
+- E-value
+- bit score
+
+Command to run it:
+
+```sh
+python script.py makesingle inputfile
+```
+*Note: The 'script.py' is the name of python file where the above code has been written and 'inputfile' is the name of your input file.

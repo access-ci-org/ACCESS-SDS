@@ -1,0 +1,35 @@
+Use Case: TransVar is a useful bioinformatics tool utilized for the annotation and impact prediction of genetic variants. It's especially helpful in decoding genomic locations for the specified variants using reference genome features.
+
+Code details and examples:
+
+TransVar requires a colon-separated .txt file containing variant descriptions in a gDNA:cDNA:p.[mutant] format.
+
+Sample input file (input.txt):
+
+```
+g.chr7:140453136A>T
+```
+
+Basic use with command line:
+
+```bash
+transvar canno -i 'chr7:g.140453134A>T' --ccds
+```
+
+In terms of Python integration, it's feasible but requires careful implementation as the tool was originally designed for utilization within a UNIX command line. Here's a sample snippet to help get the job done:
+
+```python
+import subprocess
+
+# Define our variant as well as the path to the TransVar executable
+variant = 'chr7:g.140453134A>T'
+transvar_path = '/path/to/transvar'
+
+# Use subprocess to call TransVar with our variant
+result = subprocess.run([transvar_path, 'canno', '-i', variant, '--ccds'], stdout=subprocess.PIPE)
+
+# Print the output
+print(result.stdout.decode('utf-8'))
+```
+
+This shell command queries the CCDS database for the HGVS gDNA description 'chr7:g.140453134A>T' and returns its corresponding CCDS annotations. The python code does the same and provides output to the terminal.

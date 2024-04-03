@@ -1,37 +1,48 @@
-Use Case: Working with sequence alignment files using htslib. 
+Use Case: htslib is a C library used for reading and writing high throughput sequencing data, providing support for various file formats including SAM, BAM, CRAM and VCF.
 
-Code details and examples: 
-Htslib is a software library for working with high-throughput sequencing data. One common use case for htslib is to manipulate and analyze sequence alignment files (SAM/BAM/CRAM format). Here is an example of using htslib to extract information from a BAM file.
+Code Details and Examples: Code 
 
-Code:
+Input File: The input file will be a sequence data file in any of the supported file formats.
+
+Format required: SAM, BAM, CRAM, VCF
+
+Specifications Details in Input Files: Sequence data stored in any of the supported file formats.
+
+sample.bam:
 ```
-#include <htslib/sam.h>
+@SQ SN:chr1 LN:42676
+r001   99 chr1   7 30 8M2I4M1D3M = 37 39 TTAGATAAAGGATACTG *
+r002   163 chr1  18 30 6M14N5M  = 37 39 CCTAGCTAACTAGCTAG *
+r003   0   chr1   29 30 6M14N5M  *  0  0 TTAGATAAAGGATACTG *
+```
 
-int main() {
-    htsFile *bam_file = hts_open("example.bam", "r");
-    bam_hdr_t *header = sam_hdr_read(bam_file);
-    bam1_t *aln = bam_init1();
+Code Snippet:
+```C
+#include "htslib/sam.h"
 
-    while (sam_read1(bam_file, header, aln) >= 0) {
-        // Access read information, e.g. position, sequence, quality, etc.
-        // Example: Print read name
-        printf("Read name: %s\n", bam_get_qname(aln));
+void load_bam_file() {
+    htsFile *h_in;
+    bam_hdr_t *h_hdr;
+    h_in = hts_open("example.bam", "r");
+    h_hdr = sam_hdr_read(h_in);
+    bam1_t *b = bam_init1();
+
+    while(sam_read1(h_in, h_hdr, b) >= 0) {
+        // process each alignment
     }
 
-    bam_destroy1(aln);
-    bam_hdr_destroy(header);
-    hts_close(bam_file);
+    bam_destroy1(b);
+    sam_hdr_destroy(h_hdr);
+    hts_close(h_in);
+}
 
+int main() {
+    load_bam_file();
     return 0;
 }
 ```
+Command to run: It depends on how your C environment is set up, generally, it would be ```
+gcc -o program program.c -lhts
+``` to compile it and `./program` to run it. 
 
-To compile the above code:
-```
-gcc -o extract_reads extract_reads.c -lhts
-```
-
-To run the compiled program:
-```
-./extract_reads
-```
+Remember to include the HTSLIB library in your compilation statement (with `-lhts`). The library should be installed in your system, and the GCC should be able to find it (be it in the standard library directories or by using the `-L` flag). Also, link your program with the pthread library as well, if any multi-threading functionality is used within HTSLIB.

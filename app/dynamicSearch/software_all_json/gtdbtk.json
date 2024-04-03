@@ -1,0 +1,21 @@
+{
+  "software_name": "GTDB-Tk",
+  "comprehensive_overview": "GTDB-Tk is a toolkit for processing genomes from the Genome Taxonomy Database (GTDB). It performs genome classification, quality control, and phylogenomic analysis.",
+  "core_features": [
+    "Genome classification",
+    "Quality control",
+    "Phylogenomic analysis"
+  ],
+  "general_tags": [
+    "genomics",
+    "taxonomy",
+    "phylogenomics"
+  ],
+  "additional_tags": {
+    "research_discipline": "Bioinformatics",
+    "research_area": "Genomics",
+    "software_class": "Computational tool",
+    "software_type": "Bioinformatics tool",
+    "field_of_science": "Biological Sciences"
+  }
+}

@@ -1,0 +1,30 @@
+Use Case: The PASA (Program to Assemble Spliced Alignments) pipeline is designed to analyze the alignment of transcript sequences (ESTs, cDNAs, and sequencing reads) to a genome to identify stretches of the genome that are transcribed (gene structures).
+
+Code Details and Examples:
+
+Code:
+
+The key input files for a PASA run include:
+
+1. Genome sequence file:
+Format: Multi-FASTA
+Filename: genome.fasta
+
+2. Transcript alignment file:
+Format: GTF 
+Filename: transcript.gtf
+
+A functioning example of code might look like:
+```bash
+/opt/PASApipeline/scripts/Launch_PASA_pipeline.pl -c alignAssembly.config -C -R -g genome.fasta -t transcript.gtf --ALIGNERS blat,gmap
+```
+In the `alignAssembly.config` file, required specifications would include the SQL database name and server. For example:
+```
+DATABASE=pasa_db
+...
+#Server details
+server=mysql_server
+user=db_user
+password=db_password
+...
+```

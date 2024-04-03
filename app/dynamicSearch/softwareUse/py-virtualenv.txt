@@ -1,0 +1,21 @@
+Use Case: Virtualenv is a tool used to create isolated Python environments. This is especially useful when different projects require different environments or dependencies. A project that needs Django 1.10 needs a different environment than a project that needs Django 1.8.
+
+Code Details and Examples: 
+
+Code :
+```python
+# Create a virtual environment
+virtualenv new_environment
+
+# Activate the virtual environment
+source new_environment/bin/activate
+
+# Verify you are in the correct environment
+which python
+# It should output something like this /path/to/new_environment/bin/python
+
+# After work is done, you can exit the virtual environment
+deactivate
+```
+
+There is no input file required for this. All commands are run in the command line terminal. The output changes according to the user-specific system and paths.

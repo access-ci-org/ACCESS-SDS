@@ -1,0 +1,42 @@
+Use Case: Devito is a software for performing seismic modeling, linear inversion, reverse time migration, full waveform inversion, etc. It generates optimized Finite Difference (FD) code from high-level symbolic problem definitions, relieving practitioners from the laborious and error-prone task of writing optimized FD code.
+
+Code details and examples: 
+
+Code:
+
+In Devito, we typically work with a Python script that will look more or less like this:
+
+```python
+from devito import Grid, Function, TimeFunction, Operator, Eq, solve, configuration
+from sympy import sin
+
+# Set Devito logging to debug
+configuration['log-level'] = 'DEBUG'
+
+# Define a 2D computation grid
+grid = Grid(shape=(10, 10))
+
+# Define a scalar field on the grid
+f = Function(name="f", grid=grid)
+
+# Define a time-dependent scalar field on the grid
+g = TimeFunction(name="g", grid=grid)
+
+# Define the PDE: dg/dt = sin(f)
+eq = Eq(g.dt, sin(f))
+
+# Use the Devito Operator to solve the equation
+op = Operator(eq)
+op.apply(time_m=0, time_M=10)
+```
+
+In this script, we first create an instance of `Grid` representing our computation domain. Then we define scalar fields `f` and `g` on this grid. Next, we define the partial differential equation that we want to solve. Here, we have `dg/dt = sin(f)`. We then create a Devito `Operator` to solve this equation. Finally, we apply our operator over the time range [0, 10].
+
+Command to run it:
+
+You can run this script using Python interpreter:
+
+```shell
+python script.py
+```
+It should be noted that the input is passed as arguments to function and class methods. It is also implied that Python and Devito are installed and there are no problems with dependencies. The example does not require any input files, as the settings are defined within the Python script. The level of logging verbosity, computational grid shape, scalar field definitions, PDE to solve, and the time range to solve the PDE over are all defined in this Python script. The script is self-contained and only requires Python and Devito to run.

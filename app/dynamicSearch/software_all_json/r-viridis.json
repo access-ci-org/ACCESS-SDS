@@ -1,0 +1,17 @@
+{
+  "software_name": "r-viridis",
+  "comprehensive_overview": "The R package, viridis, provides a collection of color palettes for R and aims to improve data visualization by providing visually pleasing and colorblind-friendly color scales.",
+  "core_features": "1. Includes color palettes that are perceptually uniform and friendly to colorblind individuals.\n2. Allows users to easily apply these palettes to their visualizations in R.\n3. Provides a range of options for selecting the most suitable color scale for different types of data.",
+  "general_tags": [
+    "Data Visualization",
+    "Color Palettes",
+    "R Package"
+  ],
+  "additional_tags": {
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Data Visualization",
+    "software_type": "Tool",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

@@ -1,0 +1,27 @@
+{
+    "software_name": "libyaml",
+    "comprehensive_overview": "LibYAML is a YAML 1.1 parser and emitter written in C. It is a library for parsing and emitting YAML data. YAML is a human-readable data serialization format that is commonly used for configuration files and data exchange between languages. LibYAML allows developers to integrate YAML support into their applications.",
+    "core_features": [
+        "Parsing YAML data into a native data structure",
+        "Emitting native data structures into valid YAML documents",
+        "Support for YAML 1.1 specification",
+        "Written in C for portability and efficiency"
+    ],
+    "general_tags": [
+        "YAML",
+        "Parser",
+        "Emitter",
+        "Serialization",
+        "Configuration"
+    ],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Library",
+        "software_type": "Parsing/Serialization",
+        "field_of_science": [
+            "Computer and Information Sciences",
+            "Engineering and Technology"
+        ]
+    }
+}

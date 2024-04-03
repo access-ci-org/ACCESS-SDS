@@ -1,0 +1,21 @@
+{
+  "software_name": "SuiteSparse",
+  "comprehensive_overview": "SuiteSparse is a suite of sparse matrix algorithms and solvers available in the form of libraries that are designed to efficiently handle sparse matrices commonly encountered in numerical computations.",
+  "core_features": [
+    "Suite of sparse matrix algorithms and solvers",
+    "Efficient handling of sparse matrices",
+    "Optimized for numerical computations"
+  ],
+  "general_tags": [
+    "Sparse Matrix",
+    "Algorithms",
+    "Numerical Computations"
+  ],
+  "additional_tags": {
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Library",
+    "software_type": "Computational Software",
+    "field_of_science": "Other Mathematics"
+  }
+}

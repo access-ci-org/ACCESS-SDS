@@ -1,0 +1,13 @@
+{
+    "software_name": "CPU",
+    "comprehensive_overview": "CPU (Central Processing Unit) is a hardware component of a computer that executes instructions and performs calculations. It is considered the brain of the computer and is responsible for carrying out tasks and running applications.",
+    "core_features": "1. Executes instructions from computer programs\n2. Performs arithmetic and logic operations\n3. Manages data and input/output operations\n4. Controls other hardware components\n5. Supports multitasking and multiprocessing",
+    "general_tags": ["hardware", "computing", "technology"],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Hardware",
+        "software_type": "Component",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

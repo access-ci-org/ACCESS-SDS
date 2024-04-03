@@ -1,0 +1,45 @@
+Use Case: r-scales can be used to manipulate color scales in plots. For instance, if you have data for a heatmap represented in a CSV file, r-scales could be used to change the color scale of the plot.
+
+Code details and examples:
+
+Code:
+Instead of using the default color scale provided by the plot, you can customize the color scale using r-scales.
+
+Input File: heatmap_data.csv
+Format Required: A CSV file where each row corresponds to a piece of data. Each column will correspond to different variables of the data like say, height, weight, etc. Each row will have a corresponding color in the heatmap.
+
+Suppose you have the following dataframe:
+
+```
+# A data frame with 3 variables: 
+df <- data.frame(
+    var1 = rnorm(100),
+    var2 = rnorm(100) * var1,
+    var3 = rnorm(100))
+     
+# Convert the data.frame to a correlogram
+heatmap_data <- cor(df)    
+```
+
+You can represent this data with a heatmap and customize the color scale using r-scales:
+
+```
+library(ggplot2)
+library(scales)
+
+ggplot(df, aes(x = var1, y = var2)) +
+  geom_tile(aes(fill = var3)) +
+  scale_fill_gradient2(low = muted("blue"), mid = "white",
+                       high = muted("red"), midpoint = 0,
+                       limit = c(-1,1), space = "Lab",
+                       name = "Correlation")+
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, vjust = 1,
+                                    size = 12, hjust = 1))
+```
+
+Here, `scale_fill_gradient2` is being used to change the color scale. The parameters `low`, `mid` and `high` are used to determine the colors for low, mid and high values. You can change the color values according to your preference.
+
+Command to run:
+In order to run the code in R, you just have to source the file.
+Example: within R console, `source('source_filename.R')`.

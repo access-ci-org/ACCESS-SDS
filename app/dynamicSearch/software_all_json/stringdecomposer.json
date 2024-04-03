@@ -1,0 +1,11 @@
+{
+  "software_name": "stringdecomposer",
+  "comprehensive_overview": "stringdecomposer is a tool designed to break down a given string into its individual components, such as characters or words, and provide detailed analysis on each component.",
+  "core_features": "1. String decomposition into characters or words. 2. Detailed analysis of each component, including frequency, length, position, etc. 3. Customizable settings for decomposition and analysis parameters.",
+  "general_tags": ["string manipulation", "text analysis"],
+  "research_discipline": [],
+  "research_area": [],
+  "software_class": "Data analysis tool",
+  "software_type": "Utility",
+  "field_of_science": "Computer and Information Sciences"
+}

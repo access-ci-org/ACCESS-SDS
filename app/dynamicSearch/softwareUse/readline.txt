@@ -1,23 +1,30 @@
-Use Case: Reading lines from a file using the `readline` method in Python.
+Use Case: The readline module in Python is used to define a number of functions to facilitate completion and input editing. It is most widely used in the interactive Python interpreter. Readline available on some UNIXes, BeOS, and, experimentally, Windows.
 
 Code details and examples:
 ```python
-# Opening a file and reading lines using the readline method
-with open('input.txt', 'r') as file:
-    line = file.readline()
-    while line:
-        print(line.strip())
-        line = file.readline()
+import readline
+
+# Create a list of possible completions
+COMP_WORDS = ['engine', 'python', 'hello', 'world']
+
+def completer(text, state):
+    options = [x for x in COMP_WORDS if x.startswith(text)]
+    try:
+        return options[state]
+    except IndexError:
+        return None
+
+readline.set_completer(completer)
+readline.parse_and_bind("tab: complete")
+
+# Now when you input something in your python interpreter, completions with the tab key are enabled.
 ```
 
-Sample input file `input.txt`:
-```
-Hello
-This is a sample file
-With multiple lines
-```
+Please note that readline doesn't have an input file. The method shown allows for tab completion in a python interpreter session. In this example, if the user types the first few letters of a word that is in the COMP_WORDS list, and presses tab, the nearest match from COMP_WORDS would be completed for them.
 
-Command to run the code:
+Command to Run:
+
+There is no specific command to run readline module. It's usually imported in Python script and used as per above example. You can run the python script as follows:
 ```bash
-python read_lines.py
+python script.py
 ```

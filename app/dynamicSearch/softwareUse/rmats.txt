@@ -1,0 +1,31 @@
+Use Case: rMATS is an automated pipeline used for the detection of differential alternative splicing (AS) events from RNA-Seq data. The inputs to rMATS are a pair of RNA-Seq datasets and output the difference in AS between the two datasets. 
+
+Code Details and Examples:
+
+Input file formats: It takes BAM or SAM format alignment files as input which are produced from aligning RNA-Seq reads to the reference genome.
+
+Input Specifications:
+
+1. Paired-end reads aligned BAM file: `--b1 "readAlign.1.bam,readAlign.2.bam"`
+2. Single-end reads aligned BAM file: `--b1 "readAlign.1.bam,readAlign.2.bam"`
+3. Reference gene model in GTF format: `--gtf refGene.gtf`
+4. Reference genome sequence: `--readLength 101 --genome hg19`
+
+To prepare input:
+
+1. Align your paired-end or single-end reads to reference genome using any aligner like STAR or Tophat and obtain BAM files.
+2. Alignments must be ordered by read name rather than by position.
+3. The gene model (annotation) must be downloaded in GTF format and reference genome sequence should also be available during command run.
+
+Code Snippet for paired-end reads:
+
+```
+python2 rmats.py --b1 "readAlign.1.bam,readAlign.2.bam" --gtf refGene.gtf --readLength 101 --genome hg19 --od outputFolder
+```
+
+Here,
+--b1 -> Input BAM/SAM files of Dataset.
+--gtf -> Annotation file in GTF format.
+--readLength -> Length of the read.
+--genome -> Genome version used.
+--od -> denotes the output directory.

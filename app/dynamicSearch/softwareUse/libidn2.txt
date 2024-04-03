@@ -1,22 +1,44 @@
-Use Case: Internationalized Domain Names support library
+Use Case: libidn2 is a free software library that implements Internationalized Domain Names (IDNs, defined in RFC 5890). It is used by various software and systems to support non-ASCII domain names.
 
-Code details and examples:
-libidn2 is a library that provides support for Internationalized Domain Names (IDN) according to the IDNA2008 specification. The library allows for the encoding and decoding of domain names containing non-ASCII characters.
+Code Details and Examples: 
 
-Here is an example of encoding a domain name using the idn command line tool provided by libidn2:
+Code: 
 
-```bash
-echo "example.臺灣" | idn2
+```c
+#include <idn2.h>
+#include <stdio.h>
+
+int main() {
+    char *punycode = NULL;
+    char *utf8 = NULL;
+
+    // Encode an UTF-8 string to Punycode
+    if(IDN2_OK != idn2_lookup_u8((uint8_t *)"EUROPAÄ", &punycode, 0)) {
+        return 1;
+    }
+
+    printf("Punycode version of EUROPAÄ is %s\n", punycode);
+    free(punycode); 
+
+    // Decode a Punycode string to UTF-8
+    if(IDN2_OK != idn2_to_unicode_8zlz((uint8_t *)"xn--europa-674b", &utf8, 0)) {
+        return 1;
+    }
+
+    printf("UTF-8 version of xn--europa-674b is %s\n", utf8);
+    free(utf8);
+
+    return 0;
+}
 ```
 
-This will output the Punycode encoded version of the domain name "example.臺灣".
+Above given is the c code snippet that demonstrates basic usage of libidn2 to encode/decode an internationalized domain name. After running this code we should get the following output:
 
-To decode a Punycode encoded domain name, you can use the following command:
-
-```bash
-echo "example.xn--kprw13d" | idn2
+```
+Punycode version of EUROPAÄ is rn--europa-674b
+UTF-8 version of rn--europa-674b is EUROPAÄ
 ```
 
-This will output the UTF-8 representation of the domain name "example.xn--kprw13d".
+Compilation command: `gcc -o example example.c -lidn2`
 
-The libidn2 library also provides APIs for developers to integrate IDN support into their applications.
+Execution command: `./example`

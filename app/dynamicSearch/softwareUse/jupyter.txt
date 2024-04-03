@@ -1,13 +1,31 @@
-Use Case: Jupyter Notebook is a web-based interactive computing platform. It allows you to create and share documents that contain live code, equations, visualizations, and narrative text.
+Use Case: Jupyter, a widely used tool for data science, allows you to create and share documents that contain live code, equations, visualizations and narrative text for data cleaning, statistical modeling, data visualization, machine learning and more.
 
-Code details and examples:
-Sample input file: There is no specific input file required for Jupyter Notebook. You can start it by simply running the command below.
+Code details and examples: 
 
-Command to run Jupyter Notebook:
-```bash
-jupyter notebook
+Code:
+```python
+# Import pandas
+import pandas as pd
+
+# Create a simple dataframe
+data = {
+    'apples': [3, 2, 0, 1], 
+    'oranges': [0, 3, 7, 2]
+}
+purchases = pd.DataFrame(data)
+
+# Display the dataframe
+print(purchases)
 ```
 
-Once you run the above command, it will open a new tab in your web browser where you can create a new notebook or open an existing one. Jupyter Notebook supports various programming languages such as Python, R, and Julia.
+Input Files: 
+- No specific input file is required. The dataframe is created within the code.
 
-Note: Jupyter Notebook needs to be installed on your system before running the above command.
+Format Required: 
+- The code snippet above uses Python program. Ensure your Jupyter notebook supports Python.
+
+Specifications and details in input files:
+- No specific input file is required. However, pandas can work with various file formats for data loading. For example, for CSV files, the command would be `data = pd.read_csv('file.csv')`.
+
+Command to run (In Jupyter notebook):
+- To run a cell in Jupyter, simply select the cell and use keys Shift + Enter. Alternatively, in the top menu you can go to Cell -> Run Cells.

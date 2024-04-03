@@ -1,0 +1,13 @@
+{
+    "software_name": "Intel Math Kernel Library (MKL)",
+    "comprehensive_overview": "Intel Math Kernel Library (Intel MKL) is a set of highly optimized, extensively threaded mathematical functions for scientific, engineering, and financial applications that require maximum performance.",
+    "core_features": "1. Highly optimized mathematical functions\n2. Broad set of algorithms covering linear algebra, Fourier transforms, vector math, and more\n3. Extensively threaded for parallel processing\n4. Supported on multiple platforms and compilers\n5. Integrates with popular programming languages and environments",
+    "general_tags": ["mathematics", "scientific computing", "optimization"],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "library",
+        "software_type": "mathematical library",
+        "field_of_science": "Other Mathematics"
+    }
+}

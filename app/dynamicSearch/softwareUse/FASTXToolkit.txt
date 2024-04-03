@@ -1,41 +1,41 @@
-Use Case: FASTXToolkit is a collection of command-line tools for Short-Reads FASTA/FASTQ file preprocessing. It includes tools for filtering, trimming, modifying sequences, and quality control of FASTA/FASTQ data.
+Use Case: Fastx-Toolkit is a collection of command line tools for Short-Reads FASTA/FASTQ files preprocessing. It can be used for quality filtering, trimming of reads and many more applications.
 
-Code details and examples:
-1. **Example Input files**: 
-   - Input FASTQ file (input.fastq):
-     ```
-     @SEQ_ID
-     GATCGGAAGAGCACACGTCTGAACTCCAGTCAC
-     +
-     IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
-     ```
-   
-2. **Quality filtering with fastq_quality_filter**:
-   - **Command**: 
-     ```
-     fastq_quality_filter -Q33 -q 30 -p 90 -i input.fastq -o output.fastq
-     ```
-   - **Description**: This command filters out sequences with average quality score below 30 (Phred+33) and keeps at least 90% bases with quality score of 30 or higher.
+Code Details and Examples:
 
-3. **Trimming with fastx_trimmer**:
-   - **Command**: 
-     ```
-     fastx_trimmer -f 3 -l 15 -i input.fastq -o output.fastq
-     ```
-   - **Description**: This command trims the input sequences from the 3rd base to the 15th base.
+Code:
 
-4. **Tool for quality control, fastq_quality_stats**:
-   - **Command**: 
-     ```
-     fastq_quality_stats -Q33 -i input.fastq -o stats.txt
-     ```
-   - **Description**: This command generates basic statistics on the quality of sequences in the input file.
+Fastq Quality Filter
+-----------------------
+This tool filters out low-quality reads based on the quality scores in your input fastq file. 
 
-5. **Tool for converting FASTQ to FASTA, fastq_to_fasta**:
-   - **Command**: 
-     ```
-     fastq_to_fasta -Q33 -i input.fastq -o output.fasta
-     ```
-   - **Description**: This command converts a FASTQ file to a FASTA file.
+Input file format: A fastq file to be quality checked. Quality scores should be phred +33.
 
-Note: Make sure the tools are installed and in the system's PATH to run these commands.
+Command to run it:
+```
+fastq_quality_filter -Q33 -q 20 -p 80 -i input.fastq -o output.fastq
+```
+Where:
+-Q33 specifies the phred scale of quality scores
+-q is the minimum quality score to retain a read
+-p is the minimum percentage of bases that must have the quality as specified by -q
+-i specifies the input file
+-o specifies the output file
+
+Fastq Trim Tool
+-------------------
+This tool trims low-quality bases from the 3'-end of reads until it comes across a base with a quality score above the threshold.
+
+Input file format: A fastq file with sequence reads to be trimmed. Quality scores should be phred +33.
+
+Command to run it:
+```
+fastq_quality_trimmer -Q33 -t 20 -l 20 -i input.fastq -o output.fastq
+```
+Where:
+-Q33 specifies the phred scale of quality scores
+-t is the minimum quality score, below which trimming will occur.
+-l is the minimum length of reads to be kept.
+-i specifies the input file
+-o specifies the output file
+
+Remember to replace input.fastq and output.fastq with the names of your own files.

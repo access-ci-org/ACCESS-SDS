@@ -1,0 +1,13 @@
+{
+    "software_name": "hap.py",
+    "comprehensive_overview": "hap.py is a toolkit for assessing the accuracy of variants (SNPs, indels, and block substitutions) detected by various sequencing technologies, including data from whole-genome sequencing, whole-exome sequencing, and targeted gene panels.",
+    "core_features": "It provides a variety of metrics for evaluating variant calls, such as precision, recall, F1 score, sensitivity, specificity, and more. It supports VCF and BED files as input and generates detailed reports to aid in interpreting the accuracy of variant calls.",
+    "general_tags": ["variant calling", "sequencing", "genomics"],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Computational tool",
+        "software_type": "Bioinformatics tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

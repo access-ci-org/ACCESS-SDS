@@ -1,0 +1,32 @@
+Use Case: The Coin-or linear programming (CLP) is a software library that provides functionalities for solving linear programming problems. The software library can be invoked directly from a command line interface, or used as part of a larger system via its API.
+
+Code Details and Examples:
+
+Code:
+
+To use CLP, one would usually first write an LP file that describes their optimization problem. An example simple.lp file might look like:
+
+```
+Maximize
+ obj: x1 + 2 x2 + 3 x3 + x4
+Subject To
+ c1: - x1 + x2 + x3 + 10 x4 <= 20
+ c2: x1 - 3 x2 + x3 <= 30
+ c3: x2 - 3.5 x4 = 0
+Bounds
+ 0 <= x1 <= 40
+ 2 <= x2 <= 3
+ 1.1 <= x3 <= 4
+ x4 >= 1.5
+End
+```
+
+This file describes an optimization problem where the objective is to maximize the sum of x1 + 2x2 + 3x3 + x4, subject to constraints c1, c2, and c3, and given the variable bounds.
+
+Command to run the program:
+
+After writing your LP file, you can solve it using CLP with the following command:
+
+``` clp simple.lp solve``` 
+
+This command instructs CLP to solve the optimization problem described in simple.lp. The result of the program will be printed to the console output. The exact appearance of the output can vary, but it will generally report the optimal value of the objective function and the values of the variables at the optimal solution.

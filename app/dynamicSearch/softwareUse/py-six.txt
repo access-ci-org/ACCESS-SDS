@@ -1,0 +1,24 @@
+Use Case: Use py-six to write Python code that is compatible with both Python 2 and Python 3.
+
+Code details and examples: Code
+
+Py-six doesn’t require any special input files or formats. Instead, it offers a set of functions and methods that allow you to use Python 3-specific features in a way that’s compatible with Python 2. Here is an example:
+
+```python
+import six
+
+def example_function(integer_value):
+    if not six.PY2:
+        return integer_value // 2
+    else:
+        return integer_value / 2
+```
+
+In this code, we’ve used `six.PY2` to identify the version of Python we’re using. Depending on the Python version, we’ve used different division operations. 
+
+Command to run the above code is:
+```bash
+python3 filename.py
+```
+
+(Note: replace 'filename.py' with your Python file name)

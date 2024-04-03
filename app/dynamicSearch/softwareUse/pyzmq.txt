@@ -1,0 +1,55 @@
+Use Case: PyZMQ is a python binding for the ØMQ, also known as ZeroMQ, messaging library. It allows you to create applications that can communicate across various transports like In-Process, Inter-Process, TCP, and Multicast. You can connect sockets N-to-N with patterns like fan out, pub-sub, task distribution, and request-reply. 
+
+Code details and examples:
+Code:
+
+Here we have a simple Pythynchronous client example:
+
+Client:
+```python
+import zmq
+
+#  Prepare our context and sockets
+context = zmq.Context()
+socket = context.socket(zmq.REQ)
+socket.connect("tcp://localhost:5555")
+
+#  Send request, get reply
+socket.send(b"Hello")
+message = socket.recv()
+print(f"Received reply: {message}")
+```
+
+Here is a server that can process the request of the above client:
+
+Server:
+```python
+import zmq
+
+context = zmq.Context()
+socket = context.socket(zmq.REP)
+socket.bind("tcp://*:5555")
+
+message = socket.recv()
+print(f"Received request: {message}")
+
+socket.send(b"World")
+```
+
+These two scripts must be run in separate processes, start the server first.
+
+Command to run them:
+
+1. Save the server script in a file named `server.py` and the client script in a file named `client.py`
+```
+python3 server.py
+python3 client.py
+```
+
+Input Files: These examples do not make use of input files, but instead make use of standard input and output through the terminal.
+ 
+Format Required: These examples expect input to be provided as command line arguments, and do not require any specific format to be adhered to.
+
+Specifications and Details in Input Files: n/a
+
+You can replace `b"Hello"` and `b"World"` with your own data, and you could also use other patterns from ZeroMQ. PyZMQ supports the use of multiple threads in your application and does not have any global state. All PyZMQ objects, like contexts, sockets, etc., are thread-safe.

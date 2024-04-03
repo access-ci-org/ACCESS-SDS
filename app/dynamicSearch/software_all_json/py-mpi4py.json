@@ -1,0 +1,13 @@
+{
+    "software_name": "py-mpi4py",
+    "comprehensive_overview": "py-mpi4py is a Python interface to the Message Passing Interface (MPI) standard for parallel computing, allowing users to utilize MPI functionality within Python scripts and applications.",
+    "core_features": "1. Provides Python bindings for the MPI standard, enabling parallel computing within Python.\n2. Supports point-to-point communication, collective operations, and one-sided communication.\n3. Facilitates process management, dynamic process creation, and inter-process communication.\n4. Enables parallel execution of code across multiple processors or nodes in a cluster.",
+    "general_tags": ["Python", "MPI", "Parallel Computing"],
+    "additional_tags": {
+        "research_discipline": "Computer Science",
+        "research_area": "Distributed and Parallel Computing",
+        "software_class": "Middleware",
+        "software_type": "Library",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

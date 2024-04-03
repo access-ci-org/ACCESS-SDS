@@ -1,18 +1,30 @@
-Use Case: Convex hull computation
+Use Case: Qhull is used for computing the convex hull, Delaunay triangulation, Voronoi diagram, halfspace intersection about a point, furthest-site Delaunay triangulation, and furthest-site Voronoi diagram, among others. It is widely used in scientific and engineering fields.
+
 Code details and examples:
-Qhull is a software library for computing the convex hull of a set of points in N-dimensional space. It can be used for a variety of applications, including computational geometry, graphics, and machine learning.
 
-Sample input file (points.txt):
+Code:
+Lets take a scenario where we have set of 2D points and we want to compute the Convex Hull for these points using Qhull,
+
+Format Required: Input should be in a text file, where the first line contains the dimension (2 for 2D, 3 for 3D), the second one the number of points, and each subsequent line the coordinates of a point.
+
+Sample Input File: 
+
 ```
-3
-1 1 1
-2 2 2
-3 3 3
+2
+5
+1.0 1.0
+2.0 5.0
+3.0 3.0
+5.0 2.0
+5.0 5.0
 ```
 
-Code snippet to run Qhull (assuming points.txt contains the input points):
+Commands to run:
+
+To compute Convex Hull using Qhull, the command is:
+
 ```
-$ qhull < points.txt
+qhull i < input.txt
 ```
 
-This will output the convex hull of the given points.
+This will output the indices of the points forming the convex hull.

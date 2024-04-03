@@ -1,0 +1,36 @@
+Use Case: Use cppy to create a C++ extension module for Python. 
+
+Code details and examples: Code 
+
+Input File Format: '.cpp' extension for C++ source files and '.py' extension for Python source files.
+
+Sample Input: Suppose we have a simple C++ extension module source file 'example.cpp'.
+
+Command to run: After building and installing your C++ extension module, you can use Python to run it.
+
+```python
+import example
+result = example.add(2,3)
+print(result)
+```
+
+This uses Python to import the `example` C++ extension module and call the `add` function defined in it. 
+
+Specifications and Details in Input Files:
+
+The 'example.cpp' file could be something like:
+
+```cpp
+#include <pybind11/pybind11.h>
+namespace py = pybind11;
+
+int add(int x, int y) {
+    return x + y;
+}
+
+PYBIND11_MODULE(example, m) {
+    m.def("add", &add, "A function which adds two numbers");
+}
+```
+
+The `add` function is defined and then made available to Python via the `py::module_::def` method. The string argument to `def` is the name of the function in Python and the second argument is a pointer to the C++ function. The third argument is an optional string which will be used as the docstring in Python. The `PYBIND11_MODULE` macro creates a function that will be called when an import statement is issued from Python and it should not be in any namespace. The `example` argument is the name of the module in Python and `m` is the module.

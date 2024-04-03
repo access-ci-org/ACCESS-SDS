@@ -1,0 +1,13 @@
+{
+    "software_name": "ChewBBACA",
+    "comprehensive_overview": "ChewBBACA (Chew Sequence-Based Typing Tool) is a suite of tools specifically designed for whole-genome sequence analysis, dedicated to the provision of high-resolution sequence-based microbial genotyping.",
+    "core_features": "1. Whole-genome sequence analysis\n2. High-resolution microbial genotyping\n3. Detection of core and accessory genome elements\n4. Support for bacterial typing tasks\n5. Analysis of large genomic datasets\n6. Phylogenetic inference and visualization",
+    "general_tags": ["whole-genome analysis", "microbial genotyping", "bacterial typing", "phylogenetic inference", "bioinformatics"],
+    "additional_tags": {
+        "research_discipline": "Genomics",
+        "research_area": "Microbial Genomics",
+        "software_class": "Bioinformatics",
+        "software_type": "Tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

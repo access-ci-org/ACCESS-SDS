@@ -1,0 +1,55 @@
+Use Case: OpenFold is used for protein structure prediction. One of the core tasks in molecular biology and bioinformatics, is to predict the three-dimensional structure of a protein sequence. 
+
+Code Details and Examples:
+
+Code:
+
+Here is a simple way to run a script for openfold.
+
+```
+# Import the necessary modules
+from openfold.amino_acid import protein_sequence
+from openfold.model import Model
+from openfold.visualize import view_structure
+
+# Define your amino acid sequence
+sequence = protein_sequence('SEQUENCE')
+
+# Generate the model
+model = Model(sequence)
+
+# Run the prediction
+model.predict_structure()
+
+# View the structure
+view_structure(model.structure)
+```
+
+Input files needed: 
+
+OpenFold requires an amino acid sequence as the input data. This data can be represented as a string. For example, 'SEQUENCE'.
+
+Output file generated:
+
+The output data is a structure of the protein which can be viewed using the view_structure function. 
+
+Command to run as:
+
+Preferably, you can run the script using any Python compiler as a .py file. Or if the script is saved as 'protein_structure.py', run it in the terminal as follows:
+
+```
+python protein_structure.py
+``` 
+
+Format required: 
+
+OpenFold takes an input file which is just a string of amino acids. Each amino acid is represented by a single letter. The order of the letters represents the order of the amino acids in the protein.
+
+Specifications and details in input files:
+
+The input file is a simple text file, where each character represents one amino acid. There are 20 different types of amino acids, and each one is represented by a unique character. The input file should not contain any other characters or symbols. 
+
+```
+Example of input file content:
+SEQUENCE
+```

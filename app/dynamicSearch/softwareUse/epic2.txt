@@ -1,0 +1,31 @@
+Use Case: epic2 is used for identifying enriched domains from ChIP-Seq data. It uses SICER algorithm and takes as input BED files (genomic locations of reads).
+
+Code details and examples:
+
+Code:
+```bash
+epic2 -t IP.bed -c Input.bed -g hg38
+```
+This command starts epic2 with the test file "IP.bed", control file "Input.bed" and genome "hg38".
+
+Input file format: 
+In this case, the "IP.bed" and "Input.bed" are BED files that need to have at least three columns: chr, start and end of the genomic region. A sample of how the input data looks like:
+
+```txt
+chrom1 1000 2000
+chrom1 2030 3000
+chrom2 2500 3500
+```
+
+Specifications in input files: 
+1. chr: The name of the chromosome.
+2. start: The starting position of the feature in the chromosome.
+3. end: The ending position of the feature in the chromosome.
+
+For example, if the first row of the BED file is "chrom1 1000 2000", it means that the read mapped to chromosome 1 from basepair 1000 to basepair 2000. 
+
+The BED files can be sorted using Unix sort command or bedtools sort. If they are not sorted, epic2 will sort them internally so it will take longer to compute the results.
+
+The genome argument is to specify the effective genome size and gaps. Common genomes like hg38, hg19, mm9, mm10 are already included in pkg_resources of epic2. 
+
+The output is a BED file with the identified enriched domains.

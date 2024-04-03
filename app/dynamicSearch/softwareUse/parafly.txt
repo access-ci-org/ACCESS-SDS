@@ -1,0 +1,41 @@
+Use Case: ParaFly is a highly scalable and efficient job scheduler system designed for running tasks in parallel on multi-core computers, assuming that each task is independent of others. It is particularly useful for scheduling and running computational tasks with high computational load.
+
+Code details and examples:
+
+Code:
+  
+    import subprocess
+    
+    // Declare your tasks as strings 
+    task1 = "sleep 10"
+    task2 = "sleep 5"
+    task3 = "sleep 20"
+
+    // Pass your tasks into the jobs_list
+    jobs_list = [task1, task2, task3]
+
+    // Create a command string with your tasks
+    cmd_string = "; ".join(jobs_list)
+
+    // Execute the command string using subprocess
+    subprocess.call(["ParaFly", "-c", cmd_string, "-CPU", str(len(jobs_list))]) 
+
+Sample Input: 
+
+This script doesn't take any input file. However, the software takes a list of tasks (ideally shell commands) and a number of CPUs to distribute the load. 
+
+Specify Input file format and details and any specifications:
+
+No specific format is required for input jobs as they are often system commands or calls to other scripts/programs. One should ensure that the commands provided are all executable in the shell environment where ParaFly will be running.
+
+Command to Run: 
+
+To execute the above written python script named `parafly_example.py`, run the following command in the terminal: 
+
+```python parafly_example.py``` 
+
+If one wishes to run ParaFly directly from the shell with a list of commands `commands.txt` and using 8 CPUs, the command will be:
+   
+```ParaFly -c commands.txt -CPU 8```
+
+Each line in `commands.txt` represents a task for ParaFly to execute.

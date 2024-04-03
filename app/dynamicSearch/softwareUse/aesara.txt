@@ -1,0 +1,50 @@
+Use Case: Aesara is a Python library that allows you to define, optimize, and evaluate mathematical expressions involving multi-dimensional arrays efficiently. It could be used for large-scale computations and can be applied in fields such as deep learning research.
+
+Code Details and Examples: 
+
+Code:
+
+`
+import aesara
+from aesara import tensor as T
+
+# Define a scalar (0-d) variable
+x = T.scalar('x')
+
+# Define a mathematical expression
+y = x ** 2
+
+# Convert the expression into a callable object
+f = aesara.function([x], y)
+
+# Use the function
+output = f(3)
+
+print(output)  # output: 9.0
+
+# Define two vector (1-d) variables
+x = T.vector('x')
+y = T.vector('y')
+
+# Define a mathematical expression
+z = x + y
+
+# Convert the expression into a callable object
+f = aesara.function([x, y], z)
+
+# Use the function
+output = f([1, 2], [3, 4])
+
+print(output)  # output: array([4., 6.])
+
+`
+Command to Run: 
+This Python code can be run with a python compiler or just use the command python filename.py on the command line. For the second command, replace filename with the name of your python file. 
+
+Input Files: 
+This example does not require any input files as all inputs are provided directly in the code.
+
+Specifications and Details in Input Files: 
+No input file is required hence no specifications needed. 
+
+Note: Aesara follows the same syntax as Numpy and Python and requires same or similar data structures. Hence, it is easier for users already familiar with Numpy/Python.

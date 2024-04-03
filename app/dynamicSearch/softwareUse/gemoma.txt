@@ -1,0 +1,40 @@
+Use Case: GeMoMa (Gene Model Mapper) is utilized for homology-based gene prediction by annotating protein-coding genes in a newly sequenced genome using transcript sequences annotated in a reference species. 
+
+Code details and examples: Code
+
+The GeMoMa pipeline uses multiple input files. The required input files are:
+
+- Genome assembly (`GCA_000001405.15_GRCh38_no_alt_analysis_set.fna` in this example)
+- The GeMoMa output gff file (`GeMoMa-1.6.4.jar` in this example)
+
+Sample input files:
+
+`GCA_000001405.15_GRCh38_no_alt_analysis_set.fna`:
+
+```
+>1 dna:chromosome chromosome:GRCh38:1:1:248956422:1 REF
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+...
+```
+
+`GeMoMa-1.6.4.jar`:
+
+The format for this file is gff (General Feature Format). An example of the format is:
+
+```
+1	GemoMa	gene	67092469	6709608	7.3	-	.	ID=1;
+1	GemoMa	mRNA	67092469	6709608	7.3	-	.	ID=1; Parent=1;
+1	GemoMa	exon	67092469	67092964	7.3	-	.	ID=1; Parent=1;
+```
+
+You can manipulate these files as per your requirement.
+
+Command to run: 
+
+Like other jar files, you must use the java -jar command to execute it. Here is a simple command to run gemoma:
+
+```
+java -jar GeMoMa-1.6.4.jar CLI GeMoMaPipeline credentials=credentials.txt i=$input_dir/GeMoMa-1.6.4.jar t=$input_dir/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna
+```
+
+In the command, `credentials.txt` is a text file containing credentials for the GeMoMa run. Replace `$input_dir` with the appropriate directory where your input files are located.

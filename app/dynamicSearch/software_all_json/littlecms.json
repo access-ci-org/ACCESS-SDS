@@ -1,0 +1,22 @@
+{
+  "software_name": "LittleCMS",
+  "overview": "LittleCMS is a color management engine that provides simplified and portable fundamentals for the development and integration of color management components into various software applications.",
+  "core_features": [
+    "Color management engine",
+    "Portable and lightweight",
+    "Supports ICC profiles",
+    "Open-source"
+  ],
+  "general_tags": [
+    "color management",
+    "software development",
+    "image processing"
+  ],
+  "additional_tags": {
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Color Management Software",
+    "software_type": "Library",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

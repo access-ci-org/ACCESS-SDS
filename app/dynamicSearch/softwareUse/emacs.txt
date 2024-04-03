@@ -1,16 +1,44 @@
-Use Case: Text editing, code development 
+Use Case: Emacs is a powerful, customizable, self-documenting text editor – and more where you can combine different 'modes' to edit any kind of text. It could be used for programming, scripting, markup languages, notes, blogging, to-do lists and agenda, Typesetting documents, and more. 
+
 Code details and examples: 
-```elisp
-; Sample input file (sample.txt)
-Hello, this is a sample file for Emacs.
 
-; Opening a file in Emacs
-emacs sample.txt
+Code:
 
-; Saving and closing a file in Emacs
-Ctrl + x, Ctrl + s (save) 
-Ctrl + x, Ctrl + c (close)
+Emacs doesn't run commands or scripts in the same way as a shell terminal. It provides an interactive buffer where you can type in commands and see results. 
 
-; Running a script in Emacs
-M-x (Alt + x)
+For example, to open a file you can use the command:
+
 ```
+C-x C-f filename RET
+```
+
+In this command, 'C' stands for the control key, 'x' and 'f' are the alphabetic keys and 'RET' is the return or enter key. The command 'C-x C-f' invokes the 'find-file' command, which then prompts for a filename. 
+
+To save a file, you'll use the command:
+
+```
+C-x C-s
+```
+
+Command to run(read and print) python code in Emacs:
+
+Emacs has an interactive Python mode which looks like this:
+
+```
+M-x python-mode
+```
+
+To run a python script in emacs:
+
+```
+M-x run-python
+```
+Then move to the script and press C-c C-c to send the buffer to Python.
+
+You can also write lisp code directly into the minibuffer (the command line at the bottom of the Emacs window), by starting a line with the command `M-:` which stands for `eval-expression`.
+
+```
+M-: (insert "Hello, emacs")
+```
+
+This will immediately insert the text "Hello, emacs" at the point in the current buffer.

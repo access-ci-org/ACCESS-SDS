@@ -1,0 +1,21 @@
+{
+    "software_name": "CrossMap",
+    "comprehensive_overview": "CrossMap is a versatile tool for genome coordinates conversion between different assemblies. It provides a unified and user-friendly interface for mapping features such as genomic intervals, gene coordinates, and other genomic annotations between various genome assemblies.",
+    "core_features": [
+        "Conversion of genome coordinates between different assemblies",
+        "Mapping of genomic annotations and features",
+        "User-friendly interface"
+    ],
+    "general_tags": [
+        "Genome Assembly",
+        "Genomics",
+        "Bioinformatics"
+    ],
+    "additional_tags": {
+        "research_discipline": "Genomics",
+        "research_area": "Genome Assembly and Annotation",
+        "software_class": "Utility Tool",
+        "software_type": "Bioinformatics Tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

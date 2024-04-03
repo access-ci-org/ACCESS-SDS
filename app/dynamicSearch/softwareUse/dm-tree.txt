@@ -1,0 +1,38 @@
+Use Case: dm-tree is a Python library that offers efficient and memory-saving tree implementations. It widely uses the tree structure as part of the computation in reinforcement learning, language modeling, algorithms, etc.
+
+Code details and examples: 
+
+Code:
+```python
+
+from dm_tree import Tree
+
+# Build a tree
+tree_obj = Tree({
+    'a': 1,
+    'b': [2, 3],
+    'c': {
+        'd': 4,
+        'e': 5
+    }
+})
+
+print(tree_obj)
+
+# Accessing values
+print(tree_obj['a'])
+print(tree_obj['b'])
+print(tree_obj['c']['d'])
+print(tree_obj['c']['e'])
+
+# Adding a node
+tree_obj['f'] = 6
+print(tree_obj)
+```
+
+In this mentioned code, the tree is generated using a dictionary where each key-value pair represents a node and its associated value. The nodes can be accessed using the key values just like a regular dictionary. New nodes can also be added similarly. This code does not need any specific input file.
+
+To run this code, navigate to the directory of your Python file and run this command:
+```bash
+python filename.py
+```

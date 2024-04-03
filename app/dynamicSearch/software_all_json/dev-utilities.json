@@ -1,0 +1,13 @@
+{
+  "software_name": "dev-utilities",
+  "comprehensive_overview": "Dev-utilities is a collection of various development utilities that assist software developers in various aspects of the development process. These utilities can range from code editors and version control systems to build automation tools and testing frameworks.",
+  "core_features": "Code editors, version control systems, build automation tools, testing frameworks, debugging tools, package managers, linters, code formatters, code generators, documentation generators, continuous integration/delivery tools.",
+  "general_tags": ["development", "utilities"],
+  "additional_tags": {
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Development Tools",
+    "software_type": "Tools",
+    "field_of_science": ["Computer and Information Sciences", "Other Computer and Information Sciences"]
+  }
+}

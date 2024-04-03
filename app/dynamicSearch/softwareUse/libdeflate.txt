@@ -1,45 +1,37 @@
-Use Case: libdeflate is a library providing efficient and portable DEFLATE compression and decompression. It is optimized for speed and low memory usage.
+Use Case: Libdeflate is a library for compressing data using the DEFLATE, zlib, and gzip compression formats. It is typically used for scenarios where high speed and efficiency is necessary, particularly in managing large data files such as genomic sequence files in bioinformatics.
 
-Code details and examples:
-The libdeflate library provides C functions for compression and decompression. Here is an example of how you can use it:
+Code details and examples: 
 
-1. Compression example:
-```c
-#include <stdio.h>
-#include "libdeflate.h"
+The library includes functions for compression and decompression, with the format of the functions being `libdeflate_<algorithm>_compress()` and `libdeflate_<algorithm>_decompress()`. The library is used within a C or C++ application, requiring a compiler to build an executable.
 
-int main() {
-    struct libdeflate_compressor *compressor = libdeflate_alloc_compressor(6);
-    const char *input_data = "Sample input data to compress";
-    size_t input_size = strlen(input_data);
-    size_t compressed_size = libdeflate_deflate_compress(compressor, input_data, input_size, compressed_data, output_size);
-    // You can now do something with the compressed data
-    libdeflate_free_compressor(compressor);
+Here is a simple example of using the library to compress and decompress data:
 
-    return 0;
+C code example:
+
+```C
+#include <libdeflate.h>
+#include ...
+int main(void)
+{
+    char* data_to_compress = ...;   // Load in data here 
+    size_t data_size = strlen(data_to_compress);
+
+    // To compress data
+    struct libdeflate_compressor *comp = libdeflate_alloc_compressor(6);  // Create compressor (6 is compression level)
+    size_t compressed_size = libdeflate_deflate_compress_bound(comp, data_size);  // Get upper bound on compressed size
+    char* compressed_data = malloc(compressed_size);  // Allocate space for compressed data
+    libdeflate_deflate_compress(comp, data_to_compress, data_size, compressed_data, &compressed_size);  // Compress data
+    libdeflate_free_compressor(comp);  // Free compressor
+
+    // To decompress data
+    struct libdeflate_decompressor *decomp = libdeflate_alloc_decompressor();  // Create decompressor
+    char* decompressed_data = malloc(data_size);  // Allocate space for decompressed data
+    libdeflate_deflate_decompress(decomp, compressed_data, compressed_size, decompressed_data, data_size, NULL);  // Decompress data
+    libdeflate_free_decompressor(decomp);  // Free decompressor
+
+    // Now, decompressed_data should be equal to data_to_compress
 }
 ```
+To compile this code, you can use gcc with the command: `gcc filename.c -o executable_name -ldeflate`. This will create an executable file that can be run with the command `./executable_name`.
 
-2. Decompression example:
-```c
-#include <stdio.h>
-#include "libdeflate.h"
-
-int main() {
-    struct libdeflate_decompressor *decompressor = libdeflate_alloc_decompressor();
-    const char *compressed_data = "Compressed data";
-    size_t compressed_size = strlen(compressed_data);
-    size_t uncompressed_size = get_expected_uncompressed_size(compressed_data, compressed_size);
-    char *uncompressed_data = malloc(uncompressed_size);
-    size_t actual_uncompressed_size = libdeflate_deflate_decompress(decompressor, compressed_data, compressed_size, uncompressed_data, uncompressed_size);
-    // You can now do something with the uncompressed data
-    libdeflate_free_decompressor(decompressor);
-    free(uncompressed_data);
-
-    return 0;
-}
-```
-
-Please note that the above examples are basic and may require additional error checking and handling in a real application.
-
-For specific implementation details and advanced usage, you can refer to the libdeflate documentation or source code.
+The specified input data is the data to be compressed/decompressed, and assumed memory handling by the developer when allocating for the compressed/decompressed data.

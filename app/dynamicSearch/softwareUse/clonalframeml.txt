@@ -1,0 +1,28 @@
+Use Case: Use ClonalFrameML for measuring the clonal genealogy of a bacterial sample; tests for events such as mutations, imports, and duplications; works with bacterial genomes.
+
+Code details and examples: Code.
+
+1. Sample Input File: Here is a simplified sample input file in NEWICK format. Users would need a more complex, comprehensive genome sequence for actual use cases:
+
+```
+((A:0.1,B:0.2):0.3,C:0.4);
+```
+
+This example format represents a case where gene ‘A' has evolved for 0.1 units of time, gene ‘B’ for 0.2 units of time and they share a common ancestor that has evolved for 0.3 units of time. Gene ‘C’ has evolved separately for 0.4 units of time.
+
+Please note that in reality, the input will need to be a complete set of mapped gene sequences.
+
+2. Command to Run:
+
+Create the following command in a shell script or run it from a terminal. Replace 'input.nwk' with the path to your input file and 'output' with the desired output path.
+
+```
+clonalframeml input.nwk output
+```
+
+User should replace "input.nwk" with the path to the actual Newick-formatted gene sequence file they are analyzing with ClonalFrameML. They should replace "output" with the directory and filename where they want the output to be saved. 
+
+3. Brief Discussion on how to interpret output: 
+The output file will contain information on various parameters including R/theta (relative rate of recombination to mutation), mean delta (average DNA import length), nu (mean divergence of imported DNA), and R (per site recombination rate). The entire bacterial genealogy will be painted by ClonalFrameML and shown pictorially as well with the different branches colored according to most recent common ancestors. 
+
+Note: It’s essential for users to generate gene sequence data in a compatible format and feed it to ClonalFrameML plus adjust parameters as per their experiment requirement, which is beyond the purview of providing a code snippet.

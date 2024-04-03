@@ -1,0 +1,33 @@
+Use Case: ACEpack is an R package that allows the generation of Alternating Conditional Expectations (ACE) transformations, which are used in exploratory and robust data analysis. ACE transformations can help to find relationships between variables that are nonlinear and nonmonotonic, making them useful for complex datasets and analysis situations. 
+
+Code details and examples: 
+
+The ace() function in ACEpack is used to generate ACE transformations. The syntax for the function is `ace(x, y, catx = NULL, weights = NULL, control = NULL)` where x and y are the predictors and response variable, respectively. 
+
+Sample input file (CSV file): 
+
+    ID,Factor1,Factor2,Response
+    1,23,0.4,45.6
+    2,32,0.6,48.3
+    3,14,0.8,43.2
+    ...
+
+Specifically, all numeric columns should be formatted to be identified as numerical data in R. Missing data or NA values should be indicated as such. 
+
+Sample R-script:
+
+    # Load the necessary library
+    library(acepack)
+    
+    # Load dataset (CSV file)
+    data <- read.csv('file.csv', header=T)
+   
+    # Use ace() function to get transformation. 
+    result <- ace(data$Factor1, data$Response)
+
+    # Print result
+    print(result)
+
+The command to run the R-script in the Terminal (Linux or MacOS) is: 
+
+    Rscript path_to_your_script/your_script.R

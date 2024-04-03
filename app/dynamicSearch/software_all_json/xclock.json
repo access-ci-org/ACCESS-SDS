@@ -1,0 +1,13 @@
+{
+  "software_name": "xclock",
+  "comprehensive_overview": "xclock is a simple graphical user interface (GUI) application that displays a digital or analog clock on the user's desktop. It is commonly found on Unix and Unix-like operating systems, serving as a basic utility for users to check the current time visually.",
+  "core_features": "1. Displays digital or analog clock\n2. Customizable settings like time format and colors\n3. Lightweight and easy-to-use GUI application",
+  "general_tags": ["clock utility", "GUI application"],
+  "additional_tags": {
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Utility",
+    "software_type": "Desktop Application",
+    "field_of_science": "Other Computer and Information Sciences"
+  }
+}

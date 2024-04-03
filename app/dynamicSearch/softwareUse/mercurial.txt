@@ -1,21 +1,44 @@
-Use Case: Version control system for tracking changes in source code during software development
+Use Case: Mercurial is a distributed revision control tool for software developers. It is mainly used for handling project versions, helping teams to work together, and maintaining a history of projects. 
 
-Code details and examples:
-- Sample input files: code files to be tracked
-- Format required: text files
-- Command to initialize a repository:
+Code details and examples: Code
+
+The primary user interface for Mercurial is the command line. It allows a series of commands that manage repositories, changesets, branches, merges and others.
+
+Sample Input Files: 
+In case of Mercurial, Sample input files are not specific. They are usually source code files or text files. 
+
+Format Required: 
+There is no specific format for Mercurial input files. However, files that are to be tracked by Mercurial should be in Text or Binary format. 
+
+Specifications in Input Files: 
+Mercurial can manage all types of files but it is generally used for tracking changes in text files or source codes.
+
+Sample Code:
+
+For initializing a new repository:
+```bash
+hg init myrepo
 ```
-hg init
+
+For adding files:
+```bash
+cd myrepo
+echo "Hello, World!" > hello
+hg add hello
 ```
-- Command to add files to the repository:
+
+For committing changes:
+```bash
+hg commit -m "Initial commit"
 ```
-hg add <filename>
+
+To view logs:
+```bash
+hg log
 ```
-- Command to commit changes:
+
+Command to run: 
+```bash
+hg command [options] [argument]
 ```
-hg commit -m "Commit message"
-```
-- Command to push changes to a remote repository:
-```
-hg push
-```
+The command above represents the general syntax to run Mercurial commands where command is the operation you want Mercurial to perform, options are flags that modify the behavior of the command, and argument is an optional item that is needed by some commands.

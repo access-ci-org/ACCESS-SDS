@@ -1,0 +1,13 @@
+{
+    "software_name": "amdblis",
+    "comprehensive_overview": "Amdblis is a computational software for analyzing and visualizing single-molecule data, particularly for biophysical studies.",
+    "core_features": "Amdblis includes tools for data analysis from single-molecule experiments, such as particle tracking, dwell time analysis, and fluorescence analysis. It also offers visualization capabilities for generating plots and heat maps.",
+    "general_tags": ["computational software", "data analysis", "visualization"],
+    "additional_tags": {
+        "research_discipline": "Biophysics",
+        "research_area": "Single-molecule biophysics",
+        "software_class": "Data analysis and visualization",
+        "software_type": "Computational tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

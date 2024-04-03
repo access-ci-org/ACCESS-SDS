@@ -1,0 +1,39 @@
+Use Case: ABACAS (Algorithm Based Automatic Contiguation of Assembled Sequences) is employed in quickly contiguating contigs from a de novo assembler against a reference sequence. 
+
+Code Details and Examples: 
+
+`Code:` 
+Here is a basic example of how to use ABACAS. It requires a reference sequence (in FASTA format) and a set of contigs (also in FASTA format) as inputs:
+
+```bash
+abacas.pl -r reference.fasta -q contigs.fasta -p promer
+```
+In this example command:
+
+- `-r reference.fasta` specifies the reference sequence file in FASTA format.
+- `-q contigs.fasta` specifies the contig sequence file in FASTA format.
+- `-p promer` specifies the use of the 'promer' aligner.
+
+`Specifications and details in input files:` 
+
+- `reference.fasta` is a text file in FASTA format containing the reference sequence. Each sequence begins with ">label" on a new line, followed by the sequence on the next line. 
+
+- `contigs.fasta` is a text file in FASTA format containing the set of contigs to be contiguated. The format is similar to the reference file.
+
+`Sample input files:` 
+
+- `reference.fasta`
+  ```
+    >Ref_Seq_1
+    CGTACGTAGCTAGCTAGCTAGCTAGCTAGCTAGCGTAGCTAGC
+  ```
+  
+- `contigs.fasta`
+  ```
+    >Contig_1
+    GCTAGCTAGCTAGCTAGCTAGCTAGCGTAGCTAGC
+    >Contig_2
+    AGCTAGCTAGCGTAGCTAGCTAG
+  ```
+
+Please note that this example is very basic and does not demonstrate the majority of the options available in ABACAS. For more detailed information about the options and how to use them, please consult the ABACAS user manual.

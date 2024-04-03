@@ -1,0 +1,32 @@
+Use Case: MUSCLE (Multiple Sequence Comparison by Log-Expectation) is a software tool employed for multiple sequence alignments (MSAs). This software efficiently produces accurate alignments of protein sequences; however, it can also aligned nucleotide sequences. 
+
+Code details and examples:
+
+Code: 
+
+For MUSCLE, input files are typically in FASTA format. 
+
+An example of a FASTA file is:
+
+```
+>Sequence_1
+ATGGCCGTGTACGTAGCTAGCTAGCTAGGATT
+>Sequence_2
+ATGGCTGCTGAAGTAGCTAGCTAGCTAGGATT
+>Sequence_3
+ATGGATCGTGTACGTAGCTAGCTAGCTAGGATT
+```
+This file contains three sequences each with a header (starts with '>'). The headers are 'Sequence_1', 'Sequence_2' and 'Sequence_3'.
+  
+To run MUSCLE with this input file, you would use the following command:
+
+```
+muscle -in input.fasta -out output.fasta
+```
+This is the basic way to run a MUSCLE alignment. 'input.fasta' is your input file, 'output.fasta' is the file that will be created by MUSCLE to store your alignment.
+  
+There are various other options available in MUSCLE for fine tuning the alignment process. To find more about these options, you can use the command:
+
+```
+muscle -help
+```

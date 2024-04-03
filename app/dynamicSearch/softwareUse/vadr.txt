@@ -1,0 +1,26 @@
+Use Case: Use VADR (Viral Annotation DefineR) for annotating consistency checks of a fasta input file against a built-in viral reference model. 
+
+Code details and examples:
+
+Code to run vadr:
+```
+v-annotate.pl --informat fasta seqs.fa
+```
+Sample input file (`seqs.fa`):
+```fasta
+>seq1
+MENSDTDYKLLACVFCGSVIGFQGNAEKFKEAFRLFARFLVAAFAFNAVFSSSIENVIEN
+>seq2
+LIGFAGNAQKEFGGAFLTAAFMYIAFAANIGMILLPKLHAADIKFFTSTFTVLGSVIGQL
+```
+
+Format in input file:
+A simple text file in FASTA format where each sequence starts with a '>' line which includes the sequence identifier, followed by the sequence in the next lines. VADR does not accept multi-line sequences, each sequence should be in a single line. VADR can handle both DNA and protein sequences.
+
+Specifications in input files:
+The input fasta file for VADR should not contain any unrecognized characters. Only the following -
+
+For nucleotide sequences: ACGTUacgtu
+For protein sequences: ACDEFGHIKLMNPQRSTVWYacdefghiklmnpqrstvwy
+
+VADR ignores all other characters including gaps, spaces, numbers in the sequences, and the sequences after the '#' character in a line.

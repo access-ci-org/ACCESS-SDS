@@ -1,0 +1,66 @@
+Use Case: Use Colossal-AI for large scale deep learning tasks;
+
+Code details and examples: Code 
+
+With `colossalai`, you can define a deep learning model and perform training and inference on multiple GPUs in a distributed fashion. Here is an example of defining and training a simple model:
+
+```python
+# Import necessary libraries
+import torch
+import colossalai
+from colossalai.context import Config
+from colossalai.core import optimizer
+from colossalai.engine import Engine
+from torch.nn.parallel.distributed import DistributedDataParallel as DDP
+
+# Define your model
+class SimpleModel(torch.nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.linear = torch.nn.Linear(10, 10)
+
+    def forward(self, x):
+        return self.linear(x)
+
+# Initialize colossal
+config = Config('path_to_config_file')
+engine = Engine(config)
+
+# Define data
+x = torch.ones(10).cuda()
+y = torch.ones(10).cuda()
+
+# Make model
+model = SimpleModel().cuda()
+model = DDP(model)
+
+# Define loss and optimizer
+loss_func = torch.nn.MSELoss()
+optimizer = optimizer.Optimizer(model.parameters(), torch.optim.SGD, lr=0.01)
+
+# Train model
+for _ in range(1000):
+    output = model(x)
+    loss = loss_func(output, y)
+    loss.backward()
+    optimizer.step()
+    optimizer.zero_grad()
+```
+
+To run the script, use the following command: `python script.py`.
+
+The configuration file ('path_to_config_file') is used to set up your distributed environment, and it might look like this:
+
+```yaml
+train:
+  data_parallel_size: 8
+  tensor_parallel_size: 4
+  pipeline_parallel_size: 2
+  optimizer: adam
+  grads_to_accumulate: 2
+  micro_batch_size: 4
+  auto_lr_scaling: linear
+...
+```
+
+This file specifies options such as the number of GPUs for model/data/pipeline parallelism (data_parallel_size, tensor_parallel_size, pipeline_parallel_size), the optimizer to use, the number of gradients to accumulate before performing an update (grads_to_accumulate), and so on. This file should be tailored to your specific environment and training task.

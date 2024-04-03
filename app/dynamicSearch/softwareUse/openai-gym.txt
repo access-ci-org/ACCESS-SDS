@@ -1,0 +1,44 @@
+Use Case: Training a deep reinforcement learning model to learn to play a game.
+
+Code details and examples:
+
+Code:
+
+```python
+# import gym
+import gym
+
+# create the game environment
+env = gym.make('Pong-v0')
+
+# Reset the environment
+observation = env.reset()
+
+# Loop 1000 times
+for _ in range(1000):
+    # Render environment
+    env.render()
+
+    # Take a random action
+    action = env.action_space.sample()
+    observation, reward, done, info = env.step(action)
+
+    # If the game is finished
+    if done:
+        observation = env.reset()
+
+# Close the environment
+env.close()
+```
+
+Sample input files: 
+This does not require an input file as it generates its own environment.
+
+Format required: 
+This does not require an input file as it generates its own environment.
+
+Any specifications and details in input files: 
+No input files are required.
+
+Command to run: 
+The above python script can be run using any python interpreter after installing `gym` library. The command to run this file, say `game.py`, is `python game.py`.

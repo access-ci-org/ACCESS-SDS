@@ -1,0 +1,23 @@
+Use Case: Lastz is typically used for alignment of DNA sequences, which is often needed in genomic research. For an alignment, two different DNA sequences are typically provided, one as the target and another as the query.
+
+Code details and examples: Code.
+
+The input file for Lastz is usually in FASTA format. This type of file consists of one-line descriptions followed by lines of sequence data. The description line is distinguished from the sequence data by a greater-than (">") symbol in the first column.
+
+Here's a small example of a fasta file:
+
+```
+>Sequence1
+ATGGCGCGATCGATCGATCGCTAGCTAGCTCGATCGTAGCTAGCTAGTCTAGCTAGCTCG
+ATCGATCGATCGA
+>Sequence2
+ATGGCGCGTTGACTGATCGCTAAGCTACGATCGTAGCTAGCTAGTCTAGCTAGCTCTCG
+```
+
+The command to run Lastz using these sequences could look like this:
+
+```bash
+lastz Sequence1.fasta[multiple] Sequence2.fasta --format=general:name1,strand1,size1,name2,strand2,size2,identity --output=output.txt
+```
+
+Lastz will then compare Sequence1 (multiple allowed) against Sequence2 and gives output in the specified format to output.txt. "Identity" here refers to the percentage of identical matches.

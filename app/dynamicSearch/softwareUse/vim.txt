@@ -1,20 +1,28 @@
-Use Case: Text editing
+Use Case: Vim is a highly configurable text editor for efficiently creating and changing any kind of text. It is often used for source code editing, file comparison, and file manipulation.
+
 Code details and examples:
-Code: 
-1. Open a file in vim:
-   ```
-   $ vim filename.txt
-   ```
-2. Edit the file in vim:
-   - Press `i` to insert text
-   - Make changes to the file
-   - Press `Esc` to exit insert mode
-   - Save the changes and exit vim: Press `:wq` and Enter
-3. Search for a specific word in the file:
-   - Press `/` followed by the word you want to search and press Enter
-   - Use `n` to move to the next occurrence of the word
-4. Replace text in the file:
-   - Press `:` to enter command mode
-   - Type `:%s/old_text/new_text/g` and press Enter (Replace "old_text" with the text to be replaced and "new_text" with the new text)
-   - Press Enter
-   - Save the changes and exit vim: Press `:wq` and Enter
+
+Code:
+```shell
+vim filename.txt
+```
+In this command, 'filename.txt' is the name of the file you want to edit.
+
+Once you are in the editor, you've to press 'i' to enter into 'insert mode' which allows you to edit the file. When you're done with the editing, press 'Esc' to exit the insert mode.
+
+The ':wq' Vim command allows you to save the changes you've made and exit the editor. '\:q!' command will quit the editor without saving any changes.
+
+```shell
+:wq
+```
+or 
+```shell
+:q!
+```
+This doesn't require any specific input file format as it's a text editor. It will work with any text file.
+
+File Specification: filename.txt is name of the text file you are editing. It does not need to be a .txt file, it can be any text based file such as .c, .py, .html etc. 
+
+Specifications in Input Files: There is no need for specifications inside the text file as the Vim is simply an editor and does not have any particular constraints on specifications.
+
+Command to run: The command to run Vim is "vim" followed by the name of the file you wish to edit.

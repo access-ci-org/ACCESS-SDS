@@ -1,55 +1,53 @@
-Use Case: libepoxy is a library for handling OpenGL function pointer management.
-Code details and examples:
-Sample input files:
-- No specific input file required.
+Use Case: libepoxy is a library for handling OpenGL function pointer management for you. It can be used for creating graphics applications, game engines, or anything that needs to use OpenGL for rendering.
+
+Code Details and Examples:
 
 Code:
+
+Below, an example creates a window, creates an OpenGL context, and then clears the buffer:
+
+```c
 #include <epoxy/gl.h>
-#include <epoxy/egl.h>
+#include <epoxy/glx.h>
+#include GLX header
+#include <X11/Xlib.h>
+#include X11 header
 
-// Example code to create an OpenGL window using libepoxy
-// Note: This is a simplified example
-EGLDisplay eglDpy;
-EGLContext eglCtx;
-EGLSurface eglSurf;
+int main(int argc, char **argv) {
+    Display *display = XOpenDisplay(NULL); //Open X11 Display
+    if (!display) {
+        fprintf(stderr, "Unable to open display\n");
+        return 1;
+    }
 
-const EGLint configAttribs[] = {
-    EGL_SURFACE_TYPE, EGL_WINDOW_BIT,
-    EGL_RENDERABLE_TYPE, EGL_OPENGL_ES3_BIT,
-    EGL_NONE
-};
+    Window root = DefaultRootWindow(display);
+    
+    GLint att[] = { GLX_RGBA, GLX_DEPTH_SIZE, 24, GLX_DOUBLEBUFFER, None }; //Create set of attributes
+    XVisualInfo *vi = glXChooseVisual(display, 0, att); //Choose visual based on attributes
+ 
+    GLXContext context = glXCreateContext(display, vi, NULL, GL_TRUE); //Create GLX context
+    glXMakeCurrent(display, root, context); //Make context current
+ 
+    glColorMask(true, true, true, true); //Set color mask (red, green, blue, alpha)
+    glClearColor(1.f, 1.f, 0.f, 1.f); //Set clear color (yellow)
+    glClear(GL_COLOR_BUFFER_BIT); //Clear color buffer
+ 
+    glXSwapBuffers(display, root); //Swap buffers to make visible
+ 
+    return 0;
+}
+```
 
-const EGLint contextAttribs[] = {
-    EGL_CONTEXT_CLIENT_VERSION, 3,
-    EGL_NONE
-};
+This code creates a simple OpenGL context and clears the screen to yellow. Open a terminal in the directory where your code is stored and compile with:
 
-// Initialize EGL
-eglDpy = eglGetDisplay(EGL_DEFAULT_DISPLAY);
-eglInitialize(eglDpy, NULL, NULL);
-eglBindAPI(EGL_OPENGL_ES_API);
+```sh
+gcc -o test mycode.c -lX11 -lGL -lEGL -lEPOXY
+```
 
-// Choose a configuration
-EGLConfig config;
-EGLint numConfigs;
-eglChooseConfig(eglDpy, configAttribs, &config, 1, &numConfigs);
+Then run the compiled code with:
 
-// Create a surface
-eglSurf = eglCreateWindowSurface(eglDpy, config, window, NULL);
+```sh
+./test
+``` 
 
-// Create a context
-eglCtx = eglCreateContext(eglDpy, config, EGL_NO_CONTEXT, contextAttribs);
-
-// Make the context current
-eglMakeCurrent(eglDpy, eglSurf, eglSurf, eglCtx);
-
-// Use OpenGL functions via libepoxy
-glClearColor(1.0f, 0.0f, 0.0f, 1.0f);
-glClear(GL_COLOR_BUFFER_BIT);
-
-// Swap buffers, etc.
-
-// Terminate EGL
-eglDestroyContext(eglDpy, eglCtx);
-eglDestroySurface(eglDpy, eglSurf);
-eglTerminate(eglDpy);
+NOTE: 'mycode.c' represents the name of the .c file which contains the code above.

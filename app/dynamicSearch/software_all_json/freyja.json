@@ -1,0 +1,25 @@
+{
+    "software_name": "Freyja",
+    "comprehensive_overview": "Freyja is a software tool designed for computational chemistry and quantum mechanics calculations. It provides a range of functionalities to simulate and analyze molecular systems.",
+    "core_features": [
+        "Molecular dynamics simulations",
+        "Quantum mechanical calculations",
+        "Energy minimization",
+        "Molecular structure optimization",
+        "Visualization of molecular systems"
+    ],
+    "general_tags": [
+        "computational chemistry",
+        "quantum mechanics",
+        "molecular simulations",
+        "molecular modeling",
+        "chemistry software"
+    ],
+    "additional_tags": {
+        "research_discipline": "Physical Sciences",
+        "research_area": "Chemical Sciences",
+        "software_class": "Computational software",
+        "software_type": "Molecular modeling",
+        "field_of_science": "Chemical Sciences"
+    }
+}

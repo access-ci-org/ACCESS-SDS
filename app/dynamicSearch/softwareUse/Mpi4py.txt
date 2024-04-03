@@ -1,29 +1,32 @@
-Use Case: Parallel processing in Python using MPI with mpi4py
-Code details and examples:
-1. Installation: You can install mpi4py using pip:
-```bash
-pip install mpi4py
-```
-2. Sample input file (example.py) for running MPI code with mpi4py:
+Use Case: Use mpi4py for distributed computing applications using the Message Passing Interface (MPI) standard. Input files may consist of Python scripts utilizing the mpi4py library functions, and the content or format will depend on the specific program being written.
+
+Code details and examples: Code
+
+The mpi4py library provides Python bindings to the Message Passing Interface (MPI), a standard for data communication in high-performance, distributed-memory computing environments.
+
+Here's an example Python script using the mpi4py library, saved in a file named `hello_mpi.py`.
+
 ```python
 from mpi4py import MPI
 
 comm = MPI.COMM_WORLD
-size = comm.Get_size()
 rank = comm.Get_rank()
 
 if rank == 0:
-    data = {'a': 1, 'b': 2, 'c': 3}
+    data = {'a': 7, 'b': 3.14}
+    comm.send(data, dest=1, tag=11)
 else:
-    data = None
+    data = comm.recv(source=0, tag=11)
 
-data = comm.bcast(data, root=0)
-print(f"Process {rank} received data: {data}")
+print('Rank:', rank, ', data:', data)
 ```
-3. Running the MPI code with mpi4py (assuming you have MPI installed):
-```bash
-mpirun -n 4 python example.py
-```
-This will run the example.py script with 4 processes.
 
-Please note that you need to have MPI installed on your system to run MPI codes.
+This script demonstrates basic point-to-point communication using MPI. The process with rank 0 sends a dictionary to the process with rank 1.
+
+To run the script using mpi4py, the command line syntax is as follows:
+
+```shell
+mpiexec -np 2 python hello_mpi.py
+```
+
+This runs the Python script `hello_mpi.py` with 2 MPI processes. MPI determines which process has which rank automatically, depending on how it's configured. No special input file format or specifications are needed for mpi4py; it just requires a Python script that uses its library functions. The result of the script depends on the MPI implementation and configuration; for example, it may run the two processes on different cores of the same machine, or on different machines in a cluster.

@@ -1,62 +1,104 @@
-Use Case: Petsc4py is a Python interface to the Portable, Extensible Toolkit for Scientific Computation (PETSc).
+Use Case: Write, run and visualize a simple partial differential equation (PDE) solver in Python with petsc4py.
 
 Code details and examples:
 
-1. Sample input files for solving a linear system using petsc4py:
+For the sample input file, we will solve Laplace’s equation:
 
-Matrix file (matrix.txt):
+∇^2u = 0
+
+over the box [0, 1] × [0, 1] with Dirichlet boundary condition u = 0 on ∂Ω where Ω=[0,1] × [0,1].
+
+Code:
+
 ```
-1.0 0.0 0.0
-0.0 2.0 0.0
-0.0 0.0 3.0
-```
+from petsc4py import PETSc
+from mpi4py import MPI
+import numpy 
 
-Vector file (vector.txt):
-```
-1.0
-2.0
-3.0
-```
+def rhs(coords, b):
+    (x, y) = coords
+    b = x*x + y*y
+    return
 
-Python code to solve the linear system:
-```python
-import petsc4py.PETSc as petsc
-import numpy as np
+def exact(coords):
+    (x, y) = coords
+    return x*x + y*y
 
-# Create PETSc matrix and vectors
-A = petsc.Mat().create()
-A.setSizes([3, 3])
-A.setUp()
+def run_solve(da):
 
-b = petsc.Vec().create()
-b.setSizes(3)
-b.setUp()
+    # create vectors, using ghost points
+    localX = da.createLocalVec()
+    b = da.createGlobalVec()
+    x = da.createGlobalVec()
 
-# Load matrix and vector from files
-A.load("matrix.txt")
-b.load("vector.txt")
+    mx, my = da.getSizes()
+    hx, hy = 1.0/mx, 1.0/my
+    ihxhy = 1.0/(hx*hy)
 
-# Create solver
-ksp = petsc.KSP()
-ksp.create()
-ksp.setOperators(A)
-ksp.setType(ksp.Type.PREONLY)
-ksp.getPC().setType(ksp.getPC().Type.LU)
+    # compute right-hand-side
+    b.set(0) # set to zero
+    da.globalToLocal(b, localX)
 
-# Solve the linear system
-x = petsc.Vec().create()
-x.setSizes(3)
-x.setUp()
-ksp.solve(b, x)
+    # loop over local grid points
+    (xs, xe), (ys, ye) = da.getRanges()
+    for i in range(xs, xe):
+        for j in range(ys, ye):
+            b[i,j] = rhs([i*1.0/mx,j*1.0/my], b)
 
-# Get the solution
-solution = x.getArray()
+    # solve linear system
+    ksp = PETSc.KSP().create()
+    ksp.setFromOptions()
+    ksp.setOperators(A)
+    ksp.solve(b, x)
 
-print("Solution:")
-print(solution)
-```
+    # plot solution
+    try: 
+        from matplotlib import pylab
+    except ImportError:
+        PETSc.Sys.Print("matplotlib not available")
+        return
 
-2. Command to run the Python code:
-```
-python linear_system_solver.py
-```
+    pylab.figure(figsize=(mx/80.0, my/80.0))
+    pylab.spy(A, markersize=8, markeredgewidth=0.5)
+    pylab.figure(figsize=(mx/80.0, my/80.0))
+    pylab.imshow(x[...].reshape(mx,my))
+    pylab.axis('off')
+    pylab.show()
+
+    # destroy objects
+    ksp.destroy()
+    A.destroy()
+    b.destroy()
+    x.destroy()
+    localX.destroy()
+
+def main():
+
+    # Initilize PETSc
+    PETSc.Sys.Print("Start of main()")
+    PETSc.Sys.PushErrorHandler(PETSc.Sys.Print, )
+    PETSc.Sys.Print("Creating DMDA...")
+
+    # create 2D grid
+    da = PETSc.DMDA().create([m, m], dof=1, stencil_width=1)
+    da.setUniformCoordinates([0, 1], [0, 1])
+
+    # run the solver
+    run_solve(da)
+
+    # destroy DMDA
+    da.destroy()
+
+if __name__ == '__main__':
+    opts = PETSc.Options()
+    PETSc.Sys.Print("main() : calling main")
+    main()
+``` 
+
+Command to run:
+
+`mpirun -n 4 python laplace.py -da_grid_x 50 -da_grid_y 50`
+
+Where `-n 4` is the number of MPI processes and `-da_grid_x 50 -da_grid_y 50` is the size of the grid in x and y directions.
+
+The program reads in a grid with a given number of points in x and y direction, then sets up and solves Laplace’s equation on the grid. The exact solution, the right-hand-side of the equation, and the error are then displayed as a heat map with the heat representing the solution's magnitude.

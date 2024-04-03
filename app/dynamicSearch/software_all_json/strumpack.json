@@ -1,0 +1,13 @@
+{
+  "software_name": "STRUMPACK",
+  "comprehensive_overview": "STRUMPACK (STRUctured Matrices PACKage) is a software package for the compression, factorization, and solution of structured linear systems arising from various applications. It utilizes low-rank approximations and hierarchical matrices to efficiently handle large-scale structured linear systems.",
+  "core_features": "1. Compression and low-rank approximations of structured matrices\n2. Hierarchical matrix formats for efficient storage and computation\n3. Direct and iterative solvers for linear systems\n4. Parallel and distributed computing capabilities\n5. Support for a variety of structured matrices commonly encountered in scientific computing",
+  "general_tags": ["linear algebra", "numerical methods", "scientific computing"],
+  "additional_tags": {
+    "research_discipline": "Mathematics",
+    "research_area": "Applied Mathematics",
+    "software_class": "Linear Algebra Libraries",
+    "software_type": "Computational Software",
+    "field_of_science": "Mathematics"
+  }
+}

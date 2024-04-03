@@ -1,19 +1,38 @@
-Use Case: Interactive plotting for data visualization.  
+Use Case: Use plotly for creating interactive and visually appealing plots in Python.
 
-Code details and examples: Plotly is a Python library used for creating interactive plots and dashboards. It can be used to create various types of plots like scatter plots, line charts, bar charts, etc. Here is an example of creating a simple scatter plot using Plotly:
+Code details and examples:
+
+Code:
 
 ```python
-import plotly.express as px
+import plotly.graph_objects as go
 
-# Sample data
-data = {'x': [1, 2, 3, 4, 5],
-        'y': [10, 12, 8, 15, 7]}
+# Create random data with numpy
+import numpy as np
+np.random.seed(1)
 
-# Create a scatter plot
-fig = px.scatter(data, x='x', y='y', title='Sample Scatter Plot')
+N = 100
+random_x = np.linspace(0, 1, N)
+random_y0 = np.random.randn(N) + 5
+random_y1 = np.random.randn(N)
+random_y2 = np.random.randn(N) - 5
 
-# Show the plot
+# Create traces
+fig = go.Figure()
+fig.add_trace(go.Scatter(x=random_x, y=random_y0,
+                    mode='lines',
+                    name='lines'))
+fig.add_trace(go.Scatter(x=random_x, y=random_y1,
+                    mode='lines+markers',
+                    name='lines+markers'))
+fig.add_trace(go.Scatter(x=random_x, y=random_y2,
+                    mode='markers', name='markers'))
+
 fig.show()
 ```
 
-This code snippet creates a scatter plot with x and y values provided in the sample data dictionary. The `px.scatter` function from Plotly Express is used to create the plot, and `fig.show()` is used to display the plot.
+Input format: An array or list of numerical data is often used as input for this software. This example takes in three sets of numpy arrays: random_x, random_y0, random_y1, and random_y2.
+
+Command: There is no command to run this apart from running the python script itself or executing the jupyter notebook cell containing it.
+
+The above code generates an interactive scatter plot with three different series, each represented with a different type of visualization: lines, lines + markers and markers respectively. The 'show' function at the end is used to visualise the graph.

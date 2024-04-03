@@ -1,0 +1,21 @@
+{
+	"software_name": "scikit-fda",
+	"comprehensive_overview": "scikit-fda is a Python library designed for Functional Data Analysis (FDA) in the context of Scikit-learn. It provides tools for data representation, visualization, preprocessing, and modeling with functional data.",
+	"core_features": [
+		"- Functional data representation",
+		"- Functional data visualization",
+		"- Preprocessing techniques for functional data",
+		"- Modeling tools for functional data analysis"
+	],
+	"general_tags": [
+		"Functional Data Analysis",
+		"Python Library",
+		"Data Analysis",
+		"Machine Learning"
+	],
+	"research_discipline": "Statistics and Probability",
+	"research_area": "Functional Data Analysis",
+	"software_class": "Data Analysis",
+	"software_type": "Library",
+	"field_of_science": "Mathematics"
+}

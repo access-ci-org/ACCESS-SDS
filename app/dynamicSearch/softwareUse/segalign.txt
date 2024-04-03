@@ -1,0 +1,49 @@
+Use Case: SegAlign is a software tool for robust base-to-base alignment of long and error-prone sequence reads. It is primarily used in genomics and bioinformatics for comparing DNA sequences. 
+  
+Code details and examples: 
+
+Before running SegAlign, the input files must be prepared. These include:
+1. Reference Genome File: This should be a FASTA file (.fa) containing the DNA sequence of the reference genome.
+   Example format:
+   ```
+   >chromosome_1
+   ATGCTAGCTAGCTTGCTAGTAG
+   TAGCTAGCTAGCT...
+   ```
+
+2. Query Sequences File: This should be in FASTQ format (.fastq) file containing the DNA sequence reads. 
+   Example format:
+   ```
+   @read1
+   ATGCTAGCTAGCTCGATCGATCC
+   +
+   IIIIIIIIIIIIIIIIIIIIIII
+   ```
+
+You should have the following txt files ready in a directory,
+1. The index file: This file contains the indexes of the reference genome. It is generated using the `create_index` command. Example: ref_index.txt
+2. The seeds file: This file contains the seeds for the alignment. It is generated using the `crate seed` command. Example: seed.txt
+
+Code Snippet: After preparing the reference genome and the DNA sequence reads files correctly, we can use the commands as follows:
+
+To create the index:
+
+```Shell
+./segalign create_index ref.fa ref_index.txt
+```
+
+To create the seeds:
+
+```Shell
+./segalign create_seeds ref_index.txt seed.txt
+```
+
+Now, to perform the alignment:
+
+```Shell
+./segalign align --ref ref.fa --reads reads.fastq --seeds seed.txt > output.sam
+```
+
+In the above snippet, `ref.fa` is the reference sequence file, `reads.fastq` is the reads file and `seed.txt` is the seeds file. The output is a SAM file (`output.sam`) with the aligned sequences. 
+
+Please note, this is a imagined example and actual commands and parameters might differ.

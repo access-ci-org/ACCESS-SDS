@@ -1,0 +1,32 @@
+Use Case: Panaroo is a software for pan-genome analysis. It is used to accurately compare the gene content of large numbers of microbial genomes, handle both short and long sequence reads, detect gene annotation errors and it also scales to at least 200,000 genomes. 
+
+Code details and examples: 
+
+Input File Format: The input to Panaroo is a set of annotated assemblies in GFF3 format.
+
+Command to run it:
+```
+panaroo -i <input_directories> -o <output_directory>
+```
+In the command above, `<input_directories>` refers to the location of your input files and `<output_directory>` is the location where you want the output to be written.
+
+Sample Input Files: 
+File 1 - Sample.gff3 (General Feature Format Version 3)
+```
+###gff-version 3
+Contig1 . gene 1300 1504 . + . Name=gene1
+Contig1 . mRNA 1300 1504 . + . Name=gene1;Parent=gene1
+Contig1 . CDS 1300 1504 . + 0 Name=gene1;Parent=gene1; Note=This is a sample gene
+```
+This file describes the location and information of genes in Contig1. 
+
+Specifications and Details in Input Files: The input files are gff3 annotated genome assemblies. The gff3 files contain information about the genetic elements (like genes, exons, etc.) in a sequence of DNA.
+
+Code Snippet: 
+Suppose we have two genomes in gff3 format in the directories './Sample1' and './Sample2', to run Panaroo, the command is:
+```
+panaroo -i ./Sample1 ./Sample2 -o Output
+```
+This command will run Panaroo comparing the gene content of the genomes in 'Sample1' and 'Sample2' directories, and the results will be written in the 'Output' directory. Please make sure that Panaroo and all its dependencies are correctly installed and set in the path before this command. 
+
+Output files: Primary output of Panaroo is three network files (gene_presence_absence.csv, gene_presence_absence.Rtab, gene_presence_absence_sparse.csv) and two additional network files (gene_core_graph.gml, gene_core_graph.pkl).

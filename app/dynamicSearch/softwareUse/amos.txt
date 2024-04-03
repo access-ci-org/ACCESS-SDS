@@ -1,0 +1,37 @@
+Use Case: AMOS is a collection of tools and class interfaces for the assembly of DNA reads. The package includes a robust infrastructure, modular assembly pipelines, and tools for overlapping, consensus generation, contigging, and assembly manipulation.
+
+Code details and examples: 
+
+Code:
+```
+# Run AMOS
+toAmos -s reads.fq -o reads.afg
+# Convert fastq to .afg
+minimus2 reads
+```
+
+The `toAmos` command converts a fastq file to .afg format required by AMOS. 
+
+Input File: Fastq File (reads.fq)
+
+Example Fastq file format:
+
+```
+@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
++
+!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
+```
+
+Specifications:
+On each fastq record:
+Line 1 begins with a '@' character in the first column, and encodes the sequence identifier.
+Line 2 is the raw sequence
+Line 3 begins with a '+' character and encodes the optional identifier.
+Line 4 encodes the quality values for the sequence.
+
+Command to run:
+
+```
+runAMOS -C reads.frg
+```

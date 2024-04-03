@@ -1,30 +1,70 @@
-Use Case: High Performance Computing Software
-Code details and examples: 
-ROCm (Radeon Open Compute) is an open-source software platform for AMD GPUs. It provides a foundation to support HPC and AI workloads.  
+Use Case: The ROCm (Radeon Open Compute) platform is a development platform for running computations on AMD GPUs. It can be used for general purpose computing, machine learning, and high-performance computing.
 
-To run a sample program using ROCm, you can use the following steps:
+Code details and examples:
 
-1. Write a sample OpenCL program (e.g., vector_add.cpp) using a code editor:
+Code:
+The ROCm platform uses HIP language which is similar to CUDA, a GPU programming language developed by NVIDIA. With HIP, you can write the program once and run it on both AMD and NVIDIA GPUs.
+
+An example HIP program for vector addition is shown below:
 
 ```cpp
-#include <CL/cl.hpp>
-#include <iostream>
+#include <hip/hip_runtime.h>
+#include "hip/hip_runtime_api.h"
 
-int main() {
-    // Initializing OpenCL
-    // Add your OpenCL code here
+#define SIZE 1024
+
+__global__ void VectorAdd(int *a, int *b, int *c, int n)
+{
+    int tid = threadIdx.x + blockIdx.x * blockDim.x;
+    
+    if(tid < n)
+    {
+        c[tid] = a[tid] + b[tid];
+    }
+}
+
+int main()
+{
+    int *a, *b, *c;
+    int *d_a, *d_b, *d_c;
+
+    int size = SIZE * sizeof(int);
+
+    a = (int*)malloc(size);
+    b = (int*)malloc(size);
+    c = (int*)malloc(size);
+
+    hipMalloc(&d_a, size);
+    hipMalloc(&d_b, size);
+    hipMalloc(&d_c, size);
+
+    hipMemcpy(d_a, a, size, hipMemcpyHostToDevice);
+    hipMemcpy(d_b, b, size, hipMemcpyHostToDevice);
+
+    VectorAdd<<<1,SIZE>>>(d_a, d_b, d_c, SIZE);
+
+    hipMemcpy(c, d_c, size, hipMemcpyDeviceToHost);
+
+    hipFree(d_a);
+    hipFree(d_b);
+    hipFree(d_c);
+
+    free(a);
+    free(b);
+    free(c);
+
     return 0;
 }
 ```
 
-2. Compile the program using the ROCm compiler (e.g., `hipcc` for ROCm):
+This example determines the summation of two vectors on a GPU. The two vectors are allocated in the host memory (CPU memory) and then transferred to the device memory (GPU memory). The kernel function, VectorAdd, is invoked to perform the calculation on the GPU. After the calculation, the result will be transferred back to the host memory.
 
-```bash
+HIP source files are compiled with the `hipcc` compiler. Compile command is:
+```
 hipcc vector_add.cpp -o vector_add
 ```
 
-3. Run the compiled program:
-
-```bash
+Then, run the compiled executable as follows:
+```
 ./vector_add
 ```

@@ -1,26 +1,26 @@
-Use Case: Qt4 is a cross-platform C++ application framework. 
+Use Case: Use PyQt4 to develop a simple GUI application that generates a 'Hello, World!' message when a button is clicked.
 
-Code details and examples:
-```cpp
-#include <QtGui>
+Code details and examples: Code:
 
-int main(int argc, char *argv[])
-{
-    QApplication app(argc, argv);
+Let's create a simple Python script that imports the required PyQt4 modules, and then create a basic QApplication - the central object of any PyQt4 GUI app - and a QPushButton. 
 
-    QWidget window;
-    window.resize(250, 150);
-    window.setWindowTitle("Qt4 Example");
-    window.show();
+```python
+import sys
+from PyQt4.QtGui import QApplication, QPushButton
 
-return app.exec();
-}
+def greet():
+    print("Hello, world!")
+
+app = QApplication(sys.argv)
+
+button = QPushButton("Greet the world!", clicked=greet)
+button.show()
+
+app.exec_()
 ```
 
-To compile and run the Qt4 code, you can use the following commands:
-```bash
-qmake -project
-qmake
-make
-./your_application_name
-```
+In the code above, we first import the necessary modules from PyQt4, then create a QApplication object. We also define a slot - a function that will be called in response to a particular signal - in this case, when the QPushButton is clicked. When the button is clicked, the greet function is executed, and "Hello, world!" is printed to the console.
+
+To run this code, simply run the Python script from your command line:
+
+`python your_script_name.py`

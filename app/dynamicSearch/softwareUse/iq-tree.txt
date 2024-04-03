@@ -1,0 +1,46 @@
+Use Case: Use Iq-tree for conducting phylogenetic analysis and computing maximum-likelihood trees; Using a DNA sequence alignment file as input.
+
+Code details and examples: Code
+
+Input File: Nexus or Phylip file formatted DNA/RNA/Protein sequence alignment. 
+
+Example File: 
+
+- A nexus file ("example.nex")
+
+```
+#NEXUS
+
+BEGIN DATA;
+DIMENSIONS NTAX=4 NCHAR=13;
+FORMAT DATATYPE=DNA MISSING=N GAP=-;
+MATRIX
+Taxon1  AAGCTTCACCGTG
+Taxon2  AAGCTTCACCGTT
+Taxon3  TAGTTCACATGTG
+Taxon4  CAGTTCACATCTT
+;
+END;
+```
+
+Command to run Iq-tree:
+
+- The command and an argument is as follows. This is based on the availability of 8 cores, and outputs a tree file titled "example.treefile" based on the input "example.nex".
+
+```
+iqtree -s example.nex -nt 8
+```
+
+This will produce a maximum-likelihood phylogenetic tree based on the sequence alignment.
+
+Some other specifications and details in input files:
+
+ - For Phylip file format, it should be as per the standard Phylip format. The first line contains two integers: the number of species, and the number of characters. Each of the following lines contain a species name (up to 10 characters), followed by its sequence (which may continue onto subsequent lines).
+
+ - IQ-TREE allows for a range of other command line arguments to customize the phylogenetic analysis, including model test, ultrafast bootstrap, SH-aLRT branch test, etc. 
+
+ - Output formats include several supported tree formats, log file, checkpoint file, etc. 
+
+ - IQ-TREE also supports multi-threading, so the "-nt" command can be adjusted based on how many cores are available for running the program.
+
+Note: It is very important to manually inspect the output tree and the output log to ensure that the results are as expected and no errors occurred during analysis.

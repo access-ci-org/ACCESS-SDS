@@ -1,0 +1,54 @@
+Use Case: GetDist is usually used for analyzing, visualizing and presenting the results of Monte Carlo samples, especially in the context of Markov Chain Monte Carlo inferences.
+
+Code details and examples: 
+
+Code:
+
+The Python library GetDist can handle simple ASCII files of samples, with each row being a different sample and each column being a different parameter.
+
+Sample File:
+
+```
+0.2697   0.0443  71.01  -1.018  0.9720 0.1064
+0.2699   0.0441  70.77  -1.013  0.9737 0.1044
+0.2717   0.0443  70.43  -1.016  0.9690 0.1042
+```
+
+Format Required: ASCII text file, with columns separated by whitespace.
+
+Command to Run:
+
+First, load the samples from the text file using matplotlib's loadtxt function:
+
+```python
+from getdist import loadMCSamples
+import matplotlib.pyplot as plt
+
+data = np.loadtxt('samples.txt')
+```
+
+Then, create the MCSamples object and plot the data:
+
+```python
+samples = loadMCSamples(data)
+g = plots.get_single_plotter()
+g.triangle_plot(samples, filled=True)
+```
+
+The MCSamples function automatically derives the names and labels of the parameters from the names and labels of the columns in the table. When plot is called on an MCSamples object, it will automatically generate a triangle plot of the posterior distribution of the parameters. 
+
+You can also specify some labels:
+
+```python
+samples = loadMCSamples(data, names=['omega_m', 'omega_b', 'h', 'w', 'sigma_8', 'n_s'])
+```
+
+And you can get stats in python:
+
+```python
+samples.getTable().tableTex()
+```
+
+This generates a latex-ready table of the parameter constraints.
+
+Notice: The above lines represent simple examples and real cases may differ depending on the use case and requirements.

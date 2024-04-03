@@ -1,21 +1,43 @@
-Maven, a build automation tool primarily used for Java projects.
+Use Case: Maven is a build automation tool primarily used for Java projects. It handles project's build, reporting and documentation from a central piece of information, project's pom.xml file.
 
-Use Case: Build a Java project using Maven
-Code details and examples:
-1. Create a Maven project
-```bash
-mvn archetype:generate -DgroupId=com.example -DartifactId=myproject -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+Code details and examples: 
+
+Code:
+The project's pom.xml file is a primary specification source for Maven. Below is a simple example of a `pom.xml`.
+
+```xml
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                      http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.mycompany.app</groupId>
+  <artifactId>my-app</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <properties>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
 ```
 
-2. Build the project
-```bash
-cd myproject
-mvn package
+To build the project, Maven provides several command line options. Here is a to run Maven with the most simple build goal.
+
+Command:
+
+```shell
+mvn compile
 ```
 
-3. Run the project
-```bash
-java -cp target/myproject-1.0-SNAPSHOT.jar com.example.App
-```
-
-Please note that these are general examples for a Maven project. The specific commands and project structure may vary depending on the project requirements.
+This will compile the project. Other common goals include `test` (compiles and tests your project), `package` (it takes the compiled code and packages it in its distributable format, like JAR, WAR, etc).

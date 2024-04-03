@@ -1,0 +1,22 @@
+{
+    "software_name": "DIMemas",
+    "comprehensive_overview": "DIMemas is a software tool for the automatic performance prediction of parallel applications. It utilizes simulation techniques to estimate the performance of parallel applications on large-scale systems.",
+    "core_features": [
+        "Automatic performance prediction",
+        "Simulation techniques",
+        "Estimation of parallel application performance on large-scale systems"
+    ],
+    "general_tags": [
+        "performance prediction",
+        "parallel applications",
+        "simulation",
+        "large-scale systems"
+    ],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Simulation tool",
+        "software_type": "Performance prediction tool",
+        "field_of_science": "Engineering and Technology"
+    }
+}

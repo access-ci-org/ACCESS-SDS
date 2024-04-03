@@ -1,0 +1,25 @@
+Use Case: Gubbins (Genealogies Unbiased By recomBinations In Nucleotide Sequences)is a bioinformatics software frequently used to detect recombination in bacterial genomes and improve phylogenetic reconstructions. The input to Gubbins is a multi-FASTA format file which contains aligned whole genome sequences (WGS).
+
+Code details and examples:
+   
+Code:
+
+To run Gubbins, you command it in the following way:
+
+```bash
+run_gubbins.py --prefix output_name input_file.fasta
+```
+
+Here, 'input_file.fasta' is a FASTA file containing aligned sequences. For example:
+
+FA0001.1
+ATGGCCTAGCTAGCTAGCTAGCTAGCGTAGCTAGCTAGCTAGCTAGC
+
+FA0002.1
+ATGCCCTAGCTAGCTAGCTAGCTAGCGTAGCTAGCTAGCTAGCTAGC
+
+And 'output_name' is a custom prefix that you designate for your output files.
+
+Gubbins will output a number of files, including a Newick format phylogenetic tree with a structure that reflects the impact of recombination on the evolutionary history of the input genomes.
+
+Please be sure to check out their manual page at sanger-pathogens.github.io/gubbins for more details.

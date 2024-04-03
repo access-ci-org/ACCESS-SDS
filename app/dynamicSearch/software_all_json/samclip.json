@@ -1,0 +1,11 @@
+{
+  "software_name": "Samclip",
+  "comprehensive_overview": "Samclip is a software for adapter trimming and mapping of sequencing reads for various NGS applications.",
+  "core_features": "Adapter trimming, read mapping, quality control, NGS data analysis",
+  "general_tags": ["NGS", "sequencing", "bioinformatics"],
+  "research_discipline": "Bioinformatics",
+  "research_area": "Genomics",
+  "software_class": "NGS data analysis",
+  "software_type": "Tool",
+  "field_of_science": "Biological Sciences"
+}

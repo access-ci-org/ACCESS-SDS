@@ -1,0 +1,33 @@
+Use Case: pyani is a Python3 module, which calculates average nucleotide identity (ANI) and tetranucleotide frequency correlation coefficients (TETRA) for sets of genomes. It is particularly useful in microbiology, to differentiate between closely related microorganisms at the species level.
+
+Code details and examples:
+
+Code:
+
+Input to pyani is sequence of genomes in FASTA (.fa, .fas, .fasta) or genbank (.gbk) formats.
+
+Here's an example of how you may run a basic ANI analysis using the ANIm method (one of the analysis methods provided by pyani) with two genomes MYGENOME1.fa and MYGENOME2.fa:
+
+```python
+from pyani import ANIm
+
+# Create an ANIm analysis object and execute the analysis. 
+ani_obj = pyani.ANIm('/path/to/your/genome/files', 
+                     out_dir='/path/to/save/results', 
+                     method='ANIm')
+ani_obj.run()
+```
+
+The command to run it depends on how you've installed the module and where your Python interpreter is, but it could be something like:
+
+```bash
+python3 your_script.py
+```
+
+Where `your_script.py` is the name of the file you have saved the python script in. 
+
+The `ANIm` class creates and runs a job. It writes output files to `out_dir`, including an ANIm report. You can specify other parameters as required.
+
+For parsing the GenBank files, PYANI uses Biopython, so the GenBank files should be such that they can be parsed using the Biopython SeqIO parse method.
+
+Given the package name does not have numbers, it has not been excluded and written as it is since it's case sensitive.

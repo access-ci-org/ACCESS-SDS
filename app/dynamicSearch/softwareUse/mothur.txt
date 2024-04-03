@@ -1,0 +1,34 @@
+Use Case: Mothur is a bioinformatics tool used for the analysis of microbial communities. Specifically, it is used to process high-throughput sequencing data, such as 16S rRNA gene sequencing data, to gain insight into the taxonomic and phylogenetic makeup of a microbial community.
+
+Code details and examples: Code
+
+Before we start, it is important to note that Mothur commands and options are case sensitive, must be typed exactly, and should be given in a certain order. 
+
+Sample Input Files:
+
+1. Stability.fasta – This is a fasta file that contains your sequences.
+2. Stability.file – This is a group file that associates each sequence to a particular sample. 
+
+Command to run:
+
+To align sequences in Mothur, you will use a command called align.seqs. Below you will find an example of how to run this command. The "fasta" option is used to specify the name of your fasta file, and the "reference" option is used to specify the name of your reference sequence file.
+
+    mothur > align.seqs(fasta=stability.fasta, reference=silva.bacteria.fasta)
+
+To get a summary of your sequence alignment, you will use the summary.seqs command.
+
+    mothur > summary.seqs(fasta=stability.align)
+
+Then, you might want to clean up and discard sequences that didn't align well to the reference.
+
+    mothur > screen.seqs(fasta=stability.align, summary=stability.summary, start=1250, end=13910, minlength=1200, group=stability.groups)
+
+Further commands to classify the sequences, do clustering and calculate alpha, beta diversity measures can be run. There are many commands for different types of analyses. 
+
+Importantly, remember that Mothur needs to be run in a Unix-based shell, such as Bash, and the Mothur binary should be located in your path for smooth execution of the commands.
+
+Notes:
+- The above example assumes you have a sequence data file named "stability.fasta" and a group file named "stability.groups". The "silva.bacteria.fasta" is assumed as the reference sequence file.
+- Link to get the sample files to try out these commands: https://mothur.org/wiki/miseq_sop/
+- There might be variations in the minimum sequence length, start and end points in the screen.seqs command based on the quality, and the region of the 16S RNA gene sequenced in your study. 
+- Please refer Mothur's detailed and well-explained manual pages to know more about file formats, specifications, and how to run the analyses: https://mothur.org/wiki/commands/

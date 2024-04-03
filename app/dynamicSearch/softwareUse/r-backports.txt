@@ -1,0 +1,28 @@
+Use Case: r-backports is a package in R that allows the installation of packages from previous versions of R. It is useful when you want to make sure that older scripts still work with newer versions of R. 
+
+Code details and examples: 
+
+Your input would be the package you want to install from backports. For example, let's take the package "MASS" as an example.
+
+The following code is written in R, so the required format is .R or .Rmd. The only specification is R version 3.0.0 or later.
+
+Code:
+```
+# Install the backports package
+install.packages("backports")
+
+# Load the backports package
+library(backports)
+
+# Now you can install packages from backports
+install.packages("MASS", repos="http://cran.rstudio.com")
+```
+Command to run: 
+
+You can run this command through the command line interface by executing Rscript along with the name of the script (e.g., your_script.R). For instance
+
+```
+Rscript your_script.R
+```
+
+This will install the MASS package from the specified repository from the backports. In this case, the repository is the CRAN-RStudio repository.

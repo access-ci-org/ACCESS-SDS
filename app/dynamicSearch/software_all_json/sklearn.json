@@ -1,0 +1,13 @@
+{
+    "software_name": "scikit-learn",
+    "comprehensive_overview": "Scikit-learn is a simple and efficient tool for data mining and data analysis, built on NumPy, SciPy, and matplotlib. It provides a range of supervised and unsupervised learning algorithms in Python, making it an excellent library for machine learning.",
+    "core_features": "1. Simple and efficient tools for data mining and data analysis. 2. Access to a range of supervised and unsupervised learning algorithms. 3. Easy integration with other Python libraries such as NumPy, SciPy, and matplotlib. 4. Well-designed API for easy implementation. 5. Capabilities for model validation and parameter tuning. 6. Comprehensive documentation and community support.",
+    "general_tags": ["data mining", "data analysis", "machine learning", "supervised learning", "unsupervised learning"],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Library",
+        "software_type": "Machine Learning",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

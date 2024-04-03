@@ -1,0 +1,31 @@
+Use Case: Phast is a suite of computational tools designed for comparative and evolutionary genomics. The suite includes tools for multiple sequence alignment, hidden Markov modeling, and phylogenetic modeling among others. It is used to assess the conservation of genomic sequences across related species and permits the identification of genomic regions that have evolved in a particular manner.
+
+Code details and examples: Code:
+
+Example of using phastCons tool (one of the programs in the suite) to calculate conservation scores:
+
+Input file: multiple alignment file in MAF format and a tree file in Newick format. The tree file describes a phylogenetic tree relating the species in the alignment.
+
+Sample input:
+
+**File: example.maf**
+```
+a score=23253.0
+s hg19.chr7    27578828 38 + 158545518 AGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCT
+s panTro2.chr6 28741140 37 + 161754786 AG-TAGTTAGCTAGCTAGCTAGCTAGCT-TGCTAGCTAGCT
+s mm9.chr6     53215344 39 + 149716546 AGCTAGCTTGCTTGCTAGCTAGTTGCTTGCTAGCTAGCTTG
+```
+
+**File: example.newick**
+```
+(hg19:0.00615,panTro2:0.00591,mm9:0.0871);
+```
+
+Command to run:
+```bash
+phastCons example.maf example.newick > output.cons
+```
+Here `output.cons` file contains the conservation scores.
+
+Phast requires the multi-sequence alignment file to be in MultiZ format (extension .maf). The sequences in the .maf file are expected to be in the same order as in the provided tree file (in Newick format). Multiple alignment file (.maf) can be prepared using programs like CLUSTAL or TCOFFEE. Tree file can be constructed using phylogenetic tree inference tools such as RAxML or PhyML.
+The command to run the programs depends on each program in the suite.

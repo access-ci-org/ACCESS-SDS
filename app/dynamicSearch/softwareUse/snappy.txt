@@ -1,10 +1,50 @@
-Use Case: Computational fluid dynamics solver for compressible flows
+Use Case: Snappy is a python library for 2D/3D graphics and is commonly used for automating the generation of geospatial data interfaces. These data can include satellite images or other landscape data. You can use it to create, get, manipulate or execute operations on the images.
 
-Code details and examples:
-Input file format (sample input file "input.snappy"):
-- Contains parameters for the simulation, such as mesh file, boundary conditions, solver settings, etc.
+Code details and examples: Code.
 
-Command to run:
-snappy -i input.snappy
+First, we need to import the snappy module:
+```python
+from snappy import ProductIO
+```
 
-Note: The above command is a placeholder and may vary depending on the actual usage of the software.
+A typical use case might involve loading a satellite image:
+
+```python
+product = ProductIO.readProduct('path_to_your_image.dim')
+```
+
+You can check the names of the bands:
+
+```python
+list(product.getBandNames())
+```
+
+Or get a specific Band:
+
+```python
+band = product.getBand('band_name')
+```
+
+Extract width and height of the band:
+
+```python
+width = band.getRasterWidth()
+height = band.getRasterHeight()
+```
+
+You can also get the data array of the whole raster data or subset of it:
+
+```python
+data = band.readPixels(x, y, w, h, None)
+```
+
+Or you can save the product back after manipulation:
+
+```python
+ProductIO.writeProduct(product, 'path_to_output_file.dim', 'BEAM-DIMAP')
+```
+
+For these codes, you need an image file ('path_to_your_image.dim’) in BEAM-DIMAP format (Developed by Brockmann Consult), which is the native format for satellite products in SNAP (ESA Sentinel Application Platform) where snappy is derived from.
+
+## Warning!! ##
+Pay attention to handle the image data carefully. The raster data can be more than 10 GB so it might consume too much memory if not handled properly.

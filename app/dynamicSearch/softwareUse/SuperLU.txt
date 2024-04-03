@@ -1,61 +1,94 @@
-Use Case: Solve a sparse linear system of equations using SuperLU  
-Code details and examples:  
-SuperLU is a library for solving large, sparse, nonsymmetric systems of linear equations. Below is an example code snippet in C that demonstrates how to use SuperLU to solve a sparse linear system of equations.
+Use Case: SuperLU is used for solving large sparse linear equations.
 
-Sample input files:
-1. Matrix A: A sparse matrix in matrix market format (e.g., example.mtx)
-2. Right-hand side vector b: A vector representing the right-hand side of the linear system (e.g., example_rhs.txt)
+Code Details and Examples: 
+
+Code:
 
 ```c
-#include <stdio.h>
 #include "slu_ddefs.h"
 
-int main(int argc, char *argv[]) {
-    SuperMatrix A, L, U;
-    NCformat *Astore;
+main(int argc, char *argv[])
+{
+    SuperMatrix A, L, U, B;
     double   *a;
     int      *asub, *xa;
-    SuperMatrix B;
-    NRformat *Bstore;
-    double   *b;
-    int      *bsub, *bptr;
-    int      *perm_c, *perm_r;
-    int      *etree;
-    void   *work;
-    int      info, lwork, nrhs;
-    superlu_options_t options;
-    SuperLUStat_t stat;
-
-    /* Load matrix A */
-    dCreate_CompCol_Matrix(&A, m, n, nnz, a, asub, xa, SLU_NC, SLU_D, SLU_GE);
+    int      *perm_c; /* column permutation vector */
+    int      *perm_r; /* row permutations from partial pivoting */
+    int      nrhs, i, info;
+    double   *rhsb;
     
-    /* Load right-hand side vector b */
-    dCreate_Dense_Matrix(&B, m, nrhs, b, m, SLU_DN, SLU_D, SLU_GE);
-
-    /* Set up the options */
-    set_default_options(&options);
-
-    /* Initialize the statistics variable */
-    StatInit(&stat);
-
-    /* Solve the linear system */
-    dgssv(&options, &A, perm_c, perm_r, &L, &U, &B, &stat, &info);
-
-    /* Perform some operations with the solution */
-
-    /* Free memory */
-    Destroy_CompCol_Matrix(&A);
+    /* Set up the sparse matrix A in SuperMatrix format. */
+    /* Code to initialize 'A' goes here. */
+   
+    /* Initialize the right hand side matrix B. */
+    /* Code to initialize 'B' goes here. */
+    
+    /* Setup the permutation vectors perm_c and perm_r. */
+    perm_c = intMalloc(n);
+    perm_r = intMalloc(n);
+    
+    /* Use default column permutation routine. */
+    get_perm_c(PermSpec, &A, perm_c);
+    
+    /* Perform LU factorization. */
+    dgssv(&options, &A, perm_c, perm_r, &L, &U, &B, &info);
+    
+    if ( info == 0 ) {
+        /* This will equilibration the system. */
+    } else if ( info > 0 ) {
+        printf("dgssv() error returns INFO= %d\n", info );
+        if ( info <= A.ncol ) { /* factorization completes */
+            dQuerySpace(&L, &U, panel_size, &Gstat, &mem_usage);
+            printf("L\\U MB %.3f\ttotal MB needed %.3f\texpansions %d\n",
+                   mem_usage.for_lu/1e6, mem_usage.total_needed/1e6,
+                   mem_usage.expansions);
+            Lstore = (SCformat *) L.Store;
+            Ustore = (NCformat *) U.Store;
+            printf("L\\U dimensions %dx%d, %dx%d\n", Lstore->nrow, Lstore->ncol,
+                   Ustore->nrow, Ustore->ncol);
+            printf("\tFactor flops = %.0f\tMflops = %.2f\n",
+                   Gstat.ops[FACT], Gstat.ops[FACT]/(utime[FACT]*1e6));
+            printf("\tDetect & pivot flops = %.0f\n", Gstat.ops[OTHER]);
+            printf("\t\tTriangular solve flops = %.0f\tMflops = %.2f\n",
+                   Gstat.ops[SOLVE], Gstat.ops[SOLVE]/(utime[SOLVE]*1e6));
+            printf("\t\t\tOther flops = %.0f\n", Gstat.ops[OTHER]);
+            printf("\t\t\t\t\tOther time = %.2f\n", utime[OTHER]);
+        }
+    } else {
+        printf("dgssv() error returns INFO= %d\n", info );
+    }
+    Destroy_SuperMatrix_Store(&B);
+    Destroy_SuperMatrix_Store(&A);
     Destroy_SuperNode_Matrix(&L);
     Destroy_CompCol_Matrix(&U);
-    Destroy_SuperMatrix_Store(&B);
-    StatFree(&stat);
-
-    return 0;
+    StatFree(&Gstat);
 }
 ```
 
-To compile and run the code:
-```bash
-gcc -o example example.c -L<path_to_SuperLU_library> -lsuperlu
-./example
+To compile it, use:
+
+```bash 
+gcc -L/path/to/superlu -lsuperlu_5.0 -I/path/to/include/superlu superlu_example.c
 ```
+
+To run it:
+
+```bash 
+./a.out
+``` 
+
+The exact details for filling up 'A' and 'B' depends on the problem you're solving. These input matrices could potentially be read from a file, or generated programmatically. It's generally recommended to read sparse matrix data from file in Matrix Market format or Harwell-Boeing format. 
+
+Hence setting up 'A' might look something like:
+
+```c
+dreadMM("/path/to/input/file.mtx", &A);
+```
+
+Setting up 'B' might look something like:
+
+```c
+dCreate_Dense_Matrix(&B, nrows, nrhs, rhsb, nrows, SLU_DN, SLU_D, SLU_GE);
+``` 
+
+Validate this code by checking modules you have access to and also the versioning issue. The superlu package might need the -lblas flag while compiling.

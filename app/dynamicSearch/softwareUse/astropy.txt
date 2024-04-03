@@ -1,0 +1,18 @@
+Use Case: Astropy is an open-source Python library for astronomical computations. It provides functionality for managing the manipulation and analysis of astronomical data sets. There might also be a data file (for example, a FITS - Flexible Image Transport System file, which is the most commonly used digital file format in astronomy) that we want to read and manipulate.
+
+Code details and examples: 
+
+Code:
+```Python
+from astropy.io import fits
+
+hdulist = fits.open('input.fits')
+hdulist.info()
+
+data = hdulist[0].data
+```
+This script opens a FITS file named 'input.fits' and assigns it to the variable 'hdulist'. The 'info()' function gives an overview of the file's contents. Data can be accessed from the individual HDUs (Header Data Units) that make up the file; here, we access the data stored in the first HDU and assign it to the variable 'data'. 
+
+Formatting: The input file must be a valid FITS file collected from an astronomical observation. The name of the FITS file is hardcoded here as 'input.fits', but this can be modified as per requirement. No other specific formatting is required.
+
+Command to run: Assuming you have a FITS file named 'input.fits' in the same directory as your .py file, and that you have the astropy library installed in your Python environment, you would run the .py file using the command 'python filename.py' in your terminal.

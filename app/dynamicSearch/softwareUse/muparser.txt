@@ -1,0 +1,47 @@
+Use Case: Use muparser library for parsing mathematical expressions defined at runtime.
+
+Code details and examples: 
+
+Code:
+
+```cpp
+#include "muParser.h"
+
+int main(int, char**)
+{
+
+    mu::Parser parser;
+    double var = 1.5;
+    parser.DefineVar(_T("a"), &var);
+    parser.SetExpr(_T("2*a+sin(pi/2*a)"));
+
+    try
+    {
+        std::cout << parser.Eval() << std::endl;
+    }
+    catch (mu::Parser::exception_type &e)
+    {
+        std::cout << "Error code: " << e.GetCode() << std::endl
+                  << "Message   : " << e.GetMsg() << std::endl
+                  << "Expression: " << e.GetExpr() << std::endl
+                  << "Token     : " << e.GetToken() << std::endl
+                  << "Position  : " << e.GetPos() << std::endl
+                  << "Errc      : " << e.GetErrc() << std::endl;
+    }
+
+    // The expected output of the above code will be " 5.20711 "
+}
+```
+Command to run: 
+You can use the g++ compiler and pass the C++ file 
+```bash
+g++ filename.cpp -o output
+```
+Then simply run the output file
+```bash
+./output
+```
+
+In the above code snippet a variable 'a' is defined with value 1.5. An expression '2*a+sin(pi/2*a)' is set which is later evaluated.
+
+Input file/ Format required/ Specifications and details in input files: No input files required. Input can be given directly in the code. User can define their variable and expression to parse.

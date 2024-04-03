@@ -1,0 +1,55 @@
+Use Case: Use Kcachegrind to visualize call graph and data flow in the parallel program to identify the bottleneck and optimize.
+
+Code details and examples: Code.
+
+1. To use Kcachegrind, we first need to create a callgrind file using valgrind tool.
+
+Command-line to run your C program and create a callgrind file:
+```bash
+$ Valgrind --tool=callgrind ./my_program
+```
+This command produces a `callgrind.out.pid` file.
+
+2. Open the generated callgrind file with Kcachegrind. 
+
+Command-line to start Kcachegrind:
+```bash
+$ kcachegrind callgrind.out.pid
+```
+
+The `callgrind.out.pid` file can be a complex document and doesn't have a static format as it varies based on your source code. It basically contains a list of your function calls, the number of instructions executed in each call, and call tree (which functions call which ones).
+
+The C program (`my_program`) in the commands stated above doesn't have a specific input format as it'll depend on your specific program. But an example of a C program that can be analyzed with Kcachegrind could be:
+
+```C
+#include <stdio.h>
+
+void function1() {
+    int i, num=0;
+    for(i=0; i<10000; i++) {
+        num += i;
+    }
+    printf("%d", num);
+}
+
+void function2() {
+    int i, num=0;
+    for(i=0; i<5000; i++) {
+        num += i;
+    }
+    printf("%d", num);
+}
+
+int main() {
+    function1();
+    function2();
+    return 0;
+}
+```
+
+Save it as `my_program.c`. To run it using valgrind, you first need to compile your C program:
+
+```bash
+$ gcc my_program.c -o my_program
+```
+Now you can run with the valgrind command mentioned before.

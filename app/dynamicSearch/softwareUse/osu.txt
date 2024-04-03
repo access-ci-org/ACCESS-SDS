@@ -1,33 +1,66 @@
-It seems you are referring to the open-source operating system University of Illinois/NCSA (OSU) micro-benchmark suite. Below are some examples with sample input files, formats required, any specifications, and code snippets:
+Use Case: OSU Micro-Benchmarks is a popular collection of benchmarks designed for testing MPI (Message Passing Interface) performance in multiple contexts. A user might want to compare the performance of different MPI implementations or tune a specific one to a particular kind of HPC hardware.
 
-Use Case: Benchmarking CPU performance
-Code details and examples:
-- Sample Input File: No specific input files required
-- Format: N/A
-- Specifications: The OSU Micro-Benchmarks provide a set of tests for measuring the performance of MPI libraries on clusters.
-- Code Snippet:
-  ```bash
-  mpirun -n 4 osu_bw
-  ```
+Code details and examples: Code
 
-Use Case: Testing MPI Bandwidth
-Code details and examples:
-- Sample Input File: No specific input files required
-- Format: N/A
-- Specifications: This benchmark measures the end-to-end bandwidth of message passing operations between MPI processes.
-- Code Snippet:
-  ```bash
-  mpirun -n 4 osu_bibw
-  ```
+1. Sample Input File:
 
-Use Case: Latency testing
-Code details and examples:
-- Sample Input File: No specific input files required
-- Format: N/A
-- Specifications: This benchmark measures the latency of point-to-point message passing operations between MPI processes.
-- Code Snippet:
-  ```bash
-  mpirun -n 4 osu_latency
-  ```
+    OSU Micro-Benchmarks do not rely on any external input files. They control the parameters of the benchmarking from the command line.
 
-Please note that the above examples assume you have the OSU Micro-Benchmarks suite installed on your system. The exact commands may vary based on your setup.
+2. Required File Format: 
+
+    Not applicable.
+
+3. Specifications and Details:
+    
+    Not applicable.
+
+4. Command to Run Them
+
+    Here is the command for compiling and running the osu_bw (bandwidth) benchmark:
+
+    ```bash
+    # Compile the benchmark
+    make
+
+    # Run the benchmark
+    mpirun -np 2 ./osu_bw
+    ```
+
+    To run the benchmark with a different number of processes:
+
+    ```bash
+    mpirun -np 4 ./osu_bw
+    ```
+
+5. Code snippets: 
+
+    The exact code is contained within the C files in the OSU Micro-Benchmarks distribution. The code is based around the MPI_Send and MPI_Recv functions, which send and receive messages between MPI processes. The size of the message sent is one of the critical parameters of the benchmark. 
+
+    Here is a simplified code snippet that demonstrates the core of what the osu_bw benchmark is doing:
+
+    ```c
+    #include <mpi.h>
+
+    int main(int argc, char *argv[]) {
+        int rank, size, i;
+        char message[1024];
+
+        MPI_Init(&argc, &argv);
+        MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+        MPI_Comm_size(MPI_COMM_WORLD, &size);
+
+        for (i = 0; i < 1000000; i++) {
+            if (rank == 0) {
+                MPI_Send(message, 1024, MPI_CHAR, 1, 0, MPI_COMM_WORLD);
+            } else if (rank == 1) {
+                MPI_Recv(message, 1024, MPI_CHAR, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+            }
+        }
+
+        MPI_Finalize();
+
+        return 0;
+    }
+    ```
+
+    This code sends a message of a fixed size (1024 bytes) between two processes a million times. The OSU Micro-Benchmarks add robust error checking, performance timing, and command-line options for changing parameters like the message size.

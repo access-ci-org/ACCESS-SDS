@@ -1,26 +1,24 @@
-Use Case: Octave is a high-level interpreted language, primarily intended for numerical computations.
+Use Case: Octave is a high-level programming language, primarily intended for numerical computations. It provides capabilities for the numerical solution of linear and nonlinear problems, and for performing other numerical experiments. It also provides extensive graphics capabilities for data visualization and manipulation. Octave is normally used through its interactive command line interface.
 
-Code details and examples:
-1. Sample input file (data.txt):
-```
-1 2
-3 4
-5 6
-```
+Code details and examples: The standard format for a script file in Octave is .m. A simple script to plot a sine wave may look like this:
 
-2. In Octave, you can read this data file and perform operations like matrix multiplication as follows:
-```octave
-% Load data from file
-data = load('data.txt');
+Code:
 
-% Perform matrix multiplication
-result = data * data;
-
-% Display the result
-disp(result);
+```Octave
+% sample.m
+% This program plots a sine wave
+t = linspace(0, 2*pi, 100); % Create a vector t with values ranging from 0 to 2*pi
+y = sin(t); % Compute sine of each values in t
+plot(t, y); % Plot sinusoidal wave
+xlabel('t'); % Provide an x-axis label
+ylabel('sin(t)'); % Provide a y-axis label
+title('Plot of the Sine Function'); % Provide a title
 ```
 
-3. Command to run the script (assuming the code is saved in a file named "matrix_mul.m"):
+To run this script in Octave, open the Octave command line and enter the following command, assuming `sample.m` is in your current directory:
+
 ```
-octave matrix_mul.m
-```
+octave sample.m
+``` 
+
+This will plot a sinusoidal wave on the screen with the respective labels as provided in the script.

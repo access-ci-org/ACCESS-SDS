@@ -1,47 +1,44 @@
-Use Case: QIIME 2 is a bioinformatics software for microbiome analysis.
+Use Case: Applying the DADA2 method using qiime2 to denoise paired-end sequences from a microbiome experiment;
 
-Code details and examples:
-1. Importing data into QIIME 2:
-```bash
-qiime tools import \
-  --type 'SampleData[PairedEndSequencesWithQuality]' \
-  --input-path paired-end-demux.qza \
-  --output-path paired-end-demux.qza \
-  --input-format CasavaOneEightSingleLanePerSampleDirFmt
-```
+**Code details and examples:**
 
-2. Performing quality control and denoising using DADA2:
-```bash
-qiime dada2 denoise-paired \
-  --i-demultiplexed-seqs paired-end-demux.qza \
-  --p-trunc-len-f 0 \
-  --p-trunc-len-r 0 \
-  --o-representative-sequences rep-seqs-dada2.qza \
-  --o-table table-dada2.qza \
-  --o-denoising-stats stats-dada2.qza
-```
+Input File Format:
 
-3. Generating a feature table summary:
-```bash
-qiime feature-table summarize \
-  --i-table table-dada2.qza \
-  --o-visualization table-dada2.qzv \
-  --m-sample-metadata-file sample-metadata.tsv
-```
+The input files are typically raw sequences in fastq format. An example of the sequence might be as follows:
 
-4. Performing taxonomic classification using a pre-trained classifier:
-```bash
-qiime feature-classifier classify-sklearn \
-  --i-classifier classifier.qza \
-  --i-reads rep-seqs-dada2.qza \
-  --o-classification taxonomy.qza
-```
+@M06335:119:000000000-B9H7K:1:1101:15698:1338 1:N:0:1
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
++
+# , 5< < : 1 1 AGGGFFEFFGGGGGGGCFFFFF/ACFFEFFDGAFGGG
 
-5. Visualizing taxonomic composition:
-```bash
-qiime taxa barplot \
-  --i-table table-dada2.qza \
-  --i-taxonomy taxonomy.qza \
-  --m-metadata-file sample-metadata.tsv \
-  --o-visualization taxa-bar-plot.qzv
-```
+File Specifications:
+
+- Each sequence read starts with '@'.
+- Immediately after '@', there are unique identifiers for the sequence.
+- The second line represents actual sequence data.
+- '+' is an indicator of quality scores of the sequence.
+- The fourth line contains corresponding quality scores for the sequence data where each character represents a quality score.
+
+Code Snippet:
+
+   ```
+   qiime dada2 denoise-paired \
+     --i-demultiplexed-seqs paired-end-demux.qza \
+     --p-trim-left-f 13 \
+     --p-trim-left-r 13 \
+     --p-trunc-len-f 150 \
+     --p-trunc-len-r 150 \
+     --o-representative-sequences rep-seqs-dada2.qza \
+     --o-table table-dada2.qza \
+     --o-denoising-stats stats-dada2.qza
+   ```
+
+Command Details:
+
+- qimme dada2 denoise-paired: Command to run the DADA2 pipeline on paired-end sequences.
+- --i-demultiplexed-seqs: The input file containing the sequences in QIIME2's QZA format.
+- --p-trim-left-f and --p-trim-left-r: The number of bases that should be removed from the start of forward and reverse reads.
+- --p-trunc-len-f and --p-trunc-len-r: The position at which forward and reverse reads should be truncated due to decrease in quality.
+- --o-representative-sequences, --o-table, --o-denoising-stats: The output files in QZA format to store the representative sequences, the feature table and the denoising stats respectively.
+
+This command will apply the DADA2 method on paired-end sequences, and output representative sequences, a feature table, and statistics of the denoising process. The preceding two parameters determine how much the sequences should be trimmed from the start, and where to truncate the sequences.

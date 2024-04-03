@@ -1,34 +1,23 @@
-Use Case: Parallel execution of a simple MPI program using OpenMPI
+Use Case: OpenMPI is often used in physics and engineering simulations. For example, let's consider a use case where parallel processing is required to solve large-scale fluid dynamics problems using the Navier-Stokes equations. 
 
-Code details and examples:
-1. Sample MPI program (hello_world.c) to be compiled with OpenMPI:
-```c
-#include <stdio.h>
-#include <mpi.h>
+Code details and examples: Code
 
-int main(int argc, char *argv[]) {
-    int rank, size;
+Sample Input File:
 
-    MPI_Init(&argc, &argv);
-    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-    MPI_Comm_size(MPI_COMM_WORLD, &size);
+The input file (let's call it 'navier_stokes.c') for this problem might include the necessary information and data for the program to calculate the solutions of the Navier-Stokes equations. The file will typically include a series of initialization statements, mathematical equations, loops, and output statements written in C programming language. The exact specifics and details of the input file will depend on the problem being solved.
 
-    printf("Hello world from process %d of %d\n", rank, size);
+To use OpenMPI to run this program, the code needs to be compiled using mpicc (the MPI compiler for C programs) first:
 
-    MPI_Finalize();
-
-    return 0;
-}
+```
+mpicc navier_stokes.c -o navier_stokes
 ```
 
-2. Compile the MPI program using mpicc:
-```bash
-mpicc hello_world.c -o hello_world
+Now, the code can be run using mpirun (or mpiexec) with the required number of processes:
+
+```
+mpirun -np 4 ./navier_stokes
 ```
 
-3. Run the compiled MPI program using mpirun (assuming 4 processes):
-```bash
-mpirun -np 4 ./hello_world
-```
+Here, '-np 4' specifies the number of processes to be used.
 
-Make sure OpenMPI is installed and accessible in the system path.
+Note: OpenMPI requires its own command to run the program. It won't run by the generic 'gcc' compiler command for C files. 'mpicc' and 'mpirun' are the commands provided by OpenMPI to handle this.

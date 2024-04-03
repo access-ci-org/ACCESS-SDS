@@ -1,0 +1,13 @@
+{
+    "software_name": "PARPACK",
+    "comprehensive_overview": "PARPACK is a software library for solving large scale eigenvalue problems. It is specifically designed to compute a few eigenvalues and corresponding eigenvectors of large sparse matrices.",
+    "core_features": "PARPACK provides efficient routines for solving symmetric and non-symmetric eigenvalue problems, including the ability to calculate a subset of eigenvalues based on target values (a generalized eigenvalue problem) and to find the Schur factorization of a matrix.",
+    "general_tags": ["eigenvalue problems", "sparse matrices", "numerical linear algebra"],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Computational software",
+        "software_type": "Library",
+        "field_of_science": "Mathematics"
+    }
+}

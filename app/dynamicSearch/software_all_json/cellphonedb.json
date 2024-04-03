@@ -1,0 +1,13 @@
+{
+    "software_name": "cellphonedb",
+    "comprehensive_overview": "CellPhoneDB is a publicly available repository of curated receptors, ligands, and interactions between immune and stromal cells.",
+    "core_features": "1. Curated database of receptors, ligands, and interactions in immune and stromal cells. 2. Provides information on cell-cell communication in biological systems. 3. Enables the analysis of ligand-receptor interactions and signaling networks. 4. Facilitates the study of cell communication in the context of complex tissues and organs.",
+    "general_tags": ["bioinformatics", "HPC tools"],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Bioinformatics",
+        "software_type": "Computational software",
+        "field_of_science": "Biological Sciences"
+    }
+}

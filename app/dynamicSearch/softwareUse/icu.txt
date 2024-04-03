@@ -1,0 +1,34 @@
+Use Case: ICU4C (International Components for Unicode) is a set of C libraries provides for handling Unicode characters, strings, and text, and provides many utilities. This is usually used for developing software applications that require internationalization and globalization (i18n and g11n) support.
+
+Code details and examples: 
+Code:
+
+To use ICU in a C++ program, you would typically include the relevant header files, instantiate an object such as a UnicodeString, and then call a method on that object. For example:
+
+```cpp
+#include "unicode/utypes.h"
+#include "unicode/unistr.h" 
+
+int main(int argc, char* argv[]) {
+    icu::UnicodeString str("Hello, World!");
+    std::cout << "The string is: " << str << "\n";
+    return 0;
+}
+```
+To compile an ICU application, you need to include the path to the ICU header files and link against the ICU libraries. This will vary depending on your build system and platform. For example, on a Unix-like system using the gcc compiler, you might do:
+
+```shell
+g++ -I /path/to/icu/include -L /path/to/icu/lib -licuuc -licudata -o MyApp MyApp.cpp
+```
+
+Input files:
+There are no specific input file requirements for ICU4C itself.
+
+Specifications:
+Each ICU function has its specific parameters. For instance, u_strlen function, which calculates the length of a string, requires the input to be a null terminated UChar array.
+
+Command to run a program: 
+After compilation, you can run the binary directly from the command line:
+```shell
+./MyApp
+```

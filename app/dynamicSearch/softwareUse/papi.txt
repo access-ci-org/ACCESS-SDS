@@ -1,45 +1,50 @@
-Use Case: Performance Counters for HPC applications monitoring
+Use Case: PAPI software, a.k.a Performance API, is used to access the hardware performance counters present in most modern microprocessors. It provides a consistent interface and methodology to collect performance counters information from the CPU. PAPI can be used to monitor the CPU cycles, instructions completed, cache misses, etc.
 
 Code details and examples:
-PAPI (Performance Application Programming Interface) is a widely used library for accessing hardware performance counters on modern processors. Here is an example of using PAPI to measure the cycles and instructions executed by a simple C program.
 
-Sample C code (example.c):
-```c
-#include <stdio.h>
-#include <papi.h>
+Code:
 
-#define NUM_EVENTS 2
+PAPI provides C, C++, and Fortran programming interfaces. Here is a simple C snippet to measure the number of Level 1 data cache misses:
 
-int main() {
-    int EventSet = PAPI_NULL;
-    long_long values[NUM_EVENTS];
-    int Events[NUM_EVENTS] = {PAPI_TOT_CYC, PAPI_TOT_INS};
+```cpp
+#include "papi.h"
 
-    PAPI_library_init(PAPI_VER_CURRENT);
-    PAPI_create_eventset(&EventSet);
-    PAPI_add_events(EventSet, Events, NUM_EVENTS);
+#define NUM_EVENTS 1
 
-    PAPI_start(EventSet);
-    // Code to measure goes here
-    PAPI_stop(EventSet, values);
+int main()
+{
+    int Events[NUM_EVENTS] = { PAPI_L1_DCM };
+    long long values[NUM_EVENTS];
 
-    printf("Cycles: %lld\n", values[0]);
-    printf("Instructions: %lld\n", values[1]);
+    /* Start counting events */
+    if (PAPI_start_counters(Events, NUM_EVENTS) != PAPI_OK)
+    {
+        printf("Error in PAPI_start_counters\n");
+        return 1;
+    }
 
-    PAPI_shutdown();
+   /* Run your code here which you want to measure */
+
+    /* Stop counting events */
+    if (PAPI_stop_counters(values, NUM_EVENTS) != PAPI_OK)
+    {
+        printf("Error in PAPI_stop_counters\n");
+    }
+    else
+    {
+        printf("Level 1 data cache misses: %lld\n", values[0]);
+    }
 
     return 0;
 }
 ```
 
-Compile the program (assuming "example.c" is the filename):
-```bash
-gcc example.c -o example -lpapi
-```
+This program will count the number of Level 1 data cache misses while running the code between the `PAPI_start_counters` and `PAPI_stop_counters` calls.
 
-Run the program:
-```bash
-./example
-```
+Command to run the code -
 
-Note: Make sure to have PAPI installed and linked properly when compiling the program.
+To compile: `gcc -o papi_example papi_example.c -lpapi`
+
+To run: `./papi_example`
+
+The output will show the number of Level 1 data cache misses that occurred while running the unspecified piece of code.

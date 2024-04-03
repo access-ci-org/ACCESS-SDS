@@ -1,0 +1,22 @@
+Use Case: SignalP is used for predicting signal peptide secretion in amino acid sequences i.e., it can be used for identifying secretory proteins. Input format for SignalP is a commonly used sequence format: FASTA.
+
+Code Details and Examples:
+
+Code:
+```bash
+signalp -fasta sample.fasta -org euk
+```
+
+Input Files: 
+
+You need a .fasta file containing the sequences you wish to analyze. Here's an example of what the beginning of such a file might look like:
+
+```fasta
+>protein1
+MKALIVLGLVLLSVTVQGKVFERCELARTLKRLGMDGYRGISLANWMCLAKWESGYNTRATNYNAGDRSTDYGIFQINS
+>protein2
+MKFLVFAVLFMVATLLAPFIPFFAFHAVEPRPNGNHAMHVPRMLQDLLFQATKPERRISDHERFPMMSTFKVLLCGAV
+```
+Specifications in the input file:
+
+Each protein sequence in FASTA format begins with a single-line description, followed by lines of sequence data. The description line is distinguished from the sequence data by a greater-than (">") symbol in the first column. It is recommended that all lines of text be shorter than 80 characters in length. Sequences are expected to be represented in the standard IUB/IUPAC amino acid and nucleic acid codes.

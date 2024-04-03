@@ -1,0 +1,25 @@
+Use Case: Charm++ is a parallel programming framework used for science and engineering problems. It's used for running applications that could be parallelized using message passing, which means that various computational tasks, even if they differ in computational costs, can be effectively run together by allowing them to communicate. 
+
+Code details and examples: 
+
+Code:
+
+Building a Charm++ Application:
+
+Within the Charm++ directory, an example Hello World application exists within the /examples/charm++/hello directory. Navigate to this directory and you can view the provided code files.
+
+    cd examples/charm++/hello
+    make
+    ./charmrun +p4 ./hello
+
+This will build and run the Hello World application on 4 processors.
+
+Input files: None required for the hello world application.
+
+Format required: No specific input files are required for the Hello World application of Charm++. More complex applications may require input files specific to their application, but this will be dependent on the program code, not the Charm++ framework.
+
+Specifications and details in input files: No specific details required for the Hello World application.
+
+Command to run the code: ./charmrun +p4 ./hello. This command will run the Hello World application on 4 processors. You can change the number of processors by changing the number next to "+p".
+
+Note: Charm++ does not compile the code, but it does manage the parallel execution of the program. The code must be written in a language that can be compiled (like C, C++, or Fortran) and then linked to the Charm++ libraries.

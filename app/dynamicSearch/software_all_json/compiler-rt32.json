@@ -1,0 +1,13 @@
+{
+    "software_name": "compiler-rt32",
+    "comprehensive_overview": "The compiler-rt32 project is a runtime library that provides functionality for compilers in the 32-bit architecture. It includes various runtime components such as sanitizers, builtins, and support libraries for handling memory operations and error detection.",
+    "core_features": "1. Memory error detection using sanitizers\n2. Built-in functions for optimized operations\n3. Support libraries for compiler runtime functions\n4. Designed for 32-bit architecture compilers\n5. Integration with compiler toolchains",
+    "general_tags": ["compiler", "runtime library", "32-bit architecture"],
+    "additional_tags": {
+        "research_discipline": "Computer Science",
+        "research_area": "Systems Software",
+        "software_class": "Development Library",
+        "software_type": "Runtime Library",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

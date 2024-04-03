@@ -1,0 +1,30 @@
+Use Case: This package is used as a pre-processing tool for nanopore sequencing data. It allows removal of reads that are derived from the internal control spike-in Lambda Phage.
+
+Code details and examples: Code 
+
+The input files for Nanolyse include FASTQ or compressed .gz FASTQ files. The files must contain nanopore sequencing data. 
+
+```python
+# First, import the Nanolyse module
+from nanolyse import Nanolyse
+
+# Specify the input file and reference genome
+input_file = 'reads.fastq'
+reference_genome = 'lambda_reference.fasta'
+
+# Create an instance of the Nanolyse class
+nanolyser = Nanolyse(input_reads = input_file, reference = reference_genome)
+
+# Run Nanolyse
+nanolyser.run()
+```
+
+Please note that the reference genome must be the Lambda Phage genome. Also, it should be in a FASTA file and located in the same directory as the script. The output file 'reads_Lambda_filtered.fastq' will be generated in the same directory.
+
+To run this script, save it as 'nanolysis.py' and run it from the terminal:
+
+```bash
+python nanolysis.py
+```
+
+This will remove all the Lambda Phage reads from the input FASTQ file and generate a new FASTQ file with the remaining reads.

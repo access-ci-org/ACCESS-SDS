@@ -1,0 +1,29 @@
+Use Case: Trinotate is a comprehensive annotation suite designed for automatic functional annotation of transcriptomes, particularly de novo assembled transcriptomes, from model or non-model organisms. Trinotate makes use of a number of different well referenced methods for functional annotation including homology search to known sequence data (BLAST+/SwissProt), protein domain identification (HMMER/PFAM), protein signal peptide and transmembrane domain prediction (signalP/tmHMM), and leveraging various annotation databases (eggNOG/GO/Kegg databases) to provide a wide breadth of annotation information. 
+
+Code details and examples: 
+
+Code: 
+```bash
+Trinotate Trinotate.sqlite init --gene_trans_map Trinotate.gene_trans_map --transcript_fasta Trinity.fasta --transdecoder_pep transdecoder.peptides.fasta
+Trinotate Trinotate.sqlite LOAD_swissprot_blastp blastp.outfmt6
+Trinotate Trinotate.sqlite LOAD_swissprot_blastx blastx.outfmt6
+Trinotate Trinotate.sqlite LOAD_pfam TrinotatePFAM.out
+Trinotate Trinotate.sqlite LOAD_tmhmm TrinotateTMHMM.out
+Trinotate Trinotate.sqlite LOAD_signalp TrinotateSignalP.out
+Trinotate Trinotate.sqlite LOAD_eggNOG eggNOG.out
+Trinotate Trinotate.sqlite report > Trinotate_annotation_report.xls
+```
+
+Sample Input Files: 
+
+1. Trinotate.gene_trans_map: This file contains the association of each gene with its transcripts. Format: gene_id<tab>trans_id.
+2. Trinity.fasta: This file contains the transcript sequences in FASTA format.
+3. transdecoder.peptides.fasta: This file contains the predicted peptide sequences from TransDecoder in FASTA format.
+4. blastp.outfmt6, blastx.outfmt6: These files contain the results of the BLASTP and BLASTX searches in tabular format (outfmt 6).
+5. TrinotatePFAM.out: This file contains the results of the HMMER search to the PFAM database.
+6. TrinotateTMHMM.out: This file contains the results of the TMHMM search for transmembrane domains.
+7. TrinotateSignalP.out: This file contains the results of the SignalP search for signal peptides.
+8. eggNOG.out: This file contains the results of the annotation from the eggNOG database.
+
+- Here, all input files are mandatory and the format should be strictly the same as specified.
+Command to Run the Software: Provide the path of Trinotate software script and then use the sample code provided above to run the software.

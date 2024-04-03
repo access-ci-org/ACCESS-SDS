@@ -1,15 +1,43 @@
-Use Case: High-Performance Computing Software
+Use Case: Building and installing scientific software packages that use MPI and OpenMP parallelism. It can dramatically simplify complex builds by making use of well-supported, pre-built MPI libraries. 
 
-Code details and examples:
-"Gompi" seems to be a typo. Assuming you mean "OpenMPI", which is a high-performance Message Passing Interface (MPI) implementation. OpenMPI is used in parallel computing to enable applications to run efficiently on distributed systems.
+Code details and examples: 
 
-Input files: Typically, input files for OpenMPI applications can vary depending on the specific application being run. In general, users need to provide configuration files to specify the number of processes, communication patterns, etc.
-
-Code snippets:
-To run a sample MPI program (e.g., hello world) with OpenMPI, you can use the following command:
+Code:
 ```bash
-mpirun -np 4 ./a.out
+module load gompi/2019b
+mpicc hello_world.c -o hello_world
+srun -n 4 ./hello_world
 ```
-This command will run the executable `a.out` with 4 processes.
 
-For more advanced usage and options, you can refer to the OpenMPI documentation at https://www.open-mpi.org/doc/current/.
+The `module load gompi/2019b` command loads the gompi module for the 2019b version. The `mpicc hello_world.c -o hello_world` command compiles the hello_world.c source file using the MPI C compiler, producing an executable called hello_world. The `srun -n 4 ./hello_world` command runs the hello_world executable on 4 cores.
+
+Sample Input Files: hello_world.c
+
+```c
+#include <mpi.h>
+#include <stdio.h>
+
+int main(int argc, char** argv) {
+    MPI_Init(NULL, NULL);
+
+    int world_size;
+    MPI_Comm_size(MPI_COMM_WORLD, &world_size);
+
+    int world_rank;
+    MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
+
+    char processor_name[MPI_MAX_PROCESSOR_NAME];
+    int name_len;
+    MPI_Get_processor_name(processor_name, &name_len);
+
+    printf("Hello world from processor %s, rank %d out of %d processors\n",
+           processor_name, world_rank, world_size);
+
+    MPI_Finalize();
+}
+```
+This example includes some common MPI functions. `MPI_Init` initializes the MPI environment. `MPI_Comm_size` gets the number of processes. `MPI_Comm_rank` gets the rank of the process. `MPI_Get_processor_name` gets the name of the processor. `MPI_Finalize` ends the MPI environment.
+
+Format required: C source code file.
+
+Specifications and details in the input files: The functions used in this script are standard MPI functions. MPI does not require any specific data formats, but this script assumes integer-size message lengths.

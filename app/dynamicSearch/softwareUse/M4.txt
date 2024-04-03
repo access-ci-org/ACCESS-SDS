@@ -1,19 +1,21 @@
-M4 is a powerful text processor typically used as a macro preprocessor in programming and generating files automatically. It is commonly used in Unix-like systems.
+Use Case: The m4 macro processor is used in software development where a set of macros needs to be expanded. m4 could be used to maintain customized boot files for different machines in heterogenous environments or mimic the functionality of a spreadsheet or perform complex manipulations on text files. 
 
-Use Case: Text processing and macro preprocessing.
-Code details and examples:
-1. Sample input file (input.m4):
-```m4
-define(`HELLO', `Hello, World!')
-HELLO
+Code details and examples: 
+
+Code:
 ```
-
-2. Running the m4 command to process the input file:
-```bash
-m4 input.m4
+define(`square', `multiply($1,$1)')
+define(`multiply', `expr $1 \* $2')
+square(5)
 ```
 
-Output:
+In the above example, two macros square and multiply have been defined, where square uses multiply internally, which in turn uses the expr command for arithmetic operations. The input file should be plain text with the macros defined in them.
+
+The 'm4' command is used to run the macros on the filename provided to it.
+
+Command to run:
 ```
-Hello, World!
+m4 filename
 ```
+
+The command must be executed at the shell prompt. The filename provided must be an existing file, which contains the macros to be processed.

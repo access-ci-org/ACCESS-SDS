@@ -1,12 +1,36 @@
-Use Case: Compiler for high-performance computing applications
+Use Case: PGI, also known as the Portland Group, is a suite of compiler software used for high-performance computing. It supports languages like Fortran, C, and C++ and includes a rich set of compiler-based development tools for parallel computing. 
 
-Code details and examples:
-- PGI is a compiler suite designed for parallel computing on CPUs and GPUs. It supports Fortran, C, and C++ languages.
-- Input files can be in Fortran, C, or C++ source code format.
+Code details and examples: Code 
 
-Example code snippet:
-```bash
-pgfortran -o my_program my_program.f90
+Let's say we have a C++ code in a file named "hello.cpp"
+
+```C++
+#include <iostream>
+using namespace std;
+int main() 
+{
+cout << "Hello, World!";
+return 0;
+}
+```
+To compile this file with PGI compiler, the command would be:
+
+```
+pgCC -o hello hello.cpp
+```
+This command will generate an output file named "hello".  To run the output, you should use:
+
+```
+./hello
+```
+It will print "Hello, World!" to the standard output. 
+
+In the command, -o is an option to specify the output file name. If no errors are found, the pgCC command produces an output file that has the specified output file name. 
+
+For Fortran code, the command would be:
+
+```
+pgfortran -o hello hello.f90
 ```
 
-In this example, `my_program.f90` is a Fortran source file that will be compiled into an executable named `my_program`.
+Remember to replace "hello.f90" with your Fortran source code file name. The pgfortran command is used for compiling Fortran source codes.

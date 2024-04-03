@@ -1,0 +1,56 @@
+Use Case: Running a molecular dynamics simulation with GROMACS
+
+Code details and examples: Code
+
+The input files for GROMACS include a topology file (e.g., topol.top), a trajectory file (e.g., conf.gro), and a parameters file (e.g., params.mdp). 
+
+1. Topology file (topol.top) - This file contains the details about the molecular system's topology, like the type of atoms, bonds, angles, etc. 
+
+2. Trajectory file (conf.gro) - This file stores the coordinates, velocities, and forces of all the atoms in the system.
+
+3. Parameters file (params.mdp) - This file defines the simulation parameters, like the length of the simulation, the time step, the temperature, etc.
+
+Here is a simple example of a params.mdp file:
+
+```
+; Run parameters
+integrator  = md    
+tinit       = 0
+dt          = 0.002  
+nsteps      = 500000
+
+; Output control
+nstxout     = 5000     
+nstvout     = 5000
+nstenergy   = 500 
+
+; Neighbour searching and short-range non-bonded interactions
+cutoff-scheme   = Verlet
+ns_type         = grid 
+nstlist         = 10  
+rlist           = 1.0  
+
+; Electrostatics and van der Waals
+coulombtype     = PME  
+rcoulomb        = 1.0  
+vdw-type        = cut-off
+rvdw            = 1.0  
+
+; Temperature coupling
+Tcoupl      = V-rescale
+tc-grps     = Protein Non-Protein
+tau_t       = 0.1 0.1   
+ref_t       = 300 300   
+```
+
+To run a GROMACS simulation, you need to preprocess the input files, then run the actual simulation. Here is an example command-line sequence for doing this:
+
+```
+# Preprocess the input files
+gmx grompp -f params.mdp -c conf.gro -p topol.top -o sim.tpr
+
+# Run the simulation
+gmx mdrun -v -deffnm sim
+```
+
+In this example, "sim.tpr" is the binary input file for the simulation, and "sim" is the base name for the output files (e.g., sim.gro, sim.edr, sim.log, etc.)

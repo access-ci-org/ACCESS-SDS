@@ -1,0 +1,11 @@
+{
+  "software_name": "SPRNG",
+  "comprehensive_overview": "SPRNG (Scalable Parallel Random Number Generators Library) is a software library that provides a collection of parallel pseudorandom number generators for use on parallel computers. It aims to facilitate the generation of high-quality random numbers for Monte Carlo simulations in various scientific computing applications.",
+  "core_features": "1. Implementation of various pseudorandom number generators (PRNGs) optimized for parallel computing.\n2. Provides functionality for generating random numbers in parallel for Monte Carlo simulations.\n3. Allows users to select from multiple PRNGs based on their specific requirements.\n4. Supports different parallel computing environments and platforms.",
+  "general_tags": ["random number generation", "Monte Carlo simulations", "scientific computing"],
+  "research_discipline": [],
+  "research_area": [],
+  "software_class": "Computational Software",
+  "software_type": "Library",
+  "field_of_science": "Computer and Information Sciences"
+}

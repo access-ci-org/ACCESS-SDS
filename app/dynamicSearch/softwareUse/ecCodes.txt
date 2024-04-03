@@ -1,23 +1,32 @@
-Use Case: ecCodes is a package for processing and decoding meteorological data in GRIB format.
+Use Case: The ecCodes is primarily used for decoding and encoding of data in GRIB (General Regularly-distributed Information in Binary form) format which is used for storing historical weather forecast data and processing such data for climate studies.
 
 Code details and examples:
-Sample Input File (data.grib):
+
+Code for reading a GRIB File:
+
 ```
-# Example GRIB data file
+from eccodes import *
+ 
+f = open('/data/era5.grib2')
+while 1:
+    gid = codes_grib_new_from_file(f)
+    if gid is None:
+        break
+ 
+    print("GRIB edition      :", codes_get(gid, 'edition'))
+    print("Grid type         :", codes_get(gid, 'gridType'))
+    print("Number of points  :", codes_get_size(gid, 'values'))
+    print("Average           :", codes_get(gid, 'average'))
+    print("=======================")
+ 
+    codes_release(gid)
+f.close()
 ```
 
-Input: Specify the GRIB file to decode
-```python
-import eccodes
+In this example, an input file in GRIB format is read and various parameters are extracted from it using the `codes_get` function. 
 
-filename = 'data.grib'
-with open(filename, 'rb') as file:
-    message = eccodes.codes_grib_new_from_file(file)
-    while message is not None:
-        # Process the GRIB message
-        eccodes.codes_release(message)
-        message = eccodes.codes_grib_new_from_file(file)
-```
+Command to run: 
 
-Command to run:
-This is a Python library, so the code can be executed in a Python environment after installing the ecCodes library.
+`python read_grib.py`
+
+The input file should be in the GRIB format and must contain fields such as 'edition', 'gridType', etc. to be read by this script.

@@ -1,0 +1,35 @@
+Use Case: To create an encrypted file system with cryptsetup. This software is frequently used in secure server environments in order to prevent information from being easily extracted from physical storage media.
+
+Code details and examples:
+
+File Name: cryptsetup-command.txt
+
+Format Required: Plaintext file with Command 
+
+Specifications and Details: 
+
+In this particular use case, we will create an encrypted file system on `/dev/sdb1` and will use the password `mysecretpassword`.
+
+- To create the encrypted file system:
+```
+echo -n "mysecretpassword" | cryptsetup luksFormat /dev/sdb1 -
+```
+
+- Next, you unlock /dev/sdb1
+```
+echo -n "mysecretpassword" | cryptsetup luksOpen /dev/sdb1 secret_volume -
+```
+
+- Then, you can format the device:
+```
+mkfs.ext4 /dev/mapper/secret_volume
+```
+
+- After usage, make sure to lock the device again for security:
+```
+cryptsetup luksClose secret_volume
+```
+
+Command to Run: The commands themselves need to be run in a Unix-based terminal. Please make sure all commands are run with root or sudo permissions, and replace the `/dev/sdb1` path with the path where you wish to create your encrypted file system as well as replace `mysecretpassword` by your own secure password. 
+
+Please remember that encryption provides a certain level of security which is vastly dependent on the complexity of your password. For production environment you should use a stronger method to provide password to cryptsetup, rather using echo command.

@@ -1,13 +1,35 @@
-Use Case: Archive files using tar
+Use Case: Use tar for creating an archive file
 
 Code details and examples:
-```
-# Create a new tar archive file
-tar -cvf archive.tar file1.txt file2.txt
 
-# Extract files from a tar archive
+Code:
+```bash
+tar -cvf archive.tar directory/
+```
+In this command, `c` creates a new archive, `v` enables verbose mode to show the progress, and `f` specifies that the next argument is the file name of the archive. `directory/` is the directory that you want to archive.
+
+Input files format required: Any file or directory
+Specifications and details in input files: The input is a directory of files, no specific format is required.
+Command to run it:
+```bash
+tar -cvf archive.tar directory/
+```
+Here, `archive.tar` is the name of the output tarball file, while `directory/` represents the directory to be archived. 
+
+Use Case: Use tar for extract an archive file
+
+Code details and examples:
+
+Code:
+```bash
 tar -xvf archive.tar
-
-# List the contents of a tar archive
-tar -tvf archive.tar
 ```
+In this command, `x` extracts the archive, `v` enables verbose mode to show the progress, and `f` specifies that the next argument is the file name of the archive. 
+
+Input files format required: A tar archive file
+Specifications and details in input files: The input is a tarball archive file, it contains compressed files and directories.
+Command to run it:
+```bash
+tar -xvf archive.tar
+```
+Here, `archive.tar` is the name of the input tarball file to be extracted.

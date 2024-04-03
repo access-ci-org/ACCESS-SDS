@@ -1,0 +1,13 @@
+{
+  "software_name": "R-cellchat",
+  "comprehensive_overview": "R-cellchat is an R package designed for the analysis of single-cell RNA sequencing data to identify cell-cell communication networks.",
+  "core_features": "The software enables users to characterize ligand-receptor interactions, infer cell-cell communication networks, and visualize the results in an interactive and interpretable manner. It provides modules for preprocessing scRNA-seq data, identifying differentially expressed genes, and predicting ligand-receptor pairs.",
+  "general_tags": ["single-cell RNA sequencing", "cell-cell communication", "network analysis"],
+  "additional_tags": {
+    "research_discipline": "Bioinformatics",
+    "research_area": "Computational Biology",
+    "software_class": "Data Analysis",
+    "software_type": "Bioinformatics Tool",
+    "field_of_science": "Biological Sciences"
+  }
+}

@@ -1,50 +1,25 @@
-Use Case: UCX is a library for communication and computation offload which is used in high performance computing (HPC) environments.
+Use Case: UCX (Unified Communication X) is used for enhancing the performance of Message Passing Interface (MPI) library, providing an optimized communication layer for Parallel Computing. It has advanced algorithms and architectures to facilitate high-throughput, low-latency communications for large scale high-performance computing (HPC) applications.
 
-Code details and examples:
-1. Sample Input File: 
-- No specific input file required for using UCX.
+Code details and examples: 
 
-2. Code Snippet:
-- Below is an example of using UCX with MPI to send and receive messages between two processes:
+Code: Using UCX with OpenMPI:
 
-```c
-#include <stdio.h>
-#include <mpi.h>
-#include <ucp/api/ucp.h>
+In order to use UCX with a package like OpenMPI, it's important to set the correct environment variables. This can typically be done in your shell profile or in the script that launches your MPI application.
 
-int main(int argc, char **argv) {
-    MPI_Init(&argc, &argv);
-    
-    // Initialize UCX
-    ucp_context_h ucxContext;
-    ucp_config_t *ucpConfig;
-    ucp_context_config_t *ucpContextConfig;
-    ucp_init_options_t initOptions;
-    ucp_init_version(UCP_API_VERSION, &initOptions, &ucpContextConfig);
-    ucp_config_read(NULL, NULL, &ucpConfig);
-    ucp_init(&initOptions, ucpConfig, &ucxContext);
-    
-    // MPI communication
-    int rank;
-    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-    if (rank == 0) {
-        // Process 0 sends a message to Process 1
-        // UCX code here
-    } else if (rank == 1) {
-        // Process 1 receives a message from Process 0
-        // UCX code here
-    }
-    
-    // Cleanup
-    ucp_cleanup(ucxContext);
-    MPI_Finalize();
-    
-    return 0;
-}
+For bash:
 ```
+export OMPI_MCA_mtl=^mxm
+export OMPI_MCA_pml=ucx
+```
+For tcsh/csh:
+```
+setenv OMPI_MCA_mtl ^mxm
+setenv OMPI_MCA_pml ucx
+```
+Then you would specifically invoke your MPI application. For instance, assuming you had an application called 'myApp', typically you would use 'mpirun':
+```
+mpirun -np 16 myApp
+```
+Where '-np 16' specifies the number of processes will be used for parallel computing.
 
-3. Run Command:
-- To compile the code, you would need to link against UCX and MPI libraries. Below is a sample command for compiling the code with UCX and MPI:
-```
-mpicc -o my_program my_program.c -lucp -lmpi
-```
+Notably, UCX itself does not typically require specific input files, instead it optimizes the communication between nodes in a distributed computing system that's handled by MPI or other similar frameworks. The required data and formats will be application-specific.

@@ -1,0 +1,24 @@
+{
+  "software_name": "MicrobeDMM",
+  "comprehensive_overview": "MicrobeDMM is a software tool for the prediction of microbial community dynamics and metabolic interactions. It enables users to simulate the growth and interactions of multiple microbial species in a community, taking into account environmental factors and metabolic pathways.",
+  "core_features": [
+    "Prediction of microbial community dynamics",
+    "Simulation of microbial growth and interactions",
+    "Consideration of environmental factors",
+    "Analysis of metabolic pathways",
+    "Visualization of community dynamics"
+  ],
+  "general_tags": [
+    "Microbial Community Dynamics",
+    "Metabolic Interactions",
+    "Simulation Tool",
+    "Bioinformatics"
+  ],
+  "additional_tags": {
+    "research_discipline": "Biological Sciences",
+    "research_area": "Environmental Biology",
+    "software_class": "Simulation Tool",
+    "software_type": "Bioinformatics Tool",
+    "field_of_science": "Biological Sciences"
+  }
+}

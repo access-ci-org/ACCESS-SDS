@@ -1,0 +1,24 @@
+Use Case: Use HyPhy for evolutionary hypothesis testing by conducting sophisticated analyses of genetic sequences. HyPhy is a highly flexible and widely used software package for the analysis of genetic sequences using techniques in phylogenetics, molecular evolution, and machine learning. 
+
+Code details and examples: Code
+
+HyPhy takes as input a file with genetic sequence data in FASTA format. For instance, if you have a file named "seqs.fasta" that contains the following sequence data:
+
+```
+>sequence1
+AGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCT
+>sequence2
+AGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCT
+>sequence3
+AGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCT
+```
+
+You can conduct a standard analysis using the HyPhy package's built-in set of analysis dat files. For instance, you could conduct a basic nucleotide model selection analysis with the following command, assuming that HyPhy has been properly installed and added to your PATH:
+
+```bash
+HYPHYMP /path/to/HYPHY/installation/lib/hyphy/TemplateBatchFiles/ModelSelectorBatchfile.bf "seqs.fasta"
+```
+
+This will run a nucleotide model selector analysis using the sequence data from file "seqs.fasta". The command 'HYPHYMP' refers to the HyPhy main program executable, and '/path/to/HYPHY/installation/lib/hyphy/TemplateBatchFiles/ModelSelectorBatchfile.bf' is the path to a HyPhy batch file that directs the analysis to be conducted. 
+
+Note: depending on the complexity of the analysis and the size of the input dataset, this command could take some time to run and consume large amounts of memory. Also, the HyPhy package includes many auxiliary programs and capabilities not demonstrated here. For an exhaustive list and description of all of HyPhy's capabilities, you will need to refer to the software's documentation.

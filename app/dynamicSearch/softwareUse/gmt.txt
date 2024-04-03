@@ -1,25 +1,40 @@
-Use Case: GMT (Generic Mapping Tools) is a collection of command-line tools for manipulating geographic and Cartesian data sets, creating high-quality maps and plots.
+Use Case: The Generic Mapping Tools (GMT) are used for manipulating geographic and Cartesian data sets, including filtering, trend fitting, gridding, projecting, etc., and producing high-quality illustrations.
 
-Code details and examples:
-1. Sample input file (data.txt):
+Code details and examples: 
+
+Code:
+
+For GMT, inputs are commonly in ASCII format (.txt, .dat, etc.). Example of an input file "coordinates.txt" containing longitudes and latitudes could be:
+
 ```
-1 2
-3 4
-5 6
+-70.4518 43.8824
+-70.5072 43.8429
+-70.5212 43.8161
+...
 ```
 
-2. Sample script to plot data points using GMT:
+A simple GMT script to produce a plot from these data might look slightly different depending on the task. To make a simple map using a Mercator projection from the data, the corresponding command might be:
+
 ```bash
-gmt psxy data.txt -R0/10/0/10 -JX10c -Sc0.3 -P -Ba -K > output.ps
-gmt psbasemap -R -J -B -O >> output.ps
-gmt psconvert output.ps -Tg -A
+gmt pscoast -R-71/-70/43/45 -JM6i -P -B -Ggrey -Sblue -K > map.ps
+gmt psxy coordinates.txt -R -J -Sc0.2c -Ggreen -O >> map.ps
 ```
+This script generates a map ("map.ps") with the land colored in grey and water in blue. The second command plots points from the "coordinates.txt" file on the map in green color. The symbol size is defined as 0.2 cm (-Sc0.2c).
 
-3. Command to run the script:
-```bash
-bash script.sh
-```
+The -R option sets the region of interest.
 
-Above commands will plot the data points from data.txt file using GMT, create a plot in output.ps, and convert it to output.png.
+The -J option selects the map projection and size. 
 
-Please note that GMT provides a wide range of functionalities beyond this simple example.
+-JM6i means 6 inch-size Mercator projection.
+
+The -G and -S options set the fill color.
+
+The -B option makes frame around the map.
+
+The -P option specifies portrait mode.
+
+The '>' and '>>' operators are used to create a new file or append to an existing file, respectively.
+
+The -O and -K options are used to specify that the output should be appended to an existing file and more PostScript code will be appended later.
+
+One can run this script in a bash shell.

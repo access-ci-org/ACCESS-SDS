@@ -1,0 +1,13 @@
+{
+    "software_name": "einops",
+    "comprehensive_overview": "einops is a Python library for tensor operations and reshaping with a focus on readability and flexibility. It provides a more intuitive and concise way of manipulating tensor dimensions in deep learning frameworks.",
+    "core_features": "1. Simple and expressive syntax for tensor reshaping operations. 2. Supports various tensor operations like permutation, transpose, reduction, etc. 3. Integration with popular deep learning frameworks like PyTorch and TensorFlow. 4. Efficient and easy-to-understand code for tensor manipulations.",
+    "general_tags": ["Python library", "Tensor manipulation", "Deep learning frameworks"],
+    "additional_tags": {
+        "research_discipline": "Computer Science",
+        "research_area": "Artificial Intelligence and Intelligent Systems",
+        "software_class": "Library",
+        "software_type": "Python library",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

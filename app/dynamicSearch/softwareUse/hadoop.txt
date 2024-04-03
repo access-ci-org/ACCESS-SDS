@@ -1,21 +1,99 @@
-Hadoop is an open-source software framework used for distributed storage and processing of large data sets using the MapReduce programming model.
+Use Case: Hadoop is used for distributed processing of large data sets across clusters of computers using simple programming models. It is designed to scale up from single servers to thousands of machines, each offering local computation and storage.
 
-Use Case: Word Count
-Code details and examples:
-1. Create a text file with sample input data:
-```shell
-echo "hello world" > input.txt
-echo "world hadoop" >> input.txt
+Code Details and Examples: 
+
+Code: 
+
+Hadoop primarily uses MapReduce programming model for processing and generating large data sets. Here is a sample program to calculate the frequency count of words in a text file.
+
+1. Mapper Class (WordCountMapper.java):
+
+```java
+import java.io.IOException;
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
+
+public class WordCountMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
+    private final IntWritable one = new IntWritable(1);
+    private Text word = new Text();
+
+    public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
+        String[] csv = value.toString().split(" ");
+        for (String str : csv) {
+            word.set(str);
+            context.write(word, one);
+        }
+    }
+}
+```
+2. Reducer Class (WordCountReducer.java):
+
+```java
+import java.io.IOException;
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Reducer;
+
+public class WordCountReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
+    private IntWritable result = new IntWritable();
+
+    public void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
+        int sum = 0;
+        for (IntWritable val : values) {
+            sum += val.get();
+        }
+        result.set(sum);
+        context.write(key, result);
+    }
+}
+```
+3. Driver Class (WordCount.java):
+
+```java
+import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Job;
+import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
+import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+
+public class WordCount {
+
+  public static void main(String[] args) throws Exception {
+    if (args.length != 2) {
+      System.err.println("Usage: WordCount <input path> <output path>");
+      System.exit(-1);
+    }
+
+    Job job = new Job();
+    job.setJarByClass(WordCount.class);
+    job.setJobName("Word count");
+
+    FileInputFormat.addInputPath(job, new Path(args[0]));
+    FileOutputFormat.setOutputPath(job, new Path(args[1]));
+
+    job.setMapperClass(WordCountMapper.class);
+    job.setReducerClass(WordCountReducer.class);
+
+    job.setOutputKeyClass(Text.class);
+    job.setOutputValueClass(IntWritable.class);
+
+    System.exit(job.waitForCompletion(true) ? 0 : 1);
+  }
+}
 ```
 
-2. Run the WordCount example provided with Hadoop:
-```shell
-hadoop jar hadoop-mapreduce-examples.jar wordcount input.txt output
-```
+Command to Run: 
 
-3. View the output:
-```shell
-hadoop fs -cat output/part-r-00000
-```
+To compile and execute this code, we can use the command:
 
-This is a basic example to showcase how Hadoop can be used to run a WordCount program on a given input file.
+```bash
+hadoop com.sun.tools.javac.Main WordCount.java
+jar cf wc.jar WordCount*.class
+hadoop jar wc.jar WordCount /user/hadoop/input /user/hadoop/output
+```
+The input file should be a text file uploaded to Hadoop's HDFS directory `/user/hadoop/input/`. The output would be generated in Hadoop's HDFS `/user/hadoop/output/` directory.
+
+The input file can be a simple text file containing sentences. The output will be a file containing words and their corresponding frequency in the input text file.

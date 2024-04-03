@@ -1,0 +1,27 @@
+Use Case: TIFF (Tagged Image File Format) is a widely used file format for storing raster graphics images. It is used in desktop publishing, faxing, 3D applications, and medical imaging applications.
+
+Code details and examples: 
+
+Code: Below is a code snippet in Python using the PIL library to read and display a TIFF format image file.
+
+```python
+from PIL import Image
+
+# Open an image file
+img = Image.open('example.tiff')
+
+# Display the image
+img.show()
+```
+
+Input file:
+- Example of an input file for this code would be 'example.tiff', a TIFF image file.
+
+Format required:
+- The input file must be in TIFF format.
+
+Specifications and details in input files:
+Every TIFF file begins with a two-byte indicator of byte order: "II" for little-endian (a.k.a. "Intel") byte order or "MM" for big-endian (a.k.a "Motorola") byte order.
+
+Command to run (if available):
+- N/A. This snippet can be run from a Python IDE or from the command line by executing 'python filename.py', where 'filename.py' is the name of the Python file containing the above code.

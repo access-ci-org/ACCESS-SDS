@@ -1,21 +1,71 @@
-Use Case: BerkeleyGW is a set of computer codes that calculates the quasiparticle properties and the optical responses of a large variety of materials from bulk periodic crystals to nanostructures. 
+Use Case: BerkeleyGW is a High Performance Computing software used for carrying out excited-state properties calculations in a wide range of materials.
 
-Code details and examples:
-1. To calculate the electronic band structures using BerkeleyGW, you can use the following input file (example.in):
+Code Details and Examples:
+
+Code: This suite includes several modules and files. For instance, a simple GW calculation uses at least four modules: epsilon, sigma, testconv, and abinitio (optional).
+
+Input file formats:
+
+The Sigma module uses a specific type of input file that has extension .in. An example of this file for diamond would look like:
 
 ```
-BANDS
-    ng0    ng1    ng2    divk   ecut   nempty
-    8      8      8      6      7.0    10
+BEGIN
+input_wfn_file = 'wfn'
+input_wfn_format = sp
+nempty = 5
+lattvec_constant = 10.7
+ncore = 1
+fout_gwfile = 'gwfile'
+ngridq = 3 3 3
+BEGIN
+bands
+ 2         50       1
+END
+BEGIN
+qpoints
+0    0    0
+END
+tmp_dir = './tmp'
+EXTRAPOLATE_FREQ
 END
 ```
 
-2. Run the calculation using the following command:
+Command to run it: 
+```
+mpirun -np 16 sigma.cplx
+```
+The epsilon module also uses a specific type of input file with an extension .eps.in. 
 
 ```
-bgw.x -npools 1 -nimage 1 -input example.in > example.out
+BEGIN
+input_wfn_file = 'wfn'
+input_wfn_format = sp
+nempty = 5
+fgrid_specifier = 0 0 61 1
+ngridk = 2 2 2
+fout_bsefile = 'bsefile'
+tmp_dir = '/tmp_dir/epsilon'
+BEGIN
+qpoints
+ 0    0    0
+END
+END
+```
+Command to run it:
+```
+mpirun -np 16 epsilon.cplx
+```
+Both epsilon and sigma input files require the basic format and information about the system, such as the wavefunction file, k-point, and q-point specifications. 
+
+The testconv module uses a sigma.log file as its input. 
+
+Command to run it:
+```
+testconv sigma.log
 ```
 
-3. Check the output file (example.out) for the results of the electronic band structure calculation. 
+It will generate a gwfile that contains the output of the GW calculation. 
 
-Please refer to the official BerkeleyGW documentation for more detailed information on usage and examples: https://www.berkeleygw.org/
+Please be aware that you should adjust all these parameters according to the system and the resources you have available. 
+
+Reference for specification details: http://docs.berkeleygw.org/en/latest/fileformats/

@@ -1,0 +1,25 @@
+{
+  "software_name": "Arm Forge",
+  "comprehensive_overview": "Arm Forge is an integrated suite of tools designed for performance analysis and optimization of HPC applications. It provides a range of tools for debugging, profiling, and optimizing code for high-performance computing systems.",
+  "core_features": [
+    "Integrated development environment for HPC applications",
+    "Advanced debugging capabilities",
+    "Performance profiling and optimization tools",
+    "Support for parallel programming models like MPI and OpenMP",
+    "Visualization of performance data"
+  ],
+  "general_tags": [
+    "HPC",
+    "High Performance Computing",
+    "Debugging",
+    "Profiling",
+    "Optimization"
+  ],
+  "additional_tags": {
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Development Tools",
+    "software_type": "Performance Analysis and Optimization",
+    "field_of_science": "Engineering and Technology"
+  }
+}

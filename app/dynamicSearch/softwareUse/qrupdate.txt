@@ -1,0 +1,46 @@
+Use Case: qrupdate is a Fortran library for fast updates of QR and Cholesky decompositions. It is widely used as part of larger analytics and optimization tasks, for instance in Experimental Physics and Industrial Control Systems. It is mainly a subroutine called by other codes, but below we can see an example of common usages.
+
+Code Details and Examples:
+
+A typical usage would be inside a Fortran program. Here follows an example of a simple Fortran routine using the QR update function:
+
+```fortran
+subroutine usingQRUpdate(x, y, a, b)
+
+      implicit none
+      integer, intent(in) :: x,y
+      double precision, intent(inout) :: a(x,y)
+      double precision, intent(in) :: b(x)
+
+      ! QR decomposition
+      call dqrt(a,x,b,y)
+
+      ...
+
+      ! Here someone could add code to operate on A or modify B
+
+      ...
+
+      ! Update QR
+      call dqr1up(a,x,b,y,b) 
+
+      ...
+
+      ! And so on
+      
+end subroutine usingQRUpdate
+```
+
+Here the important details are:
+- a is a matrix of size x by y
+- b is an array of size x
+
+The "..." indicates where further code would normally be placed.
+
+The subroutine must first be compiled. Given a full Fortran source file this could be done via:
+ 
+`$ gfortran -o my_code.o my_code.f`
+
+And the compiled subroutine could be run with:
+
+`$ ./my_code.o`

@@ -1,23 +1,36 @@
-Use Case: GUI development  
-Code details and examples:  
+Use Case: GTK2 is a free and open-source cross-platform widget toolkit for creating graphical user interfaces. It is often used to create sophisticated graphical user interfaces for Linux programs.
+
+Code details and examples: 
+
+Code:
+
 ```python
 import gtk
 
-def on_button_clicked(widget, data=None):
-    print("Button clicked")
+class HelloWorld:
 
-window = gtk.Window(gtk.WINDOW_TOPLEVEL)
-window.connect("destroy", gtk.main_quit)
-window.set_title("GTK2 Example")
+    def __init__(self):
+        self.window = gtk.Window(gtk.WINDOW_TOPLEVEL)
+        self.window.set_title("Hello World")
 
-button = gtk.Button("Click Me")
-button.connect("clicked", on_button_clicked)
-window.add(button)
-window.show_all()
+        self.label = gtk.Label("Hello World")
+        self.window.add(self.label)
+        
+    def main(self):
+        self.window.show_all()
+        gtk.main()
 
-gtk.main()
+if __name__ == "__main__":
+    hello = HelloWorld()
+    hello.main()
 ```
-Note: This is a simple example of creating a GTK2 window with a button that prints a message when clicked.  
-To run this code, save it in a file (e.g., `gtk_example.py`) and run it using Python.
 
-Command to run: `python gtk_example.py`
+This code will create a window with the title "Hello World" and a label "Hello World". The main window is created using `gtk.Window(gtk.WINDOW_TOPLEVEL)`. A label is added using `gtk.Label("Hello World")`, and the label is added to the window with `self.window.add(self.label)`. The window and all its child widgets are shown with `self.window.show_all()`. The `gtk.main()` function hands control to GTK, and it will start running the event loop.
+
+There are no specific input files or formats required to run this code. 
+
+To run the script, save it to a file, for example, hello_world.py, and then, given you have python and gtk2 installed, you can run it from a terminal with the command:
+
+```bash
+python hello_world.py
+```

@@ -1,0 +1,36 @@
+Use Case: KMC is a software designed for counting k-mers (subsequences of length k, derived from sequencing reads) from reads. It can count k-mers from standard FASTQ files. It's particularly useful in genomics and bioinformatics for sequence analysis.
+
+Code details and examples:
+
+Code: 
+
+Input File: FASTQ file
+Input File Format: Standard FASTQ format 
+
+Sample Input File:
+```
+@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
++
+!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
+```
+
+Command to run KMC:
+
+```
+kmc -k27 -ci1 -cs10000 -cx20000 input.fastq output_kmc kmc_tmp
+```
+
+Here,
+
+- `kmc` is the main program,
+- `-k27` defines the k-mer length. Here, 27.
+- `-ci1` sets the minimal count of k-mers to put in the output file. Here, 1.
+- `-cs10000` sets the maximal value of a counter. Here, 10000.
+- `-cx20000` sets the maximal count of k-mers to put in the output file. Here, 20000.
+- `input.fastq` is the input file.
+- `output_kmc` is the output file.
+- `kmc_tmp` is the temporary directory for computations.
+
+
+Note: The command and flags might differ based on the version of KMC.

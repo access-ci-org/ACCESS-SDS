@@ -1,0 +1,67 @@
+Use Case: cuSPARSE library is a GPU-accelerated library that provides computations for sparse matrices such as sparse-dense matrix multiplication, sparse-sparse matrix addition, matrix format conversions, etc. It is widely used in high-performance computing (HPC) and data science applications.
+
+Code details and examples:
+
+Code:
+
+```cpp
+#include <cuda_runtime_api.h> 
+#include <cusparse.h>
+
+// Creates a handle for cuSPARSE
+cusparseHandle_t handle;
+cusparseCreate(&handle);
+
+// ## sample input matrix in CSR format
+// number of non-zero elements
+int nnz = 4;
+// number of rows
+int rows = 3;
+// number of cols
+int cols = 3;
+// row pointers
+int csrRowPtr[] = {0, 2, 3, 4};
+// column indices
+int csrColInd[] = {0, 2, 0, 2};
+// matrix values
+double csrVal[] = {1.0, 2.0, 3.0, 4.0};
+  
+// Creates a description of the matrix
+cusparseMatDescr_t descr;
+cusparseCreateMatDescr(&descr);
+ 
+cusparseSetMatType(descr,CUSPARSE_MATRIX_TYPE_GENERAL);
+cusparseSetMatIndexBase(descr,CUSPARSE_INDEX_BASE_ZERO);
+  
+// Create dense vector
+double *dense;
+cudaMalloc(&dense, sizeof(double) * cols);
+cudaMemcpy(dense, csrVal, sizeof(double) * cols, cudaMemcpyHostToDevice);
+  
+// Converts the dense vector to a sparse vector
+double *sparse;
+int *nnzPerRow;
+cudaMalloc(&sparse, sizeof(double) * rows);
+cudaMalloc(&nnzPerRow, sizeof(int) * rows);
+cusparseDdense2csr(handle, rows, cols, descr, dense, rows, nnzPerRow, sparse, csrRowPtr, csrColInd);
+
+// Cleanup
+cusparseDestroyMatDescr(descr);
+cusparseDestroy(handle);
+cudaFree(dense);
+cudaFree(sparse);
+cudaFree(nnzPerRow);
+cudaDeviceReset();
+```
+
+Command to run:
+
+Assuming that the cuSPARSE library is correctly installed and the NVIDIA CUDA Compiler (nvcc) is in the system's path, this C++ script can be compiled and executed by the following commands on a Linux-based system:
+
+`nvcc -lcusparse example.cu -o example`
+
+`./example`
+
+Here, "example.cu" is the filename of your code, such as "cusparse_example.cu". The "-lcusparse" option links the cuSPARSE library, and the "-o" option specifies the output executable file name, in this case, "example". The program is run using "./example". 
+
+The code snippet above uses CSR (Compressed Sparse Row) format to represent a sparse matrix. It uses CUDA memory management functions to allocate memory on the GPU, cuSPARSE functions to create a matrix descriptor and convert a dense vector to a sparse vector, and CUDA functions to clean up and reset the device.

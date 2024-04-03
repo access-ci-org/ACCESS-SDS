@@ -1,0 +1,31 @@
+Use Case: r-affy is widely used for analyzing Affymetrix GeneChip data in bioinformatics and genomics studies. This R package provides methods for background correction, quality control, normalization, summarization, and reporting of Affymetrix GeneChip expression microarrays.
+
+Code details and examples:
+
+- The basic format of input file is .CEL, which is the raw data file provided by Affymetrix microarrays.
+
+- Individual files are separated in folders, and a specific path is used to access them.
+
+Code:
+
+```R
+# Load the packages
+library(affy)
+
+# The path to the CEL files
+path_to_data <- system.file("extdata", package="affydata")
+
+# Read the CEL files into an AffyBatch object
+celfiles <- list.celfiles(path_to_data)
+dataABatch <- ReadAffy(celfiles=celfiles)
+
+# Perform rma normalization
+dataNorm <- rma(dataABatch)
+
+# Getting expression values
+expSet <- exprs(dataNorm)
+```
+
+Command to run: This code should be run line by line in the R environment, whether that's in RStudio, R command line, or another R environment. If the script is saved as a .R file, it can be run from the command line with: `Rscript my_script.R`- this requires that you have R installed on your command line and have properly set your PATH variables for R. 
+
+Assuming you have a batch of .CEL files located in a directory on your computer, replace `path_to_data` with the path to those files. Please note that the code requires affy and affydata libraries to be installed in your R environment.

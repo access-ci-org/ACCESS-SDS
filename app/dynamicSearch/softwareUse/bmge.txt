@@ -1,0 +1,31 @@
+Use Case: BMGE (Block Mapping and Gathering with Entropy) is used in evolutionary biology, genomics and proteomics. It is applied for the selection of sequences and sites under evolutionary pressure in nucleotide or amino acid data sets and in the identification of disruptive regions in a multiple sequence alignment.
+
+Code details and examples: Code
+
+Input file format: Fasta, Clustal, Phylip, Nexus, Mase
+
+Input file example:
+ 
+   >Sequence1
+   ATGCCAGTCTTGTAGTCGATCGGACTTCCATA
+   >Sequence2
+   ATGCCAGTCTTGTAGTCGATCGGACTTCCATA
+   ...
+
+Command to run:
+
+```
+java -jar BMGE.jar -i input_file -t DNA/RNA/AUTO -of output_file_format -op output_file_path
+```
+
+For example:
+
+```
+java -jar BMGE.jar -i myfile.fasta -t DNA -of fasta -op output.fasta
+```
+
+Here, 
+-i entails input file path,
+-t specifies type of sequence (DNA/RNA/AUTO), 
+-of is output file format (fasta, clustal, phylip, nexus, mase), and
+-op is output file path.

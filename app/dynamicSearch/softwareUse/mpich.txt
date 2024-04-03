@@ -1,47 +1,66 @@
-Use Case: Parallel computing with MPICH
+Use Case: MPI (Message Passing Interface) is a standardized and portable message-passing system. It used by programmers developing applications that require multiple nodes in a computer cluster to communicate with each other. In this particular case, we will proceed with MPICH - an open-source high-performance implementation of the MPI standard that includes several features like being truly multi-threaded, scalable etc. A simple MPI program goal is to communicate between different processes and get the job done.
 
 Code details and examples:
-MPICH is a high-performance and widely portable implementation of the Message Passing Interface (MPI) standard. MPI is a communication protocol used in parallel computing to enable processes to communicate with each other.
 
-To run a simple MPI program using MPICH, you first need to write a MPI program in C or Fortran and then compile and run it using MPICH.
+Code:
+Let's consider a basic MPI program written in C that passes a message in a ring. The "message" is the integer rank of each process, which is incremented at each pass. 
 
-Here is an example of a simple MPI program in C that calculates the sum of numbers from 1 to N using MPI_Reduce:
+Below is an example of an MPI code.
 
 ```c
-#include <stdio.h>
-#include <stdlib.h>
 #include <mpi.h>
+#include <stdio.h>
 
-int main(int argc, char *argv[]) {
-    int rank, size, N = 10;
-    int sum = 0;
+int main(int argc, char** argv) {
+    MPI_Init(NULL, NULL);
 
-    MPI_Init(&argc, &argv);
-    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-    MPI_Comm_size(MPI_COMM_WORLD, &size);
+    // Find out rank, size
+    int world_rank;
+    MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
+    int world_size;
+    MPI_Comm_size(MPI_COMM_WORLD, &world_size);
 
-    for (int i = rank + 1; i <= N; i += size) {
-        sum += i;
+    int token;
+    if (world_rank != 0) {
+        MPI_Recv(&token, 1, MPI_INT, world_rank - 1, 0, MPI_COMM_WORLD,
+             MPI_STATUS_IGNORE);
+        printf("Process %d received token %d from process %d\n", world_rank, token,
+           world_rank - 1);
+    } else {
+        // Set the token's value if you are process 0
+        token = -1;
     }
+    MPI_Send(&token, 1, MPI_INT, (world_rank + 1) % world_size,
+         0, MPI_COMM_WORLD);
 
-    int totalSum;
-    MPI_Reduce(&sum, &totalSum, 1, MPI_INT, MPI_SUM, 0, MPI_COMM_WORLD);
-
-    if (rank == 0) {
-        printf("The total sum is: %d\n", totalSum);
+    // Now process 0 can receive from the last process. This makes sure that at least one MPI_Send is called before finalizing.
+    if (world_rank == 0) {
+        MPI_Recv(&token, 1, MPI_INT, world_size - 1, 0, MPI_COMM_WORLD,
+             MPI_STATUS_IGNORE);
+        printf("Process %d received token %d from process %d\n", world_rank, token,
+           world_size - 1);
     }
 
     MPI_Finalize();
-
-    return 0;
 }
 ```
 
-To compile and run this MPI program with MPICH, you can use the following commands:
+MPICH uses `mpicc` to compile and `mpirun` to run the programs. Here is a sample of how you can compile and run the above C code:
 
 ```bash
-mpicc mpi_sum.c -o mpi_sum -lmpich
-mpirun -np 4 ./mpi_sum
+mpicc -o mpi_hello_world mpi_hello_world.c
+mpirun -np 4 ./mpi_hello_world
 ```
 
-In this example, `mpicc` is used to compile the MPI program, and `mpirun` is used to run the MPI program with 4 processes.
+The `-np 4` flag indicates that 4 processes should be used to execute the program.
+
+The code output will look something like this, but the exact order of the messages may vary because of the inherent parallelism:
+
+```
+Process 1 received token -1 from process 0
+Process 2 received token -1 from process 1
+Process 3 received token -1 from process 2
+Process 0 received token -1 from process 3
+```
+
+The message is passed around in a ring until it returns to process 0. Each process waits to receive a message before sending one. The only exception is process 0, which sends a message before receiving one.

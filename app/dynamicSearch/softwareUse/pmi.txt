@@ -1,0 +1,26 @@
+Use Case: PMI (Parallel Machine Interface) is often used in high-performance computing applications for facilitating node-to-node communication in parallel computing environments. It can be utilized for parallel and distributed computing where high-speed communication between nodes is important.
+
+Code Details and Examples: 
+
+Code:
+
+
+`# include <stdio.h>
+#include <stdlib.h>
+#include "pmi.h"
+
+int main()  
+{
+    int rank, size;
+    PMI_Init(&rank, &size);
+    printf("Hello world from process %d of %d\n", rank, size);
+    PMI_Finalize();
+    return 0;
+}`
+
+This is a simple "Hello World" program that uses PMI for initializing inter-process communication. Each process communicates to print out its rank and the total number of processes. This is a simplified example and PMI is more commonly used in complex computational tasks like simulations and cryptocurrency mining.
+
+Command to compile the code: `mpicc -o hello hello.c`
+Command to run the code: `mpirun -np 4 ./hello`
+
+Please note that the number after `-np` is the number of processes you want to run. Also, `mpicc` is a wrapper of gcc for MPI (Message Passing Interface) programs and `mpirun` is the command to run MPI programs. To use PMI, MPI and its utilities must be installed and properly configured in your environment.

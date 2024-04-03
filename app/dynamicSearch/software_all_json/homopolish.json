@@ -1,0 +1,21 @@
+{
+    "software_name": "homopolish",
+    "comprehensive_overview": "Homopolish is a tool for polishing long-read assemblies using shorter reads. It takes long reads from a genome assembly and error-corrects them using short reads to produce a more accurate assembly.",
+    "core_features": [
+        "Error correction of long-read assemblies using short reads",
+        "Improving the accuracy of genome assemblies",
+        "Facilitates the generation of high-quality genome assemblies"
+    ],
+    "general_tags": [
+        "Bioinformatics",
+        "Genome Assembly",
+        "Error Correction",
+        "Long Reads",
+        "Short Reads"
+    ],
+    "research_discipline": "Bioinformatics",
+    "research_area": "Genomics",
+    "software_class": "Bioinformatics Tool",
+    "software_type": "Genome Assembly Tool",
+    "field_of_science": "Biological Sciences"
+}

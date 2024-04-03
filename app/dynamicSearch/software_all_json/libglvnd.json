@@ -1,0 +1,13 @@
+{
+    "software_name": "libglvnd",
+    "comprehensive_overview": "libglvnd is the open-source implementation of the vendor-neutral dispatch layer for arbitrating OpenGL API calls between multiple vendors' graphics drivers and the X server.",
+    "core_features": "The core functionality of libglvnd includes managing OpenGL libraries from multiple vendors, enabling applications to dynamically load the appropriate vendor libraries at runtime, and facilitating communication between the X server and OpenGL libraries.",
+    "general_tags": ["Graphics", "OpenGL", "Vendor-neutral dispatch"],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Library",
+        "software_type": "Graphics library",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

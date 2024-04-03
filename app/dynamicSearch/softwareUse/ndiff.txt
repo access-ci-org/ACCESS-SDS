@@ -1,0 +1,42 @@
+Use Case:  "ndiff" is a Python library used for comparing the result of numerical computations. It's helpful in situations where there is a need to compare the output of two or more calculations in order to check the correctness of the mathematical models.
+
+Code details and examples: Code 
+
+To use ndiff, your input file should be in a text format, which contains the output values from numerical computations. 
+
+An example: 
+
+output1.txt: 
+ ``` 
+1.00000 
+3.14159  
+6.28318
+```
+output2.txt: 
+ ```
+1.00001
+3.14160 
+6.28319
+```
+Here, output1.txt and output2.txt are output versions from different numerical computations. 
+
+Command for calculating the difference between output of two numerical computations using ndiff:
+
+`ndiff output1.txt output2.txt`
+
+The command will compare each line in the two output files and print how much they differ. Note that white spaces and comments defined by '#' are ignored.
+
+Now, to use ndiff in a program:
+
+```python
+import ndiff
+output1 = [1.00000, 3.14159, 6.28318]
+output2 = [1.00001, 3.14160, 6.28319]
+differences = ndiff.compare(output1, output2)
+for diff in differences:
+  print(diff)
+```
+
+The above code will print the differences between corresponding elements in the two output arrays. 
+
+Remember, you need to install the ndiff Python library before using it. You may use pip or any other Python package manager for installation.

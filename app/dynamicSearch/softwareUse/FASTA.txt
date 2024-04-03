@@ -1,39 +1,24 @@
-Use Case: Working with FASTA files
+Use Case: Aligning two or more biological sequences (such as amino acid or nucleotide sequences) to search for regions of agreement. It can be used for different purposes in bioinformatics, evolution studies, phylogenetics, drug discovery among many others.
 
-Code details and examples:
+Details and examples:
+
 Code:
+FASTA has various programs for different cases. For the simplest case - sequence alignment:
 
-```plaintext
-# Sample input file (input.fasta)
->seq1
-ATCGATCGATCG
->seq2
-GCTAGCTAGCTA
-
-# Viewing the content of a FASTA file
-cat input.fasta
-
-# Extracting sequences from a FASTA file
-grep "^>" input.fasta
-
-# Counting the number of sequences in a FASTA file
-grep -c "^>" input.fasta
-
-# Using Biopython to read a FASTA file and access sequences
-from Bio import SeqIO
-
-fasta_file = "input.fasta"
-for record in SeqIO.parse(fasta_file, "fasta"):
-    print(record.id)
-    print(record.seq)
-
-# Running the script to parse the fasta file
-python parse_fasta.py
-
-# Aligning sequences in a FASTA file using tools like Clustal Omega
-# Command to run Clustal Omega for multiple sequence alignment
-clustalo -i input.fasta -o output.aln
-
-# Running Clustal Omega to align sequences in the input.fasta file
-clustalo -i input.fasta -o output.aln
+FASTA input file:
 ```
+>sequence1
+MTEYKLVVVGAGGVGKSALTIQLIQNHFVDEYDPTIEDSYR
+>sequence2
+MTEYKLVVVGAGGVGKSALTIQLIQNHFVDEYDPTIED
+```
+
+This file contains two sequences for alignment. The '>' sign is used to denote a new sequence, followed by the sequence identifier and the sequence itself.
+
+Command to run the program:
+
+`fasta36 -q sequence1.fas sequence2.fas`
+
+This command aligns the sequences in the files sequence1.fas and sequence2.fas using the fasta36 program. The '-q' option suppresses unnecessary information.
+
+Please note that specific ways to run the program and specific options may vary depending on the local FASTA version and configuration.

@@ -1,32 +1,35 @@
-Use Case: Analyzing a large dataset using cuDF in RAPIDS
+Use Case: RAPIDS is a suite of open-source software libraries for executing end-to-end data science and analytics pipelines entirely on GPUs. It provides a simple API for GPU-accelerated data analytics and machine learning.
 
 Code details and examples:
 
-**Sample Input File (input.csv):**
-```
-id,age,gender,salary
-1,25,Male,50000
-2,30,Female,60000
-3,35,Male,70000
-4,40,Female,80000
-5,45,Male,90000
-```
+Code:
 
-**Code (Python using cuDF):**
 ```python
-import cudf
+import cudf, io, requests
+from io import StringIO
 
-# Load the data
-df = cudf.read_csv('input.csv')
+# Downloading the dataset
+url = "https://raw.githubusercontent.com/plotly/datasets/master/tips.csv"
+content = requests.get(url).content.decode('utf-8')
 
-# Filter data
-filtered_df = df.query('age > 30')
+# Reading it into a GPU DataFrame
+tips_df = cudf.read_csv(StringIO(content))
+tips_df['tip_percentage'] = tips_df['tip']/tips_df['total_bill']*100
 
-# Print the filtered dataframe
-print(filtered_df)
+# Group and sort by day and smoker
+print(tips_df.groupby(['day', 'smoker']).tip_percentage.mean())
 ```
 
-**Command to Run:**
+Input files & format: Input data can be a variety of file formats (CSV, JSON, Parquet etc.) but here we are using CSV. This URL based CSV file contains a dataset about restaurant tips.
+
+Specifications and details in input files: No specific details are needed in CSV. Normal dataset with columns such as ['day', 'smoker', 'tip', 'total_bill'] would work fine for above code. 
+
+Command to run: 
+
+If the code is written in a script file(.py file), it can be run using:
+```bash
+python filename.py
 ```
-python script.py
-```
+If the code is written in a Jupyter notebook cell, the cell can simply be run using Shift+Enter. 
+
+Make sure you have installed the necessary RAPIDS libraries like cudf beforehand (which is not part of the question though).

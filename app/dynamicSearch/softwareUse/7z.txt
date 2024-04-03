@@ -1,3 +1,19 @@
-Use Case: Compression and archiving  
-Code details and examples:  
-7z a archive.7z file1.txt file2.txt  
+Use Case: Use 7z to compress or decompress files using the 7z format.
+
+Code Details and Examples:
+
+Code:
+
+Compress files:
+
+7z a test.7z file1.txt file2.txt file3.txt
+
+This command compresses the files "file1.txt", "file2.txt", and "file3.txt" into the archive "test.7z".
+
+Decompress a 7z file:
+
+7z e test.7z
+
+This command extracts all files from the archive "test.7z" in the current directory.
+
+The input file format for the 7z command is any file or directory on your system. No specific details or specifications are typically necessary in the input files. For the compress command, you need to specify the name of the output 7z file and the files you want to compress. For the extract command, you only need to specify the name of the 7z file you want to extract.

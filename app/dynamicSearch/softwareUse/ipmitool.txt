@@ -1,17 +1,36 @@
-Use Case: IPMItool is a command-line utility that allows users to manage and configure IPMI-enabled devices.
+Use Case: The ipmitool is a command-line utility that's handy for managing and configuring devices which support the Intelligent Platform Management Interface. It can be used for numerous tasks such as reading sensor values, displaying system event logs, power up/down the system, and so on. 
 
-Code details and examples:
-1. Sending power commands to a remote server:
-```bash
-ipmitool -H <server_ip> -U <username> -P <password> power on
-```
+Code Details and Examples: 
 
-2. Reading sensor data from a remote server:
-```bash
-ipmitool -H <server_ip> -U <username> -P <password> sdr list
+Code 1:
+For reading all system sensor values,
 ```
+ipmitool -I open sensor 
+```
+This does not require an input file. 
 
-3. Checking the system event log of a remote server:
-```bash
-ipmitool -H <server_ip> -U <username> -P <password> sel list
+Code 2:
+For displaying system event logs,
 ```
+ipmitool -I open sel 
+```
+Again, this command also does not require any input files.
+
+Code 3:
+To power down the system,
+```
+ipmitool -I open chassis power off
+```
+This command too does not need any input files.
+
+Code 4:
+To power up the system,
+```
+ipmitool -I open chassis power on
+```
+No input files are required for this command as well.
+
+Notes: 
+-I open: specifies that the open interface is to be used.
+
+Most of the operations performed by ipmitool are towards the machines' IPMI interface, and the commands generally do not require any input files.

@@ -1,18 +1,22 @@
-Use Case: Computational geometry library.  
-Code details and examples:  
-Libvori is a computational geometry library for calculating the Voronoi diagram. Below is a sample input file format for calculating the Voronoi diagram using libvori:
+Use Case: LIBVORI is a high-performance library for Voronoi integration on arbitrary 3D grids. It is utilized in the context of computational quantum chemistry to determine atomic volumes and charges from electronic densities;
 
-Sample input file (points.txt):
-```
-3
-1 1
-2 3
-4 2
-```
+Code details and examples: Code
 
-Code:
-```bash
-libvori < points.txt
-```
+LIBVORI doesn't provide explicit command line interfaces and it is not designed to be used as stand-alone software. It must be linked together with a quantum chemistry package which uses it to post-process electronic densities. Hence, a generic usage would be to call its routines in another program. Here's a very generalized example in a quantum chemistry program:
 
-This command will calculate the Voronoi diagram for the points specified in the input file "points.txt".
+``` C++
+// include libvori header files
+#include "v_container.h"
+#include "v_fun.h"
+#include "v_file.h"
+
+// ... modify according to your quantum chemistry code and create objects
+
+for (unsigned int atomNr=0;atomNr<atomList.size();++atomNr){
+// integrate around the atom and get the volume
+double atomVolume=v_total_vol(&atomList[atomNr],grid);
+// print it out
+cout << "Volume of Voronoi cell " << atomNr << " : " << atomVolume << endl;
+}
+```
+This example will compute Voronoi volumes for all atoms in a list. Required data structure includes grid representation of electron density and atomic position coordinates. Specifics of input format will vary greatly depending on the overarching software package the library will be linked with.

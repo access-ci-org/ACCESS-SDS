@@ -1,0 +1,13 @@
+{
+  "software_name": "TransVar",
+  "comprehensive_overview": "TransVar is a command-line tool that helps in upgrading and standardizing variant nomenclature on genetic variation datasets. It assists in the conversion of variant coordinates between different genome assemblies, such as GRCh37 and GRCh38, and provides annotations for variants.",
+  "core_features": "1. Conversion of variant coordinates between different genome assemblies. 2. Standardization of variant nomenclature. 3. Annotation of genetic variants.",
+  "general_tags": ["Genetic Variation", "Variant Nomenclature", "Genome Assembly"],
+  "additional_tags": {
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Bioinformatics",
+    "software_type": "Command-line Tool",
+    "field_of_science": "Biological Sciences"
+  }
+}

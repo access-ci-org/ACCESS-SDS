@@ -1,0 +1,29 @@
+Use Case: GRIDSS is a Structural Variant detection software designed for Illumina sequencing data. It is used for detection of variant-sized insertions, deletions, duplications, inversions, and complex rearrangements.
+
+Code details and examples: Code
+
+Input File Format: The most common input file format is BAM. It needs to be position sorted and indexed.
+
+Command to run GRIDSS:
+
+```bash
+bash gridss.sh reference.fa input.bam output.vcf
+```
+
+Example of a basic input (BAM file):
+
+BAM files contain genome sequence data. Here is a very simplified example of a read in a BAM file:
+
+```txt
+D3NB8Q1:248:C9R5RACXX:6:2310:21105:99576    73    reference    9485    37    85M    =    9485    -85    TGCTGCTGTCTGCTGCTGCTGCTGTCTGCTGCTGCTGCTGTCTGCTGCTGCTGCTGCTGTCTGCTGCTGCTGCTGCTGTCTGCTGCTGCT    array of qualities    AS:i:-7    XN:i:0    XM:i:1    XO:i:0    XG:i:0    MD:Z:20G64    YT:Z:UU
+```
+
+This is an example of a simplified BAM file. The actual files usually contain millions of reads and can be multiple gigabytes in size. 
+
+A BAM file have multiple aligned sequences, each corresponding to a read from the original DNA sequence. GRIDSS requires these BAM files generated from genome sequencers like Illumina HiSeq.
+
+GRIDSS also requires a reference genome, which can be obtained from many sources based on the use case. For example, human reference genomes (GRCh38) can be obtained from NCBI.
+
+The output file is a .vcf file, which is a standard in genomics for showing variants.
+
+Please note: this is a simplified example and real-life genomic data processing occurs in a much larger scale with more complexities.

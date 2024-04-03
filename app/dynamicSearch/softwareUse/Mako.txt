@@ -1,25 +1,31 @@
-Use Case: Template engine for Python web frameworks  
-Code details and examples:  
-```python
-# Sample Mako template file (sample_template.mako)
-<html>
-<head>
-    <title>${title}</title>
-</head>
-<body>
-    <h1>${heading}</h1>
-    <p>${content}</p>
-</body>
-</html>
-```
+Use Case: Mako is a template library written in Python. It provides a familiar, non-XML syntax which compiles into Python modules for maximum performance. Mako's syntax and API borrows from the best ideas of many others, including Django templates, Cheetah, Myghty, and Genshi. Because it uses Python as a backend, it has excellent performance characteristics.
+
+Code details and examples: Code.
+
+Sample Input File: 
+The input file will be a .py or .html file containing the template code.
+
+Template Code(.py or .html file): 
 
 ```python
-# Sample Python code to render the Mako template
+<%
+    data = {"name": "John Doe", "email": "jdoe@example.com"}
+%>
+Hello ${data['name']}
+Your email is: ${data['email']}
+```
+
+In the above template, Python code is placed between < % and % > tags. The ${data['name']} syntax is used to insert Python expressions into the template.
+
+Command to run: 
+
+You can call a mako template from your python script as follows.
+
+```python
 from mako.template import Template
 
-mytemplate = Template(filename='sample_template.mako')
-rendered_template = mytemplate.render(title='Sample Title', heading='Hello World!', content='This is a sample Mako template.')
-print(rendered_template)
+mytemplate = Template(filename='/path/to/template.txt')
+print(mytemplate.render())
 ```
 
-Command to run (if applicable): N/A
+In the above Python script, change '/path/to/template.txt' to the path where your template text file is stored. The render() function is used to render the template.

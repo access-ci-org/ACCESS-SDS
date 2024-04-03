@@ -1,5 +1,34 @@
-Use Case: Check PCI devices connected to the system.
-Code details and examples:
-```bash
-lspci
+Use Case: libpciaccess is an HPC software used to simplify the process of programming with PCI. It provides developers access to PCI configuration space, device mapping, interrupts and other services.
+
+Code details and examples: 
+
+Code:
+
+```c
+#include <pciaccess.h>
+#include <stdio.h>
+
+int main(void) {
+    struct pci_device *dev;
+    int err;
+    pci_system_init();
+    /* iterate over all devices */
+    for (dev = pci_device_next(NULL); dev != NULL; dev = pci_device_next(dev)) {
+        printf("Device: %04x:%02x:%02x.%d\n", dev->domain, dev->bus,
+               dev->dev, dev->func);
+    }
+    pci_system_cleanup();
+    return 0;
+}
 ```
+
+The command to compile and run the code:
+
+```bash
+$ gcc -o test -lpciaccess test.c
+$ ./test
+```
+
+Input File Format: No input file needed. The code interacts directly with system hardware.
+
+Specifications and Details in Input Files: Not applicable for this software package as it directly works with the system PCI configuration.

@@ -1,0 +1,21 @@
+{
+  "software_name": "r-mime",
+  "comprehensive_overview": "r-mime is an R package that provides tools for parsing and creating MIME (Multipurpose Internet Mail Extensions) messages. It allows users to easily manage and manipulate MIME messages for tasks like sending emails and processing attachments.",
+  "core_features": [
+    "Parsing MIME messages",
+    "Creating MIME messages",
+    "Managing attachments in emails"
+  ],
+  "general_tags": [
+    "R package",
+    "MIME messages",
+    "Email processing"
+  ],
+  "additional_tags": {
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Data Analysis Tool",
+    "software_type": "Library",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

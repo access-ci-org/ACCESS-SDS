@@ -1,0 +1,13 @@
+{
+    "software": "cpe",
+    "comprehensive_overview": "CPE (Common Platform Enumeration) is a standardized method to describe and identify classes of applications, operating systems, and hardware devices in a consistent format. It provides unique identifiers for these entities to facilitate accurate and efficient information exchange between different security tools and databases.",
+    "core_features": "1. Standardized identification and description of software and hardware entities.\n2. Facilitates interoperability between security tools and databases.\n3. Assigns unique identifiers to each software, operating system, and hardware device.\n4. Supports accurate and efficient information exchange in the cybersecurity domain.",
+    "general_tags": ["software identification", "cybersecurity", "information exchange"],
+    "additional_tags": {
+        "research_discipline": "Computer Science",
+        "research_area": "Software Engineering, Systems, and Development",
+        "software_class": "Security Software",
+        "software_type": "Tool",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

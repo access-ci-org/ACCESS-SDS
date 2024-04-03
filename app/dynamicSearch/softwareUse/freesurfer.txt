@@ -1,0 +1,27 @@
+Use Case: Freesurfer is a tool for brain imaging analysis particularly for the processing and statistical analysis of structural and functional brain imaging data. It can generate a automated whole brain segmentation, label the subcortical brain structures, estimate the location of cortical and subcortical structures etc.
+
+Code Details and Examples: 
+
+Code type 1: Freesurfer command to analyze an MRI scan.
+
+Code:
+
+```
+recon-all -all -subject bert -i /path/to/bert/mri/brain.mgz
+```
+
+In this command `recon-all` is the script to run the pipeline, `-all` tells the pipeline to run all stages (from motion correction to spherical maps), `-subject bert` defines the name for the subject's directory, `-i` specifies the input image file.
+
+The input file (brain.mgz) must be in a specific format (.mgz or .mgh - MGH/MGZ are the standard file formats used by FreeSurfer) and it is usually a MRI brain scan.
+
+Code type 2: Freesurfer command to extract statistics from the processed data.
+
+Code:
+
+```
+aparcstats2table --subjects bert eric --hemi lh --meas volume --tablefile aparc_volume_lh.txt
+```
+
+In this command `aparcstats2table` is the script to compile the stats into table, `--subjects bert eric` defines subjects (separated by spaces) for which the stats are to be compiled,  `--hemi lh` specifies hemisphere (left hemisphere in this case), `--meas volume` specifies the measurement (volume), `--tablefile aparc_volume_lh.txt` specifies the output filename.
+
+The input for this should be the output directory of the previous command which has been processed, containing files with various stats.

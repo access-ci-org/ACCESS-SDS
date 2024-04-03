@@ -1,0 +1,47 @@
+Use Case: FreeXL is an open source library to extract valid data from within an Excel (.xls) spreadsheet. This tool is especially useful for developers who want to extract information from .xls files for their applications or data analysis.
+
+Code details and examples: Code
+
+To use FreeXL, you would first need to include it in your code like this: #include "freexl.h"
+
+Input:
+The only input FreeXL needs is a valid .xls file. An example could be a spreadsheet with a list of individuals' names and their respective phone numbers.
+
+Let's say you have a .xls file named "data.xls" with two columns - 'Name' and 'Phone number'.
+This file needs to be in .xls format as FreeXL does not support .xlsx or other Excel formats.
+
+The API calls might look like this:
+
+```c
+#include "freexl.h"
+
+// open .xls file
+const void *xls_handle;
+if (freexl_open ("data.xls", &xls_handle) != FREEXL_OK) {
+    fprintf (stderr, "FREEXL ERROR: unable to open data.xls\n");
+    return -1;
+}
+
+// get some general info
+unsigned int rows;
+unsigned short columns;
+freexl_get_info(xls_handle, FREEXL_BIFF_PASSWORD, &rows);
+freexl_get_info(xls_handle, FREEXL_BIFF_CODE_PAGE, &columns);
+
+// read data
+char *value;
+for (int i = 0; i < rows; i++) {
+    for (int j = 0; j < columns; j++) {
+        freexl_get_cell_value (xls_handle, i, j, &value);
+        printf ("%s ", value);
+    }
+    printf ("\n");
+}
+
+// close .xls file
+freexl_close (xls_handle);
+```
+
+Command to run:
+
+To compile and run the code, you would write this in your terminal: gcc your_file_name.c -lfreexl -o output_file_name && ./output_file_name

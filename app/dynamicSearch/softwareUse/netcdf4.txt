@@ -1,38 +1,45 @@
-Use Case: NetCDF4 is a library and file format for scientific data in structured array-oriented data. It provides tools for working with multidimensional array data.
+Use Case: Use netCDF4 to store large and complex data sets mainly used in many areas of scientific data processing.
 
-Code details and examples:
-```python
-# Create a NetCDF file
-import netCDF4 as nc
+Code details and examples: Code.
 
-data = np.random.rand(10, 10)
-ncFile = nc.Dataset('sample.nc', 'w', format='NETCDF4')
-ncFile.createDimension('x', 10)
-ncFile.createDimension('y', 10)
-ncVar = ncFile.createVariable('data', 'f4', ('x', 'y'))
-ncVar[:] = data
-ncFile.close()
-```
+The netCDF4 library allows for data storing in netCDF and HDF5 formats, it also incorporates new data models. Here is a script that shows how to write netCDF files using Python and the scipy.io.netcdf module. 
 
-```python
-# Read a NetCDF file
-import netCDF4 as nc
+The sample data could have an input format such as:
 
-ncFile = nc.Dataset('sample.nc', 'r')
-data = ncFile.variables['data'][:]
-ncFile.close()
-print(data)
-```
+temperature = [[20.0, 19.8, 19.7], [21.0, 23.4, 19.9], [25.5, 21.4, 18.9], [27.0, 20.2, 22.1]]
+time = [0, 1, 2, 3]
+latitude = [59.5, 60.1, 71.2]
+longitude = [17.3, 19.7, 22.0, 24.8]
+
+The code to create a netCDF file:
 
 ```python
-# Update a NetCDF file
-import netCDF4 as nc
+import netCDF4
+import numpy as np
 
-ncFile = nc.Dataset('sample.nc', 'a')
-new_data = np.random.rand(10, 10)
-ncFile.variables['data'][:] = new_data
-ncFile.close()
+rootgrp = netCDF4.Dataset('test.nc', 'w', format='NETCDF4')
+time = rootgrp.createDimension("time", None)
+latitude = rootgrp.createDimension("latitude", 72)
+longitude = rootgrp.createDimension("longitude", 144)
+
+times = rootgrp.createVariable("time","f8",("time",))
+latitudes = rootgrp.createVariable("latitude","f4",("latitude",))
+longitudes = rootgrp.createVariable("longitude","f4",("longitude",))
+temp = rootgrp.createVariable("temp","f4",("time","latitude","longitude",))
+
+latitudes[:] = np.arange(-90,90,2.5)
+longitudes[:] = np.arange(-180,180,2.5)
+temp[0:5,:,:] = np.random.uniform(size=(5,len(latitudes),len(longitudes)))
+rootgrp.close()
 ```
 
-Command to run:
-This is Python code, so you can run it using any Python environment.
+This code snippet in Python writes a file called 'test.nc' with temperature data. 
+
+To read the saved data you just input:
+
+```python
+f = netCDF4.Dataset('test.nc', 'r')
+print(f.variables['temp'])
+```
+
+This will open the file for reading ('r') and print the variable 'temp' with the stored values in the temperature array.

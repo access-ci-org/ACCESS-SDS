@@ -1,0 +1,25 @@
+Use Case: Use r-geoquery as a package in R for interaction with Gene Expression Omnibus (GEO), a public genomic database from the NCBI. It is typically used to retrieve microarray, next generation sequencing and other high throughput genomics data.
+
+Code details and examples: 
+
+Code:
+
+```R
+# Load the package
+library(GEOquery)
+
+# Define the series id 
+gseid <- "<Your_GEO_ID>"
+  
+# Get the series matrix file
+gset <- getGEO(gseid, GSEMatrix =TRUE, getGPL=FALSE)
+
+# Print out the eset
+print(summary(exprs(gset[[1]])))
+```
+
+The input required is a valid GEO series identifier (GSE ID). You can get such IDs from the GEO database. Replace `<Your_GEO_ID>` with the obtained GSE ID.
+
+To run this code, you will need to have R installed on your system, along with the GEOquery library. You can execute it in the R console, or in an R script. 
+
+The output obtained will be a summary of expressions retrieved from the given GSE ID. The data retrieved is gene expression data, usually in a tabulated format with headers describing the genes and their expression values across different samples.

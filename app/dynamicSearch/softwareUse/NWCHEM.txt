@@ -1,15 +1,26 @@
-Use Case: Quantum chemistry calculations
-Code details and examples:
-```
-echo "task scf" > water.nw
-echo "start" >> water.nw
-echo "geometry units angstrom" >> water.nw
-echo "  O  0.000000  0.000000  0.000000" >> water.nw
-echo "  H  0.529177  0.000000  0.000000" >> water.nw
-echo "  H -0.211668  0.926822  0.000000" >> water.nw
-echo "end" >> water.nw
+Use Case: Use NWCHEM for computational chemistry. 
 
-nwchem water.nw
-```
+Code details and examples: Code
 
-This example sets up a simple water molecule geometry in NWChem input file format and performs a self-consistent field (SCF) calculation using NWChem.
+Sample Input File: 
+
+```
+start h2o
+geometry
+  O     
+  H 1 R
+  H 1 R 2 A
+end
+basis
+  *
+  library 6-31G
+end
+SCF
+end
+task SCF optimize
+```
+In the input file, the line `start h2o` starts a new job called "h2o". The `geometry` block defines the molecular structure. The `basis` block specifies the basis set. The `task scf optimize` command tells NWCHEM to perform an SCF (Hartree-Fock) optimization of the molecular geometry. The variables R and A are two parameters you can play with. They decide the distance between hydrogen and oxygen atoms (R) and the angle between them (A).
+
+To execute an NWCHEM calculation, prepare an appropriate input file (the above is an example), then run the following command in the directory where the input file resides:
+
+```nwchem input.nw > output.out```

@@ -1,0 +1,39 @@
+Use Case: SZ is an error-bounded lossy compression library that is designed to compress scientific data, particularly floating-point data types. The high compression ratio and fast speed of SZ make it attractive for use in high-performance computing applications where storage resources may be limited.
+
+Code details and examples:
+
+Code:
+
+```python
+import sz
+import numpy as np
+
+# Create some example data
+data = np.arange(1000, dtype='float32')
+
+# Compress the data with an error bound of 1.0E-3 
+compressed = sz.compress(data, abs_err_bound=1.0E-3) 
+
+# The resulting compressed data is a bytes object
+print(type(compressed))  # <class 'bytes'>
+
+# Decompress the data
+decompressed = sz.decompress(compressed)
+
+# The decompressed data is a numpy array
+print(type(decompressed))  # <class 'numpy.ndarray'>
+```
+
+If using it via command line the SZ software can be executed like this:
+
+```bash
+./sz -z -f -i inputfile -1 dimension_size > outputfile.sz
+
+# The options utilized here are:
+# -z which stands for compress operation
+# -f meaning single-precision floating point data in the file
+# -i stands for input
+# -1 stands for one dimensional array.
+
+```
+The input file would be any raw binary file made up of single-precision floating point data. Dimension sizes must be known and provided. The output file will contain the compressed form of the input data.

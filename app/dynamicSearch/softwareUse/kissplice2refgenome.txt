@@ -1,0 +1,29 @@
+Use Case: KisSplice2RefGenome provides a solution to identify and analyze RNA-Seq data to study variants, including SNPs and alternative splicing events. It allows the user to map the results of KisSplice (a software to detect RNA variants from RNA-seq data) to a reference genome, and sorts the variants into several categories like canonical, atypical, complex and local splicing.
+
+Code Details and Examples:
+Code:
+
+Input Files:
+The required input files are mainly FASTA and GFF/GTF formats. 
+
+1. KisSplice results (.fa file): This is essentially a FASTA file that contains the sequence data of RNA variants detected by KisSplice.
+2. Reference genome (.fasta/.fa file): This is the reference genome sequence file.
+3. Gene annotation file (.gff/.gtf file): This is a file that contains the information about the genes and their locations on the genome.
+
+Command to run:
+The command to run Kissplice2refgenome is:
+
+```Bash
+python2.7 k2rg.py -i kisSplice_results.fa -f reference_genome.fasta -a annotation.gtf 
+```
+1. '-i' option is for the KisSplice output file.
+2. '-f' option is for the reference genome in fasta format.
+3. '-a' option is for the annotation file in gff/gtf format.
+
+Here, 'kisSplice_results.fa' is the KisSplice output, 'reference_genome.fasta' is the reference genome of your target organism, and 'annotation.gtf' is the gene annotation file. 
+
+It is important to note that all files need to be in appropriate format and directories. The output includes several files that contain categorized results (eg: canonical, atypical etc.), which will further aid in the study of RNA variants.
+
+Note: Usual bioinformatics data analysis pipeline checks, including correct file formats (.fasta/.gff/.gtf) and correct Python version (2.7) apply here.
+
+This software package does not provide code snippets for detailed understanding. Instead, it encompasses an end-to-end solution for mapping RNA-Seq variant data to a reference genome and classifying them into various splicing event categories.

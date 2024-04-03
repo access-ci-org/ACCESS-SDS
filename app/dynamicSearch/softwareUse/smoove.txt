@@ -1,0 +1,27 @@
+Use Case: Smoove is a set of tools for calling and genotyping structural variants (SVs) from next-generation sequencing data, particularly for whole genome sequencing. It has specially designed features for reducing false positives and for easy interpretation of SV calling results.
+
+Code details and examples:
+
+Code:
+
+This is just an example of how to call SVs using smoove with one 30x coverage human whole genome sequencing (WGS) sample:
+
+```bash
+smoove call \
+    --outdir results \
+    --name sample-name \
+    --fasta reference-genome.fa \
+    --processes 24 \
+    --genotype \
+    sample.bam
+```
+
+Here, the input files are:
+
+1. `sample.bam`: a BAM-formatted file of aligned sequencing reads. This should come from a WGS experiment, and it supports only one input BAM file at a time. The BAM file must be sorted and indexed (`samtools index` can do this).
+
+2. `reference-genome.fa`: FASTA-formatted file of the reference genome. It must be indexed with samtools faidx and bwa index.
+
+The output is a VCF file in the specified directory ("results" in this case) containing the called and genotyped structural variants.
+
+For detailed usage and all options, refer to the smoove documentation: https://github.com/brentp/smoove

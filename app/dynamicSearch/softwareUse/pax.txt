@@ -1,19 +1,23 @@
-`pax` command in Unix-like operating systems, which is used for creating and extracting cpio archives.
+Use Case: Use pax for archiving and extracting files in Unix-like systems. Pax is specifically useful when there is a need to handle files and directories in a flexible manner or when there is a need for better performance due to limitations of other tools such as tar and cpio.
 
-Use Case: Create a cpio archive with `pax`
 Code details and examples: 
-To create a cpio archive using `pax`, you can use the following command:
-```bash
-find /path/to/directory -depth | pax -w > archive.cpio
-```
-This command will create a cpio archive named `archive.cpio` containing all the files and directories in `/path/to/directory`.
 
-Use Case: Extract a cpio archive with `pax`
-Code details and examples: 
-To extract a cpio archive using `pax`, you can use the following command:
-```bash
-pax -r < archive.cpio
-```
-This command will extract the contents of the `archive.cpio` cpio archive in the current directory.
+Code:
+pax allows one to specify the names of the files to be archived, which can be done in one of two ways: either by directly listing the filenames in the command line or by using a file contains the list of filenames (using -f option).
 
-Please note that the usage of `pax` may vary slightly depending on the specific Unix-like operating system.
+For example, the following command creates an archive of files in the current directory and its subdirectories:
+
+```bash
+pax -wvf archive.pax .
+```
+The 'w' option tells pax to write an archive, 'v' tells pax to list the files processed, and 'f archive.pax' directs the archive output to a file named archive.pax.
+
+The input in this case does not need specific format, it only needs correct file paths based on your system specifications.
+
+The below code extract files from the archive:
+```bash
+pax -rvf archive.pax
+```
+'r' tells pax to read the archive, 'v' tells pax to list the files it hits upon and 'f archive.pax' specifies the name of the archive file in use. 
+
+Note that both above codes are run in the command line or terminal window. No external input files required.

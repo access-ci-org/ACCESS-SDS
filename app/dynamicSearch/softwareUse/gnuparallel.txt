@@ -1,39 +1,19 @@
-Use Case: Parallelizing tasks using GNU Parallel
-Code details and examples: 
+Use Case: GNU Parallel is a command-line driven utility that facilitates the execution of commands, scripts, or programs in parallel on one or multiple computers. For example, if you have a script that processes a single file and you want to run that script for each file in a directory.
 
-GNU Parallel is a command-line tool that allows for easy parallelization of shell commands. Here is an example of how you can use GNU Parallel to parallelize a simple task of echoing numbers from 1 to 10:
+Code details and examples:
 
-1. Create a file named 'input.txt' with numbers from 1 to 10 (each number on a new line):
-```
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
+Code:
+
+Considering a scenario where you have a bash script (let's name it script.sh) that takes filename as an argument and processes it. Now, you want to execute this script on all text files in a current directory:
+
+```bash
+ls *.txt | parallel ./script.sh
 ```
 
-2. Use GNU Parallel to echo each number in parallel:
-```
-cat input.txt | parallel echo {}
-```
+The above command will run script.sh on each text file in parallel.
 
-This command will run the 'echo' command for each number in parallel, resulting in output similar to the following:
-```
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-```
+Input File: The input files would be the text files that are present in the current directory. There isn't a specific structure to them as they can contain any data relevant to the user's script.
 
-You can parallelize a wide range of tasks using GNU Parallel by customizing the command within the parallel command construct.
+Specifications and Details in Input Files: This would depend on what your script is designed to do. It could be processing text files of DNS logs, Apache logs, etc.
+
+Command to run it: As mentioned in the code, you would navigate to the directory containing the files you want to process and the script. Then you would execute the 'ls *.txt | parallel ./script.sh' command in your terminal. This would start the parallel processing of the files.

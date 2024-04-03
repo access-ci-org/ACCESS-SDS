@@ -1,0 +1,11 @@
+{
+    "software_name": "Amber",
+    "comprehensive_overview": "Amber is a suite of highly extensible molecular simulation programs. It is designed for simulations of biomolecules such as proteins, nucleic acids, and carbohydrates, and can also be used for small molecules.",
+    "core_features": "1. Molecular dynamics simulations\n2. Free energy calculations\n3. Quantum chemistry\n4. Structural analysis\n5. Visualization tools",
+    "general_tags": ["molecular dynamics", "biomolecular simulations", "quantum chemistry"],
+    "research_discipline": ["Biochemistry and Molecular Biology"],
+    "research_area": ["Biophysics", "Structural Biology"],
+    "software_class": "Simulation",
+    "software_type": "Molecular Dynamics",
+    "field_of_science": "Biological Sciences"
+}

@@ -1,12 +1,34 @@
-Use Case: OpenSceneGraph is a powerful 3D graphics toolkit used for the development of high-performance graphics applications.
+Use Case: OpenSceneGraph is an open-source, highly efficient 3D graphics toolkit. It is used for visual simulations, virtual reality, scientific visualization, and games. 
 
 Code details and examples:
-OpenSceneGraph provides a variety of examples in its installation directory that demonstrate different features and capabilities of the toolkit. One such example is the "osgviewer" application which can be used to view 3D models.
 
-To run the "osgviewer" application with a sample input file, you can use the following command:
-```
-osgviewer cow.osg
-```
-In this example, "cow.osg" is a sample 3D model file that comes with OpenSceneGraph. The command will launch the viewer application and load the cow model for viewing.
+Code: 
 
-You can explore more examples and features of OpenSceneGraph by referring to its official documentation and tutorials.
+```cpp
+#include <osg/Node>
+#include <osg/Group>
+#include <osg/Geode>
+#include <osg/Geometry>
+#include <osgViewer/Viewer>
+
+int main()
+{
+    osg::ref_ptr<osg::Group> root = new osg::Group();
+    osg::ref_ptr<osg::Geode> geode = new osg::Geode();
+    root->addChild(geode);
+
+    osg::ref_ptr<osg::Geometry> geometry = new osg::Geometry();
+    geode->addDrawable(geometry);
+
+    osgViewer::Viewer viewer;
+    viewer.setSceneData(root);
+    return viewer.run();
+}
+```
+
+This code initializes a basic OpenSceneGraph program. A group node `root` is created which can contain multiple children nodes. A `Geode` is one such child which is a leaf node and can contain drawable objects like `Geometry`. The Viewer is then set with the created scene graph and run.
+
+The input files for OpenSceneGraph typically include 3D model files which come in formats such as `.osg`, `.3ds`, `.obj`, etc. The detailed structure of those files is specified by the associated file format standard and would typically be created using a 3D modeling tool like Blender. 
+
+Command to run the file: 
+`g++ -losg -losgViewer -lOpenThreads example.cpp -o example && ./example`

@@ -1,0 +1,23 @@
+{
+	"init_opencl": {
+		"comprehensive_overview": "init_opencl is a software library that is used to initialize OpenCL platforms and create OpenCL contexts for parallel computing applications.",
+		"core_features": [
+			"Initialize OpenCL platforms",
+			"Create OpenCL contexts",
+			"Support for parallel computing applications"
+		],
+		"general_tags": [
+			"software",
+			"compiler",
+			"library",
+			"HPC"
+		],
+		"additional_tags": {
+			"research_discipline": "",
+			"research_area": "",
+			"software_class": "Library",
+			"software_type": "Software Development",
+			"field_of_science": "Computer and Information Sciences"
+		}
+	}
+}

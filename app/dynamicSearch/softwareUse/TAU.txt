@@ -1,42 +1,39 @@
-Use Case: Performance analysis of HPC applications with TAU (Tuning and Analysis Utilities)
+Use Case: TAU (Tuning and Analysis Utilities) is used in performance evaluation of parallel programs written in Fortran, C, C++, Java, Python and more. It allows for profiling (both statistically and using dynamic runtime instrumentation) and tracing (event-based, control-flow, or dataflow). 
 
-Code Details and Examples:
-TAU (Tuning and Analysis Utilities) is a widely used performance analysis tool for parallel and high-performance computing applications. TAU supports various profiling methods, performance instrumentation, and performance visualization.
+Code details and examples: 
 
-1. Example of instrumenting and profiling a simple C application using TAU:
-Sample C code (sample.c):
-```c
-#include <stdio.h>
+Code: 
 
-int main() {
-    int sum = 0;
-    for (int i = 1; i <= 100; i++) {
-        sum += i;
-    }
-    printf("Sum: %d\n", sum);
+```C
+#include <iostream>
+#include "Profile/Profiler.h" // TAU's header file
+
+int main(int argc, char **argv)
+{
+    TAU_PROFILE("main()", " ", TAU_DEFAULT);
+    TAU_PROFILE_TIMER(t1, "f1()", "", TAU_USER);
+    TAU_PROFILE_START(t1);
+    // Some computational work here
+    TAU_PROFILE_STOP(t1);
     return 0;
 }
 ```
 
-Compile the code with TAU compiler wrapper (tau_cc):
-```
-tau_cc sample.c -o sample_tau
+In this code snippet, you may see that `TAU_PROFILE` and `TAU_PROFILE_TIMER` are used to denote sections of the code that you want to profile. You simply wrap the code that you want to profile with these macros.
+
+Then you would compile your program with TAU's wrapper scripts (e.g., `tau_cxx.sh` instead of `g++` for C++). Consider you have stored above code in a file named `example.cpp`.
+
+Command to run them:
+
+```bash
+tau_cxx.sh example.cpp -o example
+./example
 ```
 
-Run the instrumented binary with TAU's profiling options:
-```
-mpiexec -n 4 ./sample_tau
-```
+Then use `pprof` command to see the output of profiling. 
 
-2. Example of generating a TAU profile and viewing it with TAU's command-line utilities:
-Generate a TAU profile:
-```
+```bash
 pprof
 ```
 
-View the TAU profile:
-```
-paraprof
-```
-
-These are just basic examples to demonstrate the usage of TAU for performance analysis of HPC applications. TAU provides a wide range of features and options for in-depth performance evaluation of parallel programs.
+Input Files: No input files are needed for this example. The only requirement is to include TAU's header file and use the macros to specify which parts of the code to profile.

@@ -1,0 +1,29 @@
+Use Case: Usefulaf is a Python package that makes working with DataFrame handling more convenient and straightforward. 
+
+Code details and examples: Code
+
+```python
+import pandas as pd
+import usefulaf as uf
+
+# Create a Pandas DataFrame
+df = pd.DataFrame({
+    'A': [1, 2, 3, 4, 5],
+    'B': ['a', 'b', 'c', 'd', 'e']
+})
+
+# Using the get() method to get a column as a list
+col_A = uf.get(df, 'A')
+print(col_A)    # Output: [1, 2, 3, 4, 5]
+
+# Using the drop_cols() method to drop one or multiple columns
+df_dropped = uf.drop_cols(df, 'B')
+print(df_dropped)    # Output:    A
+                    #            0  1
+                    #            1  2
+                    #            2  3
+                    #            3  4
+                    #            4  5
+```
+
+You don't have to worry about the format and specifications in this case as we are making a DataFrame ourselves. These functions are the most commonly used ones but you can always find more functions by referring to the package documentation. You can run this code directly in your python IDE.

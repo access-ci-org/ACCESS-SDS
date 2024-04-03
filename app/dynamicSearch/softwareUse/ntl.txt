@@ -1,0 +1,42 @@
+Use Case: Use NTL for dealing with high-performance algorithms for number theory, especially large integers and algebraic computation over finite fields.
+
+Code details and examples: Code
+
+```
+#include <NTL/ZZ.h>
+
+using namespace std;
+using namespace NTL;
+
+int main() 
+{
+   ZZ a, b, c;
+
+   cin >> a;
+   cin >> b;
+   c = (a+1)*(b+1);
+   
+   cout << "c = " << c << "\n";
+
+   return 0;
+}
+```
+This code snippet demonstrates simple multiplication operation using NTL library. It reads two large integers from standard input, performs multiplication operation and then prints the result.
+
+Input file format: Large_int_1\nLarge_int_2
+Input file content example: 
+
+    10000000000000000
+    20000000000000000
+
+This represents two large integers which are to be multiplied.
+
+Command to run the above code:
+First, we need to compile it using g++ or a suitable C++ compiler:
+```
+g++ -o main main.cpp -lntl -lgmp
+```
+Then, run the compiled code:
+```
+./main
+```

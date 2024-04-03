@@ -1,52 +1,83 @@
-Use Case: Protocol Buffers (protobuf) is a method of serializing structured data for use in communications protocols, data storage, and more. It is widely used in data exchange between different systems or components.
+Use Case: Google's Protocol Buffers (protobuf) is a powerful tool that allows for the creation of flexible, efficient, and automated solutions for serializing structured data – think XML, but smaller, faster, and simpler. It is used to encode data for communication over the wire and for storage, e.g. in files or in databases.
 
-Code details and examples:
-- Sample input file (proto file):
+Code details and examples: Code
+
+Protobuf Structure File:
+A .proto file describes the structure of the objects that we want to serialize. Consider the following file called 'addressbook.proto':
+
 ```
 syntax = "proto3";
+package tutorial;
 
 message Person {
   string name = 1;
   int32 id = 2;
   string email = 3;
+
+  enum PhoneType {
+    MOBILE = 0;
+    HOME = 1;
+    WORK = 2;
+  }
+
+  message PhoneNumber {
+    string number = 1;
+    PhoneType type = 2;
+  }
+
+  repeated PhoneNumber phones = 4;
+}
+
+message AddressBook {
+  repeated Person people = 1;
 }
 ```
 
-- Compiler command to generate Python code from the proto file:
-```bash
-protoc --python_out=. your_proto_file.proto
-```
+This file describes a Person who has an Id, Name, Email and a list of PhoneNumber each containing Number and PhoneType, all these together form an Addressbook, which contains a list of such Persons.
 
-- Example Python code to serialize and deserialize using protobuf:
+Python Code Sample:
+To use it with Python, after installing the protobuf compiler and generating Python code from .proto file, use the following code:
+
 ```python
-import person_pb2
+import addressbook_pb2
 
-# Create a Person message
-person = person_pb2.Person()
-person.name = "Alice"
-person.id = 123
-person.email = "alice@example.com"
+def create_address_book_message():
+    # Instantiate the outer message
+    address_book = addressbook_pb2.AddressBook()
 
-# Serialize the data
-binary_data = person.SerializeToString()
-print("Serialized data:", binary_data)
+    # Create a new person
+    person = address_book.people.add()
+    person.id = 1
+    person.name = "John Doe"
+    person.email = "jdoe@example.com"
 
-# Deserialize the data
-new_person = person_pb2.Person()
-new_person.ParseFromString(binary_data)
-print("Deserialized data:")
-print("Name:", new_person.name)
-print("ID:", new_person.id)
-print("Email:", new_person.email)
-```
+    phone = person.phones.add()
+    phone.number = "555-4321"
+    phone.type = addressbook_pb2.Person.HOME
 
-- Sample output:
-```
-Serialized data: b'\n\x05Alice\x10{\x1a\x10alice@example.com'
-Deserialized data:
-Name: Alice
-ID: 123
-Email: alice@example.com
-```
+    return address_book
 
-- Running the Python code will show the serialized and deserialized data as shown in the sample output.
+def write_and_read_message():
+    # Create a new message
+    message = create_address_book_message()
+
+    # Serialize the message to a binary string
+    serialized_message = message.SerializeToString()
+
+    # Must instantiate a new message because previous message is in undefined
+    # state after serialization
+    new_message = addressbook_pb2.AddressBook()
+
+    # Deserialize the binary string to a new message
+    new_message.ParseFromString(serialized_message)
+
+    # Print the newly constructed message
+    print(new_message)
+``` 
+
+Command to Run:
+```shell
+python3 protobuf_sample.py
+``` 
+
+Note: Make sure you have compiled the .proto file using protobuf compiler (protoc) to generate Python specific classes. The above python class uses these classes for serialization and deserialization. Refer to protobuf compiler (protoc) documentation on how to generate class files.

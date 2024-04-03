@@ -1,0 +1,26 @@
+Use Case: Unicycler, an open-source software tool, is used in the assembly of bacterial genomes. It can handle both illumina short reads and long reads from technologies like PacBio and Oxford Nanopore. It operates by first using a short-read assembly to construct an assembly graph, then utilizing long reads to resolve the graph into a completed genome.
+
+Code Details and Examples:
+
+Code:
+```
+unicycler -1 short_R1.fastq.gz -2 short_R2.fastq.gz -l long_reads.fastq.gz -o output_dir
+```
+
+The command line options are:
+
+- `-1` is the forward short read file (in FASTQ format, optionally compressed with gz)
+- `-2` is the reverse short read file (in the same format)
+- `-l` is the long read file (in either FASTQ or FASTA format, optionally compressed with gz)
+- `-o` is the output directory, where result files will be saved.
+
+In this example, we're assembling a bacterial genome from a pair of short read files (`short_R1.fastq.gz` and `short_R2.fastq.gz`) and a long read file (`long_reads.fastq.gz`).
+
+Please Note: Input files (reads and assemblies) can be in FASTQ or FASTA format, and can be compressed with gz.
+
+You can also give it a SPAdes assembly with the `--existing_long_read_assembly` flag. The assembly should be in FASTA format. Here is how you might do that:
+
+Code:
+```
+unicycler --existing_long_read_assembly spades_assembly.fasta -1 short_R1.fastq.gz -2 short_R2.fastq.gz -l long_reads.fastq.gz -o output_dir
+```

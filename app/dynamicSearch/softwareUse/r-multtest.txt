@@ -1,0 +1,41 @@
+Use Case: Use r-multtest for multiple testing procedures, which are commonly used in statistical analyses to correct for the multiple hypotheses.
+
+Code Details and Examples: 
+
+Code:
+
+The following script shows how to use the r-multtest package in R to apply a multiple testing correction to a set of p-values. This could be p-values from a gene expression analysis, or any other statistical test.
+
+Firstly, we will generate some test data. Generate 1000 p-values from a uniform distribution between 0 and 1.
+
+```R
+pvalues <- runif(1000)
+```
+
+Once the p-values are assigned, use the mt.rawp2adjp function from the r-multtest package to adjust these p-values. The method used is the Benjamini & Hochberg (1995) step-up FDR control.
+
+```R
+library(multtest)
+adjp <- mt.rawp2adjp(pvalues, proc = "BH")
+```
+
+This function returns a list, where the adjp component gives the adjusted p-values.
+
+```R
+adjusted_pvalues <- adjp$adjp
+```
+
+The results are then sorted from lowest to highest adjusted p-value, and the top 10 results with the lowest adjusted p-values are viewed.
+
+```R
+sorted_results <- sort(adjusted_pvalues, index.return=TRUE)
+print(sorted_results$x[1:10])
+```
+
+Command to run the R script:
+
+This R script can be run by saving it as an R script file (for example, "multtest_example.R"), and then running the Rscript command in the terminal.
+
+```shell
+Rscript multtest_example.R
+```

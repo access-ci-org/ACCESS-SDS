@@ -1,0 +1,24 @@
+{
+    "software_name": "Astropy",
+    "overview": "Astropy is a community-driven Python library for astronomy and astrophysics. It aims to provide core functionality and common tools needed for astronomical research. Astropy includes modules for celestial coordinate systems, spectral manipulations, units and constants, time and dates, FITS file handling, and cosmological calculations.",
+    "core_features": [
+        "Provides tools for astronomical research in Python",
+        "Supports celestial coordinate transformations and manipulations",
+        "Handles spectral data and analysis",
+        "Includes functionality for time and date calculations",
+        "Offers tools for FITS file handling and manipulation",
+        "Provides support for cosmological calculations"
+    ],
+    "general_tags": [
+        "Python Library",
+        "Astronomy",
+        "Astrophysics",
+        "Astronomical Research",
+        "Data Analysis"
+    ],
+    "research_discipline": "Astronomy and Planetary Sciences",
+    "research_area": "Astrophysics",
+    "software_class": "Library",
+    "software_type": "Computational Software",
+    "field_of_science": "Physical Sciences"
+}

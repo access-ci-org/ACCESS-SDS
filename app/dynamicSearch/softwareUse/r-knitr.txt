@@ -1,0 +1,39 @@
+Use Case: The knitr library in R is widely used for dynamic report generation in R. It enables the intermingling of code and text to create comprehensive reports. One common use case is to create a reproducible research document in which the data analysis code, results, and interpretation are all located in the same place.
+
+Code details and examples: 
+
+To use knitr, you first need to install it using `install.packages("knitr")` command in R. Once installed, you load knitr in a script with `library(knitr)`.
+
+It's common to use knitr with Rmarkdown. Here's a simple example of this usage:
+
+```
+---
+title: "Simple Knitr Document"
+output: pdf_document
+---
+
+```{r}
+# load in the data
+data(mtcars)
+
+# summarize the data
+summary(mtcars)
+```
+
+```{r, echo=FALSE, fig.cap='A scatterplot.'}
+# Plot data
+plot(mtcars$mpg, mtcars$disp, xlab="mpg", ylab="disp")
+```
+```
+
+The above code when saved in a .Rmd file and run using the `rmarkdown::render("filename.Rmd")` command in R or "Knit" button in RStudio, generates a PDF that includes both the code and its output.
+
+The input format is a .R script or .Rmd file.
+
+The specifications include:
+
+- A YAML header surrounded by ---
+- knitr code chunks surrounded by ```
+- Code chunk options (e.g., echo=FALSE) directly after the `{r}`
+
+Code snippets are included directly in the .Rmd file, and can be written as normally written in R. The output file (this case, a PDF) includes both the input code and the output it generates (both the console output and graphs).

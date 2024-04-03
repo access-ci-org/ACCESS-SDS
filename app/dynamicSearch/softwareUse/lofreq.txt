@@ -1,0 +1,26 @@
+Use Case: LoFreq is a fast and sensitive variant-caller for inferring SNVs (Single Nucleotide Variants) and indels (Insertions and Deletions) from Next Generation Sequencing data. It was designed to detect low-frequency variants in viral and bacterial populations, but can be applied to other studies as well.
+
+Code details and examples:
+
+Code:
+
+LoFreq requires a sorted BAM file (binary version of a SAM file) as input. 
+
+Input file:
+File name: sorted.bam
+
+Command to run the software:
+```
+lofreq call -f reference.fasta -o lofreq_out.vcf sorted.bam
+```
+
+This command will initiate the variant calling. The '-f' flag specifies the reference genome in FASTA format, '-o' specifies the output VCF file, and the last argument is the sorted BAM file.
+
+The output is a VCF file that contains the detected variants. The output VCF file (lofreq_out.vcf) can be viewed using any text editor or VCF viewer.
+
+Specifications and details in input files:
+The input BAM file must be sorted and must have an associated .bai index file. The reference FASTA file must match the reference used for alignment in the BAM file. 
+
+Note: For indel calling, an extra step of indel realignment may be required before calling LoFreq. This can be done using other software like GATK's IndelRealigner. 
+
+The default settings of LoFreq are optimized for viral and bacterial data with high coverage. If you're working with lower coverage data or diploid organisms, you may need to adjust the parameters accordingly. You should also filter the output VCF file using the lofreq filter command to remove low-quality variants.

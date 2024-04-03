@@ -1,0 +1,19 @@
+{
+    "software_name": "fribidi",
+    "comprehensive_overview": "GNU FriBidi is an implementation of the Unicode Bidirectional Algorithm (bidi). It also provides utility functions to help work with bidirectional text.",
+    "core_features": [
+        "Implementation of the Unicode Bidirectional Algorithm",
+        "Utility functions for working with bidirectional text"
+    ],
+    "general_tags": [
+        "Unicode",
+        "Bidirectional Algorithm"
+    ],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Library",
+        "software_type": "Text Processing",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

@@ -1,29 +1,36 @@
-Use Case: Apache Arrow is a cross-language development platform for in-memory data. It specifies a standardized language-independent columnar memory format for flat and hierarchical data, organized for efficient analytic operations on modern hardware. It also provides computational libraries on top of this format.
+Use Case: Arrow is a Python Library used for parsing, formatting, manipulating, and creating dates, times, and timestamps. It makes date and time manipulation easy and intuitive.
 
-Code details and examples: 
-Apache Arrow supports various programming languages like C++, Java, JavaScript, Python, etc. Below is a simple example using Python:
+Code details and examples:
 
+Code:
 ```python
-import pyarrow as pa
+import arrow
 
-# Create a simple Arrow array
-data = [1, 2, 3, 4, 5]
-array = pa.array(data)
+utc = arrow.utcnow()
+utc
+# Arrow(2013, 5, 5, 0, 0, 0, tzinfo=tzutc())
 
-# Write and read back Arrow array to a file
-with pa.OSFile('data.arrow', 'wb') as f:
-    writer = pa.RecordBatchFileWriter(f, array.type)
-    batch = pa.RecordBatch.from_arrays([array], ['numbers'])
-    writer.write_batch(batch)
-    
-with pa.OSFile('data.arrow', 'rb') as f:
-    reader = pa.open_file(f)
-    print(reader.read_pandas())
+utc = utc.shift(hours=-1)
+utc
+# Arrow(2013, 5, 4, 23, 0, 0, tzinfo=tzutc())
+
+local = utc.to('US/Pacific')
+local
+# Arrow(2013, 5, 4, 16, 0, 0, tzinfo=tzfile('/usr/share/zoneinfo/US/Pacific'))
+
+arrow.get('2013-05-05T12:30:45.123456789Z')
+# Arrow(2013, 5, 5, 12, 30, 45, 123456, tzinfo=tzutc())
 ```
+The `arrow.get()` function can parse a string representation of a date and time. This string could have been created by another process and saved in a database or file. The string format is 'YYYY-MM-DDTHH:MM:SS.MMMMMM'.
 
-To run the above code, save it in a Python file (e.g., `arrow_example.py`) and execute it using a Python interpreter.
+The `arrow.utcnow()` function returns the current date and time in UTC. 
 
-Command to run:
+The `utc.shift(hours=-1)` function subtracts one hour from the time. 
+
+The `utc.to('US/Pacific')` function converts the time to the 'US/Pacific' timezone. 
+
+Command to run python code:
+If your python file is named `example.py`, you can run in the command prompt or terminal:
 ```bash
-python arrow_example.py
+python example.py
 ```

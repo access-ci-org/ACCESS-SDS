@@ -1,0 +1,11 @@
+{
+  "software_name": "Score-P",
+  "comprehensive_overview": "Score-P is a performance measurement infrastructure designed to analyze and optimize the performance of parallel and distributed applications. It provides a set of measurement and analysis tools to assess the performance, scalability, and behavior of parallel applications.",
+  "core_features": "1. Instrumentation and measurement of parallel and distributed applications. 2. Performance analysis and profiling capabilities. 3. Scalability analysis and tuning support. 4. Integration with different HPC tools and frameworks. 5. Trace-based performance analysis.",
+  "general_tags": ["software", "performance measurement", "parallel computing", "distributed computing"],
+  "research_discipline": [],
+  "research_area": [],
+  "software_class": "Performance Measurement Infrastructure",
+  "software_type": "Tool",
+  "field_of_science": "Engineering and Technology"
+}

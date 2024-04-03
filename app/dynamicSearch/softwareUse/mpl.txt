@@ -1,0 +1,49 @@
+Use Case: mpl, short for Matplotlib, is a plotting library in the Python programming language. It provides an object-oriented API for embedding plots into applications using general-purpose GUI toolkits like Tkinter, wxPython, Qt.
+
+Code details and examples: Code.
+
+Here is a simple example of creating a scatter plot using matplotlib.
+
+```
+import matplotlib.pyplot as plt
+
+# Data
+x = [5, 2, 9, 4, 7]
+y = [10, 5, 8, 4, 2]
+
+# Create a scatter plot
+plt.scatter(x, y)
+
+# Show the plot
+plt.show()
+```
+
+In this example, 'x' and 'y' are lists of numerical data. The `plt.scatter` function is used to generate a scatter plot of 'x' versus 'y'. Then `plt.show` function is used to display the plot.
+
+One could also set labels and title for the plot:
+
+```
+import matplotlib.pyplot as plt
+
+# Data
+x = [5, 2, 9, 4, 7]
+y = [10, 5, 8, 4, 2]
+
+# Create a scatter plot
+plt.scatter(x, y)
+
+# Labels
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+
+# Title
+plt.title("Scatter plot")
+
+# Show the plot
+plt.show()
+```
+
+Command to run the provided Python code (if saved as a .py file):
+```
+python filename.py
+```

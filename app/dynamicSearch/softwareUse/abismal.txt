@@ -1,0 +1,24 @@
+Use Case: Abismal (Matter Modeling package) is typically used for molecular dynamic simulations and structural analysis. It is widely used in bioinformatics, computational chemistry, and materials science to simulate and analyze molecular and biomolecular systems.
+
+Code details and examples: Code
+
+Input File:
+Suppose we have an input file called "input.pdb" in Protein Data Bank format representing a complex molecular structure for further simulations.
+
+```
+ATOM      1  N   ALA A   1      -1.012  -0.151  -0.821  1.00  0.00           N  
+ATOM      2  CA  ALA A   1      -0.434   1.194  -0.565  1.00  0.00           C  
+ATOM      3  C   ALA A   1       1.040   1.124  -0.170  1.00  0.00           C  
+ATOM      4  O   ALA A   1       1.707   0.155  -0.469  1.00  0.00           O  
+ATOM      5  CB  ALA A   1      -0.780   2.097  -1.646  1.00  0.00           C   
+```
+
+This input file contains atomic information (atom name, residue name, serial number, chain identifier, coordinate (x,y,z), occupancy, temperature factor).
+
+Command to run the software with this input file:
+In a Unix-like environment, the software is typically run from the command line with a command like:
+
+```bash
+abismal input.pdb 
+```
+The output will be dependent on the specific parameters and options provided to the program, but it will typically produce output files reflecting the results of the molecular dynamic simulations.

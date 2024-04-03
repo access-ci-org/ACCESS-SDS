@@ -1,16 +1,25 @@
-Parabricks is a GPU-accelerated bioinformatics software suite for primary and secondary next-generation sequencing (NGS) data analysis.
+Use Case: Parabricks is a GPU-accelerated genomics analysis toolkit, which is used for performing variant calling in genomic sequencing data. It performs alignment, variant calling and annotation in a highly parallel manner, making it much faster than traditional methods.
 
-Use Case: Variant Calling
-Code Details and Examples:
-- Input Files: Parabricks accepts standard input formats for NGS data such as FASTQ files for raw sequencing data and BAM files for aligned reads.
-- Sample Input Command:
+Code details and examples: Code.
+
+Files Required: 
+Two FASTQ files (for paired-end sequencing data)
+
+Input File Format:
+FASTQ
+
+Code to run alignment (pbrun aligner), variant calling (pbrun germline), and variant annotation (pbrun vep):
+
 ```
-pb_variant_calling --ref reference.fasta --in aligned_reads.bam --out variants.vcf
+$ pbrun aligner --ref ref.fasta --in-fq sample_R1.fastq sample_R2.fastq --out-bam output.bam
+$ pbrun germline --ref ref.fasta --bam output.bam --out-vcf output.vcf
+$ pbrun vep --ref ref.fasta --in-vcf output.vcf --out-vcf output_annotated.vcf
 ```
-In this example, `reference.fasta` is the reference genome, `aligned_reads.bam` is the aligned reads file, and `variants.vcf` is the output variant call format file.
 
-- Specifications: Depending on the specific analysis being performed, additional parameters such as variant calling settings, quality filters, and output formats may need to be specified in the command.
-
-- Command to Run: The command to run Parabricks varies based on the specific analysis being performed. In general, the command structure follows `pb_<analysis_type>`, where `<analysis_type>` is the specific analysis being run (e.g., variant calling, genome assembly, etc.)
-
-For more detailed information on specific analyses and commands, please refer to the official Parabricks documentation.
+Where,
+- `--ref` is the reference genome in FASTA format.
+- `--in-fq` represents the input FASTQ files (paired-end in this case).
+- `--out-bam` is the output file in BAM format after alignment.
+- `--bam` is the input file in BAM format for variant calling.
+- `--out-vcf` is the output file in VCF format after variant calling.
+- `--in-vcf` is the input file in VCF format for annotation.

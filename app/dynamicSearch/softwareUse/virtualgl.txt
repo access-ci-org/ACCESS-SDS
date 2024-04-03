@@ -1,0 +1,14 @@
+Use Case: VirtualGL is used to display 3D graphics from OpenGL-based applications running in a remote server. 
+
+Code Details and Examples: 
+
+Code: 
+
+VirtualGL doesn't directly process input files, but rather, deals with the 3D graphic outputs from other programs. It operates by "hijacking" OpenGL-based software to redirect 3D rendering commands to a framebuffer object. So, specific instructions would largely depend on the original software being used. Here is a basic command-line usage of VirtualGL with TurboVNC (a high-speed, 3D-friendly virtual network client). 
+
+```
+vglrun -d :1.0 /opt/autodesk/maya/bin/maya
+```
+This tells VirtualGL to run Maya, a 3D rendering software, over TurboVNC's first display.
+
+Command line options are listed in the VirtualGL's user manual. Users should always consult the manual or help command `vglrun --help` for specific requirements and additional options.

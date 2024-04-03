@@ -1,0 +1,42 @@
+Use Case: Displaying SV events in human genomic data using an integrative and intuitive format.
+
+Code details and examples:
+
+Code:
+
+```
+./samplot plot -s sample1.bam -s sample2.bam -o plot.png -c chr1 -s 10000 -e 20000
+```
+
+Input Files:
+A BAM, CRAM, or VCF file is required. In case a BAM is provided, the index file (BAI) should be located in the same directory. If a VCF file is used, all bam/cram files specified must have read data around the SV events in the VCF.
+
+The BAM/CRAM/VCF file is needed to be compliant with the format requirements of the SAM/BAM/VCF specifications. For example,
+
+BAM/CRAM File:
+
+```
+@SQ SN:chr1 LN:248956422
+read1  163 chr1  10000 60 100M = 10200 300 AGCTA...   ARRAY_OF_QUALITY_SCORES
+read2  83  chr1  10200 60 100M = 10000 -300 AGCTA...  ARRAY_OF_QUALITY_SCORES
+...
+```
+
+VCF File:
+
+```
+##fileformat=VCFv4.2
+#CHROM POS  ID  REF ALT QUAL  FILTER INFO  FORMAT  NA12878
+chr1   10000 .   N   <DEL> .     PASS SVTYPE=DEL;END=20000 GT  0/1
+...
+```
+
+Specifications:
+While using BAM/CRAM, the region to plot (chr, start, end) needs to be specified:
+- bam/cram: A list of paths to indexed bam/cram files. 
+- -c, -s, -e: correspond to chromosome, start, and end respectively.
+- -o: The output file where you want the generated plot to be stored.
+- In the case of VCF files, SVTYPE and END of the variant are required fields in the INFO column.
+
+Command to Run: 
+The command is run directly from the terminal in the directory containing the "samplot" tool and the required files.

@@ -1,0 +1,37 @@
+Use Case: Use PyBigWig to read and write genomic data in the BigWig format.
+
+Code Details and Examples: 
+
+The required input file format for PyBigWig is a BigWig file. BigWig is a data format used in bioinformatics for storing large, ordered, continuous sets of numerical data, specifically genomic data. The BigWig file records a list of chromosome, start position, end position, and value, grouped by chromosome.
+
+Code:
+
+```
+import pyBigWig
+
+# Opening BigWig file for reading
+bw = pyBigWig.open("my_file.bw")
+
+# Check if the file was opened successfully
+if not bw.isBigWig():
+    raise Exception("Not a BigWig file")
+
+# Get all of the chromosome name
+chroms = bw.chroms()
+
+# Getting stats of a region
+mean = bw.stats("chr1", 0, 100000, type="mean")
+
+# Close the BigWig file
+bw.close()
+```
+
+Command to run:
+
+The command to execute a Python script from the command line is:
+
+```
+python my_script.py
+```
+
+This assumes "my_script.py" is a Python file containing the above code. Note that the file "my_file.bw" should also be located in the same directory.

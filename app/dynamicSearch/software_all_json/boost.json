@@ -1,0 +1,26 @@
+{
+    "software_name": "Boost",
+    "comprehensive_overview": "Boost is a set of C++ libraries that provides support for tasks and structures such as linear algebra, pseudorandom number generation, multithreading, image processing, regular expressions, and unit testing. It aims to extend the functionality of C++ programming language and make it more efficient and powerful.",
+    "core_features": [
+        "Extensive C++ libraries",
+        "Support for various tasks and data structures",
+        "Enhanced functionality for C++ programming"
+    ],
+    "general_tags": [
+        "C++ Libraries",
+        "Programming Support",
+        "Efficiency Enhancement"
+    ],
+    "additional_tags": {
+        "research_discipline": [
+            "Computer Science",
+            "Software Engineering, Systems, and Development"
+        ],
+        "research_area": [],
+        "software_class": "Library",
+        "software_type": "Development Tool",
+        "field_of_science": [
+            "Computer and Information Sciences"
+        ]
+    }
+}

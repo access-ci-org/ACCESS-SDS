@@ -1,0 +1,28 @@
+Use Case: CubeLib is a high performance computing library utilized for performance report manipulation and visualization. It offers the user tools to analyze and visualize the performance reports produced by a certain other toolset (such as Scalasca or Score-P).
+
+Code details and examples:
+
+Code:
+
+Let's imagine that we have already performance report named `example.cubex`. We will use `cube_stat` tool, which is a part of CubeLib, to get statistics. The CubeStat tool calculates and reports various statistical values (min, max, mean, median, etc.) across all processes, threads, or metrics of the selected region.
+
+```
+cube_stat -r PRECICE_SOLVE -m time -i example.cubex
+```
+
+In this command:
+- `-r` option: it's mean 'region'. You should use the name of your region. In our case this is 'PRECICE_SOLVE' 
+- `-m` option: it's mean 'metric'. You can use one of metrics provided by the tool. In our case, we are looking at 'time'.
+- `-i` option: it's stands for 'input', here specify the path to your .cubex file
+
+This tool takes in .cubex file (binary file format) outputted by other tools (Scalasca, Score-P), treats it as an input file, and based on that produces the plain text reports about application performance, which could be further analyzed.
+
+Specifications and details in input files:
+
+The .cubex files typically include a vast array information about the performance of the parallel program you've been running, including but not limited to: 
+
+- Time spent in various parts of the code
+- Call trees (which functions called which other functions, how many times, and what was the cumulative time spent)
+- Process and thread behavior on the system
+
+Such detailed information in .cubex files enable us to gain a deep understanding of where and why the application could have performance issues.

@@ -1,39 +1,58 @@
-Use Case: HDF5 files created with the Parallel HDF5 library can contain a large amount of data and are commonly used in high-performance computing applications for storing and sharing large datasets efficiently.
+Use Case: Parallel HDF5 (PHDF5) is used when large amounts of data need to be stored and handled. By distributing the data across multiple processors, we can perform operations like data analysis and visualization at a much faster rate. PHDF5 can also be used in Monte Carlo Simulations, Computational Fluid Dynamics, etc.
 
 Code details and examples:
-1. Creating a sample HDF5 file using the h5py Python library:
-```python
-import h5py
+Code:
 
-# Create a new HDF5 file
-file = h5py.File('sample_hdf5.h5', 'w')
+The input format required in the case of hdf5 (PHDF5) usually is in the form of structured data. The data layout of hdf5 is hierarchical and is organized in the form of a "file directory". The fundamental structures under this file system are 'groups' (which are the container structures organizing the data) and 'datasets' (which are multidimensional arrays of a homogeneous type). 
 
-# Create a dataset
-data = [1, 2, 3, 4, 5]
-file.create_dataset('dataset1', data=data)
+Here is a sample of a PHDF5 program (in C):
 
-# Close the file
-file.close()
+```C
+#include "hdf5.h"
+#define FILE "test.h5"
+int main() {
+   hid_t       file_id, dataset_id;  /* identifiers */
+   herr_t      status;
+   int         i, j, dset_data[4][6]; /* define a buffer for our dataset */
+
+   /* Initialize the dataset */
+   for (i = 0; i < 4; i++)
+      for (j = 0; j < 6; j++)
+         dset_data[i][j] = i * 6 + j + 1;
+
+   /* Create a new file using the default properties */
+   file_id = H5Fcreate(FILE, H5F_ACC_TRUNC, H5P_DEFAULT, H5P_DEFAULT);
+
+   /* Create the dataspace for the dataset */
+   hsize_t dims[2] = {4, 6};
+   hid_t dataspace_id = H5Screate_simple(2, dims, NULL);
+
+   /* Create the dataset */
+   dataset_id = H5Dcreate2(file_id, "/dset", H5T_STD_I32BE, dataspace_id, 
+		      H5P_DEFAULT, H5P_DEFAULT, H5P_DEFAULT);
+
+   /* Write the dataset */
+   status = H5Dwrite(dataset_id, H5T_NATIVE_INT, H5S_ALL, H5S_ALL, H5P_DEFAULT, 
+		      dset_data);
+
+   /* End access to the dataset and release resources used by it */
+   status = H5Dclose(dataset_id);
+
+   /* Terminate access to the data space */
+   status = H5Sclose(dataspace_id);
+
+   /* Close the file */
+   status = H5Fclose(file_id);
+}
+```
+To compile the program:
+
+```
+mpicc -o h5_write h5_write.c -lhdf5
 ```
 
-2. Reading data from an existing HDF5 file using h5py:
-```python
-import h5py
+And, to run this MPI program:
 
-# Open an existing HDF5 file in read mode
-file = h5py.File('sample_hdf5.h5', 'r')
-
-# Read the dataset
-dataset = file['dataset1']
-print(dataset[:])
-
-# Close the file
-file.close()
 ```
-
-3. Running an example code that uses Parallel HDF5 library:
-```bash
-mpirun -n 4 ./parallel_hdf5_example
+mpirun -np 8 ./h5_write
 ```
-
-Note: The code snippets provided above assume you have h5py installed in your Python environment. Also, the h5py library simplifies the process of working with HDF5 files in Python. The example code for Parallel HDF5 would need to be obtained from the specific application/library that supports its usage.

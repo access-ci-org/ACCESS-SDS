@@ -1,0 +1,22 @@
+Use Case: climetlab is a Python-based library by ECMWF (European Centre for Medium-Range Weather Forecasts) for visualization and data processing. climetlab helps to read, process, and visualize meteorological, oceanographic, and atmospheric datasets. 
+
+Code details and examples: 
+
+Code: 
+
+```python
+import climetlab as cml
+
+# Reading data
+ds = cml.load_dataset('era5-temperature-at-2m')  
+
+# Processing data
+ds.to_xarray()  
+
+# Visualizing data
+cml.plot_map(ds)
+```
+
+The dataset 'era5-temperature-at-2m' is a built-in dataset in climetlab and it does not require any input file. The processing is to convert the data to an xarray dataset which is a standard format for multi-dimensional data in Python. Finally, we plot the data on a map. 
+
+Running the program command: This is not applicable for Python libraries. Run the python program containing the code mentioned above. Just ensure that python environment has the climetlab package installed.

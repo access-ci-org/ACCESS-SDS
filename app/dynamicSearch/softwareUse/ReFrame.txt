@@ -1,32 +1,36 @@
-Use Case: ReFrame is a framework for writing regression tests for HPC systems. It is a scalable and flexible framework that allows users to define, write, and run tests in a structured way.
+Use Case: ReFrame is a software framework for writing regression tests for HPC systems. It allows the user to add system-agnostic tests and adapts them to run on different systems without any modification. 
 
-Code details and examples:
-1. Sample input file (test_python.py):
+Code details and examples: Code.
+
+A simple ReFrame test might look like this:
+
 ```python
-import os
-from reframe import RunOnlyRegressionTest
+import reframe as rfm
 
-class MyTest(RunOnlyRegressionTest):
-    def __init__(self, partition='gpu', **kwargs):
-        super().__init__('my_test', os.path.dirname(__file__), **kwargs)
-        self.valid_systems = ['my_system:{}'.format(partition)]
-        self.valid_prog_environs = ['my_env']
-        self.executable = 'my_executable'
-        self.executable_opts = ['input.dat']
-        self.sanity_patterns = {
-            'output': 'SUCCESS'
-        }
-        self.num_tasks = 4
-        self.num_tasks_per_node = 1
-        self.reference = {
-            'my_system:gpu': {'output': 'SUCCESS'}
-        }
+@rfm.simple_test
+class HelloWorldTest(rfm.RegressionTest):
+    def __init__(self):
+        self.valid_systems = ['*']
+        self.valid_prog_environs = ['*']
+        self.sourcepath = 'hello.cpp'
+        self.build_system = 'SingleSource'
+        self.sanity_patterns = rfm.assert_found(r'Hello, World\!', self.stdout)
 
 ```
+In this code:
 
-2. Running the test:
+- The `@rfm.simple_test` decorator indicates that this test case is to be discovered automatically. 
+- The `valid_systems` list indicates on which systems this test is expected to pass. The value '*' means all systems.
+- The `valid_prog_environs` list indicates under which environment this test is expected to pass.
+- The `sourcepath` is the relative path (of the check's directory) to the file to compile and run.
+- The `sanity_patterns` attribute describes the patterns to be searched in the output and/or error files of the test in order to determine the sanity of the run.
+  
+To run the test:
+
+ReFrame supports a command-line interface for running and managing tests. On Linux or macOS, it can be installed and run via terminal. You first need to configure ReFrame to recognize your system and then use the following command to run the HelloWorldTest:
+
 ```bash
-reframe -c test_python.py -r --performance-report
+reframe -c <directory of HelloWorldTest> -r
 ```
-
-In the above example, a sample regression test is defined in a Python script using ReFrame. The test checks the output of an executable 'my_executable' with input file 'input.dat'. The test is configured to run on a system named 'my_system' with the 'gpu' partition and 'my_env' environment. The test should run with 4 tasks and 1 task per node, and the output should contain the string 'SUCCESS'.
+This command instructs ReFrame to compile and execute the test. 
+It checks the results and reports success or failure. Test information and results are written to an output folder. This architecture makes it easy to read and interpret test results at a glance.

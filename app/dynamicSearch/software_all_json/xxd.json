@@ -1,0 +1,21 @@
+{
+    "software_name": "xxd",
+    "comprehensive_overview": "xxd is a command-line utility on Unix and Unix-like systems for creating a hex dump of a given file or standard input.",
+    "core_features": [
+        "Create hex dump of a file or standard input",
+        "Convert binary data to hexadecimal format",
+        "Various options for formatting and displaying output"
+    ],
+    "general_tags": [
+        "hex dump",
+        "command-line utility",
+        "data conversion"
+    ],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Utility",
+        "software_type": "Command-line tool",
+        "field_of_science": "Other Computer and Information Sciences"
+    }
+}

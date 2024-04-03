@@ -1,0 +1,33 @@
+Use Case: Use Kineto for profiling PyTorch workloads to enable better understanding of the time spent in various sections of the code and for identifying any performance bottlenecks. It helps monitor GPU usage, track tensor memory consumption, visualize operation kernels and their dependencies, provides tracing of Python and C++ calls and more.
+
+Code details and examples: Code
+
+In order to use Kineto for profiling, you'll need to insert some code into your PyTorch script. The code is inserted using PyTorch's torch.profiler functionality. Below is a basic code snippet.
+
+```python
+    import torch
+    import torch.profiler
+    
+    with torch.profiler.profile(
+        activities=[
+            torch.profiler.ProfilerActivity.CPU,
+            torch.profiler.ProfilerActivity.CUDA],
+    ) as p:
+        # Your code to profile
+        ...
+    p.export_chrome_trace("trace.json")
+```
+
+In the above example, replace the '...' with the parts of your code that you want to profile.
+
+This code initiates a profiler context and captures CPU and CUDA activities. It then exports these activities into a 'trace.json' file that can be visualized in Chrome's tracing tool.
+
+Command to run:
+
+You would run your python file in the same way you usually run it, such as:
+
+```
+python your_file.py
+```
+
+This will generate a 'trace.json' file in the same directory as your script, which can be opened in Chrome's tracing tool for viewing. Just navigate to 'chrome://tracing' in your Chrome browser, click on 'Load' button and select your 'trace.json' file. After loading, you can see a detailed timeline of your script’s execution.

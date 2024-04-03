@@ -1,39 +1,59 @@
-Use Case: LLVM is a compiler infrastructure project that is widely used in high-performance computing for optimizing code generation. 
+Use Case: LLVM (Low Level Virtual Machine) is a compilation framework that is used to create and optimize compiler front ends and back ends. It has been widely used in research, industry, and production environment due to its modular and reusable structure. It is programmed in C++ and provides APIs to interact with its core libraries.
 
-Code details and examples:
-LLVM supports various programming languages like C, C++, and Swift. Here is an example of using LLVM to generate an optimized assembly code from a simple C program.
+Code Details and Examples: 
 
-```c
-// sample.c
-#include <stdio.h>
+Code:
+
+```cpp
+#include <llvm/ADT/APSInt.h>
+#include <llvm/ADT/STLExtras.h>
+#include <llvm/IR/BasicBlock.h>
+#include <llvm/IR/Constants.h>
+#include <llvm/IR/DerivedTypes.h>
+#include <llvm/IR/Function.h>
+#include <llvm/IR/IRBuilder.h>
+#include <llvm/IR/LLVMContext.h>
+#include <llvm/IR/Module.h>
+#include <llvm/IR/Type.h>
+#include <llvm/IR/Verifier.h>
+
+using namespace llvm;
+
+static LLVMContext TheContext;
+static IRBuilder<> Builder(TheContext);
 
 int main() {
-    printf("Hello, LLVM!\n");
+    // Create some module to put our function into it.
+    std::unique_ptr<Module> Owner = make_unique<Module>("test", TheContext);
+    Module *TheModule = Owner.get();
+
+    // We are about to create the "fib" function:
+    FunctionType *FibFT = FunctionType::get(Type::getInt32Ty(TheContext),
+                            Type::getInt32Ty(TheContext), false);
+
+    Function *FibF =
+        Function::Create(FibFT, Function::ExternalLinkage, "fib", TheModule);
+
+    // Add a basic block to the Fibonacci function.
+    BasicBlock *BB = BasicBlock::Create(TheContext, "EntryBlock", FibF);
+
+    // Create a basic block builder with default parameters.
+    IRBuilder<> Builder(BB);
+
+    // Return the result.
+    Builder.CreateRet(Builder.getInt32(0));
+
+    // Dump out the generated code.
+    TheModule->print(errs(), nullptr);
+
     return 0;
 }
 ```
+The above code snippet creates a LLVM module with a function named "fib". The function takes an integer as input returns an integer. The function merely returns zero. The function and module are printed to stderr.
 
-To compile the C program using LLVM's clang compiler and generate LLVM IR code:
+This code can be compiled with `clang++` and run dynamically. The command to run the code would be something like this:
+
 ```bash
-clang -S -emit-llvm sample.c -o sample.ll
-```
-
-To generate optimized assembly code using LLVM:
-```bash
-llc sample.ll -o sample.s
-```
-
-To compile the optimized assembly code:
-```bash
-gcc sample.s -o sample
-```
-
-To run the compiled executable:
-```bash
-./sample
-```
-
-This will output:
-```
-Hello, LLVM!
+$ clang++ -g -O3 toy.cpp `llvm-config --cxxflags --ldflags --system-libs --libs core` -o toy
+$ ./toy
 ```

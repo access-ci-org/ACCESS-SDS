@@ -1,0 +1,33 @@
+Use Case: The R-delayedmatrixstats software is used for calculations of summary statistics of DelayedArray objects along selected dimensions irrespective of the size of the objects.
+
+Code details and examples:
+
+Code:
+
+```R
+# Import the required library
+library(DelayedMatrixStats)
+
+# Create a Matrix
+data_matrix <- DelayedArray(matrix(runif(10000), ncol = 10))
+
+# Compute row sums
+rowsum_results <- rowSums2(data_matrix)
+
+# Compute column sums
+columnsum_results <- colSums2(data_matrix)
+
+# Show the results
+print(rowsum_results)
+print(columnsum_results)
+```
+
+Sample Input Files: Not applicable. The data matrix is generated within the code.
+
+Format Required: Not applicable. The data matrix is generated within the code.
+
+Any Specifications and details in Input Files: Not applicable.
+
+Command to run: This is R code, which can be run in an R environment like RStudio. After inputting the code, press Ctrl+Enter to run it.
+
+User should replace `runif(10000), ncol = 10` with their own data to get results applicable to their use case. Also, user should already have `DelayedMatrixStats` installed in their R environment to be able to run this code. The functions `rowSums2` and `colSums2` are used to calculate the sum of rows and columns of the DelayedArray respectively.

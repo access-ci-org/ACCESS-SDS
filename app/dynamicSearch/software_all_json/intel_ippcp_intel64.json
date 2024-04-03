@@ -1,0 +1,23 @@
+{
+  "software_name": "intel_ippcp_intel64",
+  "comprehensive_overview": "Intel Integrated Performance Primitives Cryptography (IPP Cryptography) is a collection of highly optimized cryptographic functions and algorithms developed by Intel for high-performance computing applications. It provides a set of cryptographic functions optimized for Intel processors to enhance the security and performance of cryptographic operations in software.",
+  "core_features": [
+    "Optimized cryptographic functions for Intel processors",
+    "High-performance encryption and decryption algorithms",
+    "Support for a variety of cryptographic operations",
+    "Integration with Intel IPP library for additional performance optimizations"
+  ],
+  "general_tags": [
+    "Cryptography",
+    "High-performance computing",
+    "Intel processors",
+    "Security"
+  ],
+  "additional_tags": {
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Library",
+    "software_type": "Optimization Library",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

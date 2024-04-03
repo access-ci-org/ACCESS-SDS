@@ -1,0 +1,23 @@
+{
+    "software_name": "PyGObject",
+    "comprehensive_overview": "PyGObject is a Python module that enables developers to access GObject-based libraries in Python. It allows Python code to interact with and use functionalities provided by libraries written in the GObject introspection format.",
+    "core_features": [
+        "Facilitates interaction between Python and GObject-based libraries",
+        "Enables Python developers to utilize libraries written in the GObject introspection format",
+        "Support for GObject properties, signals, and interfaces in Python",
+        "Provides a high-level interface for working with GTK and other GNOME libraries"
+    ],
+    "general_tags": [
+        "Python",
+        "Programming",
+        "GObject-based libraries",
+        "Development"
+    ],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Library",
+        "software_type": "Python library",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

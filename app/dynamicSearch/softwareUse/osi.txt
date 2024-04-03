@@ -1,0 +1,22 @@
+Use Case: The Open Solver Interface (OSI) is an interface for calling mathematical programming solvers. This allows you to call different solvers by changing only a few lines of code when you switch from one solver to another. 
+
+Code details and examples: Code:
+
+```python
+from coinor.grumpy.polyhedron2D import Polyhedron2D
+from coinor.grumpy import generateRandomObjective 
+from coinor.opencoin.glpk import GlpkSolver 
+
+A = [[ 2,  0],
+     [ 0,  2],
+     [ 2,  1]]
+b = [50, 200, 300]
+c = [1, 1]
+solver = GlpkSolver(A = A, b = b, c = c, sense = '=',
+                    variable_type = 'C', objective_sense = 'MAX')
+solver.solve()
+
+```
+Here A is the matrix of coefficients, b is a list of right-hand side values, and c is the list of objective coefficients. Each row in A represents a constraint and each column represents a variable. 
+
+To run this code, use the command python filename.py in a command prompt or terminal, where filename.py is replaced with the name of your Python script. Please make sure you have the necessary packages installed through pip.

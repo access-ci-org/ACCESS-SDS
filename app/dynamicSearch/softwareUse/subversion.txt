@@ -1,56 +1,62 @@
-Use Case: Subversion (SVN) is a version control system used for managing software projects and their source code files.
+Use Case: Use Subversion for version control which allows easier version control, reverting to previous versions, and managing multiple branches of the codebase.
 
-Code details and examples:
-1. Create a new SVN repository:
-```
-svnadmin create /path/to/repository
-```
+Code details and examples: Code
 
-2. Checkout a copy of the repository:
-```
-svn checkout file:///path/to/repository
-```
+Sample Input File: A simple text file such as example.txt can be used to illustrate the subversion commands.
 
-3. Add files to the repository:
-```
-svn add file.txt
-svn commit -m "Adding a new file"
-```
+The file should have any text content, for example, it could be:
+"Hello, World!
 
-4. Update files from the repository:
+This is an example text file for Subversion."
+
+The command to add this file to the Subversion repository is:
+
+`svn add example.txt`
+
+The command-line output will be:
+
 ```
-svn update
+A         example.txt
 ```
 
-5. View the commit history:
+After adding the file, it needs to be committed to the repository:
+
+`svn commit -m "Add example.txt" example.txt`
+
+The command-line output will show the revision number, for example:
+
 ```
-svn log
+Adding         example.txt
+Transmitting file data .
+Committed revision 1.
 ```
 
-6. Revert changes made to a file:
+When changes are made to the file, Subversion can show the differences:
+
+`svn diff example.txt`
+
+If the file was changed from "Hello, World!" to "Hello, World! This is Subversion.", then the command-line output will be something like:
+
 ```
-svn revert file.txt
+Index: example.txt
+===================================================================
+--- example.txt	(revision 1)
++++ example.txt	(working copy)
+@@ -1,2 +1,2 @@
+-Hello, World!
++Hello, World! This is Subversion.
+ 
+ This is an example text file for Subversion.
 ```
 
-7. Merge changes from one branch to another:
-```
-svn merge -r start_revision:end_revision source_branch target_branch
-```
+To update the file in the repository with the changes:
 
-8. Export a clean copy of the repository:
-```
-svn export /path/to/repository /path/to/export/folder
-```
+`svn commit -m "Update example.txt" example.txt`
 
-9. List all files and directories in the repository:
-```
-svn list file:///path/to/repository
-```
+The command-line output will be:
 
-10. Delete a file from the repository:
 ```
-svn delete file.txt
-svn commit -m "Removing a file"
+Sending        example.txt
+Transmitting file data .
+Committed revision 2.
 ```
-
-Please note that these commands are examples and may need to be adjusted based on your specific use case and repository structure.

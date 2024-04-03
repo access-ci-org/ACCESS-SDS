@@ -1,0 +1,26 @@
+Use Case: R-fansi is a tool that is sometimes used to handle ANSI control sequences when working with text in R. One main use case of the package is to determine or control the number of characters a string would occupy on a terminal (including width,height and cursor movements etc).
+
+Code details and examples:
+
+Code:
+```R
+#Load library
+library(fansi)
+
+#Create a string with an ANSI CSI SGR 31 escape sequence, which changes color to red
+x = "This is a \033[31mred\033[39m string"
+
+# print string using cat function
+cat(x)
+```
+The ANSI escape sequence "\033[31m" changes the color to red and "\033[39m" resets the color back to its original value.
+The function `cat` will print the string with color formatting in terminal.
+
+Command to run:
+Rscript filename.R (if you saved this example as filename.R)
+
+Input File: No input file required
+Output: The text "This is a red string" is printed, where "red" appears in red color in terminal.
+
+Format Required: Not applicable.
+Specifications and Details in Input Files: Not applicable.

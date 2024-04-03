@@ -1,0 +1,24 @@
+Use Case: iMath is a Computational Numeric Library, which is a library for mathematics, statistics, and numerical methods implemented in C++ and provided via Python interface. It is desired to perform a matrix operation in python using iMath.
+
+Code details and examples:
+
+Code:
+
+```python
+#import the iMath library
+import iMath 
+
+#create two arrays
+a = iMath.array([1, 2, 3])   # A row vector
+b = iMath.array([4, 5, 6])   # Another row vector
+
+# model some matrix operation
+result = iMath.dot(a, b)    # Compute inner product
+
+#print the result
+print(result)
+```
+
+Command to run the code: `python file_name.py`
+
+For the above code, the input file is not needed; you can directly execute it by saving in python file, and you have to specify the name of that file in the command. This code will import the iMath library and then performs the dot product operation of two given lists `[1, 2, 3]` & `[4, 5, 6]`. The output will then be printed to the console.

@@ -1,0 +1,13 @@
+{
+    "software_name": "PAML",
+    "comprehensive_overview": "PAML (Phylogenetic Analysis by Maximum Likelihood) is a package of programs for phylogenetic analysis of DNA or protein sequences using maximum likelihood. It provides a wide range of tools for evolutionary analysis and inference in a phylogenetic context.",
+    "core_features": "Key features of PAML include phylogeny inference, evolutionary rate estimation, branch-site and branch-specific models, selection analysis, divergence time estimation, and codon models. It allows users to perform various tests and analyses to understand the evolutionary mechanisms underlying sequence data.",
+    "general_tags": ["phylogenetics", "evolutionary analysis", "maximum likelihood", "phylogenetic inference"],
+    "additional_tags": {
+        "research_discipline": "Genetics",
+        "research_area": "Molecular Biology",
+        "software_class": "Bioinformatics",
+        "software_type": "Computational software",
+        "field_of_science": "Biological Sciences"
+    }
+}

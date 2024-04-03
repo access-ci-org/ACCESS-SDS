@@ -1,0 +1,25 @@
+Use Case: Use G2Lib in numerical relativity, cosmology, wave propagation simulations; it is used in solving Einstein's field equation.
+
+Code details and examples: Code:
+
+G2Lib is executed using compiled code. However, some parameters may be passed while executing the code. Here is a basic example for running a simulation on a uniform grid (10 by 10) with 100 iterations.
+
+```bash
+./my_G2Lib_binary --n_points=10,10 --iterations=100
+```
+
+As G2Lib is not primarily driven by input files, it does not have a specific input file format to be provided here. However, users are expected to modify the solution module and error module, provide initial and boundary conditions according to their problem. For example, they may specify initial conditions in a C++ file (InitialConditions.hpp usually), such as:
+
+```cpp
+#ifndef INITIALCONDITIONS_H
+#define INITIALCONDITIONS_H
+#include "my_constants.h"
+
+double initial_conditions(double x, double y) {
+    return sin(PI * x) * sin(PI * y);
+}
+
+#endif
+```
+
+G2Lib already provides several solution and error modules to start with for simple problems, and more detailed ones are specified by the user for their particular case. The numerical solution is then initialized with these conditions and evolved over time as specified by the user's command line options.

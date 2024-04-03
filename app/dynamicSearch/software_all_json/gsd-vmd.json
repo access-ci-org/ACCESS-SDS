@@ -1,0 +1,13 @@
+{
+  "software_name": "GSD-VMD",
+  "comprehensive_overview": "GSD-VMD is a tool for visualizing and analyzing simulation trajectories stored in the GSD file format, a hierarchical file format built for high-performance molecular simulation workflows. It integrates with the popular VMD visualization software to provide a powerful toolset for molecular dynamics analysis.",
+  "core_features": "1. Visualization of simulation trajectories in the GSD file format.\n2. Analysis of molecular simulation data.\n3. Integration with VMD for advanced visualization capabilities.\n4. Support for high-performance molecular simulation workflows.",
+  "general_tags": ["molecular dynamics", "simulation analysis", "trajectory visualization"],
+  "additional_tags": {
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "",
+    "software_type": "",
+    "field_of_science": "Other Natural Sciences"
+  }
+}

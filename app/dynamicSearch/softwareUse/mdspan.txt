@@ -1,0 +1,50 @@
+Use Case: Use mdspan to calculate an element-wise multiplication of two multidimensional arrays and store the result in another array. mdspan is used for static multi-dimensional arrays that span memory layouts, and it is part of the HPC (High-Performance Computing) STL (Standard Template Library) for C++. 
+
+Code details and examples: Code
+
+First, include the required libraries:
+
+```C++
+#include <experimental/mdspan>
+#include <vector>
+```
+
+Then, declare and initialize the multidimensional arrays:
+
+```C++
+std::vector<double> v1(12);
+std::vector<double> v2(12);
+std::vector<double> result(12);
+
+std::experimental::mdspan<double, std::experimental::extents<3, 4>> arr1(v1.data(), 3, 4);
+std::experimental::mdspan<double, std::experimental::extents<3, 4>> arr2(v2.data(), 3, 4);
+std::experimental::mdspan<double, std::experimental::extents<3, 4>> res(result.data(), 3, 4);
+```
+
+Then, fill `arr1` and `arr2` with values:
+
+```C++
+for (int i = 0; i < arr1.extent(0); ++i)
+    for (int j = 0; j < arr1.extent(1); ++j)
+        arr1(i, j) = i + j;  // Fill values as required
+
+for (int i = 0; i < arr2.extent(0); ++i)
+    for (int j = 0; j < arr2.extent(1); ++j)
+        arr2(i, j) = i + j;  // Fill values as required
+```
+
+To compute the element-wise multiplication:
+
+```C++
+for (int i = 0; i < res.extent(0); ++i)
+    for (int j = 0; j < res.extent(1); ++j)
+        res(i, j) = arr1(i, j) * arr2(i, j);  // Compute element-wise multiplication
+```
+To compile and run, save the code in a `.cpp` file (for example `mdspan_example.cpp`) and use `g++`:
+
+```bash
+g++ mdspan_example.cpp -o mdspan_example
+./mdspan_example
+```
+
+Note: The interface for mdspan is not yet officially standardized and may change in the final version. This example uses the experimental version available in some compiler distributions. Kindly check official documentation depending on the compiler you use.  Also, constants like dimensions of array (3,4) here are subject to the user input data. These should be replaced with the dimensions of arrays as needed.

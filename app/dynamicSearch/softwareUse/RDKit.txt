@@ -1,30 +1,34 @@
-Use Case: Cheminformatics and computational chemistry
-Code details and examples: 
+Use Case: RDKit is a collection of cheminformatics and machine learning tools. It includes functionality for drawing 2D and 3D molecules, generating 3D conformations, clustering, descriptor calculation, and more. It is also a base tool for many bioinformatic and cheminformatic software.
 
-RDKit is a collection of cheminformatics and machine learning tools written in C++ and Python. It provides functionalities for working with chemical structures, fingerprints, and molecular properties. Here is an example of using RDKit to generate 2D coordinates for a molecule:
+Code Details and Examples: 
 
-Sample Python code:
+Input: The input to RDKit is usually a molecule file in a format such as .sdf or .mol. Other formats including SMILES strings can also be used.
+
+Example Input File: A SMILES string representing a molecule
+       
+              CC(=O)OC1=CC=CC=C1C(=O)O     
+
+Code: Below is a simple code snippet to read the SMILES string input and generate a 2D depiction of the molecule
 
 ```python
 from rdkit import Chem
-from rdkit.Chem import AllChem
+from rdkit.Chem import Draw
 
-# Create a molecule from SMILES
-mol = Chem.MolFromSmiles('CCO')
-mol = Chem.AddHs(mol)  # Add hydrogens
-AllChem.EmbedMolecule(mol)  # Generate 2D coordinates
+# Create a molecule object from a SMILES string
+mol = Chem.MolFromSmiles('CC(=O)OC1=CC=CC=C1C(=O)O')
 
-# Access the coordinates of atoms
-for atom in mol.GetAtoms():
-    print(atom.GetIdx(), mol.GetConformer().GetAtomPosition(atom.GetIdx()))
+# Generate a depiction of the molecule
+img = Draw.MolToImage(mol)
 
+# Display the image
+img.show()
 ```
+This code takes a SMILES string as input, creates a molecule object, then generates and shows a 2D depiction of the molecule.
 
-In this code snippet, we first create a molecule from a SMILES string ('CCO'), add hydrogens, and then generate 2D coordinates for the molecule. Finally, we print the atom indices and their corresponding 2D coordinates.
+Command to Run:
 
-You can run the above code by saving it to a Python file (e.g., `generate_coordinates.py`) and executing it using a Python interpreter.
+This code can be run in a Python environment. If the code is saved in a file named script.py, it can be run with the command:
 
-Command to run the code:
-```
-python generate_coordinates.py
+```shell
+python script.py
 ```

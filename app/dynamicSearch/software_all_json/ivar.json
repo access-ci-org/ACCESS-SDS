@@ -1,0 +1,13 @@
+{
+    "software_name": "Ivar",
+    "overview": "Ivar is an open-source lightweight templating engine for Python, focused on simplicity and ease of use.",
+    "core_features": "Ivar allows for easy template creation and usage, supports simple placeholders for data replacement, and offers basic control structures like conditionals and loops.",
+    "general_tags": ["Python library", "Templating engine", "Open-source"],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Development",
+        "software_type": "Library",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

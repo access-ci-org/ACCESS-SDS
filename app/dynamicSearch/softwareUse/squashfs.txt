@@ -1,15 +1,26 @@
-Use Case: Creating a squashfs compressed filesystem.  
+Use Case: To compress a file system or a directory and preserve its structure and permissions.
 
-Code details and examples:
+Code details and examples: 
+
+Code: 
+A directory (say, ./example_dir) can be compressed into a squashfs file with the mksquashfs tool.
+
 ```bash
-mksquashfs <source_dir> <output_file>.squashfs
+mksquashfs ./example_dir ./compressed_file.sqsh
 ```
 
-In the above command:
-- `<source_dir>` is the directory you want to compress into a squashfs filesystem.
-- `<output_file>.squashfs` is the name of the output squashfs file.
+This command will include all directories and files inside `./example_dir` into a single `compressed_file.sqsh` file.
 
-For example, to create a squashfs filesystem from a directory named `myfolder` and save it as `myfolder.squashfs`, you would run:
+Also, reading from a squashfs file can be done with unsquashfs tool:
+
 ```bash
-mksquashfs myfolder myfolder.squashfs
+unsquashfs ./compressed_file.sqsh
 ```
+
+This will decompress all directories and files from `compressed_file.sqsh` to the current working directory. The command creates a squashfs-root directory that contains the filesystem contents.
+
+For the `mksquashfs` command, the input file format is any valid directory/file system. For the `unsquashfs` command, the input file format is a valid squashfs file.
+
+Input files should not have any specific requirements other than being a valid file system for mksquashfs and a valid squashfs file for unsquashfs. 
+
+There are no specifications for the code or details in input files for mksquashfs or unsquashfs. The -noappend flag can be used for overwriting existing squashfs files rather than appending.

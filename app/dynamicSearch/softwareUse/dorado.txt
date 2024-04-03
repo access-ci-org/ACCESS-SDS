@@ -1,0 +1,36 @@
+Use Case: Dorado is a Python library commonly used for Lagrangian transport modeling. It can be used for approximating solutions to the equations governing fluid motion by tracking the movement of particles in the fluid.
+
+Code details and examples:
+
+Code:
+
+### Importing Dorado and related libraries
+
+```python
+import numpy as np
+import Dorado
+from Dorado.swampy import landscape
+```
+
+### Creating a hypothetical uniform flow field
+
+```python
+L = landscape([100, 100])
+L.random_flow()
+```
+
+## Initializing particles
+
+```python
+particles = Dorado.particle_track.Particles(L, [50], [50])
+```
+
+## Advancing particles in the flow field
+
+```python
+Dorado.plotting.plotter(particles)
+for i in range(10):
+    particles.advance_until_time(0.1)
+    Dorado.plotting.plotter(particles)
+```
+To run the code, save it as a .py file and run the Python script with python filename.py from the command line.

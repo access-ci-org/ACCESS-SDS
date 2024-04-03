@@ -1,0 +1,30 @@
+Use Case: R-CellChat is a systems biology package used for inferring intercellular communication network in single cell RNA-seq data. This tool is useful in study of complex biological systems where interactions between cells of different types play a crucial role.
+
+Code details and examples:
+
+Before proceeding with the code, make sure your data is in a Seurat object as CellChat reads data from Seurat objects. Seurat is a package in R, used for QC, analysis, and exploration of single-cell RNA-seq data.
+
+Code: 
+
+`# Load CellChat package
+library(CellChat)
+
+# Load your single-cell RNA-seq data (assuming it is in Seurat object format)
+load("path/to/your/data.RData")
+
+# Preprocess the data using CellChat function
+cellchat <- CellChatDB(data = your_data, group.by = "Identity")
+
+# Run CellChat to infer intercellular communication networks
+cellchat <- computeCommunProb(cellchat)
+cellchat <- netEmbedding(cellchat, type = "customized")
+cellchat <- netVisual_intercell(cellchat, signaling = c("NOTCH", "TNF"), type = "heatmap")
+
+# Now you can visualize the inferred intercellular communication networks
+cellchat <- runCellChat(cellchat)
+netVisual_aggregate(cellchat)
+netVisual_diffInteraction(cellchat, target = "NOTCH")`
+
+This command estimates interaction probability of cellular communication, embeds the network, visualizes intercellular communication of specified pathways (such as NOTCH and TNF), runs complete analysis and visualizes the aggregate and different interactions. Please replace "your_data" with your actual data variable, and replace "NOTCH" and "TNF" with the signaling pathways of your interest.
+
+The input data to CellChat is a Seurat object. The Seurat object is a list containing many data frames such as RNA and protein expression levels and associated metadata of cells and features. The Seurat object can be read from a .RData file which can be saved by the user using saveRDS() or save() commands.

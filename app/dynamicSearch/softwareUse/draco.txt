@@ -1,0 +1,43 @@
+Use Case: The Draco library from Google is used for compressing and decompressing 3D geometric meshes, point clouds processing. It helps to improve the storage and transmission of 3D graphics.
+
+Code details and examples: 
+
+Code: A '.ply' or '.obj' file (input_file) can be used as input.
+
+```
+// Include draco
+#include "draco/compression/encode.h"
+
+// Create a draco::Mesh or draco::PointCloud
+draco::Mesh mesh;
+
+// Create a draco stream
+draco::EncoderBuffer buffer;
+
+// Create an Encoder object
+draco::Encoder encoder;
+
+// Set lossless compression
+encoder.SetAttributeQuantization(draco::GeometryAttribute::POSITION, 0);
+
+// Encode the mesh
+const draco::Status status = encoder.EncodeMeshToBuffer(mesh, &buffer);
+
+// Output is saved into buffer
+```
+
+To run the command line tool for Draco:
+
+```
+./draco_encoder -i input_file -o output_file.drc
+```
+
+Here, 'input_file' is the file with the 3D object. The '-i' flag is used to specify the input file, and the '-o' flag is used to specify the output file. Its output is a '.drc' file (output_file) that has the compressed 3D object.
+
+Decoding the mesh is equally straightforward:
+
+```
+./draco_decoder -i output_file.drc -o decoded_file.ply 
+```
+
+Here, '-i' flag specifies the input file (which is the compressed file from earlier), and '-o' specifies where to write the decoded mesh or point cloud. The output of the tool 'decoded_file.ply' is a decompressed version of the original 3D object.

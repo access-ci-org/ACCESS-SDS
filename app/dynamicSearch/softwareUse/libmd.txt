@@ -1,0 +1,28 @@
+Use Case: Molecular dynamic simulations such as Protein-ligand interaction studies or ion channel studies. libmd is a molecular dynamics library which is intended to provide all interactions between particles.
+
+Code details and examples:
+
+Code:
+
+```python
+from libmd.libmd import *
+from numpy import array
+
+# Create molecule and specify atom positions
+# Here, for example, we work with a molecule composed of just two atoms
+index = [0,1]
+types = ['C', 'O']
+positions = array([ [0.0, 0.0, 0.0], [1.0, 1.0, 1.0] ])
+molecule = md_molecule(index, types, positions)
+
+# Add inter-atomic interaction
+# We add here a generic Lennard-Jones potential between our two atoms
+interaction = md_interaction('lj', parameters={'sigma': 0.34, 'epsilon': 0.996})
+molecule.add_interaction([0,1], interaction)
+
+# Evolve the system according to the provided interactions
+timestep = 0.001
+molecule.evolve(timestep)
+```
+
+This example is a simple custom run that can be controlled in Python with libmd. Please note this example may require tweaking depending on the molecular dynamics simulation you want to perform, and will need the appropriate custom parameters depending on your study. To run it, you can use Python Interpreter after installing libmd.

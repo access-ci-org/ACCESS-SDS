@@ -1,0 +1,30 @@
+Use Case: Use of FragGeneScan, a gene prediction program in metagenomics, for identifying coding regions in short and error-prone reads.
+
+Code details and examples: 
+
+Code:
+```
+FragGeneScan -s example_short.fna -o example_short -w 1 -t illumina_5 -p 10
+```
+Input Files: FragGeneScan requires a FASTA formatted file as input. The original source of the sequence(s) (e.g., raw reads, contigs, whole genomes, etc.) doesn't matter. An example of a FASTA file (example_short.fna) is:
+
+```
+>sequence1
+ACGTAGCT
+>sequence2
+TACGACTG
+...
+```
+Specifications and Details in Input Files:
+
+1. Each sequence in the FASTA file is expected to start with a ">" character, followed by the sequence's identifier. Following the identifier, the next line should begin the actual genetic sequence, which can continue for any number of lines until either a new sequence identifier (i.e., another line starting with ">") is encountered or the file ends.
+2. No other specifics, such as sequence length or composition, are required, but sequences are typically expected to be of reasonable length (>40bp) and consist only of valid nucleotide characters (A, C, G, T, and sometimes U).
+
+Command to Run:
+
+The command to run FragGeneScan on a single processor with the input file "example_short.fna" and an output file named "example_short", trained for illumina_5 (reads of ~75bp), and using 10 threads would be:
+
+```
+FragGeneScan -s example_short.fna -o example_short -w 1 -t illumina_5 -p 10
+```
+The `-s` flag specifies the input file, the `-o` flag specifies the output file prefix, the `-w` flag denotes the use of a whole genome or not (1 for yes, 0 for no), the `-t` is the training model, and `-p` is the number of threads.

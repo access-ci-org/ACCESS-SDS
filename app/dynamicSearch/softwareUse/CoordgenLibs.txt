@@ -1,34 +1,34 @@
-Use Case: CoordgenLibs is a set of chemistry software libraries used for 3D coordinate generation of chemical structures.
+Use Case: Use CoordgenLibs for generating 3D Coordinates from 2D structural diagrams. This is an important tool in drug discovery and material science that uses structure-based drug design.
 
-Code details and examples:
-For using CoordgenLibs, you typically need to integrate it into your software or script. Below is an example of how CoordgenLibs can be used in a Java application to generate 3D coordinates for a chemical structure.
+Code details and examples: Code 
 
-```java
-import com.chemaxon.calculations.coordinates.Coordinates;
-import com.chemaxon.descriptors.common.MoleculeDescriptorsGenerator;
-import com.chemaxon.descriptors.common.MoleculeDescriptorsResult;
-import com.chemaxon.marvin.beans.MolPrinterSettings;
-import chemaxon.struchk.MoleculeChecker;
-import chemaxon.struc.Molecule;
-import chemaxon.struc.MoleculeInitializingException;
+In order to use CoordgenLibs, you will first need to define the molecule object using software that is compatible with CoordgenLibs such as OEChem, RDKit, etc. Below is an example of using CoordgenLibs in concert with RDKit, a PyBiologics library that can produce molecular objects. 
 
-public class CoordgenExample {
+Sample Code: 
 
-    public static void main(String[] args) {
-        
-        Molecule mol = new Molecule();
-        try {
-            mol.loadMol("CCO");
-            Coordinates.generate(mol); // Generate 3D coordinates for the molecule
-            System.out.println(mol.toFormat("smiles")); // Print the molecule in SMILES format
-        } catch (MoleculeInitializingException e) {
-            e.printStackTrace();
-        }
-        
-    }
-}
+```python
+from rdkit import Chem
+from rdkit.Chem import AllChem
+from coordgenlibs import CoordgenMinimizer
+
+# Create a 2D molecule with RDKit
+molecule = Chem.MolFromSmiles('C1=CC=C(C=C1)C(=O)O')
+
+# Generate coordinates with CoordgenLibs
+minimizer = CoordgenMinimizer()
+molecule3D = minimizer.getMinimizedStructureFromMolecule(molecule)
+
+# Convert it back to an RDKit mol object
+m = AllChem.AddHs(molecule3D)
+
+# Finally, use RDKit's built-in method to visualize the 3D structure
+m.UpdatePropertyCache(strict=False)
+AllChem.Compute2DCoords(m)
 ```
+Note that the input file is a SMILES string representing the molecule of interest. SMILES (Simplified Molecular Input Line Entry System) is a chemical notation that allows a user to represent a chemical structure in a way that can be used by the computer.
 
-This Java code snippet loads a simple ethanol molecule ("CCO"), generates 3D coordinates using CoordgenLibs, and then prints the molecule in SMILES format.
+This block of python code produces a 3d molecular structure from a 2D SMILES string by calling the `getMinimizedStructureFromMolecule` method from the `CoordgenMinimizer` object.
 
-Note: The code above is a high-level overview of how you could use CoordgenLibs in a Java application. The actual integration and usage may vary based on your specific requirements and the functionality provided by CoordgenLibs.
+To execute the python program, use the python command followed by the filename:
+
+```python filename.py```

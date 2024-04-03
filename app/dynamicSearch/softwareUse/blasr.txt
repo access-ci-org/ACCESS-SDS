@@ -1,0 +1,19 @@
+Use Case: BLASR (Basic Local Alignment with Successive Refinement) is a tool used to align sequences, especially long PacBio reads, to a reference genome. 
+
+Code details and examples: Code 
+
+The PacBio.Blasr has requirements for the input file such as sequencing data in FASTA/FASTQ/BAM formats and reference genome in FASTA format.
+
+Here is a simple command for running Blasr:
+
+```bash
+blasr reads.fasta reference.fasta -bestn 10 -minPctIdentity 70.0 -m 1 -out aligned.m1
+```
+In this example:
+
+- "reads.fasta" is your sequencing data input file.
+- "reference.fasta" is your reference genome input file.
+- "-bestn 10" tells BLASR to report the best 10 alignments.
+- "-minPctIdentity 70.0" sets the minimum percent identity for reporting an alignment.
+- "-m 1" specifies the output format (0=BLASR default, 1=tab-delimited).
+- "-out aligned.m1" is your output file.

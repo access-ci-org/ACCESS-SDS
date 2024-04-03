@@ -1,21 +1,24 @@
-Use Case: Text processing, pattern scanning, and processing language. 
+Use Case: To process a text file, line by line, extracting and changing individual fields, and performing calculations with the values in those fields. The input file can be any text file. 
 
-Code details and examples:
-Sample input file (input.txt):
-```
-apple 5
-banana 3
-cherry 7
-```
+Code details and examples: 
+Code: 
 
-Code:
-```
-gawk '{print $1, $2 * 2}' input.txt
-```
+This is a simple gawk use case. Here is a text file named "students.txt" with the following content:
 
-Output:
-```
-apple 10
-banana 6
-cherry 14
-```
+    John Doe 23
+    Jane Smith 19
+    Larry Johnson 21
+
+The gawk code to print the name of the students with their age is as follows:
+
+    gawk '{print $1,$2,"is",$3,"years old."}' students.txt
+
+So the command to run the script with the input file is:
+
+    gawk '{print $1,$2,"is",$3,"years old."}' students.txt
+
+This will result in the following output:
+
+    John Doe is 23 years old.
+    Jane Smith is 19 years old.
+    Larry Johnson is 21 years old.

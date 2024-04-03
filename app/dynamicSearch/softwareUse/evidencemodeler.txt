@@ -1,0 +1,29 @@
+Use Case: EvidenceModeler (EVM) is a tool used in bioinformatics for producing gene structure annotations based on the provided evidence. It combines ab initio gene predictions, protein alignments, and transcript alignments into weighted consensus gene structures. 
+
+Code details and examples: 
+
+EVM requires three distinct input files: 
+
+1. A genome sequence file in FASTA format
+
+2. Log file produced by EvidenceModeler listing all command-line options, input/output files and summaries of the evidence weights and partitioning processes.
+
+3. EVM GFF3-formatted input file – tab delimited format including sequence ID, source, type, start, stop, score, strand, phase and attributes.
+
+Here is an example of a run command with sample files: 
+
+```
+/opt/EVidenceModeler-1.1.1/EvmUtils/partition_EVM_inputs.pl --genome genome.fasta --gene_predictions gene_predictions.gff3 --protein_alignments protein_alignments.gff3 --transcript_alignments transcript_alignments.gff3 --segmentSize 100000 --overlapSize 10000 --partition_listing partitions_list.out > partitioning.log
+```
+
+Where:
+- genome.fasta: This is the input genome sequence in multi-fasta format.
+- gene_predictions.gff3: This is the input file containing gene predictions.
+- protein_alignments.gff3: This is the input file containing protein alignments.
+- transcript_alignments.gff3: This is the input file containing transcript alignments.
+- segmentSize and overlapSize: These are the size parameters for partitioning.
+- partitions_list.out: This is the output file containing the partitions list.
+- partitioning.log: This is the log file that keeps a record of the partitioning process.
+
+
+Note: Please be aware that the correct use of EVM requires configuring, partitioning and creating commands before running the EVM script itself. The names and contents of these files are highly dependent on the specific data at hand. The correct construction and interpretation of these files often require a certain level of bioinformatics expertise.

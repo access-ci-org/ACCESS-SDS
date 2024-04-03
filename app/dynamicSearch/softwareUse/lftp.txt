@@ -1,24 +1,37 @@
-Use Case: FTP file transfer
+Use Case: Use lftp for file transfer protocols including FTP, HTTP, FISH, SFTP, HTTPS and FTPS with features such as mirroring directories, resuming transfers, backgrounding, and throttling bandwidth.
+
 Code details and examples:
-lftp is a command-line file transfer program that supports various protocols including FTP. Below is an example of how to transfer a file using lftp.
 
-### Sample input file (input.txt):
-```
-This is a sample input file for FTP transfer.
-```
+Code: 
 
-### Code to transfer a file using lftp:
+1. Login to FTP server
 ```
-lftp -e "put input.txt; bye" ftp://username:password@ftp_server
+lftp -u user,password ftp.yourserver.com
 ```
+After this command, you'll be logged into the server and can interact directly from the shell.
 
-In the above code:
-- Replace `input.txt` with the file you want to transfer.
-- Replace `username` with your FTP username.
-- Replace `password` with your FTP password.
-- Replace `ftp_server` with the address of the FTP server.
+2. Transfer file from server to local machine
+```
+get file_name
+```
+This command retrieves "file_name" from the server.
 
-### Command to run the code:
+3. Transfer directory from server to local machine
 ```
-lftp -e "put input.txt; bye" ftp://username:password@ftp_server
+mirror directory_name
 ```
+This command copies the entire directory named "directory_name" from server.
+
+4. Upload file or directory to server 
+```
+put file_name
+```
+This command uploads "file_name" to your current directory on the server. For directories use `mirror -R directory_name`.
+
+5. Close the connection
+```
+exit
+```
+Above commands are used to run lftp directly from the command line.
+
+Input files: In the above examples "file_name" and "directory_name" are the input files/directories. Format & specifications: They are regular files/directories of any format or specification.

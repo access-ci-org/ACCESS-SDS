@@ -1,0 +1,25 @@
+Use Case: Use kover for genome-wide association studies on microbial genomics. Kover aims at linking genotypic and phenotypic variability allowing for a comprehensive genome-wide association study.
+
+Code details and examples: Code.
+
+1. kover dataset create from-sequence
+
+This command will create a new dataset using the provided sequence information.
+
+Command: `kover dataset create from-sequence --genomic-data genome_data.fasta --phenotype-description "The phenotype of interest" --phenotype-metadata metadata.tsv --output dataset.kover`
+
+Here, genome_data.fasta is a multi-FASTA file where each entry represents a subject's genome and metadata.tsv is a tab-delimited file where each line represents a subject and contains 2 columns: the FASTA identifier and the phenotype.
+
+2. kover learn
+
+This command will use machine learning algorithms to discover genomic regions that are associated with the phenotype of interest.
+
+Command: `kover learn --dataset dataset.kover --model-type cart --p-bound 1 --model-risk 0.1 --output model.km`
+
+3. kover predict
+
+This command will predict the phenotype of unseen data using a learned model.
+
+Command: `kover predict --dataset dataset.kover --model model.km --genomic-data unknown_genomes.fasta --output predictions.tsv`
+
+Here, unknown_genomes.fasta is a multi-FASTA file where each entry represents a subject's genome for which the phenotype is unknown. The predicted phenotype will be written to predictions.tsv.

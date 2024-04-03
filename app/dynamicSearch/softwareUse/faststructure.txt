@@ -1,0 +1,33 @@
+Use Case: fastSTRUCTURE is a tool for population genetic analyses to identify hidden population structures using genotype data. It is commonly used in population genetics, bioinformatics and ecology to study structuring within the population.
+
+Code Details and Examples: 
+
+The first step in using fastSTRUCTURE is to have your input data file in a certain format. The input ought to be in a PLINK "bed/bim/fam" format or a plain genotype file. If it's not, you must convert it. An example of a Plink format looks like:
+
+```
+1 rs1 0 5000650 A G
+1 rs2 0 5000833 A C
+```
+The commands for running the process are shown in the shell script below:
+
+Code:
+```sh
+#!/bin/bash
+
+DATADIR=/path/to/your/data
+STRUCTUREDIR=/path/to/faststructure
+KVALS=(1 2 3 4 5 6)
+
+## Runs fastStructure for a range of K values
+
+cd $DATADIR
+
+for K in "${KVALS[@]}"
+do
+    python $STRUCTUREDIR/structure.py -K $K --input=$DATADIR/yourdata --output=$DATADIR/output_K$K --full
+    python $STRUCTUREDIR/distruct.py -K $K --input=$DATADIR/output_K$K --output=$DATADIR/output_plot_K$K
+done
+```
+Replace /path/to/your/data with the path to the place where your data files are stored and /path/to/faststructure with the path to the place where faststructure is installed.
+
+Also, replace 'yourdata' with the base name of your input files and the K values should be adjusted according to the number of populations you would postulate could exist given your biological knowledge of the samples.

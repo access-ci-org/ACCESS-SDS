@@ -1,0 +1,26 @@
+Use Case: R-Matrix is a R-package designed for matrix study that includes calculating general and special matrix functions, finding matrix decompositions, and detecting matrix structures.
+
+Code details and examples: Code 
+
+To illustrate a use case, consider you have a matrix of numbers and you want to calculate its determinant. You can create this matrix and use the "det()" function to calculate its determinant. Here's how you can do it in R:
+
+```{r}
+# Load R-Matrix package
+library(Matrix)
+
+# Create a matrix
+A <- matrix(c(2, 4, 3, 1, 5, 7), nrow=2, ncol=3)
+
+# Print the matrix
+print(A)
+
+# Calculate the determinant
+detValue <- det(A)
+
+# Print the determinant
+print(detValue)
+```
+
+Input Format: The input format is a simple text file containing your matrix separated by spaces for columns and newline characters for rows.
+
+Command to run the Code: You can run your R-script directly from the command-line using the following command: `Rscript script.R`. Replace "script.R" with the path to your R-script.

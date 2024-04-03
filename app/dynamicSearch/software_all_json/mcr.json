@@ -1,0 +1,13 @@
+{
+    "software_name": "mcr",
+    "comprehensive_overview": "mcr is a computational software used for solving complex mathematical problems and conducting numerical simulations. It provides a high-performance computing environment for researchers and scientists to analyze, model, and solve mathematical equations and algorithms.",
+    "core_features": "mcr offers a wide range of numerical methods and algorithms for solving differential equations, linear algebra problems, optimization tasks, and statistical analysis. It supports parallel computing and distributed computing for efficient processing of large-scale simulations. Additionally, mcr provides visualization tools for data analysis and result interpretation.",
+    "general_tags": ["computational software", "numerical simulation", "high-performance computing"],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "scientific computing",
+        "software_type": "numerical simulation software",
+        "field_of_science": "Mathematics"
+    }
+}

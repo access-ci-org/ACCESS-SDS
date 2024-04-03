@@ -1,17 +1,32 @@
-Use Case: xxd is a command-line utility to create a hex dump of a given file or standard input.
+Use Case: Use xxd to create a hex dump of a given file or standard input. It can also convert a hex dump back to its original binary form.
 
-Code details and examples:
+Code details and examples: 
 
-```bash
-# Create a hex dump of a file
-xxd example.txt
+Code: 
 
-# Create a hex dump of a file and display ASCII representation
-xxd -g 1 example.txt
+Here is an example of a hex dump using `xxd`. Suppose we have a text file named "sample.txt" with the content "Hello, World!".
 
-# Convert a hex dump back to binary
-xxd -r example.hex > new_file
+Command to run: 
 
-# Generate a hex dump with line numbers
-xxd -c 16 example.txt
 ```
+$ xxd sample.txt
+```
+
+Output should be something like:
+```
+00000000: 4865 6c6c 6f2c 2057 6f72 6c64 210a      Hello, World!.
+```
+
+About the input file - here, sample.txt is a simple text file. xxd can handle any type of file including binary, image, etc. 
+
+To convert it back, use the `-r` option. 
+
+Command to run:
+
+```
+$ xxd -r >original.txt
+```
+
+This will read the hex dump from standard input and writes the binary form to "original.txt". Note: you have to paste the hex dump and press Ctrl-D (end of file) to convert it back.
+
+The specification in the input file are hexadecimal numbers. The first column is the offset in the file, the middle columns are the hexadecimal representation of the file, and the last column is the printable characters in the file. If a character is not printable, it will be displayed as a dot.

@@ -1,19 +1,26 @@
-Chapel is an emerging parallel programming language designed for productivity at scale. It is especially well-suited for high-performance computing (HPC) applications. Here is an example of how you can use Chapel:
+Use Case: Chapel is an Open-source, modern, parallel programming language. Chapel can be used for high performance computing (HPC) applications. This language has been designed to simplify parallel programming and improve productivity in areas of science and engineering such as physics simulation, data analytics, machine learning, and bioinformatics.
 
-Use Case: Parallel Hello World Program
-Code details and examples:
-Code:
+Code Details and Examples: Code.
 
-```chapel
-// Chapel program to print "Hello, World!" in parallel
-writeln("Hello, World!") on Locales;
+Code Snippet:
+
+```
+//Example of a simple array in Chapel language
+var A: [1..10] int = [i in 1..10] i;
+writeln(A); 
 ```
 
-To run the Chapel program:
+In this code, an array A is declared to hold 10 integers from 1 to 10. It then outputs the elements of the array.
 
-```bash
-chpl hello.chpl
-./hello
-```
+Input Files: None, as this is a simple code snippet and does not require an input file.
 
-Note: Chapel code typically consists of .chpl files and can be compiled using the `chpl` compiler. You then can run the compiled binary.
+Running Commands: 
+In order to run Chapel code, you need to first compile it. Below is the command to compile a Chapel source file.
+
+`chpl hello_world.chpl`
+
+After compilation, you will get a binary file which can be executed directly from the command line.
+
+`./hello_world`
+
+Specifications: No specific specifications are required as this is a basic example. As programs grow complex, different parts of the Chapel code can implicitly run in parallel which would require HPC specifications like multi-core processors.

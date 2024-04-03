@@ -1,0 +1,55 @@
+Use Case: AXL is an open source library for dealing with XML data. It is especially useful for manipulating XML trees, parsing XML files, encoding/decoding XML properties, etc. 
+
+Code details and examples: 
+
+Code:
+
+First, include the AXL library in your code:
+
+```c
+#include <axl.h>
+```
+
+Next, create an XML document and add nodes:
+
+```c
+/* create an XML document */
+axlDoc * doc = axl_doc_new ();
+
+/* create root node */
+axlNode * root = axl_node_create ("root");
+
+/* append root to the document */
+axl_doc_set_root (doc, root);
+
+/* create child node */
+axlNode * child = axl_node_create ("child");
+
+/* append child to the root */
+axl_node_add_child (root, child);
+
+/* set an attribute for the child */
+axl_node_set_attribute (child, "attribute", "value");
+```
+
+Finally, write the XML document to a file:
+
+```c
+axlStream * stream = axl_stream_file_open ("path_to_file.xml");
+axl_doc_dump (doc, stream);
+axl_stream_close (stream);
+axl_doc_free (doc);
+```
+
+To run this code, use the following command:
+
+```
+gcc -o test -I/usr/include/axl -laxl test.c
+./test
+```
+
+This compiles your C program (named 'test.c') and links it with the AXL library. The resultant executable is named 'test'. 
+
+Please ensure that the required input file path is accessible and the file does contain valid XML code.
+
+Note: File operation permission and location need to be taken care of. The XML document generated will be stored in the location provided with the name 'path_to_file.xml'. The program must be compiled with the `-laxl` option to link the AXL library.

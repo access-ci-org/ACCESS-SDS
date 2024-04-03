@@ -1,0 +1,61 @@
+Use Case: ANNOgesic is a bioinformatics tool that is used for the analysis of bacterial RNA-Seq data. It can be used to analyze the features of annotated or unannotated bacterial genomes, such as novel genes, sRNAs, transcriptional terminators, operons, promoters among others.
+
+Code Details and Examples:
+Requirements:
+ANNOgesic requires Python v2.7 or higher, and additional python packages like NumPy, SciPy, matplotlib, pandas v0.16.0 or higher, pysam v0.8 or higher, HTSeq v0.6.1 or higher and networkx v1.10 or higher.
+
+A typical pipeline can be outlined like this:
+
+1. Installation
+```
+pip install ANNOgesic
+```
+
+2. Quality Check
+Command: 
+```
+ANNOgesic quality_control
+```
+Input Files:
+Requires raw sequence reads (fastq format)  
+
+3. Mapping 
+Simplest form of command: 
+```
+ANNOgesic map2genomes
+```
+Input Files:
+Requires sequence reads, genomes (fasta format) and genome annotation (gff format).
+
+4. Transcript detection:
+Command:
+```
+ANNOgesic transcript
+```
+Input Files:
+Requires the bam file created in the previous step.
+
+5. Feature detection (sRNA, protein_coding_gene, terminator, TSS, Processing_Site, Rho_independent_terminator, TTS, novel_UTRs, Sub_TSSs):
+Command: 
+Usage varies with feature, for example for sRNA: `ANNOgesic sRNA_detection`
+
+Input Files: 
+Requires the gff file generated in previous step.
+
+6. Prediction of novel protein:
+Command:
+```
+ANNOgesic novel_protein
+```
+Input Files: 
+Requires the fasta file, and gff file from previous steps.
+
+7. Report and Visualization:
+Command:
+```
+ANNOgesic report
+```
+Input Files: 
+Requires all the gff and report files from the above steps.
+
+ANNOgesic provides many additional options for each step to further refine the search result. For more detailed usage, please refer to the ANNOgesic reference manual.

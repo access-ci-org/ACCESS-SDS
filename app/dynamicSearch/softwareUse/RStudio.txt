@@ -1,14 +1,40 @@
-Use Case: IDE for R programming  
-Code details and examples:  
-RStudio is an integrated development environment (IDE) for R programming. Users can write, compile, and debug R code in RStudio.  
+Use Case: Use Rstudio for statistical data analysis and visual representation.
 
-Input files: R script files (.R)  
-Sample input file content (sample_script.R):  
-```
-# This is a sample R script
-x <- 1:10
-mean(x)
+Code details and examples: Code
+
+Sample Input File:
+A CSV file with three columns: `Name`, `Age`, `Salary`.
+
+```csv
+Name,Age,Salary
+John,24,50000
+Jane,32,64000
+Bob,29,48000
 ```
 
-Command to run:  
-No specific command required as RStudio provides a Graphical User Interface (GUI) for R programming. Users can simply open RStudio, create a new script, paste the code snippet, and run it using the "Run" button.
+RStudio generally operates on objects; these objects could be vectors (numeric, character, or logical), matrices, data frames, lists, etc. Typically, the user will load data into an object from an external source, such as a CSV file. Here's a brief illustration of how this might be done:
+
+```r
+# Load the data into a dataframe.
+data <- read.csv("your_data_file.csv")
+
+# Display the summary statistics of the dataframe.
+summary(data)
+
+# Using the ggplot2 library for visual representation
+library(ggplot2)
+
+# Plotting the data in a scatter plot
+ggplot(data, aes(x=Age, y=Salary)) + 
+  geom_point(shape=1) +    # Use hollow circles
+  geom_smooth(method=lm,   # Add linear regression line
+              se=FALSE)    # Don't add shaded confidence region
+```
+
+Command to run this:
+
+Open RStudio -> Open the script file -> Click on the 'Run' button or press Ctrl+Enter to run line by line. 
+
+Please replace the "your_data_file.csv" with the actual path and name of your dataset when using the read.csv function.
+
+Note: RStudio is case sensitive, so ensure the correct case is used when entering commands.

@@ -1,0 +1,24 @@
+Use Case: Quadratic programming is often used in optimization problems where there is a quadratic objective function and linear constraints. It is used to find the minimum or maximum point of a parabola. Relevant applications include machine learning, where it is used in support vector machines.
+
+Code details and examples: Code
+
+```r
+# This example comes from IBM ILOG AMPL
+library(quadprog)
+
+# Quadratic programming parameters
+Dmat <- matrix(c(1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.4), nrow=2)
+dvec <- c(-2.0, -3.0)
+Amat <- matrix(c(-4.0, -3.0, 0.0, 1.0, -2.0, 1.0, 1.0, -3.0, -4.0, 0.0), ncol=2)
+bvec <- c(-3.0, 75.0, 10.0, 6.0, -6.0)
+
+# Use quadprog
+result <- solve.QP(Dmat, dvec, t(Amat), bvec)
+
+# Results
+print(result$solution)
+```
+
+Command to run it:
+
+This is an R script and can be run in RStudio or any other R editor. Simply copy and paste the code and run it as a script.

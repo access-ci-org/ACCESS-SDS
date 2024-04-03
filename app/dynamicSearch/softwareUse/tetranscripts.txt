@@ -1,0 +1,19 @@
+Use Case: Tetranuscripts is a software package designed to estimate the abundances of a set of transcripts given multi-mapped RNA-Seq reads. It's commonly used in the analysis of transcriptome data.
+
+Code details and examples: Code
+
+1. Prepare the input file. 
+
+An example of the input file (input.bam) obtained from RNA-Seq reads. This BAM formatted file should be sorted and contain aligned sequences to the reference genome.
+
+2. Specify the reference genome and gene annotation files
+
+The reference genome file (reference.fa) includes genome sequence information in FASTA format. The gene annotation file (annotation.gtf) includes information in GTF/GFF format.
+
+3. Run Tetranuscripts
+
+Command to run them:
+
+`Tetranuscripts --bam input.bam --ref reference.fa --gtf annotation.gtf --out output_name`
+
+The software will then estimate the abundances of transcripts and save the results in the specified output file.

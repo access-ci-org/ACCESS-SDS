@@ -1,0 +1,42 @@
+Use Case: Mamba is a reimplementation of the conda package manager in C++. The primary advantage of Mamba is that it handles the resolution of package dependencies much faster than conda. This has a significant impact when installing larger, more complex packages that have multiple dependencies.
+
+Code details and examples: 
+
+Code:
+```bash
+# Create an environment
+mamba env create -f environment.yml
+
+# Activate environment
+activate myenv
+
+# When the environment file is created, it will look something like this:
+
+name: myenv
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - numpy
+  - pandas
+  - scikit-learn
+  - matplotlib
+
+# Installing a package globally
+mamba install numpy
+
+# Updating a package
+mamba update numpy
+
+# Removing a package
+mamba remove numpy
+```
+Note:
+In this use case, Mamba works on an environment file (environment.yml) that specifies the name of the environment ("myenv"), the channels to fetch packages from, and the dependencies to be installed in that environment. The Advantage is that Mamba quickly and efficiently resolves and installs these dependencies. 
+
+After creating the environment, use the `activate` command to use it. Once in this environment, you can use mamba install/update/remove followed by the package name to manage your packages.
+
+Command to run:
+```bash
+mamba env create -f environment.yml
+```

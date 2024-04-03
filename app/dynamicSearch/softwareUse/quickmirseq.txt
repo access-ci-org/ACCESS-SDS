@@ -1,0 +1,24 @@
+Use Case: QuickMIRSeq is useful for comprehensive analyses of miRNA sequencing data, including adapter trimming, alignment with miRNA and hairpin database, detection and counting of known miRNAs, prediction of novel miRNAs, production of read count and RPM tables, calculation of diversity metrics, differential analysis, e.t.c.
+
+Code Details and Examples:
+
+Code:
+
+Input_file: A fastq file is required for this tool, which might be named "example.fastq". A sample file can looks like this:
+
+@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
++
+!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
+
+Specifications:
+This type of files contain information about the reads sequenced from the miRNA.
+
+To run QuickMIRSeq, if you have the input file, the command would be:
+
+```
+./quickmirseq.sh -i example.fastq -o output_directory
+```
+This code invokes the quickmirseq script, passing the input file 'example.fastq' and specifying an output directory ('output_directory').
+
+Output: The output will be stored in the specified output directory and will include information about the sequenced miRNA, including read counts, differential expression, etc.

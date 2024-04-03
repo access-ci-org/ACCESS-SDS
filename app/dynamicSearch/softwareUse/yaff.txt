@@ -1,0 +1,50 @@
+Use Case: Yaff (Yet Another Force Field) is a python library used for performing molecular dynamics simulations. Yaff is mostly employed by scientists for research in computational chemistry and biology.
+
+Code details and examples:
+
+You generally need to have an input file containing parameters and a structure file (in .xyz or .pdb format) describing your system. A very simple case would be to simulate an Argon atom in a vacuum.
+
+For this you need a .pdb (Protein Data Bank) file for Argon:
+
+filename: argon.pdb
+```
+ATOM      1  Ar  Ar 1  10.000  10.000  10.000  1.00  1.00
+END
+```
+Parameters file:
+
+filename: parameters.txt
+```
+126	39.948	0.2903
+```
+This file describes that the atom type 126 is Argon, with mass 39.948 and a LENNARD_JONES parameter of 0.2903.
+
+Python Script:
+
+filename: run_yaff.py
+```python
+from yaff import *
+from molmod import *
+
+system = System.from_file('argon.pdb')
+ff_args = {'fnm':'parameters.txt'}
+
+ff = ForceField.generate(system, 'parameters.txt', rcut=15.0*angstrom, tr=Switch3(CubicSpline(3*angstrom)))
+
+# Create an HDF5 output file, Attach an XYZ writer
+xyz = XYZWriter('traj.xyz')
+f = h5py.File("output_traj.h5", mode='w')
+
+# The following objects will take care of updating and writing the output
+vsl = VerletScreenLog(step=100)  
+mts = MTSVerletIntegrator(ff, dt=1.0*femtosecond, hooks=[xyz, vsl])
+mts.run(5000)
+
+f.close()
+xyz.close()
+```
+Command to run this:
+```bash
+python run_yaff.py
+```
+This script reads in the system from the argon.pdb file, generates a force field from the parameters file, then runs a 5000 step simulation with time-step of 1 femtosecond. The trajectory is saved to traj.xyz and output_traj.h5 file, with log output every 100 steps.

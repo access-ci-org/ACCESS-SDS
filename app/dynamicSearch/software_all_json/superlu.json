@@ -1,0 +1,13 @@
+{
+  "software_name": "SuperLU",
+  "comprehensive_overview": "SuperLU is a software package for solving large, sparse, nonsymmetric systems of linear equations on high-performance computers. It is based on the LU factorization with partial pivoting and triangular solution of the linear system.",
+  "core_features": "1. Direct solver for large, sparse linear systems\n2. Utilizes LU factorization with partial pivoting\n3. Support for both sequential and parallel computing\n4. High performance on modern computer architectures\n5. Compatible with a wide range of input matrix types",
+  "general_tags": ["linear algebra", "sparse matrix", "direct solver", "computational science"],
+  "additional_tags": {
+    "research_discipline": "Applied Mathematics",
+    "research_area": "Numerical Linear Algebra",
+    "software_class": "Numerical Library",
+    "software_type": "Solver Library",
+    "field_of_science": "Mathematics"
+  }
+}

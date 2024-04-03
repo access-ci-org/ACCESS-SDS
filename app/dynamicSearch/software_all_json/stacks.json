@@ -1,0 +1,13 @@
+{
+    "software_name": "Stacks",
+    "comprehensive_overview": "Stacks is a software pipeline for building loci from short-read sequences, such as those generated on the Illumina platform.",
+    "core_features": "Key features of Stacks include the ability to process RAD-seq data for population genomics studies, identifying SNPs, inferring haplotypes, and conducting linkage mapping.",
+    "general_tags": ["software", "computational biology", "bioinformatics"],
+    "additional_tags": {
+        "research_discipline": "Genomics",
+        "research_area": "Population Genomics",
+        "software_class": "Genomics Analysis",
+        "software_type": "Analysis Tool",
+        "field_of_science": "Biological Sciences"
+    }
+}

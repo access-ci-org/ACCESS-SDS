@@ -1,29 +1,59 @@
-Use Case: Code generation
+Use Case: SWIG (Simplified Wrapper and Interface Generator) is a software development tool that is used to connect programs written in C and C++ with various high-level programming languages. 
 
-Code details and examples: SWIG (Simplified Wrapper and Interface Generator) is a software development tool that connects programs written in C and C++ with scripting languages such as Perl, Python, Ruby, and Tcl. It allows developers to create interfaces for their C and C++ code in various scripting languages.
+Code details and examples:
 
-Here is an example of using SWIG with a simple C++ function to be wrapped for Python:
+Code: Let's take a C++ code that calculates the Fibonacci sequence. 
 
-C++ Function (example.h):
+`fibonacci.h` 
+
 ```cpp
-// example.h
-int add(int a, int b);
+#pragma once
+
+int fibonacci(int n);
 ```
 
-SWIG interface file (example.i):
+`fibonacci.cpp`
+
+```cpp
+#include "fibonacci.h"
+
+int fibonacci(int n) {
+    if (n <= 0) return 0;
+    if (n == 1) return 1;
+    int fib_n_minus_2 = 0;
+    int fib_n_minus_1 = 1;
+    for (int i = 2; i <= n; i++) {
+        int fib_n = fib_n_minus_1 + fib_n_minus_2;
+        fib_n_minus_2 = fib_n_minus_1;
+        fib_n_minus_1 = fib_n;
+    }
+    return fib_n_minus_1;
+}
 ```
-// example.i
-%module example
+
+SWIG interface file `fibonacci.i`
+
+```cpp
+%module fibonacci
+ 
 %{
-#include "example.h"
+#include "fibonacci.h"
 %}
-
-%include "example.h"
+ 
+%include "fibonacci.h"
 ```
 
-To generate the Python wrapper code using SWIG, run the following command in the terminal:
-```
-swig -c++ -python example.i
+Build process
+
+```bash
+$ swig -c++ -python fibonacci.i
+$ g++ -c fibonacci.cpp fibonacci_wrap.cxx -I/usr/include/python2.7
+$ g++ -shared fibonacci.o fibonacci_wrap.o -o _fibonacci.so
 ```
 
-This will generate two files, example_wrap.cxx and example.py. The example_wrap.cxx file contains the wrapper code that connects the C++ function with Python. You can then compile the wrapper code along with your C++ code to create a Python module that can be imported and used in Python scripts.
+Once you've built the SWIG module (_fibonacci.so), you can use it in Python like any other module:
+
+```python
+import fibonacci
+print(fibonacci.fibonacci(10))  # prints 55
+```

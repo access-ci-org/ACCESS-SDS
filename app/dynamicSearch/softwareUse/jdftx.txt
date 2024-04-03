@@ -1,25 +1,27 @@
-Use Case: JDFTx (Julia DFT cross platform) is an electronic structure code for modeling materials at the level of density functional theory (DFT).
+Use Case: JDFTx is an open-source software for joint density-functional theory (JDFT) computations, which are quantum mechanical methods applicable to condensed matter systems, especially those involving solvents and interfaces. JDFTx is typically used to compute ground state properties such as total energies, forces and stresses, electronic density and electrostatic potential, as well as electronic excited states via time-dependent DFT.
 
 Code details and examples:
-JDFTx supports various input file formats for simulations. Below is an example input file (input.in) for performing a simple DFT calculation on a molecule:
+
+JDFTx reads input commands from a file named with the extension ".in" or from standard input. Each input file specifies one or more calculations.
+
+Code:
 
 ```
-task: scf
-xc: PBE
-ngrid: [32, 32, 32]
-atoms:
-  - element: O
-    position: [0.0, 0.0, 0.0]
-  - element: H
-    position: [0.0, 0.0, 1.0]
-  - element: H
-    position: [1.0, 0.0, 0.0]
+lattice   a1  1 0 0  a2  0 1 0  a3  0 0 1  
+ion-species  GBRV/$ID_pbe.uspp
+ion         $ID 0.0 0.0 0.0  
+
+elec-cutoff  10  
+electron-sc-fn  Kerker  0.2
+elec-ex-corr  GGA_PBEsol
 ```
 
-To run JDFTx with this input file, you can use the following command:
+This input file defines a simple unit cell (a cubic box, with unit vectors on x, y and z axis), uses pseudopotentials from the GBRV library for ion-species, places an ion in the origin, sets energy cutoff for planewave basis, and sets exchange-correlation functional as GGA PBEsol, and uses Kerker preconditioner.
+
+Command to run this code:
 
 ```
-jdftx input.in > output.out
+jdftx -i filename.in > filename.out
 ```
 
-This will run the DFT calculation using the provided input file and write the output to output.out. Make sure to adjust the input parameters and geometry according to your specific simulation requirements.
+Here the "filename.in" should be substituted by your input file, and "filename.out" is the name of the output file.

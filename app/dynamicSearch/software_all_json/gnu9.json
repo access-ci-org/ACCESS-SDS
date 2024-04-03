@@ -1,0 +1,33 @@
+googah
+{
+  "software_name": "GNU",
+  "comprehensive_overview": "GNU is an extensive collection of free software, which includes an operating system kernel, libraries, compilers, text editors, and numerous tools for software development, system administration, and more. GNU is based on the idea of providing users with the freedom to run, study, redistribute, and modify the software.",
+  "core_features": "GNU provides a wide range of tools and software components, such as the GNU Compiler Collection (GCC), GNU Emacs text editor, GNU Bash shell, GNU Core Utilities, GNU Debugger (GDB), GNU Make, and more. These tools are widely used in the development and maintenance of software applications, as well as in system administration tasks.",
+  "general_tags": ["software", "development", "operating system"],
+  "additional_tags": {
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Development Tools",
+    "software_type": "Software Development Tools",
+    "field_of_science": {
+      "Natural Sciences": [],
+      "Mathematics": [],
+      "Computer and Information Sciences": ["Computer Science"],
+      "Physical Sciences": [],
+      "Chemical Sciences": [],
+      "Earth and Environmental Sciences": [],
+      "Biological Sciences": [],
+      "Engineering and Technology": [],
+      "Medical and Health Sciences": [],
+      "Agricultural Sciences": [],
+      "Social Sciences": [],
+      "Humanities": [],
+      "Training": [],
+      "Staff Activities (ACCESS or SP)": [],
+      "Performance Evaluation and Benchmarking": [],
+      "Infrastructure and Instrumentation": [],
+      "Science and Engineering Education": [],
+      "Other": []
+    }
+  }
+}

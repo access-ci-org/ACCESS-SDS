@@ -1,0 +1,19 @@
+Use Case: Ruby is a dynamic, open source programming language with a focus on simplicity and productivity. It is primarily used for web application development, but it's also used for scripting and data analysis.
+
+Code Details and Examples:
+
+Code: 
+```
+# define a method
+def say_hello(name)
+  puts "Hello, #{name}!"
+end
+
+# call the method
+say_hello("World")
+```
+This code creates a simple method, `say_hello`, which accepts one parameter, `name`. The method outputs to the console a hello message with the given name. The `say_hello` method is then called with the string "World" as the argument.
+
+Format required: Ruby scripts are typically written in text files with the `.rb` extension.
+
+Command to run the Ruby script: Use the `ruby` command followed by the script name. If the script was named `hello.rb`, you would run `ruby hello.rb` from the terminal.

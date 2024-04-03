@@ -1,0 +1,26 @@
+Use Case: ClustalW2 is a general purpose multiple sequence alignment program for DNA and proteins. It produces biologically meaningful multiple sequence alignments of divergent sequences.  
+
+Code Details and Examples: 
+
+Code: 
+```
+clustalw2 -INFILE=sequences.fasta -OUTFILE=aligned.fasta
+```
+
+Input file: The input file required for ClustalW2 is a FASTA format file that contains multiple sequences to be aligned.
+
+Format Required: FASTA format. An example of the input file would be:
+```
+>Seq1
+AGTCCGTAGCCTAGCG
+>Seq2
+GTTCCGTCGCCTACGG
+>Seq3
+TAGTCGTAGCTCAGCG
+```
+
+Specifications and Details in Input Files: Sequences should be represented in FASTA format, with each sequence starting with a '>' followed by the sequence's name, and the sequence itself in the following lines. Sequences can be of varying lengths.
+
+Command to run: `clustalw2 -INFILE=sequences.fasta -OUTFILE=aligned.fasta`
+
+This command will generate the output to a file named 'aligned.fasta'. The output file will be a multiple sequence alignment in which gaps are inserted into the sequences to optimize alignment.

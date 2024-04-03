@@ -1,0 +1,25 @@
+Use Case: Nodejs is a popular server-side platform which allows you to run JavaScript on your server. It can be used for creating server-side scripts, APIs, real-time applications, etc. Here's a use case for building a basic HTTP server.
+
+Code details and examples: Code
+
+Sample Code:
+```JavaScript
+var http = require('http'); 
+
+http.createServer(function (req, res) {
+   res.writeHead(200, {'Content-Type': 'text/plain'});
+   res.end('Hello World\n'); //return this text
+}).listen(8080 ,'localhost'); // the server object listens on port 8080 
+
+console.log('Server running at http://localhost:8080/');
+```
+In this sample code, we require('http') to include the http module from nodejs and then we create a server that listens at http://localhost:8080/ . Whenever that server is accessed, it responds with the text "Hello World\n". 
+
+Command to run the code:
+Save the above code in a file named server.js, and you can run it with Node.js:
+
+```Shell
+node server.js
+```
+
+Then, load http://localhost:8080/ in a web browser to see the output.

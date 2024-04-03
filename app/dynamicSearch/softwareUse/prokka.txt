@@ -1,26 +1,28 @@
-Prokka is a software tool for rapid bacterial genome annotation. It annotates in various formats like Genbank flatfile, GFF3, and visualization using Artemis. Prokka uses Prodigal for gene prediction and is capable of performing functional annotation by searching predicted proteins against various databases.
+Use Case: Prokka is used to rapidly annotate bacterial, archaeal and viral genomes producing standard output files.
 
-Use Case: Genome annotation with Prokka
 Code details and examples:
-1. Sample input file (fasta format, let's say `genome.fasta`):
+
+1. Code snippet:
+
 ```
->contig1
-ATGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGC
->contig2
-ATGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGC
+prokka --outdir mydir --prefix mygenome –-kb 250 myfile.fasta
 ```
+ 
+2. Commands:
+ 
+The above command will run Prokka using the genome contained in myfile.fasta, generate an output directory named mydir, output files will have prefix `mygenome`, and specify –kb as 250.
 
-2. Running Prokka:
-```bash
-prokka --outdir output_dir --genus Genus --species Species genome.fasta
-```
+3. Input file:
+ 
+`myfile.fasta`: This is the input file for annotation. The FASTA format is a text-based format for representing either nucleotide sequences or peptide sequences, in which nucleotides or amino acids are represented using single-letter codes. It should contain the perfect and complete sequence of the genome to be annotated.
 
-In this command:
-- `--outdir` specifies the directory where Prokka will output the results.
-- `--genus` is the genus of the organism.
-- `--species` is the species of the organism.
-- `genome.fasta` is the input genome file.
+4. Input file formats: 
 
-After running the command, Prokka will generate annotation files in the specified output directory.
+Prokka can accept FASTA (.fasta, .fna, .ffn, .faa, .frn), Genbank (.gbk) and EMBL (.embl) files.
 
-Please note that you may need to have the necessary databases installed before running Prokka, such as `prokka-data`.
+5. Output:
+
+Prokka will create an output directory specified by the user (e.g., `mydir`), containing several files. The most important one is .gbk (GenBank file) which contains the annotated genome that can be visualized by genome browsers.
+
+Note: Here, `mydir`, `mygenome`, `myfile.fasta` are user specific and should be replaced with user specific names and path if any.
+

@@ -1,0 +1,30 @@
+Use Case: SortMeRNA is used for filtering, mapping and OTU-picking of ribosomal RNAs in metatranscriptomic data. It aligns the reads against a choice of databases comprising of subunit rRNA for Bacteria, Archaea and Eukaryota.
+
+Code Details and Examples:
+
+Code:
+
+Input file:
+
+Example of a valid FASTA format file input that SortMeRNA can accept:
+
+```
+>Sample1
+GATTACAAGATTCAAGATTCAAGATTCAAGATT
+>Sample2
+TAGCTAGCTACGATCGTACGATCGATGCTATCA
+```
+
+SortMeRNA also accepts gzipped files (.gz) and files in FASTQ format.
+
+Command line arguments:
+
+To run SortMeRNA use the following command substituting `reads.fastq` and `reads_aligned.fastq` for your own input and output files respectively:
+
+```
+sortmerna --ref rRNA_databases/silva-bac-16s-id90.fasta,index/silva-bac-16s-db:rRNA_databases/silva-bac-23s-id98.fasta,index/silva-bac-23s-db --reads reads.fastq --num_alignments 1 --fastx --aligned reads_aligned.fastq
+```
+
+Here `--ref` argument should point to the rRNA sequences and corresponding index files separated by a comma. You can provide multiple reference database and index pairs each separated by a colon.
+
+`--reads` parameter is for the input read file, `--num_alignments` refers to the number of best alignments to keep, `--fastx` instructs to output in FASTA/FASTQ format and `--aligned` specifies the output file for aligned reads.

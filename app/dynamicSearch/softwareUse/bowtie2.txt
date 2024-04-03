@@ -1,32 +1,43 @@
-Use Case: Bowtie2 is a fast and memory-efficient tool for aligning sequencing reads to large genomes.
+Use Case: Bowtie2 is an ultrafast, memory-efficient tool for aligning sequencing reads to large genomes. It is widely used in bioinformatics for high-throughput sequence alignment in DNA sequencing. 
 
-Code details and examples:
-- Command to run Bowtie2:
+Code Details and Examples: 
+Bowtie2 require plain text files that may be in single-end or paired-end format. 
+
+Format Required: 
+For example, paired-end reads could be in two .fasta/.q files:
+- reads_1.fasta/reads_1.fq (sequence of the read (1st in pair))
+- reads_2.fasta/reads_2.fq (sequence of the read (2nd in pair))
+
+Input Specifications: 
+- reads_1.fasta/reads_1.fq and reads_2.fasta/reads_2.fq files basically contain the sequences to be aligned. 
+
+Code Sample: 
+
+1. To build the index for the reference genome:
+
 ```
-bowtie2 -x <index_prefix> -U <input_file> -S <output_file>
+bowtie2-build /path/to/reference/genome.fasta genome
 ```
 
-- Sample input files:
-  - Index file: Bowtie2 requires an index of the reference genome to be built before alignment. This can be done using the `bowtie2-build` command.
-    ```
-    bowtie2-build <reference_genome.fa> <index_prefix>
-    ```
-  
-  - Input file: Fastq file containing sequencing reads to be aligned to the reference genome.
-    ```
-    @read1
-    AGCTGATCGATCGATCGTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCT
-    +
-    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-    @read2
-    TCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGA
-    +
-    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-    ```
+2. For performing paired end alignments:
 
-- Running Bowtie2:
-  ```
-  bowtie2 -x reference_genome -U reads.fastq -S output.sam
-  ```
+```
+bowtie2 -x /path/to/index/genome -1 reads_1.fq -2 reads_2.fq -S mapping_result.sam
+```
 
-This command aligns the reads in `reads.fastq` to the reference genome indexed as `reference_genome` and saves the output in SAM format to `output.sam`.
+3. For performing single end alignments:
+
+```
+bowtie2 -x /path/to/index/genome -U reads.fq -S mapping_result.sam
+```
+
+Where: 
+
+- '/path/to/reference/genome.fasta' is the reference genome to which the reads will be aligned.
+- 'genome' is the prefix for the index files.
+- '-x' specifies the prefix of the index for the reference genome.
+- '-1' and '-2' specify the input file(s).
+- '-S' specifies the output file.
+- 'reads_1.fq' and 'reads_2.fq' represent paired-end reads.
+- 'reads.fq' represent single-end reads.
+- 'mapping_result.sam' is the result of the alignment in SAM format.

@@ -1,0 +1,60 @@
+Use Case: SCNIC (Sparse Cooccurrence Network Investigation for Compositional data) is a tool used for analyzing microbial compositional data. It uses correlation based approaches to infer networks from compositional data.
+
+Code Details and Examples:
+
+a) To build correlation network with cutoff of 0.35 and visualize,
+
+Code:
+
+```python
+from SCNIC import correls
+
+# your input dataframe here
+data = ...
+
+correls = correls.make_correls(data, method='spearman')
+module_table, correlation_table = correls.iterative_sc(correls, sparcc=True, minr=0.35)
+correlation_table.to_csv('correlation_table_sparcc.csv')
+module_table.to_csv('module_table_sparcc.csv')
+```
+
+Note: The input file for SCNIC is a pandas dataframe which consists of abundance of microbes in various samples. Row indices are microbes and column indices are samples.
+
+b) To perform SparCC with a minimum correlation of 0.3,
+
+Code:
+
+```python
+from SCNIC import general
+from SCNIC import sparcc as sp
+
+# input data
+df = ...
+
+# make correls
+correls = sp.sparcc(df)
+
+# run spiec easi on data1: minimum influence score to keep of 0.3
+correls = general.sparcc_correls(correls, minr=0.3)
+```
+
+c) To run correlation calculations like fastspar
+
+Code:
+
+```python
+from SCNIC import corr_calc
+
+# input data
+df = ...
+
+# calculating correlation
+corrs = corr_calc.correlation(df, 'fastspar')
+
+# saving correlation
+corrs.to_csv('correlation_fastspar.csv')
+```
+
+To run the python script: python script_name.py
+
+Make sure the data is in the correct format of pandas dataframe before running the SCNIC python scripts.  The command for executing this scripts is typically "`python script_name.py`". Replace "script_name.py" with the actual name of your python script.

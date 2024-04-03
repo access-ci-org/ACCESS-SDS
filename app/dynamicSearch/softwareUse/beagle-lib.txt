@@ -1,0 +1,22 @@
+Use Case: Beagle-lib is a high-performance library that can perform the core computations at the heart of most Bayesian and Maximum Likelihood phylogenetics packages. It can make use of highly-parallel processors such as those in graphics cards (GPUs) found in many PCs.
+
+Code details and examples: 
+
+--- Input File: ---
+The input to the Beagle library is not a file, but a complex data structure that is passed to it by the calling program. The exact structure of this input data will depend on the specific application, but in all cases it will represent some form of phylogenetic tree along with associated data and parameters.
+
+In the case of the BEAST software, one of the most common applications that employs Beagle-lib, the primary input file is an XML file that details the specifics of the Bayesian analysis to be performed, including the base substitution model, tree prior, clock model, input data, and output file specifications.
+
+--- File Format: ---
+Again, in the case of BEAST, the input file is an XML file that must adhere to the schema defined by the software. In general, the XML file will include elements such as data (usually a sequence alignment), parameters (such as the base frequencies and the transition/transversion ratio), and a model (which defines how the parameters and data interact).
+
+--- Running the Code: ---
+Here is a basic command to run BEAST using Beagle-lib:
+
+```
+java -jar beast.jar -beagle -beagle_GPU -beagle_SSE -beagle_instances 4 -beagle_CPU -threads 4 input.xml
+```
+
+In this command, `-beagle` is used to specify the use of Beagle-lib, `-beagle_GPU` and `-beagle_SSE` are used to enable the use of the GPU and SSE respectively, `-beagle_instances` is used to specify the number of Beagle instances to be created, `-beagle_CPU` is used to allow the CPU to be used in case the GPU is not available, `-threads` is used to specify the number of threads to use, and `input.xml` is the input XML file.
+
+The exact command that should be used will depend on the specific situation, including the hardware available and the specifics of the analysis to be performed.

@@ -1,21 +1,38 @@
-Siesta is a DFT (Density Functional Theory) code used for electronic structure calculations. 
+Use Case: Siesta is a computational chemistry software package that enables quantum mechanical calculations from first principles. It's commonly used for molecular dynamics simulations, geometry optimization, and electronic structure calculations of molecules and solids.
 
-Use Case: Electronic structure calculation
-Code details and examples:
-Input file (example input.fdf):
-```
-SystemName   Siesta example
-NumberOfSpecies  1
-NumberOfAtoms  2
-BeginAtoms
-1  0.00  0.00  0.00
-2  1.54  1.54  1.54
-EndAtoms
-```
+Code Details and Examples: Code
+Siesta takes as input a text file where the user specifies the system configuration (species, atom coordinates, etc.), and computational parameters. For example, a typical Siesta input file (FDF) might look like this: 
 
-Command to run:
-```
-siesta < input.fdf > output.out
-```
+SystemName          water
+SystemLabel         h2o
+NumberOfSpecies     2
+NumberOfAtoms       3
+%block ChemicalSpeciesLabel
+1 1 H
+2 8 O
+%endblock ChemicalSpeciesLabel
+%block AtomicCoordinatesAndAtomicSpecies
+0.0 0.0 0.0 2
+0.0 0.0 1.0   1
+1.0 0.0 0.0   1
+%endblock AtomicCoordinatesAndAtomicSpecies
+MeshCutoff         200 Ry
+PAO.BasisSize      DZP
+MD.TypeOfRun        CG
+MD.NumCGSteps      10
+MaxSCFIterations   50
+DM.MixingWeight     0.01
+DM.Tolerance        1.0d-4
+DM.NumberPulay      3
+SolutionMethod      diagon
+ElectronicTemperature 300 K
 
-This command will run Siesta with the parameters specified in the input file input.fdf and output the results to output.out.
+The above example is a simple geometry optimization (CG or conjugate gradient method) for a water molecule with a double-zeta plus polarization (DZP) basis set, a grid equal to energy cut-off of 200 Ry (Rydberg units), and electronic temperature of 300 K. ChemicalSpeciesLabel specifies the atom type in the molecule (Hydrogen and Oxygen), and AtomicCoordinatesAndAtomicSpecies specifies the Cartesian coordinates and atom type. Note that the Cartesian coordinates must be in Angstroms. 
+
+Run the Siesta as:
+
+siesta < h2o.fdf > h2o.out
+
+This directs the input file (h2o.fdf) into the Siesta program, with the output being written to h2o.out.
+
+The details of each of the input parameters and permissible values can be found in Siesta's User Manual. Users are encouraged to experiment with different values to see the effect on the simulation results.

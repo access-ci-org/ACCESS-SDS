@@ -1,0 +1,21 @@
+{
+  "software_name": "r-memoise",
+  "comprehensive_overview": "R package providing memoisation for functions, aiming to cache the results of function calls and return the cached value when the same inputs occur again. This can greatly improve the performance of functions with expensive computations or repetitive calculations.",
+  "core_features": [
+    "Caching of function results for future calls",
+    "Improved performance by avoiding redundant calculations",
+    "Flexible options for controlling cache behavior"
+  ],
+  "general_tags": [
+    "R package",
+    "Memoisation",
+    "Function performance optimization"
+  ],
+  "additional_tags": {
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Software Library",
+    "software_type": "Library",
+    "field_of_science": "Other Natural Sciences"
+  }
+}

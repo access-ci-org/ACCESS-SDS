@@ -1,0 +1,11 @@
+{
+	"software_name": "kbproto",
+	"comprehensive_overview": "The kbproto package provides the core XKB protocol and extension definitions for usage with X11 protocol libraries.",
+	"core_features": "1. Provides XKB protocol and extension definitions. 2. Allows for usage with X11 protocol libraries. 3. Defines keyboard properties and types for X Window System.",
+	"general_tags": ["X11 protocol", "keyboard properties"],
+	"research_discipline": "Computer Science",
+	"research_area": "Computer Science",
+	"software_class": "Library",
+	"software_type": "Protocol",
+	"field_of_science": "Computer and Information Sciences"
+}

@@ -1,0 +1,36 @@
+Use Case: Scafacos, which stands for Scalable Fast Coulomb Solvers, is generally used for particle-mesh Ewald and fast Fourier transform methods in computer simulations.
+
+Code details and examples: Code
+
+Input file: The input files for Scafacos are in XYZ format.
+
+Format:
+```
+natoms
+itle
+x1 y1 z1
+x2 y2 z2
+...
+xn yn zn
+```
+Here, natoms is the number of atoms in the simulation, x_i, y_i, z_i are the respective Cartesian coordinates of atom i. 
+
+For example, a sample input file might look like so:
+
+```
+5
+Water Molecule
+0.000000 -0.007156 0.965491
+-0.000000 0.001486 -0.003471
+0.000000 0.931026 1.207929
+0.000000 -0.465689 -0.647014
+1.620570 -0.032601 1.600546
+```
+
+To use this file as an input for a Scafacos simulation, you might employ a command like so:
+```
+mpirun -n 4 scafacos_test abc water.xyz
+```
+Here, 'abc' is the chosen solver, 'water.xyz' is the sample input file, and '-n 4' indicates the number of parallel processes to be used by MPI. 
+
+It should be noted that Scafacos also supports systems of charged particles, including both point charges and charged molecular systems. For such systems, an additional column is added to the input file to denote the charge of each particle. It also supports systems with periodic boundary conditions, but these are not demonstrated in the above example.

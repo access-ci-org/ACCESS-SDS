@@ -1,0 +1,25 @@
+Use Case: To annotate miRNA isoforms from high-throughput sequencing data in GFF3 format.
+
+Code Details and Examples: mirtop requires GFF3 files as the input. Here's an example of the input file format:
+
+```
+##gff-version 3
+chr1  .  gene  3401  5500  .  +  .  ID=miRBase;Name=MI0006360;Accession=MI0006360;Ontology_term=MI0012
+chr1  miRBase  gene  6788  7006  .  -  .  ID=MI0006361;Name=MI0006362
+chr1  miRBase  gene  7006  7206  .  -  .  ID=MI0006363;Name=MI0006363
+```
+
+Python Code:
+
+```python
+from mirtop import mirtop
+input_file = "../data/myfile.gff"
+mirtop.run(input_file)
+```
+
+Here is a command-line usage:
+```
+mirtop gff --in test.bam --organism human --format seqbuster \
+           --out out_folder/
+```
+In the above command: "test.bam" is the input file; "human" specifies the organism; "seqbuster" is the input format of the BAM file; "out_folder/" is the output directory.

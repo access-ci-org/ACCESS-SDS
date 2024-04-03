@@ -1,15 +1,29 @@
-XZ is a file compression tool and format that is commonly used in high-performance computing for compressing and decompressing files efficiently.
+Use Case: xz is used for file compression. It reduces the size of files enabling efficient storage and faster transmission rates.
 
-Use Case: Compressing a File with XZ
-Code details and examples:
-```bash
-# Compress a file using xz
-xz -z example.txt
-```
+Code Details and Examples: 
 
-Use Case: Decompressing a File with XZ
-Code details and examples:
-```bash
-# Decompress a file using xz
-xz -d example.txt.xz
-```
+In this example, we compress the file "sample.txt" using the xz command:
+
+Command: `xz sample.txt`
+
+This will compress the file and replace it with "sample.txt.xz".
+
+Uncompress the file is just as easy using the -d option:
+
+Command: `xz -d sample.txt.xz`
+
+This will decompress the file and replace it with "sample.txt".
+
+You can use the -k option if you want to keep the original file:
+
+Command: `xz -k sample.txt`
+
+This will produce a compressed file "sample.txt.xz" and also keep the original "sample.txt". Similarly you can decompress while keeping the compressed version:
+
+Command: `xz -dk sample.txt.xz`
+
+This will produce the decompressed file "sample.txt" and also keep the compressed version "sample.txt.xz". 
+
+In terms of input files, xz can handle any file type, including binary and text. The contents of the file do not affect the compression process. 
+
+The only specification is the file name, which should be a valid filename for your operating system. It does not need to have any specific extensions, however it is customary to use .xz for compressed files.

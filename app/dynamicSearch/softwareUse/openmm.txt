@@ -1,42 +1,29 @@
-Use Case: Molecular dynamics simulations
-Code details and examples:
-```
-# Sample input files: system.xml, coordinates.pdb, forcefield.xml
-# system.xml: Contains information about the molecular system
-# coordinates.pdb: Contains initial coordinates of the atoms
-# forcefield.xml: Contains force field parameters
+Use Case: Running a Molecular Dynamics simulation with OpenMM.
 
-from simtk.openmm import app
-import simtk.openmm as mm
-from simtk import unit
+Code Details and Examples:
 
-# Load the system
-system = mm.XmlSerializer.deserialize(open('system.xml').read())
+OpenMM is an open-source software toolkit to perform high performance molecular dynamics simulations. It uses hardware acceleration via GPUs to speed up the simulation. It can be used to study how atoms and molecules move under certain conditions in a provided PDB or .xml file.
 
-# Load the coordinates
-pdb = app.PDBFile('coordinates.pdb')
+Command:
+```python
+from simtk.openmm.app import *
+from simtk.openmm import *
+from simtk.unit import *
 
-# Load the force field
-forcefield = app.ForceField('forcefield.xml')
+pdb = PDBFile('input.pdb')
+forcefield = ForceField('amber14-all.xml', 'amber14/tip3pfb.xml')
+system = forcefield.createSystem(pdb.topology, nonbondedMethod=PME, nonbondedCutoff=1*nanometer, constraints=HBonds)
+integrator = LangevinMiddleIntegrator(300*kelvin, 1/picosecond, 2*femtoseconds)
 
-# Create the simulation context
-integrator = mm.LangevinIntegrator(300*unit.kelvin, 1.0/unit.picosecond, 2.0*unit.femtosecond)
-platform = mm.Platform.getPlatformByName('CUDA')
-simulation = app.Simulation(topology=pdb.topology, system=system, integrator=integrator, platform=platform)
-
-# Set the initial coordinates
+simulation = Simulation(pdb.topology, system, integrator)
 simulation.context.setPositions(pdb.positions)
-
-# Minimize the energy
 simulation.minimizeEnergy()
-
-# Run dynamics
-simulation.reporters.append(app.DCDReporter('output.dcd', 1000))
-simulation.reporters.append(app.StateDataReporter('data.csv', 1000, step=True, potentialEnergy=True, temperature=True))
+simulation.reporters.append(PDBReporter('output.pdb', 1000))
+simulation.reporters.append(StateDataReporter(stdout, 1000, step=True, potentialEnergy=True, temperature=True))
 simulation.step(10000)
 ```
+Here, the 'input.pdb' represents the input file which is in Protein Data Bank format. This file contains the coordinates of atoms in the molecule for the molecular dynamics simulation. In the above code, you need to replace 'input.pdb' with the pdb file that you have. 
 
-To run the code:
-```bash
-python my_simulation_script.py
-```
+The 'amber14-all.xml' and 'amber14/tip3pfb.xml' are the force field files that define the forces between the atoms. 
+
+Please, use Python 3 environment to run this script. The script performs the 10000 steps of the simulation which are calculated in the function 'simulation.step(10000)' and the resulting output is stored in 'output.pdb'. The intermediate information about the simulation is reported every 1000 steps.

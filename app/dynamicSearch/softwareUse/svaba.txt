@@ -1,0 +1,38 @@
+Use Case: Svaba is an open-source tool used for detecting structural variations (e.g., deletions, duplications, inversions) in a genome using high-throughput, paired-end sequencing data.
+
+Code Details and Examples: 
+Code:
+
+The input files required for Svaba include a reference genome (in fasta file format) and a BAM file containing the aligned sequencing reads.
+
+Please prepare your input files according to the following specifications:
+
+Fasta file specification:
+- Each sequence starts with a single-line description, followed by lines of sequence data.
+- The description line starts with a ">" character.
+- White spaces are allowed but will be removed.
+- The end of each sequence is indicated by an endline character.
+- Here is a sample fasta file entry:
+```
+>sequence1
+ATCGTAGCTATGCTGACTGATCGTACGTA
+```
+
+BAM file specification:
+- Binary version of a SAM file
+- BAM files are indexed binary files from which subsets of data can be randomly accessed.
+
+```
+svaba run -t tumor.bam -n normal.bam -G reference_genome.fa -a project_id -p 8 -m 
+```
+
+In the command line command above the `-t` signifies the tumour sample while the `-n` signifies the normal. The `-G` is used to specify the reference genome file while `-a` for the project id. `-p 8` let's the command know that it should use 8 threads and `-m` runs the command in dual-sample (n/t), somatic mode.
+
+These are the basics and might vary or need more specifications depending on the specific needs of the project or data. 
+
+Svaba output files include:
+- svaba.sv.vcf: contains all structural variant calls
+- svaba.somatic.sv.vcf: contains only those SVs that were found in the tumor and not in the normal
+- svaba.idisc.bam / svaba.gdisc.bam : contains discordant reads that support each call
+
+Also, parametrization might be needed based on the quality and type of input data as the command provided above is minimal. Further, downstream data analysis will be required to draw any meaningful inferences from the output files.

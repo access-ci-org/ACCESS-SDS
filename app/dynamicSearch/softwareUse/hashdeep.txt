@@ -1,22 +1,35 @@
-Use Case: hashdeep is a cross-platform set of tools to compute hashes using multiple algorithms on files and directories.
+Use Case: Hashdeep is a cross-platform software tool used for computing, matching, and auditing hashsets of any size. It is used in forensic investigations, system audits, and file integrity monitoring. Hashdeep's input file consists of a list of file names that you want to check the hashes of. The input file is typically a simple TXT file each line of which contains the full path to a file to be hashed. 
 
-Code details and examples:
-1. Create an example file for hashing:
-   ```bash
-   echo "Hello, World!" > example.txt
-   ```
+Code details and examples: Code 
 
-2. Compute hashes of the example file using hashdeep:
-   ```bash
-   hashdeep -c sha256 example.txt
-   ```
+To create a hashset for all files in a directory:
 
-3. Compute hashes of files in a directory:
-   ```bash
-   hashdeep -r -c sha256 /path/to/directory
-   ```
+```bash
+hashdeep -r /path/to/directory > hashset.txt
+```
 
-4. Verify hashes using a hash file:
-   ```bash
-   hashdeep -k hashfile.txt -c sha256 -a example.txt
-   ```
+hashset.txt file will contain lines structured in the following way:
+
+```bash
+%%%% HASHDEEP-1.0
+%%%% size,md5,sha256,filename
+## Invoked from: /home/user
+## $ hashdeep -r /path/to/directory
+##
+66060,5f4d4b780f87fd9b2169ef5b2766a392,b636900e36bb4029795c902a9740d26ff4f8fa4362298907619426080f12e632,  /path/to/directory/file1.txt
+44523,3b5e31468df69f4250536e14df3b5b48,c881a9494a83b356a6e074e912038ad65f07b88a73856065e6c39258cfaa3f5a,  /path/to/directory/file2.jpg
+```
+
+Where columns indicate the following: 
+- file size in bytes
+- md5 hash of the file
+- sha256 hash of the file
+- full path to the file
+
+To audit a hashset:
+
+```bash
+hashdeep -r -k hashset.txt /path/to/directory 
+```
+
+This command will compare the current state of /path/to/directory with the previously created hashset and report any changes.

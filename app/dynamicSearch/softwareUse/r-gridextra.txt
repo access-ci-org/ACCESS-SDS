@@ -1,0 +1,24 @@
+Use Case: To arrange multiple grid-based plots on a page. 
+
+**Code details and examples: **
+
+In this use case, r-gridExtra can be used to arrange multiple plots in R using the gridExtra package. The grid.arrange function is primarily used to arrange the plots.
+
+Code: 
+
+```R
+#Load the library
+library(gridExtra)
+library(ggplot2)
+
+#Create some plots
+p1 <- ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) + geom_point()
+p2 <- ggplot(iris, aes(x = Sepal.Width, y = Petal.Length)) + geom_point()
+
+#Arrange the plots on the page
+grid.arrange(p1, p2, nrow=2)
+```
+
+The input for this function is a list of plots (p1, p2), and the nrow argument specifies the number of rows in the layout. 
+
+When this code is run with the command `Rscript <script_name.R>`, it will create a plot with two rows, where the first row is the scatterplot of Sepal.Length versus Sepal.Width, and the second row is the scatterplot of Sepal.Width versus Petal.Length.

@@ -1,0 +1,26 @@
+Use Case: Use cellBender to remove the influence of empty droplets in single-cell RNA sequencing (scRNA-seq) data.
+
+Code Details and Examples: 
+
+Input File Format:
+The specific input for cellBender is a matrix (.mtx) file that contains the sparse count matrix of cells (columns) by genes (rows), and additional associated files that contain the gene and cell identifiers. For example:
+- matrix.mtx
+- genes.tsv
+- barcodes.tsv
+
+Command Line to Run cellBender:
+
+To run cellBender to remove empty droplets with a specific input file, you can use the command:
+
+```bash
+cellbender remove-background --input matrix.mtx --output output.h5 --total-droplets 10000 --fpr 0.01
+```
+
+In the above command:
+
+1. --input indicates the input file.
+2. --output specifies the output file, usually a .h5 file.
+3. --total-droplets is the estimated number of total droplets you want to consider for cell calling.
+4. --fpr is the false positive rate to set the sensitivity of the algorithm at finding cells.
+
+CellBender can then be used downstream to identify cells from droplets based on the cleaned count matrix. You can use the cleaned count matrix for downstream analysis using other single cell analysis tools such as Seurat or Scanpy.

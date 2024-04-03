@@ -1,0 +1,41 @@
+Use Case: Use spice server for virtual machine display access. Specifically, for running a display for a QEMU virtual machine.
+
+Code details and examples: Code.
+
+- Create a file named "myvm.sh"
+First, create a script file using any text editor.
+
+```bash
+nano myvm.sh
+```
+
+- Then, put this content into the file "myvm.sh"
+```bash
+#!/bin/bash
+qemu-system-x86_64 \
+    -spice port=5900,addr=127.0.0.1,disable-ticketing \
+    -drive file=my_vm_image.qcow2
+```
+Save the file and exit the text editor. Make the script executable
+```bash
+chmod +x myvm.sh
+```
+
+- Run your script
+This is the command to run the Spice server.
+```bash
+./myvm.sh
+```
+- You can connect to your VM using any Spice client, for example, spicy which can be invoked from the command line.
+```bash
+spicy -h 127.0.0.1 -p 5900
+```
+
+### Required/Expected format
+- "my_vm_image.qcow2" is an example for a virtual machine hard drive image. The expected format is qcow2 but it also could be raw.
+
+### Note
+- The server listens on address 127.0.0.1 port 5900 and anyone can connect without a password due to "disable-ticketing".
+- You must replace "my_vm_image.qcow2" with your actual VM image path and filename.
+
+You could also use the "-spice ... " line above with any QEMU command line that starts a VM.

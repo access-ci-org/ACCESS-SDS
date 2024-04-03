@@ -1,0 +1,29 @@
+Use Case: py-seaborn is used for data visualization in Python. It is a library used to create beautiful and informative statistical graphics.
+
+Code details and examples:
+
+Code:
+```python
+# Import necessary libraries
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Load built-in dataset
+iris = sns.load_dataset('iris')
+
+# Plot
+sns.pairplot(iris, hue = 'species')
+plt.show()
+```
+
+Input files: Not applicable. The above example uses built-in datasets available in Seaborn.
+
+Format required: Not applicable.
+
+Specifications: In Seaborn, you can input data in Pandas DataFrame format for plotting.
+
+Command to run the code:
+```bash
+python filename.py
+```
+Where `filename.py` is the name of the Python file containing the above code.

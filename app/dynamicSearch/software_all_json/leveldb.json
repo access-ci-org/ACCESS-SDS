@@ -1,0 +1,19 @@
+{
+    "software_name": "leveldb",
+    "comprehensive_overview": "LevelDB is a fast key-value storage library designed by Google that provides an ordered mapping from string keys to string values. It has features like high performance, low latency reads, low write amplification, data compression, and automatic data compaction. LevelDB is written in C++ and is optimized for use in embedded systems and applications requiring persistent storage.",
+    "core_features": [
+        "Ordered key-value storage",
+        "High performance",
+        "Low latency reads",
+        "Data compression",
+        "Automatic data compaction"
+    ],
+    "general_tags": ["storage", "database"],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "database management system (DBMS)",
+        "software_type": "library",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

@@ -1,0 +1,32 @@
+Use Case: The r-htmltable package can be used in use cases like pulling data from an html table, for example from a webpage, into an R dataframe for further processing and analysis.
+
+Code details and examples:
+
+Code:
+
+```r
+# Load the library
+library(htmltab)
+
+# Define the URL containing the HTML table
+url <- "https://www.w3schools.com/html/html_tables.asp"
+
+# Use the htmltab function to read the table into a data frame
+df <- htmltab(doc = url, which = 1)
+
+# Print the data frame
+print(df)
+```
+
+The above code uses htmltab function which requires two arguments 
+
+* `doc`  : a character string specifying the URL, path or html code to be processed.
+* `which`: an integer indicating which table to read from the webpage if there are multiple tables.
+
+Then, it prints the dataframe that is pulled from the HTML table at the URL. The URL should be one which contains an HTML table. 
+
+To run this code, the r-htmltable library must be installed and loaded. Command to run this code is simply highlighting the code in an R environment and pressing the Run button. Alternatively, the code can be run line by line in the R console.
+
+The input for this library is a URL, path or html code containing an HTML table. The format required is a valid website URL or a filepath. If there are multiple tables on the webpage, you must specify which table to read with the "which" argument. There are no specific details or specifications required in the input file as this will depend on the specific HTML table you are trying to read.
+
+For example, the input URL "https://www.w3schools.com/html/html_tables.asp" contains an HTML table demonstrating various aspects of HTML table design. The library will then convert this table into an R dataframe.

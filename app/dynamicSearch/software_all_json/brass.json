@@ -1,0 +1,20 @@
+{
+    "software_name": "Brass",
+    "comprehensive_overview": "Brass is a circuit design and simulation software that allows users to create, edit, and simulate electronic circuits. It provides a user-friendly interface for designing and testing circuits for various applications.",
+    "core_features": [
+        "Circuit design",
+        "Simulation",
+        "Electronic components library",
+        "User-friendly interface"
+    ],
+    "general_tags": [
+        "Circuit Design",
+        "Electronic Simulation",
+        "Electronics"
+    ],
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Simulation Software",
+    "software_type": "Circuit Design and Simulation",
+    "field_of_science": "Engineering and Technology"
+}

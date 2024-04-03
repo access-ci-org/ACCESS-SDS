@@ -1,0 +1,20 @@
+{
+    "software_name": "defaultmodules",
+    "comprehensive_overview": "Default modules are predefined software packages or libraries that are included with the installation of a particular software, compiler, or programming environment. These modules typically consist of commonly used tools or libraries that are essential for various tasks within the software ecosystem.",
+    "core_features": [
+        "Predefined software packages or libraries included with software installations",
+        "Essential tools for various tasks within the software ecosystem"
+    ],
+    "general_tags": [
+        "Software Libraries",
+        "Software Packages",
+        "Default Modules"
+    ],
+    "additional_tags": {
+        "research_discipline": "Not Applicable",
+        "research_area": "Not Applicable",
+        "software_class": "Development Tools",
+        "software_type": "Libraries/Modules",
+        "field_of_science": "Other"
+    }
+}

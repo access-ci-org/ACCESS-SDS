@@ -1,0 +1,13 @@
+{
+    "software_name": "Cicero",
+    "comprehensive_overview": "Cicero is a platform for automated text analysis and natural language processing.",
+    "core_features": "Cicero provides tools for sentiment analysis, entity recognition, keyword extraction, text summarization, and language translation. It is designed to assist in extracting insights, trends, and patterns from large volumes of unstructured text data.",
+    "general_tags": ["text analysis", "natural language processing"],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Computational Software",
+        "software_type": "Text Analysis Tool",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

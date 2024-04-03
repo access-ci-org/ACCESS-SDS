@@ -1,0 +1,33 @@
+Use Case: Adding optional static typing to Python
+
+Code details and examples:
+
+The typing-extensions library for Python provides a set of additional types that may be useful when using Python's new type hinting system. In the example below, the Literal type is used to specify that a function only accepts specific literal values.
+
+Code:
+
+```python
+from typing_extensions import Literal
+
+def get_letter_grade(score: Literal[90, 80, 70, 60, 0]) -> str:
+    if score == 90:
+        return 'A'
+    elif score == 80:
+        return 'B'
+    elif score == 70:
+        return 'C'
+    elif score == 60:
+        return 'D'
+    elif score == 0:
+        return 'F'
+    else:
+        raise ValueError('Invalid score')
+
+print(get_letter_grade(90))  # Outputs: A
+print(get_letter_grade(80))  # Outputs: B
+```
+Command to run: `python filename.py`
+
+The input to the function `get_letter_grade` is constrained to be one of the literal values specified by the `Literal` type. This is a form of type checking that can be extremely useful for catching coding errors.
+
+Note: While this code will run without the typing-extensions library, its main value is in the static type checking that can be done by tools like `pytype` or `mypy`. Without those tools, or without running them, the value of using typing-extensions is greatly reduced.

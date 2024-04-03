@@ -1,21 +1,38 @@
-Use Case: Visualization of meteorological data using NCL (NCAR Command Language)
+Use Case: NCL (NCAR Command Language) is a language designed specifically for scientific data analysis and visualization, particularly suitable for working with large netCDF, HDF, GRIB, and other dataset files.
 
-Code details and examples:
-NCL (NCAR Command Language) is a scripting language specifically designed for processing and visualizing data in the field of atmospheric and Earth sciences. Below is a simple example of plotting a contour map using NCL.
+Code details and examples: 
 
-Sample input file (data.nc):
+Code:
+
 ```
-f = addfile("data.nc","r")
-temperature = f->temperature
-lon = f->lon
-lat = f->lat
+; Load the necessary libraries
+load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/gsn_code.ncl"
+load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/gsn_csm.ncl"
+
+; Start a graphics workstation
+wks = gsn_open_wks("png","plot")
+
+; Define a variable
+data = addfile("data.nc","r")
+
+; Define a data variable from the file
+var = data->temperature(0,:,:)
+
+; Create a contour plot of the variable
+plot = gsn_csm_contour_map(wks,var,False)
+
+; Draw the plot
+draw(plot)
+end
+```
+This example reads a netCDF file named 'data.nc', selects the 'temperature' variable from the file, generates a contour map of the variable, and outputs the plot to a 'png' image file named 'plot'. 
+
+The input file should be a netCDF file that contains a 'temperature' variable. 
+
+To run this script, save it as a '.ncl' file and run the 'ncl' command followed by the file name. For example, if the file is named script.ncl, you would run:
+
+```
+ncl script.ncl
 ```
 
-NCL code snippet:
-```bash
-ncl 'data.nc'
-```
-
-This command will run the NCL script to create a contour plot of the temperature data stored in data.nc file. 
-
-Please ensure that you have NCL installed on your system and the necessary data files are available before running the script.
+This will generate a new PNG image file named 'plot' in the same directory.

@@ -1,35 +1,45 @@
-Spack is a flexible package manager for supercomputers, Linux and macOS. It makes installing scientific software easy. 
+Use Case: Spack is a package management system designed to support multiple versions, configurations, platforms, and compilers. It is used to simplify the process of building and installing various software packages, allowing developers to manage complex install trees and dependencies. Sample use case can be installing a software 'cmake' using spack.
 
-Use Case: Installation of a software package using Spack
 Code details and examples:
 
-Sample input file (example.yaml):
-```yaml
-spack:
-  specs:
-    - hdf5
-  concretization: together
-  config:
-    install_tree: /path/to/install
-```
-
 Code:
+
+To install a software 'cmake' using spack, we use the following command.
+
 ```
-spack install --file example.yaml
+spack install cmake
 ```
 
-Sample input file (packages.yaml):
-```yaml
-packages:
-  - fftw
-  - gcc
-  - openmpi
+To load the installed software:
+
+```
+spack load cmake
 ```
 
-Code:
+In some cases, you might need to specify the version of the package or the compiler you want to use. For example:
+
 ```
-spack repo add /path/to/repo
-spack install --install-deps packages.yaml
+spack install cmake@3.15.2
+spack install cmake%gcc@9.2.0
 ```
 
-Note: These are just examples to show how one might use Spack. Input files and commands may vary depending on the specific software package you are installing.
+The "@" character is used to specify the version, and the "%" character is used to specify the compiler.
+
+Spack uses YAML-based package recipes, which are very simple to write. A minimal spack package could be something as simple as:
+
+```
+class Cmake(Package):
+    homepage = "http://www.cmake.org"
+    url      = "http://www.cmake.org/files/v2.8/cmake-2.8.10.2.tar.gz"
+
+    version('2.8.10.2', '097278785da7182ee14c7cb44fb14c47')
+
+    def install(self, spec, prefix):
+        configure("--prefix=%s" % prefix)
+        make()
+        make("install")
+```
+
+Input files, format required, and specifications:
+
+Spack does not necessarily take an input file but requires a package recipe written in Python, staying within Spack’s DSL. With very few exceptions, the API provided by the package DSL is the only thing needed to install a package. The specification is generally the software name accompanied by its version and other details.

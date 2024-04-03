@@ -1,0 +1,35 @@
+Use Case: breseq is utilized for predicting mutations in haploid microorganisms with short-read sequencing data. For instance, explore bacterial microevolution during short-term laboratory evolution experiments. 
+
+Input Files: Breseq needs .fastq or .fastq.gz files as inputs. The genome reference file needs to be in GenBank or GFF3 format. 
+
+Format: 
+• The Mutations are predicted in this format: "GCA_000017745.1_ASM1774v1_genomic.fna".
+
+• The genome reference file needs to be in GenBank (.gbk) or GFF3 (.gff3) format. Each .fastq or .fastq.gz file should contain the reads from one sample.
+
+Code Details and Examples: 
+To run the prediction, you need to execute the following code: 
+```
+Code: 
+ breseq -r reference.gbk -p -o output input.fastq
+```
+This command will run breseq with the reference genome specified by 'reference.gbk', the polymorphism prediction mode is enabled with -p, the results will be saved in the directory 'output', and the input reads are in 'input.fastq'.
+  
+For multiple input files:
+```
+Code: 
+ breseq -r reference.gbk -p -o output input1.fastq input2.fastq
+```
+The above command will use both 'input1.fastq' and 'input2.fastq' for mutation prediction.
+
+Specifications and details in input files: 
+The input .fastq files should be a standard fastq formatted file containing the genomic sequences. The reference file in GenBank or GFF3 format should contain all the necessary annotations pertaining to the organism genome. The predicted mutations will be based on this reference. 
+
+Breseq uses standard BWA-MEM for alignment and samtools/bcftools for SNP calling.
+
+Command:
+```
+Code: 
+ breseq -r reference.gbk -p -o output_directory -j 4 input.fastq
+```
+Here, 4 represents the number of threads to be used for computation; this can be adjusted according to the available resources.

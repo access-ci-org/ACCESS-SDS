@@ -1,29 +1,26 @@
-Eckit is a scientific library that provides utility functions for scientific data processing. 
+Use Case: eckit is a cross-platform toolkit developed by ECMWF (European Centre for Medium-Range Weather Forecasts) which provides many of the basic building blocks for developing software systems. It is particularly tailored to develop large and distributed software systems for weather prediction requires. It is used for handling messages, configuration, input/output streams, filesystem, data structures and algorithms, and multi-threading and communication patterns.
 
-Use Case: Check the version of eckit
-Code details and examples:
-```bash
-eckit-version
-```
+Code details and examples: Eckit provides a python library eckit-python which includes various modules such as core, log and SuperConfig.
 
-Use Case: Generate a random 2D array using eckit
-Code details and examples: 
+Code:
+
 ```python
-from eckit import random
+from eckit.core import Main
+from eckit.log import Log
 
-array = random.random([3, 3])
-print(array)
+class App(Main):
+
+    def run(self):
+        Log.info("Hello World")
+
+main = App("hello")
+main.start()
 ```
 
-Use Case: Write the array to a netCDF file using eckit
-Code details and examples: 
-```python
-from eckit import eckit
+In this example, you define your main application as a class which is derived from eckit.core.Main and overloads a run() method. Within the run() method, you can use eckit.log.Log to output information. The command to run this python script would be:
 
-array = random.random([3, 3])
-
-with eckit.open('output.nc', 'w') as file:
-    file.write(array)
+```
+python hello.py
 ```
 
-Please note that the above examples are just hypothetical and not actual commands or methods for the eckit library.
+This would run the hello.py script and output "Hello World" to the console.

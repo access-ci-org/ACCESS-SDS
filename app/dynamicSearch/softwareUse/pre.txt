@@ -1,0 +1,45 @@
+Use Case: Preparing and analyzing molecular dynamics simulations with GROMACS.
+
+Code details and examples:
+Code:
+
+Input file: 
+The main input file for GROMACS is a .mdp file, which includes all the necessary parameters for the molecular dynamics run. The file extension must be .mdp
+
+Example of a .mdp file:
+
+; Template mdp file for Molecular Dynamics Simulation 
+integrator = md 
+nsteps = 100000 
+dt = 0.002 
+nstxout = 500 
+nstvout = 500 
+nstenergy = 500 
+nstlog = 500 
+continuation = no 
+constraint_algorithm = lincs 
+constraints = all-bonds
+cutoff-scheme = Verlet 
+ns_type = grid 
+nstlist = 10 
+rlist = 1.0 
+rcoulomb = 1.0 
+vdwtype = cut-off 
+rvdw = 1.0 
+tcoupl = v-rescale 
+tc-grps = Protein Non-Protein 
+tau_t = 0.1 0.1 
+ref_t = 300 300 
+pcoupl = Parrinello-Rahman 
+pcoupltype = isotropic 
+tau_p = 1.0 
+compressibility = 4.5e-5 
+ref_p = 1.0 
+
+Command to run the GROMACS:
+
+To run the GROMACS simulation, use gmx mdrun. For example, if your input file is named "simulation.mdp", the command would be:
+
+gmx mdrun -s simulation.tpr
+
+Where -s specifies the name of the input file. The output will be a trajectory (.xtc) file and an energy (.edr) file.

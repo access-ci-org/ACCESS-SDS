@@ -1,0 +1,13 @@
+{
+  "software_name": "Concoct",
+  "comprehensive_overview": "Concoct is a software tool designed for the binning of metagenomic contigs by utilizing nucleotide composition, coverage across multiple samples, and linkage information derived from paired-end reads.",
+  "core_features": "1. Metagenomic contig binning\n2. Utilizes nucleotide composition, coverage, and linkage information\n3. Supports multiple samples analysis\n4. Facilitates the identification of microbial populations in environmental samples",
+  "general_tags": ["Metagenomics", "Bioinformatics", "Genomics"],
+  "additional_tags": {
+    "research_discipline": "Environmental Biology",
+    "research_area": "Metagenomics",
+    "software_class": "Bioinformatics tool",
+    "software_type": "Data analysis tool",
+    "field_of_science": "Biological Sciences"
+  }
+}

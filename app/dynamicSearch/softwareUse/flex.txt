@@ -1,37 +1,32 @@
-Use Case: Flex (Fast lexical analyzer generator)
+Use Case: Flex, or Fast Lexical Analyzer, is a tool for generating scanners: programs which recognize lexical patterns in text and it is particularly useful in writing programs that have command-line options.
 
-Code details and examples:
-Flex is a tool for generating scanners, programs which recognized lexical patterns in text. It is often used in combination with a parser generator such as Bison.
+Code details and examples: 
 
-Sample input file (lex file - example.l):
-```
-%{
-#include <stdio.h>
-%}
+Code: 
 
+```antlr
+%%  
+[0-9]+ printf("Saw an integer\n"); 
+[a-z]+ printf("Saw a word\n"); 
+.|\n ; 
 %%
-[a-z]    { printf("Lowercase letter found\n"); }
-[0-9]    { printf("Digit found\n"); }
-.        { printf("Special character found\n"); }
-%%
-
-int main() {
-    yylex();
-    return 0;
-}
 ```
 
-To generate C code from the lex file, run the following command:
-```
-flex example.l
+In the above code snippet, the Flex takes the input file which is specified with the lexical rules. The integer rule specifies that when an integer (sequence of one or more digits) is detected, output "Saw an integer" to the console. The word rule specifies that when a word (sequence of one or more lower case letters) is detected, output "Saw a word" to the console.
+
+You can use the command `flex filename.l` where `filename.l` is the name of the file you want to process. This will generate a `lex.yy.c` file which can then be compiled using a C compiler such as gcc using the command `gcc lex.yy.c -lfl`. This will generate an a.out file which when run, will process the input according to the rules specified in the lex file. 
+
+The command to run the created a.out file is `./a.out`. 
+
+Input File: 
+
+Input for this scanner can be any text file or standard input which contains words and integers. There are no specific format requirements. Any text file with integers and letters should work fine for this example. 
+
+Input Example: 
+
+```txt
+12 apples picked 
+7 oranges tasted
 ```
 
-This will generate a file named `lex.yy.c`. You can then compile and run the generated C code with a C compiler like gcc:
-```
-gcc lex.yy.c -o lexer
-./lexer
-```
-
-You can provide input text to the program and see how it recognizes lexical patterns based on the rules defined in the input file.
-
-Note: This is just a simple example to demonstrate the usage of Flex. More complex patterns and rules can be defined in the input file to create sophisticated lexical analyzers.
+In this case, running the program will print "Saw an integer" followed by "Saw a word" for each line.

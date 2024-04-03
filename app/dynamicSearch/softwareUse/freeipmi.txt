@@ -1,22 +1,31 @@
-Use Case: FreeIPMI provides a collection of Intelligent Platform Management Interface (IPMI) utilities for remote management and monitoring of servers. It includes tools such as ipmitool for querying and configuring IPMI-enabled devices.
+Use Case: FreeIPMI provides in-band and out-of-band IPMI software based on the IPMI v1.5/2.0 specification. It can be used for a variety of tasks, such as reading sensor devices, reading or writing system event logs, checking system health, and managing system components.
 
 Code details and examples:
-- Sample input file format for ipmitool command:
-  - IP address: 192.168.1.100
-  - Remote username: admin
-  - Remote password: password123
 
-- Code snippet to query system information using ipmitool:
-  ```bash
-  ipmitool -H 192.168.1.100 -U admin -P password123 fru print
-  ```
+1. Code: `ipmi-sensors`
+   - This code is used to read the sensor devices.
 
-- Command to run the ipmitool tool to get sensor readings:
-  ```bash
-  ipmitool -H 192.168.1.100 -U admin -P password123 sdr list
-  ```
+2. Code: `ipmi-fru`
+   - This code reads field-replaceable unit (FRU) information.
 
-- Command to run the ipmitool tool to power off a remote server:
-  ```bash
-  ipmitool -H 192.168.1.100 -U admin -P password123 power off
-  ```
+3. Code: `ipmi-sel`
+   - This code reads and writes to the System Event Log (SEL).
+
+4. Code: `bmc-watchdog`
+   - The BMC watchdog tool can be used to monitor your system and reboot it if it is not responding.
+
+5. Code: `bmc-config`
+   - The BMC configuration tool can be used to manage different parameters of the BMC.
+
+6. Code: `ipmi-locate`
+   - This tool helps in locating your BMC.
+
+In most of these commands, the input required is the command itself, no other files or additional parameters are needed. Some commands may require additional parameters like the sensor id or sensor type, which can be found using the `ipmi-sensors` command. All these commands are run in the terminal window.
+
+For instance, to run the `ipmi-sensors`, you would type the following into your terminal window:
+
+Command: `ipmi-sensors`
+
+Also, FreeIPMI has a wide variety of options that may be specified on the command line. The options common to all the FreeIPMI tools are outlined in the FreeIPMI man pages. For instance, --help option can be used to display a help list for every command.
+
+Command: `ipmi-sensors --help`

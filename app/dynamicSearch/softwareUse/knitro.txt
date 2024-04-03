@@ -1,0 +1,72 @@
+Use Case: Use Knitro for solving large-scale mathematical optimization problems including linear programming (LP), nonlinear programming (NLP), quadratic programming (QP), quadratically constrained programming (QCP), mixed integer programming (MIP), and mixed-integer nonlinear programming (MINLP).
+
+Code details and examples: Code
+
+Input File: 
+
+Knitro accepts MPS, LP, or NL (AMPL), so we will use NL (AMPL) for this example. Assume we want to solve a simple NLP:
+
+minimize x1^2 + x2^2 
+
+subject to x1 + x2 = 10 
+
+Starting point (x1, x2) = (1, 1)
+
+This can be represented in AMPL format:
+
+```
+var x1 >= 0, <= 10; /* Boundaries */
+var x2 >= 0, <= 10; /* Boundaries */ 
+
+minimize obj: x1^2 + x2^2; /* Objective */
+
+subject to c1: x1 + x2 = 10; /* Constraint */
+
+option solver knitro; /* Solver */
+solve;
+```
+
+Reading Input File:
+
+In Python, you can use Pyomo to read AMPL files:
+
+```python
+from pyomo.environ import *
+from pyomo.opt import SolverFactory
+
+# Create a solver
+solver = SolverFactory('knitro')
+
+# Read the model file
+instance = solver.read("model.nl")
+
+# Solve the problem
+results = solver.solve(instance)
+```
+
+In Julia, you can use JuMP:
+
+```julia
+using JuMP
+using AmplNLWriter
+
+# Set the solver
+m = Model(optimizer_with_attributes(AmplNLWriter.Optimizer, "executable"=>"/path/to/knitro"))
+
+# Define the model
+@variable(m, 0 <= x1 <= 10)
+@variable(m, 0 <= x2 <= 10)
+@NLobjective(m, Min, x1^2 + x2^2)
+@constraint(m, x1 + x2 == 10)
+
+# Solve the problem
+JuMP.optimize!(m)
+```
+
+The Knitro solver can then be called from the command line:
+
+```bash
+knitro model.nl
+```
+
+This will produce output on the command line detailing the result of the optimization.

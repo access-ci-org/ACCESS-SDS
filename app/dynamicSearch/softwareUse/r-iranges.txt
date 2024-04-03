@@ -1,0 +1,54 @@
+Use Case: Using R-Iranges, you can manipulate and analyze integer sets and sequences in R. The IntegerRanges class is a vector representation of a set of integer ranges. It provides a wide range of operations such as creation, comparison, overlap and closest distance between ranges.
+
+Code Details and Examples:
+
+To use R-Iranges, you need data in R-readable format like data frame or tsv file. Let's consider we have a data frame with start and end positions of genomic regions.
+
+```R
+# Sample Input
+data <- data.frame(
+    start = c(1, 10, 20),
+    end = c(5, 15, 40)
+)
+```
+
+Now, import IRanges library and create an Interval tree from start and end positions.
+
+```R
+# Import Library
+library(IRanges)
+
+# Create IRanges object
+ranges <- IRanges(start = data$start, end = data$end)
+
+print(ranges)
+```
+
+The output will be something like this:
+
+```R
+IRanges object with 3 ranges and 0 metadata columns:
+          start       end     width
+      [1]     1         5         5
+      [2]     10       15         6
+      [3]     20       40        21
+```
+
+You can perform operations like width, distance and overlap with other ranges.
+
+```R
+# Width of ranges
+width(ranges)
+
+# Distance between ranges
+distance(ranges)
+
+# Overlap with other ranges
+overlapWidth(ranges, IRanges(start = c(30), end = c(50)))
+```
+
+The command to run the R script can be:
+
+```bash
+Rscript script.R
+```

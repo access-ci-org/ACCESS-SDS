@@ -1,23 +1,26 @@
-Use Case: Data management and sharing software.
+Use Case: iRODS (Integrated Rule-Oriented Data System) is an open-source data management system used by research organizations to organize, share and protect their vast amounts of data. It uses metadata to allow users to create a highly customizable, policy-based system to manage their files and is generally used for large collections of files distributed over a network. 
 
 Code details and examples:
-- iRODS (Integrated Rule-Oriented Data System) is a data management system that allows users to organize, share, and manage large volumes of data across different storage systems and networks.
 
-- To interact with iRODS, you can use the iCommands which provide a set of command-line utilities for managing data within an iRODS system.
+Code:
+The iRODS server is controlled mostly through its command line interface. Here's an example of how to use it.
 
-Example of using the icd command to change to a specific iRODS collection (directory):
-```
-icd /<irodsZone>/home/<username>/data
-```
+To list all files and collections in the current working directory:
 
-Example of using the iput command to upload a file to iRODS:
-```
-iput /path/to/local/file.txt /<irodsZone>/home/<username>/data/file.txt
-```
+`ils`
 
-Example of using the iget command to download a file from iRODS:
-```
-iget /<irodsZone>/home/<username>/data/file.txt /path/to/local/file.txt
-```
+To upload a file to the iRODS server:
 
-These are just a few examples of using iCommands with iRODS. The full list of iCommands and their usage can be found in the iRODS documentation.
+`iput localfile`
+
+To download a file from the server:
+
+`iget remotefile`
+
+Where `localfile` and `remotefile` are the names of the local and remote files, respectively. 
+
+Specifications in input files:
+
+iRODS can handle virtually any type of file, and it does not require any specific form of input file. Instead, the system is based around policies defined by the users themselves, which can consider any aspect of the files or system as a whole. In terms of format, input files can be of any format. 
+
+Most commands in iRODS also support a variety of flags to modify their behavior. For example, the `-r` flag can be used with the `iput` command to upload files recursively, and the `-f` flag can be used with the `iget` command to force an overwrite of any existing files.

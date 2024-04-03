@@ -1,0 +1,40 @@
+Use Case: Use of PRRTE (PMIx Reference Run-Time Environment) to launch and supervise processes on distributed computing systems such as high-performance clusters.
+
+Code Details and Examples: Code
+
+PRRTE does not involve traditional source code or input files. Rather, commands are directly run in the shell. Here are some examples of how you might use it.
+
+1. Running a parallel program across multiple nodes:
+The command "prun" is used to execute a parallel program across several nodes. It automatically starts the required runtime services on each node.
+
+Command:
+```
+prun -n 4 ./your_parallel_program
+```
+
+In this command:
+- "-n 4" specifies that the program should be run on 4 processes. 
+- "./your_parallel_program" is the binary executable of the parallel program to run. This program could be an MPI program or any other program that utilizes multiple processes for parallel computing.
+
+2. Heterogeneous execution:
+PRRTE also supports heterogeneous execution, i.e., the ability to run a program on a cluster made up of nodes with different architectures.
+
+Command:
+```
+prun -n 4 --hostfile my_hostfile.txt ./your_parallel_program
+```
+
+In this command:
+- "--hostfile my_hostfile.txt" specifies a hostfile that defines the nodes in the cluster. This file is a plain text file with one hostname per line, and the format should look something like this:
+
+my_hostfile.txt
+```
+node1.domain.com
+node2.domain.com
+node3.domain.com
+node4.domain.com
+```
+
+Here, node1-4.domain.com are the names of the nodes in your cluster.
+
+These examples show the versatility of PRRTE in the context of large-scale distributed computing. However, they are simple demonstrations, and you can use more complex command-line options and configurations based on your specific workloads and environments.

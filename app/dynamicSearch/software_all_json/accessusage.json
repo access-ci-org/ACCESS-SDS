@@ -1,0 +1,10 @@
+{
+  "software_name": "ACCESS",
+  "comprehensive_overview": "ACCESS is a tool used for performance evaluation and benchmarking in the field of science and engineering.",
+  "core_features": "It allows researchers to evaluate the performance of various algorithms, models, or systems in a standardized and systematic manner. It provides benchmarks for comparison and helps in identifying the strengths and weaknesses of different approaches.",
+  "general_tags": ["performance evaluation", "benchmarking"],
+  "additional_tags": {
+    "field_of_science": ["Engineering and Technology"],
+    "research_discipline": ["Performance Evaluation and Benchmarking"]
+  }
+}

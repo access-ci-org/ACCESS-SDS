@@ -1,0 +1,11 @@
+Use Case: MemoryViewer is a tool often used for monitoring CPU and RAM usage in a system. 
+
+Code details and examples: Code. 
+
+Since MemoryViewer is largely a visual tool, providing a code snippet is not applicable in this case. However, the execution command to run MemoryViewer is simple. Usually, it can be run from the command line using the following command:
+
+```
+memoryviewer
+```
+
+Note: The exact command might depend on the system and installation path of the software. The user interacts with MemoryViewer through its GUI once it is open. The software requires no specific input file. It monitors the system's resources, providing realtime data about the memory usage as its output.

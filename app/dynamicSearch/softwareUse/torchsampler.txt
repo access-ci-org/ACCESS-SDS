@@ -1,23 +1,42 @@
-Use Case: Sampling data from PyTorch tensors for training neural networks. 
+Use Case: Use TorchSampler for handling imbalanced classes in datasets during training a deep learning model. 
 
-Code details and examples:
+Code details and examples: In an imbalanced dataset, you may need to balance it during training. By employing TorchSampler, you can preserve the balance in classes of data. PyTorch dataloader is used in conjunction with TorchSampler to load the balanced data.
+
+Code:
+
 ```python
-import torch
+# Import necessary libraries
 from torchsampler import ImbalancedDatasetSampler
+from torchvision import datasets, transforms
 
-# Define a dummy dataset
-data = torch.randn(100, 3)
-targets = torch.randint(0, 5, (100,))
+# Data transformation
+transform = transforms.Compose([transforms.ToTensor(),
+                                transforms.Normalize((0.5,), (0.5,)),])
 
-# Create an instance of ImbalancedDatasetSampler
-sampler = ImbalancedDatasetSampler(targets)
+# MNIST dataset
+train_dataset = datasets.MNIST('./data', download=True, train=True, transform=transform)
 
-# Create a data loader using the sampler
-data_loader = torch.utils.data.DataLoader(data, batch_size=10, sampler=sampler)
+# Use Sampler for making the dataset balanced during training
+train_loader = torch.utils.data.DataLoader(train_dataset, sampler=ImbalancedDatasetSampler(train_dataset), batch_size=64)
 
-# Iterate over the data loader
-for batch in data_loader:
-    print(batch)
+# Now iterate through the DataLoader
+for batch in train_loader:
+   # Training steps goes here
 ```
 
-In this example, we are using the `ImbalancedDatasetSampler` from `torchsampler` to sample data from a PyTorch tensor with imbalanced class distribution. The data loader will iterate over the data in batches using the defined sampler to ensure balanced sampling during training.
+Command to run it: Run the python script which contains this code using a command below in command line.
+
+`python script.py`
+
+Specifications in input files:
+
+1. The ImbalancedDatasetSampler needs a PyTorch dataset as input. 
+2. The PyTorch dataset must implement a `__getitem__` and a `__len__` method. 
+
+Format required:
+
+1. The input dataset should be in format acceptable by PyTorch library. If it's an image dataset, it must be in PIL image or ndarray format. 
+2. If it's a tensor type data it should be in PyTorch tensor format.
+3. If it's in different format, necessary transformations are to be performed to convert it into acceptable format. 
+
+No additional sample input file is needed to run this code. The dataset used in the code: 'MNIST' is directly downloaded using `datasets.MNIST('./data', download=True, train=True, transform=transform)`.

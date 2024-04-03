@@ -1,0 +1,36 @@
+Use Case: Coinfinder is a tool used to detect co-occurring gains or losses of genes across microbial genomes. This software explores evolutionary associations, such as networks of genes that are gained or lost together. It's useful in discovering potential genetic interactions, functional collaborations, or disease and health states associated with a co-occurrence of certain genes.
+
+Code details and examples:
+
+For example, if you have input data of genomic information like gene presence and absence in various microbes, coinfinder can output the significant co-occurring incidences.
+
+Code:
+
+```
+coinfinder -i input/roary_output -o output_directory -p 10
+```
+
+Here, `input/roary_output` is a directory containing output files from Roary (a pan genome pipeline), which are needed as the input to coinfinder. These files include a gene presence/absence file in binary format, and possibly others. `-o output_directory` specifies the directory where the coinfinder output should be stored. `-p 10` specifies that coinfinder should use 10 processors.
+
+Input files command details:
+
+Input file format should be the output of the Roary software or any CSV file containing the gene presence/absence data. Examples of columns in the input file could be: 
+
+- Gene: Gene name
+- GenomeName_1: Binary data indicating the presence (1) or absence (0) of the gene in genome 1
+- GenomeName_2: Binary data indicating the presence (1) or absence (0) of the gene in genome 2
+- [...]
+
+The first row should contain the column names.
+
+Example CSV file content:
+
+```
+Gene,GenomeName_1,GenomeName_2,GenomeName_3
+Gene_1,1,0,1
+Gene_2,0,1,1
+Gene_3,1,1,0
+[...]
+```
+
+Important note: The name "Gene" should remain as first column name in the input file. Replace "GenomeName_1", "GenomeName_2", etc. with real genome names or genome IDs. Keep the binary data (1 for presence, 0 for absence) under each genome column.

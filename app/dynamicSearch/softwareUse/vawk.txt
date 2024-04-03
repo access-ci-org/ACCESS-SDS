@@ -1,0 +1,43 @@
+Use Case: vawk is a scriptable AWK library for VCF files, used for parsing VCF files.
+
+Code details and examples:
+
+Firstly, vawk accepts a typical AWK script bounded by { }. However, a number of additional variables (INFO fields, etc.) can be accessed by prefixing them with an I$.
+
+Format required:
+
+vawk needs a input VCF file.
+
+Example Input File (Sample.vcf):
+
+```
+##fileformat=VCFv4.2
+##FILTER=<ID=lowqual,Description="Low quality">
+#CHROM    POS    ID    REF    ALT    QUAL    FILTER    INFO
+chr1    100    .    A    T    100    PASS    DP=100;AF=0.5
+chr1    200    .    G    C    50    lowqual    DP=500;AF=0.1
+chr1    300    .    T    A    100    PASS    DP=1000;AF=0.2
+chr1    400    .    C    G    200    PASS    DP=1500;AF=0.3
+chr1    500    .    A    G    150    PASS    DP=2000;AF=0.4
+```
+
+Code:
+Processing the VCF file and printing total depth (DP) of all variant lines where the variant allele frequency (AF) is higher than 0.1.
+
+```
+vawk '{if(I$AF > 0.1) print $I$DP}' Sample.vcf
+```
+Result: 
+
+```
+100
+1000
+1500
+2000
+```
+
+Command to run it:
+
+```
+vawk '{if(I$AF > 0.1) print I$DP}' Sample.vcf
+```

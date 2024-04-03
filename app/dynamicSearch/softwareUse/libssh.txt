@@ -1,0 +1,79 @@
+Use Case: Connect to a remote server via SSH and execute a command.
+
+Code Details and Examples: C
+
+Code:
+
+First, include the necessary library:
+```C
+#include <libssh/libssh.h>
+```
+
+You then start by setting up your ssh session and connect to the server:
+```C
+ssh_session my_ssh_session = ssh_new();
+if (my_ssh_session == NULL)
+  exit(-1);
+
+ssh_options_set(my_ssh_session, SSH_OPTIONS_HOST, "localhost");
+
+int rc = ssh_connect(my_ssh_session);
+if (rc != SSH_OK)
+{
+  fprintf(stderr, "Error connecting to localhost: %s\n", ssh_get_error(my_ssh_session));
+  ssh_free(my_ssh_session);
+  exit(-1);
+}
+```
+
+Then you attempt to authenticate using password:
+```C
+rc = ssh_userauth_password(my_ssh_session, NULL, "password");
+if (rc != SSH_AUTH_SUCCESS)
+{
+  fprintf(stderr, "Error authenticating with password: %s\n", ssh_get_error(my_ssh_session));
+  ssh_disconnect(my_ssh_session);
+  ssh_free(my_ssh_session);
+  exit(-1);
+}
+```
+
+Finally, you can execute your command:
+```C
+ssh_channel channel = ssh_channel_new(my_ssh_session);
+if (channel == NULL)
+  return SSH_ERROR;
+
+rc = ssh_channel_open_session(channel);
+if (rc != SSH_OK)
+{
+  ssh_channel_free(channel);
+  return rc;
+}
+
+rc = ssh_channel_request_exec(channel, "ls");
+if (rc != SSH_OK)
+{
+  ssh_channel_close(channel);
+  ssh_channel_free(channel);
+  return rc;
+}
+
+ssh_channel_send_eof(channel);
+ssh_channel_close(channel);
+ssh_channel_free(channel);
+```
+
+You then disconnect and free your session after your command has been executed:
+```C
+ssh_disconnect(my_ssh_session);
+ssh_free(my_ssh_session);
+```
+
+Compile and run this program with:
+```bash
+gcc -o ssh_example ssh_example.c -lssh
+./ssh_example
+```
+
+In this example, replace "localhost" and "password" with your respective server and password. Also replace "ls" with whichever command you want to execute on the server.

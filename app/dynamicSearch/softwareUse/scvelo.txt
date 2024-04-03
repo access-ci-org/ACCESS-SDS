@@ -1,0 +1,29 @@
+Use Case: scvelo is a scalable toolkit for estimating and analyzing cell velocities in single-cell RNA sequencing data using RNA velocity. Scvelo is used to extract the dynamical structure underlying the static snap-shot of cell-to-cell variability. It computes RNA velocities of spliced/unspliced abundances based on your input dataset.
+
+Code details and examples: 
+
+Input File Format: An AnnData object with spliced/unspliced abundances labeled as 'spliced' and 'unspliced'. 
+
+Code:
+
+```python
+import scvelo as scv
+import numpy as np
+
+# Load dataset
+adata = scv.datasets.pancreas()
+adata.layers["spliced"] = np.random.beta(2, 2, adata.shape)
+adata.layers["unspliced"] = np.random.beta(2, 2, adata.shape)
+
+# Preprocess data
+scv.pp.filter_and_normalize(adata, min_shared_counts=20, n_top_genes=2000)
+scv.pp.moments(adata, n_pcs=30, n_neighbors=30)
+
+# Perform calculations
+scv.tl.velocity(adata)
+scv.tl.velocity_graph(adata)
+
+# Plot results 
+scv.pl.velocity_embedding_stream(adata, basis='UMAP')
+```
+Command to run: N/A as this is a Python library, it is called and used within Python scripts.

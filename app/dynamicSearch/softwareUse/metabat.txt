@@ -1,0 +1,29 @@
+Use Case: MetaBAT, an efficient tool designed to automatically group large sets of genomic contigs into individual bins, which represent a single species or a population. 
+
+Code details and examples: 
+
+Input file: A file of contigs in FASTA format, and a text file of contig depth information
+
+Input file sample:
+
+FASTA file:
+>Contig0001
+ATGGCGTGCTTGAGCGTCGTAGTTCGTCGCGTCCGCTGTTTGTCGTTGTCGTGTCGTG
+
+Depth file:
+contigName, contigLen, totalAvgDepth, t1, t2,...
+Contig0001, 2200, 20, 18,19,...
+
+Command to run MetaBAT:
+```
+metabat -i input.fasta -a depth.txt -o bins_dir/bin -v
+```
+Where,
+-i: input file in FASTA format
+-a: depth file
+-o: output bin prefix
+-v: verbose mode
+
+This command will output a series of FASTA files in the specified output directory, each representing a different bin determined by MetaBAT. The name of each output file will be in the format `bin.<bin number>.fasta`, where `<bin number>` is the bin number assigned by MetaBAT.
+
+Note: It's important that input files and specification details are accurate in order to fetch reliable results. Preprocessing of data and understanding of MetaBAT functionalities can go a long way in utilizing this bioinformatics software.

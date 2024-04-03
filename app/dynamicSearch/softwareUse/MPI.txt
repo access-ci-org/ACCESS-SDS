@@ -1,47 +1,37 @@
-Use Case: MPI (Message Passing Interface) 
+Use Case: MPI (Message Passing Interface) is commonly used in parallel computing for sending and receiving messages between processes. MPI can be used to parallelize scientific computations and simulations that require high computational power and large data sets, such as simulations of weather patterns or particle physics experiments.
 
-Code details and examples: 
-
-MPI (Message Passing Interface) is a standard for parallel and distributed computing using a message-passing model. It is commonly used in HPC (High-Performance Computing) applications to write parallel programs.
-
-Here is an example of a simple MPI program in C that calculates the sum of elements in an array:
+Code Details and Examples: 
+In an MPI program, each process has its own variables, and the processes coordinate by sending each other messages. This is a simple MPI program that sends a message from one process to another.
 
 ```c
-#include <stdio.h>
 #include <mpi.h>
+#include <stdio.h>
 
-int main(int argc, char *argv[]) {
-    int rank, size;
-    int data[5] = {1, 2, 3, 4, 5};
-    int sum = 0;
-
-    MPI_Init(&argc, &argv);
+int main(int argc, char** argv) {
+    MPI_Init(NULL, NULL);
+    int rank;
+    int world_size;
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-    MPI_Comm_size(MPI_COMM_WORLD, &size);
-
-    MPI_Scatter(data, 1, MPI_INT, &sum, 1, MPI_INT, 0, MPI_COMM_WORLD);
-
-    printf("Process %d received data: %d\n", rank, sum);
-
-    MPI_Reduce(&sum, &sum, 1, MPI_INT, MPI_SUM, 0, MPI_COMM_WORLD);
-
+    MPI_Comm_size(MPI_COMM_WORLD, &world_size);
     if (rank == 0) {
-        printf("Sum of elements: %d\n", sum);
+        int token = 0;
+        MPI_Send(&token, 1, MPI_INT, 1, 0, MPI_COMM_WORLD);
+        printf("Process 0 sent token %d to process 1\n", token);
+    } else if (rank == 1) {
+        int token;
+        MPI_Recv(&token, 1, MPI_INT, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+        printf("Process 1 received token %d from process 0\n", token);
     }
-
     MPI_Finalize();
-
-    return 0;
 }
 ```
 
-To compile and run the MPI program using mpicc (MPI C compiler) and mpirun:
+This program initializes MPI, then gets the rank and world size (number of processes). If the rank is 0, it sends a token (in this case, an integer) to process 1. If the rank is 1, it receives the token from process 0. Note that MPI_Send and MPI_Recv are blocking operations; that is, they wait until the message has been sent or received before proceeding.
 
+You can compile and run this program with the following commands:
 ```bash
-mpicc mpi_example.c -o mpi_example
-mpirun -np 4 ./mpi_example
+mpicc -o mpi_example mpi_example.c
+mpirun -np 2 ./mpi_example
 ```
 
-This example scatters the elements of the array `data` to different processes, calculates the sum of the elements in parallel, and then reduces the sum to process 0 for final output.
-
-You can customize the input array `data` to test with different values and sizes.
+Here, `mpicc` is a wrapper for the C compiler that links in the necessary MPI libraries, and `mpirun` is a utility for running MPI programs. The `-np 2` option specifies that the program should be run on 2 processes.

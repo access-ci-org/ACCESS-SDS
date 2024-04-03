@@ -1,0 +1,25 @@
+Use Case: Use r-methylumi for differential methylation analysis of Illumina 450k arrays data in R.
+
+Code details and examples: 
+
+Code:
+
+First, we load the necessary library:
+```R
+library(methylumi)
+```
+Then, we load the data:
+```R
+data = new("MethyLumiM", data = matrix(rnorm(10000), 100, 100), phenoData = data.frame(matrix(ncol = 2, nrow = 100)))
+```
+We then proceed to pfilter (probe filtering) for removing probes that have detection p-values > 0.01 in one or more samples. This removes unreliable probes from consideration:
+```R
+filtered_data = pfilter(data, detectionP = 0.01, num.samples = 1)
+```
+Finally, we normalize the filtered data using subset-quantile within array normalization (SWAN):
+```R
+normalized_data = SWAN(filtered_data)
+```
+Note: `data` is an object of class MethyLumiM where it contains methylated and unmethylated signal intensities. The `phenoData` contains sample covariates. The sample data and formats may vary based on the actual use case. 
+
+Methylumi is used in the interactive environment of R where commands are executed one by one, so specific run command is not available.

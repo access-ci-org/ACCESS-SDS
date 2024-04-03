@@ -1,31 +1,75 @@
-Use Case: A highly optimized library for small matrix-matrix multiplications.
+Use Case: LIBXSMM is a library for small dense and small sparse matrix-matrix multiplications and convolution targeting Intel Architecture (x86). It is very well-suited for machine learning applications, including support for TensorFlow.
 
-Code details and examples:
-```
-# Sample input file: input_matrix_A.txt
-3 3
-1.0 2.0 3.0
-4.0 5.0 6.0
-7.0 8.0 9.0
+Code details and examples: 
 
-# Sample input file: input_matrix_B.txt
-3 3
-9.0 8.0 7.0
-6.0 5.0 4.0
-3.0 2.0 1.0
+Code:
 
-# Code snippet to perform matrix multiplication using libxsmm
+Firstly, we will generate a dense matrix A, B and a zero matrix C:
+```python
 import numpy as np
-import libxsmm
 
-# Load input matrices from files
-matrix_A = np.loadtxt('input_matrix_A.txt', skiprows=1)
-matrix_B = np.loadtxt('input_matrix_B.txt', skiprows=1)
-
-# Perform matrix multiplication using libxsmm
-result = libxsmm.xmm(matrix_A, matrix_B)
-
-print(result)
+N = 23
+M = 23
+K = 23
+np.random.seed(42)
+# matrix A
+A = np.random.rand(N, K).astype(np.float64)
+# matrix B
+B = np.random.rand(K, M).astype(np.float64)
+# matrix C
+C = np.zeros((N, M))
 ```
 
-Please note that libxsmm is a low-level library, and the code snippet above is a conceptual example. The actual usage may vary based on the specific implementation and configuration of libxsmm.
+To compute the dense Matmul with LIBXSMM: 
+```python
+import ctypes
+
+# load the compiled shared library
+lib = ctypes.cdll.LoadLibrary("libxsmm.so")
+
+# Create pointers to the data
+AP = A.ctypes.data_as(ctypes.POINTER(ctypes.c_double))
+BP = B.ctypes.data_as(ctypes.POINTER(ctypes.c_double))
+CP = C.ctypes.data_as(ctypes.POINTER(ctypes.c_double))
+
+# Create wrapper for the C function
+matmul = lib.xsmm_dgemm
+matmul.argtypes = [ctypes.c_void_p]*10
+matmul.restype = ctypes.c_void_p
+
+# Convert integers to their C counterparts
+N = ctypes.c_int(N)
+M = ctypes.c_int(M)
+K = ctypes.c_int(K)
+
+alpha = ctypes.c_double(1.0)
+beta = ctypes.c_double(1.0)
+lda = ctypes.c_int(K)
+ldb = ctypes.c_int(M)
+ldc = ctypes.c_int(M)
+
+# Create null pointers
+null = ctypes.c_void_p(None)
+
+# Invoke the matmul function
+matmul(null, null, AP, BP, CP, lda, ldb, ldc, alpha, beta)
+
+# Print the output matrix C
+print(C)
+``` 
+
+In the above python code, we are interfacing with C which is why we see a lot of `ctypes` usage for converting python objects to C objects. This tell C how to understand the data. The actual computation is done with the `matmul(null, null, AP, BP, CP, lda, ldb, ldc, alpha, beta)` line.
+
+Command to Run:
+
+Code can be run as a standard python file.
+```bash
+python3 example.py
+```
+Where `example.py` is the filename of the python file containing the above code.
+
+This will invoke the LIBXSMM's matrix multiplication functionality, with matrix A and B as input and matrix C as output.
+
+Note: Before running above python example ensure that libxsmm.so is compiled and available in same directory.
+
+This is just a python example, In C/C++ applications LIBXSMM is used very differently by including LIBXSMM's header files and directly using API functions from libxsmm.h.

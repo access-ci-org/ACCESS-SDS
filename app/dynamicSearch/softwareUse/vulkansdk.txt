@@ -1,0 +1,39 @@
+Use Case: Use for GPU rendering, game development and simulations development 
+
+Code details and Examples: Code
+
+For Vulkan SDK, you will need Vulkan SDK and a supported development environment. This will demonstrate how to set up a simple scene where a textured quad is rendered:
+
+Sample Input:
+
+Below is the format you would use to create a renderpass in vulkan:
+
+```
+VkRenderPassCreateInfo renderPassInfo {};
+renderPassInfo.sType = VK_STRUCTURE_TYPE_RENDER_PASS_CREATE_INFO;
+renderPassInfo.attachmentCount = static_cast<uint32_t>(attachments.size());
+renderPassInfo.pAttachments = attachments.data();
+renderPassInfo.subpassCount = 1;
+renderPassInfo.pSubpasses = &subpass;
+renderPassInfo.dependencyCount = static_cast<uint32_t>(dependencies.size());
+renderPassInfo.pDependencies = dependencies.data();
+
+if (vkCreateRenderPass(device, &renderPassInfo, nullptr, &renderPass) != VK_SUCCESS) {
+    throw std::runtime_error("failed to create render pass!");
+}
+```
+
+This example command shows the input format required to create a Vulkan Renderpass, you define the necessary specifications and call the vkCreateRenderPass function. The input file is essentially the C++ source code file.
+
+Command to compile Vulkan SDK source code:
+
+If the above code was saved in a file named "main.cpp", for concreteness, you could use the following commands to build and run your program:
+
+````
+g++ main.cpp -o vulkanApp `pkg-config --static --libs glfw3` -lvulkan
+````
+Then, you can run the application with:
+````
+./vulkanApp
+````
+The compilation and running might vary based on the development environment used. This example considers gcc for a linux based development environment and GLFW for window and input handling. You might also need to include proper header files.

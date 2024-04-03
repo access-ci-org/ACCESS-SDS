@@ -1,0 +1,13 @@
+{
+  "software_name": "pepper_deepvariant",
+  "comprehensive_overview": "Pepper is a variant calling tool built on top of Google's DeepVariant that utilizes deep learning models to accurately call single nucleotide polymorphisms (SNPs) and indels from high-throughput sequencing data. It provides improved accuracy and scalability for identifying genetic variants.",
+  "core_features": "1. Utilizes deep learning models for variant calling\n2. Accurately identifies SNPs and indels from sequencing data\n3. Built on top of Google's DeepVariant technology\n4. Offers improved accuracy compared to traditional variant calling methods\n5. Scalable for large-scale genomic analyses",
+  "general_tags": ["variant calling", "deep learning", "genetic variants"],
+  "additional_tags": {
+    "research_discipline": "Bioinformatics",
+    "research_area": "Genomics",
+    "software_class": "Computational",
+    "software_type": "Tool",
+    "field_of_science": "Biological Sciences"
+  }
+}

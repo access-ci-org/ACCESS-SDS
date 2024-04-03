@@ -1,0 +1,36 @@
+Use Case: Go-Bootstrap is utilized to scaffold a new Go web app project. It aids in generating a new Go HTTP service. 
+
+Code details and examples:
+
+Code: 
+
+Here is a sample of Go code, which is usually stored in a *.go file.
+
+```go
+package main
+
+import (
+	"fmt"
+	"net/http"
+)
+
+func helloWorld(w http.ResponseWriter, r *http.Request){
+	fmt.Fprintf(w, "Hello World")
+}
+
+func main() {
+	http.HandleFunc("/", helloWorld)
+	http.ListenAndServe(":6111", nil)
+}
+```
+This is a common "Hello, World!" program written in Go. It declares a main package (a package is a way to group functions), imports the http library and uses its functions and methods and starts a web server.
+
+In the main function, two lines are running an HTTP server. The function `http.HandleFunc` is a function to call a router set up by a previous function (e.g., `http.NewServeMux()`), and tell it to send HTTP requests at the root URL ("/") to a function called `HelloWorld`. It then starts an HTTP server that listens on port 6111.
+
+Here is a basic command to run your go script:
+
+```bash 
+go run HelloWorld.go
+```
+
+It will start an HTTP server at localhost:6111 accessible in a browser where it prints 'Hello World'.

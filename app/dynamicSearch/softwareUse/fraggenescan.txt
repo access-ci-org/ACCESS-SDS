@@ -1,0 +1,47 @@
+Use Case: Prediction of protein genes in short and error-prone metagenomic sequences.
+
+Code details and examples: Code
+
+Input Files: 
+1. Quality Score File - The necessary input to FragGeneScan is sequence read data in FASTA or fastq(.fq) format. For example, "sequence.fna" or "sequence.fq".
+
+Command to run: 
+```bash
+Run_FragGeneScan.pl -genome=sequence.fna -out=output -complete=1 -train=complete
+```
+or
+```bash
+Run_FragGeneScan.pl -genome=sequence.fq -out=output -complete=0 -train=sanger_10
+```
+Parameters:
+- `-genome`: The name of your input sequence file in FASTA or fastq format.
+- `-out`: The name of your output files (without extensions).
+- `-complete`: 1 if the sequence data are complete genomic sequences (i.e., 1 sequence in a fasta file). 0 if otherwise (i.e., when you have many short sequence reads in a fasta/fastq file).
+- `-train`: The name of the file containing model parameters.
+
+In the above example, "sequence.fna" or "sequence.fq" is the input file. For `-complete=1` case, FragGeneScan uses a model trained from complete genomes; for `-complete=0` case, it uses a model trained from 454 pyro-sequencing reads (with about 10% sequencing errors). 
+
+The output files will be as follows: 
+- "output.fna" (sequence file in FASTA format).
+- "output.faa" (protein sequence file in FASTA format).
+- "output.out" (gene prediction result; similar format as Glimmer/MetaGene). 
+
+Format Required:
+
+FASTA file:
+
+    >sequence1
+    AGCTTGCTCGTAGCTGTCGTAGCTGAT
+
+FastQ file:
+
+    @sequence1
+    AGCTTGCTCGTAGCTGTCGTAGCTGAT
+    +
+    !''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
+
+Specifications in the Input Files:
+- FastA file: The sequence ID is followed by the nucleotide sequences. They are separated by a newline.
+- Fastq file: Each sequence has four lines. The first line starts with '@', followed by an optional description. The second line is the raw sequence letters. The third line, starts with by '+'. The fourth line encodes the quality values for the sequence in the second line, and must contain the same number of symbols as letters in the sequence. 
+
+Note: Every line of the same sequence must be wrapped to the same length, though sequences can differ in length from each other.

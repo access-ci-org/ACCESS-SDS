@@ -1,0 +1,31 @@
+Use Case: TRUST4 is an improved version of TRUST3 and used for finding the TCR (T-cell receptor) or BCR (B cell receptor) repertoire from bulk RNA-Seq data. The tool can be used for analyzing the configuration of immune receptors and the diversities of immune cells. 
+
+Code Details and Examples:
+
+Code: 
+
+```bash
+trust4 -f fastq_file -o output_prefix
+```
+
+The essential input for TRUST4 is a FASTQ file. The FASTQ file is a standard file format for storing readouts from sequencing experiments in bioinformatics. The input file consists of four lines for each sequence. An example of an entry from a FASTQ file can be as follows:
+
+```text
+@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
++
+!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
+```
+
+Line 1 begins with a '@' character and is followed by a sequence identifier.
+Line 2 is the raw sequence of the read.
+Line 3 begins with a '+' character and is optionally followed by the same sequence identifier.
+Line 4 encodes the quality values for the sequence in Line 2, using ASCII character codes to represent the numerical values.
+
+After running the command, TRUST4 will output the following files:
+- output_prefix.bam: Aligned sequences to the IMGT database.
+- output_prefix.annot.fa: The details of how the assembled sequences align to the IMGT database.
+- output_prefix.fq: This is the input of the annotation file.
+- output_prefix.out: The main output file with CDR3 region(s) for each read.
+
+The alignment is done based on the IMGT database so it doesn't require a reference genome.

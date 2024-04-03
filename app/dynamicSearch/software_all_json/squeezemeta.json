@@ -1,0 +1,22 @@
+{
+  "software_name": "SqueezeMeta",
+  "comprehensive_overview": "SqueezeMeta is a tool for the fast and accurate taxonomic classification of metagenomic sequences. It employs a novel filtering method to reduce the number of reference genomes for mapping, thus improving speed and accuracy in taxonomic assignment.",
+  "core_features": [
+    "Fast and accurate taxonomic classification of metagenomic sequences",
+    "Novel filtering method to reduce reference genomes for mapping",
+    "Improves speed and accuracy in taxonomic assignment"
+  ],
+  "general_tags": [
+    "metagenomics",
+    "taxonomic classification",
+    "bioinformatics",
+    "sequence analysis"
+  ],
+  "additional_tags": {
+    "research_discipline": "Biological Sciences",
+    "research_area": "Bioinformatics",
+    "software_class": "Analysis Tool",
+    "software_type": "Bioinformatics Tool",
+    "field_of_science": "Biological Sciences"
+  }
+}

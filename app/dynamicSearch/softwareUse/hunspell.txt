@@ -1,0 +1,24 @@
+Use Case: Use Hunspell for spelling check and correction in files;
+
+Code details and examples: 
+Code:
+
+```
+echo 'helllo wordl' > test.txt
+
+hunspell -d en_US test.txt
+```
+
+This will output the lines containing spelling mistakes along with corrections. In this case, 'helllo' and 'wordl' are not part of the `en_US` dictionary.
+
+Sample Input File:
+
+A text file named `test.txt` is used with the line 'helllo wordl'
+
+Specifications and Details in Input files:
+
+The input file is a simple text file with 'helllo wordl' written in it. The input file can have more lines of text for a more comprehensive spell check.
+
+Command to Run:
+
+The `hunspell -d en_US text.txt` command is run in the terminal. 'en_US' is the dictionary used and 'test.txt' is the text file that needs to be spell-checked. The '-d' option specifies the dictionary to be used.

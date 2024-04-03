@@ -1,46 +1,32 @@
-Use Case: archspec is a Python library for detecting and describing hardware configurations on HPC systems.
+Use Case: archspec is a library and command-line utility that helps to determine whether software is compatible with a certain system architecture. This is especially useful in large-scale cluster environments, where there are many different systems, and it becomes impractical to manually check software compatibility for each one.
 
-Code details and examples:
+Code Details and Examples: 
 
-Input file format (example input.yaml):
-```
-system:
-  name: my_system
-  vendor: vendor_name
-  processor:
-    name: processor_name
-    codename: processor_codename
-  memory:
-    size: memory_size
-    type: memory_type
-```
+Code: 
+Python API usage:
 
-Code snippet (example usage):
 ```python
-import archspec
+import archspec.cpu
 
-data = {
-    "system": {
-        "name": "my_system",
-        "vendor": "vendor_name",
-        "processor": {
-            "name": "processor_name",
-            "codename": "processor_codename"
-        },
-        "memory": {
-            "size": "memory_size",
-            "type": "memory_type"
-        }
-    }
-}
+cpu = archspec.cpu.host() 
 
-hw_config = archspec.ArchSpec(data)
-print(hw_config.system)
-print(hw_config.processor)
-print(hw_config.memory)
+print(f"{cpu}") #This will print the name of the host CPU microarchitecture.
 ```
 
-Command to run the code (if available):
+Command-line utility usage:
+
+The input to this utility is the `lscpu` command’s output from the target host.
+
+```bash
+lscpu | archspec cpu 
 ```
-python script.py
+
+The output is the most specific archspec label that matches the `lscpu` output.
+
+Output:
+
+```bash
+broadwell
 ```
+
+No special specification or format is required as input file. It doesn't take a file input but rather commands from the terminal or scripts from a Python program.

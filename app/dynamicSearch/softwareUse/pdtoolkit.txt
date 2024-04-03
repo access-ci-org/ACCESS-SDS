@@ -1,0 +1,35 @@
+Use Case: Profiling and detailed analysis of program execution in high-performance computing.
+
+Code details and examples:
+
+Let's consider we have an application named `bigImageAnalysis` compiled with `-g` option for debugging and profiling. 
+
+Code: 
+
+```C++
+$ tau_cc.sh -g -o bigImageAnalysis bigImageAnalysis.cpp
+```
+
+Input file: No specific input file is required for Pdtoolkit as it analyzes a compiled program. 
+
+Code: 
+
+Profiling execution of `bigImageAnalysis` with Tau:
+
+```bash
+$ tau_exec -T serial ./bigImageAnalysis
+```
+
+Output of this execution will be a directory named `tau-profile-files` containing a group of profile.*.*.* files. You can then analyze the performance of your application with the `paraprof` utility.
+
+```bash
+$ paraprof
+```
+
+Command to run Pdtoolkit: Pdtoolkit runs with the compiled application. Hence the compiled application ran with tau_exec is the command to run pdtoolkit. Here, the command is:
+
+```bash
+$ tau_exec -T serial ./bigImageAnalysis
+```
+
+Note: The code snippets and commands may vary depending on the build configuration of Pdtoolkit and its interaction with other software and tools.

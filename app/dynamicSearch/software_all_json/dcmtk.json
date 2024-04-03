@@ -1,0 +1,13 @@
+{
+    "software_name": "dcmtk",
+    "comprehensive_overview": "DCMTK is a collection of libraries and applications implementing large parts the DICOM standard. It includes software for examining, constructing and converting DICOM image files, handling offline media, sending and receiving images over a network connection, as well as demonstrative image processing, and pattern recognition techniques.",
+    "core_features": "DICOM image file examination, construction, and conversion; Handling offline media; Sending and receiving images over a network connection; Demonstrative image processing; Pattern recognition techniques.",
+    "general_tags": ["DICOM", "medical imaging", "healthcare", "image processing"],
+    "additional_tags": {
+        "research_discipline": "Medical and Health Sciences",
+        "research_area": "Medical Biotechnology",
+        "software_class": "Library and Applications",
+        "software_type": "Data Processing and Analysis",
+        "field_of_science": "Medical and Health Sciences"
+    }
+}

@@ -1,0 +1,43 @@
+Use Case: Taxonkit is used for efficient and practical manipulation of NCBI Taxonomy data. It transforms, filters, annotates, and generates files among various taxonomy formats.
+
+Code Details and Examples:
+
+Code:
+
+Here is a basic example of how to use Taxonkit to get lineage of taxids:
+
+```
+taxonkit lineage 9606 131567 9
+```
+
+In this case, "9606", "131567", and "9" are the taxids (Taxonomic identifiers provided by NCBI) for which you want to retrieve the lineage. The output will be three lines, one for each input taxid, showing the lineage of each taxid in NCBI taxonomy.
+
+For input file, this code accepts text file which has taxids as content:
+
+```
+cat taxids.txt | taxonkit lineage
+```
+
+Where taxids.txt is a text file with a list of taxids, with each taxid on a new line.
+
+Format required:
+
+The input file should be a plain text file with each taxid on a new line. The output is a plain text file with the lineages.
+
+Specifications and Details in Input File:
+
+The taxids used should correspond to the taxon id's provided by NCBI.
+
+Command to Run:
+
+In the basic usage:
+
+```
+taxonkit lineage 9606 131567 9 > output.txt
+```
+
+This writes the output to a file called "output.txt". To run using a text file as input:
+
+```
+cat taxids.txt | taxonkit lineage > output.txt
+```

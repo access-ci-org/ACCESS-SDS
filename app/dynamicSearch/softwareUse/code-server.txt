@@ -1,0 +1,46 @@
+Use Case: Use code-server to run Visual Studio Code on a remote server, allowing you to code on any machine with a web browser.
+
+Code details and examples: Code
+
+The 'code-server' command to start running Visual Studio Code server on a browser:
+
+```
+ code-server
+```
+
+Sample input:
+
+You might specify a custom port and host using the following command:
+
+```
+ code-server --port 8080 --host 0.0.0.0
+```
+
+This will start code-server on port 8080 and bind it to the 0.0.0.0 IP address. 
+
+The basic file structure of your project might look like this:
+
+```
+/myproject
+       /mycode.py
+```
+
+You can edit the files by navigating to the correct directory in the file explorer or using the command palette with the following command:
+
+```
+ code /myproject/mycode.py
+```
+
+This will open up the mycode.py file in the editor. 
+
+To run a Python file, open the terminal inside Visual Studio Code and use the following command:
+
+```
+ python mycode.py
+```
+
+This will execute your Python code using Python interpreter.
+
+There are no specific input file formats or details required. All files that are supported by Visual Studio Code can be edited. 
+
+Please note that the actual use and functionality of code-server can greatly vary depending on your use case and the installed extensions.

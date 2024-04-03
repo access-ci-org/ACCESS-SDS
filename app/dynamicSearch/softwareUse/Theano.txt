@@ -1,28 +1,41 @@
-In the current landscape, Tensorflow and PyTorch have largely replaced Theano in the deep learning community. Hence, I will provide a use case for PyTorch as it is the closest alternative.
+Use Case: Theano is a Python library that allows you to define, optimize, and evaluate mathematical expressions involving multi-dimensional arrays efficiently. It is particularly well-suited for large computational loads such as those found in deep learning.
 
-Use Case: PyTorch
 Code details and examples:
-Sample Input (Python code):
+
+Code:
+To use Theano, it's necessary to define the variables and expressions we’ll use. For simple mathematical expressions, this seems overkill.
+
+Firstly, we import theano:
 ```python
-import torch
+import theano
+from theano import tensor
+```
+Then we define the variables. In Theano, we define variables using `theano.tensor` sorts of objects. The variable declarations are a little different than normal Python symbolic computations. Instead of giving a value to a variable directly in the computation, we allow Theano to automatically fill-in the needed variable.
 
-# Create two tensors
-x = torch.tensor([[1, 2], [3, 4]])
-y = torch.tensor([[5, 6], [7, 8]])
+```python
+# declare two symbolic floating-point scalars
+a = tensor.dscalar()
+b = tensor.dscalar()
+```
+A function `f` that computes the sum of `a` and `b`:
 
-# Matrix multiplication
-result = torch.matmul(x, y)
+```python
+# create a simple expression
+c = a + b
 
+# convert the expression into a callable object that takes (a,b)
+# values as input and computes a value for c
+f = theano.function([a,b], c)
+
+# bind 1.5 to 'a', 2.5 to 'b', and evaluate 'c'
+result = f(1.5, 2.5)
 print(result)
 ```
+When you run this code, the output displayed will be `4.0`.
 
-In this sample input, we import the PyTorch library, create two tensors `x` and `y`, and perform a matrix multiplication using the `torch.matmul()` function.
+Command to Run:
+Since Theano is a Python library, you just need to run your Python code as usual. For example, if your code is in a file named `example.py`, you can run it using this command:
 
-To run the code, save it in a Python script (e.g., `matrix_multiplication.py`) and run it using Python:
+```bash
+python example.py
 ```
-python matrix_multiplication.py
-```
-
-This will output the result of the matrix multiplication of tensors `x` and `y`.
-
-Note: The provided code example is a basic illustration of using PyTorch. For more advanced use cases, such as building neural networks, additional libraries and functions would need to be incorporated.

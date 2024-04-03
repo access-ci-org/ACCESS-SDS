@@ -1,0 +1,20 @@
+{
+  "software_name": "r-htmltools",
+  "comprehensive_overview": "r-htmltools is an R package that provides a collection of tools for working with HTML content in R. It includes functions for creating, manipulating, and parsing HTML code within R scripts or packages.",
+  "core_features": [
+    "Generating HTML content from R objects",
+    "Parsing HTML content into R objects",
+    "Manipulating and modifying HTML elements",
+    "Integration with other R packages for web development"
+  ],
+  "general_tags": [
+    "R package",
+    "HTML manipulation",
+    "Web development"
+  ],
+  "research_discipline": [],
+  "research_area": [],
+  "software_class": "Library",
+  "software_type": "Data Analysis",
+  "field_of_science": "Computer and Information Sciences"
+}

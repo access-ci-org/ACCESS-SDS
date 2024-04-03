@@ -1,0 +1,42 @@
+Use Case: Use pangraph for graph-based bioinformatics modelling.
+
+Code details and examples: Code
+
+pangraph is designed around two core components: Graph and Edge. A Graph is a collection of Edge objects. The input required by pangraph, can be in one of the two popular file formats: GFA and FASTG (these formats are used to represent assembly graphs in bioinformatics).
+
+Here is an example of a simple FASTG file `example.fastg`:
+
+```text
+>contig1
+ACTG;
+>contig2
+CTGA;
+```
+
+Python code example to read a FASTG file and print the sequence information:
+
+```python
+import pangraph
+
+# Reading a FASTG file
+graph = pangraph.PanGraph.from_fastg('example.fastg')
+
+# Iterating over edges in the graph
+for edge in graph:
+    print(edge.sequence)
+```
+
+To run the code, save it in a file (e.g., `example.py`) and run it with python:
+
+```bash
+python example.py
+```
+
+This will print:
+
+```bash
+ACTG
+CTGA
+```
+
+This demonstrates only one aspect of pangraph. The library also allows manipulating the graph (e.g., adding and removing edges), and writing it back in FASTG or GFA format. For advanced use cases, please refer to the official pangraph Python library documentation.

@@ -1,0 +1,13 @@
+{
+    "software_name": "SuperLU_DIST",
+    "comprehensive_overview": "SuperLU_DIST is a parallel direct solver for large sparse systems of linear equations. It is designed for distributed memory parallel computers and can solve general, unsymmetric, linear systems Ax = b.",
+    "core_features": "1. Parallel direct solver for large sparse linear systems. 2. Works on distributed memory parallel computers. 3. Designed for general, unsymmetric linear systems.",
+    "general_tags": ["linear solver", "sparse systems", "parallel computing"],
+    "additional_tags": {
+        "research_discipline": ["Applied Mathematics"],
+        "research_area": ["Mathematics"],
+        "software_class": ["Numerical Analysis"],
+        "software_type": ["Library"],
+        "field_of_science": ["Mathematics"]
+    }
+}

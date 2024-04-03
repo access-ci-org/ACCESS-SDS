@@ -1,0 +1,31 @@
+Use Case: It is often useful to indicate preferences and configurations using options. This allows the options to be used in a more flexible manner than constant variables. The r-futile-options package provides a scoped options management for R that can be used to manage package options and configurations. 
+
+Code Details and Examples:
+
+Code:
+
+```R
+library(futile.options)
+
+# Define a new option
+options(max.iterations=100)
+
+# Use the option
+for (i in 1:options('max.iterations')) {
+  print(i)
+}
+
+# Modify the value of an option
+options(max.iterations=200)
+
+# Use the option 
+for (i in 1:options('max.iterations')) {
+  print(i)
+}
+```
+
+Command to run: This is R script, you should be able to run it in an R environment. You'll simply need to make a call to your script from the shell.
+
+```bash
+Rscript your_script.R
+```

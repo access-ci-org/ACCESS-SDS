@@ -1,0 +1,31 @@
+Use Case: The Proj library is used for performing cartographic projections and related coordinate transformations.
+
+Code Details and Examples:
+
+Code:
+
+```
+from pyproj import Proj, transform
+
+# Define a projection with Proj - in this case, WGS84
+p1 = Proj(init='epsg:4326')
+# Another projection, this time UTM zone 15 (Missouri, USA)
+p2 = Proj(init='epsg:26915')
+# Transform points between these two coordinate systems
+# Schenck Forest at NCSU campus
+lon = -78.675
+lat = 35.803
+utm_coords = transform(p1, p2, lon, lat)
+print(utm_coords)
+```
+Input files: There are no input files required.
+
+Formatting: Coordinates are passed as function parameters. There is no specific input format required, but coordinates must be provided in decimal degrees (for latitude and longitude).
+
+Specifications: The Proj function takes an 'init' parameter that specifies the EPSG code for the desired coordinate system.
+
+Command to run: This is a script; no specific command to run is needed after executing the python script.
+
+Note: Depending on the version of the pyproj, the methodology varies. The PROJ string should be used to initialize the projection, like Proj("epsg:4326"), instead of Proj(init='epsg:4326') in older versions.
+
+Python version 3.5 and above supports this library.

@@ -1,0 +1,16 @@
+{
+    "software_name": "Advisor",
+    "comprehensive_overview": "Advisor is a comprehensive software tool designed for optimizing HPC applications and maximizing performance on current and future HPC systems. It offers insights into performance bottlenecks, parallel patterns, and potential improvements.",
+    "core_features": [
+        "Performance optimization for HPC applications",
+        "Identifying performance bottlenecks",
+        "Analyzing parallel patterns",
+        "Recommendations for performance improvements"
+    ],
+    "general_tags": ["HPC", "Performance Optimization", "Parallel Computing"],
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Tool",
+    "software_type": "Performance Optimization",
+    "field_of_science": "Engineering and Technology"
+}

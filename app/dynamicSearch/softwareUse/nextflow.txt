@@ -1,6 +1,60 @@
-Use Case: Data processing and analysis pipeline management
+Use Case: Automating and paralleling computational pipelines in bioinformatics using Nextflow
 
 Code details and examples:
-```nextflow run myPipeline.nf -profile standard```
 
-In this example, `myPipeline.nf` is the name of the Nextflow script that defines the pipeline workflow. The `-profile` flag specifies the configuration profile to use. The command `nextflow run` is used to execute the pipeline.
+Nextflow uses a domain-specific language based on Groovy. Here is an example if you have three scripts, named `prepare`, `process`, and `collect`. Each script takes an input file and produces an output file. 
+
+Code:
+```groovy
+#!/usr/bin/env nextflow
+
+/*
+ * define the process 'prepare'
+ */
+process prepare {
+    output:
+    file('data.txt') into first_step
+
+    '''
+    your_script_for_preparation > data.txt
+    '''
+}
+
+/*
+ * process 'process' that takes input from 'first_step'
+ */
+process process {
+    input:
+    file i from first_step
+
+    output:
+    file('result.txt') into second_step
+
+    '''
+    your_processing_script --input $i
+    '''
+}
+
+/*
+ * process 'collect' that takes input from 'process'
+ */
+process collect {
+    input:
+    file res from second_step
+
+    '''
+    your_collecting_script --input $res
+    '''
+}
+
+```
+
+To run a Nextflow script (let's call it main.nf):
+
+```
+nextflow run main.nf
+```
+
+Note that the actual scripts' actions and inputs/outputs will vary widely depending on your specific pipeline and data. 
+
+Input file format depends on your scripts; the Nextflow part is just directing the flow of data and processes. Also, please keep in mind the usage of Nextflow strictly adheres to the UNIX philosophy: write programs that do one thing and do it well. Therefore, in Nextflow, a piece of code which is meant to execute a specific task is kept in a process. Processes are independent of each other, and each one constitutes a separate computation unit.

@@ -1,0 +1,11 @@
+{
+  "software_name": "bcftools",
+  "comprehensive_overview": "bcftools is a set of utilities that manipulate variant calls in the Variant Call Format (VCF) and its binary counterpart (BCF). It provides functionality for filtering, viewing, converting, and annotating variant data.",
+  "core_features": "Some core features of bcftools include variant calling, filtering and comparison of VCF/BCF files, genotype calling, statistical tests for association studies, subsetting and merging VCF files, and generating consensus sequences.",
+  "general_tags": ["variant calling", "genomics", "bioinformatics"],
+  "research_discipline": ["Genomics"],
+  "research_area": ["Bioinformatics"],
+  "software_class": "Computational Software",
+  "software_type": "Bioinformatics Tool",
+  "field_of_science": "Biological Sciences"
+}

@@ -1,36 +1,39 @@
-Use Case: Genome Analysis Toolkit (GATK) is a software package for analyzing high-throughput sequencing data in genomics research.
+Use Case: Genomic Analysis Toolkit
+
+GATK (Genome Analysis Toolkit) is a software package developed at the Broad Institute that allows researchers to analyze high-throughput genomic sequencing data. GATK includes several tools, for things like SNP calling, indel calling, and multiple types of analysis on genetic variation data surrounding the calls. 
 
 Code details and examples:
 
-1. Variant calling with GATK:
-```bash
-java -jar GenomeAnalysisTK.jar -T HaplotypeCaller -R reference.fasta -I input.bam -o output.vcf
+Two primary input files for GATK are a reference genome file, usually a FASTA file, and a sequence mapping file, usually in BAM or SAM format. 
+
+1) Reference genome file (FASTA format)
+The reference genome file should contain the DNA sequences for chromosomes or any other large genomic regions. It typically looks like:
+
 ```
-In this command:
-- `-T HaplotypeCaller`: specifies the tool for variant calling
-- `-R reference.fasta`: specifies the reference genome in FASTA format
-- `-I input.bam`: specifies the input aligned reads in BAM format
-- `-o output.vcf`: specifies the output VCF file for variants
-
-2. Genotype calling with GATK:
-```bash
-java -jar GenomeAnalysisTK.jar -T GenotypeGVCFs -R reference.fasta -V input.g.vcf -o output.vcf
+>chr1
+NNNNNNNNNNNNTAGCTATCGATCGNNNNNN...
+>chr2
+NNNNNNNNNNNNGTCAGCTCGATCGNNNNNN...
 ```
-In this command:
-- `-T GenotypeGVCFs`: specifies the tool for genotype calling
-- `-V input.g.vcf`: specifies the input Genomic VCF file
-- `-o output.vcf`: specifies the output VCF file for genotypes
 
-3. Base Quality Score Recalibration (BQSR) with GATK:
-```bash
-java -jar GenomeAnalysisTK.jar -T BaseRecalibrator -R reference.fasta -I input.bam -knownSites knownsites.vcf -o recal_data.table
+2) Sequence mapping file (BAM/SAM format)
+The sequence mapping files contain read sequences aligned to the reference genome. It typically looks like:
+
 ```
-In this command:
-- `-T BaseRecalibrator`: specifies the tool for BQSR
-- `-I input.bam`: specifies the input aligned reads in BAM format
-- `-knownSites knownsites.vcf`: specifies known variant sites for recalibration
-- `-o recal_data.table`: specifies the output recalibration table
+@SQ SN:chr1 LN:249250621
+@SQ SN:chr2 LN:243199373
+READ_1 163 chr1 10000 39 76M = 10076 -31 TTTTAAGGATATATTTAGGTTAGATAGGGTTTAGATAGAGTGAATTGGATTAATTTGGAGGA
+```
 
-Note: Make sure to replace `GenomeAnalysisTK.jar` with the actual path to the GATK jar file.
+Code example for a variant discovery in a single sample:
 
-For more commands and options, refer to the official GATK documentation: https://gatk.broadinstitute.org/hc/en-us
+```
+java -jar /path/to/gatk.jar HaplotypeCaller \
+    -R /path/to/reference/reference.fasta \
+    -I /path/to/sample/sample.bam \
+    -O /path/to/output/output.vcf
+```
+
+This command instructs GATK to run the HaplotypeCaller tool, taking the specified reference file '-R' and the input sample file '-I'. The output, a VCF file containing the predicted genomic variants, is specified with '-O'. Different tools within the GATK suite may require additional parameters or files to be specified. 
+
+Note: The path to java, gatk.jar, the reference genome, the bam file, and the output vcf all need to be specified correctly for the script to run. Java must be installed.

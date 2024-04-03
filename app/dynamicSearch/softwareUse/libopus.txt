@@ -1,26 +1,46 @@
-Use Case: Audio compression and encoding with libopus
+Use Case: Use libopus for encoding and decoding audio data.
 
-Code details and examples:
-Libopus is a library that implements the Opus audio codec, which is designed for interactive speech and audio transmission over the internet. It supports variable bitrate (VBR), constant bitrate (CBR), and average bitrate (ABR) encoding modes.
+Code Details and Examples: Code
 
-To use libopus, you can use the opusenc utility to encode audio files to the Opus format. Here is an example of how to encode a WAV file to Opus format:
+Input File Specifications:
+Libopus works with audio data, typically in raw format (.raw) or wave format (.wav). The sample rate and number of channels (mono or stereo) should be known for the user.
 
-1. Sample input file (input.wav):
-This is a sample WAV audio file that you want to encode to Opus format.
+Example Input File: song.wav.
 
-2. Command to encode WAV to Opus:
+C Code Snippet:
+
 ```
-opusenc input.wav output.opus
+#include <opus/opus.h>
+
+int main() {
+  int error;
+
+  // Create a new encoder state with sample rate of 48000 Hz and two channels (stereo).
+  OpusEncoder* encoder = opus_encoder_create(48000, 2, OPUS_APPLICATION_AUDIO, &error);
+  
+  // Create input buffer (16-bit signed integer samples).
+  opus_int16 in[FRAME_SIZE * CHANNELS]; 
+
+  // Fill in[] with your audio data here
+
+  // Create output buffer.
+  unsigned char data[OUTBUF_SIZE];
+
+  // Encode the audio.
+  int nbBytes = opus_encode(encoder, in, FRAME_SIZE, data, OUTBUF_SIZE);
+  
+  // data[] now contains the compressed audio data to be decoded
+
+  opus_encoder_destroy(encoder);
+
+  return 0;
+}
+```
+Command to run (assuming the file is named main.c and opus is installed):
+
+```
+gcc main.c -o main -lopus
+./main
 ```
 
-This command will encode the input.wav file to Opus format and save it as output.opus.
-
-3. Advanced options:
-You can specify additional options when using opusenc, such as specifying the bitrate or setting the complexity level. For example:
-```
-opusenc --bitrate 128 input.wav output.opus
-```
-
-This command will encode the input.wav file to Opus format with a bitrate of 128 kbps.
-
-Please note that you may need to install libopus and opus-tools to use the opusenc utility.
+Output file: In this example there isn't an output file since the output of libopus's functions are typically streamed for real time applications, or kept in memory for other uses like network transmission.

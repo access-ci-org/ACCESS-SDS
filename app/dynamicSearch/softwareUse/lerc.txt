@@ -1,0 +1,17 @@
+Use Case: The Limited Error Raster Compression (LERC) is a software used to compress raster data. One common application is the efficient storage of geospatial data.
+
+Code details and examples:
+
+Code:
+The package does not necessarily need code to use as it functions primarily through command line. A typical command to compress a file might look like this:
+
+`Lerc.exe c compress input.asc output.lerc2`
+
+Input Specification:
+It requires an input file (input.asc in the example above), which is the raster data to be compressed. This data file must be in a format that LERC can recognize, such as .tif, .png, .img, .bil, .bsq, .bip, .hdr, .raw, .rsw, .blw, or .asc. The data should be organized as a rectangular grid of pixel values.
+
+Output Specification:
+LERC also requires an output file name (output.lerc2 in the example above), which is where the compressed data will be stored. The .lerc2 extension indicates that the newest version of LERC, LERC2, is being used.
+
+Options:
+The 'c' option in the command above indicates that the user wants to compress a file. If they wanted to decompress it instead, they would use 'd'. More options can be found in the LERC manual or by running `Lerc.exe -h` in Command Prompt.

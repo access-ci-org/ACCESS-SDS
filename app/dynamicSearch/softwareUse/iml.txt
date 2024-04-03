@@ -1,0 +1,33 @@
+Use Case: iML is a Python library which is extensively used for interpretable machine learning. They provide several interpretation methods to make sense out of complex machine learning models.
+
+Code details and examples: 
+
+Code:
+
+```python
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.datasets import load_breast_cancer
+from iml.ensemble import RandomForestExplainer
+
+# Load data
+data, target = load_breast_cancer(return_X_y=True)
+
+# Train a RandomForestClassifier
+rf = RandomForestClassifier(n_estimators=1000)
+rf.fit(data, target)
+
+# Create an explainer
+explainer = RandomForestExplainer(rf)
+
+# Get importances
+importances = explainer.feature_importances()
+
+for idx, importance in enumerate(importances):
+    print(f"Feature {idx}: {importance}")
+```
+
+This script first loads the breast cancer data set from sklearn, which does not require any additional input files as the data set is directly loaded from sklearn.datasets. Then a random forest classifier is trained and a RandomForestExplainer from iML is used to explain this model. The feature importances are printed to the terminal.
+
+Run command: If saved into a file, you could simply call the Python script with `python script.py` in the terminal. 
+
+It has to be noted that the Random Forest Classifier can be replaced by other algorithms, and the explanation could be different based on the used algorithm. The loaded data set could also be replaced by custom input data, in which case the custom input data needs to be prepared as a numpy array or similar.

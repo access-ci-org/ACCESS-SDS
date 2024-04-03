@@ -1,29 +1,31 @@
-Use Case: edgeR is a Bioconductor package in R for differential expression analysis of RNA-seq data.
+Use Case: edgeR is primarily used for differential expression analysis of RNA-seq expression profiles with biological replication. It implements a range of statistical methodology based on the negative binomial distributions, including empirical Bayes estimation, exact tests, generalized linear models and quasi-likelihood tests.
 
-Code details and examples:
-```
-# Load the edgeR library
+Code Details and Examples: 
+
+Code:
+```R
+# Load the edgeR package
 library(edgeR)
 
-# Import count data
-counts <- as.matrix(read.csv("counts.csv", row.names = 1))
+# Create a simple group vector
+group <- factor(c(1,1,2,2))
 
-# Create a DGEList object
-d <- DGEList(counts = counts)
+# Load data 
+counts <- matrix(rnbinom(20000,mu=20,size=1), 200, 100)
 
-# Filter lowly expressed genes
-d <- d[rowSums(cpm(d) > 1) >= 2, , keep.lib.sizes = FALSE]
+# Create a DGElist object
+y <- DGEList(counts=counts, group=group)
 
-# Perform differential expression analysis
-design <- model.matrix(~group, data = colData(d))
-d <- estimateDisp(d, design)
-fit <- glmFit(d, design)
-lrt <- glmLRT(fit, coef = 2)
-topTags(lrt)
+# Estimate dispersions
+y <- estimateDisp(y)
+
+# Perform exact test
+et <- exactTest(y)
+
+# Print top tags
+topTags(et)
 ```
 
-In the above code:
-- "counts.csv" is the input file containing count data for RNA-seq samples.
-- The code reads the count data, filters lowly expressed genes, performs differential expression analysis, and returns the top significant genes.
+In the code snippet above, we first load the edgeR library. Then, we define a simple group vector that assigns the samples to their respective groups. Then, we artificially generate a count data matrix with 200 genes and 100 samples where the group vector defines which samples belong to which group. Next, we make a DGE list from our counts and add our grouping information to it. After that, we estimate the dispersions for our model and perform an exact test which is then stored in the 'et' object. Finally, we view the results by looking at the top tags.
 
-Command to run: Run each line of code in an R environment.
+The command to run the R script is typically interactively through an R environment like RStudio, or it could be run in the command line using the command: Rscript script.R

@@ -1,0 +1,28 @@
+Use Case: Alien-hunter is a software tool used for discovering horizontally acquired genes in a series of DNA sequences that uphold the 'compositional bias' method. It is a package used in bioinformatics, mainly for studying genome sequences to understand the nature and mechanisms of gene transfer between different organisms. 
+
+Code details and examples:
+
+Code:
+In the command line, you would run alien-hunter with an input file in the FASTA format and an output file, which can be both specified by full path or relative path. Here's an example:
+
+```
+alien_hunter sample_genome.fasta output_file.out
+```
+
+In this example `sample_genome.fasta` is the input file in FASTA format which contains your DNA sequences and `output_file.out` is where the results of the analysis will be written. The format of the output file is Interpolated Variable Order Motifs (IVOMs).
+
+The input should contain the genome sequences, and the FASTA format looks something like this:
+
+```
+>seq0
+ATGGCGAGT
+>seq1
+ATCTTACGA
+>seq2
+ACTGACTAG
+```
+
+Each line starting with a ">" symbol is the description of the sequence that follows, until the next line starting with ">".
+
+This command starts the alien-hunter software using the sample genome FASTA file and writes the output data to the specified output file. The default settings for the analysis are used. If you would like to use additional flags or settings, they would follow the output file.
+  

@@ -1,0 +1,25 @@
+{
+  "software_name": "metaseq",
+  "comprehensive_overview": "metaseq is a Python library for analyzing RNA-Seq data and differential expression analysis. It provides tools for visualizing gene expression results, exploring gene ontology, clustering samples, and identifying enriched pathways.",
+  "core_features": [
+    "RNA-Seq data analysis",
+    "Differential gene expression analysis",
+    "Visualization of gene expression results",
+    "Functional enrichment analysis",
+    "Sample clustering",
+    "Pathway analysis"
+  ],
+  "general_tags": [
+    "RNA-Seq",
+    "Data Analysis",
+    "Bioinformatics",
+    "Python Library"
+  ],
+  "additional_tags": {
+    "research_discipline": "Bioinformatics",
+    "research_area": "Transcriptomics",
+    "software_class": "Data Analysis",
+    "software_type": "Library",
+    "field_of_science": "Biological Sciences"
+  }
+}

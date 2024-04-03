@@ -1,0 +1,19 @@
+{
+	"software_name": "ZeroMQ",
+	"comprehensive_overview": "ZeroMQ is a high-performance asynchronous messaging library that is designed for building distributed and concurrent applications. It provides messaging patterns like pub-sub, request-reply, push-pull, etc., along with sockets and transports for communication between nodes.",
+	"core_features": [
+		"Asynchronous messaging",
+		"Distributed application development",
+		"Supports various messaging patterns like pub-sub, request-reply",
+		"High-performance and low-latency communication",
+		"Scalability and fault tolerance"
+	],
+	"general_tags": ["messaging", "distributed computing", "async"],
+	"additional_tags": {
+		"research_discipline": [],
+		"research_area": [],
+		"software_class": "Library",
+		"software_type": "Communication",
+		"field_of_science": "Computer and Information Sciences"
+	}
+}

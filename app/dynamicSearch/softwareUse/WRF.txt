@@ -1,70 +1,49 @@
-Use Case: Weather Research and Forecasting (WRF) model is a widely used mesoscale numerical weather prediction system designed for atmospheric research and operational forecasting applications.
+Use Case: Weather Research and Forecasting (WRF) model is a numerical weather prediction and atmospheric simulation system designed for both operational forecasting and atmospheric research. 
 
-Code details and examples:
-```bash
-# Command to run WRF:
-mpirun ./wrf.exe
-```
+Code details and examples: 
 
-Input files:
-- namelist.input: Configuration file containing settings for the WRF model
-- wrfinput_d01: Initial conditions file for the model
-- wrfbdy_d01: Boundary conditions file for the model
+WRF requires input fields such as atmospheric conditions, land surface characteristics, and sea surface conditions. These are typically sourced from other numerical weather prediction (NWP) models.
 
-Code snippets:
-```bash
-# Sample namelist.input
-&time_control
- run_days                            = 0,
- run_hours                           = 0,
- run_minutes                         = 0,
- run_seconds                         = 0,
- start_year                          = 2022, 2022, 2022,
- start_month                         = 03,   03,   03,
- start_day                           = 01,   01,   01,
- start_hour                          = 00,   00,   00,
- start_minute                        = 00,   00,   00,
- start_second                        = 00,   00,   00,
- end_year                            = 2022, 2022, 2022,
- end_month                           = 03,   03,   03,
- end_day                             = 01,   01,   01,
- end_hour                            = 03,   03,   03,
- end_minute                          = 00,   00,   00,
- end_second                          = 00,   00,   00,
- io_form_history                     = 2,
- io_form_input                       = 2,
- io_form_boundary                    = 2,
- /
+1. Running WRF requires the creation of input files using WPS:
+    - geo_em.d01.nc, which describes the geophysical data of the model domain.
+    - wrfbdy_d01, which describes the outer-most domain boundary conditions.
+    - wrfinput_d01, which describes the initial conditions.
 
-# Sample namelist.wps
-&time_control
- run_days                            = 0,
- run_hours                           = 0,
- run_minutes                         = 0,
- run_seconds                         = 0,
- start_year                          = 2022, 2022, 2022,
- start_month                         = 03,   03,   03,
- start_day                           = 01,   01,   01,
- start_hour                          = 00,   00,   00,
- start_minute                        = 00,   00,   00,
- start_second                        = 00,   00,   00,
- end_year                            = 2022, 2022, 2022,
- end_month                           = 03,   03,   03,
- end_day                             = 01,   01,   01,
- end_hour                            = 00,   00,   00,
- end_minute                          = 00,   00,   00,
- end_second                          = 00,   00,   00,
- /
+2. After setting up your namelists (namelist.input, namelist.wps) and MetGrid files, use the specific commands to run each step:   
 
-# Sample namelist.input for real.exe
-&share
- wrf_core = 'ARW',
- max_dom = 1,
- start_date = '2022-03-01_00:00:00','2022-03-01_00:00:00',
- end_date   = '2022-03-01_03:00:00','2022-03-01_03:00:00',
-/
+   ```shell
+   ./geogrid.exe
+   ./ungrib.exe
+   ./metgrid.exe
+   ./real.exe
+   ./wrf.exe
+   ```
+  
+Note: The commands are used for the MPI version and require that your machine be set up to run MPI processes. Plus, WRF should have been configured and compiled to run on multiple processors - this is done before running the program and is part of the setup and installation of WRF, which is not covered in this response.
 
+Code Snippet:
+
+This is a sample `namelist.input` snippet for WRF:
 
 ```
+ &time_control
+ run_days                            = 0,
+ run_hours                           = 12,
+ run_minutes                         = 0,
+ run_seconds                         = 0,
+ start_year                          = 2001, 2001, 2001,
+ start_month                         = 06,    06,    06,
+ start_day                           = 25,    25,    25,
+ start_hour                          = 12,    12,    12,
+ start_minute                        = 00,    00,    00,
+ start_second                        = 00,    00,    00,
+ end_year                            = 2001, 2001, 2001,
+ end_month                           = 06,    06,    06,
+ end_day                             = 26,    26,    26,
+ end_hour                            = 00,    00,    00,
+ end_minute                          = 00,    00,    00,
+ end_second                          = 00,    00,    00,
+```
 
-Please note that the above input file samples are just examples and should be customized based on the specific requirements of your simulation.
+Output:
+The main output from WRF is a NetCDF file named `wrfout_d01_2007-06-25_12:00:00` which can be visualized using NCAR Command Language (NCL), Python with libraries like netCDF4 or xarray, or any other tool that can process NetCDF files.

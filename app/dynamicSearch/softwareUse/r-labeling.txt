@@ -1,0 +1,25 @@
+Use Case: r-labeling is an R package used for optimal placement of node labels on graphs.
+
+Code details and examples: 
+
+RLabels provides a format for adjacency matrices as input, which demonstrate the relationships between nodes in a graph. Nodes represent entities and edges represent connections between them. An adjacency matrix can be visualized successfully by using the package.
+
+Sample adjacency matrix:
+
+```R
+# Node A connects to B, B connects to C and C connects to D
+graph <- matrix(c(0, 1, 0, 0,
+                  1, 0, 1, 0,
+                  0, 1, 0, 1,
+                  0, 0, 1, 0), nrow = 4, byrow = TRUE)
+colnames(graph) <- c("A", "B", "C", "D")
+rownames(graph) <- c("A", "B", "C", "D")
+```
+
+To use r-labeling to plot this graph, we execute the command:
+```R
+library(rlabel)
+plotGraph(graph)
+```
+
+This will illustrate a diagram with suitable labels. The labels are placed optimally to minimize the overlap between labels and providing a clear visualization.

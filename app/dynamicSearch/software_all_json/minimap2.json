@@ -1,0 +1,23 @@
+{
+    "software_name": "minimap2",
+    "comprehensive_overview": "Minimap2 is a versatile sequence alignment program that can be used for mapping DNA or cDNA sequences to a reference genome. It is known for its speed and accuracy, making it a popular choice for various bioinformatics applications.",
+    "core_features": [
+        "High speed and efficiency",
+        "Accurate alignment of sequences to a reference genome",
+        "Support for long-read sequences",
+        "Ability to handle noisy and error-prone data",
+        "Multiple output formats",
+        "Indexing of reference genomes for faster alignment"
+    ],
+    "general_tags": [
+        "Sequence Alignment",
+        "Bioinformatics",
+        "Genomics",
+        "Computational Biology"
+    ],
+    "research_discipline": "Bioinformatics",
+    "research_area": "Genomics",
+    "software_class": "Sequence Alignment Tool",
+    "software_type": "Bioinformatics Tool",
+    "field_of_science": "Biological Sciences"
+}

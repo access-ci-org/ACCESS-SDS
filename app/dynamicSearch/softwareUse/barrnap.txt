@@ -1,0 +1,35 @@
+Use Case: Barrnap (BAsic Rapid Ribosomal RNA Predictor) is used in bioinformatics to predict the location and type of ribosomal RNA (rRNA) genes in genomes of bacteria, archaea and metagenomes.
+
+Code details and examples:
+
+Code: 
+
+Input File: A fasta file is required as input for barrnap. 
+
+Format: Fasta file format (A text-based format for representing either nucleotide sequences or peptide sequences, in which nucleotides or amino acids are represented using single-letter codes)
+
+Details in input files: The input file must contain the genomic sequence(s) for which you want to predict rRNA locations.
+
+Code Snippet:
+
+
+```python
+# First, you may run Barrnap as follows:
+./barrnap bacterial_genome.fasta > predicted_rRNAs.gff
+
+# Here 'bacterial_genome.fasta' is your input file & 'predicted_rRNAs.gff' is output file.
+# To run Barrnap on a metagenome where the source could be either bacteria or archaea, you can run:
+
+./barrnap --kingdom arc bacterial_metagenome.fasta > predicted_rRNAs_bacteria.gff
+./barrnap --kingdom bac bacterial_metagenome.fasta > predicted_rRNAs_archaea.gff
+
+# The '--kingdom' switch can be set to either 'arc' for archaea or 'bac' for bacteria. Use this switch if you know your source.
+# If you do not specify '--kingdom', Barrnap will predict rRNAs from all known 'domains of life', i.e., bacteria, archaea, mitochondria, and eukaryota. 
+```
+
+Command to run the code:
+
+```bash
+# Change the path to your fasta sequence and add the path to your Barrnap executable if necessary
+./barrnap bacterial_genome.fasta > predicted_rRNAs.gff
+```

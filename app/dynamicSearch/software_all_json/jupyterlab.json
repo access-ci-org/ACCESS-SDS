@@ -1,0 +1,26 @@
+{
+    "software_name": "JupyterLab",
+    "comprehensive_overview": "JupyterLab is a web-based interactive development environment for Jupyter notebooks, code, and data. It offers a flexible and powerful user interface to work with data, code, and visualization in a seamless manner.",
+    "core_features": [
+        "Web-based interface for interactive computing",
+        "Support for Jupyter notebooks, text editors, terminals, and custom components",
+        "Integration with data visualization libraries and tools",
+        "Ability to work with multiple programming languages like Python, R, and Julia",
+        "Customizable user interface with drag-and-drop features",
+        "Interactive widgets for data exploration and visualization"
+    ],
+    "general_tags": [
+        "interactive computing",
+        "data visualization",
+        "Jupyter notebooks",
+        "web-based interface",
+        "code editing"
+    ],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Integrated Development Environment (IDE)",
+        "software_type": "Data Science Tool",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

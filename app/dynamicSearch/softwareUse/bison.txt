@@ -1,52 +1,62 @@
-I will provide details on Bison, which is a parser generator that is part of the GNU Project. 
+Use Case: Bison is a general-purpose parser generator that converts a grammar description for an LALR(1) context-free grammar into a C program to parse that grammar. 
 
-Use Case: Parsing a simple arithmetic expression
 Code details and examples:
-Input file (calc.y):
+
+Input File Format:
+The grammar written in bison input file contains rules and actions in C-style syntax:
+
 ```
-%token NUM
-%left '+' '-'
-%left '*' '/'
+%{
+#include <stdio.h>
+%}
+
+%token INTEGER
 
 %%
+program:
+         program statement '\n'
+         |
+         ;
 
-exp: exp '+' exp 
-   | exp '-' exp 
-   | exp '*' exp 
-   | exp '/' exp 
-   | '(' exp ')' 
-   | NUM 
-   ;
-
+statement:
+         INTEGER            { printf("%d\n", $1); }
+         ;
 %%
+```
 
-int main() {
-    yyparse();
-    return 0;
-}
+This grammar describes simple calculator program that takes integers line by line and prints it.
 
-int yyerror(char *s) {
-    printf("Error: %s\n", s);
-}
+Command to Run:
+The command to generate parser C code is: 
+```
+bison -d grammar.y
+```
 
-int yylex() {
-    int c = getchar();
-    if (c == '+' || c == '-' || c == '*' || c == '/')
-        return c;
-    if (isdigit(c)) {
-        ungetc(c, stdin);
-        scanf("%d", &yylval);
-        return NUM;
-    }
-    return c;
+It will generate 'grammar.tab.c' and 'grammar.tab.h'. 
+
+Code Snippet:
+
+To use generated parser you need to write a code that feeds lexer. Here is the simple example:
+
+```
+#include "grammar.tab.h"
+
+extern int yylex();
+extern int yyparse();
+extern FILE *yyin;
+ 
+int main(void)
+{
+  yyin = fopen("file", "r");
+  if (!yyin) return -1;
+
+  yyparse();      
 }
 ```
 
-Code to compile and run:
-```
-bison -d calc.y
-gcc -o calc calc.tab.c -lfl
-./calc
-```
+This program opens a file, starts parser that calls lexer (yylex function) to get tokens.
 
-This example demonstrates a simple calculator parser using Bison. The input file contains the grammar rules for parsing arithmetic expressions. The code provided includes the grammar rules, main function, error handling, and lexical analysis using yylex. After creating the parser using Bison and compiling the generated code with gcc, you can run the executable to parse arithmetic expressions.
+Command to compile the code:
+```
+gcc program.c grammar.tab.c -o program
+```

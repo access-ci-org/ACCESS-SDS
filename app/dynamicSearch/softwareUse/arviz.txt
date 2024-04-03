@@ -1,0 +1,22 @@
+Use Case: ArviZ is a Python package widely used for statistical and visualization analysis of data that originates from Bayesian models. Using ArviZ, you can analyze and visualize posterior, prior, predictive and other distributions, plus posterior predictive checks. 
+
+Code details and examples: Code.
+
+Here we will generate some normally-distributed data and then visualize it using the plot_posterior() function in ArviZ.
+
+```python
+import numpy as np
+import arviz as az
+
+data = np.random.randn(100)  # 100 normally-distributed random values
+
+az.plot_posterior(data)
+```
+
+Here data is a NumPy ndarray, representing a collection of 100 values from a normally-distributed random variable. 
+
+ArviZ's plot_posterior function takes an array-like object and produces a plot of the posterior distribution of the included values. By default, this function will mean-center the values and scale them by their standard deviation, producing a standardized version of the posterior plot.
+
+No special specifications or details need to be included in the input data. The above example data is normally distributed by design, but any array-like object can in principle be used as input.
+
+Running the code will produce a posterior plot displaying the KDE.

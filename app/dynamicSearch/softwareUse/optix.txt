@@ -1,0 +1,56 @@
+Use Case: 
+OptiX is a programmable ray tracing framework for software developers to create applications that generate images by tracing rays through a 3D scene. It uses the GPU to enable speed and scalability and is used in fields such as visual effects, medical imaging, and autonomous cars.
+
+Code Details and Examples: Code 
+
+A simple example of an input file for OptiX is a scene description file, typically in a format such as.obj. The file consists of vertices for 3D models in the scene.
+
+Here is a basic .obj file for a single triangle:
+
+```
+v 0.0 0.0 0.0
+v 1.0 0.0 0.0
+v 0.0 1.0 0.0
+f 1 2 3
+```
+
+This file describes a scene with three vertices and one face. Each vertex has an (x, y, z) coordinate, and the face (f) is defined by the indices of the vertices.
+
+Here is a sample OptiX code that loads this .obj file scene and renders it:
+
+```C++
+#include <optix.h>
+#include <optix_world.h>
+
+using namespace optix;
+
+// Scene parameters
+rtDeclareVariable(float3, eye, , );
+rtDeclareVariable(float3, U, , );
+rtDeclareVariable(float3, V, , );
+rtDeclareVariable(float3, W, , );
+
+rtBuffer<float3> vertex_buffer;
+rtBuffer<int3> index_buffer;
+
+RT_PROGRAM void pinhole_camera()
+{
+  size_t2 screen = output_buffer.size();
+  float2 d = make_float2(launch_index) / make_float2(screen) * 2.f - 1.f;
+  float3 ray_origin = eye;
+  float3 ray_direction = normalize(d.x*U + d.y*V + W);
+
+  optix::Ray ray(ray_origin, ray_direction, 0, 1e-3f, RT_DEFAULT_MAX);
+  PerRayData_radiance prd;
+  prd.result = make_float3(0.0f);
+  rtTrace(top_object, ray, prd);
+}
+```
+
+In this code, `pinhole_camera()` is the RT_PROGRAM that generates a simple camera model. The `rtTrace` function is called to start the ray tracing.
+
+The command to run the OptiX rendering is program-specific but typically involves compiling the OptiX program into a binary and executing it with the scene file as an argument. This might look something like:
+
+`./optixProgram scene.obj`
+
+The exact command may vary depending on the application configuration and the setup of the OptiX SDK. It should be provided in the application documentation.

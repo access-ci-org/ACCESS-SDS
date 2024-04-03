@@ -1,18 +1,38 @@
-Use Case: LDAP server software.
+Use Case: Use OpenLDAP for accessing and managing directory services in a networked environment.
 
-Code Details and Examples:
-Sample LDIF file (input file format):
+Code details and examples: 
+
+Code:
+
+The input file for OpenLDAP could be an LDIF(LDAP Data Interchange Format) file, which provides a way of expressing entries in a directory that complies with the LDAP standards.  Here is a sample of how an LDIF file could look:
+
 ```
-dn: cn=John Doe,dc=example,dc=com
+dn: uid=john,dc=example,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+uid: john
 cn: John Doe
 sn: Doe
-mail: john.doe@example.com
-objectClass: inetOrgPerson
+mail: john@example.com
+userPassword: {CLEARTEXT}password
 ```
 
-Sample command to add an entry to LDAP server:
-```
-ldapadd -x -D "cn=admin,dc=example,dc=com" -W -f entry.ldif
+This file describes a directory entry for a person with the common name (cn) "John Doe", surname (sn) "Doe", email (mail) "john@example.com", and user id (uid) "john". The password is "password".
+
+You can import this LDIF file into your OpenLDAP server with the following command:
+
+```bash
+ldapadd -x -D "cn=admin,dc=example,dc=com" -W -f myfile.ldif
 ```
 
-Note: The actual command may vary based on the LDAP server configuration.
+Here -D specifies the binddn to bind to the LDAP directory with. -W prompts for the binddn's password.  -f specifies the input LDIF file.
+
+You could also use the ldapsearch command to retrieve directory entries. Here's an example command which retrieves all entries with the surname "Doe":
+
+```bash
+ldapsearch -x -LLL -H ldap:/// -b dc=example,dc=com "(sn=Doe)" cn mail
+```
+
+Here -b specifies the base dn to search from. (sn=Doe) is the LDAP search filter specifying that the surname should be "Doe".  The final arguments "cn mail" specify that the common name and mail attribute should be returned in the results.

@@ -1,0 +1,23 @@
+Use Case: PhiPack is a set of command line programs used for analyzing patterns of polymorphism in DNA sequences. It is particularly useful for identifying signature of recombination including population recombination rate. 
+
+Code Details and Examples: 
+
+The main module in PhiPack is Phi. The input to Phi is an aligned DNA sequences file in NEXUS, PHYLIP, MEGA, or FASTA format. The output is a file containing test statistics and sites inferred to be recombination breakpoint. 
+
+For example, this is how a sample input file (in FASTA format) might look:
+
+```
+
+>Seq1
+ATGGCTCACATAGCTTATGCATGGCCTACCAGTGTCTTCACGCTCGAGCCCAGCTAGGAC
+>Seq2
+ATGGCTCACATAACTTATGCATGGCCTACCGGTCTTCACGCTCGAGCCCAGCGAGGAC
+>Seq3
+ATGGCTCACATAACTTATGCATGGCCTACCGGTCTTCACGCACGAGCCCAGCGAGGAT
+```
+
+After creating the input file (e.g., `my_sequences.fasta`), the Phi command can be run as follows:
+
+`Phi -i my_sequences.fasta -f t -o output.txt`
+
+Here `-i` specifies the input file, `-f t` indicates that trace of calculations should be saved, and `-o output.txt` specifies the name of the output file.

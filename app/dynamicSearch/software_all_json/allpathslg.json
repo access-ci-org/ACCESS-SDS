@@ -1,0 +1,11 @@
+{
+  "software_name": "Allpaths-LG",
+  "comprehensive_overview": "Allpaths-LG is a whole-genome shotgun assembly algorithm developed for large genomes, especially for those of diploid organisms. It aims to leverage the increased coverage provided by short reads to achieve high-quality assemblies.",
+  "core_features": "- Able to handle large genomes efficiently\n- Specifically designed for diploid organisms\n- Utilizes short reads for increased coverage\n- Capable of generating high-quality assemblies",
+  "general_tags": ["Genome Assembly", "Bioinformatics", "NGS Analysis"],
+  "research_discipline": "Genetics",
+  "research_area": "Genomics",
+  "software_class": "Assembly Algorithm",
+  "software_type": "Genome Assembly Software",
+  "field_of_science": "Biological Sciences"
+}

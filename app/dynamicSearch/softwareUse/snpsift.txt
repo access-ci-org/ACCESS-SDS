@@ -1,0 +1,25 @@
+Use Case: SNP filtering and manipulation in genomic datasets.
+
+Code details and examples: Code
+
+1. SnpSift annotations: One common use case for SnpSift is annotating genomic variant files with additional information. 
+
+- File Format: Input vcf file Variant Calling Format or VCF
+- Specifications: One line per variant, with annotations added by SnpSift.
+- Sample Input File: MyFile.vcf
+
+Command to run: `java -jar SnpSift.jar annotate MyAnnotations.vcf MyFile.vcf > MyFile_annotated.vcf`
+
+2. SnpSift filter: Another use case is to filter variants based on specific conditions.
+
+- File Format: Input vcf file Variant Calling Format or VCF
+- Specifications: One line per variant, filtering those that meet specified conditions.
+- Sample Input File: MyFile.vcf
+
+Code Snippet: 
+
+First, you may need to create a filter condition. A sample condition could be 'DP > 10', filtering variants with a depth greater than 10.
+
+Command to run: `java -jar SnpSift.jar filter "( DP > 10 )" MyFile.vcf > MyFile_filtered.vcf` 
+
+Where `( DP > 10 )` is the condition to filter.

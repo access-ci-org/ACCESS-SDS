@@ -1,0 +1,28 @@
+Use Case: FastSpar is used for inferring correlation networks from metagenomic sequencing data. 
+
+Code details and examples:
+
+Code: 
+
+```
+fastspar --otu_table example/otu_table.tsv --correlation median_correlation.tsv --covariance median_covariance.tsv --iterations 500
+```
+
+The input file is an OTU (Operational Taxonomic Units) table in TSV format. Each row within the table represents an OTU, with the first column providing the OTU identifier and subsequent columns containing counts for each sample.
+
+Example of an input file (otu_table.tsv):
+
+```
+OTU	Sample1	Sample2	Sample3
+OTU1	5	0	10
+OTU2	2	1	0
+OTU3	0	5	10
+```
+
+In this example, the frequency of OTU1 in the first sample (Sample1) is five, while in the second sample (Sample2) it is zero, and so forth. You can provide this OTU table to FastSpar by the `--otu_table` parameter.
+
+`--correlation median_correlation.tsv` and `--covariance median_covariance.tsv` specify the output filenames for the correlation and covariance matrices respectively.
+
+`--iterations 500` specifies the number of iterations of the FastSpar algorithm to perform. FastSpar is an implementation of the SparCC algorithm which iteratively estimates correlations in metagenomic data.
+
+Running the command as shown above will generate median_correlation.tsv and median_covariance.tsv containing the inferred correlation and covariance matrices respectively.

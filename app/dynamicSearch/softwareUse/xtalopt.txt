@@ -1,0 +1,40 @@
+Use Case: XtalOpt is an evolutionary algorithm for crystal structure prediction. It is utilised for predicting stable crystal structures and studying the phase diagrams of materials. XtalOpt is integrated into the Avogadro molecular editor enabling a nice graphical interface.
+
+Code details and examples: Code
+
+Sample Input (XtalOpt Parameter File):
+
+```
+# Required Inputs
+scellA1 = 0 0.5 0.5
+scellA2 = 0.5 0 0.5
+scellA3 = 0.5 0.5 0
+scellVol = 100
+pmVol = 50
+minVol = 50
+maxVol = 200
+percentRandomInits = 25
+numInitial = 10
+optimizationType = 0
+
+# GA Parameters
+limitDist = -1
+runningJobLimit = 25
+tol_spg = 0.1
+uphillMaxFailures = 20
+reMagSteps = 20
+
+# Similarity Thresholds
+tol_spg = 0.3
+tol_spg_dup = 0.1
+tol_spg_dup_formation = 5.5
+
+```
+
+Command to run it:
+
+```
+xtalopt [options] <xtaloptrc>
+```
+
+Please ensure that the sample input file and the command to run the software are according to the XtalOpt documentation guidelines. This example if for the most basics setup, XtalOpt allows for much more complex scenarios.

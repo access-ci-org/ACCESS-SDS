@@ -1,0 +1,52 @@
+Use Case: LDSC (LD Score Regression) is a method used in bioinformatics that leverages genome-wide summary data to partition heritability of complex traits and diseases, and to estimate the genetic correlation between pairs of traits and diseases. 
+
+Code details and examples:
+
+Code 1:
+File: Weighted LD Score Files
+Format: gzipped text file. Columns:
+- CHR: Chromosome
+- SNP: SNP Identifier
+- BP: Base Pair Location
+- LD: LD Score
+
+Example file content: 
+
+```
+CHR SNP BP LD
+1 rs3094315 792429 0.176
+1 rs4040617 817186 0.0882
+1 rs2980300 827438 0.150
+```
+
+Code 2:
+File: Summary Statistics Files
+Format: gzipped text file. Must contain the following columns:
+- SNP: SNP Identifier
+- A1: The first allele in the summary stats file.
+- A2: The second allele in the summary stats file.
+- N: Sample Size
+- Z: Z-score
+
+Example file content: 
+
+```
+SNP A1 A2 N Z
+rs3094315 G A 33809 -0.484
+rs4040617 G A 33804 -0.640
+rs2980300 T C 33794 -0.0215
+```
+
+Command to Run the Scripts:
+
+1. To Compute LD Scores, run:
+```
+ldsc.py  --bfile N --l2 --ld-wind-cm 1  --out N --print-snps snplist.txt
+```
+where `N` is the name of your output and `snplist.txt` is a list of SNPs.
+
+2. To Estimate Heritability, run:
+```
+ldsc.py --h2 sumstats.gz --ref-ld-chr baseN., --w-ld-chr baseN., --out N
+```
+where `sumstats.gz` is your summary statistics file, `baseN.,` is your reference and weight chromosome files, and `N` is the name of your output.

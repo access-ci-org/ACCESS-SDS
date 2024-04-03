@@ -1,0 +1,60 @@
+Use Case: The adol-c package is used in automatic differentiation (AD) of algorithms in C++ and C, which is useful in many scientific and engineering applications.
+
+Code details and examples: 
+
+Code: 
+
+First step is to include the Adolc library.
+
+```C++
+#include <adolc/adolc.h>
+```
+
+Next, you define the function. For example, let’s differentiate the function f(x,y) = x*y.
+
+```C++
+adouble f(adouble x, adouble y) {
+  return x*y;
+}
+```
+
+Afterwards, differentiate the function.
+
+```C++
+int main() {
+  // declare independent variables
+  adouble x, y;
+  // declare dependent variable
+  adouble z;
+
+  // trace on
+  trace_on(1);
+  // independent variables
+  x <<= 2.0; y <<= 3.0;
+  // function
+  z = f(x, y);
+  // dependent variable
+  z >>= 0.0;
+  // trace off
+  trace_off();
+
+  // evaluate gradient
+  double grad[2];
+  gradient(1, 2, grad);
+
+  // output gradient
+  std::cout << "df/dx = " << grad[0] << ", df/dy = " << grad[1] << "\n";
+
+  return 0;
+}
+```
+
+In this code, trace_on(1) starts the recording of operations for AD. In the function call f(x,y), ADOL-C records all the operations onto the tape. The operation z >>= 0.0 marks the end of the dependent variables. After calling trace_off(), no more operations will be recorded. The gradient(1,2,grad) will return gradient df/dx and df/dy.
+
+Command to run (if the code is saved as `main.cpp`) is:
+```C++
+g++ -I/path/to/adolc/include main.cpp -L/path/to/adolc/lib -ladolc
+./a.out
+```
+
+Replace `/path/to/adolc/` with actual path of adol-c. The output of this program will be `df/dx = 3, df/dy = 2` which are the derivatives of the function f(x,y) = x*y at the point (x=2, y=3).

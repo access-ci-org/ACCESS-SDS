@@ -1,0 +1,36 @@
+Use Case: ANGSD is a software package that allows you to analyze next-generation sequencing data. It can be used to estimate allele frequency, perform association mapping, estimate genetic diversity and inbreeding coefficients, perform principal component analysis, and more.
+
+Code details and examples: Code
+
+The input format required by ANGSD are BAM files, which contain sequence alignment data.
+
+Here is a simple example of an ANGSD command, which will estimate the allele frequency spectrum and generate a beagle file:
+
+```
+angsd -bam bam.filelist -GL 1 -doMajorMinor 1 -doMaf 1 -SNP_pval 1e-6 -minMapQ 30 -minQ 20 -minInd 10 -doGeno 32 -doPost 1 -out output -P 4
+```
+
+This command takes the following input:
+
+- bam.filelist: This is a file containing a list of BAM files to analyze.
+- -GL 1: This sets the genotype likelihood model to the SAMtools model.
+- -doMajorMinor 1: This tells ANGSD to infer the major and minor alleles from the data.
+- -doMaf 1: This tells ANGSD to estimate the allele frequencies.
+- -SNP_pval 1e-6: This sets the p-value cutoff for calling SNPs.
+- -minMapQ 30: This sets the minimum mapping quality required to consider a read.
+- -minQ 20: This sets the minimum basing quality required to consider a base.
+- -minInd 10: This tells ANGSD to only use sites where at least 10 individuals have data.
+- -doGeno 32: This tells ANGSD to output genotype likelihoods.
+- -doPost 1: This tells ANGSD to calculate posterior probabilities.
+- -out output: This specifies the output file prefix.
+- -P 4: This tells ANGSD to use 4 threads.
+
+Before running this command, you must prepare your bam.filelist. It should contain one path to a BAM file per line, like so:
+
+```
+/sample1.bam
+/sample2.bam
+/sample3.bam
+```
+
+Replace /sample1.bam, /sample2.bam etc with the actual full paths to your BAM files.

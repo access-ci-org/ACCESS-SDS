@@ -1,0 +1,37 @@
+Use Case: KISSDE denotes Keeping It Simple: Smith-Waterman sequence Alignment, Differential Expression. This is a software package designed for dealing with the real-world challenges of RNA-seq data, which include a mix of de novo transcripts and known genes.
+
+Code details and examples:
+
+Code:
+
+To run KISSDE, you need both a configuration file and a count matrix as input.
+
+1. Configuration file:
+
+```
+#SAMPLE_ID   FASTQ/SRA            LAYOUT    STRANDED 
+#SRR314795   SRR314795/SRR314795  PE        FR 
+#SRR314796   SRR314796/SRR314796  PE        FR 
+```
+Each line signifies a sample where the “#” symbol indicates comments which will be ignored during the program running. The first column gives the sample's UNIQUE name and must not contain any whitespace or peculiar characters like “-”, “_” or “.”  etc. The second column must contain the relative path to the fastq files. The third column can be either “SE” or “PE” indicating single-end or paired-end. The last column characterizes the library of that sample. For unstranded libraries, you can simply type "none".
+
+2. Count matrix:
+
+This matrix file must be tab delimited with the first column being the unique mapped gene names and the rest of the columns being the corresponding expression level (in terms of raw counts).
+
+Example:
+
+```
+	Gene	Sample1	Sample2	Sample3
+	GeneA	  5	      10	     15
+	GeneB	  10	     20	     30
+	GeneC	  15	     25	     35
+```
+
+To run the code:
+
+```
+python path_to_KissDE/kissDE.py -l path_to_config.txt -m path_to_count_matrix.txt
+```
+
+Here, "path_to_KissDE" denotes the path where KissDE.py is located and "path_to_config.txt" and "path_to_count_matrix.txt" are the paths to your configuration file and count matrix respectively.

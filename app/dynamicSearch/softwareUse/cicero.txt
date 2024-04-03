@@ -1,0 +1,41 @@
+Use Case: Cicero is a software package designed to predict cis-regulatory DNA interactions from single-cell chromatin accessibility data. It works by identifying candidate cis-regulatory elements and potential target genes, and then predicting connections between them based on patterns of accessibility across cells.
+
+Code Details and Examples:
+
+Code Input:
+Your input to Cicero should be a cells by peaks Binary Matrix (where each entry (i,j) indicates accessibility (1) or non-accessibility (0) of peak j in cell i), and a Data Frame describing the locations of peaks.
+
+Here's an example of how you might create input for Cicero in R:
+
+```R
+# Access the binary matrix (rows = cells, columns = peaks)
+binary_matrix <- as.matrix(read.csv("binary_matrix.csv"))
+
+# Access data frame of peak coordinates (columns = chr, start, end)
+peaks <- read.csv("peaks.csv")
+
+# Make sure your peak coordinates are ordered by chr and start
+peaks <- peaks[order(peaks$chr, peaks$start), ]
+```
+
+Code:
+Once you have your binary matrix and peaks data frame, you can run Cicero with code like this:
+
+```R
+# Load Cicero
+library(cicero)
+
+# Convert your data to a cicero object:
+cicero_data <- make_cicero_cds(binary_matrix, peaks)
+
+# Run Cicero:
+cicero_connections <- run_cicero(cicero_data, "10")
+```
+
+The "10" in the last line is a parameter – in this case, co-accessibility cutoff – that you may adjust based on your specific research question. For prediction of connections, it is suggested to set the cutoff so that each cell has between 5 and 75 connections on average (default is 10).
+
+Output from Cicero comes in the form of a CDS (a special data type used by the Monocle package for single-cell gene expression analysis), which can then be further analyzed and visualized in R. For example, you might plot predicted connections like:
+
+```R
+plot_connections(cicero_connections)
+```

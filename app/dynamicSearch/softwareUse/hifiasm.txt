@@ -1,0 +1,26 @@
+Use Case: hifiasm is a fast haplotype-resolved de novo assembler for PacBio highly accurate long reads (HiFi reads). It aids in bioinformatics, particularly genome sequencing and assembly, providing highly accurate haplotype phased de novo assembly.
+
+Code details and examples: 
+
+Input files typically include: 
+
+1. PacBio HiFi reads in FASTQ or FASTA format
+    - File format: `.fastq` or `.fasta`
+    - Specifications: Each sequence in the FASTQ file is represented with four lines. The first line has sequence identifier. 2nd line contains raw sequence. 3rd line is optional and 4th line represents sequence quality. 
+
+Sample Code Snippet:
+
+1. To run hifiasm with the default parameters, the command line would look something like this:
+
+```bash
+hifiasm -o output_prefix input.fasta
+```
+
+2. Assembling diploid genomes with -f 0 option:
+
+```bash
+hifiasm -o output_prefix -f0 raw_reads.fastq.gz
+```
+In the above commands, `output_prefix` is the prefix of output files (no directory part), and `input.fasta` or `raw_reads.fastq.gz` are the input reads in FASTA or FASTQ format respectively.
+
+These examples assume that you have hifiasm in your PATH. If not, you may need to specify the full path to the hifiasm executable.

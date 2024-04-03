@@ -1,0 +1,13 @@
+{
+  "software_name": "HOMER",
+  "comprehensive_overview": "HOMER (Hypergeometric Optimization of Motif EnRichment) is a suite of tools for motif discovery and next-gen sequencing analysis. It is widely used for identifying transcription factor binding sites and novel motifs in DNA sequences.",
+  "core_features": "1. Motif discovery in DNA sequences. 2. Identification of transcription factor binding sites. 3. Next-generation sequencing data analysis. 4. De novo motif discovery. 5. Integration with various genomic databases.",
+  "general_tags": ["bioinformatics", "next-generation sequencing", "motif discovery", "transcription factor binding sites"],
+  "additional_tags": {
+    "research_discipline": "Genetics",
+    "research_area": "Bioinformatics",
+    "software_class": "Computational Biology",
+    "software_type": "Tool",
+    "field_of_science": "Biological Sciences"
+  }
+}

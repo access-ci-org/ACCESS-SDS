@@ -1,23 +1,39 @@
-Use Case: Electronic structure calculations
-Code details and examples: 
-Q-Chem is a comprehensive ab initio quantum chemistry package that can perform electronic structure calculations for systems ranging from small molecules to large biomolecular complexes. Below is an example input file for a simple HF/6-31G calculation in Q-Chem.
+Use Case: Quantum Chemistry calculations
 
-Input file (input.inp):
-```
+Code Details and Examples:
+
+Code:
+
+The input file for QChem is usually a .inp file, defined by the user. A simple Sample might be:
+
+$comment
+Jobtype: SP method: HF basis: 6-31G*
+$end
+
 $molecule
 0 1
 O
-H 1 1.0
-H 1 1.0 2 104.5
+H 1 R
+H 1 R 2 A
 $end
 
 $rem
-jobtype = sp
-basis = 6-31G
+JOBTYPE = SP
+METHOD = hf
+BASIS = 6-31g*
 $end
-```
 
-To run the calculation, you can use the following command:
-```
-qchem input.inp output.out
-```
+In the defined example, the molecule is defined in Z-Matrix format. The parameters R and A are bond length and angle, respectively. The JOBTYPE, METHOD, and BASIS are self-explanatory. 
+
+
+Command to Run:
+
+In Linux systems, to submit a job, you use the command:
+
+qchem inputfile.inp outputfile.out
+
+For the Above example:
+
+qchem example.inp example.out
+
+Please note that the above details can change based on the version of QChem and different features and functionality other versions may offer.

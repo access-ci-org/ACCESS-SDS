@@ -1,0 +1,35 @@
+Use Case: ParaFold is used for predicting the secondary structure and thermodynamics of an RNA sequence.
+
+Code details and examples: Code
+
+ParaFold requires two input files: a sequence file and a base pair probability matrix file. 
+
+Sequence File (seq.txt):
+```
+>Sequence1
+AUGUAGCUAGUCUAGCGUACGUG
+```
+Base Pair Probability File (bpp.txt):
+```
+#i j        p(i,j)
+1  5        0.0
+1  6        0.00001
+1  7        0.00005
+2  8        0.00004
+...
+```
+The first column represents the start of the base pair and the second column represents the end of it. The third column indicates the probability of the base pair occurring.
+
+To run ParaFold with these input files, you would use the following command:
+```bash
+parafold seq.txt -p bpp.txt -o output.txt
+```
+This command outputs the predicted secondary structure and other thermodynamic properties to a file named output.txt. 
+
+The output file may look something like this:
+```
+>Sequence1
+Structure: 0.967 : ((.(((..((...))..))).))
+Enthalpy: -22.6 kcal/mol
+Free Energy: -8.43 kcal/mol
+```

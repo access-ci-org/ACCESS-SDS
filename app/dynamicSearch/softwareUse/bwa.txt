@@ -1,15 +1,32 @@
-Use Case: BWA (Burrows-Wheeler Aligner) is a software package for mapping low-divergent sequences against a large reference genome, such as the human genome. 
+Use Case: BWA is a software package for mapping low-divergent sequences against a large reference genome, such as the human genome. It consists of three algorithms: BWA-backtrack, BWA-SW and BWA-MEM.
 
-Code details and examples:
-BWA requires a reference genome file in FASTA format and one or more sequence read files in either FASTQ or FASTA format. Here is an example command to run BWA to align reads to a reference genome:
+Code details and examples: 
+
+Code:
+BWA works with FASTA and FASTQ format files as input. Below is an example of the command line usage with the input and output details.
+
+Here, ‘ref.fasta’ is the reference genome file, ‘reads.fq’ is the reads file that contains sequences to be aligned.
 
 ```
-bwa index reference_genome.fasta
-bwa mem reference_genome.fasta read1.fastq read2.fastq > alignments.sam
+// Index the genome:
+bwa index ref.fasta
+
+// Align reads to the reference:
+bwa mem ref.fasta reads.fq > alignment.sam
 ```
 
-In this example:
-- `bwa index` is used to index the reference genome file.
-- `bwa mem` is used to align paired-end reads (`read1.fastq` and `read2.fastq`) to the indexed reference genome and save the alignments in SAM format (`alignments.sam`).
+Here, `alignment.sam` will be the output file with alignment result in SAM format. The `bwa index` command indexes the reference genome to allow for efficient alignment. The `bwa mem` command aligns the sequences in the `reads.fq` file to the reference genome.
 
-Please note that the exact command may vary depending on the specific use case and options required for the alignment task.
+Input File: 
+
+ref.fasta – This should be your reference genome in FASTA format. This could be a large file, depending on the genome size.
+
+reads.fq – This is the FASTQ file that should contain your reads.
+
+Output File:
+
+alignment.sam – This is the final alignment file in SAM format and includes the genomic location of each read. A typical SAM record could look like this:
+
+`read123456  163  chr3    98091813    60  76M  =   98091845    108 TTTTCTTTTCTTTTCTTTTCTTTTCTTTTCTTTTCTT..AH:L:0: TCTTTTCTTTTCTTTTCTTTTCTTTTCTTTTCTTTTCTT..NH:L:0: CCCFFFFFHHHFA-1;+!!!!!!;99;'""######(#   NM:i:0  MD:Z:76 AS:i:76 XS:i:76`
+
+This indicates the mapping location, alignment properties and read sequence, amongst other information.

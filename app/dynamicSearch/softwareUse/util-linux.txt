@@ -1,0 +1,27 @@
+Use Case: Task scheduling, checking for system information, manipulating partitions on storage devices.
+
+Code details and examples: Code.
+
+The util-linux package is a suite of essential utilities for any Linux system. It provides tools for hardware and software configuration and system tasks management. 
+
+1. Checking file system disk space usage.
+
+    `df -hT`
+    
+    `-h` represents in 'human-readable' form and `-T` represents 'filesystem type'.
+
+2. Display system information
+
+    `uname -a`
+    
+    Display information about machine, nodename, kernel name, kernel release, kernel version, machine, processor, hardware platform and operating system.  
+
+3. Print system uptime
+
+    `uptime`
+    
+    This command provides a one line display of the following information: The current time, how long the system has been running, how many users are currently logged on, and the system load averages for the past 1, 5, and 15 minutes.
+
+Command line inputs do not require explicit input files. The commands consume system data and parameters provided directly at the command line. If command output has to be saved, it can be redirected to a file using shell redirection e.g. `df -hT > disk_usage.txt`
+
+Please note that these are basic examples and util-linux contains a more comprehensive set of tools.

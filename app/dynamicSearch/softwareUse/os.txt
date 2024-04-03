@@ -1,0 +1,48 @@
+Use Case: Use os (a Python library) to read, write, and manipulate files and directories on the system.
+
+Code details and examples: 
+
+Here is an example of how to rename a file using os:
+
+Code:
+
+```python
+import os
+
+# specify the current path and file name
+original_file = 'original_file.txt'
+
+# specify the new file name
+new_file = 'new_file.txt'
+
+# rename the original file
+os.rename(original_file, new_file)
+```
+
+To run this, you will need a file called 'original_file.txt' in the same directory where you run the script. 
+
+Your input file should be in plain text format (txt). There are no specific requirements for content in the input file, it could be anything in plain text.
+
+This command will rename the file 'original_file.txt' to 'new_file.txt'.
+
+Another example is using os to get the list of files in a particular directory:
+
+Code:
+
+```python
+import os
+
+# specify the directory
+directory = '/path/to/directory'
+
+# use os to get list of files
+files = os.listdir(directory)
+
+# print the list of files
+for file in files:
+    print(file)
+```
+
+To run this, you need to specify the directory path. Your path should be the absolute path or the relative path from where you run the script.
+
+This command will print a list of all files and directories in the specified directory.

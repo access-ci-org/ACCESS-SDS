@@ -1,0 +1,23 @@
+{
+    "software_name": "FlatBuffers Python",
+    "comprehensive_overview": "FlatBuffers is an open-source cross-platform serialization library designed for performance and efficiency. The Python implementation allows Python developers to work with data stored in FlatBuffers format.",
+    "core_features": [
+        "Efficient serialization and deserialization of data",
+        "Cross-platform support",
+        "Language-independent",
+        "Flexibility in schema evolution"
+    ],
+    "general_tags": [
+        "serialization",
+        "data storage",
+        "cross-platform",
+        "efficiency"
+    ],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Library",
+        "software_type": "Serialization",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

@@ -1,0 +1,50 @@
+Use Case: Debugging code, fixing errors, examining the state of a program while it's running.
+
+Code Details and Examples: 
+
+Code:
+
+For Python, the built-in debugger is pdb. Here's an example usage:
+
+```python
+import pdb
+
+def add_numbers(x, y):
+    sum = x + y
+    pdb.set_trace()  # This will pause the execution here, like a breakpoint in other debuggers
+    return sum
+
+print(add_numbers(1, 2))
+```
+
+You run this program as you would any other Python script: `python script.py`. When the execution hits the `pdb.set_trace()` line, it will drop into the debugger. 
+
+In the pdb debugger, you can examine the state of the program with commands like:
+
+- `p variable`: Print the value of a variable.
+- `n`: Execute the next line.
+- `c`: Continue execution until the next breakpoint or the program ends.
+
+For C/C++, a common debugger is gdb. Here's an example usage:
+
+```c
+#include <stdio.h>
+
+int add_numbers(int x, int y) {
+    return x + y;
+}
+
+int main() {
+    int z = add_numbers(1, 2);
+    printf("%d\n", z);
+    return 0;
+}
+```
+
+To compile this code with debugging symbols, use `gcc -g -o program program.c`.
+
+To run the program under gdb, use `gdb program`. To set a breakpoint at a function, use `break function_name`. To run the program until a breakpoint or the program ends, use `run`. In the gdb debugger, commands are similar to pdb, but a few differences are:
+
+- `print variable`: Print the value of a variable.
+- `next`: Execute the next line.
+- `continue`: Continue execution until the next breakpoint or the program ends.

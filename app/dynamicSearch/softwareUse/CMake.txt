@@ -1,41 +1,35 @@
-Use Case: Build C++ project with CMake
+Use Case: Cmake is a cross-platform build system generator. Projects specify their build process using platform-independent CMake list files that are used to generate appropriate build files for each platform for building, testing, and packaging software.
 
-Code details and examples:
-1. Create a `CMakeLists.txt` file in your project directory:
+Code details and examples: Code
 
-```cmake
-cmake_minimum_required(VERSION 3.10)
-project(MyProject)
+For example, a simple CMake list file might look something like this:
 
-set(CMAKE_CXX_STANDARD 11)
+``` cmake
+# This is the root ITK CMakeLists file.
+cmake_minimum_required(VERSION 3.10.2)
+project(ITK)
 
-add_executable(MyExecutable main.cpp)
+# Find includes in corresponding build directories
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+
+# Find the QtWidgets library
+find_package(Qt5Widgets CONFIG REQUIRED)
+
+# Add source files
+add_executable(MyApp main.cpp mainwindow.cpp)
+
+# Use the Widgets module from Qt 5
+target_link_libraries(MyApp Qt5::Widgets)
 ```
 
-2. Create a `main.cpp` file in the same directory:
+The input required here is a CMakeLists.txt file that specifies the build process for the project. The specific format and specifications of the file depend on the individual project. Processing this CMakeLists.txt file with CMake would generate the appropriate build files for the system.
 
-```cpp
-#include <iostream>
-int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
-}
+The command to run this makefile to generate the build files would be something like this:
+
+``` bash
+mkdir build
+cd build
+cmake ..
 ```
 
-3. Run CMake in your project directory to generate the build files:
-
-```bash
-cmake .
-```
-
-4. Build your project with Make (or any other build system specified in CMakeLists.txt):
-
-```bash
-make
-```
-
-5. Run the executable:
-
-```bash
-./MyExecutable
-```
+This creates a separate build directory, navigates into it, and then calls CMake to generate the build files based on the CMakeLists.txt file in the parent directory.

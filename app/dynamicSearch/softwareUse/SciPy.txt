@@ -1,25 +1,27 @@
-Use Case: SciPy is a Python-based ecosystem of open-source software for mathematics, science, and engineering. It includes modules for optimization, linear algebra, integration, interpolation, special functions, FFT, signal and image processing, ODE solvers, and more.
+Use Case: sudoSpectral analysis, mathematical optimization, linear algebra, and generation of random numbers.
 
-Code details and examples:
+Code details and examples: 
+
+Code:
 
 ```python
-# Example of using SciPy's optimization module (minimize function) to find the minimum of a function.
-from scipy.optimize import minimize
+import numpy as np
+from scipy import linalg as LA
 
-# Define a simple function to minimize (e.g., Rosenbrock function)
-def rosenbrock(x):
-    return sum(100*(x[1:]-x[:-1]**2)**2 + (1-x[:-1])**2)
+A = np.array([[1,2],[3,4]])
 
-# Initial guess
-initial_guess = [1, 1]
+# Compute the eigenvalues and right eigenvectors of a square array
+e_vals, e_vecs = LA.eig(A)
 
-# Run the minimization
-result = minimize(rosenbrock, initial_guess)
-
-print(result)
+print("Eigenvectors :\n",e_vecs)
+print("\nEigenvalues :\n",e_vals)
 ```
 
-To run the code:
-```
-python your_script.py
+Input format: The array A is inputted as a two-dimensional numpy array. 
+
+Specifications in input files: Matrix A is a 2x2 matrix but can be scaled up to any square matrix. 
+
+Command to run: scipy can be run directly in a Python environment or using command line by:
+```bash
+python filename.py
 ```

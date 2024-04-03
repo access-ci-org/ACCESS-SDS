@@ -1,40 +1,43 @@
-Use Case: Data visualization tool  
-Code details and examples:  
-Bokeh is a Python library used for interactive data visualization. Below is an example of creating a simple scatter plot using Bokeh.
+Use Case: Bokeh is used for creating interactive visualizations for modern web browsers. It provides elegant, concise construction of versatile graphics, and affords high-performance interactivity over large or streaming datasets.
 
-Sample input file (sample_data.csv):
-```
-x,y
-1,5
-2,3
-3,8
-4,6
-5,7
-```
+Code Details and Examples: Code 
 
-Code:
+In Bokeh, data is provided for plotting using Python lists, arrays, or pandas objects. Consider a simple excel data file ("data.xlsx") containing 2 columns- 'Fruits' and 'Quantity'. 
+
+Sample input file format:
+ 
+     Fruits   Quantity
+ 0   Apples   25
+ 1   Oranges  18
+ 2   Bananas  22 
+
+Here is a simple example of using Bokeh to display this data as a plot:
+
 ```python
 from bokeh.plotting import figure, show
 from bokeh.io import output_file
 import pandas as pd
 
-# Read data from input file
-data = pd.read_csv('sample_data.csv')
+# Load data
+df = pd.read_excel("data.xlsx")
 
-# Create a new plot with a title and axis labels
-p = figure(title="Simple scatter plot", x_axis_label='x', y_axis_label='y')
+f = figure(x_range=df['Fruits'], plot_width=400, plot_height=400)
 
-# Add a circle renderer with a size, color, and alpha
-p.circle(data['x'], data['y'], size=10, color='navy', alpha=0.5)
+f.vbar(x=df['Fruits'], width=0.5, bottom=0, top=df['Quantity'], color="firebrick")
 
-# Save the plot as an HTML file
-output_file("scatter_plot.html")
+output_file("barchart.html")
 
-# Show the plot
-show(p)
+show(f)
 ```
 
-To run the code:
+Command to run: 
+
+You can run the Python code above through a Python interpreter or Jupyter notebook. To run the python script from command line, navigate to the directory where the script is saved and use the command:
+
+```bash
+python filename.py
 ```
-python your_script.py
-```
+
+In the mentioned code, `'Fruits'` is on X-axis and `'Quantity'` is on Y-axis. A vertical bar (vbar) chart is used to represent the given data. The output is saved as an HTML file "barchart.html" and can be viewed in web browser.
+
+Please ensure Bokeh is properly imported and data file is present in your working directory for successful execution.

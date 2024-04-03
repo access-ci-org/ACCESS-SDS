@@ -1,0 +1,54 @@
+Use Case: xdinfo is an HPC software used for querying cluster layout and management designations from various cluster manager software including SLURM, SGE and Torque among others. It can be useful in automating scripts to optimize workload distribution, better analysis of resource allocation and usage, and preventatively identifying system problems that can lead to reduced performance or system downtime.
+
+Code details and examples: Code
+
+Since xdinfo is a command-line tool, its input comes from arguments passed on the command line and not from a file. Here are some examples of usage:
+
+1. To get the status of all nodes:
+
+```bash
+xdinfo --status
+```
+
+The output will show the status of all nodes formatted like this:
+
+```text
+Node         State   CPUs    Mem(kB)    Free Mem(kB)   Jobs   Job IDs
+node001      up      32      131072000  129764764     0      (none)
+```
+
+2. To get a JSON representation of all nodes:
+
+```bash
+xdinfo --json
+```
+
+The output will look like this:
+
+```json
+{
+  "node001": {
+    "State": "up",
+    "CPUs": 32,
+    "Mem(kB)": 131072000,
+    "Free Mem(kB)": 129764764,
+    "Jobs": 0,
+    "Job IDs": "(none)"
+  }
+}
+``` 
+
+3. To get the jobs running on a particular node:
+
+```bash
+xdinfo --node node001 --jobs
+```
+
+The output will show the jobs running on the specified node:
+
+```text
+Node         State   CPUs    Mem(kB)    Free Mem(kB)  Jobs   Job IDs
+node001      up      32      131072000  128000000     1      12345
+```
+
+Remember to replace 'node001' with the actual node name.

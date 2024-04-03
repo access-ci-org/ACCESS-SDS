@@ -1,0 +1,21 @@
+{
+    "software_name": "r_flexiblas",
+    "comprehensive_overview": "r_flexiblas is a software package for solving linear systems with block-angular structures. It is based on the pre-conditioned flexible GMRES iterative solver combined with a block-ILU(0) pre-conditioner. The software is written in R and primarily designed for efficient solution of large, sparse linear systems arising from computational simulations in various scientific and engineering disciplines.",
+    "core_features": [
+        "Efficient solution of large, sparse linear systems",
+        "Pre-conditioned flexible GMRES iterative solver",
+        "Block-ILU(0) pre-conditioner",
+        "Solving linear systems with block-angular structures"
+    ],
+    "general_tags": [
+        "Linear Systems Solver",
+        "Computational Mathematics",
+        "Iterative Methods",
+        "Sparse Linear Systems"
+    ],
+    "research_discipline": "Applied Mathematics",
+    "research_area": "Computational Mathematics",
+    "software_class": "Numerical Software",
+    "software_type": "Linear Algebra Library",
+    "field_of_science": "Mathematics"
+}

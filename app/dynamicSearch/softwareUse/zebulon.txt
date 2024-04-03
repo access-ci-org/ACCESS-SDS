@@ -1,0 +1,36 @@
+Use Case: ZEBULON is a scientific software package developed for mechanical and structural engineering. It provides solutions to a variety of problems, such as mechanical behavior of materials, linear and non-linear statics and dynamics, and structure optimization.
+
+Code Details and Examples:
+
+Code: FEM Simulation in ZEBULON
+
+To perform a Finite Element Method (FEM) simulation in ZEBULON, a number of input files are necessary. The primary input file is commonly a text file containing specific instructions, directives and inputs guiding the simulation.
+
+Input File: Materials.txt
+
+The input file usually contains data about the materials used within the simulation, their properties and other data necessary for the simulation, which could be linear or non-linear properties, plasticity parameters, and more. For instance, the file might resemble the following simplified example:
+
+```
+*MATERIAL, NAME=AISI_1020_STEEL
+*ELASTIC
+200000.0, 0.29
+```
+
+Input File: Geometric.txt
+
+Additionally, another input file detailing the geometry of the objects included in the simulation (usually in form of meshes) is necessary. This can be defined in various formats. An example for a simple QUAD4 element can be like this:
+
+```
+*NODE
+1, 0.0, 0.0, 0.0
+2, 1.0, 0.0, 0.0
+3, 1.0, 1.0, 0.0
+4, 0.0, 1.0, 0.0
+
+*ELEMENT, TYPE=QUAD4, ELSET=E1
+1, 1, 2, 3, 4
+```
+
+Command to Run: After all the necessary files have been prepared, ZEBULON can be run by calling its executable and providing the input file name as an argument. If ZEBULON's executable is called zeb, and the script is titled main_zeb_script, the command line would look like this:
+
+`zeb main_zeb_script`

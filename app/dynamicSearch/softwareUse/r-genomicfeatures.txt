@@ -1,0 +1,41 @@
+Use Case: GenomicFeatures is an R package used for handling and manipulating transcript centric annotations.
+ 
+Code details and examples: Code 
+
+In the R ecosystem, GenomicFeatures is among the most preferred tools to handle and manipulate known transcript annotations. The data can be loaded into R either from a bioconductor package or from annotation hub, a UCSC genes track as a TxDb, or GTF/GFF files.
+
+Sample Input:
+
+A GTF file, which usually includes gene annotation information. A simple GTF file example:
+
+```
+1  ensembl transcript  1   1824182 .   +   .   gene_id "AT1G01010"; gene_version"1"; transcript_id "AT1G01010.1"; transcript_version"1";
+1  ensembl exon    1   1824182 .   +   .   gene_id "AT1G01010"; gene_version"1"; transcript_id "AT1G01010.1"; transcript_version"1";  exon_number "1"; exon_id"AT1G01010.1.exon1"; exon_version "1";
+```
+
+Use a command like the one below to convert the GTF file into a TxDb object:
+
+```R
+library(GenomicFeatures)
+txdb <- makeTxDbFromGFF(file="sample.gtf", format="gtf")
+```
+
+After which, a command like this could be used to extract transcript level information:
+
+```R
+transcripts(txdb)
+```
+
+Finally, these commands might be used for gene-level information:
+
+```R
+genes(txdb)
+```
+The TxDb object obtained from gtf file can be utilized to extract information about genes, transcripts. It can be combined with expression data to perform downstream analyses like DEG analysis or pathway analysis. 
+
+To run a script that uses the above code, the command should be something like: 
+
+```R
+Rscript script.r
+```
+where script.r is the script containing your R code.

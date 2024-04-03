@@ -1,0 +1,32 @@
+Use Case: Use Fiji for image processing tasks, particularly for life sciences. This could include tasks such as cell counting, measuring cell area, and tracing neurites. 
+
+Code details and examples: Code.
+
+Fiji being a powerful platform to process and analyze scientific images, it doesn't have direct coding examples in Python or C++. Instead, it uses a set of complex macro commands and scripts for most of its operation. Here is an example of a simple macro script to Open an image, Rename it and then Save it.
+
+```java
+open("C:\\TOdirectory\\image.tif");
+rename("new_image_name");
+saveAs("Tiff", "C:\\FROMdirectory\\new_image_name.tif");
+```
+
+To use this, 
+
+1. Save the script with .ijm extension.
+2. Follow 'Plugins > Macros > Run' and select the saved script. 
+
+Please note, always provide the full path for accessing images while using Fiji. 
+
+_fijipytools_ is a great Python wrapper for bioformats, which is used in Fiji. It reads and writes bioformats in Python which simplifies optimization tasks. Here is a Python equivalent:
+
+```python
+import fijibin.fijipytools as fpt
+
+img, meta = fpt.start_bioformats(path_to_image)
+
+# modify image
+
+fpt.end_bioformats(new_path, img, meta)
+```
+
+To use this python script, you need to install _fijibin_ and _javabridge_ python package. Use the python interpreter to run the script. 

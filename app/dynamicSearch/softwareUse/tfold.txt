@@ -1,0 +1,28 @@
+Use Case: TFold is a bioinformatics software employed in predicting both the secondary and tertiary structures of an RNA sequence. The sequence data used in this software should be in FASTA format. 
+
+Code details and examples: 
+
+Code
+
+To perform the prediction process, you first have to prepare your input sequence data in FASTA format.
+
+Let's assume you have a RNA sequence "AGGCUAUAGCUAGGCUAGUAGCGCUAGC".
+
+Prepare your input file named "RNAseq.fasta" like this:
+
+```
+>RNA_sequence
+AGGCUAUAGCUAGGCUAGUAGCGCUAGC
+```
+
+You can then run TFold to perform the structure prediction. In terminal, you might run TFold by typing:
+
+Command to run:
+
+```bash
+java -jar TFold.jar RNAseq.fasta
+```
+
+Please note that, you have to replace the "RNAseq.fasta" with your actual path to your FASTA file. After you run the above command, it should return the predicted RNA secondary and tertiary structures.
+
+Remember that the above details are largely simplified for an illustrative purpose. The real TFold software might require other dependencies or arguments to operate properly.

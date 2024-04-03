@@ -1,0 +1,47 @@
+Use Case: MuJoCo is a physics engine for detailed, efficient rigid body simulations with contacts and proprioception. It is widely used for research purposes in fields like robotics and biomechanics.
+
+Code details and examples:
+
+Code:
+
+MuJoCo uses XML-based model files (.mjmodel) and binary-based data files (.mjb) which carry the details of the objects being modelled. The model files can include various information like assets, bodies, geometric definitions, joints, tendons, sensors, actuators among others.
+
+A simple example of a model file for a free ball in a 3D space:
+   
+```xml
+<mujoco model="ball">
+   <option time="2"/>
+   <asset>
+     <texture builtin="gradient" height="100" rgb1=".4 .5 .6" rgb2="0 0 0" type="skybox" width="100"/>
+     <material name="MatPlane" reflectance=".5" shininess="1" specular=".1" texture="TexSky" texuniform="true"/>
+   </asset>
+   <worldbody>
+      <light cutoff="100" diffuse=".8 .8 .8" dir="-0 0 -1.3" directional="true" exponent="1" pos="0 0 1.3" specular=".1 .1 .1"/>
+      <geom conaffinity="1" condim="1" material="MatPlane" name="plane" pos="0 0 0" rgba=".8 .9 .8 1" size="20 20 .125" type="plane"/>
+      <body name="ball" pos="0 0 .5">
+         <joint armature=".01" axis="1 0 0" damping=".1" limited="false" name="ballx" pos="0 0 0" type="slide"/>
+         <joint armature=".01" axis="0 1 0" damping=".1" limited="false" name="bally" pos="0 0 0" type="slide"/>
+         <joint armature=".01" axis="0 0 1" damping=".1" limited="false" name="ballz" pos="0 0 0" type="slide"/>
+         <geom fromto="0 0 0 .1 .1 .1" size=".1" type="capsule"/>
+      </body>
+   </worldbody>
+   <tendon/>
+   <actuator/>
+</mujoco>
+```
+
+To run the simulation of the model, you can use the "simulate" function of MuJoCo followed by the path to your model file. For instance for Python:
+
+```python
+import mujoco_py
+
+# Load the model and data
+model = mujoco_py.load_model_from_path("path_to_your_model_file.mjmodel")
+data = mujoco_py.MjSim(model)
+
+# Simulate
+while True: 
+    data.step()
+```
+
+The data object, in this example, holds the entire state of the simulation at each step. It can be used to retrieve or manipulate any parameter of the simulation such as positions, velocities or control signals.

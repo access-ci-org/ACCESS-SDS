@@ -1,0 +1,60 @@
+Use Case: The libSM library is a part of the X Window System that provides session management. It allows applications to save their state between runs, so that they can be restarted in the same state they were in when they were last closed. In particular, it may be used for session control between multiple users and sessions, or for the preservation of application state against crashes or other interruptions.
+
+Code details and examples: 
+
+Code:
+```
+#include <X11/SM/SMlib.h>
+
+/* A callback function to save your application's state */
+void save_yourself_callback(SmsConn sms_conn, SmPointer client_data, int save_type, Bool shutdown,
+    int interact_style, Bool fast, Bool global)
+{
+    /* Save the application's state here */
+
+    /* Let the session manager know we've successfully saved our state */
+    SmsSaveComplete(sms_conn);
+}
+
+int main()
+{
+    char error_str[128];
+    char* client_id = SmGenerateClientId();
+    SmcCallbacks callbacks;
+
+    /* Initialize the callback struct */
+    memset(&callbacks, 0, sizeof(callbacks));
+    callbacks.save_yourself.callback = save_yourself_callback;
+
+    /* Connect to the session manager */
+    SmcConn smc_conn = SmcOpenConnection(NULL, NULL, SmProtoMajor, SmProtoMinor, SmcSaveYourselfProcMask, &callbacks,
+        client_id, &client_id, sizeof(error_str), error_str);
+
+    /* Your application's main event loop goes here */
+
+    /* Close the connection to the session manager */
+    SmcCloseConnection(smc_conn, 0, NULL);
+
+    free(client_id);
+
+    return 0;
+}
+```
+
+This C program uses libSM to connect to a session manager, register a callback function that will save the application's state when necessary, and then disconnect from the session manager.
+
+Sample Input Files: 
+This code does not need any input files, as the session management data is stored in memory and communicated directly to the session manager.
+
+Format Required: 
+There is no file format required for this code. The session management data format is handled internally by the library.
+
+Specifications and Details in Input Files: 
+No input files are necessary for this code.
+
+Command to Run:
+```
+gcc main.c -lSM -o main
+./main
+```
+The gcc command compiles the main.c source file, linking the libSM library (indicated by `-lSM`), and creating an executable file named `main`. The `./main` command then runs the created program.

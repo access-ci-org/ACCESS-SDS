@@ -1,0 +1,23 @@
+Use Case: Bottleneck is a Python library used for statistical and array computation. It accelerates NumPy and Pandas. A simple use case is calculating the moving average of a list of numbers.
+
+Code details and examples:
+File Input: N/A;
+Format Required: N/A;
+Specifications: N/A;
+
+Code Snippet:
+
+```python
+import numpy as np
+import bottleneck as bn
+data = np.array([1, 2, 3, 4, 5, np.nan, 7, 8])
+print(bn.move_mean(data, window=3, min_count=1))
+```
+
+Command to run:
+
+```bash
+python filename.py
+```
+
+The above command will run the filename.py file in Python and display the moving average of the array. Insert your file name at the filename place.

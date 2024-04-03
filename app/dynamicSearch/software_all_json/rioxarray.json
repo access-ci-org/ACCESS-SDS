@@ -1,0 +1,23 @@
+{
+    "software_name": "rioxarray",
+    "comprehensive_overview": "rioxarray is a Python package that extends xarray to add geospatial capabilities by making use of rasterio for I/O operations with raster data. It enables reading and writing spatial raster data with ease and integrates seamlessly with xarray for analysis and manipulation of these geospatial datasets.",
+    "core_features": [
+        "Read and write geospatial raster data",
+        "Integration with xarray for data analysis and manipulation",
+        "Projection handling and coordinate transformations",
+        "Metadata management for geospatial datasets"
+    ],
+    "general_tags": [
+        "Python library",
+        "Geospatial data",
+        "Raster data",
+        "Data processing"
+    ],
+    "additional_tags": {
+        "research_discipline": "Earth and Environmental Sciences",
+        "research_area": "Geoinformatics",
+        "software_class": "Geospatial data processing",
+        "software_type": "Python package",
+        "field_of_science": "Earth and Environmental Sciences"
+    }
+}

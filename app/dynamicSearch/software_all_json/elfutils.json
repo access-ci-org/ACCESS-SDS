@@ -1,0 +1,13 @@
+{
+  "software name": "elfutils",
+  "comprehensive overview": "elfutils is a collection of various binary tools for working with ELF files. It includes utilities for analyzing, manipulating, and creating programs and object files in the Executable and Linkable Format (ELF). These tools are commonly used by programmers, debuggers, and system administrators to inspect and modify ELF binaries.",
+  "core features": "1. Reading and analyzing ELF files\n2. Modifying and updating ELF binaries\n3. Debugging programs and libraries\n4. Extracting and examining symbol tables and section headers\n5. Inspecting and manipulating core dump files\n6. Disassembling machine code\n7. Handling DWARF debugging information\n8. Checking and correcting ELF header information",
+  "general tags": ["binary tool", "ELF files", "debugging", "programming"],
+  "additional tags": {
+    "research discipline": [],
+    "research area": [],
+    "software class": "Debugging and Binary Utilities",
+    "software type": "Tool",
+    "field of science": "Computer and Information Sciences"
+  }
+}  

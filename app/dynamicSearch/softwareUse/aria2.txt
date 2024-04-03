@@ -1,13 +1,48 @@
-Use Case: Downloading files from the internet concurrently.
+Use Case: aria2 is a command-line based download utility that is light and fast. It can be used to download files over multiple protocols like HTTP, HTTPS, FTP, BitTorrent and Metalink.
 
-Code details and examples:
-Sample input file (urls.txt):
-```
-https://example.com/file1.zip
-https://example.com/file2.gz
+Code Details and Examples :
+
+Code:  
+Consider an example where we are trying to download a file from a web server.
+
+```bash
+aria2c https://example.com/myfile.zip
 ```
 
-Command to download files:
+The above command will start downloading the file from the specified URL. You do not need any special input file for this, you give the URL of the file that you want to download as command-line argument to aria2c.
+
+The "-o" option can be used to specify the output file name:
+
+```bash
+aria2c -o mydownload.zip https://example.com/myfile.zip
 ```
-aria2c -i urls.txt
+
+Above, mydownload.zip is the specified output file name.
+
+For heavy files, aria2 offers the feature to split files into smaller parts and download all parts simultaneously. This usually increases the overall download speed. The "-s" option is used to specify the number of parts.
+
+```bash
+aria2c -s 10 https://example.com/myfile.zip
+```
+
+In above command, aria2 will split demo.zip into 10 parts and download all of them simultaneously.
+
+Additionally, aria2 also supports download resuming, which means if downloading gets aborted for some reason then you can resume from where you left off.
+
+```bash
+aria2c -c https://example.com/myfile.zip
+```
+
+In the above command, the "-c" option enables the resume capability.
+
+For more details about additional features and options, please refer to aria2's man page or help.
+
+```bash
+man aria2c
+```
+
+or 
+
+```bash
+aria2c --help
 ```

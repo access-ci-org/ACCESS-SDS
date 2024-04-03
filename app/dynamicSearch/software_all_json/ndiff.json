@@ -1,0 +1,22 @@
+{
+    "software_name": "ndiff",
+    "comprehensive_overview": "ndiff is a command-line tool for comparing two Nmap XML output files. It parses the XML files and identifies the differences in the scan results, including changes in host status, open ports, service versions, and other scan details.",
+    "core_features": [
+        "Compare two Nmap XML output files",
+        "Identify the differences in host status, open ports, service versions, and scan details",
+        "Generate a report highlighting the variances between the scans"
+    ],
+    "general_tags": [
+        "Network Security",
+        "Network Monitoring",
+        "Penetration Testing",
+        "Cybersecurity"
+    ],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Command-line Tool",
+        "software_type": "Security Tools",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

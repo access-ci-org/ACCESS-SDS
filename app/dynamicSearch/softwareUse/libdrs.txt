@@ -1,0 +1,57 @@
+Use Case: Use libdrs for reading, writing and managing data in the DRS (Direct Read of Structures) file format, commonly used in the atmospheric and oceanographic research communities.
+
+Code details and examples: Code
+
+The following is a sample on how to use libdrs python library to read a DRS file. Please note this is a C library so you need to use ctypes to call it from Python.
+
+```python
+import numpy as np
+import os
+import ctypes
+
+# Load the DRS library
+libdrs = ctypes.cdll.LoadLibrary('libdrs.so')
+
+# Open a DRS file
+fid = libdrs.open_drs_file('test.drs', 'r')
+
+# Get the descriptor of the first variable in the file
+d = libdrs.fstinf(fid)
+
+# Read the variable data
+data = np.zeros((d.ni, d.nj, d.nk), dtype=np.float32)
+libdrs.fstluk(fid, data.ctypes.data, d.k)
+
+# Print out the data
+print(data)
+
+# Close the file
+libdrs.close_drs_file(fid)
+```
+
+Replace 'test.drs' with your DRS file path. Please note that this is a guess on how the library is used as there is no Python example available on the web. 
+
+In the real world DRS is typically used with Fortan, here a short example,
+
+```fortran
+program read_drs
+    implicit none
+    integer:: ier, dateo, deet, npas, ni, nj, nk, ig1, ig2, ig3, ig4, swa, lng
+    real:: flval(512)
+    character(len=8):: nomvar, typvar, nomref, etiket
+
+    call fstouv('test.drs', 'R')
+    call fstinf(nomvar='P0', typvar='', datev=dateo, deet=deet, npas=npas, ni=ni, nj=nj, nk=nk, ig1=ig1, ig2=ig2, ig3=ig3, ig4=ig4, swa=swa, lng=lng, nomref=nomref, etiket=etiket)
+    ier = fstluk(nomvar, flval, ni*nj*nk, ig1, ig2, ig3, ig4, dateo, deet, npas)
+    write(*,*) flval
+    call fstdim('LAT', 1, ni, nj)
+
+    call fstfrm()
+    call fsteff('test.drs')
+end program read_drs
+```
+To compile and run this Fortan example you'd need to use,
+```bash
+ftn -o read_drs read_drs.f90
+./read_drs
+```

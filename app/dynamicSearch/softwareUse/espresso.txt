@@ -1,0 +1,51 @@
+Use Case: Quantum Espresso is an integrated suite of applications for electronic-structure calculations and materials modeling at the nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials (both norm-conserving and ultrasoft).
+
+Code details and examples: Code 
+
+Sample input file (espresso.pw.in):
+
+```
+&CONTROL
+    calculation = 'scf',
+    verbosity = 'high'
+    prefix = 'silicon',
+    outdir = './',
+    pseudo_dir = './',
+/
+
+&SYSTEM
+    ibrav =  2,
+    celldm(1) = 10.20,
+    nat =  2,
+    ntyp = 1,
+    ecutwfc = 14.0 
+/
+
+&ELECTRONS
+    conv_thr =  1.0d-8,
+    mixing_beta = 0.7 
+/
+
+ATOMIC_SPECIES
+  Si  28.086  Si.pbe-rrkjus.UPF
+
+K_POINTS automatic
+  6 6 6  0 0 0 
+
+ATOMIC_POSITIONS alat
+  Si  0.00 0.00 0.00 
+  Si  0.25 0.25 0.25
+```
+This is an example of a basic silicon system.
+
+The calculation command is:
+
+```
+pw.x < espresso.pw.in > espresso.pw.out
+```
+
+This runs the pw.x executable with the input file espresso.pw.in and writes the output to espresso.pw.out.
+
+Please ensure that the pseudopotential file (Si.pbe-rrkjus.UPF) is in the specified pseudo_dir. The ibrav parameter specifies the Bravais lattice, and the celldm parameters are the lattice constants. nat and ntyp stand for the number of atoms and types of atoms respectively. ecutwfc is the wave function cut-off energy in Rydberg units.
+
+This information won't run without the installation of Quantum Espresso and the pseudopotential file. Please do not try to run these codes without understanding the physical concepts behind them and without necessary installments.

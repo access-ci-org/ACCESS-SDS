@@ -1,0 +1,43 @@
+Use Case: Use py-openpyxl for reading, writing Excel xlsx/xlsm/xltx/xltm files.
+
+Code details and examples: Code
+
+# INPUT DATA
+The input data can be in .xlsx format or generated from your Python data itself. 
+
+For example,
+test.xlsx with some sample data in columns.
+
+# PYTHON CODE
+from openpyxl import Workbook, load_workbook
+
+# To read existing workbook
+wb = load_workbook(filename='test.xlsx')
+ws = wb.active
+
+# Read the contents
+for row in ws.iter_rows(values_only=True):
+    print(row)
+
+# To write to a workbook
+wb = Workbook()
+ws = wb.active
+
+# Write some sample data
+data = [
+    ("Product", "Qty", "Price"),
+    ("Apple", 10, 0.5),
+    ("Banana", 5, 0.25),
+]
+
+for r in data:
+    ws.append(r)
+
+wb.save(filename='output.xlsx')
+
+# COMMAND TO RUN
+After writing the script suppose in a file named script.py, use the following command to run.
+python script.py
+
+The first script reads an excel file named 'test.xlsx' and prints all its contents. The second script writes some data into a new excel file 'output.xlsx'.
+Make sure that 'test.xlsx', 'output.xlsx' and 'script.py' are located at the same path where the command prompt is running.

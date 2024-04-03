@@ -1,16 +1,78 @@
-Use Case: pocl
-Code details and examples: 
-pocl (Portable Computing Language) is an open-source implementation of the OpenCL standard. It allows OpenCL applications to be executed on a variety of devices, including CPUs, GPUs, and other accelerators. Below is an example of running a simple OpenCL program using pocl.
+Use Case: Pocl is a Portable Computing Language that aims to become a efficient open source (MIT-licensed) implementation of the OpenCL standards. An example use case could be to execute an OpenCL kernel that performs addition of two arrays.
 
-Sample input file (hello.cl):
-```c
-__kernel void hello_world() {
-    printf("Hello, World!\n");
+Code details and examples: 
+
+Code: 
+```C
+// example.cl
+__kernel void add(__global const float *a, __global const float *b, __global float *c) 
+{
+  int gid = get_global_id(0); 
+  c[gid] = a[gid] + b[gid]; 
 }
 ```
 
-Command to compile and run the program:
+The above code is an example of an OpenCL kernel source file (example.cl). It is written in OpenCL language which is a subset of C/C++. The kernel function "add" is supposed to read from two float arrays "a" and "b", and write the sum into "c". 
+
+To compile and execute this kernel with pocl, following steps are used:
+
+First, the OpenCL C source file is compiled to a binary with the OpenCL runtime:
+
+Command: 
+
+```bash
+$ clang -Xclang -finclude-default-header -cl-std=CL1.2 -target spir64 -emit-llvm -c example.cl -o example.bc
 ```
-pocl-standalone -I. hello.cl -o hello
-./hello
+
+This command compiles the OpenCL source code to SPIR binary format using the clang compiler. ("-Xclang -finclude-default-header" includes the OpenCL header, "-cl-std=CL1.2" specifies the OpenCL version, "-target spir64" sets the target architecture to SPIR, and "-emit-llvm -c" instructs clang to compile the code to an LLVM bitcode file)
+
+Then the OpenCL programming interface is used in the host program to load the binary and execute the kernel: 
+
+Code: 
+
+```C
+// example.c
+#define CL_TARGET_OPENCL_VERSION 120 #include <stdio.h> #include <stdlib.h> 
+#define __CL_ENABLE_EXCEPTIONS 
+#include <CL/cl.hpp> 
+
+int main() 
+{
+  /* ... Initialize OpenCL and create context and command queue ... */ 
+
+  // Load binary from disk 
+  size_t binary_size; 
+  char* binary = load_binary("example.bc", &binary_size); 
+
+  // Create program and kernel 
+  cl::Program program(context, devices, binary, binary_size); 
+  cl::Kernel kernel(program, "add"); 
+
+  /* ... Create buffers and set kernel arguments ... */ 
+
+  // Launch kernel 
+  cl::NDRange global(num_elements); 
+  queue.enqueueNDRangeKernel(kernel, cl::NullRange, global, cl::NullRange); 
+
+  /* ... Read results from device to host ... */ 
+  return 0; 
+}
+```
+
+In this code snippet, the binary is loaded from the file into memory and sent to the OpenCL runtime to create a cl::Program instance. Then a kernel is created from the program with the function name "add". After that, the buffers are allocated, data is moved to the device, the kernel is launched with enqueueNDRangeKernel, and finally the results are retrieved from the device.
+
+The host program is then compiled and linked with the OpenCL library:
+
+Command: 
+
+```bash
+$ g++ example.c -lOpenCL -o example
+```
+
+Finally, to run the program:
+
+Command: 
+
+```bash
+$ ./example
 ```

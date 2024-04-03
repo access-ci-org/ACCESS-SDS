@@ -1,0 +1,15 @@
+{
+    "software_name": "Tiara",
+    "comprehensive_overview": "Tiara is an integrated approach for efficient and accurate genomic variant calling from gene panel data. It combines multiple variant calling tools to provide a comprehensive and reliable analysis of genetic variants.",
+    "core_features": [
+        "Integration of multiple variant calling tools",
+        "Efficient and accurate genomic variant calling",
+        "Analysis of genetic variants from gene panel data"
+    ],
+    "general_tags": ["genomic variant calling", "gene panel data"],
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Bioinformatics",
+    "software_type": "Tools",
+    "field_of_science": "Biological Sciences"
+}

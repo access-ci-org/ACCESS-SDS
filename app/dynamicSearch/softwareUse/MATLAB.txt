@@ -1,20 +1,42 @@
-Use Case: Perform matrix multiplication in MATLAB  
-Code details and examples:  
-Sample Input File (input.txt):  
+**Use Case:** MATLAB
+
+MATLAB is a high-performance language for technical computing. It integrates computation, visualization, and programming in an easy-to-use environment where problems and solutions are expressed in common mathematical notation.
+
+**Code Details and Examples:**
+
+**Code 1: Basic Plotting**
 ```
-2 3
-1 2 3
-4 5 6
+% files with .m extension
+% sample.m
+
+% Define the range of x
+x = -10:0.1:10;
+% Define the function
+y = sin(x);
+% Create the plot
+plot(x,y)
 ```
-MATLAB code:  
-```matlab
-data = load('input.txt');
-mat1 = data(2:end, :);
-mat2 = rand(size(mat1));
-result = mat1 * mat2;
-disp(result);
+This script creates a line-chart of the mathematical function y=sin(x). Input is a range of x that is from -10 to 10 with a step size of 0.1. The x, y variables are defined in the respective lines in the script.
+
+To run this script, type following command in MATLAB command prompt: 
+```run('sample.m')```
+
+**Code 2: Matrix Operations**
 ```
-Command to run:  
+% files with .m extension
+% matrix_sample.m
+
+% Define the matrices
+A = [1, 2, 3; 4, 5, 6; 7, 8, 9];
+B = [1, 0, 1; 0, 1, 0; 1, 0, 1];
+
+% Add the matrices
+C = A + B;
+% Print the result
+disp(C)
+
 ```
-matlab -nodisplay -nosplash -nodesktop -r "run('script.m');"
-```
+This script initializes two matrices, A and B, and adds them together. The result is printed to the MATLAB command prompt.
+
+To run this script, type following command in MATLAB command prompt:
+```run('matrix_sample.m')```

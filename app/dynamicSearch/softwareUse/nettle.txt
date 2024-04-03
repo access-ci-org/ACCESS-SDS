@@ -1,36 +1,42 @@
-Use Case: Cryptography library for modern C programs.
+Use Case: Nettle is a low-level cryptographic library that can be used for various cryptographic operations such as creating and verifying cryptographic hashes, encryption and decryption, and secure random number generation.
 
-Code details and examples:
-Sample input file (input.txt):
-```
-hello world
-```
+Code Details and Examples: Code
 
-Code:
+Sample Input Files: Nettle does not take input files in a formal sense, but data to be processed will usually be passed via memory buffers.
+
+Format Required: Data to be processed needs to be in a memory buffer, or, depending on the function used, may need to be in a specific structure (such as a `nettle_cipher_ctx` for encryption/decryption)
+
+Command to Run: As Nettle is a library, it needs to be called from within a C program. Here's a simple example using AES (Advanced Encryption Standard):
+
 ```c
-#include <stdio.h>
-#include <nettle/sha2.h>
+#include <nettle/aes.h>
 
-int main() {
-    struct sha256_ctx ctx;
-    uint8_t digest[SHA256_DIGEST_SIZE];
-    char input[] = "hello world";
+main()
+{
+    struct aes_ctx ctx;
+    uint8_t plain[16];
+    uint8_t cipher[16];
+    uint8_t decrypted[16];
+    uint8_t key[16];
 
-    sha256_init(&ctx);
-    sha256_update(&ctx, strlen(input), input);
-    sha256_digest(&ctx, SHA256_DIGEST_SIZE, digest);
-
-    for (int i = 0; i < SHA256_DIGEST_SIZE; i++) {
-        printf("%02x", digest[i]);
+    /* initialize key and plaintext */
+    for(int i=0; i<16; i++) {
+        key[i] = i;
+        plain[i] = i;
     }
-    printf("\n");
 
-    return 0;
+    /* set the encryption key */
+    aes_set_encrypt_key(&ctx, 16, key);
+
+    /* Encrypt the plaintext */
+    aes_encrypt(&ctx, 16, cipher, plain);
+
+    /* now set the decryption key - should be same as encryption key */
+    aes_set_decrypt_key(&ctx, 16, key);
+
+    /* Decrypt the cipher */
+    aes_decrypt(&ctx, 16, decrypted, cipher);
 }
 ```
 
-Compile and execute:
-```
-gcc example.c -lnettle -o example
-./example
-```
+This code creates and sets up an AES (Advanced Encryption Standard) context, and then encrypts and decrypts a 16-byte block of data. The data is given in the `plain` array, and the encryption key is in the `key` array. After running this code, the `decrypted` array should contain the original plaintext. You would build this program with a command like `gcc -o aes_example aes_example.c -lnettle`.

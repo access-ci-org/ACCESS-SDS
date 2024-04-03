@@ -1,0 +1,23 @@
+{
+  "software_name": "Pixy",
+  "comprehensive_overview": "Pixy is a runtime program analysis tool that detects vulnerabilities in software applications written in C or C++. It uses static analysis techniques to scan the source code and identify potential security issues.",
+  "core_features": [
+    "Static analysis of C/C++ source code",
+    "Detection of security vulnerabilities",
+    "Identification of potentially unsafe code patterns",
+    "Integration with build systems for continuous analysis"
+  ],
+  "general_tags": [
+    "Static Analysis",
+    "Security",
+    "C/C++",
+    "Runtime Analysis"
+  ],
+  "additional_tags": {
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Security Analysis Tool",
+    "software_type": "Program Analysis",
+    "field_of_science": ["Computer and Information Sciences", "Computer Science", "Software Engineering, Systems, and Development" ]
+  }
+}

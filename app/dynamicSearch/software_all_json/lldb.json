@@ -1,0 +1,13 @@
+{
+    "software_name": "lldb",
+    "comprehensive_overview": "LLDB is a powerful and modern debugger for C, C++, and Objective-C languages. It is part of the LLVM project and mainly used for debugging programs on macOS and iOS.",
+    "core_features": "LLDB provides a rich set of features for debugging, including support for breakpoints, watchpoints, expression evaluation, scripting support with Python, a command-line interface, and integration with IDEs like Xcode.",
+    "general_tags": ["debugger", "LLVM", "C/C++", "Objective-C"],
+    "additional_tags": {
+        "research_discipline": "Computer Science",
+        "research_area": "Software Engineering, Systems, and Development",
+        "software_class": "Debugging Tool",
+        "software_type": "Debugger",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

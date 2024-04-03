@@ -1,0 +1,15 @@
+{
+    "software_name": "Hunspell",
+    "comprehensive_overview": "Hunspell is a spell checker and morphological analyzer software designed for languages with rich morphology and complex word compounding.",
+    "core_features": "1. Spell checking and suggestion capabilities. 2. Morphological analysis for complex languages. 3. Support for hyphenation, Thesaurus, and morphological generation. 4. Cross-platform compatibility. 5. Customizable and extensible dictionaries.",
+    "general_tags": [
+        "spell checker",
+        "morphological analyzer",
+        "language support"
+    ],
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Spell Checking and Morphological Analysis Software",
+    "software_type": "Utility",
+    "field_of_science": "Other Computer and Information Sciences"
+}

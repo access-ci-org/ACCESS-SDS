@@ -1,0 +1,51 @@
+Use Case: CellChat is a computational framework used for inferring intercellular communication networks from single-cell RNA sequencing data (scRNA-seq). It utilizes gene sets representing signaling pathways to predict the probable communications between different cell types or subtypes.
+
+Code details and examples:
+
+Code:
+
+First, begin by loading CellChat and importing data. Here we use a fictitious dataset 'data', where 'data@counts' contains expression data normalized to transcripts per million (TPM) or counts per million (CPM).
+
+```R
+library(CellChat)
+data.input <- readRDS(file = "data.rds") 
+```
+
+Next, use this to create a CellChat object
+
+```R
+cellchat <- createCellChat(data = data.input@counts, meta = data.input$meta)
+```
+ 
+Now you can define groups for analysis, usually these would be distinct cell types or conditions in your experiment:
+
+```R
+groups <- levels(data.input$meta$cell.type) 
+cellchat <- setMeta(cellchat, group = groups)
+```
+
+Processing the raw data comes next:
+
+```R
+cellchat <- setData(cellchat, data.use = "smooth")
+```
+
+Then, we infer the communication networks:
+
+```R
+cellchat <- identifyOverExpressedGenes(cellchat)
+cellchat <- identifyOverExpressedInteractions(cellchat)
+cellchat <- identifyOverExpressedInteractionPairs(cellchat)
+```
+
+Finally, we can visualize the results using various methods:
+
+```R
+netVisual_aggregate(cellchat, signaling = pathwaysInterest, layout = "circle")
+netVisual_interactions(cellchat, select.interactions = select.interactions, vertex.label = c("sender", "receiver"))
+netExport_signalingRole(cellchat, signaling = pathwaysInterest)
+```
+
+Command to run: Rscript cellchat.R
+
+Notes: The example values "data" and "pathwaysInterest" are placeholder variables for actual datasets and signaling pathways you would use in your own project. You need to substitute these with your actual values. The example input file "data.rds" is a serialized R object containing an expression matrix and cell metadata. This file can be created using the R command saveRDS().

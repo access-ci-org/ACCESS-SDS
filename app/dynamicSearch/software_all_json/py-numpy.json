@@ -1,0 +1,23 @@
+{
+  "software_name": "numpy",
+  "comprehensive_overview": "NumPy is a popular Python library that provides support for large, multi-dimensional arrays and matrices, along with a collection of mathematical functions to operate on these arrays.",
+  "core_features": [
+    "Efficient and intuitive array operations",
+    "Support for mathematical functions like linear algebra, Fourier analysis, random number generation, etc.",
+    "Integration capabilities with C/C++ and Fortran code",
+    "Tools for array manipulation and data analysis"
+  ],
+  "general_tags": [
+    "Python library",
+    "Data manipulation",
+    "Scientific computing",
+    "Numerical computing"
+  ],
+  "additional_tags": {
+    "research_discipline": "Computer Science",
+    "research_area": "Applied Computer Science",
+    "software_class": "Library",
+    "software_type": "Python Library",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

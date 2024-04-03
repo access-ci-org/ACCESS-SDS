@@ -1,0 +1,42 @@
+Use Case: Using scarches, a single-cell Analysis tool through Representation learning algorithm, for conditional generation of high-dimensional data, specifically used for trajectory inference and cell type annotation. Typical use involves Single Cell RNA-Seq (scRNA-seq) data which can be leveraged to infer trajectories of cells or predict how a cell of a certain type will behave under a different condition.
+
+Code details and examples: 
+
+Before proceeding, separate input files for features (`x_data`) and conditions (`condition`) must be provided. In most cases, these will be 2D NumPy arrays where each row corresponds to a cell and each column corresponds to a gene (for `x_data`) or a condition (for `condition`).
+
+Here is an example of how to use the algorithm for conditional generation:
+
+Code:
+
+```python
+from scarches.dataset.trvae.data_handling import construct_dataset
+from scarches.model.trvae.trvae import trVAE
+
+# Load data and construct tensors
+x_data = ... # Load your gene expression data as numpy array
+condition = ... # Load your conditions as numpy array
+
+# Number of conditions
+n_conditions = len(np.unique(condition))
+
+# Constructing tensors
+source_conditions = range(n_conditions)
+target_conditions = range(n_conditions)
+data_loader = construct_dataset(10, source_conditions, target_conditions, 's', 't', x_data, condition)
+
+# Build a trVAE model
+trvae = trVAE(x_data.shape[1], n_conditions, conditions=condition)
+
+# Train the model
+trvae.train(data_loader, 500) # for 500 epochs
+
+# To predict outcome of cells under different condition
+# Takes input as the source condition and target condition
+# and cell's current gene expression level
+predicted_cells = trvae.predict(1, 5, x_data[0]) 
+```
+Command to run: 
+
+`python scarches_example_code.py` -> assuming the above example is saved in a python file named "scarches_example_code.py".
+
+Please note that model training can take a long time depending on the complexity and size of the dataset. Additionally, while this example uses basic settings, trVAE can be further customized according to the complexity of the data and the specific analyses required.

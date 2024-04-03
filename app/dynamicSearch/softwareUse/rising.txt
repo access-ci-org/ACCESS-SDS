@@ -1,0 +1,39 @@
+Use Case: Use rising for 2D graphics, scheme creation, and architectural prototyping, which frequently applies to fields such as GIS, CAD, and scientific visualization. The software requires input files in the YAML format that specify the parameters for the 2D graphics to be rendered.
+
+Code details and examples: Code
+
+Sample Input File (in YAML format):
+
+```YAML
+pipelines:
+  -
+    nodes:
+      -
+        ntype: 'element'
+        value: 'src_test'
+      -
+        ntype: 'element'
+        value: 'split'
+      -
+        ntype: 'element'
+        value: 'sink_test'
+        
+connections:
+  -
+    src: 'src_test'
+    dest: 'split'
+  -
+    src: 'split'
+    dest: 'sink_test'
+```
+This file specifies an example pipeline with three nodes ('src_test', 'split', 'sink_test') and two connections among the nodes.
+
+Example of a command to run rising:
+
+```bash
+rising my_scheme.yml
+```
+
+In this command, 'my_scheme.yml' is the YAML file which contains your scheme for the 2D rendering. This will start the Rising program and render your 2D graphics based on the parameters provided in the YAML file. 
+
+Please note that the example provided is very simple and only demonstrates basic usage of the rising software. For more complex tasks, the structure of the YAML file can become highly intricate, providing parameters for different nodes, connections, grouping of elements, etc. The exact command for running the software can also change based on the nature of the tasks. You could incorporate other command-line options into your command based on your specific needs.

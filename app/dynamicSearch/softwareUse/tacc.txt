@@ -1,72 +1,32 @@
-Use Case: TACC (Texas Advanced Computing Center) software, including various HPC tools and libraries.
+Use Case: Use TACC (Texas Advanced Computing Center) for running large-scale simulations, data processing and analysis tasks. It's typically used in High Performance Computing (HPC) environment.
 
 Code details and examples:
-1. Stampede2 supercomputer at TACC:
-   - Stampede2 is a supercomputer at TACC for high-performance computing.
-   - To submit a job on Stampede2, you can create a PBS script (e.g., job.pbs) with job specifications and submit it using the sbatch command.
-   
-Sample job.pbs script:
+
+TACC uses Slurm as their job scheduler. The input is usually a script that contains the job specifications and the command to execute the job, saved in a .sh file.
+
+For instance, suppose you are running a Python script named "hello_world.py". 
+
+Code:
 ```
 #!/bin/bash
-#PBS -N myjob
-#PBS -l nodes=1:ppn=16
-module load intel
-module load impi
-cd $PBS_O_WORKDIR
-mpirun -np 16 myapplication
-```
+#SBATCH --job-name=hello_world
+#SBATCH --output=hello_world_out.txt
+#SBATCH --error=hello_world_err.txt
+#SBATCH --time=01:00:00
+#SBATCH --partition=normal
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
 
-Submit the job using the sbatch command:
-```
-sbatch job.pbs
-```
-
-2. Parallel programming with MPI on Stampede2:
-   - You can write MPI programs in C or Fortran and compile them with MPI compiler wrappers provided by TACC.
-   
-Sample MPI C program (hello.c):
-```c
-#include <stdio.h>
-#include <mpi.h>
-
-int main(int argc, char *argv[]) {
-    int rank, size;
-
-    MPI_Init(&argc, &argv);
-    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-    MPI_Comm_size(MPI_COMM_WORLD, &size);
-
-    printf("Hello from rank %d of %d\n", rank, size);
-
-    MPI_Finalize();
-    return 0;
-}
-```
-
-Compile and run the MPI program:
-```
-mpicc -o hello hello.c
-ibrun hello
-```
-
-3. Python libraries and tools at TACC:
-   - TACC provides various Python libraries and tools for scientific computing and data analysis on their systems.
-   - You can load Python modules using the module command.
-   
-Example command to load Python 3 module:
-```
 module load python3
+python3 hello_world.py
 ```
 
-4. Bioinformatics tools at TACC:
-   - TACC offers bioinformatics software and tools for analyzing biological data.
-   - You can search the TACC user guide or documentation for specific bioinformatics tools available.
+This script will create a job named "hello_world", and it has specified output and error files "hello_world_out.txt" and "hello_world_err.txt". In the "module load" line, python3 is being loaded.
 
-5. Compiler tools at TACC:
-   - TACC provides various compiler tools for programming on their systems, such as Intel compilers.
-   - You can load the compiler module and compile your code using the appropriate compiler commands.
+To run this script, use the command: `sbatch script.sh`
 
-Example command to load Intel compilers module:
+The Python script "hello_world.py" just contains a simple print statement: 
 ```
-module load intel
+print('Hello,TACC!')
 ```
+The job scheduler will take care of running your script across all the nodes/processors specified in the script. Enhancing parallelism, specifically for HPC, requires additional details including use of message passing interface (MPI) or parallel python libraries as per the use-case and complexity involved.

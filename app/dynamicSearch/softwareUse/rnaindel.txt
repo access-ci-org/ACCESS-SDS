@@ -1,0 +1,28 @@
+Use Case: RNAIndel is used in detecting RNA specific indels (insertions and deletions) in tumor samples. It was designed to provide a comprehensive view of the indel landscape in RNA-Seq data, and can also be applied to matching normal sample pairs to identify somatic mutations.
+
+Code Details and Examples: 
+
+Code: 
+
+Input file format: RNAIndel requires a BAM or a CRAM file with reads that have already been aligned and sorted.
+
+For example, your input file "sample.sorted.bam" might look like this:
+
+```
+HWI-ST804:68:D0R5KACXX:3:1101:1804:81982	163	20	9483248	60	76M	=	9483322	150	...
+HWI-ST804:68:D0R5KACXX:3:1101:1527:82214	83	20	9483249	60	76M	=	9483171	-154	...
+```
+
+Command to run RNAIndel:
+
+```bash
+rnaindel run -i sample.sorted.bam -r hg38.fa -o output.vcf -t yourOptionsMenu
+```
+
+Here, `-i` specifies the input file (your BAM or CRAM file), `-r` specifies the reference genome sequence (available from resources such as NCBI or Gencode), "-o" specifies the output file (your result file in VCF format), and "-t" specifies the mode in which you want to run RNAIndel (possible options being 'grape', 'sencha', or 'mango').
+
+Specifications and details in input files:
+
+The BAM or CRAM files must have been previously aligned using a spliced aligner such as STAR or HISAT2. It is also recommended that the BAM file be coordinate-sorted and duplicate-marked.
+
+Running this command will generate an output file in VCF format, listing detected indels along with their locations and characteristics. The generated VCF file can then be analyzed using a variety of software tools.

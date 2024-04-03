@@ -1,24 +1,37 @@
-Use Case: High-performance Computing Software
+Use Case: Use AOCL for compiling high performance scientific computing codes written in C/C++ or Fortran. AOCL includes the GNU Compiler Collection (GCC), Gnu Project Debugger (GDB), and mathematical libraries. Compiled codes can run faster on AMD CPUs.
 
-Code details and examples:
-AOCL (Altera OpenCL SDK) is a software development kit for developing applications on Intel FPGAs using OpenCL. It is used for high-performance computing and acceleration of various workloads leveraging FPGA hardware.
+Code details and examples: Code
 
-Example of using AOCL:
+Input Files: A C++ source code file (.cpp extension)
 
-Input file: kernel.cl
-```c
-__kernel void vector_add(__global const float *a, __global const float *b, __global float *c, const unsigned int n) {
-    int i = get_global_id(0);
-    
-    if (i < n) {
-        c[i] = a[i] + b[i];
-    }
+Format Required: Text file with C++ code
+
+Code Snippet:
+
+```c++
+#include<iostream>
+using namespace std;
+
+int main() {
+    cout<<"Hello, World!";
+    return 0;
 }
 ```
 
-Code snippet:
+Save the code in a file called hello.cpp.
+
+Command to compile the C++ code using AOCL:
+
 ```bash
-aoc kernel.cl -o kernel.aocx
+g++ hello.cpp -o hello
 ```
 
-This code snippet compiles the OpenCL kernel code in kernel.cl using the AOCL compiler (aoc) and generates an FPGA binary file (kernel.aocx) that can be executed on an Intel FPGA.
+Specifications and Details: The hello.cpp file contains the source code that prints "Hello, World!" to the console. The `g++` command compiles the C++ source code. The `-o` option specifies the output file name.
+
+Command to run the compiled code:
+
+```bash
+./hello
+```
+
+The `./hello` command runs the compiled code. The output will print "Hello, World!" to the console.

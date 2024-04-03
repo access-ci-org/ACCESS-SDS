@@ -1,0 +1,63 @@
+Use Case: zLuda's primary purpose is to run CUDA-compatible code on Intel GPUs without modification to the codebase. It intercepts calls to the CUDA runtime API and then compiles PTX (Parallel Thread Execution) and executes it on Intel GPUs. It includes functionality such as memory management, streams, events, and even device code launch. 
+
+Code details and examples:
+
+Code:
+
+```c++
+#include <stdio.h>
+#include <assert.h>
+
+__global__ void add(int *a, int *b, int *c) {
+  *c = *a + *b;
+}
+
+int main() {
+  int a, b, c; // host copies of a, b, c
+  int *d_a, *d_b, *d_c; // device copies of a, b, c
+  int size = sizeof(int);
+
+  // Allocate space for device copies of a, b, c
+  cudaMalloc((void **)&d_a, size);
+  cudaMalloc((void **)&d_b, size);
+  cudaMalloc((void **)&d_c, size);
+
+  // Setup input values  
+  a = 2;
+  b = 7;
+
+  // Copy inputs to device
+  cudaMemcpy(d_a, &a, size, cudaMemcpyHostToDevice);
+  cudaMemcpy(d_b, &b, size, cudaMemcpyHostToDevice); 
+
+  // Launch add() kernel on GPU
+  add<<<1,1>>>(d_a, d_b, d_c);
+
+  // Copy result back to host
+  cudaMemcpy(&c, d_c, size, cudaMemcpyDeviceToHost);
+
+  // Cleanup
+  cudaFree(d_a);
+  cudaFree(d_b);
+  cudaFree(d_c);
+    
+  printf("Result is %d\n",c);
+
+  assert(c == 9);
+  
+  printf("PASSED\n");
+
+  return 0;
+}
+```
+
+This is a simple CUDA program that adds two integers in a GPU. Once zLuda is properly installed, you can compile and run this program directly on an Intel GPU.
+
+Additional specifications: The compiled code will be stored as PTX files, which will be compiled into SPIR-V at runtime. At this point, only the 64-bit version of Windows 10 and Linux are supported.
+
+Command to run the above code: 
+
+```bash
+nvcc add.cu -o add
+./add
+```

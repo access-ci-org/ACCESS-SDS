@@ -1,0 +1,40 @@
+Use Case: CellRank for Trajectory inference in Single-Cell Sequencing; it uses single-cell transcriptome data to map out cell developmental trajectories and their corresponding cells of origin, visualize these trajectories.
+
+Code Details and Examples:
+
+Code:
+
+```python
+import scvelo as scv
+import cellrank as cr
+
+# Your input data - an AnnData object.
+adata = cr.datasets.pancreas()
+
+# The main function of cellrank is `cellrank.tl.estimate_transition_matrix()`.
+# Its parameters depend on the method chosen. 
+# Ideally, the input data has been preprocessed adequately - e.g. only the relevant genes 
+# (highly variable genes, feature genes specific to your biological application) should be included. 
+# Missing genes can be computed via diffusion pseudotime or velocity-based extrapolation.
+
+# compute RNA velocity
+scv.pp.filter_and_normalize(adata)
+scv.pp.moments(adata)
+scv.tl.recover_dynamics(adata)
+scv.tl.velocity(adata)
+scv.tl.velocity_graph(adata)
+
+# perform CellRank
+cr.tl.estimate_transition_matrix(adata, method='stochastic')
+cr.tl.terminal_states(adata)
+cr.tl.initial_states(adata)
+cr.tl.lineages(adata)
+final_states = adata.obsm['to_terminal_states']
+lineages = adata.obsm['to_lineages']
+
+```
+Running the script: This code can be run using a Python interpreter, such as the one in the Jupyter notebook or by saving the script in a .py file and running it from the terminal with `$ python filename.py`
+
+Input Data: The `AnnData` objects are an efficient way of dealing with large, multi-dimensional data. The object contains various slots to store raw/normalized counts, PCA space, clustering results, and auxiliary data. Files can be in several formats, such as `H5AD`, `loom`, or some types of `mtx` files. 
+
+Command to run: Not applicable as code snippets are run in an interactive python environment.

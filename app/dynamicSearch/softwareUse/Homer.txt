@@ -1,14 +1,28 @@
-Use Case: Homer is a suite of tools for motif discovery and next-gen sequencing analysis. 
+Use Case: HOMER (Hypergeometric Optimization of Motif EnRichment) is a suite of tools for Motif Discovery and ChIP-Seq analysis. It is developed as a general tool for analyzing ChIP-Seq data, and includes a number of features specifically designed for this. 
+
 Code details and examples:
-1. Find motifs in a given input sequence file:
-```bash
-findMotifs.pl input_sequence.fa fasta output_directory -len 8 -rna
-```
-2. Merge peaks from multiple peak files:
-```bash
-mergePeaks file1.txt file2.txt > merged_peaks.txt
-```
-3. Annotate peaks with gene annotations:
-```bash
-annotatePeaks.pl merged_peaks.txt genome_version > annotated_peaks.txt
-```
+
+Code:
+The basic command in HOMER is findMotifsGenome.pl, which accepts a list of peak locations in the genome (in BED format) and the genome in which to locate the peaks.
+
+Sample BED input file: 
+chr1	1000	5000	peak1
+chr1	2000	6000	peak2
+chr2	3000	7000	peak3
+
+Here, the columns represent chromosome, start location, end location, and peak name respectively.
+
+Command to run:
+findMotifsGenome.pl <peak/BED file> <genome> <output directory> [options]
+
+where
+- <peak/BED file> is your input file in BED format.
+- <genome> is the genome build (e.g. hg38 for human).
+- <output directory> is the directory you'd like HOMER to output results and log files.
+  
+For example:
+findMotifsGenome.pl peaks.bed hg38 homerOutput/
+
+This will analyze the peaks in the "peaks.bed" file using the 'hg38' human genome build, and put output files in the 'homerOutput' directory. 
+
+NB: [options] can include a variety of additional parameters to tailor your analysis, which can be found in HOMER's documentation.
