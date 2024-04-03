@@ -67,7 +67,7 @@ def read_and_transform_json(file_path):
                 flattened_data[key] = value
 
         attributes_columns = {
-            'software name': ['software_name', 'tool', 'software', 'software name', 'softwareName'],
+            'software name': ['software_name', 'tool', 'software', 'softwareName', 'software name'],
             'overview': ['comprehensive_overview', 'overview', 'comprehensiveOverview', 'comprehensive overview', 'Comprehensive Overview'],
             'core features': ['core_features', 'coreFeatures', 'core features', 'Core Features'],
             'tags': ['general_tags', 'general tags', 'generalTags', 'General Tags'],
@@ -76,15 +76,27 @@ def read_and_transform_json(file_path):
             'research discipline': ['research_discipline', 'research discipline', 'researchDiscipline', 'discipline', 'Research Discipline', 'specific_discipline', 'research_discipline_tags'],
             'software type': ['software_type', 'softwareType', 'software type', 'Software Type'],
             'software class': ['software_class', 'softwareClass', 'software class', 'Software Class'],
-            'research field': ['field_of_science', 'specific_field_of_science', 'specific_field', 'Field of Science', 'field of science', 'technology_field', 'subfields', 'research_field']
+            'research field': ['field_of_science', 'specific_field_of_science', 'specific_field', 'Field of Science', 'field of science', 'technology_field', 'research_field', 'Scientific Field', 'subfield_of_science']
         }
 
         for attribute, columns in attributes_columns.items():
             value, flattened_data = extract_key_value(flattened_data,columns)
-            if('specific_discipline' in flattened_data):
-                print(f'value: {value}, flat: {flattened_data}')
+
             if value:
-                flattened_data[attribute]=value
+                if isinstance(value, dict):
+                    flattened_data.update(value)
+                else:
+                    flattened_data[attribute] = value
+
+        for attribute, columns in attributes_columns.items():
+            for column in columns:
+
+                if column in flattened_data.keys() and column is not attribute:
+                    temp = flattened_data[column]
+                    print(f'data: {flattened_data[attribute]} temp: {temp}')
+                    flattened_data[attribute] = flattened_data[attribute] + ', ' + temp
+                    flattened_data.pop(column)
+
 
         return flattened_data
     except json.JSONDecodeError:

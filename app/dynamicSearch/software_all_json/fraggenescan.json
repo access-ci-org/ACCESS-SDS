@@ -1,12 +1,10 @@
 {
   "software_name": "FragGeneScan",
   "comprehensive_overview": "FragGeneScan is a gene-finding program specifically designed for short reads from next-generation sequencing (NGS) technology. It predicts protein-coding sequences in short DNA sequences such as metagenomic and single-cell sequencing data.",
-  "core_features": {
-    "1": "Prediction of protein-coding sequences",
-    "2": "Designed for short reads from NGS technology",
-    "3": "Particularly useful for metagenomic and single-cell sequencing data",
-    "4": "Supports both metagenomic and whole genome sequencing data"
-  },
+  "core_features": [ " 1. Prediction of protein-coding sequences",
+    "2. Designed for short reads from NGS technology",
+    "3. Particularly useful for metagenomic and single-cell sequencing data",
+    "4. Supports both metagenomic and whole genome sequencing data"],
   "general_tags": [
     "Gene prediction",
     "NGS data analysis",

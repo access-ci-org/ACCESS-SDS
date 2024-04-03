@@ -18,10 +18,6 @@
     "research_area": "",
     "software_class": "Security Analysis Tool",
     "software_type": "Program Analysis",
-    "field_of_science": "Computer and Information Sciences",
-    "subfields": [
-      "Computer Science",
-      "Software Engineering, Systems, and Development"
-    ]
+    "field_of_science": ["Computer and Information Sciences", "Computer Science", "Software Engineering, Systems, and Development" ]
   }
 }

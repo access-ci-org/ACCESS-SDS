@@ -109,7 +109,7 @@ $(document).ready(function(){
                 }
             },
             {   // columns with links
-                targets: [10,11,12, 13, 14, 15, 16, 17, 18, 19],
+                targets: [10,11,12,13],
                 render: function(data, type, row){
                     if (type=='display' && data){
                         return makeLinkClickable(data);
