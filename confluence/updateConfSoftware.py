@@ -1,4 +1,4 @@
-from confluence.confluenceAPI import ConfluenceAPI
+from confluenceAPI import ConfluenceAPI
 # from logic.softwares import get_softwares
 import pandas as pd
 
@@ -16,6 +16,15 @@ def get_local_software(rp_name):
     # return sftw
 
     return []
+
+def get_conf_software(conf_api,page_id):
+
+    page_data, page_name = conf_api.get_tabulated_page_data(page_id)
+    if "Software" in page_name and "All RP Software" != page_name:
+        conf_sftw = page_data[0].iloc[:, 0].dropna().tolist()
+        return conf_sftw, page_name
+
+    return None
 
 
 def combine_software_data(conf_sftw, local_sftw):
@@ -44,18 +53,19 @@ def update_rp_software_page(conf_api, rp_name, page_data):
 if __name__ == '__main__':
     try:
         conf_api = ConfluenceAPI()
-
         child_page_ids = conf_api.get_page_children_ids()
-
+        print("Updating Conf software pages")
         for id in child_page_ids:
-            page_data, page_name = conf_api.get_tabulated_page_data(child_page_ids[2])
-            if "Software" in page_name and "All RP Software" != page_name:
+            conf_sftw, page_name = get_conf_software(conf_api=conf_api, page_id=id)
+            if conf_sftw:
                 rp_name = page_name.split()[0]
                 local_sftw = get_local_software(rp_name=rp_name)
-                conf_sftw = page_data[0].iloc[:, 0].dropna().tolist()
                 combined_sftw = combine_software_data(conf_sftw=conf_sftw, local_sftw=local_sftw)
                 sftw_table = pd.DataFrame({'Software Packages': combined_sftw}).to_html(index=False,classes='confluenceTable')
                 conf_api.update_or_create_page(title=page_name,body=sftw_table)
-
+                print(f"{page_name} updated")
+            else:
+                print(f"Skipping page {page_name}")
+            
     except Exception as e:
         print(e)
