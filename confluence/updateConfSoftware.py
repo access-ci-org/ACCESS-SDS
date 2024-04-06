@@ -1,5 +1,4 @@
 from confluenceAPI import ConfluenceAPI
-# from logic.softwares import get_softwares
 import pandas as pd
 
 ###
@@ -11,9 +10,8 @@ import pandas as pd
 
 
 def get_local_software(rp_name):
-    # software = get_softwares(rp_name)
-    # sftw = [s.software.software_name for s in software]
-    # return sftw
+
+    # TODO: update this function when we don't have fake softwares
 
     return []
 
