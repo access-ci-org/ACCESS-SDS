@@ -1,4 +1,45 @@
+import {header, siteMenus, footer, footerMenus, universalMenus} from "https://esm.sh/@access-ci/ui@0.2.0"
+
+const siteItems =[
+    {
+        name: "Report an Issue",
+        href: "/"
+    },
+    {
+        name: "ACCESS Resource Advisor",
+        href: "https://access-ara.ccs.uky.edu:8080/"
+    }
+]
+
 $(document).ready(function(){
+
+    universalMenus({
+        loginUrl: "/login",
+        logoutUrl: "/logout",
+        siteName: "Allocations",
+        target: document.getElementById("universal-menus"),
+    });
+    header({
+        siteName: "Support",
+        target: document.getElementById("header")
+    });
+    siteMenus({
+        items: siteItems,
+        siteName: "Allocations",
+        target: document.getElementById("site-menus"),
+      });
+
+    footerMenus({
+        items: siteItems,
+        target: document.getElementById("footer-menus"),
+    });
+    footer({ target: document.getElementById("footer") });
+
+    const NavShadowHost = document.getElementById('universal-menus');
+    const shadowRoot = NavShadowHost.shadowRoot;
+    const loginButton = shadowRoot.querySelector('li:last-child button');
+    loginButton.remove();
+
     $("#app_content").removeClass()
     $("#app_content").addClass('col')
 

@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, send_file, redirect
 from dotenv import load_dotenv
 from app.softwareStatic import create_static_table
 import os
@@ -52,6 +52,15 @@ def get_example_use(software_name):
         print(e)
         return(jsonify({"use": '**Unable to find use case record**'})), 500
 
+
+@app.route("/images/<filename>")
+def get_image(filename):
+    if 'png' in filename:
+        mimetype = 'image/png'
+    elif 'svg' in filename:
+        mimetype='image/svg+xml'
+
+    return send_file(f'static/images/{filename}', mimetype=mimetype)
 
 if __name__ == '__main__':
     load_dotenv()
