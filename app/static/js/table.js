@@ -1,15 +1,7 @@
+var issueReport = {}
 $(document).ready(function(){
     $("#app_content").removeClass()
     $("#app_content").addClass('col')
-
-    var page_title = $("#page_title");
-    var path=window.location.pathname;
-
-    if (path.includes('dynamic')){
-        page_title.text('ACCESS Software Documentation Service (Dynamic)')
-    } else{
-        page_title.text('ACCESS Software Documentation Service (Static)')
-    }
 
     // Function to make URLs clickable
     function makeLinkClickable(data) {
@@ -151,14 +143,14 @@ $(document).ready(function(){
             success: function(response){
 
                 var useHtml = converter.makeHtml(response.use)
-                $(".modal-title").html('Use Case for '+softwareName)
+                $("#modal-title").text('Use Case for '+softwareName)
                 $('#useCaseBody').html(useHtml);
 
                 document.querySelectorAll('#useCaseBody pre Code').forEach((block)=>{
-                    hljs.highlightBlock(block)
+                    hljs.highlightElement(block)
                 })
 
-                $('.modal').modal('show');
+                $('#useCase-modal').modal('show');
             },
             error: function(xhr, status, error){
                 console.error("Error fetching example use: ", error);
@@ -229,6 +221,153 @@ $(document).ready(function(){
     checkScrollEdges();
     $scrollBody.on('scroll',checkScrollEdges);
 
+
+    // report issue
+
+    var reportingIssue = false;
+    var selectedElement = null;
+
+    $("#reportIssueBtn").on('click',function(){
+        event.stopPropagation();
+        reportingIssue = !reportingIssue;
+        
+        if (reportingIssue){
+            var alertDivMessage = "Click on where you see the issue"
+            var alertType = 'info'
+            showAlert(alertDivMessage,alertType);
+        }
+
+        if (reportingIssue) {
+            $(this).text('Cancel');
+            $('body').css('cursor', 'crosshair');
+            $('body').on('click', handleIssueReportClick);
+            $('body').on('mousemove',handleMouseMove);
+
+        } else {
+            $(this).text('Report Issue');
+            $('body').css('cursor', 'default');
+            $('body').off('click', handleIssueReportClick);
+            $('body').off('mousemove',handleMouseMove);
+            
+
+            if (selectedElement){
+                selectedElement.classList.remove('hovered');
+                selectedElement = null;
+            }
+        }
+    });
+
+    function handleMouseMove(event){
+        var target = event.target;
+
+        if (selectedElement && selectedElement !== target){
+            selectedElement.classList.remove('hovered');
+        }
+
+        // Add a red outline to the currently hovered element
+        target.classList.add('hovered');
+        selectedElement = target;
+    }
+
+    function handleIssueReportClick(event){
+        if (reportingIssue && event.target !== $("#reportIssueBtn")[0]){
+            var target = event.target;
+
+            // Remove the event listener for mouse move
+            $('body').off('mousemove', handleMouseMove);
+
+            var pageUrl = window.location.href;
+            var elementType = target.tagName.toLowerCase();
+            var elementId = target.id;
+            var elementClass = target.className;
+            var elementText = $(target).text().trim();
+
+            // Check if the clicked element is a table cell
+            var tableCellInfo = {};
+            if (elementType == 'td'){
+                var $cell = $(target);
+                var $row = $cell.closest('tr');
+                var $table = $row.closest('table');
+                var rowIndex = $row.index();
+                var columnIndex = $cell.index();
+                var tableId = $table.attr('id');
+
+                tableCellInfo = {
+                    tableId: tableId,
+                    rowIndex: rowIndex,
+                    columnIndex: columnIndex
+
+                };
+            }
+
+            // Capture a screenshot of the website
+            html2canvas(document.body).then(function(canvas){
+                var captureDataUrl = canvas.toDataURL('image/png');
+                
+                // Create an object with the issue reporting data
+            issueReport = {
+                pageUrl: pageUrl,
+                elementType: elementType,
+                elementId: elementId,
+                elementClass: elementClass,
+                elementText: elementText,
+                tableCellInfo: tableCellInfo,
+                captureDataUrl: captureDataUrl
+            };
+
+            // Create a formatted string for the report details
+            var reportDetails = "Page URL: " + issueReport.pageUrl + "\n" +
+                                "Element Type: " + issueReport.elementType + "\n" +
+                                "Element ID: " + issueReport.elementId + "\n" +
+                                "Element Class: " + issueReport.elementClass + "\n" +
+                                "Element Text: " + issueReport.elementText + "\n" +
+                                "Table Cell Info: " + JSON.stringify(issueReport.tableCellInfo, null, 2);
+
+                $("#reportDetails").text(reportDetails);
+
+                // Show the modal
+                $("#report-modal").modal('show');
+                
+                // Reset the report state
+                reportingIssue = false;
+                $('#reportIssueBtn').text('Report Issue');
+                $('body').css('cursor','default');
+                $('body').off('click',handleIssueReportClick);
+                $('body').off('mousemove',handleMouseMove);
+                
+                if (selectedElement){
+                    selectedElement.classList.remove('hovered');
+                    selectedElement = null;
+                }
+            });
+        }
+    }
+
+    $("#sendReportBtn").on('click', function() {
+        var feedback = $('#reportFeedback').val();
+    
+        $.ajax({
+            url: '/report-issue',
+            type: 'POST',
+            data: JSON.stringify({ feedback: feedback, reportDetails: issueReport }),
+            contentType: 'application/json',
+            success: function(response) {
+                $('#report-modal').modal('hide');
+                let message = 'Issue reported successfully!';
+                showAlert(message,'success')
+            },
+            error: function(xhr, status, error) {
+                console.error('Error reporting issue:', error);
+                alert('Failed to report issue. Please try again.');
+            }
+    });
+
+    $('#report-modal').on('hidden.bs.modal', function (e) {
+        issueReport = {}
+    });
+
+        
+    })
 });
 
 // Define the Highlight.js extension for Showdown
@@ -248,3 +387,18 @@ function highlightExtension() {
     }];
 }
 
+function showAlert(alertMsg, alertType){
+    $("#alert-div").append(
+        `<div class="alert alert-${alertType} alert-dismissible fade show" id="alert" role="alert">
+            ${alertMsg}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>`
+    )
+    $("#alert").fadeTo(2000, 500).slideUp(1000, function(){
+        $("#alert").slideUp(1000);
+        $("#alert").alert('close')
+    });
+    $('html,body').animate({scrollTop:0},'fast')
+}

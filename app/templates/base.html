@@ -30,39 +30,47 @@
         {% endblock %}
     </title>
 </head>
-<body class="bg-light" style="display: flex; flex-direction: column; min-height: 100vh;">
+<body id="body" style="display: flex; flex-direction: column; min-height: 100vh;">
     <div style="flex: 1;">
         {%block content%}
-            <div>
+            <div class="justify-content-center">
                 <nav class="navbar navbar-light" style="background-color: #1a5b6e;">
                     {%include 'nav.html'%}
                 </nav>
             </div>
             <br>
             <div class="container justify-content-center">
-                <div class="row justify-content-center" style="height: auto;">
-                    <ul class="nav nav-pills">
-                        <li class="nav-item">
-                          <a class="nav-link" aria-current="page" href="/">SDS Static</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="/dynamic">SDS Dynamic</a>
-                        </li>
-                      </ul>
-                    <div class="col">
-                        <div id="alert-div"></div>
+                <div style="height: auto;">
+                    <div class="row">
+                        <div class="col">
+                            <div id="alert-div"></div>
+                        </div>
                     </div>
-                    <div class="w-100"></div>
-                    <div class="col">
-                        {%block page_title %}
+                    <div class="row">
+                        <div class="col">
+                            {%block page_title %}
                             {#page title is added here#}
-                        {% endblock%}
+                            {% endblock%}
+                        </div>
                     </div>
-                    <div class="w-100"></div>
-                    <div class="col-md-6" id="app_content">
-                        {%block app_content%}
+                    <div class="row">
+                        <div class="col">
+                            <ul class="nav nav-pills">
+                                <li class="nav-item">
+                                  <a class="nav-link" aria-current="page" href="/">SDS Static</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" href="/dynamic">SDS Dynamic</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6" id="app_content">
+                            {%block app_content%}
                             {#application content is added here#}
-                        {%endblock%}
+                            {%endblock%}
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,11 +1,13 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, request
 from dotenv import load_dotenv
 from app.softwareStatic import create_static_table
+from app.reports import sanitize_and_process_reports
 import os
 import re
+import json
 import pandas as pd
 import numpy as np
-
+from urllib.request import urlopen
 app = Flask(__name__)
 
 @app.route("/")
@@ -52,6 +54,27 @@ def get_example_use(software_name):
         print(e)
         return(jsonify({"use": '**Unable to find use case record**'})), 500
 
+@app.route('/report-issue', methods=['POST'])
+def report_issue():
+    issue_report = request.get_json()
+
+    report, captureDataUrl = sanitize_and_process_reports(issue_report)
+
+    current_datetime = report['datetime']
+
+    report_folder = os.path.join('reports',current_datetime)
+    os.makedirs(report_folder, exist_ok=True)
+
+    report_filename = os.path.join(report_folder,'report.json')
+    with open(report_filename, 'w') as f:
+        json.dump(report, f, indent=4)
+
+    capture_data_url = urlopen(captureDataUrl)
+    capture_filename = os.path.join(report_folder, report['captureFilename'])
+    with open(capture_filename, 'wb') as f:
+        f.write(capture_data_url.file.read())
+
+    return jsonify({'message': 'Issue reported successfully'})
 
 if __name__ == '__main__':
     load_dotenv()
