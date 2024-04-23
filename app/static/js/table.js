@@ -2,10 +2,6 @@ import {header, siteMenus, footer, footerMenus, universalMenus} from "https://es
 
 const siteItems =[
     {
-        name: "Report an Issue",
-        href: "/"
-    },
-    {
         name: "ACCESS Resource Advisor",
         href: "https://access-ara.ccs.uky.edu:8080/"
     }

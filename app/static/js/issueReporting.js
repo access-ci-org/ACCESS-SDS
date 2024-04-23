@@ -162,6 +162,7 @@ $("#sendReportBtn").on('click', function() {
 
 $("#customReportBtn").on('click', function() {
     $("#customIssueText").val('');
+    $("#reportFeedback").val('');
     $("#report-modal").modal('show');
   });
   
