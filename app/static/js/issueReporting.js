@@ -94,12 +94,15 @@ function handleIssueReportClick(event){
             var rowIndex = $row.index();
             var columnIndex = $cell.index();
             var tableId = $table.attr('id');
+            var rowName = $row.find('td:first-child').text().trim();
+            var columnName = $table.DataTable().column(columnIndex).header().innerHTML;
 
             tableCellInfo = {
                 tableId: tableId,
                 rowIndex: rowIndex,
-                columnIndex: columnIndex
-
+                columnIndex: columnIndex,
+                rowName: rowName,
+                columnName: columnName
             };
         }
 
