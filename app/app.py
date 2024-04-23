@@ -1,5 +1,4 @@
-from flask import Flask, render_template, jsonify, request
-from flask import Flask, render_template, jsonify, send_file, redirect, request
+from flask import Flask, render_template, jsonify, send_file, request
 from dotenv import load_dotenv
 from app.softwareStatic import create_static_table
 from app.reports import sanitize_and_process_reports
