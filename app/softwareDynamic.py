@@ -168,7 +168,7 @@ def make_df():
     df = pd.DataFrame(data_dicts)
     df.fillna('',inplace=True)
 
-    rpAndSoftware = pd.read_csv('./dynamicSearch/rpAndSoftwares.csv')
+    rpAndSoftware = pd.read_csv('./dynamicSearch/rp-software-map.csv')
     rpAndSoftware.rename(columns={'Software': 'software name'}, inplace=True)
 
     linksOnly = pd.read_csv('./dynamicSearch/softwareLinksOnly.csv')
