@@ -60,8 +60,8 @@ def report_issue():
     issue_report = request.get_json()
 
     if issue_report['reportDetails']:
-        current_datetime = report['datetime']
         report = sanitize_and_process_reports(issue_report)
+        current_datetime = report['datetime']
 
         capture_data_url = report['captureDataUrl']
         report.pop('captureDataUrl')
