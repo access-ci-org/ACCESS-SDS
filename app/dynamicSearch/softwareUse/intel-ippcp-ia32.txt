@@ -1,0 +1,10 @@
+Use Case: Image processing with Intel IPP CP (Intel Integrated Performance Primitives for IA32 architecture)
+Code details and examples: 
+Sample input files: Input image file in JPEG format
+Format required: JPEG
+Specifications and details in input files: NA
+Code snippets:
+```
+ippcp_sample -i input.jpg -o output.jpg
+```
+Command to run: ippcp_sample -i input.jpg -o output.jpg

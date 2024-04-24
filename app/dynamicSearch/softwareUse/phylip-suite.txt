@@ -1,0 +1,35 @@
+Use Case: Molecular phylogenetics analysis
+Code details and examples:
+PHYLIP (PHYLogeny Inference Package) is a suite of programs for inferring phylogenies. Some common programs in the PHYLIP suite include DNAML for maximum likelihood estimation of phylogenetic trees from nucleotide sequences and DNADIST for calculating distances between nucleotide sequences.
+
+Example input file format for DNAML program:
+```
+5 200
+Human       ATCGGCTA
+Chimp       ATCGGCTC
+Gorilla     ATCGGCGA
+Orangutan   ATCGGCGA
+Gibbon      ATCGGCTA
+```
+
+Command to run DNAML program:
+```
+dnaml < input_file > output_file
+```
+
+Example input file format for DNADIST program:
+```
+5
+Human       ATCGGCTA
+Chimp       ATCGGCTC
+Gorilla     ATCGGCGA
+Orangutan   ATCGGCGA
+Gibbon      ATCGGCTA
+```
+
+Command to run DNADIST program:
+```
+dnadist < input_file > output_file
+```
+
+Please note that the actual input file formats and commands may vary depending on the specific program within the PHYLIP suite that you are using.

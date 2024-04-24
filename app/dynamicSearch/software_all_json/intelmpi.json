@@ -1,0 +1,21 @@
+{
+	"software_name": "intelmpi",
+	"comprehensive_overview": "Intel MPI Library focuses on enabling applications to perform better on Intel architecture-based clusters. It enables applications to gain faster communication performance on Intel Xeon Phi coprocessors and Intel Xeon processors.",
+	"core_features": [
+		"High Performance Computing (HPC)",
+		"Message Passing Interface (MPI) Library",
+		"Optimized for Intel Architecture"
+	],
+	"general_tags": [
+		"HPC",
+		"MPI Library",
+		"Intel Architecture"
+	],
+	"additional_tags": {
+		"research_discipline": "",
+		"research_area": "",
+		"software_class": "Development Tools",
+		"software_type": "Library",
+		"field_of_science": "Engineering and Technology"
+	}
+}

@@ -1,0 +1,41 @@
+Use Case: HPC software
+
+---
+
+Code details and examples:
+
+**OpenSHMEM** is a programming interface used for partitioned global address space parallel programming. OpenSHMEM is typically used in high-performance computing for parallel programming on distributed memory systems.
+
+Here is an example of a simple OpenSHMEM program written in C:
+
+```c
+#include <stdio.h>
+#include <shmem.h>
+
+int main(void) {
+    int my_pe, npes;
+
+    shmem_init();
+    my_pe = shmem_my_pe();
+    npes = shmem_n_pes();
+    
+    printf("Hello from PE %d out of %d\n", my_pe, npes);
+
+    shmem_finalize();
+    return 0;
+}
+```
+
+To compile this program using OpenSHMEM, you can use the following command (assuming your program is saved in a file named `hello.c`):
+
+```
+oshcc hello.c -o hello
+```
+
+And to run the compiled program, you can use a command like this:
+
+```
+mpirun -np 4 ./hello
+```
+
+This will run the program with 4 parallel processes.

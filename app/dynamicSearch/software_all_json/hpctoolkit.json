@@ -1,13 +1,25 @@
 {
-  "software_name": "hpctoolkit",
-  "comprehensive_overview": "The hpctoolkit is an open-source suite of tools for profiling and tracing applications to identify performance bottlenecks in high-performance computing (HPC) environments.",
-  "core_features": "1. Performance profiling and tracing\n2. Analysis of program execution\n3. Performance optimization recommendations\n4. Support for parallel programs\n5. Visualization of performance data",
-  "general_tags": ["profiling", "tracing", "performance optimization", "HPC"],
+  "software_name": "HPC Toolkit",
+  "comprehensive_overview": "HPC Toolkit is a collection of tools designed to assist users in optimizing and analyzing the performance of their parallel scientific applications on high-performance computing (HPC) systems.",
+  "core_features": [
+    "Performance analysis",
+    "Debugging support",
+    "Profiling capabilities",
+    "Parallel code optimization",
+    "Visualization of performance data"
+  ],
+  "general_tags": [
+    "HPC",
+    "Performance Analysis",
+    "Parallel Computing",
+    "Optimization",
+    "Debugging"
+  ],
   "additional_tags": {
     "research_discipline": "",
     "research_area": "",
-    "software_class": "Performance Profiling and Tracing",
-    "software_type": "Tool",
-    "field_of_science": "Other Computer and Information Sciences"
+    "software_class": "Performance Analysis Tools",
+    "software_type": "Toolkit",
+    "field_of_science": "Engineering and Technology"
   }
 }

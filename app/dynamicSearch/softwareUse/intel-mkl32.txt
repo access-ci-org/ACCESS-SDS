@@ -1,0 +1,19 @@
+Use Case: Linear Algebra Operations with Intel Math Kernel Library (Intel MKL)
+Code details and examples: 
+- Sample Input Files: Input matrix stored in text file (e.g., matrix.txt)
+- Format: Matrix elements separated by spaces or tabs
+- Code Snippet: 
+```python
+import numpy as np
+from numpy.linalg import inv
+from numpy import genfromtxt
+
+# Load matrix from file
+matrix = genfromtxt('matrix.txt')
+
+# Calculate inverse using Intel MKL
+inverse_matrix = inv(matrix)
+
+print(inverse_matrix)
+```
+- Command to run: `python script.py`

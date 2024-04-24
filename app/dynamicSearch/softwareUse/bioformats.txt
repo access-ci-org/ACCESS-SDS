@@ -1,0 +1,22 @@
+Use Case: Bioformats
+Code details and examples:
+Bioformats is a software library for reading various microscopy file formats. Below is an example of how to use the Python library 'python-bioformats' to read an image file:
+
+```python
+from bioformats import BioformatsReader
+
+# Open an image file
+reader = BioformatsReader('example_image.tif')
+
+# Get dimensions of the image
+width = reader.x_size
+height = reader.y_size
+channels = reader.rgbc
+
+# Get pixel values at a specific location
+pixel_value = reader.read_image(plane=0, x=100, y=100)
+```
+
+Please note that 'example_image.tif' should be replaced with the path to the image file you want to read.
+
+Command to run (if available): N/A

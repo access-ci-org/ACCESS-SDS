@@ -1,0 +1,29 @@
+Software: Intel DNNL (Deep Neural Network Library) CPU with Intel OpenMP
+
+Use Case: Deep learning inference using Intel DNNL library on CPU with Intel OpenMP
+
+Code details and examples:
+```python
+import numpy as np
+import dnnl
+from dnnl import engine, memory, stream, reorder
+
+# Create input tensor
+input_data = np.random.rand(1, 3, 224, 224).astype(np.float32)
+
+# Create memory object with input data
+input_md = memory.desc((1, 3, 224, 224), 'f32', 'nchw')
+input_mem = memory(input_md, engine.get_engine(), input_data)
+
+# Define network and layers using DNNL API
+
+# Create stream and execute inference
+s = stream()
+s.submit()
+
+# Get output results from memory object
+output_data = np.empty((10,), dtype=np.float32)
+output_mem = memory(desc, engine, output_data)
+```
+
+Note: The above code snippet is a basic template for using Intel DNNL library for deep learning inference on CPU with Intel OpenMP. More details and specific implementations will depend on the specific neural network architecture and task. Additionally, the actual command to run the code will vary based on the setup and configuration of the environment.

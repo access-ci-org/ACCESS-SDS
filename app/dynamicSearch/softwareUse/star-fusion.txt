@@ -1,0 +1,21 @@
+Use Case: Detect fusion genes in RNA-seq data using STAR-Fusion.
+
+Code details and examples:
+
+Input format: STAR-Fusion requires input in the form of RNA-seq reads in FASTQ format.
+
+Sample input files: 
+- Sample_1.fq
+- Sample_2.fq
+
+Code:
+```bash
+STAR-Fusion --left_fq Sample_1.fq --right_fq Sample_2.fq --output_dir fusion_output
+```
+
+Command to run: 
+```bash
+STAR-Fusion --left_fq Sample_1.fq --right_fq Sample_2.fq --output_dir fusion_output
+```
+
+Note: The actual command may vary depending on the specific options needed for the analysis.

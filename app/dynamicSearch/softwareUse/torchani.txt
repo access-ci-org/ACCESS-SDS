@@ -1,0 +1,18 @@
+Use Case: TorchANI is a PyTorch implementation of ANI (Atomic Neural Networks) for the purpose of efficient and accurate potential energy calculation.
+Code details and examples:
+```
+import torch
+import torchani
+
+# Load the ANI model
+model = torchani.models.ANI1ccx()
+
+# Define the molecule coordinates
+coordinates = torch.tensor([[[0.0, 0.0, 0.0], [0.0, 0.0, 1.0]]], requires_grad=True)
+
+# Calculate energy
+energy = model((species, coordinates)).energies
+
+print(energy)
+```
+Note: This is a basic example of how to use TorchANI to calculate the energy of a molecule. Additional input files or settings may be required based on the specific use case. Make sure to have the necessary libraries installed before running the code above.

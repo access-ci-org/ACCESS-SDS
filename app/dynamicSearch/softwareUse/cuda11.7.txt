@@ -1,0 +1,40 @@
+Use Case: CUDA 11.7
+
+Code details and examples:
+- CUDA (Compute Unified Device Architecture) is a parallel computing platform and application programming interface (API) model created by NVIDIA. It is commonly used for accelerating computing workflows on NVIDIA GPUs.
+
+- Input files: CUDA code files with .cu extension, CUDA kernels, CUDA C/C++ source files.
+
+- Code snippets:
+```c
+// Example CUDA C code
+#include <stdio.h>
+
+__global__ void add(int a, int b, int *c) {
+    *c = a + b;
+}
+
+int main() {
+    int c;
+    int *dev_c;
+    cudaMalloc((void**)&dev_c, sizeof(int));
+
+    add<<<1,1>>>(2, 7, dev_c);
+
+    cudaMemcpy(&c, dev_c, sizeof(int), cudaMemcpyDeviceToHost);
+
+    printf("2 + 7 = %d\n", c);
+
+    cudaFree(dev_c);
+
+    return 0;
+}
+```
+
+- Command to compile and run CUDA code:
+```bash
+nvcc example.cu -o example
+./example
+```
+
+- Detailed specifications and requirements for CUDA code may vary depending on the specific algorithm or computation being performed. It is important to refer to the CUDA documentation and programming guide for detailed information.

@@ -1,0 +1,60 @@
+error
+{
+	"tools": [
+		{
+			"software_name": "Abinit",
+			"comprehensive_overview": "Abinit is an open-source software package that allows users to perform first-principles calculations of the electronic structure of materials.",
+			"core_features": "Abinit offers a range of functionalities including density functional theory calculations, pseudopotential and all-electron implementations, structural relaxations, molecular dynamics, spectral properties, and more.",
+			"general_tags": ["computational software", "electronic structure calculations", "materials science"],
+			"research_discipline": "Condensed Matter Physics",
+			"research_area": "Electronic Structure of Materials",
+			"software_class": "First-principles calculation software",
+			"software_type": "Density functional theory",
+			"field_of_science": "Physical Sciences"
+		},
+		{
+			"software_name": "BLAST",
+			"comprehensive_overview": "BLAST (Basic Local Alignment Search Tool) is a widely used bioinformatics tool for comparing primary biological sequence information.",
+			"core_features": "BLAST can be used to search nucleotide or protein databases to find sequences that resemble the query sequence.",
+			"general_tags": ["bioinformatics", "sequence analysis", "sequence alignment"],
+			"research_discipline": "Genetics",
+			"research_area": "Sequence Analysis",
+			"software_class": "Sequence alignment software",
+			"software_type": "Bioinformatics tool",
+			"field_of_science": "Biological Sciences"
+		},
+		{
+			"software_name": "GROMACS",
+			"comprehensive_overview": "GROMACS is a versatile package used for molecular dynamics simulations, quantum chemistry calculations, and more.",
+			"core_features": "GROMACS provides high-performance and parallelized algorithms for simulating molecular dynamics of large biomolecular systems.",
+			"general_tags": ["computational chemistry", "molecular dynamics", "biomolecular simulations"],
+			"research_discipline": "Biophysics",
+			"research_area": "Molecular Dynamics Simulations",
+			"software_class": "Molecular dynamics simulation software",
+			"software_type": "Quantum chemistry",
+			"field_of_science": "Biological Sciences"
+		},
+		{
+			"software_name": "MATLAB",
+			"comprehensive_overview": "MATLAB is a high-level programming language and interactive environment for numerical computation, visualization, and programming.",
+			"core_features": "MATLAB provides a wide range of mathematical functions for linear algebra, statistics, optimization, signal processing, image processing, and more.",
+			"general_tags": ["computational software", "numerical computation", "data visualization"],
+			"research_discipline": "Applied Mathematics",
+			"research_area": "Numerical Computation",
+			"software_class": "Numerical computing environment",
+			"software_type": "Programming language",
+			"field_of_science": "Mathematics"
+		},
+		{
+			"software_name": "TensorFlow",
+			"comprehensive_overview": "TensorFlow is an open-source neural network library, developed by Google, capable of performing machine learning and deep learning tasks.",
+			"core_features": "TensorFlow supports building and training deep neural networks for tasks like image recognition, natural language processing, and more.",
+			"general_tags": ["machine learning", "deep learning", "neural networks"],
+			"research_discipline": "Artificial Intelligence and Intelligent Systems",
+			"research_area": "Machine Learning",
+			"software_class": "Deep learning library",
+			"software_type": "Neural network framework",
+			"field_of_science": "Computer and Information Sciences"
+		}
+	]
+}

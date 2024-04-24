@@ -1,0 +1,21 @@
+Use Case: Python libraries
+Code details and examples:
+Anaconda is a distribution of Python and R programming languages used for scientific computing, data science, and machine learning. It comes with a wide range of pre-installed libraries and tools useful for these purposes.
+
+Example of using pandas library in Anaconda to read a CSV file:
+```python
+import pandas as pd
+
+# Read a CSV file using pandas
+df = pd.read_csv('sample.csv')
+
+# Display the first 5 rows of the dataframe
+print(df.head())
+```
+
+To run the above code, save it in a Python script file (e.g., script.py) and then run it using the Python interpreter.
+
+Command to run the script:
+```
+python script.py
+```

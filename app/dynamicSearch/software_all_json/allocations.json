@@ -1,0 +1,22 @@
+error
+{
+    "Allocations": {
+        "overview": "Allocations is a command-line utility for managing memory allocations in C and C++ programs. It helps in tracking memory usage, detecting memory leaks, and optimizing memory allocation practices.",
+        "core_features": [
+            "Memory tracking",
+            "Memory leak detection",
+            "Memory optimization",
+            "Command-line interface"
+        ],
+        "general_tags": [
+            "Memory Allocation",
+            "Debugging Tool",
+            "C/C++"
+        ],
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Development Tool",
+        "software_type": "Command Line Tool",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

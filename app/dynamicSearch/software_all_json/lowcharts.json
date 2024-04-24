@@ -1,0 +1,13 @@
+{
+    "software_name": "Lowcharts",
+    "comprehensive_overview": "Lowcharts is a Python library for creating basic low-level charts with a simplistic and minimalistic interface. It aims to provide users with an easy-to-use tool for generating simple line charts, bar charts, and scatter plots.",
+    "core_features": "1. Easy-to-use interface for creating basic charts.\n2. Supports line charts, bar charts, and scatter plots.\n3. Lightweight and minimalistic design.\n4. Open-source and customizable.",
+    "general_tags": ["Python Library", "Data Visualization", "Charting Library"],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Visualization tool",
+        "software_type": "Library",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

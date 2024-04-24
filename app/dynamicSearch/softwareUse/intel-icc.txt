@@ -1,0 +1,28 @@
+Use Case: Compiler tools
+
+Code details and examples:
+Intel C++ Compiler (ICC) is used for optimizing and compiling C++ code. 
+
+Example input file (sample.cpp):
+```cpp
+#include <iostream>
+int main() {
+    std::cout << "Hello, Intel ICC!" << std::endl;
+    return 0;
+}
+```
+
+To compile the code using Intel ICC:
+```bash
+icpc -o output sample.cpp
+```
+
+To run the compiled code:
+```bash
+./output
+```
+
+This will output:
+```
+Hello, Intel ICC!
+```

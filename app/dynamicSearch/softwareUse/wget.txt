@@ -1,0 +1,6 @@
+Use Case: Download files from the web  
+Code details and examples:  
+```
+wget http://www.example.com/file.txt
+```
+To download a file from the web, you can use the `wget` command followed by the URL of the file you want to download.

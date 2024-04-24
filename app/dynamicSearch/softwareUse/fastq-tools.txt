@@ -1,0 +1,13 @@
+Use Case: Quality control and analysis of FASTQ files.
+
+Code details and examples:
+```
+# Quality check of FASTQ file
+fastq_quality_check -i input.fastq -o output.txt
+
+# Calculate basic statistics of FASTQ file
+fastq_stats -i input.fastq -o output.txt
+
+# Trim adapters from FASTQ file
+fastq_trim -i input.fastq -a adapter.fasta -o output.fastq
+```

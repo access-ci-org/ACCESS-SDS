@@ -1,0 +1,11 @@
+{
+    "software_name": "openshmemx",
+    "comprehensive_overview": "OpenSHMEMX is a portable implementation of the OpenSHMEM API designed to provide a high-performance, flexible, and scalable parallel programming model for symmetric multiprocessing (SMP) and massively parallel processing systems. It extends the original OpenSHMEM and aims to simplify the development of parallel applications.",
+    "core_features": "1. Enhanced support for symmetrical multiprocessing (SMP) systems.\n2. Provides a set of standard symmetric memory operations that enable efficient remote memory access.\n3. Supports various symmetric memory regions and communication capabilities.\n4. Offers flexible programming interface and communication synchronization mechanisms.\n5. Compatible with widely-used programming languages and compilers.",
+    "general_tags": ["parallel programming", "high-performance computing", "distributed memory programming"],
+    "research_discipline": "Computer Science",
+    "research_area": "Parallel and Distributed Computing",
+    "software_class": "Library",
+    "software_type": "Parallel Programming Library",
+    "field_of_science": "Computer and Information Sciences"
+}

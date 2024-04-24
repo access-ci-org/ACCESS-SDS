@@ -1,0 +1,21 @@
+Use Case: Managing data on an iRODS server using iRODS iCommands.
+
+Code details and examples:
+- iCommands allow users to interact with iRODS (Integrated Rule-Oriented Data System) for data management tasks such as uploading, downloading, moving, and manipulating files.
+
+Sample command to list files in an iRODS collection:
+```
+ils
+```
+
+Sample command to upload a file to iRODS:
+```
+iput example.txt /irods_path/example.txt
+```
+
+Sample command to download a file from iRODS:
+```
+iget /irods_path/example.txt example.txt
+```
+
+These commands can be run in the terminal after setting up the iRODS environment and configuring the iRODS server connection.

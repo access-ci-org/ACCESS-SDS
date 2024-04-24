@@ -1,0 +1,13 @@
+{
+  "software_name": "libxscrnsaver",
+  "comprehensive_overview": "libxscrnsaver is a library that provides an X Window System client interface to the X11 MIT-SCREEN-SAVER extension. It allows applications to inhibit the screensaver and screen blanking in a standardized way.",
+  "core_features": "1. Inhibiting screensaver and screen blanking\n2. Standardized interface for X Window System clients\n3. Easy integration with applications using X11 MIT-SCREEN-SAVER extension",
+  "general_tags": ["library", "X Window System", "screensaver", "screen blanking"],
+  "additional_tags": {
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Library",
+    "software_type": "System Library",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "software_name": "asciinema",
+  "comprehensive_overview": "asciinema is a free and open-source solution for recording terminal sessions and sharing them on the web. It allows users to record their terminal sessions and playback the recordings directly in a terminal emulator.",
+  "core_features": [
+    "Record terminal sessions",
+    "Share recordings on the web",
+    "Playback recordings in a terminal emulator",
+    "Built-in asciinema player for playback",
+    "Free and open-source"
+  ],
+  "general_tags": ["terminal recording", "web sharing", "CLI tool"],
+  "additional_tags": {
+    "research_discipline": "",
+    "research_area": "",
+    "software_class": "Development Tool",
+    "software_type": "Terminal Recorder",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

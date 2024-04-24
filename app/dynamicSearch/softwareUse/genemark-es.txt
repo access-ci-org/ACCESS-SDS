@@ -1,0 +1,15 @@
+Use Case: Predicting genes in prokaryotic genomes using GeneMark-ES
+
+Code details and examples:
+```
+# Sample input file for GeneMark-ES
+# Input file should contain the DNA sequence in FASTA format
+>Sequence1
+ATGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGC
+TAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCT
+AGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAG
+
+# Running GeneMark-ES
+gmes_petap.pl --ES < input.fasta > output.gff
+```
+In this example, we are providing a DNA sequence in a FASTA format as input to GeneMark-ES, which predicts genes in prokaryotic genomes. The output is in GFF format indicating the location of predicted genes.

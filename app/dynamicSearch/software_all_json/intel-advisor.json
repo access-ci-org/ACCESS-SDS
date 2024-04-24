@@ -1,0 +1,23 @@
+{
+  "software_name": "Intel Advisor",
+  "comprehensive_overview": "Intel Advisor is a design and analysis tool used to optimize vectorization, threading, and memory usage in your code. It helps identify hotspots in the code, provides recommendations for optimizations, and estimates performance improvements.",
+  "core_features": [
+    "Identifying hotspots in code",
+    "Recommendations for vectorization and threading",
+    "Estimating performance improvements",
+    "Analyzing memory usage"
+  ],
+  "general_tags": [
+    "Code optimization",
+    "Performance analysis",
+    "Parallel computing",
+    "Compiler tool"
+  ],
+  "additional_tags": {
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Performance analysis and optimization tool",
+    "software_type": "Compiler tool",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}
