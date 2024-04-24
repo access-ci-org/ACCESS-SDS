@@ -62,6 +62,7 @@ $(document).ready(function(){
     var staticTable = $('#softwareTable').DataTable({
         "sScrollX": "100%",
         "autoWidth": true,
+        pageLength: 50,
         searchBuilder: {
             conditions: {
                 string: {
@@ -116,6 +117,11 @@ $(document).ready(function(){
     var dynamicTable = $('#softwareTableDynamic').DataTable({
         "sScrollX": "100%",
         "autoWidth": true,
+        "pageLength": 50,
+        lengthMenu: [
+            [50, 250, 500, -1],
+            [50, 250, 500, 'All']
+        ],
         searchBuilder: {
             conditions: {
                 string: {
