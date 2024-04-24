@@ -1,14 +1,52 @@
+import {header, siteMenus, footer, footerMenus, universalMenus} from "https://esm.sh/@access-ci/ui@0.2.0"
+
+const siteItems =[
+    {
+        name: "ACCESS Resource Advisor",
+        href: "https://access-ara.ccs.uky.edu:8080/"
+    }
+]
+
 $(document).ready(function(){
+
+    universalMenus({
+        loginUrl: "/login",
+        logoutUrl: "/logout",
+        siteName: "Allocations",
+        target: document.getElementById("universal-menus"),
+    });
+    header({
+        siteName: "Support",
+        target: document.getElementById("header")
+    });
+    siteMenus({
+        items: siteItems,
+        siteName: "Allocations",
+        target: document.getElementById("site-menus"),
+      });
+
+    footerMenus({
+        items: siteItems,
+        target: document.getElementById("footer-menus"),
+    });
+    footer({ target: document.getElementById("footer") });
+
+    const NavShadowHost = document.getElementById('universal-menus');
+    const shadowRoot = NavShadowHost.shadowRoot;
+    const loginButton = shadowRoot.querySelector('li:last-child button');
+    loginButton.remove();
+
     $("#app_content").removeClass()
     $("#app_content").addClass('col')
 
-    var page_title = $("#page_title");
-    var path=window.location.pathname;
+    var currentUrl = window.location.href
 
-    if (path.includes('dynamic')){
-        page_title.text('ACCESS Software Documentation Service (Dynamic)')
+    if (currentUrl.includes("dynamic")){
+        $("#dynamic-link").addClass("active")
+        $("#static-link").removeClass("active")
     } else{
-        page_title.text('ACCESS Software Documentation Service (Static)')
+        $("#dynamic-link").removeClass("active")
+        $("#static-link").addClass("active")
     }
 
     // Function to make URLs clickable
@@ -24,6 +62,7 @@ $(document).ready(function(){
     var staticTable = $('#softwareTable').DataTable({
         "sScrollX": "100%",
         "autoWidth": true,
+        pageLength: 50,
         searchBuilder: {
             conditions: {
                 string: {
@@ -78,6 +117,11 @@ $(document).ready(function(){
     var dynamicTable = $('#softwareTableDynamic').DataTable({
         "sScrollX": "100%",
         "autoWidth": true,
+        "pageLength": 50,
+        lengthMenu: [
+            [50, 250, 500, -1],
+            [50, 250, 500, 'All']
+        ],
         searchBuilder: {
             conditions: {
                 string: {
@@ -151,14 +195,14 @@ $(document).ready(function(){
             success: function(response){
 
                 var useHtml = converter.makeHtml(response.use)
-                $(".modal-title").html('Use Case for '+softwareName)
+                $("#modal-title").text('Use Case for '+softwareName)
                 $('#useCaseBody').html(useHtml);
 
                 document.querySelectorAll('#useCaseBody pre Code').forEach((block)=>{
-                    hljs.highlightBlock(block)
+                    hljs.highlightElement(block)
                 })
 
-                $('.modal').modal('show');
+                $('#useCase-modal').modal('show');
             },
             error: function(xhr, status, error){
                 console.error("Error fetching example use: ", error);
@@ -229,6 +273,7 @@ $(document).ready(function(){
     checkScrollEdges();
     $scrollBody.on('scroll',checkScrollEdges);
 
+    
 });
 
 // Define the Highlight.js extension for Showdown
@@ -247,4 +292,3 @@ function highlightExtension() {
         }
     }];
 }
-
