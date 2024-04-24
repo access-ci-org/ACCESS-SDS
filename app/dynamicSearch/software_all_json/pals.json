@@ -1,0 +1,4 @@
+error
+{
+    "error": "Tool information not found. Please provide a valid tool name from the list of software, compilers, python libraries, computational software, conda packages, bioinformatics, and HPC tools."
+}

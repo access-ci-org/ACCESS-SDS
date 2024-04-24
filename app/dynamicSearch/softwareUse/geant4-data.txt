@@ -1,0 +1,6 @@
+Use Case: Software package - Geant4-Data
+
+Code details and examples:
+Geant4-Data is a dataset used by the Geant4 software package, which is a toolkit for the simulation of the passage of particles through matter. It contains various datasets such as electromagnetic and hadronic data necessary for particle transport simulations.
+
+There are no specific input files or commands to run for Geant4-Data as it is used by Geant4 simulations for providing necessary data during the simulation process.

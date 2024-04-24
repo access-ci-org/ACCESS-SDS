@@ -1,0 +1,13 @@
+{
+  "software_name": "TIGER",
+  "comprehensive_overview": "TIGER (Topical Information in Genomic Experiments) is a software suite designed for the analysis and interpretation of genomics and transcriptomics data. It offers a range of tools for processing and visualizing genomic data to facilitate research in molecular biology and genetics.",
+  "core_features": "Key features of TIGER include data preprocessing tools, differential gene expression analysis, pathway enrichment analysis, visualization modules for gene expression data, and integration with various genomic databases. It also provides statistical analysis functionalities for identifying differentially expressed genes and pathways.",
+  "general_tags": ["genomics", "transcriptomics", "data analysis", "molecular biology", "genetics"],
+  "additional_tags": {
+    "research_discipline": "Genomics",
+    "research_area": "Transcriptomics",
+    "software_class": "Bioinformatics",
+    "software_type": "Tool",
+    "field_of_science": "Biological Sciences"
+  }
+}

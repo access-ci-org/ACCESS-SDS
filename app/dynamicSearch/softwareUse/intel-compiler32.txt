@@ -1,0 +1,16 @@
+Use Case: Compiler tools
+
+Code details and examples:
+```bash
+# Sample input file: hello.cpp
+#include <iostream>
+
+int main() {
+    std::cout << "Hello, world!" << std::endl;
+    return 0;
+}
+
+# Command to compile with Intel C++ Compiler (32-bit)
+icpc -m32 hello.cpp -o hello
+```
+(Note: The Intel compiler command may vary depending on the version and installation location.)

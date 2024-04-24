@@ -1,0 +1,30 @@
+Use Case: Performance profiling and optimization with Intel Advisor
+
+Code details and examples:
+Intel Advisor is a profiling and optimization tool provided by Intel for HPC applications. It helps identify bottlenecks and provides recommendations for improving performance on Intel architectures.
+
+Sample input files: 
+- Source code files of the application to be profiled
+- Build scripts or makefiles to compile the application
+
+Format required:
+- C/C++/Fortran source code
+- Build system configuration files
+
+Code:
+1. Run Intel Advisor to perform a survey analysis on the application:
+```bash
+advixe-cl --collect=survey --project-dir=./survey_results -- /path/to/application
+```
+
+2. Run Intel Advisor to perform a trip analysis on the application:
+```bash
+advixe-cl --collect=tripcounts --flop --memory-access --project-dir=./tripcounts_results -- /path/to/application
+```
+
+3. View the results using Intel Advisor GUI:
+```bash
+advixe-gui
+```
+
+Note: The above commands are examples and may vary based on the specific version of Intel Advisor.

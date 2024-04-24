@@ -1,0 +1,10 @@
+Use Case: Parallel execution of shell commands  
+Code details and examples:  
+```
+# Example of using GNU Parallel to run multiple commands in parallel
+echo "command1" > input1.txt
+echo "command2" > input2.txt
+echo "command3" > input3.txt
+
+parallel ::: 'sh input1.txt' 'sh input2.txt' 'sh input3.txt'
+```

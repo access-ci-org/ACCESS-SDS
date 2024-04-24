@@ -1,0 +1,23 @@
+{
+    "software_name": "cuQuantum Appliance",
+    "comprehensive_overview": "cuQuantum Appliance is a platform that integrates quantum algorithms, simulators, and accelerators to accelerate the development and integration of quantum computing applications.",
+    "core_features": [
+        "Integration of quantum algorithms",
+        "Quantum simulators",
+        "Quantum accelerators",
+        "Development and integration of quantum computing applications"
+    ],
+    "general_tags": [
+        "quantum computing",
+        "quantum algorithms",
+        "simulators",
+        "accelerators"
+    ],
+    "additional_tags": {
+        "research_discipline": "Other Computer and Information Sciences",
+        "research_area": "Artificial Intelligence and Intelligent Systems",
+        "software_class": "Computational software",
+        "software_type": "Platform",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

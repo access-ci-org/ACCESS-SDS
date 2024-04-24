@@ -1,0 +1,13 @@
+{
+    "Software Name": "intel-dal",
+    "Comprehensive Overview": "Intel Dynamic Application Loader (DAL) is a framework that enables applications to dynamically load and execute small code modules. It provides a secure environment for executing trusted applications on Intel platforms.",
+    "Core Features": "1. Secure environment for executing trusted applications\n2. Ability to dynamically load and execute small code modules\n3. Provides isolation and protection mechanisms\n4. Streamlines the process of developing and deploying applications\n5. Supports multiple platforms and languages",
+    "General Tags": ["Security", "Intel Platform", "Dynamic Code Loading", "Trusted Applications"],
+    "Additional Tags": {
+        "Research Discipline": [],
+        "Research Area": [],
+        "Software Class": "Development Tools",
+        "Software Type": "Framework",
+        "Field of Science": "Computer and Information Sciences"
+    }
+}

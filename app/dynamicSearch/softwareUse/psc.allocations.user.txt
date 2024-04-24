@@ -1,0 +1,55 @@
+Use Case: List of HPC Software
+Code details and examples:
+1. Slurm:
+   Input file format: Slurm batch script
+   Code snippet:
+   ```
+   #!/bin/bash
+   #SBATCH --job-name=my_job
+   #SBATCH --ntasks=4
+   #SBATCH --time=1:00:00
+   #SBATCH --output=out.txt
+   
+   srun ./my_program input.txt
+   ```
+   
+2. MPI (Message Passing Interface):
+   Input file format: MPI program source code
+   Code snippet:
+   ```
+   #include <mpi.h>
+   int main(int argc, char *argv[]) {
+       MPI_Init(&argc, &argv);
+       // MPI code here
+       MPI_Finalize();
+       return 0;
+   }
+   ```
+   
+3. GROMACS (GROningen MAchine for Chemical Simulations):
+   Input file format: GROMACS input file (.mdp)
+   Code snippet:
+   ```
+   gmx mdrun -s topol.tpr -cpi state.cpt
+   ```
+   
+4. Gaussian:
+   Input file format: Gaussian input file (.com)
+   Code snippet:
+   ```
+   g16 my_input.com
+   ```
+   
+5. OpenMP (Open Multi-Processing):
+   Input file format: OpenMP program source code
+   Code snippet:
+   ```
+   #include <omp.h>
+   int main() {
+       #pragma omp parallel
+       {
+           // OpenMP code here
+       }
+       return 0;
+   }
+   ```

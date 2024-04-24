@@ -1,0 +1,31 @@
+Use Case: Convert a C++ code to Data Parallel C++ using Intel DPCT.
+
+Code details and examples:
+Intel DPCT is used for converting C++ code to Data Parallel C++ code for running on Intel GPUs. Below is a sample C++ code that can be converted using Intel DPCT.
+
+Sample input file (sample.cpp):
+```cpp
+#include <iostream>
+
+int main() {
+    int a[10];
+    for (int i = 0; i < 10; i++) {
+        a[i] = i;
+    }
+
+    for (int i = 0; i < 10; i++) {
+        std::cout << a[i] << std::endl;
+    }
+
+    return 0;
+}
+```
+
+To convert the C++ code to Data Parallel C++ code using Intel DPCT, the following command can be used:
+
+Command:
+```
+dpct --in-root . --out-root dpct_output sample.cpp
+```
+
+This command will convert the C++ code in 'sample.cpp' to Data Parallel C++ using Intel DPCT and will store the converted code in the 'dpct_output' directory.

@@ -1,0 +1,13 @@
+Use Case: R package for coloring in output on console ; knows a variety of coloring styles which can be customized
+
+Code details and examples:
+```R
+# Load the crayon library
+library(crayon)
+
+# Print colored text
+cat(crayon::red("This text will be printed in red\n"))
+cat(crayon::green("And this text will be printed in green\n"))
+```
+
+Command to run: Not applicable. Run the code snippet in an R environment.

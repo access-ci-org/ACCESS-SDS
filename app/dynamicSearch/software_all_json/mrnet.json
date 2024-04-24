@@ -1,0 +1,22 @@
+{
+  "software_name": "MRNET",
+  "overview": "MRNET (Mendelian Randomization using Network models) is a software package for performing causal inference through Mendelian randomization and network modeling. It allows researchers to investigate causal relationships between traits by leveraging genetic instrumental variables and network structures.",
+  "core_features": [
+    "Conducts causal inference through Mendelian randomization",
+    "Utilizes genetic instrumental variables for analysis",
+    "Incorporates network modeling for complex trait relationships"
+  ],
+  "general_tags": [
+    "Causal Inference",
+    "Mendelian Randomization",
+    "Network Modeling",
+    "Genetic Instrumental Variables"
+  ],
+  "additional_tags": {
+    "research_discipline": "Genetics",
+    "research_area": "Mendelian Genetics",
+    "software_class": "Statistical Analysis",
+    "software_type": "Research Tool",
+    "field_of_science": "Biological Sciences"
+  }
+}

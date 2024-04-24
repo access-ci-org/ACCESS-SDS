@@ -1,0 +1,38 @@
+Use Case: Quantum ESPRESSO
+Code details and examples:
+Sample input files for Quantum ESPRESSO typically include input files with parameters specified for calculations such as geometry optimization, energy minimization, and electronic structure calculations.
+
+An example input file `input.in` for a geometry optimization calculation using Quantum ESPRESSO:
+
+```
+&control
+    calculation = 'relax'
+    prefix = 'al'
+/
+&system
+    ibrav = 0
+    nat = 2
+    ntyp = 1
+    ecutwfc = 30
+/
+&electrons
+/
+ATOMIC_SPECIES
+Al 26.98 Al.pbe-mt_fhi.UPF
+ATOMIC_POSITIONS { angstrom }
+Al 0.0 0.0 0.0
+Al 0.0 0.0 2.0
+CELL_PARAMETERS { angstrom }
+3.0 0.0 0.0
+0.0 3.0 0.0
+0.0 0.0 6.0
+K_POINTS { automatic }
+4 4 4 1 1 1
+```
+
+To run Quantum ESPRESSO with this input file, you would typically use a command like:
+```
+pw.x < input.in > output.out
+```
+
+Please note that the input file format and specific parameters may vary depending on the type of calculation being performed in Quantum ESPRESSO.

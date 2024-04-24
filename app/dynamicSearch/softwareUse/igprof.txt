@@ -1,0 +1,13 @@
+Use Case: Profiling tool for performance analysis in HPC environments.
+
+Code details and examples:
+```
+# Sample input file: input.txt
+# Contains the list of functions to profile
+FunctionA
+FunctionB
+FunctionC
+
+# Command to run igprof
+igprof -pp -z -o profile.gz -t python my_script.py
+```

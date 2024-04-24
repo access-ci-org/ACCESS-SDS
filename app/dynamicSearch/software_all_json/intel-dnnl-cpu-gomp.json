@@ -1,0 +1,11 @@
+{
+    "software_name": "Intel DNNL (formerly known as Intel MKL-DNN) with CPU and OpenMP support",
+    "comprehensive_overview": "Intel Deep Neural Network Library (DNNL) is an open-source performance library for deep learning applications. It is designed for accelerating deep learning frameworks on Intel CPUs. DNNL provides highly optimized building blocks for implementing convolutional neural networks (CNNs), recurrent neural networks (RNNs), and other deep learning models.",
+    "core_features": "1. Optimized for Intel CPUs\n2. Support for deep learning frameworks like TensorFlow, PyTorch, MXNet, and others\n3. Accelerates deep learning inference and training tasks\n4. Provides efficient building blocks for implementing CNNs, RNNs, and other models\n5. Open-source and actively maintained by Intel\n6. Utilizes OpenMP for parallelism on CPU architectures",
+    "general_tags": ["deep learning", "CPU acceleration", "performance library", "deep learning frameworks", "inference", "training", "OpenMP"],
+    "research_discipline": "Artificial Intelligence and Intelligent Systems",
+    "research_area": "Deep Learning",
+    "software_class": "Library",
+    "software_type": "Deep Learning Accelerator",
+    "field_of_science": "Computer and Information Sciences"
+}

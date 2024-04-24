@@ -1,0 +1,24 @@
+Use Case: Deep Learning ; Machine Learning Code details and examples: 
+Code:
+'''
+import numpy as np
+import os
+from os.path import join as jp
+
+# Create sample input arrays
+input_array = np.random.randn(1, 3, 224, 224).astype(np.float32)
+weights_array = np.random.randn(64, 3, 3, 3).astype(np.float32)
+
+# Save input arrays to files
+np.save('input_array.npy', input_array)
+np.save('weights_array.npy', weights_array)
+
+# Specify the path to the DNNL executable
+dnnl_executable = '/path/to/dnnl_executable'
+
+# Execute the DNNL code with the input arrays as arguments
+os.system(f'{dnnl_executable} -i input_array.npy -w weights_array.npy')
+'''
+In the above code snippet, we create sample input arrays, save them to files, and then call the DNNL executable with these input arrays as arguments.
+
+Please note that the above example is a generic representation. The actual command to run DNNL may vary based on the specific use case and installation settings.

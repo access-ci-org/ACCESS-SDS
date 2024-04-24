@@ -1,0 +1,11 @@
+Use Case: Programming Environment for Cray systems. 
+
+Code details and examples:
+Prgenv-cray provides different programming environments to compile and run codes on Cray systems. The available programming environments may include compilers, libraries, and tools specific to Cray supercomputers.
+
+To set the programming environment to prgenv-cray on a Cray system, you can use the following command:
+```
+module swap PrgEnv-cray PrgEnv-cray
+```
+
+This will switch the programming environment to prgenv-cray on the Cray system.

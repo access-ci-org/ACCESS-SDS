@@ -1,0 +1,12 @@
+Use Case: High Performance Computing (HPC) Software 
+
+Code details and examples:
+Intel CCL (Cluster Checker Library) is a diagnostic tool designed to analyze and assess the health of an HPC system. It helps in identifying and resolving issues that may affect the performance of the system.
+
+Sample input files: N/A
+
+Format required: N/A
+
+Specifications: N/A
+
+Command to run: N/A

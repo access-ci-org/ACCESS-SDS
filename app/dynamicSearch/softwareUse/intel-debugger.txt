@@ -1,0 +1,25 @@
+Use Case: Debugging code with Intel Debugger
+
+Code details and examples:
+Sample input file (sample.cpp):
+```cpp
+#include <iostream>
+
+int main() {
+    int a = 5;
+    std::cout << "The value of a is: " << a << std::endl;
+    return 0;
+}
+```
+
+Command to compile with debug information using Intel Compiler:
+```
+icpc -g -o sample sample.cpp
+```
+
+Command to run the Intel Debugger (idb) on the compiled executable:
+```
+idb ./sample
+```
+
+Once inside the Intel Debugger, you can use commands like `break` to set breakpoints, `run` to start the program, `step` to step through the code, and `print` to print variable values while debugging.

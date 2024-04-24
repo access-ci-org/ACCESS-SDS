@@ -1,0 +1,50 @@
+Use Case: Geant4
+
+Code details and examples:
+```cpp
+#include "G4RunManager.hh"
+#include "G4UImanager.hh"
+#include "G4NistManager.hh"
+#include "G4Box.hh"
+#include "G4LogicalVolume.hh"
+#include "G4PVPlacement.hh"
+#include "G4VisExecutive.hh"
+#include "G4UIExecutive.hh"
+
+int main(int argc, char** argv) {
+    G4RunManager* runManager = new G4RunManager;
+    
+    G4NistManager* nist = G4NistManager::Instance();
+    G4Material* air = nist->FindOrBuildMaterial("G4_AIR");
+    
+    G4double worldSize = 10.0*cm;
+    G4Box* solidWorld = new G4Box("World", 0.5*worldSize, 0.5*worldSize, 0.5*worldSize);
+    
+    G4LogicalVolume* logicWorld = new G4LogicalVolume(solidWorld, air, "World");
+    
+    G4VPhysicalVolume* physWorld = new G4PVPlacement(0, G4ThreeVector(), logicWorld, "World", 0, false, 0);
+    
+    G4VisManager* visManager = new G4VisExecutive;
+    visManager->Initialise();
+    
+    G4UImanager* UImanager = G4UImanager::GetUIpointer();
+    G4UIExecutive* ui = new G4UIExecutive(argc, argv);
+    UImanager->ApplyCommand("/control/execute your_macro_file.mac");
+    
+    delete ui;
+    delete visManager;
+    delete runManager;
+    
+    return 0;
+}
+```
+
+To run Geant4:
+```
+$ cd your_build_directory
+$ cmake ../your_source_directory
+$ make
+$ ./your_executable_name your_macro_file.mac
+```
+
+Note: You will need to have Geant4 properly installed and set up in your system to compile and run the above code with Geant4.

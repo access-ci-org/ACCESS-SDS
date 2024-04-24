@@ -1,0 +1,18 @@
+{
+	"software_name": "BAT",
+	"comprehensive_overview": "BAT (Bioinformatics Analysis Tool) is a bioinformatics software suite designed for the analysis of biological sequence data.",
+	"core_features": [
+		"- Sequence alignment",
+		"- Phylogenetic analysis",
+		"- Motif discovery",
+		"- Sequence annotation"
+	],
+	"general_tags": ["bioinformatics", "computational biology"],
+	"additional_tags": {
+		"research_discipline": "Genetics",
+		"research_area": "Bioinformatics",
+		"software_class": "Bioinformatics tool",
+		"software_type": "Analysis tool",
+		"field_of_science": "Biological Sciences"
+	}
+}

@@ -1,0 +1,23 @@
+{
+    "software_name": "deal.II",
+    "comprehensive_overview": "deal.II is an open-source finite element library designed to solve partial differential equations using adaptive mesh refinement and advanced finite element techniques.",
+    "core_features": [
+        "Supports a wide range of finite element computations",
+        "Parallel computing capabilities",
+        "Adaptive mesh refinement",
+        "Provides a collection of example programs and tutorials",
+        "High level of flexibility and extensibility"
+    ],
+    "general_tags": [
+        "Finite Element Library",
+        "Partial Differential Equations",
+        "Adaptive Mesh Refinement",
+        "Open-source",
+        "Computational Science"
+    ],
+    "research_discipline": "Applied Mathematics",
+    "research_area": "Finite Element Methods",
+    "software_class": "Computational software",
+    "software_type": "Library",
+    "field_of_science": "Mathematics"
+}

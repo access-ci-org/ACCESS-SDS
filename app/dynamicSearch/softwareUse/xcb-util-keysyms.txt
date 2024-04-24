@@ -1,0 +1,23 @@
+Use Case: Generating keysym names from keycodes.
+
+Code details and examples:
+Input file format:
+- List of keycodes
+
+Sample input file (keycodes.txt):
+```
+9
+10
+11
+```
+
+Code:
+```
+xkbcomp $DISPLAY keymap.xkb
+xkb_keymap_print $DISPLAY keymap.xkb | grep -E "KeyCode.*"$(paste -s keycodes.txt | sed 's/\t/,/')
+```
+
+Command to run:
+```
+sh generate_keysyms.sh
+```

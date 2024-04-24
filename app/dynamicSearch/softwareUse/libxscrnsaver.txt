@@ -1,0 +1,31 @@
+Use Case: List of HPC software.
+
+Code details and examples:
+- **libxscrnsaver** is a library used for X11 screen saver extension library for X. 
+- It does not have its own set of sample input files or a specific format for input. 
+- Below is a code snippet showing how to use libxscrnsaver in C:
+
+```c
+#include <X11/extensions/scrnsaver.h>
+
+int main() {
+    XScreenSaverInfo *info;
+    Display *display = XOpenDisplay(NULL);
+
+    int event_base, error_base;
+    if (XScreenSaverQueryExtension(display, &event_base, &error_base)) {
+        info = XScreenSaverAllocInfo();
+        XScreenSaverQueryInfo(display, DefaultRootWindow(display), info);
+        printf("Idle time: %u\n", info->idle);
+        XFree(info);
+    }
+
+    XCloseDisplay(display);
+    return 0;
+}
+```
+To compile the code, you can use the following command:
+```bash
+gcc -o screensaver_info screensaver_info.c -lX11 -lXext
+```
+This will generate an executable named `screensaver_info` that you can run to retrieve the idle time of the X11 screen saver.

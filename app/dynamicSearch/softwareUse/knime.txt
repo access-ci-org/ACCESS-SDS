@@ -1,0 +1,7 @@
+Use Case: Data analysis and visualization in KNIME
+Input file format: CSV, XLS, TXT
+Details: KNIME is a data analytics platform that allows users to create visual workflows for data analysis, manipulation, and visualization.
+Code: 
+- Sample input file: data.csv
+- KNIME workflow to load the input file, perform data analysis, and visualize results.
+- Command to run: Open KNIME, import the workflow, and run it.

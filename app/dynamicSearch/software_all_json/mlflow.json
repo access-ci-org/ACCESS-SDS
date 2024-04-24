@@ -1,0 +1,24 @@
+{
+    "software_name": "MLflow",
+    "comprehensive_overview": "MLflow is an open-source platform for managing the end-to-end machine learning lifecycle. It enables tracking experimentation, packaging code into reproducible runs, and sharing and deploying models.",
+    "core_features": [
+        "Experiment tracking to record and compare parameters and results",
+        "Nested runs and metrics for complex workflows",
+        "Model packaging for reproducibility and sharing models as reusable modules",
+        "Model registry for centralizing and versioning models"
+    ],
+    "general_tags": [
+        "Machine Learning",
+        "Data Science",
+        "Model Management",
+        "Experimentation",
+        "Model Deployment"
+    ],
+    "additional_tags": {
+        "research_discipline": "Computer Science",
+        "research_area": "Data Science",
+        "software_class": "Machine Learning Platform",
+        "software_type": "Open-source",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

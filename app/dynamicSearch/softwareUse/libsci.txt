@@ -1,0 +1,45 @@
+I am assuming you are referring to the Intel Math Kernel Library (MKL).
+
+Use Case: Linear Algebra operations with Intel MKL
+Code details and examples:
+Sample Input file (input.txt):
+```
+2
+3
+1 2 3
+4 5 6
+```
+
+Python code using numpy and Intel MKL:
+```python
+import numpy as np
+from numpy.linalg import inv
+from ctypes import CDLL, c_void_p, c_int, c_double
+
+mkl = CDLL('libmkl_rt.so') # Use libmkl_rt.so for Linux
+
+def inverse_matrix(a):
+    a = np.array(a, order='F', dtype=np.float64)
+    n = a.shape[0]
+    ipiv = np.zeros(n, dtype=np.int32)
+    lwork = n*n
+    work = np.zeros(lwork, dtype=np.float64)
+    info = c_int(0)
+
+    mkl.dgetrf(c_int(n), c_int(n), c_void_p(a.ctypes.data), c_int(n), c_void_p(ipiv.ctypes.data), c_void_p(info))
+    mkl.dgetri(c_int(n), c_void_p(a.ctypes.data), c_int(n), c_void_p(ipiv.ctypes.data), c_void_p(work), c_int(lwork), c_void_p(info))
+
+    return a
+
+with open('input.txt', 'r') as file:
+    n = int(file.readline())
+    a = [[float(x) for x in file.readline().split()] for _ in range(n)]
+
+result = inverse_matrix(a)
+print(result)
+```
+
+Command to run:
+```
+python script.py
+```

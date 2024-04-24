@@ -1,0 +1,14 @@
+Use Case: Deep learning inference with Intel oneAPI Deep Neural Network Library (DNNL) on CPU using Threading Building Blocks (TBB)
+
+Code details and examples:
+Input files:
+- Model file (e.g., model.xml): A file containing the deep learning model architecture
+- Weights file (e.g., weights.bin): A file containing the trained weights of the deep learning model
+- Input data file (e.g., input_data.npy): A file containing input data for inference
+
+Code:
+```bash
+dnnl_cpu_tbb --model model.xml --weights weights.bin --input input_data.npy
+```
+
+Note: This is a hypothetical command structure as an example for running deep learning inference with Intel DNNL on CPU using TBB. The actual command may vary based on the specific implementation and setup.

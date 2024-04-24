@@ -1,0 +1,38 @@
+Use Case: Use readline-devel library for implementing command line editing and history functionalities in C/C++ programs.
+
+Code details and examples:
+Sample C program using readline:
+
+```c
+#include <stdio.h>
+#include <readline/readline.h>
+#include <readline/history.h>
+
+int main() {
+    char* input;
+
+    while ((input = readline(">> ")) != NULL) {
+        if (input && *input) {
+            add_history(input);
+            printf("Input: %s\n", input);
+        }
+        free(input);
+    }
+
+    return 0;
+}
+```
+
+To compile the program, you can use the following command:
+
+```bash
+gcc -o readline_example readline_example.c -lreadline
+```
+
+To run the compiled program:
+
+```bash
+./readline_example
+```
+
+This will provide a simple command-line interface with history and editing capabilities using the `readline` library.

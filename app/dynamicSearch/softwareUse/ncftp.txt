@@ -1,0 +1,21 @@
+Use Case: File transfer software
+Code details and examples: 
+Sample input file:
+- File with FTP/SFTP server details
+- File with file transfer commands
+
+Code:
+1. Connect to an FTP server:
+```bash
+ncftp -u username ftp.example.com
+```
+
+2. Download a file from the server:
+```bash
+ncftpget -R -T -v /remote/path/file.txt /local/path/
+```
+
+3. Upload a file to the server:
+```bash
+ncftpput -R -v -u username ftp.example.com /remote/path/file.txt /local/path/file.txt
+```

@@ -67,7 +67,7 @@ def read_and_transform_json(file_path, filename):
                 flattened_data[key] = value
 
         attributes_columns = {
-            'software name': ['software_name', 'tool', 'software', 'softwareName', 'software name'],
+            'software name': ['software_name', 'tool', 'software', 'softwareName', 'software name', 'Software Name'],
             'overview': ['comprehensive_overview', 'overview', 'comprehensiveOverview', 'comprehensive overview', 'Comprehensive Overview'],
             'core features': ['core_features', 'coreFeatures', 'core features', 'Core Features'],
             'tags': ['general_tags', 'general tags', 'generalTags', 'General Tags'],
@@ -168,7 +168,7 @@ def make_df():
     df = pd.DataFrame(data_dicts)
     df.fillna('',inplace=True)
 
-    rpAndSoftware = pd.read_csv('./dynamicSearch/rpAndSoftwares.csv')
+    rpAndSoftware = pd.read_csv('./dynamicSearch/rp-software-map.csv')
     rpAndSoftware.rename(columns={'Software': 'software name'}, inplace=True)
 
     linksOnly = pd.read_csv('./dynamicSearch/softwareLinksOnly.csv')

@@ -1,0 +1,25 @@
+{
+    "software_name": "Jupyter Notebook",
+    "comprehensive_overview": "Jupyter Notebook is an open-source web application that allows users to create and share documents containing live code, equations, visualizations, and explanatory text. These documents, known as notebooks, can be used for data cleaning and transformation, numerical simulation, statistical modeling, data visualization, machine learning, and more.",
+    "core_features": [
+        "Interactive computing",
+        "Support for over 40 programming languages, including Python, R, and Julia",
+        "Markdown support for text formatting",
+        "Integration with data visualization libraries like Matplotlib and Plotly",
+        "Ability to export notebooks in various formats such as HTML, PDF, and slideshows"
+    ],
+    "general_tags": [
+        "IDE",
+        "Notebook",
+        "Data Science",
+        "Machine Learning",
+        "Research"
+    ],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "",
+        "software_type": "Web Application",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}
