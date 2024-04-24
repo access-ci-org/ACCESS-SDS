@@ -8,12 +8,25 @@ import pandas as pd
 # push table to rp software page
 ##
 
+def standardize_rp_name(rp_name):
+
+    rp_name_mapping = {
+        'Bridges-2': 'bridges',
+        'bridges2': 'bridges',
+        'Jetstream2': 'jetstream',
+        'Stampede-3': 'stampede3',
+        # Add more mappings as needed
+    }
+    return rp_name_mapping.get(rp_name, rp_name)
 
 def get_local_software(rp_name):
 
-    # TODO: update this function when we don't have fake softwares
+    csv_file_path = './app/dynamicSearch/combined_data.csv'
+    df = pd.read_csv(csv_file_path)
 
-    return []
+    rp_software = df.loc[df['RP Name'].str.contains(rp_name, case=False), 'software name'].tolist()
+
+    return rp_software
 
 def get_conf_software(conf_api,page_id):
 
@@ -21,8 +34,6 @@ def get_conf_software(conf_api,page_id):
     if "Software" in page_name and "All RP Software" != page_name:
         conf_sftw = page_data[0].iloc[:, 0].dropna().tolist()
         return conf_sftw, page_name
-
-    return None
 
 
 def combine_software_data(conf_sftw, local_sftw):
@@ -36,7 +47,6 @@ def combine_software_data(conf_sftw, local_sftw):
     combined_sftw_set = conf_sftw_set.union(local_sftw_set)
 
     combined_sftw = list(combined_sftw_set)
-    print(combined_sftw)
     combined_sftw.sort()
 
     return combined_sftw
@@ -54,16 +64,24 @@ if __name__ == '__main__':
         child_page_ids = conf_api.get_page_children_ids()
         print("Updating Conf software pages")
         for id in child_page_ids:
-            conf_sftw, page_name = get_conf_software(conf_api=conf_api, page_id=id)
-            if conf_sftw:
-                rp_name = page_name.split()[0]
-                local_sftw = get_local_software(rp_name=rp_name)
-                combined_sftw = combine_software_data(conf_sftw=conf_sftw, local_sftw=local_sftw)
-                sftw_table = pd.DataFrame({'Software Packages': combined_sftw}).to_html(index=False,classes='confluenceTable')
-                conf_api.update_or_create_page(title=page_name,body=sftw_table)
-                print(f"{page_name} updated")
-            else:
-                print(f"Skipping page {page_name}")
+            conf_sftw_info = get_conf_software(conf_api=conf_api, page_id=id)
+            if conf_sftw_info:
+                conf_sftw = conf_sftw_info[0] 
+                page_name = conf_sftw_info[1]
+                try:
+                    if isinstance(conf_sftw,list):
+                        rp_name = page_name.split()[0]
+                        rp_name = standardize_rp_name(rp_name=rp_name)
+                        local_sftw = get_local_software(rp_name=rp_name)
+                        combined_sftw = combine_software_data(conf_sftw=conf_sftw, local_sftw=local_sftw)
+                        sftw_table = pd.DataFrame({'Software Packages': combined_sftw}).to_html(index=False,classes='confluenceTable')
+                        conf_api.update_or_create_page(title=page_name,body=sftw_table)
+                        print(f"{page_name} updated")
+                    else:
+                        print(f"Skipping page {page_name}")
+
+                except Exception as e:
+                    print(f"Error while trying to update conf page: {page_name}", e)
             
     except Exception as e:
-        print(e)
+        print(f"Error while trying to retrieve conf pages", e)
