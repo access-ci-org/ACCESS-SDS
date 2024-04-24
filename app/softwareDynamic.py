@@ -72,11 +72,11 @@ def read_and_transform_json(file_path, filename):
             'core features': ['core_features', 'coreFeatures', 'core features', 'Core Features'],
             'tags': ['general_tags', 'general tags', 'generalTags', 'General Tags'],
             'additional tags': ['additionalTags', 'additional tags', 'additional_tags', 'Additional Tags', 'specific_tags'],
-            'research area': ['research_area', 'research area', 'researchArea', 'Research Area'],
-            'research discipline': ['research_discipline', 'research discipline', 'researchDiscipline', 'discipline', 'Research Discipline', 'specific_discipline', 'research_discipline_tags'],
-            'software type': ['software_type', 'softwareType', 'software type', 'Software Type'],
-            'software class': ['software_class', 'softwareClass', 'software class', 'Software Class'],
-            'research field': ['field_of_science', 'specific_field_of_science', 'specific_field', 'Field of Science', 'field of science', 'technology_field', 'research_field', 'Scientific Field', 'subfield_of_science']
+            'research area': ['research_area_tags', 'research_area', 'research area', 'researchArea', 'Research Area'],
+            'research discipline': ['discipline_tags', 'research_discipline', 'research discipline', 'researchDiscipline', 'discipline', 'Research Discipline', 'specific_discipline', 'research_discipline_tags'],
+            'software type': ['software_type_tags', 'software_type', 'softwareType', 'software type', 'Software Type'],
+            'software class': ['software_class_tags', 'software_class', 'softwareClass', 'software class', 'Software Class'],
+            'research field': ['field_of_science_tags', 'field_of_science', 'specific_field_of_science', 'specific_field', 'Field of Science', 'field of science', 'technology_field', 'research_field', 'Scientific Field', 'subfield_of_science']
         }
 
         for attribute, columns in attributes_columns.items():
