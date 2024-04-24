@@ -1,0 +1,24 @@
+{
+  "software_name": "cuda-quantum",
+  "comprehensive_overview": "cuda-quantum is a CUDA-accelerated quantum computing simulator designed to efficiently simulate quantum circuits on NVIDIA GPUs. It provides a high-performance platform for simulating large-scale quantum computations with a focus on speed and scalability.",
+  "core_features": [
+    "CUDA-accelerated quantum computing simulator",
+    "Efficiently simulates quantum circuits on NVIDIA GPUs",
+    "High-performance platform for simulating large-scale quantum computations",
+    "Emphasis on speed and scalability"
+  ],
+  "general_tags": [
+    "quantum computing",
+    "CUDA-accelerated",
+    "quantum simulator",
+    "NVIDIA GPU",
+    "high-performance computing"
+  ],
+  "additional_tags": {
+    "research_discipline": "Computer Science",
+    "research_area": "Artificial Intelligence and Intelligent Systems",
+    "software_class": "Simulation and Modeling",
+    "software_type": "Quantum Computing Simulator",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

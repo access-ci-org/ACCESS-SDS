@@ -1,0 +1,23 @@
+{
+    "software_name": "Intel ITAC",
+    "comprehensive_overview": "Intel ITAC (Intel Trace Analyzer and Collector) is a performance analysis tool suite designed to help developers optimize their applications and maximize performance on Intel architecture-based systems. It provides a range of capabilities for analyzing application behavior, identifying performance bottlenecks, and improving parallel scalability.",
+    "core_features": [
+        "Performance analysis",
+        "Application optimization",
+        "Parallel scalability improvement",
+        "Intel architecture support"
+    ],
+    "general_tags": [
+        "Performance optimization",
+        "Parallel computing",
+        "Intel architecture",
+        "Application analysis"
+    ],
+    "additional_tags": {
+        "research_discipline": "",
+        "research_area": "",
+        "software_class": "Performance Analysis Tool",
+        "software_type": "Software Development",
+        "field_of_science": "Engineering and Technology"
+    }
+}

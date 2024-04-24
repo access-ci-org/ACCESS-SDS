@@ -1,0 +1,33 @@
+Use Case: Molecular dynamics simulation
+
+Code details and examples:
+Sample input file: input.in
+```
+&control
+    calculation = 'md',
+    nstep = 100,
+/
+&system
+    ibrav = 1,
+    celldm(1) = 10,
+    nat = 2,
+    ntyp = 1,
+/
+&electrons
+    conv_thr = 1.0E-6,
+/
+ATOMIC_SPECIES
+   H 1.0079 H.pbe-rrkjus.UPF
+ATOMIC_POSITIONS {angstrom}
+   H 0.0 0.0 0.0
+   H 0.5 0.5 0.5
+K_POINTS {automatic}
+   4 4 4 0 0 0
+```
+
+Sample code snippet:
+```
+mpirun -np 4 pw.x < input.in > output.out
+```
+
+Command: mpirun -np 4 pw.x < input.in > output.out

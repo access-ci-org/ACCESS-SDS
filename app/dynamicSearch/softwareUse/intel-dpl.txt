@@ -1,0 +1,22 @@
+Use Case: Scientific libraries
+
+Code details and examples: 
+Intel Distribution for Python can be used for high-performance computing and parallel processing tasks. Here is an example of how you can run a Python script using Intel Distribution for Python:
+
+Sample input file (example.py):
+```python
+import numpy as np
+
+# Create a large NumPy array
+arr = np.random.rand(10000, 10000)
+
+# Perform matrix multiplication
+result = np.dot(arr, arr)
+
+print(result)
+```
+
+To run this script with Intel Distribution for Python, you can use the following command:
+```
+$ python example.py
+```

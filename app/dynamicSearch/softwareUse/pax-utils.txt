@@ -1,0 +1,6 @@
+Use Case: Checking ELF files for security relevant characteristics
+Code details and examples:
+```bash
+paxelfcheck /path/to/binary
+```
+This command will run a series of checks on the specified ELF binary file.

@@ -1,0 +1,61 @@
+Use Case: Motif discovery and analysis in biological sequences
+Code details and examples:
+Code: 
+- meme
+Sample input file format (fasta):
+```
+>Sequence1
+ATCGATCGATCGATCG
+>Sequence2
+CGATCGATCGATCGAT
+>Sequence3
+GATCGATCGATCGATC
+```
+Command to run:
+```bash
+meme input.fasta
+```
+
+Use Case: Predicting regulatory motifs in DNA sequences
+Code details and examples:
+Code: 
+- mast
+Sample input file format (meme file):
+```
+motif1
+letter-probability matrix: alength= 4 w= 10 nsites= 20 E= 1.2e-30
+0.2 0.1 0.3 0.4 
+0.3 0.2 0.4 0.1
+...
+motif2
+letter-probability matrix: alength= 4 w= 10 nsites= 18 E= 1.5e-25
+0.1 0.2 0.3 0.4 
+0.4 0.3 0.2 0.1
+...
+```
+Command to run:
+```bash
+mast motifs.meme input.fasta
+```
+
+Use Case: Analyzing DNA/RNA-seq data for motif discovery
+Code details and examples:
+Code: 
+- fimo
+Sample input file format (meme file):
+```
+motif1
+letter-probability matrix: alength= 4 w= 8
+0.2 0.1 0.3 0.4 
+0.3 0.2 0.4 0.1
+...
+motif2
+letter-probability matrix: alength= 4 w= 8
+0.2 0.3 0.1 0.4 
+0.4 0.1 0.3 0.2
+...
+```
+Command to run:
+```bash
+fimo motifs.meme input.fasta
+```

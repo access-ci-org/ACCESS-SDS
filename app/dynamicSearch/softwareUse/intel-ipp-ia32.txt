@@ -1,0 +1,32 @@
+Use Case: Image processing with Intel IPP library  
+Code details and examples:  
+Sample Input File: image.jpg  
+Format required: JPEG  
+Input file details: RGB image  
+```cpp
+#include <ipp.h>
+#include <iostream>
+
+int main() {
+    IppiSize roi = { 640, 480 };
+    Ipp8u* pSrc = ippiMalloc_8u_C3(roi.width, roi.height);
+    Ipp8u* pDst = ippiMalloc_8u_C3(roi.width, roi.height);
+    // Load image from file to pSrc
+
+    IppStatus status = ippiBGRToLab_8u_C3R(pSrc, roi.width * 3, pDst, roi.width * 3, roi);
+    
+    if (status != ippStsNoErr) {
+        std::cerr << "Error processing image." << std::endl;
+        return 1;
+    }
+
+    // Save processed image to file
+
+    ippiFree(pSrc);
+    ippiFree(pDst);
+
+    return 0;
+}
+```
+Command to compile: `icc -o image_processing image_processing.cpp -ipp`
+Command to run: `./image_processing`

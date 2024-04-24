@@ -1,0 +1,14 @@
+Use Case: Profiling and optimizing performance of applications.
+
+Code details and examples:
+Sample Input Files:
+- Executable binary file
+- Command line arguments
+- Performance analysis options
+
+Code:
+```bash
+vtune -collect hotspots <executable_file> <command_line_arguments>
+```
+
+Note: Replace `<executable_file>` and `<command_line_arguments>` with the actual values.

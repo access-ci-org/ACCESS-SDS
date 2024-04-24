@@ -1,0 +1,27 @@
+Use Case: Python interactive environment for data science and machine learning.
+
+Code details and examples:
+Code: 
+1. Open Jupyter Notebook:
+```
+jupyter notebook
+```
+
+2. Sample code snippet in a Jupyter notebook:
+```python
+import pandas as pd
+
+# Load a sample dataset
+df = pd.read_csv('sample.csv')
+
+# Display the first 5 rows of the dataset
+df.head()
+```
+
+3. Sample input file format (sample.csv):
+```
+Name,Age,Location
+Alice,25,New York
+Bob,30,San Francisco
+Charlie,22,Chicago
+```

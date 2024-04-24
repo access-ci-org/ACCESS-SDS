@@ -1,0 +1,34 @@
+Use Case: Deep Neural Network Library (DNNL) for CPU with OpenMP support
+Code details and examples: 
+
+Input file format: Typically, input data for deep learning models are stored in formats like CSV, JSON, or image files. Specific formats may vary depending on the model being trained or used.
+
+Example code snippet to use DNNL with OpenMP support:
+```
+import numpy as np
+import dnnl
+
+# Sample code to create a simple neural network with DNNL
+# This is just a basic example, actual network architecture and data should be based on the specific use case
+
+# Define network architecture
+input_shape = (10, 10)  # Input shape for the network
+hidden_units = 20  # Number of hidden units
+output_units = 5  # Number of output units
+
+# Create input data
+input_data = np.random.rand(*input_shape)
+
+# Create a simple neural network model
+model = dnnl.Model()
+model.add(dnnl.DenseLayer(hidden_units, activation='relu', input_shape=input_shape))
+model.add(dnnl.DenseLayer(output_units, activation='softmax'))
+
+# Compile the model
+model.compile(optimizer='adam', loss='categorical_crossentropy')
+
+# Train the model with input data
+model.fit(input_data, labels)  # 'labels' should be the corresponding labels for the input_data
+```
+
+Please note that the above code snippet is a simplistic representation of using DNNL with OpenMP support. Actual implementation may vary based on the specific task and requirements.

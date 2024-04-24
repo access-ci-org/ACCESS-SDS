@@ -1,0 +1,31 @@
+Use Case: Image processing using Intel IPP  
+Code details and examples: 
+
+Sample input image file format: jpg  
+Sample code snippet using Intel IPP for image processing:  
+```cpp
+#include <ipp.h>
+#include <iostream>
+
+int main() {
+    IppiSize roi = {640, 480};
+    Ipp8u *pSrc = ippiMalloc_8u_C1(roi.width, roi.height, NULL, NULL);
+    Ipp8u *pDst = ippiMalloc_8u_C1(roi.width, roi.height, NULL, NULL);
+    
+    // Perform image processing operations using Intel IPP functions
+    // Example: Convert image from RGB to grayscale
+    ippiRGBToGray_8u_C3C1R(pSrc, roi.width * 3, pDst, roi.width, roi, ippBorderRepl, 0);
+    
+    // Free allocated memory
+    ippFree(pSrc);
+    ippFree(pDst);
+    
+    return 0;
+}
+```
+
+To compile and run the code:
+```bash
+icpc -o image_processing image_processing.cpp -lippcore -lippi
+./image_processing
+```

@@ -1,0 +1,22 @@
+Use Case: XCB Util Image provides utilities and libraries for handling images in XCB (X protocol C-language Binding) based applications.
+
+Code details and examples:
+1. Create an XCB image with specified dimensions:
+```c
+xcb_image_t *image = xcb_image_create(Width, Height, XCB_IMAGE_FORMAT_Z_PIXMAP, depth, XCB_IMAGE_ORDER_LSB_FIRST, XCB_IMAGE_ORDER_BIT_FIRST, NULL, ~0, NULL);
+```
+
+2. Get pixel value at a specific location in the image:
+```c
+uint32_t pixel = xcb_image_get_pixel(image, x, y);
+```
+
+3. Put pixel value at a specific location in the image:
+```c
+xcb_image_put_pixel(image, x, y, pixel);
+```
+
+4. Destroy the XCB image:
+```c
+xcb_image_destroy(image);
+```

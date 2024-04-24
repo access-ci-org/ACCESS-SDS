@@ -1,0 +1,15 @@
+Use Case: High performance computing tool for running parallel applications on Intel architectures.
+
+Code details and examples:
+- Sample Input Files:
+  - No specific input files required. Input parameters are typically passed through command-line arguments.
+
+- Code Snippet:
+  ```bash
+  mpirun -np <num_processes> <executable>
+  ```
+
+- Command to run:
+  ```bash
+  mpirun -np 4 ./my_application
+  ```

@@ -1,0 +1,13 @@
+{
+    "software_name": "Mentor Graphics",
+    "comprehensive_overview": "Mentor Graphics, a Siemens business, is a US-based electronic design automation (EDA) company providing software and hardware design solutions that enable companies to develop better electronic products faster and more cost-effectively.",
+    "core_features": "Key features of Mentor Graphics include design automation software for integrated circuits (ICs), printed circuit boards (PCBs), FPGA design, automotive electronic systems, embedded software, and hardware/software co-verification. They also offer simulation and verification tools, design for manufacturability solutions, and thermal analysis software.",
+    "general_tags": ["Electronic Design Automation", "EDA", "Design Solutions", "IC Design", "PCB Design", "FPGA Design"],
+    "additional_tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Engineering and Technology",
+        "software_type": "Computational Software",
+        "field_of_science": "Engineering and Technology"
+    }
+}

@@ -1,0 +1,13 @@
+{
+  "software_name": "Dyninst",
+  "comprehensive_overview": "Dyninst is a versatile and powerful binary instrumentation and analysis tool that provides capabilities for runtime code analysis, modification, and monitoring in C, C++, and Fortran applications.",
+  "core_features": "1. Binary instrumentation for code analysis and modification.\n2. Dynamic analysis of program behavior.\n3. Program monitoring during runtime.\n4. Support for C, C++, and Fortran applications.\n5. Versatile and flexible for various use cases.",
+  "general_tags": ["binary instrumentation", "code analysis", "runtime monitoring"],
+  "additional_tags": {
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Instrumentation and Analysis",
+    "software_type": "Tool",
+    "field_of_science": "Computer and Information Sciences"
+  }
+}

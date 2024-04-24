@@ -1,0 +1,13 @@
+{
+    "software_name": "intel-dnnl-cpu-tbb",
+    "comprehensive_overview": "Intel oneAPI Deep Neural Network Library (DNNL) for CPU with Threading Building Blocks (TBB) support is a high-performance library for deep learning applications. It provides optimized building blocks for implementing deep neural networks on Intel CPUs.",
+    "core_features": "1. High-performance deep learning library optimized for Intel CPUs. 2. Supports various neural network models and operations. 3. Integration with Threading Building Blocks (TBB) for efficient multi-threading. 4. Provides primitives for deep learning acceleration on Intel CPUs.",
+    "general_tags": ["Deep Learning", "Neural Networks", "CPU Optimization", "Threading Building Blocks"],
+    "additional_tags": {
+        "research_discipline": "Artificial Intelligence and Intelligent Systems",
+        "research_area": "Machine Learning",
+        "software_class": "Library",
+        "software_type": "Deep Learning Library",
+        "field_of_science": "Computer and Information Sciences"
+    }
+}

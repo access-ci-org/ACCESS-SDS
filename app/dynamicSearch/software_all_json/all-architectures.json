@@ -1,0 +1,31 @@
+error
+{
+    "tools": [
+        {
+            "software_name": "AutoCAD",
+            "comprehensive_overview": "AutoCAD is a computer-aided design (CAD) software used for creating 2D and 3D drawings and models.",
+            "core_features": "Features include drawing and annotation tools, customizable UI, 3D modeling and visualization, documentation tools, and collaboration capabilities.",
+            "general_tags": ["CAD software", "Design software"],
+            "additional_tags": {
+                "research_discipline": [],
+                "research_area": [],
+                "software_class": "Architectural design software",
+                "software_type": "Commercial",
+                "field_of_science": "Engineering and Technology"
+            }
+        },
+        {
+            "software_name": "Revit",
+            "comprehensive_overview": "Revit is a building information modeling (BIM) software used by architects, engineers, and construction professionals for designing and documenting building projects.",
+            "core_features": "Key features include parametric modeling, collaborative design, interoperability, and construction documentation.",
+            "general_tags": ["BIM software", "Architectural design software"],
+            "additional_tags": {
+                "research_discipline": [],
+                "research_area": [],
+                "software_class": "Architectural design software",
+                "software_type": "Commercial",
+                "field_of_science": "Engineering and Technology"
+            }
+        }
+    ]
+}

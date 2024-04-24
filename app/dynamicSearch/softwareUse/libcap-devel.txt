@@ -1,0 +1,27 @@
+Use Case: Library for enabling capabilities in software development; 
+
+Code details and examples: 
+```c
+#include <stdio.h>
+#include <sys/capability.h>
+
+int main() {
+    cap_t caps = cap_get_proc();
+    
+    printf("Capabilities: %s\n", cap_to_text(caps, NULL));
+    
+    cap_free(caps);
+    
+    return 0;
+}
+```
+
+To compile the code:
+```
+gcc -o cap_test cap_test.c -lcap
+```
+
+To run the compiled code:
+```
+./cap_test
+```

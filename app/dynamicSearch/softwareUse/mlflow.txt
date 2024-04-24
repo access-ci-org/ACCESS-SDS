@@ -1,0 +1,35 @@
+Use Case: Experiment Tracking with MLflow
+
+Code Details and Examples:
+- MLflow is an open-source platform for managing the end-to-end machine learning lifecycle. It allows tracking experiments, packaging code into reproducible runs, and sharing and deploying models.
+
+1. Create a sample MLflow project:
+```python
+# my_mlflow_project.py
+import mlflow
+
+# Log parameters
+mlflow.log_param("param1", 5)
+mlflow.log_param("param2", "value2")
+
+# Log metrics
+mlflow.log_metric("metric1", 0.85)
+mlflow.log_metric("metric2", 0.92)
+
+# Start MLflow run
+with mlflow.start_run():
+    # Log model
+    mlflow.log_artifact("model.pkl")
+```
+
+2. Running the MLflow project:
+```bash
+mlflow run .
+```
+
+3. View the MLflow UI to see the results of the experiment tracking:
+```bash
+mlflow ui
+```
+
+4. For more details and functionality of MLflow, refer to the official documentation: https://www.mlflow.org/

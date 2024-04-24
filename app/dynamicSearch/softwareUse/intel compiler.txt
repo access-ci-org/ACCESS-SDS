@@ -1,0 +1,11 @@
+Use Case: Intel Compiler
+
+Code details and examples:
+Input file format:
+- Plain text files
+
+Code:
+icc -o hello_world hello_world.c
+
+Command to run:
+./hello_world

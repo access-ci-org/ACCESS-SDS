@@ -1,0 +1,11 @@
+{
+    "software_name": "intel-dpct",
+    "comprehensive_overview": "Intel Data Parallel C++ (DPC++) Compatibility Tool (dpct) is a tool developed by Intel to facilitate migration of CUDA kernels to Data Parallel C++ (DPC++) for seamless porting to heterogeneous platforms.",
+    "core_features": "1. Automatic translation of CUDA source code to DPC++ source code. 2. Support for CUDA kernels defined in separate files. 3. Generation of DPC++ offload syntax for given CUDA kernel code. 4. Integration with Intel Advisor & Inspector tools for analysis and optimization of the code. 5. Compatible with Intel oneAPI toolkits for cross-architecture development.",
+    "general_tags": ["Intel", "Data Migration", "CUDA", "DPC++", "Heterogeneous Computing"],
+    "research_discipline": [],
+    "research_area": [],
+    "software_class": "Tool",
+    "software_type": "Compiler",
+    "field_of_science": "Computer and Information Sciences"
+}

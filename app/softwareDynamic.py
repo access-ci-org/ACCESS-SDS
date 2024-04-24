@@ -67,7 +67,7 @@ def read_and_transform_json(file_path, filename):
                 flattened_data[key] = value
 
         attributes_columns = {
-            'software name': ['software_name', 'tool', 'software', 'softwareName', 'software name'],
+            'software name': ['software_name', 'tool', 'software', 'softwareName', 'software name', 'Software Name'],
             'overview': ['comprehensive_overview', 'overview', 'comprehensiveOverview', 'comprehensive overview', 'Comprehensive Overview'],
             'core features': ['core_features', 'coreFeatures', 'core features', 'Core Features'],
             'tags': ['general_tags', 'general tags', 'generalTags', 'General Tags'],

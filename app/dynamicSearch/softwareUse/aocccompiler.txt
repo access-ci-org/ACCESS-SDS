@@ -1,0 +1,25 @@
+Use Case: Compiler tools
+
+Code details and examples:
+```
+The AOCC compiler (AMD Optimizing C/C++ Compiler) is based on LLVM and is designed to provide optimized performance for AMD processors. Below is an example of compiling a C program using the AOCC compiler.
+
+Sample C program (example.c):
+```c
+#include <stdio.h>
+
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}
+```
+
+Compiling the C program with AOCC:
+```
+aocc example.c -o example
+```
+
+Running the compiled program:
+```
+./example
+```

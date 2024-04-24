@@ -1,0 +1,15 @@
+Use Case: iGenomes
+Code details and examples: 
+
+iGenomes provides genome sequences and annotation files for various organisms that are commonly used in genomics research. The data is typically organized in a specific directory structure with files in formats such as FASTA for sequences and GTF/GFF for annotations.
+
+Example input files:
+1. Genome sequence FASTA file (e.g., hg38.fa)
+2. Annotation GTF file (e.g., hg38.gtf)
+
+Data specifications:
+- FASTA file: Contains the genomic sequences in the ATCG format.
+- GTF file: Contains the genomic annotation information such as gene locations, transcript structures, and other features.
+
+Command to retrieve iGenomes data:
+iGenomes provides data for download from the Illumina iGenomes website. Download the data for the organism of interest and utilize it in your analysis pipelines.

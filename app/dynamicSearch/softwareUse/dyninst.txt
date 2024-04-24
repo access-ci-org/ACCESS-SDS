@@ -1,0 +1,17 @@
+Use Case: Binary Code Analysis
+
+Code details and examples:
+Dyninst is a dynamic instrumentation tool used for binary code analysis. It allows users to analyze and modify compiled binary executables.
+
+An example use case is to disassemble a binary executable using Dyninst. 
+
+Sample Input File (binary_executable):
+Binary executable file: program.exe
+
+Code:
+```bash
+# Disassemble binary executable using Dyninst
+./bin/dyninst/bin/parseAPI -parseApi program.exe
+```
+
+Note: The actual command to run Dyninst may vary based on the specific version and installation path on your system. Please refer to the Dyninst documentation for detailed instructions.

@@ -1,0 +1,11 @@
+{
+  "software_name": "TACC",
+  "comprehensive_overview": "TACC (Texas Advanced Computing Center) provides comprehensive advanced computing resources and support services to researchers, enabling them to address some of society's most challenging problems.",
+  "core_features": "TACC offers high-performance computing resources, visualization and data analysis tools, storage solutions, cloud computing services, and various support services to assist researchers in their computational needs. The center also provides training and education programs to enhance the computational skills of users.",
+  "general_tags": ["high-performance computing", "advanced computing resources", "visualization", "data analysis", "storage solutions", "cloud computing", "training", "education programs"],
+  "research_discipline": "Infrastructure and Instrumentation",
+  "research_area": "",
+  "software_class": "Research Computing Infrastructure",
+  "software_type": "HPC Tools",
+  "field_of_science": "Engineering and Technology"
+}

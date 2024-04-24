@@ -1,0 +1,6 @@
+Use Case: Programming and code optimization
+
+Code details and examples:
+```bash
+$ icc -o my_program my_program.cpp
+```

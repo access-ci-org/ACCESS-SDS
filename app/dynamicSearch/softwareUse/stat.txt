@@ -1,0 +1,13 @@
+I'm assuming you meant the "stat" command in Unix-like operating systems. 
+
+Use Case: Retrieve file or file system status information
+Code details and examples: 
+```
+stat <file_name>
+```
+In this command, replace `<file_name>` with the name of the file you want to retrieve information about. The "stat" command provides information such as file size, inode number, permissions, last access time, last modification time, and more.
+
+Example:
+```
+stat myfile.txt
+```
