@@ -63,6 +63,10 @@ $(document).ready(function(){
         "sScrollX": "100%",
         "autoWidth": true,
         pageLength: 50,
+        lengthMenu: [
+            [50, 250, 500, -1],
+            [50, 250, 500, 'All']
+        ],
         searchBuilder: {
             conditions: {
                 string: {
