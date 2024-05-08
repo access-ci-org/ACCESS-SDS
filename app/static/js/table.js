@@ -67,10 +67,12 @@ $(document).ready(function(){
             [50, 250, 500, -1],
             [50, 250, 500, 'All']
         ],
-        dom:'Q<"d-flex justify-content-between align-items-center gap-3"<"d-flex"<"d-flex pr-3"l><"d-flex"B>>f>rtip',
+        dom:'Q<"d-flex flex-column flex-md-row justify-content-between"<"d-flex flex-column flex-md-row"<"d-flex mb-3 mb-md-0"l><"d-flex px-3"B>>f>rtip',
         buttons: [
-            'colvis'
+            'colvis',
         ],
+        stateSave: true,
+        stateDuration:-1,
         searchBuilder: {
             conditions: {
                 string: {
@@ -126,10 +128,12 @@ $(document).ready(function(){
             [50, 250, 500, -1],
             [50, 250, 500, 'All']
         ],
-        dom:'Q<"d-flex justify-content-between align-items-center gap-3"<"d-flex"<"d-flex pr-3"l><"d-flex"B>>f>rtip',
+        dom:'Q<"d-flex flex-column flex-md-row justify-content-between"<"d-flex flex-column flex-md-row"<"d-flex mb-3 mb-md-0"l><"d-flex px-3"B>>f>rtip',
         buttons: [
-            'colvis'
+            'colvis',
         ],
+        stateSave: true,
+        stateDuration:-1,
         searchBuilder: {
             conditions: {
                 string: {
@@ -187,7 +191,6 @@ $(document).ready(function(){
     var converter = new showdown.Converter({
         extensions: [highlightExtension]
     });
-
 
     dynamicTable.on('click','.example-use-btn', function(e){
         let rowData = dynamicTable.row(e.target.closest('tr')).data();
