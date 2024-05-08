@@ -67,6 +67,10 @@ $(document).ready(function(){
             [50, 250, 500, -1],
             [50, 250, 500, 'All']
         ],
+        dom:'Q<"d-flex justify-content-between align-items-center gap-3"<"d-flex"<"d-flex pr-3"l><"d-flex"B>>f>rtip',
+        buttons: [
+            'colvis'
+        ],
         searchBuilder: {
             conditions: {
                 string: {
@@ -82,7 +86,6 @@ $(document).ready(function(){
                 },
             }
         },
-        dom:'Qlfrtip',
         columnDefs: 
             [
                 {
@@ -113,9 +116,6 @@ $(document).ready(function(){
                     width:"50px"
                 }
             ],
-        layout:{
-            top1:"searchBuilder"
-        }
     });
 
     var dynamicTable = $('#softwareTableDynamic').DataTable({
@@ -125,6 +125,10 @@ $(document).ready(function(){
         lengthMenu: [
             [50, 250, 500, -1],
             [50, 250, 500, 'All']
+        ],
+        dom:'Q<"d-flex justify-content-between align-items-center gap-3"<"d-flex"<"d-flex pr-3"l><"d-flex"B>>f>rtip',
+        buttons: [
+            'colvis'
         ],
         searchBuilder: {
             conditions: {
@@ -142,7 +146,6 @@ $(document).ready(function(){
             },
             
         },
-        dom:'Qlfrtip',
         columnDefs:[
             {
                 searchBuilder:{
@@ -178,9 +181,6 @@ $(document).ready(function(){
                 width:"300px"
             }
         ],
-        layout:{
-            top1:"searchBuilder"
-        }
     });
 
     // Initialize a Showdown converter with the Highlight.js extension
@@ -214,7 +214,7 @@ $(document).ready(function(){
         })
     })
 
-    var $scrollBody = $('.dataTables_scrollBody');
+    var $scrollBody = $('.dt-scroll-body');
     var scrollSensitivity = 100; // Distance from edge in pixels.
     var scrollSpeed = 7; // Speed of the scroll step in pixels.
     var scrollInterval;
@@ -236,10 +236,12 @@ $(document).ready(function(){
     }
   
     // Event listener for mouse movement in the scroll body.
-    $scrollBody.mousemove(function(e) {
+    $('.dt-scroll-body').mousemove(function(e) {
       var $this = $(this);
+    //   console.log($this);
+    //   console.log($this[0].scrollWidth)
       var offset = $this.offset();
-      var scrollWidth = $this.get(0).scrollWidth;
+      var scrollWidth = $this[0].scrollWidth;
       var outerWidth = $this.outerWidth();
       var x = e.pageX - offset.left;
   
@@ -259,7 +261,7 @@ $(document).ready(function(){
 
     function checkScrollEdges(){
         let scrollLeft = $scrollBody.scrollLeft();
-        var scrollWidth = $scrollBody.get(0).scrollWidth;
+        var scrollWidth = $scrollBody[0].scrollWidth;
         var outerWidth = $scrollBody.outerWidth();
 
         if (scrollLeft+outerWidth >= (scrollWidth-1)){

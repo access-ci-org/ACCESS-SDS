@@ -1,13 +1,21 @@
 {% extends "base.html" %}
 {% block scripts %}
     {{super()}}
-    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+
+    <script src="https://cdn.datatables.net/2.0.5/js/dataTables.min.js"></script>
+    
     <script type="text/javascript" src="https://cdn.datatables.net/searchbuilder/1.7.0/js/dataTables.searchBuilder.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/searchbuilder/1.7.0/js/searchBuilder.dataTables.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+    <script src="https://cdn.datatables.net/buttons/3.0.0/js/dataTables.buttons.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.0.0/js/buttons.dataTables.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.0.0/js/buttons.colVis.min.js"></script>
+    
     <script type="module" src="{{url_for('static', filename='js/alerts.js')}}"></script>
     <script type="module" src="{{url_for('static', filename='js/table.js')}}"></script>
     <script type="module" src="{{url_for('static', filename='js/issueReporting.js')}}"></script>
