@@ -182,7 +182,7 @@ def make_df():
     final_order = column_order + rest_of_columns
     df = df[final_order]
 
-    empty_columns = ['Unnamed: 5', 'additional tags', 'other_tags', 'other']
+    empty_columns = ['additional tags', 'other_tags', 'other']
     
     df.drop(empty_columns,axis=1,inplace=True)
 
