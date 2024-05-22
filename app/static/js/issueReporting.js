@@ -49,7 +49,7 @@ function enterReportingState(){
 
 function exitReportingState(){
     reportingIssue = false;
-    $("#reportIssueText").text('Report Issue');
+    $("#reportIssueText").text('Provide Feedback');
     $('body').css('cursor','default');
     $('body').off('click',handleIssueReportClick);
     $('body').off('mousemove', handleMouseMove);

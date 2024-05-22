@@ -17,16 +17,16 @@
 {% set url = url_for(request.endpoint)%}
 {%block page_title %}
 <div style="text-align: center;">
-    {% if 'dynamic' in url%}
-        <h4 style="text-align:center;" id="page_title">ACCESS Software Documentation Service (Dynamic)</h4>
+    {% if 'ai-generated' in url%}
+        <h4 style="text-align:center;" id="page_title">ACCESS Software Documentation Service (AI Generated)</h4>
     {%else%}
-        <h4 style="text-align:center;" id="page_title">ACCESS Software Documentation Service (Static)</h4>
+        <h4 style="text-align:center;" id="page_title">ACCESS Software Documentation Service (Curated)</h4>
     {%endif%}
 </div>
 {% endblock %}
 
 {% block app_content %}
-{% if 'dynamic' in url%}
+{% if 'ai-generated' in url%}
 <div class="">
     <label style="font-size: 0.8em;">
         <span style="color:#FF0000;">Disclaimer: </span>
@@ -37,10 +37,22 @@
         associated with the various RP systems should be accurate but may not be
         complete.  The additional information related to the software packages
         has been generated through the use of AI tools (ChatGPT), is in process
-        of review and may contain errors or inaccuracies.</label>
+        of review and may contain errors or inaccuracies. Users are encouraged to respond via the Provide Feedback mechanism to 
+        provide missing information, report errors, or suggest corrections.</label>
+</div>
+{%else%}
+<div class="">
+    <label style="font-size: 0.8em;">
+        <span style="color:#FF0000">Disclaimer: </span>
+        The “Curated” Software Description Service (SDS) is a work in progress. Not all information for all software is complete at this time.
+        Additional information will continue to be provided/added in future updates.
+        Users are encouraged to respond via the Provide Feedback mechanism to provide missing information, 
+        report errors, or suggest corrections.</label>
+{%endif%}
+<div class="">
     <label><strong>Hover your mouse to the edge of the table to scroll.</strong></label>
 </div>
-{%endif%}
+
 
 <div class="table-responsive table-container">
     <div class="table-responsive" id="softwareTableDiv" style="width: 80vw;">

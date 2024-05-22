@@ -41,12 +41,12 @@ $(document).ready(function(){
 
     var currentUrl = window.location.href
 
-    if (currentUrl.includes("dynamic")){
-        $("#dynamic-link").addClass("active")
-        $("#static-link").removeClass("active")
+    if (currentUrl.includes("ai-generated")){
+        $("#ai-generated-link").addClass("active")
+        $("#curated-link").removeClass("active")
     } else{
-        $("#dynamic-link").removeClass("active")
-        $("#static-link").addClass("active")
+        $("#ai-generated-link").removeClass("active")
+        $("#curated-link").addClass("active")
     }
 
     // Function to make URLs clickable
