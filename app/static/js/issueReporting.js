@@ -107,35 +107,40 @@ function handleIssueReportClick(event){
         }
 
         // Capture a screenshot of the website
-        html2canvas(document.body).then(function(canvas){
-            var captureDataUrl = canvas.toDataURL('image/png');
+        
+        html2canvas(document.body).then(function(canvas)
+        {
+          //var captureDataUrl = canvas.toDataURL('image/png');   // Disabled until we decide if we want this functionality or not
             
-            // Create an object with the issue reporting data
-        issueReport = {
+          // Create an object with the issue reporting data
+          issueReport = 
+          {
             pageUrl: pageUrl,
             elementType: elementType,
             elementId: elementId,
             elementClass: elementClass,
             elementText: elementText,
             tableCellInfo: tableCellInfo,
-            captureDataUrl: captureDataUrl
-        };
+            //captureDataUrl: captureDataUrl                      // See line 112
+          };
 
-        // Create a formatted string for the report details
-        var reportDetails = "Page URL: " + issueReport.pageUrl + "\n" +
-                            "Element Type: " + issueReport.elementType + "\n" +
-                            "Element ID: " + issueReport.elementId + "\n" +
-                            "Element Class: " + issueReport.elementClass + "\n" +
-                            "Element Text: " + issueReport.elementText + "\n" +
-                            "Table Cell Info: " + JSON.stringify(issueReport.tableCellInfo, null, 2);
-
-            $("#reportDetails").text(reportDetails);
-
-            // Show the modal
-            $("#report-modal").modal('show');
+          // Create a formatted string for the report details
+          var reportDetails = "Page URL: " + issueReport.pageUrl + "\n" +
+                              "Element Type: " + issueReport.elementType + "\n" +
+                              "Element ID: " + issueReport.elementId + "\n" +
+                              "Element Class: " + issueReport.elementClass + "\n" +
+                              "Element Text: " + issueReport.elementText + "\n" +
+                              "Table Cell Info: " + JSON.stringify(issueReport.tableCellInfo, null, 2);
+          
+          $("#reportDetails").text(reportDetails);
+          
+          // Show the modal
+          $("#report-modal").modal('show');
             
-            exitReportingState();
+          exitReportingState();
+          
         });
+        
     }
 }
 
