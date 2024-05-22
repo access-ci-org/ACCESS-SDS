@@ -59,6 +59,25 @@ $(document).ready(function(){
         });
     }
 
+    //Custom Search Logic
+    $.fn.dataTable.ext.search.push(
+        function(settings, data, dataIndex) {
+            var api = new $.fn.dataTable.Api(settings);
+            var visibleColumns = api.columns(':visible').indexes().toArray();
+            var searchTerm = api.search();
+    
+            // Check if any visible column contains the search term
+            for (var i = 0; i < visibleColumns.length; i++) {
+                var columnIndex = visibleColumns[i];
+                if (data[columnIndex].toLowerCase().includes(searchTerm.toLowerCase())) {
+                    return true; // Match found in visible column
+                }
+            }
+            return false; // No match found
+        }
+    );
+    
+
     var staticTable = $('#softwareTable').DataTable({
         "sScrollX": "100%",
         "autoWidth": true,
@@ -67,6 +86,12 @@ $(document).ready(function(){
             [50, 250, 500, -1],
             [50, 250, 500, 'All']
         ],
+        dom:'Q<"d-flex flex-column flex-md-row justify-content-between"<"d-flex flex-column flex-md-row"<"d-flex mb-3 mb-md-0"l><"d-flex px-3"B>>f>rtip',
+        buttons: [
+            'colvis',
+        ],
+        stateSave: true,
+        stateDuration:-1,
         searchBuilder: {
             conditions: {
                 string: {
@@ -82,7 +107,6 @@ $(document).ready(function(){
                 },
             }
         },
-        dom:'Qlfrtip',
         columnDefs: 
             [
                 {
@@ -113,9 +137,6 @@ $(document).ready(function(){
                     width:"50px"
                 }
             ],
-        layout:{
-            top1:"searchBuilder"
-        }
     });
 
     var dynamicTable = $('#softwareTableDynamic').DataTable({
@@ -126,6 +147,12 @@ $(document).ready(function(){
             [50, 250, 500, -1],
             [50, 250, 500, 'All']
         ],
+        dom:'Q<"d-flex flex-column flex-md-row justify-content-between"<"d-flex flex-column flex-md-row"<"d-flex mb-3 mb-md-0"l><"d-flex px-3"B>>f>rtip',
+        buttons: [
+            'colvis',
+        ],
+        stateSave: true,
+        stateDuration:-1,
         searchBuilder: {
             conditions: {
                 string: {
@@ -142,7 +169,6 @@ $(document).ready(function(){
             },
             
         },
-        dom:'Qlfrtip',
         columnDefs:[
             {
                 searchBuilder:{
@@ -178,16 +204,21 @@ $(document).ready(function(){
                 width:"300px"
             }
         ],
-        layout:{
-            top1:"searchBuilder"
-        }
     });
 
+    //Event Listener for Column Visibility
+    staticTable.on('column-visibility.dt', function(e, settings, column, state) {
+        staticTable.draw(); // Redraw the table
+    });
+    
+    dynamicTable.on('column-visibility.dt', function(e, settings, column, state) {
+        dynamicTable.draw(); // Redraw the table
+    });
+    
     // Initialize a Showdown converter with the Highlight.js extension
     var converter = new showdown.Converter({
         extensions: [highlightExtension]
     });
-
 
     dynamicTable.on('click','.example-use-btn', function(e){
         let rowData = dynamicTable.row(e.target.closest('tr')).data();
@@ -214,7 +245,7 @@ $(document).ready(function(){
         })
     })
 
-    var $scrollBody = $('.dataTables_scrollBody');
+    var $scrollBody = $('.dt-scroll-body');
     var scrollSensitivity = 100; // Distance from edge in pixels.
     var scrollSpeed = 7; // Speed of the scroll step in pixels.
     var scrollInterval;
@@ -236,10 +267,12 @@ $(document).ready(function(){
     }
   
     // Event listener for mouse movement in the scroll body.
-    $scrollBody.mousemove(function(e) {
+    $('.dt-scroll-body').mousemove(function(e) {
       var $this = $(this);
+    //   console.log($this);
+    //   console.log($this[0].scrollWidth)
       var offset = $this.offset();
-      var scrollWidth = $this.get(0).scrollWidth;
+      var scrollWidth = $this[0].scrollWidth;
       var outerWidth = $this.outerWidth();
       var x = e.pageX - offset.left;
   
@@ -259,7 +292,7 @@ $(document).ready(function(){
 
     function checkScrollEdges(){
         let scrollLeft = $scrollBody.scrollLeft();
-        var scrollWidth = $scrollBody.get(0).scrollWidth;
+        var scrollWidth = $scrollBody[0].scrollWidth;
         var outerWidth = $scrollBody.outerWidth();
 
         if (scrollLeft+outerWidth >= (scrollWidth-1)){
