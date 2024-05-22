@@ -59,6 +59,25 @@ $(document).ready(function(){
         });
     }
 
+    //Custom Search Logic
+    $.fn.dataTable.ext.search.push(
+        function(settings, data, dataIndex) {
+            var api = new $.fn.dataTable.Api(settings);
+            var visibleColumns = api.columns(':visible').indexes().toArray();
+            var searchTerm = api.search();
+    
+            // Check if any visible column contains the search term
+            for (var i = 0; i < visibleColumns.length; i++) {
+                var columnIndex = visibleColumns[i];
+                if (data[columnIndex].toLowerCase().includes(searchTerm.toLowerCase())) {
+                    return true; // Match found in visible column
+                }
+            }
+            return false; // No match found
+        }
+    );
+    
+
     var staticTable = $('#softwareTable').DataTable({
         "sScrollX": "100%",
         "autoWidth": true,
@@ -187,6 +206,15 @@ $(document).ready(function(){
         ],
     });
 
+    //Event Listener for Column Visibility
+    staticTable.on('column-visibility.dt', function(e, settings, column, state) {
+        staticTable.draw(); // Redraw the table
+    });
+    
+    dynamicTable.on('column-visibility.dt', function(e, settings, column, state) {
+        dynamicTable.draw(); // Redraw the table
+    });
+    
     // Initialize a Showdown converter with the Highlight.js extension
     var converter = new showdown.Converter({
         extensions: [highlightExtension]
