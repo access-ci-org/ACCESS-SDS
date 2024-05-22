@@ -14,13 +14,13 @@ app = Flask(__name__)
 @app.route("/")
 def software_search():
     try:
-        df = pd.read_csv("./staticSearch/ACCESS Software.csv", keep_default_na=False)
+        df = pd.read_csv("./staticSearch/staticTable.csv", keep_default_na=False)
     except FileNotFoundError as e:
 
         df = create_static_table()
         print(e)
     
-    table = df.to_html(classes='table-striped" id = "softwareTable',index=False,border=1)
+    table = df.to_html(classes='table-striped" id = "softwareTable',index=False,border=1).replace('\\n', '<br>')
 
     return render_template("software_search.html",table=table)
 

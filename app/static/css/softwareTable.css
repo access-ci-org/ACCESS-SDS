@@ -1,13 +1,13 @@
-.dataTables_scroll {
+.dt-scroll {
     position: relative;
 }
 
-.dataTables_scroll{
+.dt-scroll{
     border:3px solid #999
 }
 
-.dataTables_scroll::after,
-.dataTables_scroll::before {
+.dt-scroll::after,
+.dt-scroll::before {
     content: '';
     position: absolute;
     top: 0;
@@ -17,13 +17,13 @@
 }
   
 /* Right shadow */
-.dataTables_scroll::after {
+.dt-scroll::after {
     right: 0;
     background: linear-gradient(to left, rgba(0,0,0,0.2), rgba(0,0,0,0));
 }
 
 /* Left shadow */
-.dataTables_scroll::before {
+.dt-scroll::before {
     left: 0;
     background: linear-gradient(to right, rgba(0,0,0,0.2), rgba(0,0,0,0));
 }

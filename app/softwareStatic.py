@@ -40,14 +40,14 @@ def create_full_url(rp_names, software_name):
         if full_url:
             urls.append(full_url)
 
-    combined_urls = ' , '.join(urls)
+    combined_urls = '\n'.join(urls)
     return combined_urls
 
 def create_static_table():
-    df = pd.read_csv('./staticSearch/softwareInfo.csv',na_filter=False)
+    df = pd.read_csv('./staticSearch/ACCESS_Software.csv',na_filter=False)
     df['RP Software Documentation'] = df.apply(lambda row: create_full_url(row['RP Name'],row['Software']), axis=1)
-    empty_columns = ['Example Software Use (link)', 'Area-specific Examples', 'Containerized Version of Software',
-                     'RP Documentations for Software', 'Pathing', 'RP Name.1','RP Full Software Doc']
+    empty_columns = ['Area-specific Examples', 'Containerized Version of Software',
+                     'RP Documentations for Software', 'Pathing']
     
     df.drop(empty_columns,axis=1,inplace=True)
     df.to_csv('./staticSearch/staticTable.csv',index=False)
