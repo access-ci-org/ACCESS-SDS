@@ -1,207 +1,253 @@
-import { showAlert } from './alerts.js';
+/*////////////
+    Imports //
+*/////////////
+import { showAlert, hideAlert } from './alerts.js';
 
-var issueReport = {}
-var reportingIssue = false;
-var selectedElement = null;
+/*/////////////////////
+    Global Variables //
+*//////////////////////
+var issueReport = {}        // Report Object
+var reportingIssue = false; // State Controller
+var selectedElement = null; // Event Target
 
-function handleClick(event){
-    if (reportingIssue && event.target !== $("#reportIssueBtn")[0]){
-        event.preventDefault();
-        event.stopPropagation();
-    }
+/*//////////////
+    Functions //
+*///////////////
+
+// EVENT HANDLERS //
+////////////////////
+
+//function handleClick(event){}
+// Mouse Click Event Listener
+// This functionality is implemented elsewhere now
+
+function handleMouseMove(event)
+// Mouse Movement Event Listener
+{
+  var target = event.target;  // Assigns the Element underneath the Mouse Cursor to Target
+
+  if (selectedElement && selectedElement !== target)  // If there is already a Target, and it is not the current Target
+                                                      // i.e. the Mouse Cursor has moved somewhere else on the page
+  {
+      selectedElement.classList.remove('hovered');    // Remove the red Target outline from the previous Target
+  }
+
+  // If Cursor highlights a valid Table Cell ('td')
+  if (target.tagName.toLowerCase() == 'td')
+  {
+    target.classList.add('hovered');  // Draw the red Target outline around Target
+    selectedElement = target;         // Store reference to Target in Global Variable selectedElement
+  }
+  else
+  {
+    selectedElement = null; // Remove Target reference if Mouse leaves the Table
+                            // This prevents generating reports unless you click directly on the cell
+  }
 }
 
-function handleKeyDown(event){
-    if (reportingIssue && event.key === 'Escape'){
-        exitReportingState();
-    }
+function handleKeyDown(event)
+// Keyboard Key Event Handler
+{
+  if (reportingIssue && event.key === 'Escape')
+  {
+    exitReportingState();
+  }
 }
 
-function handleMouseMove(event){
-    var target = event.target;
+// BEHAVIORS //
+///////////////
 
-    if (selectedElement && selectedElement !== target){
-        selectedElement.classList.remove('hovered');
-    }
-
-    target.classList.add('hovered');
-    selectedElement = target;
-}
-
-function enterReportingState(){
-    reportingIssue = true;
-    var alertDivMessage = "Click on where you see the issue";
-    var alertType = 'info';
-    showAlert(alertDivMessage, alertType);
-    $("#reportIssueText").text('Cancel');
-    $('body').css('cursor', 'crosshair');
-    $('body').on('click', handleIssueReportClick);
-    $('body').on('mousemove', handleMouseMove);
-    $(document).on('click',handleClick);
-    $(document).on('keydown',handleKeyDown);
-
-    if (selectedElement){
-        selectedElement.classList.remove('hovered');
-        selectedElement = null;
-    }
-
-}
-
-function exitReportingState(){
-    reportingIssue = false;
-    $("#reportIssueText").text('Report Issue');
-    $('body').css('cursor','default');
-    $('body').off('click',handleIssueReportClick);
-    $('body').off('mousemove', handleMouseMove);
-    $(document).off('click',handleClick);
-    $(document).off('keydown',handleKeyDown);
-
-    if (selectedElement){
-        selectedElement.classList.remove('hovered');
-        selectedElement = null;
-    }
-}
-
-$("#reportIssueBtn").on('click',function(){
-    event.stopPropagation();
-
-    if (!reportingIssue){
-        enterReportingState();
-    } else {
-        exitReportingState();
-    }
-});
-
-function handleIssueReportClick(event){
-    if (reportingIssue && event.target !== $("#reportIssueBtn")[0]){
-        var target = event.target;
-
-        // Remove the event listener for mouse move
-        $('body').off('mousemove', handleMouseMove);
-
-        var pageUrl = window.location.href;
-        var elementType = target.tagName.toLowerCase();
-        var elementId = target.id;
-        var elementClass = target.className;
-        var elementText = $(target).text().trim();
-
-        // Check if the clicked element is a table cell
-        var tableCellInfo = {};
-        if (elementType == 'td'){
-            var $cell = $(target);
-            var $row = $cell.closest('tr');
-            var $table = $row.closest('table');
-            var rowIndex = $row.index();
-            var columnIndex = $cell.index();
-            var tableId = $table.attr('id');
-            var rowName = $row.find('td:first-child').text().trim();
-            var columnName = $table.DataTable().column(columnIndex).header().innerHTML;
-
-            tableCellInfo = {
-                tableId: tableId,
-                rowIndex: rowIndex,
-                columnIndex: columnIndex,
-                rowName: rowName,
-                columnName: columnName
-            };
-        }
-
-        // Capture a screenshot of the website
-        
-        html2canvas(document.body).then(function(canvas)
-        {
-          //var captureDataUrl = canvas.toDataURL('image/png');   // Disabled until we decide if we want this functionality or not
-            
-          // Create an object with the issue reporting data
-          issueReport = 
-          {
-            pageUrl: pageUrl,
-            elementType: elementType,
-            elementId: elementId,
-            elementClass: elementClass,
-            elementText: elementText,
-            tableCellInfo: tableCellInfo,
-            //captureDataUrl: captureDataUrl                      // See line 112
-          };
-
-          // Create a formatted string for the report details
-          var reportDetails = "Page URL: " + issueReport.pageUrl + "\n" +
-                              "Element Type: " + issueReport.elementType + "\n" +
-                              "Element ID: " + issueReport.elementId + "\n" +
-                              "Element Class: " + issueReport.elementClass + "\n" +
-                              "Element Text: " + issueReport.elementText + "\n" +
-                              "Table Cell Info: " + JSON.stringify(issueReport.tableCellInfo, null, 2);
-          
-          $("#reportDetails").text(reportDetails);
-          
-          // Show the modal
-          $("#report-modal").modal('show');
-            
-          exitReportingState();
-          
-        });
-        
-    }
-}
-
-$("#sendReportBtn").on('click', function() {
-    var feedback = $('#reportFeedback').val();
-    var customIssue = $("#customIssueText").val();
+function enterReportingState()
+// Begin 'Report Issue' Subroutine
+{
+  // Set Reporting State
+  reportingIssue = true;
   
-    if (customIssue) {
-      issueReport.customIssue = customIssue;
-    }
-  
-    $.ajax({
-      url: '/report-issue',
-      type: 'POST',
-      data: JSON.stringify({ feedback: feedback, reportDetails: issueReport }),
-      contentType: 'application/json',
-      success: function(response) {
+  // Alert User (from ./alert.js)
+  var alertDivMessage = "Please click on the cell in the table where there is an issue.";
+  var alertType = 'info';
+  showAlert(alertDivMessage, alertType);
+
+  // Prepare Reporting State
+  $("#reportIssueText").text('Cancel');           // Change 'Report Issue' buutton text to 'Cancel'
+  $('body').css('cursor', 'crosshair');           // Change Mouse cursor type to 'Crosshair'
+  $('body').on('click', handleIssueReportClick);  // Enable 'handleIssueReportClick' Event Listener
+  $('body').on('mousemove', handleMouseMove);     // Enable 'handleMouseMove' Event Listener
+  //$(document).on('click',handleClick);          // Enable 'handleClick' Event Listener (Currently Unnecessary)
+  $(document).on('keydown',handleKeyDown);        // Enable 'handleKeyDown' Event Listener
+}
+
+function exitReportingState()
+// End 'Report Issue' Subroutine
+// Reset Event Handler States to Default After Report
+{
+  // Variables
+  reportingIssue = false; // Return Reporting State to Default (Off)
+  if (selectedElement)    // If a target was previously selected (Red Outline)
+  {
+    selectedElement.classList.remove('hovered');  // Remove 'hovered' status, which draws the red Target outline
+    selectedElement = null;                       // Remove stored reference to Target
+  }
+
+  // Scripts
+  $("#reportIssueText").text('Report Issue');     // Set 'Report Issue' button text back to default (from 'Cancel')
+  $('body').css('cursor','default');              // Return Cursor Style back to 'default' (From 'Crosshair')
+  $('body').off('click',handleIssueReportClick);  // Disable 'handleIssueReportClick' Event Listener
+  $('body').off('mousemove', handleMouseMove);    // Disable 'handleMouseMove' Event Listener
+  //$(document).off('click',handleClick);         // Disable 'handleClick' Event Listener 
+                                                    // Don't forget to enable this too if implementing handleClick again
+  $(document).off('keydown',handleKeyDown);       // Disable 'handleKeyDown' Event Listener
+
+  // Alert
+  hideAlert();
+}
+
+function handleIssueReportClick(event)
+// Behavior of 'Report Issue' Button
+{
+  if (selectedElement.tagName.toLowerCase() == 'td')  // If Targeted Element is a valid cell in the Table
+  {
+    event.stopPropagation();  // Prevents Event Propagation, meaning one Event (in this case, clicking) will not trigger other Event Listeners
+    event.preventDefault();   // Prevents the default behavior of what is clicked (in this case, preventing links from being opened while in 'Reporting' State)
+    $('body').off('mousemove', handleMouseMove); // Disable 'handleMouseMove' event (i.e. Stop drawing outline/don't update Target)
+
+    // Capture Cell Metadata
+    var pageUrl = window.location.href;                       
+    var elementType = selectedElement.tagName.toLowerCase();
+    var elementId = selectedElement.id;                       
+    var elementClass = selectedElement.className;
+    var elementText = $(selectedElement).text().trim();       // Content of Target Element, Trimmed of Whitespace
+
+    // Prepare an Object to capture Table Cell information
+    var tableCellInfo = {};
+
+    var $cell = $(selectedElement);
+    var $row = $cell.closest('tr');
+    var $table = $row.closest('table');
+    var rowIndex = $row.index();
+    var columnIndex = $cell.index();
+    var tableId = $table.attr('id');
+    var rowName = $row.find('td:first-child').text().trim();
+    var columnName = $table.find('th').eq(columnIndex).text().trim();  // Table headers are in <th> elements
+
+    // Create a tableCellInfo Object
+    tableCellInfo = 
+    {
+        tableId: tableId,
+        rowIndex: rowIndex,
+        columnIndex: columnIndex,
+        rowName: rowName,
+        columnName: columnName
+    };
+
+    // Create an issueReport Object
+    issueReport = 
+    {
+      pageUrl: pageUrl,
+      elementType: elementType,
+      elementId: elementId,
+      elementClass: elementClass,
+      elementText: elementText,
+      tableCellInfo: tableCellInfo,
+    };
+
+    // Create a formatted string for the report details
+    var reportDetails = 
+      "Page URL: " + issueReport.pageUrl + "\n" +
+      "Element Type: " + issueReport.elementType + "\n" +
+      "Element ID: " + issueReport.elementId + "\n" +
+      "Element Class: " + issueReport.elementClass + "\n" +
+      "Element Text: " + issueReport.elementText + "\n" +
+      "Table Cell Info: " + JSON.stringify(issueReport.tableCellInfo, null, 2);
+    
+    // Place reportDetails Object information into reportDetails Element
+    $("#reportDetails").text(reportDetails);
+
+    // Display Modal containing reportDetails element
+    $("#report-modal").modal('show');
+
+    // Finish Reporting Routine
+    exitReportingState();
+  }
+}
+
+// BUTTONS //
+/////////////
+
+// 'Report Issue' Button
+// Modal defined in 'reportModal.html'
+$("#reportIssueBtn").on('click',function(event)
+{
+  if (!reportingIssue) // Toggle Reporting State On
+  {
+    enterReportingState();
+  } 
+  else                // Toggle Reporting State Off
+  {
+    exitReportingState();
+  }
+}
+);
+
+// 'Send Report' Button
+// >Inside 'Report Issue' Modal
+$("#sendReportBtn").on('click', function() 
+{
+    var userReport = $('#reportFeedback').val();
+
+    // In jQuery, AJAX exchanges data with a server
+    // In this case, we're packaging the bug report and sending it to our server for manual review
+    $.ajax(
+    {
+      url: '/report-issue',                                                       // Where the report goes (server endpoint)
+      type: 'POST',                                                               // POST-request: data sent TO server (create or update)
+      data: JSON.stringify({ feedback: userReport, reportDetails: issueReport }), // Combining everything into a JSON file
+      contentType: 'application/json',                                            // Telling the server to expect a JSON file
+      success: function(response) 
+      {
         $('#report-modal').modal('hide');
         showAlert('Issue reported successfully!', 'success');
+        // Clear Objects
+        issueReport = {};
+        $("#reportDetails").text('');
       },
-      error: function(xhr, status, error) {
+      error: function(xhr, status, error) 
+      {
         console.error('Error reporting issue:', error);
         showAlert('Failed to report issue. Please try again.', 'danger');
       }
     });
 });
 
-$("#customReportBtn").on('click', function() {
-    $("#customIssueText").val('');
-    $("#reportFeedback").val('');
-    $("#report-modal").modal('show');
-  });
+// 'Provide Feedback' Button
+// Modal defined in 'feedbackModal.html'
+$("#provideFeedbackBtn").on('click', function() 
+{
+  $("#feedback-modal").modal('show');
+}
+);
   
-  $("#submitCustomReportBtn").on('click', function() {
-    var customIssue = $("#customIssueText").val();
-  
-    if (customIssue) {
-      issueReport = {
-        pageUrl: window.location.href,
-        customIssue: customIssue
-      };
-  
-      $.ajax({
-        url: '/report-issue',
-        type: 'POST',
-        data: JSON.stringify({ reportDetails: issueReport }),
-        contentType: 'application/json',
-        success: function(response) {
-          $("#customReportModal").modal('hide');
-          $("#reportDetails").text('Enter report details above');
-          showAlert('Custom issue reported successfully!', 'success');
-        },
-        error: function(xhr, status, error) {
-          console.error('Error reporting custom issue:', error);
-          showAlert('Failed to report custom issue. Please try again.', 'danger');
-        }
-      });
+// 'Submit Feedback' Button
+// >Inside 'Provide Feedback' Modal
+$("#sendFeedbackBtn").on('click', function() 
+{
+  var userFeedback = $("#sendFeedback").val();
+
+  $.ajax(
+  {
+    url: '/report-issue',
+    type: 'POST',
+    data: JSON.stringify({ feedback: userFeedback }), // There's no cell data for this report, only what the user types into the form
+    contentType: 'application/json',
+    success: function(response) 
+    {
+      $("#feedback-modal").modal('hide');
+      showAlert('Feedback reported successfully!', 'success');
+    },
+    error: function(xhr, status, error) 
+    {
+      console.error('Error sending feedback:', error);
+      showAlert('Failed to send feedback. Please try again.', 'danger');
     }
   });
-
-$('#report-modal').on('hidden.bs.modal', function(e) {
-    issueReport = {};
-    $("#reportDetails").text('');
 });
