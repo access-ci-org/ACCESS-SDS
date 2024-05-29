@@ -105,10 +105,10 @@ function exitReportingState()
 function handleIssueReportClick(event)
 // Behavior of 'Report Issue' Button
 {
+  event.preventDefault();   // Prevents the default behavior of what is clicked (in this case, preventing links from being opened while in 'Reporting' State)
   if (selectedElement.tagName.toLowerCase() == 'td')  // If Targeted Element is a valid cell in the Table
   {
     event.stopPropagation();  // Prevents Event Propagation, meaning one Event (in this case, clicking) will not trigger other Event Listeners
-    event.preventDefault();   // Prevents the default behavior of what is clicked (in this case, preventing links from being opened while in 'Reporting' State)
     $('body').off('mousemove', handleMouseMove); // Disable 'handleMouseMove' event (i.e. Stop drawing outline/don't update Target)
 
     // Capture Cell Metadata
