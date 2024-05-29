@@ -60,6 +60,7 @@ $(document).ready(function(){
     }
 
     var staticTable = $('#softwareTable').DataTable({
+        pagingType: 'full_numbers',     // 'First', 'Previous', 'Next', 'Last', with page numbers.
         "sScrollX": "100%",
         "autoWidth": true,
         pageLength: 50,
@@ -82,7 +83,19 @@ $(document).ready(function(){
                 },
             }
         },
-        dom:'Qlfrtip',
+        dom: 'Q<"d-flex flex-column flex-md-row justify-content-between"<"d-flex flex-column flex-md-row"<"d-flex mb-3 mb-md-0"l><"d-flex px-3"B>>f>rt<"d-flex justify-content-between"ip>',
+        language:
+        {
+            paginate:
+            {
+                // Change Arrows (< and >) into Word Equivalents
+                previous: "Prev",
+                next: "Next",
+                first: "First",
+                last: "Last"
+            },
+
+        },
         columnDefs: 
             [
                 {
@@ -119,6 +132,7 @@ $(document).ready(function(){
     });
 
     var dynamicTable = $('#softwareTableDynamic').DataTable({
+        pagingType: 'full_numbers',     // 'First', 'Previous', 'Next', 'Last', with page numbers.
         "sScrollX": "100%",
         "autoWidth": true,
         "pageLength": 50,
@@ -142,7 +156,19 @@ $(document).ready(function(){
             },
             
         },
-        dom:'Qlfrtip',
+        dom: 'Q<"d-flex flex-column flex-md-row justify-content-between"<"d-flex flex-column flex-md-row"<"d-flex mb-3 mb-md-0"l><"d-flex px-3"B>>f>rt<"d-flex justify-content-between"ip>',
+        language:
+        {
+            paginate:
+            {
+		        // Change Arrows (< and >) into Word Equivalents
+                previous: "Prev",
+                next: "Next",
+                first: "First",
+                last: "Last"
+            },
+
+        },
         columnDefs:[
             {
                 searchBuilder:{
