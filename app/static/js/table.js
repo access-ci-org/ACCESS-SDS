@@ -41,12 +41,12 @@ $(document).ready(function(){
 
     var currentUrl = window.location.href
 
-    if (currentUrl.includes("dynamic")){
-        $("#dynamic-link").addClass("active")
-        $("#static-link").removeClass("active")
+    if (currentUrl.includes("ai-generated")){
+        $("#ai-generated-link").addClass("active")
+        $("#curated-link").removeClass("active")
     } else{
-        $("#dynamic-link").removeClass("active")
-        $("#static-link").addClass("active")
+        $("#ai-generated-link").removeClass("active")
+        $("#curated-link").addClass("active")
     }
 
     // Function to make URLs clickable
@@ -82,11 +82,24 @@ $(document).ready(function(){
         "sScrollX": "100%",
         "autoWidth": true,
         pageLength: 50,
+        pagingType: 'full_numbers',     // 'First', 'Previous', 'Next', 'Last', with page numbers.
         lengthMenu: [
             [50, 250, 500, -1],
             [50, 250, 500, 'All']
         ],
-        dom:'Q<"d-flex flex-column flex-md-row justify-content-between"<"d-flex flex-column flex-md-row"<"d-flex mb-3 mb-md-0"l><"d-flex px-3"B>>f>rtip',
+        dom: 'Q<"d-flex flex-column flex-md-row justify-content-between"<"d-flex flex-column flex-md-row"<"d-flex mb-3 mb-md-0"l><"d-flex px-3"B>>f>rt<"d-flex justify-content-between"ip>', 
+        language:
+        {
+            paginate:
+            {
+                // Change Arrows (< and >) into Word Equivalents
+                previous: "Prev",
+                next: "Next",
+                first: "First",
+                last: "Last"
+            },
+
+        },
         buttons: [
             'colvis',
         ],
@@ -143,11 +156,24 @@ $(document).ready(function(){
         "sScrollX": "100%",
         "autoWidth": true,
         "pageLength": 50,
+        pagingType: 'full_numbers',     // 'First', 'Previous', 'Next', 'Last', with page numbers.
         lengthMenu: [
             [50, 250, 500, -1],
             [50, 250, 500, 'All']
         ],
-        dom:'Q<"d-flex flex-column flex-md-row justify-content-between"<"d-flex flex-column flex-md-row"<"d-flex mb-3 mb-md-0"l><"d-flex px-3"B>>f>rtip',
+        dom: 'Q<"d-flex flex-column flex-md-row justify-content-between"<"d-flex flex-column flex-md-row"<"d-flex mb-3 mb-md-0"l><"d-flex px-3"B>>f>rt<"d-flex justify-content-between"ip>',
+        language:
+        {
+            paginate:
+            {
+                // Change Arrows (< and >) into Word Equivalents
+                previous: "Prev",
+                next: "Next",
+                first: "First",
+                last: "Last"
+            },
+
+        },
         buttons: [
             'colvis',
         ],
