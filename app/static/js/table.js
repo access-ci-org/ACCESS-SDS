@@ -161,7 +161,7 @@ $(document).ready(function(){
         {
             paginate:
             {
-		        // Change Arrows (< and >) into Word Equivalents
+                // Change Arrows (< and >) into Word Equivalents
                 previous: "Prev",
                 next: "Next",
                 first: "First",
