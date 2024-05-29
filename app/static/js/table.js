@@ -86,7 +86,7 @@ $(document).ready(function(){
             [50, 250, 500, -1],
             [50, 250, 500, 'All']
         ],
-        dom:'Q<"d-flex flex-column flex-md-row justify-content-between"<"d-flex flex-column flex-md-row"<"d-flex mb-3 mb-md-0"l><"d-flex px-3"B>>f>rtip',
+        dom: 'Q<"d-flex flex-column flex-md-row justify-content-between"<"d-flex flex-column flex-md-row"<"d-flex mb-3 mb-md-0"l><"d-flex px-3"B>>f>rt<"d-flex justify-content-between"ip>',
         buttons: [
             'colvis',
         ],
@@ -147,7 +147,7 @@ $(document).ready(function(){
             [50, 250, 500, -1],
             [50, 250, 500, 'All']
         ],
-        dom:'Q<"d-flex flex-column flex-md-row justify-content-between"<"d-flex flex-column flex-md-row"<"d-flex mb-3 mb-md-0"l><"d-flex px-3"B>>f>rtip',
+        dom: 'Q<"d-flex flex-column flex-md-row justify-content-between"<"d-flex flex-column flex-md-row"<"d-flex mb-3 mb-md-0"l><"d-flex px-3"B>>f>rt<"d-flex justify-content-between"ip>',
         buttons: [
             'colvis',
         ],
