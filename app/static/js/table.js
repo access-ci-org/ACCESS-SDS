@@ -41,12 +41,12 @@ $(document).ready(function(){
 
     var currentUrl = window.location.href
 
-    if (currentUrl.includes("dynamic")){
-        $("#dynamic-link").addClass("active")
-        $("#static-link").removeClass("active")
+    if (currentUrl.includes("ai-generated")){
+        $("#ai-generated-link").addClass("active")
+        $("#curated-link").removeClass("active")
     } else{
-        $("#dynamic-link").removeClass("active")
-        $("#static-link").addClass("active")
+        $("#ai-generated-link").removeClass("active")
+        $("#curated-link").addClass("active")
     }
 
     // Function to make URLs clickable
@@ -80,13 +80,26 @@ $(document).ready(function(){
 
     var staticTable = $('#softwareTable').DataTable({
         "sScrollX": "100%",
-        "autoWidth": true,
+        autoWidth: true,
         pageLength: 50,
+        pagingType: 'full_numbers',     // 'First', 'Previous', 'Next', 'Last', with page numbers.
         lengthMenu: [
             [50, 250, 500, -1],
             [50, 250, 500, 'All']
         ],
-        dom:'Q<"d-flex flex-column flex-md-row justify-content-between"<"d-flex flex-column flex-md-row"<"d-flex mb-3 mb-md-0"l><"d-flex px-3"B>>f>rtip',
+        dom: 'Q<"d-flex flex-column flex-md-row justify-content-between"<"d-flex flex-column flex-md-row"<"d-flex mb-3 mb-md-0"l><"d-flex px-3"B>>f>rt<"d-flex justify-content-between"ip>', 
+        language:
+        {
+            paginate:
+            {
+                // Change Arrows (< and >) into Word Equivalents
+                previous: "Prev",
+                next: "Next",
+                first: "First",
+                last: "Last"
+            },
+
+        },
         buttons: [
             'colvis',
         ],
@@ -107,35 +120,37 @@ $(document).ready(function(){
                 },
             }
         },
-        columnDefs: 
-            [
+        columnDefs: [
                 {
-                    searchBuilder: {
-                        defaultCondition: 'contains'
-                    },
-                    targets:[0,1,2,3,4,5,6,7,8,9],
+                    // Enable Search Function On All Columns   
+                    targets:[0,1,2,3,4,5,6,7,8,9,10],
+                    searchBuilder: 
+                        { 
+                            defaultCondition: 'contains'
+                        },    
                 },
-                {   // Direct URL columns
-                    targets: [6,7,8,9], 
-                    render: function(data, type, row) {
-                        if (type === 'display' && data) {
+
+                {
+                    // Columns with clickable URLs
+                    targets: [6,7,8,9,10], 
+                    render: function(data, type, row) 
+                    {
+                        if (type === 'display' && data) 
+                        {
                             return makeLinkClickable(data);
                         }
                         return data;
                     },
-                    createdCell:function(td){
+                    
+                    createdCell:function(td)
+                    {
                         $(td).css('word-wrap', 'break-all'); // Enable word-wrap
                         $(td).css('max-width', '300px'); // Ensure max-width is applied
                     }
+                    
                 },
-                {
-                    targets: 6,
-                    width:"700px"
-                },
-                {
-                    targets:5,
-                    width:"50px"
-                }
+                { width: '500px', targets: 6 },     // Software Description
+                { width: '400px', targets: [8, 9, 10] },     // Links
             ],
     });
 
@@ -143,11 +158,24 @@ $(document).ready(function(){
         "sScrollX": "100%",
         "autoWidth": true,
         "pageLength": 50,
+        pagingType: 'full_numbers',     // 'First', 'Previous', 'Next', 'Last', with page numbers.
         lengthMenu: [
             [50, 250, 500, -1],
             [50, 250, 500, 'All']
         ],
-        dom:'Q<"d-flex flex-column flex-md-row justify-content-between"<"d-flex flex-column flex-md-row"<"d-flex mb-3 mb-md-0"l><"d-flex px-3"B>>f>rtip',
+        dom: 'Q<"d-flex flex-column flex-md-row justify-content-between"<"d-flex flex-column flex-md-row"<"d-flex mb-3 mb-md-0"l><"d-flex px-3"B>>f>rt<"d-flex justify-content-between"ip>',
+        language:
+        {
+            paginate:
+            {
+                // Change Arrows (< and >) into Word Equivalents
+                previous: "Prev",
+                next: "Next",
+                first: "First",
+                last: "Last"
+            },
+
+        },
         buttons: [
             'colvis',
         ],
