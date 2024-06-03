@@ -22,34 +22,33 @@
 
 {% endblock %}
 <div>
-    {% set url = url_for(request.endpoint) %}
-    {% block page_title %}
-    <div style="text-align: center;">
-        {% if 'dynamic' in url %}
-            <h4 style="text-align:center;" id="page_title">ACCESS Software Documentation Service (Dynamic)</h4>
-        {% else %}
-            <h4 style="text-align:center;" id="page_title">ACCESS Software Documentation Service (Static)</h4>
-        {% endif %}
-    </div>
-    {% endblock %}
+{% set url = url_for(request.endpoint)%}
+{%block page_title %}
+<div style="text-align: center;">
+    {% if 'dynamic' in url%}
+        <h4 style="text-align:center;" id="page_title">ACCESS Software Documentation Service (Dynamic)</h4>
+    {%else%}
+        <h4 style="text-align:center;" id="page_title">ACCESS Software Documentation Service (Static)</h4>
+    {%endif%}
+</div>
+{% endblock %}
 
-    {% block app_content %}
-    {% if 'dynamic' in url %}
-    <div class="">
-        <label style="font-size: 0.8em;">
-            <span style="color:#FF0000;">Disclaimer: </span>
-            The Software Documentation Service (SDS) is a work in progress. 
-            Its purpose is to demonstrate the potential capability to support user's exploration of software offerings on ACCESS Resource Provider (RP)
-            Systems allowing the user to search software by various categories and disciplines, providing summary descriptions and helpful links to
-            additional documentation, etc.  The list of software (over 2000)
-            associated with the various RP systems should be accurate but may not be
-            complete.  The additional information related to the software packages
-            has been generated through the use of AI tools (ChatGPT), is in process
-            of review and may contain errors or inaccuracies.
-        </label>
-        <label><strong>Hover your mouse to the edge of the table to scroll.</strong></label>
-    </div>
-    {% endif %}
+{% block app_content %}
+{% if 'dynamic' in url%}
+<div class="">
+    <label style="font-size: 0.8em;">
+        <span style="color:#FF0000;">Disclaimer: </span>
+        The Software Documentation Service (SDS) is a work in progress. 
+        Its purpose is to demonstrate the potential capability to support user's exploration of software offerings on ACCESS Resource Provider (RP)
+        Systems allowing the user to search software by various categories and disciplines, providing summary descriptions and helpful links to
+        additional documentation, etc.  The list of software (over 2000)
+        associated with the various RP systems should be accurate but may not be
+        complete.  The additional information related to the software packages
+        has been generated through the use of AI tools (ChatGPT), is in process
+        of review and may contain errors or inaccuracies.</label>
+    <label><strong>Hover your mouse to the edge of the table to scroll.</strong></label>
+</div>
+{%endif%}
 
     <div class="table-responsive table-container">
         <div class="table-responsive" id="softwareTableDiv" style="width: 80vw;">
@@ -57,7 +56,6 @@
         </div>
     </div>
     
-    {% include 'useCase.html' %}
-    {% include 'reportModal.html' %}
-    {% endblock %}
-</div>
+{% include 'useCase.html' %}
+{% include 'reportModal.html' %}
+{%endblock%}

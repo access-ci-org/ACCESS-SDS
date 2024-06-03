@@ -4,17 +4,18 @@ import sqlite3
 
 rp_urls={
     'aces':'https://hprc.tamu.edu/software/aces/',
-    'anvil': 'https://www.rcac.purdue.edu/index.php/knowledge/applications/',
+    'anvil': 'https://www.rcac.purdue.edu/software/',
     'bridges-2': 'https://www.psc.edu/resources/software/',
     'darwin': 'https://docs.hpc.udel.edu/software/',
-    'delta': '',
-    'expanse':'',
+    'delta': 'https://docs.ncsa.illinois.edu/systems/delta/en/latest/user_guide/software.html',
+    'expanse':'https://www.sdsc.edu/support/user_guides/expanse.html#modules',
     'faster':'https://hprc.tamu.edu/software/faster/',
     'jetstream2':'',
     'kyric':'',
-    'ookami':'',
+    'ookami':'https://www.stonybrook.edu/commcms/ookami/support/faq/software_on_ookami',
     'rockfish':'',
     'stampede-2':'https://tacc.utexas.edu/use-tacc/software-list/',
+    'stampede3':'https://tacc.utexas.edu/use-tacc/software-list/',
     'ranch':'https://tacc.utexas.edu/use-tacc/software-list/',
     'osg':'',
     'osn':''
@@ -41,7 +42,7 @@ def create_full_url(rp_names, software_name):
         if full_url:
             urls.append(full_url)
 
-    combined_urls = '\n'.join(urls)
+    combined_urls = ' \n'.join(urls)
     return combined_urls
 
 def create_static_table_from_db(query):

@@ -23,12 +23,12 @@ def software_search():
 
     return render_template("software_search.html", table=table)
 
-@app.route("/dynamic")
+@app.route("/ai-generated")
 def software_search_dynamic():
     df = pd.read_csv('./dynamicSearch/combined_data.csv',keep_default_na=False)
     df.insert(10,"Example Use",np.nan)
     df.fillna('',inplace=True)
-    table = df.to_html(classes='table-striped" id = "softwareTableDynamic',index=False,border=1)
+    table = df.to_html(classes='table-striped" id = "softwareTableDynamic',index=False,border=1).replace('\\n', '<br>').replace('\\r', '')
     return render_template("software_search.html", table=table)
 
 @app.route("/example_use/<software_name>")
