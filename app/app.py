@@ -1,6 +1,6 @@
 from flask import Flask, render_template, jsonify, send_file, request
 from dotenv import load_dotenv
-from app.softwareStatic import create_static_table
+from app.softwareStatic import create_static_table_from_db
 from app.reports import sanitize_and_process_reports
 import os
 import re
@@ -14,15 +14,14 @@ app = Flask(__name__)
 @app.route("/")
 def software_search():
     try:
-        df = pd.read_csv("./staticSearch/staticTable.csv", keep_default_na=False)
-    except FileNotFoundError as e:
-
-        df = create_static_table()
+        df = create_static_table_from_db("SELECT * FROM SoftwareName AND Links")
+    except Exception as e:
         print(e)
+        df = pd.DataFrame()  # Fallback to an empty DataFrame in case of an error
     
-    table = df.to_html(classes='table-striped" id = "softwareTable',index=False,border=1).replace('\\n', '<br>')
+    table = df.to_html(classes='table-striped" id = "softwareTableDiv', index=False, border=1).replace('\\n', '<br>')
 
-    return render_template("software_search.html",table=table)
+    return render_template("software_search.html", table=table)
 
 @app.route("/dynamic")
 def software_search_dynamic():
