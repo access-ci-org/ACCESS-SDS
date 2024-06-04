@@ -46,27 +46,14 @@ def create_full_url(rp_names, software_name):
     return combined_urls
 
 def create_static_table_from_db(query):
-    # Connect to the SQLite database
-    conn = sqlite3.connect('./models/sqlite_db.db')
-    
-    # Read data from the SQLite database
-    df = pd.read_sql_query(query, conn)
-    
-    # Apply any necessary transformations
-    df['RP Software Documentation'] = df.apply(lambda row: create_full_url(row['rp_software'], row['software_name']), axis=1)
-    
-    # Drop the empty columns
+    df = pd.read_csv('./staticSearch/ACCESS_Software.csv',na_filter=False)
+    df['RP Software Documentation'] = df.apply(lambda row: create_full_url(row['RP Name'],row['Software']), axis=1)
     empty_columns = ['Area-specific Examples', 'Containerized Version of Software',
                      'RP Documentations for Software', 'Pathing']
-    df.drop(empty_columns, axis=1, inplace=True)
     
-    # Export the data to a CSV file
-    df.to_csv('./staticSearch/staticTable.csv', index=False)
-    
-    # Close the database connection
-    conn.close()
-    
-    return df
+    df.drop(empty_columns,axis=1,inplace=True)
+    df.to_csv('./staticSearch/staticTable.csv',index=False)
+    return(df)
 
 # Function to create the full URL
 def create_full_url(rp_name, software):
