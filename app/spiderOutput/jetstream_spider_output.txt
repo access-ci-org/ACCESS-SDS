@@ -1,0 +1,51 @@
+-------------------------------------------------------------------------------------------------------------------------------------
+The following is a list of the modules and extensions currently available:
+-------------------------------------------------------------------------------------------------------------------------------------
+  R: R/4.2.2
+    Statistical Computing and Graphics
+
+  anaconda: anaconda/22.9.0
+    Anaconda Python/3.9 Scientific Data Science Platform
+
+  aocc: aocc/aocc-compiler-4.0.0
+
+  apptainer: apptainer/1.1.6
+    Apptainer/Singularity: Container system for secure high performance computing.
+
+  intel-OneAPI: intel-OneAPI/2023.0.0
+    The Intel OneAPI compiler suite
+
+  lmod: lmod
+    Lmod: An Environment Module System
+
+  matlab: matlab/R2021a
+    Programming and numeric computing platform.
+
+  nvhpc/23.1: nvhpc/23.1/nvhpc-byo-compiler, nvhpc/23.1/nvhpc-nompi, nvhpc/23.1/nvhpc
+
+  rstudio: rstudio/2022.12.1+364
+    RStudio is an Integrated Development Environment for R.
+
+  settarg: settarg
+    The settarg module provides a way to connect the loaded modules with your build system by setting environment variables. 
+
+  singularity: singularity/1.1.6
+    Apptainer/Singularity: Container system for secure high performance computing.
+
+  xalt: xalt/3.0.1
+    Application usage tracking
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+To learn more about a package execute:
+
+   $ module spider Foo
+
+where "Foo" is the name of a module.
+
+To find detailed information about a particular package you
+must specify the version if there is more than one version:
+
+   $ module spider Foo/11.1
+
+-------------------------------------------------------------------------------------------------------------------------------------

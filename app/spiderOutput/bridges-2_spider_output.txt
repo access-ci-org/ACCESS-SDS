@@ -1,0 +1,604 @@
+
+----------------------------------------------------------------------------
+The following is a list of the modules and extensions currently available:
+----------------------------------------------------------------------------
+  ABySS: ABySS/2.1.5
+    ABySS is a de novo sequence assembler intended for short paired-end
+    reads and large genomes.
+
+  AI: AI/pytorch_23.02-1.13.1-py3, AI/tensorflow_23.02-2.10.0-py3
+    PyTorch AI development environment
+
+  AUGUSTUS: AUGUSTUS/3.4.0
+    AUGUSTUS is a program that predicts genes in eukaryotic genomic
+    sequences.
+
+  Abinit: Abinit/9.4.2-intel
+    Ab initio molecular dynamics.
+
+  BEDOPS: BEDOPS/2.4.39
+    BEDOPS is an open-source command-line toolkit that performs highly
+    efficient and scalable Boolean and other set operations, statistical
+    calculations, archiving, conversion and other management of genomic
+    data of arbitrary scale. Tasks can be easily split by chromosome for
+    distributing whole-genome analyses across a computational cluster.
+
+  BLAST: BLAST/2.9.0, BLAST/2.11.0
+    BLAST (basic local alignment search tool) is an algorithm and program
+    for comparing primary biological sequence information, such as the
+    amino-acid sequences of proteins or the nucleotides of DNA and/or RNA
+    sequences.
+
+  BLAT: BLAT/36
+    Blat produces two major classes of alignments (1) at the DNA level
+    between two sequences that are of 95% or greater identity, but which
+    may include large inserts; (2) at the protein or translated DNA level
+    between sequences that are of 80% or greater identity and may also
+    include large inserts.
+
+  BWA: BWA/0.7.3a
+    BWA is a software package for mapping low-divergent sequences against a
+    large reference genome, such as the human genome.
+
+  CP2K: CP2K/7.1-intel, CP2K/8.1-gcc10.2.0-openmpi4.0.5, ...
+    CP2K is a quantum chemistry and solid state physics software package
+    that can perform atomistic simulations of solid state, liquid,
+    molecular, periodic, material, crystal, and biological systems.
+
+  CheckM: CheckM/1.1.3
+    CheckM provides a set of tools for assessing the quality of genomes
+    recovered from isolates, single cells, or metagenomes.
+
+  FastQC: FastQC/0.11.9
+    FastQC aims to provide a simple way to do some quality control checks
+    on raw sequence data coming from high throughput sequencing pipelines.
+
+  GATK: GATK/4.1.9.0
+    The GATK is the industry standard for identifying SNPs and indels in
+    germline DNA and RNAseq data.
+
+  GeneMark-ES: GeneMark-ES/4.65
+    Novel genomes can be analyzed by GeneMark-ES, an algorithm utilizing
+    models parameterized by unsupervised training. Notably, GeneMark-ES has
+    a special option for fungal genomes to account for fungal-specific
+    intron organization.
+
+  KNIME: KNIME/5.2.1
+    KNIME, the Konstanz Information Miner, is a free and open-source data
+    analytics, reporting and integration platform. KNIME integrates various
+    components for machine learning and data mining through its modular
+    data pipelining Building Blocks of Analytics concept.
+
+  LAMMPS: LAMMPS/3Mar20, LAMMPS/14Dec21-intel, LAMMPS/23Jun22-intel, ...
+    Classical molecular dynamics.
+
+  MEME-suite: MEME-suite/5.4.1
+    The MEME suite is a collection of tools for the discovery and analysis
+    of sequence motifs.
+
+  MentorGraphics: MentorGraphics/tessent.2022.1
+
+  MuST: MuST/1.5-intel
+    MuST is software package designed for performing ab initio electornic
+    structure calculations for metals, alloys, and nanostructures. It is an
+    all-electron DFT code based on multiple scattering theory, also known
+    as KKR method, and Green function techniques.
+
+  NanoPlot: NanoPlot/1.42.0
+    Plotting scripts for long read sequencing data.
+
+  QuantumEspresso: QuantumEspresso/6.7-pgi, QuantumEspresso/6.7-intel-omp, ...
+    Quantum ESPRESSO is an integrated suite of computer codes for
+    electronic-structure calculations and materials modeling at the
+    nanoscale. It is based on density-functional theory, plane waves, and
+    pseudopotentials (both norm-conserving and ultrasoft).
+
+  RAxML: RAxML/8.2.9
+    RAxML (Randomized Axelerated Maximum Likelihood) is a program for
+    sequential and parallel Maximum Likelihood based inference of large
+    phylogenetic trees. It can also be used for postanalyses of sets of
+    phylogenetic trees, analyses of alignments and, evolutionary placement
+    of short reads
+
+  SPAdes: SPAdes/3.14.1
+    SPAdes – St. Petersburg genome assembler – is an assembly toolkit
+    containing various assembly pipelines.
+
+  STAR: STAR/2.7.6a, STAR/2.7.10b
+    Spliced Transcripts Alignment to a Reference (STAR) is a fast RNA-seq
+    read mapper, with support for splice-junction and fusion read
+    detection.
+
+  STAR-Fusion: STAR-Fusion/1.9.1, STAR-Fusion/1.11.1
+    STAR-Fusion is a component of the Trinity Cancer Transcriptome Analysis
+    Toolkit (CTAT). STAR-Fusion uses the STAR aligner to identify candidate
+    fusion transcripts supported by Illumina reads. STAR-Fusion further
+    processes the output generated by the STAR aligner to map junction
+    reads and spanning reads to a reference annotation set.
+
+  TIGER: TIGER/5.32.1
+    Target / Integrative Genetic Element Retriever: precisely maps IGEs (a
+    defined type of genomic island) in bacterial and archaeal genomes.
+
+  Trimmomatic: Trimmomatic/0.39
+    Trimmomatic performs a variety of useful trimming tasks for illumina
+    paired-end and single ended data.
+
+  Trinity: Trinity/2.11.0, Trinity/2.15.1
+    Trinity assembles transcript sequences from Illumina RNA-Seq data.
+
+  VASP: VASP/5.4.4+vtst-intel, VASP/6.3+vtst-intel, VASP/6.4.1-intel, ...
+    The Vienna Ab initio Simulation Package (VASP) is a computer program
+    for atomic scale materials modelling, e.g. electronic structure
+    calculations and quantum-mechanical molecular dynamics, from first
+    principles. VASP is not public domain software, and PSC does not
+    provide public access to it. You must have your own VASP license in
+    order to use it on Bridges-2. To use VASP on Bridges-2, submit the VASP
+    request form, verifying your license information. Once you have
+    submitted the VASP request form and your license has been verified, you
+    will be given access to the VASP executables built for Bridges-2.
+
+  allocations: allocations/1.0
+
+  anaconda2: anaconda2/2019.10
+    Anaconda is a free and open-source distribution of the Python and R
+    programming languages for scientific computing, that aims to simplify
+    package management and deployment. Package versions are managed by the
+    package management system conda. 
+
+  anaconda3: anaconda3/2020.07, anaconda3/2020.11, anaconda3/2022.10
+    Anaconda is a free and open-source distribution of the Python and R
+    programming languages for scientific computing, that aims to simplify
+    package management and deployment. Package versions are managed by the
+    package management system conda. 
+
+  ansys: ansys/201, ansys/212, ansys/221, ansys/222
+
+  anvio: anvio/7
+    Anvi'o is an open-source, community-driven analysis and visualization
+    platform for microbial 'omics.
+
+  aocc: aocc/2.2.0, aocc/2.3.0
+    The AOCC compiler system is a high performance, production quality code
+    generation tool. The AOCC environment provides various options to
+    developers when building and optimizing C, C++, and Fortran
+    applications targeting 32-bit and 64-bit Linux platforms. The AOCC
+    compiler system offers a high level of advanced optimizations,
+    multi-threading and processor support that includes global
+    optimization, vectorization, inter-procedural analyses, loop
+    transformations, and code generation. AMD also provides highly
+    optimized libraries, which extract the optimal performance from each
+    x86 processor core when utilized. The AOCC Compiler Suite simplifies
+    and accelerates development and tuning for x86 applications. Please
+    install only if you agree to terms and conditions depicted under :
+    http://developer.amd.com/wordpress/media/files/AOCC_EULA.pdf Example
+    for installation: 'spack install aocc +license-agreed' 
+
+  aocl: aocl/3.1.0
+
+  arriba: arriba/2.3.0
+    Arriba is a command-line tool for the detection of gene fusions from
+    RNA-Seq data.
+
+  asciinema: asciinema/2.0.2, asciinema/2.1.0
+    asciinema is a free and open source solution for recording terminal
+    sessions and sharing them on the web.
+
+  aspera-connect: aspera-connect/3.11.0.5
+    IBM Aspera® Connect helps you securely move file and folders of any
+    size.
+
+  bamtools: bamtools/2.5.1
+    BamTools is a project that provides both a C++ API and a command-line
+    toolkit for reading, writing, and manipulating BAM (genome alignment)
+    files.
+
+  bat: bat/0.23.0
+    bat is a cat clone with wings.
+
+  bazel: bazel/3.7.1
+
+  bbmap: bbmap/39.01
+    This package includes BBMap, a short read aligner, as well as various
+    other bioinformatic tools.
+
+  bcftools: bcftools/1.10.2
+    BCFtools is a set of utilities that manipulate variant calls in the
+    Variant Call Format (VCF) and its binary counterpart BCF. All commands
+    work transparently with both VCFs and BCFs, both uncompressed and
+    BGZF-compressed.
+
+  bedtools: bedtools/2.29.2, bedtools/2.30.0
+    bedtools utilities are a swiss-army knife of tools for a wide-range of
+    genomics analysis tasks.
+
+  bioformats: bioformats/6.10.1
+
+  bismark: bismark/0.22.3
+    A tool to map bisulfite converted sequence reads and determine cytosine
+    methylation states.
+
+  boost: boost/1.75-gcc10.2.0, boost/1.75.0-intel20.4
+    Boost provides free peer-reviewed portable C++ source libraries. 
+
+  bowtie2: bowtie2/2.4.2, bowtie2/2.4.4
+    bowtie2 is an ultrafast and memory-efficient tool for aligning
+    sequencing reads to long reference sequences
+
+  busco: busco/5.0.0
+    Based on evolutionarily-informed expectations of gene content of
+    near-universal single-copy orthologs, BUSCO metric is complementary to
+    technical metrics like N50.
+
+  circos: circos/0.69-9
+    Circos is a software package for visualizing data and information.
+
+  comsol: comsol/6.1
+
+  cuda: cuda/9.2.0, cuda/10.0.0, cuda/10.2.0, cuda/11.7.1, cuda/12.4.0
+
+  cudnn: cudnn/8.0.4
+
+  cutadapt: cutadapt/2.10
+    cutadapt finds and removes adapter sequences, primers, poly-A tails and
+    other types of unwanted sequence from your high-throughput sequencing
+    reads.
+
+  ddt: ddt/20.1.3, ddt/20.2.1, ddt/23.0.3
+
+  dealii: dealii/9.2.0, dealii/9.3.1
+
+  desmond: desmond/2020.4
+
+  dorado: dorado/0.6.0
+    Oxford Nanopore's Basecaller.
+
+  fastANI: fastANI/1.33
+    FastANI is developed for fast alignment-free computation of
+    whole-genome Average Nucleotide Identity (ANI).
+
+  fastq-tools: fastq-tools/0.8
+    Small utilities for working with fastq sequence files.
+
+  fastx-toolkit: fastx-toolkit/0.0.14
+    The FASTX-Toolkit is a collection of command line tools for Short-Reads
+    FASTA/FASTQ files preprocessing.
+
+  ffmpeg: ffmpeg/4.3.1
+    A complete, cross-platform solution to record, convert and stream audio
+    and video.
+
+  fftw: fftw/3.3.8
+
+  flash: flash/1.2.11
+    FLASH (Fast Length Adjustment of SHort reads) is a very fast and
+    accurate software tool to merge paired-end reads from next-generation
+    sequencing experiments.
+
+  funannotate: funannotate/1.8.9
+    Funannotate is a genome prediction, annotation, and comparison software
+    package.
+
+  gamess: gamess/2020
+
+  gaussian: gaussian/G16_RevC01
+
+  gcc: gcc/10.2.0, gcc/13.2.1-p20240113
+
+  gent: gent/1.0.0
+    This program computes the cross entropy for groups of sequences that
+    have been assigned to groups on the basis of biochemical,
+    physiological, or other biological property. The sequence assignments
+    are cross-validated, again by the cross entropy measure, to check for
+    problems with the alignment or group assignment. 
+
+  gettext: gettext/0.22.5-gcc13.2.1-p20240113
+
+  gromacs: gromacs/2018, gromacs/2020.2-cpu, gromacs/2020.4-gpu
+
+  guppy: guppy/6.0.0, guppy/6.5.7
+    Guppy is a data processing toolkit that contains the Oxford Nanopore
+    Technologies’ basecalling algorithms.
+
+  guppy-gpu: guppy-gpu/6.0.1
+    Guppy is a data processing toolkit that contains the Oxford Nanopore
+    Technologies’ basecalling algorithms.
+
+  gurobi: gurobi/9.1.1, gurobi/9.5.0
+    The fastest and most powerful mathematical programming solver available
+    for LP, QP and MIP (MILP, MIQP, and MIQCP) problems.
+
+  hashdeep: hashdeep/4.4
+    This is hashdeep, a set of cross-platform tools to compute hashes, or
+    message digests, for any number of files while optionally recursively
+    digging through the directory structure.
+
+  hdf5: hdf5/1.10.7-gcc10.2.0, hdf5/1.12.0-intel20.4
+    HDF5 is a data model, library, and file format for storing and managing
+    data. It supports an unlimited variety of datatypes, and is designed
+    for flexible and efficient I/O and for high volume and complex data. 
+
+  hisat2: hisat2/2.2.1
+    HISAT2 is a fast and sensitive alignment program for mapping
+    next-generation sequencing reads (both DNA and RNA) to a population of
+    human genomes as well as to a single reference genome.
+
+  hmmer: hmmer/3.3.1
+    HMMER is used for searching sequence databases for sequence homologs,
+    and for making sequence alignments. It implements methods using
+    probabilistic models called profile hidden Markov models (profile
+    HMMs).
+
+  homer: homer/4.11.0
+    HOMER (Hypergeometric Optimization of Motif EnRichment) is a suite of
+    tools for Motif Discovery and next-gen sequencing analysis.
+
+  htslib: htslib/1.13
+    HTSlib A C library for reading/writing high-throughput sequencing data.
+
+  iRODS-iCommands: iRODS-iCommands/4.3.0
+    iCommands, the default command line interface to iRODS.
+
+  infernal: infernal/1.1.3
+    Infernal (INFERence of RNA ALignment) is for searching DNA sequence
+    databases for RNA structure and sequence similarities.
+
+  intel: intel/20.4, intel/2021.3.0, intel/2021.10.0
+
+  intel-advisor: intel-advisor/2023.2.0
+
+  intel-ccl: intel-ccl/2021.10.0
+
+  intel-compiler: intel-compiler/2023.2.1
+
+  intel-compiler-rt: intel-compiler-rt/2023.2.1
+
+  intel-compiler-rt32: intel-compiler-rt32/2023.2.1
+
+  intel-compiler32: intel-compiler32/2023.2.1
+
+  intel-dal: intel-dal/2023.2.0
+
+  intel-debugger: intel-debugger/2023.2.0
+
+  intel-dev-utilities: intel-dev-utilities/2021.10.0
+
+  intel-dnnl: intel-dnnl/2023.2.0
+
+  intel-dnnl-cpu-gomp: intel-dnnl-cpu-gomp/2023.2.0
+
+  intel-dnnl-cpu-iomp: intel-dnnl-cpu-iomp/2023.2.0
+
+  intel-dnnl-cpu-tbb: intel-dnnl-cpu-tbb/2023.2.0
+
+  intel-dpct: intel-dpct/2023.2.0
+
+  intel-dpl: intel-dpl/2022.2.0
+
+  intel-icc: intel-icc/2023.2.1
+
+  intel-icc32: intel-icc32/2023.2.1
+
+  intel-inspector: intel-inspector/2023.2.0
+
+  intel-ipp-ia32: intel-ipp-ia32/2021.9.0
+
+  intel-ipp-intel64: intel-ipp-intel64/2021.9.0
+
+  intel-ippcp-ia32: intel-ippcp-ia32/2021.8.0
+
+  intel-ippcp-intel64: intel-ippcp-intel64/2021.8.0
+
+  intel-itac: intel-itac/2021.10.0
+
+  intel-mkl: intel-mkl/2023.2.0
+
+  intel-mkl32: intel-mkl32/2023.2.0
+
+  intel-mpi: intel-mpi/2021.10.0
+
+  intel-oclfpga: intel-oclfpga/2023.2.1
+
+  intel-oneapi: intel-oneapi/2023.2.1
+
+  intel-tbb: intel-tbb/2021.10.0
+
+  intel-tbb32: intel-tbb32/2021.10.0
+
+  intel-vtune: intel-vtune/2023.2.0
+
+  intelmpi: intelmpi/20.4-intel20.4, intelmpi/2021.3.0-intel2021.3.0, ...
+
+  julia: julia/1.5.2
+
+  kraken2: kraken2/2.1.2
+    Kraken is a taxonomic sequence classifier that assigns taxonomic labels
+    to DNA sequences.
+
+  lazygit: lazygit/0.28.2
+    A simple terminal UI for git commands, written in Go with the gocui
+    library.
+
+  lmod: lmod
+    Lmod: An Environment Module System
+
+  lowcharts: lowcharts/0.4.2
+    Tool to draw low-resolution graphs in terminal.
+
+  matlab: matlab/R2019b, matlab/R2021a, matlab/R2021b, matlab/R2022b
+
+  mc: mc/4.8.26
+    Midnight Commander (also known as mc) is a free cross-platform orthodox
+    file manager and a clone of Norton Commander.
+
+  methylpy: methylpy/1.4.3
+    methylpy is an analysis pipeline for DNA methylation data.
+
+  minialign: minialign/0.6.0
+    Minialign is a little bit fast and moderately accurate nucleotide
+    sequence alignment tool designed for PacBio and Nanopore long reads. It
+    is built on three key algorithms, minimizer-based index of the minimap
+    overlapper, array-based seed chaining, and SIMD-parallel
+    Smith-Waterman-Gotoh extension.
+
+  mkl: mkl/2020.4.304
+
+  mlflow: mlflow/24.02-2.10.2
+    mlflow 2.10.2 AI development environment
+
+  mvapich2: mvapich2/2.3.5-gcc8.3.1, mvapich2/2.3.5-intel20.4
+
+  namd: namd/2.13-gpu, namd/2.14-cpu, namd/3.0b6
+
+  ncdu: ncdu/1.15.1
+    Ncdu is a disk usage analyzer with an ncurses interface.
+
+  ncview: ncview/2.1.8
+    ncview is a visual browser for netCDF format files.
+
+  nextflow: nextflow/21.10.6
+    Nextflow enables scalable and reproducible scientific workflows using
+    software containers.
+
+  numpy: numpy/1.19.4
+    NumPy is the fundamental package for scientific computing with Python.
+    It contains among other things: a powerful N-dimensional array object,
+    sophisticated (broadcasting) functions, tools for integrating C/C++ and
+    Fortran code, and useful linear algebra, Fourier transform, and random
+    number capabilities
+
+  nvhpc: nvhpc/20.11, nvhpc/21.2, nvhpc/21.5, nvhpc/21.7, nvhpc/22.1, ...
+
+  nwchem: nwchem/7.0.2, nwchem/7.2.2
+
+  octave: octave/6.2.0
+    GNU Octave is software featuring a high-level programming language,
+    primarily intended for numerical computations.
+
+  openblas: openblas/0.3.12-gcc10.2.0, openblas/0.3.13-intel20.4
+
+  opencv: opencv/4.2.0
+
+  openfoam: openfoam/6.0
+
+  openmpi: openmpi/3.1.5-nvhpc21.2, openmpi/3.1.5-nvhpc21.7, ...
+
+  orca: orca/4.1.2, orca/5.0.1
+
+  parallel-netcdf: parallel-netcdf/1.12.1
+
+  phdf5: phdf5/1.10.7-openmpi4.0.2-intel20.4, ...
+    HDF5 is a data model, library, and file format for storing and managing
+    data. It supports an unlimited variety of datatypes, and is designed
+    for flexible and efficient I/O and for high volume and complex data. 
+
+  phylip-suite: phylip-suite/3.697
+    PHYLIP is a free package of programs for inferring phylogenies.
+
+  picard: picard/2.23.2
+    Picard is a set of command line tools for manipulating high-throughput
+    sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF.
+
+  pilon: pilon/1.24
+    Pilon is an automated genome assembly improvement and variant detection
+    tool.
+
+  plumed: plumed/2.6.2
+
+  porechop: porechop/0.2.4
+    Adapter trimmer for Oxford Nanopore reads.
+
+  prodigal: prodigal/2.6.3
+    Fast, reliable protein-coding gene prediction for prokaryotic genomes.
+
+  prokka: prokka/1.14.5
+    prokka is a software tool to annotate bacterial, archaeal and viral
+    genomes quickly and produce standards-compliant output files.
+
+  psc.allocations.user: psc.allocations.user/1.0
+
+  python: python/2.7.18, python/3.8.6
+
+  rclone: rclone/1.55.1, rclone/1.61.1
+    rclone is a command line program to manage files on cloud storage.
+
+  rich: rich/1.8.0
+    rich-cli is a command line toolbox for fancy output in the terminal.
+
+  rnaview: rnaview/latest
+    The RNAView program generates 2-dimensional displays of RNA/DNA
+    secondary structures with tertiary interactions.
+
+  samtools: samtools/1.11.0, samtools/1.13.0
+    Samtools is a suite of programs for interacting with high-throughput
+    sequencing data.
+
+  scalapack: scalapack/2.1.0
+    Parallel linear algebra package.
+
+  settarg: settarg
+
+  spark: spark/3.0.1-hadoop2.7
+
+  sra-toolkit: sra-toolkit/2.10.9
+    The SRA Toolkit and SDK from NCBI is a collection of tools and
+    libraries for using data in the INSDC Sequence Read Archives.
+
+  trnascan-se: trnascan-se/2.0.7
+    tRNAscan-SE pioneers the large-scale use of covariance models to
+    annotate tRNA genes in genomes.
+
+  ucx: ucx/1.11.2
+
+  vcf2maf: vcf2maf/1.6.21
+    Convert a VCF into a MAF, where each variant is annotated to only one
+    of all possible gene isoforms
+
+  vcftools: vcftools/0.1.16
+    VCFtools is a program package designed for working with VCF files, such
+    as those generated by the 1000 Genomes Project. The aim of VCFtools is
+    to provide easily accessible methods for working with complex genetic
+    variation data in the form of VCF files.
+
+  visidata: visidata/2.11
+    VisiData is an interactive multitool for tabular data.
+
+  visit: visit/3.1.2, visit/3.1.4
+    VisIt is an Open Source, interactive, scalable, visualization,
+    animation and analysis tool.
+
+  xdinfo: xdinfo/1.5-1
+
+  xdresourceid: xdresourceid/1.0-2
+
+  xdusage: xdusage/2.1-2
+
+  xit: xit/2.11
+    VisiData is an interactive multitool for tabular data.
+
+  zoltan: zoltan/3.83
+    The Zoltan library is a toolkit of parallel combinatorial algorithms
+    for parallel, unstructured, and/or adaptive scientific applications.
+    Zoltan's largest component is a suite of dynamic load-balancing and
+    partitioning algorithms that increase applications' parallel
+    performance by reducing idle time. Zoltan also has graph coloring and
+    graph ordering algorithms, which are useful in task schedulers and
+    parallel preconditioners.
+
+----------------------------------------------------------------------------
+
+To learn more about a package execute:
+
+   $ module spider Foo
+
+where "Foo" is the name of a module.
+
+To find detailed information about a particular package you
+must specify the version if there is more than one version:
+
+   $ module spider Foo/11.1
+
+----------------------------------------------------------------------------
+
+ 
+
