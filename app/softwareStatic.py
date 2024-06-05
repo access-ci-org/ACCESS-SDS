@@ -46,9 +46,8 @@ def create_full_url(rp_names, software_name):
 
 def create_static_table():
     df = pd.read_csv('./staticSearch/staticTable.csv',na_filter=False)
-    df['RP Software Documentation'] = df.apply(lambda row: create_full_url(row['rp_software'],row['software_name']), axis=1)
-    empty_columns_plus_id = ['id', 'area_specific', 'containers',
-                     'rp_documents']
+    df['rp_documents'] = df.apply(lambda row: create_full_url(row['rp_software'],row['software_name']), axis=1)
+    empty_columns_plus_id = ['id', 'id.1']
     
     df.drop(empty_columns_plus_id,axis=1,inplace=True)
     df.to_csv('./staticSearch/staticTable.csv',index=False)

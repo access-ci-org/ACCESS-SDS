@@ -19,8 +19,8 @@ def software_search():
 
         df = create_static_table()
         print(e)
-    
-    table = df.to_html(classes='table-striped" id = "softwareTableDiv',index=False,border=1).replace('\\n', '<br>')
+
+    table = df.to_html(classes='table-striped" id = "softwareTable',index=False,border=1).replace('\\n', '<br>')
 
     return render_template("software_search.html",table=table)
 
