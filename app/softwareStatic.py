@@ -1,5 +1,4 @@
 import pandas as pd
-import sqlite3
 
 
 rp_urls={
@@ -45,22 +44,15 @@ def create_full_url(rp_names, software_name):
     combined_urls = ' \n'.join(urls)
     return combined_urls
 
-def create_static_table_from_db(query):
-    df = pd.read_csv('./staticSearch/ACCESS_Software.csv',na_filter=False)
-    df['RP Software Documentation'] = df.apply(lambda row: create_full_url(row['RP Name'],row['Software']), axis=1)
-    empty_columns = ['Area-specific Examples', 'Containerized Version of Software',
-                     'RP Documentations for Software', 'Pathing']
+def create_static_table():
+    df = pd.read_csv('./staticSearch/staticTable.csv',na_filter=False)
+    df['RP Software Documentation'] = df.apply(lambda row: create_full_url(row['rp_software'],row['software_name']), axis=1)
+    empty_columns_plus_id = ['id', 'area_specific', 'containers',
+                     'rp_documents']
     
-    df.drop(empty_columns,axis=1,inplace=True)
+    df.drop(empty_columns_plus_id,axis=1,inplace=True)
     df.to_csv('./staticSearch/staticTable.csv',index=False)
     return(df)
 
-# Function to create the full URL
-def create_full_url(rp_name, software):
-    base_url = "https://example.com/"
-    return f"{base_url}{rp_name}/{software}"
-
-# Example usage
 if __name__ == "__main__":
-    df = create_static_table_from_db()
-    print(df.head())
+    df = create_static_table()

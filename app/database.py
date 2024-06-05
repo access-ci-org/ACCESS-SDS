@@ -91,7 +91,28 @@ def insert_data():
             transaction.rollback()
             print(f"Error in insert_data: {e}")
     
-    
+        try:
+            # Query the data from the database
+            print("Querying data from the database")
+            software_data = SoftwareName.select()
+            links_data = Links.select()
+
+            # Create DataFrame from the queried data
+            software_df = pd.DataFrame(list(software_data.dicts()))
+            links_df = pd.DataFrame(list(links_data.dicts()))
+
+            # Combine DataFrames if necessary
+            combined_df = pd.concat([software_df, links_df], axis=1)
+            
+            # Define the output file path
+            output_csv_file_path = './staticSearch/staticTable.csv'
+            
+            # Write the combined DataFrame to a CSV file
+            combined_df.to_csv(output_csv_file_path, index=False)
+            print(f"Data written to {output_csv_file_path} successfully")
+        
+        except Exception as e:
+            print(f"Here is the error: {e}")
     db.close()
 
 
