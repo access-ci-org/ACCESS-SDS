@@ -1,0 +1,6 @@
+  advisor: advisor/23.1, advisor/24.0
+  amask: amask/1.0
+  autotools: autotools/1.4
+  biocontainers: biocontainers/1.0
+  boost: boost/1.83, boost/1.84
+  cdo: cdo/1.9.10

@@ -123,7 +123,7 @@ $(document).ready(function(){
         columnDefs: [
                 {
                     // Enable Search Function On All Columns   
-                    targets:[0,1,2,3,4,5,6,7,8,9,10],
+                    targets:[0,1,2,3,4,5,6,7,8,9,10,11],
                     searchBuilder: 
                         { 
                             defaultCondition: 'contains'
@@ -151,6 +151,7 @@ $(document).ready(function(){
                 },
                 { width: '500px', targets: 6 },     // Software Description
                 { width: '400px', targets: [8, 9, 10] },     // Links
+                { width: '100px', targets: 11 },     // Version Info
             ],
     });
 
