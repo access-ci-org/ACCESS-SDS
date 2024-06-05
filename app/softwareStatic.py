@@ -1,6 +1,6 @@
 import pandas as pd
 
-
+# Hard-coded links to RP-specific Software Documentation
 rp_urls={
     'aces':'https://hprc.tamu.edu/software/aces/',
     'anvil': 'https://www.rcac.purdue.edu/software/',
@@ -20,15 +20,21 @@ rp_urls={
     'osn':''
 }
 
+# Some RPs generate specific links to individual software in their documentation.
+# Here, for the RPs that do this, we're using an algorithm to point to their
+# specific software pages.
+
+# This is a bandaid solution right now, and could definitely use some tidying up in the future.
 def create_full_url(rp_names, software_name):
-    has_individual_software_page = ['anvil','bridges-2','darwin']
-    rp_names_list = rp_names.split(',')
+    has_individual_software_page = ['anvil','bridges-2','darwin'] # RPs that have specific links
+    rp_names_list = rp_names.split(',') # For software that is installed on multiple systems
 
     urls=[]
     for rp_name in rp_names_list:
         rp_name_l = rp_name.strip().lower()
         base_url = rp_urls.get(rp_name_l,'')
 
+        # For software we want to generate a specific link for
         if rp_name_l in has_individual_software_page and base_url:
             full_url=f"{rp_name}: {base_url}{software_name.lower()}"
             if rp_name_l == 'darwin':
@@ -44,6 +50,7 @@ def create_full_url(rp_names, software_name):
     combined_urls = ' \n'.join(urls)
     return combined_urls
 
+# Convert our CSV file into the table
 def create_static_table():
     df = pd.read_csv('./staticSearch/ACCESS_Software.csv',na_filter=False)
     df['RP Software Documentation'] = df.apply(lambda row: create_full_url(row['RP Name'],row['Software']), axis=1)
