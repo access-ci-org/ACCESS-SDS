@@ -38,10 +38,10 @@
     display: none;
 }
  
-/* Changes the color of the column headers to match ACCESS Header */
+/* Changes the color of the table column headers to match ACCESS Header */
 .dataTable thead th {
-    background-color: #1a5b6e; /* Dark background color */
-    color: white;          /* White text color */
-    font-weight: bold;     /* Bold text */
-    padding: 10px;         /* Padding for better readability */
+    background-color: #1a5b6e;  /* Dark background color */
+    color: white;               /* White text color */
+    font-weight: bold;            /* Bold text */
+    padding: 10px;                /* Padding for better readability */
 }

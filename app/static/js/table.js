@@ -7,6 +7,7 @@ const siteItems =[
     }
 ]
 
+export var staticTable
 
 $(document).ready(function()
 {
@@ -80,7 +81,7 @@ $(document).ready(function()
     );
     
 
-    var staticTable = $('#softwareTable').DataTable({
+    staticTable = $('#softwareTable').DataTable({
         select: true,
         fixedHeader: true,  // Makes column headers 'fixed' to the top of the table when scrolling
         "sScrollX": "100%",
@@ -345,8 +346,8 @@ $(document).ready(function()
                 }
                 
             },
-            { width: '500px', targets: 6 },     // Software Description
-            { width: '400px', targets: [8, 9, 10] },     // Links
+            { width: '400px', targets: 6 },     // Software Description
+            { width: '300px', targets: [8, 9, 10] },     // Links
             { width: '100px', targets: 11 },     // Version Info
         ],
     });

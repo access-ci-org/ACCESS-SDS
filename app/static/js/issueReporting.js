@@ -2,6 +2,7 @@
     Imports //
 */////////////
 import { showAlert, hideAlert } from './alerts.js';
+import { staticTable } from './table.js';
 
 /*/////////////////////
     Global Variables //
@@ -75,6 +76,7 @@ function enterReportingState()
   $('body').on('mousemove', handleMouseMove);     // Enable 'handleMouseMove' Event Listener
   //$(document).on('click',handleClick);          // Enable 'handleClick' Event Listener (Currently Unnecessary)
   $(document).on('keydown',handleKeyDown);        // Enable 'handleKeyDown' Event Listener
+  staticTable.select.style('api');
 }
 
 function exitReportingState()
@@ -97,7 +99,7 @@ function exitReportingState()
   //$(document).off('click',handleClick);         // Disable 'handleClick' Event Listener 
                                                     // Don't forget to enable this too if implementing handleClick again
   $(document).off('keydown',handleKeyDown);       // Disable 'handleKeyDown' Event Listener
-
+  staticTable.select.style('multi');
   // Alert
   hideAlert();
 }
