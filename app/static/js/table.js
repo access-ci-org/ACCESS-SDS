@@ -7,7 +7,9 @@ const siteItems =[
     }
 ]
 
-$(document).ready(function(){
+
+$(document).ready(function()
+{
 
     universalMenus({
         loginUrl: "/login",
@@ -79,15 +81,26 @@ $(document).ready(function(){
     
 
     var staticTable = $('#softwareTable').DataTable({
+        select: true,
+        fixedHeader: true,  // Makes column headers 'fixed' to the top of the table when scrolling
         "sScrollX": "100%",
         autoWidth: true,
-        pageLength: 50,
-        pagingType: 'full_numbers',     // 'First', 'Previous', 'Next', 'Last', with page numbers.
+        pageLength: 25,
+        pagingType: 'full_numbers',     // 'First', 'Previous', 'Next', 'Last', with page numbers
         lengthMenu: [
-            [50, 250, 500, -1],
-            [50, 250, 500, 'All']
+            [25, 50, 250, 500, -1],
+            [25, 50, 250, 500, 'All']
         ],
-        dom: 'Q<"d-flex flex-column flex-md-row justify-content-between"<"d-flex flex-column flex-md-row"<"d-flex mb-3 mb-md-0"l><"d-flex px-3"B>>f>rt<"d-flex justify-content-between"ip>', 
+        dom: 'PQ<"d-flex flex-column flex-md-row justify-content-between"<"d-flex flex-column flex-md-row"<"d-flex mb-3 mb-md-0"l><"d-flex px-3"B>>f>rt<"d-flex justify-content-between"ip>', 
+        searchPanes: {
+            cascadePanes: false,    // Can't use this until we optimize the table's performance
+            dtOpts: {
+                select: {
+                    style: 'multi'
+                }, 
+            },
+            combiner: 'or'
+        },
         language:
         {
             paginate:
@@ -103,7 +116,7 @@ $(document).ready(function(){
         buttons: [
             'colvis',
         ],
-        stateSave: true,
+        stateSave: false,
         stateDuration:-1,
         searchBuilder: {
             conditions: {
@@ -121,38 +134,221 @@ $(document).ready(function(){
             }
         },
         columnDefs: [
-                {
-                    // Enable Search Function On All Columns   
-                    targets:[0,1,2,3,4,5,6,7,8,9,10,11],
-                    searchBuilder: 
-                        { 
-                            defaultCondition: 'contains'
-                        },    
-                },
-
-                {
-                    // Columns with clickable URLs
-                    targets: [6,7,8,9,10], 
-                    render: function(data, type, row) 
-                    {
-                        if (type === 'display' && data) 
+            {
+                searchPanes: {
+                    show: true,
+                    options: [                   
                         {
-                            return makeLinkClickable(data);
+                            label: 'Aces',
+                            value: function(rowData, rowIdx) {
+                                return rowData[1].toLowerCase().includes('aces');
+                            }
+                        },
+                        {
+                            label: 'Anvil',
+                            value: function(rowData, rowIdx) {
+                                return rowData[1].toLowerCase().includes('anvil');
+                            }
+                        },
+                        {
+                            label: 'Bridges-2',
+                            value: function(rowData, rowIdx) {
+                                return rowData[1].toLowerCase().includes('bridges-2');
+                            }
+                        },
+                        {
+                            label: 'DARWIN',
+                            value: function(rowData, rowIdx) {
+                                return rowData[1].toLowerCase().includes('darwin');
+                            }
+                        },
+                        {
+                            label: 'Delta',
+                            value: function(rowData, rowIdx) {
+                                return rowData[1].toLowerCase().includes('delta');
+                            }
+                        },
+                        {
+                            label: 'Expanse',
+                            value: function(rowData, rowIdx) {
+                                return rowData[1].toLowerCase().includes('expanse');
+                            }
+                        },
+                        {
+                            label: 'Faster',
+                            value: function(rowData, rowIdx) {
+                                return rowData[1].toLowerCase().includes('faster');
+                            }
+                        },
+                        {
+                            label: 'Jetstream',
+                            value: function(rowData, rowIdx) {
+                                return rowData[1].toLowerCase().includes('jetstream');
+                            }
+                        },
+                        {
+                            label: 'Kyric',
+                            value: function(rowData, rowIdx) {
+                                return rowData[1].toLowerCase().includes('kyric');
+                            }
+                        },
+                        {
+                            label: 'Ookami',
+                            value: function(rowData, rowIdx) {
+                                return rowData[1].toLowerCase().includes('ookami');
+                            }
+                        },
+                        {
+                            label: 'Stampede-3',
+                            value: function(rowData, rowIdx) {
+                                return rowData[1].toLowerCase().includes('stampede3');
+                            }
                         }
-                        return data;
-                    },
-                    
-                    createdCell:function(td)
-                    {
-                        $(td).css('word-wrap', 'break-all'); // Enable word-wrap
-                        $(td).css('max-width', '300px'); // Ensure max-width is applied
-                    }
-                    
+                    ]
                 },
-                { width: '500px', targets: 6 },     // Software Description
-                { width: '400px', targets: [8, 9, 10] },     // Links
-                { width: '100px', targets: 11 },     // Version Info
-            ],
+                targets: [1]
+            },
+            {
+                searchPanes: {
+                    show: true,
+                    options: [
+                        {
+                            label: 'API',
+                            value: function(rowData, rowIdx) {
+                                return rowData[2].toLowerCase().includes('api');
+                            }
+                        },
+                        {
+                            label: 'Application',
+                            value: function(rowData, rowIdx) {
+                                return rowData[2].toLowerCase().includes('application');
+                            }
+                        },
+                        {
+                            label: 'Language',
+                            value: function(rowData, rowIdx) {
+                                return rowData[2].toLowerCase().includes('language');
+                            }
+                        },
+                        {
+                            label: 'Library',
+                            value: function(rowData, rowIdx) {
+                                return rowData[2].toLowerCase().includes('library');
+                            }
+                        },
+                        {
+                            label: 'Package',
+                            value: function(rowData, rowIdx) {
+                                return rowData[2].toLowerCase().includes('package');
+                            }
+                        },
+                        {
+                            label: 'Service',
+                            value: function(rowData, rowIdx) {
+                                return rowData[2].toLowerCase().includes('service');
+                            }
+                        },
+                        {
+                            label: 'Toolkit',
+                            value: function(rowData, rowIdx) {
+                                return rowData[2].toLowerCase().includes('toolkit');
+                            }
+                        },
+                        {
+                            label: 'Utility',
+                            value: function(rowData, rowIdx) {
+                                return rowData[2].toLowerCase().includes('utility');
+                            }
+                        },
+                    ]
+                },
+                targets: [2]
+            },
+            {
+                searchPanes: {
+                    show: true,
+                    options: [
+                        {
+                            label: 'Climate/Weather',
+                            value: function(rowData, rowIdx) {
+                                return rowData[4].toLowerCase().includes('climate');
+                            }
+                        },
+                        {
+                            label: 'Computer Science',
+                            value: function(rowData, rowIdx) {
+                                return rowData[4].toLowerCase().includes('computer science');
+                            }
+                        },
+                        {
+                            label: 'Data Management',
+                            value: function(rowData, rowIdx) {
+                                return rowData[4].toLowerCase().includes('data management');
+                            }
+                        },
+                        {
+                            label: 'Engineering',
+                            value: function(rowData, rowIdx) {
+                                return rowData[4].toLowerCase().includes('engineering');
+                            }
+                        },
+                        {
+                            label: 'General Use',
+                            value: function(rowData, rowIdx) {
+                                return rowData[4].toLowerCase().includes('general');
+                            }
+                        },
+                        {
+                            label: 'Sciences',
+                            value: function(rowData, rowIdx) {
+                                return rowData[4].toLowerCase().includes('sciences');
+                            }
+                        },
+                    ]
+                },
+                targets: [4]
+
+            },
+            {
+                searchPanes: {
+                    show: false
+                },
+                targets: '_all'
+
+            },
+
+            {
+                // Enable Search Function On All Columns   
+                targets:[0,1,2,3,4,5,6,7,8,9,10,11],
+                searchBuilder: 
+                    { 
+                        defaultCondition: 'contains'
+                    },    
+            },
+
+            {
+                // Columns with clickable URLs
+                targets: [6,7,8,9,10], 
+                render: function(data, type, row) 
+                {
+                    if (type === 'display' && data) 
+                    {
+                        return makeLinkClickable(data);
+                    }
+                    return data;
+                },
+                
+                createdCell:function(td)
+                {
+                    $(td).css('word-wrap', 'break-all'); // Enable word-wrap
+                    $(td).css('max-width', '300px'); // Ensure max-width is applied
+                }
+                
+            },
+            { width: '500px', targets: 6 },     // Software Description
+            { width: '400px', targets: [8, 9, 10] },     // Links
+            { width: '100px', targets: 11 },     // Version Info
+        ],
     });
 
     var dynamicTable = $('#softwareTableDynamic').DataTable({
@@ -274,73 +470,89 @@ $(document).ready(function(){
         })
     })
 
-    var $scrollBody = $('.dt-scroll-body');
+    var $scrollBody = $('div.dt-scroll-body').eq(3)
     var scrollSensitivity = 100; // Distance from edge in pixels.
     var scrollSpeed = 7; // Speed of the scroll step in pixels.
     var scrollInterval;
     var scrollDirection;
-  
-    function startScrolling(direction) {
-      if (scrollInterval) {
-        clearInterval(scrollInterval);
-      }
-      scrollDirection = direction;
-      scrollInterval = setInterval(function() {
-        var currentScroll = $scrollBody.scrollLeft();
-        $scrollBody.scrollLeft(currentScroll + scrollSpeed * scrollDirection);
-      }, 10); // Interval in milliseconds
-    }
-  
-    function stopScrolling() {
-      clearInterval(scrollInterval);
-    }
-  
+
     // Event listener for mouse movement in the scroll body.
-    $('.dt-scroll-body').mousemove(function(e) {
-      var $this = $(this);
-    //   console.log($this);
-    //   console.log($this[0].scrollWidth)
-      var offset = $this.offset();
-      var scrollWidth = $this[0].scrollWidth;
-      var outerWidth = $this.outerWidth();
-      var x = e.pageX - offset.left;
+    $scrollBody.mousemove(function(e) 
+    {
+        var $this = $(this);
+        var offset = $this.offset();
+        var scrollWidth = $this[0].scrollWidth;
+        var outerWidth = $this.outerWidth();
+        var x = e.pageX - offset.left;
   
-      // Right edge of the table.
-      if (scrollWidth > outerWidth && x > outerWidth - scrollSensitivity) {
-        startScrolling(1); // Scroll right
-      }
-      // Left edge of the table.
-      else if (x < scrollSensitivity) {
-        startScrolling(-1); // Scroll left
-      } else {
-        stopScrolling();
-      }
+        // Right edge of the table.
+        if (scrollWidth > outerWidth && x > outerWidth - scrollSensitivity) 
+        {
+            startScrolling(1); // Scroll right
+        }
+        // Left edge of the table.
+        else if (x < scrollSensitivity) 
+        {
+            startScrolling(-1); // Scroll left
+        } 
+        else 
+        {
+            stopScrolling();
+        }
     });
   
     $scrollBody.mouseleave(stopScrolling);
 
-    function checkScrollEdges(){
+    checkScrollEdges();
+    $scrollBody.on('scroll',checkScrollEdges);
+
+    // Scrolling Behaviors
+    function startScrolling(direction) 
+    {
+        if (scrollInterval) 
+        {
+            clearInterval(scrollInterval);
+        }
+        scrollDirection = direction;
+        scrollInterval = setInterval(function() 
+        {
+        var currentScroll = $scrollBody.scrollLeft();
+        $scrollBody.scrollLeft(currentScroll + scrollSpeed * scrollDirection);
+        }, 10); // Interval in milliseconds
+    }
+
+
+    function checkScrollEdges()
+    {
         let scrollLeft = $scrollBody.scrollLeft();
         var scrollWidth = $scrollBody[0].scrollWidth;
         var outerWidth = $scrollBody.outerWidth();
 
-        if (scrollLeft+outerWidth >= (scrollWidth-1)){
+        if (scrollLeft+outerWidth >= (scrollWidth - 1))
+        {
             $scrollBody.parent().addClass('no-right-shadow');
-        }else{
+        }
+        else
+        {
             $scrollBody.parent().removeClass('no-right-shadow');
         }
 
-        if (scrollLeft===0){
+        if (scrollLeft == 0)
+        {
             $scrollBody.parent().addClass('no-left-shadow');
-        }else{
+        }else
+        {
             $scrollBody.parent().removeClass('no-left-shadow');
         }
     }
-    checkScrollEdges();
-    $scrollBody.on('scroll',checkScrollEdges);
 
+    function stopScrolling() 
+    {
+        clearInterval(scrollInterval);
+    }
     
 });
+
 
 // Define the Highlight.js extension for Showdown
 function highlightExtension() {
