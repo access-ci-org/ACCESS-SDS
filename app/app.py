@@ -14,6 +14,7 @@ app = Flask(__name__)
 @app.route("/")
 def software_search():
     try:
+        df = create_static_table() ### TESTING PURPOSES -- Without this, Static Table is Cached and won't update ###
         df = pd.read_csv("./staticSearch/staticTable.csv", keep_default_na=False)
     except FileNotFoundError as e:
 
