@@ -5,11 +5,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>   
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     
-    <!-- lastUpdated Script -->
-    <script type="module" src="{{url_for('static', filename='js/lastUpdated.js')}}"></script>    
-    <script type="module" src="{{url_for('static', filename='js/alerts.js')}}"></script>
+    <!-- DataTable Behaviors -->
     <script type="module" src="{{url_for('static', filename='js/table.js')}}"></script>
+    <!-- lastUpdated Timestamp -->
+    <script type="module" src="{{url_for('static', filename='js/lastUpdated.js')}}"></script>
+    <!-- Report/Feedback Buttons --> 
     <script type="module" src="{{url_for('static', filename='js/issueReporting.js')}}"></script>
+    <!-- Report Instructions Alert Messagebox -->    
+    <script type="module" src="{{url_for('static', filename='js/alerts.js')}}"></script>
+    
+
     
 {% endblock %}
 <div>

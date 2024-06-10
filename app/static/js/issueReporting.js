@@ -1,19 +1,19 @@
-/*////////////
-    Imports //
-*/////////////
+/*//////////
+  Imports //
+*///////////
 import { showAlert, hideAlert } from './alerts.js';
 import { staticTable } from './table.js';
 
-/*/////////////////////
-    Global Variables //
-*//////////////////////
+/*///////////////////
+  Global Variables //
+*////////////////////
 var issueReport = {}        // Report Object
 var reportingIssue = false; // State Controller
 var selectedElement = null; // Event Target
 
-/*//////////////
-    Functions //
-*///////////////
+/*////////////
+  Functions //
+*/////////////
 
 // EVENT HANDLERS //
 ////////////////////
@@ -76,7 +76,10 @@ function enterReportingState()
   $('body').on('mousemove', handleMouseMove);     // Enable 'handleMouseMove' Event Listener
   //$(document).on('click',handleClick);          // Enable 'handleClick' Event Listener (Currently Unnecessary)
   $(document).on('keydown',handleKeyDown);        // Enable 'handleKeyDown' Event Listener
-  staticTable.select.style('api');
+  
+  // Disable selecting rows while reporting
+  staticTable.select.style('api');                
+  dynamicTable.select.style('api');
 }
 
 function exitReportingState()
@@ -97,9 +100,13 @@ function exitReportingState()
   $('body').off('click',handleIssueReportClick);  // Disable 'handleIssueReportClick' Event Listener
   $('body').off('mousemove', handleMouseMove);    // Disable 'handleMouseMove' Event Listener
   //$(document).off('click',handleClick);         // Disable 'handleClick' Event Listener 
-                                                    // Don't forget to enable this too if implementing handleClick again
+                                                  //   Remember to renable this too if implementing handleClick again
   $(document).off('keydown',handleKeyDown);       // Disable 'handleKeyDown' Event Listener
-  staticTable.select.style('multi');
+  
+  // Renable selecting rows once report is done
+  staticTable.select.style('multi');              
+  dynamicTable.select.style('multi');
+  
   // Alert
   hideAlert();
 }
@@ -173,8 +180,9 @@ function handleIssueReportClick(event)
   }
 }
 
-// BUTTONS //
-/////////////
+/*//////////
+  BUTTONS //
+*///////////
 
 // 'Report Issue' Button
 // Modal defined in 'reportModal.html'

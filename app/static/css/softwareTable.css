@@ -40,8 +40,32 @@
  
 /* Changes the color of the table column headers to match ACCESS Header */
 .dataTable thead th {
-    background-color: #1a5b6e;  /* Dark background color */
+    background-color: #1a5b6e !important;  /* Dark background color */
     color: white;               /* White text color */
     font-weight: bold;            /* Bold text */
     padding: 10px;                /* Padding for better readability */
 }
+
+/* Changes the color of the active table tab to match ACCESS branding */
+.nav-link.active{
+    background: #107180 !important;
+}
+
+/* Changes the color of selected items in the table to match ACCESS branding */
+table.dataTable tbody tr.selected>* {
+    box-shadow: inset 0 0 0 9999px #107180 !important;
+}
+
+
+/* Changes the size of the 'Column Visibility' container */
+div.dt-button-collection.two-column{
+    width: 525px;
+}
+
+/* Changes the color of active buttons in 'Column Visibility' container */
+button.dt-button.buttons-columnVisibility.dt-button-active {
+
+    background: #107180 !important;
+    color: white; 
+}
+
