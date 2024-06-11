@@ -330,10 +330,10 @@ $(document).ready(function()
             },
             {
                 // ### TESTING ### Software Details Modal
-                render: function(data, type, row, meta){
+                render: function(data, type, row){
                     if (type === 'display')
                         {
-                            return '<a data-toggle="modal" data-target="#report-modal" href="#report-modal">'+data+'</a>'
+                            return '<a data-toggle="modal" data-target="#softwareDetails-modal" href="#softwareDetails-modal">' + data + '</a>'
                         }
                     return data
                 },
@@ -776,9 +776,9 @@ $(document).ready(function()
     });
 
 
-/*////////////////////////////////////////////////
-    Software 'Example Use' Modal Event Listener //
-*/////////////////////////////////////////////////    
+/*/////////////////////////////////////////////////////
+    Event Listener for Software 'Example Use' Modal  //
+*//////////////////////////////////////////////////////    
     dynamicTable.on('click','.example-use-btn', function(e){
         e.stopPropagation()
         let rowData = dynamicTable.row(e.target.closest('tr')).data();
@@ -790,7 +790,7 @@ $(document).ready(function()
             success: function(response){
 
                 var useHtml = converter.makeHtml(response.use)
-                $("#modal-title").text('Use Case for '+softwareName)
+                $("#useCase-modal-title").text('Use Case for ' + softwareName)
                 $('#useCaseBody').html(useHtml);
 
                 document.querySelectorAll('#useCaseBody pre Code').forEach((block)=>{
@@ -806,13 +806,35 @@ $(document).ready(function()
     })
 
 
-    $('a[href$="#report-modal"]').on( "click", function() {
-        $('#report-modal').modal('show');
-     })
+/*//////////////////////////////////////////////
+    Event Listener for Software Details Modal //
+*///////////////////////////////////////////////
+    staticTable.on('click', 'a[href$="#softwareDetails-modal"]', function(e){
+        // Grab the row of the clicked software 
+        const row = staticTable.row(e.target.closest('tr'));
+        // Stage the row info to be injected into the modal
+        const rowData = row.data();
 
+        // Create the softwareDetails modal
+        $('#softwareDetails-modal-title').html("Software Details: " + rowData[0]);
+        $('#softwareDetailsName').text(rowData[0]);
+        $('#softwareDetailsRPs').text(rowData[1]);
+        $('#softwareDetailsType').text(rowData[2]);
+        $('#softwareDetailsClass').text(rowData[3]);
+        $('#softwareDetailsArea').text(rowData[4]);
+        $('#softwareDetailsDiscipline').text(rowData[5]);
+        $('#softwareDetailsDescription').html(makeLinkClickable(rowData[6]));
+        $('#softwareDetailsWebpage').html(makeLinkClickable(rowData[7]));
+        $('#softwareDetailsDocumentation').html(makeLinkClickable(rowData[8]));
+        $('#softwareDetailsExamples').html(makeLinkClickable(rowData[9]));
+        $('#softwareDetailsRPDocs').html(makeLinkClickable(rowData[10]));
+        $('#softwareDetailsVersions').html(rowData[11]);
 
-
+        // Show the modal
+        $('#softwareDetails-modal').modal('show');
+    })
 });
+
 
 /*/////////////////////////////
     Clickable Links In Table //

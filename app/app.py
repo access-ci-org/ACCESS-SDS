@@ -2,6 +2,7 @@ from flask import Flask, render_template, jsonify, send_file, request
 from dotenv import load_dotenv
 from app.softwareStatic import create_static_table
 from app.reports import sanitize_and_process_reports
+from app.feedback import sanitize_and_process_feedback
 import os
 import re
 import json
@@ -64,8 +65,8 @@ def report_issue():
         report = sanitize_and_process_reports(issue_report)
         current_datetime = report['datetime']
 
-        capture_data_url = report['captureDataUrl']
-        report.pop('captureDataUrl')
+        #capture_data_url = report['captureDataUrl']
+        #report.pop('captureDataUrl')
 
         report_folder = os.path.join('reports', current_datetime)
         os.makedirs(report_folder, exist_ok=True)
@@ -73,10 +74,10 @@ def report_issue():
         with open(report_filename, 'w') as f:
             json.dump(report, f, indent=4)
 
-        capture_data = urlopen(capture_data_url).read()
-        capture_filename = os.path.join(report_folder, report['captureFilename'])
-        with open(capture_filename, 'wb') as f:
-            f.write(capture_data)
+        #capture_data = urlopen(capture_data_url).read()
+        #capture_filename = os.path.join(report_folder, report['captureFilename'])
+        #with open(capture_filename, 'wb') as f:
+        #    f.write(capture_data)
     else:
         current_datetime = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
         report_folder = os.path.join('reports', current_datetime)
@@ -87,6 +88,38 @@ def report_issue():
 
     return jsonify({'message': 'Issue reported successfully'})
 
+
+## Flask Route Definition for User Feedback Button
+## process_feedback() is called anytime a POST is sent to /user-feedback
+@app.route("/user-feedback", methods=['POST'])
+def process_feedback():
+    # Grab Ajax Request
+    user_feedback = request.get_json()
+
+    # Sanitize Feedback if necessary
+    if user_feedback['feedbackForm']:
+        feedback = sanitize_and_process_feedback(user_feedback)
+        current_datetime = feedback['datetime']
+
+        # Create folder and make feedback file
+        feedback_folder = os.path.join('feedback', current_datetime)
+        os.makedirs(feedback_folder, exist_ok=True)
+        feedback_filename = os.path.join(feedback_folder, 'feedback.json')
+        with open(feedback_filename, 'w') as f:
+            json.dump(feedback, f, indent=4)
+
+    else:
+        current_datetime = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+        feedback_folder = os.path.join('feedback', current_datetime)
+        os.makedirs(feedback_folder, exist_ok=True)
+        feedback_filename = os.path.join(feedback_folder, 'feedback.json')
+        with open(feedback_filename, 'w') as f:
+            json.dump(user_feedback, f, indent=4)
+
+    return jsonify({'success': 'Feedback processed successfully'})
+
+
+# Display Images
 @app.route("/images/<filename>")
 def get_image(filename):
     if 'png' in filename:
@@ -96,6 +129,8 @@ def get_image(filename):
 
     return send_file(f'static/images/{filename}', mimetype=mimetype)
 
+
+# Flask Bootloader
 if __name__ == '__main__':
     load_dotenv()
     app.run(debug=True, host='0.0.0.0', port=8080)

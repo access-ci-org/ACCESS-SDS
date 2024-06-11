@@ -93,3 +93,33 @@
     position: right;
     font-weight: bold;
   }
+
+  .modal-content{
+    border:#1a5b6e 2px solid;
+  }
+  
+  .modal-header{
+    background-color: #1a5b6e !important;
+    color: white;
+  }
+
+  .close{
+    color: white;
+    opacity: 1;
+  }
+
+  hr{
+    height: 3px;
+    background-color: #1a5b6e;
+  }
+
+  .borderCell{
+    border: 3px #185264d3 solid !important;
+    border-radius: 5px;
+  }
+
+  .borderValue
+  {
+    border: 3px #0f6572d0 solid !important;
+    border-radius: 5px;
+  }
