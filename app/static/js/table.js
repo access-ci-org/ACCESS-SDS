@@ -63,7 +63,10 @@ $(document).ready(function()
     Enabled: Buttons (Column Visibility), FixedColumn, FixedHeader, SearchBuilder, SearchPanes, Select //
 *////////////////////////////////////////////////////////////////////////////////////////////////////////
     staticTable = $('#softwareTable').DataTable({
-        select: true,       // Allows for selecting rows in tables/searchPanes
+        select: {           // Allows for selecting rows in tables/searchPanes
+            enabled: true,
+            style: 'multi', // Select multiple rows, deselect by clicking again
+        },       
         fixedColumns: true, // Makes first column 'fixed' to the left side of the table when scrolling
         fixedHeader: true,  // Makes column headers 'fixed' to the top of the table when scrolling
         "sScrollX": "100%", // Enables horizontal scrolling
@@ -371,7 +374,10 @@ $(document).ready(function()
     Enabled: Buttons (Column Visibility), FixedColumns, FixedHeader, SearchBuilder, SearchPanes, Select //
 */////////////////////////////////////////////////////////////////////////////////////////////////////////
     dynamicTable = $('#softwareTableDynamic').DataTable({
-        select: true,       // Allows for selecting rows in tables/searchPanes
+        select: {           // Allows for selecting rows in tables/searchPanes
+            enabled: true,
+            style: 'multi', // Select multiple rows, deselect by clicking again
+        }, 
         fixedColumns: true, // Makes first column 'fixed' to the left side of the table when scrolling
         fixedHeader: true,  // Makes column headers 'fixed' to the top of the table when scrolling
         "sScrollX": "100%", // Enables horizontal scrolling
