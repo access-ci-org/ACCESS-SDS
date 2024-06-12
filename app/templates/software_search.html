@@ -1,34 +1,30 @@
 {% extends "base.html" %}
 {% block scripts %}
     {{super()}}
-
-    <script src="https://cdn.datatables.net/2.0.5/js/dataTables.min.js"></script>
-    
-    <script type="text/javascript" src="https://cdn.datatables.net/searchbuilder/1.7.0/js/dataTables.searchBuilder.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/searchbuilder/1.7.0/js/searchBuilder.dataTables.js"></script>
-    
     <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>   
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-
-    <script src="https://cdn.datatables.net/buttons/3.0.0/js/dataTables.buttons.js"></script>
-    <script src="https://cdn.datatables.net/buttons/3.0.0/js/buttons.dataTables.js"></script>
-    <script src="https://cdn.datatables.net/buttons/3.0.0/js/buttons.colVis.min.js"></script>
     
-    <script type="module" src="{{url_for('static', filename='js/alerts.js')}}"></script>
+    <!-- DataTable Behaviors -->
     <script type="module" src="{{url_for('static', filename='js/table.js')}}"></script>
+    <!-- lastUpdated Timestamp -->
+    <script type="module" src="{{url_for('static', filename='js/lastUpdated.js')}}"></script>
+    <!-- Report/Feedback Buttons --> 
     <script type="module" src="{{url_for('static', filename='js/issueReporting.js')}}"></script>
+    <!-- Report Instructions Alert Messagebox -->    
+    <script type="module" src="{{url_for('static', filename='js/alerts.js')}}"></script>
+    
 
+    
 {% endblock %}
 <div>
 {% set url = url_for(request.endpoint)%}
 {%block page_title %}
 <div style="text-align: center;">
     {% if 'ai-generated' in url%}
-        <h4 style="text-align:center;" id="page_title">ACCESS Software Documentation Service (AI Generated)</h4>
+        <h3 style="text-align:center;" id="page_title">ACCESS Software Documentation Service (AI Generated)</h3>
     {%else%}
-        <h4 style="text-align:center;" id="page_title">ACCESS Software Documentation Service (Curated)</h4>
+        <h3 style="text-align:center;" id="page_title">ACCESS Software Documentation Service (Curated)</h3>
     {%endif%}
 </div>
 {% endblock %}
@@ -38,7 +34,7 @@
 <div class="">
     <label style="font-size: 0.8em;">
         <span style="color:#FF0000;">Disclaimer: </span>
-        The Software Documentation Service (SDS) is a work in progress. 
+        This tool is a work in progress. 
         Its purpose is to demonstrate the potential capability to support user's exploration of software offerings on ACCESS Resource Provider (RP)
         Systems allowing the user to search software by various categories and disciplines, providing summary descriptions and helpful links to
         additional documentation, etc.  The list of software (over 2000)
@@ -52,15 +48,18 @@
 <div class="">
     <label style="font-size: 0.8em;">
         <span style="color:#FF0000">Disclaimer: </span>
-        The “Curated” Software Description Service (SDS) is a work in progress. Not all information for all software is complete at this time.
+        This tool is a work in progress. Not all information for all software is complete at this time.
         Additional information will continue to be provided/added in future updates.
         Users are encouraged to respond via the Provide Feedback mechanism to provide missing information, 
         report errors, or suggest corrections.</label>
 {%endif%}
 <div class="">
+
     <label><strong>Hover your mouse to the edge of the table to scroll.</strong></label>
 </div>
-
+<div>
+    <strong>Last Updated: <span id="lastUpdated"></span> Eastern Standard Time</strong>
+</div>
 
 <div class="table-responsive table-container">
     <div class="table-responsive" id="softwareTableDiv" style="width: 80vw;">
@@ -71,4 +70,5 @@
 {% include 'useCase.html' %}
 {% include 'reportModal.html' %}
 {% include 'feedbackModal.html' %}
+{% include 'softwareDetailsModal.html' %}
 {%endblock%}

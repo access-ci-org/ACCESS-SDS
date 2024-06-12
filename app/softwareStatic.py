@@ -6,22 +6,22 @@ staticTable = './staticSearch/staticTable.csv'
 
 # Hard-coded links to RP-specific Software Documentation
 rp_urls = {
-    'aces':'https://hprc.tamu.edu/software/aces/',
-    'anvil': 'https://www.rcac.purdue.edu/software/',
-    'bridges-2': 'https://www.psc.edu/resources/software/',
+    'Aces':'https://hprc.tamu.edu/software/aces/',
+    'Anvil': 'https://www.rcac.purdue.edu/software/',
+    'Bridges-2': 'https://www.psc.edu/resources/software/',
     'DARWIN': 'https://docs.hpc.udel.edu/software/',
-    'delta': 'https://docs.ncsa.illinois.edu/systems/delta/en/latest/user_guide/software.html',
-    'expanse':'https://www.sdsc.edu/support/user_guides/expanse.html#modules',
-    'faster':'https://hprc.tamu.edu/software/faster/',
-    'jetstream2':'',
-    'kyric':'',
-    'ookami':'https://www.stonybrook.edu/commcms/ookami/support/faq/software_on_ookami',
-    'rockfish':'',
-    'stampede-2':'https://tacc.utexas.edu/use-tacc/software-list/',
-    'stampede3':'https://tacc.utexas.edu/use-tacc/software-list/',
-    'ranch':'https://tacc.utexas.edu/use-tacc/software-list/',
-    'osg':'',
-    'osn':''
+    'Delta': 'https://docs.ncsa.illinois.edu/systems/delta/en/latest/user_guide/software.html',
+    'Expanse':'https://www.sdsc.edu/support/user_guides/expanse.html#modules',
+    'Faster':'https://hprc.tamu.edu/software/faster/',
+    'Jetstream2':'',
+    'Kyric':'',
+    'Ookami':'https://www.stonybrook.edu/commcms/ookami/support/faq/software_on_ookami',
+    'Rockfish':'',
+    'Stampede-2':'https://tacc.utexas.edu/use-tacc/software-list/',
+    'Stampede3':'https://tacc.utexas.edu/use-tacc/software-list/',
+    'Ranch':'https://tacc.utexas.edu/use-tacc/software-list/',
+    'OSG':'',
+    'OSN':''
 }
 # Some RPs generate specific links to individual software in their documentation.
 # Here, for the RPs that do this, we're using an algorithm to point to their
@@ -38,7 +38,7 @@ rp_urls = {
 #           combinedUrls: string of formatted RP URLs           #
 #################################################################
 def createFullDocUrl(softwareName, rpNames):
-    has_individual_software_page = ['anvil','bridges-2','DARWIN']   # RPs that have specific links per software
+    has_individual_software_page = ['Anvil','Bridges-2','DARWIN']   # RPs that have specific links per software
     rpList = rpNames.split(',')                                     # For software installed on multiple systems,
                                                                     #   split the RPs into a list for processing
 
@@ -88,6 +88,13 @@ def create_static_table():
 
     df = pd.read_csv('./staticSearch/ACCESS_Software.csv',na_filter=False)  # CSV generated from Google Sheets
 
+    # Ensure uniform capitalization across cells
+    df['RP Name'] = df['RP Name'].str.title()
+    df['Software Type'] = df['Software Type'].str.title()
+    df['Software Class'] = df['Software Class'].str.title()
+    df['Research Area'] = df['Research Area'].str.title()
+    df['Research Discipline'] = df['Research Discipline'].str.title()
+
     # Ensure DARWIN is always capitalized
     df['RP Name'] = df['RP Name'].str.replace('darwin', 'DARWIN')
 
@@ -100,7 +107,7 @@ def create_static_table():
                                                                         '\nDescription Source: ')
 
     # Make Example Links on separate lines
-    df['Example Software Use'] = df['Example Software Use'].str.replace(' , ', '\n')
+    df['Example Software Use'] = df['Example Software Use'].str.replace(' , ', ' \n')
 
     # Populate 'RP Software Documentation' Field
     df['RP Software Documentation'] = df.apply(lambda row: createFullDocUrl(row['Software'], row['RP Name']), axis=1)
@@ -112,6 +119,7 @@ def create_static_table():
     
     # Add Version Info to DataFrame
     df = addVersionInfoToTable(df)
+    df['Version Info'] = df['Version Info'].str.title()
 
     # Convert DataFrame back to CSV
     df.to_csv(staticTable,index=False)

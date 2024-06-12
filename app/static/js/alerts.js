@@ -6,7 +6,7 @@
 *//////////////////////////////////////////////////
 export function showAlert(alertMsg, alertType)
 {
-    $("#alert-div").append(     // Appends new alert to html element with ID: alert-div
+    $("#alert-div").append(     // Appends new alert to html element with ID: alert-div 
         `<div class="alert alert-${alertType} alert-dismissible fade show" id="alert" role="alert">
             ${alertMsg}
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -23,7 +23,7 @@ export function showAlert(alertMsg, alertType)
     /* Previous functionality, no longer required, but kept here in case we want this again later
 
     $("#alert").fadeTo(10000, 500).slideUp(1000, function()
-        // fadeTo(10000, 500): After 10 seconds, fade to 50% opacity
+        // fadeTo(10000, 500); After 10 seconds, fade to 50% opacity
         // slideUp(1000, function(){...}):
         {
             $("#alert").slideUp(1000);  // Alert Div shrinks upward in 1 second
