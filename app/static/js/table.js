@@ -372,15 +372,15 @@ $(document).ready(function()
 */////////////////////////////////////////////////////////////////////////////////////////////////////////
     dynamicTable = $('#softwareTableDynamic').DataTable({
         select: true,       // Allows for selecting rows in tables/searchPanes
-        fixedColumns: true,
+        fixedColumns: true, // Makes first column 'fixed' to the left side of the table when scrolling
         fixedHeader: true,  // Makes column headers 'fixed' to the top of the table when scrolling
         "sScrollX": "100%", // Enables horizontal scrolling
         autoWidth: true,    // Column width is determined dynamically by content within the cells
         pageLength: 25,     // Rows displayed per page
         pagingType: 'full_numbers',     // 'First', 'Previous', 'Next', 'Last', with page numbers
         lengthMenu: [                   // User-selectable menu for pageLength
-            [25, 50, 250, 500, -1],
-            [25, 50, 250, 500, 'All']
+            [10, 25, 50, 250, 500, -1],
+            [10, 25, 50, 250, 500, 'All']
         ],
         // DOM: 'P' = searchPanes, 'Q' = searchBuilder. The rest is various layout and formatting options.
         // For example: 'p' affects the paging style at the bottom of the table.
