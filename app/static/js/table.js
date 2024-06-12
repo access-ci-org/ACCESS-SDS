@@ -79,15 +79,17 @@ $(document).ready(function()
         ],
         // DOM: 'P' = searchPanes, 'Q' = searchBuilder. The rest is various layout and formatting options.
         // For example: 'p' affects the paging style at the bottom of the table.
-        dom: 'PQ<"d-flex flex-column flex-md-row justify-content-between"<"d-flex flex-column flex-md-row"<"d-flex mb-3 mb-md-0"l><"d-flex px-3"B>>f>rt<"d-flex justify-content-between"ip>', 
+        dom: 'PQ<"d-flex flex-column flex-md-row justify-content-between"<"d-flex flex-column flex-md-row"<"d-flex mb-3 mb-md-0"l><"d-flex px-3"B>><"d-flex justify-content-between align-items-center flex-grow-1"<"d-flex justify-content-start"><"d-flex scrollText-div">f>>rt<"d-flex justify-content-between"ip>',
         initComplete: function()
         {
+            $('.scrollText-div').html("Hover your mouse to the edge of the table to scroll")
             // Prevent clicking links in the table from selecting the row.
             $('#softwareTable').on('click', 'a', function(e) {
                 e.stopPropagation();
             });           
         },
         searchPanes: {
+            initCollapsed: true,
             cascadePanes: false,    // Reflects one change in the searchPanes filters across all Panes.
                                     // Unfortunately, can't use this until we optimize the table's performance.
             dtOpts: {
@@ -139,7 +141,7 @@ $(document).ready(function()
             {
                 // Pane 1: RP Names
                 searchPanes: {
-                    show: true,
+                    className: 'noShadow',
                     options: [                   
                         {
                             label: 'Aces',
@@ -214,7 +216,7 @@ $(document).ready(function()
             {
                 // Pane 2: Software Type
                 searchPanes: {
-                    show: true,
+                    className: 'noShadow',
                     options: [
                         {
                             label: 'API',
@@ -266,12 +268,12 @@ $(document).ready(function()
                         },
                     ]
                 },
-                targets: [2]
+                targets: [2],
             },
             {
                 // Pane 3: Research Area
                 searchPanes: {
-                    show: true,
+                    className: 'noShadow',
                     options: [
                         {
                             label: 'Climate/Weather',
@@ -311,8 +313,7 @@ $(document).ready(function()
                         },
                     ]
                 },
-                targets: [4]
-
+                targets: [4],
             },
             {
                 // Disables all other columns not explicitly shown from displaying as Panes
@@ -390,15 +391,16 @@ $(document).ready(function()
         ],
         // DOM: 'P' = searchPanes, 'Q' = searchBuilder. The rest is various layout and formatting options.
         // For example: 'p' affects the paging style at the bottom of the table.
-        dom: 'PQ<"d-flex flex-column flex-md-row justify-content-between"<"d-flex flex-column flex-md-row"<"d-flex mb-3 mb-md-0"l><"d-flex px-3"B>>f>rt<"d-flex justify-content-between"ip>', 
-        initComplete: function()
+        dom: 'PQ<"d-flex flex-column flex-md-row justify-content-between"<"d-flex flex-column flex-md-row"<"d-flex mb-3 mb-md-0"l><"d-flex px-3"B>><"d-flex justify-content-between align-items-center flex-grow-1"<"d-flex justify-content-start"><"d-flex scrollText-div">f>>rt<"d-flex justify-content-between"ip>',        initComplete: function()
         {
+            $('.scrollText-div').html("Hover your mouse to the edge of the table to scroll")
             // Prevent clicking links in the table from selecting the row.
             $('#softwareTableDynamic').on('click', 'a', function(e) {
                 e.stopPropagation();
             });           
         },
         searchPanes: {
+            initCollapsed: true,
             cascadePanes: false,    // Reflects one change in the searchPanes filters across all Panes.
                                     // Unfortunately, can't use this until we optimize the table's performance.
             dtOpts: {
@@ -450,7 +452,6 @@ $(document).ready(function()
             {
                 // Pane 1: RP Names
                 searchPanes: {
-                    show: true,
                     options: [                   
                         {
                             label: 'Aces',
@@ -525,7 +526,6 @@ $(document).ready(function()
             {
                 // Pane 2: Software Type
                 searchPanes: {
-                    show: true,
                     options: [
                         {
                             label: 'API',
@@ -582,7 +582,6 @@ $(document).ready(function()
             {
                 // Pane 3: Research Area
                 searchPanes: {
-                    show: true,
                     options: [
                         {
                             label: 'Climate/Weather',

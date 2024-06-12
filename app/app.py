@@ -31,8 +31,11 @@ def software_search_dynamic():
     df = pd.read_csv('./dynamicSearch/combined_data.csv',keep_default_na=False)
     df.insert(10,"Example Use",np.nan)
     df.fillna('',inplace=True)
+    # Correct RP Names
     df['RP Name'] = df['RP Name'].str.replace('darwin', 'DARWIN')
     df['RP Name'] = df['RP Name'].str.replace('bridges', 'Bridges-2')
+    # Capitalize Headers
+    df = df.rename(columns={'software name': 'Software Name', 'core features': 'Core Features', "tags": "Tags", "software type" : "Software Type", "software class" : "Software Class", "research field" : "Research Field", "research area" : "Research Area", "research discipline" : "Research Discipline"})
     table = df.to_html(classes='table-striped" id = "softwareTableDynamic',index=False,border=1).replace('\\n', '<br>').replace('\\r', '')
     return render_template("software_search.html", table=table)
 

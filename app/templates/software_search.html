@@ -55,16 +55,16 @@
 {%endif%}
 <div class="">
 
-    <label><strong>Hover your mouse to the edge of the table to scroll.</strong></label>
-</div>
-<div>
-    <strong>Last Updated: <span id="lastUpdated"></span> Eastern Standard Time</strong>
+    
 </div>
 
 <div class="table-responsive table-container">
     <div class="table-responsive" id="softwareTableDiv" style="width: 80vw;">
         {{table|safe}}
     </div>
+</div>
+<div>
+    <strong>Last Updated: <span id="lastUpdated"></span> Eastern Standard Time</strong>
 </div>
     
 {% include 'useCase.html' %}

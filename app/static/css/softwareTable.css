@@ -74,3 +74,19 @@ button.dt-button.buttons-columnVisibility.dt-button-active {
     border: 3px #0f6572d0 solid !important;
     border-radius: 5px;
 }
+
+/* Remove shadow from searchPanes */
+.noShadow .dt-scroll::before, 
+.noShadow .dt-scroll::after {
+    display:none;
+}
+
+/* Controls the text of the mouse scroll disclaimer */
+.scrollText-div{
+    flex: 1; 
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    margin-right: 50px;
+    font-weight:bold;
+}
