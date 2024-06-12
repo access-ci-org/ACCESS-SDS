@@ -71,8 +71,8 @@ $(document).ready(function()
         pageLength: 25,     // Rows displayed per page
         pagingType: 'full_numbers',     // 'First', 'Previous', 'Next', 'Last', with page numbers
         lengthMenu: [                   // User-selectable menu for pageLength
-            [25, 50, 250, 500, -1],
-            [25, 50, 250, 500, 'All']
+            [10, 25, 50, 250, 500, -1],
+            [10, 25, 50, 250, 500, 'All']
         ],
         // DOM: 'P' = searchPanes, 'Q' = searchBuilder. The rest is various layout and formatting options.
         // For example: 'p' affects the paging style at the bottom of the table.
@@ -333,7 +333,7 @@ $(document).ready(function()
                 render: function(data, type, row){
                     if (type === 'display')
                         {
-                            return '<a data-toggle="modal" data-target="#softwareDetails-modal" href="#softwareDetails-modal">' + data + '</a>'
+                            return '<a data-toggle="modal" data-target="#softwareDetails-modal" href="#">' + data + '</a>'
                         }
                     return data
                 },
@@ -359,9 +359,9 @@ $(document).ready(function()
                 }
                 
             },
-            { width: '400px', targets: 6 },     // Software Description
-            { width: '300px', targets: [8, 9, 10] },     // Links
-            { width: '100px', targets: 11 },     // Version Info
+            { width: '400px', targets: 6 },             // Software Description
+            { width: '300px', targets: [8, 9, 10] },    // Links
+            { width: '100px', targets: 11 },            // Version Info
         ],
     });
 
@@ -809,13 +809,28 @@ $(document).ready(function()
 /*//////////////////////////////////////////////
     Event Listener for Software Details Modal //
 *///////////////////////////////////////////////
-    staticTable.on('click', 'a[href$="#softwareDetails-modal"]', function(e){
+    staticTable.on('click', 'a[data-target$="#softwareDetails-modal"]', function(e){
+        // Prevent webpage scrolling to top behind modal
+        e.preventDefault();
+
         // Grab the row of the clicked software 
         const row = staticTable.row(e.target.closest('tr'));
+
         // Stage the row info to be injected into the modal
         const rowData = row.data();
+        
+        // Prevents rare situation of malforned Description spawning multiple dividers
+        if (!rowData[6].includes('<hr>'))
+        {
+            rowData[6] = rowData[6].replace('Description Source', '<hr>Description Source');
+        }
 
-        // Create the softwareDetails modal
+        // Visually separate multiple entries with line divider
+        rowData[9] = rowData[9].replaceAll('<br>', '<hr>');
+        rowData[10] = rowData[10].replaceAll('<br>', '<hr>');
+        rowData[11] = rowData[11].replaceAll('<br>', '<hr>');
+
+        // Populate the softwareDetails modal
         $('#softwareDetails-modal-title').html("Software Details: " + rowData[0]);
         $('#softwareDetailsName').text(rowData[0]);
         $('#softwareDetailsRPs').text(rowData[1]);
@@ -830,7 +845,7 @@ $(document).ready(function()
         $('#softwareDetailsRPDocs').html(makeLinkClickable(rowData[10]));
         $('#softwareDetailsVersions').html(rowData[11]);
 
-        // Show the modal
+        // Show modal
         $('#softwareDetails-modal').modal('show');
     })
 });
@@ -842,7 +857,7 @@ $(document).ready(function()
 function makeLinkClickable(data) 
 {
     var urlRegex = /(https?:\/\/[^\s]+)/g;
-    return data.replace(urlRegex, function(url) 
+    return data.replaceAll(urlRegex, function(url) 
     {
         // Insert zero-width space after slashes or dots, as an example
         var spacedUrl = url.replace(/(\/|\.)+/g, '$&\u200B');

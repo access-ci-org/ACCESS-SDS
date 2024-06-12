@@ -31,6 +31,8 @@ def software_search_dynamic():
     df = pd.read_csv('./dynamicSearch/combined_data.csv',keep_default_na=False)
     df.insert(10,"Example Use",np.nan)
     df.fillna('',inplace=True)
+    df['RP Name'] = df['RP Name'].str.replace('darwin', 'DARWIN')
+    df['RP Name'] = df['RP Name'].str.replace('bridges', 'Bridges-2')
     table = df.to_html(classes='table-striped" id = "softwareTableDynamic',index=False,border=1).replace('\\n', '<br>').replace('\\r', '')
     return render_template("software_search.html", table=table)
 

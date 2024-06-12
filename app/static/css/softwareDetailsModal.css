@@ -1,0 +1,33 @@
+/* Class-specific Modal Overrides*/
+#softwareDetailsBody{
+    padding: 1.75em;
+    padding-left:3%;
+    background-color: #154757 !important;
+}
+
+/* Line Spacer inside Modal */
+#softwareDetailsBody hr{
+    border:0;
+    height:1px;
+    background-color:#154757;
+    border-color:#154757;
+}
+ 
+/* Shadow around left column in softwareDetails modal */
+#softwareDetailsBody .borderCell{
+    border: 3px #185264d3 solid !important;
+    padding-top:3px;
+    border-radius: 5px;
+}
+
+/* Shadow around right column in softwareDetails modal */
+#softwareDetailsBody .borderValue{
+    border: 3px #0f6572d0 solid !important;
+    padding-top:3px;
+    border-radius: 5px;
+}
+
+/* Increase contrast of links inside softwareDetails modal */
+#softwareDetailsBody a {
+    color: #08b0ce;
+}

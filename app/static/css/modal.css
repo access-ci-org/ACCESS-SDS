@@ -2,9 +2,9 @@
 .container {
     display: flex;  
     justify-content: flex-end;
-  }
-  /* Recommendation boxes inside modal*/
-  .box {
+}
+/* Recommendation boxes inside modal*/
+.box {
     position: relative;
     width:  100%;
     max-height: 40px;
@@ -23,9 +23,9 @@
     /* ACCESS Color*/
     border: 4px solid #48c0b9;
     color: #ffffff;
-  }
-  /* Caret on recommendation boxes to indicate expanded or not */
-  .caret {
+}
+/* Caret on recommendation boxes to indicate expanded or not */
+.caret {
     position: absolute;
     top: 0px;
     right: 10px;
@@ -34,9 +34,9 @@
     transition: transform 0.3s ease;
     font-size:  24 px;
     color:  #000;
-  }
-  /* Content of recommendation boxes*/
-  .box-content {
+}
+/* Content of recommendation boxes*/
+.box-content {
     position: relative;
     height: 100%;
     display: flex;
@@ -44,22 +44,22 @@
     align-items: flex-start;
     justify-content: flex-start;
     padding-left:  5px;
-  }
-  /* Title of recommendation boxes*/
-  .box-title {
+}
+/* Title of recommendation boxes*/
+.box-title {
     margin: 0;
     color: #ffffff;
     text-align: left;
     margin-bottom: 10px;
-  }
-  
-  /* Rotates the caret upon the recommendation box being expanded*/
-  .box.expand .caret {
+}
+
+/* Rotates the caret upon the recommendation box being expanded*/
+.box.expand .caret {
     transform: rotate(180deg);
-  }
-  
-  /* Reason tags inside of recommendation boxes (expanded)*/
-  .tag {
+}
+
+/* Reason tags inside of recommendation boxes (expanded)*/
+.tag {
     display: inline-block;
     padding: 5px 10px;
     /* ACCESS color*/
@@ -67,59 +67,46 @@
     color: #000000; /* Set text color to white for better visibility */
     border-radius: 10px;
     margin-right: 5px;
-  }
+}
 
-  /* Container of all the reason tags*/
-  .tags-container {
+/* Container of all the reason tags*/
+.tags-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
     margin-top: 10px;
-  }
+}
 
-  /* Container of all the text and tags inside recommendation boxes*/
-  .body-container {
+/* Container of all the text and tags inside recommendation boxes*/
+.body-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     margin-top: 10px;
     color: #ffffff;
-  }
+}
 
-  .body-container a {
+.body-container a {
     color: #ffffff;
     position: right;
     font-weight: bold;
-  }
+}
 
-  .modal-content{
-    border:#1a5b6e 2px solid;
-  }
-  
-  .modal-header{
+/* Affects the outline on modal windows */
+.modal-content{
+    border:#1a5b6e 3px solid;
+}
+
+/* Changes the modal header and text color */
+.modal-header{
     background-color: #1a5b6e !important;
     color: white;
-  }
+}
 
-  .close{
+/* Changes the 'X' in modals to solid white */
+.close{
     color: white;
     opacity: 1;
-  }
-
-  hr{
-    height: 3px;
-    background-color: #1a5b6e;
-  }
-
-  .borderCell{
-    border: 3px #185264d3 solid !important;
-    border-radius: 5px;
-  }
-
-  .borderValue
-  {
-    border: 3px #0f6572d0 solid !important;
-    border-radius: 5px;
-  }
+}
