@@ -3,6 +3,8 @@ from dotenv import load_dotenv
 from app.softwareStatic import create_static_table
 from app.reports import sanitize_and_process_reports
 from app.feedback import sanitize_and_process_feedback
+from app.softwareTable import createSoftwareTable
+
 import os
 import re
 import json
@@ -26,8 +28,8 @@ def software_search():
 
     return render_template("software_search.html",table=table)
 
-@app.route("/ai-generated")
-def software_search_dynamic():
+#@app.route("/ai-generated")
+#def software_search_dynamic():
     df = pd.read_csv('./dynamicSearch/combined_data.csv',keep_default_na=False)
     df.insert(10,"Example Use",np.nan)
     df.fillna('',inplace=True)
@@ -38,6 +40,19 @@ def software_search_dynamic():
     df = df.rename(columns={'software name': 'Software Name', 'core features': 'Core Features', "tags": "Tags", "software type" : "Software Type", "software class" : "Software Class", "research field" : "Research Field", "research area" : "Research Area", "research discipline" : "Research Discipline"})
     table = df.to_html(classes='table-striped" id = "softwareTableDynamic',index=False,border=1).replace('\\n', '<br>').replace('\\r', '')
     return render_template("software_search.html", table=table)
+
+
+@app.route("/testing")
+def testingSoftwareTable():
+    df = createSoftwareTable()
+    table = df.to_html(classes='table-striped" id = "softwareTableDynamic',index=False,border=1).replace('\\n', '<br>').replace('\\r', '')
+    return render_template("software_search.html", table=table)
+
+
+
+
+
+
 
 @app.route("/example_use/<software_name>")
 def get_example_use(software_name):

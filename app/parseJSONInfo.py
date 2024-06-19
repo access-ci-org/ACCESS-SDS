@@ -82,6 +82,7 @@ def jsonSanitizer(file):
     ###########################################
     # Search for nested tags
     # If found, move everything out of the nest and purge the old structure
+    #print("1: Checking JSON structure")
     software_name = list(data.keys())[0]   
     for key in nested_key_path:
         if key in data[software_name]:
@@ -103,7 +104,8 @@ def jsonSanitizer(file):
     ############################################################
     # 2) Standardize the tags that exist into a uniform format #
     ############################################################
-    #print("Checking JSON keys!")
+    #print("2: Checking JSON keys")
+
     #print("Checking software name...")
     # Check 'Software'
     for sError in software_names:
@@ -140,9 +142,8 @@ def jsonSanitizer(file):
         count = count + 1
 
     # Check for 'Additional Tags'
-    # These tend to get nested under 'Additional Tags'
-    # But we want them loose so we can display them in the table easier
-    # If a particular one doesn't exist, create it as a blank entry
+    # These tend to get nested, but we want them loose to display them more easily in the table
+    # If a particular one doesn't exist, create it as a blank field
     
     # Remove tags from 'Additional Tags' nest
     #print("Checking additional tags...")
@@ -153,8 +154,9 @@ def jsonSanitizer(file):
                 if tag in data[aError]:
                     data[tag] = data[aError][tag] 
                     data[aError].pop(tag)
-                    if "[]" in data[tag]:
-                        data[tag] == ""
+                    # Check for empty list, which will break things later on
+                    if data[tag] == []:
+                        data[tag] = ""
                 else:
                     data[tag] = ""
             data.pop(aError)
@@ -165,22 +167,22 @@ def jsonSanitizer(file):
             #print(tag)
             match tag:
                 case 'software_type':
-                    data['Software Type'] = data.pop('software_type')
+                    data['Software Type'] = data.pop('software_type').title()
                 case 'software_class':
-                    data['Software Class'] = data.pop('software_class')
+                    data['Software Class'] = data.pop('software_class').title()
                 case 'research_field':
-                    data['Research Field'] = data.pop('research_field')
+                    data['Research Field'] = data.pop('research_field').title()
                     if "And" in data['Research Field']:
                         data['Research Field'] = data['Research Field'].replace("And", "&")
                 case 'field_of_science':
-                    if data['Research Field'] == "":
-                        data['Research Field'] = data.pop('field_of_science')
+                    if 'Research Field' not in data or data['Research Field'] == "":
+                            data['Research Field'] = data.pop('field_of_science').title()
                     else:
                         data.pop('field_of_science')
                 case 'research_discipline':
-                    data['Research Discipline'] = data.pop('research_discipline')
+                    data['Research Discipline'] = data.pop('research_discipline').title()
                 case 'research_area':
-                    data['Research Area'] = data.pop('research_area')
+                    data['Research Area'] = data.pop('research_area').title()
 
     # Save updated JSON file
     with open(file, 'w') as infile:

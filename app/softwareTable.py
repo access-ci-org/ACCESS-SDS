@@ -91,19 +91,18 @@ def createStaticTable():
 def createGeneratedTable():
     softwareDict = {}
     # Stage the JSON Directory 
-    for file in glob.glob(os.path.join(GENERATED_INPUT_DIRECTORY, 'jupyterlab.json')):
+    for file in glob.glob(os.path.join(GENERATED_INPUT_DIRECTORY, '*.json')):
         # Filter out improperly created or fragmented JSON objects
         # These are usually due to some random text we added to filter them out intentionally
         # This way they don't break the entire script
         try:
-            # Check if JSON has been sanitized previously, and is how we need it to look    
+            # Check if JSON has been formatted properly  
             for key in JSON_keys:
                 with open(file, 'r') as infile:
                     data = json.load(infile)
                 if key in data.keys():
                     continue
                 else:
-                    print("Sanitizing...")
                     jsonSanitizer(file)
 
         except:
