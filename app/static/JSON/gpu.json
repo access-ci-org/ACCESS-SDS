@@ -1,0 +1,20 @@
+{
+    "Software": "GPU",
+    "AI Description": "GPU, short for Graphics Processing Unit, is a specialized electronic circuit designed to rapidly manipulate and alter memory to accelerate the creation of images in a frame buffer intended for output to a display device. In recent years, GPUs have been leveraged for general-purpose computing, allowing for massive parallel processing capabilities.",
+    "Core Features": "1. Parallel processing: GPU architecture allows for thousands of cores to run multiple tasks simultaneously.\n2. High-speed memory: They have dedicated high-speed memory to handle massive datasets efficiently.\n3. Accelerated computing: GPUs speed up various computational tasks, including machine learning, simulations, and scientific calculations.\n4. Programming support: GPU programming frameworks like CUDA and OpenCL enable developers to leverage GPU processing power in their applications.",
+    "General Tags": [
+        "Software",
+        "Computational Software",
+        "Hpc Tools",
+        "Gpu",
+        "Parallel Processing"
+    ],
+    "Software Type": "Hardware",
+    "Software Class": "Intermediate",
+    "Research Field": [
+        "Engineering And Technology",
+        "Computer And Information Sciences"
+    ],
+    "Research Area": "Infrastructure & Instrumentation",
+    "Research Discipline": ""
+}

@@ -1,0 +1,23 @@
+{
+    "Software": "iRODS iCommands",
+    "AI Description": "iRODS iCommands is a collection of command-line utilities for interacting with the iRODS (Integrated Rule-Oriented Data System) data grid management software. These tools facilitate data management, data movement, and metadata operations within an iRODS environment.",
+    "Core Features": [
+        "Data management operations",
+        "Data movement and transfer",
+        "Metadata operations",
+        "Scripting and automation support",
+        "Integration with iRODS data grid"
+    ],
+    "General Tags": [
+        "Data Management",
+        "Data Movement",
+        "Metadata Operations",
+        "Command-Line Utilities",
+        "Irods Integration"
+    ],
+    "Software Type": "Command-Line Tool",
+    "Software Class": "Data Management",
+    "Research Field": "Other Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

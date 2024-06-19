@@ -1,0 +1,22 @@
+{
+    "Software": "r-openssl",
+    "AI Description": "r-openssl provides an encryption toolkit for R users to use OpenSSL cryptographic library functions. It allows users to perform cryptographic operations such as encryption, decryption, signing, and verification.",
+    "Core Features": [
+        "Encryption and decryption functionality using OpenSSL library",
+        "Digital signing and verification capabilities",
+        "Support for various cryptographic algorithms",
+        "Integration with R environment for data security"
+    ],
+    "General Tags": [
+        "Encryption",
+        "Data Security",
+        "Cryptographic Operations",
+        "Openssl Library",
+        "R Package"
+    ],
+    "Software Type": "Tool",
+    "Software Class": "Cryptographic Library",
+    "Research Field": "Other Natural Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

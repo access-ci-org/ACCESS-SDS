@@ -1,0 +1,17 @@
+{
+    "Software": "Draco",
+    "AI Description": "Draco is a software library for compressing and decompressing 3D geometric meshes and point clouds. It is designed to improve the storage and transmission of 3D graphics data by offering high compression ratios while maintaining the geometric integrity of the data.",
+    "Core Features": "1. High compression ratios for 3D geometric data\n2. Maintains geometric integrity during compression and decompression\n3. Supports both mesh and point cloud data formats\n4. Optimized for performance and memory usage\n5. Portable and easy to integrate into existing software pipelines",
+    "General Tags": [
+        "Compression",
+        "3D Graphics",
+        "Geometric Data",
+        "Mesh",
+        "Point Cloud"
+    ],
+    "Software Type": "Library",
+    "Software Class": "",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

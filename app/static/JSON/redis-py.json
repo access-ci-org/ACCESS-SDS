@@ -1,0 +1,22 @@
+{
+    "Software": "redis-py",
+    "AI Description": "redis-py is a Python client library for Redis, a popular in-memory data store. It allows Python developers to easily interact with a Redis database to store and retrieve data.",
+    "Core Features": [
+        "Provides a Python interface to interact with Redis databases",
+        "Supports key-value operations such as set, get, delete, and increment",
+        "Allows for working with Redis data structures like lists, sets, sorted sets, and hashes",
+        "Offers pipeline support for executing multiple commands in a single round trip to the server",
+        "Provides pub/sub functionality for implementing messaging patterns"
+    ],
+    "General Tags": [
+        "Python Library",
+        "Database Interaction",
+        "In-Memory Data Store",
+        "Data Persistence"
+    ],
+    "Software Type": "Client Library",
+    "Software Class": "Libraries",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

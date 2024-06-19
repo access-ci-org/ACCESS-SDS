@@ -1,0 +1,22 @@
+{
+    "Software": "SeqCode",
+    "AI Description": "SeqCode is a software tool designed for identifying coding sequences in prokaryotic genomes using a comparative genomics approach. It helps in accurately predicting protein-coding genes and functional elements.",
+    "Core Features": [
+        "Identification of coding sequences in prokaryotic genomes",
+        "Utilizes comparative genomics methods",
+        "Accurate prediction of protein-coding genes",
+        "Detection of functional elements"
+    ],
+    "General Tags": [
+        "Genomics",
+        "Prokaryotic Genomes",
+        "Coding Sequences",
+        "Comparative Genomics",
+        "Gene Prediction"
+    ],
+    "Software Type": "Genomics Analysis Tool",
+    "Software Class": "Biological Research Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Comparative Genomics",
+    "Research Discipline": "Genomics"
+}

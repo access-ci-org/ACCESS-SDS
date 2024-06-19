@@ -1,0 +1,22 @@
+{
+    "Software": "PyTorch3D",
+    "AI Description": "PyTorch3D is a library for deep learning with 3D data, offering a modular and efficient differentiable rendering pipeline for 3D computational geometry deep learning research. It provides a variety of high-performance, modular components for 3D computer vision and graphics tasks.",
+    "Core Features": [
+        "Differentiable rendering pipeline",
+        "High-performance modular components",
+        "Support for 3D geometric computer vision tasks",
+        "Integration with PyTorch ecosystem"
+    ],
+    "General Tags": [
+        "Deep Learning",
+        "3D Data",
+        "Computer Vision",
+        "Graphics",
+        "Modular Components"
+    ],
+    "Software Type": "Python Library",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Computer Vision",
+    "Research Discipline": "Computer Science"
+}

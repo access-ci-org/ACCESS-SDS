@@ -1,0 +1,20 @@
+{
+    "Software": "Jupyter",
+    "AI Description": "Jupyter is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations, and narrative text. It supports over 40 programming languages, including Python, R, and Julia, and is widely used in data science, scientific computing, and machine learning projects.",
+    "Core Features": [
+        "Interactive Computing",
+        "Data Visualization",
+        "Collaborative Notebooks",
+        "Support for Multiple Programming Languages"
+    ],
+    "General Tags": [
+        "Data Science",
+        "Scientific Computing",
+        "Machine Learning"
+    ],
+    "Software Type": "Web Application",
+    "Software Class": "Computational Notebook",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

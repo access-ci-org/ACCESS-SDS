@@ -1,0 +1,22 @@
+{
+    "Software": "hmmer",
+    "AI Description": "Hmmer is a software suite used for protein sequence analysis based on profile hidden Markov models (HMMs). It is widely used for searching sequence databases for homologs of protein sequences, identifying conserved protein domains, and annotating protein sequences based on sequence alignment.",
+    "Core Features": [
+        "Protein sequence analysis",
+        "Profile Hidden Markov Models (HMMs)",
+        "Homology search",
+        "Conserved protein domain identification",
+        "Sequence annotation"
+    ],
+    "General Tags": [
+        "Bioinformatics",
+        "Computational Biology",
+        "Proteomics",
+        "Sequence Analysis"
+    ],
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Analysis Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Proteomics",
+    "Research Discipline": "Bioinformatics"
+}

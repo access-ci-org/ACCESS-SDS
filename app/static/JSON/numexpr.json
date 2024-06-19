@@ -1,0 +1,21 @@
+{
+    "Software": "numexpr",
+    "AI Description": "Numexpr is a fast numerical expression evaluator for NumPy. With it, expressions that operate on arrays (like '3*a+4*b') are accelerated and use less memory than doing the same calculation in Python. In addition, its multi-threaded capabilities can make use of all your cores in a CPU.",
+    "Core Features": [
+        "Accelerated numerical expression evaluation for NumPy arrays",
+        "Optimized for performance and memory usage",
+        "Multi-threaded capabilities for improved speed using multiple CPU cores"
+    ],
+    "General Tags": [
+        "Numerical Computation",
+        "Numerical Expressions",
+        "Array Operations",
+        "Performance Optimization",
+        "Multi-Threading"
+    ],
+    "Software Type": "Numerical Computation",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

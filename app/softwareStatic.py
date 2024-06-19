@@ -74,7 +74,7 @@ def createFullDocUrl(softwareName, rpNames):
 ##################################################################
 #   create_static_table                                          #
 #       Converts our CSV file into a DataFrame ready for HTML    # 
-#       Functions                                                #
+#       Functions:                                               #
 #           createFullDocURL: Populate RP Documentation Cells    #
 #           addVersionInfoToTable: Add Version info to DataFrame #
 #       Return:                                                  #

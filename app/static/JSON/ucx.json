@@ -1,0 +1,15 @@
+{
+    "Software": "ucx",
+    "AI Description": "Unified Communication X (UCX) is a flexible and high-performance communication library for applications and libraries.",
+    "Core Features": "Some core features of UCX include support for multiple transports, high scalability through advanced features like endpoint tagging, active message interfaces, and memory registration, optimized for modern networking hardware, providing efficient communication for distributed computing applications, and integration with popular programming models like MPI, OpenSHMEM, and Pthreads.",
+    "General Tags": [
+        "Communication Library",
+        "High-Performance Computing",
+        "Distributed Computing"
+    ],
+    "Software Type": "Communication Library",
+    "Software Class": "Library",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,14 @@
+{
+    "Software": "cm",
+    "AI Description": "CM is a compiler designed to optimize C programs for machines with cache memories. It tries to rearrange loops to reduce the number of cache misses and the amount of execution time.",
+    "Core Features": "1. Loop reordering to improve cache performance. 2. Reduces cache misses. 3. Optimizes C programs for machines with cache memories.",
+    "General Tags": [
+        "Compiler",
+        "Optimization"
+    ],
+    "Software Type": "",
+    "Software Class": "Compiler",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,20 @@
+{
+    "Software": "GoLang",
+    "AI Description": "Go, also commonly referred to as Golang, is a statically typed, compiled programming language designed at Google. It has a syntax similar to C, but with memory safety, garbage collection, structural typing, and CSP-style concurrency.",
+    "Core Features": [
+        "Memory safety",
+        "Garbage collection",
+        "Static typing",
+        "Concurrency support"
+    ],
+    "General Tags": [
+        "Programming Language",
+        "Software Development",
+        "Systems Programming"
+    ],
+    "Software Type": "Systems Programming",
+    "Software Class": "Programming Language",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

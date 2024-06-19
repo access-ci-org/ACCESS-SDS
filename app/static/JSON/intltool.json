@@ -1,0 +1,15 @@
+{
+    "Software": "intltool",
+    "AI Description": "Intltool is a set of tools to centralize translation of many different file formats using a single language-styled file.",
+    "Core Features": "1. Parsing and merging of existing translations. 2. Extraction of translatable strings from source code. 3. Generation of output files in different formats.",
+    "General Tags": [
+        "Localization",
+        "Translation",
+        "Internationalization"
+    ],
+    "Software Type": "Localization Tool",
+    "Software Class": "Tools",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

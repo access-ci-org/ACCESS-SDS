@@ -1,0 +1,22 @@
+{
+    "Software": "Gurobi Optimization",
+    "AI Description": "Gurobi Optimization provides high-performance mathematical optimization solvers to help businesses and organizations make better decisions. It offers a powerful optimization engine that can be utilized within various programming environments.",
+    "Core Features": [
+        "High-performance mathematical optimization solvers",
+        "Integration with multiple programming languages",
+        "Linear programming, quadratic programming, mixed-integer programming, etc.",
+        "Advanced algorithms for efficient optimization",
+        "Real-time optimization and decision-making support"
+    ],
+    "General Tags": [
+        "Optimization",
+        "Mathematical Modeling",
+        "Decision-Making",
+        "Operations Research"
+    ],
+    "Software Type": "Solver",
+    "Software Class": "Optimization Software",
+    "Research Field": "Other Mathematics",
+    "Research Area": "",
+    "Research Discipline": ""
+}

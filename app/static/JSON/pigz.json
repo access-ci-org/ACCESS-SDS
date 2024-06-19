@@ -1,0 +1,21 @@
+{
+    "Software": "pigz",
+    "AI Description": "pigz, which stands for parallel implementation of gzip, is a compression utility that uses multiple processors and cores to compress files quickly and efficiently. It is compatible with gzip and gunzip, allowing for seamless integration with existing gzip workflows.",
+    "Core Features": [
+        "Parallel compression using multiple processors/cores",
+        "High compression/decompression speed",
+        "Integration with gzip and gunzip utilities",
+        "Multi-threading support"
+    ],
+    "General Tags": [
+        "Compression",
+        "Parallel Processing",
+        "Utility",
+        "Command-Line Tool"
+    ],
+    "Software Type": "Utility",
+    "Software Class": "Compression Tool",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

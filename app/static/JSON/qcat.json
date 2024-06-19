@@ -1,0 +1,20 @@
+{
+    "Software": "QCAT",
+    "AI Description": "QCAT is a software tool for managing and analyzing qualitative data. It is specifically designed to assist researchers in the coding, categorizing, and organizing of qualitative data such as text, images, audio, and video files.",
+    "Core Features": [
+        "Code and categorize qualitative data",
+        "Organize and manage qualitative data",
+        "Analyze qualitative data for patterns and themes",
+        "Visualize and present qualitative data results"
+    ],
+    "General Tags": [
+        "Qualitative Data Analysis",
+        "Data Management",
+        "Research Tool"
+    ],
+    "Software Type": "Research Tool",
+    "Software Class": "Qualitative Data Analysis Tool",
+    "Research Field": "Social Sciences",
+    "Research Area": "Psychology",
+    "Research Discipline": "Social Sciences"
+}

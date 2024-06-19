@@ -1,0 +1,15 @@
+{
+    "Software": "gdrcopy",
+    "AI Description": "gdrcopy is a CUDA accelerated GPU memory copy library for NVIDIA GPUs. It provides efficient memory copy operations between host and device memory with the use of asynchronous memory copies and supports different data types for optimal performance.",
+    "Core Features": "1. CUDA accelerated GPU memory copy operations\n2. Support for asynchronous memory copies\n3. Efficient data transfer between host and device memory\n4. Optimization for different data types\n5. Compatible with NVIDIA GPUs",
+    "General Tags": [
+        "Gpu Memory Copy",
+        "Cuda Acceleration",
+        "Asynchronous Memory Copies"
+    ],
+    "Software Type": "Memory Management",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Parallel Computing",
+    "Research Discipline": "Computer Science"
+}

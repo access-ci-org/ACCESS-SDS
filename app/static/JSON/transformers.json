@@ -1,0 +1,26 @@
+{
+    "Software": "transformers",
+    "AI Description": "Transformers is a state-of-the-art natural language processing library, which provides thousands of pre-trained models for various NLP tasks. It offers an easy-to-use API for training and fine-tuning models on custom datasets.",
+    "Core Features": [
+        "Pre-trained models for NLP tasks",
+        "Support for sequence classification, token classification, question answering, language modeling, and more",
+        "Easy-to-use API for model training and fine-tuning",
+        "Integration with popular deep learning frameworks like PyTorch and TensorFlow"
+    ],
+    "General Tags": [
+        "Nlp",
+        "Deep Learning",
+        "Machine Learning"
+    ],
+    "Software Type": "Machine Learning",
+    "Software Class": "Library",
+    "Research Field": [
+        "Computer And Information Sciences"
+    ],
+    "Research Area": [
+        "Natural Language Processing"
+    ],
+    "Research Discipline": [
+        "Artificial Intelligence And Intelligent Systems"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Software": "SKA",
+    "AI Description": "The Square Kilometre Array (SKA) is a next-generation radio telescope project that aims to be the world's largest and most sensitive radio telescope, with an unprecedented level of detail and speed in observing the universe.",
+    "Core Features": "The SKA will enable scientists to address fundamental questions in astrophysics, cosmology, and astrobiology, providing insights into the origins and nature of the universe. It will have a wide field of view, high sensitivity, and high resolution, allowing for detailed studies of a wide range of celestial objects and phenomena.",
+    "General Tags": [
+        "Astronomy",
+        "Telescope",
+        "Radio Astronomy"
+    ],
+    "Software Type": "Telescope",
+    "Software Class": "Observatory",
+    "Research Field": "Physical Sciences",
+    "Research Area": "Radio Astronomy",
+    "Research Discipline": "Astronomy & Planetary Sciences"
+}

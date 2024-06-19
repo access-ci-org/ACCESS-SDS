@@ -1,0 +1,16 @@
+{
+    "Software": "cython-blis",
+    "AI Description": "Cython wrapper around BLIS linear algebra library for Python.",
+    "Core Features": "Provides a Cython interface for the BLIS linear algebra library, allowing for efficient linear algebra computations in Python. BLIS is a high-performance, portable, and thread-safe open-source library for linear algebraic operations.",
+    "General Tags": [
+        "Cython",
+        "Blis",
+        "Linear Algebra",
+        "Python"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Computational Software",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

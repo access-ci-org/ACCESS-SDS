@@ -1,0 +1,15 @@
+{
+    "Software": "r-xml2",
+    "AI Description": "R package providing easy-to-use and efficient XML and HTML parsing capabilities in R.",
+    "Core Features": "1. Parsing of XML and HTML documents.\n2. Extraction and manipulation of data from XML/HTML structures.\n3. Support for XPath queries.\n4. Seamless integration with R environment for data analysis and manipulation.",
+    "General Tags": [
+        "R Package",
+        "Xml Parsing",
+        "Html Parsing"
+    ],
+    "Software Type": "Package",
+    "Software Class": "Data Processing & Analysis",
+    "Research Field": "Other Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,15 @@
+{
+    "Software": "iccifort",
+    "AI Description": "iccifort is a software tool that provides the Intel C++ and Fortran compilers for high-performance computing applications. These compilers are designed to optimize code performance for Intel processors.",
+    "Core Features": "Features include advanced optimization capabilities, support for the latest C++ and Fortran language standards, debugging and profiling tools, parallel computing support, vectorization, and compatibility with various operating systems.",
+    "General Tags": [
+        "Compiler",
+        "High-Performance Computing",
+        "Optimization"
+    ],
+    "Software Type": "Programming Tool",
+    "Software Class": "Compiler",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "",
+    "Research Discipline": ""
+}

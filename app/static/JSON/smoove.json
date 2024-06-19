@@ -1,0 +1,16 @@
+{
+    "Software": "Smoove",
+    "AI Description": "Smoove is a structural variant caller for next-generation sequencing data, specializing in the detection of large deletions and duplications in genomes. It uses split-read alignments and discordant paired-end mappings to identify and genotype structural variants.",
+    "Core Features": "1. Detection of large deletions and duplications\n2. Utilizes split-read alignments\n3. Uses discordant paired-end mappings\n4. Genotyping of structural variants",
+    "General Tags": [
+        "Structural Variant Caller",
+        "Genome Analysis",
+        "Next-Generation Sequencing",
+        "Bioinformatics"
+    ],
+    "Software Type": "Genomic Analysis Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomics",
+    "Research Discipline": "Genetics"
+}

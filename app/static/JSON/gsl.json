@@ -1,0 +1,16 @@
+{
+    "Software": "gsl",
+    "AI Description": "The GNU Scientific Library (GSL) is a numerical library for C and C++ programmers. It provides a wide range of mathematical routines such as special functions, linear algebra, interpolation, numerical integration, random numbers, and more.",
+    "Core Features": "1. Implementation of a comprehensive set of mathematical functions\n2. High-performance numerical routines\n3. Modular structure for easy integration into C and C++ applications\n4. Extensive documentation and examples\n5. Open-source and free to use",
+    "General Tags": [
+        "Numerical Library",
+        "Mathematical Functions",
+        "C Programming",
+        "C++ Programming"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Numerical Library",
+    "Research Field": "Other Mathematics",
+    "Research Area": "",
+    "Research Discipline": ""
+}

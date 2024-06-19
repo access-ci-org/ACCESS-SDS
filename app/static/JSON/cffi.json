@@ -1,0 +1,19 @@
+{
+    "Software": "cffi",
+    "AI Description": "CFFI is a Foreign Function Interface between Python and C. It allows calling C code from Python and using Python code from C. It provides a way to interact with foreign functions and call them from Python without having to write any C code.",
+    "Core Features": [
+        "Easily call C functions from Python",
+        "Efficiently share data between C and Python",
+        "No need to write C code with the use of cffi APIs"
+    ],
+    "General Tags": [
+        "Foreign Function Interface",
+        "C Library Integration",
+        "Python"
+    ],
+    "Software Type": "Interfacing",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

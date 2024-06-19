@@ -1,0 +1,21 @@
+{
+    "Software": "HicExplorer",
+    "AI Description": "HicExplorer is a software package designed for the analysis, visualization, and interpretation of Hi-C data, which is used to study the 3D organization of the genome.",
+    "Core Features": [
+        "Processing and normalization of Hi-C data",
+        "Identification of topologically associated domains (TADs)",
+        "Visualization of Hi-C contact matrices",
+        "Detection of chromatin loops",
+        "Analysis of interaction frequencies between genomic regions"
+    ],
+    "General Tags": [
+        "Hi-C Data Analysis",
+        "Genome 3D Organization",
+        "Genomics"
+    ],
+    "Software Type": "Bioinformatics",
+    "Software Class": "Data Analysis",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Chromatin Structure",
+    "Research Discipline": "Genomics"
+}

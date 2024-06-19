@@ -1,0 +1,21 @@
+{
+    "Software": "Berkeley UPC",
+    "AI Description": "Berkeley UPC (Unified Parallel C) is an extension of the C programming language designed for multiprocessor parallel computing. It provides a set of language extensions for writing parallel programs that can run efficiently on a large-scale parallel machine.",
+    "Core Features": [
+        "C language extension for parallel programming",
+        "High performance on large-scale parallel machines",
+        "Support for distributed and shared memory systems",
+        "Allows for explicit communication and synchronization between parallel processes"
+    ],
+    "General Tags": [
+        "Parallel Computing",
+        "Multiprocessor",
+        "C Programming Language",
+        "High Performance Computing"
+    ],
+    "Software Type": "Parallel Programming",
+    "Software Class": "Compilers",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

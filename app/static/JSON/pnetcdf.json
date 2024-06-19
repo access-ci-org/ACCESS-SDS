@@ -1,0 +1,16 @@
+{
+    "Software": "pnetcdf",
+    "AI Description": "PnetCDF is a parallel I/O library for accessing NetCDF files in parallel. It is specifically designed to address the scalability and performance limitations of serial NetCDF I/O by providing parallel I/O support.",
+    "Core Features": "1. Support for parallel I/O operations on NetCDF files. 2. High scalability for large-scale scientific computing applications. 3. Improved I/O performance for reading and writing NetCDF files in parallel. 4. Integration with parallel environments such as MPI for distributed computing.",
+    "General Tags": [
+        "Parallel I/O",
+        "Netcdf Files",
+        "Scalability",
+        "Performance"
+    ],
+    "Software Type": "I/O Library",
+    "Software Class": "Library",
+    "Research Field": "Physical Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

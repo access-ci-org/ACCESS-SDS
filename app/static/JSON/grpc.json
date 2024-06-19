@@ -1,0 +1,18 @@
+{
+    "Software": "gRPC",
+    "AI Description": "gRPC is a high-performance, open-source remote procedure call (RPC) framework that enables client and server applications to communicate transparently, efficiently, and securely across distributed systems.",
+    "Core Features": "1. Supports multiple programming languages such as C++, Java, Python, Go, etc.\n2. Uses Protocol Buffers as the interface definition language for defining services and message types.\n3. Bi-directional streaming, flow control, deadline propagation, and authentication are key features.\n4. Supports synchronous and asynchronous programming models.",
+    "General Tags": [
+        "Rpc",
+        "Distributed Systems",
+        "Communication"
+    ],
+    "Software Type": "Library/Framework",
+    "Software Class": "Middleware",
+    "Research Field": [
+        "Computer And Information Sciences",
+        "Software Engineering, Systems, And Development"
+    ],
+    "Research Area": "",
+    "Research Discipline": ""
+}

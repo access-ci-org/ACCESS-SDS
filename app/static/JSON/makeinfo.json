@@ -1,0 +1,16 @@
+{
+    "Software": "makeinfo",
+    "AI Description": "makeinfo is a program that formats and prints Texinfo documentation. Texinfo is a typesetting syntax used for generating documentation in a variety of output formats such as HTML, DVI, PDF, PostScript, and plain text.",
+    "Core Features": "1. Formatting Texinfo documentation for various output formats. 2. Generating high-quality documentation with cross-references and indices. 3. Customizable templates for styling output documents. 4. Integration with build systems for automated documentation generation.",
+    "General Tags": [
+        "Documentation",
+        "Formatting",
+        "Texinfo",
+        "Build Systems"
+    ],
+    "Software Type": "Text Processing",
+    "Software Class": "Documentation Tool",
+    "Research Field": "Other Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

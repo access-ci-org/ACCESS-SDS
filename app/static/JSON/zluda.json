@@ -1,0 +1,16 @@
+{
+    "Software": "zluda",
+    "AI Description": "ZLUDA is a CUDA driver and runtime API compatibility layer for AMD GPUs, allowing CUDA applications to run on AMD hardware.",
+    "Core Features": "1. Provides CUDA driver and runtime API compatibility for AMD GPUs. 2. Enables CUDA applications to run seamlessly on AMD hardware. 3. Supports a wide range of CUDA features and functionalities. 4. Optimizes performance for CUDA workloads on AMD GPUs.",
+    "General Tags": [
+        "Cuda",
+        "Amd",
+        "Gpu",
+        "Compatibility Layer"
+    ],
+    "Software Type": "Runtime Environment",
+    "Software Class": "Compatibility Layer",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Applied Computer Science",
+    "Research Discipline": "Computer Science"
+}

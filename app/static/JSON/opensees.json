@@ -1,0 +1,17 @@
+{
+    "Software": "OpenSees",
+    "AI Description": "OpenSees is an open-source software framework developed for simulating the seismic response of structural and geotechnical systems. It is widely used in civil engineering for earthquake engineering research, structural analysis, and performance-based design.",
+    "Core Features": "1. Finite element analysis of structural and geotechnical systems\n2. Advanced material models for concrete, steel, soil, and other materials\n3. Real-time simulation and hybrid simulation capabilities\n4. Parallel processing for efficient analysis of large-scale models\n5. Extensive library of pre-built examples and documentation",
+    "General Tags": [
+        "Simulation",
+        "Finite Element Analysis",
+        "Earthquake Engineering",
+        "Structural Analysis",
+        "Geotechnical Engineering"
+    ],
+    "Software Type": "Finite Element Analysis (Fea)",
+    "Software Class": "Simulation Software",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "Seismic Response, Structural Analysis",
+    "Research Discipline": "Civil Engineering"
+}

@@ -1,0 +1,17 @@
+{
+    "Software": "Horovod",
+    "AI Description": "Horovod is a distributed deep learning training framework for TensorFlow, Keras, PyTorch, and MXNet. It significantly improves the speed and scale of distributed deep learning training.",
+    "Core Features": "Horovod supports training deep learning models on multiple GPUs across multiple nodes, providing fast and efficient distributed training. It is designed to be easy to use and integrates seamlessly with popular deep learning frameworks such as TensorFlow, Keras, PyTorch, and MXNet. Horovod incorporates optimizations for reducing communication overhead and achieving high performance on large-scale distributed systems.",
+    "General Tags": [
+        "Deep Learning",
+        "Distributed Training",
+        "Machine Learning",
+        "Gpu Acceleration",
+        "High Performance Computing"
+    ],
+    "Software Type": "Library/Framework",
+    "Software Class": "Distributed Deep Learning Training Framework",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

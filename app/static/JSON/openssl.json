@@ -1,0 +1,24 @@
+{
+    "Software": "OpenSSL",
+    "AI Description": "OpenSSL is a robust, commercial-grade, and full-featured toolkit for the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols. It is also a general-purpose cryptography library.",
+    "Core Features": [
+        "Implementation of SSL and TLS protocols",
+        "Support for a wide range of cryptographic algorithms",
+        "Secure cryptographic libraries",
+        "Large variety of functions for secure communication"
+    ],
+    "General Tags": [
+        "Cryptography",
+        "Security",
+        "Encryption",
+        "Networking"
+    ],
+    "Software Type": "",
+    "Software Class": "",
+    "Research Field": [
+        "Computer And Information Sciences",
+        "Other Computer And Information Sciences"
+    ],
+    "Research Area": "",
+    "Research Discipline": ""
+}

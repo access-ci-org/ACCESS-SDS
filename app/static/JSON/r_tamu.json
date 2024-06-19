@@ -1,0 +1,16 @@
+{
+    "Software": "r_tamu",
+    "AI Description": "r_tamu is a simulation software for thermal and mechanical unit operations in chemical engineering.",
+    "Core Features": "It allows for the simulation of various heat exchangers, reactors, separators, and other unit operations commonly encountered in chemical processes. Users can input specific parameters and design criteria to simulate and analyze the performance of these unit operations.",
+    "General Tags": [
+        "Simulation Software",
+        "Chemical Engineering",
+        "Thermal Unit Operations",
+        "Mechanical Unit Operations"
+    ],
+    "Software Type": "Engineering & Technology",
+    "Software Class": "Simulation Software",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "Thermal & Mechanical Unit Operations",
+    "Research Discipline": "Chemical Engineering"
+}

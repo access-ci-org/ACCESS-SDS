@@ -1,0 +1,15 @@
+{
+    "Software": "clairvoyante",
+    "AI Description": "clairvoyante is a deep learning-based tool for the prediction of variant calling accuracy.",
+    "Core Features": "It utilizes a deep neural network model for variant calling and can accurately predict the accuracy of variant calls made by different variant calling tools. The software identifies mislabeled pronouns and suffixes, improving the accuracy of variant prediction.",
+    "General Tags": [
+        "Variant Calling",
+        "Deep Learning",
+        "Accuracy Prediction"
+    ],
+    "Software Type": "Command Line Tool",
+    "Software Class": "Data Analysis",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Bioinformatics",
+    "Research Discipline": "Genetics"
+}

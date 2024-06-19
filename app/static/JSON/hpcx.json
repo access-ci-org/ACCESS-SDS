@@ -1,0 +1,20 @@
+{
+    "Software": "HPCx",
+    "AI Description": "HPCx is a high-performance computing environment developed for scientific and engineering applications. It provides a platform for researchers to perform complex simulations and data analysis tasks efficiently.",
+    "Core Features": [
+        "High-performance computing",
+        "Scientific and engineering applications support",
+        "Efficient simulations",
+        "Data analysis capabilities"
+    ],
+    "General Tags": [
+        "High-Performance Computing",
+        "Scientific Computing",
+        "Data Analysis"
+    ],
+    "Software Type": "Computational Software",
+    "Software Class": "Hpc Tools",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "",
+    "Research Discipline": ""
+}

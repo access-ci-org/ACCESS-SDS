@@ -1,0 +1,16 @@
+{
+    "Software": "r-pkgconfig",
+    "AI Description": "The r-pkgconfig package provides a simple interface to manipulate package descriptions in configuration files. It can be used to read and write package descriptions as well as query information from these descriptions.",
+    "Core Features": "1. Reading and writing package descriptions in configuration files.\n2. Querying information from package descriptions.\n3. Modifying package configuration settings.\n4. Integrating package descriptions in R packages.",
+    "General Tags": [
+        "R",
+        "Package Management",
+        "Configuration",
+        "R Development"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Package Manager",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Software Development",
+    "Research Discipline": "Software Engineering, Systems, & Development"
+}

@@ -1,0 +1,15 @@
+{
+    "Software": "darshan-util",
+    "AI Description": "Darshan is a scalable HPC I/O characterization tool designed to capture I/O behavior in high-performance computing applications. The darshan-util package provides a set of utilities for analyzing and visualizing the I/O data collected by Darshan.",
+    "Core Features": "1. Analyzing I/O behavior in HPC applications\n2. Visualizing I/O patterns and bottlenecks\n3. Generating reports for understanding application I/O performance",
+    "General Tags": [
+        "Hpc",
+        "I/O Characterization",
+        "Data Analysis"
+    ],
+    "Software Type": "Utility",
+    "Software Class": "Hpc Tools",
+    "Research Field": "Physical Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

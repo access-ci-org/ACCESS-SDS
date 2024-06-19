@@ -1,0 +1,17 @@
+{
+    "Software": "libedit",
+    "AI Description": "libedit is an open-source library that provides a readline-like interface for line editing in command-line applications. It is a replacement for GNU Readline used in many Unix-like systems, providing similar functionality but with a more permissive open-source license (BSD-style license).",
+    "Core Features": "1. Provides line editing and history capabilities for command-line applications.\n2. Offers custom key bindings and configuration options.\n3. Supports basic features like command history, line editing, and tab completion.\n4. Easily integrated into various Unix-like operating systems and applications.",
+    "General Tags": [
+        "Library",
+        "Command-Line",
+        "Line Editing",
+        "History",
+        "Open-Source"
+    ],
+    "Software Type": "Tool",
+    "Software Class": "Libraries",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

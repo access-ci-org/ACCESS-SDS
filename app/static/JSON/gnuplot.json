@@ -1,0 +1,15 @@
+{
+    "Software": "Gnuplot",
+    "AI Description": "Gnuplot is a portable command-line driven graphing utility for Linux, OS/2, MS Windows, OSX, VMS, and many other platforms. It is capable of producing interactive plots and supports various output formats.",
+    "Core Features": "Gnuplot enables users to generate 2D and 3D plots, histograms, and animations. It supports a wide range of functions and data sources, with the ability to customize plot styles, labels, and axes. Gnuplot can be scripted for batch processing and supports various file formats for output including PNG, PDF, and SVG. It also allows users to combine multiple plots and perform complex data manipulations.",
+    "General Tags": [
+        "Graphing",
+        "Visualization",
+        "Data Analysis"
+    ],
+    "Software Type": "Plotting & Data Visualization",
+    "Software Class": "Graphing & Visualization Tools",
+    "Research Field": "Physical Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

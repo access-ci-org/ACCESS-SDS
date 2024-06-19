@@ -1,0 +1,15 @@
+{
+    "Software": "aocl",
+    "AI Description": "The Intel FPGA SDK for OpenCL (aocl) is a software development kit that allows developers to create high-performance FPGA-accelerated applications using OpenCL. It provides a framework for FPGA programming with OpenCL, enabling developers to leverage the parallel processing capabilities of FPGAs for accelerating their applications.",
+    "Core Features": "1. Allows developers to target Intel FPGAs for acceleration.\n2. Supports OpenCL for FPGA programming.\n3. Provides optimization tools for FPGA design.\n4. Enables developers to harness the parallel processing power of FPGAs.\n5. Facilitates high-performance computing through FPGA acceleration.",
+    "General Tags": [
+        "Fpga",
+        "Opencl",
+        "Acceleration"
+    ],
+    "Software Type": "Compiler",
+    "Software Class": "Development Tools",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "",
+    "Research Discipline": ""
+}

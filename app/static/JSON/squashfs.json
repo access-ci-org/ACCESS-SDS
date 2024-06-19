@@ -1,0 +1,15 @@
+{
+    "Software": "squashfs",
+    "AI Description": "SquashFS is a compressed read-only filesystem for Linux. It enables efficient storage of files, in a compressed format, with a focus on high compression ratios.",
+    "Core Features": "1. High compression ratios for efficient storage of files. 2. Read-only filesystem ensuring data integrity. 3. Supports both block and file-level deduplication. 4. Can be used for embedded systems, live CDs, and other scenarios where storage space is limited.",
+    "General Tags": [
+        "Filesystem",
+        "Compression",
+        "Read-Only"
+    ],
+    "Software Type": "Filesystem",
+    "Software Class": "Operating System Tools",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Software Engineering, Systems, & Development",
+    "Research Discipline": "Computer Science"
+}

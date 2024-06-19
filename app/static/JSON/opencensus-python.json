@@ -1,0 +1,21 @@
+{
+    "Software": "opencensus-python",
+    "AI Description": "OpenCensus is a set of libraries for various programming languages that helps developers collect performance and tracing data from their applications. The opencensus-python library specifically provides support for Python applications to enable monitoring and distributed tracing.",
+    "Core Features": [
+        "Distributed tracing",
+        "Metrics collection",
+        "Performance monitoring",
+        "Integration with various backends and frameworks"
+    ],
+    "General Tags": [
+        "Monitoring",
+        "Distributed Tracing",
+        "Performance",
+        "Python"
+    ],
+    "Software Type": "Application Development",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

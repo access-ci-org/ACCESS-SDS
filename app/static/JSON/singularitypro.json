@@ -1,0 +1,20 @@
+{
+    "Software": "SingularityPro",
+    "AI Description": "SingularityPro is a container platform that allows users to create, deploy, and manage containers for high-performance computing (HPC) environments. It is designed to provide users with a flexible and scalable solution for running applications in isolated environments.",
+    "Core Features": [
+        "Creation and management of containers",
+        "Support for HPC environments",
+        "Isolated application environments",
+        "Flexible and scalable solution"
+    ],
+    "General Tags": [
+        "Container Platform",
+        "Hpc",
+        "High-Performance Computing"
+    ],
+    "Software Type": "Container Platform",
+    "Software Class": "Containerization",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "",
+    "Research Discipline": ""
+}

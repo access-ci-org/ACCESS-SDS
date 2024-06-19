@@ -1,0 +1,22 @@
+{
+    "Software": "fontconfig",
+    "AI Description": "Fontconfig is a library designed to provide system-wide font configuration, customization, and management for user interfaces and text display on Linux and other Unix-like operating systems. It allows applications to discover and access fonts, and provides settings for font selection, aliasing, subsetting, and caching.",
+    "Core Features": [
+        "System-wide font configuration",
+        "Font discovery and access for applications",
+        "Font aliasing and subsetting",
+        "Font caching for performance optimization"
+    ],
+    "General Tags": [
+        "Fontconfig",
+        "Font Management",
+        "Font Configuration",
+        "Linux",
+        "Unix-Like Systems"
+    ],
+    "Software Type": "System Tool",
+    "Software Class": "Library",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "",
+    "Research Discipline": ""
+}

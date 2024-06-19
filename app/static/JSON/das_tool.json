@@ -1,0 +1,24 @@
+{
+    "Software": "das_tool",
+    "AI Description": "das_tool is a versatile software tool used for analyzing and visualizing large-scale genomic data in the context of chromatin interactions and 3D genome organization. It provides researchers with a range of functions to explore spatial genome architecture and identify regulatory elements.",
+    "Core Features": [
+        "Analyze large-scale genomic datasets",
+        "Visualize chromatin interactions",
+        "Study 3D genome organization",
+        "Identify regulatory elements",
+        "Explore spatial genome architecture"
+    ],
+    "General Tags": [
+        "Genomics",
+        "Chromatin Interactions",
+        "Spatial Genome Architecture",
+        "Regulatory Elements",
+        "Bioinformatics",
+        "Data Visualization"
+    ],
+    "Software Type": "Genomic Data Analysis Tool",
+    "Software Class": "Analysis & Visualization",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomics",
+    "Research Discipline": "Bioinformatics"
+}

@@ -1,0 +1,19 @@
+{
+    "Software": "xvfb",
+    "AI Description": "Xvfb (X virtual framebuffer) is an in-memory display server for Unix-like systems that enable running graphical applications without a display.",
+    "Core Features": [
+        "Run graphical applications without a display",
+        "Create virtual displays",
+        "Lightweight and easy to use"
+    ],
+    "General Tags": [
+        "Display Server",
+        "Headless",
+        "Virtual Display"
+    ],
+    "Software Type": "Virtual Display Server",
+    "Software Class": "Utility",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

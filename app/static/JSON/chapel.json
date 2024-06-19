@@ -1,0 +1,22 @@
+{
+    "Software": "Chapel",
+    "AI Description": "Chapel is an emerging parallel programming language developed by Cray Inc. specifically designed for productive high-performance computing (HPC). It is designed to improve the productivity of parallel programming and provide scalability and portability across various HPC platforms.",
+    "Core Features": [
+        "Supports a multithreaded execution model with a partitioned global address space",
+        "Provides a high-level and expressive syntax",
+        "Offers support for data parallelism, task parallelism, and nested parallelism",
+        "Includes features for interoperability with existing languages such as C, C++, and Fortran",
+        "Designed for use in large-scale parallel computing environments"
+    ],
+    "General Tags": [
+        "Parallel Programming",
+        "Hpc",
+        "High-Performance Computing",
+        "Programming Language"
+    ],
+    "Software Type": "Compiler",
+    "Software Class": "Programming Language",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

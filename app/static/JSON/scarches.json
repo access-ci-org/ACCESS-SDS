@@ -1,0 +1,20 @@
+{
+    "Software": "scarches",
+    "AI Description": "scarches is a scalable toolkit for single-cell RNA velocity analysis in Python. It enables efficient analysis of large-scale single-cell RNA sequencing data to predict cell state transitions and identify dynamically changing genes.",
+    "Core Features": [
+        "Single-cell RNA velocity analysis",
+        "Scalable toolkit",
+        "Prediction of cell state transitions",
+        "Identification of dynamically changing genes"
+    ],
+    "General Tags": [
+        "Single-Cell Rna Sequencing",
+        "Python Toolkit",
+        "Bioinformatics"
+    ],
+    "Software Type": "Toolkit",
+    "Software Class": "Data Analysis Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Single-Cell Rna Sequencing",
+    "Research Discipline": "Bioinformatics"
+}

@@ -1,0 +1,18 @@
+{
+    "Software": "kover",
+    "AI Description": "Kover is a tool for computing k-coverage using k-mers from multiple sequencing datasets.",
+    "Core Features": [
+        "Compute k-coverage using k-mers from multiple sequencing datasets",
+        "Identify underrepresented genomic regions"
+    ],
+    "General Tags": [
+        "Bioinformatics",
+        "Computational Biology",
+        "Sequence Analysis"
+    ],
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Analytical Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

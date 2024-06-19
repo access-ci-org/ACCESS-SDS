@@ -1,0 +1,16 @@
+{
+    "Software": "OpenFOAM",
+    "AI Description": "OpenFOAM (Open Source Field Operation and Manipulation) is a free, open-source computational fluid dynamics (CFD) software package developed by the OpenFOAM Foundation. It is widely used for simulating complex fluid flows in various industries and academic research.",
+    "Core Features": "1. Finite volume discretization for solving fluid flow problems\n2. Ability to solve a wide range of physical problems including incompressible and compressible flows, heat transfer, turbulence modeling, and multiphase flows\n3. Extensive library of pre-built solvers and utilities\n4. Customizability through programming interface and source code access\n5. Parallel processing capabilities for high-performance computing (HPC)",
+    "General Tags": [
+        "Computational Fluid Dynamics",
+        "Open-Source Software",
+        "Finite Volume Method",
+        "Hpc"
+    ],
+    "Software Type": "Computational Software",
+    "Software Class": "Simulation Software",
+    "Research Field": "Physical Sciences",
+    "Research Area": "Computational Fluid Dynamics",
+    "Research Discipline": "Fluid Dynamics"
+}

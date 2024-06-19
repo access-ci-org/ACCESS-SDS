@@ -1,0 +1,15 @@
+{
+    "Software": "r-rlang",
+    "AI Description": "r-rlang is an R package that provides a set of low-level tools for working with R functions and objects in a way that is abstracted and consistent. It aims to simplify the creation and manipulation of functions and expressions in R programming.",
+    "Core Features": "1. Utilities for working with R objects such as environments, calls, and expressions.\n2. Functions for creating and manipulating formulas in R.\n3. Supports advanced features like non-standard evaluation and quasiquotation.\n4. Enables consistent and tidy handling of functions and expressions in R code.",
+    "General Tags": [
+        "R Package",
+        "Programming",
+        "Functional Programming"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Development, Programming Tools",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,15 @@
+{
+    "Software": "bioconvert",
+    "AI Description": "Bioconvert is a tool for converting between different bioinformatics file formats. It supports a wide range of formats commonly used in bioinformatics analysis and allows for easy and efficient conversion from one format to another.",
+    "Core Features": "1. Conversion between various bioinformatics file formats.\n2. Support for common formats such as FASTA, FASTQ, SAM, BAM, BED, VCF, and more.\n3. Command-line interface for batch processing of files.\n4. Efficient and reliable conversion process.\n5. Customizable options for format conversion.",
+    "General Tags": [
+        "Bioinformatics",
+        "Data Conversion",
+        "File Format"
+    ],
+    "Software Type": "Converter",
+    "Software Class": "Utility Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

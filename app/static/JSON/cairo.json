@@ -1,0 +1,15 @@
+{
+    "Software": "Cairo",
+    "AI Description": "Cairo is a 2D graphics library with support for multiple output devices. It provides a vector-based rendering engine for high-quality graphics with full support for transparency and anti-aliasing.",
+    "Core Features": "Cairo supports various output targets including image buffers, PNG files, PDF files, SVG files, PostScript files, and direct rendering to X Window System and Windows surfaces. It offers a simple API for drawing paths, text, and images with advanced features like gradients, patterns, and transformations.",
+    "General Tags": [
+        "Graphics Library",
+        "2D Graphics",
+        "Rendering Engine"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Graphics Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

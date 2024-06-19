@@ -1,0 +1,15 @@
+{
+    "Software": "EasyBuild-ACES",
+    "AI Description": "EasyBuild-ACES is a collection of EasyBuild framework recipes for building commonly used software packages within the Army Combat Capabilities Development Command Army Research Laboratory (CCDC-ARL) Computational and Information Sciences Directorate (CISD) Advanced Computing, Engineering and Software (ACES) research group.",
+    "Core Features": "EasyBuild-ACES provides recipes for building software packages often used by the CCDC-ARL CISD ACES research group, allowing for easy deployment and management of these tools.",
+    "General Tags": [
+        "Software Development",
+        "Tools",
+        "Packages"
+    ],
+    "Software Type": "Tools",
+    "Software Class": "Software Engineering & Development",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Software Engineering, Systems, & Development",
+    "Research Discipline": "Computer & Information Sciences"
+}

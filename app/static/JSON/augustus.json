@@ -1,0 +1,15 @@
+{
+    "Software": "Augustus",
+    "AI Description": "Augustus is a gene prediction software for eukaryotes that uses a probabilistic model to predict genes on genomic sequences. It is widely used in bioinformatics to identify coding regions in DNA sequences.",
+    "Core Features": "1. Gene prediction using probabilistic model\n2. Prediction of coding regions in eukaryotic genomes\n3. Incorporation of RNA-Seq data for improved gene prediction accuracy",
+    "General Tags": [
+        "Gene Prediction",
+        "Eukaryotes",
+        "Bioinformatics"
+    ],
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Gene Prediction",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomics",
+    "Research Discipline": "Bioinformatics"
+}

@@ -1,0 +1,29 @@
+{
+    "Software": "scikit-learn",
+    "AI Description": "Scikit-learn is a machine learning library for the Python programming language. It features various classification, regression, and clustering algorithms including support vector machines, random forests, gradient boosting, k-means, and DBSCAN, among others. Scikit-learn is designed to interoperate with the Python numerical and scientific libraries NumPy and SciPy.",
+    "Core Features": [
+        "Supervised learning",
+        "Unsupervised learning",
+        "Dimensionality reduction",
+        "Model selection",
+        "Preprocessing data"
+    ],
+    "General Tags": [
+        "Machine Learning",
+        "Python Library"
+    ],
+    "Software Type": "Libraries",
+    "Software Class": [
+        "Machine Learning Library"
+    ],
+    "Research Field": [
+        "Computer And Information Sciences",
+        "Artificial Intelligence And Intelligent Systems"
+    ],
+    "Research Area": [
+        "Machine Learning"
+    ],
+    "Research Discipline": [
+        "Artificial Intelligence And Intelligent Systems"
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "Software": "TensorFlow Probability",
+    "AI Description": "TensorFlow Probability is a library for probabilistic reasoning and statistical analysis in TensorFlow. It provides a wide range of tools for building probabilistic models using neural networks and deep learning techniques. TensorFlow Probability seamlessly integrates with TensorFlow for efficient computation and training of probabilistic models.",
+    "Core Features": [
+        "Probabilistic modeling",
+        "Statistical analysis",
+        "Bayesian inference",
+        "Markov chain Monte Carlo (MCMC)",
+        "Variational inference",
+        "Probabilistic layers for neural networks"
+    ],
+    "General Tags": [
+        "Machine Learning",
+        "Deep Learning",
+        "Probabilistic Programming",
+        "Statistical Analysis"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Machine Learning Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

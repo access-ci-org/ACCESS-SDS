@@ -1,0 +1,19 @@
+{
+    "Software": "CEGMA",
+    "AI Description": "CEGMA (Core Eukaryotic Genes Mapping Approach) is a pipeline for predicting core eukaryotic genes in genome assemblies. It is designed to identify a set of conserved genes that are expected to be present in all eukaryotic genomes. CEGMA is commonly used for evaluating the completeness and quality of genome assemblies.",
+    "Core Features": [
+        "Prediction of core eukaryotic genes",
+        "Assessment of genome assembly completeness",
+        "Identification of conserved genes in eukaryotic genomes"
+    ],
+    "General Tags": [
+        "Genome Assembly",
+        "Core Eukaryotic Genes",
+        "Bioinformatics"
+    ],
+    "Software Type": "Tool",
+    "Software Class": "Bioinformatics",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genome Assembly",
+    "Research Discipline": "Genomics"
+}

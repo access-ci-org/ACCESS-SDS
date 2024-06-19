@@ -1,0 +1,20 @@
+{
+    "Software": "CESM",
+    "AI Description": "The Community Earth System Model (CESM) is a fully-coupled, global climate model that provides state-of-the-art computer simulations of the Earth's past, present, and future climate states.",
+    "Core Features": [
+        "Fully-coupled climate model",
+        "Global climate simulations",
+        "Multi-component model",
+        "Advanced Earth system modeling capabilities"
+    ],
+    "General Tags": [
+        "Climate Modeling",
+        "Earth System Modeling",
+        "Global Climate Simulations"
+    ],
+    "Software Type": "Computational Software",
+    "Software Class": "Modeling & Simulation",
+    "Research Field": "Earth & Environmental Sciences",
+    "Research Area": "Climate & Global Dynamics",
+    "Research Discipline": "Earth & Environmental Sciences"
+}

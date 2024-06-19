@@ -1,0 +1,20 @@
+{
+    "Software": "default-environment",
+    "AI Description": "The default-environment is a basic system setup that provides essential tools and configurations for software development and computational work. It serves as a starting point for creating custom environments tailored to specific requirements and preferences.",
+    "Core Features": [
+        "Includes popular programming languages such as Python, C++, Java, and others",
+        "Common utilities like text editors, version control systems, and package managers are pre-installed",
+        "Support for compiling code, managing dependencies, and running basic scripts",
+        "Can be easily extended and customized with additional software packages and libraries"
+    ],
+    "General Tags": [
+        "Development-Environment",
+        "Computational-Tools",
+        "Software-Utilities"
+    ],
+    "Software Type": "Default Environment",
+    "Software Class": "Environment Setup",
+    "Research Field": "",
+    "Research Area": "",
+    "Research Discipline": ""
+}

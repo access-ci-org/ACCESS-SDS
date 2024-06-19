@@ -1,0 +1,15 @@
+{
+    "Software": "libint",
+    "AI Description": "libint is a library for the evaluation of molecular integrals needed in computational chemistry and related fields. It provides efficient and accurate implementations for various types of integrals used in quantum chemistry calculations.",
+    "Core Features": "1. Calculation of electron repulsion integrals\n2. Evaluation of overlap integrals\n3. Computation of kinetic energy integrals\n4. Integration of nuclear-electron attraction terms\n5. Supports a wide range of basis functions and molecular orbitals",
+    "General Tags": [
+        "Computational Chemistry",
+        "Molecular Integrals",
+        "Quantum Chemistry"
+    ],
+    "Software Type": "Computational",
+    "Software Class": "Library",
+    "Research Field": "Chemical Sciences",
+    "Research Area": "Theoretical & Computational Chemistry",
+    "Research Discipline": "Physical Chemistry"
+}

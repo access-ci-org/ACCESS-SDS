@@ -1,0 +1,22 @@
+{
+    "Software": "Motus",
+    "AI Description": "Motus is a software tool designed for the analysis of animal movement data, particularly in the context of migration studies. It provides a platform for researchers to process, visualize, and analyze tracking data of individual animals to understand their movement patterns and behaviors.",
+    "Core Features": [
+        "Import and process animal tracking data",
+        "Visualize movement trajectories",
+        "Analyze movement patterns",
+        "Identify stopover sites and migration routes",
+        "Generate reports and statistics"
+    ],
+    "General Tags": [
+        "Animal Movement Data Analysis",
+        "Migration Studies",
+        "Movement Pattern Analysis",
+        "Animal Tracking"
+    ],
+    "Software Type": "Research",
+    "Software Class": "Data Analysis Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Ecology",
+    "Research Discipline": "Environmental Biology"
+}

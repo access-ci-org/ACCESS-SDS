@@ -1,0 +1,17 @@
+{
+    "Software": "FSL",
+    "AI Description": "FSL (FMRIB Software Library) is a comprehensive library of analysis tools for functional, structural, and diffusion MRI brain imaging data. It provides various image processing tools to process and analyze data acquired using MRI techniques.",
+    "Core Features": "Some core features of FSL include preprocessing of MRI data for better analysis, registration of images to a standard space, statistical analysis of MRI data, and tools for brain segmentation and visualization.",
+    "General Tags": [
+        "Mri",
+        "Imaging",
+        "Neuroimaging",
+        "Data Analysis",
+        "Image Processing"
+    ],
+    "Software Type": "Image Processing Software",
+    "Software Class": "Medical Imaging Software",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Biophysics, Neuroscience",
+    "Research Discipline": "Biological Sciences"
+}

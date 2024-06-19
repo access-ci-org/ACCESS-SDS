@@ -1,0 +1,22 @@
+{
+    "Software": "qemu",
+    "AI Description": "QEMU is a generic and open-source machine emulator and virtualizer that supports executing different operating systems and programs on a host operating system. It provides full system simulation, allowing users to run virtual machines with various architectures (x86, ARM, PowerPC, etc.) on a wide range of host platforms. QEMU can be used for various purposes such as development, testing, debugging, and virtualization.",
+    "Core Features": [
+        "Full system emulation",
+        "Virtualization support",
+        "Dynamic translation",
+        "User-mode emulation",
+        "Snapshots",
+        "Live migration"
+    ],
+    "General Tags": [
+        "Virtualization",
+        "Emulation",
+        "System Development"
+    ],
+    "Software Type": "Virtual Machine Emulator",
+    "Software Class": "Virtualization & Emulation",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

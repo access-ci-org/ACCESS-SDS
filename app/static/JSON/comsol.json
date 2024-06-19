@@ -1,0 +1,24 @@
+{
+    "Software": "COMSOL",
+    "AI Description": "COMSOL is a platform for modeling and simulating physics-based systems. It offers a wide range of tools for multiphysics simulations, allowing users to analyze and optimize designs in various scientific and engineering fields.",
+    "Core Features": [
+        "Multiphysics simulations",
+        "Finite element analysis",
+        "Customizable modeling environment",
+        "Interactive simulation tools",
+        "Comprehensive physics libraries",
+        "Post-processing capabilities"
+    ],
+    "General Tags": [
+        "Simulation",
+        "Modeling",
+        "Physics",
+        "Engineering",
+        "Optimization"
+    ],
+    "Software Type": "Simulation Software",
+    "Software Class": "Engineering & Technology",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "",
+    "Research Discipline": ""
+}

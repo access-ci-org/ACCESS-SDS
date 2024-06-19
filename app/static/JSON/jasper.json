@@ -1,0 +1,15 @@
+{
+    "Software": "jasper",
+    "AI Description": "JasPer (JPEG-2000 Part-1 Suite) is an open-source software implementation of the JPEG-2000 Part-1 standard. It provides a complete set of tools for encoding and decoding JPEG-2000 streams, including color space conversion, wavelet transforms, quantization, and entropy coding.",
+    "Core Features": "1. Support for encoding and decoding JPEG-2000 images\n2. Color space conversion\n3. Wavelet transforms\n4. Quantization\n5. Entropy coding",
+    "General Tags": [
+        "Image Processing",
+        "Open-Source",
+        "Jpeg-2000"
+    ],
+    "Software Type": "Image Processing",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Data Compression",
+    "Research Discipline": "Computer Science"
+}

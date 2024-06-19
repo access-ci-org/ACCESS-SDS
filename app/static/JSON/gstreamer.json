@@ -1,0 +1,17 @@
+{
+    "Software": "gstreamer",
+    "AI Description": "GStreamer is a multimedia framework that allows the construction of graphs of media-handling components, ranging from simple Ogg/Vorbis playback to complex audio (mixing) and video (non-linear editing) processing. It is designed to be easily extended with new plugins that provide new functionality.",
+    "Core Features": "1. Support for a wide range of media formats and protocols. 2. Modular architecture that allows flexible construction of multimedia pipelines. 3. Extensive plugin architecture for additional features and format support. 4. Cross-platform compatibility. 5. Open-source and actively developed community.",
+    "General Tags": [
+        "Multimedia",
+        "Framework",
+        "Media Processing",
+        "Audio",
+        "Video"
+    ],
+    "Software Type": "Framework",
+    "Software Class": "Media Processing",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

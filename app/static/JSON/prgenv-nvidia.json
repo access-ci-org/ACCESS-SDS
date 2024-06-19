@@ -1,0 +1,16 @@
+{
+    "Software": "prgenv-nvidia",
+    "AI Description": "prgenv-nvidia is a software environment that provides compilers and tools optimized for NVIDIA GPUs, allowing users to develop and execute GPU-accelerated applications efficiently.",
+    "Core Features": "1. NVIDIA GPU optimization tools and compilers.\n2. Enables development and execution of GPU-accelerated applications.\n3. Integration with popular programming languages and libraries.\n4. Streamlined workflow for GPU computing tasks.",
+    "General Tags": [
+        "Software Environment",
+        "Compilers",
+        "Gpu Computing",
+        "Nvidia"
+    ],
+    "Software Type": "Compiler",
+    "Software Class": "Development Tools",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "High Performance Computing",
+    "Research Discipline": "Computational Science"
+}

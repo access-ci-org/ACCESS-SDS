@@ -1,0 +1,20 @@
+{
+    "Software": "gcatools",
+    "AI Description": "gcatools is a set of tools designed to analyze and process genomic data generated from next-generation sequencing experiments. It offers a variety of functionalities for quality control, alignment, variant calling, and annotation of genomic sequences.",
+    "Core Features": [
+        "Quality control of sequencing data",
+        "Alignment of sequencing reads to a reference genome",
+        "Identification of genetic variants",
+        "Annotation of genomic sequences"
+    ],
+    "General Tags": [
+        "Genomic Data Analysis",
+        "Next-Generation Sequencing",
+        "Bioinformatics"
+    ],
+    "Software Type": "Tool",
+    "Software Class": "Analysis Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomics",
+    "Research Discipline": "Bioinformatics"
+}

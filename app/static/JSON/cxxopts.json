@@ -1,0 +1,16 @@
+{
+    "Software": "cxxopts",
+    "AI Description": "A lightweight C++ library for parsing command line arguments, inspired by Python's argparse library.",
+    "Core Features": "Provides a simple API for defining and parsing command line arguments in C++ applications. Supports a wide range of argument types, such as bool, string, integer, floating-point numbers, and custom data types. Allows specifying required arguments, default values, and help text. Enables grouping of options, subcommands, and handling positional arguments.",
+    "General Tags": [
+        "C++",
+        "Command Line Arguments",
+        "Parsing",
+        "Library"
+    ],
+    "Software Type": "",
+    "Software Class": "",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

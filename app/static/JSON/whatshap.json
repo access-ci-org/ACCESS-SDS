@@ -1,0 +1,15 @@
+{
+    "Software": "Whatshap",
+    "AI Description": "Whatshap is a software tool for phasing genomic variants, which refers to the process of determining the parental origin of alleles in an individual's genome. It focuses on handling variants such as single nucleotide polymorphisms (SNPs) and indels.",
+    "Core Features": "1. Phasing of genomic variants for diploid and polyploid organisms.\n2. Integration with existing variant calling pipelines.\n3. Support for multiple input file formats such as VCF and BCF.\n4. Efficient algorithms for accurate phasing.",
+    "General Tags": [
+        "Genomics",
+        "Bioinformatics",
+        "Variant Phasing"
+    ],
+    "Software Type": "Tool",
+    "Software Class": "Bioinformatics",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

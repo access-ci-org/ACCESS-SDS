@@ -1,0 +1,16 @@
+{
+    "Software": "dorado",
+    "AI Description": "Dorado is a software tool used for performance evaluation and benchmarking in HPC (High-Performance Computing) environments. It allows users to assess the performance of parallel applications and optimize their running times on supercomputers and clusters.",
+    "Core Features": "Dorado provides capabilities for analyzing parallel application performance, identifying bottlenecks, measuring scalability, and optimizing code efficiency. It offers detailed performance metrics and visualizations to help users understand the behavior of their applications on parallel architectures.",
+    "General Tags": [
+        "Performance Evaluation",
+        "Benchmarking",
+        "Hpc",
+        "Supercomputing"
+    ],
+    "Software Type": "Tool",
+    "Software Class": "Software",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "",
+    "Research Discipline": ""
+}

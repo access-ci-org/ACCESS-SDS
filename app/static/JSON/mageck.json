@@ -1,0 +1,21 @@
+{
+    "Software": "MAGeCK",
+    "AI Description": "MAGeCK is a computational model designed for the analysis of high-throughput CRISPR-Cas9 genetic screens to identify essential genes and pathways.",
+    "Core Features": [
+        "High-throughput CRISPR-Cas9 genetic screen analysis",
+        "Identification of essential genes and pathways",
+        "Gene set enrichment analysis",
+        "Quality control and normalization of CRISPR screening data"
+    ],
+    "General Tags": [
+        "Crispr-Cas9",
+        "Genetic Screens",
+        "Essential Genes",
+        "Pathway Analysis"
+    ],
+    "Software Type": "Computational Tool",
+    "Software Class": "Bioinformatics",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Crispr-Cas9 Screening",
+    "Research Discipline": "Genetics"
+}

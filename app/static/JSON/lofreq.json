@@ -1,0 +1,22 @@
+{
+    "Software": "LoFreq",
+    "AI Description": "LoFreq is a computational tool designed for the identification of rare sequence variants from next-generation sequencing data. It specifically focuses on the detection of somatic mutations in cancer genomes and low-frequency variants in viral populations.",
+    "Core Features": [
+        "Detection of low-frequency variants",
+        "Identification of somatic mutations in cancer genomes",
+        "Optimized for viral populations",
+        "Statistical models for variant calling"
+    ],
+    "General Tags": [
+        "Variant Calling",
+        "Ngs Data Analysis",
+        "Sequence Analysis",
+        "Somatic Mutations",
+        "Viral Populations"
+    ],
+    "Software Type": "Tool",
+    "Software Class": "Bioinformatics",
+    "Research Field": "Natural Sciences",
+    "Research Area": "Genetics",
+    "Research Discipline": "Biological Sciences"
+}

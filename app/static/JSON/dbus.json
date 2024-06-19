@@ -1,0 +1,15 @@
+{
+    "Software": "dbus",
+    "AI Description": "D-Bus is a message bus system, a simple way for applications to talk to one another. In addition to interprocess communication, D-Bus helps coordinate process lifecycle management.",
+    "Core Features": "1. Interprocess communication between applications. 2. Coordination of process lifecycle management. 3. Suitable for use in both small and large systems. 4. Enables communication between applications written in different programming languages.",
+    "General Tags": [
+        "Message Bus System",
+        "Interprocess Communication",
+        "Process Lifecycle Management"
+    ],
+    "Software Type": "Middleware",
+    "Software Class": "System Software",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

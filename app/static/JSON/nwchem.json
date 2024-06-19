@@ -1,0 +1,21 @@
+{
+    "Software": "NWChem",
+    "AI Description": "NWChem is an open-source computational chemistry package designed for high-performance simulations of large-scale molecular systems. It provides various tools and algorithms for both classical and quantum chemical calculations.",
+    "Core Features": [
+        "Quantum chemical calculations",
+        "Classical molecular dynamics simulations",
+        "Electronic structure calculations",
+        "Ab initio molecular simulations",
+        "Density functional theory calculations"
+    ],
+    "General Tags": [
+        "Computational Chemistry",
+        "High-Performance Computing",
+        "Open-Source Software"
+    ],
+    "Software Type": "Computational Chemistry Software",
+    "Software Class": "Simulation",
+    "Research Field": "Chemical Sciences",
+    "Research Area": "Chemical Sciences",
+    "Research Discipline": "Physical Chemistry"
+}

@@ -1,0 +1,15 @@
+{
+    "Software": "r-nlme",
+    "AI Description": "r-nlme is a comprehensive statistical software package in R specifically designed for fitting and analyzing nonlinear mixed effects models. It provides a wide range of functionalities to handle complex data structures and hierarchical modeling.",
+    "Core Features": "1. Fitting nonlinear mixed effects models\n2. Analyzing hierarchical structures in data\n3. Handling complex data structures in statistical modeling\n4. Estimating and testing fixed and random effects\n5. Visualizing model results and diagnostics",
+    "General Tags": [
+        "Statistical Software",
+        "R Package",
+        "Nonlinear Mixed Effects Models"
+    ],
+    "Software Type": "Analysis Tool",
+    "Software Class": "Statistical Analysis",
+    "Research Field": "Other Mathematics",
+    "Research Area": "Nonlinear Mixed Effects Modeling",
+    "Research Discipline": "Statistics & Probability"
+}

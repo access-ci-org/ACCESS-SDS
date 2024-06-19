@@ -1,0 +1,19 @@
+{
+    "Software": "OGDF",
+    "AI Description": "OGDF (Open Graph Drawing Framework) is a C++ library for the automatic layout of diagrams and graphs. It provides a wide range of algorithms and data structures for various graph drawing tasks.",
+    "Core Features": [
+        "Automatic layout of diagrams and graphs",
+        "Support for various graph drawing tasks",
+        "Implementation of a wide range of algorithms and data structures"
+    ],
+    "General Tags": [
+        "Graph Drawing",
+        "Layout Algorithms",
+        "C++ Library"
+    ],
+    "Software Type": "Graph Visualization",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Graph Drawing",
+    "Research Discipline": "Computer Science"
+}

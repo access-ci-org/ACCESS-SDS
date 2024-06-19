@@ -1,0 +1,19 @@
+{
+    "Software": "pyensembl",
+    "AI Description": "pyensembl is a Python interface for accessing Ensembl's REST API to programmatically retrieve and analyze genomic data.",
+    "Core Features": [
+        "Accessing Ensembl's REST API",
+        "Retrieving genomic data",
+        "Analyzing genomic data"
+    ],
+    "General Tags": [
+        "Python Library",
+        "Genomics",
+        "Bioinformatics"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Api Interface",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomic Data Analysis",
+    "Research Discipline": "Genomics"
+}

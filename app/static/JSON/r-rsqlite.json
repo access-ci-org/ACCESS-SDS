@@ -1,0 +1,21 @@
+{
+    "Software": "RSQLite",
+    "AI Description": "RSQLite is an R package that provides an interface to SQLite databases. It allows users to connect to SQLite databases, create, read, update, and delete data within these databases, and execute SQL queries directly from R.",
+    "Core Features": [
+        "Connect to SQLite databases from R",
+        "CRUD operations (Create, Read, Update, Delete)",
+        "Execute SQL queries from R",
+        "Interface between R and SQLite databases"
+    ],
+    "General Tags": [
+        "R Package",
+        "Database Management",
+        "Data Manipulation",
+        "Sql Interface"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Data Management & Analysis",
+    "Research Field": "Social Sciences",
+    "Research Area": "Economics & Business",
+    "Research Discipline": "Other Social Sciences"
+}

@@ -1,0 +1,17 @@
+{
+    "Software": "gl2ps",
+    "AI Description": "GL2PS is an OpenGL to PostScript printing library that converts any OpenGL action into a vector PostScript image. It provides capabilities for saving OpenGL-generated 2D and 3D graphics as encapsulated PostScript files. GL2PS is written in C++ and can be easily integrated into existing OpenGL code.",
+    "Core Features": "1. Conversion of OpenGL graphics to PostScript format\n2. Support for 2D and 3D graphics\n3. Integration with existing OpenGL applications\n4. Vector-based output for high-quality printing\n5. Cross-platform compatibility",
+    "General Tags": [
+        "Opengl",
+        "Postscript",
+        "Printing",
+        "Graphics",
+        "Vector Graphics"
+    ],
+    "Software Type": "",
+    "Software Class": "",
+    "Research Field": "",
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,18 @@
+{
+    "Software": "hifiasm",
+    "AI Description": "Hifiasm is a fast and scalable haplotype-resolved de novo assembler for PacBio HiFi reads.",
+    "Core Features": [
+        "Haplotype-resolved de novo assembly",
+        "Supports PacBio HiFi reads",
+        "Fast and scalable"
+    ],
+    "General Tags": [
+        "Assembler",
+        "De Novo Assembly"
+    ],
+    "Software Type": "Bioinformatics",
+    "Software Class": "Genome Assembly",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genetics",
+    "Research Discipline": "Biological Sciences"
+}

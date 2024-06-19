@@ -1,0 +1,19 @@
+{
+    "Software": "nlohmann_json",
+    "AI Description": "nlohmann_json is a JSON library for modern C++. It provides a simple and efficient way to work with JSON data in C++ programs.",
+    "Core Features": [
+        "Parsing and serializing JSON data",
+        "Support for various data types including strings, numbers, arrays, and objects",
+        "Flexible and intuitive API",
+        "Header-only library for easy integration"
+    ],
+    "General Tags": [
+        "Json Library",
+        "C++"
+    ],
+    "Software Type": "Data Handling",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

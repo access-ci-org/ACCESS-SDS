@@ -1,0 +1,15 @@
+{
+    "Software": "DeconSeq",
+    "AI Description": "DeconSeq is a novel program specifically designed to automatically decontaminate sequences and detect possible contamination in sequence datasets. It efficiently detects and removes sequence contamination from high-throughput sequencing reads. The tool is particularly useful in metagenomics studies to ensure the quality and accuracy of the analysis results.",
+    "Core Features": "1. Removal of contaminating sequences from datasets\n2. Detection of contamination based on user-defined criteria\n3. Support for various sequence formats\n4. Customizable parameters for tailored analysis\n5. Efficient processing of high-throughput sequencing data",
+    "General Tags": [
+        "Bioinformatics",
+        "Sequence Analysis",
+        "Metagenomics"
+    ],
+    "Software Type": "Analysis Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

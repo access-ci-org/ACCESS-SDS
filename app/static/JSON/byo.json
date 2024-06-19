@@ -1,0 +1,15 @@
+{
+    "Software": "byo",
+    "AI Description": "byo is a software tool for building your own bioinformatics pipelines and workflows. It provides a flexible and customizable framework for creating and running analysis pipelines tailored to specific research needs.",
+    "Core Features": "Custom pipeline creation, Workflow management, Integration of bioinformatics tools, Flexibility in pipeline design, Scalability",
+    "General Tags": [
+        "Bioinformatics",
+        "Workflow Management",
+        "Pipeline Design"
+    ],
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Pipeline Manager",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Computational Biology",
+    "Research Discipline": "Bioinformatics"
+}

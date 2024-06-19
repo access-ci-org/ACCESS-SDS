@@ -1,0 +1,22 @@
+{
+    "Software": "Cartopy",
+    "AI Description": "Cartopy is a Python package designed for geospatial data processing to produce high-quality visualizations of maps using matplotlib. It aims to simplify and enhance the mapping capabilities in Python, providing rich, interactive, and customized maps for various scientific disciplines.",
+    "Core Features": [
+        "Supports various map projections and coordinate reference systems",
+        "Integration with matplotlib for plotting spatial data",
+        "Ability to plot data on maps, add coastlines, borders, and gridlines",
+        "Provides tools for geospatial data manipulation and analysis"
+    ],
+    "General Tags": [
+        "Geospatial Data Processing",
+        "Data Visualization",
+        "Python Library",
+        "Mapping",
+        "Scientific Visualization"
+    ],
+    "Software Type": "Python Library",
+    "Software Class": "Visualization Tool",
+    "Research Field": "Physical Sciences",
+    "Research Area": "Geophysics & Geochemistry",
+    "Research Discipline": "Earth & Environmental Sciences"
+}

@@ -1,0 +1,15 @@
+{
+    "Software": "r-gridbase",
+    "AI Description": "r-gridbase is an R package that provides basic grid functions for display and drawing. It allows for creating and manipulating grid graphics objects, such as lines, rectangles, circles, and text, to create customized plots and visualizations.",
+    "Core Features": "Some core features of r-gridbase include grid layout management, grid drawing functions, grid table creation and manipulation, and customization of graphical parameters. It offers flexibility in arranging multiple plots and annotations on a single display.",
+    "General Tags": [
+        "R Package",
+        "Grid Graphics",
+        "Visualization"
+    ],
+    "Software Type": "Package",
+    "Software Class": "Graphics Library",
+    "Research Field": "Mathematics",
+    "Research Area": "Mathematics",
+    "Research Discipline": "Other Mathematics"
+}

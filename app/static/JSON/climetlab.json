@@ -1,0 +1,20 @@
+{
+    "Software": "climetlab",
+    "AI Description": "climetlab is a Python library designed for easy access, manipulation, and visualization of climate data. It aims to simplify the process of working with climate datasets by providing a unified interface and tools for data exploration.",
+    "Core Features": [
+        "Accessing climate datasets",
+        "Manipulating climate data",
+        "Visualizing climate data",
+        "Convenient data exploration tools"
+    ],
+    "General Tags": [
+        "Python Library",
+        "Climate Data",
+        "Data Visualization"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Data Analysis & Visualization",
+    "Research Field": "Earth & Environmental Sciences",
+    "Research Area": "Climate & Global Dynamics",
+    "Research Discipline": "Earth & Environmental Sciences"
+}

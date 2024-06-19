@@ -1,0 +1,15 @@
+{
+    "Software": "Py-Cython",
+    "AI Description": "Py-Cython is a compiler for writing C extensions for the Python language. It allows for combining Python and C code seamlessly to improve performance and efficiency.",
+    "Core Features": "1. Enables writing C extensions for Python.\n2. Provides a simple and efficient way to combine Python and C code.\n3. Helps in optimizing Python code for better performance.\n4. Allows for creating standalone executables from Python scripts.",
+    "General Tags": [
+        "Compiler",
+        "Python Library",
+        "Performance Optimization"
+    ],
+    "Software Type": "Development Tool",
+    "Software Class": "Compiler",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

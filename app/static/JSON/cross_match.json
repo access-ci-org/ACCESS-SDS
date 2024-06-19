@@ -1,0 +1,21 @@
+{
+    "Software": "Cross_Match",
+    "AI Description": "Cross_Match is a software package used for aligning two lists of objects, usually representing detected sources or astronomical catalogs, in order to identify matching or related entries.",
+    "Core Features": [
+        "Alignment of two lists of objects",
+        "Identification of matching entries",
+        "Astronomical applications",
+        "Handling of astronomical catalog data"
+    ],
+    "General Tags": [
+        "Alignment",
+        "Astronomy",
+        "Cataloging",
+        "Data Processing"
+    ],
+    "Software Type": "Matching Tool",
+    "Software Class": "Data Processing",
+    "Research Field": "Physical Sciences",
+    "Research Area": "Astronomy",
+    "Research Discipline": "Astronomy & Planetary Sciences"
+}

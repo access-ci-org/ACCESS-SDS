@@ -1,0 +1,19 @@
+{
+    "Software": "fastq-scan",
+    "AI Description": "fastq-scan is a tool for batch scanning and processing FASTQ files to extract quality control metrics for Next-Generation Sequencing (NGS) data.",
+    "Core Features": [
+        "Batch scanning of FASTQ files",
+        "Quality control metrics extraction for NGS data",
+        "Efficient processing of large datasets"
+    ],
+    "General Tags": [
+        "Ngs Data Analysis",
+        "Quality Control",
+        "Fastq File Processing"
+    ],
+    "Software Type": "Bioinformatics",
+    "Software Class": "Ngs Quality Control",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomics",
+    "Research Discipline": "Genetics"
+}

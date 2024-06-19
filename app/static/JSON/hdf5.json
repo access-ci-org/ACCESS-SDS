@@ -1,0 +1,26 @@
+{
+    "Software": "HDF5",
+    "AI Description": "HDF5 (Hierarchical Data Format version 5) is a file format and a suite of tools developed by the HDF Group for managing and storing large and complex data. It is designed to store and organize large amounts of data efficiently, enabling fast data access and sharing.",
+    "Core Features": [
+        "Support for various data types and structures",
+        "Hierarchical organization of data",
+        "High-performance I/O capabilities",
+        "Parallel I/O for large-scale data processing",
+        "Data compression and chunking for efficient storage",
+        "Cross-platform compatibility",
+        "Support for metadata and attributes",
+        "Integration with other programming languages like Python, C, and Fortran"
+    ],
+    "General Tags": [
+        "File Format",
+        "Data Management",
+        "Data Storage",
+        "Data Sharing",
+        "High-Performance Computing"
+    ],
+    "Software Type": "Library/Tool",
+    "Software Class": "Data Management",
+    "Research Field": "Other Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

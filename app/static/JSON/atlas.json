@@ -1,0 +1,16 @@
+{
+    "Software": "Atlas",
+    "AI Description": "Atlas is a powerful software for managing and visualizing genomic sequencing data. It allows users to analyze large datasets, perform variant calling, and visualize results in an interactive and user-friendly interface.",
+    "Core Features": "1. Genomic data management\n2. Variant calling\n3. Visualization tools\n4. Interactive interface\n5. Large dataset analysis",
+    "General Tags": [
+        "Genomics",
+        "Sequencing",
+        "Data Analysis",
+        "Visualization"
+    ],
+    "Software Type": "Analysis Tool",
+    "Software Class": "Genomic Data Analysis",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomics",
+    "Research Discipline": "Biological Sciences"
+}

@@ -1,0 +1,15 @@
+{
+    "Software": "SIP (Scilab Image Processing)",
+    "AI Description": "SIP is a toolbox for the Scilab software for numerical computations in image processing. It provides a set of algorithms and functions to perform image processing tasks using Scilab, which is a free and open-source software for numerical computation.",
+    "Core Features": "1. Image filtering and enhancement techniques\n2. Image segmentation and feature extraction\n3. Morphological operations\n4. Image restoration and transformations\n5. Image analysis and manipulation\n6. Integration with Scilab for numerical computations",
+    "General Tags": [
+        "Image Processing",
+        "Toolbox",
+        "Scilab"
+    ],
+    "Software Type": "Numerical Computation",
+    "Software Class": "Toolbox",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Image Processing",
+    "Research Discipline": ""
+}

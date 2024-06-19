@@ -1,0 +1,15 @@
+{
+    "Software": "intel-icc32",
+    "AI Description": "The intel-icc32 compiler is a part of the Intel Compiler Suite specifically designed for 32-bit architectures. It provides a set of tools and libraries for optimizing and building applications for Intel processors.",
+    "Core Features": "1. Support for 32-bit architectures\n2. Optimization for Intel processors\n3. Building and compiling applications\n4. Integration with Intel libraries\n5. Parallel computing support",
+    "General Tags": [
+        "Compiler",
+        "Software Development",
+        "Optimization"
+    ],
+    "Software Type": "Development Tools",
+    "Software Class": "Compiler",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

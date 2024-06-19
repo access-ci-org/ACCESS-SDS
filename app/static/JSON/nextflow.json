@@ -1,0 +1,22 @@
+{
+    "Software": "Nextflow",
+    "AI Description": "Nextflow is a powerful workflow manager that enables the writing of parallel and scalable computational workflows using native, containerized, or cloud-enabled execution environments.",
+    "Core Features": [
+        "Declarative and data-driven workflow definition using a domain-specific language (DSL)",
+        "Support for various execution environments including local, cluster, and cloud computing",
+        "Efficient handling of data dependencies and task parallelization",
+        "Integration with container technologies like Docker and Singularity",
+        "Built-in support for various bioinformatics tools and libraries",
+        "Monitoring and resume capabilities for fault-tolerant workflows"
+    ],
+    "General Tags": [
+        "Workflow Manager",
+        "Computational Biology",
+        "Data Science"
+    ],
+    "Software Type": "Open Source",
+    "Software Class": "Workflow Management System",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

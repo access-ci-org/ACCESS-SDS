@@ -1,0 +1,21 @@
+{
+    "Software": "r-purrr",
+    "AI Description": "The 'purrr' package in R is a functional programming toolkit that provides a consistent and easy-to-use set of tools for working with functions and vectors. It simplifies common tasks using functional programming patterns and allows for cleaner, more readable code.",
+    "Core Features": [
+        "Allows working with functions and vectors in a consistent manner",
+        "Enables functional programming patterns for tasks like iterating, mapping, and modifying data",
+        "Facilitates writing cleaner and more readable code",
+        "Supports parallel computing and computation with list-columns"
+    ],
+    "General Tags": [
+        "R Package",
+        "Functional Programming",
+        "Data Manipulation",
+        "Data Analysis"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Analytics & Data Science Tools",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Analytics",
+    "Research Discipline": "Informatics, Analytics & Information Science"
+}

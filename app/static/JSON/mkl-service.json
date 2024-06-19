@@ -1,0 +1,15 @@
+{
+    "Software": "mkl-service",
+    "AI Description": "mkl-service is part of the Intel Math Kernel Library (MKL) that provides optimized performance for mathematical, scientific, and engineering computations on Intel architectures. It provides a set of routines optimized for use with Intel processors.",
+    "Core Features": "1. Optimized mathematical functions for Intel processors\n2. Accelerated linear algebra and FFT functions\n3. Support for various numerical computations\n4. Integration with other Intel performance libraries\n5. Enhanced performance and scalability on Intel hardware",
+    "General Tags": [
+        "Mathematics",
+        "Computer Science",
+        "Software Engineering, Systems, And Development"
+    ],
+    "Software Type": "Mathematical Computing",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

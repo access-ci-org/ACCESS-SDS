@@ -1,0 +1,15 @@
+{
+    "Software": "proteinortho",
+    "AI Description": "ProteinOrtho is a versatile standalone tool for detecting orthologous proteins across multiple species. It generates ortholog groups based on pairwise comparison of proteins and supports different orthology definitions for accurate ortholog detection.",
+    "Core Features": "1. Detects orthologous proteins in multiple species\n2. Supports different orthology definitions\n3. Performs pairwise protein comparisons for accurate ortholog detection\n4. Can handle large-scale datasets efficiently\n5. Provides options for customization and parameter tuning",
+    "General Tags": [
+        "Bioinformatics",
+        "Protein Orthology",
+        "Ortholog Detection"
+    ],
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Computational Biology",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genetics",
+    "Research Discipline": "Biological Sciences"
+}

@@ -1,0 +1,15 @@
+{
+    "Software": "R colorbrewer",
+    "AI Description": "The RColorBrewer package is an R implementation of Cynthia Elaine Brewer's color schemes. These color schemes are designed to work well for choropleth maps and other data graphics.",
+    "Core Features": "1. Implementation of Cynthia Brewer's color schemes\n2. Designed for creating visually appealing data graphics, specifically choropleth maps\n3. Provides a variety of color palettes with different color combinations",
+    "General Tags": [
+        "R Package",
+        "Color Schemes",
+        "Data Visualization"
+    ],
+    "Software Type": "Data Visualization Tool",
+    "Software Class": "Statistical Analysis Tools",
+    "Research Field": "Applied Mathematics",
+    "Research Area": "Data Visualization",
+    "Research Discipline": "Other Mathematics"
+}

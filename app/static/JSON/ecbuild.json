@@ -1,0 +1,23 @@
+{
+    "Software": "ecbuild",
+    "AI Description": "ecBuild is a CMake-based build system generator for Earth system model (ESM) projects. It focuses on enabling easy configuration and management of complex ESM projects by automating the generation of build systems.",
+    "Core Features": [
+        "Automated generation of CMake-based build systems",
+        "Configuration management for Earth system model projects",
+        "Integration with ESM workflows and components",
+        "Facilitates model coupling and parallel execution"
+    ],
+    "General Tags": [
+        "Build System Generator",
+        "Earth System Model",
+        "Cmake-Based",
+        "Esm Project",
+        "Model Coupling",
+        "Parallel Execution"
+    ],
+    "Software Type": "Build System Generator",
+    "Software Class": "Development Tools",
+    "Research Field": "Earth & Environmental Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

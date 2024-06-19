@@ -1,0 +1,16 @@
+{
+    "Software": "glnexus",
+    "AI Description": "glnexus is a software tool for haplotype-aware variant calling and genotyping in large cohorts.",
+    "Core Features": "- Haplotype-aware variant calling\n- Genotyping in large cohorts\n- Detects complex variants\n- Scalable to handle large datasets\n- Supports VCF and BCF formats",
+    "General Tags": [
+        "Variant Calling",
+        "Genotyping",
+        "Haplotype-Aware",
+        "Bioinformatics"
+    ],
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Genomic Data Analysis",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

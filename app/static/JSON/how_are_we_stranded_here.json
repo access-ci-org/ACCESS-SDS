@@ -1,0 +1,22 @@
+{
+    "Software": "Stranded",
+    "AI Description": "Stranded is a bioinformatics tool designed for the analysis of RNA sequencing data. It provides a user-friendly interface for processing and interpreting RNA-seq data to extract meaningful insights.",
+    "Core Features": [
+        "Quality control of RNA-seq data",
+        "Alignment of sequence reads to a reference genome",
+        "Quantification of gene expression levels",
+        "Differential gene expression analysis",
+        "Visualization of RNA-seq results"
+    ],
+    "General Tags": [
+        "Bioinformatics",
+        "Rna Sequencing",
+        "Data Analysis",
+        "Gene Expression"
+    ],
+    "Software Type": "Analysis Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Transcriptomics",
+    "Research Discipline": "Bioinformatics"
+}

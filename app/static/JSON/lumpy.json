@@ -1,0 +1,14 @@
+{
+    "Software": "Lumpy",
+    "AI Description": "Lumpy is a structural variant caller that can detect various types of genomic variations using paired-end short reads, such as deletions, insertions, inversions, and duplications. It provides insights into the structural organization of a genome.",
+    "Core Features": "1. Detects structural variants from paired-end short reads\n2. Identifies deletions, insertions, inversions, and duplications\n3. Provides information on the structural organization of the genome\n4. Can be used for variant discovery and genotyping",
+    "General Tags": [
+        "Genomic Analysis",
+        "Structural Variant Detection"
+    ],
+    "Software Type": "Variant Caller",
+    "Software Class": "Bioinformatics",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomic Variation Analysis",
+    "Research Discipline": "Genomics"
+}

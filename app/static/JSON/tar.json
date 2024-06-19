@@ -1,0 +1,20 @@
+{
+    "Software": "tar",
+    "AI Description": "tar is a software utility used for packaging files together into an archive file often referred to as a \"tarball\". It is commonly used in Unix-like operating systems for creating, storing, and managing files in a single file.",
+    "Core Features": [
+        "Creating archive files",
+        "Adding files to existing archives",
+        "Extracting files from archives",
+        "Compressing archives with various compression algorithms"
+    ],
+    "General Tags": [
+        "File Archiving",
+        "Compression",
+        "Terminal"
+    ],
+    "Software Type": "File Management",
+    "Software Class": "Utility",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "N/A",
+    "Research Discipline": "Other"
+}

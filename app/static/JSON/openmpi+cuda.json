@@ -1,0 +1,21 @@
+{
+    "Software": "OpenMPI + CUDA",
+    "AI Description": "OpenMPI is an open-source Message Passing Interface (MPI) library that allows for parallel computing on a distributed memory system. CUDA (Compute Unified Device Architecture) is a parallel computing platform and programming model developed by NVIDIA for their GPUs. When used together, OpenMPI and CUDA enable high-performance parallel computing on GPU-accelerated clusters.",
+    "Core Features": [
+        "Message Passing Interface (MPI) for distributed memory systems",
+        "Parallel computing on GPU-accelerated clusters",
+        "Integration of CUDA for GPU programming",
+        "Support for high-performance and scalable computing"
+    ],
+    "General Tags": [
+        "Parallel Computing",
+        "Distributed Computing",
+        "Gpu Acceleration",
+        "High-Performance Computing"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Hpc Tool",
+    "Research Field": "Other Natural Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

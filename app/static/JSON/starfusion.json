@@ -1,0 +1,15 @@
+{
+    "Software": "StarFusion",
+    "AI Description": "StarFusion is a computational tool designed for the detection of fusion genes from RNA-Seq data. It employs a multi-step process involving alignment, filtering, and scoring to accurately identify fusion events in transcriptomic data. StarFusion incorporates advanced algorithms to enhance sensitivity and specificity in fusion gene detection.",
+    "Core Features": "1. Alignment of RNA-Seq reads\n2. Fusion event filtering\n3. Scoring and classification of fusion events\n4. Visualization of fusion gene candidates\n5. Integration with other bioinformatics pipelines",
+    "General Tags": [
+        "Computational Biology",
+        "Rna-Seq Analysis",
+        "Fusion Gene Detection"
+    ],
+    "Software Type": "Rna-Seq Analysis Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Transcriptomics",
+    "Research Discipline": "Bioinformatics"
+}

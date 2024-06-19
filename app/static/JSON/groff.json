@@ -1,0 +1,20 @@
+{
+    "Software": "groff",
+    "AI Description": "Groff (GNU troff) is a typesetting system that reads plain text mixed with formatting commands and produces formatted output. It's a modern implementation of the classic Unix troff typesetting system.",
+    "Core Features": [
+        "Typesetting system",
+        "Formatting commands",
+        "Formatted output",
+        "Unix troff implementation"
+    ],
+    "General Tags": [
+        "Typesetting",
+        "Text Formatting",
+        "Unix Utilities"
+    ],
+    "Software Type": "Typesetting System",
+    "Software Class": "Document Preparation System",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

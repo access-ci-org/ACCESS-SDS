@@ -343,10 +343,15 @@ $(document).ready(function()
                 },
                 target: [0],
             },
-
+            {   // show use case
+                targets:16,
+                render: function(data, type, row){
+                    return '<button class="btn btn-info example-use-btn" type="button">Use Example</button>';
+                }
+            },
             {
                 // Columns with clickable URLs
-                targets: [6,7,8,9,10], 
+                targets: [7,10,11,12,13,14], 
                 render: function(data, type, row) 
                 {
                     if (type === 'display' && data) 
@@ -355,17 +360,13 @@ $(document).ready(function()
                     }
                     return data;
                 },
-                
-                createdCell:function(td)
-                {
-                    $(td).css('word-wrap', 'break-all'); // Enable word-wrap
-                    $(td).css('max-width', '300px'); // Ensure max-width is applied
-                }
-                
             },
-            { width: '400px', targets: 6 },             // Software Description
-            { width: '300px', targets: [8, 9, 10] },    // Links
-            { width: '100px', targets: 11 },            // Version Info
+            { width: '50px' , targets: [0,2,15] },
+            { width: '100px', targets: [1,3,4,5,6,16] },
+            { width: '200px', targets: [9,10,11,12,13,14] },
+            { width: '250px', targets: [8,15] },
+            { width: '300px', targets: [7] },
+
         ],
     });
 
@@ -784,9 +785,9 @@ $(document).ready(function()
 /*/////////////////////////////////////////////////////
     Event Listener for Software 'Example Use' Modal  //
 *//////////////////////////////////////////////////////    
-    dynamicTable.on('click','.example-use-btn', function(e){
+    staticTable.on('click','.example-use-btn', function(e){
         e.stopPropagation()
-        let rowData = dynamicTable.row(e.target.closest('tr')).data();
+        let rowData = staticTable.row(e.target.closest('tr')).data();
         var softwareName = rowData[0];
         var encodedSoftwareName = encodeURIComponent(softwareName);
         $.ajax({

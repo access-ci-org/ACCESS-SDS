@@ -1,0 +1,15 @@
+{
+    "Software": "freexl",
+    "AI Description": "FreeXL is a library to extract data from Excel (.xls) spreadsheet files. The library allows for reading Excel files without the need for Microsoft Excel to be installed.",
+    "Core Features": "1. Reading data from Excel (.xls) files\n2. No dependency on Microsoft Excel\n3. Cross-platform compatibility\n4. Simple API for easy integration into other projects",
+    "General Tags": [
+        "Excel",
+        "Spreadsheet",
+        "Data Extraction"
+    ],
+    "Software Type": "Data Extraction",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

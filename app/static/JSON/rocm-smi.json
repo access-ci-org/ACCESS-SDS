@@ -1,0 +1,23 @@
+{
+    "Software": "rocm-smi",
+    "AI Description": "rocm-smi is a command-line program that allows users to monitor and manage AMD Radeon Open Compute (ROCm) System Management Interface (SMI) enabled GPUs. It provides detailed information about the current state of the GPUs and enables users to manage various aspects of the GPUs such as power management, fan speed control, temperature monitoring, and more.",
+    "Core Features": [
+        "Monitoring GPU parameters such as temperature, power usage, fan speed, and clock speeds",
+        "Managing power profiles for optimized performance",
+        "Controlling fan speed to maintain optimal cooling",
+        "Adjusting frequency and voltage settings for power efficiency",
+        "Viewing detailed GPU information and metrics"
+    ],
+    "General Tags": [
+        "Gpu Management",
+        "Performance Monitoring",
+        "System Management Interface",
+        "Amd Radeon",
+        "Rocm"
+    ],
+    "Software Type": "Command-Line Interface",
+    "Software Class": "System Monitoring & Management",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "",
+    "Research Discipline": ""
+}

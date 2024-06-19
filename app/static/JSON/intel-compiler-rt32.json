@@ -1,0 +1,28 @@
+{
+    "discipline_tags": [],
+    "research_area_tags": [],
+    "software_class_tags": [],
+    "software_type_tags": [],
+    "field_of_science_tags": [
+        "Computer and Information Sciences",
+        "Other Computer and Information Sciences"
+    ],
+    "Software": "Intel Compiler Runtime (rt32)",
+    "AI Description": "Intel Compiler Runtime (rt32) is a runtime library for applications compiled with Intel Compiler. It provides necessary runtime support for applications compiled with Intel Compiler, including math functions, memory management, and threading support.",
+    "Core Features": [
+        "Optimized math functions for Intel hardware",
+        "Memory management support",
+        "Threading support for parallel execution"
+    ],
+    "General Tags": [
+        "Runtime Library",
+        "Intel Compiler",
+        "Optimized Math Functions",
+        "Threading Support"
+    ],
+    "Software Type": "",
+    "Software Class": "",
+    "Research Field": "",
+    "Research Area": "",
+    "Research Discipline": ""
+}

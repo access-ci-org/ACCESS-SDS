@@ -1,0 +1,23 @@
+{
+    "Software": "Python 3.7",
+    "AI Description": "Python is a high-level, versatile, and interpreted programming language known for its readability and syntax simplicity, making it an excellent choice for both beginners and experienced developers. Python 3.7 is a specific version of Python that introduced several new features, optimizations, and security enhancements.",
+    "Core Features": [
+        "Easy-to-read syntax",
+        "Extensive standard library",
+        "Support for multiple programming paradigms (procedural, object-oriented, functional)",
+        "Dynamic typing and automatic memory management",
+        "Cross-platform compatibility",
+        "Large community and ecosystem of libraries and frameworks",
+        "Regularly updated with new features and improvements"
+    ],
+    "General Tags": [
+        "Programming Language",
+        "Interpreted Language",
+        "High-Level Language"
+    ],
+    "Software Type": "Development Tool",
+    "Software Class": "Programming Language",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": "Computer Science"
+}

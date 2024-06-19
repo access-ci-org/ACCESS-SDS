@@ -1,0 +1,23 @@
+{
+    "Software": "Intel Debugger",
+    "AI Description": "Intel Debugger is a powerful debugging tool for software developers working on Intel-based systems. It provides an interactive environment for debugging and analyzing code to identify and fix issues efficiently.",
+    "Core Features": [
+        "Interactive debugging capabilities",
+        "Support for Intel architectures",
+        "Advanced analysis tools",
+        "Integration with popular IDEs",
+        "Memory and performance profiling",
+        "Multi-threaded debugging support"
+    ],
+    "General Tags": [
+        "Debugger",
+        "Software Development",
+        "Code Analysis",
+        "Performance Optimization"
+    ],
+    "Software Type": "Debugger",
+    "Software Class": "Development Tools",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

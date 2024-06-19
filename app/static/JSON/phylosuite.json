@@ -1,0 +1,24 @@
+{
+    "Software": "PhyloSuite",
+    "AI Description": "PhyloSuite is a comprehensive and user-friendly phylogenetic analysis toolkit that integrates multiple bioinformatics tools for data preparation, alignment, model selection, phylogeny estimation, tree visualization, and more. It aims to streamline the phylogenomic workflow and provide a one-stop solution for researchers working in the field of evolutionary biology and phylogenetics.",
+    "Core Features": [
+        "Data preparation and processing for phylogenetic analysis",
+        "Sequence alignment and trimming",
+        "Model selection and identification",
+        "Phylogeny estimation using multiple methods",
+        "Visualization of phylogenetic trees",
+        "Automated workflow for efficient analysis"
+    ],
+    "General Tags": [
+        "Phylogenetic Analysis",
+        "Bioinformatics",
+        "Evolutionary Biology",
+        "Phylogenomics",
+        "Sequence Alignment"
+    ],
+    "Software Type": "Toolkit",
+    "Software Class": "Bioinformatics",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Phylogenetics",
+    "Research Discipline": "Systematics & Population Biology"
+}

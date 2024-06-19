@@ -1,0 +1,23 @@
+{
+    "Software": "r-backports",
+    "AI Description": "The r-backports package provides features and enhanced functionality for the R programming language by backporting new features found in recent versions of R to older versions of R. This allows users to access new functions and capabilities in older R versions to ensure compatibility with their existing workflows and packages.",
+    "Core Features": [
+        "Backports new features from recent R versions to older R versions",
+        "Enhances compatibility with existing R packages and code",
+        "Facilitates access to updated functions and capabilities"
+    ],
+    "General Tags": [
+        "R Package",
+        "Backporting",
+        "Compatibility",
+        "Functionality Enhancement"
+    ],
+    "Software Type": "Statistical Computing",
+    "Software Class": "Library",
+    "Research Field": [
+        "Mathematics",
+        "Statistics And Probability"
+    ],
+    "Research Area": "",
+    "Research Discipline": ""
+}

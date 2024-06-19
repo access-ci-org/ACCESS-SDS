@@ -1,0 +1,18 @@
+{
+    "Software": "attrdict3",
+    "AI Description": "attrdict3 is a Python library that provides a dictionary-like object that allows accessing keys like attributes, providing a more convenient way to work with nested dictionaries.",
+    "Core Features": [
+        "Attribute access to dictionary keys",
+        "Nested dictionary support",
+        "Easy to use and intuitive"
+    ],
+    "General Tags": [
+        "Python Library",
+        "Dictionary Wrapper"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Python Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

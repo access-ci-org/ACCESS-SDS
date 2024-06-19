@@ -1,0 +1,14 @@
+{
+    "Software": "libdeflate",
+    "AI Description": "libdeflate is a library for fast, flexible, and memory-efficient DEFLATE-based compressed data decompression.",
+    "Core Features": "1. High-speed decompression for DEFLATE-compressed data.\n2. Flexibility to allow multiple decompression strategies.\n3. Memory-efficiency for handling large volumes of compressed data.",
+    "General Tags": [
+        "Compression",
+        "Data Decompression"
+    ],
+    "Software Type": "Compression",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Software Engineering, Systems, & Development",
+    "Research Discipline": "Computer & Information Sciences"
+}

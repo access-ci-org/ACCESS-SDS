@@ -1,0 +1,21 @@
+{
+    "Software": "bali-phy",
+    "AI Description": "bali-phy is a software package for Bayesian inference of phylogenies, evolutionary rates, and divergence times. It is particularly designed for large-scale comparative genomic studies.",
+    "Core Features": "Some core features of bali-phy include Bayesian inference of phylogenetic trees, estimation of evolutionary rates and divergence times, handling large-scale datasets efficiently, and conducting rigorous statistical analyses.",
+    "General Tags": [
+        "Bayesian Inference",
+        "Phylogenetics",
+        "Evolutionary Biology",
+        "Genomics"
+    ],
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Computational Biology",
+    "Research Field": "Biological Sciences",
+    "Research Area": [
+        "Phylogenetics",
+        "Comparative Genomics"
+    ],
+    "Research Discipline": [
+        "Bioinformatics"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "Software": "Jansson",
+    "AI Description": "Jansson is a C library for encoding, decoding, and manipulating JSON data. It is designed to be efficient, powerful, and easy to use for integrating JSON parsing and generation capabilities into C/C++ applications.",
+    "Core Features": "1. Parsing and generation of JSON data.\n2. Supports precise error reporting for debugging.\n3. Extendable through custom memory allocation functions.\n4. Provides a flexible API for manipulating JSON data structures.\n5. High performance and low memory consumption.",
+    "General Tags": [
+        "Json",
+        "C Library",
+        "Data Parsing",
+        "Data Manipulation"
+    ],
+    "Software Type": "Data Processing",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

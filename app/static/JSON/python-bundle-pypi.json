@@ -1,0 +1,21 @@
+{
+    "Software": "python-bundle-pypi",
+    "AI Description": "Python-bundle-pypi is a collection of Python package bundles available on the Python Package Index (PyPI). These bundles consist of multiple Python libraries and utilities grouped together for convenience in installation and usage.",
+    "Core Features": [
+        "Collection of Python package bundles",
+        "Access to multiple Python libraries and utilities",
+        "Convenient installation and usage"
+    ],
+    "General Tags": [
+        "Python",
+        "Package",
+        "Pypi",
+        "Library",
+        "Utilities"
+    ],
+    "Software Type": "Utility",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

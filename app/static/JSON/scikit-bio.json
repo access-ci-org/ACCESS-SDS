@@ -1,0 +1,22 @@
+{
+    "Software": "scikit-bio",
+    "AI Description": "scikit-bio is a Python library for bioinformatics that provides tools for biological data manipulation, analysis, and visualization. It offers functionality for working with biological sequence data, phylogenetic trees, and related metadata.",
+    "Core Features": [
+        "Manipulation of biological sequence data",
+        "Phylogenetic tree analysis",
+        "Metadata handling",
+        "Sequence alignment",
+        "Statistical analysis for biological data"
+    ],
+    "General Tags": [
+        "Bioinformatics",
+        "Python Library",
+        "Biological Data Analysis",
+        "Sequence Analysis"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Data Analysis & Visualization",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Computational Biology",
+    "Research Discipline": "Bioinformatics"
+}

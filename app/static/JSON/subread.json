@@ -1,0 +1,16 @@
+{
+    "Software": "subread",
+    "AI Description": "subread is a software package for processing next-generation sequencing data, including read mapping and quantification of gene and genomic feature expression levels. It is designed to efficiently handle large volumes of sequencing data with high accuracy and speed.",
+    "Core Features": "1. Read mapping: Efficiently aligns reads to a reference genome or transcriptome.\n2. Quantification: Calculates expression levels of genes and genomic features.\n3. Versatile: Supports various sequencing protocols and data formats.\n4. Speed and accuracy: Provides fast and accurate analysis of NGS data.",
+    "General Tags": [
+        "Ngs",
+        "Bioinformatics",
+        "Sequencing",
+        "Alignment"
+    ],
+    "Software Type": "Ngs Analysis",
+    "Software Class": "Analysis Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomics",
+    "Research Discipline": "Bioinformatics"
+}

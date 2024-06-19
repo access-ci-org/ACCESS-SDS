@@ -1,0 +1,26 @@
+{
+    "Software": "Strique",
+    "AI Description": "Strique is a software tool designed for computational biology and bioinformatics applications. It focuses on analyzing and visualizing RNA sequence and secondary structure data, with a specific emphasis on RNA structural motifs and their biological functions.",
+    "Core Features": "1. Analyzing RNA sequences and secondary structures. 2. Identifying and characterizing RNA structural motifs. 3. Visualizing RNA structures and motifs. 4. Investigating the biological relevance of RNA motifs.",
+    "General Tags": [
+        "Bioinformatics",
+        "Computational Biology",
+        "Rna Analysis",
+        "Structural Motifs"
+    ],
+    "Software Type": [
+        "Analysis And Visualization Tool"
+    ],
+    "Software Class": [
+        "Bioinformatics Tool"
+    ],
+    "Research Field": [
+        "Biological Sciences"
+    ],
+    "Research Area": [
+        "Computational Biology"
+    ],
+    "Research Discipline": [
+        "Bioinformatics"
+    ]
+}

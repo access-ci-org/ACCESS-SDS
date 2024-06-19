@@ -1,0 +1,23 @@
+{
+    "Software": "CLP",
+    "AI Description": "CLP (Cbc, Lapack, and ParallelCbc) is an open-source linear programming solver that provides both a standalone solver and a framework for building custom optimization algorithms. It is designed to solve large-scale linear programming problems efficiently and offers a range of features for linear optimization.",
+    "Core Features": [
+        "Standalone linear programming solver",
+        "Framework for building custom optimization algorithms",
+        "Efficient solution of large-scale linear programming problems"
+    ],
+    "General Tags": [
+        "Linear Programming",
+        "Optimization",
+        "Large-Scale Problems",
+        "Open-Source"
+    ],
+    "Software Type": "Solver",
+    "Software Class": "Optimization Software",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "",
+    "Research Discipline": [
+        "Operations Research",
+        "Industrial Engineering"
+    ]
+}

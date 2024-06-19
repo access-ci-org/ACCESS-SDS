@@ -1,0 +1,17 @@
+{
+    "Software": "zfp",
+    "AI Description": "zfp is a compressed numerical array library providing high-throughput, low-overhead fixed-rate, fixed-precision encoding and compression of 1D and 2D scientific data.",
+    "Core Features": "1. High-throughput compression of scientific data.\n2. Low-overhead fixed-rate, fixed-precision encoding.\n3. Supports compression and decompression of 1D and 2D numerical arrays.\n4. Designed for use with scientific data.",
+    "General Tags": [
+        "Numerical Array",
+        "Compression",
+        "Scientific Data"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Data Compression",
+    "Research Field": [
+        "Computer And Information Sciences"
+    ],
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,20 @@
+{
+    "Software": "anvio",
+    "AI Description": "Anvi'o is an analysis and visualization platform for omics data. It is designed to help researchers explore complex microbial datasets and perform various tasks such as binning, genome assembly, metagenomic analysis, and visualization.",
+    "Core Features": "Some core features of Anvi'o include metagenomic binning, interactive data exploration, genome assembly visualization, multi-omics integration, and phylogenetic profiling.",
+    "General Tags": [
+        "Omics Data Analysis",
+        "Microbiome",
+        "Metagenomics",
+        "Bioinformatics"
+    ],
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Analysis & Visualization Platform",
+    "Research Field": "Biological Sciences",
+    "Research Area": [
+        "Microbiome Research"
+    ],
+    "Research Discipline": [
+        "Biological Sciences"
+    ]
+}

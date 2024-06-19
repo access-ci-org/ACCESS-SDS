@@ -1,0 +1,18 @@
+{
+    "Software": "gcccore",
+    "AI Description": "gcccore refers to the core components of the GNU Compiler Collection (GCC), which is a collection of compilers for several programming languages. These core components provide essential functionality for compiling code and generating executable programs.",
+    "Core Features": "Key features of gcccore include optimizing compilers for various programming languages such as C, C++, and Fortran, support for multiple architectures and operating systems, advanced optimization techniques, and extensive error-checking capabilities.",
+    "General Tags": [
+        "Compiler",
+        "Programming",
+        "Software Development"
+    ],
+    "Software Type": "Core Component",
+    "Software Class": "Compiler",
+    "Research Field": [
+        "Computer And Information Sciences",
+        "Software Engineering, Systems, And Development"
+    ],
+    "Research Area": "",
+    "Research Discipline": ""
+}

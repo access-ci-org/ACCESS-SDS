@@ -1,0 +1,15 @@
+{
+    "Software": "r-quadprog",
+    "AI Description": "r-quadprog is an R interface to the qhull library's QP solver, which is a specialized solver for convex quadratic programming problems. It provides users with the necessary tools to solve quadratic programming problems efficiently within the R environment.",
+    "Core Features": "1. Solves convex quadratic programming (QP) problems\n2. Provides an interface to the qhull library's QP solver\n3. Efficiently handles large-scale QP problems\n4. Allows users to specify constraints and objective functions for QP",
+    "General Tags": [
+        "R Package",
+        "Quadratic Programming",
+        "Convex Optimization"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Mathematical Optimization Software",
+    "Research Field": "Mathematics",
+    "Research Area": "Optimization",
+    "Research Discipline": "Applied Mathematics"
+}

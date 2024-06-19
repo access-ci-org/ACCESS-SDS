@@ -1,0 +1,20 @@
+{
+    "Software": "libmatheval",
+    "AI Description": "Libmatheval is a library for evaluating mathematical expressions on the fly. It supports a wide range of mathematical functions and operations, making it a versatile tool for numerical computations and symbolic manipulation.",
+    "Core Features": [
+        "Supports evaluation of mathematical expressions",
+        "Extensive library of mathematical functions and operations",
+        "Handles complex number arithmetic",
+        "Can parse and evaluate user-defined functions"
+    ],
+    "General Tags": [
+        "Mathematical Expression Evaluation",
+        "Mathematical Functions",
+        "Symbolic Manipulation"
+    ],
+    "Software Type": "Computational Software",
+    "Software Class": "Library",
+    "Research Field": "Other Mathematics",
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,21 @@
+{
+    "Software": "WiggleTools",
+    "AI Description": "WiggleTools is a software library for the analysis and visualization of data stored in the common genomics Wiggle track format (WIG), allowing researchers to efficiently manipulate, aggregate, and visualize large-scale genomic datasets.",
+    "Core Features": [
+        "Analysis of genomic data in the Wiggle track format (WIG)",
+        "Efficient manipulation and aggregation of large-scale genomic datasets",
+        "Visualization of genomic data",
+        "Integration with other bioinformatics tools"
+    ],
+    "General Tags": [
+        "Genomics",
+        "Bioinformatics",
+        "Data Analysis",
+        "Visualization"
+    ],
+    "Software Type": "Data Analysis",
+    "Software Class": "Library",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomics",
+    "Research Discipline": "Bioinformatics"
+}

@@ -1,0 +1,16 @@
+{
+    "Software": "cfitsio",
+    "AI Description": "CFITSIO is a library of C and Fortran subroutines for reading and writing data files in FITS (Flexible Image Transport System) data format.",
+    "Core Features": "CFITSIO provides a comprehensive set of interfaces for reading, writing, and manipulating FITS files. It supports various data types, compression methods, and image formats commonly used in astronomical and scientific data.",
+    "General Tags": [
+        "Astronomy",
+        "Data Processing",
+        "File Format",
+        "Fits"
+    ],
+    "Software Type": "Data Processing",
+    "Software Class": "Library",
+    "Research Field": "Physical Sciences",
+    "Research Area": "Astronomy",
+    "Research Discipline": "Astronomy & Planetary Sciences"
+}

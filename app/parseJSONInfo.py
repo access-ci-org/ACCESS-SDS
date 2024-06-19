@@ -136,9 +136,9 @@ def jsonSanitizer(file):
     
     # Capitalize tags for better searching
     count = 0
-    for tag in data['General Tags']:
-        tag = tag.title()
-        data['General Tags'][count] = tag
+    for gTag in data['General Tags']:
+        gTag = gTag.title()
+        data['General Tags'][count] = gTag
         count = count + 1
 
     # Check for 'Additional Tags'
@@ -147,6 +147,7 @@ def jsonSanitizer(file):
     
     # Remove tags from 'Additional Tags' nest
     #print("Checking additional tags...")
+
     for aError in add_tag_names:
         #print(aError)
         if aError in data:
@@ -154,35 +155,50 @@ def jsonSanitizer(file):
                 if tag in data[aError]:
                     data[tag] = data[aError][tag] 
                     data[aError].pop(tag)
-                    # Check for empty list, which will break things later on
-                    if data[tag] == []:
-                        data[tag] = ""
                 else:
                     data[tag] = ""
             data.pop(aError)
-
-    # Sanitize tag names
+           
+    # Sanitize tag names and contents
     for tag in additional_tags_to_fix:
+        # Check for empty or null list, which will break things later on
+        if tag not in data or data[tag] == [] or data[tag] is None:
+                data[tag] = ""
         if tag in data:
-            #print(tag)
             match tag:
                 case 'software_type':
-                    data['Software Type'] = data.pop('software_type').title()
+                    data['Software Type'] = data.pop('software_type')
+                    tag = 'Software Type'
                 case 'software_class':
-                    data['Software Class'] = data.pop('software_class').title()
+                    data['Software Class'] = data.pop('software_class')
+                    tag = 'Software Class'
                 case 'research_field':
-                    data['Research Field'] = data.pop('research_field').title()
-                    if "And" in data['Research Field']:
-                        data['Research Field'] = data['Research Field'].replace("And", "&")
+                    data['Research Field'] = data.pop('research_field')
+                    tag = 'Research Field'
                 case 'field_of_science':
                     if 'Research Field' not in data or data['Research Field'] == "":
-                            data['Research Field'] = data.pop('field_of_science').title()
+                            data['Research Field'] = data.pop('field_of_science')
                     else:
                         data.pop('field_of_science')
+                    tag = 'Research Field'
                 case 'research_discipline':
-                    data['Research Discipline'] = data.pop('research_discipline').title()
+                    data['Research Discipline'] = data.pop('research_discipline')
+                    tag = 'Research Discipline'
                 case 'research_area':
-                    data['Research Area'] = data.pop('research_area').title()
+                    data['Research Area'] = data.pop('research_area')
+                    tag = 'Research Area'
+            
+            if isinstance(data[tag], list):
+                count = 0
+                for subtag in data[tag]:
+                    subtag = subtag.title()
+                    data[tag][count] = subtag
+                    count = count + 1
+            else:
+                data[tag] = data[tag].title()
+            
+            if "And" in data[tag]:
+                data[tag] = data[tag].replace("And", "&")
 
     # Save updated JSON file
     with open(file, 'w') as infile:

@@ -1,0 +1,19 @@
+{
+    "Software": "ncbi-table2asn",
+    "AI Description": "NCBI Table2ASN is a tool provided by the National Center for Biotechnology Information (NCBI) for converting simple Sanger sequencing results and assembly annotations into ASN.1 format, which is required for submission to GenBank. It automates the process of creating sequence records with annotations and metadata that are compatible with GenBank submission standards.",
+    "Core Features": [
+        "Converts Sanger sequencing results and assembly annotations to ASN.1 format",
+        "Automates creation of sequence records with annotations and metadata",
+        "Ensures compatibility with GenBank submission standards"
+    ],
+    "General Tags": [
+        "Bioinformatics",
+        "Sequence Annotation",
+        "Genbank Submission"
+    ],
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Data Management & Analysis",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Bioinformatics",
+    "Research Discipline": "Biological Sciences"
+}

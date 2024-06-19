@@ -1,0 +1,21 @@
+{
+    "Software": "AGAT",
+    "AI Description": "AGAT (Annotation-based Genome Assembly Toolkit) is a pipeline designed for comprehensive annotation and evaluation of genome assemblies.",
+    "Core Features": [
+        "Genome assembly annotation",
+        "Evaluation of genome assemblies",
+        "Identification of genes and regulatory elements",
+        "Functional annotation of genomic features"
+    ],
+    "General Tags": [
+        "Genome Assembly",
+        "Annotation",
+        "Evaluation",
+        "Genomic Analysis"
+    ],
+    "Software Type": "Pipeline",
+    "Software Class": "Bioinformatics",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genome Annotation",
+    "Research Discipline": "Genomics"
+}

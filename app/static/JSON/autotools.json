@@ -1,0 +1,15 @@
+{
+    "Software": "Autotools",
+    "AI Description": "Autotools is a suite of programming tools designed to assist in making source code packages portable across different Unix-like systems. It includes autoconf, automake, libtool, and others and is commonly used in open-source software projects.",
+    "Core Features": "1. Configuration scripts generation for software builds\n2. Dependency tracking and handling\n3. Portable Makefiles generation\n4. Simplified cross-platform compilation\n5. Integration with various programming languages and build systems",
+    "General Tags": [
+        "Programming",
+        "Software Development",
+        "Build Automation"
+    ],
+    "Software Type": "Build Automation",
+    "Software Class": "Development Tools",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Software Development",
+    "Research Discipline": "Software Engineering, Systems, & Development"
+}

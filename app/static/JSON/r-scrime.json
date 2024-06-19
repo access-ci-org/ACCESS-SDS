@@ -1,0 +1,21 @@
+{
+    "Software": "R-scrime",
+    "AI Description": "R-scrime is an R package for sequential change-point detection in genomic sequences. It provides various methods for detecting structural changes in gene order in a given set of genomes.",
+    "Core Features": [
+        "Sequential change-point detection",
+        "Genomic sequence analysis",
+        "Structural changes detection in gene order",
+        "Comparison of gene order across genomes"
+    ],
+    "General Tags": [
+        "R Package",
+        "Genomics",
+        "Bioinformatics",
+        "Sequence Analysis"
+    ],
+    "Software Type": "Sequence Analysis Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomic Sequence Analysis",
+    "Research Discipline": "Genomics"
+}

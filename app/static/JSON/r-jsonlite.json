@@ -1,0 +1,19 @@
+{
+    "Software": "r-jsonlite",
+    "AI Description": "r-jsonlite is an R package that provides a comprehensive and lightweight interface for interacting with JSON data. It allows for parsing JSON content, generating JSON from R objects, and converting JSON data to R objects.",
+    "Core Features": [
+        "Parsing JSON content",
+        "Generating JSON from R objects",
+        "Converting JSON data to R objects"
+    ],
+    "General Tags": [
+        "R Package",
+        "Json Data Processing",
+        "Data Manipulation"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Data Processing",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

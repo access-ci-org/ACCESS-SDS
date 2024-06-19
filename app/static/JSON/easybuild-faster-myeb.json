@@ -1,0 +1,15 @@
+{
+    "Software": "EasyBuild",
+    "AI Description": "EasyBuild is a software build and installation framework that allows you to manage (scientific) software on High Performance Computing (HPC) systems in an efficient way.",
+    "Core Features": "1. Automated software build process\n2. Dependency resolution\n3. Module files generation\n4. Support for different HPC systems and software stacks\n5. Easy integration with module systems like Lmod\n6. Extensive software repository\n7. Version control and updates",
+    "General Tags": [
+        "Software Management",
+        "Hpc",
+        "Scientific Computing"
+    ],
+    "Software Type": "Tool",
+    "Software Class": "Infrastructure & Instrumentation",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "",
+    "Research Discipline": ""
+}

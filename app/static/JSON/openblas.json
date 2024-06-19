@@ -1,0 +1,21 @@
+{
+    "Software": "OpenBLAS",
+    "AI Description": "OpenBLAS is an open-source implementation of the Basic Linear Algebra Subprograms (BLAS) library with optimized functions for matrix operations and linear algebra computations. It provides fast and efficient routines for common linear algebra operations.",
+    "Core Features": [
+        "Optimized BLAS functions",
+        "Support for various mathematical operations on matrices",
+        "High performance and efficiency",
+        "Multi-threading support for parallel processing"
+    ],
+    "General Tags": [
+        "Linear Algebra",
+        "Blas Library",
+        "Optimized Functions",
+        "Open Source"
+    ],
+    "Software Type": "",
+    "Software Class": "",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,16 @@
+{
+    "Software": "gmpy2",
+    "AI Description": "gmpy2 is a Python library for arbitrary-precision arithmetic within Python using the GMP and MPFR libraries. It provides efficient multiple-precision arithmetic in Python and supports both integer and floating-point arithmetic with arbitrary precision.",
+    "Core Features": "1. High-performance multiple-precision arithmetic\n2. Arbitrary-precision integer arithmetic\n3. Arbitrary-precision floating-point arithmetic\n4. Compatible with Python's math module\n5. Supports complex numbers and mathematical functions",
+    "General Tags": [
+        "Python Library",
+        "Arbitrary-Precision Arithmetic",
+        "Gmp Library",
+        "Mpfr Library"
+    ],
+    "Software Type": "Python Library",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

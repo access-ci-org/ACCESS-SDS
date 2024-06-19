@@ -1,0 +1,15 @@
+{
+    "Software": "RapMap",
+    "AI Description": "RapMap is a fast and accurate software for mapping RNA-seq reads to reference transcripts. It leverages pseudoalignment-based mapping to achieve high mapping speeds while maintaining high sensitivity and specificity.",
+    "Core Features": "1. Pseudoalignment-based mapping for fast mapping speeds.\n2. Achieves high sensitivity and specificity in RNA-seq read mapping.\n3. Supports various input formats such as FASTQ and FASTA.\n4. Provides a user-friendly interface for easy execution and result interpretation.",
+    "General Tags": [
+        "Rna-Seq",
+        "Read Mapping",
+        "Transcript Mapping"
+    ],
+    "Software Type": "Tool",
+    "Software Class": "Bioinformatics",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genetics",
+    "Research Discipline": "Biological Sciences"
+}

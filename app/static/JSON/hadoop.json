@@ -1,0 +1,22 @@
+{
+    "Software": "Hadoop",
+    "AI Description": "Hadoop is an open-source framework used for distributed storage and processing of large sets of data on computer clusters using simple programming models.",
+    "Core Features": [
+        "Distributed storage",
+        "Distributed processing",
+        "Fault tolerance",
+        "Scalability",
+        "Flexibility",
+        "High availability"
+    ],
+    "General Tags": [
+        "Big Data",
+        "Data Processing",
+        "Distributed Computing"
+    ],
+    "Software Type": "Framework",
+    "Software Class": "Data Processing",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

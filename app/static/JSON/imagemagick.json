@@ -1,0 +1,21 @@
+{
+    "Software": "ImageMagick",
+    "AI Description": "ImageMagick is a free and open-source software suite for creating, editing, composing, or converting bitmap images.",
+    "Core Features": [
+        "Supports a wide range of image formats",
+        "Batch processing",
+        "Image editing and manipulation",
+        "Conversion between different image formats",
+        "Command-line interface"
+    ],
+    "General Tags": [
+        "Image Processing",
+        "Graphics Editing",
+        "Conversion Tool"
+    ],
+    "Software Type": "Utility",
+    "Software Class": "Image Processing",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

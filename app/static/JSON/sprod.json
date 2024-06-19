@@ -1,0 +1,14 @@
+{
+    "Software": "sprod",
+    "AI Description": "A high-performance computational package for simulating complex systems in physics and materials science. It provides a range of tools and algorithms for conducting large-scale simulations and analyzing the properties of physical systems.",
+    "Core Features": "1. Advanced simulation algorithms for modeling complex physical systems.\n2. Efficient parallel computing capabilities for high-performance simulations.\n3. Tools for analyzing and visualizing simulation results.\n4. Support for a variety of input file formats and data manipulation tasks.",
+    "General Tags": [
+        "Computational Software",
+        "Hpc Tools"
+    ],
+    "Software Type": "Computational Package",
+    "Software Class": "Simulation Software",
+    "Research Field": "Physical Sciences",
+    "Research Area": "Materials Science",
+    "Research Discipline": "Condensed Matter Physics"
+}

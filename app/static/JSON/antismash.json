@@ -1,0 +1,22 @@
+{
+    "Software": "AntiSMASH",
+    "AI Description": "AntiSMASH is a comprehensive software tool for the automatic genome mining, analysis, and annotation of biosynthetic gene clusters (BGCs) in microbial genomes. It is widely used in bioinformatics and drug discovery research to identify and characterize secondary metabolite biosynthesis pathways.",
+    "Core Features": [
+        "Detection and annotation of gene clusters involved in secondary metabolite production",
+        "Prediction of putative functions of biosynthetic enzymes",
+        "Identification of potential bioactive compounds and natural products",
+        "Visualization of gene clusters and biosynthetic pathways",
+        "Integration of multiple bioinformatics tools and databases"
+    ],
+    "General Tags": [
+        "Bioinformatics",
+        "Genome Mining",
+        "Biosynthetic Gene Clusters",
+        "Secondary Metabolites"
+    ],
+    "Software Type": "Annotation Tool",
+    "Software Class": "Genomics & Bioinformatics Tools",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomics",
+    "Research Discipline": "Bioinformatics"
+}

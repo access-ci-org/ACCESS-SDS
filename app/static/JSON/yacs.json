@@ -1,0 +1,16 @@
+{
+    "Software": "yacs",
+    "AI Description": "YACS (Yet Another Constraint Solver) is a Python-based constraint satisfaction problem (CSP) solver that allows for the modeling and solving of constraint problems using a high-level interface.",
+    "Core Features": "Some core features of YACS include support for both global and local constraints, various search strategies (backtracking, local search, hybrid), and the ability to define custom constraint propagation algorithms.",
+    "General Tags": [
+        "Constraint Satisfaction Problem",
+        "Csp Solver",
+        "Python-Based",
+        "Constraint Modeling"
+    ],
+    "Software Type": "Optimization Tool",
+    "Software Class": "Constraint Satisfaction Problem Solver",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

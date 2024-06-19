@@ -1,0 +1,15 @@
+{
+    "Software": "libdap",
+    "AI Description": "The libdap (Data Access Protocol) library is a software package that provides an implementation of DAP (Data Access Protocol) for accessing and sharing scientific data over the internet. DAP is a protocol that allows users to access and query remote data repositories in a unified and standardized manner.",
+    "Core Features": "1. Implementation of the Data Access Protocol (DAP) for accessing scientific data over the internet.\n2. Allows users to access and query remote data repositories.\n3. Provides a standardized and unified method for sharing and accessing scientific data.\n4. Supports various data formats and protocols for efficient data transfer.",
+    "General Tags": [
+        "Data Access",
+        "Scientific Data",
+        "Internet Protocol"
+    ],
+    "Software Type": "Data Access",
+    "Software Class": "Library",
+    "Research Field": "Other Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,21 @@
+{
+    "Software": "netcdf-combined",
+    "AI Description": "NetCDF-COMBINED is a package that combines multiple NetCDF files together to create a single output file. It is specifically designed for manipulating large datasets stored in the NetCDF format.",
+    "Core Features": [
+        "Combines multiple NetCDF files into a single output file",
+        "Supports large datasets",
+        "Facilitates data manipulation and organization",
+        "Compatible with NetCDF format"
+    ],
+    "General Tags": [
+        "Data Manipulation",
+        "Netcdf Files",
+        "Large Datasets",
+        "File Organization"
+    ],
+    "Software Type": "Utility",
+    "Software Class": "Data Processing Tool",
+    "Research Field": "Other Natural Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

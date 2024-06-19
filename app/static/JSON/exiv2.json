@@ -1,0 +1,17 @@
+{
+    "Software": "exiv2",
+    "AI Description": "Exiv2 is a C++ library and a command-line utility to manage image metadata. It provides fast and easy read and write access to the Exif, IPTC, and XMP metadata of images in various formats.",
+    "Core Features": "1. Supports reading and writing Exif metadata in various image formats\n2. Supports reading and writing IPTC and XMP metadata\n3. Command-line utility for batch processing of image metadata\n4. Embeds, extracts, and deletes metadata from images\n5. Supports various image formats including JPEG, TIFF, PNG, and more",
+    "General Tags": [
+        "Metadata Management",
+        "Image Processing",
+        "Command-Line Utility"
+    ],
+    "Software Type": "Metadata Management",
+    "Software Class": "Library, Utility",
+    "Research Field": [
+        "Computer And Information Sciences"
+    ],
+    "Research Area": "",
+    "Research Discipline": ""
+}

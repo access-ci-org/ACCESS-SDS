@@ -1,0 +1,15 @@
+{
+    "Software": "libnsl",
+    "AI Description": "The libnsl library provides an interface for applications to make use of the services provided by the Network Services Layer (NSL). It offers functions that allow applications to communicate over the network using a variety of protocols.",
+    "Core Features": "1. Provides network communication services.\n2. Supports multiple network protocols.\n3. Facilitates network-aware applications.",
+    "General Tags": [
+        "Network Services",
+        "Communication",
+        "Protocols"
+    ],
+    "Software Type": "System Software",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,27 @@
+{
+    "Software": "Shapely",
+    "AI Description": "Shapely is a Python library for manipulation and analysis of planar geometric objects. It is based on the widely deployed GEOS (the engine of PostGIS) and JTS (from which GEOS is ported) libraries.",
+    "Core Features": [
+        "Creation of geometric objects like points, lines, and polygons",
+        "Geometric operations like intersection, union, and buffering",
+        "Spatial analysis functions such as distance measurements and polygon splitting",
+        "Support for manipulating and analyzing geometric shapes in 2D space"
+    ],
+    "General Tags": [
+        "Python Library",
+        "Geospatial Analysis",
+        "Geometric Objects"
+    ],
+    "Software Type": "Python Library",
+    "Software Class": "Library",
+    "Research Field": [
+        "Earth And Environmental Sciences"
+    ],
+    "Research Area": [
+        "Geospatial Analysis",
+        "Geometric Modeling"
+    ],
+    "Research Discipline": [
+        "Geographic Information Science"
+    ]
+}

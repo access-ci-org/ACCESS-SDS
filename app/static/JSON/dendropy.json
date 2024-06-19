@@ -1,0 +1,23 @@
+{
+    "Software": "DendroPy",
+    "AI Description": "DendroPy is a flexible and modular phylogenetic computing library in Python, offering reading, writing, simulation, and manipulation of phylogenetic trees and associated data.",
+    "Core Features": [
+        "Read and write phylogenetic tree files in various formats",
+        "Perform tree manipulations, transformations, and calculations",
+        "Simulate trees under a variety of models and conditions",
+        "Analyze and visualize phylogenetic data",
+        "Supports a wide range of phylogenetic analysis tools and methods"
+    ],
+    "General Tags": [
+        "Phylogenetics",
+        "Computational Biology",
+        "Python Library",
+        "Bioinformatics",
+        "Phylogenetic Trees"
+    ],
+    "Software Type": "Computational",
+    "Software Class": "Library",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Evolutionary Biology",
+    "Research Discipline": "Biological Sciences"
+}

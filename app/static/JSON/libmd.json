@@ -1,0 +1,15 @@
+{
+    "Software": "libmd",
+    "AI Description": "libmd is a library for molecular dynamics simulations that allows for the integration of equations of motion for particles interacting with different potentials.",
+    "Core Features": "1. Integration of equations of motion for particles\n2. Support for different interaction potentials\n3. Molecular dynamics simulations capability",
+    "General Tags": [
+        "Molecular Dynamics",
+        "Simulation",
+        "Library"
+    ],
+    "Software Type": "Computational",
+    "Software Class": "Library",
+    "Research Field": "Physical Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

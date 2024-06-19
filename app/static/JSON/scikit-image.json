@@ -1,0 +1,20 @@
+{
+    "Software": "scikit-image",
+    "AI Description": "scikit-image is an open-source image processing library for the Python programming language that is designed to work with NumPy arrays. It provides a collection of algorithms for image processing, segmentation, feature extraction, and more.",
+    "Core Features": [
+        "Image processing algorithms",
+        "Feature extraction",
+        "Segmentation techniques",
+        "Color space manipulation",
+        "Filters and edge detection"
+    ],
+    "General Tags": [
+        "Image Processing",
+        "Python Library"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Image Processing Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

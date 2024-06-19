@@ -1,0 +1,18 @@
+{
+    "Software": "R Snow",
+    "AI Description": "R Snow is an R package that provides support for simple network of workstations (SNOW) parallel computing in R, allowing users to distribute and manage parallel computations across a cluster of machines.",
+    "Core Features": [
+        "Support for parallel computing in R using simple network of workstations (SNOW)",
+        "Ability to distribute and manage computations across a cluster of machines",
+        "Facilitates parallel execution of R code for improved performance and efficiency"
+    ],
+    "General Tags": [
+        "Parallel Computing",
+        "R Package"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Parallel Computing Software",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Parallel & Distributed Computing",
+    "Research Discipline": "Other Computer & Information Sciences"
+}

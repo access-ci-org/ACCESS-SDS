@@ -1,0 +1,23 @@
+{
+    "Software": "libtiff",
+    "AI Description": "libtiff is a library for reading and writing TIFF (Tagged Image File Format) files. It provides support for handling images and documents in various uncompressed and compressed formats.",
+    "Core Features": [
+        "Read and write TIFF files",
+        "Support for various compression schemes like LZW, ZIP, JPEG, etc.",
+        "Ability to handle different color spaces and depths",
+        "Integration with other image processing libraries",
+        "Cross-platform compatibility"
+    ],
+    "General Tags": [
+        "Image Processing",
+        "File Format",
+        "Library",
+        "Tiff",
+        "Image Storage"
+    ],
+    "Software Type": "Image Processing",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Image Processing",
+    "Research Discipline": ""
+}

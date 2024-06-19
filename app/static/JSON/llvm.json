@@ -1,0 +1,14 @@
+{
+    "Software": "LLVM",
+    "AI Description": "The LLVM Project is a collection of modular and reusable compiler and toolchain technologies. LLVM is used for developing compiler back-ends, static analysis tools, and JIT compilation engines.",
+    "Core Features": "LLVM provides a modern code generation infrastructure with a strong focus on compile-time, run-time, and language-agnostic components. It includes a wide range of compiler technologies, such as front-end parsing, optimization passes, and code generation. LLVM also offers a powerful intermediate representation (IR) that facilitates optimization and portability across different architectures.",
+    "General Tags": [
+        "Compiler",
+        "Toolchain"
+    ],
+    "Software Type": "Compiler",
+    "Software Class": "Programming & Development Tools",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

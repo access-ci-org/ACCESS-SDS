@@ -1,0 +1,15 @@
+{
+    "Software": "Qwt",
+    "AI Description": "Qwt is a robust library for developing Qt applications that require 2D plotting and data visualization. It provides a set of classes and functions for creating various types of plots and graphs with different customization options.",
+    "Core Features": "1. Support for various plot types such as curves, bars, histograms, scatter plots, etc.\n2. Customizable plotting attributes including axis scaling, labeling, and styling.\n3. Integration with Qt's event handling mechanisms for interactive plots.\n4. Exporting plots to different image formats like PNG, JPEG, EPS, etc.\n5. Extensive documentation and examples to assist developers in using the library effectively.",
+    "General Tags": [
+        "2D Plotting",
+        "Data Visualization",
+        "Qt Applications"
+    ],
+    "Software Type": "Libraries",
+    "Software Class": "Visualization & Human-Computer Systems",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,20 @@
+{
+    "Software": "perftools-lite-loops",
+    "AI Description": "The perftools-lite-loops software is a performance monitoring tool that focuses on analyzing loop-level performance in applications. It is designed to provide detailed insights into loop optimizations, dependencies, and potential performance bottlenecks in code.",
+    "Core Features": [
+        "Analyzing loop-level performance",
+        "Identifying loop optimizations",
+        "Detecting dependencies within loops",
+        "Pinpointing performance bottlenecks"
+    ],
+    "General Tags": [
+        "Performance Monitoring",
+        "Optimization",
+        "Debugging"
+    ],
+    "Software Type": "Analysis Tool",
+    "Software Class": "Performance Monitoring Tool",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

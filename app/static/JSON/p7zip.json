@@ -1,0 +1,21 @@
+{
+    "Software": "p7zip",
+    "AI Description": "p7zip is a command-line file archiver that supports the 7z compression format and various other archive formats. It is based on the open-source LZMA compression algorithm.",
+    "Core Features": [
+        "Supports creating and extracting 7z, XZ, GZIP, TAR, ZIP, and other archive formats",
+        "High compression ratio with the use of the LZMA algorithm",
+        "Can be used in automation scripts and batch processing",
+        "Cross-platform compatibility on Windows, Linux, and macOS"
+    ],
+    "General Tags": [
+        "File Archiver",
+        "Compression Software",
+        "Command-Line Tool",
+        "Open-Source Software"
+    ],
+    "Software Type": "",
+    "Software Class": "",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

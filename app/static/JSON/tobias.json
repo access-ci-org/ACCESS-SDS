@@ -1,0 +1,19 @@
+{
+    "Software": "Tobias",
+    "AI Description": "Tobias is a software tool for analyzing biological sequence data, particularly focused on genomics.",
+    "Core Features": "Tobias provides functionalities for processing sequencing data, detecting genetic variations, identifying regulatory elements, and performing integrative genomics analyses.",
+    "General Tags": [
+        "Computational Biology",
+        "Genomics",
+        "Bioinformatics"
+    ],
+    "Software Type": "Bioinformatics",
+    "Software Class": "Data Analysis",
+    "Research Field": "Biological Sciences",
+    "Research Area": [
+        "Biological Sciences"
+    ],
+    "Research Discipline": [
+        "Genomics"
+    ]
+}

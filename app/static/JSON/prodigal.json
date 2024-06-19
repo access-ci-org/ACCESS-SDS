@@ -1,0 +1,19 @@
+{
+    "Software": "Prodigal",
+    "AI Description": "Prodigal is a microbial gene finding program that identifies protein-coding regions in microbial genomes. It uses a combination of intrinsic and extrinsic signals to accurately predict genes in bacterial and archaeal genomes.",
+    "Core Features": [
+        "Gene prediction in microbial genomes",
+        "Utilizes a combination of intrinsic and extrinsic signals for accuracy",
+        "Supports prediction of both start and stop codons",
+        "Handles overlapping genes and fragmented assemblies"
+    ],
+    "General Tags": [
+        "Gene Prediction",
+        "Microbial Genomes"
+    ],
+    "Software Type": "Bioinformatics",
+    "Software Class": "Gene Prediction",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genetics",
+    "Research Discipline": "Biological Sciences"
+}

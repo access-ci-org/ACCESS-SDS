@@ -1,0 +1,24 @@
+{
+    "Software": "ONNX Runtime",
+    "AI Description": "ONNX Runtime is a high-performance scoring engine for Open Neural Network Exchange (ONNX) models. It provides an easy and efficient way to deploy and run ONNX models across a variety of hardware platforms and devices.",
+    "Core Features": [
+        "Efficient inference of ONNX models",
+        "Cross-platform support for Windows, Linux, and macOS",
+        "Hardware acceleration with CUDA and TensorRT support",
+        "Ability to integrate with various programming languages and frameworks like Python, C++, and .NET"
+    ],
+    "General Tags": [
+        "Machine Learning",
+        "Deep Learning",
+        "Model Deployment",
+        "Inference Engine"
+    ],
+    "Software Type": "Runtime Engine",
+    "Software Class": "Deployment Tool",
+    "Research Field": [
+        "Computer And Information Sciences",
+        "Artificial Intelligence And Intelligent Systems"
+    ],
+    "Research Area": "",
+    "Research Discipline": ""
+}

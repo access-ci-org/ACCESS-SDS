@@ -1,0 +1,15 @@
+{
+    "Software": "gzip",
+    "AI Description": "gzip is a file compression and decompression tool used to reduce the size of files for storage or transfer purposes. It is a widely used compression utility in Unix-like operating systems.",
+    "Core Features": "Compression and decompression of files, support for various compression levels, integration with tar for creating compressed archives, fast and efficient compression algorithms.",
+    "General Tags": [
+        "File Compression",
+        "Data Storage",
+        "Data Transfer"
+    ],
+    "Software Type": "Compression Tool",
+    "Software Class": "Utility",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,23 @@
+{
+    "Software": "VarScan",
+    "AI Description": "VarScan is a platform-independent variant caller for massively parallel sequencing data, focused on variant discovery in next-generation sequencing data. It detects germline variants, somatic mutations, and copy number alterations (CNVs) based on multi-sample or paired tumor-normal data.",
+    "Core Features": [
+        "Detects germline variants, somatic mutations, and CNVs",
+        "Supports multi-sample or paired tumor-normal data",
+        "Enables the use of both DNA-Seq and RNA-Seq data",
+        "Provides statistical and heuristical methods for variant calling",
+        "Generates detailed variant calls including genotype, read depth, frequency, and quality"
+    ],
+    "General Tags": [
+        "Bioinformatics",
+        "Ngs",
+        "Variant Calling",
+        "Somatic Mutations",
+        "Copy Number Alterations"
+    ],
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Variant Caller",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomics",
+    "Research Discipline": "Genetics"
+}

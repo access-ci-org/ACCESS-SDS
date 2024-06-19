@@ -1,0 +1,15 @@
+{
+    "Software": "Flye",
+    "AI Description": "Flye is a long-read assembler designed to assemble genomes using nanopore sequencing data. It aims to provide accurate and high-quality genome assemblies by utilizing long reads.",
+    "Core Features": "1. Long-read assembly 2. Utilizes nanopore sequencing data 3. Accurate genome assemblies 4. High-quality output",
+    "General Tags": [
+        "Genome Assembly",
+        "Long-Read Sequencing",
+        "Nanopore Sequencing"
+    ],
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Assembly",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genome Assembly & Analysis",
+    "Research Discipline": "Genomics"
+}

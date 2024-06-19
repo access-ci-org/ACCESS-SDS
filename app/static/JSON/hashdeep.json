@@ -1,0 +1,15 @@
+{
+    "Software": "hashdeep",
+    "AI Description": "hashdeep is a cross-platform hashing utility that calculates and verifies hash signatures for files and directories.",
+    "Core Features": "The tool supports multiple hashing algorithms such as MD5, SHA-1, SHA-256, SHA-384, SHA-512, and many others. It can recursively compute hashes for files in a directory structure, output the results in various formats, and verify file integrity by comparing hashes.",
+    "General Tags": [
+        "Hashing",
+        "Data Integrity",
+        "Security"
+    ],
+    "Software Type": "Hashing",
+    "Software Class": "Utility",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

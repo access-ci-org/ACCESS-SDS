@@ -1,0 +1,21 @@
+{
+    "Software": "ExpansionHunter",
+    "AI Description": "ExpansionHunter is a set of tools for detecting repeat expansions in whole genome sequencing data. It is specifically designed to identify repeat length differences that are associated with genetic diseases. ExpansionHunter scans the genome for such expansions and provides detailed information and visualizations to assist in variant interpretation.",
+    "Core Features": [
+        "Detection of repeat expansions in human genomes",
+        "Identification of repeat length differences linked to genetic diseases",
+        "Visualization tools for variant interpretation",
+        "Analysis of whole genome sequencing data"
+    ],
+    "General Tags": [
+        "Genetic Diseases",
+        "Repeat Expansions",
+        "Variant Interpretation",
+        "Whole Genome Sequencing"
+    ],
+    "Software Type": "Data Analysis Tool",
+    "Software Class": "Bioinformatics",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Medical Biotechnology",
+    "Research Discipline": "Genetics"
+}

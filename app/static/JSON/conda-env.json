@@ -1,0 +1,14 @@
+{
+    "Software": "conda-env",
+    "AI Description": "Conda-env is a command-line tool that allows users to create, export, list, remove, and update conda environments. Conda is an open-source package management system and environment management system that runs on Windows, macOS, and Linux.",
+    "Core Features": "1. Create new conda environments. 2. Export and share conda environments. 3. List existing conda environments. 4. Remove conda environments. 5. Update conda environments with new packages.",
+    "General Tags": [
+        "Package Management",
+        "Environment Management"
+    ],
+    "Software Type": "Command Line Tool",
+    "Software Class": "Package Management",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

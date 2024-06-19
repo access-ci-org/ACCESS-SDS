@@ -1,0 +1,19 @@
+{
+    "Software": "LUMPY-SV",
+    "AI Description": "LUMPY-SV is a general probabilistic framework for structural variant discovery. It includes several variant callers which can be combined to detect different types of structural variations in a reference genome.",
+    "Core Features": [
+        "Probabilistic framework for structural variant discovery",
+        "Detection of various types of structural variations",
+        "Combining multiple variant callers for improved accuracy"
+    ],
+    "General Tags": [
+        "Structural Variant Discovery",
+        "Probabilistic Framework",
+        "Bioinformatics"
+    ],
+    "Software Type": "Tool",
+    "Software Class": "Bioinformatics",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genetics & Genomics",
+    "Research Discipline": "Genetics"
+}

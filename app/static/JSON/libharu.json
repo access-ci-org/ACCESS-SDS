@@ -1,0 +1,21 @@
+{
+    "Software": "libharu",
+    "AI Description": "libHaru is a free, open-source software library for generating PDF files. It supports a wide range of features for creating PDF documents programmatically, including text, images, vector graphics, and more.",
+    "Core Features": [
+        "Generate PDF files programmatically",
+        "Support for text, images, and vector graphics",
+        "Ability to add annotations and bookmarks",
+        "Support for encryption and compression",
+        "Cross-platform compatibility"
+    ],
+    "General Tags": [
+        "Pdf Generation",
+        "Open-Source Software",
+        "Programming Library"
+    ],
+    "Software Type": "Pdf Generation",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

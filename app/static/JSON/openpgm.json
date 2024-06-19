@@ -1,0 +1,19 @@
+{
+    "Software": "OpenPGM",
+    "AI Description": "OpenPGM is an open-source implementation of the Pragmatic General Multicast (PGM) protocol for reliable and scalable multicast communication. It offers high performance and reliability for applications requiring multicast messaging.",
+    "Core Features": [
+        "Open-source implementation of the PGM protocol",
+        "High performance",
+        "Reliable and scalable multicast communication"
+    ],
+    "General Tags": [
+        "Multicast Communication",
+        "Network Protocols",
+        "Open Source Software"
+    ],
+    "Software Type": "Networking",
+    "Software Class": "",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,15 @@
+{
+    "Software": "Gridss",
+    "AI Description": "Gridss is a structural variant caller that identifies complex, nested, and discontinuous structural variations from high-throughput DNA sequencing data. It aims to improve the detection of genomic rearrangements, such as insertions, deletions, inversions, and translocations.",
+    "Core Features": "1. Structural variant calling from DNA sequencing data\n2. Identification of complex, nested, and discontinuous structural variations\n3. Detection of genomic rearrangements like insertions, deletions, inversions, and translocations",
+    "General Tags": [
+        "Structural Variant Calling",
+        "Dna Sequencing",
+        "Genomic Rearrangements"
+    ],
+    "Software Type": "Tool",
+    "Software Class": "Bioinformatics",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomic Structural Variation",
+    "Research Discipline": "Genetics"
+}

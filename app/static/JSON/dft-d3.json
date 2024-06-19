@@ -1,0 +1,15 @@
+{
+    "Software": "DFT-D3",
+    "AI Description": "DFT-D3 is a widely used dispersion correction method for density functional theory (DFT) calculations to accurately account for long-range dispersive interactions in molecular systems. It improves the description of non-bonded interactions, including van der Waals forces, and enhances the accuracy of DFT calculations.",
+    "Core Features": "1. Dispersion correction method for DFT calculations.\n2. Accounts for long-range dispersive interactions.\n3. Improves description of non-bonded interactions and van der Waals forces.\n4. Enhances the accuracy of DFT calculations in molecular systems.",
+    "General Tags": [
+        "Computational Chemistry",
+        "Density Functional Theory",
+        "Quantum Mechanics"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Computational Software",
+    "Research Field": "Chemical Sciences",
+    "Research Area": "Chemical Sciences",
+    "Research Discipline": "Physical Sciences"
+}

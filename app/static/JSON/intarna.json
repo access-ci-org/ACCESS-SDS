@@ -1,0 +1,15 @@
+{
+    "Software": "IntaRNA",
+    "AI Description": "IntaRNA predicts RNA-RNA interactions by taking both target site accessibility and hybridization energies into account, allowing the identification of interaction sites that are not only energetically favorable, but also accessible in the target RNA.",
+    "Core Features": "1. Prediction of RNA-RNA interactions\n2. Consideration of target site accessibility\n3. Calculation of hybridization energies\n4. Identification of energetically favorable interaction sites\n5. Accessibility calculation in target RNA",
+    "General Tags": [
+        "Rna-Rna Interaction Prediction",
+        "Bioinformatics",
+        "Rna Structure Prediction"
+    ],
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Prediction Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Bioinformatics",
+    "Research Discipline": "Biological Sciences"
+}

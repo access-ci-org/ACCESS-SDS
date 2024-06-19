@@ -1,0 +1,23 @@
+{
+    "Software": "iGenomes",
+    "AI Description": "iGenomes is a collection of reference genomes and annotation files that have been pre-built for commonly used organisms, designed to streamline the data analysis pipeline for genomics research.",
+    "Core Features": [
+        "Pre-built reference genomes",
+        "Annotation files",
+        "Compatibility with popular bioinformatics tools",
+        "Streamlined data analysis process",
+        "Regularly updated and curated"
+    ],
+    "General Tags": [
+        "Bioinformatics",
+        "Genomics",
+        "Reference Genomes",
+        "Annotation",
+        "Data Analysis"
+    ],
+    "Software Type": "Reference Genome & Annotation Repository",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,26 @@
+{
+    "Software": "liftofftools",
+    "AI Description": "liftofftools is a software tool designed for the analysis and visualization of liftoff data generated from sequencing technologies, particularly useful in genomics and bioinformatics research.",
+    "Core Features": "The core features of liftofftools include liftoff data analysis, visualization of liftoff output, comparison of liftoff results, integration with other bioinformatics tools, and customization for specific research needs.",
+    "General Tags": [
+        "Bioinformatics",
+        "Genomics",
+        "Data Analysis",
+        "Sequencing Technologies"
+    ],
+    "Software Type": [
+        "Genomic Analysis Tool"
+    ],
+    "Software Class": [
+        "Data Analysis And Visualization"
+    ],
+    "Research Field": [
+        "Biological Sciences"
+    ],
+    "Research Area": [
+        "Genomics"
+    ],
+    "Research Discipline": [
+        "Bioinformatics"
+    ]
+}

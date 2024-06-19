@@ -1,0 +1,22 @@
+{
+    "Software": "ipmitool",
+    "AI Description": "ipmitool is an open-source utility for managing and configuring devices that support the Intelligent Platform Management Interface (IPMI) specification. It allows users to interact with IPMI-enabled devices to retrieve information, perform system management tasks, and monitor hardware sensors remotely.",
+    "Core Features": [
+        "Retrieve system information remotely",
+        "Configure and manage IPMI-enabled devices",
+        "Monitor hardware sensors and power usage",
+        "Reset or power cycle systems remotely",
+        "Execute pre-defined commands on remote machines"
+    ],
+    "General Tags": [
+        "System Management",
+        "Hardware Monitoring",
+        "Remote Administration",
+        "Open Source"
+    ],
+    "Software Type": "Utility",
+    "Software Class": "System Management",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "",
+    "Research Discipline": ""
+}

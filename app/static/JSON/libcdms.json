@@ -1,0 +1,21 @@
+{
+    "Software": "libcdms",
+    "AI Description": "libcdms is a computational software library for climate and atmospheric sciences, specifically designed for the analysis, management, and visualization of climate datasets.",
+    "Core Features": [
+        "Efficient management of climate data sets",
+        "Advanced analysis capabilities for climate scientists",
+        "Integration with visualization tools for data interpretation",
+        "Support for common data formats in climate science"
+    ],
+    "General Tags": [
+        "Climate Science",
+        "Atmospheric Sciences",
+        "Data Management",
+        "Visualization"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Computational Software",
+    "Research Field": "Earth & Environmental Sciences",
+    "Research Area": "Climate & Global Dynamics",
+    "Research Discipline": "Atmospheric Sciences"
+}

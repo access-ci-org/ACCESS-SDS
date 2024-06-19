@@ -1,0 +1,22 @@
+{
+    "Software": "GROMACS",
+    "AI Description": "GROMACS (GROningen MAssive Parallel MD for Molecular Dynamics) is a versatile package for molecular dynamics simulations with a strong emphasis on high-performance computing capabilities.",
+    "Core Features": [
+        "Efficient algorithms for molecular dynamics simulations",
+        "Optimized for performance on CPUs, GPUs, and other accelerators",
+        "Support for various force fields and integrators",
+        "Analysis tools for processing simulation output data",
+        "Extensive community support and documentation"
+    ],
+    "General Tags": [
+        "Molecular Dynamics",
+        "Simulation",
+        "High Performance Computing",
+        "Biomolecular Systems"
+    ],
+    "Software Type": "Molecular Dynamics Software",
+    "Software Class": "Simulation Software",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Biophysics",
+    "Research Discipline": ""
+}

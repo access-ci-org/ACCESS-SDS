@@ -1,0 +1,16 @@
+{
+    "Software": "gangstr",
+    "AI Description": "GangSTR is a tool for profiling short tandem repeats (STRs) from high-throughput sequencing data. It is specifically designed for examining STR variation in whole-genome sequencing data and is optimized for population-scale studies, allowing for accurate STR genotyping and discovery.",
+    "Core Features": "1. Genotyping and discovery of short tandem repeats (STRs) from sequencing data\n2. Optimized for whole-genome sequencing data\n3. Designed for population-scale studies\n4. Accurate detection of STR variation",
+    "General Tags": [
+        "Str",
+        "Genotyping",
+        "Short Tandem Repeats",
+        "Sequencing Data Analysis"
+    ],
+    "Software Type": "Genomic Analysis Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Population Genetics",
+    "Research Discipline": "Genomics"
+}

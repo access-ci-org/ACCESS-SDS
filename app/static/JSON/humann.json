@@ -1,0 +1,16 @@
+{
+    "Software": "humann",
+    "AI Description": "HUMAnN (HMP Unified Metabolic Analysis Network) is a tool for efficiently and accurately profiling the presence and abundance of microbial pathways in a community from metagenomic shotgun sequencing data. It combines sequence alignment and gene activity profiling to quantify the presence of pathway modules.",
+    "Core Features": "1. Pathway abundance profiling from metagenomic sequencing data\n2. Integration of sequence alignment and gene activity profiling\n3. Quantification of microbial pathways in a community\n4. Visualization tools for pathway analyses",
+    "General Tags": [
+        "Metagenomics",
+        "Microbiome",
+        "Pathway Analysis",
+        "Bioinformatics"
+    ],
+    "Software Type": "Analysis Tool",
+    "Software Class": "Bioinformatics",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Ecology",
+    "Research Discipline": "Biological Sciences"
+}

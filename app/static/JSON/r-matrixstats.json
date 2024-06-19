@@ -1,0 +1,14 @@
+{
+    "Software": "r-matrixstats",
+    "AI Description": "R package for a matrix statistical functions implementation.",
+    "Core Features": "Implements a set of functions for statistical analysis on matrices, including functions for row-wise and column-wise summaries, manipulation, and statistical operations on matrix data.",
+    "General Tags": [
+        "R Package",
+        "Matrix Statistical Functions"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Statistical Analysis",
+    "Research Field": "Other Natural Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,21 @@
+{
+    "Software": "ROCm Compiler Support",
+    "AI Description": "ROCm (Radeon Open Compute) Compiler Support is a collection of tools and libraries that enable developers to compile and optimize code for AMD GPUs using the ROCm platform. It includes compilers, runtime libraries, and tools for accelerating computation on AMD GPUs.",
+    "Core Features": [
+        "Compilers for AMD GPUs",
+        "Optimization tools",
+        "Runtime libraries for GPU acceleration",
+        "Support for ROCm platform"
+    ],
+    "General Tags": [
+        "Compiler",
+        "Gpu Computing",
+        "Optimization",
+        "Accelerated Computing"
+    ],
+    "Software Type": "Development Tools",
+    "Software Class": "Compiler",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

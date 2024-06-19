@@ -1,0 +1,21 @@
+{
+    "Software": "rpart",
+    "AI Description": "rpart is an R package for recursive partitioning, which builds classification and regression trees for predictive modeling.",
+    "Core Features": [
+        "Recursive partitioning for decision trees",
+        "Classification and regression tree building",
+        "Predictive modeling",
+        "Visualization of tree structures"
+    ],
+    "General Tags": [
+        "R Package",
+        "Predictive Modeling",
+        "Decision Trees",
+        "Machine Learning"
+    ],
+    "Software Type": "Open-Source Software",
+    "Software Class": "Machine Learning",
+    "Research Field": "Mathematics",
+    "Research Area": "Predictive Modeling",
+    "Research Discipline": "Statistics & Probability"
+}

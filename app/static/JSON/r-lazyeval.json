@@ -1,0 +1,15 @@
+{
+    "Software": "r-lazyeval",
+    "AI Description": "r-lazyeval is an R package that provides a set of tools for non-standard evaluation in R. It allows for delayed evaluation of expressions and promises, enabling advanced programming techniques in R.",
+    "Core Features": "1. Provides tools for non-standard evaluation in R.\n2. Supports delayed evaluation of expressions.\n3. Enables advanced programming techniques.",
+    "General Tags": [
+        "R Package",
+        "Non-Standard Evaluation",
+        "Programming"
+    ],
+    "Software Type": "Library",
+    "Software Class": "R Package",
+    "Research Field": "Other Mathematics",
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,21 @@
+{
+    "Software": "Fiona",
+    "AI Description": "Fiona is a Python library for reading and writing geospatial vector data formats.",
+    "Core Features": [
+        "Support for various GIS file formats such as Shapefile, GeoJSON, KML, GPKG, and others",
+        "Integration with OGR (Simple Features Library) for efficient data access",
+        "Ability to read and write vector data with support for geometry manipulation",
+        "Designed for easy interaction with geospatial data in Python applications"
+    ],
+    "General Tags": [
+        "Python Library",
+        "Geospatial Data",
+        "Gis",
+        "Vector Data"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Data Processing & Visualization",
+    "Research Field": "Earth & Environmental Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

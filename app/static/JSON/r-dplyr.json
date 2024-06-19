@@ -1,0 +1,21 @@
+{
+    "Software": "r-dplyr",
+    "AI Description": "The dplyr package in R is a grammar of data manipulation, providing a consistent set of verbs that help you solve the most common data manipulation challenges. It allows for easy data manipulation, data summarization, filtering, and arranging of data sets.",
+    "Core Features": [
+        "Data manipulation",
+        "Data summarization",
+        "Filtering data",
+        "Arranging data sets"
+    ],
+    "General Tags": [
+        "Data Manipulation",
+        "Data Analysis",
+        "R Programming",
+        "Data Cleaning"
+    ],
+    "Software Type": "Package/Library",
+    "Software Class": "Data Manipulation",
+    "Research Field": "Other Natural Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

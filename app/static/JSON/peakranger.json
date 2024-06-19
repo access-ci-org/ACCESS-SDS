@@ -1,0 +1,15 @@
+{
+    "Software": "PeakRanger",
+    "AI Description": "PeakRanger is a peak-finding algorithm specifically designed for the accurate identification of transcription factor binding sites from ChIP-Seq data. It utilizes a dynamic programming approach to accurately model and detect enriched regions, providing a comprehensive analysis of transcription factor binding patterns.",
+    "Core Features": "1. Identification of transcription factor binding sites from ChIP-Seq data. 2. Dynamic programming approach for accurate modeling. 3. Comprehensive analysis of enriched regions. 4. Visualization tools for peak identification and visualization.",
+    "General Tags": [
+        "Peak Finding",
+        "Transcription Factor Binding",
+        "Chip-Seq Data Analysis"
+    ],
+    "Software Type": "Peak Finding Tool",
+    "Software Class": "Algorithm",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Transcription Factor Binding Site Analysis",
+    "Research Discipline": "Bioinformatics"
+}

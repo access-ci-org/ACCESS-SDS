@@ -1,0 +1,15 @@
+{
+    "Software": "Control-FREEC",
+    "AI Description": "Control-FREEC is a tool for detection of copy-number alterations and loss of heterozygosity in whole-genome sequencing data.",
+    "Core Features": "Control-FREEC is able to detect copy-number alterations, loss of heterozygosity, and estimate purity, ploidy, and infer normal contamination in tumor samples. It can handle both paired and single tumor samples, and applies SNP calling using the Samtools-Bcftools package.",
+    "General Tags": [
+        "Bioinformatics",
+        "Copy Number Variation",
+        "Whole-Genome Sequencing"
+    ],
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Genomic Analysis Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Cancer Genetics",
+    "Research Discipline": "Genetics"
+}

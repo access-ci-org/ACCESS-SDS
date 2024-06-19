@@ -1,0 +1,15 @@
+{
+    "Software": "nMAD",
+    "AI Description": "nMAD (normalized mean absolute deviation) is a measure of dispersion for a set of data points. It is used to quantify the variability or spread of the data. nMAD is calculated as the mean of the absolute differences between each data point and the mean of the data, divided by a constant factor for normalization.",
+    "Core Features": "1. Measure of dispersion for data sets\n2. Quantifies variability and spread of data\n3. Normalizes the mean absolute differences\n4. Useful in data analysis and comparisons",
+    "General Tags": [
+        "Statistics",
+        "Data Analysis",
+        "Data Normalization"
+    ],
+    "Software Type": "Measurement Tool",
+    "Software Class": "Statistical Analysis Tool",
+    "Research Field": "Other Mathematics",
+    "Research Area": "",
+    "Research Discipline": ""
+}

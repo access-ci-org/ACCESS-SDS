@@ -1,0 +1,20 @@
+{
+    "Software": "MetaBAT",
+    "AI Description": "MetaBAT is a software tool for reconstructing single genomes from complex microbial communities for metagenomics analysis. It utilizes a mixture model to leverage the differential abundance of unique sequences to bin contigs according to their species origin.",
+    "Core Features": [
+        "Metagenomic binning",
+        "Single genome reconstruction",
+        "Utilizes a mixture model",
+        "Binning contigs based on species origin"
+    ],
+    "General Tags": [
+        "Metagenomics",
+        "Microbial Communities",
+        "Genome Reconstruction"
+    ],
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Metagenomics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

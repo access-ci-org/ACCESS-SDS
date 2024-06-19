@@ -1,0 +1,19 @@
+{
+    "Software": "ccdb",
+    "AI Description": "CCDB (Cell Cycle Database) is a freely accessible, comprehensive resource for the cell cycle community. It provides information and tools to study cell cycle regulation and its role in cancer and other diseases.",
+    "Core Features": [
+        "Access to curated cell cycle-related data",
+        "Tools for analyzing cell cycle regulation",
+        "Links to relevant literature and resources"
+    ],
+    "General Tags": [
+        "Cell Cycle",
+        "Cell Biology",
+        "Database"
+    ],
+    "Software Type": "Curated Data Resource",
+    "Software Class": "Database",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Cell Cycle Regulation",
+    "Research Discipline": "Cell Biology"
+}

@@ -1,0 +1,15 @@
+{
+    "Software": "NGS",
+    "AI Description": "NGS (Next-Generation Sequencing) refers to high-throughput sequencing technologies that allow for rapid and cost-effective sequencing of DNA and RNA. NGS has revolutionized genomics research, enabling various applications in areas such as genetics, personalized medicine, and evolutionary biology.",
+    "Core Features": "NGS platforms offer high sequencing throughput, high accuracy, scalability for different project sizes, and the ability to detect genomic variations, gene expression levels, and epigenetic modifications.",
+    "General Tags": [
+        "Ngs",
+        "Next-Generation Sequencing",
+        "Genomics"
+    ],
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Ngs Analysis Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genetics",
+    "Research Discipline": "Genomics"
+}

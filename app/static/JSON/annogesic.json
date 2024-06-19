@@ -1,0 +1,25 @@
+{
+    "Software": "ANNOgesic",
+    "AI Description": "ANNOgesic is a software tool designed to analyze RNA-seq data for the identification of various elements in bacterial genomes. It integrates multiple steps of RNA-seq analysis to predict transcription start sites (TSSs), operon structures, small RNAs, RNA-RNA interactions, and RNA motifs.",
+    "Core Features": [
+        "Identification of transcription start sites (TSSs)",
+        "Prediction of operon structures",
+        "Detection of small RNAs",
+        "Analysis of RNA-RNA interactions",
+        "Identification of RNA motifs"
+    ],
+    "General Tags": [
+        "Rna-Seq Analysis",
+        "Bacterial Genomes",
+        "Transcription Start Sites",
+        "Operon Structures",
+        "Small Rnas",
+        "Rna Motifs",
+        "Rna-Rna Interactions"
+    ],
+    "Software Type": "Tool",
+    "Software Class": "Bioinformatics",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genetics",
+    "Research Discipline": "Biological Sciences"
+}

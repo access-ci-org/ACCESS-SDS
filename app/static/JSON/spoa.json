@@ -1,0 +1,20 @@
+{
+    "Software": "spoa",
+    "AI Description": "SPAdes Overlap-Layout-Consensus (SPOA) is a C++ library and command-line tool for sequence alignment using a partial order graph (POG). It provides an efficient way to align long error-prone reads (such as Nanopore or PacBio) by constructing a graph based on input sequences and then finding the optimal alignment through a dynamic programming algorithm.",
+    "Core Features": [
+        "Sequence alignment using partial order graph (POG)",
+        "Efficient alignment of long error-prone reads",
+        "Dynamic programming algorithm for optimal alignment"
+    ],
+    "General Tags": [
+        "Sequence Alignment",
+        "Bioinformatics",
+        "Long Reads",
+        "Graph Based Alignment"
+    ],
+    "Software Type": "Command-Line Tool",
+    "Software Class": "Library",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomics",
+    "Research Discipline": "Bioinformatics"
+}

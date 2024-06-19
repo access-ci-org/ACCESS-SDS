@@ -1,0 +1,20 @@
+{
+    "Software": "intel_ippcp_ia32",
+    "AI Description": "Intel Integrated Performance Primitives - Cryptography (IPP-Crypto) is a library that provides highly optimized building blocks for a variety of encryption and decryption algorithms on Intel architecture processors. It aims to accelerate cryptographic operations to enhance performance in software applications.",
+    "Core Features": [
+        "Optimized encryption and decryption algorithms",
+        "Support for various cryptographic techniques",
+        "Designed for Intel architecture processors",
+        "Improved performance in cryptographic operations"
+    ],
+    "General Tags": [
+        "Cryptographic Library",
+        "Performance Optimization",
+        "Intel Architecture"
+    ],
+    "Software Type": "Compiler/Library",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

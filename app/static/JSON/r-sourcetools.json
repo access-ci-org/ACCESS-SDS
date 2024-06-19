@@ -1,0 +1,19 @@
+{
+    "Software": "r-sourcetools",
+    "AI Description": "r-sourcetools is an R package that provides tools for reading, tokenizing, and parsing R source code.",
+    "Core Features": [
+        "Reading and parsing R source code",
+        "Tokenizing R source code",
+        "Extracting information from R source files"
+    ],
+    "General Tags": [
+        "R Package",
+        "Source Code Analysis",
+        "Data Parsing"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Data Analysis",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

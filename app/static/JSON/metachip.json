@@ -1,0 +1,21 @@
+{
+    "Software": "Metachip",
+    "AI Description": "Metachip is a computational software tool designed for the analysis, visualization, and interpretation of high-throughput sequencing data from metagenomic studies. It allows researchers to perform taxonomic classification, functional annotation, and comparative analysis of microbial communities present in environmental samples.",
+    "Core Features": [
+        "Taxonomic classification of microbial communities",
+        "Functional annotation of metagenomic data",
+        "Comparative analysis of microbial diversity",
+        "Visualization of metagenomic sequencing results"
+    ],
+    "General Tags": [
+        "Bioinformatics",
+        "Metagenomics",
+        "High-Throughput Sequencing",
+        "Microbiome Analysis"
+    ],
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Data Analysis & Visualization",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Microbial Ecology",
+    "Research Discipline": "Ecology"
+}

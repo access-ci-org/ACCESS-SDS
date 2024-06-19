@@ -1,0 +1,22 @@
+{
+    "Software": "Xerces-C",
+    "AI Description": "Xerces-C is a validating XML parser written in C++.",
+    "Core Features": [
+        "Support for XML schema validation",
+        "Support for XPath expression evaluation",
+        "DOM and SAX parser interfaces",
+        "Unicode support",
+        "Error reporting and handling"
+    ],
+    "General Tags": [
+        "Xml Parser",
+        "Validation",
+        "C++",
+        "Unicode"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Compiler",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

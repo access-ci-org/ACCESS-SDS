@@ -1,0 +1,20 @@
+{
+    "Software": "RNAview",
+    "AI Description": "RNAview is a software tool for visualizing RNA secondary structures. It provides an interactive graphical interface for users to explore and analyze RNA molecules' structural properties.",
+    "Core Features": [
+        "Interactive visualization of RNA secondary structures",
+        "Analysis of structural properties of RNA molecules",
+        "Customization options for viewing and annotating RNA structures",
+        "Exporting capabilities for images and data files"
+    ],
+    "General Tags": [
+        "Rna Secondary Structure",
+        "Visualization Tool",
+        "Bioinformatics"
+    ],
+    "Software Type": "Molecular Biology",
+    "Software Class": "Visualization Software",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": "Bioinformatics"
+}

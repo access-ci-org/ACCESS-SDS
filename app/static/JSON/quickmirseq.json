@@ -1,0 +1,15 @@
+{
+    "Software": "quickmirseq",
+    "AI Description": "quickmirseq is a fast and accurate tool for microRNA quantification from small RNA-Seq data. It utilizes an ultra-fast aligner for reads mapping and a novel algorithm for microRNA quantification, offering efficient processing of large datasets.",
+    "Core Features": "1. Ultra-fast aligner for mapping small RNA-Seq reads. 2. Novel algorithm for accurate microRNA quantification. 3. Efficient processing of large-scale small RNA-Seq datasets. 4. User-friendly interface for ease of use and interpretation of results.",
+    "General Tags": [
+        "Bioinformatics",
+        "Computational Biology",
+        "Microrna Quantification"
+    ],
+    "Software Type": "Data Analysis Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Molecular Biology",
+    "Research Discipline": "Genetics"
+}

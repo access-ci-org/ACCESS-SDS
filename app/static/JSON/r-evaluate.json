@@ -1,0 +1,21 @@
+{
+    "Software": "R-Evaluate",
+    "AI Description": "R-Evaluate is a software tool designed for interactive programming environments in R, facilitating rapid evaluation and assessment of code snippets. It allows users to quickly test and analyze individual lines of code or small code blocks within the R programming language.",
+    "Core Features": [
+        "Interactive programming environment for R",
+        "Facilitates rapid evaluation of code snippets",
+        "Allows quick testing and analysis of code lines or small blocks",
+        "Enhances code assessment and debugging processes"
+    ],
+    "General Tags": [
+        "R Programming",
+        "Interactive Programming",
+        "Code Evaluation",
+        "Debugging"
+    ],
+    "Software Type": "Tool",
+    "Software Class": "Development Tool",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

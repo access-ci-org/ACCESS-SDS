@@ -1,0 +1,21 @@
+{
+    "Software": "MPI",
+    "AI Description": "Message Passing Interface (MPI) is a standardized and portable message-passing system designed to enable scalable, parallel computing on a wide variety of parallel computers. It is widely used in the field of high-performance computing (HPC) to develop parallel programs that can run efficiently on distributed memory architectures.",
+    "Core Features": [
+        "Allows communication and data exchange between parallel processes",
+        "Supports creation of parallel applications for distributed memory systems",
+        "Facilitates coordination and synchronization of parallel tasks",
+        "Scalable and efficient for large-scale parallel computing"
+    ],
+    "General Tags": [
+        "Hpc",
+        "Parallel Computing",
+        "Message Passing",
+        "Scalable Computing"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Parallel Programming",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Applied Computer Science",
+    "Research Discipline": "Computer Science"
+}

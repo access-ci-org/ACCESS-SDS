@@ -1,0 +1,21 @@
+{
+    "Software": "BMGE",
+    "AI Description": "BMGE (Block Mapping and Gathering with Entropy) is a software tool designed for the alignment of homologous DNA or protein sequences. It employs block mapping and entropy-based techniques to identify and remove poorly aligned regions, thereby improving the accuracy of multiple sequence alignments.",
+    "Core Features": [
+        "Alignment of homologous DNA or protein sequences",
+        "Utilizes block mapping and entropy-based techniques",
+        "Identification and removal of poorly aligned regions",
+        "Improves accuracy of multiple sequence alignments"
+    ],
+    "General Tags": [
+        "Bioinformatics",
+        "Computational Biology",
+        "Sequence Alignment",
+        "Sequence Analysis"
+    ],
+    "Software Type": "Sequence Alignment Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Sequence Analysis",
+    "Research Discipline": "Bioinformatics"
+}

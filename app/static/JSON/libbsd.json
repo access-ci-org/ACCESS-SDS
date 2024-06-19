@@ -1,0 +1,15 @@
+{
+    "Software": "libbsd",
+    "AI Description": "libbsd is a library that provides functions typically found in the BSD operating systems. It aims to offer a more portable solution for developers needing BSD functions on non-BSD systems.",
+    "Core Features": "1. Implementation of BSD system functions\n2. Portability across different operating systems\n3. Open-source and freely available\n4. Simplifies integration of BSD code in non-BSD environments",
+    "General Tags": [
+        "Library",
+        "Bsd",
+        "Operating System"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Development",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,15 @@
+{
+    "Software": "kyric/miniconda3",
+    "AI Description": "A lightweight, minimalistic version of the Conda package and environment management system, containing only essential components needed to run Python applications and libraries efficiently.",
+    "Core Features": "1. Fast and efficient package management system. 2. Allows easy creation and management of virtual environments. 3. Enables seamless installation, update, and removal of Python packages and dependencies. 4. Supports multiple platforms, including Windows, macOS, and Linux.",
+    "General Tags": [
+        "Conda Package",
+        "Environment Management",
+        "Python"
+    ],
+    "Software Type": "Package & Environment Management",
+    "Software Class": "Package Manager",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Software Development",
+    "Research Discipline": "Software Engineering, Systems, & Development"
+}

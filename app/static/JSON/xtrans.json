@@ -1,0 +1,20 @@
+{
+    "Software": "xtrans",
+    "AI Description": "xtrans is a general-purpose transducer-based approach for defining translations between various formats and data representations. It provides a flexible framework for specifying bidirectional transformations between different data structures.",
+    "Core Features": [
+        "Define bidirectional translations between different data formats",
+        "Supports various data representations and structures",
+        "Flexibility in specifying transformations",
+        "General-purpose transducer-based approach"
+    ],
+    "General Tags": [
+        "Data Transformation",
+        "Format Conversion",
+        "Transducer-Based Tool"
+    ],
+    "Software Type": "Tool",
+    "Software Class": "Data Transformation",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

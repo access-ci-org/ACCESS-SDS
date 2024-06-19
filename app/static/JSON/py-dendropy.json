@@ -1,0 +1,22 @@
+{
+    "Software": "py-dendropy",
+    "AI Description": "Pydendropy is a flexible and customizable phylogenetic computing library implemented in Python. It provides tools and utilities for the simulation, transformation, analysis, and comparison of phylogenetic trees and associated data.",
+    "Core Features": [
+        "Simulation of phylogenetic trees",
+        "Transformation of tree topologies and branch lengths",
+        "Comparison and analysis of phylogenetic trees",
+        "Incorporation of metadata with trees",
+        "Support for various file formats including Newick, Nexus, and NeXML"
+    ],
+    "General Tags": [
+        "Phylogenetics",
+        "Phylogenetic Analysis",
+        "Computational Biology",
+        "Evolutionary Biology"
+    ],
+    "Software Type": "Computational Tool",
+    "Software Class": "Library",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Systematics & Population Biology",
+    "Research Discipline": "Biological Sciences"
+}

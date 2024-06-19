@@ -1,0 +1,15 @@
+{
+    "Software": "py-cpuinfo",
+    "AI Description": "py-cpuinfo is a Python library to get CPU information by parsing data from /proc/cpuinfo. It provides information about the CPU and its features.",
+    "Core Features": "1. Retrieve CPU vendor, brand, frequency, cores, and cache sizes.\n2. Detect CPU features like MMX, SSE, and AVX.\n3. Get flags indicating the presence of specific CPU features.\n4. Support for various operating systems including Linux, Windows, macOS, and FreeBSD.",
+    "General Tags": [
+        "Python Library",
+        "System Information",
+        "Cpu Information"
+    ],
+    "Software Type": "Python Library",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

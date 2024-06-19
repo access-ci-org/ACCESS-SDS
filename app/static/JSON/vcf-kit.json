@@ -1,0 +1,22 @@
+{
+    "Software": "vcf-kit",
+    "AI Description": "VCF-kit is a Python-based collection of tools for working with Variant Call Format (VCF) files. It provides various utilities for processing, filtering, annotating, and analyzing genetic variation data.",
+    "Core Features": [
+        "Manipulation of VCF files",
+        "Variant calling and annotation",
+        "Filtering and quality control of variants",
+        "Population genetics analysis",
+        "Integration with other bioinformatics tools"
+    ],
+    "General Tags": [
+        "Bioinformatics",
+        "Computational Biology",
+        "Genomics",
+        "Variant Analysis"
+    ],
+    "Software Type": "Data Analysis Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genetic Variation Analysis",
+    "Research Discipline": "Genetics"
+}

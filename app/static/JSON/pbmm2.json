@@ -1,0 +1,21 @@
+{
+    "Software": "pbmm2",
+    "AI Description": "pbmm2 is a long read aligner designed for PacBio single molecule sequencing reads, utilizing a graph-guided mapping approach to accurately and efficiently align long reads to a reference genome.",
+    "Core Features": [
+        "Optimized for PacBio long reads",
+        "Graph-guided mapping approach",
+        "Highly accurate alignments",
+        "Efficient mapping to reference genomes"
+    ],
+    "General Tags": [
+        "Long Read Aligner",
+        "Graph-Guided Mapping",
+        "Reference Genome Mapping",
+        "Bioinformatics"
+    ],
+    "Software Type": "Alignment Tool",
+    "Software Class": "Genomic Alignment Software",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

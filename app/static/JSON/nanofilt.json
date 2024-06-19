@@ -1,0 +1,15 @@
+{
+    "Software": "nanofilt",
+    "AI Description": "Nanofilt is a tool for filtering and trimming Oxford Nanopore sequencing data. It is specifically designed to process raw Nanopore reads and perform quality control operations to improve the accuracy and reliability of downstream analyses.",
+    "Core Features": "1. Quality filtering and trimming of Nanopore sequencing data\n2. Adapter removal\n3. Length filtering to remove short reads\n4. Basecall quality filtering\n5. Dynamic trimming based on quality scores\n6. Support for both single-end and paired-end reads",
+    "General Tags": [
+        "Bioinformatics",
+        "Sequence Analysis",
+        "Nanopore Sequencing"
+    ],
+    "Software Type": "Tool",
+    "Software Class": "Data Processing & Analysis",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomics",
+    "Research Discipline": "Bioinformatics"
+}

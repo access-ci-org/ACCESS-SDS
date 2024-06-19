@@ -1,0 +1,22 @@
+{
+    "Software": "Vartrix",
+    "AI Description": "Vartrix is a software tool for computing biological variant matrices from high-throughput sequencing data. It supports multiple sequencing data formats and enables users to perform variant calling, filtering, and annotation.",
+    "Core Features": [
+        "Variant calling from sequencing data",
+        "Variant filtering and annotation",
+        "Support for multiple sequencing data formats",
+        "Statistical analysis of variant data"
+    ],
+    "General Tags": [
+        "Bioinformatics",
+        "Hpc Tools",
+        "Computational Software"
+    ],
+    "Software Type": "",
+    "Software Class": "",
+    "Research Field": [
+        "Biological Sciences"
+    ],
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,19 @@
+{
+    "Software": "psc.allocations.user",
+    "AI Description": "The psc.allocations.user software is a tool used for managing user allocations on the Pittsburgh Supercomputing Center's high-performance computing systems. It allows administrators to assign computing resources to users based on their specific research needs and usage requirements.",
+    "Core Features": [
+        "User allocation management",
+        "Resource assignment based on research needs",
+        "Usage requirement customization"
+    ],
+    "General Tags": [
+        "Hpc Tools",
+        "User Management",
+        "Resource Allocation"
+    ],
+    "Software Type": "Allocation Tool",
+    "Software Class": "User Management",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "High-Performance Computing",
+    "Research Discipline": "Infrastructure & Instrumentation"
+}

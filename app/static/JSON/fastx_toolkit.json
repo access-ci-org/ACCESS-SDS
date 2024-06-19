@@ -1,0 +1,15 @@
+{
+    "Software": "fastx_toolkit",
+    "AI Description": "The FASTX-Toolkit is a collection of command line tools for Short-Reads FASTA/FASTQ files preprocessing.",
+    "Core Features": "The toolkit includes programs to filter, modify, and manipulate short-reads and perform various quality control checks on the FastQ files.",
+    "General Tags": [
+        "Bioinformatics",
+        "Short-Reads",
+        "Preprocessing"
+    ],
+    "Software Type": "Pre-Processing Tool",
+    "Software Class": "Bioinformatics Tools",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

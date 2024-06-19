@@ -1,0 +1,15 @@
+{
+    "Software": "Open MPI",
+    "AI Description": "Open MPI (Message Passing Interface) is an open-source software implementation of the Message Passing Interface standard. It is designed for high-performance computing (HPC) and is used to parallelize and optimize applications across distributed computing systems.",
+    "Core Features": "1. Support for parallel computing across distributed memory systems\n2. Scalability for large computing clusters\n3. High performance and efficiency in message passing\n4. Flexibility in configuration and customization\n5. Fault tolerance and resilience in distributed computing environments",
+    "General Tags": [
+        "Hpc",
+        "Parallel Computing",
+        "Message Passing Interface"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Middleware",
+    "Research Field": "",
+    "Research Area": "",
+    "Research Discipline": ""
+}

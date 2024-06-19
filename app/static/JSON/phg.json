@@ -1,0 +1,23 @@
+{
+    "Software": "phg",
+    "AI Description": "PHG (Population Hybrid Graphs) is a software package for analyzing genome-wide markers in a case-control population hybrid design. It is designed for detecting genomic regions that differ in allele frequency between cases and controls, considering ancestry information and accounting for linkage disequilibrium.",
+    "Core Features": [
+        "Analyze genome-wide markers",
+        "Case-control population hybrid design",
+        "Detect genomic regions with different allele frequencies",
+        "Incorporate ancestry information",
+        "Account for linkage disequilibrium"
+    ],
+    "General Tags": [
+        "Genomics",
+        "Population Genetics",
+        "Allele Frequency Analysis",
+        "Linkage Disequilibrium",
+        "Ancestry Information"
+    ],
+    "Software Type": "",
+    "Software Class": "",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

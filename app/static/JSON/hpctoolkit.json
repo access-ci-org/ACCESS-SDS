@@ -1,0 +1,23 @@
+{
+    "Software": "HPC Toolkit",
+    "AI Description": "HPC Toolkit is a collection of tools designed to assist users in optimizing and analyzing the performance of their parallel scientific applications on high-performance computing (HPC) systems.",
+    "Core Features": [
+        "Performance analysis",
+        "Debugging support",
+        "Profiling capabilities",
+        "Parallel code optimization",
+        "Visualization of performance data"
+    ],
+    "General Tags": [
+        "Hpc",
+        "Performance Analysis",
+        "Parallel Computing",
+        "Optimization",
+        "Debugging"
+    ],
+    "Software Type": "Toolkit",
+    "Software Class": "Performance Analysis Tools",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "",
+    "Research Discipline": ""
+}

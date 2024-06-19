@@ -1,0 +1,20 @@
+{
+    "Software": "GeneMark-ES",
+    "AI Description": "GeneMark-ES (Eukaryotic) is a eukaryotic gene prediction software that accurately predicts the location and structure of protein-coding genes in eukaryotic genomes. It is based on an unsupervised ab initio approach using hidden Markov model algorithms.",
+    "Core Features": [
+        "Accurate prediction of protein-coding genes in eukaryotic genomes",
+        "Unsupervised ab initio gene prediction approach",
+        "Hidden Markov model algorithms"
+    ],
+    "General Tags": [
+        "Gene Prediction",
+        "Bioinformatics",
+        "Eukaryotic Genomes",
+        "Hidden Markov Model"
+    ],
+    "Software Type": "Gene Prediction Software",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genetics",
+    "Research Discipline": "Biological Sciences"
+}

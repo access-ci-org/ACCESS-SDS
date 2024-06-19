@@ -1,0 +1,20 @@
+{
+    "Software": "imkl",
+    "AI Description": "imkl is a open-source software library for creating and managing knowledge graphs for various applications in artificial intelligence, data science, and information retrieval.",
+    "Core Features": "The core features of imkl include graph creation, visualization, querying, and analysis functionality for knowledge graphs. It provides tools for integrating heterogeneous data sources, performing entity recognition and disambiguation, and inferring relationships between entities.",
+    "General Tags": [
+        "Software Library",
+        "Knowledge Graph",
+        "Artificial Intelligence",
+        "Data Science",
+        "Information Retrieval"
+    ],
+    "Software Type": "Open-Source",
+    "Software Class": "Library",
+    "Research Field": [
+        "Computer And Information Sciences",
+        "Artificial Intelligence And Intelligent Systems"
+    ],
+    "Research Area": "",
+    "Research Discipline": ""
+}

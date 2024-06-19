@@ -1,0 +1,19 @@
+{
+    "Software": "r-zeallot",
+    "AI Description": "The r-zeallot package in R is designed for elegant variable assignment in R. It allows for unpacking multiple values from objects in a single statement, thus simplifying coding and improving readability.",
+    "Core Features": [
+        "Simple and elegant variable assignment",
+        "Unpacking multiple values from objects in a single statement",
+        "Improved code readability"
+    ],
+    "General Tags": [
+        "R Package",
+        "Variable Assignment",
+        "Code Readability"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Data Manipulation Tool",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

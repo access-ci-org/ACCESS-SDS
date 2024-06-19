@@ -1,0 +1,16 @@
+{
+    "Software": "py-h5py",
+    "AI Description": "py-h5py is a Python interface for the HDF5 binary data format, providing efficient input/output operations for working with large datasets.",
+    "Core Features": "The core features of py-h5py include easy integration with Python, support for parallel I/O operations, efficient data compression techniques, compatibility with NumPy arrays, and the ability to handle complex data structures.",
+    "General Tags": [
+        "Python Library",
+        "Data Format",
+        "Input/Output Operations",
+        "Large Datasets"
+    ],
+    "Software Type": "Interface",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

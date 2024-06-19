@@ -1,0 +1,15 @@
+{
+    "Software": "libfabric",
+    "AI Description": "libfabric is a high-performance library for fabric interfaces, designed to abstract fabric communication resources to applications while providing flexibility to applications that need to bypass the fabric interfaces. It provides fabric-agnostic interfaces for communication in high-performance computing (HPC) environments.",
+    "Core Features": "1. Abstraction of fabric interfaces for applications\n2. Flexibility for applications to bypass fabric interfaces\n3. Fabric-agnostic interfaces for HPC communication\n4. High-performance communication resources",
+    "General Tags": [
+        "Fabric Interfaces",
+        "High-Performance Computing",
+        "Communication Resources"
+    ],
+    "Software Type": "Communication Library",
+    "Software Class": "Library",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "Software Engineering, Systems, & Development",
+    "Research Discipline": "Computer Science"
+}

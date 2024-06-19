@@ -1,0 +1,23 @@
+{
+    "Software": "Liftoff",
+    "AI Description": "Liftoff is a powerful build system for iOS and macOS projects. It is designed to be faster and more reliable than the built-in Xcode build system, providing a more efficient development experience for Apple platform developers.",
+    "Core Features": [
+        "Faster build times compared to Xcode",
+        "Improved reliability and consistency in building projects",
+        "Automatic parallelization of tasks for maximizing performance",
+        "Integrated dependency management for efficient project builds",
+        "Support for defining custom build rules and configurations"
+    ],
+    "General Tags": [
+        "Build System",
+        "Ios Development",
+        "Macos Development",
+        "Software Development",
+        "Apple Platforms"
+    ],
+    "Software Type": "Build Automation",
+    "Software Class": "Development Tools",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "",
+    "Research Discipline": ""
+}

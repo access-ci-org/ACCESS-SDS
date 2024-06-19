@@ -1,0 +1,21 @@
+{
+    "Software": "r-annotate",
+    "AI Description": "r-annotate is an R package designed for functional annotation of bisulfite sequencing data. It provides tools for annotating differentially methylated regions (DMRs) and CpG sites with genomic features such as promoters, enhancers, CpG islands, and more.",
+    "Core Features": [
+        "Functional annotation of bisulfite sequencing data",
+        "Annotation of DMRs and CpG sites",
+        "Identification of genomic features like promoters, enhancers, and CpG islands",
+        "Integration with R environment for statistical analysis"
+    ],
+    "General Tags": [
+        "R Package",
+        "Functional Annotation",
+        "Bisulfite Sequencing",
+        "Genomic Features"
+    ],
+    "Software Type": "R Package",
+    "Software Class": "Data Analysis",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomics",
+    "Research Discipline": "Bioinformatics"
+}

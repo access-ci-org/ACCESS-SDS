@@ -1,0 +1,15 @@
+{
+    "Software": "hprc_utils",
+    "AI Description": "hprc_utils is a collection of utility tools for managing and analyzing High Performance Computing (HPC) environments and workflows.",
+    "Core Features": "Some of the core features of hprc_utils include job submission, monitoring, resource management, data transfer, job scheduling, workflow optimization, and HPC environment setup.",
+    "General Tags": [
+        "Hpc",
+        "High Performance Computing",
+        "Utility Tools"
+    ],
+    "Software Type": "Tool",
+    "Software Class": "Utility",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "",
+    "Research Discipline": ""
+}

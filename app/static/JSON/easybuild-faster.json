@@ -1,0 +1,20 @@
+{
+    "Software": "EasyBuild-Faster",
+    "AI Description": "EasyBuild-Faster is an extension of EasyBuild, a software build and installation framework for high-performance computing (HPC) systems. EasyBuild-Faster focuses on optimizing the software build process to reduce build times and improve overall efficiency on HPC systems.",
+    "Core Features": [
+        "Optimizes software build process for HPC systems",
+        "Reduces build times",
+        "Improves overall efficiency",
+        "Works as an extension of EasyBuild"
+    ],
+    "General Tags": [
+        "Hpc",
+        "Software Build Optimization",
+        "High-Performance Computing"
+    ],
+    "Software Type": "Software Framework",
+    "Software Class": "Development & Optimization Tools",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,15 @@
+{
+    "Software": "Autoconf",
+    "AI Description": "Autoconf is a tool for producing configure scripts for building, installing, and packaging software on Unix-like systems. It assists in the process of automating the configuration of software packages and generating portable makefiles.",
+    "Core Features": "1. Generates configure scripts for software packages.\n2. Helps in checking system features, setting up variables, and creating makefiles.\n3. Enables the creation of software that can be compiled on different Unix-like systems.\n4. Facilitates the customization and configuration of software build processes.\n5. Aids in reducing the complexity of software builds across multiple platforms.",
+    "General Tags": [
+        "Build Automation",
+        "Software Configuration",
+        "Makefiles"
+    ],
+    "Software Type": "Build Tools",
+    "Software Class": "Software Development",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "",
+    "Research Discipline": ""
+}

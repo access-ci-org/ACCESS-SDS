@@ -1,0 +1,19 @@
+{
+    "Software": "Intel VTune Profiler",
+    "AI Description": "Intel VTune Profiler is a performance profiling tool that provides a deep level of analysis for optimizing software applications on Intel platforms. It offers a range of performance profiling capabilities to identify performance bottlenecks, optimize for power efficiency, and tune threading and memory access for parallel performance.",
+    "Core Features": [
+        "Performance profiling for optimizing software applications on Intel platforms",
+        "Identifying performance bottlenecks",
+        "Optimizing for power efficiency",
+        "Tuning threading and memory access for parallel performance"
+    ],
+    "General Tags": [
+        "Performance Profiling",
+        "Software Optimization"
+    ],
+    "Software Type": "Profiling Tool",
+    "Software Class": "Development Tools",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Software Engineering, Systems, & Development",
+    "Research Discipline": "Computer Science"
+}

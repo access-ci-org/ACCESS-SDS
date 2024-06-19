@@ -1,0 +1,23 @@
+{
+    "Software": "shared",
+    "AI Description": "Shared is a cloud-based collaboration platform that allows users to share files, documents, and information with team members or external collaborators. It provides a centralized location for real-time collaboration, file storage, version control, and communication.",
+    "Core Features": [
+        "Real-time collaboration on documents and files",
+        "File sharing and storage",
+        "Version control for tracking changes",
+        "Communication tools for team collaboration",
+        "Access control and permission management"
+    ],
+    "General Tags": [
+        "Collaboration Platform",
+        "Cloud-Based Software",
+        "File Sharing",
+        "Communication",
+        "Version Control"
+    ],
+    "Software Type": "Cloud-Based Platform",
+    "Software Class": "Collaboration & File Sharing",
+    "Research Field": "Other",
+    "Research Area": "",
+    "Research Discipline": ""
+}

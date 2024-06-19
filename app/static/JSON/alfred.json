@@ -1,0 +1,22 @@
+{
+    "Software": "Alfred",
+    "AI Description": "Alfred is a productivity application for macOS that boosts your efficiency with hotkeys, keywords, text expansion, and more. It allows users to perform various tasks quickly using customizable keyboard shortcuts.",
+    "Core Features": [
+        "Customizable hotkeys for various actions",
+        "Keyword-based search for files, contacts, and web searches",
+        "Text expansion for frequently used phrases",
+        "Clipboard history and management",
+        "Integration with various apps and workflows"
+    ],
+    "General Tags": [
+        "Productivity",
+        "Macos",
+        "Keyboard Shortcuts",
+        "Automation"
+    ],
+    "Software Type": "Application",
+    "Software Class": "Productivity Tool",
+    "Research Field": "Other Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

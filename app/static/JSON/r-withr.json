@@ -1,0 +1,20 @@
+{
+    "Software": "r-withr",
+    "AI Description": "The r-withr package is designed to simplify various coding tasks in R by providing utilities for managing R options, working directories, and various resources with ease. It aims to enhance the workflow and efficiency of R programming by offering convenient functions for common operations.",
+    "Core Features": [
+        "Managing R options effectively",
+        "Facilitating working directory management",
+        "Simplifying resource manipulation tasks",
+        "Enhancing coding workflow in R"
+    ],
+    "General Tags": [
+        "R Programming",
+        "Programming Utilities",
+        "Workflow Management"
+    ],
+    "Software Type": "R Package",
+    "Software Class": "Utility Library",
+    "Research Field": "Other Natural Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

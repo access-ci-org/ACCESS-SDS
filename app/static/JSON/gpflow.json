@@ -1,0 +1,18 @@
+{
+    "Software": "GPflow",
+    "AI Description": "GPflow is a Gaussian process library that uses TensorFlow for its core computational backend. It is a scalable, flexible, and modular Gaussian process framework for building probabilistic models.",
+    "Core Features": "1. Supports Gaussian Processes (GPs) and Bayesian Neural Networks (BNNs)\n2. High-level abstractions for creating complex models\n3. Scalable inference methods for efficient computation\n4. Integration with TensorFlow for automatic differentiation\n5. Modular design for easy customization and extension",
+    "General Tags": [
+        "Machine Learning",
+        "Probabilistic Programming",
+        "Gaussian Processes"
+    ],
+    "Software Type": "",
+    "Software Class": "Computational Software",
+    "Research Field": [
+        "Computer And Information Sciences",
+        "Artificial Intelligence And Intelligent Systems"
+    ],
+    "Research Area": "",
+    "Research Discipline": ""
+}

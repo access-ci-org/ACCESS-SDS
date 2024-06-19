@@ -1,0 +1,15 @@
+{
+    "Software": "GTK2",
+    "AI Description": "GTK2 is a cross-platform widget toolkit for creating graphical user interfaces. It is used in a variety of applications to provide a user-friendly interface.",
+    "Core Features": "1. Provides a set of graphical control elements\n2. Supports event-driven programming\n3. Easily customizable and themable\n4. Allows for creating interactive and responsive GUIs\n5. Cross-platform compatibility",
+    "General Tags": [
+        "Gui",
+        "Widget Toolkit",
+        "Cross-Platform"
+    ],
+    "Software Type": "Gui Toolkit",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

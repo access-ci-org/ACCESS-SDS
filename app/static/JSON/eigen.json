@@ -1,0 +1,15 @@
+{
+    "Software": "Eigen",
+    "AI Description": "Eigen is a C++ template library for linear algebra: matrices, vectors, numerical solvers, and related algorithms.",
+    "Core Features": "1. Straightforward API for matrix operations\n2. Support for dense and sparse matrices\n3. Various linear algebra and numerical solvers\n4. Eigenvalues and eigenvectors computations\n5. Fast and efficient computation",
+    "General Tags": [
+        "Linear Algebra",
+        "Numerical Computation",
+        "C++ Library"
+    ],
+    "Software Type": "Linear Algebra Library",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

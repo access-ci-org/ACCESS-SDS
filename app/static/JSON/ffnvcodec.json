@@ -1,0 +1,15 @@
+{
+    "Software": "ffnvcodec",
+    "AI Description": "ffnvcodec is a codec library provided by NVIDIA for efficient video encoding and decoding using the NVIDIA GPU hardware acceleration.",
+    "Core Features": "1. Hardware-accelerated video encoding and decoding with NVIDIA GPUs\n2. Support for popular video codecs such as H.264 and HEVC\n3. High-performance video processing\n4. Integration with NVIDIA CUDA technology for parallel processing",
+    "General Tags": [
+        "Codec",
+        "Video Processing",
+        "Gpu Acceleration"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Codec Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

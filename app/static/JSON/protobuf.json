@@ -1,0 +1,15 @@
+{
+    "Software": "protobuf",
+    "AI Description": "Protocol buffers are a language- and platform-neutral extensible mechanism for serializing structured data. It enables you to define data structures in a JSON-like format and automatically generate code to serialize and deserialize them in a variety of languages.",
+    "Core Features": "1. Define structured data using a serialization format similar to JSON. 2. Automatically generate code in various programming languages for serialization and deserialization. 3. Efficient binary serialization for data interchange. 4. Backward and forward compatibility support for data evolution. 5. Language and platform independence for seamless cross-system communication.",
+    "General Tags": [
+        "Serialization",
+        "Data Interchange",
+        "Code Generation"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Data Serialization",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

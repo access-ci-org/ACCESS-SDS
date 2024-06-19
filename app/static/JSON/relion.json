@@ -1,0 +1,16 @@
+{
+    "Software": "Relion",
+    "AI Description": "Relion is a stand-alone computer program that employs an empirical Bayesian approach to refinement of (multiple) 3D reconstructions or 2D class averages in electron cryo-microscopy (cryo-EM).",
+    "Core Features": "Key features of Relion include particle extraction, 2D and 3D classification, image processing, refinement, and reconstruction. It is widely used for high-resolution structure determination of macromolecular complexes.",
+    "General Tags": [
+        "Cryo-Em",
+        "Image Processing",
+        "3D Reconstruction",
+        "Macromolecular Complexes"
+    ],
+    "Software Type": "Image Processing",
+    "Software Class": "Data Processing & Analysis",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Structural Biology",
+    "Research Discipline": "Bioinformatics"
+}

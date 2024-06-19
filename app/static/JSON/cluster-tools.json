@@ -1,0 +1,21 @@
+{
+    "Software": "Cluster Tools",
+    "AI Description": "Cluster Tools is a suite of software tools designed for the analysis and management of clusters in high-performance computing environments.",
+    "Core Features": [
+        "Cluster management",
+        "Performance optimization",
+        "Job scheduling",
+        "Resource allocation",
+        "Monitoring and reporting"
+    ],
+    "General Tags": [
+        "Cluster Management",
+        "High-Performance Computing",
+        "Resource Allocation"
+    ],
+    "Software Type": "Application",
+    "Software Class": "Hpc Tool",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Hpc Tools",
+    "Research Discipline": "Computer Science"
+}

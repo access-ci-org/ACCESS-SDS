@@ -1,0 +1,21 @@
+{
+    "Software": "MetaPhlAn",
+    "AI Description": "MetaPhlAn is a computational tool for profiling the composition of microbial communities from metagenomic shotgun sequencing data. It relies on unique clade-specific marker genes to identify and quantify the presence of microbial species in a sample.",
+    "Core Features": [
+        "Microbial community profiling",
+        "Metagenomic shotgun sequencing data analysis",
+        "Clade-specific marker genes",
+        "Taxonomic abundance quantification"
+    ],
+    "General Tags": [
+        "Metagenomics",
+        "Microbiome",
+        "Microbial Ecology",
+        "Bioinformatics"
+    ],
+    "Software Type": "Tool",
+    "Software Class": "Bioinformatics",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Microbial Ecology",
+    "Research Discipline": "Environmental Biology"
+}

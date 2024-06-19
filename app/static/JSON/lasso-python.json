@@ -1,0 +1,15 @@
+{
+    "Software": "lasso-python",
+    "AI Description": "Lasso-python is a Python library that provides tools for lasso regression, a linear regression technique that performs variable selection and regularization to improve the model's prediction and interpretability.",
+    "Core Features": "1. Implements lasso regression for feature selection and regularization. \n2. Helps in reducing overfitting by penalizing the absolute size of the regression coefficients. \n3. Supports various optimization algorithms for efficient model fitting. \n4. Allows users to tune the regularization parameter for optimal model performance.",
+    "General Tags": [
+        "Python Library",
+        "Machine Learning",
+        "Regression Analysis"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Data Analysis",
+    "Research Field": "Mathematics",
+    "Research Area": "Applied Mathematics",
+    "Research Discipline": "Statistics & Probability"
+}

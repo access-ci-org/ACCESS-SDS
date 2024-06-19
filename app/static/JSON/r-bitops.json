@@ -1,0 +1,19 @@
+{
+    "Software": "r-bitops",
+    "AI Description": "r-bitops is an R package that provides bitwise operations for integer vectors in R. It enables users to perform bitwise operations such as AND, OR, XOR, and bit shifting on integer vectors efficiently.",
+    "Core Features": [
+        "Perform bitwise operations in R",
+        "Supports operations like AND, OR, XOR, bit shifting",
+        "Efficient handling of integer vectors"
+    ],
+    "General Tags": [
+        "R Package",
+        "Bitwise Operations",
+        "Integer Vectors"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Data Manipulation",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

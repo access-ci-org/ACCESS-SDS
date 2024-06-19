@@ -1,0 +1,15 @@
+{
+    "Software": "SVE",
+    "AI Description": "SVE is an open-source compiler written in Scala for automatically generating vectorized algorithms for high-performance computing on modern processors.",
+    "Core Features": "Automatic vectorized algorithm generation, high-performance computing optimization, support for modern processors.",
+    "General Tags": [
+        "Compiler",
+        "High-Performance Computing",
+        "Open-Source"
+    ],
+    "Software Type": "Tool",
+    "Software Class": "Compiler",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

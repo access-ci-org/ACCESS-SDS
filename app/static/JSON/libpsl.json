@@ -1,0 +1,15 @@
+{
+    "Software": "libpsl",
+    "AI Description": "Libpsl is a C library that provides functions to work with the Public Suffix List (PSL), which is a database of domain suffixes (like .com, .co.uk, etc.) that are under public registry control.",
+    "Core Features": "It allows applications to accurately determine the effective top-level domain (eTLD) of a domain name.",
+    "General Tags": [
+        "C Library",
+        "Domain Management",
+        "Public Suffix List"
+    ],
+    "Software Type": "System/Library Software",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,16 @@
+{
+    "Software": "r-progress",
+    "AI Description": "r-progress is a simple yet versatile R package that provides functionality for creating progress bars within R scripts or functions. It offers a convenient way to visualize the progress of tasks that might take longer to complete, enhancing user experience and providing real-time feedback on the status of the computation.",
+    "Core Features": "1. Customizable progress bars\n2. Support for parallel computations\n3. Flexible formatting options\n4. Multi-platform compatibility\n5. Lightweight and easy to integrate",
+    "General Tags": [
+        "R Package",
+        "Progress Bar",
+        "User Experience",
+        "Task Monitoring"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Software Development",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

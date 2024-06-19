@@ -1,0 +1,20 @@
+{
+    "Software": "xz",
+    "AI Description": "xz is a free and open-source data compression tool that uses the LZMA compression algorithm. It is designed to be an efficient and high-performance compression utility.",
+    "Core Features": [
+        "Supports various compressed formats like .xz and .lzma",
+        "High compression ratio",
+        "Fast compression and decompression speed",
+        "Supports multi-threading for improved performance"
+    ],
+    "General Tags": [
+        "Compression",
+        "Data Compression",
+        "Open-Source"
+    ],
+    "Software Type": "Utility",
+    "Software Class": "Compression Software",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

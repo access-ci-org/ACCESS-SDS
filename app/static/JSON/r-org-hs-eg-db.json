@@ -1,0 +1,19 @@
+{
+    "Software": "R",
+    "AI Description": "R is a free software environment for statistical computing and graphics. It compiles and runs on a wide variety of UNIX platforms, Windows, and MacOS.",
+    "Core Features": [
+        "Statistical computing",
+        "Data analysis",
+        "Statistical graphics"
+    ],
+    "General Tags": [
+        "Statistical Computing",
+        "Data Analysis",
+        "Statistical Graphics"
+    ],
+    "Software Type": "Statistical Software",
+    "Software Class": "Data Analysis & Visualization",
+    "Research Field": "Medical & Health Sciences",
+    "Research Area": "Epidemiology & Global Health",
+    "Research Discipline": "Biostatistics"
+}

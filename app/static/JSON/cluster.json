@@ -1,0 +1,20 @@
+{
+    "Software": "Cluster",
+    "AI Description": "Cluster is a software package for physically based clustering and cluster analysis of numerical datasets. It provides tools for identifying groups of similar data points based on defined similarity metrics.",
+    "Core Features": [
+        "Physically based clustering algorithms",
+        "Cluster analysis of numerical datasets",
+        "Definition of similarity metrics for data point grouping",
+        "Visualization tools for clustered data analysis"
+    ],
+    "General Tags": [
+        "Clustering",
+        "Data Analysis",
+        "Visualization"
+    ],
+    "Software Type": "Numerical Analysis",
+    "Software Class": "Clustering Software",
+    "Research Field": "Other Mathematics",
+    "Research Area": "",
+    "Research Discipline": ""
+}

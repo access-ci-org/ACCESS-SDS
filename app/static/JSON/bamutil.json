@@ -1,0 +1,21 @@
+{
+    "Software": "bamutil",
+    "AI Description": "BamUtil is a versatile utility that provides a range of operations for manipulating BAM files, which are binary versions of the Sequence Alignment/Map (SAM) format used in bioinformatics for storing mapped sequencing data. It offers a variety of functions for sorting, merging, indexing, and filtering BAM files efficiently.",
+    "Core Features": [
+        "Sorting BAM files",
+        "Merging BAM files",
+        "Indexing BAM files",
+        "Filtering BAM files"
+    ],
+    "General Tags": [
+        "Bam Files",
+        "Sequence Alignment/Map Format",
+        "Bioinformatics",
+        "Data Manipulation"
+    ],
+    "Software Type": "Utility",
+    "Software Class": "Data Manipulation",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomics",
+    "Research Discipline": "Bioinformatics"
+}

@@ -1,0 +1,20 @@
+{
+    "Software": "miRDeep2",
+    "AI Description": "miRDeep2 is a computational tool for discovering known and novel microRNAs from small RNA sequencing data. It integrates standard sequencing data analysis with novel features like predicting the secondary structure of miRNAs, quantifying their expression levels, and identifying their targets.",
+    "Core Features": [
+        "Discovery of known and novel microRNAs",
+        "Integration of sequencing data analysis",
+        "Prediction of miRNA secondary structure",
+        "Quantification of miRNA expression levels",
+        "Identification of miRNA targets"
+    ],
+    "General Tags": [
+        "Bioinformatics",
+        "Computational Biology"
+    ],
+    "Software Type": "Tool",
+    "Software Class": "Bioinformatics",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Molecular Biology",
+    "Research Discipline": "Genetics"
+}

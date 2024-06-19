@@ -1,0 +1,20 @@
+{
+    "Software": "kentutils",
+    "AI Description": "kentutils is a collection of utilities provided by the UCSC Genome Browser that allow for the manipulation and analysis of genomic data. These tools are particularly useful for researchers working with genomics data and looking to perform various operations on genome sequences.",
+    "Core Features": "1. Utilities for manipulating genomic data.\n2. Tools for analyzing genome sequences.\n3. Support for various file formats commonly used in genomics.",
+    "General Tags": [
+        "Genomics",
+        "Genome Browser",
+        "Utilities"
+    ],
+    "Software Type": "Bioinformatics Tools",
+    "Software Class": "Utility",
+    "Research Field": "Biological Sciences",
+    "Research Area": [
+        "Genomics",
+        "Computational Biology"
+    ],
+    "Research Discipline": [
+        "Bioinformatics"
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "Software": "MMseqs2",
+    "AI Description": "MMseqs2 is a software suite for fast and sensitive sequence searching. It enables ultra-fast and sensitive sequence search and clustering functionality using a versatile and memory-efficient index data structure.",
+    "Core Features": [
+        "Ultra-fast sequence searching",
+        "Sensitive sequence searching",
+        "Sequence clustering",
+        "Memory-efficient index data structure"
+    ],
+    "General Tags": [
+        "Sequence Searching",
+        "Sequence Clustering",
+        "Bioinformatics",
+        "Computational Biology"
+    ],
+    "Software Type": "Sequence Search & Clustering Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

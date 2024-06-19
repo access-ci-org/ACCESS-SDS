@@ -1,0 +1,21 @@
+{
+    "Software": "obitools3",
+    "AI Description": "Obitools3 is a comprehensive package for analyzing and processing metagenomic data. It includes a variety of tools for quality control, taxonomic assignment, and diversity analysis of DNA sequences obtained from environmental samples.",
+    "Core Features": [
+        "Quality control of metagenomic data",
+        "Taxonomic assignment of DNA sequences",
+        "Diversity analysis of environmental samples",
+        "Support for handling large-scale datasets"
+    ],
+    "General Tags": [
+        "Metagenomics",
+        "Bioinformatics",
+        "Microbiome Analysis",
+        "High-Throughput Sequencing"
+    ],
+    "Software Type": "Bioinformatics Software",
+    "Software Class": "Analysis Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Bioinformatics",
+    "Research Discipline": "Biological Sciences"
+}

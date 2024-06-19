@@ -1,0 +1,15 @@
+{
+    "Software": "Mauve",
+    "AI Description": "Mauve is a computational tool used for multiple genome alignment. It is specifically designed for aligning and analyzing genomes with an emphasis on rearrangements.",
+    "Core Features": "Mauve offers an interactive visualization tool for comparing multiple genomes, identifying large-scale genome rearrangements, and highlighting areas of conservation or variation. It can align draft genomes and has the ability to handle incomplete or noisy data.",
+    "General Tags": [
+        "Computational Biology",
+        "Bioinformatics",
+        "Genome Alignment"
+    ],
+    "Software Type": "Bioinformatics Software",
+    "Software Class": "Analysis Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genome Analysis",
+    "Research Discipline": "Genomics"
+}

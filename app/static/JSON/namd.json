@@ -1,0 +1,31 @@
+{
+    "Software": "NAMD",
+    "AI Description": "NAMD (NAnoscale Molecular Dynamics) is a parallel molecular dynamics code designed for high-performance simulation of large biomolecular systems. It is developed by the Theoretical and Computational Biophysics Group at the University of Illinois at Urbana-Champaign.",
+    "Core Features": [
+        "High-performance simulation of large biomolecular systems",
+        "Parallel computing support",
+        "Integration with VMD for visualization",
+        "Scalability to utilize supercomputers",
+        "Efficient handling of systems with millions of atoms"
+    ],
+    "General Tags": [
+        "Molecular Dynamics",
+        "Biomolecular",
+        "Parallel Computing"
+    ],
+    "Software Type": [
+        "Simulation"
+    ],
+    "Software Class": [
+        "Molecular Dynamics"
+    ],
+    "Research Field": [
+        "Biological Sciences"
+    ],
+    "Research Area": [
+        "Biomolecular Modeling"
+    ],
+    "Research Discipline": [
+        "Biophysics"
+    ]
+}

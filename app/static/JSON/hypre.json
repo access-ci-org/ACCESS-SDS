@@ -1,0 +1,16 @@
+{
+    "Software": "HYPRE",
+    "AI Description": "HYPRE (High Performance Preconditioners) is a library of high performance preconditioners and solvers for the solution of large, sparse linear systems of equations on massively parallel computers. It provides scalable algorithms for solving large-scale scientific and engineering applications.",
+    "Core Features": "1. Scalable algorithms for solving large-scale linear systems. 2. Preconditioners and solvers optimized for massively parallel computers. 3. Support for various parallel computing architectures. 4. Integration with other computational software and libraries.",
+    "General Tags": [
+        "Preconditioners",
+        "Solvers",
+        "Linear Systems",
+        "Sparse Matrices"
+    ],
+    "Software Type": "Computational Software",
+    "Software Class": "Library",
+    "Research Field": "Mathematics",
+    "Research Area": "Numerical Computations",
+    "Research Discipline": "Applied Mathematics"
+}

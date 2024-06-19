@@ -1,0 +1,22 @@
+{
+    "Software": "EMBOSS",
+    "AI Description": "EMBOSS is a comprehensive software analysis package for biological sequence data. It provides over 200 tools for sequence alignment, database searching, pattern matching, motif identification, and more. EMBOSS is widely used in bioinformatics and computational biology research.",
+    "Core Features": [
+        "Sequence alignment",
+        "Database searching",
+        "Motif identification",
+        "Pattern matching",
+        "Phylogenetic analysis"
+    ],
+    "General Tags": [
+        "Bioinformatics",
+        "Computational Biology",
+        "Sequence Analysis",
+        "Biological Data"
+    ],
+    "Software Type": "Analysis Tool",
+    "Software Class": "Sequence Analysis Tools",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Sequence Analysis",
+    "Research Discipline": "Bioinformatics"
+}

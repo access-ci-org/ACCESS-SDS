@@ -1,0 +1,18 @@
+{
+    "Software": "kissplice2refgenome",
+    "AI Description": "Kissplice2refgenome is a computational tool used for the detection of fusions and alternative splicing events in RNA-Seq data. It aligns reads on a reference genome and detects different types of events including fusions, exon skipping, intron retention, and more.",
+    "Core Features": "1. Alignment of RNA-Seq reads to a reference genome.\n2. Detection of fusions and alternative splicing events.\n3. Identification of various types of splicing events like exon skipping and intron retention.\n4. Provides detailed reports and visualizations for the detected events.",
+    "General Tags": [
+        "Computational Biology",
+        "Rna-Seq Analysis",
+        "Splice Junction Detection"
+    ],
+    "Software Type": "Rna-Seq Analysis Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Gene Expression Analysis",
+    "Research Discipline": [
+        "Genetics",
+        "Bioinformatics"
+    ]
+}

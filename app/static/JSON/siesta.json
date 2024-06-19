@@ -1,0 +1,15 @@
+{
+    "Software": "Siesta",
+    "AI Description": "Siesta is a computer program that performs electronic structure calculations based on density-functional theory. It is especially designed for tight-binding and ab-initio calculations in materials science.",
+    "Core Features": "Siesta offers various features including optimized algorithms for linear-scaling calculations, parallelization, support for various exchange-correlation functionals, electronic transport calculations, and support for magnetic systems.",
+    "General Tags": [
+        "Electronic Structure Calculations",
+        "Density-Functional Theory",
+        "Materials Science"
+    ],
+    "Software Type": "Material Science",
+    "Software Class": "Computational Chemistry",
+    "Research Field": "Physical Sciences",
+    "Research Area": "Materials Science",
+    "Research Discipline": "Condensed Matter Physics"
+}

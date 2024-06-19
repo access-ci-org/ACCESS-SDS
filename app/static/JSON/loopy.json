@@ -1,0 +1,21 @@
+{
+    "Software": "Loopy",
+    "AI Description": "Loopy is a software tool for array-oriented programming with multiple inputs and outputs, offering automatic differentiation and GPU support. It enables users to express and solve linear equations in a highly optimized manner.",
+    "Core Features": [
+        "Array-oriented programming",
+        "Automatic differentiation",
+        "GPU support",
+        "Linear equation solving"
+    ],
+    "General Tags": [
+        "Programming",
+        "Optimization",
+        "Linear Algebra",
+        "Automatic Differentiation"
+    ],
+    "Software Type": "Computational Software",
+    "Software Class": "Software Development",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

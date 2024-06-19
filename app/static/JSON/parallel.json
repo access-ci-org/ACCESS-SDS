@@ -1,0 +1,21 @@
+{
+    "Software": "parallel",
+    "AI Description": "GNU Parallel is a command-line tool for Unix-like operating systems that allows the user to execute shell scripts or commands in parallel. It is designed to simplify parallel job execution on single or multiple processors without the need for complex scripting.",
+    "Core Features": [
+        "Execute commands in parallel",
+        "Distribute jobs on multiple processors",
+        "Supports for-loops, mapping functions, and piping output",
+        "Flexible and efficient task scheduling",
+        "Control resource allocation and job execution parameters"
+    ],
+    "General Tags": [
+        "Parallel Computing",
+        "Command-Line Tool",
+        "Task Scheduling"
+    ],
+    "Software Type": "Command-Line Tool",
+    "Software Class": "Utility Software",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

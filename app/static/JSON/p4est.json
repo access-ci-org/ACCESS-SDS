@@ -1,0 +1,14 @@
+{
+    "Software": "p4est",
+    "AI Description": "p4est (parallel framework for dynamic load balancing and adaptive mesh refinement) is a software library that provides support for dynamic load balancing and adaptive mesh refinement in parallel numerical simulations. It is particularly useful for solving partial differential equations on unstructured grids efficiently.",
+    "Core Features": "1. Parallel framework for dynamic load balancing\n2. Adaptive mesh refinement capabilities\n3. Support for solving partial differential equations on unstructured grids\n4. Enables efficient parallel numerical simulations",
+    "General Tags": [
+        "Computational Software",
+        "Library"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Scientific Computing Software",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "",
+    "Research Discipline": ""
+}

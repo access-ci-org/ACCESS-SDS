@@ -1,0 +1,16 @@
+{
+    "Software": "Metis",
+    "AI Description": "Metis is a computational software library for partitioning graphs, meshes, and hypergraphs. It provides algorithms that can efficiently partition large graphs and meshes while minimizing the edge-cuts and balancing the partition sizes.",
+    "Core Features": "1. Graph and mesh partitioning algorithms\n2. Hypergraph partitioning capabilities\n3. Minimization of edge-cuts for balanced partition sizes\n4. Efficient partitioning of large-scale graphs and meshes",
+    "General Tags": [
+        "Computational Software",
+        "Graph Partitioning",
+        "Mesh Partitioning",
+        "Hypergraph Partitioning"
+    ],
+    "Software Type": "Tool",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

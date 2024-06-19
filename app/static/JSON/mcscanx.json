@@ -1,0 +1,15 @@
+{
+    "Software": "MCScanX",
+    "AI Description": "MCScanX is a toolkit specifically designed for detecting collinear gene pairs within multiple genomes or subgenomes and inferring the syntenic relationships among them. It allows for the analysis of gene synteny and evolutionary relationships, aiding in understanding gene duplication and divergence events.",
+    "Core Features": "1. Detection of collinear gene pairs in multiple genomes or subgenomes\n2. Inference of syntenic relationships among genes\n3. Visualization of gene synteny and evolutionary relationships\n4. Identification of gene duplication and divergence events",
+    "General Tags": [
+        "Gene Synteny",
+        "Genomic Analysis",
+        "Syntenic Relationships"
+    ],
+    "Software Type": "Tool",
+    "Software Class": "Bioinformatics",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,21 @@
+{
+    "Software": "Graphlan",
+    "AI Description": "Graphlan is a software tool used for the visualization and annotation of phylogenetic trees and their associated metadata. It allows users to create high-quality graphical representations of phylogenetic trees with customizable features and options.",
+    "Core Features": [
+        "Visualization of phylogenetic trees",
+        "Annotation of trees with metadata",
+        "Customizable features for tree display",
+        "Support for complex tree layouts",
+        "Interactive viewing capabilities"
+    ],
+    "General Tags": [
+        "Phylogenetics",
+        "Tree Visualization",
+        "Bioinformatics"
+    ],
+    "Software Type": "Graph Visualization",
+    "Software Class": "Data Visualization",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

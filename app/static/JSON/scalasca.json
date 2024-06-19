@@ -1,0 +1,17 @@
+{
+    "Software": "Scalasca",
+    "AI Description": "Scalasca is a software toolset for analyzing the performance behavior of parallel applications and specifically for identifying potential performance bottlenecks. It assists users in optimizing the performance of their parallel applications by providing scalable and usable performance data.",
+    "Core Features": "1. Performance analysis of parallel applications\n2. Identifying performance bottlenecks\n3. Scalable and usable performance data\n4. Optimizing parallel application performance\n5. Supports MPI applications\n6. Visualization of performance data",
+    "General Tags": [
+        "Performance Analysis",
+        "Parallel Applications",
+        "Performance Optimization",
+        "Mpi Applications",
+        "Visualization"
+    ],
+    "Software Type": "Performance Analysis Tool",
+    "Software Class": "Code Analysis",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Performance Analysis",
+    "Research Discipline": "Software Engineering, Systems, & Development"
+}

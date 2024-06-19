@@ -1,0 +1,19 @@
+{
+    "Software": "libglu",
+    "AI Description": "libglu is a software library that provides support for building OpenGL applications. It is designed to complement the functionality provided by OpenGL and aids in handling complex geometric shapes, tessellation, and creating polygonal models.",
+    "Core Features": [
+        "Support for tessellating complex geometric shapes",
+        "Functions for creating and handling polygonal models",
+        "Provides utilities for creating surfaces and shapes in OpenGL applications"
+    ],
+    "General Tags": [
+        "Software Library",
+        "Geometry Processing",
+        "Computer Graphics"
+    ],
+    "Software Type": "Programming Library",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

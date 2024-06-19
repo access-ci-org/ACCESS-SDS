@@ -1,0 +1,16 @@
+{
+    "Software": "Magma",
+    "AI Description": "Magma is a software package designed for computations in algebra, number theory, algebraic geometry, and algebraic combinatorics. It provides a powerful tool for mathematical research and applications.",
+    "Core Features": "Magma offers a wide range of capabilities including computations with matrices, algebraic structures, number theory, polynomial systems, and modular forms. It also supports visualization tools for exploring mathematical objects and structures.",
+    "General Tags": [
+        "Mathematics",
+        "Algebra",
+        "Number Theory",
+        "Combinatorics"
+    ],
+    "Software Type": "Mathematical Software",
+    "Software Class": "Computational Software",
+    "Research Field": "Mathematics",
+    "Research Area": "Pure Mathematics",
+    "Research Discipline": "Algebra & Number Theory"
+}

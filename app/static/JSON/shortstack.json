@@ -1,0 +1,15 @@
+{
+    "Software": "shortstack",
+    "AI Description": "ShortStack is a computational pipeline for analyzing small RNA sequencing data, particularly from plant species. It facilitates the discovery and profiling of microRNAs and other small RNAs.",
+    "Core Features": "1. Small RNA sequencing data analysis\n2. MicroRNA and small RNA profiling\n3. Differential expression analysis\n4. Novel small RNA discovery\n5. Plant species focus",
+    "General Tags": [
+        "Small Rna Sequencing",
+        "Microrna Analysis",
+        "Plant Species"
+    ],
+    "Software Type": "Computational Tool",
+    "Software Class": "Bioinformatics",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Plant Genomics",
+    "Research Discipline": "Genomics"
+}

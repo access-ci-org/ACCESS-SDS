@@ -1,0 +1,21 @@
+{
+    "Software": "xit",
+    "AI Description": "Xit is a powerful version control tool designed for Git with a focus on simplicity and productivity. It provides a graphical user interface to facilitate the management and tracking of code changes, branches, and repositories.",
+    "Core Features": [
+        "Graphical user interface for Git",
+        "Code change management",
+        "Branch management",
+        "Repository tracking",
+        "Simplicity and productivity"
+    ],
+    "General Tags": [
+        "Version Control",
+        "Git",
+        "Graphical User Interface"
+    ],
+    "Software Type": "Tool",
+    "Software Class": "Version Control System",
+    "Research Field": "Other Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

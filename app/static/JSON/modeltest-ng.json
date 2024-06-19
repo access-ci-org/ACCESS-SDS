@@ -1,0 +1,21 @@
+{
+    "Software": "ModelTest-NG",
+    "AI Description": "ModelTest-NG is a software for the selection of nucleotide substitution models in phylogenetics. It uses model selection strategies to automatically choose the best-fit nucleotide substitution model for a given dataset, which is essential for accurate phylogenetic inference.",
+    "Core Features": [
+        "Automated selection of nucleotide substitution models",
+        "Compatibility with popular phylogenetic software packages",
+        "Support for multiple model selection strategies",
+        "Statistical evaluation of model adequacy"
+    ],
+    "General Tags": [
+        "Phylogenetics",
+        "Model Selection",
+        "Phylogenetic Inference",
+        "Nucleotide Substitution Models"
+    ],
+    "Software Type": "Model Selection Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Evolutionary Biology",
+    "Research Discipline": "Bioinformatics"
+}

@@ -1,0 +1,17 @@
+{
+    "Software": "pyranges",
+    "AI Description": "PyRanges is a Python library for working with genomic ranges. It provides an efficient and intuitive way to manipulate genomic intervals and perform set operations on them.",
+    "Core Features": "Key features include creating, manipulating, and analyzing genomic intervals, performing set operations such as intersection, union, difference, and complement on ranges, supporting both one-dimensional and two-dimensional ranges, integrating with pandas DataFrames, enabling fast and memory-efficient operations on large datasets, and providing a user-friendly API for genomic data processing.",
+    "General Tags": [
+        "Genomic Data",
+        "Genomic Intervals",
+        "Data Processing",
+        "Set Operations",
+        "Python Library"
+    ],
+    "Software Type": "Python Library",
+    "Software Class": "Library",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genetics",
+    "Research Discipline": "Biological Sciences"
+}

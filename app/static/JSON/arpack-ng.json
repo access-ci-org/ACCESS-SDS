@@ -1,0 +1,21 @@
+{
+    "Software": "ARPACK-NG",
+    "AI Description": "ARPACK (ARnoldi PACKage) is a collection of Fortran77 subroutines designed to solve large scale eigenvalue problems. The ARPACK-ng project is a re-implementation of the original ARPACK with the goal of improving its usability, maintainability, and performance across a wide range of modern hardware platforms.",
+    "Core Features": "ARPACK-NG provides efficient and scalable algorithms for solving large sparse eigenvalue problems, including those arising from applications in physics, chemistry, engineering, and other fields. It supports iterative methods like Arnoldi iteration for computing a few eigenvalues/vectors of a large sparse matrix, with options for finding either the largest or smallest eigenvalues.",
+    "General Tags": [
+        "Linear-Algebra",
+        "Eigenvalue Problems",
+        "Sparse Matrices",
+        "Iterative Methods",
+        "Computational Physics",
+        "Computational Chemistry",
+        "Fortran"
+    ],
+    "Software Type": "",
+    "Software Class": "",
+    "Research Field": [
+        "Physical Sciences"
+    ],
+    "Research Area": "",
+    "Research Discipline": ""
+}

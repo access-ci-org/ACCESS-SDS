@@ -3,32 +3,79 @@ import glob
 import os
 import pandas as pd
 
-from parseJSONInfo import jsonSanitizer
-from parseVersionInfo import addVersionInfoToTable
-from softwareStatic import createFullDocUrl
+from app.parseJSONInfo import jsonSanitizer
+from app.parseVersionInfo import addVersionInfoToTable
+from app.softwareStatic import createFullDocUrl
 
 CURATED_INPUT_DIRECTORY = './static/data/ACCESS_Software.csv'
 CURATED_OUTPUT_DIRECTORY = './static/data/staticTable.csv'
 
-GENERATED_INPUT_DIRECTORY = "./dynamicSearch/software_all_json"
+GENERATED_INPUT_DIRECTORY = "./static/JSON"
 GENERATED_OUTPUT_DIRECTORY = './static/data/generatedTable.csv'
 
 FINAL_OUTPUT_DIRECTORY = './static/data/softwareTable.csv'
-JSON_keys = ['Software', 'AI Description', 'Core Features', "General Tags"]
+
+JSON_keys = [
+    'Software', 
+    'AI Description', 
+    'Core Features', 
+    'General Tags', 
+    'Software Type', 
+    'Software Class',
+    'Research Field',
+    'Research Area',
+    'Research Discipline'
+    ]
+
+column_order = ['Software', 'RP Name', 'Software Type', 'Software Class', 'Research Field', 'Research Area', 
+                'Research Discipline', 'Software Description', 'Core Features', 'General Tags', "Software's Web Page",
+                'Software Documentation', 'Example Software Use', 'RP Software Documentation', 'Version Info', 'AI Description', 'Example Use']
 
 
 ##################################################################
 #   createGeneratedTable                                         #
 ##################################################################
 def createSoftwareTable():
-    #os.remove(STATIC_OUTPUT_DIRECTORY)
-    #os.remove(GENERATED_OUTPUT_DIRECTORY)
+    mergeColumns = ['Software Type', 'Software Class', 'Research Area', 'Research Discipline']
 
-    staticTableDF = createStaticTable()
-    generatedTableDF = createGeneratedTable()
+    # Read cached tables, if they exist
+    # Otherwise, recreate as little as necessary
+    try:
+        mergedDF = pd.read_csv(FINAL_OUTPUT_DIRECTORY)
+        print("Software table found!")
+    except:
+        print("Software table not found. Creating...")
+        try:
+            staticTableDF = pd.read_csv(CURATED_OUTPUT_DIRECTORY)
+            print("Static Table found!")
+        except:
+            staticTableDF = createStaticTable()
+            print("Static table not found. Creating...")
+        try:
+            generatedTableDF = pd.read_csv(GENERATED_OUTPUT_DIRECTORY)
+            print("AI Generated table found!")
+        except:
+            generatedTableDF = createGeneratedTable()
+            print("AI Generated table not found. Creating...")
 
-    mergedDF = staticTableDF.merge(generatedTableDF, how='left', on='Software')
-    mergedDF.to_csv(FINAL_OUTPUT_DIRECTORY,index=False)
+        # Merge tables by index
+        mergedDF = staticTableDF.merge(generatedTableDF, how='left', on='Software', suffixes=('_static', '_generated'))
+        
+        # Combine matching columns, prioritizing the AI Generated information
+        for column in mergeColumns:
+            mergedDF[column] = mergedDF[column + '_static'].combine_first(mergedDF[column + '_generated'])
+        
+        # Drop the unmerged versions of columns
+        mergedDF = mergedDF.drop(columns=[column + '_static' for column in mergeColumns] + [column + '_generated' for column in mergeColumns] )
+        #mergedDF.fillna('',inplace=True)
+        mergedDF.insert(16, 'Example Use', '')
+
+        mergedDF = mergedDF[column_order]
+        # Cache the table for efficiency
+        mergedDF.to_csv(FINAL_OUTPUT_DIRECTORY,index=False)
+
+
+
 
     return mergedDF
 
@@ -126,7 +173,7 @@ def createGeneratedTable():
     sortedDict = dict(sorted(softwareDict.items()))
 
     # Create the DataFrame
-    df = pd.DataFrame.from_dict(sortedDict, orient='index', columns=['Software', 'AI Description', 'Core Features', 'General Tags', 'Software Type', 'Software Class', 'Research Field', 'Reserarch Area', 'Research Discipline'], )
+    df = pd.DataFrame.from_dict(sortedDict, orient='index', columns=['Software', 'AI Description', 'Core Features', 'General Tags', 'Software Type', 'Software Class', 'Research Field', 'Research Area', 'Research Discipline'], )
     # Ensure uniformity in Software names, since this will be the index
     df['Software'] = df['Software'].str.lower()
     df.set_index('Software', inplace=True)
@@ -136,4 +183,9 @@ def createGeneratedTable():
     return df
 
 
-createSoftwareTable()
+
+
+
+
+
+#createSoftwareTable()

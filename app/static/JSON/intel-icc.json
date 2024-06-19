@@ -1,0 +1,15 @@
+{
+    "Software": "Intel ICC",
+    "AI Description": "The Intel C++ Compiler (ICC) is a high-performance compiler that supports the latest C++ standards, enabling developers to create efficient and optimized code for Intel processors. It is part of Intel's Parallel Studio suite of tools, designed to enhance performance and scalability for parallel computing.",
+    "Core Features": "1. Support for the latest C++ standards\n2. Optimization for Intel processors\n3. Parallel computing support\n4. Integration with Intel Parallel Studio\n5. Enhanced performance and scalability",
+    "General Tags": [
+        "Compiler",
+        "Parallel Computing",
+        "Optimization"
+    ],
+    "Software Type": "Development Tool",
+    "Software Class": "Compiler",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,15 @@
+{
+    "Software": "R-bh",
+    "AI Description": "R-bh is a collection of software packages and libraries for the R programming language that provide various bioinformatics algorithms and tools for analyzing biological data.",
+    "Core Features": "Includes a wide range of functionalities such as sequence alignment, motif discovery, gene expression analysis, statistical analysis of high-throughput sequencing data, and visualization tools for biological data.",
+    "General Tags": [
+        "Bioinformatics",
+        "R Language",
+        "Biological Data Analysis"
+    ],
+    "Software Type": "Data Analysis Tool",
+    "Software Class": "Bioinformatics Software",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Biological Sciences",
+    "Research Discipline": "Bioinformatics"
+}

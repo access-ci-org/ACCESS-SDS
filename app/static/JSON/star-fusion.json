@@ -1,0 +1,16 @@
+{
+    "Software": "Star-Fusion",
+    "AI Description": "Star-Fusion is a computational tool developed to identify fusion transcripts from RNA-Seq data. It utilizes the STAR aligner to map reads and searches for evidence of chimeric transcripts, providing insight into gene fusions in cancer and other diseases.",
+    "Core Features": "1. Detection of fusion transcripts from RNA-Seq data\n2. Utilizes the STAR aligner for read mapping\n3. Identifies chimeric transcripts for downstream analysis\n4. Useful for studying gene fusions in cancer and related diseases",
+    "General Tags": [
+        "Rna-Seq",
+        "Fusion Transcripts",
+        "Gene Fusions",
+        "Computational Tool"
+    ],
+    "Software Type": "Computational Software",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Transcriptomics",
+    "Research Discipline": "Bioinformatics"
+}

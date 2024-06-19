@@ -1,0 +1,20 @@
+{
+    "Software": "GTK4",
+    "AI Description": "GTK4 is a multi-platform toolkit for creating graphical user interfaces. It is used for developing applications with a consistent look and feel across different operating systems.",
+    "Core Features": [
+        "Cross-platform support",
+        "Customizable themes and styling",
+        "Support for various programming languages",
+        "Integration with popular programming languages and development environments"
+    ],
+    "General Tags": [
+        "Gui Toolkit",
+        "Cross-Platform Development",
+        "User Interface Design"
+    ],
+    "Software Type": "Development Tool",
+    "Software Class": "Graphical User Interface (Gui) Toolkit",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

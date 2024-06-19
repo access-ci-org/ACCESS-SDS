@@ -1,0 +1,19 @@
+{
+    "Software": "Nanolyse",
+    "AI Description": "Nanolyse is a software tool for analyzing and processing nanopore sequencing data, with a focus on structural variation analysis.",
+    "Core Features": [
+        "Structural variation analysis",
+        "Nanopore sequencing data processing",
+        "Quality control",
+        "Variant calling"
+    ],
+    "General Tags": [
+        "Bioinformatics",
+        "Hpc Tools"
+    ],
+    "Software Type": "Computational Software",
+    "Software Class": "Analytical & Materials Chemistry",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

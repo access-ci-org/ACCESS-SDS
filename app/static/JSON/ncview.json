@@ -1,0 +1,21 @@
+{
+    "Software": "ncview",
+    "AI Description": "ncview is a visual browser for netCDF format files used for earth system data. It provides functionalities for viewing, analyzing, and interacting with data stored in netCDF files.",
+    "Core Features": [
+        "Visualization of data stored in netCDF format",
+        "Plotting of variables such as temperature, humidity, wind vectors, and more",
+        "Zooming, panning, and slicing through data",
+        "Overlaying multiple variables for comparison",
+        "Customizing plots with different color maps and annotations"
+    ],
+    "General Tags": [
+        "Data Visualization",
+        "Netcdf",
+        "Earth System Data"
+    ],
+    "Software Type": "Data Analysis Tool",
+    "Software Class": "Data Visualization",
+    "Research Field": "Earth & Environmental Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

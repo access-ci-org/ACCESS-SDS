@@ -1,0 +1,21 @@
+{
+    "Software": "R-genomeinfodb",
+    "AI Description": "R-genomeinfodb is an R package that provides utilities and helper functions for interacting with different genome annotation databases, such as UCSC, Ensembl, and NCBI. It allows users to easily access and retrieve genomic information for various organisms.",
+    "Core Features": [
+        "Access and retrieve genomic information from different annotation databases",
+        "Integration with popular genome browsers like UCSC, Ensembl, and NCBI",
+        "Query specific genomic regions and features",
+        "Retrieve gene annotations, sequence information, and regulatory elements"
+    ],
+    "General Tags": [
+        "Genomics",
+        "Bioinformatics",
+        "R Package",
+        "Genome Annotation"
+    ],
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Utility",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomics",
+    "Research Discipline": "Biological Sciences"
+}

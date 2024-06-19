@@ -1,0 +1,15 @@
+{
+    "Software": "coordgenlibs",
+    "AI Description": "CoordGenLibs is a set of computational chemistry libraries and tools for generating 3D coordinates for small molecules. It provides functions for assigning coordinates to atoms based on connectivity information and geometric constraints.",
+    "Core Features": "1. Generation of 3D coordinates for small molecules\n2. Connectivity-based atom coordination\n3. Geometric constraints for accurate coordinate assignment\n4. Integration with various computational chemistry workflows",
+    "General Tags": [
+        "Computational Chemistry",
+        "3D Coordinate Generation",
+        "Small Molecules"
+    ],
+    "Software Type": "Chemical Informatics",
+    "Software Class": "Library",
+    "Research Field": "Chemical Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

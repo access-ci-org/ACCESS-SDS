@@ -1,0 +1,15 @@
+{
+    "Software": "libidn",
+    "AI Description": "Libidn is an internationalized domain name library designed to help with the process of converting internationalized domain names to/from ASCII representation. It implements the Stringprep, Punycode and IDNA specifications defined by the IETF (Internet Engineering Task Force).",
+    "Core Features": "The core features of libidn include support for internationalized domain names (IDN), ASCII conversion, Punycode encoding/decoding, Unicode normalization, and IDNA (Internationalized Domain Names in Applications) compliance. It supports both IDNA2003 and IDNA2008 specifications.",
+    "General Tags": [
+        "Software Library",
+        "Internationalization",
+        "Domain Names"
+    ],
+    "Software Type": "Dynamic Link Library (Dll)",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Applied Computer Science",
+    "Research Discipline": "Computer & Information Sciences"
+}

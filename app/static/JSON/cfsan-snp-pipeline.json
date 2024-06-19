@@ -1,0 +1,15 @@
+{
+    "Software": "cfsan-snp-pipeline",
+    "AI Description": "The cfsan-snp-pipeline is a bioinformatics tool developed by the Center for Food Safety and Applied Nutrition (CFSAN) that is used for identifying single nucleotide polymorphisms (SNPs) from raw sequence data of bacterial genomes.",
+    "Core Features": "1. Identification of single nucleotide polymorphisms (SNPs) in bacterial genomes.\n2. Processing of raw sequence data from next-generation sequencing (NGS) platforms.\n3. Phylogenetic analysis and comparison of bacterial strains based on SNP variations.\n4. Visualization tools for SNP analysis results.\n5. Integration with other bioinformatics tools and databases for additional analysis.",
+    "General Tags": [
+        "Bioinformatics",
+        "Computational Biology",
+        "Sequence Analysis"
+    ],
+    "Software Type": "Pipeline",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

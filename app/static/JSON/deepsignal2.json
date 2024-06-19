@@ -1,0 +1,16 @@
+{
+    "Software": "deepsignal2",
+    "AI Description": "Deepsignal2 is a deep learning-based toolkit for nanopore signal processing and variant detection. It is designed to accurately detect DNA modifications and structural variants from raw nanopore sequencing data.",
+    "Core Features": "1. Process raw nanopore signal data\n2. Detect DNA modifications and structural variations\n3. Utilizes deep learning algorithms for improved accuracy\n4. Supports real-time analysis of nanopore sequencing data",
+    "General Tags": [
+        "Nanopore Sequencing",
+        "Deep Learning",
+        "Signal Processing",
+        "Variant Detection"
+    ],
+    "Software Type": "Toolkit",
+    "Software Class": "Bioinformatics",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomics",
+    "Research Discipline": "Genetics"
+}

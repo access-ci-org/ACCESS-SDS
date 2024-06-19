@@ -1,0 +1,15 @@
+{
+    "Software": "r-bit",
+    "AI Description": "r-bit is a software library that provides a suite of functions for working with binary data and bit manipulation in the R programming language.",
+    "Core Features": "r-bit offers functions for setting, clearing, toggling, checking, and querying specific bits within binary data. It also supports operations for bitwise AND, OR, XOR, and shifting operations. The library aims to simplify the handling of binary data and bitwise operations within R scripts.",
+    "General Tags": [
+        "Binary Data",
+        "Bit Manipulation",
+        "R Programming"
+    ],
+    "Software Type": "Data Analysis Tool",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

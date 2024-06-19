@@ -1,0 +1,24 @@
+{
+    "Software": "regtools",
+    "AI Description": "Regtools is a command-line tool and Python library for manipulating sequence alignments (SAM/BAM/CRAM), variant call files (VCF/BCF) and genomic annotations in the standard genomic file formats. It provides various utilities for filtering, sorting, comparing, and annotating genomic data to assist in the analysis of high-throughput sequencing data.",
+    "Core Features": [
+        "Manipulation of sequence alignments and variant call files",
+        "Filtering, sorting, and comparing genomic data",
+        "Annotating genomic annotations",
+        "Command-line tool and Python library"
+    ],
+    "General Tags": [
+        "Sequence Alignment",
+        "Variant Calling",
+        "Genomic Data",
+        "High-Throughput Sequencing"
+    ],
+    "Software Type": "Command-Line Tool/Python Library",
+    "Software Class": "Utility Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": [
+        "Genomics",
+        "Bioinformatics"
+    ],
+    "Research Discipline": ""
+}

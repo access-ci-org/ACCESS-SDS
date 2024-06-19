@@ -1,0 +1,23 @@
+{
+    "Software": "c-ares",
+    "AI Description": "c-ares is a C library that performs DNS requests and name resolutions asynchronously. It is designed to be lightweight and efficient, providing asynchronous DNS capabilities to applications.",
+    "Core Features": [
+        "Asynchronous DNS requests",
+        "Support for IPv4 and IPv6",
+        "Thread-safe design",
+        "Support for multiple DNS server configurations",
+        "Compatible with various operating systems"
+    ],
+    "General Tags": [
+        "Dns",
+        "Asynchronous",
+        "Networking",
+        "Library",
+        "C"
+    ],
+    "Software Type": "Networking",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

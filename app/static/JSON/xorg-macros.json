@@ -1,0 +1,14 @@
+{
+    "Software": "xorg-macros",
+    "AI Description": "The xorg-macros package provides a set of autoconf macros used by X.org software packages for consistent and simplified build procedures across various Unix and Linux systems.",
+    "Core Features": "1. Simplifies the build process for X.org software packages.\n2. Ensures consistency in build procedures across different Unix and Linux systems.\n3. Provides a collection of autoconf macros for configuring and building software efficiently.",
+    "General Tags": [
+        "Build Tools",
+        "Autoconf Macros"
+    ],
+    "Software Type": "Library/Dependency",
+    "Software Class": "Development Tools",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

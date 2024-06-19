@@ -1,0 +1,20 @@
+{
+    "Software": "giflib",
+    "AI Description": "Giflib is a library for reading and writing GIF images. It is a widely used library for handling Graphics Interchange Format (GIF) images in various software applications and programming languages.",
+    "Core Features": [
+        "Reading and writing GIF images",
+        "Support for various GIF image manipulation functions",
+        "High performance and efficient GIF image processing",
+        "Cross-platform compatibility"
+    ],
+    "General Tags": [
+        "Library",
+        "Image Processing",
+        "Gif Images"
+    ],
+    "Software Type": "",
+    "Software Class": "",
+    "Research Field": "",
+    "Research Area": "",
+    "Research Discipline": ""
+}

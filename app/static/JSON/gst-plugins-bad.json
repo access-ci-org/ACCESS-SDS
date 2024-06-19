@@ -1,0 +1,15 @@
+{
+    "Software": "gst-plugins-bad",
+    "AI Description": "gst-plugins-bad is a collection of GStreamer plugins and elements that are not of high quality, experimental, or have not been tested well. These plugins are considered 'bad' due to various reasons such as being incomplete, breaking or lacking proper documentation.",
+    "Core Features": "1. Provides a variety of GStreamer plugins and elements.\n2. Experimental plugins for testing new functionalities.\n3. Plugins that are incomplete or lack proper testing.\n4. Supplement to the GStreamer plugins base.",
+    "General Tags": [
+        "Multimedia",
+        "Plugin",
+        "Gstreamer"
+    ],
+    "Software Type": "Plugin",
+    "Software Class": "Multimedia",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

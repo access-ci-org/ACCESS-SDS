@@ -1,0 +1,15 @@
+{
+    "Software": "nsync",
+    "AI Description": "Nsync is a command-line tool for synchronizing files and directories between two locations. It allows users to easily mirror data between local and remote locations, ensuring that the contents are up to date in both places.",
+    "Core Features": "1. Synchronize files and directories between local and remote locations.\n2. Efficiently mirror data to ensure consistency across locations.\n3. Support for various protocols for remote synchronization.\n4. Command-line interface for easy automation and integration into scripts.",
+    "General Tags": [
+        "File Synchronization",
+        "Data Mirroring",
+        "Command-Line Tool"
+    ],
+    "Software Type": "File Synchronization Tool",
+    "Software Class": "Utility Software",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "Software Engineering, Systems, & Development",
+    "Research Discipline": "Computer Science"
+}

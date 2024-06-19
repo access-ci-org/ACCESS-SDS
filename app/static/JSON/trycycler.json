@@ -1,0 +1,21 @@
+{
+    "Software": "trycycler",
+    "AI Description": "Trycycler is a software tool designed for the analysis of highly divergent microbial genomes, specifically those with atypical genome structures or high levels of genetic variation. It aims to accurately identify and assemble circular contigs from metagenomic datasets, which can be particularly challenging due to the presence of repeats, inversions, and other complex genome rearrangements.",
+    "Core Features": [
+        "Identification and assembly of circular contigs in highly divergent microbial genomes",
+        "Handling of atypical genome structures and high genetic variation",
+        "Ability to process metagenomic datasets",
+        "Detection of repeats, inversions, and complex genome rearrangements"
+    ],
+    "General Tags": [
+        "Bioinformatics",
+        "Metagenomics",
+        "Genome Assembly",
+        "Microbial Genomics"
+    ],
+    "Software Type": "Sequence Analysis Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomics",
+    "Research Discipline": "Genetics"
+}

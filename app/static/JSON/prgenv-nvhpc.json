@@ -1,0 +1,21 @@
+{
+    "Software": "prgenv-nvhpc",
+    "AI Description": "The prgenv-nvhpc module is part of the NVIDIA HPC SDK that provides an environment for compiling and running HPC applications on NVIDIA GPUs. It includes compilers, libraries, tools, and runtime support optimized for high-performance computing workloads.",
+    "Core Features": [
+        "Optimized compilers for NVIDIA GPUs",
+        "High-performance libraries for numerical computing",
+        "Tools for profiling and debugging HPC applications",
+        "Support for parallel programming models like CUDA and OpenACC"
+    ],
+    "General Tags": [
+        "Hpc",
+        "Compiler",
+        "Gpu Computing",
+        "High-Performance Computing"
+    ],
+    "Software Type": "Compiler",
+    "Software Class": "Development Tools",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

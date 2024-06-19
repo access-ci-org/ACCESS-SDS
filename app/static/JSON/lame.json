@@ -1,0 +1,15 @@
+{
+    "Software": "LAME",
+    "AI Description": "LAME is a high-quality MPEG Audio Layer III (MP3) encoder licensed under the GNU Lesser General Public License (LGPL). It is considered one of the best MP3 encoders available.",
+    "Core Features": "LAME provides excellent sound quality with high compression rates, supports various encoding options and settings, is open-source and actively maintained.",
+    "General Tags": [
+        "Audio Encoding",
+        "Mp3",
+        "Open-Source"
+    ],
+    "Software Type": "Encoder",
+    "Software Class": "Audio Encoding",
+    "Research Field": "Other Engineering & Technologies",
+    "Research Area": "",
+    "Research Discipline": ""
+}

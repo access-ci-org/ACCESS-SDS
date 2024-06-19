@@ -1,0 +1,20 @@
+{
+    "Software": "p11-kit",
+    "AI Description": "p11-kit is a library to manage PKCS#11 modules. It enables multiple applications to use the same PKCS#11 module in parallel, ensures that applications get access to the same serialized view of the module's state, and handles sharing access to the module state among applications.",
+    "Core Features": [
+        "Manages PKCS#11 modules",
+        "Enables multiple applications to use the same module",
+        "Provides a serialized view of the module's state",
+        "Handles sharing access to the module state among applications"
+    ],
+    "General Tags": [
+        "Library",
+        "Pkcs#11",
+        "Module Management"
+    ],
+    "Software Type": "Utility",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

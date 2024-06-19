@@ -1,0 +1,15 @@
+{
+    "Software": "byacc",
+    "AI Description": "byacc is a public domain LALR parser generator which is often used as a replacement for yacc. LALR parsers are used in the generation of efficient parsers for modern programming languages.",
+    "Core Features": "byacc generates parsers for context-free grammars, assists in building syntax analysis for programming languages, facilitates the creation of efficient parsers for various applications.",
+    "General Tags": [
+        "Parser Generator",
+        "Lalr",
+        "Context-Free Grammar"
+    ],
+    "Software Type": "Development Tool",
+    "Software Class": "Compiler",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

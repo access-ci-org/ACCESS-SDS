@@ -1,0 +1,21 @@
+{
+    "Software": "Intel Integrated Performance Primitives (Intel IPP) for Intel 64",
+    "AI Description": "The Intel Integrated Performance Primitives (Intel IPP) is a library of functions for multimedia, data processing, and communication applications which are developed to enable developers to deliver more reliable, scalable, and efficient applications.",
+    "Core Features": [
+        "Optimized functions for multimedia, data processing, and communication applications",
+        "Support for various data types and platforms including Intel 64 architecture",
+        "Parallel processing capabilities for improved performance",
+        "Integration with popular development environments and compilers"
+    ],
+    "General Tags": [
+        "Software Library",
+        "Multimedia Processing",
+        "Data Processing",
+        "Communication Applications"
+    ],
+    "Software Type": "Optimization Library",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,21 @@
+{
+    "Software": "r-utf8",
+    "AI Description": "The r-utf8 package in R provides support for handling UTF-8 character strings, enabling users to efficiently manipulate and process Unicode text data. It offers functions for encoding, decoding, and working with UTF-8 encoded strings, making it easier to work with multilingual text.",
+    "Core Features": [
+        "UTF-8 character string manipulation",
+        "Encoding and decoding functions",
+        "Support for Unicode text data",
+        "Facilitates handling of multilingual text"
+    ],
+    "General Tags": [
+        "R Package",
+        "Text Processing",
+        "Unicode Support",
+        "Character Encoding"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Package",
+    "Research Field": "Other Mathematics",
+    "Research Area": "",
+    "Research Discipline": ""
+}

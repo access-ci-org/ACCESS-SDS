@@ -1,0 +1,23 @@
+{
+    "Software": "vsearch",
+    "AI Description": "VSEARCH is a versatile open-source tool for metagenomics and sequence analysis. It supports DNA and RNA sequence analysis, clustering, dereplication, chimera detection, pairwise alignment, searching, and filtering.",
+    "Core Features": [
+        "Metagenomics analysis",
+        "Sequence clustering",
+        "Dereplication",
+        "Chimera detection",
+        "Pairwise alignment",
+        "Sequence searching",
+        "Sequence filtering"
+    ],
+    "General Tags": [
+        "Metagenomics",
+        "Sequence Analysis",
+        "Bioinformatics"
+    ],
+    "Software Type": "Sequence Analysis Tool",
+    "Software Class": "Analysis Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Metagenomics",
+    "Research Discipline": "Bioinformatics"
+}

@@ -1,0 +1,15 @@
+{
+    "Software": "RSeQC",
+    "AI Description": "RSeQC provides a number of standalone modules to check quality of RNA-Seq experiments, from raw data to the final result.",
+    "Core Features": "Key features include gene body coverage, read distribution over gene model, read distribution around transcription start site, read distribution around transcription termination site, coverage uniformity and more.",
+    "General Tags": [
+        "Rna-Seq",
+        "Quality Control",
+        "Gene Expression Analysis"
+    ],
+    "Software Type": "Tool",
+    "Software Class": "Bioinformatics",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

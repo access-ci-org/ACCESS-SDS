@@ -1,0 +1,22 @@
+{
+    "Software": "perftools-preload",
+    "AI Description": "perftools-preload is a tool designed to optimize and profile code performance by collecting runtime statistics, such as CPU utilization, memory usage, and function call traces. It is particularly useful for identifying performance bottlenecks and optimizing code for improved efficiency.",
+    "Core Features": [
+        "Code optimization",
+        "Performance profiling",
+        "Runtime statistics collection",
+        "Identifying performance bottlenecks",
+        "Function call trace analysis"
+    ],
+    "General Tags": [
+        "Performance Optimization",
+        "Code Profiling",
+        "Software Performance",
+        "Debugging"
+    ],
+    "Software Type": "Tool",
+    "Software Class": "Performance Tuning",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

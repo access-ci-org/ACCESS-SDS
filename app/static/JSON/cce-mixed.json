@@ -1,0 +1,15 @@
+{
+    "Software": "cce-mixed",
+    "AI Description": "cce-mixed is a software package designed for performing calculations in the framework of many-body perturbation theory for the electronic structure of solids. It focuses on the GW approximation, self-energy calculations, and the solution of the Bethe-Salpeter equation for optical excitations.",
+    "Core Features": "1. GW approximation calculations for electronic structure analysis\n2. Self-energy calculations\n3. Bethe-Salpeter equation solutions for optical excitations\n4. Solid-state materials electronic structure analysis",
+    "General Tags": [
+        "Computational Chemistry",
+        "Quantum Mechanics",
+        "Electronic Structure Calculations"
+    ],
+    "Software Type": "Electronic Structure Calculation",
+    "Software Class": "Computational Software",
+    "Research Field": "Physical Sciences",
+    "Research Area": "Electronic Structure Of Solids",
+    "Research Discipline": "Condensed Matter Physics"
+}

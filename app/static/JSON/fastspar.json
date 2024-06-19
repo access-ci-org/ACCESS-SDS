@@ -1,0 +1,15 @@
+{
+    "Software": "fastspar",
+    "AI Description": "fastspar is a Python package that implements a fast version of SparCC, a correlation method tailored for compositional data commonly found in microbiome studies.",
+    "Core Features": "fastspar provides a quicker alternative to SparCC, especially for large datasets, by utilizing an improved algorithm for computing compositional correlation values. It is designed to handle high-dimensional and sparse data typically encountered in microbiome research.",
+    "General Tags": [
+        "Microbiome",
+        "Correlation",
+        "Compositional Data"
+    ],
+    "Software Type": "Computational Software",
+    "Software Class": "Python Library",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

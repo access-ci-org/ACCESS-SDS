@@ -1,0 +1,15 @@
+{
+    "Software": "gobff",
+    "AI Description": "gobff is a software tool for protein structure prediction based on the Fragment-Assembly Monte Carlo (FAMC) approach. It enables the modeling of protein structures by assembling fragments and refining the models using Monte Carlo simulations.",
+    "Core Features": "1. Fragment-Assembly Monte Carlo (FAMC) based protein structure prediction\n2. Fragment assembly for structure modeling\n3. Monte Carlo simulations for model refinement\n4. Ability to predict protein structures with high accuracy\n5. User-friendly interface for easy input and visualization of results",
+    "General Tags": [
+        "Protein Structure Prediction",
+        "Fragment Assembly",
+        "Monte Carlo Simulations"
+    ],
+    "Software Type": "Computational Software",
+    "Software Class": "Molecular Modeling",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Protein Structure Prediction",
+    "Research Discipline": "Bioinformatics"
+}

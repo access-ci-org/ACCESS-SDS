@@ -1,0 +1,15 @@
+{
+    "Software": "Nuitka",
+    "AI Description": "Nuitka is a Python compiler written in Python. It helps in compiling Python source code to C code, thereby making it possible to create standalone executable programs from Python scripts.",
+    "Core Features": "1. Compiles Python source code to optimized C code for better performance. 2. Enables the creation of standalone executable programs. 3. Compatible with major Python versions. 4. Supports many Python language features and libraries.",
+    "General Tags": [
+        "Python Compiler",
+        "Source Code Optimization",
+        "Executable Program Generation"
+    ],
+    "Software Type": "Development Tools",
+    "Software Class": "Compiler",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Software Engineering, Systems, & Development",
+    "Research Discipline": "Computer Science"
+}

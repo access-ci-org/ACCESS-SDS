@@ -1,0 +1,24 @@
+{
+    "Software": "R-scrnaseq",
+    "AI Description": "R-scrnaseq is an R package designed for preprocessing and analyzing single-cell RNA sequencing (scRNA-seq) data. It offers a comprehensive suite of tools for quality control, normalization, dimensionality reduction, clustering, differential expression analysis, and visualization of scRNA-seq data.",
+    "Core Features": [
+        "Quality control of scRNA-seq data",
+        "Normalization and pre-processing of single-cell gene expression data",
+        "Dimensionality reduction techniques such as PCA and t-SNE",
+        "Cluster analysis to identify cell populations",
+        "Differential expression analysis to identify marker genes",
+        "Visualization tools for expression patterns and cluster assignments"
+    ],
+    "General Tags": [
+        "Single-Cell Rna Sequencing",
+        "Bioinformatics",
+        "Data Analysis",
+        "Data Visualization",
+        "R Package"
+    ],
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Data Analysis & Visualization",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genetics",
+    "Research Discipline": "Bioinformatics"
+}

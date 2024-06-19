@@ -1,0 +1,21 @@
+{
+    "Software": "AMD ScaLAPACK",
+    "AI Description": "AMD ScaLAPACK (Scalable LAPACK) is a high-performance linear algebra library for distributed-memory computations. It is designed to efficiently solve large-scale problems in numerical linear algebra on parallel distributed memory architectures.",
+    "Core Features": [
+        "High-performance linear algebra computations",
+        "Distributed-memory parallel computing support",
+        "Optimized for large-scale numerical problems",
+        "Provides routines for solving dense linear algebra problems"
+    ],
+    "General Tags": [
+        "Linear Algebra",
+        "Parallel Computing",
+        "Distributed Memory",
+        "Numerical Computation"
+    ],
+    "Software Type": "Computational Software",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

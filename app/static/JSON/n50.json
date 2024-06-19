@@ -1,0 +1,19 @@
+{
+    "Software": "n50",
+    "AI Description": "n50 is a metric commonly used in genomics to assess the assembly quality of a set of contigs or scaffolds. It represents the contig or scaffold length where at least 50% of the total genome size is contained in contigs or scaffolds of equal or greater length.",
+    "Core Features": [
+        "Calculates N50 value for genome assemblies",
+        "Quality assessment of genome assembly",
+        "Evaluation of contig or scaffold lengths in genomics"
+    ],
+    "General Tags": [
+        "Genomics",
+        "Assembly Quality",
+        "Bioinformatics"
+    ],
+    "Software Type": "Metric Calculation",
+    "Software Class": "Analysis Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomics",
+    "Research Discipline": "Bioinformatics"
+}

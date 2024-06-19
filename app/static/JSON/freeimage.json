@@ -1,0 +1,21 @@
+{
+    "Software": "FreeImage",
+    "AI Description": "FreeImage is an open-source graphics library that supports popular image formats and features image loading, saving, conversion, manipulation, and processing capabilities.",
+    "Core Features": [
+        "Support for various image formats including BMP, GIF, PNG, JPEG, TIFF, and more",
+        "Image loading and saving functionality",
+        "Image conversion and manipulation tools",
+        "High-quality image processing algorithms",
+        "Suitable for use in graphics, digital photography, medical imaging, and other applications"
+    ],
+    "General Tags": [
+        "Graphics Library",
+        "Image Processing",
+        "Open-Source"
+    ],
+    "Software Type": "Graphics Library",
+    "Software Class": "Library",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "",
+    "Research Discipline": ""
+}

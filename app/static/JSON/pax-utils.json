@@ -1,0 +1,21 @@
+{
+    "Software": "pax-utils",
+    "AI Description": "pax-utils is a set of utilities that enable examination and manipulation of ELF (Executable and Linkable Format) files created for Linux systems. These tools are primarily used for analyzing and modifying various attributes of ELF binaries.",
+    "Core Features": [
+        "Inspect ELF binary files",
+        "Display information about ELF files",
+        "Modify ELF file attributes",
+        "Detect security issues in ELF binaries"
+    ],
+    "General Tags": [
+        "Elf Files",
+        "Binary Analysis",
+        "Security Tools",
+        "Linux"
+    ],
+    "Software Type": "Utility",
+    "Software Class": "System Tool",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

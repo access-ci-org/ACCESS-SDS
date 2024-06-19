@@ -1,0 +1,21 @@
+{
+    "Software": "intel-oclfpga",
+    "AI Description": "The Intel OneAPI Base Toolkit for OpenCL FPGA is a comprehensive suite of development tools for accelerating workloads on Intel FPGA devices. It provides a unified programming model for CPU, GPU, and FPGA to simplify application development and deployment across diverse hardware architectures.",
+    "Core Features": [
+        "Unified programming model for CPU, GPU, and FPGA",
+        "Optimized performance for Intel FPGA devices",
+        "Support for OpenCL programming language",
+        "Integration with Intel OneAPI Base Toolkit"
+    ],
+    "General Tags": [
+        "Development Tools",
+        "Accelerating Workloads",
+        "Fpga Programming",
+        "Hardware Acceleration"
+    ],
+    "Software Type": "Compiler",
+    "Software Class": "Development Tools",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Software Engineering, Systems, & Development",
+    "Research Discipline": "Computer Science"
+}

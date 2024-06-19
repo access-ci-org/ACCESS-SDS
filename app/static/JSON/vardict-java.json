@@ -1,0 +1,17 @@
+{
+    "Software": "VarDict-java",
+    "AI Description": "VarDict-java is a variant discovery and genotyping tool that can analyze variants from DNA/RNA sequencing. It identifies, filters, annotates somatic and germline variants, and can be used for both targeted and whole-genome sequencing data.",
+    "Core Features": "1. Variant discovery and genotyping\n2. Analysis of somatic and germline variants\n3. Annotation of variants\n4. Suitable for targeted and whole-genome sequencing data",
+    "General Tags": [
+        "Variant Discovery",
+        "Genotyping",
+        "Dna Sequencing",
+        "Rna Sequencing",
+        "Bioinformatics"
+    ],
+    "Software Type": "Variant Analysis Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genetic Variation Analysis",
+    "Research Discipline": "Genomics"
+}

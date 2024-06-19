@@ -1,0 +1,24 @@
+{
+    "Software": "Spack",
+    "AI Description": "Spack is a flexible package management tool designed to support multiple versions of software, compilers, libraries, and tools on a wide range of platforms and configurations. It helps users easily install, uninstall, and manage software and dependencies in a reproducible and customizable way.",
+    "Core Features": [
+        "Package management for software, compilers, libraries, and tools",
+        "Support for multiple versions and configurations",
+        "Reproducibility and customization of installations",
+        "Ability to build from source or use pre-built binaries",
+        "Dependency resolution and management",
+        "Integration with HPC and scientific computing environments"
+    ],
+    "General Tags": [
+        "Package Management",
+        "Software Installation",
+        "Dependency Management",
+        "Hpc",
+        "Scientific Computing"
+    ],
+    "Software Type": "Utility",
+    "Software Class": "Package Management Tool",
+    "Research Field": "Other Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

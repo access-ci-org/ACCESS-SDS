@@ -1,0 +1,16 @@
+{
+    "Software": "Intel CUDA",
+    "AI Description": "Intel CUDA is a software development kit for accelerating applications using GPUs, particularly NVIDIA GPUs, by utilizing parallel computing features.",
+    "Core Features": "1. GPU acceleration for computationally intensive applications. 2. Utilizes parallel processing for increased performance. 3. Supports NVIDIA GPUs for high-speed computing tasks. 4. Integration with popular programming languages like C, C++, and Fortran.",
+    "General Tags": [
+        "Gpu Acceleration",
+        "Parallel Computing",
+        "High-Performance Computing",
+        "Programming Languages"
+    ],
+    "Software Type": "",
+    "Software Class": "",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

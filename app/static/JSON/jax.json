@@ -1,0 +1,15 @@
+{
+    "Software": "JAX",
+    "AI Description": "JAX is an open-source software library for high-performance machine learning research, particularly for automatic differentiation, and numerical and scientific computing.",
+    "Core Features": "JAX provides a functional framework that extends NumPy and enables GPU/TPU acceleration, automatic differentiation for Python and NumPy functions, custom vectorizable NumPy functions, composable transformations, and efficient gradient computation.",
+    "General Tags": [
+        "Machine Learning",
+        "Numerical Computing",
+        "Scientific Computing"
+    ],
+    "Software Type": "Machine Learning",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Artificial Intelligence & Intelligent Systems",
+    "Research Discipline": ""
+}

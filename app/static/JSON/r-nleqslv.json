@@ -1,0 +1,15 @@
+{
+    "Software": "R-nleqslv",
+    "AI Description": "R-nleqslv is an R package that provides a nonlinear system solver for solving systems of nonlinear equations.",
+    "Core Features": "The package offers an efficient and robust algorithm for solving nonlinear systems, along with tools for convergence diagnostics and sensitivity analysis.",
+    "General Tags": [
+        "R Package",
+        "Nonlinear Equations",
+        "Solver"
+    ],
+    "Software Type": "Package",
+    "Software Class": "Computational Software",
+    "Research Field": "Other Mathematics",
+    "Research Area": "",
+    "Research Discipline": ""
+}

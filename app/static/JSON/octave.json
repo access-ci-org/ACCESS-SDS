@@ -1,0 +1,19 @@
+{
+    "Software": "Octave",
+    "AI Description": "Octave is a high-level interpreted language, primarily intended for numerical computations. It provides capabilities for the numerical solution of linear and nonlinear problems and has extensive graphics capabilities for data visualization and manipulation.",
+    "Core Features": [
+        "High-level language for numerical computations",
+        "Linear and nonlinear problem solving capabilities",
+        "Extensive graphics capabilities for data visualization",
+        "Large library of functions for numerical computations"
+    ],
+    "General Tags": [
+        "Numerical Computations",
+        "Data Visualization"
+    ],
+    "Software Type": "Numerical Computation Software",
+    "Software Class": "Scientific Computing Software",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

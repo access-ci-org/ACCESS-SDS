@@ -1,0 +1,17 @@
+{
+    "Software": "Intel Distribution for Python",
+    "AI Description": "Intel Distribution for Python is a distribution of the Python programming language that includes optimized numerical libraries from Intel to improve performance on Intel processors. It provides high-performance tools for machine learning, scientific computing, data analysis, and more.",
+    "Core Features": "1. Optimized numerical libraries for faster execution on Intel processors\n2. Integration with popular Python packages like NumPy, SciPy, and scikit-learn\n3. Enhanced performance for machine learning algorithms and data processing\n4. Support for parallel processing and optimization for Intel architecture\n5. Compatibility with commonly used Python environments and tools",
+    "General Tags": [
+        "Python Distribution",
+        "Optimized Libraries",
+        "Machine Learning",
+        "Data Analysis",
+        "Scientific Computing"
+    ],
+    "Software Type": "Python Distribution",
+    "Software Class": "Development Tools",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Applied Computer Science",
+    "Research Discipline": "Computer Science"
+}

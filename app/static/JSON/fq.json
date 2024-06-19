@@ -1,0 +1,20 @@
+{
+    "Software": "fq",
+    "AI Description": "fq is a command-line tool for filtering and manipulating FASTQ files, which are used to store biological sequences and their quality scores obtained from high-throughput sequencing. It provides functionalities for filtering reads based on quality scores, length, and other criteria, as well as for modifying read headers and sequences.",
+    "Core Features": [
+        "Filtering FASTQ files based on quality scores",
+        "Filtering reads based on length",
+        "Modifying read headers and sequences",
+        "Command-line interface for easy usage"
+    ],
+    "General Tags": [
+        "Fastq File Manipulation",
+        "High-Throughput Sequencing Data Processing",
+        "Biological Sequence Analysis"
+    ],
+    "Software Type": "Command-Line Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

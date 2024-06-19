@@ -1,0 +1,20 @@
+{
+    "Software": "memes-R",
+    "AI Description": "memes-R is a suite of tools for sequence motif discovery and analysis that includes algorithms for de novo motif discovery, motif scanning, motif enrichment analysis, multiple sequence alignment, and motif visualization.",
+    "Core Features": [
+        "De novo motif discovery",
+        "Motif scanning",
+        "Motif enrichment analysis",
+        "Multiple sequence alignment",
+        "Motif visualization"
+    ],
+    "General Tags": [
+        "Bioinformatics",
+        "Computational Biology"
+    ],
+    "Software Type": "Sequence Motif Discovery Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

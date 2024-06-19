@@ -1,0 +1,15 @@
+{
+    "Software": "openSYCL",
+    "AI Description": "openSYCL is an open-source implementation of the SYCL standard, which is a higher-level programming model for developing C++ applications on heterogeneous systems with various accelerators such as GPUs, FPGAs, and other specialized processing units. It enables developers to write single-source C++ code that can target a variety of hardware accelerators without the need for low-level programming.",
+    "Core Features": "1. Compatibility with heterogeneous systems\n2. Simplified parallel programming with C++\n3. Targeting GPUs, FPGAs, and other accelerators\n4. Open-source implementation\n5. Enables single-source C++ programming for various devices",
+    "General Tags": [
+        "Programming Model",
+        "Heterogeneous Systems",
+        "Accelerators"
+    ],
+    "Software Type": "Compiler",
+    "Software Class": "Programming Tool",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "High-Performance Computing",
+    "Research Discipline": "Computer Science"
+}

@@ -1,0 +1,22 @@
+{
+    "Software": "PerfTools-Lite-HBM",
+    "AI Description": "PerfTools-Lite-HBM is a performance analysis tool specifically designed for profiling applications running on High Bandwidth Memory (HBM) systems. It provides insights into memory access patterns, cache behavior, and overall performance characteristics of HBM-enabled applications.",
+    "Core Features": [
+        "Profiling of applications utilizing High Bandwidth Memory (HBM)",
+        "Analysis of memory access patterns",
+        "Cache behavior monitoring",
+        "Performance optimization for HBM systems"
+    ],
+    "General Tags": [
+        "Performance Analysis",
+        "Memory Profiling",
+        "Hbm Systems",
+        "High Bandwidth Memory",
+        "Optimization"
+    ],
+    "Software Type": "Profiler",
+    "Software Class": "Performance Analysis Tool",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "",
+    "Research Discipline": ""
+}

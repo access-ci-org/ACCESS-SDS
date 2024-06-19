@@ -1,0 +1,16 @@
+{
+    "Software": "Zebulon",
+    "AI Description": "Zebulon is a computational software designed for protein structure prediction using deep learning methods.",
+    "Core Features": "Zebulon utilizes deep learning techniques to accurately predict protein structures, allowing for better understanding of protein function and interactions. It provides tools for analyzing and visualizing predicted protein structures.",
+    "General Tags": [
+        "Computational Software",
+        "Protein Structure Prediction",
+        "Deep Learning",
+        "Bioinformatics"
+    ],
+    "Software Type": "Computational",
+    "Software Class": "Structure Prediction",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Proteomics",
+    "Research Discipline": "Bioinformatics"
+}

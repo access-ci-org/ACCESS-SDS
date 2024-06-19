@@ -1,0 +1,15 @@
+{
+    "Software": "alsa-lib",
+    "AI Description": "Advanced Linux Sound Architecture (ALSA) provides audio and MIDI functionality to the Linux operating system. alsa-lib is a library that provides an interface for programmers to access sound card capabilities.",
+    "Core Features": "1. Allows access to sound card capabilities in Linux\n2. Provides audio and MIDI functionality\n3. Supports various audio formats\n4. Offers low latency audio processing\n5. Enables hardware-level audio control",
+    "General Tags": [
+        "Linux",
+        "Audio",
+        "Library"
+    ],
+    "Software Type": "Audio Library",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

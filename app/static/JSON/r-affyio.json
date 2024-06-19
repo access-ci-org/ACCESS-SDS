@@ -1,0 +1,15 @@
+{
+    "Software": "r-affyio",
+    "AI Description": "The r-affyio package in R provides tools for parsing and handling Affymetrix CEL and CDF file formats, which are commonly used in microarray analysis.",
+    "Core Features": "1. Import and parse Affymetrix CEL files\n2. Access and manipulate data stored in Affymetrix CDF files\n3. Preprocess microarray gene expression data for downstream analysis\n4. Quality control checks on microarray data",
+    "General Tags": [
+        "Microarray Analysis",
+        "Gene Expression",
+        "Bioinformatics"
+    ],
+    "Software Type": "R Package",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

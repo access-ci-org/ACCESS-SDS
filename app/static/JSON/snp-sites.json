@@ -1,0 +1,19 @@
+{
+    "Software": "snp-sites",
+    "AI Description": "snp-sites is a software tool used for identifying single nucleotide polymorphisms (SNPs) from a multi-FASTA alignment of DNA sequences. It extracts variable sites from the alignment and outputs the SNPs in various formats for downstream analysis.",
+    "Core Features": [
+        "Identification of single nucleotide polymorphisms (SNPs)",
+        "Analysis of multi-FASTA alignments of DNA sequences",
+        "Output of SNPs in different formats for further analysis"
+    ],
+    "General Tags": [
+        "Bioinformatics",
+        "Computational Biology",
+        "Genomics"
+    ],
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Utility",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

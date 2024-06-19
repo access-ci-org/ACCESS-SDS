@@ -1,0 +1,15 @@
+{
+    "Software": "gcc-native",
+    "AI Description": "gcc-native is a compiler system produced by the GNU Project supporting various programming languages, most notably C, C++, and Fortran. It is the default compiler for many Unix-like operating systems.",
+    "Core Features": "gcc-native provides compilers for various programming languages including C, C++, and Fortran. It supports optimization flags for performance tuning. The system includes a preprocessor, compiler, assembler, and linker.",
+    "General Tags": [
+        "Compiler",
+        "Gnu",
+        "Programming Language"
+    ],
+    "Software Type": "Native Compiler",
+    "Software Class": "Compiler",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Software Development",
+    "Research Discipline": "Computer Science"
+}

@@ -1,0 +1,23 @@
+{
+    "Software": "MC",
+    "AI Description": "MC is a popular C compiler and interpreter that is widely used for developing efficient and portable software.",
+    "Core Features": [
+        "Optimized code generation",
+        "Support for various platforms and operating systems",
+        "Compilation and execution of C code",
+        "Interactive interpreter mode",
+        "Extensive standard libraries",
+        "Debugging capabilities"
+    ],
+    "General Tags": [
+        "Compiler",
+        "Interpreter",
+        "C",
+        "Software Development"
+    ],
+    "Software Type": "Compiler",
+    "Software Class": "Development Tools",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

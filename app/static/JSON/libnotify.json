@@ -1,0 +1,15 @@
+{
+    "Software": "libnotify",
+    "AI Description": "libnotify is a library that provides a way to display desktop notifications to users. It is typically used by desktop environments such as GNOME to show notifications for various events and applications.",
+    "Core Features": "1. Display desktop notifications\n2. Customizable notification content\n3. Support for actions within notifications\n4. Integration with desktop environments\n5. Cross-platform compatibility",
+    "General Tags": [
+        "Notifications",
+        "Desktop",
+        "Library"
+    ],
+    "Software Type": "System Software",
+    "Software Class": "Library",
+    "Research Field": "Other Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

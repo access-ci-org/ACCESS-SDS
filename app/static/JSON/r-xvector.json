@@ -1,0 +1,15 @@
+{
+    "Software": "r-xvector",
+    "AI Description": "r-xvector is an R package that provides a compact and efficient data structure for storing sequences, generally DNA and RNA, with a focus on memory efficiency and a range of operations optimized for large-scale genomic data.",
+    "Core Features": "1. Efficient and compact storage of sequence data\n2. Optimized operations for large-scale genomic data\n3. Support for DNA and RNA sequences\n4. Memory-efficient data structure\n5. Integrated functionality for sequence manipulation and analysis",
+    "General Tags": [
+        "R Package",
+        "Genomic Data",
+        "Sequence Analysis"
+    ],
+    "Software Type": "",
+    "Software Class": "Computational Biology",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

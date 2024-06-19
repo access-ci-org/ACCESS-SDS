@@ -1,0 +1,22 @@
+{
+    "Software": "Beautiful Soup",
+    "AI Description": "Beautiful Soup is a Python library designed for web scraping HTML and XML files. It creates a parse tree from page source code that can be used to extract data effortlessly. Beautiful Soup provides simple methods and Pythonic idioms for navigating, searching, and modifying the parse tree.",
+    "Core Features": [
+        "Parsing HTML and XML files",
+        "Extracting data from web pages",
+        "Navigating parse tree",
+        "Searching and filtering elements",
+        "Modifying parse tree"
+    ],
+    "General Tags": [
+        "Python Library",
+        "Web Scraping",
+        "Html Parser",
+        "Xml Parser"
+    ],
+    "Software Type": "Python Library",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

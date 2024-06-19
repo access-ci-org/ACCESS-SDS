@@ -1,0 +1,16 @@
+{
+    "Software": "roct-thunk-interface",
+    "AI Description": "The roct-thunk-interface is a component of the ROCm project that provides a thin abstraction layer for various ROCm tools and libraries to interact with the ROCr driver.",
+    "Core Features": "1. Abstraction layer for ROCm tools and libraries to communicate with the ROCr driver. 2. Facilitates communication and coordination between different components in the ROCm ecosystem. 3. Helps in managing memory, kernel execution, context, and other GPU operations. 4. Enhances the portability and compatibility of ROCm software across different hardware platforms.",
+    "General Tags": [
+        "Rocm",
+        "Gpu",
+        "Abstraction Layer",
+        "Compatibility"
+    ],
+    "Software Type": "Interface",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Parallel Computing",
+    "Research Discipline": "Computer Science"
+}

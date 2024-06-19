@@ -1,0 +1,21 @@
+{
+    "Software": "r-lambda-r",
+    "AI Description": "r-lambda-r is a software package used for analyzing and modeling RNA-protein binding sites by considering the complex relationships between sequence, structure, and binding affinity. It employs machine learning algorithms to predict binding affinities and can help in understanding the molecular basis of RNA-protein interactions.",
+    "Core Features": [
+        "Analysis of RNA-protein binding sites",
+        "Incorporation of sequence, structure, and binding affinity data",
+        "Machine learning algorithms for affinity prediction",
+        "Insights into molecular basis of RNA-protein interactions"
+    ],
+    "General Tags": [
+        "Rna-Protein Interactions",
+        "Machine Learning",
+        "Bioinformatics",
+        "Computational Biology"
+    ],
+    "Software Type": "Research Tool",
+    "Software Class": "Data Analysis & Modeling",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Rna-Protein Interactions",
+    "Research Discipline": "Bioinformatics"
+}

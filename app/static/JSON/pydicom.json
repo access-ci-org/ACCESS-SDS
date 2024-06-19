@@ -1,0 +1,20 @@
+{
+    "Software": "pydicom",
+    "AI Description": "pydicom is a Python library for working with DICOM files and data. It provides tools for reading, modifying, and writing DICOM files, as well as accessing DICOM data elements and metadata.",
+    "Core Features": [
+        "Read, write, and modify DICOM files",
+        "Access DICOM data elements and metadata",
+        "Support for various DICOM SOP Classes and Transfer Syntaxes",
+        "Integration with other scientific Python libraries"
+    ],
+    "General Tags": [
+        "Python Library",
+        "Dicom Data",
+        "Medical Imaging"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Data Analysis & Visualization",
+    "Research Field": "Medical & Health Sciences",
+    "Research Area": "Medical Biotechnology",
+    "Research Discipline": "Medical & Health Sciences"
+}

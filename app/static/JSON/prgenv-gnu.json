@@ -1,0 +1,21 @@
+{
+    "Software": "prgenv-gnu",
+    "AI Description": "The prgenv-gnu is a programming environment module that provides the GNU compiler collection (GCC) for compiling and running codes. It sets up the environment variables needed to compile and run programs using the GNU compilers.",
+    "Core Features": "1. Provides the GNU compiler collection (GCC).\n2. Sets up environment variables for compiling and running programs.\n3. Supports various programming languages such as C, C++, and Fortran.",
+    "General Tags": [
+        "Programming Environment",
+        "Gnu Compiler Collection (Gcc)"
+    ],
+    "Software Type": [
+        "Compiler"
+    ],
+    "Software Class": [
+        "Development Tools"
+    ],
+    "Research Field": [
+        "Computer And Information Sciences",
+        "Software Engineering, Systems, And Development"
+    ],
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,15 @@
+{
+    "Software": "r-highr",
+    "AI Description": "r-highr is an R package that provides tools for creating and formatting markdown text for R code chunks.",
+    "Core Features": "1. Syntax highlighting for R code chunks in markdown text.\n2. Customizable formatting options for code blocks.\n3. Support for generating code reference tables.",
+    "General Tags": [
+        "R Package",
+        "Text Formatting",
+        "Code Highlighting"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Data Analysis",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

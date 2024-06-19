@@ -1,0 +1,21 @@
+{
+    "Software": "tigmint",
+    "AI Description": "Tigmint is a software tool that aids in the rearrangement and duplication error correction in genomes assembled with linked-read sequencing technologies such as 10X Genomics.",
+    "Core Features": [
+        "Corrects errors in genome assemblies from linked-read sequencing technologies",
+        "Identifies misassemblies, corrects genome misassemblies, and fills gaps in assemblies",
+        "Efficiently handles large and complex genomes",
+        "Improves the accuracy and contiguity of genome assemblies"
+    ],
+    "General Tags": [
+        "Genome Assembly",
+        "Genomics",
+        "Dna Sequencing",
+        "Linked-Read Sequencing"
+    ],
+    "Software Type": "Genome Assembly Correction Tool",
+    "Software Class": "Genomics Tools",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genome Assembly",
+    "Research Discipline": "Genomics"
+}

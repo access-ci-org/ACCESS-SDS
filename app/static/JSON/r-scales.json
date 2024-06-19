@@ -1,0 +1,15 @@
+{
+    "Software": "R-scales",
+    "AI Description": "R-scales is an R package designed to assist with scaling data transformations for visualization and modeling in R. It provides various scaling functions to standardize and normalize data, making it easier to compare and analyze datasets.",
+    "Core Features": "1. Standardization and normalization of data.\n2. Various scaling functions available.\n3. Easy integration with R for data visualization and modeling.\n4. Facilitates comparison and analysis of datasets.",
+    "General Tags": [
+        "Data Transformation",
+        "Data Scaling",
+        "Data Analysis"
+    ],
+    "Software Type": "Data Analysis",
+    "Software Class": "Library",
+    "Research Field": "Other Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

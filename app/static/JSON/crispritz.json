@@ -1,0 +1,22 @@
+{
+    "Software": "CRISPRitz",
+    "AI Description": "CRISPRitz is a web-based software tool for designing and analyzing CRISPR/Cas9 guide RNAs. It allows users to design guide RNAs for gene knockout, gene editing, and transcriptional activation with high specificity and efficiency.",
+    "Core Features": [
+        "Guide RNA design for gene knockout",
+        "Guide RNA design for gene editing",
+        "Guide RNA design for transcriptional activation",
+        "High specificity and efficiency",
+        "Web-based interface"
+    ],
+    "General Tags": [
+        "Crispr/Cas9",
+        "Guide Rna Design",
+        "Genome Editing",
+        "Molecular Biology"
+    ],
+    "Software Type": "Web-Based Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

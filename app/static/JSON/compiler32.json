@@ -1,0 +1,19 @@
+{
+    "Software": "compiler32",
+    "AI Description": "compiler32 is a lightweight and efficient compiler software designed for compiling source code into executable programs. It supports various programming languages and optimization techniques to enhance the performance of the compiled code.",
+    "Core Features": [
+        "Support for multiple programming languages",
+        "Optimization techniques",
+        "Efficient compilation process"
+    ],
+    "General Tags": [
+        "Compiler",
+        "Software Development",
+        "Programming"
+    ],
+    "Software Type": "Development Tools",
+    "Software Class": "Compiler",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,22 @@
+{
+    "Software": "HyPhy",
+    "AI Description": "HyPhy (Hypothesis Testing using Phylogenies) is an open-source software package for the analysis of genetic sequences using techniques in phylogenetics, molecular evolution, and epidemiology. It provides a flexible and user-friendly platform for conducting evolutionary analysis on biological sequence data.",
+    "Core Features": [
+        "Phylogenetic analysis",
+        "Selection analysis",
+        "Recombination analysis",
+        "Epidemiological modeling",
+        "Population genetics analysis"
+    ],
+    "General Tags": [
+        "Bioinformatics",
+        "Molecular Evolution",
+        "Phylogenetics",
+        "Epidemiology"
+    ],
+    "Software Type": "Open-Source Software",
+    "Software Class": "Analysis Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Evolutionary Biology",
+    "Research Discipline": "Bioinformatics"
+}

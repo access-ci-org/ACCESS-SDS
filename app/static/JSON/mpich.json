@@ -1,0 +1,20 @@
+{
+    "Software": "MPICH",
+    "AI Description": "MPICH is a high-performance and widely portable implementation of the Message Passing Interface (MPI) standard. It enables parallel computing on a wide variety of platforms and architectures.",
+    "Core Features": [
+        "Implements the MPI standard for message passing interface",
+        "High-performance parallel computing capabilities",
+        "Portability across diverse platforms and architectures",
+        "Support for large-scale parallel applications"
+    ],
+    "General Tags": [
+        "Mpi Implementation",
+        "Parallel Computing",
+        "High Performance Computing"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Middleware",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

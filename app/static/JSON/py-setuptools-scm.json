@@ -1,0 +1,20 @@
+{
+    "Software": "py-setuptools-scm",
+    "AI Description": "Setuptools version control plugin which can generate version numbers from SCM tags and commit hashes.",
+    "Core Features": [
+        "Generates version numbers from SCM tags and commit hashes",
+        "Automatic versioning for setuptools projects",
+        "Supports Git, Mercurial, and Bazaar",
+        "Simplifies software version management"
+    ],
+    "General Tags": [
+        "Version-Control",
+        "Software-Development",
+        "Python Packaging"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Development Tools",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "",
+    "Research Discipline": ""
+}

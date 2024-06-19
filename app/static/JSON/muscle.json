@@ -1,0 +1,14 @@
+{
+    "Software": "MUSCLE",
+    "AI Description": "MUSCLE (Multiple Sequence Comparison by Log-Expectation) is a software package for multiple sequence alignment. It offers high accuracy and speed, making it a popular choice for aligning large datasets of biological sequences.",
+    "Core Features": "Some core features of MUSCLE include progressive alignment, iterative refinement, support for protein and nucleotide sequences, various output formats, and the ability to handle large datasets efficiently.",
+    "General Tags": [
+        "Sequence Alignment",
+        "Bioinformatics"
+    ],
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Alignment Software",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Bioinformatics",
+    "Research Discipline": "Biological Sciences"
+}

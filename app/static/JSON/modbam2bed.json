@@ -1,0 +1,16 @@
+{
+    "Software": "modbam2bed",
+    "AI Description": "modbam2bed is a tool designed to convert modBAM files (modified base BAM files containing information about modified bases detected in sequencing data) to BED files, which are commonly used for representing genomic regions in bioinformatics analyses.",
+    "Core Features": "Conversion of modBAM files to BED format, extraction of genomic regions containing modified bases, compatibility with various sequencing data files.",
+    "General Tags": [
+        "Bioinformatics",
+        "Data Conversion",
+        "Sequencing Data",
+        "Genomic Analysis"
+    ],
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Data Conversion",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

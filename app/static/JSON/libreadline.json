@@ -1,0 +1,21 @@
+{
+    "Software": "libreadline",
+    "AI Description": "libreadline is a GNU library that provides line-editing capabilities for interactive programs with a command-line interface. It allows users to edit text as they type commands, providing features such as history, editing, and completion of input.",
+    "Core Features": [
+        "History: Keeps track of previously entered commands, allowing users to navigate and reuse them easily.",
+        "Editing: Supports editing functionalities like cursor movement, deletion, and insertion within the input line.",
+        "Completion: Offers tab-completion for commands, variables, and file paths to assist users with input.",
+        "Customization: Allows for customization of key bindings, behavior, and appearance of the editing interface."
+    ],
+    "General Tags": [
+        "Command-Line Interface",
+        "Text Editing",
+        "Gnu Library",
+        "Interactive Programs"
+    ],
+    "Software Type": "Utility",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,15 @@
+{
+    "Software": "ltrpred",
+    "AI Description": "ltrpred is a tool for predicting the transcription start sites (TSSs) and the directionality of a given genomic sequence, using machine learning models trained on data sets containing experimentally verified TSSs.",
+    "Core Features": "1. Predicting transcription start sites in genomic sequences.\n2. Determining the directionality of transcription in a given sequence.\n3. Utilizing machine learning models for accurate predictions based on experimental data sets.",
+    "General Tags": [
+        "Transcription Start Site Prediction",
+        "Genomic Sequences",
+        "Machine Learning"
+    ],
+    "Software Type": "Prediction Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomics",
+    "Research Discipline": "Bioinformatics"
+}

@@ -1,0 +1,22 @@
+{
+    "Software": "Miniprot",
+    "AI Description": "Miniprot is a software tool for predicting and modeling protein structures, including protein folding, structure prediction, and structural analysis. It is designed to be user-friendly and efficient for researchers working in the field of protein structure prediction and molecular modeling.",
+    "Core Features": [
+        "Protein structure prediction",
+        "Protein folding simulations",
+        "Structural analysis",
+        "User-friendly interface"
+    ],
+    "General Tags": [
+        "Protein Structure Prediction",
+        "Molecular Modeling",
+        "Protein Folding",
+        "Structural Analysis",
+        "Bioinformatics"
+    ],
+    "Software Type": "Prediction & Modeling",
+    "Software Class": "Molecular Modeling",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Structural Biology",
+    "Research Discipline": "Bioinformatics"
+}

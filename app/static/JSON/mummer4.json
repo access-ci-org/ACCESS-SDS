@@ -1,0 +1,15 @@
+{
+    "Software": "MUMmer4",
+    "AI Description": "MUMmer is a bioinformatics software system for the rapid alignment of very large DNA and amino acid sequences.",
+    "Core Features": "MUMmer's core features include suffix tree data structures for linear-time whole-genome alignment and alignment of multiple sequences, identification of exact matches, similarity regions, single base pair differences, and large-scale structural differences.",
+    "General Tags": [
+        "Bioinformatics",
+        "Sequence Alignment",
+        "Genomics"
+    ],
+    "Software Type": "Alignment Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Dna Sequence Analysis",
+    "Research Discipline": "Genomics"
+}

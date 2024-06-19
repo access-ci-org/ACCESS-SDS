@@ -1,0 +1,15 @@
+{
+    "Software": "libssh",
+    "AI Description": "libssh is a multiplatform C library implementing the SSHv2 protocol on client and server side. It provides a stable API, high performance, and is designed to be easy to use.",
+    "Core Features": "1. SSH client and server functionality\n2. Support for various SSH protocols and key exchange algorithms\n3. Integration with OpenSSL and mbedTLS\n4. Session multiplexing\n5. Portable and cross-platform\n6. Easy-to-use API for developers",
+    "General Tags": [
+        "Ssh",
+        "Library",
+        "Networking"
+    ],
+    "Software Type": "Networking",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

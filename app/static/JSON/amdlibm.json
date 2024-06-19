@@ -1,0 +1,15 @@
+{
+    "Software": "amdlibm",
+    "AI Description": "AMDlibm is a software library provided by AMD that offers mathematical functions specifically optimized for high performance on AMD processors. It provides a collection of mathematical functions designed to exploit the advanced features of AMD processors for enhanced numerical computation.",
+    "Core Features": "Some core features of amdlibm include optimized mathematical functions for common operations such as elementary functions (e.g., sin, cos), exponential and logarithmic functions, and more. The library is optimized to leverage the advanced capabilities of AMD processors to achieve high performance and accurate computation results.",
+    "General Tags": [
+        "Mathematics",
+        "Numerical Computation",
+        "Math Library"
+    ],
+    "Software Type": "Math Library",
+    "Software Class": "Library",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "",
+    "Research Discipline": ""
+}

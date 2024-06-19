@@ -1,0 +1,26 @@
+{
+    "Software": "VMD",
+    "AI Description": "Visual Molecular Dynamics (VMD) is a molecular visualization program for displaying, animating, and analyzing large biomolecular systems using 3-D graphics and built-in scripting.",
+    "Core Features": [
+        "Visualization of molecular structures",
+        "Animation of molecular dynamics simulations",
+        "Analysis and manipulation of molecular data",
+        "Integration with popular molecular dynamics simulation packages"
+    ],
+    "General Tags": [
+        "Molecular Visualization",
+        "Molecular Dynamics",
+        "Structural Biology"
+    ],
+    "Software Type": "Molecular Visualization Tool",
+    "Software Class": "Visualization Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": [
+        "Structural Biology",
+        "Computational Chemistry"
+    ],
+    "Research Discipline": [
+        "Biophysics",
+        "Biochemistry And Molecular Biology"
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "Software": "glibc",
+    "AI Description": "glibc, the GNU C Library, is an essential part of most systems running the Linux kernel. It provides the necessary functionality for programs written in the C programming language to interact with the operating system and hardware.",
+    "Core Features": [
+        "Implementation of the standard C library functions",
+        "System calls and low-level interfaces",
+        "Dynamic memory allocation and management",
+        "Thread support and synchronization",
+        "Localization support"
+    ],
+    "General Tags": [
+        "C Library",
+        "Operating System",
+        "System Programming"
+    ],
+    "Software Type": "Library",
+    "Software Class": "System Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Systems Programming",
+    "Research Discipline": "Computer & Information Sciences"
+}

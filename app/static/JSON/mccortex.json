@@ -1,0 +1,21 @@
+{
+    "Software": "mccortex",
+    "AI Description": "Mccortex is a software tool for assembling genomes quickly and efficiently by leveraging the compacted de Bruijn graph data structure.",
+    "Core Features": [
+        "Genome assembly",
+        "De Bruijn graph data structure",
+        "Efficient algorithms",
+        "Sequence analysis"
+    ],
+    "General Tags": [
+        "Genomics",
+        "Bioinformatics",
+        "Computational Biology",
+        "Sequence Analysis"
+    ],
+    "Software Type": "Bioinformatics Software",
+    "Software Class": "Genome Assembler",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

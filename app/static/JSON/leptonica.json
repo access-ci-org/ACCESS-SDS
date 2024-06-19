@@ -1,0 +1,23 @@
+{
+    "Software": "Leptonica",
+    "AI Description": "Leptonica is an open-source image processing and image analysis library. It provides a wide range of image processing functions and is used for tasks such as image enhancement, binarization, morphology, and more. Leptonica is written in C and provides bindings for various programming languages.",
+    "Core Features": [
+        "Image processing functions",
+        "Image analysis tools",
+        "Support for various image formats",
+        "Advanced image manipulation techniques",
+        "Integration with other programming languages"
+    ],
+    "General Tags": [
+        "Image Processing",
+        "Image Analysis",
+        "Open-Source",
+        "Library",
+        "C"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Image Processing Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Computer Vision",
+    "Research Discipline": "Computer Science"
+}

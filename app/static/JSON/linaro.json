@@ -1,0 +1,19 @@
+{
+    "Software": "Linaro",
+    "AI Description": "Linaro is a collaborative engineering organization that works on consolidating and optimizing open-source software for the Arm architecture, including the Linux kernel, toolchain, and graphics stack.",
+    "Core Features": [
+        "Collaborative engineering for Arm architecture",
+        "Optimizing open-source software",
+        "Working on Linux kernel, toolchain, and graphics stack"
+    ],
+    "General Tags": [
+        "Collaborative Engineering",
+        "Arm Architecture",
+        "Open-Source Software Optimization"
+    ],
+    "Software Type": "Development & Optimization Tools",
+    "Software Class": "System Software",
+    "Research Field": "Computer Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

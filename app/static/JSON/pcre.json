@@ -1,0 +1,19 @@
+{
+    "Software": "PCRE",
+    "AI Description": "Perl Compatible Regular Expressions (PCRE) is a library for pattern matching with regular expressions. It implements the functionality of the regular expression library in Perl and provides support for Perl-style regular expressions in many programming languages.",
+    "Core Features": [
+        "Support for Perl-style regular expressions",
+        "Pattern matching capabilities",
+        "Compatible with many programming languages"
+    ],
+    "General Tags": [
+        "Regular Expressions",
+        "Pattern Matching",
+        "Library"
+    ],
+    "Software Type": "Runtime Library",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

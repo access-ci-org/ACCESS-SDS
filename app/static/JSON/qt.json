@@ -1,0 +1,18 @@
+{
+    "Software": "Qt",
+    "AI Description": "Qt is a cross-platform C++ framework for application development. It provides a comprehensive set of libraries and tools for building graphical user interfaces, as well as for developing applications with network support, database integration, and more.",
+    "Core Features": "Cross-platform development, graphical user interface development, network programming, database integration, multithreading support, internationalization, drag-and-drop support, rich text processing, 2D and 3D graphics, multimedia support.",
+    "General Tags": [
+        "C++ Framework",
+        "Application Development",
+        "Cross-Platform",
+        "Graphical User Interface",
+        "Network Programming",
+        "Database Integration"
+    ],
+    "Software Type": "Framework",
+    "Software Class": "Development Framework",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "",
+    "Research Discipline": ""
+}

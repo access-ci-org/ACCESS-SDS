@@ -1,0 +1,21 @@
+{
+    "Software": "TeX Live",
+    "AI Description": "TeX Live is a comprehensive distribution of the TeX typesetting system that includes all the major TeX-related programs, macro packages, and fonts. It is designed to be cross-platform and provides a complete TeX environment for users working with typesetting and document preparation.",
+    "Core Features": [
+        "Cross-platform support for Windows, macOS, and Linux",
+        "Includes all essential TeX programs, macro packages, and fonts",
+        "Rich set of tools for typesetting mathematical formulas, complex documents, and academic papers",
+        "Extensive package manager for easy installation and updates of additional TeX components"
+    ],
+    "General Tags": [
+        "Typesetting",
+        "Document Preparation",
+        "Tex Distribution",
+        "Cross-Platform"
+    ],
+    "Software Type": "Distribution",
+    "Software Class": "Typesetting System",
+    "Research Field": "Other Natural Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

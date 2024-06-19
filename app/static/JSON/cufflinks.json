@@ -1,0 +1,20 @@
+{
+    "Software": "Cufflinks",
+    "AI Description": "Cufflinks assembles transcripts, estimates their abundances, and tests for differential expression and regulation in RNA-Seq samples.",
+    "Core Features": [
+        "Transcript assembly",
+        "Abundance estimation",
+        "Differential expression analysis",
+        "Regulation testing"
+    ],
+    "General Tags": [
+        "Rna-Seq",
+        "Transcriptomics",
+        "Bioinformatics"
+    ],
+    "Software Type": "Tool",
+    "Software Class": "Bioinformatics",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

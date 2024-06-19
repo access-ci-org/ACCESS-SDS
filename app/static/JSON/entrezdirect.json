@@ -1,0 +1,17 @@
+{
+    "Software": "Entrez Direct",
+    "AI Description": "Entrez Direct is a set of UNIX command line tools that provides users with efficient and advanced access to the NCBI's suite of interconnected molecular biology databases, including PubMed, GenBank, BLAST, and more.",
+    "Core Features": "1. Allows users to search, fetch, and analyze biological data from various NCBI databases.\n2. Provides batch access to databases for retrieving large datasets.\n3. Supports automated queries and data retrieval for efficient data mining.\n4. Facilitates complex search operations and data manipulation.\n5. Integration with popular scripting languages for automation and scripting.",
+    "General Tags": [
+        "Bioinformatics",
+        "Data Retrieval",
+        "Molecular Biology",
+        "Ncbi",
+        "Unix"
+    ],
+    "Software Type": "Command Line Tool",
+    "Software Class": "Data Retrieval & Analysis",
+    "Research Field": "Natural Sciences",
+    "Research Area": "Bioinformatics",
+    "Research Discipline": "Biological Sciences"
+}

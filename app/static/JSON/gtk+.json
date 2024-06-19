@@ -1,0 +1,22 @@
+{
+    "Software": "GTK+",
+    "AI Description": "GTK+ is a multi-platform toolkit for creating graphical user interfaces. It offers a comprehensive set of widgets for building GUIs and provides tools for interaction with the user interface. GTK+ is widely used in software development for creating desktop applications with a consistent look and feel across different operating systems.",
+    "Core Features": [
+        "Cross-platform compatibility",
+        "Extensive widget library",
+        "Support for numerous programming languages",
+        "Customizable theming",
+        "Accessibility features",
+        "Internationalization and localization support"
+    ],
+    "General Tags": [
+        "Gui Toolkit",
+        "Graphical User Interface",
+        "Desktop Application Development"
+    ],
+    "Software Type": "Toolkit",
+    "Software Class": "Application Software",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

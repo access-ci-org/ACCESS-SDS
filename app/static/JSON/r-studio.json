@@ -1,0 +1,24 @@
+{
+    "Software": "R-Studio",
+    "AI Description": "R-Studio is an integrated development environment (IDE) for R, a programming language used for statistical computing and graphics. It provides a user-friendly interface for data analysis, visualization, and statistical modeling.",
+    "Core Features": [
+        "Code editing and execution",
+        "Workspace management",
+        "Data visualization tools",
+        "Integrated debugger",
+        "Package management",
+        "Project organization"
+    ],
+    "General Tags": [
+        "Ide",
+        "R Programming",
+        "Data Analysis",
+        "Data Visualization",
+        "Statistical Modeling"
+    ],
+    "Software Type": "Data Analysis Tool",
+    "Software Class": "Integrated Development Environment (Ide)",
+    "Research Field": "Statistics & Probability",
+    "Research Area": "",
+    "Research Discipline": ""
+}

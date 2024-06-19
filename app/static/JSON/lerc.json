@@ -1,0 +1,15 @@
+{
+    "Software": "LERC",
+    "AI Description": "LERC (Limited Error Raster Compression) is an algorithm for raster data compression that provides high compression ratios with minimal loss in data quality. It is commonly used in geospatial applications to reduce storage space and transmission times for large raster datasets.",
+    "Core Features": "1. High compression ratios\n2. Minimal loss in data quality\n3. Efficient storage and transmission of raster data\n4. Compatible with various geospatial applications",
+    "General Tags": [
+        "Compression",
+        "Raster Data",
+        "Geospatial Applications"
+    ],
+    "Software Type": "Algorithm",
+    "Software Class": "Data Compression",
+    "Research Field": "Other Natural Sciences",
+    "Research Area": "Geoinformatics",
+    "Research Discipline": "Earth & Environmental Sciences"
+}

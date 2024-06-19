@@ -1,0 +1,16 @@
+{
+    "Software": "Squid",
+    "AI Description": "Squid is a caching proxy server that can reduce bandwidth usage and speed up web access by caching frequently accessed web content.",
+    "Core Features": "1. Caching of web content\n2. Bandwidth usage reduction\n3. Web access speed improvement\n4. Support for various protocols\n5. Access control and monitoring capabilities",
+    "General Tags": [
+        "Proxy Server",
+        "Web Caching",
+        "Bandwidth Optimization",
+        "Networking"
+    ],
+    "Software Type": "Networking Software",
+    "Software Class": "Infrastructure & Instrumentation",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

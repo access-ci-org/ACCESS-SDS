@@ -1,0 +1,21 @@
+{
+    "Software": "libxslt",
+    "AI Description": "Libxslt is the XSLT C library developed for the GNOME project. It is used for transforming XML documents into other formats using XSLT stylesheets. Libxslt is based on libxml2, the XML C parser and toolkit.",
+    "Core Features": [
+        "Transforming XML documents into different formats",
+        "XSLT processing",
+        "Integration with libxml2",
+        "Support for XPath and XSLT standards"
+    ],
+    "General Tags": [
+        "Xml",
+        "Xslt",
+        "C Library",
+        "Transformation"
+    ],
+    "Software Type": "Data Processing",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

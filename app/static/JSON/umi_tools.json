@@ -1,0 +1,20 @@
+{
+    "Software": "umi_tools",
+    "AI Description": "umi_tools is a software package that provides a comprehensive set of tools for processing Unique Molecular Identifiers (UMIs) in next-generation sequencing data, particularly for single-cell RNA-seq datasets. It offers functionalities for deduplicating reads, performing read mapping, and processing BAM files containing UMIs.",
+    "Core Features": [
+        "Read deduplication based on UMIs",
+        "Single-cell RNA-seq data processing",
+        "Adapting BAM files containing UMIs",
+        "Read mapping and quality control"
+    ],
+    "General Tags": [
+        "Umi Processing",
+        "Next-Generation Sequencing",
+        "Single-Cell Rna-Seq"
+    ],
+    "Software Type": "Tool",
+    "Software Class": "Data Processing",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Transcriptomics",
+    "Research Discipline": "Bioinformatics"
+}

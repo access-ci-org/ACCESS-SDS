@@ -1,0 +1,15 @@
+{
+    "Software": "CUSZ",
+    "AI Description": "CUSZ is a fast and memory-efficient software tool for clustering and annotating large single-cell RNA-seq datasets.",
+    "Core Features": "CUSZ offers advanced clustering algorithms and annotation methods tailored for analyzing single-cell RNA-seq data. It can handle large datasets with efficiency and scalability while providing accurate and interpretable results.",
+    "General Tags": [
+        "Single-Cell Rna-Seq",
+        "Clustering",
+        "Annotation"
+    ],
+    "Software Type": "Bioinformatics",
+    "Software Class": "Data Analysis",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Single-Cell Rna Sequencing",
+    "Research Discipline": "Cell Biology"
+}

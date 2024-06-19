@@ -1,0 +1,23 @@
+{
+    "Software": "TenPy",
+    "AI Description": "TenPy is a Python library for the simulation of strongly correlated quantum lattice models. It includes algorithms for finding ground states and low-energy excitations, as well as for time evolution and thermal equilibrium states. The library is designed to work efficiently with tensor networks in one and two dimensions, such as matrix product states and projected entangled pair states.",
+    "Core Features": [
+        "Simulation of strongly correlated quantum lattice models",
+        "Ground state and low-energy excitation calculations",
+        "Time evolution and thermal equilibrium state simulations",
+        "Efficient tensor network algorithms for 1D and 2D systems",
+        "Support for matrix product states and projected entangled pair states"
+    ],
+    "General Tags": [
+        "Quantum Physics",
+        "Python Library",
+        "Tensor Networks",
+        "Quantum Simulation",
+        "Computational Physics"
+    ],
+    "Software Type": "Simulation Package",
+    "Software Class": "Scientific Computing",
+    "Research Field": "Physical Sciences",
+    "Research Area": "Quantum Many-Body Systems",
+    "Research Discipline": "Condensed Matter Physics"
+}

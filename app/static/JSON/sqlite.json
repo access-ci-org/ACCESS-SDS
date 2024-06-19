@@ -1,0 +1,21 @@
+{
+    "Software": "SQLite",
+    "AI Description": "SQLite is a C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine. SQLite is the most widely deployed SQL database engine in the world. The source code for SQLite is in the public domain.",
+    "Core Features": [
+        "Small and self-contained",
+        "Serverless database engine",
+        "Supports standard SQL syntax",
+        "Transaction support",
+        "Cross-platform compatibility"
+    ],
+    "General Tags": [
+        "Relational Database",
+        "Sql",
+        "Database Management"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Database Management System",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

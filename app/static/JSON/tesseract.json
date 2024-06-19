@@ -1,0 +1,21 @@
+{
+    "Software": "Tesseract",
+    "AI Description": "Tesseract is an open-source OCR (Optical Character Recognition) engine that can be used to extract text from various sources like images, PDFs, and scanned documents.",
+    "Core Features": [
+        "High accuracy in text recognition",
+        "Supports multiple languages",
+        "Can be trained to recognize new fonts and languages",
+        "Cross-platform availability"
+    ],
+    "General Tags": [
+        "Ocr",
+        "Text Recognition",
+        "Open-Source",
+        "Cross-Platform"
+    ],
+    "Software Type": "Ocr Tool",
+    "Software Class": "Utilities",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

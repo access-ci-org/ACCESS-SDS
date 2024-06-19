@@ -1,0 +1,15 @@
+{
+    "Software": "r-plogr",
+    "AI Description": "The 'plogr' package in R provides a simple and consistent logging interface for R scripts and packages, allowing users to easily log messages and errors while running code. It offers customizable logging levels and output destinations to help with debugging and monitoring.",
+    "Core Features": "1. Logging messages and errors in R scripts and packages.\n2. Customizable logging levels - DEBUG, INFO, WARNING, ERROR, FATAL.\n3. Support for directing log output to console, files, or other custom destinations.\n4. Simple and consistent logging interface for easy use.",
+    "General Tags": [
+        "Logging",
+        "Debugging",
+        "Monitoring"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Logging & Debugging Tools",
+    "Research Field": "Other Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

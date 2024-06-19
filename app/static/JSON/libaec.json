@@ -1,0 +1,14 @@
+{
+    "Software": "libaec",
+    "AI Description": "libaec is a C library for lossless image compression.",
+    "Core Features": "It provides fast and efficient compression and decompression of images using adaptive arithmetic coding.",
+    "General Tags": [
+        "Image Compression",
+        "Lossless Compression"
+    ],
+    "Software Type": "Compression",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

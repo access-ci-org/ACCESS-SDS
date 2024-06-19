@@ -1,0 +1,18 @@
+{
+    "Software": "libtirpc",
+    "AI Description": "libtirpc is an open-source library that provides an implementation of Sun's Transport-Independent RPC (TI-RPC) protocol.",
+    "Core Features": [
+        "- Implementation of Sun's TI-RPC protocol",
+        "- Support for various RPC transport specification",
+        "- Simplified RPC development and integration",
+        "- High-performance and efficient RPC communication"
+    ],
+    "General Tags": [
+        "Software Library"
+    ],
+    "Software Type": "Development",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

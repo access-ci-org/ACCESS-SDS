@@ -1,0 +1,20 @@
+{
+    "Software": "R tidyselect",
+    "AI Description": "The tidyselect package in R provides a dialect of selection semantics tailored to work with the tidyverse. It allows users to select columns (variables) in a data frame using a human-readable syntax that reflects the structure of the data.",
+    "Core Features": [
+        "Select columns in data frames using a tidyverse-friendly syntax",
+        "Support for a wide range of selection operations",
+        "Integration with other tidyverse packages for seamless data manipulation"
+    ],
+    "General Tags": [
+        "R",
+        "Data Wrangling",
+        "Data Manipulation",
+        "Tidyverse"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Data Manipulation Tool",
+    "Research Field": "Mathematics",
+    "Research Area": "Data Science",
+    "Research Discipline": "Statistics & Probability"
+}

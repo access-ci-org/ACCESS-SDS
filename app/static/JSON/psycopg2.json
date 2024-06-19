@@ -1,0 +1,22 @@
+{
+    "Software": "psycopg2",
+    "AI Description": "Psycopg is a popular PostgreSQL database adapter for the Python programming language. It provides a robust, efficient, and well-supported interface for interacting with PostgreSQL databases from Python applications.",
+    "Core Features": [
+        "Allows Python applications to connect to and interact with PostgreSQL databases",
+        "Supports various PostgreSQL features such as server-side cursors and asynchronous communication",
+        "Facilitates executing SQL commands, managing transactions, and fetching query results efficiently",
+        "Provides a high level of compatibility with Python DB-API specification for database programming",
+        "Offers good performance and reliability for database operations"
+    ],
+    "General Tags": [
+        "Python Library",
+        "Database Adapter",
+        "Postgresql",
+        "Data Management"
+    ],
+    "Software Type": "Database Adapter",
+    "Software Class": "Data Management Tools",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

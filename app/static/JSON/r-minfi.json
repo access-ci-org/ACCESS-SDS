@@ -1,0 +1,21 @@
+{
+    "Software": "r-minfi",
+    "AI Description": "r-minfi is an R package for the analysis and quality control of Illumina DNA methylation arrays. It provides a suite of functions for preprocessing raw data, normalization, and comprehensive quality assessment of DNA methylation data.",
+    "Core Features": [
+        "Preprocessing of raw Illumina DNA methylation array data",
+        "Normalization methods for DNA methylation data",
+        "Quality control and assessment of DNA methylation data",
+        "Integration with other Bioconductor packages for downstream analysis"
+    ],
+    "General Tags": [
+        "Data Analysis",
+        "Quality Control",
+        "Bioinformatics",
+        "Epigenetics"
+    ],
+    "Software Type": "R Package",
+    "Software Class": "Bioinformatics",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Epigenomics",
+    "Research Discipline": "Epigenetics"
+}

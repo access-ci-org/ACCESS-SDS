@@ -1,0 +1,16 @@
+{
+    "Software": "openfold",
+    "AI Description": "openfold is a computational software tool designed for protein folding simulations and structural analysis. It allows researchers to study the folding pathways of proteins and investigate their three-dimensional structures.",
+    "Core Features": "Some core features of openfold include molecular dynamics simulations, energy minimization algorithms, force field calculations, and visualization tools for protein structures. It also provides functionalities for analyzing protein folding kinetics and stability.",
+    "General Tags": [
+        "Computational Software",
+        "Molecular Dynamics Simulations",
+        "Protein Folding",
+        "Structural Analysis"
+    ],
+    "Software Type": "Bioinformatics",
+    "Software Class": "Simulation Software",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Protein Folding",
+    "Research Discipline": "Biophysics"
+}

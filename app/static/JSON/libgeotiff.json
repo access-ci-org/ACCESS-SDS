@@ -1,0 +1,16 @@
+{
+    "Software": "libgeotiff",
+    "AI Description": "Libgeotiff is a library for reading and writing coordinate system information embedded in geotiff files.",
+    "Core Features": "1. Reading and writing metadata tags for geotiff files\n2. Supporting reading and writing of geotiff files with coordinate system information\n3. Enables developers to access and manipulate geotiff file metadata\n4. Allows for the extraction of geographic and geospatial information from geotiff files",
+    "General Tags": [
+        "Geotiff",
+        "Metadata",
+        "Coordinates",
+        "Geospatial"
+    ],
+    "Software Type": "File Handling",
+    "Software Class": "Library",
+    "Research Field": "Earth & Environmental Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

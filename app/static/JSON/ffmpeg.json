@@ -1,0 +1,22 @@
+{
+    "Software": "ffmpeg",
+    "AI Description": "FFmpeg is a free and open-source software project consisting of a large suite of libraries and programs for handling video, audio, and other multimedia files and streams.",
+    "Core Features": [
+        "Encoding, decoding, transcoding, muxing, demuxing, streaming, filtering, and playing audio/video files",
+        "Support for a wide range of codecs, formats, and protocols",
+        "Cross-platform compatibility"
+    ],
+    "General Tags": [
+        "Media Processing",
+        "Multimedia",
+        "Video",
+        "Audio"
+    ],
+    "Software Type": "Tool",
+    "Software Class": "Utility",
+    "Research Field": [
+        "Engineering And Technology"
+    ],
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,22 @@
+{
+    "Software": "libunwind",
+    "AI Description": "libunwind is a portable and efficient C programming interface (API) to determine the call-chain of a program. It is primarily used for debugging, performance profiling, and runtime instrumentation.",
+    "Core Features": [
+        "Provides a C API for unwinding the call stack",
+        "Supports multiple processor architectures",
+        "Portable and lightweight",
+        "Used for debugging, profiling, and runtime instrumentation"
+    ],
+    "General Tags": [
+        "Debugging",
+        "Profiling",
+        "Runtime Instrumentation",
+        "Call Stack",
+        "C Programming"
+    ],
+    "Software Type": "Development",
+    "Software Class": "Library",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "",
+    "Research Discipline": ""
+}

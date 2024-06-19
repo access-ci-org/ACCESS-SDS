@@ -1,0 +1,23 @@
+{
+    "Software": "R Bioconductor",
+    "AI Description": "R Bioconductor is a collection of R packages for the analysis and comprehension of high-throughput genomic data. It provides tools for the analysis of genomics, proteomics, metabolomics, and other high-throughput biology data.",
+    "Core Features": [
+        "Analysis of high-throughput genomic data",
+        "Tools for genomics, proteomics, and metabolomics",
+        "Data visualization and interpretation",
+        "Statistical analysis for biological data"
+    ],
+    "General Tags": [
+        "R",
+        "Bioconductor",
+        "Genomics",
+        "Proteomics",
+        "Metabolomics",
+        "Data Analysis"
+    ],
+    "Software Type": "Computational Software",
+    "Software Class": "Bioinformatics",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

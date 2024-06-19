@@ -1,0 +1,15 @@
+{
+    "Software": "UCC",
+    "AI Description": "UCC (Universal Chemistry Converter) is a versatile software tool designed to convert chemical structures from one format to another. It supports a wide range of chemical structure file formats, making it an essential utility for chemists and researchers working with molecular structures.",
+    "Core Features": "1. Conversion of chemical structures between different file formats\n2. Support for popular formats such as SMILES, SDF, MOL, InChI, etc.\n3. Batch processing for efficient conversion of multiple structures\n4. User-friendly interface for easy input and output manipulation",
+    "General Tags": [
+        "Chemical Software",
+        "Chemical Structure Converter",
+        "Chemistry"
+    ],
+    "Software Type": "Conversion Tool",
+    "Software Class": "Utility",
+    "Research Field": "Natural Sciences",
+    "Research Area": "Analytical & Materials Chemistry",
+    "Research Discipline": "Chemical Sciences"
+}

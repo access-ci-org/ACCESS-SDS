@@ -1,0 +1,22 @@
+{
+    "Software": "VCFtools",
+    "AI Description": "VCFtools is a software package for manipulating and analyzing genetic variation data stored in Variant Call Format (VCF) files. It provides a wide range of tools for quality control, filtering, summarization, and other analyses of genetic variants.",
+    "Core Features": [
+        "Manipulation of Variant Call Format (VCF) files",
+        "Quality control and filtering of genetic variation data",
+        "Population genetics analyses",
+        "Linkage disequilibrium analysis",
+        "Variant annotation and statistics"
+    ],
+    "General Tags": [
+        "Genetic Variation Analysis",
+        "Variant Call Format (Vcf)",
+        "Population Genetics",
+        "Bioinformatics"
+    ],
+    "Software Type": "Data Analysis Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,16 @@
+{
+    "Software": "nvidia-container-cli",
+    "AI Description": "NVIDIA Container CLI is a command-line tool provided by NVIDIA that enables users to manage and interact with NVIDIA container runtimes. It allows for the configuration of various NVIDIA GPU-related settings within container environments.",
+    "Core Features": "1. Manage NVIDIA container runtimes\n2. Configure NVIDIA GPU settings within containers\n3. Interact with NVIDIA container environments through a command-line interface\n4. Facilitates the usage of NVIDIA GPUs for accelerated computing tasks in containers",
+    "General Tags": [
+        "Container Runtime Management",
+        "Gpu Settings Configuration",
+        "Command-Line Interface",
+        "Accelerated Computing"
+    ],
+    "Software Type": "Command-Line Tool",
+    "Software Class": "Tools & Utilities",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "Software Engineering, Systems, & Development",
+    "Research Discipline": "Computer Science"
+}

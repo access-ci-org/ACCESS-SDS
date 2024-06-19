@@ -1,0 +1,15 @@
+{
+    "Software": "Catch2",
+    "AI Description": "Catch2 is a C++ testing framework that is easy to use, yet powerful. It supports test-driven development, behavior-driven development, and specification by example.",
+    "Core Features": "1. Lightweight and easy to get started with\n2. Support for TDD, BDD, and specification by example\n3. Extensive set of matchers to write expressive and flexible test specifications\n4. Ability to define test cases with minimal boilerplate code\n5. Rich command-line interface for executing tests and generating reports",
+    "General Tags": [
+        "Testing Framework",
+        "C++",
+        "Unit Testing"
+    ],
+    "Software Type": "Testing Framework",
+    "Software Class": "Developer Tools",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "Software Engineering, Systems, & Development",
+    "Research Discipline": "Computer Science"
+}

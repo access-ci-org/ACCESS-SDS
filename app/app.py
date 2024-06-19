@@ -18,18 +18,20 @@ app = Flask(__name__)
 def software_search():
     try:
         df = create_static_table() ### TESTING PURPOSES -- Without this, Static Table is Cached and won't update ###
-        df = pd.read_csv("./staticSearch/staticTable.csv", keep_default_na=False)
+        #df = pd.read_csv("./staticSearch/staticTable.csv", keep_default_na=False)
+        df = pd.read_csv("./static/data/softwareTable.csv", keep_default_na=False)
     except FileNotFoundError as e:
 
-        df = create_static_table()
+        #df = create_static_table()
+        df = createSoftwareTable()
         print(e)
     
     table = df.to_html(classes='table-striped" id = "softwareTable',index=False,border=1).replace('\\n', '<br>')
 
     return render_template("software_search.html",table=table)
 
-#@app.route("/ai-generated")
-#def software_search_dynamic():
+@app.route("/ai-generated")
+def software_search_dynamic():
     df = pd.read_csv('./dynamicSearch/combined_data.csv',keep_default_na=False)
     df.insert(10,"Example Use",np.nan)
     df.fillna('',inplace=True)
@@ -45,7 +47,7 @@ def software_search():
 @app.route("/testing")
 def testingSoftwareTable():
     df = createSoftwareTable()
-    table = df.to_html(classes='table-striped" id = "softwareTableDynamic',index=False,border=1).replace('\\n', '<br>').replace('\\r', '')
+    table = df.to_html(classes='table-striped" id = "softwareTableTest',border=1)
     return render_template("software_search.html", table=table)
 
 

@@ -1,0 +1,15 @@
+{
+    "Software": "hypo",
+    "AI Description": "Hypo is a software package designed for statistical analysis and hypothesis testing. It provides a range of tools for conducting various types of statistical tests and analyzing data to determine the significance of results.",
+    "Core Features": "1. Conducts hypothesis testing with a variety of statistical tests\n2. Calculates p-values and confidence intervals\n3. Supports both parametric and non-parametric tests\n4. Provides tools for power analysis and sample size calculation\n5. Offers data visualization capabilities for result interpretation",
+    "General Tags": [
+        "Statistical Analysis",
+        "Hypothesis Testing",
+        "Data Analysis"
+    ],
+    "Software Type": "Scientific Software",
+    "Software Class": "Statistical Analysis",
+    "Research Field": "Statistics & Probability",
+    "Research Area": "",
+    "Research Discipline": ""
+}

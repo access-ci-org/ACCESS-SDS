@@ -1,0 +1,17 @@
+{
+    "Software": "nco",
+    "AI Description": "NCO (NetCDF Operators) is a suite of programs designed to help manipulate and analyze netCDF and HDF4 files. It provides a range of powerful tools for processing and analyzing climate and weather data stored in netCDF format.",
+    "Core Features": "1. Handling and manipulation of netCDF and HDF4 files\n2. Data extraction, subsetting, and filtering\n3. Statistical analysis and visualization of climate data\n4. Data format conversion and interoperability\n5. Automation of data processing tasks",
+    "General Tags": [
+        "Data Manipulation",
+        "Data Analysis",
+        "Climate Data",
+        "Netcdf",
+        "Hdf4"
+    ],
+    "Software Type": "",
+    "Software Class": "",
+    "Research Field": "Earth & Environmental Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

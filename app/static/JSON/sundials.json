@@ -1,0 +1,17 @@
+{
+    "Software": "SUNDIALS",
+    "AI Description": "SUNDIALS (Suite of Nonlinear and Differential/Algebraic Equation Solvers) is a software package for the solution of large-scale, time-dependent nonlinear differential/algebraic systems.",
+    "Core Features": "1. Provides a variety of numerical integration techniques.\n2. Supports both explicit and implicit time-stepping methods.\n3. Includes solvers for stiff and non-stiff systems of equations.\n4. Offers flexibility in choosing solvers based on problem characteristics.\n5. Supports a wide range of applications in scientific computing.",
+    "General Tags": [
+        "Software",
+        "Numerical Integration",
+        "Differential Equations",
+        "Algebraic Equations",
+        "Scientific Computing"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Computational Software",
+    "Research Field": "Other Mathematics",
+    "Research Area": "",
+    "Research Discipline": ""
+}

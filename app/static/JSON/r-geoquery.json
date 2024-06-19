@@ -1,0 +1,22 @@
+{
+    "Software": "R-GEOQUERY",
+    "AI Description": "R-GEOQUERY is an R package that provides tools for querying and retrieving genomic data from online databases. It allows users to easily access and retrieve various types of genomic data for analysis and visualization within the R environment.",
+    "Core Features": [
+        "Querying genomic data",
+        "Retrieving data from online databases",
+        "Analyzing genomic data",
+        "Visualizing genomic data"
+    ],
+    "General Tags": [
+        "R Package",
+        "Genomic Data",
+        "Data Retrieval",
+        "Analysis",
+        "Visualization"
+    ],
+    "Software Type": "R Package",
+    "Software Class": "Data Retrieval & Analysis",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomics",
+    "Research Discipline": "Bioinformatics"
+}

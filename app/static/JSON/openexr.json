@@ -1,0 +1,17 @@
+{
+    "Software": "OpenEXR",
+    "AI Description": "OpenEXR is a high dynamic-range (HDR) image file format developed by Industrial Light & Magic (ILM) for use in computer imaging applications. It is used for the interchange of high-fidelity image data between different software applications.",
+    "Core Features": "1. Supports high dynamic-range and floating-point pixel data\n2. Can store multiple images, layers, and auxiliary channels\n3. Lossless compression algorithms\n4. Extensible metadata capabilities\n5. Cross-platform and open-source",
+    "General Tags": [
+        "Image",
+        "File Format",
+        "High Dynamic-Range",
+        "Hdr",
+        "Image Data"
+    ],
+    "Software Type": "File Format",
+    "Software Class": "Image Processing",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "",
+    "Research Discipline": ""
+}

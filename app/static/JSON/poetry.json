@@ -1,0 +1,15 @@
+{
+    "Software": "poetry",
+    "AI Description": "Poetry is a dependency management and packaging tool for Python projects. It allows you to declare and manage project dependencies, create virtual environments, build and publish packages, and more.",
+    "Core Features": "Dependency management, virtual environments, package building and publishing.",
+    "General Tags": [
+        "Dependency Management",
+        "Packaging",
+        "Python"
+    ],
+    "Software Type": "Package Manager",
+    "Software Class": "Development Tools",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

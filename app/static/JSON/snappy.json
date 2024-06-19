@@ -1,0 +1,15 @@
+{
+    "Software": "snappy",
+    "AI Description": "Snappy is a fast compressor/decompressor for big data. It aims for very high speeds and reasonable compression levels. Snappy is widely used in many large-scale data processing frameworks.",
+    "Core Features": "1. High-speed compression and decompression. 2. Reasonable compression ratios. 3. Designed for efficiency with big data processing frameworks.",
+    "General Tags": [
+        "Compression",
+        "Big Data",
+        "Data Processing"
+    ],
+    "Software Type": "Data Processing Tool",
+    "Software Class": "Compression Tool",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

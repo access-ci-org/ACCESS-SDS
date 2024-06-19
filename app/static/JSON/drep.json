@@ -1,0 +1,19 @@
+{
+    "Software": "drep",
+    "AI Description": "drep (Dereplicator) is a tool for fast and accurate dereplication of genomes in microbial datasets. It helps to identify and remove duplicate sequences to ensure that downstream analyses are not biased by redundant data.",
+    "Core Features": [
+        "Dereplication of microbial genomes",
+        "Identification and removal of duplicate sequences",
+        "Improving efficiency and accuracy of downstream analyses"
+    ],
+    "General Tags": [
+        "Microbiome",
+        "Genome Analysis",
+        "Bioinformatics"
+    ],
+    "Software Type": "Bioinformatics",
+    "Software Class": "Algorithm/Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

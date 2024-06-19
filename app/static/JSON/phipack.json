@@ -1,0 +1,18 @@
+{
+    "Software": "Phipack",
+    "AI Description": "Phipack is a software package for the analysis of site-specific amino acid substitutions within multiple sequence alignments. It uses statistical methods to estimate selection pressure at individual sites, identify positive selection on specific branches of a phylogenetic tree, and detect recombination events.",
+    "Core Features": [
+        "Estimation of selection pressure at individual sites",
+        "Identification of positive selection on specific branches",
+        "Detection of recombination events"
+    ],
+    "General Tags": [
+        "Bioinformatics",
+        "Computational Biology"
+    ],
+    "Software Type": "Analytics Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Evolutionary Genetics",
+    "Research Discipline": "Genetics"
+}

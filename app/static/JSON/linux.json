@@ -1,0 +1,24 @@
+{
+    "Software": "Linux",
+    "AI Description": "Linux is a family of open-source Unix-like operating systems based on the Linux kernel, an operating system kernel first released on September 17, 1991, by Linus Torvalds.",
+    "Core Features": [
+        "Open-source",
+        "Unix-like operating system",
+        "Modular design",
+        "Multi-user capabilities",
+        "Security features",
+        "Stability and reliability",
+        "Command-line interface"
+    ],
+    "General Tags": [
+        "Operating System",
+        "Open Source",
+        "Unix-Like",
+        "Kernel"
+    ],
+    "Software Type": "System Software",
+    "Software Class": "Operating System",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,15 @@
+{
+    "Software": "ltrpred",
+    "AI Description": "ltrpred is a software tool for predicting long terminal repeat retrotransposons in genomic sequences. It uses a machine learning approach to identify and annotate LTR retrotransposons.",
+    "Core Features": "1. Prediction of LTR retrotransposons in genomic sequences\n2. Utilizes machine learning algorithms for accurate identification\n3. Annotation of LTR retrotransposons with relevant information\n4. User-friendly interface for easy analysis",
+    "General Tags": [
+        "Bioinformatics",
+        "Genomics",
+        "Machine Learning"
+    ],
+    "Software Type": "Prediction Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,21 @@
+{
+    "Software": "snphylo",
+    "AI Description": "snphylo is a software package designed for efficient construction of phylogenetic trees from large SNP datasets. It offers a range of features for processing SNP data and generating phylogenetic trees using various methods.",
+    "Core Features": [
+        "Processing large SNP datasets",
+        "Phylogenetic tree construction",
+        "Support for various methods",
+        "Efficiency in tree building"
+    ],
+    "General Tags": [
+        "Phylogenetics",
+        "Snp Data",
+        "Tree Construction",
+        "Bioinformatics"
+    ],
+    "Software Type": "Phylogenetic Analysis Software",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomics",
+    "Research Discipline": "Genetics"
+}

@@ -1,0 +1,15 @@
+{
+    "Software": "R-BibTeX",
+    "AI Description": "R-BibTeX is a software package for managing bibliographic references and creating citation files in BibTeX format within the R environment. It provides functions for importing, exporting, manipulating, and formatting bibliographic data for academic and research purposes.",
+    "Core Features": "1. Importing and exporting bibliographic references in BibTeX format.\n2. Manipulating and formatting citation files within R.\n3. Integration with R's data manipulation and visualization capabilities.\n4. Customization options for citation styles and output formats.",
+    "General Tags": [
+        "Bibtex",
+        "Bibliography Management",
+        "Citation Management"
+    ],
+    "Software Type": "Tool",
+    "Software Class": "Reference Management",
+    "Research Field": "Other Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

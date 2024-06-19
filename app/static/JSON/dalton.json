@@ -1,0 +1,15 @@
+{
+    "Software": "Dalton",
+    "AI Description": "Dalton is an powerful quantum chemistry program for the study of molecular properties. It can perform a variety of high-level ab initio quantum chemical calculations for both ground and excited states.",
+    "Core Features": "Some core features of Dalton include molecular property calculations, density functional theory calculations, coupled cluster calculations, symmetry-adapted perturbation theory, and relativistic effects calculations.",
+    "General Tags": [
+        "Quantum Chemistry",
+        "Molecular Properties",
+        "Ab Initio Calculations"
+    ],
+    "Software Type": "Simulation",
+    "Software Class": "Quantum Chemistry Software",
+    "Research Field": "Chemical Sciences",
+    "Research Area": "Theoretical Chemistry",
+    "Research Discipline": "Physical Chemistry"
+}

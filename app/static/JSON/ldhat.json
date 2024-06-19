@@ -1,0 +1,23 @@
+{
+    "Software": "ldhat",
+    "AI Description": "LDhat is a suite of population genetic software tools for the analysis of recombination rate, genetic diversity, population structure, and demographic history in DNA sequence data.",
+    "Core Features": [
+        "Estimation of recombination rates",
+        "Inferring population structure",
+        "Calculating genetic diversity",
+        "Analyzing demographic history",
+        "Simulation of genetic data"
+    ],
+    "General Tags": [
+        "Population Genetics",
+        "Genetic Diversity",
+        "Recombination Rate",
+        "Demographic History",
+        "Bioinformatics"
+    ],
+    "Software Type": "Computational",
+    "Software Class": "Bioinformatics",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Population Genetics",
+    "Research Discipline": "Genetics"
+}

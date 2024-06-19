@@ -1,0 +1,16 @@
+{
+    "Software": "EasyBuild-aces-tmp",
+    "AI Description": "EasyBuild is a software build and installation framework for high-performance computing (HPC) systems. The aces-tmp tool is a temporary directory management tool that is part of the EasyBuild framework.",
+    "Core Features": "1. Manages temporary directories for the EasyBuild software build and installation framework.\n2. Helps in organizing and cleaning up temporary build directories for optimized performance.\n3. Streamlines the build process by efficiently managing temporary storage.",
+    "General Tags": [
+        "Software Build",
+        "Installation Framework",
+        "Hpc Systems",
+        "Temporary Directory Management"
+    ],
+    "Software Type": "Tool",
+    "Software Class": "Utilities",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "Science & Engineering Education",
+    "Research Discipline": "Infrastructure & Instrumentation"
+}

@@ -1,0 +1,20 @@
+{
+    "Software": "CTI",
+    "AI Description": "CTI (Common Threat Intelligence) is an open source library designed to parse and manipulate structured threat intelligence information. It provides a set of APIs to work with different threat intelligence data formats and supports the serialization of data into various formats.",
+    "Core Features": [
+        "Parsing structured threat intelligence data",
+        "Manipulating threat intelligence information",
+        "Support for various threat intelligence data formats",
+        "Serialization of data into different formats"
+    ],
+    "General Tags": [
+        "Threat Intelligence",
+        "Data Parsing",
+        "Open Source"
+    ],
+    "Software Type": "Threat Intelligence",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,15 @@
+{
+    "Software": "dos2unix",
+    "AI Description": "dos2unix is a command-line utility that converts text files with DOS or Windows line endings (CRLF) to Unix line endings (LF) format.",
+    "Core Features": "1. Converts text files from DOS/Windows line endings (CRLF) to Unix line endings (LF).\n2. Preserves the file ownership, permissions, and timestamps.\n3. Can handle conversion of multiple files in batch mode.",
+    "General Tags": [
+        "Text Conversion",
+        "Line Endings",
+        "Command-Line Utility"
+    ],
+    "Software Type": "Utility",
+    "Software Class": "Data Management",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

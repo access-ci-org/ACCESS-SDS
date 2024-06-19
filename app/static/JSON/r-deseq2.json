@@ -1,0 +1,22 @@
+{
+    "Software": "R DESeq2",
+    "AI Description": "R DESeq2 is an R package that provides statistical tools for analyzing count data from high-throughput sequencing assays such as RNA-seq. It uses negative binomial distribution for modeling read counts and incorporates methods for normalization, differential expression analysis, and visualization.",
+    "Core Features": [
+        "Normalization of count data",
+        "Statistical testing for differential expression analysis",
+        "Estimation of variance-mean dependence",
+        "Visualization of results through various plots",
+        "Integration with other Bioconductor packages"
+    ],
+    "General Tags": [
+        "Bioinformatics",
+        "Computational Biology",
+        "Rna-Seq",
+        "Statistical Analysis"
+    ],
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Statistical Analysis",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomics",
+    "Research Discipline": "Genetics"
+}

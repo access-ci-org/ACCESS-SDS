@@ -1,0 +1,21 @@
+{
+    "Software": "CCS",
+    "AI Description": "The Consensus Computational Suite (CCS) is a collection of open-source tools and algorithms for analyzing, visualizing, and interpreting data in the context of consensus algorithms. It includes various modules for sequence assembly, genome scaffolding, variant calling, and haplotype phasing.",
+    "Core Features": [
+        "Sequence assembly",
+        "Genome scaffolding",
+        "Variant calling",
+        "Haplotype phasing"
+    ],
+    "General Tags": [
+        "Bioinformatics",
+        "Computational Biology",
+        "Sequence Analysis",
+        "Genomics"
+    ],
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Computational Software",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,16 @@
+{
+    "Software": "netcdf-c",
+    "AI Description": "NetCDF (Network Common Data Form) is a set of software libraries and self-describing, machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data.",
+    "Core Features": "1. Support for a variety of data types including integer, floating-point, and text\n2. Dimension scales for efficient representation of multidimensional data\n3. Metadata storage for describing the data\n4. Advanced compression and chunking techniques for efficient storage\n5. Parallel I/O capabilities\n6. Portability across different platforms\n7. Integration with other data visualization and analysis tools",
+    "General Tags": [
+        "Data Format",
+        "Scientific Data",
+        "Data Access",
+        "Data Sharing"
+    ],
+    "Software Type": "Data Format",
+    "Software Class": "Library",
+    "Research Field": "Other Natural Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

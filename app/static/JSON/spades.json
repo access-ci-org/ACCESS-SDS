@@ -1,0 +1,15 @@
+{
+    "Software": "SPAdes",
+    "AI Description": "SPAdes (St. Petersburg genome assembler) is a de novo genome assembly software tool designed for single-cell and multi-cell bacterial genome projects. It uses a combination of de Bruijn graph and mismatch correction algorithms to assemble highly accurate and contiguous draft genomes.",
+    "Core Features": "1. De novo genome assembly for various types of bacterial genomes. 2. Support for single-cell and multi-cell sequencing data. 3. Hybrid assembly combining short and long reads for improved genome contiguity. 4. Error correction modules to enhance assembly accuracy. 5. Automated parameter selection to streamline the assembly process.",
+    "General Tags": [
+        "Genome Assembly",
+        "Bioinformatics",
+        "Computational Biology"
+    ],
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Assembly Software",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

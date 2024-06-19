@@ -1,0 +1,21 @@
+{
+    "Software": "Circlator",
+    "AI Description": "Circlator is a tool designed for circularizing and visualizing genome assemblies, specifically for circularizing genomes, fixing misassemblies, and improving the overall assembly quality.",
+    "Core Features": [
+        "Circularizing genome assemblies",
+        "Fixing misassemblies",
+        "Improving assembly quality",
+        "Visualizing genome assemblies"
+    ],
+    "General Tags": [
+        "Genome Assembly",
+        "Bioinformatics",
+        "Genome Visualization",
+        "Assembly Improvement"
+    ],
+    "Software Type": "Assembly Tools",
+    "Software Class": "Genome Tools",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genome Assembly",
+    "Research Discipline": "Genomics"
+}

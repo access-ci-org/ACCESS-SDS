@@ -1,0 +1,15 @@
+{
+    "Software": "kmer-jellyfish",
+    "AI Description": "Kmer-Jellyfish is a software tool for counting k-mers using the Jellyfish k-mer counter. K-mers are substrings of length k in a DNA or RNA sequence and are commonly used in various bioinformatics applications.",
+    "Core Features": "1. Counting k-mers in DNA or RNA sequences\n2. Utilizes the Jellyfish k-mer counter for efficient processing\n3. Can handle large-scale genomic data sets\n4. Supports multiple k-mer sizes and input formats\n5. Provides options for customizing k-mer counting parameters",
+    "General Tags": [
+        "Bioinformatics",
+        "Computational Biology",
+        "Sequence Analysis"
+    ],
+    "Software Type": "Sequence Analysis Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomic Data Analysis",
+    "Research Discipline": "Genomics"
+}

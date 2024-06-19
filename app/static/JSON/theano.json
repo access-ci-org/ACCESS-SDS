@@ -1,0 +1,15 @@
+{
+    "Software": "Theano",
+    "AI Description": "Theano is an open-source symbolic mathematical library, used for deep learning and numerical computation, that allows you to define, optimize, and evaluate mathematical expressions involving multi-dimensional arrays efficiently.",
+    "Core Features": "Theano provides modules for defining and manipulating mathematical expressions, supports GPU computation, enables automatic differentiation, optimizes symbolic graph execution, and integrates seamlessly with NumPy. It is commonly used for building and training deep learning models.",
+    "General Tags": [
+        "Mathematical Library",
+        "Deep Learning",
+        "Numerical Computation"
+    ],
+    "Software Type": "Symbolic Mathematical Library",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Machine Learning",
+    "Research Discipline": "Artificial Intelligence & Intelligent Systems"
+}

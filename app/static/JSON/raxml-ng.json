@@ -1,0 +1,15 @@
+{
+    "Software": "RAxML-NG",
+    "AI Description": "RAxML-NG (RAxML Next Generation) is a fast and accurate phylogenetic inference tool that implements maximum likelihood methods for large-scale phylogenetic tree estimation. It is designed to efficiently analyze large datasets with thousands of taxa and can handle diverse types of evolutionary models.",
+    "Core Features": "1. Fast and efficient maximum likelihood phylogenetic tree estimation.\n2. Supports multiple substitution models, rate heterogeneity, and partitioned models.\n3. Parallel processing capabilities for high-performance computing.\n4. Handles large datasets with thousands of sequences.\n5. Incorporates advanced algorithms for rapid tree search and bootstrapping.",
+    "General Tags": [
+        "Phylogenetics",
+        "Evolutionary Biology",
+        "Bioinformatics"
+    ],
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Phylogenetic Inference",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Phylogenetics",
+    "Research Discipline": "Systematics & Population Biology"
+}

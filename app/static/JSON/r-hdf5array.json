@@ -1,0 +1,17 @@
+{
+    "Software": "r-hdf5array",
+    "AI Description": "The r-hdf5array package provides HDF5-based storage for array-like objects in R. It allows for efficient storage and manipulation of large arrays, with support for data compression and chunking.",
+    "Core Features": "1. Storage of large array-like objects in HDF5 format\n2. Efficient manipulation of array data\n3. Support for data compression and chunking\n4. Integration with R programming language for data analysis and visualization",
+    "General Tags": [
+        "Data Storage",
+        "Manipulation",
+        "Data Compression",
+        "R Programming",
+        "Hdf5 Format"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Data Processing & Storage",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

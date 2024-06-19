@@ -1,0 +1,27 @@
+{
+    "Software": "extrae",
+    "AI Description": "Extrae is a performance analysis tool designed to capture and analyze trace data from parallel and distributed applications. It allows users to monitor and examine the behavior of their applications in terms of performance, identifying potential bottlenecks and areas for optimization.",
+    "Core Features": [
+        "Capture and analyze trace data from parallel applications",
+        "Identify performance bottlenecks",
+        "Optimize application performance",
+        "Monitor application behavior"
+    ],
+    "General Tags": [
+        "Performance Analysis",
+        "Trace Data",
+        "Parallel Applications",
+        "Distributed Applications"
+    ],
+    "Software Type": "Tool",
+    "Software Class": "Performance Analysis",
+    "Research Field": [
+        "Computer And Information Sciences",
+        "Software Engineering, Systems, And Development",
+        "Engineering And Technology",
+        "Training",
+        "Infrastructure And Instrumentation"
+    ],
+    "Research Area": "",
+    "Research Discipline": ""
+}

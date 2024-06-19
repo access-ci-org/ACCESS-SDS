@@ -1,0 +1,20 @@
+{
+    "Software": "R bumphunter",
+    "AI Description": "R package for detecting breakpoints in DNA methylation data",
+    "Core Features": "1. Identifying differentially methylated regions (DMRs) in DNA methylation data\n2. Utilizes a bump hunting approach to detect differences in methylation levels\n3. Provides statistical methods for assessing significance of detected DMRs",
+    "General Tags": [
+        "Bioinformatics",
+        "Statistical Analysis",
+        "Dna Methylation"
+    ],
+    "Software Type": "Package",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": [
+        "Genomics",
+        "Epigenetics"
+    ],
+    "Research Discipline": [
+        "Genetics"
+    ]
+}

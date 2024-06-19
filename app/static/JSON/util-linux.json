@@ -1,0 +1,21 @@
+{
+    "Software": "util-linux",
+    "AI Description": "Util-linux is a suite of essential utilities for any Linux system. It contains various programs for handling basic system functionalities, such as mounting drives, managing partitions, controlling system processes, monitoring system performance, and more.",
+    "Core Features": [
+        "Mounting and unmounting filesystems",
+        "Partitioning storage devices",
+        "Process management",
+        "System monitoring",
+        "System information retrieval"
+    ],
+    "General Tags": [
+        "Linux",
+        "System Utilities",
+        "Command Line Tools"
+    ],
+    "Software Type": "Operating System Tools",
+    "Software Class": "System Utility",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

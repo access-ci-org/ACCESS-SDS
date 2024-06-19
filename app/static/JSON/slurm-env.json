@@ -1,0 +1,20 @@
+{
+    "Software": "slurm-env",
+    "AI Description": "slurm-env is a tool that helps manage environment variables for SLURM job scripts. SLURM, which stands for Simple Linux Utility for Resource Management, is an open-source job scheduler for Linux clusters.",
+    "Core Features": [
+        "Managing environment variables for SLURM job scripts",
+        "Integration with SLURM job scheduler",
+        "Facilitates setting up the environment for job execution"
+    ],
+    "General Tags": [
+        "Slurm",
+        "Job Scheduler",
+        "Environment Variables",
+        "Linux Clusters"
+    ],
+    "Software Type": "Utility Tool",
+    "Software Class": "Software",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "",
+    "Research Discipline": ""
+}

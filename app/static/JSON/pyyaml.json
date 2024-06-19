@@ -1,0 +1,15 @@
+{
+    "Software": "pyyaml",
+    "AI Description": "PyYAML is a YAML parser and emitter for Python. It supports YAML 1.2 specification and can parse and emit YAML data quickly and efficiently.",
+    "Core Features": "1. Parsing YAML data into Python data structures\n2. Serializing Python data structures into YAML format\n3. Full support for YAML 1.2 specification\n4. High performance and efficiency\n5. Unicode support",
+    "General Tags": [
+        "Yaml",
+        "Parser",
+        "Emitter"
+    ],
+    "Software Type": "Data Serialization",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Informatics, Analytics & Information Science",
+    "Research Discipline": "Other Computer & Information Sciences"
+}

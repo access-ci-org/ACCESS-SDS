@@ -1,0 +1,21 @@
+{
+    "Software": "advntr",
+    "AI Description": "Advntr (Adaptive Variant Detection in NGS data with trained Recurrent Neural Networks) is a software tool that utilizes deep learning techniques to identify genetic variants in next-generation sequencing (NGS) data. It employs trained recurrent neural networks to accurately and efficiently detect variants in DNA sequences.",
+    "Core Features": [
+        "Utilizes deep learning methods for variant detection",
+        "Trained recurrent neural networks for improved accuracy",
+        "Works with next-generation sequencing (NGS) data",
+        "Efficient and fast variant detection process"
+    ],
+    "General Tags": [
+        "Ngs",
+        "Variant Detection",
+        "Deep Learning",
+        "Dna Sequencing"
+    ],
+    "Software Type": "Bioinformatics",
+    "Software Class": "Genetic Variant Analysis",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomics",
+    "Research Discipline": "Genetics"
+}

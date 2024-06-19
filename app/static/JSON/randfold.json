@@ -1,0 +1,15 @@
+{
+    "Software": "Randfold",
+    "AI Description": "Randfold is a computational tool for predicting the thermodynamic ensemble of RNA secondary structures. It uses a statistical sampling approach to generate an ensemble of structures consistent with the input sequence.",
+    "Core Features": "1. Predicts RNA secondary structure ensemble\n2. Statistical sampling approach\n3. Generates structures consistent with input sequence",
+    "General Tags": [
+        "Computational Biology",
+        "Bioinformatics",
+        "Rna Secondary Structure Prediction"
+    ],
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Prediction Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Rna Biology",
+    "Research Discipline": "Bioinformatics"
+}

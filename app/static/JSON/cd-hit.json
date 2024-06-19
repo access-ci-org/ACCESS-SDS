@@ -1,0 +1,15 @@
+{
+    "Software": "cd-hit",
+    "AI Description": "cd-hit is a widely used program for clustering and comparing protein or nucleotide sequences. It clusters a large set of sequences to reduce redundancy and generate a non-redundant representative set. This tool is beneficial for sequence analysis, especially in bioinformatics studies.",
+    "Core Features": "1. Clustering of protein or nucleotide sequences\n2. Reducing redundancy in large sequence datasets\n3. Generating non-redundant representative sequences\n4. Alignment-based and word-counting algorithms\n5. Various clustering and similarity threshold options",
+    "General Tags": [
+        "Sequence Analysis",
+        "Clustering",
+        "Bioinformatics"
+    ],
+    "Software Type": "Bioinformatics Software",
+    "Software Class": "Clustering Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Sequence Analysis",
+    "Research Discipline": "Bioinformatics"
+}

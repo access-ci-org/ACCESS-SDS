@@ -1,0 +1,22 @@
+{
+    "Software": "pycoQC",
+    "AI Description": "pycoQC is a Python package designed for parsing Oxford Nanopore sequencing quality control (QC) reports. It provides tools for analysis, visualization, and assessment of sequencing performance metrics.",
+    "Core Features": [
+        "Parsing Oxford Nanopore sequencing QC reports",
+        "Analysis of sequencing metrics",
+        "Quality control assessment",
+        "Visualization of QC data"
+    ],
+    "General Tags": [
+        "Python Package",
+        "Bioinformatics",
+        "Quality Control",
+        "Data Analysis",
+        "Visualization"
+    ],
+    "Software Type": "Sequencing Qc",
+    "Software Class": "Data Analysis Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genetics",
+    "Research Discipline": "Biological Sciences"
+}

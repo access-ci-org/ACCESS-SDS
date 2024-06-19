@@ -1,0 +1,20 @@
+{
+    "Software": "libpciaccess",
+    "AI Description": "libpciaccess is a library providing generic access to the PCI bus and devices for use in user-space programs. It allows user-space drivers to directly map PCI memory regions, perform bus transactions, and query devices on the PCI bus.",
+    "Core Features": [
+        "Generic access to PCI bus and devices",
+        "Direct mapping of PCI memory regions",
+        "Bus transactions",
+        "Device querying on the PCI bus"
+    ],
+    "General Tags": [
+        "Library",
+        "Pci Bus Access",
+        "User-Space Drivers"
+    ],
+    "Software Type": "Programming Library",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

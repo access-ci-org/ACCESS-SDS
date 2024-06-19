@@ -1,0 +1,16 @@
+{
+    "Software": "eztrace",
+    "AI Description": "eztrace is a tool that provides a set of library calls that can be used to trace the evolution of applications during their execution. It helps in performance analysis by collecting information about function calls, communication patterns, and execution characteristics.",
+    "Core Features": "1. Tracing function calls and communication patterns\n2. Performance analysis\n3. Execution characteristics monitoring\n4. Profiling applications",
+    "General Tags": [
+        "Performance Analysis",
+        "Function Call Tracing",
+        "Profiling",
+        "Monitoring"
+    ],
+    "Software Type": "Library Tool",
+    "Software Class": "Performance Analysis Tool",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

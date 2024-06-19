@@ -1,0 +1,18 @@
+{
+    "Software": "snaptools",
+    "AI Description": "SnapTools is a comprehensive software suite designed for the analysis of single-cell data from various technologies.",
+    "Core Features": "Some of the core features of SnapTools include preprocessing, quality control, dimensionality reduction, batch effect correction, visualization, and downstream analysis of single-cell data.",
+    "General Tags": [
+        "Single-Cell Data",
+        "Preprocessing",
+        "Dimensionality Reduction",
+        "Batch Effect Correction",
+        "Visualization",
+        "Downstream Analysis"
+    ],
+    "Software Type": "Data Analysis",
+    "Software Class": "Bioinformatics",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Single-Cell Analysis",
+    "Research Discipline": "Cell Biology"
+}

@@ -1,0 +1,15 @@
+{
+    "Software": "fasta3",
+    "AI Description": "fasta3 is a suite of tools for searching nucleotide or protein databases with a query sequence, as well as for conducting multiple sequence alignment.",
+    "Core Features": "fasta3 includes tools for database searching, sequence alignment, and motif finding. It provides efficient methods for comparing DNA or protein sequences.",
+    "General Tags": [
+        "Bioinformatics",
+        "Sequence Analysis",
+        "Alignment"
+    ],
+    "Software Type": "Sequence Analysis Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,22 @@
+{
+    "Software": "Boost.Python",
+    "AI Description": "Boost.Python is a library used for interfacing Python and C++. It enables seamless integration of C++ code with Python and provides tools to expose C++ classes, functions, and objects to Python scripts, and vice versa.",
+    "Core Features": [
+        "Bi-directional communication between C++ and Python",
+        "Automatic mapping of basic C++ types to Python",
+        "Support for exposing C++ classes, functions, and modules to Python",
+        "Ability to call Python code from C++ and vice versa",
+        "Extensive documentation and community support"
+    ],
+    "General Tags": [
+        "C++",
+        "Python",
+        "Integration",
+        "Library"
+    ],
+    "Software Type": "Library",
+    "Software Class": "",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

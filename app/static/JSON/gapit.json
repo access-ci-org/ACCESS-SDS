@@ -1,0 +1,21 @@
+{
+    "Software": "GAPIT",
+    "AI Description": "GAPIT (Genome Association and Prediction Integrated Tool) is a comprehensive software package developed for genome-wide association studies (GWAS) and genomic prediction in crops. It provides a user-friendly interface to perform various statistical analyses and data visualization related to genetic studies in plants.",
+    "Core Features": [
+        "Conduct genome-wide association studies (GWAS)",
+        "Perform genomic prediction",
+        "Supports a variety of statistical models",
+        "Data visualization tools",
+        "User-friendly interface"
+    ],
+    "General Tags": [
+        "Gwas",
+        "Genomic Prediction",
+        "Crop Genetics"
+    ],
+    "Software Type": "Tool",
+    "Software Class": "Bioinformatics",
+    "Research Field": "Agricultural Sciences",
+    "Research Area": "Crop Genetics",
+    "Research Discipline": "Agricultural Sciences"
+}

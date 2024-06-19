@@ -1,0 +1,21 @@
+{
+    "Software": "GEANT4",
+    "AI Description": "GEANT4 is a toolkit for the simulation of the passage of particles through matter. It is used by a large number of experiments and projects in a variety of application domains, including high energy physics, astrophysics and space science, medical physics, and radiation protection.",
+    "Core Features": [
+        "Monte Carlo simulation of particle transport through matter",
+        "Modular design with a wide range of physics processes and geometries",
+        "User-friendly interfaces and visualization tools",
+        "Open-source and actively maintained by a large international collaboration"
+    ],
+    "General Tags": [
+        "Software",
+        "Physics",
+        "Simulation",
+        "Particle Transport"
+    ],
+    "Software Type": "Toolkit",
+    "Software Class": "Simulation Software",
+    "Research Field": "Physical Sciences",
+    "Research Area": "High Energy Physics",
+    "Research Discipline": "Particle Physics"
+}

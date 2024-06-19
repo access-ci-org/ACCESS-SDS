@@ -1,0 +1,15 @@
+{
+    "Software": "meson-python",
+    "AI Description": "Meson is a high-productivity build system. It provides a simple syntax for describing how your project is build and a wide range of options to control the build process.",
+    "Core Features": "Meson is optimized for simplicity and ease of use without sacrificing functionality. It supports multiple languages, cross-compilation, and out-of-source builds. Meson is also highly customizable and extensible through plugins.",
+    "General Tags": [
+        "Build System",
+        "Automation",
+        "Software Development"
+    ],
+    "Software Type": "Build System",
+    "Software Class": "Development Tools",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

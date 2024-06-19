@@ -1,0 +1,19 @@
+{
+    "Software": "gcccuda",
+    "AI Description": "gcccuda is a wrapper around the GCC C compiler that enables CUDA programming directly in C without the need for NVCC. It allows developers to write CUDA code using familiar C syntax and compile it with the GCC compiler.",
+    "Core Features": [
+        "Enables CUDA programming in C using GCC compiler",
+        "No need for NVCC",
+        "Supports CUDA features and optimizations"
+    ],
+    "General Tags": [
+        "Cuda Programming",
+        "C Compiler Wrapper",
+        "Parallel Computing"
+    ],
+    "Software Type": "Development Tool",
+    "Software Class": "Compiler",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Parallel & Distributed Computing",
+    "Research Discipline": "Computer Science"
+}

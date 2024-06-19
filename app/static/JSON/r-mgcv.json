@@ -1,0 +1,21 @@
+{
+    "Software": "r-mgcv",
+    "AI Description": "R package for Generalized Additive Models with GCV/AIC/REML smoothness estimation",
+    "Core Features": [
+        "Fits generalized additive models with integrated smoothness estimation",
+        "Flexible modeling of nonlinear relationships",
+        "Automated selection of model complexity with GCV/AIC/REML",
+        "Supports various types of response variables",
+        "Allows for multiple smoothing methods like thin plate regression splines and cubic regression splines"
+    ],
+    "General Tags": [
+        "R Package",
+        "Generalized Additive Models",
+        "Nonlinear Modeling"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Statistical Analysis",
+    "Research Field": "Other Mathematics",
+    "Research Area": "",
+    "Research Discipline": ""
+}

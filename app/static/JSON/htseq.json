@@ -1,0 +1,22 @@
+{
+    "Software": "HTSeq",
+    "AI Description": "HTSeq is a Python library that provides efficient tools to work with high-throughput sequencing data. It offers functionalities to process and analyze sequence data from RNA-Seq experiments, particularly for quantification of gene and transcript expression levels.",
+    "Core Features": [
+        "Quantification of gene expression levels",
+        "Handling high-throughput sequencing data",
+        "RNA-Seq data analysis",
+        "Python library for bioinformatics"
+    ],
+    "General Tags": [
+        "Bioinformatics",
+        "Rna-Seq",
+        "High-Throughput Sequencing",
+        "Gene Expression",
+        "Sequence Data"
+    ],
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Python Library",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Transcriptomics",
+    "Research Discipline": "Bioinformatics"
+}

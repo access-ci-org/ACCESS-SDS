@@ -1,0 +1,19 @@
+{
+    "Software": "pytest-rerunfailures",
+    "AI Description": "pytest-rerunfailures is a plugin for the pytest testing framework that automatically reruns failed test cases to improve test reliability.",
+    "Core Features": [
+        "Automatic rerun of failed test cases",
+        "Enhanced test reliability",
+        "Customizable rerun settings"
+    ],
+    "General Tags": [
+        "Software Testing",
+        "Python Libraries",
+        "Programming Tools"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Testing Tools",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "Quality Assurance",
+    "Research Discipline": "Software Engineering, Systems, & Development"
+}

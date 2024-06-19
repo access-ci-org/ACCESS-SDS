@@ -1,0 +1,24 @@
+{
+    "Software": "glib",
+    "AI Description": "GLib is a general-purpose utility library for the C programming language. It provides data structure handling for lists, trees, hashes, memory allocation, and other commonly needed functionality.",
+    "Core Features": [
+        "Data structure handling for lists, trees, and hashes",
+        "Memory management and allocation",
+        "Thread support",
+        "Internationalization support",
+        "Dynamic loading of modules",
+        "Utilities for strings and file manipulation"
+    ],
+    "General Tags": [
+        "Utility Library",
+        "C Programming",
+        "Data Structures",
+        "Memory Management",
+        "Thread Support"
+    ],
+    "Software Type": "Utility",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

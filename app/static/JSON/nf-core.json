@@ -1,0 +1,17 @@
+{
+    "Software": "nf-core",
+    "AI Description": "NF-core is a collection of community curated Nextflow pipelines available for genomics, transcriptomics, and other bioinformatics analyses. It provides a collection of best practices workflows that are highly optimized, scalable, and easy to use.",
+    "Core Features": "1. Community-curated Nextflow pipelines\n2. Best practices workflows for genomics and transcriptomics analyses\n3. Highly optimized and scalable\n4. Easy to use and customize for specific research needs",
+    "General Tags": [
+        "Bioinformatics",
+        "Workflow Management",
+        "Nextflow",
+        "Genomics",
+        "Transcriptomics"
+    ],
+    "Software Type": "Data Analysis Tool",
+    "Software Class": "Workflow Management",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomics, Transcriptomics",
+    "Research Discipline": "Bioinformatics"
+}

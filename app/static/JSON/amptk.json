@@ -1,0 +1,22 @@
+{
+    "Software": "amptk",
+    "AI Description": "Amplicon analysis and metabarcoding toolkit (amptk) is a bioinformatics pipeline for analyzing high-throughput amplicon sequencing data such as 16S rRNA gene sequences and Internal Transcribed Spacer (ITS) sequences. It provides various modules for processing raw sequence data, including demultiplexing, quality filtering, denoising, chimera removal, operational taxonomic unit (OTU) picking, taxonomic assignment, and diversity analysis.",
+    "Core Features": "1. Demultiplexing and quality filtering of raw sequencing data.\n2. Denoising and dereplication of sequences to remove errors.\n3. Chimera removal to improve the accuracy of data.\n4. OTU picking based on clustering at specified sequence similarities.\n5. Taxonomic assignment of OTUs using reference databases.\n6. Diversity analyses for comparing microbial communities.",
+    "General Tags": [
+        "Bioinformatics",
+        "Amplicon Analysis",
+        "Metabarcoding",
+        "High-Throughput Sequencing",
+        "16S Rrna Gene",
+        "Its Sequences"
+    ],
+    "Software Type": "",
+    "Software Class": "",
+    "Research Field": [
+        "Biological Sciences"
+    ],
+    "Research Area": "",
+    "Research Discipline": [
+        "Biological Sciences"
+    ]
+}

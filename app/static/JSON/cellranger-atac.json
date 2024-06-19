@@ -1,0 +1,15 @@
+{
+    "Software": "Cell Ranger ATAC",
+    "AI Description": "Cell Ranger ATAC is a software package developed by 10x Genomics for analyzing and visualizing chromatin accessibility data from single-cell ATAC-seq experiments.",
+    "Core Features": "Key features include alignment, barcode processing, filtering, peak calling, quality control, clustering, and data visualization.",
+    "General Tags": [
+        "Atac-Seq",
+        "Single-Cell Analysis",
+        "Chromatin Accessibility"
+    ],
+    "Software Type": "Analysis Tool",
+    "Software Class": "Bioinformatics",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Single-Cell Chromatin Biology",
+    "Research Discipline": "Genomics"
+}

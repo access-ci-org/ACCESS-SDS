@@ -1,0 +1,15 @@
+{
+    "Software": "GPyTorch",
+    "AI Description": "GPyTorch is a Gaussian process library implemented using PyTorch. It is designed for scalable and flexible Gaussian process models, with a focus on deep learning integration.",
+    "Core Features": "1. Scalable Gaussian process models\n2. Integration with PyTorch for deep learning\n3. Flexibility in model construction\n4. Efficient computation through GPU acceleration\n5. Bayesian optimization and kernel learning capabilities",
+    "General Tags": [
+        "Machine Learning",
+        "Gaussian Processes",
+        "Deep Learning"
+    ],
+    "Software Type": "Python Library",
+    "Software Class": "Machine Learning Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

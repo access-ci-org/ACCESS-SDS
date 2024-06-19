@@ -1,0 +1,21 @@
+{
+    "Software": "samplot",
+    "AI Description": "Samplot is a Python package for creating publication-quality plots of structural variants identified from short- and long-read sequencing data. It provides a flexible and customizable framework for visualizing structural variations in genomic data.",
+    "Core Features": [
+        "Visualization of structural variants",
+        "Support for short- and long-read sequencing data",
+        "Publication-quality plots",
+        "Customizable plots"
+    ],
+    "General Tags": [
+        "Bioinformatics",
+        "Genomics",
+        "Structural Variants",
+        "Data Visualization"
+    ],
+    "Software Type": "Python Library",
+    "Software Class": "Visualization Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomics",
+    "Research Discipline": "Bioinformatics"
+}

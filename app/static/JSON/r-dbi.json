@@ -1,0 +1,21 @@
+{
+    "Software": "R-DBI",
+    "AI Description": "R-DBI is a collection of database interfaces for R, providing a common interface for interacting with different database management systems. It allows R users to connect to various databases, query data, and retrieve results seamlessly.",
+    "Core Features": [
+        "Provides unified interface for database connectivity in R",
+        "Supports various database management systems such as MySQL, SQLite, PostgreSQL, and more",
+        "Enables querying and retrieving data from databases within R environment",
+        "Facilitates data import and export between R and databases"
+    ],
+    "General Tags": [
+        "Database Connectivity",
+        "Data Querying",
+        "R Package",
+        "Data Import/Export"
+    ],
+    "Software Type": "Database Interface",
+    "Software Class": "Library / Package",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Data Science",
+    "Research Discipline": ""
+}

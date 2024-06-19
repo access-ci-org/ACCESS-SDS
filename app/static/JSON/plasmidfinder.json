@@ -1,0 +1,21 @@
+{
+    "Software": "PlasmidFinder",
+    "AI Description": "PlasmidFinder is a tool for in silico detection of plasmids in bacterial genomes. It identifies plasmid replicon sequences by comparing input DNA sequences to a predefined database of known plasmids.",
+    "Core Features": [
+        "In silico detection of plasmids",
+        "Identification of plasmid replicon sequences",
+        "Comparison to a database of known plasmids"
+    ],
+    "General Tags": [
+        "Bioinformatics",
+        "Genomics",
+        "Microbiology",
+        "Bacterial Genomics",
+        "Plasmid Detection"
+    ],
+    "Software Type": "Sequence Analysis Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Bacterial Genomics",
+    "Research Discipline": "Microbiology"
+}

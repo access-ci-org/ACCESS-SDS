@@ -1,0 +1,15 @@
+{
+    "Software": "Wayland",
+    "AI Description": "Wayland is a communication protocol that specifies the communication between a display server and its clients, as well as a reference implementation of the protocol in the C programming language.",
+    "Core Features": "1. Enhanced security features compared to X11 protocol\n2. Efficient handling of graphics rendering\n3. Improved performance and reduced latency\n4. Better support for modern compositing and window management\n5. Simplified codebase leading to easier maintenance and development",
+    "General Tags": [
+        "Display Server",
+        "Communication Protocol",
+        "Graphics Rendering"
+    ],
+    "Software Type": "Communication Protocol Implementation",
+    "Software Class": "Graphics & Display Systems",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

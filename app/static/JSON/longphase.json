@@ -1,0 +1,22 @@
+{
+    "Software": "longphase",
+    "AI Description": "longphase is a comprehensive software package for Bayesian model selection and parameter inference in the field of geochronology. It provides tools for analyzing radiogenic isotopic data with statistical methods to estimate the ages and uncertainties of geological events.",
+    "Core Features": [
+        "Bayesian model selection",
+        "Parameter inference",
+        "Radiogenic isotopic data analysis",
+        "Age estimation",
+        "Uncertainty assessment"
+    ],
+    "General Tags": [
+        "Geochronology",
+        "Radiogenic Isotopes",
+        "Bayesian Statistics",
+        "Parameter Estimation"
+    ],
+    "Software Type": "Analysis Tool",
+    "Software Class": "Scientific Computing",
+    "Research Field": "Physical Sciences",
+    "Research Area": "Geology & Solid Earth Sciences",
+    "Research Discipline": "Earth & Environmental Sciences"
+}

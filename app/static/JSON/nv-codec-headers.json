@@ -1,0 +1,22 @@
+{
+    "Software": "nv-codec-headers",
+    "AI Description": "NVIDIA Video Codec SDK includes software development kits, samples, and documentation for encoding, decoding, and transcoding video and audio content. It provides low-level APIs for enabling applications to utilize NVIDIA GPU hardware accelerated video processing capabilities.",
+    "Core Features": [
+        "Support for NVIDIA GPU accelerated video encoding and decoding",
+        "Integration with NVIDIA Video Codec SDK",
+        "Access to low-level APIs for efficient video processing operations",
+        "Samples and documentation for developers"
+    ],
+    "General Tags": [
+        "Video Processing",
+        "Gpu Acceleration",
+        "Software Development Kit",
+        "Video Codec",
+        "Nvidia"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Development Tools",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

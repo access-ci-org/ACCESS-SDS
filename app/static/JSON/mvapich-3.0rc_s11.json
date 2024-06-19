@@ -1,0 +1,15 @@
+{
+    "Software": "MVAPICH",
+    "AI Description": "MVAPICH is an MPI (Message Passing Interface) implementation focused on high-performance computing and cluster-based systems. It is designed to deliver low-latency, high-bandwidth communication for parallel applications.",
+    "Core Features": "1. High-performance MPI implementation\n2. Optimized for low-latency, high-bandwidth communication\n3. Cluster-based computing support\n4. Scalability for large parallel applications\n5. Advanced features for efficient message passing",
+    "General Tags": [
+        "Mpi",
+        "High-Performance Computing",
+        "Cluster Computing"
+    ],
+    "Software Type": "Compiler",
+    "Software Class": "Hpc Tool",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

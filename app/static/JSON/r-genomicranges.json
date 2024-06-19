@@ -1,0 +1,21 @@
+{
+    "Software": "r-genomicranges",
+    "AI Description": "The 'GenomicRanges' package provides efficient containers for storing, manipulating, and annotating genomic range data. It defines general purpose containers for representing genomic annotations along a chromosome. It also provides efficient operations to extract and manipulate portions of a chromosome based on range queries.",
+    "Core Features": [
+        "Efficient storage of genomic range data",
+        "Annotation of genomic features",
+        "Manipulation and extraction of genomic ranges",
+        "Support for operations based on range queries"
+    ],
+    "General Tags": [
+        "Genomics",
+        "Bioinformatics",
+        "Data Analysis",
+        "Data Visualization"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Bioinformatics",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomic Annotation",
+    "Research Discipline": "Genomics"
+}

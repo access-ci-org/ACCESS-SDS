@@ -1,0 +1,15 @@
+{
+    "Software": "R-Blob",
+    "AI Description": "The R-Blob package provides a method for saving and loading R objects to and from files. It allows users to serialize R objects to binary format, facilitating easier storage and retrieval of complex R objects.",
+    "Core Features": "1. Save R objects to files in binary format.\n2. Load serialized R objects back into R environment.\n3. Facilitates storage and retrieval of complex R objects.",
+    "General Tags": [
+        "Serialization",
+        "Data Storage",
+        "R Programming"
+    ],
+    "Software Type": "R Package",
+    "Software Class": "Data Management",
+    "Research Field": "Other Mathematics",
+    "Research Area": "",
+    "Research Discipline": ""
+}

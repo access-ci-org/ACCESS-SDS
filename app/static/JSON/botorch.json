@@ -1,0 +1,19 @@
+{
+    "Software": "BoTorch",
+    "AI Description": "BoTorch is a library for Bayesian optimization built on PyTorch. It provides a modular and scalable approach to Bayesian optimization, including state-of-the-art methods for acquisition functions, models, and optimizers, all implemented in PyTorch.",
+    "Core Features": [
+        "Modular and scalable approach to Bayesian optimization",
+        "State-of-the-art methods for acquisition functions, models, and optimizers",
+        "Implemented in PyTorch for seamless integration with deep learning workflows"
+    ],
+    "General Tags": [
+        "Bayesian Optimization",
+        "Pytorch",
+        "Machine Learning"
+    ],
+    "Software Type": "Bayesian Optimization Library",
+    "Software Class": "Computational Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Machine Learning",
+    "Research Discipline": "Artificial Intelligence & Intelligent Systems"
+}

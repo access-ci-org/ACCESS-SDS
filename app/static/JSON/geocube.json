@@ -1,0 +1,15 @@
+{
+    "Software": "geocube",
+    "AI Description": "Geocube is a Python library for generating interactive 3D visualizations of geospatial data. It is designed to facilitate the creation of immersive and dynamic representations of geospatial information for research, analysis, and presentation purposes.",
+    "Core Features": "1. Supports visualization of geospatial data in a 3D environment.\n2. Allows for interactive exploration of spatial datasets.\n3. Enables customization of visual elements such as colors, textures, and annotations.\n4. Provides tools for adding interactive controls and user interactions.\n5. Compatible with popular geospatial data formats and libraries.",
+    "General Tags": [
+        "Geospatial Data",
+        "3D Visualization",
+        "Python Library"
+    ],
+    "Software Type": "Python Library",
+    "Software Class": "Visualization Tool",
+    "Research Field": "Physical Sciences",
+    "Research Area": "Geophysics & Geochemistry",
+    "Research Discipline": "Earth & Environmental Sciences"
+}

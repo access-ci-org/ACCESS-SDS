@@ -1,0 +1,16 @@
+{
+    "Software": "nspr",
+    "AI Description": "nspr (Netscape Portable Runtime) provides a platform-neutral API for system level and libc-like functions. nspr is a platform abstraction library for C/C++. It provides many useful APIs for cross-platform development.",
+    "Core Features": "1. Abstraction of operating system features such as threads, processes, sockets, and files.\n2. Extensive support for cross-platform development.\n3. Platform-independent interfaces for common functions.\n4. Portable and lightweight.",
+    "General Tags": [
+        "Platform-Abstraction",
+        "Cross-Platform",
+        "Api",
+        "System-Level Functions"
+    ],
+    "Software Type": "",
+    "Software Class": "",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

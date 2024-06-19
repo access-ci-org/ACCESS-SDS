@@ -1,0 +1,28 @@
+{
+    "Software": "OpenAI Gym",
+    "AI Description": "OpenAI Gym is a toolkit for developing and comparing reinforcement learning algorithms. It provides a diverse set of environments for training and testing RL agents, along with a simple interface for interacting with these environments.",
+    "Core Features": [
+        "Diverse collection of environments (from classic gridworlds to Atari games)",
+        "Simple and consistent API for interacting with environments",
+        "Support for various RL algorithms and techniques",
+        "Easy to use and integrate with different frameworks",
+        "Extensive documentation and community support"
+    ],
+    "General Tags": [
+        "Reinforcement Learning",
+        "Toolkit",
+        "Deep Learning"
+    ],
+    "Software Type": "Toolkit",
+    "Software Class": "Open Source",
+    "Research Field": [
+        "Computer And Information Sciences",
+        "Applied Computer Science"
+    ],
+    "Research Area": [
+        "Reinforcement Learning"
+    ],
+    "Research Discipline": [
+        "Artificial Intelligence And Intelligent Systems"
+    ]
+}

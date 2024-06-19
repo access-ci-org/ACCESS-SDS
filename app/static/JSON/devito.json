@@ -1,0 +1,28 @@
+{
+    "Software": "Devito",
+    "AI Description": "Devito is a high-level finite difference compiler for solving partial differential equations (PDEs). It generates and optimizes finite difference kernels to achieve high performance on modern computer architectures.",
+    "Core Features": [
+        "High-level symbolic problem definition",
+        "Automatic optimization of finite difference kernels",
+        "Geared towards seismic imaging and inversion",
+        "Supports a range of PDE problems"
+    ],
+    "General Tags": [
+        "Finite Difference Compiler",
+        "Pde Solver",
+        "Computational Science"
+    ],
+    "Software Type": "Compiler",
+    "Software Class": [
+        "Computational Science",
+        "Optimization"
+    ],
+    "Research Field": "Applied Mathematics",
+    "Research Area": [
+        "Seismic Imaging",
+        "Inverse Problems"
+    ],
+    "Research Discipline": [
+        "Numerical Analysis"
+    ]
+}

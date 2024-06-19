@@ -1,0 +1,17 @@
+{
+    "Software": "utf8proc",
+    "AI Description": "utf8proc is a small, clean C library that provides Unicode normalization, case-folding, and other operations for data in the UTF-8 encoding. It is written with performance and robustness in mind.",
+    "Core Features": "Unicode normalization, case-folding, UTF-8 data manipulation, character width calculation, grapheme cluster boundary analysis, Unicode property querying.",
+    "General Tags": [
+        "Unicode",
+        "Utf-8",
+        "Normalization",
+        "Case Folding",
+        "Character Manipulation"
+    ],
+    "Software Type": "Data Processing",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

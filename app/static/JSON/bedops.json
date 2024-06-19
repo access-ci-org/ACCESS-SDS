@@ -1,0 +1,23 @@
+{
+    "Software": "BEDOPS",
+    "AI Description": "BEDOPS is a suite of tools for flexible and highly efficient genomic data analysis. It provides a wide range of operations for working with genomic data, such as set operations, comparisons, and statistical calculations.",
+    "Core Features": [
+        "Set operations on genomic intervals",
+        "Comparisons and statistical analyses",
+        "Highly efficient and flexible data analysis tools",
+        "Support for various genomic data formats",
+        "Command-line interface"
+    ],
+    "General Tags": [
+        "Genomic Data Analysis",
+        "Bioinformatics",
+        "Computational Biology",
+        "Genomics",
+        "Data Analysis"
+    ],
+    "Software Type": "Command-Line Tool",
+    "Software Class": "Genomic Data Analysis Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomics",
+    "Research Discipline": "Bioinformatics"
+}

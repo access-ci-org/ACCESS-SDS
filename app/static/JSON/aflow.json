@@ -1,0 +1,15 @@
+{
+    "Software": "aflow",
+    "AI Description": "aflow is a computational software package for first-principles calculations and high-throughput materials science. It enables researchers to study materials properties, electronic structure, and phase stability using density functional theory (DFT) calculations.",
+    "Core Features": "Some core features of aflow include: 1. High-throughput screening of materials properties, 2. Prediction of phase stability and electronic structure, 3. Automated workflows for DFT calculations, 4. Database integration for materials discovery and design.",
+    "General Tags": [
+        "Computational Software",
+        "Materials Science",
+        "Density Functional Theory"
+    ],
+    "Software Type": "Materials Modeling & Simulation",
+    "Software Class": "Scientific Software",
+    "Research Field": "Physical Sciences",
+    "Research Area": "Condensed Matter Physics",
+    "Research Discipline": "Physics & Physical Sciences"
+}

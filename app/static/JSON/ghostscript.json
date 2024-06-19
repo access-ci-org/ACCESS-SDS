@@ -1,0 +1,18 @@
+{
+    "Software": "Ghostscript",
+    "AI Description": "Ghostscript is a versatile software suite for viewing, converting, and printing PostScript and PDF files. It is widely used for rasterizing files for high-quality printing and viewing on a variety of devices.",
+    "Core Features": "1. Interpret and render PostScript and PDF files\n2. Convert files between different formats\n3. Manipulate graphics and images\n4. Display and print documents\n5. Scriptable interface for automation",
+    "General Tags": [
+        "Document-Processing",
+        "File-Conversion",
+        "Print-Management"
+    ],
+    "Software Type": "Software Development",
+    "Software Class": "Utility",
+    "Research Field": [
+        "Computer And Information Sciences",
+        "Engineering And Technology"
+    ],
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,15 @@
+{
+    "Software": "Isoquant",
+    "AI Description": "Isoquant is a software tool used in economics to analyze production processes and determine the optimal combination of inputs to produce a given level of output. It is commonly used to study the trade-offs between factors of production such as labor and capital in maximizing output.",
+    "Core Features": "1. Production analysis: Helps in determining the most efficient input combinations for a given level of output. 2. Isoquant mapping: Visualizes the various combinations of inputs that yield the same level of output. 3. Cost minimization: Assists in minimizing production costs while maximizing output. 4. Input substitution: Evaluates the impact of substituting one input for another on production efficiency.",
+    "General Tags": [
+        "Production Analysis",
+        "Input-Output Relationships",
+        "Economics"
+    ],
+    "Software Type": "Productivity Software",
+    "Software Class": "Economic Modeling Tool",
+    "Research Field": "Social Sciences",
+    "Research Area": "Production Analysis",
+    "Research Discipline": "Economics"
+}

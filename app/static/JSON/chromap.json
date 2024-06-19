@@ -1,0 +1,21 @@
+{
+    "Software": "Chromap",
+    "AI Description": "Chromap is a computational tool for comprehensive and integrative analysis of chromatin modifications from multiple ChIP-seq experiments.",
+    "Core Features": [
+        "Integrative analysis of chromatin modifications",
+        "Multi-sample ChIP-seq experiment analysis",
+        "Statistical analysis of ChIP-seq data",
+        "Visualization of chromatin modification patterns"
+    ],
+    "General Tags": [
+        "Chromatin Modifications",
+        "Computational Biology",
+        "Bioinformatics",
+        "Genomics"
+    ],
+    "Software Type": "Bioinformatics",
+    "Software Class": "Analysis Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Epigenetics",
+    "Research Discipline": "Genomics"
+}

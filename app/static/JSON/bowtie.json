@@ -1,0 +1,16 @@
+{
+    "Software": "Bowtie",
+    "AI Description": "Bowtie is a fast and memory-efficient short read aligner for short DNA sequences. It aligns short DNA sequences (reads) to the human genome at a rate of over 25 million reads per hour on a typical workstation with a large amount of memory.",
+    "Core Features": "Some core features of Bowtie include ultrafast alignment, memory efficiency, support for gapped alignment, support for multi-core processing, and compatibility with various sequencing platforms.",
+    "General Tags": [
+        "Bioinformatics",
+        "Genomics",
+        "Dna Sequencing",
+        "Sequence Alignment"
+    ],
+    "Software Type": "Alignment Tool",
+    "Software Class": "Bioinformatics",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Biological Sciences",
+    "Research Discipline": "Genetics"
+}

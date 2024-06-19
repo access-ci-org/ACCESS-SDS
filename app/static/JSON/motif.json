@@ -1,0 +1,20 @@
+{
+    "Software": "Motif",
+    "AI Description": "Motif is a software tool used for motif discovery and motif analysis in biological sequences. It is commonly employed in bioinformatics and computational biology to identify conserved patterns or motifs within nucleotide or protein sequences.",
+    "Core Features": [
+        "Motif discovery",
+        "Motif analysis",
+        "Conserved pattern identification",
+        "Biological sequence analysis"
+    ],
+    "General Tags": [
+        "Bioinformatics",
+        "Computational Biology",
+        "Sequence Analysis"
+    ],
+    "Software Type": "Sequence Analysis Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

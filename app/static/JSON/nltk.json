@@ -1,0 +1,15 @@
+{
+    "Software": "NLTK",
+    "AI Description": "NLTK, or Natural Language Toolkit, is a leading platform for building Python programs to work with human language data. It provides easy-to-use interfaces to over 50 corpora and lexical resources such as WordNet, along with a suite of text processing libraries for classification, tokenization, stemming, tagging, parsing, and semantic reasoning.",
+    "Core Features": "NLTK offers tools for text processing, text classification, tokenization, stemming, tagging, parsing, and semantic reasoning. It provides access to over 50 corpora and lexical resources such as WordNet. NLTK is designed to support education and research in natural language processing, linguistics, and cognitive science.",
+    "General Tags": [
+        "Python Library",
+        "Text Processing",
+        "Natural Language Processing"
+    ],
+    "Software Type": "Text Analysis",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Natural Language Processing",
+    "Research Discipline": "Informatics, Analytics & Information Science"
+}

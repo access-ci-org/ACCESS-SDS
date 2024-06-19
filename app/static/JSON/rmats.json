@@ -1,0 +1,20 @@
+{
+    "Software": "RMATS",
+    "AI Description": "RMATS (RNA-Seq Multivariate Analysis of Transcript Splicing) is a computational tool used for detecting differential alternative splicing from RNA-Seq data. It performs statistical analysis to identify differential splicing events between two or more biological conditions.",
+    "Core Features": [
+        "Detection of differential alternative splicing",
+        "Statistical analysis of RNA-Seq data",
+        "Identification of splicing events across conditions"
+    ],
+    "General Tags": [
+        "Rna-Seq",
+        "Alternative Splicing",
+        "Transcriptomics",
+        "Bioinformatics"
+    ],
+    "Software Type": "Computational Tool",
+    "Software Class": "Bioinformatics",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Transcriptomics",
+    "Research Discipline": "Genetics"
+}

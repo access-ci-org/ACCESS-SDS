@@ -1,0 +1,21 @@
+{
+    "Research Discipline": "",
+    "Research Area": "",
+    "Software Class": "",
+    "Software Type": "",
+    "Field of Science": "Engineering and Technology",
+    "Software": "cmjob",
+    "AI Description": "cmjob is a Python-based tool for computational materials science that aids in automating the submission of multiple jobs on high-performance computing clusters. It simplifies the process of handling multiple job submissions, tracking job statuses, and organizing job outputs.",
+    "Core Features": [
+        "Automates job submissions on HPC clusters",
+        "Monitors job statuses",
+        "Organizes job outputs",
+        "Facilitates management of multiple computational jobs"
+    ],
+    "General Tags": [
+        "Hpc",
+        "Computational Materials Science",
+        "Python Library"
+    ],
+    "Research Field": ""
+}

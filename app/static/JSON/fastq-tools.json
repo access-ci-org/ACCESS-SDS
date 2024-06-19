@@ -1,0 +1,16 @@
+{
+    "Software": "fastq-tools",
+    "AI Description": "fastq-tools is a collection of simple and efficient command-line tools for processing FASTQ files commonly used in bioinformatics. It provides various utilities for quality control, filtering, and manipulation of raw sequencing data in FASTQ format.",
+    "Core Features": "Some of the core features of fastq-tools include quality assessment, adapter trimming, filtering by quality scores, file format conversion, and extraction of specific sequences from FASTQ files. It aims to streamline common preprocessing tasks in next-generation sequencing data analysis pipelines.",
+    "General Tags": [
+        "Bioinformatics",
+        "Ngs",
+        "Genome Sequencing",
+        "Sequence Analysis"
+    ],
+    "Software Type": "Data Processing Tool",
+    "Software Class": "Command-Line Tools",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomics",
+    "Research Discipline": "Bioinformatics"
+}

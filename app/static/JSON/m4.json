@@ -1,0 +1,22 @@
+{
+    "Software": "m4",
+    "AI Description": "m4 is a general-purpose macro processor designed to be used with any programming language or data file format. It is commonly used to generate source code or text files and is often used as part of the build process for software development.",
+    "Core Features": [
+        "Macro processing capabilities",
+        "Text manipulation and generation",
+        "Support for defining and calling macros",
+        "Conditional processing",
+        "Loop constructs"
+    ],
+    "General Tags": [
+        "Macro Processor",
+        "Text Processing",
+        "Software Development",
+        "Build Process"
+    ],
+    "Software Type": "Compiler",
+    "Software Class": "Development Tools",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

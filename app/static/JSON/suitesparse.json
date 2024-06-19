@@ -1,0 +1,21 @@
+{
+    "Software": "SuiteSparse",
+    "AI Description": "SuiteSparse is a collection of libraries for sparse matrix computations that builds upon the functionality of the widely-used SPARSEKIT and HSL routines.",
+    "Core Features": [
+        "Direct methods for solving sparse linear systems",
+        "Iterative solvers for sparse linear systems",
+        "Graph partitioning and ordering routines",
+        "Sparse matrix data structures and manipulation routines"
+    ],
+    "General Tags": [
+        "Sparse Matrix Computations",
+        "Linear Algebra",
+        "Computational Mathematics",
+        "Numerical Algorithms"
+    ],
+    "Software Type": "Computational Software",
+    "Software Class": "Library",
+    "Research Field": "Mathematics",
+    "Research Area": "",
+    "Research Discipline": ""
+}

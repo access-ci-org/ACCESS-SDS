@@ -1,0 +1,21 @@
+{
+    "Software": "Remora",
+    "AI Description": "Remora is a lightweight and extensible Python library for parallel and distributed computing workflows. It simplifies the process of distributing tasks across multiple workers and managing dependencies in a distributed environment.",
+    "Core Features": [
+        "Parallel and distributed computing",
+        "Task distribution",
+        "Dependency management",
+        "Lightweight and extensible",
+        "Python library"
+    ],
+    "General Tags": [
+        "Python Library",
+        "Parallel Computing",
+        "Distributed Computing"
+    ],
+    "Software Type": "Parallel & Distributed Computing",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,15 @@
+{
+    "Software": "netcdf-fortran",
+    "AI Description": "NetCDF-Fortran is a set of Fortran interfaces to the NetCDF library providing an easy-to-use, high-level access to the NetCDF file format for storing and sharing scientific data.",
+    "Core Features": "1. Read and write NetCDF files using Fortran programming language. 2. Create, open, read, write, and close NetCDF files. 3. Supports structured and unstructured data arrays. 4. Supports various data types and dimensions.",
+    "General Tags": [
+        "Scientific Data",
+        "Fortran Interface",
+        "Netcdf Library"
+    ],
+    "Software Type": "Programming Interface",
+    "Software Class": "Library",
+    "Research Field": "Other Natural Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

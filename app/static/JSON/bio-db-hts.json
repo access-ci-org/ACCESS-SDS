@@ -1,0 +1,21 @@
+{
+    "Software": "bio-db-hts",
+    "AI Description": "Bio-db-hts is a Python library that provides an easy-to-use interface for working with HTS (High Throughput Sequencing) data. It allows users to access, manipulate, and analyze biological sequence data obtained from high-throughput sequencing technologies.",
+    "Core Features": [
+        "Access and retrieve HTS data",
+        "Manipulate and analyze biological sequence data",
+        "Support for various types of high-throughput sequencing technologies",
+        "Integrates with other bioinformatics tools and libraries"
+    ],
+    "General Tags": [
+        "Python Library",
+        "High Throughput Sequencing",
+        "Biological Sequence Data",
+        "Bioinformatics"
+    ],
+    "Software Type": "Data Analysis",
+    "Software Class": "Library",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomics",
+    "Research Discipline": "Bioinformatics"
+}

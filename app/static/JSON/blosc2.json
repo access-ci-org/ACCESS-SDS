@@ -1,0 +1,16 @@
+{
+    "Software": "Blosc2",
+    "AI Description": "Blosc2 is a high-performance, production-ready meta-compressor library that provides a simple way to accelerate data storage and retrieval. It focuses on optimizing the handling of large, multi-dimensional data, catering to both compression and decompression operations efficiently.",
+    "Core Features": "1. Multi-dimensional data support\n2. High-performance compression and decompression\n3. Production-ready meta-compressor library\n4. Data storage and retrieval optimization\n5. Supported by various programming languages\n6. Parallel compression with thread and process-based approaches",
+    "General Tags": [
+        "High-Performance Computing",
+        "Compression",
+        "Data Storage",
+        "Optimization"
+    ],
+    "Software Type": "Compression",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

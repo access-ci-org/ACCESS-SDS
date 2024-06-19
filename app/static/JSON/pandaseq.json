@@ -1,0 +1,15 @@
+{
+    "Software": "Pandaseq",
+    "AI Description": "PANDASEQ is a program to align Illumina reads, optionally with PCR primers embedded in the sequences, and reconstruct an overlapping sequence.",
+    "Core Features": "1. Alignment of Illumina reads\n2. Reconstruction of overlapping sequences\n3. Optional incorporation of PCR primers in sequences",
+    "General Tags": [
+        "Bioinformatics",
+        "Sequence Alignment",
+        "Illumina Reads"
+    ],
+    "Software Type": "Tool",
+    "Software Class": "Sequence Alignment & Assembly",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Sequence Analysis",
+    "Research Discipline": "Bioinformatics"
+}

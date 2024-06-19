@@ -1,0 +1,21 @@
+{
+    "Software": "r-rhdf5",
+    "AI Description": "The r-rhdf5 package is an R interface to the HDF5 data format. HDF5 is a versatile data model for storing and managing large and complex data. This package allows R users to read and write data in HDF5 files, providing efficient storage and high-performance access to data.",
+    "Core Features": [
+        "Read and write HDF5 data files in R",
+        "Efficient storage and retrieval of complex data structures",
+        "High-performance access to large datasets",
+        "Integration with R's data manipulation and visualization tools"
+    ],
+    "General Tags": [
+        "R Package",
+        "Hdf5 Data Format",
+        "Data Storage",
+        "Data Management"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Data Management",
+    "Research Field": "Other Natural Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

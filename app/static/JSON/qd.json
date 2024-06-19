@@ -1,0 +1,16 @@
+{
+    "Software": "qd",
+    "AI Description": "qd is a library for fast computation of numerical quaternion and dual numbers. It provides tools for arithmetic operations, calculus, and linear algebra with quaternions and dual numbers.",
+    "Core Features": "1. Arithmetic operations with quaternions and dual numbers\n2. Calculus operations such as differentiation and integration\n3. Linear algebra operations\n4. High performance computing capabilities",
+    "General Tags": [
+        "Library",
+        "Numerical Computation",
+        "Quaternions",
+        "Dual Numbers"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Mathematics",
+    "Research Field": "Mathematics",
+    "Research Area": "",
+    "Research Discipline": ""
+}

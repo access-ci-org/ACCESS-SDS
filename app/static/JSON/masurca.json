@@ -1,0 +1,15 @@
+{
+    "Software": "Masurca",
+    "AI Description": "MaSuRCA (Maryland Super-Read Celera Assembler) is a hybrid and hierarchical genome assembler specifically designed for long reads like those produced by Pacific Biosciences or Oxford Nanopore Technologies. It aims to assemble genomes at high accuracy and contiguity using a combination of short Illumina reads and long error-prone reads.",
+    "Core Features": "1. Hybrid assembly of genomes using both short and long reads.\n2. Utilizes error correction protocols for long reads.\n3. Implements mate pair and paired-end libraries for scaffolding.\n4. Specifically optimized for long reads from PacBio and Nanopore technologies.",
+    "General Tags": [
+        "Genome Assembly",
+        "Bioinformatics",
+        "Computational Biology"
+    ],
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Genome Assembler",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomics",
+    "Research Discipline": "Bioinformatics"
+}

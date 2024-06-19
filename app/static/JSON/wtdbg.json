@@ -1,0 +1,21 @@
+{
+    "Software": "wtdbg",
+    "AI Description": "Wtdbg is a bioinformatics software tool designed for the assembly, comparison, and analysis of long-read sequencing data. It is optimized for dealing with noisy and error-prone reads commonly produced by technologies like PacBio and Oxford Nanopore.",
+    "Core Features": [
+        "De novo assembly of long-read sequencing data",
+        "Error correction and consensus sequence generation",
+        "Visualization of assembly graphs and genomes",
+        "Comparative analysis of genomic data"
+    ],
+    "General Tags": [
+        "Bioinformatics",
+        "Long-Read Sequencing",
+        "Assembly",
+        "Genomics"
+    ],
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Genome Assembly",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Comparative Genomics",
+    "Research Discipline": "Genomics"
+}

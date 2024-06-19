@@ -1,0 +1,15 @@
+{
+    "Software": "rocr-runtime",
+    "AI Description": "The ROCR Runtime (ROCR) is a runtime system designed for GPU-accelerated computing using ROCm platforms. It provides a high-performance environment for executing applications on AMD GPUs for parallel processing tasks.",
+    "Core Features": "1. GPU-accelerated computing using ROCm platforms\n2. High-performance runtime system\n3. Support for parallel processing tasks on AMD GPUs\n4. Efficient execution of applications on GPU architectures",
+    "General Tags": [
+        "Gpu-Accelerated Computing",
+        "Parallel Processing",
+        "Amd Gpus"
+    ],
+    "Software Type": "High-Performance Computing",
+    "Software Class": "Runtime System",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Software Engineering, Systems, & Development",
+    "Research Discipline": "Computer & Information Sciences"
+}

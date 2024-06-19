@@ -1,0 +1,19 @@
+{
+    "Software": "R-BioCParallel",
+    "AI Description": "R-BioCParallel is an R package that provides parallel computing capabilities for Bioconductor packages. It allows users to easily parallelize their code to accelerate computations in genomics and computational biology.",
+    "Core Features": [
+        "Parallel computing for Bioconductor packages",
+        "Support for multicore and cluster environments",
+        "Enhanced performance for large-scale genomics data analysis"
+    ],
+    "General Tags": [
+        "R Package",
+        "Parallel Computing",
+        "Bioinformatics"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Data Analysis",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomics",
+    "Research Discipline": "Bioinformatics"
+}

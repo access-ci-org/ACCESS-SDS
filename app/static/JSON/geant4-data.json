@@ -1,0 +1,17 @@
+{
+    "Software": "GEANT4 Data",
+    "AI Description": "GEANT4 is a toolkit for the simulation of the passage of particles through matter. It is used in a wide range of applications, including high energy physics, astrophysics, medical physics, and radiation protection.",
+    "Core Features": "GEANT4 Data provides a set of data required by GEANT4 for simulating particle interactions and traversals in matter. It includes datasets for various materials, electromagnetic physics, hadronic physics, decay data, and optical photon interactions.",
+    "General Tags": [
+        "Simulation",
+        "Particle Physics",
+        "Astrophysics",
+        "Medicine",
+        "Radiation Protection"
+    ],
+    "Software Type": "Simulation",
+    "Software Class": "Data Library",
+    "Research Field": "Physics",
+    "Research Area": "",
+    "Research Discipline": ""
+}

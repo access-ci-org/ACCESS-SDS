@@ -1,0 +1,15 @@
+{
+    "Software": "py-matplotlib",
+    "AI Description": "Matplotlib is a plotting library for the Python programming language and its numerical mathematics extension NumPy. It provides an object-oriented API for embedding plots into applications using general-purpose GUI toolkits like Tkinter, wxPython, Qt, or GTK.",
+    "Core Features": "Matplotlib can generate various types of plots, such as line plots, histogram, bar charts, error charts, scatter plots, etc. It supports customizing plot styles, labels, colors, and markers. Matplotlib can create figures, subplots, and axes for advanced plot layouts. It also allows saving plots in different file formats like PNG, PDF, SVG, etc.",
+    "General Tags": [
+        "Plotting",
+        "Data Visualization",
+        "Python Library"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Data Visualization",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

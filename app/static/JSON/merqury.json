@@ -1,0 +1,17 @@
+{
+    "Software": "Merqury",
+    "AI Description": "Merqury is a computational tool designed for efficient and accurate quantification of mappable k-mers in noisy long-read assemblies, with a focus on repeat resolution in the presence of high error rates.",
+    "Core Features": "1. Quantification of mappable k-mers\n2. Addressing repeat resolution in noisy long-read assemblies\n3. Handling high error rates\n4. Analysis of repetitive regions in genomes",
+    "General Tags": [
+        "Computational Tool",
+        "Genomics",
+        "Bioinformatics"
+    ],
+    "Software Type": "Bioinformatics",
+    "Software Class": "Computational Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomics",
+    "Research Discipline": [
+        "Biological Sciences"
+    ]
+}

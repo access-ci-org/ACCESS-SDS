@@ -1,0 +1,16 @@
+{
+    "Software": "gperf",
+    "AI Description": "GNU gperf is a perfect hash function generator tool that generates perfect hash functions for sets of keys, optimized for use in constructing a minimal perfect hash table.",
+    "Core Features": "1. Generates perfect hash functions\n2. Optimized for constructing minimal perfect hash tables\n3. Supports sets of keys for hash function generation",
+    "General Tags": [
+        "Perfect Hash Function",
+        "Hash Table",
+        "Optimization",
+        "Gnu"
+    ],
+    "Software Type": "Compiler/Generator",
+    "Software Class": "Development Tool",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Software Engineering, Systems, & Development",
+    "Research Discipline": "Computer Science"
+}

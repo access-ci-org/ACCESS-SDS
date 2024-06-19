@@ -1,0 +1,21 @@
+{
+    "Software": "Unison",
+    "AI Description": "Unison is a file synchronization and file sharing tool that allows users to synchronize files across multiple devices or directories. It is designed to be efficient, reliable, and easy to use, with support for both one-way and two-way synchronization.",
+    "Core Features": [
+        "File synchronization",
+        "File sharing",
+        "Cross-platform support",
+        "Efficient and reliable syncing",
+        "Supports both one-way and two-way synchronization"
+    ],
+    "General Tags": [
+        "File Synchronization",
+        "File Sharing",
+        "Cross-Platform Tool"
+    ],
+    "Software Type": "Utility",
+    "Software Class": "File Synchronization Tool",
+    "Research Field": "",
+    "Research Area": "",
+    "Research Discipline": ""
+}

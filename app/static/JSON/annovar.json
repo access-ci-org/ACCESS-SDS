@@ -1,0 +1,23 @@
+{
+    "Software": "ANNOVAR",
+    "AI Description": "ANNOVAR is a powerful software tool designed to annotate genetic variants detected from diverse genomes.",
+    "Core Features": [
+        "Variant annotation",
+        "Gene-based annotations",
+        "Functional prediction",
+        "Prioritize variants",
+        "Population frequencies",
+        "Conservation scores"
+    ],
+    "General Tags": [
+        "Genomics",
+        "Genetic Variation",
+        "Bioinformatics",
+        "Annotation"
+    ],
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Genomic Annotation Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

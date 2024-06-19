@@ -1,0 +1,15 @@
+{
+    "Software": "Hypothesis",
+    "AI Description": "Hypothesis is a property-based testing tool for Python that helps in finding edge cases and identifying bugs by generating test data based on properties and invariants.",
+    "Core Features": "1. Automatically generates test cases based on specified properties.\n2. Provides comprehensive coverage by exploring a wide range of input values.\n3. Identifies edge cases and corner scenarios that traditional testing might miss.\n4. Integrates with popular testing frameworks like pytest.\n5. Supports custom strategies for generating complex data structures.",
+    "General Tags": [
+        "Python Testing Tool",
+        "Property-Based Testing",
+        "Automated Test Generation"
+    ],
+    "Software Type": "Property-Based Testing Tool",
+    "Software Class": "Testing Tool",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Software Engineering, Systems, & Development",
+    "Research Discipline": "Computer Science"
+}

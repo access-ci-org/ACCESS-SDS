@@ -1,0 +1,14 @@
+{
+    "Software": "spglib",
+    "AI Description": "spglib is a software library for finding and manipulating the crystal symmetries written in C. It is primarily used for crystallography and solid-state physics research.",
+    "Core Features": "spglib provides functionalities for space group detection, symmetry operations, and k-point mesh generation in crystal structures. It allows users to analyze the symmetry properties of crystal structures and perform symmetry-based operations.",
+    "General Tags": [
+        "Crystallography",
+        "Solid-State Physics"
+    ],
+    "Software Type": "Computational Software",
+    "Software Class": "Library",
+    "Research Field": "Physical Sciences",
+    "Research Area": "Crystallography",
+    "Research Discipline": "Condensed Matter Physics"
+}

@@ -1,0 +1,16 @@
+{
+    "Software": "lastz",
+    "AI Description": "Lastz is a program for aligning DNA sequences, a key step in comparative genomics analysis. It efficiently finds local alignments between sequences, identifying areas of similarity and potential evolutionary relationships.",
+    "Core Features": "1. High performance and speed in DNA sequence alignment.\n2. Ability to handle large genomes and datasets.\n3. Supports various output formats for alignments and visualization.\n4. Offers flexibility in specifying alignment parameters and scoring.",
+    "General Tags": [
+        "Bioinformatics",
+        "Dna Sequencing",
+        "Alignment",
+        "Comparative Genomics"
+    ],
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Sequence Alignment",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Comparative Genomics",
+    "Research Discipline": "Genomics"
+}

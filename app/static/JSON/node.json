@@ -1,0 +1,20 @@
+{
+    "Software": "Node",
+    "AI Description": "Node.js is an open-source, cross-platform JavaScript runtime environment that executes JavaScript code outside of a web browser. It allows developers to use JavaScript for server-side scripting and runs scripts server-side to produce dynamic web page content before returning this content to the client's web browser.",
+    "Core Features": [
+        "Asynchronous and event-driven",
+        "Cross-platform",
+        "Highly scalable",
+        "Large ecosystem of open-source libraries"
+    ],
+    "General Tags": [
+        "Javascript",
+        "Server-Side Scripting",
+        "Cross-Platform"
+    ],
+    "Software Type": "Programming Platform",
+    "Software Class": "Runtime Environment",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

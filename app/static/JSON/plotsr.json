@@ -1,0 +1,15 @@
+{
+    "Software": "plotsr",
+    "AI Description": "plotsr is a Python library for creating publication-quality plots with minimal effort. It aims to simplify the process of generating complex and visually appealing plots for scientific research and data visualization.",
+    "Core Features": "1. Easy-to-use interface for creating plots\n2. Supports a wide range of plot types including bar plots, scatter plots, line plots, and histograms\n3. Customization options for colors, labels, axes, and legends\n4. Integration with popular data manipulation libraries like numpy and pandas\n5. Export plots in various formats such as PNG, JPEG, and PDF",
+    "General Tags": [
+        "Plotting",
+        "Data Visualization",
+        "Python Library"
+    ],
+    "Software Type": "Data Visualization",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

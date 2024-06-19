@@ -1,0 +1,19 @@
+{
+    "Software": "pillow-simd",
+    "AI Description": "pillow-simd is an optimized fork of Python imaging library (PIL) with SIMD support, designed to enhance image processing capabilities with improved performance.",
+    "Core Features": [
+        "SIMD support for accelerated image processing",
+        "Enhanced performance for image manipulation tasks",
+        "Compatibility with Python imaging library (PIL) for easy transition"
+    ],
+    "General Tags": [
+        "Image Processing",
+        "Python Library",
+        "Optimization"
+    ],
+    "Software Type": "Image Processing",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

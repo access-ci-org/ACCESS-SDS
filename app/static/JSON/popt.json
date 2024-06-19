@@ -1,0 +1,14 @@
+{
+    "Software": "popt",
+    "AI Description": "popt is a C library for parsing command line options.",
+    "Core Features": "popt provides a simple interface for parsing command line options in C programs, including support for long and short options, automatic generation of help messages, and error reporting.",
+    "General Tags": [
+        "Command Line Options",
+        "C Library"
+    ],
+    "Software Type": "Command Line Option Parser",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

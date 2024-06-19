@@ -1,0 +1,20 @@
+{
+    "Software": "EasyBuild",
+    "AI Description": "EasyBuild is an open-source framework for building and installing software packages on High-Performance Computing (HPC) systems. It aims to make building software easier for system administrators and users on HPC systems by automating the build process.",
+    "Core Features": [
+        "Automates the building and installation of software packages",
+        "Supports a wide range of software packages and libraries",
+        "Provides easy-to-use configuration options",
+        "Designed for HPC systems"
+    ],
+    "General Tags": [
+        "Software Building",
+        "High-Performance Computing",
+        "Automation"
+    ],
+    "Software Type": "Build Automation",
+    "Software Class": "Developer Tools",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "",
+    "Research Discipline": ""
+}

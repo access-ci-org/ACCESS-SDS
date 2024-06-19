@@ -1,0 +1,22 @@
+{
+    "Software": "Meme Suite",
+    "AI Description": "MEME Suite is a comprehensive and powerful set of tools for discovering and analyzing motifs in a collection of DNA or protein sequences. It enables users to perform motif-based sequence analysis, including motif discovery, motif enrichment analysis, motif scanning, and motif comparison.",
+    "Core Features": [
+        "Motif discovery in DNA or protein sequences",
+        "Motif enrichment analysis",
+        "Motif scanning",
+        "Motif comparison",
+        "Statistical analysis of motifs"
+    ],
+    "General Tags": [
+        "Bioinformatics",
+        "Dna Sequences",
+        "Protein Sequences",
+        "Motif Analysis"
+    ],
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Sequence Analysis",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genetics",
+    "Research Discipline": "Bioinformatics"
+}

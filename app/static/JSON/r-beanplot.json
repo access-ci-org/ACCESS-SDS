@@ -1,0 +1,15 @@
+{
+    "Software": "r-beanplot",
+    "AI Description": "R package for producing beanplots, a unique way to visualize data distribution, similar to a boxplot or violin plot but showing individual data points as well.",
+    "Core Features": "1. Provides beanplots to visualize data distribution with individual data points.\n2. Offers customization options for colors, shapes, and appearance.\n3. Allows for overlaying multiple beanplots for comparison.\n4. Supports grouping and faceting to display multiple groups of data.",
+    "General Tags": [
+        "Visualization",
+        "Data Analysis",
+        "Statistics"
+    ],
+    "Software Type": "Visualization Tool",
+    "Software Class": "Statistical Analysis Tool",
+    "Research Field": "Other Mathematics",
+    "Research Area": "",
+    "Research Discipline": ""
+}

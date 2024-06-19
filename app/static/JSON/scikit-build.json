@@ -1,0 +1,15 @@
+{
+    "Software": "scikit-build",
+    "AI Description": "Scikit-build is an improved build system generator for CPython C/C++/Fortran/Cython extensions. It provides better support for CMake and enables you to easily build Python packages containing C++, C, Fortran, or Cython code.",
+    "Core Features": "1. Simplified generation of CMake-based build systems for Python extensions.\n2. Integrated support for compiling and packaging C++, C, Fortran, and Cython code with Python packages.\n3. Seamless integration with setuptools, enabling easy building and distribution of packages.",
+    "General Tags": [
+        "Python Library",
+        "Build System",
+        "Cmake Integration"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Software Development",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,25 @@
+{
+    "Software": "Singularity",
+    "AI Description": "Singularity is an open-source container platform designed to create, run, and manage containers for scientific and high-performance computing (HPC) workloads. It focuses on providing secure and portable environments for researchers and developers.",
+    "Core Features": [
+        "Creation of lightweight and secure containers",
+        "Support for container mobility and reproducibility",
+        "Integration with existing container ecosystems",
+        "Ability to run unmodified Linux applications",
+        "Enhanced security features"
+    ],
+    "General Tags": [
+        "Containerization",
+        "Scientific Computing",
+        "Hpc",
+        "Research"
+    ],
+    "Software Type": "Platform",
+    "Software Class": "Containerization",
+    "Research Field": [
+        "Computer And Information Sciences",
+        "Engineering And Technology"
+    ],
+    "Research Area": "",
+    "Research Discipline": ""
+}

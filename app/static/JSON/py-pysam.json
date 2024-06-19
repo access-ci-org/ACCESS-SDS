@@ -1,0 +1,16 @@
+{
+    "Software": "py-pysam",
+    "AI Description": "PyPysam is a Python module that provides an interface to the SAM/BAM sequence alignment and variant calling format files. It allows for easy reading, writing, and manipulation of such files, enabling bioinformatics analysis and processing of high-throughput sequencing data.",
+    "Core Features": "1. Reading and writing SAM/BAM files. 2. Accessing aligned sequences and associated metadata. 3. Extracting alignment statistics. 4. Handling variant calling information. 5. Performing coordinate transformations and conversions.",
+    "General Tags": [
+        "Bioinformatics",
+        "Sequencing",
+        "Alignment",
+        "Variant-Calling"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Molecular Biology",
+    "Research Discipline": "Genetics"
+}

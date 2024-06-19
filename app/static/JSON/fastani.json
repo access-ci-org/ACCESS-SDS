@@ -1,0 +1,15 @@
+{
+    "Software": "fastANI",
+    "AI Description": "fastANI is a tool for computing average nucleotide identity (ANI) and relatedness between bacterial and archaeal genomes at high speed. It uses MinHash to estimate ANI values in a fraction of the time compared to traditional methods.",
+    "Core Features": "1. Calculation of average nucleotide identity (ANI) between microbial genomes. 2. Utilizes MinHash algorithm for fast ANI estimation. 3. Supports large-scale genome comparisons efficiently. 4. Provides a rapid alternative to traditional ANI calculation methods.",
+    "General Tags": [
+        "Bioinformatics",
+        "Genome Comparison",
+        "Bacterial Genomes"
+    ],
+    "Software Type": "Genome Analysis Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genomics",
+    "Research Discipline": "Biology"
+}

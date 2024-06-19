@@ -1,0 +1,21 @@
+{
+    "Software": "NetworkX",
+    "AI Description": "NetworkX is a Python package for the creation, manipulation, and study of complex networks or graphs. It provides data structures for representing many types of networks, algorithms for analyzing them, and visualization tools to display them.",
+    "Core Features": [
+        "Creation and manipulation of complex networks or graphs",
+        "Data structures for representing various types of networks",
+        "Algorithms for analyzing and processing network data",
+        "Visualization tools for displaying networks"
+    ],
+    "General Tags": [
+        "Python Library",
+        "Graph Theory",
+        "Network Analysis",
+        "Data Visualization"
+    ],
+    "Software Type": "Computational Software",
+    "Software Class": "Network Analysis",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,21 @@
+{
+    "Software": "Py-Scikit-Optimize",
+    "AI Description": "Py-Scikit-Optimize is a Python library designed to optimize hyperparameters and search for the global minimum of a function. It utilizes Bayesian optimization techniques to efficiently search the hyperparameter space and explore various configurations of machine learning models.",
+    "Core Features": [
+        "Bayesian optimization for hyperparameter tuning",
+        "Supports various machine learning libraries like scikit-learn and XGBoost",
+        "Ability to customize acquisition functions and surrogate models",
+        "Efficiently handles both continuous and categorical hyperparameters"
+    ],
+    "General Tags": [
+        "Bayesian Optimization",
+        "Hyperparameter Tuning",
+        "Machine Learning",
+        "Optimization"
+    ],
+    "Software Type": "Optimization Tool",
+    "Software Class": "Python Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

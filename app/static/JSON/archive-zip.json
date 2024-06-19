@@ -1,0 +1,21 @@
+{
+    "Software": "archive-zip",
+    "AI Description": "archive-zip is a simple, easy-to-use Python library for creating, reading, and extracting ZIP archives. It provides functionality to compress and decompress files and directories using the ZIP format.",
+    "Core Features": [
+        "Creating ZIP archives",
+        "Reading ZIP archives",
+        "Extracting files and directories",
+        "Compression and decompression using ZIP format"
+    ],
+    "General Tags": [
+        "Python Library",
+        "Zip Archives",
+        "Compression",
+        "Decompression"
+    ],
+    "Software Type": "",
+    "Software Class": "",
+    "Research Field": "",
+    "Research Area": "",
+    "Research Discipline": ""
+}

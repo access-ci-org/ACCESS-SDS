@@ -1,0 +1,15 @@
+{
+    "Software": "pangolin",
+    "AI Description": "Pangolin is a software tool developed for assigning lineages to SARS-CoV-2 sequences. It uses a phylogenetic tree-based approach to assign viral lineages based on the mutation profiles of the sequences. Pangolin is widely used in tracking the evolution and spread of the SARS-CoV-2 virus.",
+    "Core Features": "1. Lineage assignment for SARS-CoV-2 sequences.\n2. Phylogenetic tree-based lineage determination.\n3. Monitoring the viral evolution and spread.\n4. Integration with various bioinformatics tools and databases.",
+    "General Tags": [
+        "Bioinformatics",
+        "Sequence Analysis",
+        "Viral Evolution"
+    ],
+    "Software Type": "Phylogenetic Analysis Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

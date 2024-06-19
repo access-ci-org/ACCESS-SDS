@@ -1,0 +1,14 @@
+{
+    "Software": "Samblaster",
+    "AI Description": "Samblaster is a tool designed to mark duplicates and obtain discordant and split read alignments from SAM, BAM, or CRAM files, leveraging information from the SAM flags to accurately categorize the alignment information.",
+    "Core Features": "1. Mark duplicates in SAM/BAM/CRAM files.\n2. Extract discordant and split read alignments.\n3. Utilizes information from SAM flags for accurate alignment categorization.",
+    "General Tags": [
+        "Bioinformatics",
+        "Hpc Tools"
+    ],
+    "Software Type": "Analysis Tool",
+    "Software Class": "Utility Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genetics",
+    "Research Discipline": "Bioinformatics"
+}

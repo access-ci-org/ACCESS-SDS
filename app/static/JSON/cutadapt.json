@@ -1,0 +1,21 @@
+{
+    "Software": "cutadapt",
+    "AI Description": "cutadapt removes adapter sequences from high-throughput sequencing reads. It finds and removes adapter sequences, primers, poly-A tails and other types of unwanted sequence from your high-throughput sequencing reads.",
+    "Core Features": [
+        "Removes adapter sequences from high-throughput sequencing reads",
+        "Identifies and trims various types of unwanted sequences",
+        "Flexibility in specifying adapter sequences and error rates",
+        "Support for various sequencing platforms"
+    ],
+    "General Tags": [
+        "Bioinformatics",
+        "Ngs",
+        "Sequence Analysis",
+        "Genomics"
+    ],
+    "Software Type": "Sequence Analysis Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,16 @@
+{
+    "Software": "r-affy",
+    "AI Description": "r-affy is an R package for the pre-processing and analysis of high-throughput gene expression data generated from microarray technology. It provides functions for background correction, normalization, summarization, and quality assessment of microarray data.",
+    "Core Features": "1. Background correction for microarray data.\n2. Normalization of gene expression values.\n3. Summarization of probe intensity values.\n4. Quality assessment tools for evaluating microarray data.",
+    "General Tags": [
+        "Microarray",
+        "Gene Expression",
+        "Data Pre-Processing",
+        "Bioinformatics"
+    ],
+    "Software Type": "R Package",
+    "Software Class": "Data Analysis",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Genetics",
+    "Research Discipline": "Biological Sciences"
+}

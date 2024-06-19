@@ -1,0 +1,15 @@
+{
+    "Software": "ASE",
+    "AI Description": "Atomistic Simulation Environment (ASE) is a set of tools and Python modules for setting up, manipulating, running, visualizing, and analyzing atomistic simulations.",
+    "Core Features": "ASE provides interfaces to a wide range of electronic structure codes like VASP, LAMMPS, Quantum ESPRESSO, and more. It offers support for different file formats, offers tools for symmetry operations, molecule visualization, and analysis of simulation results.",
+    "General Tags": [
+        "Computational Software",
+        "Python Library",
+        "Molecular Simulations"
+    ],
+    "Software Type": "Tool",
+    "Software Class": "Simulation & Modeling",
+    "Research Field": "Other Natural Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

@@ -1,0 +1,22 @@
+{
+    "Software": "ncftp",
+    "AI Description": "ncftp is a powerful and easy-to-use command-line FTP client for various operating systems. It provides a wide range of features for transferring files over FTP protocols.",
+    "Core Features": [
+        "Support for FTP, FTPS, and HTTP protocols",
+        "Bookmarking for easy navigation",
+        "Recursive file transfer and directory mirroring",
+        "Scriptable automation with batch processing",
+        "Remote file editing and permission management"
+    ],
+    "General Tags": [
+        "Ftp Client",
+        "Command-Line Interface",
+        "File Transfer",
+        "Automation"
+    ],
+    "Software Type": "Client",
+    "Software Class": "Utility",
+    "Research Field": "Other Natural Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

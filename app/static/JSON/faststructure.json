@@ -1,0 +1,19 @@
+{
+    "Software": "faststructure",
+    "AI Description": "faststructure is a software package for inferring population structure from large SNP genotype data. It is designed to work efficiently with large datasets and can identify population structure in the presence of admixture.",
+    "Core Features": [
+        "Population structure inference",
+        "Analysis of large SNP genotype data",
+        "Ability to handle datasets with admixture"
+    ],
+    "General Tags": [
+        "Population Genetics",
+        "Structural Biology",
+        "Genomics"
+    ],
+    "Software Type": "Inference Tool",
+    "Software Class": "Population Structure Inference",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Population Genetics",
+    "Research Discipline": "Genetics"
+}

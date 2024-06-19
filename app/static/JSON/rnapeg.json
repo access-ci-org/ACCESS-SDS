@@ -1,0 +1,18 @@
+{
+    "Software": "rnapeg",
+    "AI Description": "rnapeg is a tool for predicting 3D RNA structures from sequence alone using deep learning.",
+    "Core Features": [
+        "Predicting 3D RNA structures from sequence",
+        "Utilizes deep learning techniques",
+        "No requirement for template structures"
+    ],
+    "General Tags": [
+        "Rna Structure Prediction",
+        "Deep Learning Tool"
+    ],
+    "Software Type": "Prediction Tool",
+    "Software Class": "Modeling & Simulation",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Molecular Biology",
+    "Research Discipline": "Bioinformatics"
+}

@@ -1,0 +1,23 @@
+{
+    "Software": "FlatBuffers",
+    "AI Description": "FlatBuffers is an open-source, cross-platform serialization library for efficient data storage and communication. It allows for storing and accessing serialized data without parsing and generating overhead, making it faster and more memory-efficient than traditional serialization methods.",
+    "Core Features": [
+        "Efficient data serialization and deserialization",
+        "Cross-platform support",
+        "Customizable data schemas",
+        "Random access to serialized data",
+        "Minimal memory allocation and copying"
+    ],
+    "General Tags": [
+        "Serialization",
+        "Data Storage",
+        "Communication",
+        "Efficiency",
+        "Cross-Platform"
+    ],
+    "Software Type": "Library",
+    "Software Class": "Serialization Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

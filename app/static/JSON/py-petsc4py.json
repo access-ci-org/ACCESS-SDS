@@ -1,0 +1,19 @@
+{
+    "Software": "py-petsc4py",
+    "AI Description": "py-petsc4py is a Python binding for the Portable, Extensible Toolkit for Scientific Computation (PETSc), which is a suite of data structures and routines for the scalable (parallel) solution of scientific applications modeled by partial differential equations.",
+    "Core Features": "1. Provides Python interfaces to PETSc's data structures and solvers.\n2. Allows users to perform parallel computing and solve large-scale scientific problems efficiently.\n3. Facilitates the integration of PETSc functionality into Python-based scientific computing workflows.\n4. Supports a wide range of linear and nonlinear solvers, preconditioners, and parallel vector operations.",
+    "General Tags": [
+        "Python Binding",
+        "Scientific Computation",
+        "Parallel Computing",
+        "Partial Differential Equations",
+        "Data Structures",
+        "Linear Solvers",
+        "Nonlinear Solvers"
+    ],
+    "Software Type": "Python Library",
+    "Software Class": "Scientific Computing Library",
+    "Research Field": "Other Natural Sciences",
+    "Research Area": "Computational Science, Numerical Analysis",
+    "Research Discipline": ""
+}

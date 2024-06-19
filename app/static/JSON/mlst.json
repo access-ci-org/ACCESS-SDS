@@ -1,0 +1,21 @@
+{
+    "Software": "mlst",
+    "AI Description": "Multi-Locus Sequence Typing (MLST) is a molecular typing method that characterizes isolates by sequencing a set of housekeeping genes. MLST is widely used in microbial genotyping studies to investigate the genetic relationships between isolates and is particularly popular in epidemiological and population biology studies.",
+    "Core Features": [
+        "Characterizes isolates by sequencing housekeeping genes",
+        "Used for investigating genetic relationships between isolates",
+        "Popular in epidemiological and population biology studies"
+    ],
+    "General Tags": [
+        "Bioinformatics",
+        "Microbiology",
+        "Genotyping",
+        "Epidemiology",
+        "Population Biology"
+    ],
+    "Software Type": "Sequence Typing Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Epidemiological Studies",
+    "Research Discipline": "Microbial Genomics"
+}

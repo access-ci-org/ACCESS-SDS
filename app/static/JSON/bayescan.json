@@ -1,0 +1,15 @@
+{
+    "Software": "BayeScan",
+    "AI Description": "BayeScan is a tool used for detecting natural selection from genetic data. It is based on Bayesian model comparisons that enable the identification of loci that are under selection compared to neutral loci. BayeScan uses FST values to differentiate between selected and neutral loci.",
+    "Core Features": "1. Detection of loci under selection from genetic data\n2. Bayesian model comparisons\n3. Differentiation between selected and neutral loci using FST values",
+    "General Tags": [
+        "Genetic Analysis",
+        "Natural Selection",
+        "Bayesian Model Comparison"
+    ],
+    "Software Type": "Analysis Tool",
+    "Software Class": "Bioinformatics",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Population Genetics",
+    "Research Discipline": "Genetics"
+}

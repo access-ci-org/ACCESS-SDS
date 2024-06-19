@@ -1,0 +1,20 @@
+{
+    "Software": "gts",
+    "AI Description": "GNU Triangulated Surface Library (GTS) is a free library for computational geometry. It includes many useful functions for calculating surface properties and constructing complex surfaces using triangulations.",
+    "Core Features": [
+        "Computation of geometric surface properties",
+        "Triangulation of complex surfaces",
+        "Support for 2D and 3D geometric data structures",
+        "Mesh generation and manipulation tools"
+    ],
+    "General Tags": [
+        "Computational Geometry",
+        "Surface Properties",
+        "Mesh Generation"
+    ],
+    "Software Type": "Computational Software",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

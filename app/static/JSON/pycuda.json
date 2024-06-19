@@ -1,0 +1,15 @@
+{
+    "Software": "PyCUDA",
+    "AI Description": "PyCUDA is a Python library that enables easy access to NVIDIA's CUDA parallel computation API directly from Python. It allows for seamless integration of GPU computation into Python code, providing a high-level interface to CUDA operations.",
+    "Core Features": "1. Direct access to NVIDIA's CUDA API from Python\n2. Integration of GPU computation within Python workflows\n3. High-level interface for CUDA operations\n4. Efficient parallel processing capabilities\n5. Simplified GPU memory management",
+    "General Tags": [
+        "Python Library",
+        "Gpu Computing",
+        "Parallel Processing"
+    ],
+    "Software Type": "Python Library",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

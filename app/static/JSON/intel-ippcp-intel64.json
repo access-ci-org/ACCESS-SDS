@@ -1,0 +1,16 @@
+{
+    "Software": "Intel IPP Cryptography",
+    "AI Description": "Intel Integrated Performance Primitives Cryptography (Intel IPP Cryptography) is a software library that provides highly optimized cryptographic functions for data encryption, decryption, secure key generation, and hashing algorithms.",
+    "Core Features": "1. Optimized cryptographic functions for data encryption and decryption.\n2. Secure key generation and management.\n3. Hashing algorithms for data integrity and authentication.\n4. Integration with Intel hardware for enhanced performance.\n5. Support for various encryption standards and algorithms.",
+    "General Tags": [
+        "Software Library",
+        "Cryptography",
+        "Data Encryption",
+        "Hashing Algorithms"
+    ],
+    "Software Type": "Computational Software",
+    "Software Class": "Compiler/Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "Software Engineering, Systems, & Development",
+    "Research Discipline": "Computer Science"
+}

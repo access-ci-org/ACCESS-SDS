@@ -1,0 +1,20 @@
+{
+    "Software": "tkinter",
+    "AI Description": "Tkinter is the standard GUI (Graphical User Interface) toolkit for Python. It provides a fast and easy way to create desktop applications with a collection of standard GUI elements.",
+    "Core Features": [
+        "Simple and easy-to-use interface design",
+        "Cross-platform compatibility (Windows, macOS, Linux)",
+        "Support for a wide range of GUI elements such as buttons, menus, text boxes, etc.",
+        "Integration with Python's built-in modules like tkinter, platform-specific modules"
+    ],
+    "General Tags": [
+        "Gui",
+        "Toolkit",
+        "Python Library"
+    ],
+    "Software Type": "Gui Toolkit",
+    "Software Class": "Graphical User Interface",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

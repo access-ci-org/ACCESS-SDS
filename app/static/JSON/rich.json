@@ -1,0 +1,15 @@
+{
+    "Software": "Rich",
+    "AI Description": "Rich is a Python library for rich text and beautiful formatting in the terminal.",
+    "Core Features": "Rich provides rich syntax highlighting, render images and tables, emojis, markdown and ASCII art rendering, and text formatting capabilities to create stylish and visually appealing text-based user interfaces in the terminal.",
+    "General Tags": [
+        "Python Library",
+        "Terminal Formatting",
+        "Text-Based Ui"
+    ],
+    "Software Type": "Text Formatting",
+    "Software Class": "Library",
+    "Research Field": "Computer & Information Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

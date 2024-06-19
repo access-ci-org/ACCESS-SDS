@@ -1,0 +1,15 @@
+{
+    "Software": "cdsapi",
+    "AI Description": "cdsapi is a Python client library for Climate Data Store (CDS) API, which allows users to access climate and weather data provided by the European Centre for Medium-Range Weather Forecasts (ECMWF).",
+    "Core Features": "1. Access climate and weather data from ECMWF's CDS API. 2. Retrieve datasets for various parameters like temperature, precipitation, wind speed, etc. 3. Download data in multiple formats such as NetCDF and GRIB. 4. Simplified authentication process for accessing ECMWF data. 5. Efficient querying and downloading of meteorological data.",
+    "General Tags": [
+        "Python Library",
+        "Climate Data",
+        "Weather Data"
+    ],
+    "Software Type": "Api",
+    "Software Class": "Library",
+    "Research Field": "Earth & Environmental Sciences",
+    "Research Area": "",
+    "Research Discipline": ""
+}

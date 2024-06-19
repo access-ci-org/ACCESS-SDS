@@ -1,0 +1,21 @@
+{
+    "Software": "VESTA",
+    "AI Description": "VESTA is a 3D visualization software for structural models, volumetric data, and crystal structures. It allows users to manipulate and analyze complex molecular and crystal structures with a range of visualization options.",
+    "Core Features": [
+        "3D visualization of crystal structures and molecular models",
+        "Analysis tools for manipulating structures",
+        "Rendering options for creating high-quality images and animations",
+        "Support for various file formats for importing and exporting data"
+    ],
+    "General Tags": [
+        "3D Visualization",
+        "Crystallography",
+        "Molecular Modeling",
+        "Structural Analysis"
+    ],
+    "Software Type": "Scientific Software",
+    "Software Class": "Visualization Software",
+    "Research Field": "Chemical Sciences",
+    "Research Area": "Analytical & Materials Chemistry",
+    "Research Discipline": "Chemical Sciences"
+}

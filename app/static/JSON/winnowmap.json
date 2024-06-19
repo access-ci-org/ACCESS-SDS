@@ -1,0 +1,17 @@
+{
+    "Software": "WinnowMap",
+    "AI Description": "WinnowMap is a software tool for mapping and alignment of long nanopore and PacBio sequencing reads to large reference genomes.",
+    "Core Features": "Core features of WinnowMap include efficient mapping of long sequencing reads to large genomes, support for nanopore and PacBio sequencing data, ability to handle large datasets, customizable parameter settings, and output of alignment in SAM format.",
+    "General Tags": [
+        "Mapping",
+        "Alignment",
+        "Nanopore",
+        "Pacbio",
+        "Sequencing"
+    ],
+    "Software Type": "Sequence Alignment Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Bioinformatics",
+    "Research Discipline": "Genetics"
+}

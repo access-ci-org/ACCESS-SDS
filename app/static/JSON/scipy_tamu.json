@@ -1,0 +1,19 @@
+{
+    "Software": "scipy_tamu",
+    "AI Description": "scipy_tamu is a software library that provides various scientific computing tools and algorithms tailored for research and educational purposes.",
+    "Core Features": "1. Includes a wide range of mathematical functions and numerical routines for scientific computing. 2. Offers tools for optimization, integration, interpolation, Fourier transforms, linear algebra, and more. 3. Supports efficient data structures and arrays for computational tasks. 4. Integrates seamlessly with other Python scientific computing libraries like NumPy and Matplotlib.",
+    "General Tags": [
+        "Scientific Computing",
+        "Mathematical Functions",
+        "Numerical Routines",
+        "Optimization",
+        "Linear Algebra"
+    ],
+    "Software Type": "Scientific Computing",
+    "Software Class": "Library",
+    "Research Field": "Mathematics",
+    "Research Area": "",
+    "Research Discipline": [
+        "Applied Mathematics"
+    ]
+}

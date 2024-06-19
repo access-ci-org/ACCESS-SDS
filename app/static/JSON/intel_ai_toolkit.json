@@ -1,0 +1,27 @@
+{
+    "Software": "Intel AI Toolkit",
+    "AI Description": "The Intel AI Toolkit is a comprehensive suite of software tools designed to accelerate the development and deployment of AI applications. It includes libraries, frameworks, and development tools optimized for Intel architecture to help developers leverage the power of AI at scale.",
+    "Core Features": [
+        "Optimized for Intel architecture",
+        "Includes popular deep learning frameworks like TensorFlow, PyTorch, and MXNet",
+        "Efficient parallel processing capabilities",
+        "Support for advanced neural network optimization techniques",
+        "Performance profiling and tuning tools",
+        "Integration with Intel hardware accelerators like Intel Xeon CPUs and Intel FPGA devices"
+    ],
+    "General Tags": [
+        "Ai Development",
+        "Deep Learning",
+        "Optimization",
+        "Performance Tuning",
+        "Framework Integration"
+    ],
+    "Software Type": "Development Tools",
+    "Software Class": "Machine Learning Toolkit",
+    "Research Field": [
+        "Computer And Information Sciences",
+        "Artificial Intelligence And Intelligent Systems"
+    ],
+    "Research Area": "",
+    "Research Discipline": ""
+}

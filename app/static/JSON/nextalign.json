@@ -1,0 +1,15 @@
+{
+    "Software": "nextalign",
+    "AI Description": "Nextalign is a software tool for viral genome alignment and analysis, focusing on SARS-CoV-2 and other related viruses. It is designed to help researchers and clinicians analyze the mutations and genetic variations in viral genomes.",
+    "Core Features": "1. Rapid and accurate alignment of viral genomes\n2. Identification of mutations and genetic variations\n3. Annotation of important features such as amino acid changes\n4. Visualization of aligned sequences and mutations\n5. Support for analyzing SARS-CoV-2 and related viruses",
+    "General Tags": [
+        "Viral Genome Analysis",
+        "Sequence Alignment",
+        "Mutation Analysis"
+    ],
+    "Software Type": "Tool",
+    "Software Class": "Bioinformatics",
+    "Research Field": "Biological Sciences",
+    "Research Area": "Epidemiology",
+    "Research Discipline": "Virology"
+}

@@ -1,0 +1,19 @@
+{
+    "Software": "CoinFinder",
+    "AI Description": "CoinFinder is a software tool designed for locating specific coins in large image datasets. It provides a user-friendly interface for efficiently searching and identifying coins based on their features.",
+    "Core Features": [
+        "Image analysis for coin recognition",
+        "Search functionality for locating specific coins",
+        "User-friendly interface for ease of use"
+    ],
+    "General Tags": [
+        "Image Analysis",
+        "Coin Recognition",
+        "Search Tool"
+    ],
+    "Software Type": "Search Tool",
+    "Software Class": "Image Recognition",
+    "Research Field": "Engineering & Technology",
+    "Research Area": "Image Processing",
+    "Research Discipline": "Other"
+}
