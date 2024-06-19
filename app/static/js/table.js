@@ -361,11 +361,13 @@ $(document).ready(function()
                     return data;
                 },
             },
-            { width: '50px' , targets: [0,2,15] },
+            { width: '50px' , targets: [0,2] },
             { width: '100px', targets: [1,3,4,5,6,16] },
-            { width: '200px', targets: [9,10,11,12,13,14] },
-            { width: '250px', targets: [8,15] },
-            { width: '300px', targets: [7] },
+            { width: '150px', targets: [14] },
+            { width: '200px', targets: [9] },
+            { width: '300px', targets: [10,11,12,13] },
+            { width: '400px', targets: [8, 15] },
+            { width: '500px', targets: [7] },
 
         ],
     });

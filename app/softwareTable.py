@@ -67,7 +67,6 @@ def createSoftwareTable():
         
         # Drop the unmerged versions of columns
         mergedDF = mergedDF.drop(columns=[column + '_static' for column in mergeColumns] + [column + '_generated' for column in mergeColumns] )
-        #mergedDF.fillna('',inplace=True)
         mergedDF.insert(16, 'Example Use', '')
 
         mergedDF = mergedDF[column_order]

@@ -1,43 +1,43 @@
+body{
+    font-size:.95em;
+}
+table.dataTable>tbody>tr>th, table.dataTable>tbody>tr>td {
+    padding: 5px 5px;
+}
 .dt-scroll {
     position: relative;
 }
-
 .dt-scroll{
     border:3px solid #999
 }
-
 .dt-scroll::after,
 .dt-scroll::before {
     content: '';
     position: absolute;
+    z-index:2;
     top: 0;
     height: 100%;
     pointer-events: none;
     width: 40px; /* Width of the shadow */
 }
-  
 /* Right shadow */
 .dt-scroll::after {
     right: 0;
-    background: linear-gradient(to left, rgba(0,0,0,0.2), rgba(0,0,0,0));
+    background: linear-gradient(to left, rgba(0,0,0,0.25), rgba(0,0,0,0));
 }
-
 /* Left shadow */
 .dt-scroll::before {
     left: 0;
-    background: linear-gradient(to right, rgba(0,0,0,0.2), rgba(0,0,0,0));
+    background: linear-gradient(to right, rgba(0,0,0,0.25), rgba(0,0,0,0));
 }
-  
 /* Class to hide the right shadow */
 .no-right-shadow::after {
     display: none;
 }
-  
   /* Class to hide the left shadow */
 .no-left-shadow::before {
     display: none;
-}
- 
+} 
 
 /* Changes the color of the table column headers to match ACCESS Header */
 .dataTable thead th {
@@ -53,6 +53,10 @@
 /* Changes the color of selected items in the table to match ACCESS branding */
 table.dataTable tbody tr.selected>* {
     box-shadow: inset 0 0 0 9999px #107180 !important;
+}
+/* Changes the color of selected links to be higher visibility */
+table.dataTable>tbody>tr.selected a {
+    color: #00ffde;
 }
 /* Changes the 'Column Visibility' Container */
 div.dt-button-collection.two-column{
