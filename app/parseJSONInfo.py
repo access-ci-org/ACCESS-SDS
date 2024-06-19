@@ -1,59 +1,91 @@
-import os
 import json
-import glob
-import pandas as pd
-from collections import OrderedDict
 
-INPUT_DIRECTORY = "./dynamicSearch/software_all_json"
-OUTPUT_DIRECTORY = './static/data/test.csv'
-JSON_keys = {'software_name', 'comprehensive_overview', 'core_features', "general_tags", "additional_tags"}
-nested_key_path = ['overview', 'comprehensive_overview']
-software_names = {'tool', 'software', 'software name'}
-overview_names = {'overview', 'comprehensive_overview', 'Comprehensive Overview'}
-features_names = ['core features', 'Core Features']
-gen_tag_names = ['general tags', 'General Tags']
-add_tag_names = ['additional tags', 'Additional Tags']
-additional_tags_to_fix = ['software_type','software_class','research_field','research_area','research_discipline','field_of_science']
+nested_key_path = [
+    'overview', 
+    'comprehensive_overview', 
+    'Comprehensive Overview', 
+    'comprehensive overview'
+    ]
 
-def createDynamicTable():
-    dict = {}
-    for file in glob.glob(os.path.join(INPUT_DIRECTORY, '*.json')):
-        try:    
-            for key in JSON_keys:
-                with open(file, 'r') as infile:
-                    data = json.load(infile, object_pairs_hook=OrderedDict)
-                if key in data.keys():
-                    continue
-                else:
-                    jsonSanitizer(file)
-            softwareName = data['software_name']
-            dict[softwareName] = data
-        except:
-            #print("Error reading: " + file)
-            continue
-    #print("Sanitizing data... done")
+software_names = [
+    'tool', 
+    'software_name', 
+    'software name', 
+    'Software Name', 
+    'software'
+    ]
 
-    df = pd.DataFrame.from_dict(dict, orient='index', columns=['software_name', 'comprehensive_overview', 'core_features', 'general_tags'], )
-    df.set_index('software_name', inplace=True)
-    df.to_csv(OUTPUT_DIRECTORY)
-    #print("DataFrame... done")
-    return df
+overview_names = [
+    'overview', 
+    'comprehensive_overview', 
+    'Comprehensive Overview', 
+    'comprehensive overview'
+    ]
 
+features_names = [
+    'core features', 
+    'Core Features', 
+    'core_features'
+    ]
 
+gen_tag_names = [
+    'general tags', 
+    'General Tags', 
+    'general_tags'
+    ]
 
+add_tag_names = [
+    'additional tags', 
+    'Additional Tags', 
+    'additional_tags'
+    ]
 
-########################
+additional_tags_to_fix = [
+    'software_type',
+    'software_class',
+    'research_field',
+    'research_area',
+    'research_discipline',
+    'field_of_science'
+    ]
+
+#########################################################
+#   jsonSanitizer                                       #
+#       Converts AI-generated JSON software files       #
+#       into a uniform format for further manipulation  #
+#       Parameters:                                     #
+#           file: the file to be formatted              #
+#########################################################
 def jsonSanitizer(file):
     fileName = file.split('json/')[1]
-    #print("Sanitizing file: " + fileName)
+    print("Sanitizing file: " + fileName)
 
+    # Open JSON File
     with open(file, 'r') as infile:
-        data = json.load(infile, object_pairs_hook=OrderedDict)
+        data = json.load(infile)
+    
+    # This is the structure we want by the end:
+    #{
+    #   Software: {}
+    #   AI Description: {}
+    #   Core Features: {}
+    #   General Tags: {}
+    #   Software Type: {}
+    #   Software Class: {}
+    #   Research Field: {}
+    #   Research Area: {}
+    #   Research Discipline: {}
+    #}
 
-    software_name = list(data.keys())[0]
+    ###########################################
+    # 1) Check if the data we want is nested  #
+    ###########################################
+    # Search for nested tags
+    # If found, move everything out of the nest and purge the old structure
+    software_name = list(data.keys())[0]   
     for key in nested_key_path:
         if key in data[software_name]:
-            data['software_name'] = software_name.lower()
+            data['Software'] = software_name.lower()
             #print("software_name moved!")
 
             for key in data[software_name]:
@@ -62,63 +94,95 @@ def jsonSanitizer(file):
 
             data.pop(software_name)
             #print("Unpacking complete!")
+
+            # Save the file and exit the loop
             with open(file, 'w') as infile:
                 json.dump(data, infile, indent=4)
-            
-            jsonSanitizer(file)
-
+                break
+    
+    ############################################################
+    # 2) Standardize the tags that exist into a uniform format #
+    ############################################################
     #print("Checking JSON keys!")
-        
     #print("Checking software name...")
-    for error in software_names:
-        if error in data:
-            data['software_name'] = data.pop(error)
-            #print("Software name fixed!")
+    # Check 'Software'
+    for sError in software_names:
+        if sError in data:
+            data['Software'] = data.pop(sError)
+            #print("Software name fixed!")      
 
     #print("Checking description...")
-    for error in overview_names:
-        if error in data:
-            data['comprehensive_overview'] = data.pop(error)
+    # Check 'AI Description'
+    for oError in overview_names:
+        if oError in data.keys():
+            data['AI Description'] = data.pop(oError)
             #print("Overview name fixed!")
 
     #print("Checking core features...")
-    for error in features_names:
-        if error in data:
-            data['core_features'] = data.pop(error)
+    # Check 'Core Features'
+    for fError in features_names:
+        if fError in data:
+            data['Core Features'] = data.pop(fError)
             #print("Features fixed!")
 
     #print("Checking general tags...")
-    for error in gen_tag_names:
-        if error in data:
-            data['general_tags'] = data.pop(error)
+    # Check 'General Tags'
+    for tError in gen_tag_names:
+        if tError in data:
+            data['General Tags'] = data.pop(tError)
             #print("General tags fixed!")
     
-    #print("Checking additional tags...")
-    for error in add_tag_names:
-        if error in data:
-            data['additional_tags'] = data.pop(error)
-            #print("Additional tags fixed!")
+    # Capitalize tags for better searching
+    count = 0
+    for tag in data['General Tags']:
+        tag = tag.title()
+        data['General Tags'][count] = tag
+        count = count + 1
 
-    if 'additional_tags' not in data:
-        #print("Additional Tags Missing!")
-        
-        data['additional_tags'] = OrderedDict()
-        nested_fields = OrderedDict()
-
-        for tag in additional_tags_to_fix:
-            if tag in data:
-                nested_fields[tag] = data.pop(tag)
-        
-        data['additional_tags'].update(nested_fields)
-        #print("Additional Tags fixed!")
-    else:
-        data['additional_tags'] = data.pop('additional_tags')
-
+    # Check for 'Additional Tags'
+    # These tend to get nested under 'Additional Tags'
+    # But we want them loose so we can display them in the table easier
+    # If a particular one doesn't exist, create it as a blank entry
     
+    # Remove tags from 'Additional Tags' nest
+    #print("Checking additional tags...")
+    for aError in add_tag_names:
+        #print(aError)
+        if aError in data:
+            for tag in additional_tags_to_fix:
+                if tag in data[aError]:
+                    data[tag] = data[aError][tag] 
+                    data[aError].pop(tag)
+                    if "[]" in data[tag]:
+                        data[tag] == ""
+                else:
+                    data[tag] = ""
+            data.pop(aError)
+
+    # Sanitize tag names
+    for tag in additional_tags_to_fix:
+        if tag in data:
+            #print(tag)
+            match tag:
+                case 'software_type':
+                    data['Software Type'] = data.pop('software_type')
+                case 'software_class':
+                    data['Software Class'] = data.pop('software_class')
+                case 'research_field':
+                    data['Research Field'] = data.pop('research_field')
+                    if "And" in data['Research Field']:
+                        data['Research Field'] = data['Research Field'].replace("And", "&")
+                case 'field_of_science':
+                    if data['Research Field'] == "":
+                        data['Research Field'] = data.pop('field_of_science')
+                    else:
+                        data.pop('field_of_science')
+                case 'research_discipline':
+                    data['Research Discipline'] = data.pop('research_discipline')
+                case 'research_area':
+                    data['Research Area'] = data.pop('research_area')
+
+    # Save updated JSON file
     with open(file, 'w') as infile:
         json.dump(data, infile, indent=4)
     #print("Formatting complete!")
-
-
-#####################################
-createDynamicTable()
