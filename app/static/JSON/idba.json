@@ -2,16 +2,10 @@
     "Software": "IDBA",
     "AI Description": "IDBA (Iterative De Bruijn Graph Assembler) is a highly efficient and accurate de novo assembler for sequencing data, specifically designed for Illumina and/or 454 reads. It uses a novel iterative method to optimize the assembly of short reads into longer contigs, maintaining high accuracy and low memory consumption.",
     "Core Features": "1. De novo assembly of short sequencing reads. \n2. Utilizes an iterative approach for optimizing assembly. \n3. Designed for Illumina and 454 sequencing data. \n4. High accuracy and low memory usage. \n5. Handles complex and repetitive genomic regions effectively.",
-    "General Tags": [
-        "De Novo Assembly",
-        "Sequencing Data",
-        "Illumina",
-        "454",
-        "Bioinformatics"
-    ],
+    "General Tags": "De Novo Assembly, Sequencing Data, Illumina, 454, Bioinformatics",
     "Software Type": "Assembler",
     "Software Class": "Ngs Assembly",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genomics",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

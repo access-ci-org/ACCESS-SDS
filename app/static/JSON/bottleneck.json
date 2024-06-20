@@ -2,14 +2,10 @@
     "Software": "bottleneck",
     "AI Description": "bottleneck is a collection of fast NumPy array functions written in C. It is designed to work in situations where speed is important, particularly for large data sets.",
     "Core Features": "1. Fast NumPy array functions\n2. Optimized for performance\n3. Ideal for large data sets\n4. Written in C for efficiency",
-    "General Tags": [
-        "Numpy",
-        "Array Functions",
-        "Performance Optimization"
-    ],
+    "General Tags": "Numpy, Array Functions, Performance Optimization",
     "Software Type": "Data Processing",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

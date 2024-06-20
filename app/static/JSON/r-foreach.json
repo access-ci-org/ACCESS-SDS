@@ -1,19 +1,11 @@
 {
     "Software": "r-foreach",
     "AI Description": "The r-foreach package provides a simple looping construct for the R programming language, allowing users to easily parallelize and distribute operations across multiple processors or nodes. It simplifies the process of iterating over elements or data structures in parallel, enhancing the performance of R code by leveraging parallel computing capabilities.",
-    "Core Features": [
-        "Parallelizing loops in R",
-        "Distributing computations across multiple processors or nodes",
-        "Improving the performance of R code through parallel processing"
-    ],
-    "General Tags": [
-        "R",
-        "Looping",
-        "Parallel Computing"
-    ],
+    "Core Features": "Parallelizing Loops In R, Distributing Computations Across Multiple Processors Or Nodes, Improving The Performance Of R Code Through Parallel Processing",
+    "General Tags": "R, Looping, Parallel Computing",
     "Software Type": "Parallel Computing Tool",
     "Software Class": "Library",
-    "Research Field": "Other Mathematics",
     "Research Area": "Data Analysis",
-    "Research Discipline": "Statistics & Probability"
+    "Research Discipline": "Statistics & Probability",
+    "Research Field": "Other Mathematics"
 }

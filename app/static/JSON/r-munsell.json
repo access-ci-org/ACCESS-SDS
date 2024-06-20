@@ -1,20 +1,11 @@
 {
     "Software": "R-munsell",
     "AI Description": "R-munsell is a package that provides easy access to Munsell colours in R. The Munsell system is a widely used color classification system that categorizes colors based on three color dimensions: hue, value, and chroma.",
-    "Core Features": [
-        "Access Munsell color notations",
-        "Convert Munsell colors to other color spaces",
-        "Visualize Munsell colors"
-    ],
-    "General Tags": [
-        "Color Classification",
-        "Color Notations",
-        "Color Spaces",
-        "Data Visualization"
-    ],
+    "Core Features": "Access Munsell Color Notations, Convert Munsell Colors To Other Color Spaces, Visualize Munsell Colors",
+    "General Tags": "Color Classification, Color Notations, Color Spaces, Data Visualization",
     "Software Type": "Package",
     "Software Class": "Data Visualization",
-    "Research Field": "Mathematics",
     "Research Area": "Color Theory",
-    "Research Discipline": "Other Mathematics"
+    "Research Discipline": "Other Mathematics",
+    "Research Field": "Mathematics"
 }

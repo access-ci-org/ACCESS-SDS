@@ -2,13 +2,10 @@
     "Software": "Cafe",
     "AI Description": "Cafe is a computational tool for analyzing gene family evolution. It implements a stochastic model to infer the birth-and-death process of gene family evolution.",
     "Core Features": "Cafe allows users to estimate the birth (duplication) and death (deletion) rates of gene families, assess the significance of gene family size changes, and infer ancestral gene family sizes. It also provides visualizations of the results.",
-    "General Tags": [
-        "Computational Biology",
-        "Bioinformatics"
-    ],
+    "General Tags": "Computational Biology, Bioinformatics",
     "Software Type": "Bioinformatics Tool",
     "Software Class": "Statistical Analysis",
-    "Research Field": "Biological Sciences",
     "Research Area": "Evolutionary Genomics",
-    "Research Discipline": "Genomics"
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
 }

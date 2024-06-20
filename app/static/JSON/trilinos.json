@@ -1,21 +1,11 @@
 {
     "Software": "Trilinos",
     "AI Description": "Trilinos is an open-source collection of solvers and libraries for the solution of large-scale, complex multi-physics engineering and scientific problems. It provides a framework for the development of parallel linear and nonlinear algebraic solvers, preconditioners, and other scientific computing capabilities.",
-    "Core Features": [
-        "Framework for scalable linear algebra solvers",
-        "Parallel preconditioners and iterative solvers",
-        "Multi-physics simulation tools",
-        "High-performance computing (HPC) capabilities"
-    ],
-    "General Tags": [
-        "Scientific Computing",
-        "Numerical Analysis",
-        "Parallel Computing",
-        "Computational Physics"
-    ],
+    "Core Features": "Framework For Scalable Linear Algebra Solvers, Parallel Preconditioners & Iterative Solvers, Multi-Physics Simulation Tools, High-Performance Computing (Hpc) Capabilities",
+    "General Tags": "Scientific Computing, Numerical Analysis, Parallel Computing, Computational Physics",
     "Software Type": "Library",
     "Software Class": "Computational Software",
-    "Research Field": "Engineering & Technology",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
 }

@@ -1,19 +1,11 @@
 {
     "Software": "SEPP",
     "AI Description": "SEPP (Satz per Partial Parsimony) is a software tool for aligning short DNA reads to a reference alignment in phylogenetic studies. It employs a phylogenetic placement strategy to assign reads to the reference tree in a computationally efficient manner.",
-    "Core Features": [
-        "Phylogenetic placement of short DNA reads",
-        "Reference alignment-based alignment method",
-        "Efficient and accurate placement algorithm"
-    ],
-    "General Tags": [
-        "Phylogenetics",
-        "Dna Alignment",
-        "Phylogenetic Placement"
-    ],
+    "Core Features": "Phylogenetic Placement Of Short DNA Reads, Reference Alignment-Based Alignment Method, Efficient & Accurate Placement Algorithm",
+    "General Tags": "Phylogenetics, DNA Alignment, Phylogenetic Placement",
     "Software Type": "Bioinformatics Tool",
     "Software Class": "Alignment Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Phylogenetics",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

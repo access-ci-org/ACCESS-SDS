@@ -2,13 +2,10 @@
     "Software": "genomescope2",
     "AI Description": "GenomeScope 2 is a software tool for estimating genome characteristics such as heterozygosity, repeat content, and genome size from high-throughput sequencing reads using a k-mer based approach.",
     "Core Features": "- Heterozygosity estimation\n- Repeat content estimation\n- Genome size estimation\n- K-mer analysis",
-    "General Tags": [
-        "Genome Analysis",
-        "Bioinformatics"
-    ],
+    "General Tags": "Genome Analysis, Bioinformatics",
     "Software Type": "Bioinformatics Tool",
     "Software Class": "Genome Analysis Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genome Characterization",
-    "Research Discipline": "Genomics"
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
 }

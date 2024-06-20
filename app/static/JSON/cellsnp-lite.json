@@ -2,15 +2,10 @@
     "Software": "cellsnp-lite",
     "AI Description": "Cellsnp-lite is a variant calling tool for single-cell RNA sequencing data, specifically designed for genotyping and haplotype inference for diploid cells. It allows for accurately detecting single-nucleotide variations, small insertions and deletions, and single-cell genotyping from scRNA-seq data.",
     "Core Features": "1. Genotyping of single cells\n2. Haplotype inference for diploid cells\n3. Detection of single-nucleotide variations (SNVs) and small indels\n4. Single-cell RNA sequencing data analysis\n5. High accuracy in variant calling",
-    "General Tags": [
-        "Variant Calling",
-        "Single-Cell Rna Sequencing",
-        "Genotyping",
-        "Haplotype Inference"
-    ],
+    "General Tags": "Variant Calling, Single-Cell RNA Sequencing, Genotyping, Haplotype Inference",
     "Software Type": "Variant Calling Tool",
     "Software Class": "Bioinformatics Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Single-Cell Genomics",
-    "Research Discipline": "Cell Biology"
+    "Research Discipline": "Cell Biology",
+    "Research Field": "Biological Sciences"
 }

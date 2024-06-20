@@ -1,20 +1,11 @@
 {
     "Software": "pciutils",
     "AI Description": "pciutils is a set of utilities for displaying information about PCI buses in the system and devices connected to them. It provides various tools for configuration, diagnostics, and monitoring of PCI devices in Linux systems.",
-    "Core Features": [
-        "Extract detailed information on PCI buses and devices",
-        "Query and manipulate PCI device configuration registers",
-        "View and modify PCI device identifiers and capabilities",
-        "Identify and manage PCI devices for driver compatibility"
-    ],
-    "General Tags": [
-        "Pci Management",
-        "System Utilities",
-        "Linux Tools"
-    ],
+    "Core Features": "Extract Detailed Information On Pci Buses & Devices, Query & Manipulate Pci Device Configuration Registers, View & Modify Pci Device Identifiers & Capabilities, Identify & Manage Pci Devices For Driver Compatibility",
+    "General Tags": "Pci Management, System Utilities, Linux Tools",
     "Software Type": "Command-Line Tool",
     "Software Class": "System Utility",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

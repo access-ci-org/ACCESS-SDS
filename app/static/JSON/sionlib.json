@@ -2,14 +2,10 @@
     "Software": "sionlib",
     "AI Description": "Sionlib is a library that provides an I/O interface for scientific data stored in self-describing Hierarchical Data Format (HDF5) files, often used in high-performance computing applications. It offers functionalities for reading and writing data, metadata management, and dataset manipulation, making it a valuable tool for handling complex scientific data structures.",
     "Core Features": "1. Supports reading and writing data in HDF5 format. 2. Enables efficient management of metadata associated with scientific datasets. 3. Facilitates manipulation and processing of multidimensional data arrays. 4. Offers a user-friendly I/O interface for seamless data access.",
-    "General Tags": [
-        "I/O Interface",
-        "Scientific Data",
-        "Hdf5 Files"
-    ],
+    "General Tags": "I/O Interface, Scientific Data, Hdf5 Files",
     "Software Type": "",
     "Software Class": "",
-    "Research Field": "",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": ""
 }

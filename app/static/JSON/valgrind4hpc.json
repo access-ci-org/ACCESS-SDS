@@ -1,28 +1,11 @@
 {
     "Software": "Valgrind4HPC",
     "AI Description": "Valgrind4HPC is a performance analysis tool suite specifically designed for high-performance computing (HPC) environments. It provides a comprehensive set of tools for profiling, memory debugging, and thread analysis to help optimize and improve the performance of parallel and distributed applications on HPC systems.",
-    "Core Features": [
-        "Performance profiling for HPC applications",
-        "Memory debugging and leak detection",
-        "Thread analysis and synchronization debugging",
-        "Support for MPI and OpenMP parallel programming models",
-        "Visualization and debugging capabilities",
-        "Integration with HPC job schedulers"
-    ],
-    "General Tags": [
-        "Performance Analysis",
-        "Hpc Environments",
-        "Profiling",
-        "Memory Debugging",
-        "Thread Analysis",
-        "Parallel Programming"
-    ],
+    "Core Features": "Performance Profiling For Hpc Applications, Memory Debugging & Leak Detection, Thread Analysis & Synchronization Debugging, Support For Mpi & Openmp Parallel Programming Models, Visualization & Debugging Capabilities, Integration With Hpc Job Schedulers",
+    "General Tags": "Performance Analysis, Hpc Environments, Profiling, Memory Debugging, Thread Analysis, Parallel Programming",
     "Software Type": "Tool",
     "Software Class": "Performance Analysis Tool",
-    "Research Field": [
-        "Computer And Information Sciences",
-        "Engineering And Technology"
-    ],
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences, Engineering & Technology"
 }

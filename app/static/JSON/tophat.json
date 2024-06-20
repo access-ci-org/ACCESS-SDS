@@ -1,19 +1,11 @@
 {
     "Software": "Tophat",
     "AI Description": "Tophat is a fast splice junction mapper for RNA-Seq reads. It aligns RNA-Seq reads to the genome using the Bowtie aligner and then analyzes the mapping results to identify splice junctions between exons.",
-    "Core Features": [
-        "Alignment of RNA-Seq reads to the genome",
-        "Identification of splice junctions",
-        "Utilizes the Bowtie aligner for mapping"
-    ],
-    "General Tags": [
-        "Rna-Seq",
-        "Splice Junction Mapper",
-        "Genomics"
-    ],
+    "Core Features": "Alignment Of RNA-Seq Reads To The Genome, Identification Of Splice Junctions, Utilizes The Bowtie Aligner For Mapping",
+    "General Tags": "RNA-Seq, Splice Junction Mapper, Genomics",
     "Software Type": "Genomic Analysis Tool",
     "Software Class": "Bioinformatics",
-    "Research Field": "Biological Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

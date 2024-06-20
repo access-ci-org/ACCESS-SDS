@@ -2,14 +2,10 @@
     "Software": "JBIG-KIT",
     "AI Description": "JBIG-KIT is a software implementation of the JBIG1 data compression standard for bi-level images.",
     "Core Features": "JBIG-KIT provides tools for compressing and decompressing bi-level images in the JBIG1 format. It is designed to achieve high compression ratios for binary images, making it suitable for applications where storage or transmission bandwidth is a concern.",
-    "General Tags": [
-        "Data Compression",
-        "Image Processing",
-        "Software Development"
-    ],
+    "General Tags": "Data Compression, Image Processing, Software Development",
     "Software Type": "Compression",
     "Software Class": "",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

@@ -1,22 +1,11 @@
 {
     "Software": "TCLAP",
     "AI Description": "TCLAP is a small, flexible library that provides a simple interface for defining and accessing command line arguments. It is a mature, stable, lightweight, and efficient library for parsing command line arguments in C++ programs.",
-    "Core Features": [
-        "Simple and straightforward API for defining and parsing command line arguments",
-        "Support for short and long argument formats",
-        "Ability to easily define arguments with various data types",
-        "Automatic generation of help and usage information",
-        "Cross-platform compatibility"
-    ],
-    "General Tags": [
-        "Command Line Arguments",
-        "Parsing",
-        "C++",
-        "Library"
-    ],
+    "Core Features": "Simple & Straightforward Api For Defining & Parsing Command Line Arguments, Support For Short & Long Argument Formats, Ability To Easily Define Arguments With Various Data Types, Automatic Generation Of Help & Usage Information, Cross-Platform Compatibility",
+    "General Tags": "Command Line Arguments, Parsing, C++, Library",
     "Software Type": "",
     "Software Class": "",
-    "Research Field": "Engineering & Technology",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
 }

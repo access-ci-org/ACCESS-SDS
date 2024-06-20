@@ -2,14 +2,10 @@
     "Software": "gperftools",
     "AI Description": "gperftools is a collection of performance analysis and profiling tools for C and C++ applications. It includes tools such as CPU and heap profilers, heap-checker, and a specialized CPU profiler for multithreaded programs.",
     "Core Features": "1. CPU profiler for single-threaded and multithreaded applications.\n2. Heap profiler for memory allocation analysis.\n3. Heap-checker for detecting memory leaks and memory errors.\n4. Performance analysis tools to aid in optimizing code performance.\n5. Scalable and efficient profiling capabilities for large-scale applications.",
-    "General Tags": [
-        "Performance Analysis",
-        "Profiling",
-        "C/C++"
-    ],
+    "General Tags": "Performance Analysis, Profiling, C/C++",
     "Software Type": "Tool",
     "Software Class": "Performance Analysis & Profiling Tools",
-    "Research Field": "Engineering & Technology",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
 }

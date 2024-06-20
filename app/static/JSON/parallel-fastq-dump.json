@@ -1,21 +1,11 @@
 {
     "Software": "parallel-fastq-dump",
     "AI Description": "parallel-fastq-dump is a tool for parallelizing the download and extraction of FASTQ files from the Sequence Read Archive (SRA) in order to significantly reduce the download time.",
-    "Core Features": [
-        "Parallelizes the download and extraction process of FASTQ files from SRA",
-        "Improves download speed by utilizing multiple threads",
-        "Supports efficient retrieval of data from the Sequence Read Archive",
-        "Reduces the time taken for downloading large datasets"
-    ],
-    "General Tags": [
-        "Sra",
-        "Fastq Files",
-        "Data Download",
-        "Parallel Processing"
-    ],
+    "Core Features": "Parallelizes The Download & Extraction Process Of Fastq Files From Sra, Improves Download Speed By Utilizing Multiple Threads, Supports Efficient Retrieval Of Data From The Sequence Read Archive, Reduces The Time Taken For Downloading Large Datasets",
+    "General Tags": "Sra, Fastq Files, Data Download, Parallel Processing",
     "Software Type": "Tool",
     "Software Class": "Bioinformatics",
-    "Research Field": "Biological Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

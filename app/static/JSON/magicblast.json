@@ -1,21 +1,11 @@
 {
     "Software": "magicblast",
     "AI Description": "Magic-BLAST is a tool for mapping large next-generation RNA or DNA sequencing runs against a whole genome or transcriptome. It uses the BLAST algorithm to map reads quickly and accurately and produce output in a standard SAM format.",
-    "Core Features": [
-        "Mapping next-generation sequencing runs",
-        "Using BLAST algorithm for read mapping",
-        "Producing output in SAM format",
-        "High-speed and accuracy"
-    ],
-    "General Tags": [
-        "Bioinformatics",
-        "Ngs Analysis",
-        "Sequence Alignment",
-        "Read Mapping"
-    ],
+    "Core Features": "Mapping Next-Generation Sequencing Runs, Using Blast Algorithm For Read Mapping, Producing Output In Sam Format, High-Speed & Accuracy",
+    "General Tags": "Bioinformatics, Ngs Analysis, Sequence Alignment, Read Mapping",
     "Software Type": "Bioinformatics Tool",
     "Software Class": "Alignment Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

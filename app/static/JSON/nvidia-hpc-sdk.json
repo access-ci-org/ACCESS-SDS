@@ -2,15 +2,10 @@
     "Software": "NVIDIA HPC SDK",
     "AI Description": "NVIDIA HPC SDK is a comprehensive suite of compilers, libraries, and tools for high-performance computing (HPC) and scientific computing applications. It is designed to optimize performance on NVIDIA GPUs and multi-core CPUs.",
     "Core Features": "Includes NVIDIA-compilers for CUDA C/C++, Fortran, and Python, along with libraries such as cuBLAS, cuFFT, cuSPARSE, and cuDNN. Provides tools for profiling, debugging, and optimizing HPC applications. Supports integration with popular HPC frameworks and workflows.",
-    "General Tags": [
-        "Hpc",
-        "High Performance Computing",
-        "Scientific Computing",
-        "Gpu Computing"
-    ],
+    "General Tags": "Hpc, High Performance Computing, Scientific Computing, Gpu Computing",
     "Software Type": "Tool",
     "Software Class": "Compiler",
-    "Research Field": "Engineering & Technology",
     "Research Area": "Performance Evaluation & Benchmarking",
-    "Research Discipline": "Other"
+    "Research Discipline": "Other",
+    "Research Field": "Engineering & Technology"
 }

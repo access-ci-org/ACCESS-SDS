@@ -1,20 +1,11 @@
 {
     "Software": "TPMCalculator",
     "AI Description": "TPMCalculator is a computational tool that enables the quantification of gene expression levels from RNA-Seq data based on the transcripts per million (TPM) method. TPM calculations normalize read counts by the length of the transcripts and the total number of mapped reads, providing a more accurate representation of gene expression levels.",
-    "Core Features": [
-        "Quantification of gene expression levels from RNA-Seq data",
-        "Uses transcripts per million (TPM) method for normalization",
-        "Accurate representation of gene expression levels"
-    ],
-    "General Tags": [
-        "Bioinformatics",
-        "Computational Biology",
-        "Rna-Seq",
-        "Transcriptomics"
-    ],
+    "Core Features": "Quantification Of Gene Expression Levels From RNA-Seq Data, Uses Transcripts Per Million (Tpm) Method For Normalization, Accurate Representation Of Gene Expression Levels",
+    "General Tags": "Bioinformatics, Computational Biology, RNA-Seq, Transcriptomics",
     "Software Type": "Bioinformatics",
     "Software Class": "Computational Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

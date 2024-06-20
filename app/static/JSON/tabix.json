@@ -2,14 +2,10 @@
     "Software": "tabix",
     "AI Description": "Tabix is a tool used for indexing and querying genomic data stored in TAB-delimited text files. It allows for fast retrieval of data in specific genomic regions.",
     "Core Features": "1. Indexing of genomic data in tab-delimited text files\n2. Efficient retrieval of data based on query regions\n3. Support for compressed files like gzip or bgzip\n4. Integration with SAMtools for handling BAM files\n5. Compatibility with various bioinformatics pipelines and tools",
-    "General Tags": [
-        "Genomic Data",
-        "Indexing",
-        "Querying"
-    ],
+    "General Tags": "Genomic Data, Indexing, Querying",
     "Software Type": "Tool",
     "Software Class": "Data Management & Analysis",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genomics",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

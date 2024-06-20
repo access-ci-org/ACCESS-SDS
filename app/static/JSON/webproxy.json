@@ -1,23 +1,11 @@
 {
     "Software": "webproxy",
     "AI Description": "WebProxy is a tool that allows users to access websites anonymously by hiding their IP address. It acts as an intermediary between the user's device and the internet, masking the user's IP address and encrypting their internet traffic for increased privacy and security.",
-    "Core Features": [
-        "Anonymously access websites",
-        "Hide IP address",
-        "Encrypt internet traffic",
-        "Increase privacy and security"
-    ],
-    "General Tags": [
-        "Proxy Server",
-        "Internet Privacy",
-        "Security",
-        "Anonymity"
-    ],
+    "Core Features": "Anonymously Access Websites, Hide Ip Address, Encrypt Internet Traffic, Increase Privacy & Security",
+    "General Tags": "Proxy Server, Internet Privacy, Security, Anonymity",
     "Software Type": "Tool",
     "Software Class": "",
-    "Research Field": [
-        "Computer And Information Sciences"
-    ],
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

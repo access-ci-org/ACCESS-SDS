@@ -2,14 +2,10 @@
     "Software": "prgenv-cray",
     "AI Description": "PRGENV module controls the programming environment for building and running applications on Cray systems. It configures the environment variables, compiler options, and libraries needed for compiling and executing programs efficiently on Cray supercomputers.",
     "Core Features": "1. Manages programming environment settings\n2. Configures compiler options\n3. Sets up necessary libraries for Cray supercomputers\n4. Facilitates efficient compilation and execution of programs",
-    "General Tags": [
-        "Programming Environment",
-        "Cray Systems",
-        "Supercomputing"
-    ],
+    "General Tags": "Programming Environment, Cray Systems, Supercomputing",
     "Software Type": "Compiler/Environment Configuration",
     "Software Class": "Utility",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "High Performance Computing",
-    "Research Discipline": "Computer Science"
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
 }

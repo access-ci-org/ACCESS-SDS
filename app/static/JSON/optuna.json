@@ -1,23 +1,11 @@
 {
     "Software": "Optuna",
     "AI Description": "Optuna is an open-source hyperparameter optimization framework to automate hyperparameter search with a variety of flexible and powerful features for machine learning model training.",
-    "Core Features": [
-        "Automated hyperparameter optimization",
-        "Distributed optimization",
-        "Support for multiple machine learning frameworks (e.g., PyTorch, TensorFlow, scikit-learn)",
-        "Integration with Jupyter notebooks",
-        "Visualization of optimization results",
-        "Pruning of unpromising trials"
-    ],
-    "General Tags": [
-        "Machine Learning",
-        "Hyperparameter Optimization",
-        "Automated Machine Learning",
-        "Optimization Framework"
-    ],
+    "Core Features": "Automated Hyperparameter Optimization, Distributed Optimization, Support For Multiple Machine Learning Frameworks (E.G., Pytorch, Tensorflow, Scikit-Learn), Integration With Jupyter Notebooks, Visualization Of Optimization Results, Pruning Of Unpromising Trials",
+    "General Tags": "Machine Learning, Hyperparameter Optimization, Automated Machine Learning, Optimization Framework",
     "Software Type": "Library",
     "Software Class": "Optimization",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

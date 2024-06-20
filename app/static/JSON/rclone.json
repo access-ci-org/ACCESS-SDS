@@ -2,14 +2,10 @@
     "Software": "rclone",
     "AI Description": "Rclone is a command-line program to manage files on cloud storage. It is a powerful tool that supports various cloud storage services and allows users to sync files between different storage locations.",
     "Core Features": "Rclone offers features such as file synchronization, file transfer, and file management across multiple cloud storage services. It supports a wide range of cloud storage providers including Google Drive, Amazon S3, Dropbox, Microsoft OneDrive, and more. It also provides encryption, bandwidth control, and checksum verification capabilities.",
-    "General Tags": [
-        "Cloud Storage",
-        "File Synchronization",
-        "Command-Line Tool"
-    ],
+    "General Tags": "Cloud Storage, File Synchronization, Command-Line Tool",
     "Software Type": "Data Management",
     "Software Class": "Cloud Storage Management",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

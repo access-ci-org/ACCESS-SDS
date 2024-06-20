@@ -1,20 +1,11 @@
 {
     "Software": "unzip",
     "AI Description": "Unzip is a popular open-source file extraction utility for extracting compressed files in various formats. It is commonly used to extract files from ZIP archives, but it also supports other archive formats.",
-    "Core Features": [
-        "Extract files from ZIP archives",
-        "Support for various archive formats",
-        "Open-source and freely available",
-        "Cross-platform compatibility"
-    ],
-    "General Tags": [
-        "File Extraction",
-        "Compression",
-        "Utility"
-    ],
+    "Core Features": "Extract Files From Zip Archives, Support For Various Archive Formats, Open-Source & Freely Available, Cross-Platform Compatibility",
+    "General Tags": "File Extraction, Compression, Utility",
     "Software Type": "File Extraction",
     "Software Class": "Utility",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

@@ -1,21 +1,11 @@
 {
     "Software": "dm-tree",
     "AI Description": "dm-tree is a Python library for manipulating nested tree-like data structures with ease and efficiency. It provides a comprehensive set of tools for working with hierarchical data in a user-friendly manner.",
-    "Core Features": [
-        "Efficient manipulation of tree structures",
-        "Support for nested and hierarchical data",
-        "Traversal and querying capabilities",
-        "Serialization and deserialization of tree data"
-    ],
-    "General Tags": [
-        "Python Library",
-        "Hierarchical Data",
-        "Tree Structures",
-        "Data Manipulation"
-    ],
+    "Core Features": "Efficient Manipulation Of Tree Structures, Support For Nested & Hierarchical Data, Traversal & Querying Capabilities, Serialization & Deserialization Of Tree Data",
+    "General Tags": "Python Library, Hierarchical Data, Tree Structures, Data Manipulation",
     "Software Type": "Library",
     "Software Class": "Scientific Computing",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

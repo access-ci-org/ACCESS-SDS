@@ -2,13 +2,10 @@
     "Software": "Expat",
     "AI Description": "Expat is an XML parser library written in C. It is a fast and lightweight library that is designed for high-performance applications.",
     "Core Features": "1. Supports parsing of XML documents\n2. Provides API for developers to implement XML parsing in their applications\n3. Fast and efficient parsing of XML\n4. Easy to integrate with various programming languages",
-    "General Tags": [
-        "Xml Parser",
-        "Library"
-    ],
+    "General Tags": "Xml Parser, Library",
     "Software Type": "Xml Parser",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

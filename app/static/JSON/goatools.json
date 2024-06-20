@@ -1,22 +1,11 @@
 {
     "Software": "goatools",
     "AI Description": "Goatools is a Python library for exploring the Gene Ontology and determining the statistical significance of GO term enrichment in sets of genes or gene products.",
-    "Core Features": [
-        "Interpretation of Gene Ontology (GO)",
-        "Statistical analysis of GO term enrichment",
-        "Visualization of GO term relationships",
-        "Integration with biological data analysis pipelines"
-    ],
-    "General Tags": [
-        "Bioinformatics",
-        "Python Library",
-        "Gene Ontology",
-        "Enrichment Analysis",
-        "Biological Data Analysis"
-    ],
+    "Core Features": "Interpretation Of Gene Ontology (Go), Statistical Analysis Of Go Term Enrichment, Visualization Of Go Term Relationships, Integration With Biological Data Analysis Pipelines",
+    "General Tags": "Bioinformatics, Python Library, Gene Ontology, Enrichment Analysis, Biological Data Analysis",
     "Software Type": "Python Library",
     "Software Class": "Library",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genetics",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

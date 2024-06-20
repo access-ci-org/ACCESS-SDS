@@ -1,21 +1,11 @@
 {
     "Software": "SeqyClean",
     "AI Description": "SeqyClean is a tool for fastq preprocessing and quality filtering optimized for Next-Generation Sequencing (NGS) data. It provides various modules for read filtering, quality control, and adapter trimming to improve the quality of sequencing data before downstream analysis.",
-    "Core Features": [
-        "Fastq preprocessing",
-        "Quality filtering",
-        "Adapter trimming",
-        "NGS data optimization"
-    ],
-    "General Tags": [
-        "Ngs Data",
-        "Quality Control",
-        "Preprocessing",
-        "Bioinformatics"
-    ],
+    "Core Features": "Fastq Preprocessing, Quality Filtering, Adapter Trimming, Ngs Data Optimization",
+    "General Tags": "Ngs Data, Quality Control, Preprocessing, Bioinformatics",
     "Software Type": "Ngs Data Processing Tool",
     "Software Class": "Preprocessing Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

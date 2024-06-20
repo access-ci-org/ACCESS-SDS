@@ -2,14 +2,10 @@
     "Software": "perftools-lite",
     "AI Description": "Perftools lite is a set of performance analysis tools designed for lightweight profiling and tracing of applications. It provides insights into the performance of software applications to help optimize and improve efficiency.",
     "Core Features": "Perftools-lite offers functionalities such as profiling, tracing, performance analysis, and visualization tools. It includes features like CPU and memory profiling, function-level profiling, heap profiling, thread profiling, real-time tracing, and performance visualization.",
-    "General Tags": [
-        "Performance Analysis",
-        "Profiling",
-        "Tracing"
-    ],
+    "General Tags": "Performance Analysis, Profiling, Tracing",
     "Software Type": "Software Tool",
     "Software Class": "Performance Analysis Tool",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Software Engineering, Systems, & Development",
-    "Research Discipline": "Computer Science"
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
 }

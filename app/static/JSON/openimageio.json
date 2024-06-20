@@ -1,23 +1,11 @@
 {
     "Software": "OpenImageIO",
     "AI Description": "OpenImageIO is a library for reading and writing images, and a bunch of related functionality, like dealing with image formats and color management.",
-    "Core Features": [
-        "Support for a wide range of image formats",
-        "Efficient image reading and writing capabilities",
-        "Color management functionalities",
-        "Image processing and manipulation tools",
-        "Cross-platform compatibility"
-    ],
-    "General Tags": [
-        "Image Processing",
-        "Color Management",
-        "Library",
-        "Image Formats",
-        "Cross-Platform"
-    ],
+    "Core Features": "Support For A Wide Range Of Image Formats, Efficient Image Reading & Writing Capabilities, Color Management Functionalities, Image Processing & Manipulation Tools, Cross-Platform Compatibility",
+    "General Tags": "Image Processing, Color Management, Library, Image Formats, Cross-Platform",
     "Software Type": "Computational Software",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

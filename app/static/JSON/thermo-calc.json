@@ -1,24 +1,11 @@
 {
     "Software": "Thermo-Calc",
     "AI Description": "Thermo-Calc is a powerful software package for thermodynamic calculations and phase diagram calculations in materials science, metallurgy, and other related fields. It is widely used for studying phase equilibria, phase transformations, diffusion, and precipitation in multicomponent systems.",
-    "Core Features": [
-        "Thermodynamic calculations",
-        "Phase diagram calculations",
-        "Phase equilibria",
-        "Diffusion",
-        "Precipitation",
-        "Multicomponent systems"
-    ],
-    "General Tags": [
-        "Materials Science",
-        "Metallurgy",
-        "Thermodynamics",
-        "Phase Equilibria",
-        "Phase Transformations"
-    ],
+    "Core Features": "Thermodynamic Calculations, Phase Diagram Calculations, Phase Equilibria, Diffusion, Precipitation, Multicomponent Systems",
+    "General Tags": "Materials Science, Metallurgy, Thermodynamics, Phase Equilibria, Phase Transformations",
     "Software Type": "Computational Tool",
     "Software Class": "Scientific Software",
-    "Research Field": "Engineering & Technology",
     "Research Area": "Materials Science",
-    "Research Discipline": "Metallurgical Engineering"
+    "Research Discipline": "Metallurgical Engineering",
+    "Research Field": "Engineering & Technology"
 }

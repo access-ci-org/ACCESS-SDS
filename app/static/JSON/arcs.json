@@ -1,20 +1,11 @@
 {
     "Software": "ARCS",
     "AI Description": "ARCS (Advanced Research Computing Services) is a software platform developed to provide high-performance computing (HPC) services to researchers in various fields. It aims to enhance computational workflows and facilitate complex simulations and data analysis.",
-    "Core Features": [
-        "High-performance computing services",
-        "Advanced computational workflows",
-        "Support for complex simulations",
-        "Data analysis capabilities"
-    ],
-    "General Tags": [
-        "Hpc",
-        "Computational Workflows",
-        "Data Analysis"
-    ],
+    "Core Features": "High-Performance Computing Services, Advanced Computational Workflows, Support For Complex Simulations, Data Analysis Capabilities",
+    "General Tags": "Hpc, Computational Workflows, Data Analysis",
     "Software Type": "Research Software",
     "Software Class": "Tools & Platforms",
-    "Research Field": "Engineering & Technology",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
 }

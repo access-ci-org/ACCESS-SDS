@@ -1,20 +1,11 @@
 {
     "Software": "SNPGenie",
     "AI Description": "SNPGenie is a computational tool designed for detecting single nucleotide polymorphisms (SNPs) and insertions/deletions (indels) in next-generation sequencing (NGS) data. It provides an intuitive and user-friendly interface for variant calling and annotation.",
-    "Core Features": [
-        "Variant calling in NGS data",
-        "Detection of SNPs and indels",
-        "User-friendly interface",
-        "Variant annotation"
-    ],
-    "General Tags": [
-        "Ngs Variant Calling",
-        "Snp Detection",
-        "Variant Annotation"
-    ],
+    "Core Features": "Variant Calling In Ngs Data, Detection Of Snps & Indels, User-Friendly Interface, Variant Annotation",
+    "General Tags": "Ngs Variant Calling, Snp Detection, Variant Annotation",
     "Software Type": "Bioinformatics Tool",
     "Software Class": "Ngs Data Analysis Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

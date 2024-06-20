@@ -2,17 +2,10 @@
     "Software": "nvshmem",
     "AI Description": "nvshmem is a GPU-accelerated implementation of the OpenSHMEM standard designed for NVIDIA GPUs. It provides a high-performance, parallel programming model for developing applications on GPU clusters.",
     "Core Features": "1. GPU-accelerated implementation of the OpenSHMEM standard.\n2. High-performance parallel programming model.\n3. Enables development of applications on GPU clusters.\n4. Supports asynchronous communication and shared memory operations.",
-    "General Tags": [
-        "Gpu-Accelerated",
-        "Openshmem",
-        "Nvidia Gpus"
-    ],
+    "General Tags": "Gpu-Accelerated, Openshmem, Nvidia Gpus",
     "Software Type": "Library",
     "Software Class": "Parallel Computing",
-    "Research Field": [
-        "Computer And Information Sciences",
-        "Other Computer And Information Sciences"
-    ],
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences, Other Computer & Information Sciences"
 }

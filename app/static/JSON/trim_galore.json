@@ -1,21 +1,11 @@
 {
     "Software": "Trim Galore",
     "AI Description": "Trim Galore is a wrapper tool around Cutadapt and FastQC for quality and adapter trimming of Illumina reads. It removes low quality bases as well as adapter sequences from the 3' end of the reads.",
-    "Core Features": [
-        "Quality trimming",
-        "Adapter trimming",
-        "Automated read processing",
-        "Integration with Cutadapt and FastQC"
-    ],
-    "General Tags": [
-        "Bioinformatics",
-        "Genomics",
-        "Ngs Data Processing",
-        "Quality Control"
-    ],
+    "Core Features": "Quality Trimming, Adapter Trimming, Automated Read Processing, Integration With Cutadapt & Fastqc",
+    "General Tags": "Bioinformatics, Genomics, Ngs Data Processing, Quality Control",
     "Software Type": "Bioinformatics Tool",
     "Software Class": "Data Processing",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genomics",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

@@ -1,21 +1,11 @@
 {
     "Software": "Desmond",
     "AI Description": "Desmond is a molecular dynamics simulation software designed for studying biological systems at the atomic level. It is widely used for drug discovery, protein folding, and molecular interactions.",
-    "Core Features": [
-        "Molecular dynamics simulations",
-        "Protein-ligand interactions",
-        "Free energy calculations",
-        "Structural refinement"
-    ],
-    "General Tags": [
-        "Molecular Dynamics",
-        "Biological Systems",
-        "Drug Discovery",
-        "Protein Folding"
-    ],
+    "Core Features": "Molecular Dynamics Simulations, Protein-Ligand Interactions, Free Energy Calculations, Structural Refinement",
+    "General Tags": "Molecular Dynamics, Biological Systems, Drug Discovery, Protein Folding",
     "Software Type": "Molecular Dynamics Software",
     "Software Class": "Simulation Software",
-    "Research Field": "Biological Sciences",
     "Research Area": "Structural Biology",
-    "Research Discipline": "Biochemistry & Molecular Biology"
+    "Research Discipline": "Biochemistry & Molecular Biology",
+    "Research Field": "Biological Sciences"
 }

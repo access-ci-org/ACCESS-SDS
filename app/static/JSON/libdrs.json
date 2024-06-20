@@ -1,20 +1,11 @@
 {
     "Software": "libdrs",
     "AI Description": "libdrs is a Python library for Differential RNA-seq (Differential RNA sequencing) analysis. It provides various tools for the analysis of gene expression data generated from RNA-seq experiments, focusing on identifying differentially expressed genes between different conditions or treatments.",
-    "Core Features": [
-        "Differential RNA-seq analysis",
-        "Identification of differentially expressed genes",
-        "Analysis of gene expression data",
-        "Integration with Python for seamless data analysis"
-    ],
-    "General Tags": [
-        "Python Library",
-        "Rna-Seq Analysis",
-        "Gene Expression Analysis"
-    ],
+    "Core Features": "Differential RNA-Seq Analysis, Identification Of Differentially Expressed Genes, Analysis Of Gene Expression Data, Integration With Python For Seamless Data Analysis",
+    "General Tags": "Python Library, RNA-Seq Analysis, Gene Expression Analysis",
     "Software Type": "Python Library",
     "Software Class": "Library",
-    "Research Field": "Biological Sciences",
     "Research Area": "Transcriptomics",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

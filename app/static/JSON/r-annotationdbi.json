@@ -1,21 +1,11 @@
 {
     "Software": "R AnnotationDbi",
     "AI Description": "AnnotationDbi is an R package providing a common interface to easily access and manipulate annotations in various formats for genomic data analysis. It enables researchers to retrieve and manage annotation data from various sources to enhance the interpretation of genomic data.",
-    "Core Features": [
-        "Access and manipulate annotation data for genomic analysis",
-        "Support for various annotation formats and sources",
-        "Integration with other Bioconductor packages for comprehensive genomic analysis",
-        "Efficient data retrieval and manipulation functions for large datasets"
-    ],
-    "General Tags": [
-        "Data Annotation",
-        "Genomic Analysis",
-        "Bioinformatics",
-        "R Package"
-    ],
+    "Core Features": "Access & Manipulate Annotation Data For Genomic Analysis, Support For Various Annotation Formats & Sources, Integration With Other Bioconductor Packages For Comprehensive Genomic Analysis, Efficient Data Retrieval & Manipulation Functions For Large Datasets",
+    "General Tags": "Data Annotation, Genomic Analysis, Bioinformatics, R Package",
     "Software Type": "Library/Tool",
     "Software Class": "Data Management & Analysis",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genomics",
-    "Research Discipline": "Biological Sciences"
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
 }

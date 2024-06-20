@@ -2,14 +2,10 @@
     "Software": "gklib",
     "AI Description": "gklib is a C++ library for geometric kernels that provides efficient and accurate geometric algorithms for computational geometry and related fields.",
     "Core Features": "The core features of gklib include robust and reliable geometric algorithms for tasks such as intersection detection, proximity queries, convex hull computation, point location, and triangulation.",
-    "General Tags": [
-        "Geometric Kernels",
-        "Computational Geometry",
-        "Algorithms"
-    ],
+    "General Tags": "Geometric Kernels, Computational Geometry, Algorithms",
     "Software Type": "Computational Software",
     "Software Class": "Library",
-    "Research Field": "Mathematics",
     "Research Area": "Computational Geometry",
-    "Research Discipline": "Applied Mathematics"
+    "Research Discipline": "Applied Mathematics",
+    "Research Field": "Mathematics"
 }

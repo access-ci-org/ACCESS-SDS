@@ -1,22 +1,11 @@
 {
     "Software": "gpustat",
     "AI Description": "gpustat is a Python library that gives an easy access to the GPU-related data, such as GPU utilization, memory usage, temperature, and power. It provides a command-line interface for quickly checking the status of GPUs in a system.",
-    "Core Features": [
-        "Retrieve GPU status information",
-        "Monitor GPU utilization",
-        "Check memory usage and temperature of GPUs",
-        "Access power consumption data",
-        "Simple command-line interface for quick status checks"
-    ],
-    "General Tags": [
-        "Gpu Monitoring",
-        "System Administration",
-        "Python Library",
-        "Command-Line Tool"
-    ],
+    "Core Features": "Retrieve Gpu Status Information, Monitor Gpu Utilization, Check Memory Usage & Temperature Of Gpus, Access Power Consumption Data, Simple Command-Line Interface For Quick Status Checks",
+    "General Tags": "Gpu Monitoring, System Administration, Python Library, Command-Line Tool",
     "Software Type": "Library",
     "Software Class": "Data Management & Analytics",
-    "Research Field": "Engineering & Technology",
     "Research Area": "Computer & Information Sciences",
-    "Research Discipline": "Computer Science"
+    "Research Discipline": "Computer Science",
+    "Research Field": "Engineering & Technology"
 }

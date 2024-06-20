@@ -1,20 +1,11 @@
 {
     "Software": "AutoDock",
     "AI Description": "AutoDock is a suite of automated docking tools designed to predict how small molecules, such as substrates or drug candidates, bind to a receptor of known 3D structure.",
-    "Core Features": [
-        "Docking of small molecules to protein receptors",
-        "Prediction of binding modes and binding affinities",
-        "Analysis of molecular interactions",
-        "Virtual screening for drug discovery"
-    ],
-    "General Tags": [
-        "Computational Chemistry",
-        "Molecular Docking",
-        "Virtual Screening"
-    ],
+    "Core Features": "Docking Of Small Molecules To Protein Receptors, Prediction Of Binding Modes & Binding Affinities, Analysis Of Molecular Interactions, Virtual Screening For Drug Discovery",
+    "General Tags": "Computational Chemistry, Molecular Docking, Virtual Screening",
     "Software Type": "Bioinformatics Tool",
     "Software Class": "Molecular Docking",
-    "Research Field": "Biological Sciences",
     "Research Area": "Drug Discovery",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

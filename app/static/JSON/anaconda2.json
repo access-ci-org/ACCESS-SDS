@@ -2,20 +2,10 @@
     "Software": "Anaconda2",
     "AI Description": "Anaconda2 is a free and open-source distribution of the Python and R programming languages for scientific computing, that aims to simplify package management and deployment. It includes over 720 open-source packages and is widely used for data science, machine learning, and scientific computing.",
     "Core Features": "1. Simplified package management through the conda package manager. 2. Includes a wide range of commonly used scientific computing libraries and tools. 3. Supports Python and R programming languages. 4. Cross-platform compatibility for Windows, macOS, and Linux. 5. Integrated environments such as Jupyter Notebook for interactive computing.",
-    "General Tags": [
-        "Python Libraries",
-        "Conda Packages",
-        "Data Science",
-        "Scientific Computing",
-        "Machine Learning",
-        "Computational Software"
-    ],
+    "General Tags": "Python Libraries, Conda Packages, Data Science, Scientific Computing, Machine Learning, Computational Software",
     "Software Type": "Distribution",
     "Software Class": "Scientific Computing",
-    "Research Field": [
-        "Computer And Information Sciences",
-        "Artificial Intelligence And Intelligent Systems"
-    ],
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences, Artificial Intelligence & Intelligent Systems"
 }

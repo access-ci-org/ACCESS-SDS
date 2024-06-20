@@ -2,13 +2,10 @@
     "Software": "kbproto",
     "AI Description": "The kbproto package provides the core XKB protocol and extension definitions for usage with X11 protocol libraries.",
     "Core Features": "1. Provides XKB protocol and extension definitions. 2. Allows for usage with X11 protocol libraries. 3. Defines keyboard properties and types for X Window System.",
-    "General Tags": [
-        "X11 Protocol",
-        "Keyboard Properties"
-    ],
+    "General Tags": "X11 Protocol, Keyboard Properties",
     "Software Type": "Protocol",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Computer Science",
-    "Research Discipline": "Computer Science"
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
 }

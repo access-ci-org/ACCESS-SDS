@@ -2,15 +2,10 @@
     "Software": "GenMap",
     "AI Description": "GenMap is a software tool designed for genetic mapping studies, particularly in the context of linkage analysis. It is used to map genetic loci to specific regions of chromosomes by analyzing the inheritance patterns of genetic markers within families.",
     "Core Features": "1. Genetic mapping for linkage analysis\n2. Analysis of inheritance patterns of genetic markers\n3. Mapping genetic loci to chromosomal regions\n4. Family-based genetic studies support\n5. Visualization of linkage results",
-    "General Tags": [
-        "Genetic Mapping",
-        "Linkage Analysis",
-        "Genetic Loci Mapping",
-        "Family-Based Studies"
-    ],
+    "General Tags": "Genetic Mapping, Linkage Analysis, Genetic Loci Mapping, Family-Based Studies",
     "Software Type": "Genetic Mapping Software",
     "Software Class": "Bioinformatics Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

@@ -1,21 +1,11 @@
 {
     "Software": "clang",
     "AI Description": "Clang is a compiler front end for the C, C++, and Objective-C programming languages. It uses LLVM as its back end, providing highly optimized code generation. Clang is designed to provide fast compiles, expressive diagnostics, and a modular architecture for easy integration with other tools and libraries.",
-    "Core Features": [
-        "Support for C, C++, and Objective-C languages",
-        "Highly optimized code generation using LLVM back end",
-        "Fast compilation times",
-        "Expressive diagnostics for easy debugging",
-        "Modular architecture for easy integration with other tools and libraries"
-    ],
-    "General Tags": [
-        "Compiler",
-        "Software Development",
-        "Programming Languages"
-    ],
+    "Core Features": "Support For C, C++, & Objective-C Languages, Highly Optimized Code Generation Using Llvm Back End, Fast Compilation Times, Expressive Diagnostics For Easy Debugging, Modular Architecture For Easy Integration With Other Tools & Libraries",
+    "General Tags": "Compiler, Software Development, Programming Languages",
     "Software Type": "Development Tool",
     "Software Class": "Compiler",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Programming Languages & Compilers",
-    "Research Discipline": "Software Engineering, Systems, & Development"
+    "Research Discipline": "Software Engineering, Systems, & Development",
+    "Research Field": "Computer & Information Sciences"
 }

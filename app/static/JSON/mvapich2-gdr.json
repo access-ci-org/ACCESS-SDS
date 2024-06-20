@@ -1,21 +1,11 @@
 {
     "Software": "MVAPICH2-GDR",
     "AI Description": "MVAPICH2-GDR is a high-performance MPI library designed for NVIDIA GPU Direct RDMA technology, allowing direct data transfers between GPUs and networking adapters without involving the CPU. It is optimized for HPC clusters and large-scale computing environments to achieve low latency and high message rate communication.",
-    "Core Features": [
-        "Optimized for NVIDIA GPU Direct RDMA technology",
-        "Supports direct GPU-to-GPU communication",
-        "Designed for HPC clusters and large-scale computing environments",
-        "Low latency and high message rate communication"
-    ],
-    "General Tags": [
-        "Hpc",
-        "Mpi Library",
-        "Gpu Direct Rdma",
-        "High-Performance Computing"
-    ],
+    "Core Features": "Optimized For Nvidia Gpu Direct Rdma Technology, Supports Direct Gpu-To-Gpu Communication, Designed For Hpc Clusters & Large-Scale Computing Environments, Low Latency & High Message Rate Communication",
+    "General Tags": "Hpc, Mpi Library, Gpu Direct Rdma, High-Performance Computing",
     "Software Type": "Library",
     "Software Class": "Mpi Library",
-    "Research Field": "Engineering & Technology",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
 }

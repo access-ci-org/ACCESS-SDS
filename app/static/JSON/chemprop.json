@@ -1,19 +1,11 @@
 {
     "Software": "Chemprop",
     "AI Description": "Chemprop is a deep learning-based tool for molecular property prediction. It allows users to train models to predict chemical properties and enables transfer learning to easily apply pre-trained models to new datasets.",
-    "Core Features": [
-        "Deep learning-based molecular property prediction",
-        "Transfer learning for easy application of pre-trained models",
-        "Flexible model architecture customization"
-    ],
-    "General Tags": [
-        "Chemoinformatics",
-        "Molecular Property Prediction",
-        "Deep Learning"
-    ],
+    "Core Features": "Deep Learning-Based Molecular Property Prediction, Transfer Learning For Easy Application Of Pre-Trained Models, Flexible Model Architecture Customization",
+    "General Tags": "Chemoinformatics, Molecular Property Prediction, Deep Learning",
     "Software Type": "Bioinformatics",
     "Software Class": "Machine Learning Tool",
-    "Research Field": "Chemical Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Chemical Sciences"
 }

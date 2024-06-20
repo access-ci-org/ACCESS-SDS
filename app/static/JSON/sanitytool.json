@@ -1,22 +1,11 @@
 {
     "Software": "sanitytool",
     "AI Description": "Sanitytool is a software tool designed for ensuring the sanity and quality of software code by performing various checks and validations. It helps in identifying potential issues, bugs, and vulnerabilities in the codebase, ensuring a higher level of code quality and reliability.",
-    "Core Features": [
-        "Automated code quality checks",
-        "Identifying potential issues and bugs",
-        "Improving code reliability",
-        "Enforcing coding standards",
-        "Integration with Continuous Integration (CI) pipelines"
-    ],
-    "General Tags": [
-        "Software Quality Assurance",
-        "Code Analysis",
-        "Automated Testing",
-        "Continuous Integration"
-    ],
+    "Core Features": "Automated Code Quality Checks, Identifying Potential Issues & Bugs, Improving Code Reliability, Enforcing Coding Standards, Integration With Continuous Integration (Ci) Pipelines",
+    "General Tags": "Software Quality Assurance, Code Analysis, Automated Testing, Continuous Integration",
     "Software Type": "Quality Assurance Tool",
     "Software Class": "Development Tools",
-    "Research Field": "Engineering & Technology",
     "Research Area": "Software Development",
-    "Research Discipline": "Software Engineering, Systems, & Development"
+    "Research Discipline": "Software Engineering, Systems, & Development",
+    "Research Field": "Engineering & Technology"
 }

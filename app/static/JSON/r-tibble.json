@@ -2,15 +2,10 @@
     "Software": "r-tibble",
     "AI Description": "The r-tibble package in R provides a modern data frame implementation that handles data in a structured tabular format, enhancing data manipulation capabilities for data analysis and statistical computing.",
     "Core Features": "1. Provides a modern and efficient data frame structure for data management. 2. Offers enhanced data manipulation functions. 3. Supports streamlined data analysis workflows. 4. Facilitates seamless integration with other R packages.",
-    "General Tags": [
-        "R",
-        "Data Frame",
-        "Data Analysis",
-        "Data Manipulation"
-    ],
+    "General Tags": "R, Data Frame, Data Analysis, Data Manipulation",
     "Software Type": "Data Analysis Tool",
     "Software Class": "Data Management",
-    "Research Field": "Other Natural Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Other Natural Sciences"
 }

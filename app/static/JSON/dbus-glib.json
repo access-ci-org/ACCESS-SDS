@@ -2,14 +2,10 @@
     "Software": "dbus-glib",
     "AI Description": "D-Bus is a message bus system for inter-application communication and coordination. dbus-glib is a library for GLib based applications to communicate with D-Bus.",
     "Core Features": "dbus-glib provides a high-level API for interacting with D-Bus, allowing applications to publish objects and call methods on remote objects over the D-Bus.",
-    "General Tags": [
-        "D-Bus",
-        "Inter-Process Communication",
-        "Glib"
-    ],
+    "General Tags": "D-Bus, Inter-Process Communication, Glib",
     "Software Type": "Api",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

@@ -1,22 +1,11 @@
 {
     "Software": "mash",
     "AI Description": "Mash is a fast and flexible genome distance estimator that can accurately estimate the pairwise genetic distance between genomes. It uses a MinHash dimensionality reduction technique to efficiently compute Jaccard distances between large sets of DNA sequences, enabling rapid genome comparisons.",
-    "Core Features": [
-        "Estimates genetic distances between genomes",
-        "Uses MinHash technique for dimensionality reduction",
-        "Computes Jaccard distances between DNA sequences",
-        "Rapid genome comparisons"
-    ],
-    "General Tags": [
-        "Genome Distance Estimator",
-        "Minhash Technique",
-        "Jaccard Distances",
-        "Dna Sequences",
-        "Genome Comparisons"
-    ],
+    "Core Features": "Estimates Genetic Distances Between Genomes, Uses Minhash Technique For Dimensionality Reduction, Computes Jaccard Distances Between DNA Sequences, Rapid Genome Comparisons",
+    "General Tags": "Genome Distance Estimator, Minhash Technique, Jaccard Distances, DNA Sequences, Genome Comparisons",
     "Software Type": "",
     "Software Class": "Bioinformatics Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

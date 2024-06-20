@@ -1,25 +1,11 @@
 {
     "Software": "HiC-Pro",
     "AI Description": "HiC-Pro is a bioinformatics pipeline for processing, analyzing, and visualizing high-throughput chromatin conformation capture (Hi-C) data. It allows users to generate significant biological insights by studying chromatin structure, genome organization, and 3D chromatin interactions.",
-    "Core Features": [
-        "Preprocessing raw Hi-C data",
-        "Mapping reads to the reference genome",
-        "Filtering and processing valid interaction pairs",
-        "Normalization and visualization of interactions",
-        "Quality control assessment of Hi-C data",
-        "Identifying topological domains and chromatin interactions"
-    ],
-    "General Tags": [
-        "Bioinformatics",
-        "Genomics",
-        "Chromatin Structure",
-        "Hi-C Data",
-        "Data Visualization",
-        "Chromatin Interactions"
-    ],
+    "Core Features": "Preprocessing Raw Hi-C Data, Mapping Reads To The Reference Genome, Filtering & Processing Valid Interaction Pairs, Normalization & Visualization Of Interactions, Quality Control Assessment Of Hi-C Data, Identifying Topological Domains & Chromatin Interactions",
+    "General Tags": "Bioinformatics, Genomics, Chromatin Structure, Hi-C Data, Data Visualization, Chromatin Interactions",
     "Software Type": "Data Analysis",
     "Software Class": "Bioinformatics Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Chromatin Structure & Function",
-    "Research Discipline": "Genomics"
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
 }

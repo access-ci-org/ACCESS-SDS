@@ -1,19 +1,11 @@
 {
     "Software": "pkgconfig",
     "AI Description": "pkg-config is a helper tool used when compiling applications and libraries. It helps in specifying compilation options by providing the compiler options needed to use a library. It also provides information about installed libraries.",
-    "Core Features": [
-        "Facilitates specifying compilation options",
-        "Provides compiler options needed to use a library",
-        "Offers information about installed libraries"
-    ],
-    "General Tags": [
-        "Compilation",
-        "Library Management",
-        "Software Development"
-    ],
+    "Core Features": "Facilitates Specifying Compilation Options, Provides Compiler Options Needed To Use A Library, Offers Information About Installed Libraries",
+    "General Tags": "Compilation, Library Management, Software Development",
     "Software Type": "Tool",
     "Software Class": "Development Tools",
-    "Research Field": "Engineering & Technology",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
 }

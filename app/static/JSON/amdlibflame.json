@@ -1,19 +1,11 @@
 {
     "Software": "amdlibflame",
     "AI Description": "AMD LIBFLAME is an open-source software library that provides a high-performance implementation of the dense linear algebra routines on CPUs. It aims to offer efficient and robust algebraic computations for numerical linear algebra applications.",
-    "Core Features": [
-        "High-performance implementation of dense linear algebra routines on CPUs",
-        "Open-source nature for accessibility and customization",
-        "Efficient and robust algebraic computations for numerical linear algebra applications"
-    ],
-    "General Tags": [
-        "Linear Algebra",
-        "Numerical Computations",
-        "Performance Optimization"
-    ],
+    "Core Features": "High-Performance Implementation Of Dense Linear Algebra Routines On Cpus, Open-Source Nature For Accessibility & Customization, Efficient & Robust Algebraic Computations For Numerical Linear Algebra Applications",
+    "General Tags": "Linear Algebra, Numerical Computations, Performance Optimization",
     "Software Type": "Library",
     "Software Class": "Computational Software",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

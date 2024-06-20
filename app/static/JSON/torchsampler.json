@@ -2,17 +2,10 @@
     "Software": "torchsampler",
     "AI Description": "torchsampler is a library for data sampling in PyTorch, designed to efficiently handle various sampling strategies and techniques to improve data processing and training of deep learning models.",
     "Core Features": "1. Implementation of various data sampling strategies\n2. Seamless integration with PyTorch for easy implementation\n3. Efficient handling of large datasets\n4. Customizable sampling techniques for diverse use cases",
-    "General Tags": [
-        "Data Sampling",
-        "Pytorch",
-        "Deep Learning"
-    ],
+    "General Tags": "Data Sampling, Pytorch, Deep Learning",
     "Software Type": "Data Sampling",
     "Software Class": "Library",
-    "Research Field": [
-        "Computer And Information Sciences",
-        "Artificial Intelligence And Intelligent Systems"
-    ],
     "Research Area": "Machine Learning",
-    "Research Discipline": "Artificial Intelligence & Intelligent Systems"
+    "Research Discipline": "Artificial Intelligence & Intelligent Systems",
+    "Research Field": "Computer & Information Sciences, Artificial Intelligence & Intelligent Systems"
 }

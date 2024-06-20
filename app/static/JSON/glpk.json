@@ -1,20 +1,11 @@
 {
     "Software": "glpk",
     "AI Description": "GNU Linear Programming Kit (GLPK) is an open-source software package for solving large-scale linear programming (LP), mixed integer programming (MIP), and other related problems. It is designed with an emphasis on flexibility, portability, and ease of use.",
-    "Core Features": [
-        "Solves large-scale linear programming problems",
-        "Supports mixed integer programming and related problems",
-        "Offers both a high-level and low-level C API for problem input and output",
-        "Includes tools for post-processing and sensitivity analysis"
-    ],
-    "General Tags": [
-        "Linear Programming",
-        "Optimization",
-        "Open-Source"
-    ],
+    "Core Features": "Solves Large-Scale Linear Programming Problems, Supports Mixed Integer Programming & Related Problems, Offers Both A High-Level & Low-Level C Api For Problem Input & Output, Includes Tools For Post-Processing & Sensitivity Analysis",
+    "General Tags": "Linear Programming, Optimization, Open-Source",
     "Software Type": "Mathematical Optimization",
     "Software Class": "Solver",
-    "Research Field": "Mathematics",
     "Research Area": "Operations Research",
-    "Research Discipline": "Applied Mathematics"
+    "Research Discipline": "Applied Mathematics",
+    "Research Field": "Mathematics"
 }

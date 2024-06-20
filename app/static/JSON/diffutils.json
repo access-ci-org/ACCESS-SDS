@@ -2,15 +2,10 @@
     "Software": "diffutils",
     "AI Description": "Diffutils is a collection of utilities for comparing and finding differences between text files. It includes programs like `diff` for showing the differences between two files, `cmp` for comparing two files byte by byte, and `diff3` for comparing three files.",
     "Core Features": "1. Generating line-by-line differences between text files.\n2. Showing changes between files in a user-friendly format.\n3. Comparing files at byte level with detailed output.\n4. Merging changes from multiple versions of a file.",
-    "General Tags": [
-        "Text Comparison",
-        "File Difference",
-        "Text Analysis",
-        "Version Control"
-    ],
+    "General Tags": "Text Comparison, File Difference, Text Analysis, Version Control",
     "Software Type": "Text Processing",
     "Software Class": "Utility",
-    "Research Field": "Engineering & Technology",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
 }

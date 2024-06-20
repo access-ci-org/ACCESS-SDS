@@ -1,20 +1,11 @@
 {
     "Software": "CppUnit",
     "AI Description": "CppUnit is a C++ unit testing framework designed to assist in writing and running automated test suites for C++ code. It is based on the xUnit architecture and is similar in functionality to JUnit for Java.",
-    "Core Features": [
-        "Supports Test Fixtures",
-        "Test Suites",
-        "Assertions",
-        "Test Runners",
-        "Output Validation"
-    ],
-    "General Tags": [
-        "Unit Testing",
-        "C++"
-    ],
+    "Core Features": "Supports Test Fixtures, Test Suites, Assertions, Test Runners, Output Validation",
+    "General Tags": "Unit Testing, C++",
     "Software Type": "Library",
     "Software Class": "Testing Framework",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

@@ -1,22 +1,11 @@
 {
     "Software": "gdbm",
     "AI Description": "GNU dbm (GDBM) is a library that provides an abstraction for a simple database manager. It allows for the creation and manipulation of key/value pairs in a persistent database, with support for fast lookup, retrieval, insertion, and deletion operations.",
-    "Core Features": [
-        "Supports key/value pairs",
-        "Provides persistent storage",
-        "Allows fast lookup and retrieval operations",
-        "Enables efficient insertion and deletion of data",
-        "Offers API for database management"
-    ],
-    "General Tags": [
-        "Database Management",
-        "Key-Value Store",
-        "Persistent Storage",
-        "Api"
-    ],
+    "Core Features": "Supports Key/Value Pairs, Provides Persistent Storage, Allows Fast Lookup & Retrieval Operations, Enables Efficient Insertion & Deletion Of Data, Offers Api For Database Management",
+    "General Tags": "Database Management, Key-Value Store, Persistent Storage, Api",
     "Software Type": "Library",
     "Software Class": "Data Management & Storage",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

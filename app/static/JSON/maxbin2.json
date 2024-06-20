@@ -2,15 +2,10 @@
     "Software": "MaxBin2",
     "AI Description": "MaxBin2 is a software tool for binning assembled metagenomic sequences based on an Expectation-Maximization algorithm. It assigns contigs to discrete bins representing individual genomes in a microbial community.",
     "Core Features": "1. Binning of assembled metagenomic sequences to represent individual genomes in microbial communities.\n2. High accuracy binning using Expectation-Maximization algorithm.\n3. Ability to handle large dataset sizes efficiently.\n4. Provides visualization tools for analyzing binning results.\n5. Compatible with various sequencing technologies and assembly tools.",
-    "General Tags": [
-        "Metagenomics",
-        "Microbiome",
-        "Bioinformatics",
-        "Genomics"
-    ],
+    "General Tags": "Metagenomics, Microbiome, Bioinformatics, Genomics",
     "Software Type": "",
     "Software Class": "",
-    "Research Field": "",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": ""
 }

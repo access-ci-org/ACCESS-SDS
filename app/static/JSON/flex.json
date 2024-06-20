@@ -2,15 +2,10 @@
     "Software": "Flex",
     "AI Description": "Flex is a fast lexical analyzer generator. It is a tool for creating programs that perform pattern-matching on text. It reads the given input files for a description of a scanner to generate and produces a C source file for the scanner. The output file, lex.yy.c, can then be compiled and linked with the flex runtime library to produce an executable. The resulting executable will scan input files for occurrences of the regular expressions in the scanner description, and perform actions specified in the description.",
     "Core Features": "1. Generates C source code for lexical analyzers based on specified patterns.\n2. Provides a fast and efficient tool for performing text pattern matching.\n3. Offers flexibility in defining scanner descriptions using regular expressions and associated actions.\n4. Supports the development of scanners for use in various text processing applications.",
-    "General Tags": [
-        "Lexical Analyzer",
-        "Text Processing",
-        "Pattern Matching",
-        "Scanner Generator"
-    ],
+    "General Tags": "Lexical Analyzer, Text Processing, Pattern Matching, Scanner Generator",
     "Software Type": "",
     "Software Class": "",
-    "Research Field": "",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": ""
 }

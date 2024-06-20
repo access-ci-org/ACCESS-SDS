@@ -2,16 +2,10 @@
     "Software": "protobuf-python",
     "AI Description": "protobuf-python is a Python library for Protocol Buffers, Google's language-neutral, platform-neutral extensible mechanism for serializing structured data.",
     "Core Features": "1. Efficient serialization of structured data\n2. Language and platform neutral\n3. Extensibility\n4. Binary encoding for data transmission\n5. Data validation",
-    "General Tags": [
-        "Data Serialization",
-        "Binary Encoding",
-        "Data Validation",
-        "Structured Data",
-        "Extensible"
-    ],
+    "General Tags": "Data Serialization, Binary Encoding, Data Validation, Structured Data, Extensible",
     "Software Type": "Serialization",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

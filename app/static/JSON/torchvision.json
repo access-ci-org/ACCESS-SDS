@@ -2,14 +2,10 @@
     "Software": "torchvision",
     "AI Description": "Torchvision is a package in the PyTorch deep learning framework that consists of popular datasets, model architectures, and common image transformations for computer vision tasks.",
     "Core Features": "1. Access to datasets like CIFAR-10, CIFAR-100, MNIST, COCO, etc.\n2. Pre-trained models like AlexNet, VGG, ResNet, etc.\n3. Image transformation functions such as resizing, cropping, and normalization.\n4. Modular structure for easy integration into PyTorch workflows.",
-    "General Tags": [
-        "Deep Learning",
-        "Computer Vision",
-        "Image Processing"
-    ],
+    "General Tags": "Deep Learning, Computer Vision, Image Processing",
     "Software Type": "Deep Learning",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Computer Vision",
-    "Research Discipline": "Artificial Intelligence & Intelligent Systems"
+    "Research Discipline": "Artificial Intelligence & Intelligent Systems",
+    "Research Field": "Computer & Information Sciences"
 }

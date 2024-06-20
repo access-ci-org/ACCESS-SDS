@@ -1,29 +1,11 @@
 {
     "Software": "SDSC",
     "AI Description": "SDSC (San Diego Supercomputer Center) is an organized research unit of the University of California, San Diego that provides cyberinfrastructure resources and services to researchers in the fields of computational science, data analytics, bioinformatics, and more. SDSC supports a wide range of scientific disciplines by offering high-performance computing resources, data storage solutions, software tools, consulting services, and training programs.",
-    "Core Features": [
-        "High-performance computing resources",
-        "Data storage solutions",
-        "Software tools",
-        "Consulting services",
-        "Training programs"
-    ],
-    "General Tags": [
-        "Supercomputing",
-        "Research Support",
-        "Data Analytics",
-        "Cyberinfrastructure"
-    ],
+    "Core Features": "High-Performance Computing Resources, Data Storage Solutions, Software Tools, Consulting Services, Training Programs",
+    "General Tags": "Supercomputing, Research Support, Data Analytics, Cyberinfrastructure",
     "Software Type": "",
     "Software Class": "",
-    "Research Field": [
-        "Computer And Information Sciences",
-        "Other Computer And Information Sciences",
-        "Engineering And Technology",
-        "Other Engineering And Technologies",
-        "Training",
-        "Infrastructure And Instrumentation"
-    ],
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences, Other Computer & Information Sciences, Engineering & Technology, Other Engineering & Technologies, Training, Infrastructure & Instrumentation"
 }

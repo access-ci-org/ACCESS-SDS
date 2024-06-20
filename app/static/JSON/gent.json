@@ -2,14 +2,10 @@
     "Software": "Gent",
     "AI Description": "Gent is a graph-based DNA comparison tool that enables the identification of structural variants, inversions, deletions, insertions, duplications, and translocations in the human genome.",
     "Core Features": "1. Detection of structural variants in DNA sequences.\n2. Graph-based approach for accurate variant identification.\n3. Ability to detect various types of variations such as inversions, deletions, insertions, duplications, and translocations.\n4. Analysis of structural variations in the human genome.",
-    "General Tags": [
-        "Dna Comparison",
-        "Structural Variants",
-        "Genomics"
-    ],
+    "General Tags": "DNA Comparison, Structural Variants, Genomics",
     "Software Type": "Bioinformatics Tool",
     "Software Class": "Computational Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genomics",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

@@ -2,14 +2,10 @@
     "Software": "gffread",
     "AI Description": "gffread is a tool for converting GFF3 files to FASTA format. It extracts sequences based on feature type or ID, translates CDS features to proteins, and more.",
     "Core Features": "1. Converts GFF3 files to FASTA format. 2. Extracts sequences based on feature type or ID. 3. Translates CDS features to proteins. 4. Supports filtering by attributes or locations.",
-    "General Tags": [
-        "Gff3",
-        "Fasta",
-        "Sequence Processing"
-    ],
+    "General Tags": "Gff3, Fasta, Sequence Processing",
     "Software Type": "Tool",
     "Software Class": "Bioinformatics",
-    "Research Field": "Biological Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

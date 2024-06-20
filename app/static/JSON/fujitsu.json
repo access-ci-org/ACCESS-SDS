@@ -2,15 +2,10 @@
     "Software": "Fujitsu",
     "AI Description": "Fujitsu is a multinational information technology equipment and services company headquartered in Tokyo, Japan. Fujitsu offers a wide range of products and services including servers, storage systems, software, networking equipment, and more.",
     "Core Features": "Fujitsu provides innovative solutions in the areas of cloud computing, big data analytics, artificial intelligence, IoT, and cybersecurity. Their products and services cater to various industries including finance, healthcare, retail, and manufacturing.",
-    "General Tags": [
-        "It Services",
-        "Information Technology",
-        "Hardware",
-        "Software"
-    ],
+    "General Tags": "It Services, Information Technology, Hardware, Software",
     "Software Type": "",
     "Software Class": "",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

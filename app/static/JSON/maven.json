@@ -1,21 +1,11 @@
 {
     "Software": "Maven",
     "AI Description": "Apache Maven is a build automation tool used primarily for Java projects. It manages project dependencies and provides a standardized way to build, test, and deploy Java software projects.",
-    "Core Features": [
-        "Dependency management",
-        "Build automation",
-        "Project reporting",
-        "Plugin management",
-        "Reusable build logic"
-    ],
-    "General Tags": [
-        "Build Automation",
-        "Dependency Management",
-        "Java Projects"
-    ],
+    "Core Features": "Dependency Management, Build Automation, Project Reporting, Plugin Management, Reusable Build Logic",
+    "General Tags": "Build Automation, Dependency Management, Java Projects",
     "Software Type": "Development Tool",
     "Software Class": "Build Automation Tool",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

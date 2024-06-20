@@ -2,14 +2,10 @@
     "Software": "Inspector",
     "AI Description": "Inspector is a software tool used for monitoring and analyzing various aspects of computer systems and networks to detect and prevent security breaches or performance issues.",
     "Core Features": "Key features include real-time monitoring of network traffic, system performance metrics, and security events. It provides alerts for suspicious activities, generates reports for analysis, and allows for proactive response to potential threats.",
-    "General Tags": [
-        "Monitoring",
-        "Security",
-        "Network Analysis"
-    ],
+    "General Tags": "Monitoring, Security, Network Analysis",
     "Software Type": "Security Software",
     "Software Class": "Monitoring Tool",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Software Engineering, Systems, & Development",
-    "Research Discipline": "Computer Science"
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
 }

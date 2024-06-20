@@ -1,24 +1,11 @@
 {
     "Software": "lxml",
     "AI Description": "lxml is a powerful and feature-rich library for processing XML and HTML in Python. It provides a simple and pythonic API for efficient handling of XML and HTML data.",
-    "Core Features": [
-        "Parsing XML and HTML documents",
-        "XPath and XSLT support",
-        "ElementTree API for manipulating XML data",
-        "Validation and schema support"
-    ],
-    "General Tags": [
-        "Python Library",
-        "Xml Processing",
-        "Html Processing",
-        "Data Parsing"
-    ],
+    "Core Features": "Parsing Xml & Html Documents, Xpath & Xslt Support, Elementtree Api For Manipulating Xml Data, Validation & Schema Support",
+    "General Tags": "Python Library, Xml Processing, Html Processing, Data Parsing",
     "Software Type": "Data Processing",
     "Software Class": "Library",
-    "Research Field": [
-        "Computer And Information Sciences",
-        "Other Computer And Information Sciences"
-    ],
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences, Other Computer & Information Sciences"
 }

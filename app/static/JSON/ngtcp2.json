@@ -2,14 +2,10 @@
     "Software": "ngtcp2",
     "AI Description": "ngtcp2 is a C library implementation of the QUIC protocol (IETF draft) for building QUIC servers and clients.",
     "Core Features": "1. Implements the QUIC protocol.\n2. Provides APIs for building QUIC servers and clients.\n3. Supports version negotiation for QUIC.\n4. Offers integration with OpenSSL for cryptographic functions.",
-    "General Tags": [
-        "Quic Protocol",
-        "C Library",
-        "Networking"
-    ],
+    "General Tags": "Quic Protocol, C Library, Networking",
     "Software Type": "Library",
     "Software Class": "Networking Libraries",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

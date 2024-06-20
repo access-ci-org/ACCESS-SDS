@@ -1,22 +1,11 @@
 {
     "Software": "SNPsift",
     "AI Description": "SNPsift is a software tool used for filtering and annotating genetic variants, particularly single nucleotide polymorphisms (SNPs), in VCF files. It allows users to perform various operations to identify and extract relevant variants based on specified criteria.",
-    "Core Features": [
-        "Filtering genetic variants in VCF files",
-        "Annotating SNPs",
-        "Extracting specific variants based on user-defined criteria",
-        "Integration with other bioinformatics tools"
-    ],
-    "General Tags": [
-        "Bioinformatics",
-        "Variant Filtering",
-        "Genetic Variants",
-        "Vcf Files",
-        "Snps"
-    ],
+    "Core Features": "Filtering Genetic Variants In Vcf Files, Annotating Snps, Extracting Specific Variants Based On User-Defined Criteria, Integration With Other Bioinformatics Tools",
+    "General Tags": "Bioinformatics, Variant Filtering, Genetic Variants, Vcf Files, Snps",
     "Software Type": "Annotation Tool",
     "Software Class": "Bioinformatics Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genomics",
-    "Research Discipline": "Genetics"
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
 }

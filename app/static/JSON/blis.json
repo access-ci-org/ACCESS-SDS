@@ -2,15 +2,10 @@
     "Software": "BLIS",
     "AI Description": "BLAS (Basic Linear Algebra Subprograms) implemented in native C and suitable for high-performance implementations. BLIS is capable of achieving high levels of performance on various architectures.",
     "Core Features": "High-performance BLAS library, portable and flexible, optimized for various modern architectures, includes a BLISlab for automated performance analysis and tuning.",
-    "General Tags": [
-        "Blas",
-        "Linear Algebra",
-        "High Performance Computing",
-        "Optimization"
-    ],
+    "General Tags": "Blas, Linear Algebra, High Performance Computing, Optimization",
     "Software Type": "Computational Software",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

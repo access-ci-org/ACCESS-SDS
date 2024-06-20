@@ -1,25 +1,11 @@
 {
     "Software": "OHPC",
     "AI Description": "OpenHPC is a collaborative, community-driven effort to provide a comprehensive and cohesive open-source HPC stack to the community. Through close collaboration with key stakeholders across the industry, OpenHPC aims to provide a reference collection of open-source HPC software components and best practices to enable the development, testing, and deployment of HPC systems. Ultimately, building on the resecarch outputs from various related fields.",
-    "Core Features": [
-        "Comprehensive collection of open-source HPC software components",
-        "Best practices for HPC system development, testing, and deployment",
-        "Community-driven effort",
-        "Collaboration with key stakeholders in the industry"
-    ],
-    "General Tags": [
-        "Hpc",
-        "High Performance Computing",
-        "Open-Source",
-        "Collaborative",
-        "Community-Driven"
-    ],
+    "Core Features": "Comprehensive Collection Of Open-Source Hpc Software Components, Best Practices For Hpc System Development, Testing, & Deployment, Community-Driven Effort, Collaboration With Key Stakeholders In The Industry",
+    "General Tags": "Hpc, High Performance Computing, Open-Source, Collaborative, Community-Driven",
     "Software Type": "Computational Software",
-    "Software Class": [
-        "Development Tools",
-        "Infrastructure And Instrumentation"
-    ],
-    "Research Field": "Engineering & Technology",
+    "Software Class": "Development Tools, Infrastructure & Instrumentation",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
 }

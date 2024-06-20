@@ -1,23 +1,11 @@
 {
     "Software": "Visual Studio Code",
     "AI Description": "Visual Studio Code is a powerful source code editor developed by Microsoft for Windows, macOS, and Linux. It includes support for debugging, embedded Git control, syntax highlighting, intelligent code completion, snippets, and code refactoring.",
-    "Core Features": [
-        "Source code editor",
-        "Debugger",
-        "Git control",
-        "Syntax highlighting",
-        "Code completion",
-        "Code snippets",
-        "Code refactoring"
-    ],
-    "General Tags": [
-        "Ide",
-        "Code Editor",
-        "Development Tool"
-    ],
+    "Core Features": "Source Code Editor, Debugger, Git Control, Syntax Highlighting, Code Completion, Code Snippets, Code Refactoring",
+    "General Tags": "Ide, Code Editor, Development Tool",
     "Software Type": "Development Tool",
     "Software Class": "Ide",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

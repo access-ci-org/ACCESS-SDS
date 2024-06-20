@@ -1,18 +1,11 @@
 {
     "Software": "pullseq",
     "AI Description": "pullseq is a tool for extracting sequence data from a multi-FASTA file based on sequence identifiers. It can extract sequences by exact match, partial match, regular expression, and invert match. It is particularly useful for subsetting sequences from large sequence datasets.",
-    "Core Features": [
-        "Sequence extraction",
-        "Sequence subset",
-        "Sequence identification"
-    ],
-    "General Tags": [
-        "Bioinformatics",
-        "Sequence Analysis"
-    ],
+    "Core Features": "Sequence Extraction, Sequence Subset, Sequence Identification",
+    "General Tags": "Bioinformatics, Sequence Analysis",
     "Software Type": "Sequence Analysis Tool",
     "Software Class": "Bioinformatics Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

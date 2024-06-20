@@ -2,14 +2,10 @@
     "Software": "fastp",
     "AI Description": "fastp is a tool designed for pre-processing high throughput sequencing data faster and more efficiently.",
     "Core Features": "The core features of fastp include adapter trimming, quality filtering, quality control, and error correction of sequencing data.",
-    "General Tags": [
-        "Bioinformatics",
-        "Sequencing",
-        "Data Processing"
-    ],
+    "General Tags": "Bioinformatics, Sequencing, Data Processing",
     "Software Type": "Tool",
     "Software Class": "Data Processing",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genomics",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

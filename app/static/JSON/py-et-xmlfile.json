@@ -2,15 +2,10 @@
     "Software": "py-et-xmlfile",
     "AI Description": "The py-et-xmlfile is a Python library that provides efficient XML file reading and writing capabilities using ElementTree with a focus on performance and memory management.",
     "Core Features": "The library offers fast and memory-efficient handling of large XML files, supports reading and writing XML files using ElementTree, provides easy-to-use APIs for XML parsing and manipulation, and emphasizes performance optimization for processing XML data.",
-    "General Tags": [
-        "Python Library",
-        "Xml Processing",
-        "Elementtree",
-        "Performance Optimization"
-    ],
+    "General Tags": "Python Library, Xml Processing, Elementtree, Performance Optimization",
     "Software Type": "Data Processing",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

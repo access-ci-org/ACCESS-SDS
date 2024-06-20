@@ -2,15 +2,10 @@
     "Software": "r-rhdf5lib",
     "AI Description": "The R package r-rhdf5lib provides bindings to the HDF5 library for the R programming language. HDF5 is a versatile data model, enabling the management and storage of large and complex data sets. This package allows R users to interact with HDF5 files within the R environment.",
     "Core Features": "1. Facilitates reading and writing HDF5 files in R\n2. Enables the creation and manipulation of HDF5 datasets\n3. Supports the extraction of specific data subsets from HDF5 files\n4. Provides tools for exploring the structure of HDF5 datasets\n5. Offers a seamless interface between R and the HDF5 library",
-    "General Tags": [
-        "R Package",
-        "Hdf5 Library",
-        "Data Management",
-        "Data Storage"
-    ],
+    "General Tags": "R Package, Hdf5 Library, Data Management, Data Storage",
     "Software Type": "Library",
     "Software Class": "Data Management",
-    "Research Field": "Other Natural Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Other Natural Sciences"
 }

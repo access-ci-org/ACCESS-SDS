@@ -2,15 +2,10 @@
     "Software": "fftw3",
     "AI Description": "The Fastest Fourier Transform in the West (FFTW) is an open-source software library for calculating discrete Fourier transforms (DFTs) efficiently. It provides a wide range of algorithms for executing Fourier transforms of various sizes, both real and complex data.",
     "Core Features": "1. Efficient computation of discrete Fourier transforms (DFTs)\n2. Support for various transform sizes and data types\n3. Thread-safe and parallelized algorithms for performance optimization\n4. Portability across different platforms\n5. Customizable with user-defined options and configurations",
-    "General Tags": [
-        "Fft",
-        "Fourier Transform",
-        "Open-Source",
-        "Computational Physics"
-    ],
+    "General Tags": "Fft, Fourier Transform, Open-Source, Computational Physics",
     "Software Type": "Numerical Library",
     "Software Class": "Library",
-    "Research Field": "Physical Sciences",
     "Research Area": "Computational Physics",
-    "Research Discipline": "Condensed Matter Physics"
+    "Research Discipline": "Condensed Matter Physics",
+    "Research Field": "Physical Sciences"
 }

@@ -1,21 +1,11 @@
 {
     "Software": "CellChat",
     "AI Description": "CellChat is a Python package designed for cell-cell communication analysis in single-cell RNA-seq data. It provides a comprehensive toolkit for studying ligand-receptor interactions and signaling networks between different cell types within complex tissues.",
-    "Core Features": [
-        "Identification and visualization of ligand-receptor interactions",
-        "Inference of signaling networks between cell types",
-        "Integration of scRNA-seq data to study intercellular communication",
-        "Visualization of communication networks and pathways"
-    ],
-    "General Tags": [
-        "Single-Cell Rna Sequencing",
-        "Cell-Cell Communication",
-        "Bioinformatics",
-        "Python Package"
-    ],
+    "Core Features": "Identification & Visualization Of Ligand-Receptor Interactions, Inference Of Signaling Networks Between Cell Types, Integration Of Scrna-Seq Data To Study Intercellular Communication, Visualization Of Communication Networks & Pathways",
+    "General Tags": "Single-Cell RNA Sequencing, Cell-Cell Communication, Bioinformatics, Python Package",
     "Software Type": "Python Library",
     "Software Class": "Bioinformatics Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Single-Cell Analysis",
-    "Research Discipline": "Cell Biology"
+    "Research Discipline": "Cell Biology",
+    "Research Field": "Biological Sciences"
 }

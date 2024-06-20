@@ -1,19 +1,11 @@
 {
     "Software": "HighWay",
     "AI Description": "HighWay is an open-source statistical software tool designed for the identification of driver genes and pathways in cancer based on the analysis of somatic mutations across a cohort of tumor samples.",
-    "Core Features": [
-        "Identification of driver genes and pathways in cancer",
-        "Analysis of somatic mutations",
-        "Processing of tumor samples"
-    ],
-    "General Tags": [
-        "Bioinformatics",
-        "Computational Biology",
-        "Statistical Analysis"
-    ],
+    "Core Features": "Identification Of Driver Genes & Pathways In Cancer, Analysis Of Somatic Mutations, Processing Of Tumor Samples",
+    "General Tags": "Bioinformatics, Computational Biology, Statistical Analysis",
     "Software Type": "Statistical Tool",
     "Software Class": "Data Analysis",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genetics",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

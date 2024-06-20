@@ -2,15 +2,10 @@
     "Software": "python-parasail",
     "AI Description": "python-parasail is a Python library providing fast implementations of sequence alignment algorithms. It offers optimized implementations of pairwise sequence alignment based on the Parasail C library.",
     "Core Features": "1. Fast implementations of sequence alignment algorithms\n2. Optimized pairwise sequence alignment\n3. Integration with the Parasail C library\n4. Supports various alignment types such as global, semi-global, and local alignment\n5. Ability to work with a wide range of substitution matrices",
-    "General Tags": [
-        "Sequence Alignment",
-        "Bioinformatics",
-        "Computational Biology",
-        "Python Library"
-    ],
+    "General Tags": "Sequence Alignment, Bioinformatics, Computational Biology, Python Library",
     "Software Type": "Tool",
     "Software Class": "Library",
-    "Research Field": "Biological Sciences",
     "Research Area": "Sequence Alignment",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

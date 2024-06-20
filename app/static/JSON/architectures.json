@@ -2,14 +2,10 @@
     "Software": "architectures",
     "AI Description": "This software provides a platform for designing, analyzing, and visualizing various architectural structures and configurations. It offers tools for architects and engineers to create and simulate complex architectural designs.",
     "Core Features": "Design architectural structures, Analyze structural integrity, Visualize complex configurations, Simulate building performance",
-    "General Tags": [
-        "Architecture",
-        "Design",
-        "Simulation"
-    ],
+    "General Tags": "Architecture, Design, Simulation",
     "Software Type": "Design Tool",
     "Software Class": "Simulation & Modeling",
-    "Research Field": "Engineering & Technology",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
 }

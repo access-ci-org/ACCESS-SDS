@@ -2,17 +2,10 @@
     "Software": "Python",
     "AI Description": "Python is a high-level, interpreted programming language known for its simplicity and readability. It supports multiple programming paradigms and has a vast ecosystem of libraries and frameworks.",
     "Core Features": "1. Easy-to-learn syntax\n2. Interpreted nature\n3. Dynamic typing\n4. Extensive standard library\n5. Supports object-oriented, imperative, functional, and procedural programming\n6. Cross-platform compatibility\n7. Large community support\n8. Extensible and customizable\n9. Used for web development, data analysis, artificial intelligence, automation, and more.",
-    "General Tags": [
-        "Programming Language",
-        "Interpreted Language",
-        "High-Level Language"
-    ],
+    "General Tags": "Programming Language, Interpreted Language, High-Level Language",
     "Software Type": "Language",
     "Software Class": "General Purpose Programming Language",
-    "Research Field": [
-        "Computer And Information Sciences",
-        "Software Engineering, Systems, And Development"
-    ],
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences, Software Engineering, Systems, & Development"
 }

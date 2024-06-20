@@ -2,14 +2,10 @@
     "Software": "VLC",
     "AI Description": "VLC media player is a free and open-source portable cross-platform media player software and streaming media server developed by the VideoLAN project. VLC supports a wide range of multimedia formats, streaming protocols, and graphical user interface elements.",
     "Core Features": "1. Playback of various multimedia formats including MPEG-1, MPEG-2, MPEG-4, H.264, MKV, WebM, WMV, MP3, etc. \n2. Streaming support for various network protocols including UDP, HTTP, FTP, RTP, RTSP, etc. \n3. Ability to play encrypted DVDs, Blu-Ray discs, and VCDs. \n4. Advanced playback features like audio equalizer, video effects, and filters. \n5. Customizable skins and themes for the player interface. \n6. Media conversion and streaming capabilities. \n7. Support for subtitles and closed captions.",
-    "General Tags": [
-        "Media Player",
-        "Streaming",
-        "Multimedia"
-    ],
+    "General Tags": "Media Player, Streaming, Multimedia",
     "Software Type": "Application",
     "Software Class": "Media Player",
-    "Research Field": "Other Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Other Computer & Information Sciences"
 }

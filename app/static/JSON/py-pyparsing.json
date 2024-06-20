@@ -1,21 +1,11 @@
 {
     "Software": "py-pyparsing",
     "AI Description": "py-pyparsing is a Python module that helps in creating lexical parsers for processing textual data. It is a versatile parser generator that can be used for a wide range of parsing tasks, from simple text pattern matching to complex syntactic analysis.",
-    "Core Features": [
-        "Parsing textual data using user-defined grammar rules",
-        "Supports parsing of complex expressions and sentence structures",
-        "Ability to handle recursive grammars and backtracking",
-        "Integration with Python code for processing parsed data"
-    ],
-    "General Tags": [
-        "Parser Generator",
-        "Text Processing",
-        "Lexical Analysis",
-        "Python Module"
-    ],
+    "Core Features": "Parsing Textual Data Using User-Defined Grammar Rules, Supports Parsing Of Complex Expressions & Sentence Structures, Ability To Handle Recursive Grammars & Backtracking, Integration With Python Code For Processing Parsed Data",
+    "General Tags": "Parser Generator, Text Processing, Lexical Analysis, Python Module",
     "Software Type": "Parser Generator",
     "Software Class": "Software Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

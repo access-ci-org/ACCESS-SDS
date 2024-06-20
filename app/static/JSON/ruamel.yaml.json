@@ -2,15 +2,10 @@
     "Software": "ruamel.yaml",
     "AI Description": "ruamel.yaml is a YAML 1.2 loader/dumper package for Python. It is a superset of the PyYAML library and it includes round-trip parsing (which allows for preserving comments and formatting when loading and then emitting the YAML data).",
     "Core Features": "1. Supports YAML 1.2 2. Round-trip parsing to preserve comments and formatting 3. Compatibility with PyYAML 4. Comprehensive documentation",
-    "General Tags": [
-        "Yaml",
-        "Parser",
-        "Dumper",
-        "Python"
-    ],
+    "General Tags": "Yaml, Parser, Dumper, Python",
     "Software Type": "Data Serialization",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

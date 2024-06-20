@@ -2,14 +2,10 @@
     "Software": "STREAM",
     "AI Description": "STREAM (STreaming SIMD Extensions 2 through Array Manipulation) is a synthetic benchmark program that measures sustainable memory bandwidth and the corresponding computation rate for simple vector kernels.",
     "Core Features": "1. Measures sustainable memory bandwidth\n2. Evaluates computation rates for simple vector kernels\n3. Focuses on optimized SIMD parallelism",
-    "General Tags": [
-        "Benchmarking",
-        "Memory Bandwidth",
-        "Vector Kernels"
-    ],
+    "General Tags": "Benchmarking, Memory Bandwidth, Vector Kernels",
     "Software Type": "Benchmark Software",
     "Software Class": "Benchmarking Tool",
-    "Research Field": "Engineering & Technology",
     "Research Area": "Performance Evaluation & Benchmarking",
-    "Research Discipline": "Infrastructure & Instrumentation"
+    "Research Discipline": "Infrastructure & Instrumentation",
+    "Research Field": "Engineering & Technology"
 }

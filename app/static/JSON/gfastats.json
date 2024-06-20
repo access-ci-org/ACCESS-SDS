@@ -1,20 +1,11 @@
 {
     "Software": "gfastats",
     "AI Description": "gfastats is a Python library for statistical functions and data analysis, providing a wide range of functions for descriptive statistics, hypothesis testing, and regression analysis.",
-    "Core Features": [
-        "Descriptive statistics",
-        "Hypothesis testing",
-        "Regression analysis",
-        "Data analysis"
-    ],
-    "General Tags": [
-        "Python Library",
-        "Statistical Functions",
-        "Data Analysis"
-    ],
+    "Core Features": "Descriptive Statistics, Hypothesis Testing, Regression Analysis, Data Analysis",
+    "General Tags": "Python Library, Statistical Functions, Data Analysis",
     "Software Type": "Statistical Analysis Tool",
     "Software Class": "Python Library",
-    "Research Field": "Other Mathematics",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Other Mathematics"
 }

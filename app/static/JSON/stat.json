@@ -1,22 +1,11 @@
 {
     "Software": "stat",
     "AI Description": "Stat is a statistical software package designed for data analysis, statistical modeling, hypothesis testing, and visualization.",
-    "Core Features": [
-        "Data analysis",
-        "Statistical modeling",
-        "Hypothesis testing",
-        "Visualization"
-    ],
-    "General Tags": [
-        "Statistics",
-        "Data Analysis",
-        "Statistical Modeling",
-        "Hypothesis Testing",
-        "Visualization"
-    ],
+    "Core Features": "Data Analysis, Statistical Modeling, Hypothesis Testing, Visualization",
+    "General Tags": "Statistics, Data Analysis, Statistical Modeling, Hypothesis Testing, Visualization",
     "Software Type": "Data Analysis Tool",
     "Software Class": "Statistical Software",
-    "Research Field": "Mathematics",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Mathematics"
 }

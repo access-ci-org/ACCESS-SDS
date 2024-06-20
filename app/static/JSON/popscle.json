@@ -2,14 +2,10 @@
     "Software": "popscle",
     "AI Description": "Popscle is a computational tool for inferring population-scaled copy number variants and somatic single nucleotide variants from bulk DNA sequencing data. It offers capabilities to analyze data from diverse tumor types and platforms, providing insights into tumor heterogeneity and clonal evolution.",
     "Core Features": "1. Inferring population-scaled copy number variants\n2. Detecting somatic single nucleotide variants\n3. Analyzing data from different tumor types\n4. Studying tumor heterogeneity and clonal evolution",
-    "General Tags": [
-        "Computational Tool",
-        "Dna Sequencing",
-        "Tumor Analysis"
-    ],
+    "General Tags": "Computational Tool, DNA Sequencing, Tumor Analysis",
     "Software Type": "Bioinformatics",
     "Software Class": "Analysis Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genetics",
-    "Research Discipline": "Biological Sciences"
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
 }

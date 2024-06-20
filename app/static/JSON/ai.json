@@ -2,17 +2,10 @@
     "Software": "AI",
     "AI Description": "AI, or artificial intelligence, refers to the simulation of human intelligence processes by machines, particularly computer systems. These processes include learning, reasoning, problem-solving, perception, and language understanding.",
     "Core Features": "Core features of AI include machine learning, neural networks, natural language processing, computer vision, and robotics. AI systems can be designed to perform tasks such as speech recognition, decision-making, visual perception, and language translation.",
-    "General Tags": [
-        "Artificial Intelligence",
-        "Machine Learning",
-        "Neural Networks",
-        "Natural Language Processing",
-        "Computer Vision",
-        "Robotics"
-    ],
+    "General Tags": "Artificial Intelligence, Machine Learning, Neural Networks, Natural Language Processing, Computer Vision, Robotics",
     "Software Type": "Software",
     "Software Class": "Artificial Intelligence & Intelligent Systems",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

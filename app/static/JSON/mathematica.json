@@ -1,23 +1,11 @@
 {
     "Software": "Mathematica",
     "AI Description": "Mathematica is a computational software program used in scientific, engineering, mathematical and computing fields. It provides a wide range of tools for symbolic and numerical computations, visualization, data analysis, and programming.",
-    "Core Features": [
-        "Symbolic and numerical computation",
-        "Data analysis and visualization",
-        "Programming environment",
-        "Algorithms and equation solving",
-        "Machine learning capabilities"
-    ],
-    "General Tags": [
-        "Computational Software",
-        "Mathematics",
-        "Data Analysis",
-        "Programming",
-        "Visualization"
-    ],
+    "Core Features": "Symbolic & Numerical Computation, Data Analysis & Visualization, Programming Environment, Algorithms & Equation Solving, Machine Learning Capabilities",
+    "General Tags": "Computational Software, Mathematics, Data Analysis, Programming, Visualization",
     "Software Type": "Mathematical Software",
     "Software Class": "Computational Software",
-    "Research Field": "Mathematics",
     "Research Area": "",
-    "Research Discipline": "Applied Mathematics"
+    "Research Discipline": "Applied Mathematics",
+    "Research Field": "Mathematics"
 }

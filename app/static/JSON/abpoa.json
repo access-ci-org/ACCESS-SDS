@@ -2,14 +2,10 @@
     "Software": "abpoa",
     "AI Description": "ABPOA (adaptive bi-path overlap aligner) is a multiple sequence alignment tool that employs a novel bi-path structure to generate pairwise alignments between sequences for constructing a multiple sequence alignment. It is designed to align long noisy read sequences efficiently and accurately by adapting to local alignment conditions.",
     "Core Features": "1. Utilizes a bi-path structure for pairwise sequence alignment\n2. Designed for aligning long noisy read sequences\n3. Adapts to local alignment conditions to improve accuracy\n4. Efficient and scalable for handling large datasets",
-    "General Tags": [
-        "Multiple Sequence Alignment",
-        "Sequence Alignment",
-        "Long Read Sequences"
-    ],
+    "General Tags": "Multiple Sequence Alignment, Sequence Alignment, Long Read Sequences",
     "Software Type": "Alignment Tool",
     "Software Class": "Bioinformatics",
-    "Research Field": "Biological Sciences",
     "Research Area": "Comparative Genomics",
-    "Research Discipline": "Genetics"
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
 }

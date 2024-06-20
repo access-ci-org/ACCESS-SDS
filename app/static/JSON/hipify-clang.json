@@ -2,15 +2,10 @@
     "Software": "hipify-clang",
     "AI Description": "hipify-clang is a tool that translates CUDA code to HIP (Heterogeneous-Compute Interface for Portability) code, enabling the porting of CUDA applications to AMD GPUs.",
     "Core Features": "1. Translates CUDA source code to HIP source code.\n2. Facilitates the migration of CUDA applications to AMD GPUs.\n3. Helps in leveraging the performance of AMD GPUs for existing CUDA projects.",
-    "General Tags": [
-        "Cuda",
-        "Hip",
-        "Gpu Computing",
-        "Code Translation"
-    ],
+    "General Tags": "Cuda, Hip, Gpu Computing, Code Translation",
     "Software Type": "Code Translation Tool",
     "Software Class": "Compiler",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

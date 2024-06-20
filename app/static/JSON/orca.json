@@ -2,17 +2,10 @@
     "Software": "Orca",
     "AI Description": "Orca is a flexible, efficient, and powerful quantum chemistry software written by Frank Neese and co-workers. It provides accurate and reliable computational simulations of molecular structures and properties based on quantum mechanical methods.",
     "Core Features": "Orca offers a wide range of quantum chemical methods, including Density Functional Theory (DFT), ab initio Hartree-Fock, and many post-Hartree-Fock methods. It can perform geometry optimizations, transition state searches, and molecular dynamics simulations. Orca also supports a variety of spectroscopic properties calculations, such as NMR chemical shifts, electronic circular dichroism (ECD) spectra, and UV/Vis spectra.",
-    "General Tags": [
-        "Quantum Chemistry",
-        "Computational Chemistry",
-        "Quantum Mechanics"
-    ],
+    "General Tags": "Quantum Chemistry, Computational Chemistry, Quantum Mechanics",
     "Software Type": "Quantum Chemistry Software",
     "Software Class": "Molecular Simulation Software",
-    "Research Field": "Chemical Sciences",
-    "Research Area": [
-        "Theoretical Chemistry",
-        "Computational Chemistry"
-    ],
-    "Research Discipline": "Physical Chemistry"
+    "Research Area": "Theoretical Chemistry, Computational Chemistry",
+    "Research Discipline": "Physical Chemistry",
+    "Research Field": "Chemical Sciences"
 }

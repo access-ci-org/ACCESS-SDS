@@ -2,19 +2,10 @@
     "Software": "ColossalAI",
     "AI Description": "ColossalAI is an open-source deep learning framework that focuses on large-scale distributed training and efficient model serving. It provides a unified platform for researchers and practitioners to build, train, and deploy deep learning models at scale.",
     "Core Features": "1. Large-scale distributed training capabilities\n2. Efficient model serving for deployment\n3. Unified platform for building and training deep learning models\n4. Support for a wide range of deep learning architectures and algorithms",
-    "General Tags": [
-        "Deep Learning Framework",
-        "Large-Scale Training",
-        "Model Serving"
-    ],
+    "General Tags": "Deep Learning Framework, Large-Scale Training, Model Serving",
     "Software Type": "Open Source",
     "Software Class": "Deep Learning Framework",
-    "Research Field": "Computer & Information Sciences",
-    "Research Area": [
-        "Deep Learning",
-        "Machine Learning"
-    ],
-    "Research Discipline": [
-        "Artificial Intelligence And Intelligent Systems"
-    ]
+    "Research Area": "Deep Learning, Machine Learning",
+    "Research Discipline": "Artificial Intelligence & Intelligent Systems",
+    "Research Field": "Computer & Information Sciences"
 }

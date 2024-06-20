@@ -1,19 +1,11 @@
 {
     "Software": "CNVkit",
     "AI Description": "CNVkit is a software toolkit for copy number variation (CNV) detection and genotyping from targeted DNA sequencing data. It is designed to handle shallow coverage whole-exome and panel target sequencing from tumor-normal pairs.",
-    "Core Features": [
-        "Detection and genotyping of copy number variations (CNVs)",
-        "Handling shallow coverage whole-exome and panel target sequencing data",
-        "Analysis of tumor-normal pairs"
-    ],
-    "General Tags": [
-        "Bioinformatics",
-        "Hpc Tools",
-        "Computational Software"
-    ],
+    "Core Features": "Detection & Genotyping Of Copy Number Variations (Cnvs), Handling Shallow Coverage Whole-Exome & Panel Target Sequencing Data, Analysis Of Tumor-Normal Pairs",
+    "General Tags": "Bioinformatics, Hpc Tools, Computational Software",
     "Software Type": "Analysis Tool",
     "Software Class": "Genomics",
-    "Research Field": "Biological Sciences",
     "Research Area": "Molecular Biology",
-    "Research Discipline": "Genetics"
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
 }

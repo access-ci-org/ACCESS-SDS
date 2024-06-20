@@ -2,14 +2,10 @@
     "Software": "COVERM",
     "AI Description": "COVERM is a software tool for the analysis of metagenomic data, particularly for evaluating the coverage and abundance of genes or sequences within metagenomes.",
     "Core Features": "Some core features of COVERM include calculating coverage and abundance metrics for genes in metagenomic data, assessing sample completeness, providing visualizations for coverage profiles, and enabling users to compare different samples.",
-    "General Tags": [
-        "Metagenomics",
-        "Bioinformatics",
-        "Genomics"
-    ],
+    "General Tags": "Metagenomics, Bioinformatics, Genomics",
     "Software Type": "Genomic Analysis Tool",
     "Software Class": "Computational Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Bioinformatics",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

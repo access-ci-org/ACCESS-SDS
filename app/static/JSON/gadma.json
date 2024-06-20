@@ -2,15 +2,10 @@
     "Software": "gadma",
     "AI Description": "GADMA (Genetic Algorithm for Detecting Mutually exclusive Alterations) is a tool for identifying mutually exclusive alterations in cancer using a genetic algorithm approach.",
     "Core Features": "1. Utilizes genetic algorithm techniques for identifying mutually exclusive alterations. 2. Provides visualization tools for results interpretation. 3. Supports input data from various cancer genomics studies. 4. Allows customization of parameters to refine analysis. 5. Facilitates the discovery of potential driver genes in cancer.",
-    "General Tags": [
-        "Genetic Algorithm",
-        "Cancer Genomics",
-        "Mutually Exclusive Alterations",
-        "Driver Genes"
-    ],
+    "General Tags": "Genetic Algorithm, Cancer Genomics, Mutually Exclusive Alterations, Driver Genes",
     "Software Type": "Tool",
     "Software Class": "Bioinformatics",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genetics",
-    "Research Discipline": "Biological Sciences"
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
 }

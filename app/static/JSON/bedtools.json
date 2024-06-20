@@ -2,15 +2,10 @@
     "Software": "bedtools",
     "AI Description": "Bedtools is a software suite for the comparison, manipulation, and annotation of genomic features in multiple formats.",
     "Core Features": "Bedtools enables users to intersect, merge, count, complement, and shuffle genomic intervals from multiple files. It facilitates the identification of overlaps between different genomic features, such as peaks, gene annotations, and other genomic regions.",
-    "General Tags": [
-        "Bioinformatics",
-        "Genomics",
-        "Data Analysis",
-        "Tool"
-    ],
+    "General Tags": "Bioinformatics, Genomics, Data Analysis, Tool",
     "Software Type": "",
     "Software Class": "",
-    "Research Field": "Biological Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

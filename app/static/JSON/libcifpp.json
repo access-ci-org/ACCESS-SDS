@@ -8,20 +8,11 @@
     },
     "Software": "libcifpp",
     "AI Description": "libcifpp is a C++ library for reading, writing, and manipulating Crystallographic Information Format (CIF) files. CIF is a standard text file format for representing crystallographic information approved by the International Union of Crystallography.",
-    "Core Features": [
-        "Provides an API for parsing CIF files",
-        "Supports reading and writing CIF files",
-        "Allows manipulation of CIF data"
-    ],
-    "General Tags": [
-        "Cif Files",
-        "Crystallography",
-        "Library",
-        "C++"
-    ],
+    "Core Features": "Provides An Api For Parsing Cif Files, Supports Reading & Writing Cif Files, Allows Manipulation Of Cif Data",
+    "General Tags": "Cif Files, Crystallography, Library, C++",
     "Software Type": "",
     "Software Class": "",
-    "Research Field": "",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": ""
 }

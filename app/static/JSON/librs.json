@@ -2,15 +2,10 @@
     "Software": "librs",
     "AI Description": "librs is a library for performing robust statistics in various programming languages.",
     "Core Features": "Provides functions for robust statistical analysis, including robust regression, robust covariance estimation, and outlier detection. Supports multiple programming languages such as Python, R, and Matlab. Implements algorithms for resistant fitting and robust M-estimators.",
-    "General Tags": [
-        "Statistics",
-        "Robust Statistics",
-        "Outlier Detection",
-        "Data Analysis"
-    ],
+    "General Tags": "Statistics, Robust Statistics, Outlier Detection, Data Analysis",
     "Software Type": "Statistical Analysis",
     "Software Class": "Library",
-    "Research Field": "Statistics & Probability",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Statistics & Probability"
 }

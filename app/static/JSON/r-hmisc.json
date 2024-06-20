@@ -2,15 +2,10 @@
     "Software": "r-hmisc",
     "AI Description": "The r-hmisc package in R provides a collection of functions for statistical analysis and data manipulation. It includes tools for data processing, visualization, model selection, imputation, and regression diagnostics.",
     "Core Features": "1. Data manipulation and processing\n2. Statistical analysis functions\n3. Visualization tools\n4. Model selection and imputation techniques\n5. Regression diagnostics",
-    "General Tags": [
-        "Statistics",
-        "Data Analysis",
-        "Data Visualization",
-        "Regression"
-    ],
+    "General Tags": "Statistics, Data Analysis, Data Visualization, Regression",
     "Software Type": "Library",
     "Software Class": "R Package",
-    "Research Field": "Statistics & Probability",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Statistics & Probability"
 }

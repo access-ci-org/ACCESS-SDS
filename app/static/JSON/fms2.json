@@ -2,14 +2,10 @@
     "Software": "fms2",
     "AI Description": "fms2 is an efficient and flexible Fortran to C++ source-to-source compiler that aids in translating Fortran 77/90/95 code to modern C++ code, enabling improved performance and compatibility.",
     "Core Features": "fms2 offers automatic translation of legacy Fortran code to modern C++ for enhanced performance, supports Fortran 77/90/95 standards, assists in porting legacy scientific applications to modern architectures, provides optimizations for improved computational efficiency.",
-    "General Tags": [
-        "Compiler",
-        "Software",
-        "Translation"
-    ],
+    "General Tags": "Compiler, Software, Translation",
     "Software Type": "Source-To-Source Compiler",
     "Software Class": "Compiler",
-    "Research Field": "Other Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Other Computer & Information Sciences"
 }

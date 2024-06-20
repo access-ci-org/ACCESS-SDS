@@ -1,22 +1,11 @@
 {
     "Software": "tbb32",
     "AI Description": "Intel Threading Building Blocks (TBB) is a widely used C++ template library developed by Intel for parallel programming on multi-core processors. TBB provides higher-level abstractions for parallelism, making it easier to write code that can take advantage of multicore processors.",
-    "Core Features": [
-        "Task-based parallelism",
-        "Data parallelism",
-        "Concurrency",
-        "Scalability",
-        "Thread safety"
-    ],
-    "General Tags": [
-        "Parallel Programming",
-        "Multi-Core Processors",
-        "C++ Template Library",
-        "Intel"
-    ],
+    "Core Features": "Task-Based Parallelism, Data Parallelism, Concurrency, Scalability, Thread Safety",
+    "General Tags": "Parallel Programming, Multi-Core Processors, C++ Template Library, Intel",
     "Software Type": "Library",
     "Software Class": "Development Tools",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

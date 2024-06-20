@@ -2,15 +2,10 @@
     "Software": "Bazel",
     "AI Description": "Bazel is a build tool that helps to build and test software of any size, quickly and reliably.",
     "Core Features": "Bazel provides advanced caching and parallel execution for faster builds, support for multiple languages, robust dependency analysis, and scalable resource management.",
-    "General Tags": [
-        "Build Tool",
-        "Software Testing",
-        "Dependency Management",
-        "Resource Management"
-    ],
+    "General Tags": "Build Tool, Software Testing, Dependency Management, Resource Management",
     "Software Type": "Build & Testing Tools",
     "Software Class": "Development Tools & Techniques",
-    "Research Field": "Engineering & Technology",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
 }

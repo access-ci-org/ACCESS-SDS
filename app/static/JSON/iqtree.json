@@ -1,21 +1,11 @@
 {
     "Software": "IQ-TREE",
     "AI Description": "IQ-TREE is a fast and effective software for phylogenomic inference. It implements a variety of models for DNA and protein sequences, including substitution models, rate heterogeneity, and mixture models. IQ-TREE uses maximum likelihood estimation to construct phylogenetic trees, and offers ultrafast bootstrap approximation to assess the tree accuracy.",
-    "Core Features": [
-        "Phylogenomic inference",
-        "Substitution models",
-        "Ultrafast bootstrap approximation",
-        "Maximum likelihood estimation"
-    ],
-    "General Tags": [
-        "Phylogenetics",
-        "Bioinformatics",
-        "Computational Biology",
-        "Phylogenomic Analysis"
-    ],
+    "Core Features": "Phylogenomic Inference, Substitution Models, Ultrafast Bootstrap Approximation, Maximum Likelihood Estimation",
+    "General Tags": "Phylogenetics, Bioinformatics, Computational Biology, Phylogenomic Analysis",
     "Software Type": "Phylogenetic Tree Construction Tool",
     "Software Class": "Bioinformatics Software",
-    "Research Field": "Biological Sciences",
     "Research Area": "Phylogenetics",
-    "Research Discipline": "Systematics & Population Biology"
+    "Research Discipline": "Systematics & Population Biology",
+    "Research Field": "Biological Sciences"
 }

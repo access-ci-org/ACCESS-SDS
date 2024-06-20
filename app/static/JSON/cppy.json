@@ -1,20 +1,11 @@
 {
     "Software": "cppy",
     "AI Description": "C++ embedded Python library to seamlessly interact with C++ and Python code within the same application.",
-    "Core Features": [
-        "Embed Python interpreter in C++ applications",
-        "Call Python functions from C++ code",
-        "Exchange data between C++ and Python seamlessly"
-    ],
-    "General Tags": [
-        "C++",
-        "Python",
-        "Embedded Python",
-        "Interoperability"
-    ],
+    "Core Features": "Embed Python Interpreter In C++ Applications, Call Python Functions From C++ Code, Exchange Data Between C++ & Python Seamlessly",
+    "General Tags": "C++, Python, Embedded Python, Interoperability",
     "Software Type": "Integration Tool",
     "Software Class": "Software Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

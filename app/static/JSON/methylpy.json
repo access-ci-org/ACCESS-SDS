@@ -1,22 +1,11 @@
 {
     "Software": "methylpy",
     "AI Description": "methylpy is a Python package designed for the analysis of DNA methylation data obtained from bisulfite sequencing. It provides various tools for processing, analyzing, visualizing, and interpreting DNA methylation data.",
-    "Core Features": [
-        "Preprocessing of bisulfite sequencing data",
-        "Identification of differentially methylated regions (DMRs)",
-        "Annotation of DMRs with genomic features",
-        "Visualization of methylation patterns"
-    ],
-    "General Tags": [
-        "Dna Methylation",
-        "Bisulfite Sequencing",
-        "Epigenetics",
-        "Bioinformatics",
-        "Python Package"
-    ],
+    "Core Features": "Preprocessing Of Bisulfite Sequencing Data, Identification Of Differentially Methylated Regions (Dmrs), Annotation Of Dmrs With Genomic Features, Visualization Of Methylation Patterns",
+    "General Tags": "DNA Methylation, Bisulfite Sequencing, Epigenetics, Bioinformatics, Python Package",
     "Software Type": "Python Library",
     "Software Class": "Analysis Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Epigenomics",
-    "Research Discipline": "Genetics"
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
 }

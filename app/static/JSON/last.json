@@ -2,14 +2,10 @@
     "Software": "last",
     "AI Description": "Last is a program for aligning sequencing reads to a reference genome with important applications in the field of bioinformatics.",
     "Core Features": "1. Performs read alignment to a reference genome. 2. Supports paired-end and single-end reads. 3. Outputs alignments in SAM/BAM format. 4. Efficiently handles large datasets. 5. Utilizes a seed-and-extend algorithm for alignment.",
-    "General Tags": [
-        "Bioinformatics",
-        "Sequence Alignment",
-        "Genomics"
-    ],
+    "General Tags": "Bioinformatics, Sequence Alignment, Genomics",
     "Software Type": "",
     "Software Class": "",
-    "Research Field": "",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": ""
 }

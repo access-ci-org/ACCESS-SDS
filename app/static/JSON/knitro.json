@@ -2,15 +2,10 @@
     "Software": "Knitro",
     "AI Description": "Knitro is a proprietary software package for solving large-scale optimization problems. It provides a suite of optimization algorithms designed to handle continuous nonlinear optimization problems efficiently. Knitro is suitable for solving problems with thousands to millions of variables and constraints.",
     "Core Features": "1. Nonlinear optimization algorithms\n2. Large-scale optimization capabilities\n3. Efficient handling of thousands to millions of variables and constraints\n4. Ability to solve continuous optimization problems\n5. Support for various problem types and advanced modeling features",
-    "General Tags": [
-        "Optimization",
-        "Large-Scale",
-        "Nonlinear",
-        "Modeling"
-    ],
+    "General Tags": "Optimization, Large-Scale, Nonlinear, Modeling",
     "Software Type": "Solver",
     "Software Class": "Optimization Software",
-    "Research Field": "Other Mathematics",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Other Mathematics"
 }

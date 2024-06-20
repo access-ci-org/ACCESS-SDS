@@ -2,14 +2,10 @@
     "Software": "Capstone",
     "AI Description": "Capstone is a disassembly framework with the target of becoming the ultimate disasm engine for binary analysis and reversing in the security community. Created by Nguyen Anh Quynh, it is open-source software distributed under the Simplified BSD License.",
     "Core Features": "Capstone supports multiple hardware architectures and provides a rich set of APIs for disassembling machine code, including instruction semantics, details, and operand access. It is designed to be lightweight and efficient, making it suitable for various applications such as static code analysis, dynamic binary instrumentation, malware analysis, and more.",
-    "General Tags": [
-        "Disassembly",
-        "Binary Analysis",
-        "Reverse Engineering"
-    ],
+    "General Tags": "Disassembly, Binary Analysis, Reverse Engineering",
     "Software Type": "Tool",
     "Software Class": "Disassembly Framework",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Cybersecurity",
-    "Research Discipline": "Computer Science"
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
 }

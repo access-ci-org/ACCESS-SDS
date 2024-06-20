@@ -2,14 +2,10 @@
     "Software": "Libmesh",
     "AI Description": "Libmesh is a C++ finite element library designed to provide a framework for the numerical simulation of partial differential equations in high dimensions. It supports 1D, 2D, and 3D mesh generation, provides a wide range of finite element types, and includes solvers for various types of PDEs.",
     "Core Features": "1. Multi-dimensional mesh generation\n2. Support for a variety of finite element types\n3. Solvers for a range of partial differential equations\n4. Parallel computing capabilities\n5. Extensive documentation and user support",
-    "General Tags": [
-        "Finite Element Library",
-        "Numerical Simulation",
-        "Partial Differential Equations"
-    ],
+    "General Tags": "Finite Element Library, Numerical Simulation, Partial Differential Equations",
     "Software Type": "Library",
     "Software Class": "Simulation & Modeling",
-    "Research Field": "Other Mathematics",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Other Mathematics"
 }

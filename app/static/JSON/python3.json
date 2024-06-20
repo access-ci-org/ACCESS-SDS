@@ -1,26 +1,11 @@
 {
     "Software": "Python3",
     "AI Description": "Python3 is a versatile, high-level programming language that is known for its readability and simplicity. It supports multiple programming paradigms such as object-oriented, imperative, functional, and procedural programming. Python3 has a comprehensive standard library and a large ecosystem of third-party packages, making it suitable for a wide range of applications.",
-    "Core Features": [
-        "Clean and readable syntax",
-        "Dynamic typing",
-        "Automatic memory management",
-        "Extensive standard library",
-        "Support for multiple programming paradigms",
-        "Large ecosystem of third-party packages",
-        "Cross-platform compatibility"
-    ],
-    "General Tags": [
-        "Programming Language",
-        "Scripting Language"
-    ],
+    "Core Features": "Clean & Readable Syntax, Dynamic Typing, Automatic Memory Management, Extensive Standard Library, Support For Multiple Programming Paradigms, Large Ecosystem Of Third-Party Packages, Cross-Platform Compatibility",
+    "General Tags": "Programming Language, Scripting Language",
     "Software Type": "Interpreter",
     "Software Class": "General Purpose Programming Language",
-    "Research Field": [
-        "Computer And Information Sciences",
-        "Computer Science",
-        "Other Computer And Information Sciences"
-    ],
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences, Computer Science, Other Computer & Information Sciences"
 }

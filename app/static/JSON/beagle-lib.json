@@ -9,16 +9,10 @@
     "Software": "beagle-lib",
     "AI Description": "Beagle-lib is a high-performance library for evaluating the likelihood of sequence evolution on phylogenetic trees. It is designed to implement the BEAGLE (Broad-platform Evolutionary Analysis General Likelihood Evaluator) application programming interface (API) for helping in tasks related to phylogenetic inference in computational biology.",
     "Core Features": "1. High-performance likelihood calculations for phylogenetic inference. 2. Implementing the BEAGLE API for efficient computation on both CPU and GPU architectures. 3. Provides functionalities for assessing sequence evolution on large phylogenetic trees. 4. Supports parallel processing for faster calculations. 5. Optimized for handling complex evolutionary models and large datasets efficiently.",
-    "General Tags": [
-        "Computational Biology",
-        "Phylogenetic Inference",
-        "Likelihood Evaluation",
-        "Evolutionary Analysis",
-        "Bioinformatics"
-    ],
+    "General Tags": "Computational Biology, Phylogenetic Inference, Likelihood Evaluation, Evolutionary Analysis, Bioinformatics",
     "Software Type": "",
     "Software Class": "",
-    "Research Field": "",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": ""
 }

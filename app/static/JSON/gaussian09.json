@@ -2,14 +2,10 @@
     "Software": "Gaussian09",
     "AI Description": "Gaussian09 is a software suite for quantum chemistry calculations, widely used for predicting molecular properties and behaviors based on quantum mechanics principles.",
     "Core Features": "1. Perform ab initio and DFT calculations for molecules and reactions.\n2. Predict electronic and molecular structures, energies, and spectra.\n3. Explore potential energy surfaces and reaction mechanisms.\n4. Study molecular properties like dipole moments, polarizabilities, and vibrational frequencies.",
-    "General Tags": [
-        "Quantum Chemistry",
-        "Quantum Mechanics",
-        "Molecular Modeling"
-    ],
+    "General Tags": "Quantum Chemistry, Quantum Mechanics, Molecular Modeling",
     "Software Type": "Computational Software",
     "Software Class": "Quantum Chemistry Software",
-    "Research Field": "Chemical Sciences",
     "Research Area": "Physical Chemistry",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Chemical Sciences"
 }

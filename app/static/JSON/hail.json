@@ -1,23 +1,11 @@
 {
     "Software": "Hail",
     "AI Description": "Hail is an open-source, scalable genetic analysis platform built to store and process large-scale genetic data with ease. It is tailored for exploring, analyzing, and visualizing genomic data on research scale.",
-    "Core Features": [
-        "Scalable genetic analysis platform",
-        "Storage and processing of large-scale genetic data",
-        "Exploration, analysis, and visualization of genomic data",
-        "Support for high-throughput sequencing data",
-        "Integration with Apache Spark for distributed computing"
-    ],
-    "General Tags": [
-        "Genetic Analysis",
-        "Genomics",
-        "Big Data",
-        "Bioinformatics",
-        "Genetic Data Analysis"
-    ],
+    "Core Features": "Scalable Genetic Analysis Platform, Storage & Processing Of Large-Scale Genetic Data, Exploration, Analysis, & Visualization Of Genomic Data, Support For High-Throughput Sequencing Data, Integration With Apache Spark For Distributed Computing",
+    "General Tags": "Genetic Analysis, Genomics, Big Data, Bioinformatics, Genetic Data Analysis",
     "Software Type": "Analysis Tool",
     "Software Class": "Bioinformatics & Computational Biology",
-    "Research Field": "Biological Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

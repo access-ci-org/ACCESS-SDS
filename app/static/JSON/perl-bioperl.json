@@ -1,23 +1,11 @@
 {
     "Software": "Perl BioPerl",
     "AI Description": "BioPerl is a collection of Perl modules that provide a toolkit for bioinformatics programming. It aims to facilitate the development of bioinformatics applications by providing reusable components and utilities.",
-    "Core Features": [
-        "Access to biological databases",
-        "Sequence analysis tools",
-        "Phylogenetic analysis",
-        "Structural biology support",
-        "Data manipulation and conversion functions"
-    ],
-    "General Tags": [
-        "Bioinformatics",
-        "Perl",
-        "Computational Biology",
-        "Sequence Analysis",
-        "Structural Biology"
-    ],
+    "Core Features": "Access To Biological Databases, Sequence Analysis Tools, Phylogenetic Analysis, Structural Biology Support, Data Manipulation & Conversion Functions",
+    "General Tags": "Bioinformatics, Perl, Computational Biology, Sequence Analysis, Structural Biology",
     "Software Type": "Toolkit",
     "Software Class": "Library",
-    "Research Field": "Biological Sciences",
     "Research Area": "Bioinformatics",
-    "Research Discipline": "Molecular Biology"
+    "Research Discipline": "Molecular Biology",
+    "Research Field": "Biological Sciences"
 }

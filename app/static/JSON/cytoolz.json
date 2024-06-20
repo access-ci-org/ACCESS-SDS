@@ -1,19 +1,11 @@
 {
     "Software": "cytoolz",
     "AI Description": "CyToolz is a \"cythonized\" version of the Toolz library, providing high performance utility functions for iterables, functions, and dictionaries in Python. It offers a set of functional tools for iterators that extends the itertools module with additional functions.",
-    "Core Features": [
-        "- High performance utility functions for iterables, functions, and dictionaries",
-        "- Extends the itertools module with additional functions",
-        "- Improved performance through Cython optimization"
-    ],
-    "General Tags": [
-        "Python Library",
-        "Functional Programming",
-        "Utility Functions"
-    ],
+    "Core Features": "- High Performance Utility Functions For Iterables, Functions, & Dictionaries, - Extends The Itertools Module With Additional Functions, - Improved Performance Through Cython Optimization",
+    "General Tags": "Python Library, Functional Programming, Utility Functions",
     "Software Type": "Utility",
     "Software Class": "Python Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

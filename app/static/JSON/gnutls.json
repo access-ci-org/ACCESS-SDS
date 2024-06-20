@@ -1,19 +1,11 @@
 {
     "Software": "gnutls",
     "AI Description": "GnuTLS is a secure communications library implementing the SSL, TLS and DTLS protocols, providing various cryptographic algorithms.",
-    "Core Features": [
-        "Implement SSL, TLS, and DTLS protocols",
-        "Support various cryptographic algorithms",
-        "Secure communication library"
-    ],
-    "General Tags": [
-        "Security",
-        "Encryption",
-        "Networking"
-    ],
+    "Core Features": "Implement Ssl, Tls, & Dtls Protocols, Support Various Cryptographic Algorithms, Secure Communication Library",
+    "General Tags": "Security, Encryption, Networking",
     "Software Type": "Library",
     "Software Class": "Networking & Security",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

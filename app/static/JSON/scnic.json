@@ -1,22 +1,11 @@
 {
     "Software": "scnic",
     "AI Description": "scnic is a Python package designed for the analysis, visualization, and interpretation of single-cell data.",
-    "Core Features": [
-        "Quality control of single-cell datasets",
-        "Dimensionality reduction techniques",
-        "Clustering algorithms",
-        "Visualization tools for single-cell data",
-        "Interpretation of single-cell data"
-    ],
-    "General Tags": [
-        "Single-Cell Analysis",
-        "Data Visualization",
-        "Bioinformatics",
-        "Python Library"
-    ],
+    "Core Features": "Quality Control Of Single-Cell Datasets, Dimensionality Reduction Techniques, Clustering Algorithms, Visualization Tools For Single-Cell Data, Interpretation Of Single-Cell Data",
+    "General Tags": "Single-Cell Analysis, Data Visualization, Bioinformatics, Python Library",
     "Software Type": "Data Analysis Tool",
     "Software Class": "Python Library",
-    "Research Field": "Biological Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

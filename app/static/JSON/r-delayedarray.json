@@ -2,14 +2,10 @@
     "Software": "r-delayedarray",
     "AI Description": "The r-delayedarray package in R provides classes and methods for large-scale array-oriented calculations, particularly for array-like objects that are too large to fit into memory at once. It allows for efficient array storage and manipulation through delayed operations and memory-mapping to minimize memory usage and optimize performance.",
     "Core Features": "1. Support for large-scale array-oriented calculations\n2. Delayed operations for efficient memory usage\n3. Memory-mapping for optimized performance\n4. Integration with other R packages for data analysis and visualization",
-    "General Tags": [
-        "Array Processing",
-        "Large-Scale Data Analysis",
-        "Memory Optimization"
-    ],
+    "General Tags": "Array Processing, Large-Scale Data Analysis, Memory Optimization",
     "Software Type": "R Library",
     "Software Class": "Computational Software",
-    "Research Field": "Other Natural Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Other Natural Sciences"
 }

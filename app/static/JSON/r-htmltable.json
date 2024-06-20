@@ -2,15 +2,10 @@
     "Software": "r-htmltable",
     "AI Description": "r-htmltable is an R package that provides functionality to easily create HTML tables from R objects, allowing users to customize the appearance and style of tables for publication-ready output.",
     "Core Features": "1. Creation of HTML tables from R objects.\n2. Customization of table appearance and style.\n3. Options for adding headers, footers, and other table elements.\n4. Support for formatting and styling content within cells.\n5. Ability to export tables in HTML format for use in reports, websites, and presentations.",
-    "General Tags": [
-        "R Package",
-        "Html Tables",
-        "Data Visualization",
-        "Publication-Ready Output"
-    ],
+    "General Tags": "R Package, Html Tables, Data Visualization, Publication-Ready Output",
     "Software Type": "Library",
     "Software Class": "Data Visualization",
-    "Research Field": "Other Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Other Computer & Information Sciences"
 }

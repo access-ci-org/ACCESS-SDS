@@ -2,16 +2,10 @@
     "Software": "vtk",
     "AI Description": "The Visualization Toolkit (VTK) is an open-source software system for 3D computer graphics, image processing, and visualization used by thousands of researchers and developers around the world. VTK offers a wide range of functionality for tasks such as scientific visualization, medical imaging, computational fluid dynamics, and more.",
     "Core Features": "Core features of VTK include 3D rendering, volume rendering, surface and contour plotting, interactive manipulation of data, support for various input formats (such as DICOM for medical imaging), integration with Python for scripting, parallel processing capabilities, and support for OpenGL and DirectX rendering.",
-    "General Tags": [
-        "3D Computer Graphics",
-        "Image Processing",
-        "Scientific Visualization",
-        "Medical Imaging",
-        "Computational Fluid Dynamics"
-    ],
+    "General Tags": "3D Computer Graphics, Image Processing, Scientific Visualization, Medical Imaging, Computational Fluid Dynamics",
     "Software Type": "Visualization",
     "Software Class": "Scientific Computing",
-    "Research Field": "Physical Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Physical Sciences"
 }

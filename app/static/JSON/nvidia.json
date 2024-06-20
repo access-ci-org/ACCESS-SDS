@@ -2,15 +2,10 @@
     "Software": "NVIDIA",
     "AI Description": "NVIDIA Corporation is an American technology company that designs graphics processing units (GPUs) for the gaming, cryptocurrency, and professional markets, as well as system on a chip units (SoCs) for the mobile computing and automotive market.",
     "Core Features": "1. Design of GPUs for gaming, cryptocurrency, and professional markets.\n2. Creation of SoCs for mobile computing and automotive markets.\n3. Development of high-performance computing solutions.\n4. Provision of software solutions for AI, deep learning, and data analytics.",
-    "General Tags": [
-        "Graphics Processing Units",
-        "High-Performance Computing",
-        "Deep Learning",
-        "Data Analytics"
-    ],
+    "General Tags": "Graphics Processing Units, High-Performance Computing, Deep Learning, Data Analytics",
     "Software Type": "Graphics Processing Units",
     "Software Class": "Hardware",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

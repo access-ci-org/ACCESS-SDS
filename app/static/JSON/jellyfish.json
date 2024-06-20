@@ -2,14 +2,10 @@
     "Software": "jellyfish",
     "AI Description": "Jellyfish is a tool for fast, memory-efficient counting of k-mers in DNA sequences. It has the capability to efficiently store and query k-mer counts in large sequencing datasets.",
     "Core Features": "1. Counting k-mers in DNA sequences\n2. Memory-efficient data storage\n3. Fast querying of k-mer counts\n4. Support for large sequencing datasets",
-    "General Tags": [
-        "K-Mer Counting",
-        "Dna Sequences",
-        "Sequence Analysis"
-    ],
+    "General Tags": "K-Mer Counting, DNA Sequences, Sequence Analysis",
     "Software Type": "Bioinformatics Tool",
     "Software Class": "Computational Biology",
-    "Research Field": "Biological Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

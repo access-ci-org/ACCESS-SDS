@@ -1,21 +1,11 @@
 {
     "Software": "gobject-introspection",
     "AI Description": "GObject Introspection is a middleware layer between C libraries (using GObject) and language bindings. The goal is to make the C libraries accessible from scripting languages and other environments without the need for manual intervention.",
-    "Core Features": [
-        "Automated generation of language bindings for C libraries",
-        "Allows scripting languages and other environments to access C libraries easily",
-        "Eliminates manual intervention in creating language bindings",
-        "Supports GObject-based libraries"
-    ],
-    "General Tags": [
-        "Middleware",
-        "Language Bindings",
-        "Automation",
-        "Compatibility"
-    ],
+    "Core Features": "Automated Generation Of Language Bindings For C Libraries, Allows Scripting Languages & Other Environments To Access C Libraries Easily, Eliminates Manual Intervention In Creating Language Bindings, Supports Gobject-Based Libraries",
+    "General Tags": "Middleware, Language Bindings, Automation, Compatibility",
     "Software Type": "Library",
     "Software Class": "Middleware",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": "Computer Science"
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
 }

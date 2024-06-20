@@ -1,22 +1,11 @@
 {
     "Software": "QGIS",
     "AI Description": "QGIS is a free and open-source cross-platform desktop geographic information system (GIS) application that supports viewing, editing, and analysis of geospatial data.",
-    "Core Features": [
-        "Supports various vector, raster, and database formats",
-        "Advanced data visualization and analysis tools",
-        "Plugins for additional functionality and customization",
-        "Support for georeferencing and map projections",
-        "Print composer for creating high-quality maps"
-    ],
-    "General Tags": [
-        "Gis",
-        "Mapping",
-        "Geospatial",
-        "Open Source"
-    ],
+    "Core Features": "Supports Various Vector, Raster, & Database Formats, Advanced Data Visualization & Analysis Tools, Plugins For Additional Functionality & Customization, Support For Georeferencing & Map Projections, Print Composer For Creating High-Quality Maps",
+    "General Tags": "Gis, Mapping, Geospatial, Open Source",
     "Software Type": "Geo-Spatial Software",
     "Software Class": "Visualization & Mapping",
-    "Research Field": "Earth & Environmental Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Earth & Environmental Sciences"
 }

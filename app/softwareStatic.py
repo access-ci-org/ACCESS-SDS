@@ -1,7 +1,3 @@
-import pandas as pd
-import os
-from app.parseVersionInfo import addVersionInfoToTable
-
 staticTable = './staticSearch/staticTable.csv'
 
 # Hard-coded links to RP-specific Software Documentation
@@ -70,66 +66,3 @@ def createFullDocUrl(softwareName, rpNames):
     # Format URLs so each is on a separate line in the table cell
     combinedUrls = ' \n'.join(urls)
     return combinedUrls
-
-##################################################################
-#   create_static_table                                          #
-#       Converts our CSV file into a DataFrame ready for HTML    # 
-#       Functions:                                               #
-#           createFullDocURL: Populate RP Documentation Cells    #
-#           addVersionInfoToTable: Add Version info to DataFrame #
-#       Return:                                                  #
-#           df: Pandas DataFrame of completed Static Table       #
-##################################################################
-def create_static_table():
-    # If the static table already exists, it doesn't get updated when change it unless we delete it first
-    # The app has a cached version. We should decide if we want this behavior or not.
-    if os.path.exists(staticTable):
-        os.remove(staticTable)
-
-    df = pd.read_csv('./staticSearch/ACCESS_Software.csv',na_filter=False)  # CSV generated from Google Sheets
-
-    # Ensure uniform capitalization across cells
-    df['RP Name'] = df['RP Name'].str.title()
-    df['Software Type'] = df['Software Type'].str.title()
-    df['Software Class'] = df['Software Class'].str.title()
-    df['Research Area'] = df['Research Area'].str.title()
-    df['Research Discipline'] = df['Research Discipline'].str.title()
-
-    # Ensure DARWIN is always capitalized
-    df['RP Name'] = df['RP Name'].str.replace('darwin', 'DARWIN')
-
-    # Table Column Formatting
-    df.rename(columns={'Software Documentation/Link' : 'Software Documentation'}, inplace=True)
-    df.rename(columns={'Example Software Use (link)' : 'Example Software Use'}, inplace=True)
-
-    # Description Source Formatting
-    df['Software Description'] = df['Software Description'].str.replace('Description Source:', 
-                                                                        '\nDescription Source: ')
-
-    # Make Example Links on separate lines
-    df['Example Software Use'] = df['Example Software Use'].str.replace(' , ', ' \n')
-
-    # Populate 'RP Software Documentation' Field
-    df['RP Software Documentation'] = df.apply(lambda row: createFullDocUrl(row['Software'], row['RP Name']), axis=1)
-
-    # This really needs to be fixed. If we don't want these columns, get rid of them. If we do, populate them.
-    empty_columns = ['Area-specific Examples', 'Containerized Version of Software',
-                     'RP Documentations for Software', 'Pathing']
-    df.drop(empty_columns,axis=1,inplace=True)
-    
-    # Add Version Info to DataFrame
-    df = addVersionInfoToTable(df)
-    df['Version Info'] = df['Version Info'].str.title()
-
-    # Convert DataFrame back to CSV
-    df.to_csv(staticTable,index=False)
-    
-    # Export DataFrame to App
-    return(df)
-
-
-
-
-# I'm pretty sure this doesn't do anything but I'll wait one update before removing it.
-#if __name__ == "__main__":
-#    df = create_static_table()

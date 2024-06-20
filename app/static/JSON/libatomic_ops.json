@@ -2,15 +2,10 @@
     "Software": "libatomic_ops",
     "AI Description": "Libatomic_ops is a library implementing atomic memory access operations for use in concurrent programming. It provides a number of low-level memory access and synchronization operations which can be used in lock-free data structures and for inter-thread communication without the need for locks.",
     "Core Features": "1. Provides atomic operations for memory access.\n2. Facilitates concurrent programming and lock-free data structures.\n3. Enables inter-thread communication without locks.\n4. Supports a wide range of platforms and compilers.",
-    "General Tags": [
-        "Concurrent Programming",
-        "Atomic Operations",
-        "Memory Access",
-        "Synchronization"
-    ],
+    "General Tags": "Concurrent Programming, Atomic Operations, Memory Access, Synchronization",
     "Software Type": "Development Tool",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

@@ -1,20 +1,11 @@
 {
     "Software": "compiler-rt",
     "AI Description": "compiler-rt stands for Compiler Runtime Library. It is a collection of runtime libraries that provide low-level support for compiler-generated code. It is designed to be used with the LLVM compiler infrastructure and is commonly used in conjunction with Clang. The compiler-rt libraries implement runtime parts of the language features that are not supported directly by the compiler.",
-    "Core Features": [
-        "Runtime support libraries for compiler-generated code",
-        "Designed for use with the LLVM compiler infrastructure",
-        "Implements runtime parts of language features not directly supported by the compiler"
-    ],
-    "General Tags": [
-        "Runtime Library",
-        "Compiler Support",
-        "Low-Level Support",
-        "Language Features"
-    ],
+    "Core Features": "Runtime Support Libraries For Compiler-Generated Code, Designed For Use With The Llvm Compiler Infrastructure, Implements Runtime Parts Of Language Features Not Directly Supported By The Compiler",
+    "General Tags": "Runtime Library, Compiler Support, Low-Level Support, Language Features",
     "Software Type": "Library",
     "Software Class": "Compiler Runtime",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Software Engineering, Systems, & Development",
-    "Research Discipline": "Computer Science"
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
 }

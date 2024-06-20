@@ -2,14 +2,10 @@
     "Software": "isl",
     "AI Description": "ISL (Integer Set Library) is a library for manipulating sets and maps of integer points bounded by linear constraints. It provides functions for computing the integer points in a set or projection of a set represented as unions of polyhedra, as wells as their images under affine transformations.",
     "Core Features": "- Manipulating sets and maps of integer points\n- Computing integer points in a set\n- Intersection and union operations\n- Projection of a set\n- Affine transformations",
-    "General Tags": [
-        "Library",
-        "Integer Points",
-        "Linear Constraints"
-    ],
+    "General Tags": "Library, Integer Points, Linear Constraints",
     "Software Type": "Library",
     "Software Class": "Computational Software",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Applied Computer Science",
-    "Research Discipline": "Computer Science"
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
 }

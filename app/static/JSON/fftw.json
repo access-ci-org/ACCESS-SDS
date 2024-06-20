@@ -2,14 +2,10 @@
     "Software": "FFTW",
     "AI Description": "FFTW is a fast C library for computing the discrete Fourier transform (DFT) in one or more dimensions, of arbitrary input size, and of both real and complex data. It is widely used in areas such as signal processing, data compression, and solving partial differential equations.",
     "Core Features": "1. Efficient DFT computation in multiple dimensions.\n2. Supports both real and complex data.\n3. High performance through optimized algorithms and implementations.\n4. Portable and easy-to-use interface.\n5. Scalable to large input sizes.",
-    "General Tags": [
-        "Signal Processing",
-        "Data Compression",
-        "Partial Differential Equations"
-    ],
+    "General Tags": "Signal Processing, Data Compression, Partial Differential Equations",
     "Software Type": "Computational Software",
     "Software Class": "Library",
-    "Research Field": "Mathematics",
     "Research Area": "Numerical Analysis",
-    "Research Discipline": "Applied Mathematics"
+    "Research Discipline": "Applied Mathematics",
+    "Research Field": "Mathematics"
 }

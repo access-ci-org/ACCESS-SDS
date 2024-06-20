@@ -2,18 +2,10 @@
     "Software": "Autoconf Archive",
     "AI Description": "Autoconf Archive is a collection of more than 500 macros for GNU Autoconf that have been contributed as free software by friendly supporters of the cause from all over the Internet. Each macro helps test for the availability of features, functions, or system characteristics. These macros have been tentatively designed to work with any free software package that uses GNU Autoconf; they should work with Autoconf-2.50 (1999) through Autoconf-2.70 (2010-now).",
     "Core Features": "1. Extensive library of more than 500 macros for GNU Autoconf. 2. Allows easy testing for the availability of features, functions, or system characteristics. 3. Supports a wide range of free software packages that use GNU Autoconf. 4. Compatible with Autoconf versions from 2.50 to 2.70. 5. Continuously updated and maintained by contributors from the community.",
-    "General Tags": [
-        "Gnu",
-        "Autoconf",
-        "Macro",
-        "Configuration",
-        "Software Development"
-    ],
+    "General Tags": "Gnu, Autoconf, Macro, Configuration, Software Development",
     "Software Type": "Library",
     "Software Class": "Development Tools",
-    "Research Field": [
-        "Computer Science"
-    ],
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer Science"
 }

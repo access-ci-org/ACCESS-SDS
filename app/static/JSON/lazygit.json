@@ -1,22 +1,11 @@
 {
     "Software": "lazygit",
     "AI Description": "lazygit is a simple terminal UI for git commands, with the ability to easily view and manage changes in repositories.",
-    "Core Features": [
-        "Intuitive and easy-to-use terminal UI for git commands",
-        "Visual representation of git status, changes, commits, and branches",
-        "Interactive interface for staging, unstaging, committing, and managing changes",
-        "Support for common git operations such as pull, push, merge, and rebase",
-        "Ability to resolve merge conflicts and perform basic git actions seamlessly"
-    ],
-    "General Tags": [
-        "Version Control",
-        "Git",
-        "Terminal Ui",
-        "Software Development"
-    ],
+    "Core Features": "Intuitive & Easy-To-Use Terminal Ui For Git Commands, Visual Representation Of Git Status, Changes, Commits, & Branches, Interactive Interface For Staging, Unstaging, Committing, & Managing Changes, Support For Common Git Operations Such As Pull, Push, Merge, & Rebase, Ability To Resolve Merge Conflicts & Perform Basic Git Actions Seamlessly",
+    "General Tags": "Version Control, Git, Terminal Ui, Software Development",
     "Software Type": "Tools",
     "Software Class": "",
-    "Research Field": "Engineering & Technology",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
 }

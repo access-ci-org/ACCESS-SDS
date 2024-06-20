@@ -2,15 +2,10 @@
     "Software": "ngc",
     "AI Description": "NGC is a cloud-based hub that provides users with a comprehensive catalog of GPU-optimized software for deep learning, machine learning, and HPC applications. It offers a platform for easy deployment and integration of GPU-accelerated applications in various domains.",
     "Core Features": "NGC offers a wide range of GPU-accelerated containers and models for deep learning frameworks such as TensorFlow, PyTorch, and MXNet. It simplifies the setup and configuration of complex software environments by providing pre-configured containers with optimized performance for NVIDIA GPUs. Users can quickly deploy and scale applications in the cloud or on-premises.",
-    "General Tags": [
-        "Cloud Computing",
-        "Deep Learning",
-        "Machine Learning",
-        "Hpc"
-    ],
+    "General Tags": "Cloud Computing, Deep Learning, Machine Learning, Hpc",
     "Software Type": "Platform",
     "Software Class": "Scientific Computing",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

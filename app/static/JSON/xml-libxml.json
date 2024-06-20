@@ -1,21 +1,11 @@
 {
     "Software": "xml-libxml",
     "AI Description": "xml-libxml is a software library for reading, writing, and manipulating XML files. It provides a robust set of tools for parsing and processing XML documents.",
-    "Core Features": [
-        "XML parsing",
-        "XML manipulation",
-        "Support for XPath and XSLT",
-        "Validation of XML documents"
-    ],
-    "General Tags": [
-        "Xml",
-        "Parser",
-        "Library",
-        "Data Processing"
-    ],
+    "Core Features": "Xml Parsing, Xml Manipulation, Support For Xpath & Xslt, Validation Of Xml Documents",
+    "General Tags": "Xml, Parser, Library, Data Processing",
     "Software Type": "Data Processing",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Software Engineering, Systems, & Development",
-    "Research Discipline": "Other Computer & Information Sciences"
+    "Research Discipline": "Other Computer & Information Sciences",
+    "Research Field": "Computer & Information Sciences"
 }

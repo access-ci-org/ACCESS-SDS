@@ -1,22 +1,11 @@
 {
     "Software": "MACS3",
     "AI Description": "MACS3 (Model-based analysis of ChIP-Seq) is a software tool specifically designed for identifying genome-wide protein-DNA interaction sites from ChIP-Seq data. It uses a dynamic Poisson distribution to model the background noise and captures the spatial correlation of the ChIP-Seq data to improve peak detection accuracy.",
-    "Core Features": [
-        "Identification of protein-DNA interaction sites",
-        "Analysis of ChIP-Seq data",
-        "Dynamic Poisson distribution modeling",
-        "Spatial correlation capture for peak detection"
-    ],
-    "General Tags": [
-        "Bioinformatics",
-        "Chip-Seq",
-        "Genomics",
-        "Computational Biology",
-        "Data Analysis"
-    ],
+    "Core Features": "Identification Of Protein-DNA Interaction Sites, Analysis Of Chip-Seq Data, Dynamic Poisson Distribution Modeling, Spatial Correlation Capture For Peak Detection",
+    "General Tags": "Bioinformatics, Chip-Seq, Genomics, Computational Biology, Data Analysis",
     "Software Type": "Data Analysis",
     "Software Class": "Tools",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genetics",
-    "Research Discipline": "Cell Biology"
+    "Research Discipline": "Cell Biology",
+    "Research Field": "Biological Sciences"
 }

@@ -2,15 +2,10 @@
     "Software": "BEAST2",
     "AI Description": "BEAST2 is a cross-platform program for Bayesian evolutionary analysis of molecular sequences. It is widely used for estimating species trees, gene trees, divergence times, substitution rates, and demographic parameters using various models of sequence evolution.",
     "Core Features": "1. Bayesian inference for molecular sequences analysis\n2. Estimation of species trees, gene trees, divergence times, substitution rates, and demographic parameters\n3. Wide range of substitution models and clock models\n4. Incorporation of fossil constraints and birth-death models\n5. Advanced Markov chain Monte Carlo (MCMC) algorithms\n6. Integration with other tools like BEAGLE library for high-performance computing",
-    "General Tags": [
-        "Phylogenetics",
-        "Evolutionary Analysis",
-        "Molecular Sequences",
-        "Bayesian Inference"
-    ],
+    "General Tags": "Phylogenetics, Evolutionary Analysis, Molecular Sequences, Bayesian Inference",
     "Software Type": "Tool",
     "Software Class": "Bioinformatics",
-    "Research Field": "Biological Sciences",
     "Research Area": "Phylogenetics",
-    "Research Discipline": "Ecology"
+    "Research Discipline": "Ecology",
+    "Research Field": "Biological Sciences"
 }

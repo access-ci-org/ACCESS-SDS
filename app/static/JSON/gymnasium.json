@@ -2,14 +2,10 @@
     "Software": "gymnasium",
     "AI Description": "Gymnasium is a Python library which provides tools and utilities for creating and manipulating complex mathematical expressions and equations.",
     "Core Features": "1. Allows users to create and manipulate mathematical expressions\n2. Supports complex mathematical operations and transformations\n3. Provides a simple and intuitive interface for working with mathematical equations\n4. Compatible with Python programming language\n5. Useful for symbolic mathematics and equation handling tasks",
-    "General Tags": [
-        "Python Library",
-        "Mathematical Expressions",
-        "Equation Manipulation"
-    ],
+    "General Tags": "Python Library, Mathematical Expressions, Equation Manipulation",
     "Software Type": "Programming Library",
     "Software Class": "Library",
-    "Research Field": "Mathematics",
     "Research Area": "Applied Computer Science",
-    "Research Discipline": "Computer Science"
+    "Research Discipline": "Computer Science",
+    "Research Field": "Mathematics"
 }

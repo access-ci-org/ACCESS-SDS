@@ -2,14 +2,10 @@
     "Software": "libvori",
     "AI Description": "libvori is a library for calculating voronoi diagrams. It provides functions for generating voronoi diagrams from a set of points in the plane.",
     "Core Features": "1. Generate voronoi diagrams from 2D points. 2. Support for both Euclidean and Manhattan distance metrics. 3. Efficient computation and data structure for voronoi diagrams.",
-    "General Tags": [
-        "Voronoi Diagrams",
-        "Computational Geometry",
-        "Library"
-    ],
+    "General Tags": "Voronoi Diagrams, Computational Geometry, Library",
     "Software Type": "Calculation Tool",
     "Software Class": "Library",
-    "Research Field": "Mathematics",
     "Research Area": "Geometry",
-    "Research Discipline": "Other Mathematics"
+    "Research Discipline": "Other Mathematics",
+    "Research Field": "Mathematics"
 }

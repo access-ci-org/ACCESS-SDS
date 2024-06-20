@@ -1,19 +1,11 @@
 {
     "Software": "xprop",
     "AI Description": "xprop is a utility for retrieving the properties of a window in a X server system. It allows users to query and display properties of a given X server window, which can be useful for debugging and troubleshooting GUI-related issues.",
-    "Core Features": [
-        "Retrieves properties of X server windows",
-        "Queries and displays window properties",
-        "Useful for debugging and troubleshooting GUI-related problems"
-    ],
-    "General Tags": [
-        "X Server",
-        "Window Properties",
-        "Gui Debugging"
-    ],
+    "Core Features": "Retrieves Properties Of X Server Windows, Queries & Displays Window Properties, Useful For Debugging & Troubleshooting Gui-Related Problems",
+    "General Tags": "X Server, Window Properties, Gui Debugging",
     "Software Type": "System Tool",
     "Software Class": "Utility",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Software Engineering, Systems, & Development",
-    "Research Discipline": "Computer Science"
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
 }

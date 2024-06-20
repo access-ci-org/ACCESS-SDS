@@ -1,21 +1,11 @@
 {
     "Software": "genomedata",
     "AI Description": "genomedata is a Python package that provides efficient and convenient access to genome data and annotations. It allows users to work with genomic data in a structured and standardized manner, enabling easy manipulation, analysis, and visualization of genomics data.",
-    "Core Features": [
-        "Efficient access to genome data and annotations",
-        "Structured and standardized handling of genomic data",
-        "Data manipulation, analysis, and visualization capabilities",
-        "Integration with popular Python libraries for genomics"
-    ],
-    "General Tags": [
-        "Genomics",
-        "Python Package",
-        "Data Analysis",
-        "Data Visualization"
-    ],
+    "Core Features": "Efficient Access To Genome Data & Annotations, Structured & Standardized Handling Of Genomic Data, Data Manipulation, Analysis, & Visualization Capabilities, Integration With Popular Python Libraries For Genomics",
+    "General Tags": "Genomics, Python Package, Data Analysis, Data Visualization",
     "Software Type": "Data Processing",
     "Software Class": "Library",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genomics",
-    "Research Discipline": "Biological Sciences"
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
 }

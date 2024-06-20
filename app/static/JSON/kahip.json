@@ -1,20 +1,11 @@
 {
     "Software": "kahip",
     "AI Description": "KaHIP (Karlsruhe High Quality Partitioning) is a family of graph partitioning programs that aims to efficiently compute high-quality graph partitions. It provides several partitioning algorithms to balance computational load and minimize communication overhead. KaHIP is suitable for large-scale parallel applications and is widely used in the field of high-performance computing.",
-    "Core Features": [
-        "Efficient computation of high-quality graph partitions",
-        "Multiple partitioning algorithms",
-        "Optimization for load balancing and communication reduction",
-        "Suitable for large-scale parallel applications"
-    ],
-    "General Tags": [
-        "Graph Partitioning",
-        "High-Performance Computing",
-        "Parallel Computing"
-    ],
+    "Core Features": "Efficient Computation Of High-Quality Graph Partitions, Multiple Partitioning Algorithms, Optimization For Load Balancing & Communication Reduction, Suitable For Large-Scale Parallel Applications",
+    "General Tags": "Graph Partitioning, High-Performance Computing, Parallel Computing",
     "Software Type": "Utility",
     "Software Class": "Algorithm",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": "Computer Science"
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
 }

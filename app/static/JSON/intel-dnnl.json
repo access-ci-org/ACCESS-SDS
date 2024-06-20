@@ -2,14 +2,10 @@
     "Software": "Intel oneAPI DNNL",
     "AI Description": "Intel oneAPI Deep Neural Network Library (oneDNN) is an open-source performance library for deep learning applications, providing primitives for executing deep learning operations with high efficiency on Intel CPUs. It supports popular deep learning frameworks such as TensorFlow, PyTorch, and MXNet.",
     "Core Features": "1. Optimized primitives for deep learning operations\n2. Integration with popular deep learning frameworks\n3. High performance on Intel CPUs\n4. Open-source and flexible for customization\n5. Support for various data types and formats",
-    "General Tags": [
-        "Deep Learning",
-        "Performance Optimization",
-        "Intel Cpu"
-    ],
+    "General Tags": "Deep Learning, Performance Optimization, Intel Cpu",
     "Software Type": "Library",
     "Software Class": "Deep Learning Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

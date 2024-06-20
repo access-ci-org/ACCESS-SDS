@@ -2,14 +2,10 @@
     "Software": "py-statsmodels",
     "AI Description": "py-statsmodels is a Python library that provides classes and functions for the estimation of many different statistical models, as well as for conducting statistical tests, and statistical data exploration. It complements scipy.stats in the statistical analysis of data. The library has an extensive list of different models, from linear regression to generalized linear models, time series analysis, and nonparametric methods.",
     "Core Features": "1. Estimation of statistical models\n2. Conducting statistical tests\n3. Exploration of statistical data\n4. Wide range of models including linear regression, generalized linear models, time series analysis, and nonparametric methods",
-    "General Tags": [
-        "Statistics",
-        "Data Analysis",
-        "Modeling"
-    ],
+    "General Tags": "Statistics, Data Analysis, Modeling",
     "Software Type": "Python Library",
     "Software Class": "Library",
-    "Research Field": "Other Natural Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Other Natural Sciences"
 }

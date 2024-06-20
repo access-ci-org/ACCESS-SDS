@@ -2,14 +2,10 @@
     "Software": "dace",
     "AI Description": "dace (Data Assimilation for Categorical and High-Dimensional Data) is a Python toolkit for data assimilation, specifically designed for high-dimensional and categorical data. It provides a range of data assimilation algorithms and tools to effectively integrate observational data and models to improve predictions and understanding of complex systems.",
     "Core Features": "1. Support for high-dimensional and categorical data assimilation.\n2. Implementation of various data assimilation algorithms.\n3. Integration of observational data with models.\n4. Improves predictions and understanding of complex systems.",
-    "General Tags": [
-        "Data Assimilation",
-        "Python Toolkit",
-        "Observational Data Integration"
-    ],
+    "General Tags": "Data Assimilation, Python Toolkit, Observational Data Integration",
     "Software Type": "",
     "Software Class": "",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

@@ -1,20 +1,11 @@
 {
     "Software": "R Studioapi",
     "AI Description": "The R Studioapi package provides an interface to the RStudio IDE's API, allowing users to interact with the IDE programmatically. It enables users to extract information about projects, sessions, source code, UI state, and more from the RStudio IDE environment.",
-    "Core Features": [
-        "Access the RStudio IDE API programmatically",
-        "Retrieve information about projects, sessions, source code, and UI state",
-        "Interact with RStudio IDE features using R code"
-    ],
-    "General Tags": [
-        "R",
-        "Api",
-        "Ide",
-        "Programming"
-    ],
+    "Core Features": "Access The Rstudio Ide Api Programmatically, Retrieve Information About Projects, Sessions, Source Code, & Ui State, Interact With Rstudio Ide Features Using R Code",
+    "General Tags": "R, Api, Ide, Programming",
     "Software Type": "Api Integration",
     "Software Class": "Development Tools",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

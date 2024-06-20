@@ -1,21 +1,11 @@
 {
     "Software": "OpenJDK",
     "AI Description": "OpenJDK (Open Java Development Kit) is a free and open-source implementation of the Java Platform, Standard Edition (Java SE). It is developed under the OpenJDK project as a collaboration between several companies and the open-source community.",
-    "Core Features": [
-        "Free and open-source implementation of Java SE",
-        "Support for Java applications development",
-        "Regular updates and bug fixes",
-        "Compatibility with various operating systems"
-    ],
-    "General Tags": [
-        "Open-Source",
-        "Java Development",
-        "Software Development",
-        "Programming"
-    ],
+    "Core Features": "Free & Open-Source Implementation Of Java Se, Support For Java Applications Development, Regular Updates & Bug Fixes, Compatibility With Various Operating Systems",
+    "General Tags": "Open-Source, Java Development, Software Development, Programming",
     "Software Type": "Compiler",
     "Software Class": "Development Environment",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

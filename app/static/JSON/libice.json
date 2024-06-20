@@ -2,14 +2,10 @@
     "Software": "libice",
     "AI Description": "libice is a library that provides support for Inter-Client Exchange (ICE) in the X Window System, allowing X clients to securely exchange data through the X server.",
     "Core Features": "1. Implementation of the ICE protocol for secure communication between X clients.\n2. Support for negotiation, authentication, and data exchange between X clients.\n3. Integration with the X Window System for seamless communication.",
-    "General Tags": [
-        "Library",
-        "Inter-Client Exchange",
-        "X Window System"
-    ],
+    "General Tags": "Library, Inter-Client Exchange, X Window System",
     "Software Type": "Communication",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

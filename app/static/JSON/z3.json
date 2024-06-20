@@ -2,18 +2,10 @@
     "Software": "z3",
     "AI Description": "Z3 is a high-performance theorem prover being developed at Microsoft Research. Z3 is a state-of-the-art SMT (Satisfiability Modulo Theories) solver used in various applications including software and hardware verification, security, AI and ML, and more. It provides a programming interface for both C and Python.",
     "Core Features": "Z3 provides efficient decision procedures for theories such as linear and nonlinear arithmetics, arrays, bit-vectors, and more. It supports a wide range of theories and is known for its high performance and reliability. Z3 can be used for solving logical formulas over integers and real numbers, as well as bitvector and Boolean operations.",
-    "General Tags": [
-        "Theorem Prover",
-        "Satisfiability Modulo Theories (Smt) Solver",
-        "Software Verification",
-        "Hardware Verification",
-        "Security",
-        "Ai",
-        "Machine Learning"
-    ],
+    "General Tags": "Theorem Prover, Satisfiability Modulo Theories (Smt) Solver, Software Verification, Hardware Verification, Security, Ai, Machine Learning",
     "Software Type": "Theorem Prover",
     "Software Class": "Computation & Logic",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

@@ -2,15 +2,10 @@
     "Software": "libwpe",
     "AI Description": "libwpe is a library that provides web platform support for Wayland compositors and other clients that need web content rendered on a Wayland surface.",
     "Core Features": "1. Provides a WebKit rendering engine for Wayland compositors. 2. Enables seamless integration of web content within Wayland-based applications. 3. Supports modern web standards and technologies. 4. Offers APIs for customizing and controlling the behavior of web content on Wayland surfaces.",
-    "General Tags": [
-        "Library",
-        "Web Platform Support",
-        "Wayland Compositors",
-        "Web Content Rendering"
-    ],
+    "General Tags": "Library, Web Platform Support, Wayland Compositors, Web Content Rendering",
     "Software Type": "Library",
     "Software Class": "Web Development",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

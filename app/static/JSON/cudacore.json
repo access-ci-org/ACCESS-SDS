@@ -2,16 +2,10 @@
     "Software": "cudacore",
     "AI Description": "cudacore is a high-performance computational software that leverages GPU (Graphics Processing Unit) computing through CUDA (Compute Unified Device Architecture) for accelerated processing of scientific and engineering applications.",
     "Core Features": "1. Utilizes GPU computing power for parallel processing\n2. Supports CUDA programming model for high-performance computing\n3. Accelerates complex calculations in scientific and engineering domains\n4. Enhances computational efficiency and speed for diverse applications",
-    "General Tags": [
-        "Computational Software",
-        "Cuda",
-        "Gpu Computing",
-        "Scientific Computing",
-        "Engineering Applications"
-    ],
+    "General Tags": "Computational Software, Cuda, Gpu Computing, Scientific Computing, Engineering Applications",
     "Software Type": "High-Performance Computing Tool",
     "Software Class": "Computational Software",
-    "Research Field": "Engineering & Technology",
     "Research Area": "High-Performance Computing",
-    "Research Discipline": "Other Engineering & Technologies"
+    "Research Discipline": "Other Engineering & Technologies",
+    "Research Field": "Engineering & Technology"
 }

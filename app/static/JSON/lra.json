@@ -2,14 +2,10 @@
     "Software": "LRA",
     "AI Description": "LRA is a free and open-source software tool designed for linear regression analysis. It allows users to perform statistical analysis to model the relationship between a dependent variable and one or more independent variables.",
     "Core Features": "1. Perform linear regression analysis\n2. Model the relationship between dependent and independent variables\n3. Explore statistical significance of variables\n4. Generate regression plots and diagnostics",
-    "General Tags": [
-        "Linear Regression",
-        "Statistical Analysis",
-        "Open-Source"
-    ],
+    "General Tags": "Linear Regression, Statistical Analysis, Open-Source",
     "Software Type": "Tool",
     "Software Class": "Statistical Analysis",
-    "Research Field": "Other Mathematics",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Other Mathematics"
 }

@@ -1,23 +1,11 @@
 {
     "Software": "libxt",
     "AI Description": "Libxt is a library offering extensions for automating compilation, dependency tracking, and execution of computational tasks within HPC environments.",
-    "Core Features": [
-        "Automated compilation of software packages",
-        "Dependency tracking for code builds",
-        "Execution of computational tasks in HPC environments",
-        "Enhanced parallel processing capabilities"
-    ],
-    "General Tags": [
-        "Library",
-        "Hpc",
-        "Automation",
-        "Compilation",
-        "Dependency Tracking",
-        "Parallel Processing"
-    ],
+    "Core Features": "Automated Compilation Of Software Packages, Dependency Tracking For Code Builds, Execution Of Computational Tasks In Hpc Environments, Enhanced Parallel Processing Capabilities",
+    "General Tags": "Library, Hpc, Automation, Compilation, Dependency Tracking, Parallel Processing",
     "Software Type": "Library",
     "Software Class": "Tool",
-    "Research Field": "Engineering & Technology",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
 }

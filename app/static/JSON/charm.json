@@ -2,26 +2,10 @@
     "Software": "CHARM",
     "AI Description": "CHARM (Chemistry at Harvard Macromolecular Mechanics) is a molecular mechanics force field for the simulation of proteins, nucleic acids, carbohydrates, and lipids. It is widely used in the field of computational biology and bioinformatics for studying the structure, dynamics, and interactions of biomolecular systems.",
     "Core Features": "1. Simulation of proteins, nucleic acids, carbohydrates, and lipids\n2. Calculation of molecular energies and forces\n3. Modeling of biomolecular interactions\n4. Analysis of molecular dynamics trajectories\n5. Integration with various simulation packages",
-    "General Tags": [
-        "Molecular Mechanics",
-        "Biomolecular Simulation",
-        "Protein Structure Prediction"
-    ],
-    "Software Type": [
-        "Simulation Software"
-    ],
-    "Software Class": [
-        "Molecular Mechanics Force Field"
-    ],
-    "Research Field": [
-        "Biological Sciences"
-    ],
-    "Research Area": [
-        "Computational Biology",
-        "Structural Biology"
-    ],
-    "Research Discipline": [
-        "Bioinformatics",
-        "Biophysics"
-    ]
+    "General Tags": "Molecular Mechanics, Biomolecular Simulation, Protein Structure Prediction",
+    "Software Type": "Simulation Software",
+    "Software Class": "Molecular Mechanics Force Field",
+    "Research Area": "Computational Biology, Structural Biology",
+    "Research Discipline": "Bioinformatics, Biophysics",
+    "Research Field": "Biological Sciences"
 }

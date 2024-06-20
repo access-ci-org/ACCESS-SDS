@@ -2,14 +2,10 @@
     "Software": "patchelf",
     "AI Description": "PatchELF is a simple utility for modifying the dynamic linker and run-time library paths in executable files.",
     "Core Features": "PatchELF allows users to easily modify the dynamic linker and run-time library paths in executables, making it useful for managing dependencies and ensuring proper execution of programs.",
-    "General Tags": [
-        "Dependency Management",
-        "Executable Modification",
-        "Dynamic Linker Paths"
-    ],
+    "General Tags": "Dependency Management, Executable Modification, Dynamic Linker Paths",
     "Software Type": "Library Management",
     "Software Class": "Utility",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

@@ -2,14 +2,10 @@
     "Software": "lmod",
     "AI Description": "Lmod is an environment module system that helps users manage their software environment by providing a convenient way to dynamically modify the user's environment through modulefiles. It supports multiple collections of modules that can be easily swapped in and out, allowing users to load the software packages and versions they need for their work.",
     "Core Features": "1. Hierarchical module naming scheme for organizing modules 2. Support for software collections and version retention 3. Intelligent module handling to prevent conflicts 4. Easy-to-use commands for loading, swapping, unloading, and listing modules\n5. Integration with cluster job submissions for seamless environment setup",
-    "General Tags": [
-        "Module Management",
-        "Software Environment",
-        "Environment Module System"
-    ],
+    "General Tags": "Module Management, Software Environment, Environment Module System",
     "Software Type": "Utility",
     "Software Class": "Software Management",
-    "Research Field": "Engineering & Technology",
     "Research Area": "",
-    "Research Discipline": "Infrastructure & Instrumentation"
+    "Research Discipline": "Infrastructure & Instrumentation",
+    "Research Field": "Engineering & Technology"
 }

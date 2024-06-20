@@ -2,18 +2,10 @@
     "Software": "HDF4",
     "AI Description": "Hierarchical Data Format Version 4 (HDF4) is a data management software library and file format that provides high-performance I/O capabilities for storing and managing large and complex data. HDF4 is designed to support diverse data types and structures, enabling efficient data storage, retrieval, and sharing.",
     "Core Features": "1. Support for various data types and structures\n2. High-performance I/O operations\n3. Scalable and flexible data storage\n4. Tools for data visualization and manipulation\n5. Support for parallel and distributed computing\n6. Cross-platform compatibility",
-    "General Tags": [
-        "Data Management",
-        "I/O Operations",
-        "Data Storage",
-        "Data Visualization",
-        "Parallel Computing"
-    ],
+    "General Tags": "Data Management, I/O Operations, Data Storage, Data Visualization, Parallel Computing",
     "Software Type": "Library",
-    "Software Class": [
-        "Data Management"
-    ],
-    "Research Field": "Computer & Information Sciences",
+    "Software Class": "Data Management",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

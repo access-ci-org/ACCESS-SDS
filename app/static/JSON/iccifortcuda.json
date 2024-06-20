@@ -1,21 +1,11 @@
 {
     "Software": "ICCIFortCUDA",
     "AI Description": "ICCIFortCUDA is a high-performance computing (HPC) compiler designed for CUDA-enabled GPUs. It provides a set of tools for developers to write and compile parallel programs using NVIDIA\u2019s CUDA architecture.",
-    "Core Features": [
-        "HPC compiler for CUDA-enabled GPUs",
-        "Support for parallel programming",
-        "Optimized for performance tuning",
-        "Integration with NVIDIA CUDA architecture"
-    ],
-    "General Tags": [
-        "Hpc",
-        "Compiler",
-        "Cuda",
-        "Parallel Programming"
-    ],
+    "Core Features": "Hpc Compiler For Cuda-Enabled Gpus, Support For Parallel Programming, Optimized For Performance Tuning, Integration With Nvidia Cuda Architecture",
+    "General Tags": "Hpc, Compiler, Cuda, Parallel Programming",
     "Software Type": "Development Tools",
     "Software Class": "Compiler",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Software Engineering, Systems, & Development",
-    "Research Discipline": "Computer Science"
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
 }

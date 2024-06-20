@@ -1,20 +1,11 @@
 {
     "Software": "LibROM",
     "AI Description": "LibROM is a library for Reduced Order Models (ROMs) that provides tools for model reduction of complex systems in engineering and computational science applications. It offers a range of algorithms and methods to reduce the computational cost of high-fidelity simulations.",
-    "Core Features": [
-        "Implementation of various model reduction algorithms",
-        "Support for reduction of large-scale systems",
-        "Integration with common computational frameworks",
-        "Efficient handling of high-dimensional data"
-    ],
-    "General Tags": [
-        "Software Library",
-        "Model Reduction",
-        "Computational Science"
-    ],
+    "Core Features": "Implementation Of Various Model Reduction Algorithms, Support For Reduction Of Large-Scale Systems, Integration With Common Computational Frameworks, Efficient Handling Of High-Dimensional Data",
+    "General Tags": "Software Library, Model Reduction, Computational Science",
     "Software Type": "Model Reduction Tool",
     "Software Class": "Library",
-    "Research Field": "Engineering & Technology",
     "Research Area": "Computational Science",
-    "Research Discipline": "Engineering & Technology"
+    "Research Discipline": "Engineering & Technology",
+    "Research Field": "Engineering & Technology"
 }

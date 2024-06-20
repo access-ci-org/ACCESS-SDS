@@ -2,15 +2,10 @@
     "Software": "Cython",
     "AI Description": "Cython is a programming language that makes it easy to write C extensions for Python. It provides a superset of the Python language that allows for calling C functions and declaring C types on variables and class attributes.",
     "Core Features": "Cython allows for easy integration of C libraries and functions with Python code, enabling developers to speed up Python code by writing performance-critical portions in C. It also provides static type declarations that can lead to performance improvements over pure Python code.",
-    "General Tags": [
-        "Programming Language",
-        "C Extensions",
-        "Python",
-        "Cython"
-    ],
+    "General Tags": "Programming Language, C Extensions, Python, Cython",
     "Software Type": "Language Compiler",
     "Software Class": "Compiler",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

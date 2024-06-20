@@ -2,15 +2,10 @@
     "Software": "py-slepc4py",
     "AI Description": "py-slepc4py is a Python package that provides interfaces to the Scalable Library for Eigenvalue Problem Computations (SLEPc) for solving large-scale eigenvalue problems.",
     "Core Features": "1. Interface to SLEPc for solving eigenvalue problems. 2. Support for parallel and distributed computing. 3. Integration with PETSc for efficient linear algebra operations. 4. High-performance computing capabilities for large-scale problems.",
-    "General Tags": [
-        "Python",
-        "Package",
-        "Eigenvalue Problems",
-        "Parallel Computing"
-    ],
+    "General Tags": "Python, Package, Eigenvalue Problems, Parallel Computing",
     "Software Type": "Library",
     "Software Class": "Scientific Computing",
-    "Research Field": "Other Natural Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Other Natural Sciences"
 }

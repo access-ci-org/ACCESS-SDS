@@ -2,14 +2,10 @@
     "Software": "perftools-base",
     "AI Description": "perftools is a collection of performance analysis tools for Linux-based systems. perftools-base is the base package of perftools which includes basic performance analysis tools for profiling CPU and memory usage.",
     "Core Features": "1. CPU profiler for sampling performance data\n2. Memory profiler for tracking memory allocation and deallocation\n3. Lightweight and easy to use\n4. Suitable for basic performance analysis tasks",
-    "General Tags": [
-        "Performance Analysis",
-        "Profiling",
-        "Linux"
-    ],
+    "General Tags": "Performance Analysis, Profiling, Linux",
     "Software Type": "Tool",
     "Software Class": "Performance Analysis Tools",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

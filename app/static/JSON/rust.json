@@ -1,24 +1,11 @@
 {
     "Software": "Rust",
     "AI Description": "Rust is a multi-paradigm system programming language focused on safety, speed, and concurrency.",
-    "Core Features": [
-        "Memory safety without garbage collection",
-        "Concurrency without data races",
-        "Minimal runtime",
-        "Low-level control like C",
-        "Strong type system",
-        "Pattern matching",
-        "Traits for code reuse",
-        "Cargo - the package manager and build system"
-    ],
-    "General Tags": [
-        "Programming Language",
-        "System Programming",
-        "Concurrency"
-    ],
+    "Core Features": "Memory Safety Without Garbage Collection, Concurrency Without Data Races, Minimal Runtime, Low-Level Control Like C, Strong Type System, Pattern Matching, Traits For Code Reuse, Cargo - The Package Manager & Build System",
+    "General Tags": "Programming Language, System Programming, Concurrency",
     "Software Type": "Compiler",
     "Software Class": "Programming Language",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

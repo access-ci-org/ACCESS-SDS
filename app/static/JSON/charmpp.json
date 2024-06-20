@@ -2,16 +2,10 @@
     "Software": "Charm++",
     "AI Description": "Charm++ is a parallel programming framework that aims to simplify the development of parallel applications by providing a flexible and scalable runtime system. It is particularly well-suited for irregular and dynamic applications that require adaptive load balancing and fault tolerance.",
     "Core Features": "1. Adaptive runtime system for dynamic load balancing\n2. Message-driven architecture for asynchronous communication\n3. Fault tolerance mechanisms for handling system failures\n4. Scalable performance on distributed memory systems\n5. Support for migration of computational entities across processors\n6. High-level abstractions for parallel programming",
-    "General Tags": [
-        "Parallel Programming",
-        "Runtime System",
-        "Load Balancing",
-        "Fault Tolerance",
-        "Message-Driven Architecture"
-    ],
+    "General Tags": "Parallel Programming, Runtime System, Load Balancing, Fault Tolerance, Message-Driven Architecture",
     "Software Type": "Software Development Tool",
     "Software Class": "Parallel Programming Framework",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

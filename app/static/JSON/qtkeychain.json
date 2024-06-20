@@ -2,13 +2,10 @@
     "Software": "qtkeychain",
     "AI Description": "QtKeychain is a Qt API to store passwords securely",
     "Core Features": "Secure storage of passwords, cross-platform support, simple API for password management",
-    "General Tags": [
-        "Password Management",
-        "Security"
-    ],
+    "General Tags": "Password Management, Security",
     "Software Type": "",
     "Software Class": "",
-    "Research Field": "",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": ""
 }

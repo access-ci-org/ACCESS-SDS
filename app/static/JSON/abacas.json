@@ -2,13 +2,10 @@
     "Software": "ABACAS",
     "AI Description": "ABACAS is a tool for rapid bacterial genome contig assembly. It takes contigs produced by an assemblrer and scaffolds them to generate a pseudo-chromosome. It can handle multiple contigs and uses reference genomes for scaffolding.",
     "Core Features": "Contig assembly, scaffolding, reference genome utilization",
-    "General Tags": [
-        "Bacterial Genome",
-        "Genome Assembly"
-    ],
+    "General Tags": "Bacterial Genome, Genome Assembly",
     "Software Type": "Genome Assembly",
     "Software Class": "Bioinformatics",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genetics",
-    "Research Discipline": "Biological Sciences"
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
 }

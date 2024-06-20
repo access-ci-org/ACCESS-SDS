@@ -2,14 +2,10 @@
     "Software": "dnnl-cpu-iomp",
     "AI Description": "dnnl-cpu-iomp is an optimization library for deep neural network computations on CPU using Intel OpenMP (iomp) for improved performance.",
     "Core Features": "1. Accelerates deep learning inferencing on CPU.\n2. Utilizes Intel OpenMP for parallel processing.\n3. Optimized for performance with deep neural network computations on Intel CPUs.",
-    "General Tags": [
-        "Deep Learning",
-        "Optimization",
-        "Cpu Acceleration"
-    ],
+    "General Tags": "Deep Learning, Optimization, Cpu Acceleration",
     "Software Type": "",
     "Software Class": "",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

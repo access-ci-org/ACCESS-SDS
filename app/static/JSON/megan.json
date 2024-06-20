@@ -1,24 +1,12 @@
 {
-    "discipline": [
-        "Biological Sciences"
-    ],
+    "discipline": "Biological Sciences",
     "Software": "MEGAN",
     "AI Description": "MEGAN (MEtaGenome ANalyzer) is a comprehensive software package for analyzing large metagenomic data sets. It is designed to facilitate the exploration and taxonomic analysis of complex microbiomes.",
     "Core Features": "1. Taxonomic analysis and visualization of metagenomic data. 2. Functional analysis of microbial communities. 3. Comparative analysis of multiple samples. 4. Supports integration of various sequencing technologies, such as Illumina, Ion Torrent, and PacBio. 5. User-friendly interface for interactive exploration of results.",
-    "General Tags": [
-        "Metagenomics",
-        "Microbiome",
-        "Bioinformatics"
-    ],
-    "Software Type": [
-        "Bioinformatics Tool"
-    ],
-    "Software Class": [
-        "Analysis Tool"
-    ],
-    "Research Field": "Biological Sciences",
-    "Research Area": [
-        "Bioinformatics"
-    ],
-    "Research Discipline": ""
+    "General Tags": "Metagenomics, Microbiome, Bioinformatics",
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Analysis Tool",
+    "Research Area": "Bioinformatics",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

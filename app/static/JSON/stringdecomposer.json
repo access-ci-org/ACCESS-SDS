@@ -2,13 +2,10 @@
     "Software": "stringdecomposer",
     "AI Description": "stringdecomposer is a tool designed to break down a given string into its individual components, such as characters or words, and provide detailed analysis on each component.",
     "Core Features": "1. String decomposition into characters or words. 2. Detailed analysis of each component, including frequency, length, position, etc. 3. Customizable settings for decomposition and analysis parameters.",
-    "General Tags": [
-        "String Manipulation",
-        "Text Analysis"
-    ],
+    "General Tags": "String Manipulation, Text Analysis",
     "Software Type": "Utility",
     "Software Class": "Data Analysis Tool",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

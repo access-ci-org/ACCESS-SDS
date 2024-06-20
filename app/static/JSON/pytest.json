@@ -1,21 +1,11 @@
 {
     "Software": "pytest",
     "AI Description": "Pytest is a testing framework that makes it easy to write simple and scalable tests in Python. It is a popular testing framework used for testing Python programs and libraries.",
-    "Core Features": [
-        "Support for fixtures",
-        "Parameterized testing",
-        "Support for test discovery",
-        "Detailed test reports",
-        "Plugin architecture for extensibility"
-    ],
-    "General Tags": [
-        "Testing",
-        "Python",
-        "Framework"
-    ],
+    "Core Features": "Support For Fixtures, Parameterized Testing, Support For Test Discovery, Detailed Test Reports, Plugin Architecture For Extensibility",
+    "General Tags": "Testing, Python, Framework",
     "Software Type": "Testing Framework",
     "Software Class": "",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

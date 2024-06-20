@@ -2,14 +2,10 @@
     "Software": "visit",
     "AI Description": "Visit is an open-source interactive parallel visualization and graphical analysis tool. It is designed to handle very large data set visualization and enable users to visualize and analyze data from a variety of sources.",
     "Core Features": "Visit offers a wide range of visualization techniques, such as volume rendering, contour plotting, and streamline visualization. It supports various data formats, parallel computing, and scripting capabilities for automation. Users can interactively explore and analyze data, create publication-quality visualizations, and animate data for presentations.",
-    "General Tags": [
-        "Visualization",
-        "Data Analysis",
-        "Scientific Computing"
-    ],
+    "General Tags": "Visualization, Data Analysis, Scientific Computing",
     "Software Type": "Visualization Software",
     "Software Class": "Visualization Tool",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Visualization & Human-Computer Systems",
-    "Research Discipline": "Informatics, Analytics & Information Science"
+    "Research Discipline": "Informatics, Analytics & Information Science",
+    "Research Field": "Computer & Information Sciences"
 }

@@ -2,15 +2,10 @@
     "Software": "mbuffer",
     "AI Description": "mbuffer is a tool for buffering data streams that offers high-speed I/O performance and better throughput. It provides an efficient way to read and write data to and from various sources while optimizing the data transfer rate.",
     "Core Features": "1. High-speed buffering of data streams\n2. Optimization of data transfer rate\n3. Support for reading from and writing to various sources\n4. Efficient I/O performance",
-    "General Tags": [
-        "Data Streams",
-        "Buffering",
-        "Data Transfer",
-        "Optimization"
-    ],
+    "General Tags": "Data Streams, Buffering, Data Transfer, Optimization",
     "Software Type": "",
     "Software Class": "",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

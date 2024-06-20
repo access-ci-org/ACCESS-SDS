@@ -2,15 +2,10 @@
     "Software": "GNU",
     "AI Description": "GNU is an extensive collection of free software, including an operating system kernel, utilities, programming languages, compilers, and more, designed to provide users with the freedom to run, study, share, and modify the software.",
     "Core Features": "1. Free software philosophy 2. Extensive collection of tools and utilities 3. Operating system kernel 4. Programming languages and compilers\n5. Community-driven development\n",
-    "General Tags": [
-        "Software",
-        "Development",
-        "Operating System",
-        "Free Software"
-    ],
+    "General Tags": "Software, Development, Operating System, Free Software",
     "Software Type": "",
     "Software Class": "",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

@@ -1,19 +1,11 @@
 {
     "Software": "Tinker-HP",
     "AI Description": "Tinker-HP is a molecular modeling software designed for high-performance simulations of biomolecular systems. It provides tools for molecular dynamics simulations, energy minimization, and analysis of complex biomolecular structures.",
-    "Core Features": [
-        "Molecular dynamics simulations",
-        "Energy minimization",
-        "Biomolecular structure analysis"
-    ],
-    "General Tags": [
-        "Molecular Modeling",
-        "Biomolecular Systems",
-        "Simulations"
-    ],
+    "Core Features": "Molecular Dynamics Simulations, Energy Minimization, Biomolecular Structure Analysis",
+    "General Tags": "Molecular Modeling, Biomolecular Systems, Simulations",
     "Software Type": "Molecular Dynamics Simulation Software",
     "Software Class": "Scientific",
-    "Research Field": "Biological Sciences",
     "Research Area": "Molecular Biology",
-    "Research Discipline": "Biophysics"
+    "Research Discipline": "Biophysics",
+    "Research Field": "Biological Sciences"
 }

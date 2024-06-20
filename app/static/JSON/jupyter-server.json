@@ -1,19 +1,11 @@
 {
     "Software": "jupyter-server",
     "AI Description": "Jupyter server is a flexible and extensible tool that allows users to run interactive computational environments in various programming languages. It provides a web-based interface for running Jupyter notebooks, code, and data analysis.",
-    "Core Features": [
-        "Web-based interface",
-        "Interactive computational environments",
-        "Support for multiple programming languages"
-    ],
-    "General Tags": [
-        "Interactive Computing",
-        "Web-Based Interface",
-        "Notebooks"
-    ],
+    "Core Features": "Web-Based Interface, Interactive Computational Environments, Support For Multiple Programming Languages",
+    "General Tags": "Interactive Computing, Web-Based Interface, Notebooks",
     "Software Type": "Compiler",
     "Software Class": "Computational Software",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

@@ -1,21 +1,11 @@
 {
     "Software": "Hatchling",
     "AI Description": "Hatchling is a software tool designed for simulating and analyzing population dynamics in ecological studies, particularly focusing on early life stages of organisms such as fish, amphibians, and invertebrates. It allows researchers to model various environmental factors affecting the survival and growth of hatchlings in different ecosystems.",
-    "Core Features": [
-        "Population dynamics modeling",
-        "Simulation of early life stages of organisms",
-        "Analysis of environmental factors on hatchling survival and growth",
-        "Ecological study support"
-    ],
-    "General Tags": [
-        "Population Dynamics",
-        "Ecology",
-        "Simulation",
-        "Environmental Factors"
-    ],
+    "Core Features": "Population Dynamics Modeling, Simulation Of Early Life Stages Of Organisms, Analysis Of Environmental Factors On Hatchling Survival & Growth, Ecological Study Support",
+    "General Tags": "Population Dynamics, Ecology, Simulation, Environmental Factors",
     "Software Type": "Research Tool",
     "Software Class": "Simulation & Modeling",
-    "Research Field": "Biological Sciences",
     "Research Area": "Population Dynamics Of Early Life Stages",
-    "Research Discipline": "Environmental Biology"
+    "Research Discipline": "Environmental Biology",
+    "Research Field": "Biological Sciences"
 }

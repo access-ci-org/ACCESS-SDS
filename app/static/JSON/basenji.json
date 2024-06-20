@@ -1,19 +1,11 @@
 {
     "Software": "basenji",
     "AI Description": "Basenji is a deep learning framework for regulatory genomics that leverages convolutional neural networks (CNNs) to predict transcriptional regulation by learning the patterns of chromatin accessibility, histone modification, and transcription factor binding.",
-    "Core Features": [
-        "Utilizes convolutional neural networks (CNNs) for regulatory genomics",
-        "Predicts transcriptional regulation by learning patterns of chromatin accessibility, histone modification, and transcription factor binding",
-        "Performs genome sequence segmentation and regulatory element prediction"
-    ],
-    "General Tags": [
-        "Deep Learning",
-        "Regulatory Genomics",
-        "Transcriptional Regulation"
-    ],
+    "Core Features": "Utilizes Convolutional Neural Networks (Cnns) For Regulatory Genomics, Predicts Transcriptional Regulation By Learning Patterns Of Chromatin Accessibility, Histone Modification, & Transcription Factor Binding, Performs Genome Sequence Segmentation & Regulatory Element Prediction",
+    "General Tags": "Deep Learning, Regulatory Genomics, Transcriptional Regulation",
     "Software Type": "Genomics Tool",
     "Software Class": "Deep Learning Framework",
-    "Research Field": "Biological Sciences",
     "Research Area": "Regulatory Genomics",
-    "Research Discipline": "Genomics"
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
 }

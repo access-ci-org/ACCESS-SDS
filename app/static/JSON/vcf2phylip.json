@@ -2,14 +2,10 @@
     "Software": "vcf2phylip",
     "AI Description": "vcf2phylip is a tool for converting variant call format (VCF) files to Phylip format, which is commonly used in phylogenetic analysis. It allows for the conversion of genetic variation data to the alignment format required for various phylogenetic inference algorithms.",
     "Core Features": "1. Converts VCF files to Phylip format for phylogenetic analysis. \n2. Preserves genetic variation information during the conversion process. \n3. Facilitates the input of genetic data into phylogenetic analysis pipelines.",
-    "General Tags": [
-        "Vcf",
-        "Phylip",
-        "Phylogenetic Analysis"
-    ],
+    "General Tags": "Vcf, Phylip, Phylogenetic Analysis",
     "Software Type": "Bioinformatics",
     "Software Class": "Data Conversion",
-    "Research Field": "Biological Sciences",
     "Research Area": "Phylogenetics",
-    "Research Discipline": "Genetics"
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
 }

@@ -2,14 +2,10 @@
     "Software": "r-pillar",
     "AI Description": "r-pillar is an R package that provides tools for reshaping and transforming tabular data into tidy formats. It is part of the tidyverse ecosystem and facilitates data cleaning and preparation tasks.",
     "Core Features": "The core features of r-pillar include functions for creating and reshaping data frames, formatting columns, managing column types, and displaying data in a structured and organized manner.",
-    "General Tags": [
-        "Data Manipulation",
-        "Data Cleaning",
-        "Data Preparation"
-    ],
+    "General Tags": "Data Manipulation, Data Cleaning, Data Preparation",
     "Software Type": "Library",
     "Software Class": "Data Wrangling",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Data Science",
-    "Research Discipline": "Informatics, Analytics & Information Science"
+    "Research Discipline": "Informatics, Analytics & Information Science",
+    "Research Field": "Computer & Information Sciences"
 }

@@ -1,23 +1,11 @@
 {
     "Software": "JupyterLab",
     "AI Description": "JupyterLab is a web-based interactive development environment for Jupyter notebooks, code, and data. It provides a flexible and extensible platform for exploring, analyzing, and visualizing data.",
-    "Core Features": [
-        "Interactive development environment",
-        "Support for Jupyter notebooks and code editing",
-        "Data visualization capabilities",
-        "Customizable user interface",
-        "Extensible through plugins and extensions"
-    ],
-    "General Tags": [
-        "Ide",
-        "Data Analysis",
-        "Visualization",
-        "Notebooks",
-        "Web-Based"
-    ],
+    "Core Features": "Interactive Development Environment, Support For Jupyter Notebooks & Code Editing, Data Visualization Capabilities, Customizable User Interface, Extensible Through Plugins & Extensions",
+    "General Tags": "Ide, Data Analysis, Visualization, Notebooks, Web-Based",
     "Software Type": "Open Source",
     "Software Class": "Development Environment",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

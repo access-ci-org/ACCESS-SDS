@@ -1,22 +1,11 @@
 {
     "Software": "PyQt5",
     "AI Description": "PyQt5 is a comprehensive set of Python bindings for the Qt application framework developed by Riverbank Computing. It allows Python programmers to create desktop applications with rich graphical user interfaces (GUIs) using Qt tools and libraries.",
-    "Core Features": [
-        "Integration with Qt Designer for drag-and-drop GUI design",
-        "Extensive support for GUI development with widgets, layouts, and events",
-        "Cross-platform compatibility with Windows, macOS, Linux, and mobile platforms",
-        "Access to a wide range of Qt functionalities including multimedia, networking, and databases",
-        "Ability to create standalone executables from Python code"
-    ],
-    "General Tags": [
-        "Python",
-        "Gui",
-        "Qt",
-        "Desktop Applications"
-    ],
+    "Core Features": "Integration With Qt Designer For Drag-&-Drop Gui Design, Extensive Support For Gui Development With Widgets, Layouts, & Events, Cross-Platform Compatibility With Windows, Macos, Linux, & Mobile Platforms, Access To A Wide Range Of Qt Functionalities Including Multimedia, Networking, & Databases, Ability To Create Standalone Executables From Python Code",
+    "General Tags": "Python, Gui, Qt, Desktop Applications",
     "Software Type": "Library",
     "Software Class": "User Interface Tools",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

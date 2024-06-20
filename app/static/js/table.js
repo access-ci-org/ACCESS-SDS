@@ -1,14 +1,12 @@
 import {header, siteMenus, footer, footerMenus, universalMenus} from "https://esm.sh/@access-ci/ui@0.2.0"
 
-const siteItems =[
-    {
+const siteItems = [{
         name: "ACCESS Resource Advisor",
         href: "https://access-ara.ccs.uky.edu:8080/"
     }
 ]
 
 export var staticTable
-export var dynamicTable
 
 $(document).ready(function()
 {
@@ -45,18 +43,6 @@ $(document).ready(function()
     $("#app_content").removeClass()
     $("#app_content").addClass('col')
 
-/*//////////////////////////////
-    Navigation between tables //
-*///////////////////////////////    
-    var currentUrl = window.location.href
-
-    if (currentUrl.includes("ai-generated")){
-        $("#ai-generated-link").addClass("active")
-        $("#curated-link").removeClass("active")
-    } else{
-        $("#ai-generated-link").removeClass("active")
-        $("#curated-link").addClass("active")
-    }
 
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////
     STATIC TABLE                                                                                       //
@@ -82,11 +68,7 @@ $(document).ready(function()
         dom: 'PQ<"d-flex flex-column flex-md-row justify-content-between"<"d-flex flex-column flex-md-row"<"d-flex mb-3 mb-md-0"l><"d-flex px-3"B>><"d-flex justify-content-between align-items-center flex-grow-1"<"d-flex justify-content-start"><"d-flex scrollText-div">f>>rt<"d-flex justify-content-between"ip>',
         initComplete: function()
         {
-            $('.scrollText-div').html("Hover your mouse to the edge of the table to scroll")
-            // Prevent clicking links in the table from selecting the row.
-            $('#softwareTable').on('click', 'a', function(e) {
-                e.stopPropagation();
-            });           
+            $('.scrollText-div').html("Hover your mouse to the edge of the table to scroll")          
         },
         searchPanes: {
             initCollapsed: true,
@@ -100,20 +82,15 @@ $(document).ready(function()
             combiner: 'or'          // in searchPanes, selecting multiple rows 'OR's them together.
                                     // Default behavior is 'AND'
         },
-        language:
-        {
-            paginate:
-            {
-                // Change Arrows (< and >) into Word Equivalents
+        language: {
+            paginate: { // Change Arrows (< and >) into Word Equivalents
                 previous: "Prev",
                 next: "Next",
                 first: "First",
                 last: "Last"
             },
-
         },
-        buttons: [  // Column Visibility Buttons
-            {
+        buttons: [{ // Column Visibility Buttons
                 extend: 'colvis',
                 collectionLayout: 'two-column',
                 popoverTitle: 'Column Visibility',
@@ -134,87 +111,71 @@ $(document).ready(function()
                     'ends':null,
                     '!ends':null,
                     '!contains':null,
-                },
-            }
-        },
+        }}}, 
         columnDefs: [
-            {
-                // Pane 1: RP Names
-                searchPanes: {
+            {   // Pane 1: RP Names
+                targets: [1],
+                searchPanes: { 
                     className: 'noShadow',
                     options: [                   
                         {
                             label: 'Aces',
                             value: function(rowData, rowIdx) {
                                 return rowData[1].toLowerCase().includes('aces');
-                            }
-                        },
+                            }},                        
                         {
                             label: 'Anvil',
                             value: function(rowData, rowIdx) {
                                 return rowData[1].toLowerCase().includes('anvil');
-                            }
-                        },
+                            }},
                         {
                             label: 'Bridges-2',
                             value: function(rowData, rowIdx) {
                                 return rowData[1].toLowerCase().includes('bridges-2');
-                            }
-                        },
+                            }},
                         {
                             label: 'DARWIN',
                             value: function(rowData, rowIdx) {
                                 return rowData[1].toLowerCase().includes('darwin');
-                            }
-                        },
+                            }},                        
                         {
                             label: 'Delta',
                             value: function(rowData, rowIdx) {
                                 return rowData[1].toLowerCase().includes('delta');
-                            }
-                        },
+                            }},                        
                         {
                             label: 'Expanse',
                             value: function(rowData, rowIdx) {
                                 return rowData[1].toLowerCase().includes('expanse');
-                            }
-                        },
+                            }},                        
                         {
                             label: 'Faster',
                             value: function(rowData, rowIdx) {
                                 return rowData[1].toLowerCase().includes('faster');
-                            }
-                        },
+                            }},                        
                         {
                             label: 'Jetstream',
                             value: function(rowData, rowIdx) {
                                 return rowData[1].toLowerCase().includes('jetstream');
-                            }
-                        },
+                            }},                        
                         {
                             label: 'Kyric',
                             value: function(rowData, rowIdx) {
                                 return rowData[1].toLowerCase().includes('kyric');
-                            }
-                        },
+                            }},                        
                         {
                             label: 'Ookami',
                             value: function(rowData, rowIdx) {
                                 return rowData[1].toLowerCase().includes('ookami');
-                            }
-                        },
+                            }},                        
                         {
                             label: 'Stampede-3',
                             value: function(rowData, rowIdx) {
                                 return rowData[1].toLowerCase().includes('stampede3');
-                            }
-                        }
-                    ]
-                },
-                targets: [1]
-            },
-            {
-                // Pane 2: Software Type
+                            }}                        
+            ]}},             
+            {   // Pane 2: Software Type     
+                targets: [2],           
                 searchPanes: {
                     className: 'noShadow',
                     options: [
@@ -266,410 +227,95 @@ $(document).ready(function()
                                 return rowData[2].toLowerCase().includes('utility');
                             }
                         },
-                    ]
-                },
-                targets: [2],
-            },
-            {
-                // Pane 3: Research Area
+            ]}},   
+            {   // Pane 3: Research Area 
+                targets: [5],               
                 searchPanes: {
                     className: 'noShadow',
                     options: [
                         {
                             label: 'Climate/Weather',
                             value: function(rowData, rowIdx) {
-                                return rowData[4].toLowerCase().includes('climate');
-                            }
-                        },
+                                return rowData[5].toLowerCase().includes('climate');
+                            }},                        
                         {
                             label: 'Computer Science',
                             value: function(rowData, rowIdx) {
-                                return rowData[4].toLowerCase().includes('computer science');
-                            }
-                        },
+                                return rowData[5].toLowerCase().includes('computer science');
+                            }},                        
                         {
                             label: 'Data Management',
                             value: function(rowData, rowIdx) {
-                                return rowData[4].toLowerCase().includes('data management');
-                            }
-                        },
+                                return rowData[5].toLowerCase().includes('data management');
+                            }},                        
                         {
                             label: 'Engineering',
                             value: function(rowData, rowIdx) {
-                                return rowData[4].toLowerCase().includes('engineering');
-                            }
-                        },
+                                return rowData[5].toLowerCase().includes('engineering');
+                            }},                        
                         {
                             label: 'General Use',
                             value: function(rowData, rowIdx) {
-                                return rowData[4].toLowerCase().includes('general');
-                            }
-                        },
+                                return rowData[5].toLowerCase().includes('general');
+                            }},                        
                         {
                             label: 'Sciences',
                             value: function(rowData, rowIdx) {
-                                return rowData[4].toLowerCase().includes('sciences');
-                            }
-                        },
-                    ]
-                },
-                targets: [4],
-            },
-            {
-                // Disables all other columns not explicitly shown from displaying as Panes
+                                return rowData[5].toLowerCase().includes('sciences');
+                            }},                        
+            ]}},              
+            {   // Disables all other columns not explicitly shown from displaying as Panes
+                targets: '_all',
+                //targets: [7,8,9,10,11,12,13,14,15,16],
                 searchPanes: {
                     show: false
-                },
-                targets: '_all'
-
-            },
-
-            {
-                // Enable searchBuilder on all columns   
+            }}, 
+            {   // Enable searchBuilder on all columns 
                 targets: '_all',
-                searchBuilder: 
-                    { 
+                searchBuilder: { 
                         defaultCondition: 'contains'
-                    },    
-            },
-            {
-                // ### TESTING ### Software Details Modal
-                render: function(data, type, row){
+            }},  
+            {   // Software Details Modal  
+                target: [0],             
+                render: function(data, type, row) {
                     if (type === 'display')
                         {
                             return '<a data-toggle="modal" data-target="#softwareDetails-modal" href="#">' + data + '</a>'
                         }
                     return data
-                },
-                target: [0],
-            },
-            {   // show use case
-                targets:16,
-                render: function(data, type, row){
+            }},   
+            {   // Example Use Modal
+                targets:[16],
+                render: function(data, type, row) {
                     return '<button class="btn btn-info example-use-btn" type="button">Use Example</button>';
-                }
-            },
-            {
-                // Columns with clickable URLs
-                targets: [7,10,11,12,13,14], 
-                render: function(data, type, row) 
-                {
+            }},
+            {   // Columns with clickable URLs
+                targets: [7,10,11,12,13], 
+                render: function(data, type, row) {
                     if (type === 'display' && data) 
                     {
                         return makeLinkClickable(data);
                     }
                     return data;
-                },
-            },
-            { width: '50px' , targets: [0,2] },
-            { width: '100px', targets: [1,3,4,5,6,16] },
+            }}, 
+            //{ width: '50px' , targets: [0,2] },
+            { width: '100px', targets: [1,3,4,5,6] },
             { width: '150px', targets: [14] },
             { width: '200px', targets: [9] },
             { width: '300px', targets: [10,11,12,13] },
             { width: '400px', targets: [8, 15] },
             { width: '500px', targets: [7] },
-
-        ],
+        ]
     });
 
-
-/*////////////////////////////////////////////////////////////////////////////////////////////////////////
-    DYNAMIC TABLE                                                                                       //
-    Enabled: Buttons (Column Visibility), FixedColumns, FixedHeader, SearchBuilder, SearchPanes, Select //
-*/////////////////////////////////////////////////////////////////////////////////////////////////////////
-    dynamicTable = $('#softwareTableDynamic').DataTable({
-        select: {           // Allows for selecting rows in tables/searchPanes
-            enabled: true,
-            style: 'multi', // Select multiple rows, deselect by clicking again
-        }, 
-        fixedColumns: true, // Makes first column 'fixed' to the left side of the table when scrolling
-        fixedHeader: true,  // Makes column headers 'fixed' to the top of the table when scrolling
-        "sScrollX": "100%", // Enables horizontal scrolling
-        autoWidth: true,    // Column width is determined dynamically by content within the cells
-        pageLength: 25,     // Rows displayed per page
-        pagingType: 'full_numbers',     // 'First', 'Previous', 'Next', 'Last', with page numbers
-        lengthMenu: [                   // User-selectable menu for pageLength
-            [10, 25, 50, 250, 500, -1],
-            [10, 25, 50, 250, 500, 'All']
-        ],
-        // DOM: 'P' = searchPanes, 'Q' = searchBuilder. The rest is various layout and formatting options.
-        // For example: 'p' affects the paging style at the bottom of the table.
-        dom: 'PQ<"d-flex flex-column flex-md-row justify-content-between"<"d-flex flex-column flex-md-row"<"d-flex mb-3 mb-md-0"l><"d-flex px-3"B>><"d-flex justify-content-between align-items-center flex-grow-1"<"d-flex justify-content-start"><"d-flex scrollText-div">f>>rt<"d-flex justify-content-between"ip>',        initComplete: function()
+    // Prevent clicking links in the table from Selecting the row
+    $('#softwareTable').on('click', 'a', function(e) {
+        // Ensures this event listener doesn't trample 'Report Issue' event
+        if ($("#reportIssueText").text() != 'Cancel')
         {
-            $('.scrollText-div').html("Hover your mouse to the edge of the table to scroll")
-            // Prevent clicking links in the table from selecting the row.
-            $('#softwareTableDynamic').on('click', 'a', function(e) {
-                e.stopPropagation();
-            });           
-        },
-        searchPanes: {
-            initCollapsed: true,
-            cascadePanes: false,    // Reflects one change in the searchPanes filters across all Panes.
-                                    // Unfortunately, can't use this until we optimize the table's performance.
-            dtOpts: {
-                select: {
-                    style: 'multi'  // Allows for selecting multiple rows.
-                }, 
-            },
-            combiner: 'or'          // in searchPanes, selecting multiple rows 'OR's them together.
-                                    // Default behavior is 'AND'
-        },
-        language:
-        {
-            paginate:
-            {
-                // Change Arrows (< and >) into Word Equivalents
-                previous: "Prev",
-                next: "Next",
-                first: "First",
-                last: "Last"
-            },
-
-        },
-        buttons: [  // Column Visibility Buttons
-            {
-                extend: 'colvis',
-                collectionLayout: 'two-column',
-                popoverTitle: 'Column Visibility',
-            },
-            'colvisRestore' 
-        ], 
-        stateSave: false,   // Saves table options between page reloads
-        stateDuration:-1,
-        searchBuilder: {
-            conditions: {
-                string: {
-                    '=': null,
-                    'null':null,
-                    '!null':null,
-                    '!=':null,
-                    'starts':null,
-                    '!starts':null,
-                    'ends':null,
-                    '!ends':null,
-                    '!contains':null,
-                },
-            }
-        },
-        columnDefs: [
-            {
-                // Pane 1: RP Names
-                searchPanes: {
-                    options: [                   
-                        {
-                            label: 'Aces',
-                            value: function(rowData, rowIdx) {
-                                return rowData[1].toLowerCase().includes('aces');
-                            }
-                        },
-                        {
-                            label: 'Anvil',
-                            value: function(rowData, rowIdx) {
-                                return rowData[1].toLowerCase().includes('anvil');
-                            }
-                        },
-                        {
-                            label: 'Bridges-2',
-                            value: function(rowData, rowIdx) {
-                                return rowData[1].toLowerCase().includes('bridges-2');
-                            }
-                        },
-                        {
-                            label: 'DARWIN',
-                            value: function(rowData, rowIdx) {
-                                return rowData[1].toLowerCase().includes('darwin');
-                            }
-                        },
-                        {
-                            label: 'Delta',
-                            value: function(rowData, rowIdx) {
-                                return rowData[1].toLowerCase().includes('delta');
-                            }
-                        },
-                        {
-                            label: 'Expanse',
-                            value: function(rowData, rowIdx) {
-                                return rowData[1].toLowerCase().includes('expanse');
-                            }
-                        },
-                        {
-                            label: 'Faster',
-                            value: function(rowData, rowIdx) {
-                                return rowData[1].toLowerCase().includes('faster');
-                            }
-                        },
-                        {
-                            label: 'Jetstream',
-                            value: function(rowData, rowIdx) {
-                                return rowData[1].toLowerCase().includes('jetstream');
-                            }
-                        },
-                        {
-                            label: 'Kyric',
-                            value: function(rowData, rowIdx) {
-                                return rowData[1].toLowerCase().includes('kyric');
-                            }
-                        },
-                        {
-                            label: 'Ookami',
-                            value: function(rowData, rowIdx) {
-                                return rowData[1].toLowerCase().includes('ookami');
-                            }
-                        },
-                        {
-                            label: 'Stampede-3',
-                            value: function(rowData, rowIdx) {
-                                return rowData[1].toLowerCase().includes('stampede3');
-                            }
-                        }
-                    ]
-                },
-                targets: [1]
-            },
-            {
-                // Pane 2: Software Type
-                searchPanes: {
-                    options: [
-                        {
-                            label: 'API',
-                            value: function(rowData, rowIdx) {
-                                return rowData[2].toLowerCase().includes('api');
-                            }
-                        },
-                        {
-                            label: 'Application',
-                            value: function(rowData, rowIdx) {
-                                return rowData[2].toLowerCase().includes('application');
-                            }
-                        },
-                        {
-                            label: 'Language',
-                            value: function(rowData, rowIdx) {
-                                return rowData[2].toLowerCase().includes('language');
-                            }
-                        },
-                        {
-                            label: 'Library',
-                            value: function(rowData, rowIdx) {
-                                return rowData[2].toLowerCase().includes('library');
-                            }
-                        },
-                        {
-                            label: 'Package',
-                            value: function(rowData, rowIdx) {
-                                return rowData[2].toLowerCase().includes('package');
-                            }
-                        },
-                        {
-                            label: 'Service',
-                            value: function(rowData, rowIdx) {
-                                return rowData[2].toLowerCase().includes('service');
-                            }
-                        },
-                        {
-                            label: 'Toolkit',
-                            value: function(rowData, rowIdx) {
-                                return rowData[2].toLowerCase().includes('toolkit');
-                            }
-                        },
-                        {
-                            label: 'Utility',
-                            value: function(rowData, rowIdx) {
-                                return rowData[2].toLowerCase().includes('utility');
-                            }
-                        },
-                    ]
-                },
-                targets: [5]
-            },
-            {
-                // Pane 3: Research Area
-                searchPanes: {
-                    options: [
-                        {
-                            label: 'Climate/Weather',
-                            value: function(rowData, rowIdx) {
-                                return rowData[4].toLowerCase().includes('climate');
-                            }
-                        },
-                        {
-                            label: 'Computer Science',
-                            value: function(rowData, rowIdx) {
-                                return rowData[4].toLowerCase().includes('computer science');
-                            }
-                        },
-                        {
-                            label: 'Data Management',
-                            value: function(rowData, rowIdx) {
-                                return rowData[4].toLowerCase().includes('data management');
-                            }
-                        },
-                        {
-                            label: 'Engineering',
-                            value: function(rowData, rowIdx) {
-                                return rowData[4].toLowerCase().includes('engineering');
-                            }
-                        },
-                        {
-                            label: 'General Use',
-                            value: function(rowData, rowIdx) {
-                                return rowData[4].toLowerCase().includes('general');
-                            }
-                        },
-                        {
-                            label: 'Sciences',
-                            value: function(rowData, rowIdx) {
-                                return rowData[4].toLowerCase().includes('sciences');
-                            }
-                        },
-                    ]
-                },
-                targets: [7]
-            },
-            {
-                // Disables all other columns not explicitly shown from displaying as Panes
-                searchPanes: {
-                    show: false
-                },
-                targets: '_all'
-
-            },
-            {
-                searchBuilder:{
-                    defaultCondition:'contains'
-                },
-                targets:[0,1,2,3,4,5,6,7,8,9,10,11,12]
-            },
-            {   // show use case
-                targets:10,
-                render: function(data, type, row){
-                    return '<button class="btn btn-info example-use-btn" type="button">Use Example</button>';
-                }
-            },
-            {   // columns with links
-                targets: [10,11,12,13],
-                render: function(data, type, row){
-                    if (type=='display' && data){
-                        return makeLinkClickable(data);
-                    }
-                    return data;
-                },
-                createdCell:function(td){
-                    $(td).css('word-wrap', 'break-all'); // Enable word-wrap
-                    $(td).css('max-width', '400px'); // Ensure max-width is applied
-                }
-            },
-            {   // description column
-                targets:2,
-                width:"700px",
-            },
-            {
-                targets:3,
-                width:"300px"
-            },
-        ],
-    });
-
+            e.stopPropagation();
+        }
+    }); 
 
 /*////////////////////
     Mouse Scrolling //
@@ -725,7 +371,6 @@ $(document).ready(function()
         }, 10); // Interval in milliseconds
     }
 
-
     function checkScrollEdges()
     {
         let scrollLeft = $scrollBody.scrollLeft();
@@ -775,10 +420,11 @@ $(document).ready(function()
             return false; // No match found
         }
     );
-    
 
 
-    // Initialize a Showdown converter with the Highlight.js extension
+/*////////////////////////////////////////////////////////////////////
+    Initialize a Showdown converter with the Highlight.js extension //
+*/////////////////////////////////////////////////////////////////////
     var converter = new showdown.Converter({
         extensions: [highlightExtension]
     });
@@ -809,8 +455,7 @@ $(document).ready(function()
             },
             error: function(xhr, status, error){
                 console.error("Error fetching example use: ", error);
-            }
-        })
+        }})
     })
 
 
@@ -834,28 +479,57 @@ $(document).ready(function()
         }
 
         // Visually separate multiple entries with line divider
-        rowData[9] = rowData[9].replaceAll('<br>', '<hr>');
-        rowData[10] = rowData[10].replaceAll('<br>', '<hr>');
-        rowData[11] = rowData[11].replaceAll('<br>', '<hr>');
+        rowData[12] = rowData[12].replaceAll('<br>', '<hr>');
+        rowData[13] = rowData[13].replaceAll('<br>', '<hr>');
+        rowData[14] = rowData[14].replaceAll('<br>', '<hr>');
 
         // Populate the softwareDetails modal
+        // Curated
         $('#softwareDetails-modal-title').html("Software Details: " + rowData[0]);
         $('#softwareDetailsName').text(rowData[0]);
         $('#softwareDetailsRPs').text(rowData[1]);
         $('#softwareDetailsType').text(rowData[2]);
         $('#softwareDetailsClass').text(rowData[3]);
-        $('#softwareDetailsArea').text(rowData[4]);
-        $('#softwareDetailsDiscipline').text(rowData[5]);
-        $('#softwareDetailsDescription').html(makeLinkClickable(rowData[6]));
-        $('#softwareDetailsWebpage').html(makeLinkClickable(rowData[7]));
-        $('#softwareDetailsDocumentation').html(makeLinkClickable(rowData[8]));
-        $('#softwareDetailsExamples').html(makeLinkClickable(rowData[9]));
-        $('#softwareDetailsRPDocs').html(makeLinkClickable(rowData[10]));
-        $('#softwareDetailsVersions').html(rowData[11]);
+        $('#softwareDetailsField').text(rowData[4]);
+        $('#softwareDetailsArea').text(rowData[5]);
+        $('#softwareDetailsDiscipline').text(rowData[6]);
+        $('#softwareDetailsDescription').html(makeLinkClickable(rowData[7]));
+        $('#softwareDetailsWebpage').html(makeLinkClickable(rowData[10]));
+        $('#softwareDetailsDocumentation').html(makeLinkClickable(rowData[11]));
+        $('#softwareDetailsExamples').html(makeLinkClickable(rowData[12]));
+        $('#softwareDetailsRPDocs').html(makeLinkClickable(rowData[13]));
+        $('#softwareDetailsVersions').html(rowData[14]);
 
+        // AI
+        $('#softwareDetailsCoreFeat').text(rowData[8]);
+        $('#softwareDetailsTags').text(rowData[9]);
+        $('#softwareDetailsAIDesc').text(rowData[15]);
+
+        // Inject Example Use into Modal
+        var softwareName = rowData[0];
+        var encodedSoftwareName = encodeURIComponent(softwareName);
+        $.ajax({
+            url: "/example_use/"+encodedSoftwareName,
+            type:"GET",
+            success: function(response){
+
+                var useHtml = converter.makeHtml(response.use)
+                $("#modalExampleTitle").text('Example Use for ' + softwareName)
+                $('#modalExampleUse').html(useHtml);
+
+                document.querySelectorAll('#modalExampleUse pre Code').forEach((block)=>{
+                    hljs.highlightElement(block)
+                })
+            },
+            error: function(xhr, status, error){
+                console.error("Error fetching example use: ", error);
+            }
+        })
         // Show modal
         $('#softwareDetails-modal').modal('show');
     })
+
+    
 });
 
 
@@ -893,17 +567,3 @@ function highlightExtension() {
         }
     }];
 }
-
-
-/*  Pretty sure this doesn't do anything that DataTables doesn't already do.
-    I'll delete this in a few updates if we don't find a use for it.
-//Event Listener for Column Visibility
-staticTable.on('column-visibility.dt', function(e, settings, column, state) {
-    staticTable.draw(); // Redraw the table
-});
-
-dynamicTable.on('column-visibility.dt', function(e, settings, column, state) {
-    dynamicTable.draw(); // Redraw the table
-});
-
-*/

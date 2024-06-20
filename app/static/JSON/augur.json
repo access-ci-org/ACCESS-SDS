@@ -1,21 +1,11 @@
 {
     "Software": "Augur",
     "AI Description": "Augur is a bioinformatics tool designed for phylogenetic analysis of viral genomes. It provides a pipeline for analyzing viral sequence data, performing phylogenetic inference, and visualizing the results.",
-    "Core Features": [
-        "Phylogenetic analysis of viral genomes",
-        "Pipeline for viral sequence data analysis",
-        "Phylogenetic inference",
-        "Visualization of results"
-    ],
-    "General Tags": [
-        "Bioinformatics",
-        "Phylogenetics",
-        "Viral Genomes",
-        "Sequence Analysis"
-    ],
+    "Core Features": "Phylogenetic Analysis Of Viral Genomes, Pipeline For Viral Sequence Data Analysis, Phylogenetic Inference, Visualization Of Results",
+    "General Tags": "Bioinformatics, Phylogenetics, Viral Genomes, Sequence Analysis",
     "Software Type": "Sequence Analysis Tool",
     "Software Class": "Bioinformatics Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Phylogenetics",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

@@ -1,21 +1,11 @@
 {
     "Software": "ucsctest",
     "AI Description": "UC Solvent Cluster Test (UCSCTest) is a suite of tools for testing parallel quantum chemistry software that uses solvent cluster models. It allows users to easily set up and run tests to evaluate the performance of various quantum chemistry software in the presence of solvent effects.",
-    "Core Features": [
-        "Testing parallel quantum chemistry software with solvent cluster models",
-        "Setting up and running performance evaluation tests",
-        "Evaluating the impact of solvent effects on computational accuracy",
-        "Providing a standardized framework for benchmarking quantum chemistry software"
-    ],
-    "General Tags": [
-        "Quantum Chemistry",
-        "Solvent Effects",
-        "Performance Evaluation",
-        "Benchmarking"
-    ],
+    "Core Features": "Testing Parallel Quantum Chemistry Software With Solvent Cluster Models, Setting Up & Running Performance Evaluation Tests, Evaluating The Impact Of Solvent Effects On Computational Accuracy, Providing A Standardized Framework For Benchmarking Quantum Chemistry Software",
+    "General Tags": "Quantum Chemistry, Solvent Effects, Performance Evaluation, Benchmarking",
     "Software Type": "Tool",
     "Software Class": "Testing",
-    "Research Field": "Other Chemical Sciences",
     "Research Area": "Physical Chemistry",
-    "Research Discipline": "Chemical Sciences"
+    "Research Discipline": "Chemical Sciences",
+    "Research Field": "Other Chemical Sciences"
 }

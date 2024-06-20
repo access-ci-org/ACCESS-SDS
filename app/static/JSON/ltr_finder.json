@@ -2,16 +2,10 @@
     "Software": "LTR_FINDER",
     "AI Description": "LTR_FINDER is a computational tool for the identification and annotation of long terminal repeat (LTR) retrotransposons in genomic sequences. These transposable elements have a significant impact on genome structure and evolution.",
     "Core Features": "1. Detection and characterization of LTR retrotransposons\n2. Identification of LTR sequences and direct repeats\n3. Prediction of target site duplications and primer binding sites\n4. Classification of LTR families and annotation of LTR retrotransposons",
-    "General Tags": [
-        "Bioinformatics",
-        "Computational Biology",
-        "Genomics"
-    ],
+    "General Tags": "Bioinformatics, Computational Biology, Genomics",
     "Software Type": "Bioinformatics Tool",
     "Software Class": "Sequence Analysis",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genomics",
-    "Research Discipline": [
-        "Genomics"
-    ]
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
 }

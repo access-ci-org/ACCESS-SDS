@@ -1,21 +1,11 @@
 {
     "Software": "Tombo",
     "AI Description": "Tombo is a software package developed by Oxford Nanopore Technologies for the analysis of raw signal data produced by Oxford Nanopore sequencers. It is designed to process raw electric current signals produced during DNA or RNA sequencing to detect modifications, such as base modifications or DNA or RNA secondary structures.",
-    "Core Features": [
-        "Analysis of raw signal data from Oxford Nanopore sequencers",
-        "Detection of modifications in DNA or RNA sequences",
-        "Identification of base modifications and secondary structures"
-    ],
-    "General Tags": [
-        "Bioinformatics",
-        "Genomics",
-        "Dna Sequencing",
-        "Rna Sequencing",
-        "Signal Analysis"
-    ],
+    "Core Features": "Analysis Of Raw Signal Data From Oxford Nanopore Sequencers, Detection Of Modifications In DNA Or RNA Sequences, Identification Of Base Modifications & Secondary Structures",
+    "General Tags": "Bioinformatics, Genomics, DNA Sequencing, RNA Sequencing, Signal Analysis",
     "Software Type": "Data Analysis Tool",
     "Software Class": "Bioinformatics Tool",
-    "Research Field": "Biological Sciences",
-    "Research Area": "Dna Sequencing",
-    "Research Discipline": "Genomics"
+    "Research Area": "DNA Sequencing",
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
 }

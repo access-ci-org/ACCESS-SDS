@@ -1,20 +1,11 @@
 {
     "Software": "Charliecloud",
     "AI Description": "Charliecloud is a software tool that provides user-defined software stacks in userspace with no privileged operations or daemons. It uses containers for software isolation and runs in user space, making it lightweight and secure.",
-    "Core Features": [
-        "Lightweight and secure container tool",
-        "User-defined software stacks",
-        "No privileged operations or daemons",
-        "Runs in user space"
-    ],
-    "General Tags": [
-        "Containerization",
-        "Software Development",
-        "Research Tools"
-    ],
+    "Core Features": "Lightweight & Secure Container Tool, User-Defined Software Stacks, No Privileged Operations Or Daemons, Runs In User Space",
+    "General Tags": "Containerization, Software Development, Research Tools",
     "Software Type": "Tool",
     "Software Class": "Containerization",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

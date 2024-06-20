@@ -1,21 +1,11 @@
 {
     "Software": "likwid",
     "AI Description": "LIKWID is a performance analysis tool suite designed to support HPC/PCP (performance counter profiling) on Intel and AMD processors. It offers a set of command-line tools and libraries that facilitate the collection of performance data and analysis on modern hardware architectures.",
-    "Core Features": [
-        "Supports performance counter profiling on Intel and AMD processors",
-        "Command-line tools for gathering performance data",
-        "Libraries for accessing hardware performance counters",
-        "Advanced analysis and visualization capabilities"
-    ],
-    "General Tags": [
-        "Performance Analysis",
-        "Hpc",
-        "Performance Counter Profiling",
-        "Hardware Performance Counters"
-    ],
+    "Core Features": "Supports Performance Counter Profiling On Intel & Amd Processors, Command-Line Tools For Gathering Performance Data, Libraries For Accessing Hardware Performance Counters, Advanced Analysis & Visualization Capabilities",
+    "General Tags": "Performance Analysis, Hpc, Performance Counter Profiling, Hardware Performance Counters",
     "Software Type": "Tool",
     "Software Class": "Performance Analysis Tool",
-    "Research Field": "Engineering & Technology",
     "Research Area": "",
-    "Research Discipline": "Performance Evaluation & Benchmarking"
+    "Research Discipline": "Performance Evaluation & Benchmarking",
+    "Research Field": "Engineering & Technology"
 }

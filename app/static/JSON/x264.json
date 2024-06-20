@@ -1,20 +1,11 @@
 {
     "Software": "x264",
     "AI Description": "x264 is a free and open-source software library and a command-line utility for encoding video streams into the H.264/MPEG-4 AVC format.",
-    "Core Features": [
-        "High-quality and efficient H.264 video encoding",
-        "Support for a wide range of input sources and parameters",
-        "Advanced encoding settings and optimizations for compression",
-        "Multi-threading support for faster processing"
-    ],
-    "General Tags": [
-        "Video Encoding",
-        "H.264/Mpeg-4 Avc",
-        "Open-Source"
-    ],
+    "Core Features": "High-Quality & Efficient H.264 Video Encoding, Support For A Wide Range Of Input Sources & Parameters, Advanced Encoding Settings & Optimizations For Compression, Multi-Threading Support For Faster Processing",
+    "General Tags": "Video Encoding, H.264/Mpeg-4 Avc, Open-Source",
     "Software Type": "Video Encoding",
     "Software Class": "Library / Utility",
-    "Research Field": "Engineering & Technology",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
 }

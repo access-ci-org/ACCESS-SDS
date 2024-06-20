@@ -2,14 +2,10 @@
     "Software": "matio",
     "AI Description": "matio is a library for reading and writing MATLAB MAT files in C and Fortran. The library supports reading and writing Level 5 MAT files and supports most of the features of MAT 4 and MAT 5 MAT files.",
     "Core Features": "1. Reading and writing MATLAB MAT files in C and Fortran.\n2. Supports Level 5 MAT files.\n3. Supports most features of MAT 4 and MAT 5 MAT files.",
-    "General Tags": [
-        "Matlab Mat Files",
-        "C",
-        "Fortran"
-    ],
+    "General Tags": "Matlab Mat Files, C, Fortran",
     "Software Type": "Data Management",
     "Software Class": "Library",
-    "Research Field": "Mathematics",
     "Research Area": "Applied Mathematics",
-    "Research Discipline": "Other Mathematics"
+    "Research Discipline": "Other Mathematics",
+    "Research Field": "Mathematics"
 }

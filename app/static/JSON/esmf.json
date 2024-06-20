@@ -1,22 +1,11 @@
 {
     "Software": "ESMF",
     "AI Description": "The Earth System Modeling Framework (ESMF) is a software infrastructure for building and coupling weather, climate, and related Earth science models. It provides a flexible and reusable software architecture that facilitates the use, development, and coupling of Earth science models.",
-    "Core Features": [
-        "Supports modeling weather, climate, and Earth science phenomena",
-        "Provides infrastructure for building and coupling models",
-        "Facilitates interoperability and data exchange between models",
-        "Offers tools for parallel computing and performance optimization"
-    ],
-    "General Tags": [
-        "Earth System Modeling",
-        "Climate Modeling",
-        "Weather Modeling",
-        "Model Coupling",
-        "Earth Science"
-    ],
+    "Core Features": "Supports Modeling Weather, Climate, & Earth Science Phenomena, Provides Infrastructure For Building & Coupling Models, Facilitates Interoperability & Data Exchange Between Models, Offers Tools For Parallel Computing & Performance Optimization",
+    "General Tags": "Earth System Modeling, Climate Modeling, Weather Modeling, Model Coupling, Earth Science",
     "Software Type": "Computational Software",
     "Software Class": "Modeling Framework",
-    "Research Field": "Physical Sciences",
     "Research Area": "Atmospheric Sciences",
-    "Research Discipline": "Earth & Environmental Sciences"
+    "Research Discipline": "Earth & Environmental Sciences",
+    "Research Field": "Physical Sciences"
 }

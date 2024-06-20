@@ -1,21 +1,11 @@
 {
     "Software": "UPC++",
     "AI Description": "UPC++ is a high-performance communication system designed for implementing scalable applications in partitioned global address space (PGAS). It extends the C++ programming language with a variety of features to enable efficient shared memory parallel programming.",
-    "Core Features": [
-        "Supports PGAS programming model",
-        "Extends C++ with new features for distributed memory systems",
-        "High-performance communication system",
-        "Scalable for large parallel applications"
-    ],
-    "General Tags": [
-        "Programming Language Extension",
-        "High Performance Computing",
-        "Parallel Programming",
-        "Pgas Model"
-    ],
+    "Core Features": "Supports Pgas Programming Model, Extends C++ With New Features For Distributed Memory Systems, High-Performance Communication System, Scalable For Large Parallel Applications",
+    "General Tags": "Programming Language Extension, High Performance Computing, Parallel Programming, Pgas Model",
     "Software Type": "Middleware",
     "Software Class": "Communication Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Distributed Systems",
-    "Research Discipline": "Computer Science"
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
 }

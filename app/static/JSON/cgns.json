@@ -2,12 +2,10 @@
     "Software": "CGNS",
     "AI Description": "The CFD General Notation System (CGNS) provides a standard for recording and recovering computer data associated with the numerical solution of the equations of fluid dynamics. It is designed to facilitate the exchange of data between sites and applications, as well as to help stabilize the archiving of fluid dynamics data.",
     "Core Features": "1. Supports the hierarchical structure of CFD computations.\n2. Allows data to be written to a file so that it is portable across different machines and operating systems.\n3. Provides mechanisms for modifying data as technologies advance, ensuring long-term viability of CFD data.\n4. Offers a range of tools and conventions to support data interoperability.",
-    "General Tags": [
-        "Computational Software"
-    ],
+    "General Tags": "Computational Software",
     "Software Type": "File Format",
     "Software Class": "Data Exchange",
-    "Research Field": "Physical Sciences",
     "Research Area": "Fluid Dynamics",
-    "Research Discipline": "Fluid & Plasma Physics"
+    "Research Discipline": "Fluid & Plasma Physics",
+    "Research Field": "Physical Sciences"
 }

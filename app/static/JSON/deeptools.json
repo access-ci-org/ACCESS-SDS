@@ -1,20 +1,11 @@
 {
     "Software": "deeptools",
     "AI Description": "DeepTools is a suite of tools for the analysis of high-throughput sequencing data, with a focus on ChIP-seq and ATAC-seq data. It provides various functions for quality control, normalization, visualization, and downstream analysis of sequencing data.",
-    "Core Features": [
-        "Quality control of sequencing data",
-        "Normalization of ChIP-seq and ATAC-seq data",
-        "Visualization of genomic data",
-        "Statistical analysis of high-throughput sequencing data"
-    ],
-    "General Tags": [
-        "Bioinformatics",
-        "Hpc Tools",
-        "Computational Software"
-    ],
+    "Core Features": "Quality Control Of Sequencing Data, Normalization Of Chip-Seq & Atac-Seq Data, Visualization Of Genomic Data, Statistical Analysis Of High-Throughput Sequencing Data",
+    "General Tags": "Bioinformatics, Hpc Tools, Computational Software",
     "Software Type": "Analysis Tool",
     "Software Class": "",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genomics",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

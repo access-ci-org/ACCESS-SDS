@@ -1,19 +1,11 @@
 {
     "Software": "ColabFold",
     "AI Description": "ColabFold is a collaborative project that aims to bring together deep learning and biophysical modeling for protein structure prediction. It provides an easy-to-use interface for researchers to perform protein folding predictions using state-of-the-art techniques.",
-    "Core Features": [
-        "Combines deep learning and biophysical modeling",
-        "Protein structure prediction",
-        "User-friendly interface"
-    ],
-    "General Tags": [
-        "Protein Structure Prediction",
-        "Deep Learning",
-        "Biophysical Modeling"
-    ],
+    "Core Features": "Combines Deep Learning & Biophysical Modeling, Protein Structure Prediction, User-Friendly Interface",
+    "General Tags": "Protein Structure Prediction, Deep Learning, Biophysical Modeling",
     "Software Type": "Protein Structure Prediction Tool",
     "Software Class": "Web-Based Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Protein Structure Prediction",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

@@ -1,19 +1,11 @@
 {
     "Software": "pytz",
     "AI Description": "pytz brings the Olson tz database into Python. This library allows accurate and cross platform timezone calculations using Python.",
-    "Core Features": [
-        "Provides timezone data from the Olson database",
-        "Supports timezone localization and conversions",
-        "Handles daylight saving time transitions"
-    ],
-    "General Tags": [
-        "Python Library",
-        "Timezone Management",
-        "Date And Time Operations"
-    ],
+    "Core Features": "Provides Timezone Data From The Olson Database, Supports Timezone Localization & Conversions, Handles Daylight Saving Time Transitions",
+    "General Tags": "Python Library, Timezone Management, Date & Time Operations",
     "Software Type": "Data Management",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

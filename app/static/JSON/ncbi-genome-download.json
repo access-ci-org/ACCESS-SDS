@@ -1,18 +1,11 @@
 {
     "Software": "ncbi-genome-download",
     "AI Description": "ncbi-genome-download is a command-line tool to download genome assemblies and annotation data from the NCBI's Assembly database.",
-    "Core Features": [
-        "Downloading genome assemblies and annotation data from NCBI",
-        "Filtering by taxonomy or assembly criteria",
-        "Parallel downloading for faster retrieval"
-    ],
-    "General Tags": [
-        "Genomics",
-        "Bioinformatics"
-    ],
+    "Core Features": "Downloading Genome Assemblies & Annotation Data From Ncbi, Filtering By Taxonomy Or Assembly Criteria, Parallel Downloading For Faster Retrieval",
+    "General Tags": "Genomics, Bioinformatics",
     "Software Type": "Command-Line Tool",
     "Software Class": "Data Download Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genome Assembly",
-    "Research Discipline": "Genomics"
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
 }

@@ -1,24 +1,11 @@
 {
     "Software": "libX11",
     "AI Description": "libX11 is the X Window System protocol client library which provides an interface to the X Window System core protocol and provides higher-level functions for building window systems on top of the X Window System core.",
-    "Core Features": [
-        "Implements the client side of the X Window System protocol",
-        "Provides higher-level functions for building window systems on top of the X Window System core",
-        "Supports window creation, management, and event handling",
-        "Enables communication with the X server for display and input management"
-    ],
-    "General Tags": [
-        "X Window System",
-        "Client Library",
-        "Window System Interface",
-        "Graphics"
-    ],
+    "Core Features": "Implements The Client Side Of The X Window System Protocol, Provides Higher-Level Functions For Building Window Systems On Top Of The X Window System Core, Supports Window Creation, Management, & Event Handling, Enables Communication With The X Server For Display & Input Management",
+    "General Tags": "X Window System, Client Library, Window System Interface, Graphics",
     "Software Type": "Software Development",
     "Software Class": "Library",
-    "Research Field": [
-        "Computer And Information Sciences",
-        "Computer Science"
-    ],
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences, Computer Science"
 }

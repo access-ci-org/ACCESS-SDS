@@ -2,14 +2,10 @@
     "Software": "szip",
     "AI Description": "szip is a compression tool specifically designed for scientific data sets. It is optimized for enhancing the performance of reading and writing data stored in the HDF5 file format by reducing the file size. szip uses a lossless compression algorithm to achieve data compression while maintaining data integrity.",
     "Core Features": "1. Lossless compression of scientific data\n2. Optimized for HDF5 file format\n3. Improves reading and writing performance\n4. Maintains data integrity during compression and decompression",
-    "General Tags": [
-        "Compression Tool",
-        "Scientific Data Sets",
-        "Hdf5 File Format"
-    ],
+    "General Tags": "Compression Tool, Scientific Data Sets, Hdf5 File Format",
     "Software Type": "Utility",
     "Software Class": "Compression",
-    "Research Field": "Engineering & Technology",
     "Research Area": "Infrastructure & Instrumentation",
-    "Research Discipline": "Other Natural Sciences"
+    "Research Discipline": "Other Natural Sciences",
+    "Research Field": "Engineering & Technology"
 }

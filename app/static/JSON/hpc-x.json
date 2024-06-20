@@ -2,15 +2,10 @@
     "Software": "hpc-x",
     "AI Description": "hpc-x is a high-performance computing (HPC) software package designed to provide optimized libraries, tools, and compilers for scientific computing on HPC systems. It aims to enhance the performance and efficiency of parallel computing applications on modern HPC architectures.",
     "Core Features": "hpc-x includes optimized libraries and tools for parallel computing, high-performance compilers, performance analysis tools, and debugging utilities. It provides support for distributed memory parallel computing using MPI (Message Passing Interface) and shared memory parallel computing using OpenMP.",
-    "General Tags": [
-        "Hpc",
-        "High-Performance Computing",
-        "Scientific Computing",
-        "Parallel Computing"
-    ],
+    "General Tags": "Hpc, High-Performance Computing, Scientific Computing, Parallel Computing",
     "Software Type": "Hpc Tools",
     "Software Class": "Tools & Libraries",
-    "Research Field": "Engineering & Technology",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
 }

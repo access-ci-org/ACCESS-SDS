@@ -1,27 +1,11 @@
 {
     "Software": "SciPy",
     "AI Description": "SciPy is an open-source Python library that is used for scientific and technical computing. It provides efficient algorithms for numerical integration, optimization, linear algebra, interpolation, and more. SciPy builds on NumPy arrays for high-performance array operations and adds modules for statistics, signal processing, image processing, and other scientific computing tasks.",
-    "Core Features": [
-        "Numerical integration and optimization",
-        "Linear algebra operations",
-        "Interpolation and curve fitting",
-        "Statistics and signal processing",
-        "Image processing",
-        "Sparse matrix operations"
-    ],
-    "General Tags": [
-        "Scientific Computing",
-        "Numerical Algorithms",
-        "Python Library",
-        "Data Analysis",
-        "Signal Processing"
-    ],
+    "Core Features": "Numerical Integration & Optimization, Linear Algebra Operations, Interpolation & Curve Fitting, Statistics & Signal Processing, Image Processing, Sparse Matrix Operations",
+    "General Tags": "Scientific Computing, Numerical Algorithms, Python Library, Data Analysis, Signal Processing",
     "Software Type": "Python",
     "Software Class": "Library",
-    "Research Field": [
-        "Computer And Information Sciences",
-        "Other Computer And Information Sciences"
-    ],
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences, Other Computer & Information Sciences"
 }

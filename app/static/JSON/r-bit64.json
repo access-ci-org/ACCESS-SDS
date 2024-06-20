@@ -2,14 +2,10 @@
     "Software": "r-bit64",
     "AI Description": "The r-bit64 package provides an implementation of 64-bit integers in R. This allows users to manipulate integers greater than the usual 32-bit range in R, providing increased precision for numerical computations.",
     "Core Features": "1. Implementation of 64-bit integers in R\n2. Allows manipulation of integers greater than the 32-bit range\n3. Increased precision for numerical computations",
-    "General Tags": [
-        "64-Bit Integers",
-        "Numerical Computations",
-        "Data Manipulation"
-    ],
+    "General Tags": "64-Bit Integers, Numerical Computations, Data Manipulation",
     "Software Type": "Package",
     "Software Class": "Data Manipulation",
-    "Research Field": "Other Natural Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Other Natural Sciences"
 }

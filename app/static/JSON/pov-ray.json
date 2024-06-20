@@ -1,22 +1,11 @@
 {
     "Software": "POV-Ray",
     "AI Description": "POV-Ray (Persistence of Vision Raytracer) is a high-quality three-dimensional graphics tool that creates stunning photorealistic images using ray tracing techniques. It is a free, open-source software package that allows users to design detailed scenes using a specialized scripting language.",
-    "Core Features": [
-        "Produces visually realistic images with ray tracing",
-        "Supports a wide range of elegant textures, lighting effects, and reflections",
-        "Includes a sophisticated scene description language for creating complex scenes",
-        "Highly customizable and extensible through user-created scripts and modules",
-        "Enables the creation of animations and interactive 3D scenes"
-    ],
-    "General Tags": [
-        "3D Graphics",
-        "Ray Tracing",
-        "Open-Source",
-        "Visualization"
-    ],
+    "Core Features": "Produces Visually Realistic Images With Ray Tracing, Supports A Wide Range Of Elegant Textures, Lighting Effects, & Reflections, Includes A Sophisticated Scene Description Language For Creating Complex Scenes, Highly Customizable & Extensible Through User-Created Scripts & Modules, Enables The Creation Of Animations & Interactive 3D Scenes",
+    "General Tags": "3D Graphics, Ray Tracing, Open-Source, Visualization",
     "Software Type": "Visualization Software",
     "Software Class": "Graphics & Animation",
-    "Research Field": "Computer Science",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer Science"
 }

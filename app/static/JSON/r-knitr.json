@@ -2,14 +2,10 @@
     "Software": "r-knitr",
     "AI Description": "Knitr is an R package that enables integration of R code into LaTeX, Markdown, HTML, and other document formats. It allows for dynamic report generation, combining narrative text, code, and output.",
     "Core Features": "1. Seamless integration of R code within various document formats.\n2. Supports dynamic reporting with the ability to embed R code chunks.\n3. Facilitates reproducible research by knitting together R code, output, and narrative in a single document.\n4. Provides customizable formatting options and support for multiple output formats.",
-    "General Tags": [
-        "R Package",
-        "Dynamic Reporting",
-        "Reproducible Research"
-    ],
+    "General Tags": "R Package, Dynamic Reporting, Reproducible Research",
     "Software Type": "Libraries & Packages",
     "Software Class": "Data Analysis",
-    "Research Field": "Other Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Other Computer & Information Sciences"
 }

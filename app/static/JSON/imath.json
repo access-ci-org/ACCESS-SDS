@@ -2,15 +2,10 @@
     "Software": "iMath",
     "AI Description": "iMath is a comprehensive computational software for mathematical modeling, simulation, and analysis. It provides a user-friendly interface for performing various mathematical and statistical computations.",
     "Core Features": "Some core features of iMath include symbolic and numeric computation capabilities, data visualization tools, equation solving, optimization algorithms, statistical analysis functions, and support for matrix operations.",
-    "General Tags": [
-        "Mathematics",
-        "Computational Software",
-        "Simulation",
-        "Data Analysis"
-    ],
+    "General Tags": "Mathematics, Computational Software, Simulation, Data Analysis",
     "Software Type": "Mathematical Modeling & Analysis Software",
     "Software Class": "Computational Software",
-    "Research Field": "Mathematics",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Mathematics"
 }

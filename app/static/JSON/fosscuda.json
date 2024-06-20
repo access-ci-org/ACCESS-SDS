@@ -2,15 +2,10 @@
     "Software": "FOSSCUDA",
     "AI Description": "FOSSCUDA stands for Free and Open-Source Software for CUDA (Compute Unified Device Architecture) and is a collection of tools and libraries that enable developers to leverage the power of NVIDIA GPUs for parallel computing tasks.",
     "Core Features": "1. Provides open-source alternatives to proprietary CUDA tools. 2. Enables accelerated computing on NVIDIA GPUs. 3. Supports parallel processing and high-performance computing applications. 4. Includes libraries and frameworks for GPU-accelerated programming.",
-    "General Tags": [
-        "Cuda",
-        "Gpu Computing",
-        "Parallel Programming",
-        "Open-Source"
-    ],
+    "General Tags": "Cuda, Gpu Computing, Parallel Programming, Open-Source",
     "Software Type": "Compiler/Library",
     "Software Class": "Software Development/Tools",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Artificial Intelligence & Intelligent Systems",
-    "Research Discipline": "Computer Science"
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
 }

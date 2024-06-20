@@ -1,19 +1,11 @@
 {
     "Software": "abricate",
     "AI Description": "abricate is a tool for finding antimicrobial resistance and virulence genes in bacterial genomes.",
-    "Core Features": [
-        "Identify antimicrobial resistance genes",
-        "Detect virulence genes",
-        "Analyze bacterial genomes"
-    ],
-    "General Tags": [
-        "Antimicrobial Resistance",
-        "Genomic Analysis",
-        "Bacterial Genomics"
-    ],
+    "Core Features": "Identify Antimicrobial Resistance Genes, Detect Virulence Genes, Analyze Bacterial Genomes",
+    "General Tags": "Antimicrobial Resistance, Genomic Analysis, Bacterial Genomics",
     "Software Type": "Tool",
     "Software Class": "Bioinformatics",
-    "Research Field": "Biological Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

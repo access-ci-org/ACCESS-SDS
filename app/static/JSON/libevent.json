@@ -1,22 +1,11 @@
 {
     "Software": "libevent",
     "AI Description": "libevent is a robust event notification library that provides a mechanism to execute a callback function when specific events occur on a file descriptor or after a timeout has been reached. It is designed to be highly efficient and versatile, capable of handling various types of events in a scalable manner.",
-    "Core Features": [
-        "Event-driven programming model",
-        "Support for multiple event types (I/O, signals, timers)",
-        "Asynchronous and non-blocking I/O operations",
-        "Thread safety and multiplexing",
-        "Cross-platform compatibility"
-    ],
-    "General Tags": [
-        "Event Notification",
-        "Callback Functions",
-        "Scalable",
-        "Efficient"
-    ],
+    "Core Features": "Event-Driven Programming Model, Support For Multiple Event Types (I/O, Signals, Timers), Asynchronous & Non-Blocking I/O Operations, Thread Safety & Multiplexing, Cross-Platform Compatibility",
+    "General Tags": "Event Notification, Callback Functions, Scalable, Efficient",
     "Software Type": "Development",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

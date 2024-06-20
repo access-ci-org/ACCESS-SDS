@@ -1,21 +1,11 @@
 {
     "Software": "rebaler",
     "AI Description": "rebaler is a software tool for evaluating the performance of de novo genome assemblers by comparing their results against a reference genome. It provides detailed statistics and visualizations to assess the quality of the assembly.",
-    "Core Features": [
-        "Performance evaluation of de novo genome assemblers",
-        "Comparison with a reference genome",
-        "Statistical analysis of assembly quality",
-        "Visualizations for easy interpretation"
-    ],
-    "General Tags": [
-        "Genome Assembly",
-        "De Novo Assembly",
-        "Assembly Evaluation",
-        "Bioinformatics"
-    ],
+    "Core Features": "Performance Evaluation Of De Novo Genome Assemblers, Comparison With A Reference Genome, Statistical Analysis Of Assembly Quality, Visualizations For Easy Interpretation",
+    "General Tags": "Genome Assembly, De Novo Assembly, Assembly Evaluation, Bioinformatics",
     "Software Type": "Bioinformatics Tool",
     "Software Class": "Evaluation Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genomics",
-    "Research Discipline": "Genetics"
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
 }

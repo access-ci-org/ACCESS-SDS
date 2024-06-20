@@ -2,14 +2,10 @@
     "Software": "ViennaRNA",
     "AI Description": "ViennaRNA is a software package that provides algorithms and tools for the prediction and comparison of RNA secondary structures. It includes various programs for structure prediction, partition function calculations, RNA-RNA interaction prediction, and more.",
     "Core Features": "RNA secondary structure prediction, partition function calculations, RNA-RNA interaction prediction, thermodynamic analysis, structure comparison",
-    "General Tags": [
-        "Rna Secondary Structure",
-        "Bioinformatics",
-        "Computational Biology"
-    ],
+    "General Tags": "RNA Secondary Structure, Bioinformatics, Computational Biology",
     "Software Type": "Prediction & Analysis Tools",
     "Software Class": "Bioinformatics Tools",
-    "Research Field": "Biological Sciences",
     "Research Area": "Computational Biology",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

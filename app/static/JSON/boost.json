@@ -1,24 +1,11 @@
 {
     "Software": "Boost",
     "AI Description": "Boost is a set of C++ libraries that provides support for tasks and structures such as linear algebra, pseudorandom number generation, multithreading, image processing, regular expressions, and unit testing. It aims to extend the functionality of C++ programming language and make it more efficient and powerful.",
-    "Core Features": [
-        "Extensive C++ libraries",
-        "Support for various tasks and data structures",
-        "Enhanced functionality for C++ programming"
-    ],
-    "General Tags": [
-        "C++ Libraries",
-        "Programming Support",
-        "Efficiency Enhancement"
-    ],
+    "Core Features": "Extensive C++ Libraries, Support For Various Tasks & Data Structures, Enhanced Functionality For C++ Programming",
+    "General Tags": "C++ Libraries, Programming Support, Efficiency Enhancement",
     "Software Type": "Development Tool",
     "Software Class": "Library",
-    "Research Field": [
-        "Computer And Information Sciences"
-    ],
     "Research Area": "",
-    "Research Discipline": [
-        "Computer Science",
-        "Software Engineering, Systems, And Development"
-    ]
+    "Research Discipline": "Computer Science, Software Engineering, Systems, & Development",
+    "Research Field": "Computer & Information Sciences"
 }

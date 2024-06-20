@@ -2,14 +2,10 @@
     "Software": "libgpg-error",
     "AI Description": "Libgpg-error is a small library that defines common error values for all GnuPG components. It is used by GnuPG and some other packages.",
     "Core Features": "1. Provides a set of error codes for use by GnuPG components\n2. Enables standardized error handling across GnuPG processes\n3. Supports better error reporting and debugging capabilities\n4. Facilitates compatibility and interoperability between different GnuPG components",
-    "General Tags": [
-        "Error Handling",
-        "Library",
-        "Gnupg"
-    ],
+    "General Tags": "Error Handling, Library, Gnupg",
     "Software Type": "Utility",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

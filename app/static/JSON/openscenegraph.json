@@ -1,23 +1,11 @@
 {
     "Software": "OpenSceneGraph",
     "AI Description": "OpenSceneGraph (OSG) is an open-source high-performance 3D graphics toolkit that is widely used in the fields of virtual reality, simulation, visualization, and gaming. It provides a powerful scene graph API for rapid development of interactive 3D graphics applications.",
-    "Core Features": [
-        "Cross-platform support for Windows, macOS, and Linux",
-        "Support for shaders, textures, lighting, and effects",
-        "Integration with other libraries like OpenGL, OpenAL, and Qt",
-        "Various file format support including OBJ, OSG, FBX, and COLLADA",
-        "Extensive documentation and community support"
-    ],
-    "General Tags": [
-        "3D Graphics",
-        "Virtual Reality",
-        "Simulation",
-        "Visualization",
-        "Gaming"
-    ],
+    "Core Features": "Cross-Platform Support For Windows, Macos, & Linux, Support For Shaders, Textures, Lighting, & Effects, Integration With Other Libraries Like Opengl, Openal, & Qt, Various File Format Support Including Obj, Osg, Fbx, & Collada, Extensive Documentation & Community Support",
+    "General Tags": "3D Graphics, Virtual Reality, Simulation, Visualization, Gaming",
     "Software Type": "Library",
     "Software Class": "Graphics Toolkit",
-    "Research Field": "Engineering & Technology",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
 }

@@ -1,22 +1,11 @@
 {
     "Software": "fastx-toolkit",
     "AI Description": "The fastx-toolkit is a collection of command line tools for Short-Reads FASTA/FASTQ files preprocessing. The tools simplify and streamline various tasks related to quality control, adapter trimming, and format conversion of next-generation sequencing data.",
-    "Core Features": [
-        "Quality filtering of FASTQ files",
-        "Adapter trimming",
-        "Format conversion between FASTA and FASTQ files",
-        "Length filtering",
-        "Sequence preprocessing"
-    ],
-    "General Tags": [
-        "Bioinformatics",
-        "Ngs Data Processing",
-        "Sequence Analysis",
-        "Fastq Manipulation"
-    ],
+    "Core Features": "Quality Filtering Of Fastq Files, Adapter Trimming, Format Conversion Between Fasta & Fastq Files, Length Filtering, Sequence Preprocessing",
+    "General Tags": "Bioinformatics, Ngs Data Processing, Sequence Analysis, Fastq Manipulation",
     "Software Type": "Tool",
     "Software Class": "Data Processing & Analysis",
-    "Research Field": "Biological Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

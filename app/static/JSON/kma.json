@@ -1,20 +1,11 @@
 {
     "Software": "KMA",
     "AI Description": "KMA (K-mer Matching Alignment) is a tool for mapping sequencing reads to reference sequences. It utilizes k-mer based alignment to efficiently and accurately map reads in both nucleotide and amino acid sequence data.",
-    "Core Features": [
-        "Efficient mapping of sequencing reads",
-        "Support for nucleotide and amino acid sequences",
-        "K-mer based alignment",
-        "High accuracy in read mapping"
-    ],
-    "General Tags": [
-        "Sequence Alignment",
-        "Read Mapping",
-        "Bioinformatics"
-    ],
+    "Core Features": "Efficient Mapping Of Sequencing Reads, Support For Nucleotide & Amino Acid Sequences, K-Mer Based Alignment, High Accuracy In Read Mapping",
+    "General Tags": "Sequence Alignment, Read Mapping, Bioinformatics",
     "Software Type": "Analysis Tool",
     "Software Class": "Alignment Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genomics",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

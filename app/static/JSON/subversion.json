@@ -1,23 +1,11 @@
 {
     "Software": "Subversion",
     "AI Description": "Subversion (SVN) is an open-source version control system that allows users to manage files and directories, track changes in the source code, and collaborate with team members on software development projects.",
-    "Core Features": [
-        "Version control system",
-        "Branching and merging",
-        "File and directory metadata",
-        "Atomic commits",
-        "Tagging and labeling",
-        "Authentication and authorization"
-    ],
-    "General Tags": [
-        "Version Control",
-        "Software Development",
-        "Collaboration",
-        "Teamwork"
-    ],
+    "Core Features": "Version Control System, Branching & Merging, File & Directory Metadata, Atomic Commits, Tagging & Labeling, Authentication & Authorization",
+    "General Tags": "Version Control, Software Development, Collaboration, Teamwork",
     "Software Type": "Development Tools",
     "Software Class": "Version Control System",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

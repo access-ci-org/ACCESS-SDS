@@ -1,20 +1,11 @@
 {
     "Software": "Intel-DPL",
     "AI Description": "Intel-DPL (Data Parallel Library) is a software library that enables developers to write parallel programs in a natural and expressive way, without needing to have expertise in parallel programming. It helps in achieving high performance in parallel computing tasks by utilizing task parallelism and data parallelism.",
-    "Core Features": [
-        "Easy-to-use parallel programming interface",
-        "Support for task parallelism and data parallelism",
-        "High performance computing capabilities",
-        "Optimized for Intel architectures"
-    ],
-    "General Tags": [
-        "Parallel Programming",
-        "High Performance Computing",
-        "Intel Architecture"
-    ],
+    "Core Features": "Easy-To-Use Parallel Programming Interface, Support For Task Parallelism & Data Parallelism, High Performance Computing Capabilities, Optimized For Intel Architectures",
+    "General Tags": "Parallel Programming, High Performance Computing, Intel Architecture",
     "Software Type": "Development Tool",
     "Software Class": "Parallel Programming Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

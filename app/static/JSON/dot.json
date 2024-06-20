@@ -2,14 +2,10 @@
     "Software": "dot",
     "AI Description": "Graphviz is open source graph visualization software. It has several main graph layout programs. It also has web and interactive graphical interfaces, and auxiliary tools, libraries, and language bindings.",
     "Core Features": "Graph layout programs, web and interactive graphical interfaces, auxiliary tools, libraries, language bindings",
-    "General Tags": [
-        "Graph Visualization",
-        "Open Source",
-        "Graph Layout"
-    ],
+    "General Tags": "Graph Visualization, Open Source, Graph Layout",
     "Software Type": "Graph Visualization Software",
     "Software Class": "Visualization Tool",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

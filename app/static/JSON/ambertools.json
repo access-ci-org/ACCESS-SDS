@@ -2,15 +2,10 @@
     "Software": "AmberTools",
     "AI Description": "AmberTools is a suite of software for molecular dynamics simulations, energy minimization, and trajectory analysis in the field of computational chemistry. It provides tools for the refinement and analysis of biomolecular structures.",
     "Core Features": "AmberTools offers a wide range of functionality for molecular dynamics simulations, including energy minimization, molecular dynamics simulation, structure analysis, and visualization. It supports various force fields and parameters for simulating biomolecules.",
-    "General Tags": [
-        "Molecular Dynamics",
-        "Computational Chemistry",
-        "Biomolecular Structure",
-        "Energy Minimization"
-    ],
+    "General Tags": "Molecular Dynamics, Computational Chemistry, Biomolecular Structure, Energy Minimization",
     "Software Type": "Simulation Software",
     "Software Class": "Software Tools",
-    "Research Field": "Biological Sciences",
     "Research Area": "Structural Biology",
-    "Research Discipline": "Biophysics"
+    "Research Discipline": "Biophysics",
+    "Research Field": "Biological Sciences"
 }

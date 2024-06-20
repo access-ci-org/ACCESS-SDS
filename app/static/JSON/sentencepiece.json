@@ -2,14 +2,10 @@
     "Software": "sentencepiece",
     "AI Description": "SentencePiece is an unsupervised text tokenizer and detokenizer mainly for Neural Network-based text generation systems where the vocabulary size greatly affects the model performance.",
     "Core Features": "SentencePiece allows for effective tokenization and detokenization of text data, with the ability to encode/decode text to/from input sequences. It is designed for use in Neural Network-based text generation systems to optimize vocabulary size and model performance. SentencePiece supports various tokenization strategies such as unigram language model, BPE (Byte Pair Encoding), WordPiece, and more. It also offers subword regularization and reversible tokenization.",
-    "General Tags": [
-        "Text Tokenizer",
-        "Neural Network",
-        "Text Generation"
-    ],
+    "General Tags": "Text Tokenizer, Neural Network, Text Generation",
     "Software Type": "Library/Tool",
     "Software Class": "Text Processing & Nlp",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

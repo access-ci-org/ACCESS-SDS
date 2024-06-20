@@ -2,14 +2,10 @@
     "Software": "hh-suite",
     "AI Description": "HH-suite is a software package for sensitive protein sequence searching based on profile hidden Markov models. It includes tools for the alignment of protein sequences, detecting remote homologs, and predicting protein structures.",
     "Core Features": "1. Sensitive protein sequence searching using profile hidden Markov models. 2. Alignment of protein sequences. 3. Detection of remote homologs. 4. Prediction of protein structures.",
-    "General Tags": [
-        "Protein Sequence Searching",
-        "Profile Hidden Markov Models",
-        "Protein Structure Prediction"
-    ],
+    "General Tags": "Protein Sequence Searching, Profile Hidden Markov Models, Protein Structure Prediction",
     "Software Type": "Computational Software",
     "Software Class": "Bioinformatics",
-    "Research Field": "Biological Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

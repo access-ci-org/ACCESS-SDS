@@ -2,14 +2,10 @@
     "Software": "Pydantic",
     "AI Description": "Pydantic is a data validation and settings management library in Python that provides data validation using Python type annotations. It enforces type hints at runtime, allowing you to define JSON-like data structures with Python types.",
     "Core Features": "1. Data validation using Python type annotations\n2. Enforces type hints at runtime\n3. Settings management\n4. Define JSON-like data structures with Python types",
-    "General Tags": [
-        "Python Library",
-        "Data Validation",
-        "Settings Management"
-    ],
+    "General Tags": "Python Library, Data Validation, Settings Management",
     "Software Type": "Library",
     "Software Class": "Validation & Settings Management",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

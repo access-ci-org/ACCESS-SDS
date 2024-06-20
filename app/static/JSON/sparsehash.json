@@ -2,13 +2,10 @@
     "Software": "sparsehash",
     "AI Description": "sparsehash is a C++ library that provides several hash-map implementations. These implementations are designed to be very space-efficient, but still allow fast lookups.",
     "Core Features": "1. Provides hash-map implementations. 2. Designed to be space-efficient. 3. Allows fast lookups. 4. Supports several hash-map types such as sparse_hash_map, dense_hash_map, and more.",
-    "General Tags": [
-        "C++ Library",
-        "Hash-Map Implementations"
-    ],
+    "General Tags": "C++ Library, Hash-Map Implementations",
     "Software Type": "Data Structure",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

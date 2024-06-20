@@ -2,15 +2,10 @@
     "Software": "brotli-python",
     "AI Description": "brotli-python is a Python binding for the Brotli compression library. It allows users to compress and decompress data using the Brotli algorithm within Python applications.",
     "Core Features": "1. Compression and decompression of data using the Brotli algorithm.\n2. Integration with Python applications for efficient data compression.\n3. Support for various compression levels and settings.\n4. High compression ratio and fast decompression speed.",
-    "General Tags": [
-        "Compression",
-        "Data Compression",
-        "Brotli",
-        "Python Library"
-    ],
+    "General Tags": "Compression, Data Compression, Brotli, Python Library",
     "Software Type": "Compression Library",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Data Compression",
-    "Research Discipline": "Computer Science"
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
 }

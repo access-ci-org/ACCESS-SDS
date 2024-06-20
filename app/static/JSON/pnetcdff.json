@@ -1,21 +1,11 @@
 {
     "Software": "pnetcdf",
     "AI Description": "Parallel netCDF (pnetCDF) is a library providing high-performance I/O facilities for applications running on parallel distributed computing platforms. It is built on top of the widely-used netCDF file format and offers parallel I/O capabilities for reading and writing data in a scalable and efficient manner.",
-    "Core Features": [
-        "Parallel I/O support",
-        "High-performance data access",
-        "Compatible with netCDF file format",
-        "Scalability on distributed computing platforms"
-    ],
-    "General Tags": [
-        "Parallel I/O",
-        "Data Access",
-        "Distributed Computing",
-        "High Performance Computing"
-    ],
+    "Core Features": "Parallel I/O Support, High-Performance Data Access, Compatible With Netcdf File Format, Scalability On Distributed Computing Platforms",
+    "General Tags": "Parallel I/O, Data Access, Distributed Computing, High Performance Computing",
     "Software Type": "I/O Library",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

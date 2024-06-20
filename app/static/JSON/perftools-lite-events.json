@@ -2,14 +2,10 @@
     "Software": "perftools-lite-events",
     "AI Description": "Perftools Lite (PTL) provides a framework for lightweight performance analysis of parallel applications. It allows users to collect and analyze performance data to identify bottlenecks and optimize code performance. PTL focuses on event-based performance analysis to monitor and measure the execution behavior of parallel applications.",
     "Core Features": "1. Event-based performance analysis\n2. Lightweight and efficient performance data collection\n3. Identification of performance bottlenecks\n4. Optimization of code performance\n5. Monitoring and measuring parallel application execution behavior",
-    "General Tags": [
-        "Performance Analysis",
-        "Parallel Applications",
-        "Optimization"
-    ],
+    "General Tags": "Performance Analysis, Parallel Applications, Optimization",
     "Software Type": "Compiler/Profiler",
     "Software Class": "Performance Analysis Tool",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

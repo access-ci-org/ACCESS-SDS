@@ -1,120 +1,163 @@
-<div id="softwareDetails-modal" class="softwareDetailsModal modal" tabindex="-1" role="dialog" aria-labelledby="softwareDetails-modal-title" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" style="min-width:30%;" role="document">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h4 id="softwareDetails-modal-title" class="modal-title"><b>Software Details: </b></h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-              </button>
-          </div>
-          <div class="modal-body" id = "softwareDetailsBody">
-            <div class="row">
-              <div class="col-md-4 borderCell" style="background-color:#1a5b6e;color:white;">
-                <p><b>Software Name:</b></p>
-              </div>
-              <div class="col-md-8 borderValue" style="background-color:#107180;color:white;">
-                <p id="softwareDetailsName">This is a software. It does very cool things.</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-4 borderCell" style="background-color:#1a5b6e;color:white;">
-                <p><b>Available on these RPs:</b></p>
-              </div>
-              <div class="col-md-8 borderValue" style="background-color:#107180;color:white;">
-                <p id="softwareDetailsRPs">Very cool HPCs will be listed here.</p>
-              </div>
-            </div>
-            
-            <div class="row">
-              <div class="col-md-4 borderCell" style="background-color:#1a5b6e;color:white;">
-                <p><b>Software Type:</b></p>
-              </div>
-              <div class="col-md-8 borderValue" style="background-color:#107180;color:white;">
-                <p id="softwareDetailsType">Lorem ipsum dolor sit amet.</p>
-              </div>
-            </div>
-            
-            <div class="row">
-              <div class="col-md-4 borderCell" style="background-color:#1a5b6e;color:white;">
-                <p><b>Software Class:</b></p>
-              </div>
-              <div class="col-md-8 borderValue" style="background-color:#107180;color:white;">
-                <p id="softwareDetailsClass">sem at dapibus interdum,</p>
-              </div>
-            </div>
-            
-            <div class="row">
-              <div class="col-md-4 borderCell" style="background-color:#1a5b6e;color:white;">
-                <p><b>Research Area:</b></p>
-              </div>
-              <div class="col-md-8 borderValue" style="background-color:#107180;color:white;">
-                <p id="softwareDetailsArea">consectetur adipiscing elit.</p>
-              </div>
-            </div>
-            
-            <div class="row">
-              <div class="col-md-4 borderCell" style="background-color:#1a5b6e;color:white;">
-                <p><b>Research Discipline:</b></p>
-              </div>
-              <div class="col-md-8 borderValue" style="background-color:#107180;color:white;">
-                <p id="softwareDetailsDiscipline">Duis condimentum nisi ac velit maximus blandit.</p>
-              </div>
-            </div>
-            
-            <div class="row">
-              <div class="col-md-4 borderCell" style="background-color:#1a5b6e;color:white;">
-                <p><b>Software Description:</b></p>
-              </div>
-              <div class="col-md-8 borderValue" style="background-color:#107180;color:white;">
-                <p id="softwareDetailsDescription">Nullam dapibus aliquam nunc vel feugiat.</p>
-              </div>
-            </div>
-            
-            <div class="row">
-              <div class="col-md-4 borderCell" style="background-color:#1a5b6e;color:white;">
-                <p><b>Software's Web Page:</b></p>
-              </div>
-              <div class="col-md-8 borderValue" style="background-color:#107180;color:white;">
-                <p><a id="softwareDetailsWebpage" >Morbi ut accumsan diam.</p>
-              </div>
-            </div>
-            
-            <div class="row">
-              <div class="col-md-4 borderCell" style="background-color:#1a5b6e;color:white;">
-                <p><b>Software's Documentation:</b></p>
-              </div>
-              <div class="col-md-8 borderValue" style="background-color:#107180;color:white;">
-                <p id="softwareDetailsDocumentation">Proin lorem nisl,</p>
-              </div>
-            </div>
-            
-            <div class="row">
-              <div class="col-md-4 borderCell" style="background-color:#1a5b6e;color:white;">
-                <p><b>Tutorials/Examples of Software's Use:</b></p>
-              </div>
-              <div class="col-md-8 borderValue" style="background-color:#107180;color:white;">
-                <p id="softwareDetailsExamples">dapibus et elementum a,</p>
-              </div>
-            </div>
-            
-            <div class="row">
-              <div class="col-md-4 borderCell" style="background-color:#1a5b6e;color:white;">
-                <p><b>Resource Provider Specific Documentation:</b></p>
-              </div>
-              <div class="col-md-8 borderValue" style="background-color:#107180;color:white;">
-                <p id="softwareDetailsRPDocs">pulvinar ut tortor.</p>
-              </div>
-            </div>
-            
-            <div class="row">
-              <div class="col-md-4 borderCell" style="background-color:#1a5b6e;color:white;">
-                <p><b>Installed Versions:</b></p>
-              </div>
-              <div class="col-md-8 borderValue" style="background-color:#107180;color:white;">
-                <p id="softwareDetailsVersions">Mauris consectetur,</p>
-              </div>
-            </div>
-          </div>
+<div class="softwareDetailsModal modal" id="softwareDetails-modal" tabindex="-1" role="dialog" aria-labelledby="softwareDetails-modalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="softwareDetails-modal-title"><b>Software Details: </b></h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
+      <div class="modal-body" id="softwareDetailsBody">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6 borderCell" style="background-color:#1a5b6e;color:white;">
+              <p><h5><b>Curated Information</b></h5></p>
+              <div class="row">
+                <div class="col-md-4 borderCell" style="background-color:#1a5b6e;color:white;">
+                  <p><b>Software Name:</b></p>
+                </div>
+                <div class="col-md-8 borderValue" style="background-color:#107180;color:white;">
+                  <p id="softwareDetailsName">This is a software. It does very cool things.</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 borderCell" style="background-color:#1a5b6e;color:white;">
+                  <p><b>Available on these RPs:</b></p>
+                </div>
+                <div class="col-md-8 borderValue" style="background-color:#107180;color:white;">
+                  <p id="softwareDetailsRPs">Very cool HPCs will be listed here.</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 borderCell" style="background-color:#1a5b6e;color:white;">
+                  <p><b>Software Type:</b></p>
+                </div>
+                <div class="col-md-8 borderValue" style="background-color:#107180;color:white;">
+                  <p id="softwareDetailsType">Lorem ipsum dolor sit amet.</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 borderCell" style="background-color:#1a5b6e;color:white;">
+                  <p><b>Software Class:</b></p>
+                </div>
+                <div class="col-md-8 borderValue" style="background-color:#107180;color:white;">
+                  <p id="softwareDetailsClass">sem at dapibus interdum,</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 borderCell" style="background-color:#1a5b6e;color:white;">
+                  <p><b>Research Field:</b></p>
+                </div>
+                <div class="col-md-8 borderValue" style="background-color:#107180;color:white;">
+                  <p id="softwareDetailsField">Nulla malesuada ipsum id accumsan gravida.</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 borderCell" style="background-color:#1a5b6e;color:white;">
+                  <p><b>Research Area:</b></p>
+                </div>
+                <div class="col-md-8 borderValue" style="background-color:#107180;color:white;">
+                  <p id="softwareDetailsArea">consectetur adipiscing elit.</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 borderCell" style="background-color:#1a5b6e;color:white;">
+                  <p><b>Research Discipline:</b></p>
+                </div>
+                <div class="col-md-8 borderValue" style="background-color:#107180;color:white;">
+                  <p id="softwareDetailsDiscipline">Duis condimentum nisi ac velit maximus blandit.</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 borderCell" style="background-color:#1a5b6e;color:white;">
+                  <p><b>Software Description:</b></p>
+                </div>
+                <div class="col-md-8 borderValue" style="background-color:#107180;color:white;">
+                  <p id="softwareDetailsDescription">Nullam dapibus aliquam nunc vel feugiat.</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 borderCell" style="background-color:#1a5b6e;color:white;">
+                  <p><b>Software Description:</b></p>
+                </div>
+                <div class="col-md-8 borderValue" style="background-color:#107180;color:white;">
+                  <p id="softwareDetailsWebpage">Morbi ut accumsan diam.</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 borderCell" style="background-color:#1a5b6e;color:white;">
+                  <p><b>Software's Documentation:</b></p>
+                </div>
+                <div class="col-md-8 borderValue" style="background-color:#107180;color:white;">
+                  <p id="softwareDetailsDocumentation">Proin lorem nisl,</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 borderCell" style="background-color:#1a5b6e;color:white;">
+                  <p><b>Tutorials/Examples of Software's Use:</b></p>
+                </div>
+                <div class="col-md-8 borderValue" style="background-color:#107180;color:white;">
+                  <p id="softwareDetailsExamples">dapibus et elementum a,</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 borderCell" style="background-color:#1a5b6e;color:white;">
+                  <p><b>Resource Provider Specific Documentation:</b></p>
+                </div>
+                <div class="col-md-8 borderValue" style="background-color:#107180;color:white;">
+                  <p id="softwareDetailsRPDocs">pulvinar ut tortor.</p>
+                </div>
+              </div> 
+              <div class="row">
+                <div class="col-md-4 borderCell" style="background-color:#1a5b6e;color:white;">
+                  <p><b>Installed Versions:</b></p>
+                </div>
+                <div class="col-md-8 borderValue" style="background-color:#107180;color:white;">
+                  <p id="softwareDetailsVersions">Mauris consectetur,</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6 borderCell" style="background-color:#1a5b6e;color:white;">
+                <p><h5><b>AI Generated Information</b></h5></p>
+                <div class="row">
+                  <div class="col-md-4 borderCell" style="background-color:#1a5b6e;color:white;">
+                    <p><b>Description:</b></p>
+                  </div>
+                  <div class="col-md-8 borderValue" style="background-color:#107180;color:white;">
+                    <p id="softwareDetailsAIDesc">Mauris tellus eros,</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4 borderCell" style="background-color:#1a5b6e;color:white;">
+                    <p><b>Core Features:</b></p>
+                  </div>
+                  <div class="col-md-8 borderValue" style="background-color:#107180;color:white;">
+                    <p id="softwareDetailsCoreFeat">suscipit vel nulla nec,</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4 borderCell" style="background-color:#1a5b6e;color:white;">
+                    <p><b>Tags:</b></p>
+                  </div>
+                  <div class="col-md-8 borderValue" style="background-color:#107180;color:white;">
+                    <p id="softwareDetailsTags">fringilla convallis ipsum.</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 borderCell" style="background-color:#1a5b6e;color:white;"> 
+                    <b><p id="modalExampleTitle">Example Use:</p></b>
+                  </div>             
+                </div>
+                <div class="row">
+                  <div class="col-md-12 borderCell" style="background-color:white;color:black;"> 
+                    <p id="modalExampleUse">Example Use:</p>
+                  </div>             
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

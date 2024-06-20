@@ -1,19 +1,11 @@
 {
     "Software": "pytest-flakefinder",
     "AI Description": "pytest-flakefinder is a Pytest plugin that helps in detecting flaky tests by running them multiple times and analyzing the results. It identifies tests that fail intermittently due to non-deterministic behavior.",
-    "Core Features": [
-        "Detection of flaky tests",
-        "Running tests multiple times",
-        "Analysis of test results"
-    ],
-    "General Tags": [
-        "Pytest Plugin",
-        "Test Automation",
-        "Flaky Test Detection"
-    ],
+    "Core Features": "Detection Of Flaky Tests, Running Tests Multiple Times, Analysis Of Test Results",
+    "General Tags": "Pytest Plugin, Test Automation, Flaky Test Detection",
     "Software Type": "Plugin",
     "Software Class": "Testing",
-    "Research Field": "Engineering & Technology",
     "Research Area": "Software Development",
-    "Research Discipline": "Software Engineering, Systems, & Development"
+    "Research Discipline": "Software Engineering, Systems, & Development",
+    "Research Field": "Engineering & Technology"
 }

@@ -1,19 +1,11 @@
 {
     "Software": "py-jupyter-core",
     "AI Description": "py-jupyter-core is a Python library that provides core functionality for Jupyter applications. It includes APIs for managing Jupyter kernels, messaging protocols, configuration handling, and more.",
-    "Core Features": [
-        "Management of Jupyter kernels",
-        "Messaging protocols",
-        "Configuration handling"
-    ],
-    "General Tags": [
-        "Python Library",
-        "Jupyter Applications",
-        "Core Functionality"
-    ],
+    "Core Features": "Management Of Jupyter Kernels, Messaging Protocols, Configuration Handling",
+    "General Tags": "Python Library, Jupyter Applications, Core Functionality",
     "Software Type": "Core Functionality",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Software Engineering, Systems, & Development",
-    "Research Discipline": "Computer Science"
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
 }

@@ -2,15 +2,10 @@
     "Software": "gompic",
     "AI Description": "gompic is an open-source framework for simulating collective dynamics in soft matter systems with a focus on granular materials. It is designed to simulate the dynamics of large ensembles of particles undergoing complex interactions and can be used to study phenomena like granular flow, pattern formation, and self-organization.",
     "Core Features": "1. Simulation of granular systems with complex interactions.\n2. Study of collective dynamics and emergent behaviors in soft matter.\n3. Analysis of granular flow, pattern formation, and self-organization.\n4. Open-source and customizable framework for research purposes.",
-    "General Tags": [
-        "Simulation",
-        "Granular Materials",
-        "Collective Dynamics",
-        "Soft Matter"
-    ],
+    "General Tags": "Simulation, Granular Materials, Collective Dynamics, Soft Matter",
     "Software Type": "Research",
     "Software Class": "Simulation Framework",
-    "Research Field": "Physical Sciences",
     "Research Area": "Granular Materials Simulation",
-    "Research Discipline": "Other Physical Sciences"
+    "Research Discipline": "Other Physical Sciences",
+    "Research Field": "Physical Sciences"
 }

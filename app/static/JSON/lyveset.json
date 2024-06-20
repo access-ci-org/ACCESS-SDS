@@ -1,21 +1,11 @@
 {
     "Software": "LyveSET",
     "AI Description": "LyveSET is a microbial variant detection pipeline for Whole Genome Sequencing data. It identifies single nucleotide variants (SNVs), insertion and deletions (indels) using a Bayesian algorithm. LyveSET is primarily used for the analysis of bacterial genomes.",
-    "Core Features": [
-        "Variant detection for Whole Genome Sequencing data",
-        "Identifies SNVs and indels",
-        "Uses Bayesian algorithm for variant calling",
-        "Specifically designed for bacterial genomes analysis"
-    ],
-    "General Tags": [
-        "Bioinformatics",
-        "Genomics",
-        "Variant Detection",
-        "Microbial Genomics"
-    ],
+    "Core Features": "Variant Detection For Whole Genome Sequencing Data, Identifies Snvs & Indels, Uses Bayesian Algorithm For Variant Calling, Specifically Designed For Bacterial Genomes Analysis",
+    "General Tags": "Bioinformatics, Genomics, Variant Detection, Microbial Genomics",
     "Software Type": "Bioinformatics Tool",
     "Software Class": "Analysis",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genomics",
-    "Research Discipline": "Biological Sciences"
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
 }

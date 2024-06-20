@@ -1,21 +1,11 @@
 {
     "Software": "AlignStats",
     "AI Description": "AlignStats is a software tool for the statistical analysis of biological sequence alignments. It provides various statistical metrics and analyses to investigate the patterns and properties of sequence alignments.",
-    "Core Features": [
-        "Statistical analysis of biological sequence alignments",
-        "Calculation of sequence conservation scores",
-        "Identification of conserved regions",
-        "Generation of graphical visualizations of alignment statistics"
-    ],
-    "General Tags": [
-        "Bioinformatics",
-        "Sequence Analysis",
-        "Alignment",
-        "Statistics"
-    ],
+    "Core Features": "Statistical Analysis Of Biological Sequence Alignments, Calculation Of Sequence Conservation Scores, Identification Of Conserved Regions, Generation Of Graphical Visualizations Of Alignment Statistics",
+    "General Tags": "Bioinformatics, Sequence Analysis, Alignment, Statistics",
     "Software Type": "Statistical Analysis Tool",
     "Software Class": "Bioinformatics Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genetics",
-    "Research Discipline": "Biological Sciences"
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
 }

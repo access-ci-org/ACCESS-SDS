@@ -1,21 +1,11 @@
 {
     "Software": "py-numba",
     "AI Description": "Numba is a just-in-time compiler for Python that works best on code that uses NumPy arrays and functions. It compiles Python functions to machine code at runtime using the industry-standard LLVM compiler library. It is designed to be used with NumPy arrays and functions, and integrates seamlessly with the Python scientific software stack.",
-    "Core Features": [
-        "Just-in-time compilation of Python code",
-        "Optimized performance of numerical computations",
-        "Integration with NumPy arrays and functions",
-        "Uses LLVM compiler library for machine code generation"
-    ],
-    "General Tags": [
-        "Software Compiler",
-        "Python Library",
-        "Numeric Computation",
-        "Scientific Computing"
-    ],
+    "Core Features": "Just-In-Time Compilation Of Python Code, Optimized Performance Of Numerical Computations, Integration With Numpy Arrays & Functions, Uses Llvm Compiler Library For Machine Code Generation",
+    "General Tags": "Software Compiler, Python Library, Numeric Computation, Scientific Computing",
     "Software Type": "Library",
     "Software Class": "Compiler",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

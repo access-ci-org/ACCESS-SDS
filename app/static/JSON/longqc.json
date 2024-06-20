@@ -1,21 +1,11 @@
 {
     "Software": "LongQC",
     "AI Description": "LongQC is a quality control tool for long-read sequencing data, designed specifically for third-generation sequencing technologies like Pacific Biosciences (PacBio) and Oxford Nanopore Technologies. It aims to assess the quality of raw long-read sequencing data and provide users with detailed insights into the characteristics of the sequenced reads.",
-    "Core Features": [
-        "Quality assessment of long-read sequencing data",
-        "Identification of sequencing errors and artifacts",
-        "Visualization of sequencing metrics and quality scores",
-        "Detection of chimeric reads and adapter sequences",
-        "Assessment of base-call accuracy and read-length distribution"
-    ],
-    "General Tags": [
-        "Quality Control",
-        "Long-Read Sequencing",
-        "Bioinformatics"
-    ],
+    "Core Features": "Quality Assessment Of Long-Read Sequencing Data, Identification Of Sequencing Errors & Artifacts, Visualization Of Sequencing Metrics & Quality Scores, Detection Of Chimeric Reads & Adapter Sequences, Assessment Of Base-Call Accuracy & Read-Length Distribution",
+    "General Tags": "Quality Control, Long-Read Sequencing, Bioinformatics",
     "Software Type": "Bioinformatics Tool",
     "Software Class": "Quality Control Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

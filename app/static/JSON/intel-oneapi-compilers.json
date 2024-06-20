@@ -1,22 +1,11 @@
 {
     "Software": "Intel oneAPI Compilers",
     "AI Description": "Intel oneAPI compilers are a set of high-performance C++ and Fortran compilers that support OpenMP and SYCL programming models. These compilers are designed to accelerate performance and power efficiency across a wide range of hardware platforms.",
-    "Core Features": [
-        "Support for C++ and Fortran programming languages",
-        "Optimized for high performance and power efficiency",
-        "Support for OpenMP and SYCL programming models",
-        "Cross-platform compatibility",
-        "Integration with Intel oneAPI base toolkit"
-    ],
-    "General Tags": [
-        "Compilers",
-        "Software Development",
-        "High Performance Computing",
-        "Parallel Programming"
-    ],
+    "Core Features": "Support For C++ & Fortran Programming Languages, Optimized For High Performance & Power Efficiency, Support For Openmp & Sycl Programming Models, Cross-Platform Compatibility, Integration With Intel Oneapi Base Toolkit",
+    "General Tags": "Compilers, Software Development, High Performance Computing, Parallel Programming",
     "Software Type": "Compiler",
     "Software Class": "Programming Tools",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

@@ -1,21 +1,11 @@
 {
     "Software": "gmap-gsnap",
     "AI Description": "GMAP and GSnap are splice-aware algorithms for mapping RNA-Seq reads to a genome. GMAP is a genomic mapping and alignment program while GSnap is a sensitive and accurate gapped read mapper. Both tools are commonly used in bioinformatics for RNA-Seq analysis.",
-    "Core Features": [
-        "Splice-aware RNA-Seq read mapping",
-        "Alignment to a reference genome",
-        "Identification of novel splice sites",
-        "Support for gapped alignment"
-    ],
-    "General Tags": [
-        "Rna-Seq",
-        "Bioinformatics",
-        "Mapping",
-        "Alignment"
-    ],
+    "Core Features": "Splice-Aware RNA-Seq Read Mapping, Alignment To A Reference Genome, Identification Of Novel Splice Sites, Support For Gapped Alignment",
+    "General Tags": "RNA-Seq, Bioinformatics, Mapping, Alignment",
     "Software Type": "Analysis Tool",
     "Software Class": "Bioinformatics",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genetics",
-    "Research Discipline": "Biological Sciences"
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
 }

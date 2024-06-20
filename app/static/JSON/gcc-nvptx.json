@@ -1,17 +1,11 @@
 {
     "Software": "gcc-nvptx",
     "AI Description": "The Nvidia PTX (Parallel Thread Execution) backend for GCC enables the generation of PTX code, which is a low-level parallel thread execution virtual machine and instruction set architecture used by Nvidia GPUs. It allows users to compile and optimize C and C++ code for Nvidia GPUs.",
-    "Core Features": [
-        "Generating PTX code for Nvidia GPUs",
-        "Compiling and optimizing C and C++ code for GPU execution"
-    ],
-    "General Tags": [
-        "Compiler",
-        "Gpu Programming"
-    ],
+    "Core Features": "Generating Ptx Code For Nvidia Gpus, Compiling & Optimizing C & C++ Code For Gpu Execution",
+    "General Tags": "Compiler, Gpu Programming",
     "Software Type": "Programming Tool",
     "Software Class": "Compiler",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Systems & Development",
-    "Research Discipline": "Computer Science"
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
 }

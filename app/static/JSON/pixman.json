@@ -2,15 +2,10 @@
     "Software": "pixman",
     "AI Description": "Pixman is a low-level software library for pixel manipulation, providing software acceleration for numerous rendering operations. It is used primarily by projects requiring high-quality rendering such as the X server, Cairo, the GTK+ toolkit, and more.",
     "Core Features": "1. Pixel manipulation operations\n2. High-performance software acceleration for rendering\n3. Supports various image formats and colorspaces\n4. Portable and platform-independent\n5. Used by projects requiring quality rendering such as X server and Cairo",
-    "General Tags": [
-        "Pixel Manipulation",
-        "Rendering",
-        "Software Library",
-        "Performance"
-    ],
+    "General Tags": "Pixel Manipulation, Rendering, Software Library, Performance",
     "Software Type": "Graphics Library",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Computer Graphics",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

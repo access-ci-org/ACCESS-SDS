@@ -2,14 +2,10 @@
     "Software": "brotli",
     "AI Description": "Brotli is a generic-purpose lossless compression algorithm that compresses data using a combination of a modern variant of the LZ77 algorithm, Huffman coding, and 2nd order context modelling. It is developed by Google and designed to replace the zlib compression.",
     "Core Features": "1. High compression ratio: Brotli provides better compression ratios compared to the existing compression algorithms. 2. Fast decompression speed: Brotli decompression is highly efficient, making it suitable for use in various applications. 3. Support for multiple platforms: Brotli is available for various platforms including desktop and mobile environments. 4. Open-source: Brotli is an open-source project, allowing for community contributions and improvements. 5. Integration with web browsers: Brotli is supported by major web browsers, enabling faster loading times for web pages.",
-    "General Tags": [
-        "Compression Algorithm",
-        "Lossless Compression",
-        "Data Compression"
-    ],
+    "General Tags": "Compression Algorithm, Lossless Compression, Data Compression",
     "Software Type": "",
     "Software Class": "",
-    "Research Field": "",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": ""
 }

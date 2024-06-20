@@ -1,21 +1,11 @@
 {
     "Software": "isa-l",
     "AI Description": "ISA-L (Intel Storage Acceleration Library) is a collection of optimized low-level functions used in storage applications. It is specifically designed to offer high-performance data movement and protection functions for storage and data processing workloads, leveraging Intel hardware capabilities.",
-    "Core Features": [
-        "Optimized low-level functions",
-        "High-performance data movement",
-        "Data protection functions",
-        "Leverages Intel hardware capabilities"
-    ],
-    "General Tags": [
-        "Optimized Functions",
-        "Data Movement",
-        "Data Protection",
-        "Storage Applications"
-    ],
+    "Core Features": "Optimized Low-Level Functions, High-Performance Data Movement, Data Protection Functions, Leverages Intel Hardware Capabilities",
+    "General Tags": "Optimized Functions, Data Movement, Data Protection, Storage Applications",
     "Software Type": "",
     "Software Class": "",
-    "Research Field": "Engineering & Technology",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
 }

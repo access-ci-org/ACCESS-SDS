@@ -1,20 +1,11 @@
 {
     "Software": "NGSadmix",
     "AI Description": "NGSadmix is a software tool used for analyzing genetic admixture, which is the result of mixing genetic material from different ancestral populations within a population or individual. It is specifically designed to estimate individual admixture proportions and infer the number of ancestral populations contributing to a target population.",
-    "Core Features": [
-        "Estimation of individual admixture proportions",
-        "Identification of ancestral populations contributing to a target population",
-        "Model-based approach for genetic admixture analysis"
-    ],
-    "General Tags": [
-        "Genetic Admixture",
-        "Population Genetics",
-        "Ancestral Populations",
-        "Genomics"
-    ],
+    "Core Features": "Estimation Of Individual Admixture Proportions, Identification Of Ancestral Populations Contributing To A Target Population, Model-Based Approach For Genetic Admixture Analysis",
+    "General Tags": "Genetic Admixture, Population Genetics, Ancestral Populations, Genomics",
     "Software Type": "Bioinformatics Tool",
     "Software Class": "Genetic Admixture Analysis",
-    "Research Field": "Biological Sciences",
     "Research Area": "Population Genetics",
-    "Research Discipline": "Genetics"
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
 }

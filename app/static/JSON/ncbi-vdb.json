@@ -2,14 +2,10 @@
     "Software": "ncbi-vdb",
     "AI Description": "NCBI-vdb is a collection of software tools for managing data from the NCBI Sequence Read Archive, the GenBank flatfile sequence databases, as well as a framework for loading data into third-party caller software. It provides tools for downloading, validating, transforming, and analyzing biological sequence data.",
     "Core Features": "1. Downloading and managing data from NCBI databases. 2. Validating sequence data integrity. 3. Transforming data formats for compatibility with third-party software tools. 4. Analyzing biological sequences for research purposes.",
-    "General Tags": [
-        "Bioinformatics",
-        "Sequence Data Management",
-        "Data Analysis"
-    ],
+    "General Tags": "Bioinformatics, Sequence Data Management, Data Analysis",
     "Software Type": "Tool",
     "Software Class": "Data Management/Analysis",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genomics",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

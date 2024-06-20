@@ -2,15 +2,10 @@
     "Software": "nccl-tests",
     "AI Description": "NVIDIA Collective Communications Library (NCCL) provides multi-GPU and multi-node collective communication primitives optimized for NVIDIA GPUs. nccl-tests is a collection of test utilities and benchmarks for NCCL.",
     "Core Features": "1. Benchmark tests for measuring performance of collective communication operations on multiple GPUs. 2. Validation tests to ensure correct functioning of collective communication operations. 3. Support for various types of collective operations such as all-reduce, all-gather, broadcast, reduce, reduce-scatter, etc. 4. Multi-GPU and multi-node communication support. 5. Integration with NVIDIA GPU hardware to leverage optimized communication paths.",
-    "General Tags": [
-        "Gpu",
-        "Collective Communication",
-        "Benchmarking",
-        "Performance Testing"
-    ],
+    "General Tags": "Gpu, Collective Communication, Benchmarking, Performance Testing",
     "Software Type": "Testing & Benchmarking",
     "Software Class": "Benchmarking Tools",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

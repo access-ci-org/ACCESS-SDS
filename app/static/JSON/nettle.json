@@ -1,22 +1,11 @@
 {
     "Software": "Nettle",
     "AI Description": "Nettle is a cryptographic library that is designed to be low-level and general-purpose, offering several cryptographic algorithms such as AES, ARCFOUR, Blowfish, and MD5.",
-    "Core Features": [
-        "Implements various cryptographic algorithms like AES, ARCFOUR, Blowfish, MD5",
-        "Low-level and general-purpose cryptographic library",
-        "Designed for high performance and portability"
-    ],
-    "General Tags": [
-        "Cryptography",
-        "Security",
-        "Library"
-    ],
+    "Core Features": "Implements Various Cryptographic Algorithms Like Aes, Arcfour, Blowfish, Md5, Low-Level & General-Purpose Cryptographic Library, Designed For High Performance & Portability",
+    "General Tags": "Cryptography, Security, Library",
     "Software Type": "Library",
     "Software Class": "",
-    "Research Field": [
-        "Computer And Information Sciences",
-        "Computer Science"
-    ],
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences, Computer Science"
 }

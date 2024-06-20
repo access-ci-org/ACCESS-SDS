@@ -1,21 +1,11 @@
 {
     "Software": "ncdu",
     "AI Description": "ncdu (NCurses Disk Usage) is a disk utility for analyzing disk usage in a terminal environment. It provides a fast way to see what directories are using the most space on a filesystem.",
-    "Core Features": [
-        "Interactive disk usage viewer",
-        "Lightweight and fast scanning",
-        "Allows navigation through directory hierarchy",
-        "Delete files and directories from within the interface"
-    ],
-    "General Tags": [
-        "Disk Utility",
-        "Disk Usage Analyzer",
-        "Terminal Tool",
-        "Storage Management"
-    ],
+    "Core Features": "Interactive Disk Usage Viewer, Lightweight & Fast Scanning, Allows Navigation Through Directory Hierarchy, Delete Files & Directories From Within The Interface",
+    "General Tags": "Disk Utility, Disk Usage Analyzer, Terminal Tool, Storage Management",
     "Software Type": "Command Line Tool",
     "Software Class": "Utility",
-    "Research Field": "Other Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Other Computer & Information Sciences"
 }

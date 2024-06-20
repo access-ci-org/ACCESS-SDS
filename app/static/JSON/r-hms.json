@@ -1,19 +1,11 @@
 {
     "Software": "r-hms",
     "AI Description": "A package in R for handling and formatting time data.",
-    "Core Features": [
-        "Handles and formats time data in R",
-        "Provides functions for creating and manipulating time data objects",
-        "Supports various time formats and units"
-    ],
-    "General Tags": [
-        "R Package",
-        "Time Data Handling",
-        "Data Formatting"
-    ],
+    "Core Features": "Handles & Formats Time Data In R, Provides Functions For Creating & Manipulating Time Data Objects, Supports Various Time Formats & Units",
+    "General Tags": "R Package, Time Data Handling, Data Formatting",
     "Software Type": "Data Analysis",
     "Software Class": "Library",
-    "Research Field": "Mathematics",
     "Research Area": "",
-    "Research Discipline": "Statistics & Probability"
+    "Research Discipline": "Statistics & Probability",
+    "Research Field": "Mathematics"
 }

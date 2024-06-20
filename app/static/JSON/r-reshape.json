@@ -1,22 +1,11 @@
 {
     "Software": "R Reshape",
     "AI Description": "R Reshape is a package in R programming language that provides tools for restructuring and aggregating data sets. It allows users to transform data frames into various formats to suit different analysis needs.",
-    "Core Features": [
-        "Data restructuring",
-        "Data aggregation",
-        "Data transformation",
-        "Data manipulation",
-        "Support for various data formats"
-    ],
-    "General Tags": [
-        "Data Analysis",
-        "Data Manipulation",
-        "Data Transformation",
-        "R Package"
-    ],
+    "Core Features": "Data Restructuring, Data Aggregation, Data Transformation, Data Manipulation, Support For Various Data Formats",
+    "General Tags": "Data Analysis, Data Manipulation, Data Transformation, R Package",
     "Software Type": "Library",
     "Software Class": "Data Analysis",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

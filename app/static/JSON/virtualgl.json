@@ -1,21 +1,11 @@
 {
     "Software": "VirtualGL",
     "AI Description": "VirtualGL is an open-source toolkit that enables the 3D acceleration of applications that are running on a remote server. It redirects the 3D rendering commands from a Unix/Linux OpenGL application onto a server-side GPU and converts the rendered 3D images into a video stream that is sent to the client-side for display using a high-speed network connection.",
-    "Core Features": [
-        "Enables 3D acceleration of applications on remote servers",
-        "Supports OpenGL applications on Unix/Linux systems",
-        "Utilizes server-side GPU for rendering",
-        "Transmits rendered 3D images to the client-side for display"
-    ],
-    "General Tags": [
-        "Remote Rendering",
-        "Gpu Acceleration",
-        "Opengl Applications",
-        "Network Streaming"
-    ],
+    "Core Features": "Enables 3D Acceleration Of Applications On Remote Servers, Supports Opengl Applications On Unix/Linux Systems, Utilizes Server-Side Gpu For Rendering, Transmits Rendered 3D Images To The Client-Side For Display",
+    "General Tags": "Remote Rendering, Gpu Acceleration, Opengl Applications, Network Streaming",
     "Software Type": "Graphics Software",
     "Software Class": "Desktop Application",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

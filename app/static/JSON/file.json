@@ -1,17 +1,11 @@
 {
     "Software": "File",
     "AI Description": "File is a command-line utility that performs file type identification. It is commonly used to determine the file type and content of a given file or set of files.",
-    "Core Features": [
-        "Identifying file types",
-        "Determining file content"
-    ],
-    "General Tags": [
-        "File Management",
-        "Command-Line Utility"
-    ],
+    "Core Features": "Identifying File Types, Determining File Content",
+    "General Tags": "File Management, Command-Line Utility",
     "Software Type": "Command Line Tool",
     "Software Class": "Utility",
-    "Research Field": "",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": ""
 }

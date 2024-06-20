@@ -1,22 +1,11 @@
 {
     "Software": "PAX",
     "AI Description": "PAX is a lightweight container tool for packaging container images in a single archive. It aims to simplify the process of building and distributing application containers.",
-    "Core Features": [
-        "Packaging container images",
-        "Building application containers",
-        "Distributing containerized applications"
-    ],
-    "General Tags": [
-        "Containerization",
-        "Packaging",
-        "Distributed Computing"
-    ],
+    "Core Features": "Packaging Container Images, Building Application Containers, Distributing Containerized Applications",
+    "General Tags": "Containerization, Packaging, Distributed Computing",
     "Software Type": "Devops Tool",
     "Software Class": "Containerization Tool",
-    "Research Field": [
-        "Computer And Information Sciences",
-        "Engineering And Technology"
-    ],
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences, Engineering & Technology"
 }

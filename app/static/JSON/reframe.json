@@ -1,19 +1,11 @@
 {
     "Software": "reframe",
     "AI Description": "ReFrame is a Python library for writing tests for High Performance Computing (HPC) systems. It provides a functional testing framework designed to support a variety of different HPC systems.",
-    "Core Features": [
-        "Functional testing framework",
-        "Support for HPC systems",
-        "Python library"
-    ],
-    "General Tags": [
-        "Hpc",
-        "Python Library",
-        "Testing Framework"
-    ],
+    "Core Features": "Functional Testing Framework, Support For Hpc Systems, Python Library",
+    "General Tags": "Hpc, Python Library, Testing Framework",
     "Software Type": "Software Development",
     "Software Class": "Tool",
-    "Research Field": "Engineering & Technology",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
 }

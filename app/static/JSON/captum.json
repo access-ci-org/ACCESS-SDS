@@ -2,15 +2,10 @@
     "Software": "captum",
     "AI Description": "Captum is an extensible library for model interpretation in PyTorch. It provides a flexible and unified API for different interpretability methods and allows users to easily interpret deep learning models.",
     "Core Features": "1. Support for various interpretability algorithms such as Integrated Gradients, Feature Ablation, Occlusion, DeepLift, etc. 2. Compatibility with PyTorch for seamless integration into PyTorch-based deep learning workflows. 3. Extensibility to create custom interpretation algorithms or extend existing ones. 4. Visualization tools to aid in the interpretation of model decisions. 5. Facilitates understanding of model behavior and decisions for better model debugging and trustworthiness.",
-    "General Tags": [
-        "Interpretability",
-        "Model Interpretation",
-        "Deep Learning",
-        "Pytorch"
-    ],
+    "General Tags": "Interpretability, Model Interpretation, Deep Learning, Pytorch",
     "Software Type": "Model Interpretation",
     "Software Class": "Interpretability Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

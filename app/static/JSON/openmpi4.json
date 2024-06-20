@@ -1,22 +1,11 @@
 {
     "Software": "OpenMPI 4",
     "AI Description": "OpenMPI 4 is an open-source Message Passing Interface (MPI) library that enables parallel computing on a wide range of architectures. It supports programming in C, C++, and Fortran and allows users to develop scalable and efficient parallel applications.",
-    "Core Features": [
-        "Support for MPI-1, MPI-2, and MPI-3 standards",
-        "Dynamic process management",
-        "Interoperability with various programming languages",
-        "High-performance on clusters and supercomputers",
-        "Scalable for large-scale parallel computing"
-    ],
-    "General Tags": [
-        "Parallel Computing",
-        "Message Passing Interface",
-        "High-Performance Computing",
-        "Scalable Computing"
-    ],
+    "Core Features": "Support For Mpi-1, Mpi-2, & Mpi-3 Standards, Dynamic Process Management, Interoperability With Various Programming Languages, High-Performance On Clusters & Supercomputers, Scalable For Large-Scale Parallel Computing",
+    "General Tags": "Parallel Computing, Message Passing Interface, High-Performance Computing, Scalable Computing",
     "Software Type": "Parallel Computing Library",
     "Software Class": "Compiler/Runtime Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

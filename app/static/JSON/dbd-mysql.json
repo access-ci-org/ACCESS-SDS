@@ -2,13 +2,10 @@
     "Software": "dbd-mysql",
     "AI Description": "DBD::mysql is the Perl5 Database Interface driver for the MySQL database. In other words, DBD::mysql is an interface between the Perl programming language and the MySQL programming API that comes with the MySQL relational database management system.",
     "Core Features": "1. Allows Perl scripts to connect to a MySQL database.\n2. Provides a set of functions for database management, querying, and manipulation.\n3. Supports efficient integration of MySQL database functionality within Perl applications.",
-    "General Tags": [
-        "Database",
-        "Mysql"
-    ],
+    "General Tags": "Database, Mysql",
     "Software Type": "Software Library",
     "Software Class": "Database Interface Driver",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

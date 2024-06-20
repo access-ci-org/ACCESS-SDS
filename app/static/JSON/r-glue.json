@@ -1,19 +1,11 @@
 {
     "Software": "r-glue",
     "AI Description": "r-glue is an R package that provides a simple and flexible way to concatenate and interpolate strings.",
-    "Core Features": [
-        "String interpolation",
-        "String concatenation",
-        "Supports vectorized input"
-    ],
-    "General Tags": [
-        "R Package",
-        "String Manipulation",
-        "Data Preprocessing"
-    ],
+    "Core Features": "String Interpolation, String Concatenation, Supports Vectorized Input",
+    "General Tags": "R Package, String Manipulation, Data Preprocessing",
     "Software Type": "Library",
     "Software Class": "Data Manipulation Tool",
-    "Research Field": "Other Natural Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Other Natural Sciences"
 }

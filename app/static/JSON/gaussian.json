@@ -2,14 +2,10 @@
     "Software": "Gaussian",
     "AI Description": "Gaussian is a computational chemistry software suite used for electronic structure modeling. It is widely utilized in research and industry for predicting molecular properties and simulating chemical processes.",
     "Core Features": "Key features of Gaussian include ab initio and density functional theory calculations, molecular dynamics simulations, electronic and vibrational spectroscopy, reaction mechanism analysis, and transition state optimization. It supports a wide range of methods and basis sets for accurate quantum chemical calculations.",
-    "General Tags": [
-        "Computational Chemistry",
-        "Quantum Chemistry",
-        "Molecular Modeling"
-    ],
+    "General Tags": "Computational Chemistry, Quantum Chemistry, Molecular Modeling",
     "Software Type": "Simulation Software",
     "Software Class": "Scientific Software",
-    "Research Field": "Natural Sciences",
     "Research Area": "Physical Chemistry",
-    "Research Discipline": "Chemical Sciences"
+    "Research Discipline": "Chemical Sciences",
+    "Research Field": "Natural Sciences"
 }

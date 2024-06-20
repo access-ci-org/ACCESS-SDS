@@ -1,25 +1,11 @@
 {
     "Software": "numpy",
     "AI Description": "NumPy is a fundamental package for scientific computing with Python. It contains functionality for multidimensional arrays, high-level mathematical functions such as linear algebra operations, Fourier transformations, and random number generation. NumPy can be utilized to solve linear algebraic equations, perform statistical analysis, create software simulations, and much more.",
-    "Core Features": [
-        "Multidimensional array operations",
-        "Mathematical functions",
-        "Linear algebra operations",
-        "Random number generation",
-        "Statistical analysis"
-    ],
-    "General Tags": [
-        "Scientific Computing",
-        "Numerical Computing",
-        "Data Analysis",
-        "Mathematics"
-    ],
+    "Core Features": "Multidimensional Array Operations, Mathematical Functions, Linear Algebra Operations, Random Number Generation, Statistical Analysis",
+    "General Tags": "Scientific Computing, Numerical Computing, Data Analysis, Mathematics",
     "Software Type": "Computational Software",
     "Software Class": "Library",
-    "Research Field": [
-        "Computer And Information Sciences",
-        "Mathematics"
-    ],
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences, Mathematics"
 }

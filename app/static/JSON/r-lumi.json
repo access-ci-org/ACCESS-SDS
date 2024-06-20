@@ -2,14 +2,10 @@
     "Software": "r-lumi",
     "AI Description": "R package for the analysis of luminescence data in archaeology and geosciences. It provides functions for reading luminescence data, data processing, statistical analysis, and visualization.",
     "Core Features": "1. Reading and processing of luminescence data files\n2. Statistical analysis of luminescence data\n3. Visualization tools for luminescence data\n4. Integration with other R packages for comprehensive analysis",
-    "General Tags": [
-        "Luminescence Data",
-        "Data Analysis",
-        "R Package"
-    ],
+    "General Tags": "Luminescence Data, Data Analysis, R Package",
     "Software Type": "Research Tool",
     "Software Class": "Data Analysis",
-    "Research Field": "Other Natural Sciences",
     "Research Area": "Archaeology & Geosciences",
-    "Research Discipline": "Earth & Environmental Sciences"
+    "Research Discipline": "Earth & Environmental Sciences",
+    "Research Field": "Other Natural Sciences"
 }

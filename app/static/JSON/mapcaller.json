@@ -2,16 +2,10 @@
     "Software": "MapCaller",
     "AI Description": "MapCaller is a software for calling and analyzing the genetic variations from sequencing data.",
     "Core Features": "MapCaller offers variant calling capabilities, including single nucleotide polymorphisms (SNPs), insertions/deletions (indels), structural variations (SVs), and copy number variations (CNVs). It supports various sequencing technologies and can handle large-scale datasets efficiently.",
-    "General Tags": [
-        "Genetic Variations",
-        "Sequencing Data",
-        "Variant Calling"
-    ],
+    "General Tags": "Genetic Variations, Sequencing Data, Variant Calling",
     "Software Type": "Tool",
     "Software Class": "Bioinformatics",
-    "Research Field": "Biological Sciences",
-    "Research Area": [
-        "Genetics"
-    ],
-    "Research Discipline": ""
+    "Research Area": "Genetics",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

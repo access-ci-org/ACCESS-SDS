@@ -2,14 +2,10 @@
     "Software": "itac",
     "AI Description": "Intel Trace Analyzer and Collector (ITAC) is a performance analysis tool designed for parallel applications. It provides in-depth performance data to help developers optimize the performance of their parallel code.",
     "Core Features": "ITAC offers features such as tracing and profiling of parallel applications, identifying performance bottlenecks, visualizing application performance data, analyzing communication patterns, and providing detailed reports on the performance metrics.",
-    "General Tags": [
-        "Performance Analysis",
-        "Parallel Applications",
-        "Optimization"
-    ],
+    "General Tags": "Performance Analysis, Parallel Applications, Optimization",
     "Software Type": "Compiler",
     "Software Class": "Performance Analysis Tool",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

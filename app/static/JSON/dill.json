@@ -2,15 +2,10 @@
     "Software": "dill",
     "AI Description": "Dill is a serialization library for Python datastructures. It provides the ability to serialize all standard Python data types without needing to be pre-informed about their existence, offering extended functionality beyond what is available in the standard `pickle` library.",
     "Core Features": "1. Supports the serialization of almost all Python data types.\n2. Can serialize functions and classes.\n3. Supports lambda functions.\n4. Provides a mechanism to serialize instances of un-picklable classes.\n5. Allows for easy storage and retrieval of Python objects.",
-    "General Tags": [
-        "Serialization",
-        "Python",
-        "Datastructures",
-        "Library"
-    ],
+    "General Tags": "Serialization, Python, Datastructures, Library",
     "Software Type": "Library",
     "Software Class": "Serialization Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

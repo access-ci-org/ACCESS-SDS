@@ -2,14 +2,10 @@
     "Software": "mcl",
     "AI Description": "MCL (Markov Cluster Algorithm) is a clustering algorithm based on simulation of stochastic flow in graphs. It is commonly used for clustering network data to identify modules or communities of nodes with related functions or properties.",
     "Core Features": "1. Efficient clustering of network data\n2. Scalable to large networks\n3. Ability to identify dense regions in graphs\n4. Parameterizable for different types of networks\n5. Implementation available in various programming languages",
-    "General Tags": [
-        "Clustering",
-        "Network Analysis",
-        "Graph Algorithms"
-    ],
+    "General Tags": "Clustering, Network Analysis, Graph Algorithms",
     "Software Type": "Clustering Algorithm",
     "Software Class": "Algorithm",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

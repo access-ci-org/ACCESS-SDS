@@ -2,15 +2,10 @@
     "Software": "tensorboardX",
     "AI Description": "TensorBoardX is a library for visualization and tracking of TensorFlow deep learning models. It enables visualization of training and testing processes, model graphs, scalar values, histograms, images, text, audio, and videos. It extends the functionality of TensorFlow's native TensorBoard with additional features and flexibility.",
     "Core Features": "1. Real-time visualization of training and testing metrics.\n2. Graph visualization of deep learning models.\n3. Support for scalar values, histograms, images, text, audio, and videos.\n4. Enhanced flexibility and customization options for data visualization.\n5. Seamless integration with TensorFlow and PyTorch frameworks.\n6. Compatible with multiple platforms and environments.",
-    "General Tags": [
-        "Visualization",
-        "Deep Learning",
-        "Tensorflow",
-        "Pytorch"
-    ],
+    "General Tags": "Visualization, Deep Learning, Tensorflow, Pytorch",
     "Software Type": "Library",
     "Software Class": "Data Visualization",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

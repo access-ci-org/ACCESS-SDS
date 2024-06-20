@@ -1,20 +1,11 @@
 {
     "Software": "Transrate",
     "AI Description": "Transrate is a software tool for de novo transcriptome assembly quality analysis. It assesses the quality of de novo transcriptome assemblies, identifies problem areas, and suggests improvements. Transrate helps in evaluating the accuracy and completeness of transcriptome assemblies.",
-    "Core Features": [
-        "Quality assessment of de novo transcriptome assemblies",
-        "Identifying problem areas in assemblies",
-        "Providing suggestions for improvements",
-        "Evaluating accuracy and completeness of transcriptome assemblies"
-    ],
-    "General Tags": [
-        "Transcriptome Assembly",
-        "Quality Assessment",
-        "Bioinformatics"
-    ],
+    "Core Features": "Quality Assessment Of De Novo Transcriptome Assemblies, Identifying Problem Areas In Assemblies, Providing Suggestions For Improvements, Evaluating Accuracy & Completeness Of Transcriptome Assemblies",
+    "General Tags": "Transcriptome Assembly, Quality Assessment, Bioinformatics",
     "Software Type": "Bioinformatics Tool",
     "Software Class": "Analysis Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Transcriptomics",
-    "Research Discipline": "Genetics"
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
 }

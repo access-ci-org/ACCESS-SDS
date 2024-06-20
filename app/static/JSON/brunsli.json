@@ -2,14 +2,10 @@
     "Software": "brunsli",
     "AI Description": "Brunsli is an advanced lossless image compressor that focuses on high-speed encoding. It aims to achieve significant compression ratios while maintaining fast encoding and decoding speeds.",
     "Core Features": "1. Lossless image compression\n2. High-speed encoding\n3. Efficient compression ratios\n4. Fast decoding speeds",
-    "General Tags": [
-        "Image Compression",
-        "Lossless Compression",
-        "High-Speed Encoding"
-    ],
+    "General Tags": "Image Compression, Lossless Compression, High-Speed Encoding",
     "Software Type": "Image Compressor",
     "Software Class": "Compression Software",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

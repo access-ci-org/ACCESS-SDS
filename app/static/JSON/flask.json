@@ -1,24 +1,11 @@
 {
     "Software": "Flask",
     "AI Description": "Flask is a lightweight and versatile Python web application framework that provides the essentials for building web applications. It is known for its simplicity, flexibility, and ease of use, making it a popular choice for developers.",
-    "Core Features": [
-        "Quick and easy to set up and get started",
-        "Minimalistic design with a simple and straightforward API",
-        "Extensible through a variety of plugins and extensions",
-        "Built-in development server and debugger",
-        "Support for secure cookies and sessions",
-        "Jinja2 template engine for efficient HTML rendering",
-        "Werkzeug WSGI toolkit for handling requests and responses"
-    ],
-    "General Tags": [
-        "Web Development",
-        "Python",
-        "Framework",
-        "Web Applications"
-    ],
+    "Core Features": "Quick & Easy To Set Up & Get Started, Minimalistic Design With A Simple & Straightforward Api, Extensible Through A Variety Of Plugins & Extensions, Built-In Development Server & Debugger, Support For Secure Cookies & Sessions, Jinja2 Template Engine For Efficient Html Rendering, Werkzeug Wsgi Toolkit For Handling Requests & Responses",
+    "General Tags": "Web Development, Python, Framework, Web Applications",
     "Software Type": "Open Source",
     "Software Class": "Web Framework",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

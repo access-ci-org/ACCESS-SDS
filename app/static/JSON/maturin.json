@@ -1,21 +1,11 @@
 {
     "Software": "maturin",
     "AI Description": "Maturin is a Rust-native build system for Python packages that allows users to create wheels for their Python packages written in Rust. It aims to simplify the process of packaging and distributing Python extensions written in Rust, providing a seamless integration between Rust and Python ecosystems.",
-    "Core Features": [
-        "Facilitates building Python packages with Rust extensions",
-        "Enables creation of Python wheels for packages with Rust code",
-        "Simplifies distribution and packaging process for hybrid Rust-Python projects"
-    ],
-    "General Tags": [
-        "Python Packaging",
-        "Rust Programming Language",
-        "Build System",
-        "Python Extensions",
-        "Package Distribution"
-    ],
+    "Core Features": "Facilitates Building Python Packages With Rust Extensions, Enables Creation Of Python Wheels For Packages With Rust Code, Simplifies Distribution & Packaging Process For Hybrid Rust-Python Projects",
+    "General Tags": "Python Packaging, Rust Programming Language, Build System, Python Extensions, Package Distribution",
     "Software Type": "Build System",
     "Software Class": "Development Tools",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

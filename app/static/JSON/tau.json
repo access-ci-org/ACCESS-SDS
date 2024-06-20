@@ -2,14 +2,10 @@
     "Software": "Tau",
     "AI Description": "Tau is a performance analysis tool for parallel programs, providing insights into the behavior of applications across various HPC platforms.",
     "Core Features": "Features include profiling, tracing, and performance analysis to identify bottlenecks and optimize code efficiency. It offers support for parallel programming models like MPI, OpenMP, CUDA, and more.",
-    "General Tags": [
-        "Software",
-        "Compiler",
-        "Hpc Tools"
-    ],
+    "General Tags": "Software, Compiler, Hpc Tools",
     "Software Type": "Commercial",
     "Software Class": "Performance Analysis Tool",
-    "Research Field": "Physical Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Physical Sciences"
 }

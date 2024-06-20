@@ -2,15 +2,10 @@
     "Software": "mashmap",
     "AI Description": "mashmap is a reference-based approximate mapping tool designed for highly-divergent sequences. It efficiently aligns large genomes, offering flexibility and speed in detecting structural variations and similarities.",
     "Core Features": "1. Reference-based mapping for highly-divergent sequences\n2. Efficient alignment of large genomes\n3. Detection of structural variations\n4. Rapid identification of sequence similarities\n5. Flexible and customizable options for mapping",
-    "General Tags": [
-        "Mapping",
-        "Alignment",
-        "Genomics",
-        "Bioinformatics"
-    ],
+    "General Tags": "Mapping, Alignment, Genomics, Bioinformatics",
     "Software Type": "Bioinformatics",
     "Software Class": "Mapping Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Structural Variation Analysis",
-    "Research Discipline": "Genomics"
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
 }

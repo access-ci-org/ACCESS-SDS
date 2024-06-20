@@ -2,16 +2,10 @@
     "Software": "Default-S11",
     "AI Description": "Default-S11 is a high-performance computational software designed for bioinformatics analysis and molecular dynamics simulations.",
     "Core Features": "The software offers advanced tools for sequence alignment, protein structure prediction, molecular docking, and molecular dynamics simulations. It provides multiple algorithms for analyzing biological sequences and predicting protein structures. Default-S11 also includes visualization capabilities for molecular dynamics simulations.",
-    "General Tags": [
-        "Computational Software",
-        "Bioinformatics",
-        "Molecular Dynamics",
-        "Sequence Analysis",
-        "Protein Structure Prediction"
-    ],
+    "General Tags": "Computational Software, Bioinformatics, Molecular Dynamics, Sequence Analysis, Protein Structure Prediction",
     "Software Type": "Bioinformatics Tool",
     "Software Class": "Computational Software",
-    "Research Field": "Biological Sciences",
     "Research Area": "Bioinformatics",
-    "Research Discipline": "Biological Sciences"
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
 }

@@ -1,21 +1,11 @@
 {
     "Software": "r-formatr",
     "AI Description": "r-formatr is an R package that provides functions for formatting R source code. It aims to help users automatically and consistently format their R code for better readability and maintainability.",
-    "Core Features": [
-        "Automated formatting of R code",
-        "Consistent code styling",
-        "Improved code readability",
-        "Integration with RStudio and other R IDEs"
-    ],
-    "General Tags": [
-        "R Package",
-        "Code Formatting",
-        "Automation",
-        "Readability"
-    ],
+    "Core Features": "Automated Formatting Of R Code, Consistent Code Styling, Improved Code Readability, Integration With Rstudio & Other R Ides",
+    "General Tags": "R Package, Code Formatting, Automation, Readability",
     "Software Type": "Code Formatting",
     "Software Class": "Tool",
-    "Research Field": "Other Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Other Computer & Information Sciences"
 }

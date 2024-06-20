@@ -2,14 +2,10 @@
     "Software": "Abseil",
     "AI Description": "Abseil is an open-source collection of C++ code (compliant to C++11) designed to augment the C++ standard library. It provides a set of high-quality library code that is well tested, portable, and efficient for a wide range of purposes.",
     "Core Features": "1. Cross-platform support\n2. Robust and well-tested library code\n3. Portable and efficient implementations\n4. Compliant with C++11 standards\n5. Designed to complement the C++ standard library",
-    "General Tags": [
-        "C++ Library",
-        "Open Source",
-        "Cross-Platform"
-    ],
+    "General Tags": "C++ Library, Open Source, Cross-Platform",
     "Software Type": "Code Library",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

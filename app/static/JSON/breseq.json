@@ -2,14 +2,10 @@
     "Software": "breseq",
     "AI Description": "Breseq is a computational tool for identifying mutations in bacteria that have evolved in a microbial population. It can detect single nucleotide variants, insertions, deletions, inversions, and complex polymorphisms in bacterial genomes.",
     "Core Features": "1. Identification of mutations in bacterial genomes\n2. Detection of single nucleotide variants, insertions, deletions, inversions, and complex polymorphisms\n3. Visualization of identified mutations\n4. Analysis of microbial evolution within a population",
-    "General Tags": [
-        "Computational Biology",
-        "Bioinformatics",
-        "Genomics"
-    ],
+    "General Tags": "Computational Biology, Bioinformatics, Genomics",
     "Software Type": "Genome Analysis Tool",
     "Software Class": "Bioinformatics Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Microbial Genetics",
-    "Research Discipline": "Genetics"
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
 }

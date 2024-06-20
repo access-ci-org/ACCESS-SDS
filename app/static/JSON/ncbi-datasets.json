@@ -2,14 +2,10 @@
     "Software": "ncbi-datasets",
     "AI Description": "The ncbi-datasets tool from NCBI (National Center for Biotechnology Information) provides a command-line interface to access and download various datasets available through NCBI, allowing users to search, filter, and download biological data efficiently.",
     "Core Features": "1. Search and download various biological datasets from NCBI.\n2. Filter datasets based on specific criteria, such as organism, data type, and more.\n3. Automate data retrieval processes through scripting.\n4. Efficiently manage and download large-scale biological data.",
-    "General Tags": [
-        "Bioinformatics",
-        "Data Retrieval",
-        "Biological Datasets"
-    ],
+    "General Tags": "Bioinformatics, Data Retrieval, Biological Datasets",
     "Software Type": "Command-Line Interface",
     "Software Class": "Data Retrieval",
-    "Research Field": "Biological Sciences",
     "Research Area": "Computational Biology",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

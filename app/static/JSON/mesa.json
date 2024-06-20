@@ -2,15 +2,10 @@
     "Software": "Mesa",
     "AI Description": "Mesa is an open-source agent-based modeling framework that allows users to create and analyze computational models of complex adaptive systems.",
     "Core Features": "Key features of Mesa include the ability to create and simulate agent-based models, support for multiple types of agents and environments, visualization tools for model output, and the flexibility to customize and extend the framework through Python programming.",
-    "General Tags": [
-        "Agent-Based Modeling",
-        "Complex Systems",
-        "Simulation",
-        "Computational Modeling"
-    ],
+    "General Tags": "Agent-Based Modeling, Complex Systems, Simulation, Computational Modeling",
     "Software Type": "Framework",
     "Software Class": "Modeling & Simulation",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Software Engineering, Systems, & Development",
-    "Research Discipline": "Other Computer & Information Sciences"
+    "Research Discipline": "Other Computer & Information Sciences",
+    "Research Field": "Computer & Information Sciences"
 }

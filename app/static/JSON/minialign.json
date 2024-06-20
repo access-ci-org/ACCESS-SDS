@@ -1,21 +1,11 @@
 {
     "Software": "minialign",
     "AI Description": "minialign is an ultrafast, memory efficient, and highly accurate tool for multiple sequence alignment (MSA) of biological sequences. It is designed to handle very large datasets with high throughput. The software employs a k-mer based approach for rapid pairwise alignment followed by progressive alignment to generate the final MSA.",
-    "Core Features": [
-        "Ultrafast multiple sequence alignment",
-        "Memory efficient handling of large datasets",
-        "Highly accurate alignment results",
-        "Support for DNA, RNA, and protein sequences",
-        "Advanced k-mer based alignment strategy",
-        "Progressive alignment for final MSA generation"
-    ],
-    "General Tags": [
-        "Bioinformatics",
-        "Hpc Tools"
-    ],
+    "Core Features": "Ultrafast Multiple Sequence Alignment, Memory Efficient Handling Of Large Datasets, Highly Accurate Alignment Results, Support For DNA, RNA, & Protein Sequences, Advanced K-Mer Based Alignment Strategy, Progressive Alignment For Final Msa Generation",
+    "General Tags": "Bioinformatics, Hpc Tools",
     "Software Type": "Tool",
     "Software Class": "Research",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genetics",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

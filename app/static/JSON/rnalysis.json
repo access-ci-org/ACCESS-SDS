@@ -1,21 +1,11 @@
 {
     "Software": "rnalysis",
     "AI Description": "rnalysis is a Python library designed for the analysis of RNA sequencing data. It provides functions for processing and analyzing gene expression data obtained from RNA-Seq experiments. rnalysis simplifies the preprocessing, quality control, differential expression analysis, and visualization of RNA-Seq data.",
-    "Core Features": [
-        "Preprocessing of RNA-Seq data",
-        "Quality control of gene expression data",
-        "Differential expression analysis",
-        "Visualization of RNA-Seq results"
-    ],
-    "General Tags": [
-        "Python Library",
-        "Rna Sequencing Data",
-        "Gene Expression Analysis",
-        "Data Visualization"
-    ],
+    "Core Features": "Preprocessing Of RNA-Seq Data, Quality Control Of Gene Expression Data, Differential Expression Analysis, Visualization Of RNA-Seq Results",
+    "General Tags": "Python Library, RNA Sequencing Data, Gene Expression Analysis, Data Visualization",
     "Software Type": "Analysis Tool",
     "Software Class": "Library",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genetics",
-    "Research Discipline": "Biological Sciences"
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
 }

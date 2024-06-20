@@ -2,15 +2,10 @@
     "Software": "CPE-NOsvE",
     "AI Description": "CPE-NOsvE (Canonical Polyadic Decomposition-based Network Observation for Structure Validation and Elucidation) is a computational tool for network structure elucidation and validation using canonical polyadic decomposition (CPD) analysis. It is designed to infer the underlying structure of complex networks from observed data, helping researchers better understand and validate network architectures.",
     "Core Features": "1: Utilizes canonical polyadic decomposition (CPD) analysis for network structure inference 2: Validates and elucidates complex network structures, 3: Assists in understanding the underlying architecture of networks from observed data",
-    "General Tags": [
-        "Computational Software",
-        "Network Analysis",
-        "Data Validation",
-        "Structure Elucidation"
-    ],
+    "General Tags": "Computational Software, Network Analysis, Data Validation, Structure Elucidation",
     "Software Type": "",
     "Software Class": "",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

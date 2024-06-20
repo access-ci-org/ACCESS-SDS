@@ -1,20 +1,11 @@
 {
     "Software": "awscli",
     "AI Description": "The AWS Command Line Interface (CLI) is a unified tool that provides a consistent interface for interacting with various Amazon Web Services (AWS) through the command line. It allows users to manage AWS services and resources directly from the terminal.",
-    "Core Features": [
-        "Interact with various AWS services",
-        "Control multiple AWS resources",
-        "Automate AWS tasks",
-        "Access and manage AWS CLI configuration"
-    ],
-    "General Tags": [
-        "Cloud Computing",
-        "Command Line Interface",
-        "Aws Services"
-    ],
+    "Core Features": "Interact With Various Aws Services, Control Multiple Aws Resources, Automate Aws Tasks, Access & Manage Aws Cli Configuration",
+    "General Tags": "Cloud Computing, Command Line Interface, Aws Services",
     "Software Type": "Development Tool",
     "Software Class": "Command Line Interface Tool",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

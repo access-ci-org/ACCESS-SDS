@@ -1,19 +1,11 @@
 {
     "Software": "Global Arrays",
     "AI Description": "Global Arrays is a software development toolkit that enables efficient and scalable parallel computing on distributed memory systems. It provides a shared-memory style programming interface for parallel computing, allowing users to work with distributed multi-dimensional arrays.",
-    "Core Features": [
-        "Shared-memory style programming interface",
-        "Support for distributed multi-dimensional arrays",
-        "Efficient and scalable parallel computing on distributed memory systems"
-    ],
-    "General Tags": [
-        "Software Development Toolkit",
-        "Parallel Computing",
-        "Distributed Memory Systems"
-    ],
+    "Core Features": "Shared-Memory Style Programming Interface, Support For Distributed Multi-Dimensional Arrays, Efficient & Scalable Parallel Computing On Distributed Memory Systems",
+    "General Tags": "Software Development Toolkit, Parallel Computing, Distributed Memory Systems",
     "Software Type": "Library",
     "Software Class": "Middleware/Toolkit",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

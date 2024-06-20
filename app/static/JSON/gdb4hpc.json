@@ -2,15 +2,10 @@
     "Software": "gdb4hpc",
     "AI Description": "gdb4hpc is a plugin designed to enhance the GNU Debugger (GDB) for High Performance Computing (HPC) applications. It provides additional features to aid in debugging parallel and distributed applications typically used in HPC environments.",
     "Core Features": "Some core features of gdb4hpc include advanced debugging capabilities for parallel and distributed applications, support for various HPC programming models such as MPI and OpenMP, improved performance analysis tools, integration with common HPC development environments, and enhanced visualization of parallel program execution.",
-    "General Tags": [
-        "Debugging",
-        "Hpc",
-        "Parallel Programming",
-        "Performance Analysis"
-    ],
+    "General Tags": "Debugging, Hpc, Parallel Programming, Performance Analysis",
     "Software Type": "Plugin",
     "Software Class": "Debugging Tools",
-    "Research Field": "Engineering & Technology",
     "Research Area": "Software Engineering, Systems, & Development",
-    "Research Discipline": "Computer Science"
+    "Research Discipline": "Computer Science",
+    "Research Field": "Engineering & Technology"
 }

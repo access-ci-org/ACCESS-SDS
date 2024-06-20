@@ -1,21 +1,11 @@
 {
     "Software": "build",
     "AI Description": "Build is a task automation tool that allows users to define tasks in a buildfile. It is commonly used for compiling source code, running tests, creating distributions, and other repetitive tasks in software development projects.",
-    "Core Features": [
-        "Task automation",
-        "Buildfile configuration",
-        "Dependency management",
-        "Plugin system",
-        "Integration with version control systems"
-    ],
-    "General Tags": [
-        "Task Automation",
-        "Build Tool",
-        "Software Development"
-    ],
+    "Core Features": "Task Automation, Buildfile Configuration, Dependency Management, Plugin System, Integration With Version Control Systems",
+    "General Tags": "Task Automation, Build Tool, Software Development",
     "Software Type": "Task Automation",
     "Software Class": "Development Tools",
-    "Research Field": "Engineering & Technology",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
 }

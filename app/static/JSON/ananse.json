@@ -2,14 +2,10 @@
     "Software": "Ananse",
     "AI Description": "Ananse is a software tool used for analyzing and visualizing network structures, including complex biological networks.",
     "Core Features": "Ananse offers functionalities for network visualization, analysis, and manipulation. It supports various network types, such as protein-protein interaction networks, gene regulatory networks, and metabolic networks. Users can apply different algorithms for network analysis, clustering, and identifying important network nodes. The tool also provides interactive visualization options for exploring network properties.",
-    "General Tags": [
-        "Network Analysis",
-        "Visualization",
-        "Biological Networks"
-    ],
+    "General Tags": "Network Analysis, Visualization, Biological Networks",
     "Software Type": "Tool",
     "Software Class": "Data Analysis",
-    "Research Field": "Other Natural Sciences",
     "Research Area": "",
-    "Research Discipline": "Biological Sciences"
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Other Natural Sciences"
 }

@@ -1,20 +1,11 @@
 {
     "Software": "R-genefilter",
     "AI Description": "R-genefilter is a package in R programming language used for filtering and selecting genes based on various criteria for gene expression analysis.",
-    "Core Features": [
-        "Filtering genes based on statistical metrics",
-        "Selecting genes with specific expression patterns",
-        "Performing quality control on gene expression data"
-    ],
-    "General Tags": [
-        "R Package",
-        "Bioinformatics",
-        "Data Analysis",
-        "Gene Expression"
-    ],
+    "Core Features": "Filtering Genes Based On Statistical Metrics, Selecting Genes With Specific Expression Patterns, Performing Quality Control On Gene Expression Data",
+    "General Tags": "R Package, Bioinformatics, Data Analysis, Gene Expression",
     "Software Type": "Bioinformatics Tool",
     "Software Class": "Data Analysis",
-    "Research Field": "Biological Sciences",
     "Research Area": "Gene Expression Analysis",
-    "Research Discipline": "Computational Biology"
+    "Research Discipline": "Computational Biology",
+    "Research Field": "Biological Sciences"
 }

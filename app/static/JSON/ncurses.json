@@ -2,22 +2,10 @@
     "Software": "ncurses",
     "AI Description": "ncurses is a programming library providing an API that allows the programmer to write text-based user interfaces on a terminal.",
     "Core Features": "ncurses enables the creation of text-based interfaces with functionalities such as windows, panels, menus, and dialog boxes. It provides capabilities for handling keyboard input, color, and cursor positioning on the terminal. It allows for the development of interactive and visually appealing terminal applications.",
-    "General Tags": [
-        "Programming Library",
-        "Text-Based User Interfaces",
-        "Terminal Applications"
-    ],
-    "Software Type": [
-        "Programming/Development"
-    ],
-    "Software Class": [
-        "Library"
-    ],
-    "Research Field": [
-        "Computer And Information Sciences"
-    ],
+    "General Tags": "Programming Library, Text-Based User Interfaces, Terminal Applications",
+    "Software Type": "Programming/Development",
+    "Software Class": "Library",
     "Research Area": "",
-    "Research Discipline": [
-        "Computer Science"
-    ]
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
 }

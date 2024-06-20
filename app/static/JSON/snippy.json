@@ -1,19 +1,11 @@
 {
     "Software": "snippy",
     "AI Description": "Snippy is a tool for rapid haploid variant calling and core genome alignments of bacterial isolates.",
-    "Core Features": [
-        "Rapid haploid variant calling",
-        "Core genome alignments",
-        "Bacterial isolates analysis"
-    ],
-    "General Tags": [
-        "Haploid Variant Calling",
-        "Core Genome Alignments",
-        "Bacterial Isolates"
-    ],
+    "Core Features": "Rapid Haploid Variant Calling, Core Genome Alignments, Bacterial Isolates Analysis",
+    "General Tags": "Haploid Variant Calling, Core Genome Alignments, Bacterial Isolates",
     "Software Type": "Genomic Analysis Tool",
     "Software Class": "Bioinformatics Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genomics",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

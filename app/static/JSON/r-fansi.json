@@ -1,20 +1,11 @@
 {
     "Software": "r-fansi",
     "AI Description": "The r-fansi package is a versatile R package that offers a set of tools for formatting text in the terminal or console. It provides functionality to style and colorize the output text, making it visually appealing and improving readability for users.",
-    "Core Features": [
-        "Text formatting and styling in the terminal/console",
-        "Colorizing text output",
-        "Customization options for text appearance",
-        "Enhancing user experience with visually appealing text"
-    ],
-    "General Tags": [
-        "R Package",
-        "Text Formatting",
-        "Terminal/Console Styling"
-    ],
+    "Core Features": "Text Formatting & Styling In The Terminal/Console, Colorizing Text Output, Customization Options For Text Appearance, Enhancing User Experience With Visually Appealing Text",
+    "General Tags": "R Package, Text Formatting, Terminal/Console Styling",
     "Software Type": "Library",
     "Software Class": "Data Visualization",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

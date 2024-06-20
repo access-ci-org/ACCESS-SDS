@@ -1,21 +1,11 @@
 {
     "Software": "Anaconda3 GPU",
     "AI Description": "Anaconda3 GPU is a high performance distribution of Python and R, that includes over 200 of the most popular data science packages optimized for NVIDIA CUDA-enabled GPUs. It simplifies package management and deployment for data scientists and researchers working with GPU-accelerated applications.",
-    "Core Features": [
-        "Optimized for NVIDIA CUDA-enabled GPUs",
-        "Includes over 200 data science packages",
-        "Efficient package management and deployment",
-        "Supports Python and R programming languages"
-    ],
-    "General Tags": [
-        "Anaconda Distribution",
-        "Data Science",
-        "Gpu Acceleration",
-        "Package Management"
-    ],
+    "Core Features": "Optimized For Nvidia Cuda-Enabled Gpus, Includes Over 200 Data Science Packages, Efficient Package Management & Deployment, Supports Python & R Programming Languages",
+    "General Tags": "Anaconda Distribution, Data Science, Gpu Acceleration, Package Management",
     "Software Type": "Package Management System",
     "Software Class": "Development Tools",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

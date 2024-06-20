@@ -2,17 +2,10 @@
     "Software": "MOE",
     "AI Description": "MOE (Molecular Operating Environment) is a comprehensive molecular modeling and simulation software that provides tools for molecular visualization, protein modeling, docking, QSAR analysis, and more.",
     "Core Features": "Some core features of MOE include molecular visualization, protein modeling and analysis, docking simulations, quantum mechanics calculations, molecular dynamics simulations, homology modeling, and pharmacophore modeling.",
-    "General Tags": [
-        "Molecular Modeling",
-        "Molecular Simulation",
-        "Protein Modeling",
-        "Docking",
-        "Quantum Mechanics",
-        "Pharmacophore Modeling"
-    ],
+    "General Tags": "Molecular Modeling, Molecular Simulation, Protein Modeling, Docking, Quantum Mechanics, Pharmacophore Modeling",
     "Software Type": "Analysis & Visualization Tool",
     "Software Class": "Molecular Modeling Software",
-    "Research Field": "Biological Sciences",
     "Research Area": "Computational Biology",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

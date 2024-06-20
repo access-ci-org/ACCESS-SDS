@@ -2,14 +2,10 @@
     "Software": "Alien Hunter",
     "AI Description": "Alien Hunter is a software tool used for detecting alien genes in bacterial genomes. It utilizes a specific algorithm to identify potential regions of horizontal gene transfer in microbial DNA sequences, giving insights into the presence of foreign genetic material.",
     "Core Features": "1. Detection of alien genes in bacterial genomes\n2. Identification of regions of horizontal gene transfer\n3. Analysis of microbial DNA sequences for foreign genetic material",
-    "General Tags": [
-        "Gene Detection",
-        "Genomics",
-        "Microbiology"
-    ],
+    "General Tags": "Gene Detection, Genomics, Microbiology",
     "Software Type": "Tool",
     "Software Class": "Bioinformatics",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genetics",
-    "Research Discipline": "Biological Sciences"
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
 }

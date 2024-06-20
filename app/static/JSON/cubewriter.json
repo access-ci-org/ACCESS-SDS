@@ -2,15 +2,10 @@
     "Software": "Cubewriter",
     "AI Description": "Cubewriter is a software tool that enables researchers to organize, write, and format scientific papers efficiently.",
     "Core Features": "Key features of Cubewriter include template-based formatting for various journals, real-time collaboration and feedback, references management, version control, and integration with LaTeX for advanced document customization.",
-    "General Tags": [
-        "Scientific Writing",
-        "Document Formatting",
-        "Research Collaboration",
-        "References Management"
-    ],
+    "General Tags": "Scientific Writing, Document Formatting, Research Collaboration, References Management",
     "Software Type": "Productivity Tool",
     "Software Class": "Research & Writing Tools",
-    "Research Field": "Other Natural Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Other Natural Sciences"
 }

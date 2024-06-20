@@ -2,16 +2,10 @@
     "Software": "R-Cran",
     "AI Description": "R is a programming language and open-source software environment widely used for statistical computing and graphics. R-Cran, also known as CRAN, is a network of servers around the world that store the source code and documentation for R packages.",
     "Core Features": "1. Comprehensive Statistical Tools: R provides a wide variety of statistical and graphical techniques, including linear and nonlinear modeling, time-series analysis, and clustering.\n2. Extensive Graphical Capabilities: R offers advanced plotting and graphing capabilities for data visualization.\n3. Open-Source Community: R has a large and active user community that contributes packages, libraries, and support.\n4. Reproducible Research: R supports reproducible research through the use of scripts and markdown documents.\n5. Integration with Other Languages: R can be integrated with other programming languages such as Python and C++.",
-    "General Tags": [
-        "Statistics",
-        "Data Analysis",
-        "Data Visualization",
-        "Statistical Computing",
-        "Open Source"
-    ],
+    "General Tags": "Statistics, Data Analysis, Data Visualization, Statistical Computing, Open Source",
     "Software Type": "Statistical Software",
     "Software Class": "Statistical Programming Language",
-    "Research Field": "Other Mathematics",
     "Research Area": "Statistical Computing",
-    "Research Discipline": "Statistics & Probability"
+    "Research Discipline": "Statistics & Probability",
+    "Research Field": "Other Mathematics"
 }

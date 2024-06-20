@@ -2,14 +2,10 @@
     "Software": "imageio",
     "AI Description": "Imageio is a Python library that provides an easy interface to read and write a wide range of image and video file formats. It allows for simple, high-level access to image data from Python code.",
     "Core Features": "1. Read and write images in various formats such as JPEG, PNG, BMP, GIF, and more.\n2. Support for reading and writing videos in formats like MPEG, AVI, and QuickTime.\n3. Integration with NumPy arrays for efficient image processing.\n4. Easily display, save, and manipulate images in Python applications.\n5. Simple and uniform API for accessing image data across multiple formats.",
-    "General Tags": [
-        "Python Libraries",
-        "Image Processing",
-        "Data Visualization"
-    ],
+    "General Tags": "Python Libraries, Image Processing, Data Visualization",
     "Software Type": "Python Library",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

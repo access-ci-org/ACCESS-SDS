@@ -2,16 +2,10 @@
     "Software": "Node.js",
     "AI Description": "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It uses an event-driven, non-blocking I/O model, making it lightweight and efficient for real-time applications.",
     "Core Features": "Asynchronous and event-driven, Fast and efficient, Single-threaded but highly scalable, Cross-platform, Open source",
-    "General Tags": [
-        "Javascript",
-        "Runtime",
-        "Server-Side",
-        "Event-Driven",
-        "Non-Blocking I/O"
-    ],
+    "General Tags": "Javascript, Runtime, Server-Side, Event-Driven, Non-Blocking I/O",
     "Software Type": "Compiler/Interpreter",
     "Software Class": "Development Tools",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

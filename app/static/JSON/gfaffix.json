@@ -1,19 +1,11 @@
 {
     "Software": "Gfaffix",
     "AI Description": "Gfaffix is a computational software package designed for analyzing genomic data, specifically focused on functional annotation and analysis of DNA sequences.",
-    "Core Features": [
-        "Functional annotation of DNA sequences",
-        "Genomic data analysis",
-        "Identification of regulatory elements",
-        "Visualization tools for genomic data"
-    ],
-    "General Tags": [
-        "Computational Software",
-        "Genomic Data Analysis"
-    ],
+    "Core Features": "Functional Annotation Of DNA Sequences, Genomic Data Analysis, Identification Of Regulatory Elements, Visualization Tools For Genomic Data",
+    "General Tags": "Computational Software, Genomic Data Analysis",
     "Software Type": "Computational Tool",
     "Software Class": "Bioinformatics",
-    "Research Field": "Biological Sciences",
     "Research Area": "Functional Genomics",
-    "Research Discipline": "Genomics"
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
 }

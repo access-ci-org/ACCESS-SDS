@@ -2,17 +2,10 @@
     "Software": "SDL",
     "AI Description": "Simple DirectMedia Layer is a cross-platform development library designed to provide low-level access to audio, keyboard, mouse, joystick, and graphics hardware via OpenGL and Direct3D. It is used by video playback software, emulators, and popular games including Stardew Valley, Undertale, and more.",
     "Core Features": "Cross-platform support, low-level access to audio, graphics, and input devices, hardware acceleration, support for OpenGL and Direct3D, easy to use API for multimedia applications, used in a wide range of software and games.",
-    "General Tags": [
-        "Development",
-        "Game Development",
-        "Multimedia",
-        "Library"
-    ],
+    "General Tags": "Development, Game Development, Multimedia, Library",
     "Software Type": "",
     "Software Class": "",
-    "Research Field": [
-        "Engineering And Technology"
-    ],
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
 }

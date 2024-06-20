@@ -2,15 +2,10 @@
     "Software": "alphapickle",
     "AI Description": "Alphapickle is a Python library that provides tools and utilities for working with alpha factors and optimizing portfolio construction in quantitative finance.",
     "Core Features": "Automated alpha factor research, portfolio optimization, backtesting, risk management tools, performance analysis, support for common financial data formats.",
-    "General Tags": [
-        "Python Library",
-        "Quantitative Finance",
-        "Alpha Factors",
-        "Portfolio Optimization"
-    ],
+    "General Tags": "Python Library, Quantitative Finance, Alpha Factors, Portfolio Optimization",
     "Software Type": "Data Analysis",
     "Software Class": "Library",
-    "Research Field": "Other Mathematics",
     "Research Area": "Quantitative Finance",
-    "Research Discipline": "Financial Engineering"
+    "Research Discipline": "Financial Engineering",
+    "Research Field": "Other Mathematics"
 }

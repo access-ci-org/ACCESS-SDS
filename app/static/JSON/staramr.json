@@ -2,14 +2,10 @@
     "Software": "staramr",
     "AI Description": "staramr is a command-line tool and Python module that identifies antimicrobial resistance genes in bacterial genome assemblies.",
     "Core Features": "1. Detection of antimicrobial resistance genes in bacterial genome assemblies\n2. Command-line tool for ease of use\n3. Utilizes a curated database of known antimicrobial resistance genes",
-    "General Tags": [
-        "Antimicrobial Resistance",
-        "Bioinformatics",
-        "Genome Assembly"
-    ],
+    "General Tags": "Antimicrobial Resistance, Bioinformatics, Genome Assembly",
     "Software Type": "Command-Line Tool",
     "Software Class": "Bioinformatics Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Antimicrobial Resistance",
-    "Research Discipline": "Microbiology"
+    "Research Discipline": "Microbiology",
+    "Research Field": "Biological Sciences"
 }

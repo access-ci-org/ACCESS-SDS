@@ -2,17 +2,10 @@
     "Software": "SHAP",
     "AI Description": "SHAP (SHapley Additive exPlanations) is a unified approach to explain the output of any machine learning model. It connects game theory with local explanations, attributing the impact of each feature on a model's predictions.",
     "Core Features": "1. Provides unified approach for explaining machine learning models.\n2. Utilizes Shapley values from cooperative game theory for local feature attributions.\n3. Supports various model types including tree-based models, deep learning models, and more.\n4. Helps understand the impact of individual features on model predictions.\n5. Enables model interpretability and transparency for better decision making.",
-    "General Tags": [
-        "Explainability",
-        "Interpretability",
-        "Machine Learning",
-        "Model Explanation"
-    ],
+    "General Tags": "Explainability, Interpretability, Machine Learning, Model Explanation",
     "Software Type": "Python Library",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": [
-        "Artificial Intelligence And Intelligent Systems"
-    ]
+    "Research Discipline": "Artificial Intelligence & Intelligent Systems",
+    "Research Field": "Computer & Information Sciences"
 }

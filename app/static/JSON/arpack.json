@@ -2,14 +2,10 @@
     "Software": "ARPACK",
     "AI Description": "ARPACK is a collection of Fortran77 subroutines designed to solve large scale eigenvalue problems. It is capable of solving complex, real, symmetric, and nonsymmetric eigenvalue problems across different fields of scientific computing.",
     "Core Features": "1. Solving large scale eigenvalue problems\n2. Ability to handle complex, real, symmetric, and nonsymmetric eigenvalue problems\n3. High performance and efficiency\n4. Available subroutines for integration into various computational environments",
-    "General Tags": [
-        "Computational Software",
-        "Linear Algebra",
-        "Eigenvalue Problems"
-    ],
+    "General Tags": "Computational Software, Linear Algebra, Eigenvalue Problems",
     "Software Type": "Library",
     "Software Class": "Numerical Library",
-    "Research Field": "Mathematics",
     "Research Area": "Numerical Analysis",
-    "Research Discipline": "Applied Mathematics"
+    "Research Discipline": "Applied Mathematics",
+    "Research Field": "Mathematics"
 }

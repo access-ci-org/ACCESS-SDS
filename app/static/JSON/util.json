@@ -1,21 +1,11 @@
 {
     "Software": "util",
     "AI Description": "Util is a multipurpose software tool that provides various utilities for system administration, programming, and general computing tasks. It offers a collection of useful functionalities and commands to enhance efficiency and productivity in diverse computational activities.",
-    "Core Features": [
-        "System administration utilities",
-        "Programming tools and functions",
-        "General computing functionalities",
-        "Enhanced efficiency and productivity"
-    ],
-    "General Tags": [
-        "Utility Software",
-        "System Administration",
-        "Programming Tools",
-        "Computing Utilities"
-    ],
+    "Core Features": "System Administration Utilities, Programming Tools & Functions, General Computing Functionalities, Enhanced Efficiency & Productivity",
+    "General Tags": "Utility Software, System Administration, Programming Tools, Computing Utilities",
     "Software Type": "",
     "Software Class": "",
-    "Research Field": "",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": ""
 }

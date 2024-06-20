@@ -1,21 +1,11 @@
 {
     "Software": "R-plyr",
     "AI Description": "R-plyr is a data manipulation package in R that provides tools for splitting, applying, combining, and summarizing data. It helps users to easily manipulate and transform data frames in R for advanced data analysis.",
-    "Core Features": [
-        "Data manipulation",
-        "Data transformation",
-        "Data summarization",
-        "Data aggregation"
-    ],
-    "General Tags": [
-        "R Package",
-        "Data Manipulation",
-        "Data Analysis",
-        "Data Processing"
-    ],
+    "Core Features": "Data Manipulation, Data Transformation, Data Summarization, Data Aggregation",
+    "General Tags": "R Package, Data Manipulation, Data Analysis, Data Processing",
     "Software Type": "Library",
     "Software Class": "Data Manipulation",
-    "Research Field": "Mathematics",
     "Research Area": "Data Science",
-    "Research Discipline": "Statistics & Probability"
+    "Research Discipline": "Statistics & Probability",
+    "Research Field": "Mathematics"
 }

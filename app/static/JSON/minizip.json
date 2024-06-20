@@ -1,22 +1,11 @@
 {
     "Software": "minizip",
     "AI Description": "Minizip is a minimalistic, open-source library that provides a simple API to create, read, and update zip files. It is a lightweight solution for working with zip archives in C or C++ projects.",
-    "Core Features": [
-        "Creating zip archives",
-        "Reading zip archives",
-        "Updating zip archives",
-        "Cross-platform compatibility",
-        "Minimalistic design"
-    ],
-    "General Tags": [
-        "Compression",
-        "Archiving",
-        "Library",
-        "Open Source"
-    ],
+    "Core Features": "Creating Zip Archives, Reading Zip Archives, Updating Zip Archives, Cross-Platform Compatibility, Minimalistic Design",
+    "General Tags": "Compression, Archiving, Library, Open Source",
     "Software Type": "Compression/Archiving",
     "Software Class": "Library",
-    "Research Field": "",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": ""
 }

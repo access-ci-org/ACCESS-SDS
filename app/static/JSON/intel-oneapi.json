@@ -1,23 +1,11 @@
 {
     "Software": "Intel OneAPI",
     "AI Description": "Intel OneAPI is a unified programming model for accelerating artificial intelligence, high-performance computing, data analytics, and more across Intel CPUs, GPUs, and FPGAs.",
-    "Core Features": [
-        "Unified programming model",
-        "Supports Intel CPUs, GPUs, and FPGAs",
-        "Versatile for AI, HPC, data analytics, and more"
-    ],
-    "General Tags": [
-        "Unified Programming Model",
-        "Heterogeneous Computing",
-        "Parallel Computing"
-    ],
+    "Core Features": "Unified Programming Model, Supports Intel Cpus, Gpus, & Fpgas, Versatile For Ai, Hpc, Data Analytics, & More",
+    "General Tags": "Unified Programming Model, Heterogeneous Computing, Parallel Computing",
     "Software Type": "Compiler",
     "Software Class": "Development Tools",
-    "Research Field": [
-        "Computer And Information Sciences",
-        "Other Computer And Information Sciences",
-        "Engineering And Technology"
-    ],
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences, Other Computer & Information Sciences, Engineering & Technology"
 }

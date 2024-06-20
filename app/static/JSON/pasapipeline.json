@@ -2,20 +2,10 @@
     "Software": "pasapipeline",
     "AI Description": "PASA (Program to Assemble Spliced Alignments) is a eukaryotic genome annotation tool that uses multiple sources of experimental evidence to identify and improve gene structures. PASA Pipeline is a comprehensive software tool that automates and streamlines the process of gene structure annotation and improvement.",
     "Core Features": "1. Integration of various sources of evidence such as RNA-Seq reads, ESTs, and protein alignments to annotate gene structures. \n2. Automated identification of alternatively spliced isoforms. \n3. Improvement of gene structures through iterative alignment and assembly steps. \n4. Built-in support for visualization of gene structures and associated evidence.",
-    "General Tags": [
-        "Genome Annotation",
-        "Gene Structure",
-        "Rna-Seq",
-        "Eukaryotic Genomes"
-    ],
+    "General Tags": "Genome Annotation, Gene Structure, RNA-Seq, Eukaryotic Genomes",
     "Software Type": "Annotation & Assembly",
     "Software Class": "Genome Annotation Tool",
-    "Research Field": "Biological Sciences",
-    "Research Area": [
-        "Genetics",
-        "Molecular Biology"
-    ],
-    "Research Discipline": [
-        "Biological Sciences"
-    ]
+    "Research Area": "Genetics, Molecular Biology",
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
 }

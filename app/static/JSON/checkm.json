@@ -1,21 +1,11 @@
 {
     "Software": "CheckM",
     "AI Description": "CheckM is a software tool for assessing the quality of microbial genomes recovered from isolates, single cells, or metagenomes. It provides robust statistical evaluation of genome completeness and contamination, as well as identification of marker genes for phylogenetic placement.",
-    "Core Features": [
-        "Estimates genome completeness and contamination",
-        "Identifies marker genes for phylogenetic analysis",
-        "Supports analysis of microbial genomes from isolates, single cells, or metagenomes",
-        "Provides detailed reports and visualizations"
-    ],
-    "General Tags": [
-        "Microbial Genomics",
-        "Genome Quality Assessment",
-        "Phylogenetic Analysis",
-        "Bioinformatics"
-    ],
+    "Core Features": "Estimates Genome Completeness & Contamination, Identifies Marker Genes For Phylogenetic Analysis, Supports Analysis Of Microbial Genomes From Isolates, Single Cells, Or Metagenomes, Provides Detailed Reports & Visualizations",
+    "General Tags": "Microbial Genomics, Genome Quality Assessment, Phylogenetic Analysis, Bioinformatics",
     "Software Type": "Bioinformatics Tool",
     "Software Class": "Genomics Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Microbial Ecology",
-    "Research Discipline": "Ecology"
+    "Research Discipline": "Ecology",
+    "Research Field": "Biological Sciences"
 }

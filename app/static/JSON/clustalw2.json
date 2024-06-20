@@ -1,20 +1,11 @@
 {
     "Software": "ClustalW2",
     "AI Description": "ClustalW2 is a general purpose multiple sequence alignment program for DNA or proteins. It produces biologically meaningful multiple sequence alignments of divergent sequences.",
-    "Core Features": [
-        "Multiple sequence alignment for DNA or proteins",
-        "Phylogenetic tree generation",
-        "Visualization of alignments",
-        "Alignment quality & reliability analysis"
-    ],
-    "General Tags": [
-        "Bioinformatics",
-        "Computational Biology",
-        "Sequence Analysis"
-    ],
+    "Core Features": "Multiple Sequence Alignment For DNA Or Proteins, Phylogenetic Tree Generation, Visualization Of Alignments, Alignment Quality & Reliability Analysis",
+    "General Tags": "Bioinformatics, Computational Biology, Sequence Analysis",
     "Software Type": "Alignment Tool",
     "Software Class": "Bioinformatics",
-    "Research Field": "Biological Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

@@ -1,22 +1,11 @@
 {
     "Software": "cellrank-krylov",
     "AI Description": "cellrank-Krylov is a Python library designed to provide cell fate prediction and lineage analysis for single-cell RNA sequencing data using Krylov subspace methods. It offers tools for exploring cell differentiation trajectories and uncovering crucial cell states in the data.",
-    "Core Features": [
-        "Cell fate prediction",
-        "Lineage analysis",
-        "Single-cell RNA sequencing data analysis",
-        "Cell differentiation trajectories",
-        "Identification of key cell states"
-    ],
-    "General Tags": [
-        "Single-Cell Analysis",
-        "Lineage Analysis",
-        "Rna Sequencing",
-        "Cell Fate Prediction"
-    ],
+    "Core Features": "Cell Fate Prediction, Lineage Analysis, Single-Cell RNA Sequencing Data Analysis, Cell Differentiation Trajectories, Identification Of Key Cell States",
+    "General Tags": "Single-Cell Analysis, Lineage Analysis, RNA Sequencing, Cell Fate Prediction",
     "Software Type": "Python Library",
     "Software Class": "Computational Software",
-    "Research Field": "Biological Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

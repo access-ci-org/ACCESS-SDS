@@ -13,6 +13,7 @@ software_names = [
     'software name', 
     'Software Name', 
     'software'
+    'Software'
     ]
 
 overview_names = [
@@ -20,6 +21,7 @@ overview_names = [
     'comprehensive_overview', 
     'Comprehensive Overview', 
     'comprehensive overview'
+    'AI Description'
     ]
 
 features_names = [
@@ -49,6 +51,18 @@ additional_tags_to_fix = [
     'field_of_science'
     ]
 
+JSON_keys = [
+    'Software', 
+    'AI Description', 
+    'Core Features', 
+    'General Tags', 
+    'Software Type', 
+    'Software Class',
+    'Research Field',
+    'Research Area',
+    'Research Discipline'
+    ]
+
 #########################################################
 #   jsonSanitizer                                       #
 #       Converts AI-generated JSON software files       #
@@ -57,8 +71,8 @@ additional_tags_to_fix = [
 #           file: the file to be formatted              #
 #########################################################
 def jsonSanitizer(file):
-    fileName = file.split('json/')[1]
-    print("Sanitizing file: " + fileName)
+    fileName = file.split('JSON/')[1]
+    #print("Sanitizing file: " + fileName)
 
     # Open JSON File
     with open(file, 'r') as infile:
@@ -147,7 +161,6 @@ def jsonSanitizer(file):
     
     # Remove tags from 'Additional Tags' nest
     #print("Checking additional tags...")
-
     for aError in add_tag_names:
         #print(aError)
         if aError in data:
@@ -161,44 +174,70 @@ def jsonSanitizer(file):
            
     # Sanitize tag names and contents
     for tag in additional_tags_to_fix:
-        # Check for empty or null list, which will break things later on
-        if tag not in data or data[tag] == [] or data[tag] is None:
-                data[tag] = ""
+        # Check for missing or null values, which will break things later on
+        if tag not in data or data[tag] is None:
+            data[tag] = ""
+        # Break lists into strings
         if tag in data:
             match tag:
                 case 'software_type':
-                    data['Software Type'] = data.pop('software_type')
-                    tag = 'Software Type'
+                    if data['Software Type'] is None:
+                        data['Software Type'] = data.pop('software_type')
+                    else:
+                        data.pop('software_type')
+                        data['Software Type'] = data.pop('Software Type')
+                
                 case 'software_class':
-                    data['Software Class'] = data.pop('software_class')
-                    tag = 'Software Class'
+                    if data['Software Class'] is None:
+                        data['Software Class'] = data.pop('software_class')
+                    else:
+                        data.pop('software_class')
+                        data['Software Class'] = data.pop('Software Class')
+                
                 case 'research_field':
-                    data['Research Field'] = data.pop('research_field')
-                    tag = 'Research Field'
+                    if data['Research Field'] is None:
+                        data['Research Field'] = data.pop('research_field')
+                    else:
+                        data.pop('research_field')
+                        data['Research Field'] = data.pop('Research Field')
+                
                 case 'field_of_science':
-                    if 'Research Field' not in data or data['Research Field'] == "":
+                    if 'Research Field' not in data or data['Research Field'] is None:
                             data['Research Field'] = data.pop('field_of_science')
                     else:
                         data.pop('field_of_science')
-                    tag = 'Research Field'
+                        data['Research Field'] = data.pop('Research Field')
+                
                 case 'research_discipline':
-                    data['Research Discipline'] = data.pop('research_discipline')
-                    tag = 'Research Discipline'
+                    if data['Research Discipline'] is None:
+                        data['Research Discipline'] = data.pop('research_discipline')
+                    else:
+                        data.pop('research_discipline')
+                        data['Research Discipline'] = data.pop('Research Discipline')
+               
                 case 'research_area':
-                    data['Research Area'] = data.pop('research_area')
-                    tag = 'Research Area'
+                    if data['Research Area'] is None:
+                        data['Research Area'] = data.pop('research_area')
+                    else:
+                        data.pop('research_area')
+                        data['Research Area'] = data.pop('Research Area')            
+
+    for element in data:
+        if isinstance(data[element], list):
+            listStr = ""
+            for str in data[element]:
+                if listStr == "":
+                    listStr = str
+                else:
+                    listStr = listStr + ", " + str
+                data[element] = listStr.title()
+        if "Rna" in data[element] or "Dna" in data[element]:
+            data[element] = data[element].replace("Rna", "RNA")
+            data[element] = data[element].replace("Dna", "DNA")
+        if element not in software_names or element not in overview_names:
+            if "And" in data[element]:
+                data[element] = data[element].replace("And", "&")
             
-            if isinstance(data[tag], list):
-                count = 0
-                for subtag in data[tag]:
-                    subtag = subtag.title()
-                    data[tag][count] = subtag
-                    count = count + 1
-            else:
-                data[tag] = data[tag].title()
-            
-            if "And" in data[tag]:
-                data[tag] = data[tag].replace("And", "&")
 
     # Save updated JSON file
     with open(file, 'w') as infile:

@@ -1,20 +1,11 @@
 {
     "Software": "MainMast",
     "AI Description": "MainMast is a software tool designed for high-throughput genetic data analysis, specifically focusing on Next-Generation Sequencing (NGS) data. It provides researchers with a user-friendly interface and a suite of analysis tools to efficiently process and interpret genetic data.",
-    "Core Features": [
-        "NGS data analysis",
-        "High-throughput genetic data processing",
-        "User-friendly interface",
-        "Advanced analysis tools"
-    ],
-    "General Tags": [
-        "Ngs Analysis",
-        "Genetic Data Processing",
-        "Bioinformatics"
-    ],
+    "Core Features": "Ngs Data Analysis, High-Throughput Genetic Data Processing, User-Friendly Interface, Advanced Analysis Tools",
+    "General Tags": "Ngs Analysis, Genetic Data Processing, Bioinformatics",
     "Software Type": "Bioinformatics Tool",
     "Software Class": "Genomics",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genetic Data Analysis",
-    "Research Discipline": "Genetics"
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
 }

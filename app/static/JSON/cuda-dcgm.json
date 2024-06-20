@@ -1,22 +1,11 @@
 {
     "Software": "cuda-dcgm",
     "AI Description": "NVIDIA's Data Center GPU Manager (DCGM) is a suite of tools for managing and monitoring GPU devices in data center environments. It provides real-time monitoring, troubleshooting, and diagnostics capabilities.",
-    "Core Features": [
-        "Real-time monitoring of GPU performance metrics",
-        "Alerting and notification of hardware errors and failures",
-        "Policy-based power and temperature management",
-        "Historical data collection for analysis and reporting"
-    ],
-    "General Tags": [
-        "Gpu Management",
-        "Monitoring",
-        "Diagnostics",
-        "Data Center",
-        "Nvidia"
-    ],
+    "Core Features": "Real-Time Monitoring Of Gpu Performance Metrics, Alerting & Notification Of Hardware Errors & Failures, Policy-Based Power & Temperature Management, Historical Data Collection For Analysis & Reporting",
+    "General Tags": "Gpu Management, Monitoring, Diagnostics, Data Center, Nvidia",
     "Software Type": "Monitoring Tool",
     "Software Class": "Device Management",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

@@ -2,14 +2,10 @@
     "Software": "dbcsr",
     "AI Description": "dbcsr (distributed block compressed sparse row) is a library for creating distributed block-sparse matrix data structures and performing operations on them efficiently. It is designed for high-performance computing (HPC) applications that involve large, sparse matrices.",
     "Core Features": "1. Creation of distributed block-sparse matrix data structures\n2. Efficient operations on block-sparse matrices\n3. Designed for high-performance computing (HPC) applications\n4. Supports parallel computation\n5. Optimized for large, sparse matrices",
-    "General Tags": [
-        "Hpc",
-        "Sparse Matrices",
-        "Parallel Computing"
-    ],
+    "General Tags": "Hpc, Sparse Matrices, Parallel Computing",
     "Software Type": "Library",
     "Software Class": "",
-    "Research Field": "Other Natural Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Other Natural Sciences"
 }

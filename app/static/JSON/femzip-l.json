@@ -2,15 +2,10 @@
     "Software": "femzip-l",
     "AI Description": "femzip-l is a lossless compression tool designed specifically for Finite Element Models (FEM) in engineering and computational sciences. It aims to reduce the storage space required for FEM data without compromising on the accuracy and integrity of the model.",
     "Core Features": "1. Lossless compression of Finite Element Models (FEM) data.\n2. Reduction of storage space required for FEM data.\n3. Maintains the accuracy and integrity of the model throughout the compression process.",
-    "General Tags": [
-        "Compression",
-        "Finite Element Models",
-        "Engineering",
-        "Computational Sciences"
-    ],
+    "General Tags": "Compression, Finite Element Models, Engineering, Computational Sciences",
     "Software Type": "Tool",
     "Software Class": "Data Compression",
-    "Research Field": "Engineering & Technology",
     "Research Area": "Computational Sciences",
-    "Research Discipline": "Engineering & Technology"
+    "Research Discipline": "Engineering & Technology",
+    "Research Field": "Engineering & Technology"
 }

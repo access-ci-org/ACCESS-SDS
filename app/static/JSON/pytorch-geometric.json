@@ -2,14 +2,10 @@
     "Software": "PyTorch Geometric",
     "AI Description": "PyTorch Geometric is a geometric deep learning extension library for PyTorch. It consists of various methods for deep learning on irregular structures such as graphs, point clouds, and manifolds.",
     "Core Features": "1. Geometric deep learning on graphs, point clouds, and manifolds.\n2. Data handling utilities for processing graph data.\n3. PyTorch integration for easy use and compatibility.\n4. Implementation of various state-of-the-art graph neural networks and geometric deep learning methods.",
-    "General Tags": [
-        "Deep Learning",
-        "Graph Neural Networks",
-        "Graph Data Processing"
-    ],
+    "General Tags": "Deep Learning, Graph Neural Networks, Graph Data Processing",
     "Software Type": "Python Library",
     "Software Class": "Machine Learning Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Artificial Intelligence & Intelligent Systems",
-    "Research Discipline": "Computer Science"
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
 }

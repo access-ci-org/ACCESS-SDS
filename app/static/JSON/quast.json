@@ -2,14 +2,10 @@
     "Software": "QUAST",
     "AI Description": "QUAST (Quality Assessment Tool for Genome Assemblies) is a software tool used for evaluating and comparing genome assemblies. It generates various metrics and statistics to assess the quality and accuracy of genomic assemblies.",
     "Core Features": "1. Evaluate completeness and correctness of genome assemblies\n2. Generate detailed reports and visualizations of assembly metrics\n3. Support for assessing assemblies from various sequencing platforms\n4. Identify misassemblies, genome coverage, and other assembly errors\n5. Compare multiple assemblies to identify the best one",
-    "General Tags": [
-        "Genome Assembly",
-        "Bioinformatics",
-        "Quality Assessment"
-    ],
+    "General Tags": "Genome Assembly, Bioinformatics, Quality Assessment",
     "Software Type": "Stand-Alone Tool",
     "Software Class": "Genomics Tools",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genome Assembly",
-    "Research Discipline": "Genomics"
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
 }

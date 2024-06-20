@@ -2,14 +2,10 @@
     "Software": "poppunk",
     "AI Description": "poppunk is a software tool for analyzing population structure data in bacterial genomes. It uses a k-mer approach to identify clusters of isolates that share similar genomic content, aiding in the identification of lineages and sub-lineages in microbial populations.",
     "Core Features": "1. Population structure analysis\n2. Identification of lineages and sub-lineages\n3. K-mer based clustering of isolates\n4. Genomic content comparison\n5. Visualization of population clusters",
-    "General Tags": [
-        "Population Structure Analysis",
-        "Bacterial Genomes",
-        "Genomic Content Comparison"
-    ],
+    "General Tags": "Population Structure Analysis, Bacterial Genomes, Genomic Content Comparison",
     "Software Type": "Analysis Tool",
     "Software Class": "Bioinformatics",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genetics",
-    "Research Discipline": "Biological Sciences"
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
 }

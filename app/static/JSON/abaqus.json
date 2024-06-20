@@ -1,27 +1,11 @@
 {
     "Software": "Abaqus",
     "AI Description": "Abaqus is a software suite used for finite element analysis and computer-aided engineering simulations for a wide range of industrial applications. It provides powerful simulation capabilities to analyze the behavior of materials and structures under various conditions.",
-    "Core Features": [
-        "Finite Element Analysis (FEA)",
-        "Structural Analysis",
-        "Thermal Analysis",
-        "Fluid Analysis",
-        "Multiphysics Simulation",
-        "Explicit and Implicit Solvers",
-        "Material Modeling",
-        "Contact Analysis",
-        "Fatigue Analysis",
-        "Nonlinear Analysis"
-    ],
-    "General Tags": [
-        "Simulation",
-        "Finite Element Analysis",
-        "Computer-Aided Engineering",
-        "Materials Analysis"
-    ],
+    "Core Features": "Finite Element Analysis (Fea), Structural Analysis, Thermal Analysis, Fluid Analysis, Multiphysics Simulation, Explicit & Implicit Solvers, Material Modeling, Contact Analysis, Fatigue Analysis, Nonlinear Analysis",
+    "General Tags": "Simulation, Finite Element Analysis, Computer-Aided Engineering, Materials Analysis",
     "Software Type": "Simulation Software",
     "Software Class": "Other",
-    "Research Field": "Engineering & Technology",
     "Research Area": "",
-    "Research Discipline": "Engineering & Technology"
+    "Research Discipline": "Engineering & Technology",
+    "Research Field": "Engineering & Technology"
 }

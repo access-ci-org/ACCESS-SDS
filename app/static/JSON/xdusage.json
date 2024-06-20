@@ -1,21 +1,11 @@
 {
     "Software": "xdusage",
     "AI Description": "xdusage is a tool used for monitoring and analyzing batch job resource utilization on High Performance Computing (HPC) systems. It allows users to track resource usage, such as CPU time, memory, and disk space, for individual jobs or users.",
-    "Core Features": [
-        "Monitoring batch job resource utilization",
-        "Tracking CPU time, memory, and disk space usage",
-        "Analyzing resource consumption for individual jobs or users",
-        "Generating reports on resource utilization"
-    ],
-    "General Tags": [
-        "Hpc",
-        "Resource Monitoring",
-        "Batch Job Management",
-        "Performance Analysis"
-    ],
+    "Core Features": "Monitoring Batch Job Resource Utilization, Tracking Cpu Time, Memory, & Disk Space Usage, Analyzing Resource Consumption For Individual Jobs Or Users, Generating Reports On Resource Utilization",
+    "General Tags": "Hpc, Resource Monitoring, Batch Job Management, Performance Analysis",
     "Software Type": "Command Line Tool",
     "Software Class": "Monitoring Tool",
-    "Research Field": "Engineering & Technology",
     "Research Area": "",
-    "Research Discipline": "Infrastructure & Instrumentation"
+    "Research Discipline": "Infrastructure & Instrumentation",
+    "Research Field": "Engineering & Technology"
 }

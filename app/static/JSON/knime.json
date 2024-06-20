@@ -2,14 +2,10 @@
     "Software": "KNIME",
     "AI Description": "KNIME is an open-source data analytics, reporting, and integration platform. It allows users to visually design data flows, execute data processing, data cleansing, analysis, and reporting without needing to write any code.",
     "Core Features": "Some key features of KNIME include visual programming, support for various data formats and sources, integration with other data science tools such as Python and R, extensive set of data manipulation and analysis nodes, advanced machine learning capabilities, and scalability for big data processing.",
-    "General Tags": [
-        "Data Analytics",
-        "Data Integration",
-        "Data Visualization"
-    ],
+    "General Tags": "Data Analytics, Data Integration, Data Visualization",
     "Software Type": "Data Analysis Tool",
     "Software Class": "Data Analytics Platform",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Data Science",
-    "Research Discipline": "Informatics, Analytics, & Information Science"
+    "Research Discipline": "Informatics, Analytics, & Information Science",
+    "Research Field": "Computer & Information Sciences"
 }

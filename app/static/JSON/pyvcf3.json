@@ -2,14 +2,10 @@
     "Software": "pyvcf3",
     "AI Description": "PyVCF is a Python library for parsing Variant Call Format (VCF) files. PyVCF can be used to extract and manipulate variant information and genotypes stored in VCF files.",
     "Core Features": "1. Parsing VCF files\n2. Extracting variant information\n3. Manipulating genotypes\n4. Accessing metadata in VCF files",
-    "General Tags": [
-        "Python Library",
-        "Variant Call Format (Vcf)",
-        "Bioinformatics"
-    ],
+    "General Tags": "Python Library, Variant Call Format (Vcf), Bioinformatics",
     "Software Type": "Data Analysis",
     "Software Class": "Library",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genomics",
-    "Research Discipline": "Genetics"
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
 }

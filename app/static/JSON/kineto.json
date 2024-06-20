@@ -1,22 +1,11 @@
 {
     "Software": "Kineto",
     "AI Description": "Kineto is a software suite designed for analyzing and simulating the dynamics of mechanical systems. It provides tools for both kinematic and dynamic analysis of systems with rigid bodies, joints, and constraints. Kineto is particularly useful for studying the motion and forces in complex mechanical systems.",
-    "Core Features": [
-        "Kinematic analysis of mechanical systems",
-        "Dynamic analysis of mechanical systems",
-        "Simulation of rigid body motion with joints and constraints",
-        "Visualization of motion and forces in mechanical systems"
-    ],
-    "General Tags": [
-        "Mechanical Engineering",
-        "Simulation",
-        "Mechanical Systems",
-        "Kinematics",
-        "Dynamics"
-    ],
+    "Core Features": "Kinematic Analysis Of Mechanical Systems, Dynamic Analysis Of Mechanical Systems, Simulation Of Rigid Body Motion With Joints & Constraints, Visualization Of Motion & Forces In Mechanical Systems",
+    "General Tags": "Mechanical Engineering, Simulation, Mechanical Systems, Kinematics, Dynamics",
     "Software Type": "Analysis Tool",
     "Software Class": "Simulation",
-    "Research Field": "Engineering & Technology",
     "Research Area": "Mechanical Engineering",
-    "Research Discipline": "Engineering & Technology"
+    "Research Discipline": "Engineering & Technology",
+    "Research Field": "Engineering & Technology"
 }

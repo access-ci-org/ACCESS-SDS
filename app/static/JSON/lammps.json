@@ -1,20 +1,11 @@
 {
     "Software": "LAMMPS",
     "AI Description": "LAMMPS (Large-scale Atomic/Molecular Massively Parallel Simulator) is a classical molecular dynamics code designed for simulating large-scale atomistic systems. It is highly versatile and can be used to model a wide range of materials and complex molecular structures.",
-    "Core Features": [
-        "Classical molecular dynamics simulations",
-        "Support for parallel execution on a range of computing architectures",
-        "Wide selection of force fields and potential models",
-        "Extensible through user-defined functionalities and customizations"
-    ],
-    "General Tags": [
-        "Molecular Dynamics",
-        "Simulation",
-        "Computational Chemistry"
-    ],
+    "Core Features": "Classical Molecular Dynamics Simulations, Support For Parallel Execution On A Range Of Computing Architectures, Wide Selection Of Force Fields & Potential Models, Extensible Through User-Defined Functionalities & Customizations",
+    "General Tags": "Molecular Dynamics, Simulation, Computational Chemistry",
     "Software Type": "Code/Package",
     "Software Class": "Simulation Tool",
-    "Research Field": "Chemical Sciences",
     "Research Area": "Computational Chemical Physics",
-    "Research Discipline": "Physical Chemistry"
+    "Research Discipline": "Physical Chemistry",
+    "Research Field": "Chemical Sciences"
 }

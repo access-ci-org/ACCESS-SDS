@@ -1,21 +1,11 @@
 {
     "Software": "pytest-xdist",
     "AI Description": "pytest-xdist is a plugin for pytest that extends it with distributed testing capabilities. It allows for parallel execution of tests across multiple CPUs on the same machine or multiple machines, potentially reducing the overall test suite execution time.",
-    "Core Features": [
-        "Parallel test execution",
-        "Distributed testing",
-        "Load balancing for tests",
-        "Support for running tests across multiple CPUs/machines"
-    ],
-    "General Tags": [
-        "Pytest",
-        "Testing",
-        "Distributed Computing",
-        "Parallel Execution"
-    ],
+    "Core Features": "Parallel Test Execution, Distributed Testing, Load Balancing For Tests, Support For Running Tests Across Multiple Cpus/Machines",
+    "General Tags": "Pytest, Testing, Distributed Computing, Parallel Execution",
     "Software Type": "Python Library",
     "Software Class": "Testing",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

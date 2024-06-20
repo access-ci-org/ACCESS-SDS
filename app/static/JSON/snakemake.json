@@ -1,24 +1,11 @@
 {
     "Software": "Snakemake",
     "AI Description": "Snakemake is a workflow management system that aims to improve the reproducibility and traceability of computational workflows. It allows users to define workflows in a human-readable and Python-based domain-specific language.",
-    "Core Features": [
-        "Workflow management",
-        "Reproducibility",
-        "Traceability",
-        "Human-readable definition",
-        "Python-based language"
-    ],
-    "General Tags": [
-        "Workflow Management",
-        "Reproducibility",
-        "Traceability",
-        "Bioinformatics",
-        "Computational Biology",
-        "Data Science"
-    ],
+    "Core Features": "Workflow Management, Reproducibility, Traceability, Human-Readable Definition, Python-Based Language",
+    "General Tags": "Workflow Management, Reproducibility, Traceability, Bioinformatics, Computational Biology, Data Science",
     "Software Type": "Software",
     "Software Class": "Workflow Management",
-    "Research Field": "Other Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Other Computer & Information Sciences"
 }

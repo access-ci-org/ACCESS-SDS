@@ -2,14 +2,10 @@
     "Software": "Arcade Learning Environment",
     "AI Description": "The Arcade Learning Environment (ALE) is an evaluation platform that combines various classic video games in a consistent framework for the purpose of AI research and reinforcement learning. It provides a standardized environment for testing and comparing the performance of different AI agents.",
     "Core Features": "1. Offers a variety of classic video games integrated into a single framework. 2. Allows researchers to develop and test reinforcement learning algorithms. 3. Provides a standardized platform for benchmarking AI agents. 4. Enables the evaluation of AI performance across different game environments.",
-    "General Tags": [
-        "Ai Research",
-        "Reinforcement Learning",
-        "Video Games"
-    ],
+    "General Tags": "Ai Research, Reinforcement Learning, Video Games",
     "Software Type": "Research Tool",
     "Software Class": "Simulation/Emulation",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Reinforcement Learning",
-    "Research Discipline": "Artificial Intelligence & Intelligent Systems"
+    "Research Discipline": "Artificial Intelligence & Intelligent Systems",
+    "Research Field": "Computer & Information Sciences"
 }

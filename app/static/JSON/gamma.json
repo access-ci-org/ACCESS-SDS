@@ -2,16 +2,10 @@
     "Software": "gamma",
     "AI Description": "Gamma is a software package for probabilistic modeling, Bayesian inference, and statistical analysis. It provides tools for fitting complex models to data, performing parameter estimation, and uncertainty quantification.",
     "Core Features": "1. Probabilistic modeling\n2. Bayesian inference\n3. Statistical analysis\n4. Parameter estimation\n5. Uncertainty quantification",
-    "General Tags": [
-        "Probabilistic Modeling",
-        "Bayesian Inference",
-        "Statistical Analysis"
-    ],
+    "General Tags": "Probabilistic Modeling, Bayesian Inference, Statistical Analysis",
     "Software Type": "Library",
     "Software Class": "Computational Software",
-    "Research Field": "Mathematics",
-    "Research Area": [
-        "Statistics And Probability"
-    ],
-    "Research Discipline": ""
+    "Research Area": "Statistics & Probability",
+    "Research Discipline": "",
+    "Research Field": "Mathematics"
 }

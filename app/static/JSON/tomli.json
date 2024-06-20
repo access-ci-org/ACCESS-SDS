@@ -2,16 +2,10 @@
     "Software": "tomli",
     "AI Description": "Tom's Obvious, Minimal Language (TOML) is a data serialization language designed to be a minimal configuration file format that's easy to read due to obvious semantics. TOML is designed to map unambiguously to a hash table. TOML files end with the .toml extension.",
     "Core Features": "1. Intuitive and minimal syntax for configuration files 2. Easily readable by both humans and machines 3. Supports multiple data types including arrays, strings, integers, floats, booleans, and tables 4. Allows comments and preserves key order 5. Language-agnostic with support in various programming languages",
-    "General Tags": [
-        "Toml",
-        "Configuration File Format",
-        "Data Serialization",
-        "Human-Readable",
-        "Machine-Readable"
-    ],
+    "General Tags": "Toml, Configuration File Format, Data Serialization, Human-Readable, Machine-Readable",
     "Software Type": "Configuration File",
     "Software Class": "Data Serialization",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Software Development",
-    "Research Discipline": "Software Engineering, Systems, & Development"
+    "Research Discipline": "Software Engineering, Systems, & Development",
+    "Research Field": "Computer & Information Sciences"
 }

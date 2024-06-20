@@ -1,20 +1,11 @@
 {
     "Software": "ncbi-amrfinderplus",
     "AI Description": "NCBI AMRFinderPlus is a web-based tool that enables the identification of antimicrobial resistance (AMR) genes in bacterial genomes. It uses a curated database of AMR gene sequences to accurately detect and classify known resistance mechanisms.",
-    "Core Features": [
-        "Identification of antimicrobial resistance genes",
-        "Classification of resistance mechanisms",
-        "Utilizes curated AMR gene sequence database",
-        "Web-based interface"
-    ],
-    "General Tags": [
-        "Bioinformatics",
-        "Hpc Tools",
-        "Computational Software"
-    ],
+    "Core Features": "Identification Of Antimicrobial Resistance Genes, Classification Of Resistance Mechanisms, Utilizes Curated Amr Gene Sequence Database, Web-Based Interface",
+    "General Tags": "Bioinformatics, Hpc Tools, Computational Software",
     "Software Type": "Web Tool",
     "Software Class": "Bioinformatics Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genomics",
-    "Research Discipline": "Genetics"
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
 }

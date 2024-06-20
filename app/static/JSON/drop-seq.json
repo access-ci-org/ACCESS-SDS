@@ -2,16 +2,10 @@
     "Software": "Drop-seq",
     "AI Description": "Drop-seq is a computational method that enables biologists to analyze the gene expression profiles of thousands of individual cells in a single experiment. It is designed to perform single-cell RNA sequencing using microfluidic techniques.",
     "Core Features": "1. Enables analysis of gene expression profiles at the single-cell level\n2. Utilizes microfluidic techniques for high-throughput single-cell RNA sequencing\n3. Allows for the identification of cell types and characterization of cell populations within heterogeneous samples\n4. Provides a platform for studying gene expression dynamics in individual cells\n5. Facilitates the discovery of rare cell types and transitional cell states",
-    "General Tags": [
-        "Single-Cell Rna Sequencing",
-        "Gene Expression Analysis",
-        "Microfluidics",
-        "Cellular Heterogeneity",
-        "Transcriptomics"
-    ],
+    "General Tags": "Single-Cell RNA Sequencing, Gene Expression Analysis, Microfluidics, Cellular Heterogeneity, Transcriptomics",
     "Software Type": "Bioinformatics",
     "Software Class": "Computational Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genetics",
-    "Research Discipline": "Biological Sciences"
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
 }

@@ -2,14 +2,10 @@
     "Software": "impute2",
     "AI Description": "IMPUTE2 is a tool for imputing ungenotyped markers in large-scale genome-wide association studies.",
     "Core Features": "IMPUTE2 uses a combination of reference haplotypes and the study genotypes to infer genotypes at ungenotyped SNPs. It also provides a quality score to assess the imputation accuracy. The software supports a variety of input formats and allows for parallel computing to speed up the imputation process.",
-    "General Tags": [
-        "Genotype Imputation",
-        "Genome-Wide Association Studies",
-        "Bioinformatics"
-    ],
+    "General Tags": "Genotype Imputation, Genome-Wide Association Studies, Bioinformatics",
     "Software Type": "Tool",
     "Software Class": "Bioinformatics",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genome-Wide Association Studies",
-    "Research Discipline": "Genetics"
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
 }

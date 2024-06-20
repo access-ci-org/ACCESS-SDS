@@ -1,24 +1,11 @@
 {
     "Software": "Biopython",
     "AI Description": "Biopython is a set of freely available tools for biological computation written in Python. It provides functionalities for molecular biology, bioinformatics, structural bioinformatics, and computational biology.",
-    "Core Features": [
-        "Sequence and structure manipulation",
-        "File parsing (e.g., FASTA, GenBank)",
-        "BLAST, NCBI Entrez utilities",
-        "Phylogenetics and population genetics",
-        "Protein structure analysis",
-        "Sequence motif discovery"
-    ],
-    "General Tags": [
-        "Biological Computation",
-        "Bioinformatics",
-        "Computational Biology",
-        "Molecular Biology",
-        "Structural Bioinformatics"
-    ],
+    "Core Features": "Sequence & Structure Manipulation, File Parsing (E.G., Fasta, Genbank), Blast, Ncbi Entrez Utilities, Phylogenetics & Population Genetics, Protein Structure Analysis, Sequence Motif Discovery",
+    "General Tags": "Biological Computation, Bioinformatics, Computational Biology, Molecular Biology, Structural Bioinformatics",
     "Software Type": "Python Library",
     "Software Class": "Library",
-    "Research Field": "Biological Sciences",
     "Research Area": "Molecular Biology",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

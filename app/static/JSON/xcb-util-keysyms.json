@@ -2,14 +2,10 @@
     "Software": "xcb-util-keysyms",
     "AI Description": "The xcb-util-keysyms library provides utility functions for obtaining the keysyms keycode values, as used in the X Window System, as well as common XKB functions. It is part of the X C Bindings (XCB) utility libraries which provide a number of convenience functions and interfaces for usage with XCB.",
     "Core Features": "1. Easily obtain keysyms keycode values in the X Window System. 2. Includes common XKB functions for enhanced key mapping and handling. 3. Compatible with XCB utility libraries for seamless integration with the X Window System applications.",
-    "General Tags": [
-        "X Window System",
-        "Utility Functions",
-        "Xcb"
-    ],
+    "General Tags": "X Window System, Utility Functions, Xcb",
     "Software Type": "Utility",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Software Engineering, Systems, & Development",
-    "Research Discipline": "Computer Science"
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
 }

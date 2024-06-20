@@ -2,14 +2,10 @@
     "Software": "qt5webkit",
     "AI Description": "Qt 5 Webkit is a module for the Qt 5 framework that allows developers to integrate web content into their applications. It provides a web rendering engine based on the open-source WebKit engine, allowing Qt applications to display and interact with web content.",
     "Core Features": "1. Integration of web content within Qt applications\n2. Web rendering engine based on WebKit\n3. Support for HTML, CSS, JavaScript, and other web technologies\n4. Allows for web content manipulation and interaction within Qt applications",
-    "General Tags": [
-        "Web Content Integration",
-        "Ui Development",
-        "Qt Framework"
-    ],
+    "General Tags": "Web Content Integration, Ui Development, Qt Framework",
     "Software Type": "Library",
     "Software Class": "Software Development Tools",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Software Engineering, Systems, & Development",
-    "Research Discipline": "Computer Science"
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
 }

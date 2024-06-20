@@ -2,13 +2,10 @@
     "Software": "libv8",
     "AI Description": "libv8 is an open-source C++ library that provides a fast and efficient JavaScript engine for embedding in various applications and tools.",
     "Core Features": "1. High-performance JavaScript execution\n2. Embeddable in C++ applications\n3. Support for ECMAScript 5.1 standard\n4. Lightweight and portable\n5. Easily integrated into projects\n6. Extensive documentation and community support",
-    "General Tags": [
-        "Javascript Engine",
-        "C++ Library"
-    ],
+    "General Tags": "Javascript Engine, C++ Library",
     "Software Type": "Programming Library",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

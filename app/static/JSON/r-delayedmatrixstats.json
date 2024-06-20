@@ -1,21 +1,11 @@
 {
     "Software": "r-delayedmatrixstats",
     "AI Description": "R package providing optimized functions for computing row and column sums and means, sample variances, and correlations for matrix-like objects representing matrices or data frames.",
-    "Core Features": [
-        "Efficient computation of basic statistics for matrix-like objects",
-        "Supports row and column sums, means, sample variances, and correlations",
-        "Optimized for performance with large-scale data sets",
-        "Integration with R programming environment"
-    ],
-    "General Tags": [
-        "R Package",
-        "Matrix Statistics",
-        "Data Analysis",
-        "Statistical Computing"
-    ],
+    "Core Features": "Efficient Computation Of Basic Statistics For Matrix-Like Objects, Supports Row & Column Sums, Means, Sample Variances, & Correlations, Optimized For Performance With Large-Scale Data Sets, Integration With R Programming Environment",
+    "General Tags": "R Package, Matrix Statistics, Data Analysis, Statistical Computing",
     "Software Type": "Library",
     "Software Class": "Data Analysis",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

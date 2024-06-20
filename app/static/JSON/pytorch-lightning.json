@@ -2,15 +2,10 @@
     "Software": "PyTorch Lightning",
     "AI Description": "PyTorch Lightning is a lightweight PyTorch wrapper for high-performance AI research. It abstracts the PyTorch code to accelerate research and production workflows while promoting best practices.",
     "Core Features": "1. Simplified PyTorch usage for faster development\n2. Built-in features for easy debugging, logging, and visualization\n3. Facilitates scalable training and deployment\n4. Community-driven with extensive documentation and support",
-    "General Tags": [
-        "Pytorch",
-        "Deep Learning",
-        "Machine Learning",
-        "Research Tools"
-    ],
+    "General Tags": "Pytorch, Deep Learning, Machine Learning, Research Tools",
     "Software Type": "Library",
     "Software Class": "Machine Learning Framework",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

@@ -2,15 +2,10 @@
     "Software": "Matplotlib",
     "AI Description": "Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python. It is widely used for generating high-quality plots, charts, and figures for scientific and technical purposes.",
     "Core Features": "1. Supports a wide variety of plots including line plots, scatter plots, bar charts, histograms, pie charts, and more.\n2. Offers fine-grained control over every aspect of a visualization such as labels, fonts, colors, and axes.\n3. Provides support for different output formats including interactive figures for web applications.\n4. Integration with NumPy and Pandas for seamless data visualization.\n5. Capable of creating complex multi-axes plots and subplots.",
-    "General Tags": [
-        "Visualization",
-        "Plotting",
-        "Data Visualization",
-        "Matplotlib"
-    ],
+    "General Tags": "Visualization, Plotting, Data Visualization, Matplotlib",
     "Software Type": "Library",
     "Software Class": "Data Visualization Tools",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

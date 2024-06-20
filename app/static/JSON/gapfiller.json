@@ -1,21 +1,11 @@
 {
     "Software": "GapFiller",
     "AI Description": "GapFiller is a software tool designed for closing gaps and improving genome assemblies by utilizing paired-end reads. It works by enabling the precise elucidation of gaps that occur during the sequencing and assembly process, ultimately enhancing the accuracy and completeness of the assembled genome.",
-    "Core Features": [
-        "Utilizes paired-end reads for gap filling",
-        "Improves genome assembly accuracy",
-        "Enhances assembly completeness",
-        "Provides detailed elucidation of sequencing gaps"
-    ],
-    "General Tags": [
-        "Genome Assembly",
-        "Bioinformatics",
-        "Sequencing",
-        "Gap Filling"
-    ],
+    "Core Features": "Utilizes Paired-End Reads For Gap Filling, Improves Genome Assembly Accuracy, Enhances Assembly Completeness, Provides Detailed Elucidation Of Sequencing Gaps",
+    "General Tags": "Genome Assembly, Bioinformatics, Sequencing, Gap Filling",
     "Software Type": "Computational Tool",
     "Software Class": "Genome Assembly",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genomics",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

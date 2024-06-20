@@ -1,23 +1,11 @@
 {
     "Software": "SynthCity",
     "AI Description": "SynthCity is a software for urban simulation and modeling that allows researchers to simulate various aspects of urban environments and study the effects of different urban planning strategies. It provides a platform for detailed spatial analysis and scenario planning.",
-    "Core Features": [
-        "Urban simulation",
-        "Spatial analysis",
-        "Scenario planning",
-        "Data visualization",
-        "Data integration"
-    ],
-    "General Tags": [
-        "Urban Planning",
-        "Simulation Software",
-        "Spatial Analysis",
-        "Scenario Planning",
-        "Data Visualization"
-    ],
+    "Core Features": "Urban Simulation, Spatial Analysis, Scenario Planning, Data Visualization, Data Integration",
+    "General Tags": "Urban Planning, Simulation Software, Spatial Analysis, Scenario Planning, Data Visualization",
     "Software Type": "",
     "Software Class": "",
-    "Research Field": "",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": ""
 }

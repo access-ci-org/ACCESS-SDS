@@ -2,14 +2,10 @@
     "Software": "Keras",
     "AI Description": "Keras is an open-source neural network library written in Python. It is capable of running on top of TensorFlow, Microsoft Cognitive Toolkit, Theano, or PlaidML. Designed with user-friendliness and modularity as its guiding principles, Keras is known for its ease of use and flexibility, allowing users to experiment with deep neural networks.",
     "Core Features": "1. User-friendly API\n2. Modular and extensible\n3. Supports both convolutional networks and recurrent networks, as well as combinations of the two\n4. Runs seamlessly on CPU and GPU",
-    "General Tags": [
-        "Neural Networks",
-        "Deep Learning",
-        "Machine Learning"
-    ],
+    "General Tags": "Neural Networks, Deep Learning, Machine Learning",
     "Software Type": "Library",
     "Software Class": "Neural Network Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Machine Learning",
-    "Research Discipline": "Artificial Intelligence & Intelligent Systems"
+    "Research Discipline": "Artificial Intelligence & Intelligent Systems",
+    "Research Field": "Computer & Information Sciences"
 }

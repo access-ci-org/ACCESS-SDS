@@ -2,13 +2,10 @@
     "Software": "bamliquidator",
     "AI Description": "bamliquidator is a tool for finding biologically-relevant peak sets in high-throughput sequencing data, particularly ChIP-seq and ATAC-seq data. It helps in identifying enriched regions (peaks) by calculating the fold enrichment compared to control data.",
     "Core Features": "1. Identifying enriched regions (peaks) in ChIP-seq and ATAC-seq data\n2. Calculating fold enrichment compared to control data\n3. Generating statistics and visualization of peak sets\n4. Providing options for customization and integration with downstream analysis tools",
-    "General Tags": [
-        "Bioinformatics",
-        "Hpc Tools"
-    ],
+    "General Tags": "Bioinformatics, Hpc Tools",
     "Software Type": "Data Analysis Tool",
     "Software Class": "Bioinformatics Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Chip-Seq & Atac-Seq Data Analysis",
-    "Research Discipline": "Genetics"
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
 }

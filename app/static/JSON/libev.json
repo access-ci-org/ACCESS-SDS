@@ -1,23 +1,11 @@
 {
     "Software": "libev",
     "AI Description": "libev is a high-performance event loop that provides a full-featured alternative to the event loop provided by the standard C library. It is designed for high scalability and low latency applications.",
-    "Core Features": [
-        "Supports multiple event types including I/O events, signal events, and timer events",
-        "Efficient and scalable event processing using optimized data structures",
-        "Supports priority queues for event scheduling",
-        "Provides a simple and easy-to-use interface for event handling",
-        "Platform-independent and supports multiple operating systems"
-    ],
-    "General Tags": [
-        "Event Loop",
-        "High Performance",
-        "Scalable",
-        "Low Latency",
-        "Operating System Independent"
-    ],
+    "Core Features": "Supports Multiple Event Types Including I/O Events, Signal Events, & Timer Events, Efficient & Scalable Event Processing Using Optimized Data Structures, Supports Priority Queues For Event Scheduling, Provides A Simple & Easy-To-Use Interface For Event Handling, Platform-Independent & Supports Multiple Operating Systems",
+    "General Tags": "Event Loop, High Performance, Scalable, Low Latency, Operating System Independent",
     "Software Type": "Library",
     "Software Class": "System Software",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

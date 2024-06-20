@@ -2,16 +2,10 @@
     "Software": "WESTPA",
     "AI Description": "The Weighted Ensemble Simulation Toolkit for the Analysis of Rare Events (WESTPA) is an open-source software package designed to facilitate the description and analysis of rare events in complex systems. It employs a weighted ensemble-based strategy to efficiently sample and explore the configuration space of a system, particularly when traditional molecular dynamics simulations may struggle to capture rare events.",
     "Core Features": "1. Weighted ensemble simulation method for sampling rare events\n2. Analysis tools for estimating transition rates, reaction coordinates, and free energy landscapes\n3. Support for parallelization on high-performance computing resources\n4. Integration with popular simulation packages like GROMACS, AMBER, and NAMD\n5. Customizable options for simulation parameters and analysis techniques",
-    "General Tags": [
-        "Molecular Dynamics",
-        "Simulation Analysis",
-        "Rare Events",
-        "Complex Systems",
-        "Open-Source"
-    ],
+    "General Tags": "Molecular Dynamics, Simulation Analysis, Rare Events, Complex Systems, Open-Source",
     "Software Type": "Computational Software",
     "Software Class": "Simulation & Analysis",
-    "Research Field": "Biological Sciences",
     "Research Area": "Computational Biophysics",
-    "Research Discipline": "Biophysics"
+    "Research Discipline": "Biophysics",
+    "Research Field": "Biological Sciences"
 }

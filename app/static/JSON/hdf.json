@@ -1,21 +1,11 @@
 {
     "Software": "HDF",
     "AI Description": "HDF (Hierarchical Data Format) is a flexible and extensible file format for storing and managing large amounts of data. It supports various data types, attributes, and metadata, making it suitable for a wide range of scientific and engineering applications.",
-    "Core Features": [
-        "Supports large, complex, and multidimensional datasets",
-        "Allows for efficient data organization and storage",
-        "Provides tools for data management, manipulation, and visualization",
-        "Offers APIs for different programming languages such as C, Python, and Java"
-    ],
-    "General Tags": [
-        "Data Management",
-        "File Format",
-        "Data Visualization",
-        "Api"
-    ],
+    "Core Features": "Supports Large, Complex, & Multidimensional Datasets, Allows For Efficient Data Organization & Storage, Provides Tools For Data Management, Manipulation, & Visualization, Offers Apis For Different Programming Languages Such As C, Python, & Java",
+    "General Tags": "Data Management, File Format, Data Visualization, Api",
     "Software Type": "File Format",
     "Software Class": "Data Management & Storage",
-    "Research Field": "Other Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Other Computer & Information Sciences"
 }

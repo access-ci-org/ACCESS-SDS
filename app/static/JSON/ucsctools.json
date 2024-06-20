@@ -2,15 +2,10 @@
     "Software": "ucsctools",
     "AI Description": "UCSC Genome Browser Utilities, a set of tools that interact with the UCSC Genome Browser database. These tools facilitate various genomic data manipulation tasks.",
     "Core Features": "1. Retrieve DNA sequences, annotations, and other genomic data from the UCSC Genome Browser database. \n2. Extract and manipulate data in various formats like BED, GTF, and FASTA. \n3. Perform operations such as converting between coordinate systems, fetching alignments, and working with genomic sequences. \n4. Integrate UCSC Genome Browser data into custom pipelines and workflows.",
-    "General Tags": [
-        "Genomics",
-        "Genome Browser",
-        "Data Manipulation",
-        "Bioinformatics"
-    ],
+    "General Tags": "Genomics, Genome Browser, Data Manipulation, Bioinformatics",
     "Software Type": "Library",
     "Software Class": "Bioinformatics Tools",
-    "Research Field": "Biological Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

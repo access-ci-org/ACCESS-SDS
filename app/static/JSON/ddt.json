@@ -2,15 +2,10 @@
     "Software": "ddt",
     "AI Description": "DDT is a powerful, flexible, scalable, and easy-to-use debugging and performance analysis tool for parallel and serial codes.",
     "Core Features": "DDT offers intuitive graphical user interface, multi-language support for C, C++, and Fortran, advanced debugging capabilities, memory debugging, parallel debugging for MPI, OpenMP, and hybrid codes, performance analysis for identifying bottlenecks, debugging in a distributed environment, and efficient visualization of program behavior.",
-    "General Tags": [
-        "Debugging Tool",
-        "Performance Analysis",
-        "Parallel Computing",
-        "Serial Computing"
-    ],
+    "General Tags": "Debugging Tool, Performance Analysis, Parallel Computing, Serial Computing",
     "Software Type": "Debugger",
     "Software Class": "Development Tool",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

@@ -2,14 +2,10 @@
     "Software": "libXau",
     "AI Description": "libXau is a library that provides authentication data for Xlib-based client programs.",
     "Core Features": "1. Provides authentication data for Xlib-based client programs.\n2. Part of the X.Org project.\n3. Ensures secure communication between X client and X server.",
-    "General Tags": [
-        "Library",
-        "Authentication",
-        "Xlib"
-    ],
+    "General Tags": "Library, Authentication, Xlib",
     "Software Type": "",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

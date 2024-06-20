@@ -1,20 +1,11 @@
 {
     "Software": "jdftx",
     "AI Description": "JDFTx is a computational package for joint density-functional theory (JDFT) calculations. It enables electronic structure calculations for materials using the JDFT formalism, offering a versatile tool for a wide range of research applications.",
-    "Core Features": [
-        "Performs density-functional theory calculations",
-        "Supports joint density-functional theory (JDFT)",
-        "Allows for electronic structure analysis of materials",
-        "Includes features for simulating various physical properties"
-    ],
-    "General Tags": [
-        "Computational Software",
-        "Electronic Structure Calculations",
-        "Materials Science"
-    ],
+    "Core Features": "Performs Density-Functional Theory Calculations, Supports Joint Density-Functional Theory (Jdft), Allows For Electronic Structure Analysis Of Materials, Includes Features For Simulating Various Physical Properties",
+    "General Tags": "Computational Software, Electronic Structure Calculations, Materials Science",
     "Software Type": "Simulation Software",
     "Software Class": "Scientific Software",
-    "Research Field": "Physical Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Physical Sciences"
 }

@@ -1,23 +1,11 @@
 {
     "Software": "GRASS GIS",
     "AI Description": "GRASS GIS (Geographic Resources Analysis Support System) is a free and open-source geographic information system (GIS) software suite used for geospatial data management and analysis, image processing, graphics/maps production, spatial modeling, and visualization.",
-    "Core Features": [
-        "Geospatial data management",
-        "Geospatial analysis",
-        "Image processing",
-        "Spatial modeling",
-        "Visualization"
-    ],
-    "General Tags": [
-        "Gis",
-        "Geospatial Analysis",
-        "Image Processing",
-        "Spatial Modeling",
-        "Visualization"
-    ],
+    "Core Features": "Geospatial Data Management, Geospatial Analysis, Image Processing, Spatial Modeling, Visualization",
+    "General Tags": "Gis, Geospatial Analysis, Image Processing, Spatial Modeling, Visualization",
     "Software Type": "Geographic Information System (Gis)",
     "Software Class": "Geospatial Software",
-    "Research Field": "Earth & Environmental Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Earth & Environmental Sciences"
 }

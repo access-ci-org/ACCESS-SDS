@@ -2,14 +2,10 @@
     "Software": "agfusion",
     "AI Description": "agfusion is a computational tool for annotating and predicting the effects of gene fusions in cancer. It integrates multiple algorithms to identify and characterize gene fusions using RNA sequencing data.",
     "Core Features": "1. Detection of gene fusions in cancer genomes\n2. Annotation and classification of gene fusions\n3. Prediction of functional consequences of gene fusions\n4. Integration of multiple algorithms for accurate fusion detection\n5. Analysis of fusion breakpoints and potential fusion partners",
-    "General Tags": [
-        "Computational Tool",
-        "Gene Fusions",
-        "Cancer"
-    ],
+    "General Tags": "Computational Tool, Gene Fusions, Cancer",
     "Software Type": "Computational",
     "Software Class": "Research Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Cancer Genomics",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

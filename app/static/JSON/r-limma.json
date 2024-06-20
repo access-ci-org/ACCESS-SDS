@@ -1,21 +1,11 @@
 {
     "Software": "r-limma",
     "AI Description": "r-limma is an R package that provides methods for analyzing gene expression data, specifically designed for the detection of differentially expressed genes.",
-    "Core Features": [
-        "Statistical analysis of gene expression data",
-        "Identification of differentially expressed genes",
-        "Linear models and empirical Bayes methods",
-        "Visualization tools for gene expression data"
-    ],
-    "General Tags": [
-        "Bioinformatics",
-        "Statistical Analysis",
-        "Gene Expression",
-        "R Package"
-    ],
+    "Core Features": "Statistical Analysis Of Gene Expression Data, Identification Of Differentially Expressed Genes, Linear Models & Empirical Bayes Methods, Visualization Tools For Gene Expression Data",
+    "General Tags": "Bioinformatics, Statistical Analysis, Gene Expression, R Package",
     "Software Type": "Data Analysis Tool",
     "Software Class": "Statistical Analysis",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genomics",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

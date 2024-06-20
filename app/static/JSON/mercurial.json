@@ -2,13 +2,10 @@
     "Software": "Mercurial",
     "AI Description": "Mercurial is a free, distributed source control management tool. It efficiently handles projects of any size and offers an intuitive interface.",
     "Core Features": "Mercurial provides distributed revision control, fast operations, built-in merge algorithms, efficient handling of binary files, extensibility via Python scripts, and support for multiple workflows.",
-    "General Tags": [
-        "Version Control",
-        "Software Development"
-    ],
+    "General Tags": "Version Control, Software Development",
     "Software Type": "Development Tools",
     "Software Class": "Version Control System",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

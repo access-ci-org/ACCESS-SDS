@@ -2,18 +2,10 @@
     "Software": "Pyro-PPL",
     "AI Description": "Pyro is a universal probabilistic programming language (PPL) built on top of PyTorch. It is designed to enable flexible and expressive deep probabilistic modeling, variational inference, and probabilistic programming.",
     "Core Features": "1. Deep probabilistic modeling\n2. Variational inference\n3. Probabilistic programming capabilities\n4. Incorporates PyTorch for scalable deep learning\n5. Extensive library for stochastic variational inference and MCMC algorithms",
-    "General Tags": [
-        "Probabilistic Programming Language",
-        "Deep Learning",
-        "Variational Inference",
-        "Pytorch"
-    ],
+    "General Tags": "Probabilistic Programming Language, Deep Learning, Variational Inference, Pytorch",
     "Software Type": "Machine Learning Tool",
     "Software Class": "Probabilistic Programming Language",
-    "Research Field": [
-        "Computer And Information Sciences",
-        "Artificial Intelligence And Intelligent Systems"
-    ],
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences, Artificial Intelligence & Intelligent Systems"
 }

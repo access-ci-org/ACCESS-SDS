@@ -2,13 +2,10 @@
     "Software": "assembly-stats",
     "AI Description": "assembly-stats is a tool for summary statistics of genome assembly, providing information on contig and scaffold lengths, NG(x) statistics, and basic completeness metrics.",
     "Core Features": "- Calculates basic statistics on genome assemblies\n- Provides information on contig and scaffold lengths\n- Calculates NG(x) statistics\n- Evaluates basic completeness metrics",
-    "General Tags": [
-        "Genome Assembly",
-        "Bioinformatics"
-    ],
+    "General Tags": "Genome Assembly, Bioinformatics",
     "Software Type": "Stand-Alone Tool",
     "Software Class": "Bioinformatics Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

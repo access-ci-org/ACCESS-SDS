@@ -2,13 +2,10 @@
     "Software": "phd2fasta",
     "AI Description": "phd2fasta is a tool used for converting DNA sequencing trace files in PHD format to the FASTA format, making it easier to work with DNA sequences in bioinformatics analysis.",
     "Core Features": "Converts DNA sequencing trace files in PHD format to the commonly used FASTA format. Retains sequence information and quality scores for downstream analysis. Simple and straightforward conversion process for users.",
-    "General Tags": [
-        "Bioinformatics",
-        "Sequence Analysis"
-    ],
+    "General Tags": "Bioinformatics, Sequence Analysis",
     "Software Type": "Conversion Tool",
     "Software Class": "Bioinformatics Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genomics",
-    "Research Discipline": "Genetics"
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
 }

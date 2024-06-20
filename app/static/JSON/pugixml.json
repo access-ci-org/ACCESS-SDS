@@ -2,15 +2,10 @@
     "Software": "pugixml",
     "AI Description": "pugixml is a lightweight C++ XML processing library that consists of a simple and intuitive API. It is designed to be easy to integrate with other projects and provides efficient and fast XML parsing capabilities.",
     "Core Features": "Some of the core features of pugixml include XPath support, DOM-like interface, memory efficiency, high performance parsing, and compatibility with various C++ compilers.",
-    "General Tags": [
-        "Xml Processing",
-        "C++ Library",
-        "Xpath",
-        "Parsing"
-    ],
+    "General Tags": "Xml Processing, C++ Library, Xpath, Parsing",
     "Software Type": "Xml Processing",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

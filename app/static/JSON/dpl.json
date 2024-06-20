@@ -1,19 +1,12 @@
 {
-    "Research Discipline": "",
-    "Research Area": "",
-    "Software Class": "",
-    "Software Type": "",
-    "Field of Science": [
-        "Computer and Information Sciences",
-        "Other Computer and Information Sciences"
-    ],
+    "Field of Science": "Computer & Information Sciences, Other Computer & Information Sciences",
     "Software": "dpl",
     "AI Description": "dpl is a software for performing direct programming language analysis.",
     "Core Features": "It provides tools for analyzing the structure and syntax of programming languages directly.",
-    "General Tags": [
-        "Programming Language Analysis",
-        "Syntax Analysis",
-        "Language Structure Analysis"
-    ],
+    "General Tags": "Programming Language Analysis, Syntax Analysis, Language Structure Analysis",
+    "Software Type": "",
+    "Software Class": "",
+    "Research Area": "",
+    "Research Discipline": "",
     "Research Field": ""
 }

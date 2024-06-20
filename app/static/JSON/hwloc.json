@@ -2,14 +2,10 @@
     "Software": "hwloc",
     "AI Description": "hwloc, the Portable Hardware Locality (hwloc), is an open-source hierarchical machine topology library used to provide abstract representation of the hierarchical topology of modern architectures.",
     "Core Features": "Some core features of hwloc include the ability to identify the hierarchy of processing units, caches, memory, and locality information, support for a variety of hardware and software platforms, APIs for querying and modifying the topology, support for NUMA (Non-Uniform Memory Access) and processor binding policies, and visualization tools.",
-    "General Tags": [
-        "Machine Topology",
-        "Hardware Architecture",
-        "System Software"
-    ],
+    "General Tags": "Machine Topology, Hardware Architecture, System Software",
     "Software Type": "Library",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "System Software",
-    "Research Discipline": "Computer Science"
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
 }

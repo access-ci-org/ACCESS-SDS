@@ -1,20 +1,11 @@
 {
     "Software": "xdinfo",
     "AI Description": "xdinfo is a Python package which provides information about X-ray diffraction (XD) like functions, atomic scattering, Mueller matrix, XD profiles, and more. It is designed for the analysis and interpretation of X-ray diffraction data in various scientific applications.",
-    "Core Features": [
-        "Provides information about X-ray diffraction",
-        "Calculates atomic scattering",
-        "Analyzes Mueller matrix",
-        "Generates XD profiles"
-    ],
-    "General Tags": [
-        "Python Package",
-        "X-Ray Diffraction Analysis",
-        "Scientific Data Interpretation"
-    ],
+    "Core Features": "Provides Information About X-Ray Diffraction, Calculates Atomic Scattering, Analyzes Mueller Matrix, Generates Xd Profiles",
+    "General Tags": "Python Package, X-Ray Diffraction Analysis, Scientific Data Interpretation",
     "Software Type": "Library",
     "Software Class": "Data Analysis",
-    "Research Field": "Physical Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Physical Sciences"
 }

@@ -2,15 +2,10 @@
     "Software": "TensorFlow",
     "AI Description": "TensorFlow is an open-source machine learning library developed by Google to build and train deep learning models.",
     "Core Features": "Key features include a flexible architecture for large-scale machine learning, deep neural networks for training complex learning models, TensorFlow Lite for mobile and edge devices, TensorFlow Serving for deploying machine learning models in production, and TensorFlow Extended (TFX) for end-to-end machine learning pipelines.",
-    "General Tags": [
-        "Machine Learning",
-        "Deep Learning",
-        "Neural Networks",
-        "Model Training"
-    ],
+    "General Tags": "Machine Learning, Deep Learning, Neural Networks, Model Training",
     "Software Type": "Machine Learning Framework",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Machine Learning",
-    "Research Discipline": "Artificial Intelligence & Intelligent Systems"
+    "Research Discipline": "Artificial Intelligence & Intelligent Systems",
+    "Research Field": "Computer & Information Sciences"
 }

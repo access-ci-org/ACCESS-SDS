@@ -1,6 +1,13 @@
-body{
-    font-size:.95em;
+/* DataTable Container*/
+.container {
+    display: flex;  
+    justify-content: flex-end;
 }
+
+body{
+    font-size:.9em;
+}
+
 table.dataTable>tbody>tr>th, table.dataTable>tbody>tr>td {
     padding: 5px 5px;
 }
@@ -14,21 +21,23 @@ table.dataTable>tbody>tr>th, table.dataTable>tbody>tr>td {
 .dt-scroll::before {
     content: '';
     position: absolute;
-    z-index:2;
+    z-index:5;
     top: 0;
     height: 100%;
     pointer-events: none;
-    width: 40px; /* Width of the shadow */
+    width: 50px; /* Width of the shadow */
 }
 /* Right shadow */
 .dt-scroll::after {
     right: 0;
-    background: linear-gradient(to left, rgba(0,0,0,0.25), rgba(0,0,0,0));
+    width: 50px; /* Width of the shadow */
+    background: linear-gradient(to left, rgba(0,0,0,0.65), rgba(0,0,0,0));
 }
 /* Left shadow */
 .dt-scroll::before {
     left: 0;
-    background: linear-gradient(to right, rgba(0,0,0,0.25), rgba(0,0,0,0));
+    width: 20px; /* Width of the shadow */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.55), rgba(0,0,0,0));
 }
 /* Class to hide the right shadow */
 .no-right-shadow::after {
@@ -56,7 +65,7 @@ table.dataTable tbody tr.selected>* {
 }
 /* Changes the color of selected links to be higher visibility */
 table.dataTable>tbody>tr.selected a {
-    color: #00ffde;
+    color: #adfbff;
 }
 /* Changes the 'Column Visibility' Container */
 div.dt-button-collection.two-column{

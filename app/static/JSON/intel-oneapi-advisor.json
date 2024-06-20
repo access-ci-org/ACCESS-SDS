@@ -2,15 +2,10 @@
     "Software": "Intel oneAPI Advisor",
     "AI Description": "Intel oneAPI Advisor is a performance optimization tool that helps developers to improve their code's efficiency and performance on Intel architectures. It provides insights and recommendations for parallelism, vectorization, and memory access optimization.",
     "Core Features": "1. Performance analysis and optimization tools\n2. Parallelism and vectorization optimization\n3. Memory access analysis and recommendations\n4. CPU and GPU code optimization\n5. Compatibility with various development environments",
-    "General Tags": [
-        "Performance Optimization",
-        "Code Efficiency",
-        "Cpu Optimization",
-        "Gpu Optimization"
-    ],
+    "General Tags": "Performance Optimization, Code Efficiency, Cpu Optimization, Gpu Optimization",
     "Software Type": "Performance Optimization Tool",
     "Software Class": "Development Tool",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

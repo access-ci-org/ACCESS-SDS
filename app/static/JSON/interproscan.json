@@ -1,21 +1,11 @@
 {
     "Software": "InterProScan",
     "AI Description": "InterProScan is a software tool that allows the functional analysis of protein sequences by classifying them into families and predicting domains and important sites. It combines different protein signature recognition methods in one resource.",
-    "Core Features": [
-        "Protein sequence analysis",
-        "Functional classification",
-        "Domain prediction",
-        "Signature recognition"
-    ],
-    "General Tags": [
-        "Bioinformatics",
-        "Proteomics",
-        "Sequence Analysis",
-        "Functional Annotation"
-    ],
+    "Core Features": "Protein Sequence Analysis, Functional Classification, Domain Prediction, Signature Recognition",
+    "General Tags": "Bioinformatics, Proteomics, Sequence Analysis, Functional Annotation",
     "Software Type": "Bioinformatics Tool",
     "Software Class": "Annotation Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Proteomics",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

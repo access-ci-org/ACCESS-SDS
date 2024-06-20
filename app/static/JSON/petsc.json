@@ -1,24 +1,11 @@
 {
     "Software": "PETSc",
     "AI Description": "PETSc, the Portable, Extensible Toolkit for Scientific Computation, is a suite of data structures and routines for the scalable (parallel) solution of scientific applications modeled by partial differential equations.",
-    "Core Features": [
-        "Scalable solution of scientific applications modeled by partial differential equations",
-        "Efficient numerical computations on high-performance computers",
-        "Portable and extensible toolkit",
-        "Support for parallel computing",
-        "Integration with other computational software"
-    ],
-    "General Tags": [
-        "Scientific Computing",
-        "Computational Science",
-        "Numerical Analysis"
-    ],
+    "Core Features": "Scalable Solution Of Scientific Applications Modeled By Partial Differential Equations, Efficient Numerical Computations On High-Performance Computers, Portable & Extensible Toolkit, Support For Parallel Computing, Integration With Other Computational Software",
+    "General Tags": "Scientific Computing, Computational Science, Numerical Analysis",
     "Software Type": "Library",
     "Software Class": "Computational Software",
-    "Research Field": "Natural Sciences",
-    "Research Area": [
-        "Scientific Computing",
-        "Numerical Analysis"
-    ],
-    "Research Discipline": ""
+    "Research Area": "Scientific Computing, Numerical Analysis",
+    "Research Discipline": "",
+    "Research Field": "Natural Sciences"
 }

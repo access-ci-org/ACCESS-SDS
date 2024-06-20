@@ -1,23 +1,11 @@
 {
     "Software": "apr-util",
     "AI Description": "Apache Portable Runtime Utility Library (APR-util) provides a set of utility functions to support the Apache Portable Runtime core functionalities. It is a companion library to APR, extending the basic functionality of APR with additional features.",
-    "Core Features": [
-        "Database and SQL support",
-        "LDAP (Lightweight Directory Access Protocol) support",
-        "Resource pooling",
-        "XML parsing",
-        "URI parsing",
-        "Memory allocation and management"
-    ],
-    "General Tags": [
-        "Utility Library",
-        "Apache Portable Runtime",
-        "Support Library",
-        "Additional Features"
-    ],
+    "Core Features": "Database & Sql Support, Ldap (Lightweight Directory Access Protocol) Support, Resource Pooling, Xml Parsing, Uri Parsing, Memory Allocation & Management",
+    "General Tags": "Utility Library, Apache Portable Runtime, Support Library, Additional Features",
     "Software Type": "",
     "Software Class": "",
-    "Research Field": "",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": ""
 }

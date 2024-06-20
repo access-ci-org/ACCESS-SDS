@@ -1,21 +1,11 @@
 {
     "Software": "Geomview",
     "AI Description": "Geomview is an interactive 3D viewing program for Unix. It lets you view and manipulate 3D objects: you use a mouse to rotate, translate, zoom in and out, etc. It reads and writes files in any of the formats supported by your 3D graphics library.",
-    "Core Features": [
-        "Interactive 3D viewing of objects",
-        "Rotation, translation, zooming functionality",
-        "Support for multiple file formats",
-        "Customizable display options",
-        "Compatibility with Unix systems"
-    ],
-    "General Tags": [
-        "3D Visualization",
-        "Interactive Viewing",
-        "Unix Software"
-    ],
+    "Core Features": "Interactive 3D Viewing Of Objects, Rotation, Translation, Zooming Functionality, Support For Multiple File Formats, Customizable Display Options, Compatibility With Unix Systems",
+    "General Tags": "3D Visualization, Interactive Viewing, Unix Software",
     "Software Type": "3D Viewing",
     "Software Class": "Visualization Tool",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

@@ -1,27 +1,11 @@
 {
     "Software": "aria2",
     "AI Description": "aria2 is a lightweight multi-protocol & multi-source command-line download utility. It supports HTTP/HTTPS, FTP, SFTP, BitTorrent and Metalink.",
-    "Core Features": [
-        "Multi-protocol & multi-source command-line download utility",
-        "Supports HTTP/HTTPS, FTP, SFTP, BitTorrent, Metalink",
-        "Configurable download settings",
-        "Batch downloading",
-        "Download resuming",
-        "Parallel downloads"
-    ],
-    "General Tags": [
-        "Download Manager",
-        "Command-Line Tool",
-        "Multi-Protocol",
-        "Multi-Source",
-        "File Transfer"
-    ],
+    "Core Features": "Multi-Protocol & Multi-Source Command-Line Download Utility, Supports Http/Https, Ftp, Sftp, Bittorrent, Metalink, Configurable Download Settings, Batch Downloading, Download Resuming, Parallel Downloads",
+    "General Tags": "Download Manager, Command-Line Tool, Multi-Protocol, Multi-Source, File Transfer",
     "Software Type": "Download Manager",
     "Software Class": "Utility",
-    "Research Field": [
-        "Computer And Information Sciences",
-        "Other Computer And Information Sciences"
-    ],
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences, Other Computer & Information Sciences"
 }

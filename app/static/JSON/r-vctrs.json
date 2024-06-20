@@ -1,19 +1,11 @@
 {
     "Software": "R package - vctrs",
     "AI Description": "The vctrs package in R provides tools for creating consistent and well-composed vector behaviors. It defines types and size preserving coercion to streamline data manipulation and manipulation in R programming.",
-    "Core Features": [
-        "Defines types and size preserving coercion",
-        "Streamlines data manipulation in R",
-        "Ensures consistent and well-composed vector behaviors"
-    ],
-    "General Tags": [
-        "R Package",
-        "Data Manipulation",
-        "Vector Behaviors"
-    ],
+    "Core Features": "Defines Types & Size Preserving Coercion, Streamlines Data Manipulation In R, Ensures Consistent & Well-Composed Vector Behaviors",
+    "General Tags": "R Package, Data Manipulation, Vector Behaviors",
     "Software Type": "Software Library",
     "Software Class": "Library",
-    "Research Field": "Other Mathematics",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Other Mathematics"
 }

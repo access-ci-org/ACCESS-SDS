@@ -2,13 +2,10 @@
     "Software": "JCVI",
     "AI Description": "J. Craig Venter Institute (JCVI) software tools for bioinformatics analysis and computational biology.",
     "Core Features": "JCVI offers a suite of bioinformatics tools for analyzing biological data, including sequence alignment, assembly, visualization, and annotation. These tools are designed to assist researchers in genomics, metagenomics, transcriptomics, and other areas of computational biology.",
-    "General Tags": [
-        "Bioinformatics",
-        "Computational Biology"
-    ],
+    "General Tags": "Bioinformatics, Computational Biology",
     "Software Type": "Analysis Tools",
     "Software Class": "Bioinformatics Tools",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genomics",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

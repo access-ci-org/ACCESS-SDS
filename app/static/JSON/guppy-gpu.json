@@ -2,15 +2,10 @@
     "Software": "guppy-gpu",
     "AI Description": "Guppy is a basecaller software for Oxford Nanopore sequencing data. The GPU version utilizes the power of graphics processing units to accelerate the basecalling process for faster and more efficient analysis of sequencing data.",
     "Core Features": "1. Utilizes GPU acceleration for rapid basecalling\n2. Optimized for Oxford Nanopore sequencing data\n3. Supports real-time sequencing data analysis\n4. Provides high-throughput processing capabilities",
-    "General Tags": [
-        "Basecaller",
-        "Oxford Nanopore",
-        "Sequencing",
-        "Gpu Acceleration"
-    ],
+    "General Tags": "Basecaller, Oxford Nanopore, Sequencing, Gpu Acceleration",
     "Software Type": "Bioinformatics Tool",
     "Software Class": "Analysis Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genetics",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

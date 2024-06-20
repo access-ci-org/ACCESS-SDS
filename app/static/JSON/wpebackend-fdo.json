@@ -2,15 +2,10 @@
     "Software": "wpebackend-fdo",
     "AI Description": "wpebackend-fdo is a software project that provides a backend implementation for WebKit's WPE WebKit using a Flatpak distributed runtime for sandboxing.",
     "Core Features": "The software facilitates the integration of the WPE WebKit with Flatpak runtime for secure sandboxing of web content. It allows for optimized performance and resource management within the Flatpak environment.",
-    "General Tags": [
-        "Software",
-        "Sandboxing",
-        "Integration",
-        "Performance Optimization"
-    ],
+    "General Tags": "Software, Sandboxing, Integration, Performance Optimization",
     "Software Type": "Backend Implementation",
     "Software Class": "Web Browser Backend",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Software Engineering, Systems, & Development",
-    "Research Discipline": "Computer Science"
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
 }

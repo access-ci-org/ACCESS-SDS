@@ -2,14 +2,10 @@
     "Software": "CLHEP",
     "AI Description": "CLHEP (Class Library for High Energy Physics) is a library of C++ classes specifically designed for high energy physics (HEP) applications. It provides a set of utility classes for HEP-specific tasks, such as vectors, matrices, random number generation, and units of measurement.",
     "Core Features": "1. Vector and matrix classes\n2. Random number generators\n3. Physical constants and units\n4. Geometry and kinematics classes\n5. Reference counting and smart pointers\n6. Event data model classes",
-    "General Tags": [
-        "C++ Library",
-        "High Energy Physics",
-        "Hep Applications"
-    ],
+    "General Tags": "C++ Library, High Energy Physics, Hep Applications",
     "Software Type": "Computational Tool",
     "Software Class": "Library",
-    "Research Field": "Physical Sciences",
     "Research Area": "High Energy Physics",
-    "Research Discipline": "Physics"
+    "Research Discipline": "Physics",
+    "Research Field": "Physical Sciences"
 }

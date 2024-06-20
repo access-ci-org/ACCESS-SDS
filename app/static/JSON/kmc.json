@@ -2,14 +2,10 @@
     "Software": "kmc",
     "AI Description": "KMC (K-mer Counter) is a fast and space-efficient tool for counting k-mers (substrings of length k) in DNA or RNA sequences. It is commonly used for tasks such as genome assembly, sequence error correction, and metagenomic analysis.",
     "Core Features": "1. Efficient k-mer counting for large-scale sequencing datasets\n2. Support for both DNA and RNA sequences\n3. Scalability to handle massive datasets\n4. Low memory requirements\n5. Parallel processing capabilities for faster computations",
-    "General Tags": [
-        "Sequence Analysis",
-        "Genome Assembly",
-        "Metagenomics"
-    ],
+    "General Tags": "Sequence Analysis, Genome Assembly, Metagenomics",
     "Software Type": "Tool",
     "Software Class": "Bioinformatics",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genomics",
-    "Research Discipline": "Computational Biology"
+    "Research Discipline": "Computational Biology",
+    "Research Field": "Biological Sciences"
 }

@@ -1,19 +1,11 @@
 {
     "Software": "Debugger",
     "AI Description": "A debugger is a software tool that allows programmers to track down and fix bugs (errors) in their programs. It enables users to step through code, inspect variables, set breakpoints, and analyze the program's execution flow.",
-    "Core Features": [
-        "Stepping through code",
-        "Inspecting variables",
-        "Setting breakpoints",
-        "Analyzing program execution flow"
-    ],
-    "General Tags": [
-        "Debugging",
-        "Software Development"
-    ],
+    "Core Features": "Stepping Through Code, Inspecting Variables, Setting Breakpoints, Analyzing Program Execution Flow",
+    "General Tags": "Debugging, Software Development",
     "Software Type": "Debugger",
     "Software Class": "Development Tools",
-    "Research Field": "Engineering & Technology",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
 }

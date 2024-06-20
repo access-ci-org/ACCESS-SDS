@@ -1,21 +1,11 @@
 {
     "Software": "RAVEN Assembler",
     "AI Description": "RAVEN Assembler is a software tool for de novo genome assembly used in bioinformatics. It is designed to accurately reconstruct genomes from high-throughput sequencing data.",
-    "Core Features": [
-        "De novo genome assembly",
-        "High-throughput sequencing data processing",
-        "Accurate genome reconstruction"
-    ],
-    "General Tags": [
-        "Bioinformatics",
-        "Genome Assembly",
-        "Sequencing Data Processing"
-    ],
+    "Core Features": "De Novo Genome Assembly, High-Throughput Sequencing Data Processing, Accurate Genome Reconstruction",
+    "General Tags": "Bioinformatics, Genome Assembly, Sequencing Data Processing",
     "Software Type": "Bioinformatics Tool",
     "Software Class": "Assembly Software",
-    "Research Field": "Biological Sciences",
     "Research Area": "",
-    "Research Discipline": [
-        "Genomics"
-    ]
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
 }

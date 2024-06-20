@@ -1,19 +1,11 @@
 {
     "Software": "py-virtualenv",
     "AI Description": "py-virtualenv is a tool to create isolated Python environments. It creates a unique directory for a new Python project and installs dependencies in that directory, rather than globally.",
-    "Core Features": [
-        "Creation of isolated Python environments",
-        "Installation of project-specific dependencies",
-        "Avoiding conflicts between project dependencies"
-    ],
-    "General Tags": [
-        "Python",
-        "Virtual Environment",
-        "Dependency Management"
-    ],
+    "Core Features": "Creation Of Isolated Python Environments, Installation Of Project-Specific Dependencies, Avoiding Conflicts Between Project Dependencies",
+    "General Tags": "Python, Virtual Environment, Dependency Management",
     "Software Type": "Environment Management",
     "Software Class": "Development Tools",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Software Development",
-    "Research Discipline": "Software Engineering, Systems, & Development"
+    "Research Discipline": "Software Engineering, Systems, & Development",
+    "Research Field": "Computer & Information Sciences"
 }

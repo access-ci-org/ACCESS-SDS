@@ -2,16 +2,10 @@
     "Software": "ExaBayes",
     "AI Description": "ExaBayes is a software package for Bayesian inference on large phylogenetic trees using parallel computing techniques.",
     "Core Features": "ExaBayes offers efficient and scalable Markov chain Monte Carlo (MCMC) algorithms for analyzing very large Bayesian phylogenetic datasets. It is specifically designed to handle massive datasets on high-performance computing (HPC) systems. The software supports various models of sequence evolution and tree priors, enabling complex phylogenetic analyses. ExaBayes leverages GPU acceleration for rapid computation and supports MPI for parallel processing.",
-    "General Tags": [
-        "Bayesian Inference",
-        "Phylogenetics",
-        "Parallel Computing",
-        "Mcmc",
-        "Hpc"
-    ],
+    "General Tags": "Bayesian Inference, Phylogenetics, Parallel Computing, Mcmc, Hpc",
     "Software Type": "Phylogenetic Software",
     "Software Class": "Bioinformatics",
-    "Research Field": "Biological Sciences",
     "Research Area": "Evolutionary Biology",
-    "Research Discipline": "Ecology"
+    "Research Discipline": "Ecology",
+    "Research Field": "Biological Sciences"
 }

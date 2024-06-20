@@ -2,14 +2,10 @@
     "Software": "pggb",
     "AI Description": "pggb is a software tool used for conducting performance evaluation and benchmarking of computational applications. It allows users to analyze the performance of their codes, identify bottlenecks, and optimize for better efficiency.",
     "Core Features": "1. Performance evaluation of computational applications\n2. Benchmarking for comparing performance metrics\n3. Identification of bottlenecks in code\n4. Optimization strategies for improving efficiency",
-    "General Tags": [
-        "Performance Evaluation",
-        "Benchmarking",
-        "Computational Applications"
-    ],
+    "General Tags": "Performance Evaluation, Benchmarking, Computational Applications",
     "Software Type": "",
     "Software Class": "Performance Evaluation Tool",
-    "Research Field": "Training",
     "Research Area": "",
-    "Research Discipline": "Performance Evaluation & Benchmarking"
+    "Research Discipline": "Performance Evaluation & Benchmarking",
+    "Research Field": "Training"
 }

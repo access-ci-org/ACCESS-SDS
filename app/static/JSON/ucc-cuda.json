@@ -1,24 +1,11 @@
 {
     "Software": "ucc-cuda",
     "AI Description": "ucc-cuda is an open-source compiler that integrates Unified Code Coverage Analysis (UCC) with the CUDA programming model used for parallel computing on NVIDIA GPUs. It allows developers to perform code coverage analysis on CUDA programs to identify unexecuted code paths and improve code quality.",
-    "Core Features": [
-        "Integration of UCC with CUDA programming model",
-        "Code coverage analysis for CUDA programs",
-        "Identification of unexecuted code paths",
-        "Improvement of code quality in GPU programming"
-    ],
-    "General Tags": [
-        "Compiler",
-        "Cuda",
-        "Code Coverage Analysis",
-        "Parallel Computing"
-    ],
+    "Core Features": "Integration Of Ucc With Cuda Programming Model, Code Coverage Analysis For Cuda Programs, Identification Of Unexecuted Code Paths, Improvement Of Code Quality In Gpu Programming",
+    "General Tags": "Compiler, Cuda, Code Coverage Analysis, Parallel Computing",
     "Software Type": "Development Tool",
     "Software Class": "Compiler",
-    "Research Field": [
-        "Computer And Information Sciences",
-        "Engineering And Technology"
-    ],
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences, Engineering & Technology"
 }

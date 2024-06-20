@@ -2,14 +2,10 @@
     "Software": "pybigwig",
     "AI Description": "pyBigWig is a Python interface for working with BigWig files, a binary format for efficiently storing genome-wide signal data.",
     "Core Features": "1. Reading and writing data to BigWig files\n2. Efficient storage and retrieval of genome-wide signal data\n3. Accessing data at specific genomic regions\n4. Compatible with Python data analysis and visualization libraries",
-    "General Tags": [
-        "Bigwig Files",
-        "Genome-Wide Signal Data",
-        "Python Interface"
-    ],
+    "General Tags": "Bigwig Files, Genome-Wide Signal Data, Python Interface",
     "Software Type": "Library",
     "Software Class": "Bioinformatics",
-    "Research Field": "Biological Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

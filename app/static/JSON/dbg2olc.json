@@ -1,21 +1,11 @@
 {
     "Software": "dbg2olc",
     "AI Description": "dbg2olc is a tool developed for genome assembly using a de Bruijn graph based on overlap-layout-consensus (OLC) algorithm. It aims to efficiently assemble large and complex genomes by utilizing both long and short reads.",
-    "Core Features": [
-        "De Bruijn graph assembly",
-        "Overlap-layout-consensus algorithm",
-        "Hybrid assembly using long and short reads",
-        "Efficient assembly of large and complex genomes"
-    ],
-    "General Tags": [
-        "Genome Assembly",
-        "De Bruijn Graph",
-        "Olc Algorithm",
-        "Bioinformatics"
-    ],
+    "Core Features": "De Bruijn Graph Assembly, Overlap-Layout-Consensus Algorithm, Hybrid Assembly Using Long & Short Reads, Efficient Assembly Of Large & Complex Genomes",
+    "General Tags": "Genome Assembly, De Bruijn Graph, Olc Algorithm, Bioinformatics",
     "Software Type": "Genome Assembly Software",
     "Software Class": "Bioinformatics Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genome Assembly",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

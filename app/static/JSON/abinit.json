@@ -2,14 +2,10 @@
     "Software": "Abinit",
     "AI Description": "Abinit is a first-principles simulation software for materials science, condensed matter physics, and related fields. It performs electronic structure calculations based on density functional theory (DFT) and many-body perturbation theory.",
     "Core Features": "Abinit offers a wide range of functionalities for modeling materials properties, such as electronic band structures, total energies, forces, dielectric properties, and more. It supports parallel computing for scalability and efficiency.",
-    "General Tags": [
-        "Materials Science",
-        "Condensed Matter Physics",
-        "Electronic Structure Calculations"
-    ],
+    "General Tags": "Materials Science, Condensed Matter Physics, Electronic Structure Calculations",
     "Software Type": "Electronic Structure Calculation",
     "Software Class": "Simulation Software",
-    "Research Field": "Physical Sciences",
     "Research Area": "Materials Science",
-    "Research Discipline": "Condensed Matter Physics"
+    "Research Discipline": "Condensed Matter Physics",
+    "Research Field": "Physical Sciences"
 }

@@ -1,20 +1,11 @@
 {
     "Software": "R-BioMart",
     "AI Description": "R-BioMart is an R interface to the BioMart database that provides access to a wide range of biological databases. It allows users to query and retrieve data from various biological resources, such as Ensembl and UniProt, through a unified API.",
-    "Core Features": [
-        "Querying and retrieving data from biological databases",
-        "Access to diverse biological resources like Ensembl and UniProt",
-        "Unified API for seamless data access"
-    ],
-    "General Tags": [
-        "Bioinformatics",
-        "Data Retrieval",
-        "Biological Databases",
-        "Data Query"
-    ],
+    "Core Features": "Querying & Retrieving Data From Biological Databases, Access To Diverse Biological Resources Like Ensembl & Uniprot, Unified Api For Seamless Data Access",
+    "General Tags": "Bioinformatics, Data Retrieval, Biological Databases, Data Query",
     "Software Type": "R Package",
     "Software Class": "Data Retrieval & Querying",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genomics",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

@@ -1,21 +1,11 @@
 {
     "Software": "R-RNAseq",
     "AI Description": "R-RNAseq is an R package for the analysis of RNA sequencing data. It provides a comprehensive set of tools for preprocessing, quality assessment, differential expression analysis, and visualization of RNA sequencing data.",
-    "Core Features": [
-        "Preprocessing of RNA sequencing data",
-        "Quality assessment of sequencing data",
-        "Differential expression analysis",
-        "Visualization of RNA sequencing results"
-    ],
-    "General Tags": [
-        "Rna Sequencing",
-        "Bioinformatics",
-        "Data Analysis",
-        "Statistical Analysis"
-    ],
+    "Core Features": "Preprocessing Of RNA Sequencing Data, Quality Assessment Of Sequencing Data, Differential Expression Analysis, Visualization Of RNA Sequencing Results",
+    "General Tags": "RNA Sequencing, Bioinformatics, Data Analysis, Statistical Analysis",
     "Software Type": "R Package",
     "Software Class": "Analysis Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Transcriptomics",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

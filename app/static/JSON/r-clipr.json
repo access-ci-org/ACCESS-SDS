@@ -2,14 +2,10 @@
     "Software": "r-clipr",
     "AI Description": "r-clipr is a R package that provides a clipboard interface for R. It allows users to interact with the system clipboard, enabling copying and pasting data between R and other applications.",
     "Core Features": "1. Ability to read from and write to the system clipboard in R.\n2. Facilitates data transfer between R and external applications.\n3. Supports a variety of data formats for clipboard operations.",
-    "General Tags": [
-        "R Package",
-        "Clipboard Interface",
-        "Data Transfer"
-    ],
+    "General Tags": "R Package, Clipboard Interface, Data Transfer",
     "Software Type": "Data Management Tool",
     "Software Class": "Programming & Scripting Tools",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

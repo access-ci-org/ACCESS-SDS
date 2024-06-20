@@ -1,19 +1,11 @@
 {
     "Software": "eggnog-mapper",
     "AI Description": "EggNOG-mapper is a tool that allows functional annotation of non-model species using orthology-based methods. It leverages precomputed clusters of orthologous genes from multiple species to predict gene function through orthology transfer.",
-    "Core Features": [
-        "Functional annotation of non-model species",
-        "Orthology-based methods",
-        "Gene function prediction through orthology transfer"
-    ],
-    "General Tags": [
-        "Functional Annotation",
-        "Orthology",
-        "Gene Function Prediction"
-    ],
+    "Core Features": "Functional Annotation Of Non-Model Species, Orthology-Based Methods, Gene Function Prediction Through Orthology Transfer",
+    "General Tags": "Functional Annotation, Orthology, Gene Function Prediction",
     "Software Type": "Bioinformatics Tool",
     "Software Class": "Annotation Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genomics",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

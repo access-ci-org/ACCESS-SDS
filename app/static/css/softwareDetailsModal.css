@@ -1,9 +1,28 @@
-/* Class-specific Modal Overrides*/
-#softwareDetailsBody{
-    padding: 1.75em;
-    padding-left:3%;
-    background-color: #154757 !important;
+.softwareDetailsModal .modal-dialog{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    max-width:60%;
 }
+
+.softwareDetailsModal .modal-content{
+    display:flex;
+    flex-direction: column;
+    width: auto;
+    border:#154e5fee 4px solid;
+}
+.softwareDetailsModal .modal-header{
+    border: 3px #154e5fd5 solid;
+    border-radius: 5px;
+}
+.softwareDetailsModal .modal-body{
+    padding: 0;
+    background-color: #1a5b6e;
+    border: 1px #185264d3 solid;
+}
+
+
 
 /* Line Spacer inside Modal */
 #softwareDetailsBody hr{
@@ -15,15 +34,13 @@
  
 /* Shadow around left column in softwareDetails modal */
 #softwareDetailsBody .borderCell{
-    border: 3px #185264d3 solid !important;
-    padding-top:3px;
+    border: 3px #154e5fd5 solid;
     border-radius: 5px;
 }
 
 /* Shadow around right column in softwareDetails modal */
 #softwareDetailsBody .borderValue{
-    border: 3px #0f6572d0 solid !important;
-    padding-top:3px;
+    border: 3px #0c5a66d5 solid;
     border-radius: 5px;
 }
 
@@ -31,3 +48,4 @@
 #softwareDetailsBody a {
     color: #adfbff;
 }
+

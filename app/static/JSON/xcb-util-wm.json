@@ -1,19 +1,11 @@
 {
     "Software": "xcb-util-wm",
     "AI Description": "xcb-util-wm is a set of utility functions for interfacing with the X Window Manager (WM) extension of the XCB library. It provides a number of functions that are useful to XCB WM clients.",
-    "Core Features": [
-        "Interfacing with X Window Manager (WM) extension",
-        "Utility functions for XCB WM clients"
-    ],
-    "General Tags": [
-        "X Window System",
-        "Window Manager",
-        "Xcb Library",
-        "Utility Functions"
-    ],
+    "Core Features": "Interfacing With X Window Manager (Wm) Extension, Utility Functions For Xcb Wm Clients",
+    "General Tags": "X Window System, Window Manager, Xcb Library, Utility Functions",
     "Software Type": "Utility",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

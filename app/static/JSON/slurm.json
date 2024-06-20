@@ -2,14 +2,10 @@
     "Software": "Slurm",
     "AI Description": "Slurm is an open-source workload manager designed for Linux clusters of all sizes. It provides job scheduling, prioritization, and management capabilities to maximize the efficiency of cluster resources.",
     "Core Features": "Job scheduling, Resource management, Cluster monitoring, Job prioritization, Fair-share scheduling, Job accounting, Power management",
-    "General Tags": [
-        "Workload Manager",
-        "Cluster Management",
-        "High-Performance Computing"
-    ],
+    "General Tags": "Workload Manager, Cluster Management, High-Performance Computing",
     "Software Type": "Workload Manager",
     "Software Class": "Resource Management System",
-    "Research Field": "Engineering & Technology",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
 }

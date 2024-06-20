@@ -1,20 +1,11 @@
 {
     "Software": "Megadepth",
     "AI Description": "Megadepth is a software tool designed for precise and efficient quantification of sequencing data from bisulfite-treated DNA. It allows for accurate measurement of DNA methylation levels and offers various features for analyzing and visualizing methylation data.",
-    "Core Features": [
-        "Quantification of sequencing data from bisulfite-treated DNA",
-        "Accurate measurement of DNA methylation levels",
-        "Analysis and visualization of methylation data"
-    ],
-    "General Tags": [
-        "Bioinformatics",
-        "Sequencing Data Analysis",
-        "Dna Methylation Analysis",
-        "Computational Biology"
-    ],
+    "Core Features": "Quantification Of Sequencing Data From Bisulfite-Treated DNA, Accurate Measurement Of DNA Methylation Levels, Analysis & Visualization Of Methylation Data",
+    "General Tags": "Bioinformatics, Sequencing Data Analysis, DNA Methylation Analysis, Computational Biology",
     "Software Type": "Analysis Tool",
     "Software Class": "Bioinformatics",
-    "Research Field": "Biological Sciences",
     "Research Area": "Epigenetics",
-    "Research Discipline": "Genetics"
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
 }

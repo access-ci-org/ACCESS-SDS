@@ -1,20 +1,11 @@
 {
     "Software": "zstd",
     "AI Description": "Zstandard (or zstd) is a fast data compression algorithm developed by Facebook. It is designed to provide high compression ratios with very low latency, making it suitable for real-time compression/decompression scenarios. Zstandard offers a wide range of compression levels, from very fast to very strong, allowing users to balance between speed and compression ratio based on their requirements.",
-    "Core Features": [
-        "High compression ratios",
-        "Low latency",
-        "Wide range of compression levels",
-        "Suitable for real-time scenarios"
-    ],
-    "General Tags": [
-        "Compression",
-        "Data Compression",
-        "Algorithm"
-    ],
+    "Core Features": "High Compression Ratios, Low Latency, Wide Range Of Compression Levels, Suitable For Real-Time Scenarios",
+    "General Tags": "Compression, Data Compression, Algorithm",
     "Software Type": "Compression Algorithm",
     "Software Class": "Data Compression Software",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": "Computer Science"
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
 }

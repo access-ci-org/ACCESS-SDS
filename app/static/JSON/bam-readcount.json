@@ -1,20 +1,11 @@
 {
     "Software": "bam-readcount",
     "AI Description": "bam-readcount is a program that summarizes reference-aligned reads from a BAM file. It is useful for generating read counts at specific genomic positions, such as for variant calling or assessing coverage.",
-    "Core Features": [
-        "Summarizes BAM file reads at specific genomic positions",
-        "Useful for variant calling and coverage assessment",
-        "Flexible output formats for downstream analysis"
-    ],
-    "General Tags": [
-        "Bioinformatics",
-        "Genomics",
-        "Variant-Calling",
-        "Coverage-Assessment"
-    ],
+    "Core Features": "Summarizes Bam File Reads At Specific Genomic Positions, Useful For Variant Calling & Coverage Assessment, Flexible Output Formats For Downstream Analysis",
+    "General Tags": "Bioinformatics, Genomics, Variant-Calling, Coverage-Assessment",
     "Software Type": "Command Line Tool",
     "Software Class": "Bioinformatics Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Bioinformatics",
-    "Research Discipline": "Genomics"
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
 }

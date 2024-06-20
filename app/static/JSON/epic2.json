@@ -2,14 +2,10 @@
     "Software": "epic2",
     "AI Description": "epic2 is a software tool for identifying genomic regions enriched with ChIP-seq signal. It is specifically designed for identifying enriched regions in large datasets, offering high sensitivity and specificity in peak calling.",
     "Core Features": "1. Efficient identification of enriched genomic regions in large ChIP-seq datasets.\n2. High sensitivity and specificity in peak calling.\n3. User-friendly interface for ease of use.\n4. Capable of handling large-scale data analysis.",
-    "General Tags": [
-        "Chip-Seq",
-        "Peak Calling",
-        "Genomic Regions"
-    ],
+    "General Tags": "Chip-Seq, Peak Calling, Genomic Regions",
     "Software Type": "Data Analysis Tool",
     "Software Class": "Bioinformatics Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genomics",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

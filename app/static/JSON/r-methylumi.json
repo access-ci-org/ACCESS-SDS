@@ -1,20 +1,11 @@
 {
     "Software": "r-methylumi",
     "AI Description": "r-methylumi is an R package for methylation data analysis. It provides functions for preprocessing, quality control, normalization, and visualization of methylation array data.",
-    "Core Features": [
-        "Preprocessing of methylation array data",
-        "Quality control",
-        "Normalization techniques",
-        "Visualization tools"
-    ],
-    "General Tags": [
-        "Methylation Data Analysis",
-        "R Package",
-        "Bioinformatics"
-    ],
+    "Core Features": "Preprocessing Of Methylation Array Data, Quality Control, Normalization Techniques, Visualization Tools",
+    "General Tags": "Methylation Data Analysis, R Package, Bioinformatics",
     "Software Type": "R Package",
     "Software Class": "Data Analysis",
-    "Research Field": "Biological Sciences",
     "Research Area": "Epigenetics",
-    "Research Discipline": "Genetics"
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
 }

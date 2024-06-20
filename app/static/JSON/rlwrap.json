@@ -1,21 +1,11 @@
 {
     "Software": "rlwrap",
     "AI Description": "rlwrap is a readline wrapper that uses the GNU readline library to allow the editing of keyboard input for any command. It provides command history, persistent history, line editing, and tab completion capabilities for command line interfaces.",
-    "Core Features": [
-        "Readline wrapper for command line interfaces",
-        "Command history support",
-        "Persistent history across sessions",
-        "Line editing and tab completion"
-    ],
-    "General Tags": [
-        "Command Line Interface",
-        "Readline",
-        "Line Editing",
-        "Tab Completion"
-    ],
+    "Core Features": "Readline Wrapper For Command Line Interfaces, Command History Support, Persistent History Across Sessions, Line Editing & Tab Completion",
+    "General Tags": "Command Line Interface, Readline, Line Editing, Tab Completion",
     "Software Type": "Utility",
     "Software Class": "Command Line Interface (Cli) Tools",
-    "Research Field": "Other Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Other Computer & Information Sciences"
 }

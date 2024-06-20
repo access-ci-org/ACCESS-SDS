@@ -1,21 +1,11 @@
 {
     "Software": "MultiQC",
     "AI Description": "MultiQC is a reporting tool that collects statistics from multiple bioinformatics analyses and generates a single report. It helps in summarizing the output from various bioinformatics tools in a standardized and consolidated format.",
-    "Core Features": [
-        "Aggregates results from various bioinformatics tools into a single report",
-        "Supports a wide range of analysis tools and file formats",
-        "Generates interactive and visually appealing reports for easier data interpretation",
-        "Customizable report templates and modules for adding extra functionality"
-    ],
-    "General Tags": [
-        "Bioinformatics",
-        "Computational Biology",
-        "Data Analysis",
-        "Reporting Tool"
-    ],
+    "Core Features": "Aggregates Results From Various Bioinformatics Tools Into A Single Report, Supports A Wide Range Of Analysis Tools & File Formats, Generates Interactive & Visually Appealing Reports For Easier Data Interpretation, Customizable Report Templates & Modules For Adding Extra Functionality",
+    "General Tags": "Bioinformatics, Computational Biology, Data Analysis, Reporting Tool",
     "Software Type": "Visualization Tool",
     "Software Class": "Data Analysis",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genomics",
-    "Research Discipline": "Biophysics"
+    "Research Discipline": "Biophysics",
+    "Research Field": "Biological Sciences"
 }

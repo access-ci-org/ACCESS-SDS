@@ -1,22 +1,11 @@
 {
     "Software": "ADOL-C",
     "AI Description": "ADOL-C (Automatic Differentiation by Overloading in C++) is a software package for the calculation of derivatives of given C or C++ code. It allows for the efficient calculation of first and higher derivative information, which is useful in optimization, sensitivity analysis, and uncertainty quantification.",
-    "Core Features": [
-        "Automatic differentiation for C/C++ code",
-        "Efficient calculation of derivatives",
-        "Support for first and higher order derivative information",
-        "Useful for optimization, sensitivity analysis, and uncertainty quantification"
-    ],
-    "General Tags": [
-        "Automatic Differentiation",
-        "Computational Mathematics",
-        "Optimization",
-        "Sensitivity Analysis",
-        "Uncertainty Quantification"
-    ],
+    "Core Features": "Automatic Differentiation For C/C++ Code, Efficient Calculation Of Derivatives, Support For First & Higher Order Derivative Information, Useful For Optimization, Sensitivity Analysis, & Uncertainty Quantification",
+    "General Tags": "Automatic Differentiation, Computational Mathematics, Optimization, Sensitivity Analysis, Uncertainty Quantification",
     "Software Type": "Computational Software",
     "Software Class": "Library",
-    "Research Field": "Mathematics",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Mathematics"
 }

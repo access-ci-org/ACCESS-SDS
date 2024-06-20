@@ -2,6 +2,7 @@ import json
 import glob
 import os
 import pandas as pd
+import numpy as np
 
 from app.parseJSONInfo import jsonSanitizer
 from app.parseVersionInfo import addVersionInfoToTable
@@ -46,7 +47,7 @@ def createSoftwareTable():
     except:
         print("Software table not found. Creating...")
         try:
-            staticTableDF = pd.read_csv(CURATED_OUTPUT_DIRECTORY)
+            staticTableDF = pd.read_csv(CURATED_OUTPUT_DIRECTORY, na_filter=False)
             print("Static Table found!")
         except:
             staticTableDF = createStaticTable()
@@ -55,18 +56,19 @@ def createSoftwareTable():
             generatedTableDF = pd.read_csv(GENERATED_OUTPUT_DIRECTORY)
             print("AI Generated table found!")
         except:
-            generatedTableDF = createGeneratedTable()
+            generatedTableDF = createGeneratedTable('f')
             print("AI Generated table not found. Creating...")
 
         # Merge tables by index
         mergedDF = staticTableDF.merge(generatedTableDF, how='left', on='Software', suffixes=('_static', '_generated'))
-        
+        mergedDF = mergedDF.replace('', np.nan)
         # Combine matching columns, prioritizing the AI Generated information
         for column in mergeColumns:
-            mergedDF[column] = mergedDF[column + '_static'].combine_first(mergedDF[column + '_generated'])
+            mergedDF[column] = mergedDF[column + '_generated'].combine_first(mergedDF[column + '_static'])
         
         # Drop the unmerged versions of columns
         mergedDF = mergedDF.drop(columns=[column + '_static' for column in mergeColumns] + [column + '_generated' for column in mergeColumns] )
+        
         mergedDF.insert(16, 'Example Use', '')
 
         mergedDF = mergedDF[column_order]
@@ -134,7 +136,7 @@ def createStaticTable():
 ##################################################################
 #   createGeneratedTable                                         #
 ##################################################################
-def createGeneratedTable():
+def createGeneratedTable(override):
     softwareDict = {}
     # Stage the JSON Directory 
     for file in glob.glob(os.path.join(GENERATED_INPUT_DIRECTORY, '*.json')):
@@ -142,14 +144,18 @@ def createGeneratedTable():
         # These are usually due to some random text we added to filter them out intentionally
         # This way they don't break the entire script
         try:
+            if override.lower() == 't':
+                forceRun = True
+            else:
+                forceRun = False
             # Check if JSON has been formatted properly  
             for key in JSON_keys:
                 with open(file, 'r') as infile:
                     data = json.load(infile)
-                if key in data.keys():
-                    continue
-                else:
+                if key not in data.keys() or forceRun:
                     jsonSanitizer(file)
+                    forceRun = False
+                    
 
         except:
             print("Error reading: " + file)
@@ -180,11 +186,6 @@ def createGeneratedTable():
     df.to_csv(GENERATED_OUTPUT_DIRECTORY)
 
     return df
-
-
-
-
-
 
 
 #createSoftwareTable()

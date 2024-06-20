@@ -2,14 +2,10 @@
     "Software": "NBO",
     "AI Description": "Natural Bond Orbital (NBO) analysis is a popular method for understanding chemical bonding in molecules. It provides insight into the nature of chemical bonds, bond strengths, and electron delocalization.",
     "Core Features": "Provides quantitative analysis of molecular electronic structure based on Natural Bond Orbitals, facilitates interpretation of molecular properties, aids in understanding chemical reactivity and stability, supports visualization of electron density distributions, allows for analysis of intermolecular interactions.",
-    "General Tags": [
-        "Chemistry",
-        "Molecular Biology",
-        "Computational Chemistry"
-    ],
+    "General Tags": "Chemistry, Molecular Biology, Computational Chemistry",
     "Software Type": "Molecular Modeling",
     "Software Class": "Computational Software",
-    "Research Field": "Chemical Sciences",
     "Research Area": "Organic Chemistry",
-    "Research Discipline": "Physical Chemistry"
+    "Research Discipline": "Physical Chemistry",
+    "Research Field": "Chemical Sciences"
 }

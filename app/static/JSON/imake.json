@@ -2,14 +2,10 @@
     "Software": "imake",
     "AI Description": "imake is a software tool that automates the construction of imakefiles, which are used with the make utility in software development projects. It simplifies the process of generating makefiles for building software projects, allowing developers to focus on writing code rather than manually creating build configurations.",
     "Core Features": "1. Automates the generation of makefiles for software projects\n2. Allows developers to define rules for compiling source code and linking executable\n3. Simplifies the build configuration process\n4. Supports customization for specific project requirements\n5. Integrates with the make utility for building software projects",
-    "General Tags": [
-        "Build Automation",
-        "Software Development",
-        "Build Configuration"
-    ],
+    "General Tags": "Build Automation, Software Development, Build Configuration",
     "Software Type": "Automation Tool",
     "Software Class": "Build Tools",
-    "Research Field": "Engineering & Technology",
     "Research Area": "",
-    "Research Discipline": "Software Engineering, Systems, & Development"
+    "Research Discipline": "Software Engineering, Systems, & Development",
+    "Research Field": "Engineering & Technology"
 }

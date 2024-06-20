@@ -1,21 +1,11 @@
 {
     "Software": "Firestarter",
     "AI Description": "Firestarter is a visual firewall tool that allows users to configure a firewall for Linux systems using an easy-to-use graphical interface. It provides a user-friendly way to manage network security policies and rules.",
-    "Core Features": [
-        "Graphical interface for managing firewall settings",
-        "Ability to set up rules for incoming and outgoing traffic",
-        "Monitoring of network connections",
-        "Support for NAT configurations",
-        "Logging and reporting features"
-    ],
-    "General Tags": [
-        "Firewall",
-        "Network Security",
-        "Linux"
-    ],
+    "Core Features": "Graphical Interface For Managing Firewall Settings, Ability To Set Up Rules For Incoming & Outgoing Traffic, Monitoring Of Network Connections, Support For Nat Configurations, Logging & Reporting Features",
+    "General Tags": "Firewall, Network Security, Linux",
     "Software Type": "Security Tool",
     "Software Class": "Firewall Configuration Tool",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

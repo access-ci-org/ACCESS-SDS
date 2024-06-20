@@ -2,14 +2,10 @@
     "Software": "r-assertthat",
     "AI Description": "The r-assertthat package is designed to make testing code easier by providing a set of predicates to perform assertions. It aims to simplify the process of writing tests and improve code quality.",
     "Core Features": "1. Simplifies testing code by providing a wide range of predicates for assertions.\n2. Allows users to easily write tests for R code.\n3. Improves code quality by ensuring that functions return the expected results.\n4. Provides informative error messages when assertions fail.",
-    "General Tags": [
-        "Unit Testing",
-        "Software Testing",
-        "Quality Assurance"
-    ],
+    "General Tags": "Unit Testing, Software Testing, Quality Assurance",
     "Software Type": "Library",
     "Software Class": "Testing",
-    "Research Field": "Other Natural Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Other Natural Sciences"
 }

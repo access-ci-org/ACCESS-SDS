@@ -1,19 +1,11 @@
 {
     "Software": "gffcompare",
     "AI Description": "gffcompare is a tool for evaluating the accuracy of RNA-Seq transcript assemblers and for annotating genomic features.",
-    "Core Features": [
-        "Compare, evaluate, and classify transcript models",
-        "Determine relationships between reference transcripts and assembled transcripts",
-        "Produce various statistics and visualization plots for comparison"
-    ],
-    "General Tags": [
-        "Rna-Seq",
-        "Transcript Assembly",
-        "Genome Annotation"
-    ],
+    "Core Features": "Compare, Evaluate, & Classify Transcript Models, Determine Relationships Between Reference Transcripts & Assembled Transcripts, Produce Various Statistics & Visualization Plots For Comparison",
+    "General Tags": "RNA-Seq, Transcript Assembly, Genome Annotation",
     "Software Type": "Computational Tool",
     "Software Class": "Bioinformatics",
-    "Research Field": "Biological Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

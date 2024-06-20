@@ -2,18 +2,10 @@
     "Software": "SWIG",
     "AI Description": "SWIG (Simplified Wrapper and Interface Generator) is a software development tool that connects programs written in C and C++ with scripting languages such as Perl, Python, Ruby, Tcl, and more. It simplifies the process of creating interfaces for these languages, enabling developers to easily incorporate C/C++ code into their scripting language-based projects.",
     "Core Features": "1. Automatic generation of interface code for C/C++ libraries\n2. Support for multiple scripting languages\n3. Simplifies the integration of C/C++ code with scripting languages\n4. Customizable and flexible code generation\n5. Designed to work with different types of C/C++ code and data structures",
-    "General Tags": [
-        "Software Development",
-        "Programming Tool",
-        "Scripting Languages",
-        "Interface Generator"
-    ],
+    "General Tags": "Software Development, Programming Tool, Scripting Languages, Interface Generator",
     "Software Type": "Interface Generator",
     "Software Class": "Development Tools",
-    "Research Field": [
-        "Computer And Information Sciences",
-        "Software Engineering, Systems, And Development"
-    ],
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences, Software Engineering, Systems, & Development"
 }

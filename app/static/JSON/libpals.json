@@ -1,20 +1,11 @@
 {
     "Software": "libpals",
     "AI Description": "Libpals is a collection of tools for analyzing and manipulating phylogenetic trees. It provides functionalities for tree comparison, consensus tree construction, tree visualization, and more.",
-    "Core Features": [
-        "Phylogenetic tree analysis",
-        "Tree comparison",
-        "Consensus tree construction",
-        "Tree visualization"
-    ],
-    "General Tags": [
-        "Phylogenetics",
-        "Bioinformatics",
-        "Computational Biology"
-    ],
+    "Core Features": "Phylogenetic Tree Analysis, Tree Comparison, Consensus Tree Construction, Tree Visualization",
+    "General Tags": "Phylogenetics, Bioinformatics, Computational Biology",
     "Software Type": "Library",
     "Software Class": "Phylogenetic Analysis Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "",
-    "Research Discipline": "Systematics & Population Biology"
+    "Research Discipline": "Systematics & Population Biology",
+    "Research Field": "Biological Sciences"
 }

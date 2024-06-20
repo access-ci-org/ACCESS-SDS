@@ -2,14 +2,10 @@
     "Software": "impi",
     "AI Description": "impi is a high-performance message passing library that provides asynchronous messaging and queuing functionalities for parallel computing applications.",
     "Core Features": "impi offers efficient communication among processes, supports scalable performance for large-scale parallel computing, and has advanced queuing mechanisms for managing message passing in distributed computing environments.",
-    "General Tags": [
-        "Message Passing Library",
-        "Parallel Computing",
-        "Asynchronous Messaging"
-    ],
+    "General Tags": "Message Passing Library, Parallel Computing, Asynchronous Messaging",
     "Software Type": "Communication Library",
     "Software Class": "Library",
-    "Research Field": "Engineering & Technology",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
 }

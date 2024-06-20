@@ -2,14 +2,10 @@
     "Software": "OptiX",
     "AI Description": "OptiX is a GPU-accelerated ray tracing engine from NVIDIA that provides a programmable ray tracing pipeline for developers to build high-performance ray tracing applications.",
     "Core Features": "1. Real-time ray tracing: OptiX enables real-time ray tracing by leveraging the power of NVIDIA GPUs.\n2. Programmable pipeline: Developers can create custom ray tracing applications with a programmable pipeline using CUDA.\n3. Scalability: OptiX is designed for scalability, allowing developers to efficiently utilize multiple GPU cores for parallel processing.\n4. Ray tracing effects: Supports advanced ray tracing effects such as shadows, reflections, refractions, and global illumination.",
-    "General Tags": [
-        "Ray Tracing",
-        "Gpu-Accelerated",
-        "Real-Time Rendering"
-    ],
+    "General Tags": "Ray Tracing, Gpu-Accelerated, Real-Time Rendering",
     "Software Type": "Gpu Software",
     "Software Class": "Rendering Engine",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Graphics & Visualization",
-    "Research Discipline": "Computer Science"
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
 }

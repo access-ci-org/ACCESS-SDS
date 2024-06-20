@@ -2,14 +2,10 @@
     "Software": "Judy",
     "AI Description": "Judy is a C library that provides a collection of functions to efficiently manage data arrays to store and retrieve key/value pairs.",
     "Core Features": "Some core features of Judy include high performance, memory efficiency, scalability with large data sets, support for dynamic arrays, and a simple API for easy integration.",
-    "General Tags": [
-        "C Library",
-        "Data Management",
-        "Key/Value Pairs"
-    ],
+    "General Tags": "C Library, Data Management, Key/Value Pairs",
     "Software Type": "Data Management",
     "Software Class": "Library",
-    "Research Field": "Other Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Other Computer & Information Sciences"
 }

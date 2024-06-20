@@ -2,15 +2,10 @@
     "Software": "AMD FFTW",
     "AI Description": "AMD FFTW is an optimized version of the Fastest Fourier Transform in the West (FFTW) library specifically designed to take advantage of AMD processors. It provides high-performance implementations of the discrete Fourier transform (DFT) algorithms for a wide range of sizes and dimensions.",
     "Core Features": "1. High-performance DFT calculations optimized for AMD processors. 2. Support for various sizes and dimensions of Fourier transforms. 3. Compatible with existing FFTW interfaces for easy integration into projects. 4. Improved efficiency and parallelism for faster Fourier transform computations.",
-    "General Tags": [
-        "Software",
-        "Numerical Computing",
-        "Fourier Transform",
-        "Optimization"
-    ],
+    "General Tags": "Software, Numerical Computing, Fourier Transform, Optimization",
     "Software Type": "Library",
     "Software Class": "Mathematics & Statistics",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

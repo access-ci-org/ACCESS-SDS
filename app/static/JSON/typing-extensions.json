@@ -2,15 +2,10 @@
     "Software": "typing-extensions",
     "AI Description": "The typing-extensions module in Python provides additional type hinting support for Python 3.7 and later. It includes type hinting classes that were proposed for inclusion in the main 'typing' module but are specifically intended for external use.",
     "Core Features": "1. Provides additional typing classes such as Protocol, TypedDict, and Literal for more advanced type hinting.\n2. Enables developers to create more specific type hints for function parameters, return values, and variables.\n3. Improves code readability and maintainability by specifying the expected types more precisely.",
-    "General Tags": [
-        "Python",
-        "Type Hinting",
-        "Typing Module",
-        "Type Annotations"
-    ],
+    "General Tags": "Python, Type Hinting, Typing Module, Type Annotations",
     "Software Type": "Python Library",
     "Software Class": "Type Hinting",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

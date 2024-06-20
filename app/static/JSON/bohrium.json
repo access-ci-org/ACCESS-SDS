@@ -2,15 +2,10 @@
     "Software": "Bohrium",
     "AI Description": "Bohrium is a high-performance JIT-compiled array programming language that extends Python with support for versatile array operations using a subset of the APL syntax. It automatically parallelizes and runs programs on the CPU and GPU.",
     "Core Features": "1. Python integration with APL-like array operations. 2. Just-in-time (JIT) compilation for high performance. 3. Automatic parallelization for CPU and GPU execution. 4. Seamless integration with existing Python libraries and tools.",
-    "General Tags": [
-        "High-Performance Computing",
-        "Array Programming",
-        "Python Integration",
-        "Gpu Acceleration"
-    ],
+    "General Tags": "High-Performance Computing, Array Programming, Python Integration, Gpu Acceleration",
     "Software Type": "High-Performance Computing Tool",
     "Software Class": "Array Programming Language",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Programming Languages & Compilers",
-    "Research Discipline": "Computer Science"
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
 }

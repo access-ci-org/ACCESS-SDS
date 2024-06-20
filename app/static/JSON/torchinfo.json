@@ -2,15 +2,10 @@
     "Software": "Torchinfo",
     "AI Description": "Torchinfo is a PyTorch library that provides detailed layer-by-layer model information, such as shapes, number of parameters, and memory usage. It helps in debugging neural network architectures and understanding the flow of data through the network.",
     "Core Features": "1. Layer-by-layer model information\n2. Insights into shapes, parameters, and memory usage\n3. Debugging neural network architectures\n4. Understanding data flow in the network",
-    "General Tags": [
-        "Deep Learning",
-        "Neural Networks",
-        "Pytorch",
-        "Model Debugging"
-    ],
+    "General Tags": "Deep Learning, Neural Networks, Pytorch, Model Debugging",
     "Software Type": "Pytorch Library",
     "Software Class": "Software Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Machine Learning",
-    "Research Discipline": "Artificial Intelligence & Intelligent Systems"
+    "Research Discipline": "Artificial Intelligence & Intelligent Systems",
+    "Research Field": "Computer & Information Sciences"
 }

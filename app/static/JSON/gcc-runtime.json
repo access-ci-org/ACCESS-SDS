@@ -2,14 +2,10 @@
     "Software": "gcc-runtime",
     "AI Description": "The GCC Runtime Library is a part of the GCC compiler collection that provides runtime support for programs compiled with GCC. It includes various runtime libraries and support files necessary for programs compiled with GCC to execute correctly.",
     "Core Features": "1. Includes runtime libraries needed for programs compiled with GCC. 2. Provides support files required for programs to run correctly. 3. Ensures compatibility and execution efficiency for programs compiled using GCC.",
-    "General Tags": [
-        "Compiler",
-        "Runtime",
-        "Library"
-    ],
+    "General Tags": "Compiler, Runtime, Library",
     "Software Type": "Runtime Library",
     "Software Class": "Compiler",
-    "Research Field": "Engineering & Technology",
     "Research Area": "Software Development",
-    "Research Discipline": "Software Engineering, Systems, & Development"
+    "Research Discipline": "Software Engineering, Systems, & Development",
+    "Research Field": "Engineering & Technology"
 }

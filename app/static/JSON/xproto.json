@@ -2,14 +2,10 @@
     "Software": "xproto",
     "AI Description": "X Window System protocol development files.",
     "Core Features": "X Window System protocol development files for extension headers and C prototypes.",
-    "General Tags": [
-        "Software Development",
-        "Protocol Development",
-        "X Window System"
-    ],
+    "General Tags": "Software Development, Protocol Development, X Window System",
     "Software Type": "Library",
     "Software Class": "Development Tools",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

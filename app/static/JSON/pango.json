@@ -2,14 +2,10 @@
     "Software": "Pango",
     "AI Description": "Pango is a library for layout and rendering of text, with an emphasis on internationalization. It forms the core of text and font handling for the GTK+ toolkit and is used by a variety of other open-source projects, including GNOME desktop environment.",
     "Core Features": "1. Support for multiple languages and writing systems. 2. Font fallback mechanism for displaying missing characters. 3. Bi-directional text support. 4. Advanced text layout capabilities, such as complex script rendering.",
-    "General Tags": [
-        "Text Layout",
-        "Font Handling",
-        "Internationalization"
-    ],
+    "General Tags": "Text Layout, Font Handling, Internationalization",
     "Software Type": "Text Processing",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Software Engineering, Systems, & Development",
-    "Research Discipline": "Computer & Information Sciences"
+    "Research Discipline": "Computer & Information Sciences",
+    "Research Field": "Computer & Information Sciences"
 }

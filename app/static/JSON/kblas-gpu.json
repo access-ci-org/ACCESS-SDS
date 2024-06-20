@@ -2,15 +2,10 @@
     "Software": "kblas-gpu",
     "AI Description": "KBLAS is a GPU-accelerated linear algebra library for high-performance computing (HPC) applications. It provides optimized implementations of basic linear algebra subroutines (BLAS) and dense matrix operations for NVIDIA GPUs.",
     "Core Features": "1. Accelerated linear algebra operations on NVIDIA GPUs. 2. Optimized Basic Linear Algebra Subroutines (BLAS) for high-performance computing. 3. Dense matrix operations such as matrix-matrix multiplication, matrix-vector multiplication, etc. 4. Support for various data types and precision levels. 5. High-performance and parallel computation capabilities.",
-    "General Tags": [
-        "Linear Algebra",
-        "Gpu-Accelerated",
-        "Hpc",
-        "Parallel Computing"
-    ],
+    "General Tags": "Linear Algebra, Gpu-Accelerated, Hpc, Parallel Computing",
     "Software Type": "Computational Software",
     "Software Class": "Numerical Library",
-    "Research Field": "Engineering & Technology",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
 }

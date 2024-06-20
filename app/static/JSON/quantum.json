@@ -1,23 +1,11 @@
 {
     "Software": "Qiskit",
     "AI Description": "Qiskit is an open-source quantum computing software development framework with tools for circuit optimization, quantum algorithm design, quantum software development, and more. It allows users to create, simulate, and execute quantum computing programs on quantum computers.",
-    "Core Features": [
-        "Quantum circuit design and optimization",
-        "Quantum algorithm development",
-        "Quantum software development tools",
-        "Quantum simulation capabilities"
-    ],
-    "General Tags": [
-        "Quantum Computing",
-        "Software Development",
-        "Open-Source",
-        "Simulation"
-    ],
+    "Core Features": "Quantum Circuit Design & Optimization, Quantum Algorithm Development, Quantum Software Development Tools, Quantum Simulation Capabilities",
+    "General Tags": "Quantum Computing, Software Development, Open-Source, Simulation",
     "Software Type": "",
     "Software Class": "",
-    "Research Field": [
-        "Physical Sciences"
-    ],
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Physical Sciences"
 }

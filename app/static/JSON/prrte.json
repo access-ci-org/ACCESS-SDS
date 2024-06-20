@@ -2,15 +2,10 @@
     "Software": "PRRTE",
     "AI Description": "PRRTE (Proactive Resilience and Real-Time Executor) is a fault tolerance framework designed to provide fault tolerance capabilities to complex, high-performance computing (HPC) applications. It focuses on enabling applications to run to completion in the presence of faults by providing various resilience strategies.",
     "Core Features": "1. Proactive resilience management\n2. Real-time fault detection and recovery\n3. Hierarchical checkpointing mechanisms\n4. Dynamic process restructuring\n5. Monitoring and reporting of application health",
-    "General Tags": [
-        "Fault Tolerance",
-        "Hpc",
-        "Resilience",
-        "Real-Time Execution"
-    ],
+    "General Tags": "Fault Tolerance, Hpc, Resilience, Real-Time Execution",
     "Software Type": "Framework",
     "Software Class": "Hpc Tools",
-    "Research Field": "Engineering & Technology",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
 }

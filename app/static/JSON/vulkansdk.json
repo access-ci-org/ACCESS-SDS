@@ -2,15 +2,10 @@
     "Software": "Vulkan SDK",
     "AI Description": "Vulkan SDK is a set of software development tools and libraries for the Vulkan API, which is a low-overhead, cross-platform 3D graphics and compute API.",
     "Core Features": "1. Validation layers for debugging Vulkan applications\n2. Loader to access Vulkan functions dynamically from multiple vendors\n3. Code samples and tutorials for learning Vulkan programming\n4. Performance optimization tools for Vulkan applications",
-    "General Tags": [
-        "Software Development",
-        "Graphics Api",
-        "3D Graphics",
-        "Compute Api"
-    ],
+    "General Tags": "Software Development, Graphics Api, 3D Graphics, Compute Api",
     "Software Type": "Sdk",
     "Software Class": "Development Tools",
-    "Research Field": "Engineering & Technology",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
 }

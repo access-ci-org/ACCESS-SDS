@@ -1,25 +1,11 @@
 {
     "Software": "csvtk",
     "AI Description": "csvtk is a cross-platform, efficient, and practical CSV/TSV toolkit for working with flat files. It aims to make it easy to work with csv and tsv data, providing a variety of functionalities for processing, cleaning, and analyzing tabular data.",
-    "Core Features": [
-        "Convert between CSV and TSV formats",
-        "Merge multiple files by rows or columns",
-        "Filter rows or columns based on specified conditions",
-        "Sort data based on specified columns",
-        "Perform basic statistics on columns",
-        "Join tables based on specified keys",
-        "Extract specific columns or rows",
-        "Split large files into smaller chunks"
-    ],
-    "General Tags": [
-        "Data Manipulation",
-        "Tabular Data",
-        "Data Analysis",
-        "Data Processing"
-    ],
+    "Core Features": "Convert Between Csv & Tsv Formats, Merge Multiple Files By Rows Or Columns, Filter Rows Or Columns Based On Specified Conditions, Sort Data Based On Specified Columns, Perform Basic Statistics On Columns, Join Tables Based On Specified Keys, Extract Specific Columns Or Rows, Split Large Files Into Smaller Chunks",
+    "General Tags": "Data Manipulation, Tabular Data, Data Analysis, Data Processing",
     "Software Type": "Command Line Tool",
     "Software Class": "Data Analysis Tool",
-    "Research Field": "Other Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Other Computer & Information Sciences"
 }

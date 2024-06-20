@@ -2,14 +2,10 @@
     "Software": "BEAST 1",
     "AI Description": "BEAST (Bayesian Evolutionary Analysis Sampling Trees) is a powerful software package for Bayesian analysis of molecular sequences using MCMC.",
     "Core Features": "BEAST provides a sophisticated framework for estimating the phylogenetic relationships among taxa, divergence times, and demographic parameters, allowing for the incorporation of complex models of evolution and diverse data types.",
-    "General Tags": [
-        "Bayesian Analysis",
-        "Molecular Sequences",
-        "Mcmc"
-    ],
+    "General Tags": "Bayesian Analysis, Molecular Sequences, Mcmc",
     "Software Type": "Computational Software",
     "Software Class": "Bioinformatics",
-    "Research Field": "Biological Sciences",
     "Research Area": "Systematics & Population Biology",
-    "Research Discipline": "Biological Sciences"
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
 }

@@ -1,21 +1,11 @@
 {
     "Software": "cue-login-env",
     "AI Description": "Cue-login-env is a Python library that provides an easy way to configure user-specific environments within shared servers or computing clusters. It helps users manage their environment variables, aliases, and paths without interfering with the system-wide configurations.",
-    "Core Features": [
-        "Configuring user-specific environment variables",
-        "Managing user-specific paths and aliases",
-        "Isolating user environments from system-wide configurations",
-        "Simplifying environment setup on shared servers or computing clusters"
-    ],
-    "General Tags": [
-        "Python Library",
-        "User-Specific Environment",
-        "Shared Servers",
-        "Computing Clusters"
-    ],
+    "Core Features": "Configuring User-Specific Environment Variables, Managing User-Specific Paths & Aliases, Isolating User Environments From System-Wide Configurations, Simplifying Environment Setup On Shared Servers Or Computing Clusters",
+    "General Tags": "Python Library, User-Specific Environment, Shared Servers, Computing Clusters",
     "Software Type": "Python Library",
     "Software Class": "Development Tools",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

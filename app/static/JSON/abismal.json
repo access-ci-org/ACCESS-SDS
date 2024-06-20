@@ -2,14 +2,10 @@
     "Software": "abismal",
     "AI Description": "AbInitio Solvers for Intersolute-interaction and Surfaces and Materials with Ab-initio Library",
     "Core Features": "Abismal provides ab-initio solvers for studying intersolute-interaction and surfaces and materials. It includes a library for ab-initio calculations and supports various methods for electronic structure calculations.",
-    "General Tags": [
-        "Ab-Initio",
-        "Electronic Structure Calculations",
-        "Materials Science"
-    ],
+    "General Tags": "Ab-Initio, Electronic Structure Calculations, Materials Science",
     "Software Type": "Computational Chemistry Software",
     "Software Class": "Scientific Computing Software",
-    "Research Field": "Other Natural Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Other Natural Sciences"
 }

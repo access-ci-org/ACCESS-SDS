@@ -1,20 +1,11 @@
 {
     "Software": "PLUMED",
     "AI Description": "PLUMED is an open-source library for free energy calculations in molecular dynamics simulations. It allows for the easy and flexible implementation of enhanced sampling techniques and the calculation of various collective variables.",
-    "Core Features": [
-        "Implementation of enhanced sampling methods",
-        "Calculation of collective variables",
-        "Integration with various molecular dynamics simulation packages"
-    ],
-    "General Tags": [
-        "Molecular Dynamics",
-        "Enhanced Sampling",
-        "Free Energy Calculations",
-        "Collective Variables"
-    ],
+    "Core Features": "Implementation Of Enhanced Sampling Methods, Calculation Of Collective Variables, Integration With Various Molecular Dynamics Simulation Packages",
+    "General Tags": "Molecular Dynamics, Enhanced Sampling, Free Energy Calculations, Collective Variables",
     "Software Type": "Library",
     "Software Class": "Computational Software",
-    "Research Field": "Biological Sciences",
     "Research Area": "Bioinformatics",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

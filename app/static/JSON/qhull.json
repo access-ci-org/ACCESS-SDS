@@ -2,15 +2,10 @@
     "Software": "qhull",
     "AI Description": "Qhull computes the convex hull, Delaunay triangulation, Voronoi diagram, halfspace intersection about a point, furthest-site Delaunay triangulation, and furthest-site Voronoi diagram.",
     "Core Features": "1. Computes convex hulls, Delaunay triangulations, and Voronoi diagrams. 2. Supports point location, mesh generation, intersection, and distance queries. 3. Runs in 2D, 3D, 4D, and higher dimensions. 4. Interfaces with other libraries and visualization tools.",
-    "General Tags": [
-        "Computational Geometry",
-        "Libraries",
-        "Mesh Generation",
-        "Geometry Processing"
-    ],
+    "General Tags": "Computational Geometry, Libraries, Mesh Generation, Geometry Processing",
     "Software Type": "Libraries",
     "Software Class": "",
-    "Research Field": "Other Mathematics",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Other Mathematics"
 }

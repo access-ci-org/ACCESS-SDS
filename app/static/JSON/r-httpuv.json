@@ -2,14 +2,10 @@
     "Software": "r-httpuv",
     "AI Description": "R package that provides low-level socket and protocol support for handling HTTP and WebSocket requests directly within R scripts.",
     "Core Features": "1. Support for handling HTTP and WebSocket requests.\n2. Low-level socket and protocol support.\n3. Allows direct handling of web requests within R scripts.",
-    "General Tags": [
-        "R Package",
-        "Http Requests",
-        "Websocket Requests"
-    ],
+    "General Tags": "R Package, Http Requests, Websocket Requests",
     "Software Type": "Library",
     "Software Class": "Web Development",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

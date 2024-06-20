@@ -2,14 +2,10 @@
     "Software": "foss",
     "AI Description": "FOSS (Free and Open Source Software) refers to software that is both free to use and distribute, as well as with access to the source code for modification or enhancement by users.",
     "Core Features": "1. Free for distribution and modification. 2. Access to the source code for transparency and customization. 3. Collaboration and community-driven development. 4. Cost-effective and sustainable solutions. 5. Promotes innovation and knowledge sharing.",
-    "General Tags": [
-        "Free Software",
-        "Open Source Software",
-        "Software Development"
-    ],
+    "General Tags": "Free Software, Open Source Software, Software Development",
     "Software Type": "Software Library",
     "Software Class": "Development Tools",
-    "Research Field": "Other Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Other Computer & Information Sciences"
 }

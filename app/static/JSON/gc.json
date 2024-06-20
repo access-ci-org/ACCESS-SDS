@@ -2,18 +2,10 @@
     "Software": "GC",
     "AI Description": "GC is a compiler for the Go programming language.",
     "Core Features": "GC provides garbage collection, concurrency support, memory safety, and a standard library.",
-    "General Tags": [
-        "Compiler",
-        "Go",
-        "Garbage Collection",
-        "Concurrency"
-    ],
+    "General Tags": "Compiler, Go, Garbage Collection, Concurrency",
     "Software Type": "Programming Language Compiler",
     "Software Class": "Compiler",
-    "Research Field": [
-        "Computer And Information Sciences",
-        "Computer Science"
-    ],
     "Research Area": "Software Engineering, Systems, & Development",
-    "Research Discipline": "Computer Science"
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences, Computer Science"
 }

@@ -1,21 +1,11 @@
 {
     "Software": "GPy",
     "AI Description": "GPy is a Gaussian process framework in Python for implementing Gaussian processes. It offers tools for Gaussian process regression, classification, optimization, and more.",
-    "Core Features": [
-        "Gaussian process regression",
-        "Gaussian process classification",
-        "Gaussian process optimization",
-        "Implementation in Python"
-    ],
-    "General Tags": [
-        "Machine Learning",
-        "Data Analysis",
-        "Python",
-        "Gaussian Processes"
-    ],
+    "Core Features": "Gaussian Process Regression, Gaussian Process Classification, Gaussian Process Optimization, Implementation In Python",
+    "General Tags": "Machine Learning, Data Analysis, Python, Gaussian Processes",
     "Software Type": "Data Analysis",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

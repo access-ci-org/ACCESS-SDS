@@ -1,18 +1,11 @@
 {
     "Software": "Meraculous",
     "AI Description": "Meraculous is a whole-genome shotgun assembler specifically designed for large and complex genomes. It aims to accurately reconstruct the genome structure and gene content using high-throughput sequencing data.",
-    "Core Features": [
-        "Specifically optimized for large and complex genomes",
-        "Utilizes high-throughput sequencing data for genome assembly",
-        "Focuses on accurate reconstruction of genome structure and gene content"
-    ],
-    "General Tags": [
-        "Genome Assembly",
-        "Bioinformatics"
-    ],
+    "Core Features": "Specifically Optimized For Large & Complex Genomes, Utilizes High-Throughput Sequencing Data For Genome Assembly, Focuses On Accurate Reconstruction Of Genome Structure & Gene Content",
+    "General Tags": "Genome Assembly, Bioinformatics",
     "Software Type": "Computational Biology/Genomics Tool",
     "Software Class": "Genome Assembler",
-    "Research Field": "Biological Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

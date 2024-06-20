@@ -2,14 +2,10 @@
     "Software": "Redis",
     "AI Description": "Redis is an open-source, in-memory data structure store that can be used as a database, cache, and message broker. It supports various data structures such as strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyperloglogs, geospatial indexes with radius queries, and streams.",
     "Core Features": "1. In-memory data store\n2. Support for various data structures\n3. Persistence options\n4. Pub/Sub messaging system\n5. Lua scripting\n6. Built-in replication",
-    "General Tags": [
-        "Database",
-        "Cache",
-        "Message Broker"
-    ],
+    "General Tags": "Database, Cache, Message Broker",
     "Software Type": "Data Store",
     "Software Class": "Database Management System",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

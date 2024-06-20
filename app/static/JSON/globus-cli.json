@@ -1,21 +1,11 @@
 {
     "Software": "globus-cli",
     "AI Description": "The globus-cli is a command-line interface tool that provides users with a way to interact with the Globus file transfer service directly from the terminal. It allows for managing transfers, accessing endpoints, and monitoring tasks efficiently through the command line interface.",
-    "Core Features": [
-        "Manage file transfers",
-        "Access endpoints",
-        "Monitor tasks",
-        "Interact with Globus service"
-    ],
-    "General Tags": [
-        "Command-Line Interface",
-        "File Transfer Service",
-        "Data Management",
-        "Data Transfer"
-    ],
+    "Core Features": "Manage File Transfers, Access Endpoints, Monitor Tasks, Interact With Globus Service",
+    "General Tags": "Command-Line Interface, File Transfer Service, Data Management, Data Transfer",
     "Software Type": "Command Line Tool",
     "Software Class": "Tools",
-    "Research Field": "Other Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Other Computer & Information Sciences"
 }

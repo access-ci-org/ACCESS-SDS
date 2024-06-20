@@ -1,19 +1,11 @@
 {
     "Software": "ACTC",
     "AI Description": "ACTC (Assembly, Clustering, and Transformation for Connected Components) is a software tool for finding connected components in large, distributed graphs. It is specifically designed to handle massive graphs efficiently.",
-    "Core Features": [
-        "Identifying connected components in large, distributed graphs",
-        "Efficient handling of massive graphs",
-        "Scalability"
-    ],
-    "General Tags": [
-        "Graph Analytics",
-        "Connected Components",
-        "Distributed Computing"
-    ],
+    "Core Features": "Identifying Connected Components In Large, Distributed Graphs, Efficient Handling Of Massive Graphs, Scalability",
+    "General Tags": "Graph Analytics, Connected Components, Distributed Computing",
     "Software Type": "Tool",
     "Software Class": "Graph Analytics",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

@@ -2,16 +2,10 @@
     "Software": "Metilene",
     "AI Description": "Metilene is a software tool for the analysis of whole-genome bisulfite sequencing data, primarily focusing on the identification of differentially methylated regions (DMRs) between biological samples.",
     "Core Features": "1. Identification of differentially methylated regions (DMRs) based on whole-genome bisulfite sequencing data. \n2. Detection of statistically significant changes in DNA methylation patterns between samples. \n3. Visualization of methylation levels and differential methylation patterns. \n4. Integration of genomic annotation data to provide biological context for identified DMRs.",
-    "General Tags": [
-        "Bioinformatics",
-        "Epigenetics",
-        "Dna Methylation",
-        "Genomics",
-        "Bisulfite Sequencing"
-    ],
+    "General Tags": "Bioinformatics, Epigenetics, DNA Methylation, Genomics, Bisulfite Sequencing",
     "Software Type": "Bioinformatics Tool",
     "Software Class": "Analysis Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Epigenetics",
-    "Research Discipline": "Genetics"
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
 }

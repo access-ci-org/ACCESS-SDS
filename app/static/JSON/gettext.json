@@ -1,21 +1,11 @@
 {
     "Software": "gettext",
     "AI Description": "GNU gettext is a package providing a framework for internationalization and localization of software. It includes tools for extracting translatable strings from source code, for generating message catalogs (pot files), and for translating the strings into different languages.",
-    "Core Features": [
-        "Internationalization (i18n)",
-        "Localization (l10n)",
-        "Extracting translatable strings",
-        "Generating message catalogs",
-        "Translating strings"
-    ],
-    "General Tags": [
-        "Internationalization",
-        "Localization",
-        "Software Development"
-    ],
+    "Core Features": "Internationalization (I18N), Localization (L10N), Extracting Translatable Strings, Generating Message Catalogs, Translating Strings",
+    "General Tags": "Internationalization, Localization, Software Development",
     "Software Type": "Localization Tool",
     "Software Class": "Compilers",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

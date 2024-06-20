@@ -1,20 +1,11 @@
 {
     "Software": "CheckM-Genome",
     "AI Description": "CheckM-Genome is a software tool used for assessing the quality of genomes derived from metagenome-assembled data. It provides insights into the completeness and contamination levels of bacterial and archaeal genomes, aiding in the evaluation of genome quality in microbial ecology and metagenomics studies.",
-    "Core Features": [
-        "Assessment of genome completeness",
-        "Estimation of genome contamination levels",
-        "Identification of marker genes and lineage-specific marker sets",
-        "Visualization of results and quality metrics"
-    ],
-    "General Tags": [
-        "Metagenomics",
-        "Microbial Ecology",
-        "Genome Quality Assessment"
-    ],
+    "Core Features": "Assessment Of Genome Completeness, Estimation Of Genome Contamination Levels, Identification Of Marker Genes & Lineage-Specific Marker Sets, Visualization Of Results & Quality Metrics",
+    "General Tags": "Metagenomics, Microbial Ecology, Genome Quality Assessment",
     "Software Type": "Genome Quality Assessment Tool",
     "Software Class": "Bioinformatics",
-    "Research Field": "Biological Sciences",
     "Research Area": "Microbial Ecology",
-    "Research Discipline": "Environmental Biology"
+    "Research Discipline": "Environmental Biology",
+    "Research Field": "Biological Sciences"
 }

@@ -1,19 +1,11 @@
 {
     "Software": "py-cached-property",
     "AI Description": "py-cached-property is a Python library that provides a decorator for caching properties in classes. It allows for the creation of cached properties that can compute their value once and store it for later use, avoiding redundant calculations.",
-    "Core Features": [
-        "Decorator for caching properties in classes",
-        "Creates cached properties that compute their value once and store it for later use",
-        "Avoids redundant calculations"
-    ],
-    "General Tags": [
-        "Python Library",
-        "Decorator",
-        "Caching Properties"
-    ],
+    "Core Features": "Decorator For Caching Properties In Classes, Creates Cached Properties That Compute Their Value Once & Store It For Later Use, Avoids Redundant Calculations",
+    "General Tags": "Python Library, Decorator, Caching Properties",
     "Software Type": "Python Library",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

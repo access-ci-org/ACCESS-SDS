@@ -2,15 +2,10 @@
     "Software": "ngsutils",
     "AI Description": "ngsutils is a collection of software tools for working with next-generation sequencing (NGS) data. It provides various utilities for handling NGS data, performing analysis, and extracting useful information.",
     "Core Features": "Some core features of ngsutils include quality control, trimming, filtering, alignment, format conversion, manipulation of NGS data, statistics generation, and visualization.",
-    "General Tags": [
-        "Ngs",
-        "Bioinformatics",
-        "Sequencing",
-        "Data Analysis"
-    ],
+    "General Tags": "Ngs, Bioinformatics, Sequencing, Data Analysis",
     "Software Type": "Research Tools",
     "Software Class": "Bioinformatics",
-    "Research Field": "Biological Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

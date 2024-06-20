@@ -1,20 +1,11 @@
 {
     "Software": "R-Bioconductor Generics",
     "AI Description": "R-Bioconductor Generics is a package within the Bioconductor project that defines generic functions for manipulating genomic data. It provides a uniform interface for various Bioconductor packages to interact with genomic data structures efficiently.",
-    "Core Features": [
-        "Defines generic functions for genomic data manipulation",
-        "Uniform interface for Bioconductor packages",
-        "Efficient interaction with genomic data structures"
-    ],
-    "General Tags": [
-        "R Package",
-        "Bioinformatics",
-        "Genomics",
-        "Data Manipulation"
-    ],
+    "Core Features": "Defines Generic Functions For Genomic Data Manipulation, Uniform Interface For Bioconductor Packages, Efficient Interaction With Genomic Data Structures",
+    "General Tags": "R Package, Bioinformatics, Genomics, Data Manipulation",
     "Software Type": "R Package",
     "Software Class": "Library",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genomics",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

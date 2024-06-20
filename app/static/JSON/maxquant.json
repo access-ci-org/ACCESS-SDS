@@ -1,20 +1,11 @@
 {
     "Software": "MaxQuant",
     "AI Description": "MaxQuant is a quantitative proteomics software package designed for analyzing large mass spectrometric data sets. It is used for label-free and stable isotope-labeled protein quantification, as well as identification of peptides and proteins.",
-    "Core Features": [
-        "Quantitative proteomics analysis",
-        "Label-free and stable isotope-labeled protein quantification",
-        "Identification of peptides and proteins"
-    ],
-    "General Tags": [
-        "Proteomics",
-        "Mass Spectrometry",
-        "Data Analysis",
-        "Bioinformatics"
-    ],
+    "Core Features": "Quantitative Proteomics Analysis, Label-Free & Stable Isotope-Labeled Protein Quantification, Identification Of Peptides & Proteins",
+    "General Tags": "Proteomics, Mass Spectrometry, Data Analysis, Bioinformatics",
     "Software Type": "Data Analysis",
     "Software Class": "Tools",
-    "Research Field": "Biological Sciences",
     "Research Area": "Proteomics",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

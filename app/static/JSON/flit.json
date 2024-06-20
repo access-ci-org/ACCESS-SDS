@@ -1,17 +1,11 @@
 {
     "Software": "Flit",
     "AI Description": "Flit is a simple tool for building and distributing Python packages.",
-    "Core Features": [
-        "Building Python packages",
-        "Distributing Python packages"
-    ],
-    "General Tags": [
-        "Python Packaging",
-        "Package Management"
-    ],
+    "Core Features": "Building Python Packages, Distributing Python Packages",
+    "General Tags": "Python Packaging, Package Management",
     "Software Type": "Building & Distribution Tool",
     "Software Class": "Package Management Tool",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

@@ -1,21 +1,11 @@
 {
     "Software": "SICER2",
     "AI Description": "SICER2 is a software tool used for identifying enriched domains from histone modification ChIP-Seq data. It is designed to accurately detect broad domains of histone modifications and chromatin states.",
-    "Core Features": [
-        "Identification of enriched domains in ChIP-Seq data",
-        "Accurate detection of broad domains of histone modifications",
-        "Analysis of chromatin states",
-        "Visualization of enrichment profiles"
-    ],
-    "General Tags": [
-        "Chip-Seq Analysis",
-        "Epigenetics",
-        "Genomics",
-        "Bioinformatics"
-    ],
+    "Core Features": "Identification Of Enriched Domains In Chip-Seq Data, Accurate Detection Of Broad Domains Of Histone Modifications, Analysis Of Chromatin States, Visualization Of Enrichment Profiles",
+    "General Tags": "Chip-Seq Analysis, Epigenetics, Genomics, Bioinformatics",
     "Software Type": "Bioinformatics Tool",
     "Software Class": "Data Analysis",
-    "Research Field": "Biological Sciences",
     "Research Area": "Epigenomics",
-    "Research Discipline": "Genomics"
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
 }

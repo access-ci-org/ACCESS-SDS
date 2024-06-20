@@ -2,15 +2,10 @@
     "Software": "Cubegui",
     "AI Description": "Cubegui is a graphical user interface (GUI) software designed for visualizing and analyzing volumetric data in computational chemistry and materials science.",
     "Core Features": "Cubegui allows users to load, visualize, and manipulate volumetric data files in various formats. It provides tools for interactive exploration of molecular and crystal structures, electron densities, molecular orbitals, and other properties derived from quantum mechanical calculations. Users can customize visual representations, create animations, and perform analysis on the volumetric data.",
-    "General Tags": [
-        "Gui Software",
-        "Volumetric Data Visualization",
-        "Computational Chemistry",
-        "Materials Science"
-    ],
+    "General Tags": "Gui Software, Volumetric Data Visualization, Computational Chemistry, Materials Science",
     "Software Type": "Graphical User Interface (Gui)",
     "Software Class": "Data Visualization",
-    "Research Field": "Natural Sciences",
     "Research Area": "Physical Chemistry",
-    "Research Discipline": "Chemical Sciences"
+    "Research Discipline": "Chemical Sciences",
+    "Research Field": "Natural Sciences"
 }

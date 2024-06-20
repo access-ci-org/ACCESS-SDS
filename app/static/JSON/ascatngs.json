@@ -2,14 +2,10 @@
     "Software": "ascatngs",
     "AI Description": "ASCA-based copy number and ploidy profiles for NGS data in R",
     "Core Features": "Generation of allele-specific copy number and ploidy profiles from next-generation sequencing (NGS) data using Allele-Specific Copy number Analysis of Tumors (ASCAT) algorithm in R.",
-    "General Tags": [
-        "Copy Number Analysis",
-        "Ploidy Profiles",
-        "Ngs Data Analysis"
-    ],
+    "General Tags": "Copy Number Analysis, Ploidy Profiles, Ngs Data Analysis",
     "Software Type": "Computational",
     "Software Class": "Bioinformatics",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genetics",
-    "Research Discipline": "Biological Sciences"
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
 }

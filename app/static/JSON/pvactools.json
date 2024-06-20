@@ -2,18 +2,10 @@
     "Software": "PVACTools",
     "AI Description": "PVACTools is a software suite designed for the prediction and analysis of peptide-MHC-I binding affinity and neoantigen assessment for cancer immunotherapy.",
     "Core Features": "PVACTools provides tools for predicting neoantigens, calculating binding affinity of peptides to MHC-I molecules, and assessing the immunogenicity of potential tumor-specific mutations. It includes modules for epitope prediction, T cell receptor recognition, and neoantigen prioritization.",
-    "General Tags": [
-        "Immunotherapy",
-        "Peptide-Mhc-I Binding",
-        "Neoantigen Assessment"
-    ],
+    "General Tags": "Immunotherapy, Peptide-Mhc-I Binding, Neoantigen Assessment",
     "Software Type": "Tool",
     "Software Class": "Bioinformatics",
-    "Research Field": "Biological Sciences",
-    "Research Area": [
-        "Cancer Immunotherapy"
-    ],
-    "Research Discipline": [
-        "Biomedical Sciences"
-    ]
+    "Research Area": "Cancer Immunotherapy",
+    "Research Discipline": "Biomedical Sciences",
+    "Research Field": "Biological Sciences"
 }

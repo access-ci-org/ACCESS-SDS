@@ -2,19 +2,10 @@
     "Software": "VASP",
     "AI Description": "VASP (Vienna Ab-initio Simulation Package) is a computer program for atomic scale materials modelling, e.g. electronic structure calculations and quantum-mechanical molecular dynamics, from first principles.",
     "Core Features": "Some core features of VASP include Density Functional Theory (DFT) calculations, plane-wave basis sets, ultrasoft pseudopotentials, and various methods for structure optimization and molecular dynamics simulations.",
-    "General Tags": [
-        "Materials Modelling",
-        "Electronic Structure Calculations",
-        "Quantum-Mechanical Simulations",
-        "Dft Calculations",
-        "Molecular Dynamics"
-    ],
+    "General Tags": "Materials Modelling, Electronic Structure Calculations, Quantum-Mechanical Simulations, Dft Calculations, Molecular Dynamics",
     "Software Type": "",
     "Software Class": "",
-    "Research Field": [
-        "Physical Sciences",
-        "Engineering And Technology"
-    ],
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Physical Sciences, Engineering & Technology"
 }

@@ -2,15 +2,10 @@
     "Software": "phdf5",
     "AI Description": "ph5util provides utilities for reading, writing, and manipulating PHDF5 files. PHDF5 is a parallel I/O file format based on the HDF5 file format and is used for storing large datasets efficiently across distributed storage systems.",
     "Core Features": "1. Read and write PHDF5 files\n2. Manipulate large datasets efficiently\n3. Parallel I/O support for distributed storage systems",
-    "General Tags": [
-        "Parallel I/O",
-        "Phdf5",
-        "Hdf5",
-        "Large Datasets"
-    ],
+    "General Tags": "Parallel I/O, Phdf5, Hdf5, Large Datasets",
     "Software Type": "File Format",
     "Software Class": "Data Management",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

@@ -1,20 +1,11 @@
 {
     "Software": "R Crayon",
     "AI Description": "R Crayon is an R package that provides colored terminal output for R on supported terminals. It allows users to add colors to R outputs in the console, making it easier to differentiate between different types of information.",
-    "Core Features": [
-        "Provides colored terminal output for R on supported terminals",
-        "Allows users to customize the color of R outputs in the console",
-        "Facilitates easier differentiation of information with colored text"
-    ],
-    "General Tags": [
-        "R Package",
-        "Colored Terminal Output",
-        "Data Visualization",
-        "Programming Tool"
-    ],
+    "Core Features": "Provides Colored Terminal Output For R On Supported Terminals, Allows Users To Customize The Color Of R Outputs In The Console, Facilitates Easier Differentiation Of Information With Colored Text",
+    "General Tags": "R Package, Colored Terminal Output, Data Visualization, Programming Tool",
     "Software Type": "R Package",
     "Software Class": "Programming Tool",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

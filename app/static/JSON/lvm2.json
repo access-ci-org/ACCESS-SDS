@@ -1,20 +1,11 @@
 {
     "Software": "lvm2",
     "AI Description": "Logical Volume Manager 2 (LVM2) is a system tool for managing logical volumes. It is typically used to manage disk storage space in a more flexible manner than traditional partitioning.",
-    "Core Features": [
-        "Create and manage logical volumes",
-        "Resize logical volumes on the fly",
-        "Support for snapshots and thin provisioning",
-        "Manage multiple physical storage devices as a single shared pool"
-    ],
-    "General Tags": [
-        "System Tool",
-        "Storage Management",
-        "Disk Management"
-    ],
+    "Core Features": "Create & Manage Logical Volumes, Resize Logical Volumes On The Fly, Support For Snapshots & Thin Provisioning, Manage Multiple Physical Storage Devices As A Single Shared Pool",
+    "General Tags": "System Tool, Storage Management, Disk Management",
     "Software Type": "Utility",
     "Software Class": "System Utility",
-    "Research Field": "Engineering & Technology",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
 }

@@ -2,15 +2,10 @@
     "Software": "Bioformats",
     "AI Description": "Bioformats is a software library that provides reading and writing support for a wide range of biological data formats. It aims to simplify the access and integration of diverse image data types in scientific research.",
     "Core Features": "1. Reading and writing support for various biological image formats.\n2. Ability to convert between different image data formats.\n3. Efficient handling of large and complex image datasets.\n4. Integration with popular programming languages and analysis tools.",
-    "General Tags": [
-        "Bioinformatics",
-        "Imaging",
-        "Biological Data",
-        "Data Formats"
-    ],
+    "General Tags": "Bioinformatics, Imaging, Biological Data, Data Formats",
     "Software Type": "Library",
     "Software Class": "",
-    "Research Field": "Biological Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

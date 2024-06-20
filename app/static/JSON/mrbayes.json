@@ -2,14 +2,10 @@
     "Software": "MrBayes",
     "AI Description": "MrBayes is a program for Bayesian inference and model choice across a wide range of phylogenetic and evolutionary models. It employs Markov chain Monte Carlo methods to estimate the posterior distribution of model parameters.",
     "Core Features": "1. Bayesian inference for phylogenetics and evolutionary biology. 2. Markov chain Monte Carlo methods for estimating model parameters. 3. Support for various nucleotide and protein models. 4. Visualizations of phylogenetic trees and model parameter distributions.",
-    "General Tags": [
-        "Bayesian Inference",
-        "Phylogenetics",
-        "Evolutionary Biology"
-    ],
+    "General Tags": "Bayesian Inference, Phylogenetics, Evolutionary Biology",
     "Software Type": "Software Tool",
     "Software Class": "Bioinformatics",
-    "Research Field": "Biological Sciences",
     "Research Area": "Evolutionary Biology",
-    "Research Discipline": "Systematics & Population Biology"
+    "Research Discipline": "Systematics & Population Biology",
+    "Research Field": "Biological Sciences"
 }

@@ -1,22 +1,11 @@
 {
     "Software": "TensorRT",
     "AI Description": "TensorRT is a high-performance deep learning inference optimizer and runtime for production deployment of deep learning applications. It maximizes runtime performance through optimizations like kernel fusion, layer fusion, and precision calibration. TensorRT also delivers low latency and high throughput for deep learning inference by leveraging GPU hardware.",
-    "Core Features": [
-        "High-performance deep learning inference optimizer and runtime",
-        "Kernel fusion and layer fusion optimizations",
-        "Precise calibration for optimized performance",
-        "Low latency and high throughput for inference",
-        "Support for various deep learning frameworks"
-    ],
-    "General Tags": [
-        "Deep Learning Inference",
-        "Optimization",
-        "Gpu Acceleration",
-        "Production Deployment"
-    ],
+    "Core Features": "High-Performance Deep Learning Inference Optimizer & Runtime, Kernel Fusion & Layer Fusion Optimizations, Precise Calibration For Optimized Performance, Low Latency & High Throughput For Inference, Support For Various Deep Learning Frameworks",
+    "General Tags": "Deep Learning Inference, Optimization, Gpu Acceleration, Production Deployment",
     "Software Type": "Runtime",
     "Software Class": "Deep Learning Inference Optimizer",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

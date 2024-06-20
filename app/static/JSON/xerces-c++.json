@@ -1,22 +1,11 @@
 {
     "Software": "Xerces-C++",
     "AI Description": "Xerces-C++ is a validating XML parser written in C++ and released by the Apache Software Foundation. It is a high-performance, feature-rich parser that is widely used for parsing and processing XML documents in a variety of applications.",
-    "Core Features": [
-        "Validating XML parser",
-        "Supports XML Schema",
-        "SAX and DOM parsers",
-        "Unicode support",
-        "High performance",
-        "Portable across various platforms"
-    ],
-    "General Tags": [
-        "Xml Parser",
-        "Data Processing",
-        "Software Development"
-    ],
+    "Core Features": "Validating Xml Parser, Supports Xml Schema, Sax & Dom Parsers, Unicode Support, High Performance, Portable Across Various Platforms",
+    "General Tags": "Xml Parser, Data Processing, Software Development",
     "Software Type": "Parser",
     "Software Class": "",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

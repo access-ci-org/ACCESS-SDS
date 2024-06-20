@@ -2,14 +2,10 @@
     "Software": "opari2",
     "AI Description": "OPARI2 (OpenMP Parallelizer and Runtime Instrumentation) is a tool for the parallelization and instrumentation of OpenMP programs. It helps to analyze and optimize the performance of parallel codes that use OpenMP directives.",
     "Core Features": "1. Automatic parallelization of OpenMP codes. 2. Instrumentation for performance analysis. 3. Automatic generation of OpenMP regions. 4. Support for various analysis tools. 5. Integration with compilers and build systems.",
-    "General Tags": [
-        "Parallelization",
-        "Performance Analysis",
-        "Openmp"
-    ],
+    "General Tags": "Parallelization, Performance Analysis, Openmp",
     "Software Type": "Compiler/Analyzer",
     "Software Class": "Development Tools",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

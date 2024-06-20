@@ -1,21 +1,11 @@
 {
     "Software": "cuda-samples",
     "AI Description": "cuda-samples is a collection of CUDA code samples and examples provided by NVIDIA. These samples cover a wide range of CUDA programming concepts and techniques, serving as useful resources for developers to learn and practice GPU programming using CUDA.",
-    "Core Features": [
-        "Diverse collection of CUDA code samples",
-        "Covers various CUDA programming concepts and techniques",
-        "Helps developers learn and practice GPU programming",
-        "Provides hands-on examples for CUDA programming"
-    ],
-    "General Tags": [
-        "Cuda",
-        "Gpu Programming",
-        "Code Samples",
-        "Nvidia"
-    ],
+    "Core Features": "Diverse Collection Of Cuda Code Samples, Covers Various Cuda Programming Concepts & Techniques, Helps Developers Learn & Practice Gpu Programming, Provides Hands-On Examples For Cuda Programming",
+    "General Tags": "Cuda, Gpu Programming, Code Samples, Nvidia",
     "Software Type": "Code Sample Repository",
     "Software Class": "Developer Tools",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

@@ -2,14 +2,10 @@
     "Software": "help2man",
     "AI Description": "help2man is a tool that can generate simple man pages from the '--help' and '--version' output of other commands.",
     "Core Features": "help2man automates the generation of manual pages for programs that lack a man page but provide a '--help' or '--version' option. It extracts the necessary information from these options and formats them into a manual page.",
-    "General Tags": [
-        "Documentation",
-        "Man Pages",
-        "Automation"
-    ],
+    "General Tags": "Documentation, Man Pages, Automation",
     "Software Type": "Utility",
     "Software Class": "Documentation Tool",
-    "Research Field": "Engineering & Technology",
     "Research Area": "Software Development",
-    "Research Discipline": "Software Engineering, Systems, & Development"
+    "Research Discipline": "Software Engineering, Systems, & Development",
+    "Research Field": "Engineering & Technology"
 }

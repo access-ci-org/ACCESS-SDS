@@ -2,15 +2,10 @@
     "Software": "atk",
     "AI Description": "The Amsterdam Modeling Suite (AMS) offers a comprehensive set of programs for computational chemistry. One of the key components is the Atomistix ToolKit (ATK) for quantum mechanical and classical atomistic simulations of materials.",
     "Core Features": "ATK enables simulations based on density functional theory (DFT) for electronic structure calculations, molecular dynamics (MD) simulations for atomistic modeling, and a combination of both in quantum mechanics/molecular mechanics (QM/MM) approaches. It supports a wide range of materials properties and advanced analysis tools.",
-    "General Tags": [
-        "Computational Chemistry",
-        "Materials Science",
-        "Quantum Mechanics",
-        "Molecular Dynamics"
-    ],
+    "General Tags": "Computational Chemistry, Materials Science, Quantum Mechanics, Molecular Dynamics",
     "Software Type": "Simulation Software",
     "Software Class": "Computational Software",
-    "Research Field": "Physical Sciences",
     "Research Area": "Condensed Matter Physics",
-    "Research Discipline": "Physical Sciences"
+    "Research Discipline": "Physical Sciences",
+    "Research Field": "Physical Sciences"
 }

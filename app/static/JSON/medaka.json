@@ -2,15 +2,10 @@
     "Software": "medaka",
     "AI Description": "Medaka is a tool for nanopore consensus sequence calling in real-time. It is designed to provide a high-accuracy consensus sequence for a given set of nanopore reads.",
     "Core Features": "Real-time nanopore consensus sequence calling, High-accuracy consensus sequence generation, Utilizes neural network basecaller for improved accuracy",
-    "General Tags": [
-        "Bioinformatics",
-        "Ngs Data Analysis",
-        "Nanopore Sequencing",
-        "Consensus Sequence Calling"
-    ],
+    "General Tags": "Bioinformatics, Ngs Data Analysis, Nanopore Sequencing, Consensus Sequence Calling",
     "Software Type": "Ngs Data Analysis Tool",
     "Software Class": "Bioinformatics Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

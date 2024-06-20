@@ -1,21 +1,11 @@
 {
     "Software": "r-genomicfeatures",
     "AI Description": "The r-genomicfeatures package provides tools to work with genomic ranges in R, allowing users to manipulate and extract information from genomic ranges. It is particularly useful for analyzing genomics data and performing various operations on genomic intervals.",
-    "Core Features": [
-        "Manipulation of genomic ranges",
-        "Extraction of information from genomic ranges",
-        "Analysis of genomics data",
-        "Operations on genomic intervals"
-    ],
-    "General Tags": [
-        "Genomics",
-        "Data Analysis",
-        "R Package",
-        "Genomic Ranges"
-    ],
+    "Core Features": "Manipulation Of Genomic Ranges, Extraction Of Information From Genomic Ranges, Analysis Of Genomics Data, Operations On Genomic Intervals",
+    "General Tags": "Genomics, Data Analysis, R Package, Genomic Ranges",
     "Software Type": "Data Analysis Tool",
     "Software Class": "Library",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genomics",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

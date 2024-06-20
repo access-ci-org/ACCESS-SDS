@@ -2,15 +2,10 @@
     "Software": "nghttp3",
     "AI Description": "nghttp3 is an implementation of HTTP/3 and QUIC protocol in C programming language. It provides a low-level API for developers to interact with HTTP/3 and QUIC connections.",
     "Core Features": "1. Implementation of HTTP/3 and QUIC protocols\n2. Low-level API for interacting with HTTP/3 and QUIC connections\n3. Written in C programming language",
-    "General Tags": [
-        "Http/3",
-        "Quic",
-        "Networking",
-        "Protocol"
-    ],
+    "General Tags": "Http/3, Quic, Networking, Protocol",
     "Software Type": "Protocol",
     "Software Class": "Networking",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

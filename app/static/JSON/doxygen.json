@@ -1,20 +1,11 @@
 {
     "Software": "Doxygen",
     "AI Description": "Doxygen is a documentation generator tool that is used to generate software reference documentation from annotated source code. It supports multiple programming languages and produces output in various formats, including HTML, LaTeX, RTF, and more.",
-    "Core Features": [
-        "Automatic generation of documentation from source code",
-        "Support for multiple programming languages including C++, Objective-C, C#, Java, Python, etc.",
-        "Output documentation in various formats such as HTML, LaTeX, RTF, XML, and man pages",
-        "Support for code cross-referencing, inheritance diagrams, collaboration diagrams, and more"
-    ],
-    "General Tags": [
-        "Documentation Generator",
-        "Software Development",
-        "Programming"
-    ],
+    "Core Features": "Automatic Generation Of Documentation From Source Code, Support For Multiple Programming Languages Including C++, Objective-C, C#, Java, Python, Etc., Output Documentation In Various Formats Such As Html, Latex, Rtf, Xml, & Man Pages, Support For Code Cross-Referencing, Inheritance Diagrams, Collaboration Diagrams, & More",
+    "General Tags": "Documentation Generator, Software Development, Programming",
     "Software Type": "Tool",
     "Software Class": "Documentation Generation",
-    "Research Field": "Software Engineering, Systems, & Development",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Software Engineering, Systems, & Development"
 }

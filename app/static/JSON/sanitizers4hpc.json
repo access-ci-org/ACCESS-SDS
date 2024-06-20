@@ -2,14 +2,10 @@
     "Software": "sanitizers4hpc",
     "AI Description": "sanitizers4hpc is a toolset designed for detecting and removing memory errors and data races in high-performance computing (HPC) applications. It offers various sanitizers to enhance the reliability and performance of parallel programs.",
     "Core Features": "1. Detection of memory errors such as buffer overflows, memory leaks, and uninitialized memory access.\n2. Identification of data races to ensure thread safety and consistency in parallel applications.\n3. Improved debugging capabilities for HPC codes to boost overall program stability and efficiency.",
-    "General Tags": [
-        "Memory Errors",
-        "Data Races",
-        "Hpc Applications"
-    ],
+    "General Tags": "Memory Errors, Data Races, Hpc Applications",
     "Software Type": "Tool",
     "Software Class": "Debugging & Profiling",
-    "Research Field": "Engineering & Technology",
     "Research Area": "Software Engineering, Systems, & Development",
-    "Research Discipline": "Computer Science"
+    "Research Discipline": "Computer Science",
+    "Research Field": "Engineering & Technology"
 }

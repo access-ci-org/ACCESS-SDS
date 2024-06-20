@@ -2,14 +2,10 @@
     "Software": "Zarr",
     "AI Description": "Zarr is a Python package providing an implementation of chunked, compressed, N-dimensional arrays which can be stored in memory, on disk, or on cloud storage. It is designed to efficiently store and retrieve large arrays of data while minimizing the use of computational resources.",
     "Core Features": "1. Chunked storage to access smaller parts of large arrays efficiently. 2. Support for different compression codecs to reduce the storage space required. 3. Ability to store arrays in memory, on disk, or on cloud storage. 4. Compatible with a wide range of Python libraries and tools for data analysis and scientific computing.",
-    "General Tags": [
-        "Python Library",
-        "Data Storage",
-        "Data Management"
-    ],
+    "General Tags": "Python Library, Data Storage, Data Management",
     "Software Type": "Library",
     "Software Class": "Data Management",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

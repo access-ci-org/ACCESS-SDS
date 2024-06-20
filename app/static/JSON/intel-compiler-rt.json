@@ -2,14 +2,10 @@
     "Software": "intel-compiler-rt",
     "AI Description": "The Intel Compiler Runtime Library (Intel Compiler RT) is a collection of runtime libraries for the Intel software development tools, designed to provide support for various runtime components in software applications compiled with Intel compilers.",
     "Core Features": "1. Provides runtime support for applications compiled with Intel compilers\n2. Includes optimized libraries for performance-critical functions\n3. Supports advanced processor optimizations\n4. Enhances application performance and reliability\n5. Enables better scalability and parallelism",
-    "General Tags": [
-        "Compiler",
-        "Runtime Library",
-        "Performance Optimization"
-    ],
+    "General Tags": "Compiler, Runtime Library, Performance Optimization",
     "Software Type": "Compiler Runtime Library",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

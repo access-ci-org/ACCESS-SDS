@@ -2,16 +2,10 @@
     "Software": "Bokeh",
     "AI Description": "Bokeh is an interactive visualization library for modern web browsers. It provides elegant, concise construction of versatile graphics with high-performance interactivity over large or streaming datasets in a browser window.",
     "Core Features": "Some core features of Bokeh include creating versatile plots, dashboards, and data applications in Python; interactive visualizations with a large selection of visual elements such as plots, tables, and sliders; seamless integration with Jupyter notebooks; support for streaming and real-time data; and the ability to create interactive, web-ready plots which can be easily shared.",
-    "General Tags": [
-        "Visualization",
-        "Interactive Plots",
-        "Data Visualization"
-    ],
+    "General Tags": "Visualization, Interactive Plots, Data Visualization",
     "Software Type": "Library",
     "Software Class": "Visualization",
-    "Research Field": [
-        "Computer And Information Sciences"
-    ],
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

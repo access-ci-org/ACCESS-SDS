@@ -1,21 +1,11 @@
 {
     "Software": "ARM GNU Toolchain",
     "AI Description": "ARM GNU Toolchain is an open-source collection of programming tools for creating software on ARM architecture-based systems. It includes compilers, assemblers, linkers, and other tools necessary for software development.",
-    "Core Features": [
-        "Compilers for C, C++, and other languages",
-        "Assemblers and linkers for ARM architecture",
-        "Open-source and freely available",
-        "Support for various ARM processors and microcontrollers"
-    ],
-    "General Tags": [
-        "Software Development",
-        "Arm Architecture",
-        "Compilers",
-        "Open-Source"
-    ],
+    "Core Features": "Compilers For C, C++, & Other Languages, Assemblers & Linkers For Arm Architecture, Open-Source & Freely Available, Support For Various Arm Processors & Microcontrollers",
+    "General Tags": "Software Development, Arm Architecture, Compilers, Open-Source",
     "Software Type": "Programming Tools",
     "Software Class": "Development Tools",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Software Engineering, Systems, & Development",
-    "Research Discipline": "Computer Science"
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
 }

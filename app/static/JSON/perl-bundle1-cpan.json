@@ -2,14 +2,10 @@
     "Software": "perl-bundle1-cpan",
     "AI Description": "A collection of Perl modules and libraries available on CPAN (Comprehensive Perl Archive Network) bundled together for easy installation and management.",
     "Core Features": "1. Includes a variety of Perl modules and libraries from CPAN.\n2. Simplifies the process of installing and managing multiple Perl modules as a single bundle.\n3. Provides access to a wide range of functionalities and tools for Perl programming.",
-    "General Tags": [
-        "Software Bundle",
-        "Perl Modules",
-        "Code Libraries"
-    ],
+    "General Tags": "Software Bundle, Perl Modules, Code Libraries",
     "Software Type": "Programming Libraries",
     "Software Class": "Software Development",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

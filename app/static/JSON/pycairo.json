@@ -2,15 +2,10 @@
     "Software": "Pycairo",
     "AI Description": "Pycairo is a set of Python bindings for the Cairo graphics library. It allows Python applications to use the powerful vector graphics capabilities provided by Cairo for creating high-quality 2D graphics and illustrations.",
     "Core Features": "1. Integration with Python: Pycairo provides seamless integration with Python, allowing developers to easily leverage the advanced graphics capabilities of Cairo within Python applications.\n2. 2D Vector Graphics: Users can create high-quality 2D vector graphics and illustrations using Pycairo, enabling the development of visually appealing charts, diagrams, and UI elements.\n3. Extensive Drawing Capabilities: The library offers a wide range of drawing capabilities, including paths, text, images, and transformations, giving developers the flexibility to create complex and detailed graphics.\n4. Cross-Platform Support: Pycairo supports multiple platforms, including Windows, macOS, and various Unix-based operating systems, ensuring portability across different environments.",
-    "General Tags": [
-        "Python",
-        "Graphics",
-        "2D Graphics",
-        "Illustrations"
-    ],
+    "General Tags": "Python, Graphics, 2D Graphics, Illustrations",
     "Software Type": "Visualization Library",
     "Software Class": "Python Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

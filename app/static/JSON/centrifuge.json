@@ -1,22 +1,11 @@
 {
     "Software": "Centrifuge",
     "AI Description": "Centrifuge is a tool used for rapid and sensitive classification of metagenomic sequencing data. It utilizes a Burrows-Wheeler transform (BWT) and FM-index for rapid and memory-efficient classification of reads against a comprehensive and up-to-date protein sequence database.",
-    "Core Features": [
-        "Classification of metagenomic sequencing data",
-        "Utilizes Burrows-Wheeler transform (BWT) and FM-index",
-        "Rapid and memory-efficient",
-        "Uses a comprehensive protein sequence database"
-    ],
-    "General Tags": [
-        "Bioinformatics",
-        "Metagenomics",
-        "Sequencing Data Analysis",
-        "Microbiome Analysis",
-        "Computational Biology"
-    ],
+    "Core Features": "Classification Of Metagenomic Sequencing Data, Utilizes Burrows-Wheeler Transform (Bwt) & Fm-Index, Rapid & Memory-Efficient, Uses A Comprehensive Protein Sequence Database",
+    "General Tags": "Bioinformatics, Metagenomics, Sequencing Data Analysis, Microbiome Analysis, Computational Biology",
     "Software Type": "Analysis Tool",
     "Software Class": "Bioinformatics Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Metagenomics",
-    "Research Discipline": "Microbiology"
+    "Research Discipline": "Microbiology",
+    "Research Field": "Biological Sciences"
 }

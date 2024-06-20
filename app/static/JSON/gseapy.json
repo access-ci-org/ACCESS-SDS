@@ -1,21 +1,11 @@
 {
     "Software": "gseapy",
     "AI Description": "GSEApy is a Python library for Gene Set Enrichment Analysis (GSEA) and various enrichment analysis methods to interpret gene expression data.",
-    "Core Features": [
-        "Supports Gene Set Enrichment Analysis (GSEA)",
-        "Offers various enrichment analysis methods",
-        "Allows interpretation of gene expression data",
-        "Provides tools for pathway and network analysis"
-    ],
-    "General Tags": [
-        "Bioinformatics",
-        "Computational Biology",
-        "Python Library",
-        "Enrichment Analysis"
-    ],
+    "Core Features": "Supports Gene Set Enrichment Analysis (Gsea), Offers Various Enrichment Analysis Methods, Allows Interpretation Of Gene Expression Data, Provides Tools For Pathway & Network Analysis",
+    "General Tags": "Bioinformatics, Computational Biology, Python Library, Enrichment Analysis",
     "Software Type": "Library",
     "Software Class": "Analysis Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Gene Expression Analysis",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

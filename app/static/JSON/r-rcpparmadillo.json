@@ -2,14 +2,10 @@
     "Software": "RcppArmadillo",
     "AI Description": "RcppArmadillo provides an interface for seamless integration of Armadillo C++ library with R, allowing for high-performance linear algebra operations within R environment.",
     "Core Features": "1. Integration of Armadillo C++ library with R for efficient linear algebra computations.\n2. Enables easy and fast manipulation of matrices, vectors, and arrays within R.\n3. Provides a simple and clean syntax for expressing complex algebraic operations.\n4. Supports various linear algebra functions and operations, such as matrix multiplication, decompositions, and solvers.",
-    "General Tags": [
-        "Linear Algebra",
-        "Matrix Computation",
-        "R Integration"
-    ],
+    "General Tags": "Linear Algebra, Matrix Computation, R Integration",
     "Software Type": "Mathematical Software",
     "Software Class": "R Package",
-    "Research Field": "Mathematics",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Mathematics"
 }

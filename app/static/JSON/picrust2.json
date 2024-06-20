@@ -1,21 +1,11 @@
 {
     "Software": "picrust2",
     "AI Description": "PICRUSt2 (Phylogenetic Investigation of Communities by Reconstruction of Unobserved States 2) is a software package designed for predicting metagenome functional content from marker gene surveys of microbial communities. It leverages evolutionary modeling to predict the gene content of microbial taxa in a community and their metabolic potentials.",
-    "Core Features": [
-        "Metagenome functional content prediction",
-        "Marker gene surveys analysis",
-        "Evolutionary modeling for gene content prediction",
-        "Metabolic potential inference for microbial communities"
-    ],
-    "General Tags": [
-        "Bioinformatics",
-        "Metagenomics",
-        "Microbiome Analysis",
-        "Functional Gene Prediction"
-    ],
+    "Core Features": "Metagenome Functional Content Prediction, Marker Gene Surveys Analysis, Evolutionary Modeling For Gene Content Prediction, Metabolic Potential Inference For Microbial Communities",
+    "General Tags": "Bioinformatics, Metagenomics, Microbiome Analysis, Functional Gene Prediction",
     "Software Type": "Metagenomics Tool",
     "Software Class": "Bioinformatics Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Microbiome Research",
-    "Research Discipline": "Biological Sciences"
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
 }

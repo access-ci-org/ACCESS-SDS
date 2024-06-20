@@ -2,14 +2,10 @@
     "Software": "EDTA",
     "AI Description": "EDTA (Enhanced De Novo Transcriptome Assembler) is a software tool designed for transcriptome assembly from RNA-Seq data. It aims to accurately reconstruct full-length transcripts and improve gene annotation.",
     "Core Features": "1. De novo transcriptome assembly from RNA-Seq data\n2. Reconstruction of full-length transcripts\n3. Improvement of gene annotation\n4. Identification of alternatively spliced isoforms\n5. Estimation of expression levels",
-    "General Tags": [
-        "Transcriptome Assembly",
-        "Rna-Seq",
-        "Gene Annotation"
-    ],
+    "General Tags": "Transcriptome Assembly, RNA-Seq, Gene Annotation",
     "Software Type": "Tool",
     "Software Class": "Bioinformatics",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genetics",
-    "Research Discipline": "Biological Sciences"
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
 }

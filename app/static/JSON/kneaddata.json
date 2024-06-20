@@ -1,21 +1,11 @@
 {
     "Software": "KneadData",
     "AI Description": "KneadData is a tool designed to perform quality control on metagenomic and metatranscriptomic sequencing data, specifically targeted at removing contaminating host sequences and improving the data quality for downstream analysis.",
-    "Core Features": [
-        "Quality control for metagenomic and metatranscriptomic data",
-        "Removal of contaminating host sequences",
-        "Improvement of data quality for downstream analysis",
-        "Support for various sequencing platforms",
-        "Customizable parameters for quality filtering"
-    ],
-    "General Tags": [
-        "Bioinformatics",
-        "Metagenomics",
-        "Data Quality Control"
-    ],
+    "Core Features": "Quality Control For Metagenomic & Metatranscriptomic Data, Removal Of Contaminating Host Sequences, Improvement Of Data Quality For Downstream Analysis, Support For Various Sequencing Platforms, Customizable Parameters For Quality Filtering",
+    "General Tags": "Bioinformatics, Metagenomics, Data Quality Control",
     "Software Type": "Analysis Tool",
     "Software Class": "Bioinformatics Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Metagenomics",
-    "Research Discipline": "Biomolecular Sciences"
+    "Research Discipline": "Biomolecular Sciences",
+    "Research Field": "Biological Sciences"
 }

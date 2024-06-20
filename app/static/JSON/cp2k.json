@@ -2,25 +2,10 @@
     "Software": "CP2K",
     "AI Description": "CP2K is an open-source quantum chemistry and solid state physics software package designed to perform atomistic simulations of solid-state, liquid, molecular, and biological systems. It can be used to study a wide range of properties, including electronic structures, molecular dynamics, and vibrational spectra.",
     "Core Features": "Key features of CP2K include density functional theory (DFT) calculations, molecular dynamics simulations, efficient algorithms for large-scale parallel computations, advanced basis sets, and support for various functionals and dispersion corrections. It also offers tools for studying solvation effects, band structures, and NMR properties.",
-    "General Tags": [
-        "Computational Chemistry",
-        "Quantum Mechanics",
-        "Molecular Dynamics"
-    ],
-    "Software Type": [
-        "Molecular Simulation"
-    ],
-    "Software Class": [
-        "Computational Software"
-    ],
-    "Research Field": [
-        "Physical Sciences"
-    ],
-    "Research Area": [
-        "Condensed Matter Physics",
-        "Atomic, Molecular, And Optical Physics"
-    ],
-    "Research Discipline": [
-        "Physical Sciences"
-    ]
+    "General Tags": "Computational Chemistry, Quantum Mechanics, Molecular Dynamics",
+    "Software Type": "Molecular Simulation",
+    "Software Class": "Computational Software",
+    "Research Area": "Condensed Matter Physics, Atomic, Molecular, & Optical Physics",
+    "Research Discipline": "Physical Sciences",
+    "Research Field": "Physical Sciences"
 }

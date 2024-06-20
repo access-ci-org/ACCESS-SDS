@@ -2,14 +2,10 @@
     "Software": "r-genomicalignments",
     "AI Description": "R package for working with genome alignments, providing functionality for reading, manipulating, and writing genome alignment data in the form of BAM, BED, and GAlignments objects.",
     "Core Features": "1. Reading and writing genome alignment data in BAM, BED, and GAlignments formats.\n2. Manipulating and analyzing genome alignment data.\n3. Visualization tools for genome alignment data.\n4. Integration with other R packages for genomics analysis.",
-    "General Tags": [
-        "Genomics",
-        "Genome Alignments",
-        "R Package"
-    ],
+    "General Tags": "Genomics, Genome Alignments, R Package",
     "Software Type": "Library",
     "Software Class": "Bioinformatics",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genomics",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
 }

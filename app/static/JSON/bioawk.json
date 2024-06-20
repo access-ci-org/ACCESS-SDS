@@ -2,15 +2,10 @@
     "Software": "bioawk",
     "AI Description": "Bioawk is an extension of the AWK programming language, with added functionality specifically designed for processing bioinformatics data. It is an efficient tool for manipulating and analyzing biological data in various formats.",
     "Core Features": "1. Process and extract information from common bioinformatics file formats such as SAM, BAM, VCF, FASTQ, and GFF.\n2. Perform complex data manipulation tasks using custom scripts and commands.\n3. Integrate seamlessly with existing bioinformatics pipelines and tools.\n4. Handle large-scale datasets efficiently and effectively.",
-    "General Tags": [
-        "Bioinformatics",
-        "Data Processing",
-        "File Formats",
-        "Data Analysis"
-    ],
+    "General Tags": "Bioinformatics, Data Processing, File Formats, Data Analysis",
     "Software Type": "Scripting Tool",
     "Software Class": "Bioinformatics Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Computational Biology",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

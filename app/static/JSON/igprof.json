@@ -1,22 +1,11 @@
 {
     "Software": "igprof",
     "AI Description": "igprof is a lightweight, portable, and flexible performance profiling tool for C, C++, and Fortran applications. It provides insights into code performance and helps identify hotspots for optimization, with a focus on low-overhead and accurate measurements.",
-    "Core Features": [
-        "Lightweight and portable performance profiler",
-        "Supports C, C++, and Fortran applications",
-        "Low-overhead measurements for accurate profiling",
-        "Identifies code hotspots for optimization",
-        "Offers detailed insights into application performance"
-    ],
-    "General Tags": [
-        "Profiler",
-        "Performance Analysis",
-        "Code Optimization",
-        "Software Development"
-    ],
+    "Core Features": "Lightweight & Portable Performance Profiler, Supports C, C++, & Fortran Applications, Low-Overhead Measurements For Accurate Profiling, Identifies Code Hotspots For Optimization, Offers Detailed Insights Into Application Performance",
+    "General Tags": "Profiler, Performance Analysis, Code Optimization, Software Development",
     "Software Type": "Tool",
     "Software Class": "Performance Profiling",
-    "Research Field": "Engineering & Technology",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
 }

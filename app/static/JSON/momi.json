@@ -2,14 +2,10 @@
     "Software": "momi",
     "AI Description": "momi (MOran models for Inference) is a Python package designed for inferring demographic histories from genetic data using multiple sequentially Markovian coalescent (MSMC) models. It provides a framework for fitting demographic models to multi-population allele frequency spectra (AFS) data.",
     "Core Features": "1. Estimation of historical effective population sizes and divergence times. 2. Incorporation of multiple populations and complex demographic scenarios. 3. Inference of demographic events using allele frequency spectra data. 4. Incorporation of recombination rate variation and linked selection.",
-    "General Tags": [
-        "Demographic Inference",
-        "Allele Frequency Spectra",
-        "Msmc Models"
-    ],
+    "General Tags": "Demographic Inference, Allele Frequency Spectra, Msmc Models",
     "Software Type": "Python Library",
     "Software Class": "Bioinformatics",
-    "Research Field": "Biological Sciences",
     "Research Area": "Population Genetics",
-    "Research Discipline": "Genetics"
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
 }

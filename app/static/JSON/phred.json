@@ -2,14 +2,10 @@
     "Software": "Phred",
     "AI Description": "Phred is a base-calling software used for analyzing DNA sequencing chromatograms. It assigns quality scores to each base call, providing information about the accuracy and reliability of the sequencing data.",
     "Core Features": "Base calling, quality score assignment, error rate estimation, confidence measures for base calls.",
-    "General Tags": [
-        "Dna Sequencing",
-        "Base Calling",
-        "Quality Assessment"
-    ],
+    "General Tags": "DNA Sequencing, Base Calling, Quality Assessment",
     "Software Type": "Tool",
     "Software Class": "Bioinformatics",
-    "Research Field": "Biological Sciences",
     "Research Area": "Molecular Biology",
-    "Research Discipline": "Genetics"
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
 }

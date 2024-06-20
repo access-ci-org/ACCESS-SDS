@@ -2,14 +2,10 @@
     "Software": "r-genomeinfodbdata",
     "AI Description": "The 'r-genomeinfodbdata' package provides annotation data for various organisms sourced from GenomeInfoDb.",
     "Core Features": "1. Provides annotation data for various organisms. 2. Allows users to access genomic data easily. 3. Integration with GenomeInfoDb for up-to-date information. 4. Facilitates bioinformatics analysis and research.",
-    "General Tags": [
-        "Bioinformatics",
-        "Genomics",
-        "R Package"
-    ],
+    "General Tags": "Bioinformatics, Genomics, R Package",
     "Software Type": "R Package",
     "Software Class": "Data Processing & Annotation",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genomics",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

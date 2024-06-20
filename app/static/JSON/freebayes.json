@@ -1,20 +1,11 @@
 {
     "Software": "freebayes",
     "AI Description": "FreeBayes is a Bayesian genetic variant detector designed to find small polymorphisms, specifically SNPs (single-nucleotide polymorphisms), indels (insertions and deletions), and complex events (composite insertion and substitution events) smaller than the length of a short-read sequencing alignment.",
-    "Core Features": [
-        "Detection of small polymorphisms including SNPs, indels, and complex events",
-        "Designed for short-read sequencing data",
-        "Utilizes a Bayesian algorithm for variant detection"
-    ],
-    "General Tags": [
-        "Genetic Variant Detector",
-        "Snp Detection",
-        "Indel Detection",
-        "Bayesian Algorithm"
-    ],
+    "Core Features": "Detection Of Small Polymorphisms Including Snps, Indels, & Complex Events, Designed For Short-Read Sequencing Data, Utilizes A Bayesian Algorithm For Variant Detection",
+    "General Tags": "Genetic Variant Detector, Snp Detection, Indel Detection, Bayesian Algorithm",
     "Software Type": "Tool",
     "Software Class": "Genomic Variant Calling Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genomics",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

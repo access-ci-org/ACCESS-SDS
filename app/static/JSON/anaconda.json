@@ -2,18 +2,10 @@
     "Software": "Anaconda",
     "AI Description": "Anaconda is a free and open-source distribution of Python and R programming languages for scientific computing, that aims to simplify package management and deployment.",
     "Core Features": "Anaconda includes over 250 popular data science packages and their dependencies such as NumPy, pandas, scipy, scikit-learn, and Jupyter, along with conda package manager for managing virtual environments and deploying packages.",
-    "General Tags": [
-        "Data Science",
-        "Scientific Computing",
-        "Package Management",
-        "Python",
-        "R"
-    ],
+    "General Tags": "Data Science, Scientific Computing, Package Management, Python, R",
     "Software Type": "Package Management",
     "Software Class": "Software Development",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": [
-        "Informatics, Analytics And Information Science"
-    ]
+    "Research Discipline": "Informatics, Analytics & Information Science",
+    "Research Field": "Computer & Information Sciences"
 }

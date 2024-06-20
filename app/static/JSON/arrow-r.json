@@ -2,15 +2,10 @@
     "Software": "Arrow-R",
     "AI Description": "Arrow-R is an open-source statistical computing and graphics software program based on the R programming language. It provides advanced statistical analysis, data visualization, and modeling capabilities for researchers and statisticians.",
     "Core Features": "1. Comprehensive statistical analysis tools\n2. Advanced data visualization capabilities\n3. Extensive libraries for statistical modeling\n4. Integration with R programming language\n5. Support for custom functions and packages\n6. Interactive graphics and plots",
-    "General Tags": [
-        "Statistical Computing",
-        "Data Visualization",
-        "Statistical Modeling",
-        "R Programming"
-    ],
+    "General Tags": "Statistical Computing, Data Visualization, Statistical Modeling, R Programming",
     "Software Type": "Statistical Software",
     "Software Class": "Data Analysis & Visualization",
-    "Research Field": "Mathematics",
     "Research Area": "Statistical Analysis",
-    "Research Discipline": "Statistics & Probability"
+    "Research Discipline": "Statistics & Probability",
+    "Research Field": "Mathematics"
 }

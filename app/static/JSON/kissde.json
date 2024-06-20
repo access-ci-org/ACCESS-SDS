@@ -1,28 +1,11 @@
 {
     "Software": "KISSDE",
     "AI Description": "KISSDE (Kinetic Simulator of Synthetic Degradation and Expression) is a software tool for simulating the kinetics of gene expression and protein degradation in synthetic biological systems. It allows users to model the dynamics of gene expression and protein degradation processes to better understand and optimize synthetic genetic circuits.",
-    "Core Features": [
-        "Simulation of gene expression dynamics",
-        "Modeling protein degradation kinetics",
-        "Optimization of synthetic genetic circuits",
-        "Analysis of synthetic biological systems"
-    ],
-    "General Tags": [
-        "Computational Biology",
-        "Bioinformatics"
-    ],
-    "Software Type": [
-        "Bioinformatics Tool"
-    ],
-    "Software Class": [
-        "Simulation Tool"
-    ],
-    "Research Field": "Biological Sciences",
-    "Research Area": [
-        "Synthetic Biology",
-        "Systems Biology"
-    ],
-    "Research Discipline": [
-        "Biological Sciences"
-    ]
+    "Core Features": "Simulation Of Gene Expression Dynamics, Modeling Protein Degradation Kinetics, Optimization Of Synthetic Genetic Circuits, Analysis Of Synthetic Biological Systems",
+    "General Tags": "Computational Biology, Bioinformatics",
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Simulation Tool",
+    "Research Area": "Synthetic Biology, Systems Biology",
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
 }

@@ -1,19 +1,11 @@
 {
     "Software": "OpenSSH",
     "AI Description": "OpenSSH is a suite of secure networking utilities based on the SSH protocol, providing encrypted communication sessions over a computer network using the SSH protocol. It offers secure remote login, secure file transfer, and public key authentication functionalities.",
-    "Core Features": [
-        "Secure remote login",
-        "Secure file transfer",
-        "Public key authentication"
-    ],
-    "General Tags": [
-        "Ssh",
-        "Secure Networking",
-        "Utilities"
-    ],
+    "Core Features": "Secure Remote Login, Secure File Transfer, Public Key Authentication",
+    "General Tags": "Ssh, Secure Networking, Utilities",
     "Software Type": "Utility",
     "Software Class": "Networking & Security",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

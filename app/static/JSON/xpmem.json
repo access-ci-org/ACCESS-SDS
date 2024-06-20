@@ -2,14 +2,10 @@
     "Software": "xpmem",
     "AI Description": "XPMEM is a kernel module that provides a kernel-level interface for sharing memory between processes.",
     "Core Features": "1. Kernel module for sharing memory\n2. Provides kernel-level interface for inter-process communication\n3. Allows processes to communicate by sharing memory directly",
-    "General Tags": [
-        "Kernel Module",
-        "Inter-Process Communication",
-        "Memory Sharing"
-    ],
+    "General Tags": "Kernel Module, Inter-Process Communication, Memory Sharing",
     "Software Type": "System Software",
     "Software Class": "Kernel Module",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "Operating Systems",
-    "Research Discipline": "Computer Science"
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
 }

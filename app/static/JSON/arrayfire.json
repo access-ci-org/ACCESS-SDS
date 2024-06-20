@@ -1,26 +1,11 @@
 {
     "Software": "ArrayFire",
     "AI Description": "ArrayFire is a high-performance software library for parallel computing with an emphasis on GPU acceleration. It provides a broad range of functionality for accelerated computing, including linear algebra, signal processing, statistics, and image processing.",
-    "Core Features": [
-        "GPU acceleration",
-        "Parallel computing",
-        "Linear algebra operations",
-        "Signal processing",
-        "Image processing",
-        "Statistics"
-    ],
-    "General Tags": [
-        "Software Library",
-        "Parallel Computing",
-        "Gpu Acceleration",
-        "Linear Algebra",
-        "Signal Processing",
-        "Image Processing",
-        "Statistics"
-    ],
+    "Core Features": "Gpu Acceleration, Parallel Computing, Linear Algebra Operations, Signal Processing, Image Processing, Statistics",
+    "General Tags": "Software Library, Parallel Computing, Gpu Acceleration, Linear Algebra, Signal Processing, Image Processing, Statistics",
     "Software Type": "",
     "Software Class": "Library",
-    "Research Field": "Computer & Information Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
 }

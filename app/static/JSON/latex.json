@@ -1,27 +1,11 @@
 {
     "Software": "LaTeX",
     "AI Description": "LaTeX is a typesetting system commonly used for scientific and technical documentation preparation. It is widely used for the communication and publication of scientific documents in fields such as mathematics, computer science, physics, engineering, and more.",
-    "Core Features": [
-        "High-quality typesetting for complex mathematical equations and symbols",
-        "Customization of document layout and styles",
-        "Automatic generation of table of contents, lists of figures/tables, and citations",
-        "Easy integration of graphics and images",
-        "Support for cross-referencing and bibliography management",
-        "Flexible and powerful system for creating professional-looking documents"
-    ],
-    "General Tags": [
-        "Typesetting",
-        "Scientific Communication",
-        "Document Preparation"
-    ],
+    "Core Features": "High-Quality Typesetting For Complex Mathematical Equations & Symbols, Customization Of Document Layout & Styles, Automatic Generation Of Table Of Contents, Lists Of Figures/Tables, & Citations, Easy Integration Of Graphics & Images, Support For Cross-Referencing & Bibliography Management, Flexible & Powerful System For Creating Professional-Looking Documents",
+    "General Tags": "Typesetting, Scientific Communication, Document Preparation",
     "Software Type": "Publishing",
     "Software Class": "Typesetting System",
-    "Research Field": [
-        "Natural Sciences",
-        "Mathematics",
-        "Computer And Information Sciences",
-        "Engineering And Technology"
-    ],
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Natural Sciences, Mathematics, Computer & Information Sciences, Engineering & Technology"
 }

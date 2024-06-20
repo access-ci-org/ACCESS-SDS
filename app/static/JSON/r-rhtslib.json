@@ -1,21 +1,11 @@
 {
     "Software": "R-rhtslib",
     "AI Description": "R-rhtslib is an R package that provides an interface to the HTSlib C library, which enables high-performance file input/output with SAM, BAM, and CRAM file formats.",
-    "Core Features": [
-        "Interface to HTSlib C library for file input/output",
-        "Support for SAM, BAM, and CRAM file formats",
-        "High-performance data processing",
-        "Integration with R environment"
-    ],
-    "General Tags": [
-        "R Package",
-        "Htslib Interface",
-        "Data Processing",
-        "Bioinformatics"
-    ],
+    "Core Features": "Interface To Htslib C Library For File Input/Output, Support For Sam, Bam, & Cram File Formats, High-Performance Data Processing, Integration With R Environment",
+    "General Tags": "R Package, Htslib Interface, Data Processing, Bioinformatics",
     "Software Type": "Library",
     "Software Class": "Bioinformatics Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genetics",
-    "Research Discipline": "Bioinformatics"
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
 }

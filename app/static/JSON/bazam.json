@@ -1,19 +1,11 @@
 {
     "Software": "Bazam",
     "AI Description": "Bazam is a computational software tool developed for analyzing and visualizing structural genetic variants from sequencing data. It provides researchers with a comprehensive set of functionalities to analyze and interpret genomics data.",
-    "Core Features": [
-        "Structural genetic variant analysis",
-        "Sequencing data interpretation",
-        "Data visualization tools"
-    ],
-    "General Tags": [
-        "Computational Software",
-        "Bioinformatics",
-        "Genomics"
-    ],
+    "Core Features": "Structural Genetic Variant Analysis, Sequencing Data Interpretation, Data Visualization Tools",
+    "General Tags": "Computational Software, Bioinformatics, Genomics",
     "Software Type": "Bioinformatics Tool",
     "Software Class": "Data Analysis",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genomics",
-    "Research Discipline": "Genetics"
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
 }

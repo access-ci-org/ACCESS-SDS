@@ -1,19 +1,11 @@
 {
     "Software": "py-cutadapt",
     "AI Description": "py-cutadapt is a Python package for preprocessing high-throughput sequencing data. It trims adapter sequences, removes low-quality bases, and filters out reads that do not meet specified quality thresholds.",
-    "Core Features": [
-        "Adapter trimming",
-        "Quality filtering",
-        "Read processing for high-throughput sequencing data"
-    ],
-    "General Tags": [
-        "Bioinformatics",
-        "Sequencing Data Processing",
-        "Python Package"
-    ],
+    "Core Features": "Adapter Trimming, Quality Filtering, Read Processing For High-Throughput Sequencing Data",
+    "General Tags": "Bioinformatics, Sequencing Data Processing, Python Package",
     "Software Type": "Bioinformatics Tool",
     "Software Class": "Preprocessing Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Transcriptomics",
-    "Research Discipline": "Genomics"
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
 }

@@ -1,19 +1,11 @@
 {
     "Software": "vcf2tsvpy",
     "AI Description": "vcf2tsvpy is a Python library for converting Variant Call Format (VCF) files into tab-separated values (TSV) files. It facilitates the conversion of genetic variant data stored in VCF format into a more easily accessible and analyzable TSV format.",
-    "Core Features": [
-        "Conversion of VCF files to TSV format",
-        "Support for genetic variant data processing",
-        "Written in Python for ease of use and integration in Python workflows"
-    ],
-    "General Tags": [
-        "Python Library",
-        "Genetic Data Processing",
-        "Data Format Conversion"
-    ],
+    "Core Features": "Conversion Of Vcf Files To Tsv Format, Support For Genetic Variant Data Processing, Written In Python For Ease Of Use & Integration In Python Workflows",
+    "General Tags": "Python Library, Genetic Data Processing, Data Format Conversion",
     "Software Type": "Library",
     "Software Class": "Data Conversion Tool",
-    "Research Field": "Biological Sciences",
     "Research Area": "Genetic Variant Analysis",
-    "Research Discipline": "Genetics"
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
 }

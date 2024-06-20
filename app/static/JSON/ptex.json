@@ -2,14 +2,10 @@
     "Software": "ptex",
     "AI Description": "A high-quality Japanese typesetting system based on TeX that is specifically optimized for the Japanese language.",
     "Core Features": "Supports Japanese language typesetting, allows for complex layouts and professional typesetting, provides high-quality output, offers a wide range of customization options, integrates well with other TeX-related tools.",
-    "General Tags": [
-        "Typesetting",
-        "Tex",
-        "Japanese Language"
-    ],
+    "General Tags": "Typesetting, Tex, Japanese Language",
     "Software Type": "Typesetting Software",
     "Software Class": "Text Processing",
-    "Research Field": "Humanities",
     "Research Area": "Linguistics",
-    "Research Discipline": "Languages & Literature"
+    "Research Discipline": "Languages & Literature",
+    "Research Field": "Humanities"
 }

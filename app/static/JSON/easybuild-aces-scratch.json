@@ -2,15 +2,10 @@
     "Software": "EasyBuild ACES Scratch",
     "AI Description": "EasyBuild is a software build and installation framework for (scientific) software. The ACES Scratch environment provides a framework for installing scientific software, including HPC libraries and tools, on a cluster system.",
     "Core Features": "Automated building and installation of scientific software, support for different HPC systems and environments, module management system for easy loading of software packages, version control and reproducibility for scientific workflows.",
-    "General Tags": [
-        "Software Build",
-        "Installation Framework",
-        "Hpc Cluster",
-        "Scientific Software"
-    ],
+    "General Tags": "Software Build, Installation Framework, Hpc Cluster, Scientific Software",
     "Software Type": "Computational Software",
     "Software Class": "Infrastructure & Instrumentation",
-    "Research Field": "Engineering & Technology",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
 }

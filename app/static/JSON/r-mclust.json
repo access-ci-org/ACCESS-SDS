@@ -2,15 +2,10 @@
     "Software": "R-mclust",
     "AI Description": "R-mclust is an R package that provides tools for model-based clustering, classification, and density estimation based on finite normal mixture modeling. It offers a variety of models, including the diagonal, ellipsoidal, and full-covariance parameterizations of the Gaussian mixture model.",
     "Core Features": "1. Model-based clustering\n2. Model-based classification\n3. Density estimation\n4. Finite normal mixture modeling\n5. Support for various Gaussian mixture models parameterizations",
-    "General Tags": [
-        "Model-Based Clustering",
-        "Classification",
-        "Density Estimation",
-        "Gaussian Mixture Model"
-    ],
+    "General Tags": "Model-Based Clustering, Classification, Density Estimation, Gaussian Mixture Model",
     "Software Type": "R Package",
     "Software Class": "Clustering & Classification",
-    "Research Field": "Statistics & Probability",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Statistics & Probability"
 }

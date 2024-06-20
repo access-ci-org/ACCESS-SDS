@@ -1,20 +1,11 @@
 {
     "Software": "jupyterlmod",
     "AI Description": "jupyterlmod is an extension for Jupyter Notebooks that allows users to interact with Lmod, the Environment Modules System, directly within the Jupyter environment. It enables users to manage software environments, load and unload modules, and handle environment variables conveniently within Jupyter Notebook.",
-    "Core Features": [
-        "Integration of Lmod with Jupyter Notebooks",
-        "Software environment management",
-        "Module loading and unloading",
-        "Environment variable handling"
-    ],
-    "General Tags": [
-        "Jupyter Notebook",
-        "Environment Modules",
-        "Software Environment Management"
-    ],
+    "Core Features": "Integration Of Lmod With Jupyter Notebooks, Software Environment Management, Module Loading & Unloading, Environment Variable Handling",
+    "General Tags": "Jupyter Notebook, Environment Modules, Software Environment Management",
     "Software Type": "Extension",
     "Software Class": "Environment Management",
-    "Research Field": "Other Natural Sciences",
     "Research Area": "",
-    "Research Discipline": ""
+    "Research Discipline": "",
+    "Research Field": "Other Natural Sciences"
 }
