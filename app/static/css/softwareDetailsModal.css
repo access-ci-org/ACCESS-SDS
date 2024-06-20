@@ -21,6 +21,11 @@
     background-color: #1a5b6e;
     border: 1px #185264d3 solid;
 }
+.softwareDetailsModal .modal-footer{
+    padding: 5px;
+    background-color: #1a5b6e;
+    border: 2px #185264d3 solid;
+}
 
 
 

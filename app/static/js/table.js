@@ -71,6 +71,7 @@ $(document).ready(function()
             $('.scrollText-div').html("Hover your mouse to the edge of the table to scroll")          
         },
         searchPanes: {
+            //threshold: 0.8,
             initCollapsed: true,
             cascadePanes: false,    // Reflects one change in the searchPanes filters across all Panes.
                                     // Unfortunately, can't use this until we optimize the table's performance.
@@ -192,6 +193,30 @@ $(document).ready(function()
                             }
                         },
                         {
+                            label: 'Command Line',
+                            value: function(rowData, rowIdx) {
+                                return rowData[2].toLowerCase().includes('command');
+                            }
+                        },
+                        {
+                            label: 'Compiler',
+                            value: function(rowData, rowIdx) {
+                                return rowData[2].toLowerCase().includes('compiler');
+                            }
+                        },
+                        {
+                            label: 'Editor',
+                            value: function(rowData, rowIdx) {
+                                return rowData[2].toLowerCase().includes('editor');
+                            }
+                        },
+                        {
+                            label: 'Framework',
+                            value: function(rowData, rowIdx) {
+                                return rowData[2].toLowerCase().includes('framework');
+                            }
+                        },
+                        {
                             label: 'Language',
                             value: function(rowData, rowIdx) {
                                 return rowData[2].toLowerCase().includes('language');
@@ -207,6 +232,30 @@ $(document).ready(function()
                             label: 'Package',
                             value: function(rowData, rowIdx) {
                                 return rowData[2].toLowerCase().includes('package');
+                            }
+                        },
+                        {
+                            label: 'Parser',
+                            value: function(rowData, rowIdx) {
+                                return rowData[2].toLowerCase().includes('pars');
+                            }
+                        },
+                        {
+                            label: 'Plugin',
+                            value: function(rowData, rowIdx) {
+                                return rowData[2].toLowerCase().includes('plug');
+                            }
+                        },
+                        {
+                            label: 'Service',
+                            value: function(rowData, rowIdx) {
+                                return rowData[2].toLowerCase().includes('service');
+                            }
+                        },
+                        {
+                            label: 'Software',
+                            value: function(rowData, rowIdx) {
+                                return rowData[2].toLowerCase().includes('software');
                             }
                         },
                         {
@@ -263,15 +312,112 @@ $(document).ready(function()
                             value: function(rowData, rowIdx) {
                                 return rowData[5].toLowerCase().includes('sciences');
                             }},                        
-            ]}},              
+            ]}},
+            {   // Pane 4: General Tags 
+                targets: [9],               
+                searchPanes: {
+                    show: true,
+                    className: 'noShadow',
+                    options: [
+                        {
+                            label: '2D',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('2d');
+                            }},
+                        {
+                            label: '3D',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('3d');
+                            }},   
+                        {
+                            label: 'Artificial Intelligence',
+                            value: function(rowData, rowIdx) {
+                                return /\b(ai|artificial intelligence)\b/i.test(rowData[9]);
+                            }},                         
+                        {
+                            label: 'Assembly',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('assembl');
+                            }},
+                        {
+                            label: 'Astronomy',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('astronomy');
+                            }},
+                        {
+                            label: 'Audio',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('audio');
+                            }},
+                        {
+                            label: 'Bioinformatics',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('bioinformatics');
+                            }},
+                        {
+                            label: 'C++',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('c++');
+                            }},
+                        {
+                            label: 'Genetics',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('genetic');
+                            }},
+                        {
+                            label: 'GUI',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('gui');
+                            }},
+                        {
+                            label: 'High Performance Computing',
+                            value: function(rowData, rowIdx) {
+                                return /\b(hpc|high[-\s]performance computing)\b/i.test(rowData[9]);
+                            }},
+                        {
+                            label: 'Imaging',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('imag');
+                            }}, 
+                        {
+                            label: 'Machine Learning',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('machine learning');
+                            }},
+                        {
+                            label: 'Open Source',
+                            value: function(rowData, rowIdx) {
+                                return /open[\s-]source/i.test(rowData[9]);
+                            }},
+                        {
+                            label: 'Python',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('python');
+                            }},
+                        {
+                            label: 'Sequencing',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('sequencing');
+                            }},
+                        {
+                            label: 'User Interface',
+                            value: function(rowData, rowIdx) {
+                                return /\b(ui|user[\s-]interface)\b/i.test(rowData[9]);
+                            }},
+                        {
+                            label: 'Visualization',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('visualization');
+                            }},              
+            ]}},
             {   // Disables all other columns not explicitly shown from displaying as Panes
-                targets: '_all',
-                //targets: [7,8,9,10,11,12,13,14,15,16],
+                //targets: [9, 14, 15],
+                targets: "_all",
                 searchPanes: {
                     show: false
             }}, 
             {   // Enable searchBuilder on all columns 
-                targets: '_all',
+                targets: "_all",
                 searchBuilder: { 
                         defaultCondition: 'contains'
             }},  
@@ -320,7 +466,7 @@ $(document).ready(function()
 /*////////////////////
     Mouse Scrolling //
 */////////////////////
-    var $scrollBody = $('div.dt-scroll-body').eq(3)
+    var $scrollBody = $('div.dt-scroll-body:last')
     var scrollSensitivity = 100; // Distance from edge in pixels.
     var scrollSpeed = 7; // Speed of the scroll step in pixels.
     var scrollInterval;
@@ -501,7 +647,7 @@ $(document).ready(function()
         $('#softwareDetailsVersions').html(rowData[14]);
 
         // AI
-        $('#softwareDetailsCoreFeat').text(rowData[8]);
+        $('#softwareDetailsCoreFeat').html(rowData[8]);
         $('#softwareDetailsTags').text(rowData[9]);
         $('#softwareDetailsAIDesc').text(rowData[15]);
 
