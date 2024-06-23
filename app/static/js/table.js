@@ -454,17 +454,17 @@ $(document).ready(function()
                     }
                     return data;
             }}, 
-            { width: '75px', targets: [1] },    // RP Names
-            { width: '106px', targets: [16], className: 'dt-center'}, // Example Use Button
-            { width: '116px', targets: [5]},    // Research Area
-            { width: '117px', targets: [2,4]},  // Software Type, Research Field
-            { width: '119px', targets: [3]},    // Software Class
-            { width: '142px', targets: [14]},   // Version Info
-            { width: '150px', targets: [6]},    // Research Discipline
-            { width: '200px', targets: [9]},    // General Tags
-            { width: '300px', targets: [10,11,12,13] }, // Software Links
-            { width: '400px', targets: [8,15]}, // Core Features, AI Description
-            { width: '500px', targets: [7]},    // Software Description
+            { width: '65px', targets: [1], className: 'dt-center' },    // RP Names
+            { width: '100px', targets: [16], className: 'dt-center'}, // Example Use Button
+            { width: '100px', targets: [5], className: 'dt-center'},    // Research Area
+            { width: '110px', targets: [2,4], className: 'dt-center'},  // Software Type, Research Field
+            { width: '115px', targets: [3], className: 'dt-center'},    // Software Class
+            { width: '120px', targets: [14], className: 'dt-center'},   // Version Info
+            { width: '110px', targets: [6], className: 'dt-center'},    // Research Discipline
+            { width: '180px', targets: [9], className: 'dt-center'},    // General Tags
+            { width: '300px', targets: [10,11,12,13], className: 'dt-center'}, // Software Links
+            { width: '400px', targets: [8,15], className: 'dt-center'}, // Core Features, AI Description
+            { width: '500px', targets: [7], className: 'dt-center'},    // Software Description
         ],
     });
 

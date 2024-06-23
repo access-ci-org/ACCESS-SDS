@@ -9,6 +9,7 @@ import re
 import json
 import pandas as pd
 from datetime import datetime
+import logging
 
 app = Flask(__name__)
 
@@ -103,6 +104,84 @@ def process_feedback():
             json.dump(user_feedback, f, indent=4)
 
     return jsonify({'success': 'Feedback processed successfully'})
+
+
+
+
+## TESTING-IGNORE ##
+# Set up basic logging
+logging.basicConfig(level=logging.DEBUG)
+
+@app.route("/data", methods=['POST'])
+def data():
+    try:
+        # Log start of the request processing
+        logging.debug("Starting to process request")
+        # Read parameters from DataTables
+        draw = request.form.get('draw', type=int, default=1)                        # A counter to ensure that the Ajax requests are processed sequentially.
+        start = request.form.get('start', type=int, default=0)                      # The starting index of the data to be fetched (for pagination)
+        length = request.form.get('length', type=int, default=10)                   # The number of records to fetch (page size)
+        order_column = request.form.get('order[0][column]', type=int, default=0)    # The column index to sort by
+        order_dir = request.form.get('order[0][dir]', default='asc')                # The direction of sorting ('asc' or 'desc')
+        search_value = request.form.get('search[value]', default='')                # The search term entered by the user
+
+        logging.debug(f"Draw: {draw}, Start: {start}, Length: {length}, Order Column: {order_column}, Order Dir: {order_dir}, Search Value: {search_value}")
+
+        # Read the CSV file
+        csv_path = './data/CSV/softwareTable.csv'  # Adjust path to your CSV file
+        logging.debug(f"Reading CSV file from: {csv_path}")
+        df = pd.read_csv(csv_path)  # Adjust path to your CSV file
+
+        # Define the column mapping
+        columns = [
+        'Software','RP Name','✨Software Type','✨Software Class','✨Research Field','✨Research Area','✨Research Discipline','Software Description',
+        '✨Core Features','✨General Tags',"Software's Web Page",'Software Documentation','Example Software Use','RP Software Documentation','Version Info',
+        '✨AI Description','✨Example Use'
+        ]
+        logging.debug(f"CSV columns: {columns}")
+
+        # Filtering
+        if search_value:
+            logging.debug(f"Applying search filter: {search_value}")
+            df = df[df.apply(lambda row: row.astype(str).str.contains(search_value, case=False).any(), axis=1)]
+
+        # Sorting
+        logging.debug(f"Sorting by column: {columns[order_column]}, direction: {order_dir}")
+        if order_dir == 'asc':
+            df = df.sort_values(by=columns[order_column])
+        else:
+            df = df.sort_values(by=columns[order_column], ascending=False)
+
+        # Paging
+        records_total = len(df)
+        logging.debug(f"Total records: {records_total}")
+        df_page = df.iloc[start:start+length]
+        records_filtered = len(df)
+        logging.debug(f"Filtered records: {records_filtered}")
+
+        # Prepare the response
+        # Reorder DataFrame columns to match the expected order
+        df_page_reordered = df_page[columns]
+
+        # Convert reordered DataFrame to list of dictionaries
+        data_reordered = df_page_reordered.to_dict(orient='records')
+
+        response = {
+            "draw": draw,
+            "recordsTotal": records_total,
+            "recordsFiltered": records_filtered,
+            "data": data_reordered
+        }
+
+        # Limit the data shown in logs for debugging
+        logging.debug(f"Records Total: {records_total}, Records Filtered: {records_filtered}")
+        logging.debug(f"Data Sample: {df_page.head().to_dict(orient='records')}")
+
+        return jsonify(response)
+
+    except Exception as e:
+        logging.error(f"Error occurred: {e}")
+        return jsonify({"error": str(e)})
 
 
 # Display Images

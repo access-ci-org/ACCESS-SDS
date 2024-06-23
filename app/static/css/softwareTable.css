@@ -72,6 +72,7 @@ table.dataTable>tbody>tr.selected a {
 /* ##################### */
 div.dtsb-searchBuilder div.dtsb-titleRow div.dtsb-title {
     font-weight: bold;
+    font-size: 1.07em;
 }
 div.dtsb-searchBuilder button.dtsb-button {
     background-color: #1a5b6e !important;
@@ -168,10 +169,13 @@ button.dt-button.buttons-columnVisibility {
     display: flex;
     justify-content: right;
     align-items: right;
-    margin-right: 50px;
+    margin-right: 4%;
     font-weight:bold;
 }
 
+div.dt-container .dt-search label{
+    font-weight: bold;
+}
 /* ### SEARCHPANES ### */
 /* SearchPanes Visbility Buttons */
 .dtsp-collapseAll,
