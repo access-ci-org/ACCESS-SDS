@@ -49,7 +49,6 @@ $(document).ready(function()
     Enabled: Buttons (Column Visibility), FixedColumn, FixedHeader, SearchBuilder, SearchPanes, Select //
 *////////////////////////////////////////////////////////////////////////////////////////////////////////
     staticTable = $('#softwareTable').DataTable({
-
         select: {           // Allows for selecting rows in tables/searchPanes
             enabled: true,
             style: 'multi', // Select multiple rows, deselect by clicking again
