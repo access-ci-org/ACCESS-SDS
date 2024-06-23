@@ -46,7 +46,7 @@ def create_full_doc_url(software_name, rp_names):
             
             # Extra Code for DARWIN links, which aren't constructed normally
             if rp_name == 'DARWIN':
-                full_url = f"{fullUrl}/{software_name.lower()}"     # fullURL = rpName: rpUrl/softwareName/softwareName
+                full_url = f"{full_url}/{software_name.lower()}"     # fullURL = rpName: rpUrl/softwareName/softwareName
         
         # For software from RPs with only generic documentation
         elif rp_url:
