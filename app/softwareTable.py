@@ -4,17 +4,17 @@ import os
 import pandas as pd
 import numpy as np
 
+from app.makeRPDocLinks import create_full_doc_url
 from app.parseVersionInfo import add_version_info_to_table
-from app.softwareStatic import createFullDocUrl
 from app.parseJSONInfo import json_sanitizer
 
-CURATED_INPUT_DIRECTORY = './static/data/ACCESS_Software.csv'
-CURATED_OUTPUT_DIRECTORY = './static/data/staticTable.csv'
+CURATED_INPUT_DIRECTORY = './data/CSV/ACCESS_Software.csv'
+CURATED_OUTPUT_DIRECTORY = './data/CSV/staticTable.csv'
 
-GENERATED_INPUT_DIRECTORY = "./static/JSON"
-GENERATED_OUTPUT_DIRECTORY = './static/data/generatedTable.csv'
+GENERATED_INPUT_DIRECTORY = "./data/CSV/JSON"
+GENERATED_OUTPUT_DIRECTORY = './data/CSV/generatedTable.csv'
 
-FINAL_OUTPUT_DIRECTORY = './static/data/softwareTable.csv'
+FINAL_OUTPUT_DIRECTORY = './data/CSV/softwareTable.csv'
 
 JSON_KEYS = [
     'Software', 
@@ -129,16 +129,18 @@ def create_curated_table():
     df.rename(columns={'Example Software Use (link)' : 'Example Software Use'}, inplace=True)
 
     # Description Source Formatting
-    df['Software Description'] = df['Software Description'].str.replace('Description Source:', 
-                                                                        '\nDescription Source: ')
+    df['Software Description'] = df['Software Description'].str.replace(
+        'Description Source:', '\nDescription Source: ')
 
     # Make Example Links on separate lines
     df['Example Software Use'] = df['Example Software Use'].str.replace(' , ', ' \n')
 
     # Populate 'RP Software Documentation' Field
-    df['RP Software Documentation'] = df.apply(lambda row: createFullDocUrl(row['Software'], row['RP Name']), axis=1)
+    df['RP Software Documentation'] = df.apply(
+        lambda row: create_full_doc_url(row['Software'], row['RP Name']), axis=1)
 
-    # This really needs to be fixed. If we don't want these columns, get rid of them. If we do, populate them.
+    # This really needs to be fixed. If we don't want these columns, get rid of them. 
+    # If we do, populate them.
     empty_columns = ['Area-specific Examples', 'Containerized Version of Software',
                      'RP Documentations for Software', 'Pathing']
     df.drop(empty_columns,axis=1,inplace=True)

@@ -1,7 +1,5 @@
-staticTable = './staticSearch/staticTable.csv'
-
 # Hard-coded links to RP-specific Software Documentation
-rp_urls = {
+RP_URLS = {
     'Aces':'https://hprc.tamu.edu/software/aces/',
     'Anvil': 'https://www.rcac.purdue.edu/software/',
     'Bridges-2': 'https://www.psc.edu/resources/software/',
@@ -23,46 +21,45 @@ rp_urls = {
 # Here, for the RPs that do this, we're using an algorithm to point to their
 #   specific software pages.
 
-
 #################################################################
-#   createFullDocUrl                                            #
+#   create_full_doc_url                                         #
 #       Generates RP-specific documentation links for the table #
 #       Args:                                                   #
-#           softwareName: software as it appears on the table   #
-#           rpNames: list of RPs with the software installed    #
+#           software_name: software as it appears on the table  #
+#           rp_names: list of RPs with the software installed   #
 #       Return:                                                 #
-#           combinedUrls: string of formatted RP URLs           #
+#           combined_urls: string of formatted RP URLs          #
 #################################################################
-def createFullDocUrl(softwareName, rpNames):
+def create_full_doc_url(software_name, rp_names):
     has_individual_software_page = ['Anvil','Bridges-2','DARWIN']   # RPs that have specific links per software
-    rpList = rpNames.split(',')                                     # For software installed on multiple systems,
+    rp_list = rp_names.split(',')                                     # For software installed on multiple systems,
                                                                     #   split the RPs into a list for processing
 
     urls=[]
-    for rp in rpList:
-        rpName = rp.strip()                 # Strip off any whitespace 
-        rpUrl = rp_urls.get(rpName)         # Grab URL from rp_urls dictionary based on rpName
+    for rp in rp_list:
+        rp_name = rp.strip()                 # Strip off any whitespace 
+        rp_url = RP_URLS.get(rp_name)         # Grab URL from rp_urls dictionary based on rpName
 
         # For software with specific links
-        if rpName in has_individual_software_page:        
-            fullUrl = f"{rpName}: {rpUrl}{softwareName.lower()}"  # fullURL = rpName: rpUrl/softwareName
+        if rp_name in has_individual_software_page:        
+            full_url = f"{rp_name}: {rp_url}{software_name.lower()}"  # fullURL = rpName: rpUrl/softwareName
             
             # Extra Code for DARWIN links, which aren't constructed normally
-            if rpName == 'DARWIN':
-                fullUrl = f"{fullUrl}/{softwareName.lower()}"     # fullURL = rpName: rpUrl/softwareName/softwareName
+            if rp_name == 'DARWIN':
+                full_url = f"{fullUrl}/{software_name.lower()}"     # fullURL = rpName: rpUrl/softwareName/softwareName
         
         # For software from RPs with only generic documentation
-        elif rpUrl:
-            fullUrl = f"{rpName}: {rpUrl}"
+        elif rp_url:
+            full_url = f"{rp_name}: {rp_url}"
         
         # For software from RPs with no documentation at all
         else:
-            fullUrl=''
+            full_url=''
         
         # Combine URLs across multiple RPs
-        if fullUrl:
-            urls.append(fullUrl)
+        if full_url:
+            urls.append(full_url)
 
     # Format URLs so each is on a separate line in the table cell
-    combinedUrls = ' \n'.join(urls)
-    return combinedUrls
+    combined_urls = ' \n'.join(urls)
+    return combined_urls

@@ -91,11 +91,21 @@ $(document).ready(function()
                 first: "First",
                 last: "Last"
             },
+            buttons:{
+                colvis: 'Show/Hide Columns',
+                colvisRestore: 'Restore All'
+            },
+            searchBuilder: {
+                title: {
+                    0: 'Advanced Search',
+                    _: 'Advanced Search (%d)'
+                }
+            }
         },
         buttons: [{ // Column Visibility Buttons
                 extend: 'colvis',
                 collectionLayout: 'two-column',
-                popoverTitle: 'Column Visibility',
+                popoverTitle: 'Show/Hide Columns',
             },
             'colvisRestore' 
         ], 

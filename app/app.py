@@ -9,13 +9,14 @@ import re
 import json
 import pandas as pd
 from datetime import datetime
+
 app = Flask(__name__)
 
 # Main Route
 @app.route("/")
 def software_search():
     try:
-        df = pd.read_csv("./static/data/softwareTable.csv", keep_default_na=False)
+        df = pd.read_csv("./data/CSV/softwareTable.csv", keep_default_na=False)
         print("Table found!")
     except FileNotFoundError as e:
         df = create_software_table()
@@ -31,7 +32,7 @@ def get_example_use(software_name):
     if software_name == '7-Zip':
         software_name = '7z'
 
-    file_directory = "./dynamicSearch/softwareUse/"
+    file_directory = "./data/exampleUse/"
     
     normalize_software_name = re.escape(software_name).lower()
 

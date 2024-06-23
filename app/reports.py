@@ -1,14 +1,16 @@
 from datetime import datetime
 
 
-#########################################################
-#   define_and_process_reports                          #
-#       Converts AI-generated JSON software files       #
-#       into a uniform format for to facilitate         #
-#       programmatic manipulation                       #
-#       Parameters:                                     #
-#           file: the file to be formatted              #
-#########################################################
+#############################################################
+#   define_and_process_reports                              #
+#       Processing for 'Report Issue' button functionality, #
+#       allowing users to report problems to the team       #
+#       Parameters:                                         #
+#           issue_report: contents of AJAX call             #
+#       Return:                                             #
+#           report: finished user report, ready to send     #
+#                   to the server                           #
+#############################################################
 def sanitize_and_process_reports(issue_report):
     # Get user-submitted feedback from modal
     user_form = issue_report.get('formReport', '')

@@ -72,7 +72,7 @@ div.dt-button-collection.two-column{
     background-color: #1a5b6e !important;  /* Dark background color */
     color: white;   
     width: 525px;
-    border: 3px #185264d3 solid;
+    border: 5px #185264d3 solid;
 }
 /* Changes 'Column Visibility' Header */
 .dt-button-collection-title{
@@ -80,12 +80,70 @@ div.dt-button-collection.two-column{
     font-weight: bold;
     font-size: 1.1em !important;
 }
+div.dt-buttons
+{
+    margin-left: 28px;
+}
+div.dt-buttons .dt-button {
+    background-color: #1a5b6e !important;
+    color: white;
+    font-size: 1.07em;
+    border: 2px #0b4b55 solid !important;
+    border-radius: 5px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    margin: 2px;
+}
+div.dtsb-searchBuilder div.dtsb-titleRow div.dtsb-title {
+    font-weight: bold;
+}
+div.dtsb-searchBuilder button.dtsb-button {
+    background-color: #1a5b6e !important;
+    border: 2px #0b4b55 solid !important;
+    border-radius: 5px;
+    font-size: 1.07em;
+    color: white;
+}
+div.dtsb-searchBuilder button.dtsb-button:hover {
+    background-color: #107180 !important;
+}
+div.dtsb-searchBuilder div.dtsb-group div.dtsb-logicContainer{
+    background-color: #103d4b;
+}
+div.dtsb-searchBuilder div.dtsb-group div.dtsb-logicContainer button.dtsb-logic,
+div.dtsb-searchBuilder div.dtsb-group div.dtsb-logicContainer button.dtsb-clearGroup {
+    background-color: #1a5b6e !important;
+    border: 2px #103d4b solid !important;
+    border-radius: 5px;
+    color: white;
+}
+div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria select.dtsb-dropDown {
+    background-color: #1a5b6e !important;
+    border: 2px #0b4b55 solid !important;
+    border-radius: 5px;
+    color: white;
+}
+
+div.dt-container select.dt-input {
+    background-color: #1a5b6e !important;
+    border: 2px #0b4b55 solid !important;
+    color: white;
+}
+.dt-length>label{
+    margin-left:5px;
+}
+
 /* Changes the color of active buttons in 'Column Visibility' container */
 button.dt-button.buttons-columnVisibility.dt-button-active {
     background: #107180 !important;
     color: white;
     border: 3px #0f6572d0 solid !important;
     border-radius: 5px;
+}
+button.dt-button.buttons-columnVisibility {
+    border: 0 !important;
 }
 
 /* Remove shadow from searchPanes */
@@ -102,4 +160,44 @@ button.dt-button.buttons-columnVisibility.dt-button-active {
     align-items: right;
     margin-right: 50px;
     font-weight:bold;
+}
+
+.dtsp-collapseAll,
+.dtsp-showAll,
+.dtsp-clearAll{
+    background-color: #148fa1 !important;
+    color: white;
+    font-size:1.07em;
+    border: 2px #0e626e solid !important;
+    border-radius: 5px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    margin: 3px;
+}
+div.dtsp-panesContainer button.dtsp-collapseAll.dtsp-disabledButton,
+div.dtsp-panesContainer button.dtsp-showAll.dtsp-disabledButton,
+div.dtsp-panesContainer button.dtsp-clearAll.dtsp-disabledButton{
+    background-color: #1a5b6e !important;
+    border: 2px #144655 solid !important;
+    color: white;
+}
+.dtsp-collapseAll:hover,
+.dtsp-showAll:hover,
+.dtsp-clearAll:hover{
+    background-color: rgb(90, 143, 161) !important;
+}
+
+#reportIssueBtn.btn.btn-outline-danger,
+#provideFeedbackBtn.btn.btn-outline-danger{
+    background-color: rgb(130, 0, 0);
+    border: 2px rgb(65, 0, 0) solid;
+    color:white;
+    border-radius: 5px;
+    margin: 2px;
+}
+#reportIssueBtn.btn.btn-outline-danger:hover,
+#provideFeedbackBtn.btn.btn-outline-danger:hover{
+    background-color: rgb(255, 85, 85);
 }
