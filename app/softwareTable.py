@@ -4,9 +4,9 @@ import os
 import pandas as pd
 import numpy as np
 
-from app.parseJSONInfo import jsonSanitizer
-from app.parseVersionInfo import addVersionInfoToTable
+from app.parseVersionInfo import add_version_info_to_table
 from app.softwareStatic import createFullDocUrl
+from app.parseJSONInfo import json_sanitizer
 
 CURATED_INPUT_DIRECTORY = './static/data/ACCESS_Software.csv'
 CURATED_OUTPUT_DIRECTORY = './static/data/staticTable.csv'
@@ -16,7 +16,7 @@ GENERATED_OUTPUT_DIRECTORY = './static/data/generatedTable.csv'
 
 FINAL_OUTPUT_DIRECTORY = './static/data/softwareTable.csv'
 
-JSON_keys = [
+JSON_KEYS = [
     'Software', 
     'AI Description', 
     'Core Features', 
@@ -28,69 +28,90 @@ JSON_keys = [
     'Research Discipline'
     ]
 
-column_order = ['Software', 'RP Name', 'Software Type', 'Software Class', 'Research Field', 'Research Area', 
-                'Research Discipline', 'Software Description', 'Core Features', 'General Tags', "Software's Web Page",
-                'Software Documentation', 'Example Software Use', 'RP Software Documentation', 'Version Info', 'AI Description', 'Example Use']
+COLUMN_ORDER = [
+    'Software', 'RP Name', 'Software Type', 'Software Class', 'Research Field',
+    'Research Area', 'Research Discipline', 'Software Description', 
+    'Core Features', 'General Tags', "Software's Web Page", 
+    'Software Documentation', 'Example Software Use', 'RP Software Documentation', 
+    'Version Info', 'AI Description', 'Example Use'
+    ]
 
+MERGE_COLUMNS = [
+    'Software Type', 'Software Class', 'Research Area', 'Research Discipline']
 
-##################################################################
-#   createGeneratedTable                                         #
-##################################################################
-def createSoftwareTable():
-    mergeColumns = ['Software Type', 'Software Class', 'Research Area', 'Research Discipline']
-
-    # Read cached tables, if they exist
-    # Otherwise, recreate as little as necessary
+DEFINE_AI_COLUMNS = [
+    'Software Type', 'Software Class', 'Research Field', 'Research Area', 'Research Discipline',
+    'Core Features', 'General Tags', 'AI Description', 'Example Use'
+]
+#########################################################################
+#   create_software_table                                               #
+#       Creates a combined DataFrame from our curated information and   # 
+#       our AI-generated information into a DataFrame ready for HTML    #
+#       Functions                                                       #
+#           create_curated_table(): Loads curated data into DataFrame   #
+#           create_generated_table(): Loads AI data into DataFrame      #
+#       Return:                                                         #
+#           df: Pandas DataFrame of completed combined Table            #
+#########################################################################
+def create_software_table():
+    # Read cached tables if they exist
+    # Otherwise recreate as little as necessary
     try:
-        mergedDF = pd.read_csv(FINAL_OUTPUT_DIRECTORY)
+        merged_DF = pd.read_csv(FINAL_OUTPUT_DIRECTORY)
         print("Software table found!")
     except:
         print("Software table not found. Creating...")
         try:
-            staticTableDF = pd.read_csv(CURATED_OUTPUT_DIRECTORY, na_filter=False)
-            print("Static Table found!")
+            curated_table_DF = pd.read_csv(CURATED_OUTPUT_DIRECTORY, na_filter=False)
+            print("Curated Table found!")
         except:
-            staticTableDF = createStaticTable()
+            curated_table_DF = create_curated_table()
             print("Static table not found. Creating...")
         try:
-            generatedTableDF = pd.read_csv(GENERATED_OUTPUT_DIRECTORY)
+            generated_table_DF = pd.read_csv(GENERATED_OUTPUT_DIRECTORY)
             print("AI Generated table found!")
         except:
-            generatedTableDF = createGeneratedTable('f')
+            generated_table_DF = create_generated_table('f')
             print("AI Generated table not found. Creating...")
 
         # Merge tables by index
-        mergedDF = staticTableDF.merge(generatedTableDF, how='left', on='Software', suffixes=('_static', '_generated'))
-        mergedDF = mergedDF.replace('', np.nan)
+        merged_DF = curated_table_DF.merge(generated_table_DF, how='left', on='Software', suffixes=('_static', '_generated'))
+        merged_DF = merged_DF.replace('', np.nan)
+        
         # Combine matching columns, prioritizing the AI Generated information
-        for column in mergeColumns:
-            mergedDF[column] = mergedDF[column + '_generated'].combine_first(mergedDF[column + '_static'])
+        for column in MERGE_COLUMNS:
+            merged_DF[column] = merged_DF[column + '_generated'].combine_first(merged_DF[column + '_static'])
         
         # Drop the unmerged versions of columns
-        mergedDF = mergedDF.drop(columns=[column + '_static' for column in mergeColumns] + [column + '_generated' for column in mergeColumns] )
+        merged_DF = merged_DF.drop(columns=[column + '_static' for column in MERGE_COLUMNS]
+                                  + [column + '_generated' for column in MERGE_COLUMNS] )
         
-        mergedDF.insert(16, 'Example Use', '')
+        # Add 'Example Use' modals to table
+        merged_DF.insert(16, 'Example Use', '')
 
-        mergedDF = mergedDF[column_order]
-        # Cache the table for efficiency
-        mergedDF.to_csv(FINAL_OUTPUT_DIRECTORY,index=False)
+        # Finalize table
+        merged_DF = merged_DF[COLUMN_ORDER]
+        for col in merged_DF.columns:
+            if col in DEFINE_AI_COLUMNS:
+                merged_DF.rename(columns={col : '✨' + col}, inplace=True)
+
+        # Cache the table for future use
+        merged_DF.to_csv(FINAL_OUTPUT_DIRECTORY,index=False)
 
 
+    return merged_DF
 
 
-    return mergedDF
-
-
-##################################################################
-#   createStaticTable                                            #
-#       Converts our CSV file into a DataFrame ready for HTML    # 
-#       Functions                                                #
-#           createFullDocURL: Populate RP Documentation Cells    #
-#           addVersionInfoToTable: Add Version info to DataFrame #
-#       Return:                                                  #
-#           df: Pandas DataFrame of completed Static Table       #
-##################################################################
-def createStaticTable():
+#########################################################################
+#   create_curated_table                                                #
+#       Generate a DataFrame from our manually-curated CSV data         #
+#       Functions                                                       #
+#           create_full_doc_URL: Populate RP Documentation Cells        #
+#           add_version_info_to_table: Add Version info into DataFrame  #
+#       Return:                                                         #
+#           df: Pandas DataFrame of completed curated Table             #
+#########################################################################
+def create_curated_table():
     df = pd.read_csv(CURATED_INPUT_DIRECTORY,na_filter=False)  # CSV generated from Google Sheets
 
     # Ensure uniform capitalization across cells
@@ -123,7 +144,7 @@ def createStaticTable():
     df.drop(empty_columns,axis=1,inplace=True)
     
     # Add Version Info to DataFrame
-    df = addVersionInfoToTable(df)
+    df = add_version_info_to_table(df)
     df['Version Info'] = df['Version Info'].str.title()
 
     # Convert DataFrame back to CSV
@@ -133,52 +154,63 @@ def createStaticTable():
     return(df)
 
 
-##################################################################
-#   createGeneratedTable                                         #
-##################################################################
-def createGeneratedTable(override):
-    softwareDict = {}
+#################################################################
+#   create_generated_table                                      #
+#       Prepares a DataFrame from a directory of JSON files     #   
+#       generated by an AI to fill holes in our curated table   # 
+#       Functions                                               #
+#           json_sanitizer: Ensures JSON files are in a         # 
+#               consistent format that eases processing         #
+#       Parameters:
+#           override:
+#       Return:                                                 #
+#           df: Pandas DataFrame of completed generated table   #
+#################################################################
+def create_generated_table(override):
+    software_dict = {}
     # Stage the JSON Directory 
     for file in glob.glob(os.path.join(GENERATED_INPUT_DIRECTORY, '*.json')):
         # Filter out improperly created or fragmented JSON objects
         # These are usually due to some random text we added to filter them out intentionally
         # This way they don't break the entire script
         try:
+            # If the JSON is correctly formatted but needs to be processed
+            # Use this flag to force the sanitizer to run
             if override.lower() == 't':
-                forceRun = True
+                force_run = True
             else:
-                forceRun = False
+                force_run = False
             # Check if JSON has been formatted properly  
-            for key in JSON_keys:
+            for key in JSON_KEYS:
                 with open(file, 'r') as infile:
                     data = json.load(infile)
-                if key not in data.keys() or forceRun:
-                    jsonSanitizer(file)
-                    forceRun = False
-                    
-
+                if key not in data.keys() or force_run:
+                    json_sanitizer(file)
+                    force_run = False                
         except:
             print("Error reading: " + file)
             continue
 
         # Stage JSON data to be added to dictionary
-        softwareName = data['Software'].lower()
+        software_name = data['Software'].lower()
         
         # Additional overhead for specific file(s)
         # Thanks Ookami
-        if softwareName == '7-zip':     
-            softwareName = '7z'
+        if software_name == '7-zip':     
+            software_name = '7z'
             data['Software'] = '7z'
         
         # Add JSON data to dictionary
-        softwareDict[softwareName] = data
+        software_dict[software_name] = data
 
     # Alphabetizes the dictionary, mostly for user friendly CSV generation
     # Easier to make sure the CSV is doing what we want this way
-    sortedDict = dict(sorted(softwareDict.items()))
+    sorted_dict = dict(sorted(software_dict.items()))
 
     # Create the DataFrame
-    df = pd.DataFrame.from_dict(sortedDict, orient='index', columns=['Software', 'AI Description', 'Core Features', 'General Tags', 'Software Type', 'Software Class', 'Research Field', 'Research Area', 'Research Discipline'], )
+    df = pd.DataFrame.from_dict(sorted_dict, orient='index', columns=['Software', 
+        'AI Description', 'Core Features', 'General Tags', 'Software Type', 
+        'Software Class', 'Research Field', 'Research Area', 'Research Discipline'], )
     # Ensure uniformity in Software names, since this will be the index
     df['Software'] = df['Software'].str.lower()
     df.set_index('Software', inplace=True)
@@ -186,6 +218,3 @@ def createGeneratedTable(override):
     df.to_csv(GENERATED_OUTPUT_DIRECTORY)
 
     return df
-
-
-#createSoftwareTable()

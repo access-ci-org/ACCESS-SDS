@@ -1,13 +1,8 @@
 import json
 
-nested_key_path = [
-    'overview', 
-    'comprehensive_overview', 
-    'Comprehensive Overview', 
-    'comprehensive overview'
-    ]
-
-software_names = [
+# Various words and phrases that AI may use to label the related fields
+# It's safe to expand these as necessary
+SOFTWARE_ALIASES = [
     'tool', 
     'software_name', 
     'software name', 
@@ -15,34 +10,38 @@ software_names = [
     'software'
     'Software'
     ]
-
-overview_names = [
+DESCRIPTION_ALIASES = [
     'overview', 
     'comprehensive_overview', 
     'Comprehensive Overview', 
     'comprehensive overview'
     'AI Description'
     ]
-
-features_names = [
+FEATURES_ALIASES = [
     'core features', 
     'Core Features', 
     'core_features'
     ]
-
-gen_tag_names = [
+GEN_TAG_ALIASES = [
     'general tags', 
     'General Tags', 
     'general_tags'
     ]
-
-add_tag_names = [
+ADD_TAG_ALIASES = [
     'additional tags', 
     'Additional Tags', 
     'additional_tags'
     ]
-
-additional_tags_to_fix = [
+# Since every JSON should have a description, this is the most consistent way 
+# to find if data has been nested
+NESTED_KEY_PATH = [
+    'overview', 
+    'comprehensive_overview', 
+    'Comprehensive Overview', 
+    'comprehensive overview'
+    ]
+# These are used to find nested tags in an 'additional tags' field in JSONs
+ADD_TAGS_TO_FIX = [
     'software_type',
     'software_class',
     'research_field',
@@ -51,28 +50,25 @@ additional_tags_to_fix = [
     'field_of_science'
     ]
 
-JSON_keys = [
-    'Software', 
-    'AI Description', 
-    'Core Features', 
-    'General Tags', 
-    'Software Type', 
-    'Software Class',
-    'Research Field',
-    'Research Area',
-    'Research Discipline'
-    ]
-
-#########################################################
-#   jsonSanitizer                                       #
-#       Converts AI-generated JSON software files       #
-#       into a uniform format for further manipulation  #
-#       Parameters:                                     #
-#           file: the file to be formatted              #
-#########################################################
-def jsonSanitizer(file):
-    fileName = file.split('JSON/')[1]
-    #print("Sanitizing file: " + fileName)
+# Dictionary of common acronyms that should be capitalized
+# Make sure to capitalize the first letter of each entry (text is titled)
+# This ensures you don't erroneously grab random strings mid-word 
+# (such as 'thiNGS' or 'kiDNApper')
+# Add to this dictionary as necessary
+COMMON_ACRONYMS_DICT = {
+    'Dna':'DNA', 'Rna':'RNA', 'Ngs':'NGS', 'Tls':'TLS', 'Sql':'SQL',
+    'Ldap':'LDAP', 'Fea':'FEA', 'Xml':'XML', 'Hpc':'HPC'
+    }
+#########################################################################
+#   json_sanitizer                                                      #
+#       Converts AI-generated JSON software files into a uniform format #
+#        for to facilitate programmatic manipulation                    #
+#       Parameters:                                                     #
+#           file: the file to be formatted                              #
+#########################################################################
+def json_sanitizer(file):
+    file_name = file.split('JSON/')[1]
+    print("Sanitizing file: " + file_name)
 
     # Open JSON File
     with open(file, 'r') as infile:
@@ -90,6 +86,8 @@ def jsonSanitizer(file):
     #   Research Area: {}
     #   Research Discipline: {}
     #}
+    # Sometimes Research Field ends up at the bottom. This is fine.
+    # Python dictionaries don't care about order, we do this for visual clarity
 
     ###########################################
     # 1) Check if the data we want is nested  #
@@ -98,7 +96,7 @@ def jsonSanitizer(file):
     # If found, move everything out of the nest and purge the old structure
     #print("1: Checking JSON structure")
     software_name = list(data.keys())[0]   
-    for key in nested_key_path:
+    for key in NESTED_KEY_PATH:
         if key in data[software_name]:
             data['Software'] = software_name.lower()
             #print("software_name moved!")
@@ -122,37 +120,37 @@ def jsonSanitizer(file):
 
     #print("Checking software name...")
     # Check 'Software'
-    for sError in software_names:
-        if sError in data:
-            data['Software'] = data.pop(sError)
+    for software_error in SOFTWARE_ALIASES:
+        if software_error in data:
+            data['Software'] = data.pop(software_error)
             #print("Software name fixed!")      
 
     #print("Checking description...")
     # Check 'AI Description'
-    for oError in overview_names:
-        if oError in data.keys():
-            data['AI Description'] = data.pop(oError)
+    for description_error in DESCRIPTION_ALIASES:
+        if description_error in data.keys():
+            data['AI Description'] = data.pop(description_error)
             #print("Overview name fixed!")
 
     #print("Checking core features...")
     # Check 'Core Features'
-    for fError in features_names:
-        if fError in data:
-            data['Core Features'] = data.pop(fError)
+    for features_error in FEATURES_ALIASES:
+        if features_error in data:
+            data['Core Features'] = data.pop(features_error)
             #print("Features fixed!")
 
     #print("Checking general tags...")
     # Check 'General Tags'
-    for tError in gen_tag_names:
-        if tError in data:
-            data['General Tags'] = data.pop(tError)
+    for tags_error in GEN_TAG_ALIASES:
+        if tags_error in data:
+            data['General Tags'] = data.pop(tags_error)
             #print("General tags fixed!")
     
     # Capitalize tags for better searching
     count = 0
-    for gTag in data['General Tags']:
-        gTag = gTag.title()
-        data['General Tags'][count] = gTag
+    for general_tag in data['General Tags']:
+        general_tag = general_tag.title()
+        data['General Tags'][count] = general_tag
         count = count + 1
 
     # Check for 'Additional Tags'
@@ -161,19 +159,19 @@ def jsonSanitizer(file):
     
     # Remove tags from 'Additional Tags' nest
     #print("Checking additional tags...")
-    for aError in add_tag_names:
+    for additional_error in ADD_TAG_ALIASES:
         #print(aError)
-        if aError in data:
-            for tag in additional_tags_to_fix:
-                if tag in data[aError]:
-                    data[tag] = data[aError][tag] 
-                    data[aError].pop(tag)
+        if additional_error in data:
+            for tag in ADD_TAGS_TO_FIX:
+                if tag in data[additional_error]:
+                    data[tag] = data[additional_error][tag] 
+                    data[additional_error].pop(tag)
                 else:
                     data[tag] = ""
-            data.pop(aError)
+            data.pop(additional_error)
            
     # Sanitize tag names and contents
-    for tag in additional_tags_to_fix:
+    for tag in ADD_TAGS_TO_FIX:
         # Check for missing or null values, which will break things later on
         if tag not in data or data[tag] is None:
             data[tag] = ""
@@ -185,6 +183,9 @@ def jsonSanitizer(file):
                         data['Software Type'] = data.pop('software_type')
                     else:
                         data.pop('software_type')
+                        # This is done in each case to preserve formatting
+                        # Purely for visual clarity to the reader
+                        # Easier to tell if data was sanitized properly
                         data['Software Type'] = data.pop('Software Type')
                 
                 case 'software_class':
@@ -222,23 +223,27 @@ def jsonSanitizer(file):
                         data.pop('research_area')
                         data['Research Area'] = data.pop('Research Area')            
 
+    # Turn lists into strings, and do basic text formatting on them
     for element in data:
         if isinstance(data[element], list):
-            listStr = ""
+            list_str = ""
             for str in data[element]:
-                if listStr == "":
-                    listStr = str
+                if list_str == "":
+                    list_str = str
                 else:
-                    listStr = listStr + ", " + str
-                data[element] = listStr.title()
-        if "Rna" in data[element] or "Dna" in data[element]:
-            data[element] = data[element].replace("Rna", "RNA")
-            data[element] = data[element].replace("Dna", "DNA")
-        if element not in software_names or element not in overview_names:
+                    list_str = list_str + ", " + str
+                data[element] = list_str.title()
+
+        # Capitalize known/common acronyms for professionalism
+        for acronym in COMMON_ACRONYMS_DICT:
+            if acronym in data[element]:
+                data[element] = data[element].replace(acronym, COMMON_ACRONYMS_DICT[acronym])
+
+        # Replace 'And' in anything but software names and descriptions
+        if element not in SOFTWARE_ALIASES or element not in DESCRIPTION_ALIASES:
             if "And" in data[element]:
                 data[element] = data[element].replace("And", "&")
             
-
     # Save updated JSON file
     with open(file, 'w') as infile:
         json.dump(data, infile, indent=4)

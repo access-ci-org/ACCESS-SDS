@@ -2,30 +2,29 @@ from flask import Flask, render_template, jsonify, send_file, request
 from dotenv import load_dotenv
 from app.reports import sanitize_and_process_reports
 from app.feedback import sanitize_and_process_feedback
-from app.softwareTable import createSoftwareTable
+from app.softwareTable import create_software_table
 
 import os
 import re
 import json
 import pandas as pd
-import numpy as np
 from datetime import datetime
-from urllib.request import urlopen
 app = Flask(__name__)
 
+# Main Route
 @app.route("/")
 def software_search():
     try:
         df = pd.read_csv("./static/data/softwareTable.csv", keep_default_na=False)
         print("Table found!")
     except FileNotFoundError as e:
-        df = createSoftwareTable()
+        df = create_software_table()
         print(e)
     
     table = df.to_html(classes='table-striped" id = "softwareTable',index=False,border=1).replace('\\n', '<br>')
     return render_template("software_search.html",table=table)
 
-
+# 'Example Use' Modal Route
 @app.route("/example_use/<software_name>")
 def get_example_use(software_name):
     
@@ -49,6 +48,7 @@ def get_example_use(software_name):
         print(e)
         return(jsonify({"use": '**Unable to find use case record**'})), 500
 
+# 'Report Issue' Button Route
 @app.route("/report-issue", methods=['POST'])
 def report_issue():
     issue_report = request.get_json()
@@ -57,19 +57,12 @@ def report_issue():
         report = sanitize_and_process_reports(issue_report)
         current_datetime = report['datetime']
 
-        #capture_data_url = report['captureDataUrl']
-        #report.pop('captureDataUrl')
-
         report_folder = os.path.join('reports', current_datetime)
         os.makedirs(report_folder, exist_ok=True)
         report_filename = os.path.join(report_folder, 'report.json')
         with open(report_filename, 'w') as f:
             json.dump(report, f, indent=4)
 
-        #capture_data = urlopen(capture_data_url).read()
-        #capture_filename = os.path.join(report_folder, report['captureFilename'])
-        #with open(capture_filename, 'wb') as f:
-        #    f.write(capture_data)
     else:
         current_datetime = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
         report_folder = os.path.join('reports', current_datetime)

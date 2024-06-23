@@ -21,36 +21,30 @@
     background-color: #1a5b6e;
     border: 1px #185264d3 solid;
 }
-.softwareDetailsModal .modal-footer{
-    padding: 5px;
-    background-color: #1a5b6e;
-    border: 2px #185264d3 solid;
-}
 
-
-
-/* Line Spacer inside Modal */
-#softwareDetailsBody hr{
-    border:0;
-    height:1px;
-    background-color:#154757;
-    border-color:#154757;
-}
- 
 /* Shadow around left column in softwareDetails modal */
 #softwareDetailsBody .borderCell{
+    background-color:#1a5b6e;
+    color:white;
     border: 3px #154e5fd5 solid;
-    border-radius: 5px;
+    border-radius: 6px;
 }
-
 /* Shadow around right column in softwareDetails modal */
 #softwareDetailsBody .borderValue{
+    background-color:#107180;
+    color:white;
     border: 3px #0c5a66d5 solid;
-    border-radius: 5px;
+    border-radius: 6px;
 }
-
 /* Increase contrast of links inside softwareDetails modal */
 #softwareDetailsBody a {
     color: #adfbff;
 }
-
+/* Line Spacer inside Modal */
+#softwareDetailsBody hr{
+    border:0;
+    height:1px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    background-color:#0c5a66d5;
+}

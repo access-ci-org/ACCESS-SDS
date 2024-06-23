@@ -116,7 +116,7 @@ def convertRPDictToDataFrame():
 #       Return:                                                             #
 #           merged_df: Static DataFrame merged with Version Info DataFrame  #
 #############################################################################
-def addVersionInfoToTable(static_df):
+def add_version_info_to_table(static_df):
     version_df = convertRPDictToDataFrame()
     merged_df = static_df.merge(version_df, how='left', on='Software')  # 'Left' Join returns all rows from static_df
                                                                         #   and adds version_df to them based on the

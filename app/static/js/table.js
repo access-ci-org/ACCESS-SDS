@@ -49,6 +49,7 @@ $(document).ready(function()
     Enabled: Buttons (Column Visibility), FixedColumn, FixedHeader, SearchBuilder, SearchPanes, Select //
 *////////////////////////////////////////////////////////////////////////////////////////////////////////
     staticTable = $('#softwareTable').DataTable({
+
         select: {           // Allows for selecting rows in tables/searchPanes
             enabled: true,
             style: 'multi', // Select multiple rows, deselect by clicking again
@@ -444,24 +445,28 @@ $(document).ready(function()
                     }
                     return data;
             }}, 
-            //{ width: '50px' , targets: [0,2] },
-            { width: '100px', targets: [1,3,4,5,6] },
-            { width: '150px', targets: [14] },
-            { width: '200px', targets: [9] },
-            { width: '300px', targets: [10,11,12,13] },
-            { width: '400px', targets: [8, 15] },
-            { width: '500px', targets: [7] },
-        ]
+            { width: '75px', targets: [1] },    // RP Names
+            { width: '106px', targets: [16], className: 'dt-center'}, // Example Use Button
+            { width: '116px', targets: [5]},    // Research Area
+            { width: '117px', targets: [2,4]},  // Software Type, Research Field
+            { width: '119px', targets: [3]},    // Software Class
+            { width: '142px', targets: [14]},   // Version Info
+            { width: '150px', targets: [6]},    // Research Discipline
+            { width: '200px', targets: [9]},    // General Tags
+            { width: '300px', targets: [10,11,12,13] }, // Software Links
+            { width: '400px', targets: [8,15]}, // Core Features, AI Description
+            { width: '500px', targets: [7]},    // Software Description
+        ],
     });
 
-    // Prevent clicking links in the table from Selecting the row
-    $('#softwareTable').on('click', 'a', function(e) {
-        // Ensures this event listener doesn't trample 'Report Issue' event
-        if ($("#reportIssueText").text() != 'Cancel')
-        {
-            e.stopPropagation();
-        }
-    }); 
+// Prevent clicking links in the table from Selecting the row
+$('#softwareTable').on('click', 'a', function(e) {
+    // Ensures this event listener doesn't trample 'Report Issue' event
+    if ($("#reportIssueText").text() != 'Cancel')
+    {
+        e.stopPropagation();
+    }
+}); 
 
 /*////////////////////
     Mouse Scrolling //
@@ -624,6 +629,7 @@ $(document).ready(function()
             rowData[6] = rowData[6].replace('Description Source', '<hr>Description Source');
         }
 
+        rowData[7] = rowData[7].replaceAll('<br>', '<hr>');
         // Visually separate multiple entries with line divider
         rowData[12] = rowData[12].replaceAll('<br>', '<hr>');
         rowData[13] = rowData[13].replaceAll('<br>', '<hr>');
@@ -634,11 +640,11 @@ $(document).ready(function()
         $('#softwareDetails-modal-title').html("Software Details: " + rowData[0]);
         $('#softwareDetailsName').text(rowData[0]);
         $('#softwareDetailsRPs').text(rowData[1]);
-        $('#softwareDetailsType').text(rowData[2]);
-        $('#softwareDetailsClass').text(rowData[3]);
-        $('#softwareDetailsField').text(rowData[4]);
-        $('#softwareDetailsArea').text(rowData[5]);
-        $('#softwareDetailsDiscipline').text(rowData[6]);
+        $('#softwareDetailsType').html(rowData[2]);
+        $('#softwareDetailsClass').html(rowData[3]);
+        $('#softwareDetailsField').html(rowData[4]);
+        $('#softwareDetailsArea').html(rowData[5]);
+        $('#softwareDetailsDiscipline').html(rowData[6]);
         $('#softwareDetailsDescription').html(makeLinkClickable(rowData[7]));
         $('#softwareDetailsWebpage').html(makeLinkClickable(rowData[10]));
         $('#softwareDetailsDocumentation').html(makeLinkClickable(rowData[11]));
