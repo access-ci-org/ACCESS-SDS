@@ -10,150 +10,184 @@
       <div class="modal-body" id="softwareDetailsBody">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-md-6 borderCell">
-              <p><h5><b>Curated Information</b></h5></p>
-              <div class="row">
-                <div class="col-md-4 borderCell">
-                  <p><b>Software Name:</b></p>
-                </div>
-                <div class="col-md-8 borderValue">
-                  <p id="softwareDetailsName">This is a software. It does very cool things.</p>
-                </div>
+
+            <div class="col-md-6" style="background-color: #0f343f;">
+              <div class="row borderColumn" data-toggle="collapse" data-target="#curatedSoftwareDetails">
+                <p><h5><b>Curated Information</b></h5></p>
               </div>
               <div class="row">
-                <div class="col-md-4 borderCell">
-                  <p><b>Available on these RPs:</b></p>
-                </div>
-                <div class="col-md-8 borderValue">
-                  <p id="softwareDetailsRPs">Very cool HPCs will be listed here.</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-4 borderCell">
-                  <p><b>Software Type:</b></p>
-                </div>
-                <div class="col-md-8 borderValue">
-                  <p id="softwareDetailsType">Lorem ipsum dolor sit amet.</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-4 borderCell">
-                  <p><b>Software Class:</b></p>
-                </div>
-                <div class="col-md-8 borderValue">
-                  <p id="softwareDetailsClass">sem at dapibus interdum,</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-4 borderCell">
-                  <p><b>Research Field:</b></p>
-                </div>
-                <div class="col-md-8 borderValue">
-                  <p id="softwareDetailsField">Nulla malesuada ipsum id accumsan gravida.</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-4 borderCell">
-                  <p><b>Research Area:</b></p>
-                </div>
-                <div class="col-md-8 borderValue">
-                  <p id="softwareDetailsArea">consectetur adipiscing elit.</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-4 borderCell">
-                  <p><b>Research Discipline:</b></p>
-                </div>
-                <div class="col-md-8 borderValue">
-                  <p id="softwareDetailsDiscipline">Duis condimentum nisi ac velit maximus blandit.</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-4 borderCell">
-                  <p><b>Software Description:</b></p>
-                </div>
-                <div class="col-md-8 borderValue">
-                  <p id="softwareDetailsDescription">Nullam dapibus aliquam nunc vel feugiat.</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-4 borderCell">
-                  <p><b>Software Description:</b></p>
-                </div>
-                <div class="col-md-8 borderValue">
-                  <p id="softwareDetailsWebpage">Morbi ut accumsan diam.</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-4 borderCell">
-                  <p><b>Software's Documentation:</b></p>
-                </div>
-                <div class="col-md-8 borderValue">
-                  <p id="softwareDetailsDocumentation">Proin lorem nisl,</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-4 borderCell">
-                  <p><b>Tutorials/Examples of Software's Use:</b></p>
-                </div>
-                <div class="col-md-8 borderValue">
-                  <p id="softwareDetailsExamples">dapibus et elementum a,</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-4 borderCell">
-                  <p><b>Resource Provider Specific Documentation:</b></p>
-                </div>
-                <div class="col-md-8 borderValue">
-                  <p id="softwareDetailsRPDocs">pulvinar ut tortor.</p>
-                </div>
-              </div> 
-              <div class="row">
-                <div class="col-md-4 borderCell">
-                  <p><b>Installed Versions:</b></p>
-                </div>
-                <div class="col-md-8 borderValue">
-                  <p id="softwareDetailsVersions">Mauris consectetur,</p>
+                <div class="col-md-12 collapse show" id="curatedSoftwareDetails">
+
+                  <div class="row">
+                    <div class="col-md-4 borderCell" data-toggle="collapse" data-target="#curatedName">
+                      <p><b>Software Name:</b></p>
+                    </div>
+                    <div class="col-md-8 borderValue collapse show" id="curatedName">
+                      <p id="softwareDetailsName">This is a software. It does very cool things.</p>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-4 borderCell" data-toggle="collapse" data-target="#curatedRPs">
+                      <p><b>Available on these RPs:</b></p>
+                    </div>
+                    <div class="col-md-8 borderValue collapse show" id="curatedRPs">
+                      <p id="softwareDetailsRPs">Very cool HPCs will be listed here.</p>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-4 borderCell" data-toggle="collapse" data-target="#curatedDescription">
+                      <p><b>Software Description:</b></p>
+                    </div>
+                    <div class="col-md-8 borderValue collapse show" id ="curatedDescription">
+                      <p id="softwareDetailsDescription">Nullam dapibus aliquam nunc vel feugiat.</p>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-4 borderCell" data-toggle="collapse" data-target="#curatedWebpage">
+                      <p><b>Software's Web Page:</b></p>
+                    </div>
+                    <div class="col-md-8 borderValue collapse show" id="curatedWebpage">
+                      <p id="softwareDetailsWebpage">Morbi ut accumsan diam.</p>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-4 borderCell" data-toggle="collapse" data-target="#curatedDocumentation">
+                      <p><b>Software's Documentation:</b></p>
+                    </div>
+                    <div class="col-md-8 borderValue collapse show" id="curatedDocumentation">
+                      <p id="softwareDetailsDocumentation">Proin lorem nisl,</p>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-4 borderCell" data-toggle="collapse" data-target="#curatedTutorial">
+                      <p><b>Tutorials or Examples of Software's Use:</b></p>
+                    </div>
+                    <div class="col-md-8 borderValue collapse show" id="curatedTutorial">
+                      <p id="softwareDetailsExamples">dapibus et elementum a,</p>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-4 borderCell" data-toggle="collapse" data-target="#curatedRPDoc">
+                      <p><b>Resource Provider Specific Documentation:</b></p>
+                    </div>
+                    <div class="col-md-8 borderValue collapse show" id="curatedRPDoc">
+                      <p id="softwareDetailsRPDocs">pulvinar ut tortor.</p>
+                    </div>
+                  </div> 
+
+                  <div class="row">
+                    <div class="col-md-4 borderCell" data-toggle="collapse" data-target="#curatedVersions">
+                      <p><b>Installed Versions:</b></p>
+                    </div>
+                    <div class="col-md-8 borderValue collapse show" id="curatedVersions">
+                      <p id="softwareDetailsVersions">Mauris consectetur,</p>
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </div>
             
-            <div class="col-md-6 borderCell">
+            <div class="col-md-6" style="background-color: #0f343f;">
+              <div class="row borderColumn" data-toggle="collapse" data-target="#generatedSoftwareDetails">
                 <p><h5><b>✨ AI Generated Information</b></h5></p>
-                <div class="row">
-                  <div class="col-md-4 borderCell">
-                    <p><b>Description:</b></p>
+              </div>
+              <div class="row">
+                <div class="col-md-12 collapse show" id="generatedSoftwareDetails">
+
+                  <div class="row">
+                    <div class="col-md-4 borderCell" data-toggle="collapse" data-target="#curatedType">
+                      <p><b>Software Type:</b></p>
+                    </div>
+                    <div class="col-md-8 borderValue collapse show" id="curatedType">
+                      <p id="softwareDetailsType">Lorem ipsum dolor sit amet.</p>
+                    </div>
                   </div>
-                  <div class="col-md-8 borderValue">
-                    <p id="softwareDetailsAIDesc">Mauris tellus eros,</p>
+
+                  <div class="row">
+                    <div class="col-md-4 borderCell" data-toggle="collapse" data-target="#curatedClass">
+                      <p><b>Software Class:</b></p>
+                    </div>
+                    <div class="col-md-8 borderValue collapse show" id="curatedClass">
+                      <p id="softwareDetailsClass">sem at dapibus interdum,</p>
+                    </div>
                   </div>
+
+                  <div class="row">
+                    <div class="col-md-4 borderCell" data-toggle="collapse" data-target="#curatedField">
+                      <p><b>Research Field:</b></p>
+                    </div>
+                    <div class="col-md-8 borderValue collapse show" id="curatedField">
+                      <p id="softwareDetailsField">Nulla malesuada ipsum id accumsan gravida.</p>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-4 borderCell" data-toggle="collapse" data-target="#curatedArea">
+                      <p><b>Research Area:</b></p>
+                    </div>
+                    <div class="col-md-8 borderValue collapse show" id="curatedArea">
+                      <p id="softwareDetailsArea">consectetur adipiscing elit.</p>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-4 borderCell" data-toggle="collapse" data-target="#curatedDiscipline">
+                      <p><b>Research Discipline:</b></p>
+                    </div>
+                    <div class="col-md-8 borderValue collapse show" id="curatedDiscipline">
+                      <p id="softwareDetailsDiscipline">Duis condimentum nisi ac velit maximus blandit.</p>
+                    </div>
+                  </div>
+              
+                  <div class="row">
+                    <div class="col-md-4 borderCell" data-toggle="collapse" data-target="#generatedDescription">
+                      <p><b>Description:</b></p>
+                    </div>
+                    <div class="col-md-8 borderValue collapse show" id="generatedDescription">
+                      <p id="softwareDetailsAIDesc">Mauris tellus eros,</p>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-4 borderCell" data-toggle="collapse" data-target="#generatedFeatures">
+                      <p><b>Core Features:</b></p>
+                    </div>
+                    <div class="col-md-8 borderValue collapse show" id="generatedFeatures">
+                      <p id="softwareDetailsCoreFeat">suscipit vel nulla nec,</p>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-4 borderCell" data-toggle="collapse" data-target="#generatedTags">
+                      <p><b>Tags:</b></p>
+                    </div>
+                    <div class="col-md-8 borderValue collapse show" id="generatedTags">
+                      <p id="softwareDetailsTags">fringilla convallis ipsum.</p>
+                    </div>
+                  </div>
+
                 </div>
-                <div class="row">
-                  <div class="col-md-4 borderCell">
-                    <p><b>Core Features:</b></p>
-                  </div>
-                  <div class="col-md-8 borderValue">
-                    <p id="softwareDetailsCoreFeat">suscipit vel nulla nec,</p>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-4 borderCell">
-                    <p><b>Tags:</b></p>
-                  </div>
-                  <div class="col-md-8 borderValue">
-                    <p id="softwareDetailsTags">fringilla convallis ipsum.</p>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-12 borderCell"> 
-                    <b><p id="modalExampleTitle">Example Use:</p></b>
-                  </div>             
-                </div>
-                <div class="row">
-                  <div class="col-md-12 borderCell" style="background-color:white;color:black;"> 
-                    <p id="modalExampleUse">Example Use:</p>
-                  </div>             
-                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 borderExample" data-toggle="collapse" data-target="#modalExampleUse">
+                  <p><b>Example Use (Click to Show):</b></p>
+                </div>            
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 borderCell collapse" id="modalExampleUse" style="background-color:white;color:black;"> 
+                  <p>Example Use Goes Here</p>
+                </div>             
+              </div>
+
             </div>
           </div>
         </div>

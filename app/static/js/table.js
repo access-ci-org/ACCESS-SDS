@@ -133,57 +133,57 @@ $(document).ready(function()
                             label: 'Aces',
                             value: function(rowData, rowIdx) {
                                 return rowData[1].toLowerCase().includes('aces');
-                            }},                        
+                        }},                        
                         {
                             label: 'Anvil',
                             value: function(rowData, rowIdx) {
                                 return rowData[1].toLowerCase().includes('anvil');
-                            }},
+                        }},
                         {
                             label: 'Bridges-2',
                             value: function(rowData, rowIdx) {
                                 return rowData[1].toLowerCase().includes('bridges-2');
-                            }},
+                        }},
                         {
                             label: 'DARWIN',
                             value: function(rowData, rowIdx) {
                                 return rowData[1].toLowerCase().includes('darwin');
-                            }},                        
+                        }},                        
                         {
                             label: 'Delta',
                             value: function(rowData, rowIdx) {
                                 return rowData[1].toLowerCase().includes('delta');
-                            }},                        
+                        }},                        
                         {
                             label: 'Expanse',
                             value: function(rowData, rowIdx) {
                                 return rowData[1].toLowerCase().includes('expanse');
-                            }},                        
+                        }},                        
                         {
                             label: 'Faster',
                             value: function(rowData, rowIdx) {
                                 return rowData[1].toLowerCase().includes('faster');
-                            }},                        
+                        }},                        
                         {
                             label: 'Jetstream',
                             value: function(rowData, rowIdx) {
                                 return rowData[1].toLowerCase().includes('jetstream');
-                            }},                        
+                        }},                        
                         {
                             label: 'Kyric',
                             value: function(rowData, rowIdx) {
                                 return rowData[1].toLowerCase().includes('kyric');
-                            }},                        
+                        }},                        
                         {
                             label: 'Ookami',
                             value: function(rowData, rowIdx) {
                                 return rowData[1].toLowerCase().includes('ookami');
-                            }},                        
+                        }},                        
                         {
                             label: 'Stampede-3',
                             value: function(rowData, rowIdx) {
                                 return rowData[1].toLowerCase().includes('stampede3');
-                            }}                        
+                        }}                        
             ]}},             
             {   // Pane 2: Software Type     
                 targets: [2],           
@@ -194,98 +194,77 @@ $(document).ready(function()
                             label: 'API',
                             value: function(rowData, rowIdx) {
                                 return rowData[2].toLowerCase().includes('api');
-                            }
-                        },
+                        }},
                         {
                             label: 'Application',
                             value: function(rowData, rowIdx) {
                                 return rowData[2].toLowerCase().includes('application');
-                            }
-                        },
+                        }},
                         {
                             label: 'Command Line',
                             value: function(rowData, rowIdx) {
                                 return rowData[2].toLowerCase().includes('command');
-                            }
-                        },
+                        }},
                         {
                             label: 'Compiler',
                             value: function(rowData, rowIdx) {
                                 return rowData[2].toLowerCase().includes('compiler');
-                            }
-                        },
+                        }},
                         {
                             label: 'Editor',
                             value: function(rowData, rowIdx) {
                                 return rowData[2].toLowerCase().includes('editor');
-                            }
-                        },
+                        }},
                         {
                             label: 'Framework',
                             value: function(rowData, rowIdx) {
                                 return rowData[2].toLowerCase().includes('framework');
-                            }
-                        },
+                        }},
                         {
                             label: 'Language',
                             value: function(rowData, rowIdx) {
                                 return rowData[2].toLowerCase().includes('language');
-                            }
-                        },
+                        }},
                         {
                             label: 'Library',
                             value: function(rowData, rowIdx) {
                                 return rowData[2].toLowerCase().includes('library');
-                            }
-                        },
+                        }},
                         {
                             label: 'Package',
                             value: function(rowData, rowIdx) {
                                 return rowData[2].toLowerCase().includes('package');
-                            }
-                        },
+                        }},
                         {
                             label: 'Parser',
                             value: function(rowData, rowIdx) {
                                 return rowData[2].toLowerCase().includes('pars');
-                            }
-                        },
+                        }},
                         {
                             label: 'Plugin',
                             value: function(rowData, rowIdx) {
                                 return rowData[2].toLowerCase().includes('plug');
-                            }
-                        },
+                        }},
                         {
                             label: 'Service',
                             value: function(rowData, rowIdx) {
                                 return rowData[2].toLowerCase().includes('service');
-                            }
-                        },
+                        }},
                         {
                             label: 'Software',
                             value: function(rowData, rowIdx) {
                                 return rowData[2].toLowerCase().includes('software');
-                            }
-                        },
-                        {
-                            label: 'Service',
-                            value: function(rowData, rowIdx) {
-                                return rowData[2].toLowerCase().includes('service');
-                            }
-                        },
+                        }},
                         {
                             label: 'Toolkit',
                             value: function(rowData, rowIdx) {
                                 return rowData[2].toLowerCase().includes('toolkit');
-                            }
-                        },
+                        }},
                         {
                             label: 'Utility',
                             value: function(rowData, rowIdx) {
                                 return rowData[2].toLowerCase().includes('utility');
-                            }
-                        },
+                        }},
             ]}},   
             {   // Pane 3: Research Area 
                 targets: [5],               
@@ -293,35 +272,80 @@ $(document).ready(function()
                     className: 'noShadow',
                     options: [
                         {
-                            label: 'Climate/Weather',
+                            label: 'Artificial Intelligence',
                             value: function(rowData, rowIdx) {
-                                return rowData[5].toLowerCase().includes('climate');
-                            }},                        
+                                return /\b(ai|artificial intelligence|machine learning|deep learning|natural language)\b/i.test(rowData[5]);
+                        }}, 
+                        {
+                            label: 'Astronomy/Cosmology',
+                            value: function(rowData, rowIdx) {
+                                return /(astro|cosmo)/i.test(rowData[5]);
+                        }}, 
+                        {
+                            label: 'Biology',
+                            value: function(rowData, rowIdx) {
+                                return /(bio|genom|DNA|genet|sequenc|ngs|population|prote|sciences|transcriptomics)/i.test(rowData[5]);
+                        }}, 
+                        {
+                            label: 'Chemistry',
+                            value: function(rowData, rowIdx) {
+                                return rowData[5].toLowerCase().includes('chemistry');
+                        }}, 
+                        {
+                            label: 'Climate & Meteorology',
+                            value: function(rowData, rowIdx) {
+                                return /(climate|weather|meteor)/i.test(rowData[5]);
+                        }},                        
                         {
                             label: 'Computer Science',
                             value: function(rowData, rowIdx) {
-                                return rowData[5].toLowerCase().includes('computer science');
-                            }},                        
+                                return /(comput|network|cyber|operating systems|program|software|visualization)/i.test(rowData[5]);
+                        }},                        
                         {
-                            label: 'Data Management',
+                            label: 'Data Science/Management',
                             value: function(rowData, rowIdx) {
-                                return rowData[5].toLowerCase().includes('data management');
-                            }},                        
+                                return /(data|info|infra)/i.test(rowData[5]);
+                        }},   
+                        {
+                            label: 'Ecology/Hydrology',
+                            value: function(rowData, rowIdx) {
+                                return /(ecology|environmental|hydro)/i.test(rowData[5]);
+                        }},                      
                         {
                             label: 'Engineering',
                             value: function(rowData, rowIdx) {
-                                return rowData[5].toLowerCase().includes('engineering');
-                            }},                        
+                                return /(engineering|electrical|robotic)/i.test(rowData[5]);
+                        }},  
+                        {
+                            label: 'Health Sciences',
+                            value: function(rowData, rowIdx) {
+                                return /(health|epidemiolog|cancer|immun|medic)/i.test(rowData[5]);
+                        }},                       
                         {
                             label: 'General Use',
                             value: function(rowData, rowIdx) {
                                 return rowData[5].toLowerCase().includes('general');
-                            }},                        
+                        }}, 
                         {
-                            label: 'Sciences',
+                            label: 'Genetics',
                             value: function(rowData, rowIdx) {
-                                return rowData[5].toLowerCase().includes('sciences');
-                            }},                        
+                                return rowData[5].toLowerCase().includes('genet');
+                        }}, 
+                        {
+                            label: 'Mathematics',
+                            value: function(rowData, rowIdx) {
+                                return /(mathematics|statistics|geometry|graph|number|numer|optimization|quant)/i.test(rowData[5]);
+                        }},  
+                        {
+                            label: 'Physics',
+                            value: function(rowData, rowIdx) {
+                                return /(physics|dynamics|spectro)/i.test(rowData[5]);
+                        }},                       
+                        {
+                            label: 'Neurology/Psychology',
+                            value: function(rowData, rowIdx) {
+                                return /(neuro|psych)/i.test(rowData[5]);
+                        }},                        
             ]}},
             {   // Pane 4: General Tags 
                 targets: [9],               
@@ -333,92 +357,137 @@ $(document).ready(function()
                             label: '2D',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('2d');
-                            }},
+                        }},
                         {
                             label: '3D',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('3d');
-                            }},   
+                        }},   
                         {
                             label: 'Artificial Intelligence',
                             value: function(rowData, rowIdx) {
                                 return /\b(ai|artificial intelligence)\b/i.test(rowData[9]);
-                            }},                         
+                        }},                         
                         {
                             label: 'Assembly',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('assembl');
-                            }},
+                        }},
                         {
                             label: 'Astronomy',
                             value: function(rowData, rowIdx) {
-                                return rowData[9].toLowerCase().includes('astronomy');
-                            }},
+                                return rowData[9].toLowerCase().includes('astro');
+                        }},
                         {
                             label: 'Audio',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('audio');
-                            }},
+                        }},
                         {
                             label: 'Bioinformatics',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('bioinformatics');
-                            }},
+                        }},
                         {
                             label: 'C++',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('c++');
-                            }},
+                        }},
                         {
-                            label: 'Genetics',
+                            label: 'CUDA',
                             value: function(rowData, rowIdx) {
-                                return rowData[9].toLowerCase().includes('genetic');
-                            }},
+                                return rowData[9].toLowerCase().includes('cuda');
+                        }},
+                        {
+                            label: 'Genetics/Genomics',
+                            value: function(rowData, rowIdx) {
+                                return /(gene|genom)/i.test(rowData[9]);
+                        }},
+                        {
+                            label: 'GPU',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('gpu');
+                        }},
+                        {
+                            label: 'Graph',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('graph');
+                        }},
                         {
                             label: 'GUI',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('gui');
-                            }},
+                        }},
                         {
                             label: 'High Performance Computing',
                             value: function(rowData, rowIdx) {
                                 return /\b(hpc|high[-\s]performance computing)\b/i.test(rowData[9]);
-                            }},
+                        }},
+                        {
+                            label: 'HTML',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('html');
+                        }},
                         {
                             label: 'Imaging',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('imag');
-                            }}, 
+                        }}, 
+                        {
+                            label: 'Library',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('library');
+                        }}, 
                         {
                             label: 'Machine Learning',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('machine learning');
-                            }},
+                        }},
                         {
                             label: 'Open Source',
                             value: function(rowData, rowIdx) {
                                 return /open[\s-]source/i.test(rowData[9]);
-                            }},
+                        }},
+                        {
+                            label: 'Parser',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('parser');
+                        }},
                         {
                             label: 'Python',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('python');
-                            }},
+                        }},
                         {
                             label: 'Sequencing',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('sequencing');
-                            }},
+                        }},
+                        {
+                            label: 'Software',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('software');
+                        }},
                         {
                             label: 'User Interface',
                             value: function(rowData, rowIdx) {
                                 return /\b(ui|user[\s-]interface)\b/i.test(rowData[9]);
-                            }},
+                        }},
                         {
                             label: 'Visualization',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('visualization');
-                            }},              
+                        }}, 
+                        {
+                            label: 'XML',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('xml');
+                        }}, 
+                        {
+                            label: 'YAML',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('yaml');
+                        }},          
             ]}},
             {   // Disables all other columns not explicitly shown from displaying as Panes
                 //targets: [9, 14, 15],
@@ -468,18 +537,32 @@ $(document).ready(function()
         ],
     });
 
-// Prevent clicking links in the table from Selecting the row
-$('#softwareTable').on('click', 'a', function(e) {
-    // Ensures this event listener doesn't trample 'Report Issue' event
-    if ($("#reportIssueText").text() != 'Cancel')
-    {
-        e.stopPropagation();
-    }
-}); 
+    // Prevent clicking links in the table from Selecting the row
+    $('#softwareTable').on('click', 'a', function(e) {
+        // Ensures this event listener doesn't trample 'Report Issue' event
+        if ($("#reportIssueText").text() != 'Cancel')
+        {
+            e.stopPropagation();
+        }
+    }); 
 
-/*////////////////////
-    Mouse Scrolling //
-*/////////////////////
+    // Return softwareDetails modal to default state when closed
+    $('#softwareDetails-modal').on('hidden.bs.modal', function() {
+        $('.collapse').each(function() {
+            // Reopen all closed drawers except for Example Use
+            if ($(this).attr('id') !== 'modalExampleUse' && !$(this).hasClass('show')) {
+            $(this).addClass('show');
+            } 
+            // Reclose Example Use
+            else if ($(this).attr('id') == 'modalExampleUse' && $(this).hasClass('show')) {
+            $(this).removeClass('show');
+            }
+        });
+    });
+
+    /*////////////////////
+        Mouse Scrolling //
+    */////////////////////
     var $scrollBody = $('div.dt-scroll-body:last')
     var scrollSensitivity = 100; // Distance from edge in pixels.
     var scrollSpeed = 7; // Speed of the scroll step in pixels.
