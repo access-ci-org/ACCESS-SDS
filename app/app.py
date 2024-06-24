@@ -106,14 +106,14 @@ def process_feedback():
     return jsonify({'success': 'Feedback processed successfully'})
 
 
-
-
-## TESTING-IGNORE ##
+######################
+### TESTING-IGNORE ###
+######################
 # Set up basic logging
-logging.basicConfig(level=logging.DEBUG)
+#logging.basicConfig(level=logging.DEBUG)
 
-@app.route("/data", methods=['POST'])
-def data():
+#@app.route("/data", methods=['POST'])
+#def data():
     try:
         # Log start of the request processing
         logging.debug("Starting to process request")
@@ -182,6 +182,9 @@ def data():
     except Exception as e:
         logging.error(f"Error occurred: {e}")
         return jsonify({"error": str(e)})
+##################
+### END IGNORE ###
+##################
 
 
 # Display Images
