@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     width: auto;
-    max-width:50%;
+    max-width:70%;
 }
 
 .softwareDetailsModal .modal-content{
@@ -24,6 +24,7 @@
     border: 1px #144352 solid;
 }
 
+/* Custom class to format collapsable columns*/
 #softwareDetailsBody .borderColumn{
     background: linear-gradient(to bottom, rgba(230, 230, 230, 0.1) 0%, rgba(0, 0, 0, 0.2) 100%) !important;
     background-color:#1a5b6e !important;
@@ -37,7 +38,7 @@
     justify-content: center;
     cursor:pointer;
 }
-
+/* Custom class for 'Example Use' */
 #softwareDetailsBody .borderExample{
     background: linear-gradient(to bottom, rgba(230, 230, 230, 0.1) 0%, rgba(0, 0, 0, 0.2) 100%) !important;
     background-color:#1a5b6e !important;
@@ -51,7 +52,7 @@
     justify-content: center;
     cursor:pointer;
 }
-/* Shadow around left column in softwareDetails modal */
+/* Custom class for collapsable row headers */
 #softwareDetailsBody .borderCell{
     background-color:#1a5b6e;
     cursor:pointer;
@@ -59,7 +60,7 @@
     border: 3px #154e5fd5 solid;
     border-radius: 6px;
 }
-/* Shadow around right column in softwareDetails modal */
+/* Custom class for collapsable row data */
 #softwareDetailsBody .borderValue{
     background-color:#107180;
     color:white;

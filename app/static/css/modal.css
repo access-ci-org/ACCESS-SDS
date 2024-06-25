@@ -1,8 +1,8 @@
 /* Custom styles for the whole modal */
 .modal-content {
-    background-color: #1a5b6e;
-    border: 4px #154e5fee solid;
-    border-radius: 5px;
+    background-color: #1a5b6e !important;
+    border: 4px #154e5fee solid !important;
+    border-radius: 5px !important;
 }
 
 .modal-header{
@@ -31,4 +31,12 @@
 .modal-header .close:hover {
     color: #adfbff;
     opacity: 1;
+}
+
+/* JQueryUI Accordion */
+.ui-state-default,
+.ui-state-active{
+    background: #1c6277 !important;
+    border: 2px #154e5fee solid !important;
+    color:white !important;
 }
