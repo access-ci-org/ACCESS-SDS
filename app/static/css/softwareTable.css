@@ -239,12 +239,17 @@ div.dtsp-searchPane div.dtsp-topRow div.dtsp-searchCont input.dtsp-search {
 }
 div.dtsp-searchPane div.dtsp-topRow div.dtsp-searchCont input.dtsp-search:focus,
 div.dtsp-searchPane div.dtsp-topRow div.dtsp-searchCont input.dtsp-search:hover {
+    background-color: white;
     color:black !important;
 }
 div.dtsp-topRow div.dtsp-subRow1 button.dtsp-searchIcon span {
     -webkit-filter: invert(100%); /* Safari/Chrome */
     filter: invert(100%);
-    background-size:16px; 
+    background-size:16px;
+}
+div.dtsp-topRow div.dtsp-subRow1 button.dtsp-searchIcon:hover span,
+div.dtsp-topRow div.dtsp-subRow1 button.dtsp-searchIcon:hover {
+    background-color: transparent;
 }
 div.dtsp-topRow button.dtsp-countButton:focus span,
 div.dtsp-topRow button.dtsp-nameButton:focus span {
@@ -253,7 +258,7 @@ div.dtsp-topRow button.dtsp-nameButton:focus span {
     background-size:20px; 
 }
 div.dtsp-topRow div.dtsp-subRow1 button.dtsp-searchIcon {
-    margin-top:5px;
+    margin-top:3px;
 }
 div.dtsp-topRow div.dtsp-subRow2 {
     color:white !important;
@@ -267,6 +272,13 @@ button.dtsp-paneButton.clearButton {
     color:white;
     font-size:1.5em;
 }
+button.dtsp-paneButton.clearButton:hover,
+div.dtsp-topRow button.dtsp-countButton:hover,
+div.dtsp-topRow button.dtsp-nameButton:hover,
+button.dtsp-paneButton.dtsp-collapseButton:hover {
+    background-color: rgb(90, 143, 161) !important;
+    border-radius: 4px !important;
+}
 
 div.dtsp-topRow button.dtsp-collapseButton span.dtsp-caret {
     top: 7px;
@@ -274,6 +286,9 @@ div.dtsp-topRow button.dtsp-collapseButton span.dtsp-caret {
 
 button.dtsp-paneButton.clearButton.dtsp-disabledButton {
     border: 3px #144655 inset !important;
+}
+button.dtsp-paneButton.clearButton.dtsp-disabledButton:hover {
+    background-color: transparent !important;
 }
 
 div.dtsp-searchPane button.dtsp-paneButton {

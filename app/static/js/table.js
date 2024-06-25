@@ -10,9 +10,9 @@ export var staticTable
 
 $(document).ready(function()
 {
-/*/////////////////////////////////////
+/*//////////////////////////////////////
     ACCESS Website Predfined Content //
-*//////////////////////////////////////
+*/////////////////////////////////////
     universalMenus({
         loginUrl: "/login",
         logoutUrl: "/logout",
@@ -44,10 +44,10 @@ $(document).ready(function()
     $("#app_content").addClass('col')
 
 
-/*///////////////////////////////////////////////////////////////////////////////////////////////////////
-    STATIC TABLE                                                                                       //
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////
+    STATIC TABLE                                                                                        //
     Enabled: Buttons (Column Visibility), FixedColumn, FixedHeader, SearchBuilder, SearchPanes, Select //
-*////////////////////////////////////////////////////////////////////////////////////////////////////////
+*///////////////////////////////////////////////////////////////////////////////////////////////////////
     staticTable = $('#softwareTable').DataTable({
         select: {           // Allows for selecting rows in tables/searchPanes
             enabled: true,
@@ -71,6 +71,7 @@ $(document).ready(function()
             $('.scrollText-div').html("Hover your mouse to the edge of the table to scroll")          
         },
         searchPanes: {
+            columns: [1,2,5,9],
             //threshold: 0.8,
             initCollapsed: true,
             cascadePanes: false,    // Reflects one change in the searchPanes filters across all Panes.
@@ -90,26 +91,27 @@ $(document).ready(function()
                 first: "First",
                 last: "Last"
             },
-            buttons:{
+            buttons:{   // Rename Column Visibility Buttons
                 colvis: 'Show/Hide Columns',
                 colvisRestore: 'Restore All'
             },
             searchBuilder: {
-                title: {
-                    0: 'Advanced Search',
-                    _: 'Advanced Search (%d)'
+                title: {    // Change text for searchBuilder Title
+                    0: 'Advanced Search',       // Zero filters selected
+                    _: 'Advanced Search (%d)'   // Any other number (%d is a placeholder for the number)
                 }
             }
         },
-        buttons: [{ // Column Visibility Buttons
+        buttons: [
+            {   // Edit Column Visibility Buttons
                 extend: 'colvis',
                 collectionLayout: 'two-column',
                 popoverTitle: 'Show/Hide Columns',
             },
-            'colvisRestore' 
+                'colvisRestore' 
         ], 
-        stateSave: false,   // Saves table options between page reloads
-        stateDuration:-1,
+        stateSave: false,   // Toggle for saving table options between page reloads
+        stateDuration:-1,   // How long to save 
         searchBuilder: {
             conditions: {
                 string: {
@@ -124,373 +126,304 @@ $(document).ready(function()
                     '!contains':null,
         }}}, 
         columnDefs: [
-            {   // Pane 1: RP Names
-                targets: [1],
+            {   targets: [1],
                 searchPanes: { 
+                    name: 'RP Name',
                     className: 'noShadow',
                     options: [                   
-                        {
-                            label: 'Aces',
+                        {   label: 'Aces',
                             value: function(rowData, rowIdx) {
                                 return rowData[1].toLowerCase().includes('aces');
                         }},                        
-                        {
-                            label: 'Anvil',
+                        {   label: 'Anvil',
                             value: function(rowData, rowIdx) {
                                 return rowData[1].toLowerCase().includes('anvil');
                         }},
-                        {
-                            label: 'Bridges-2',
+                        {   label: 'Bridges-2',
                             value: function(rowData, rowIdx) {
                                 return rowData[1].toLowerCase().includes('bridges-2');
                         }},
-                        {
-                            label: 'DARWIN',
+                        {   label: 'DARWIN',
                             value: function(rowData, rowIdx) {
                                 return rowData[1].toLowerCase().includes('darwin');
                         }},                        
-                        {
-                            label: 'Delta',
+                        {   label: 'Delta',
                             value: function(rowData, rowIdx) {
                                 return rowData[1].toLowerCase().includes('delta');
                         }},                        
-                        {
-                            label: 'Expanse',
+                        {   label: 'Expanse',
                             value: function(rowData, rowIdx) {
                                 return rowData[1].toLowerCase().includes('expanse');
                         }},                        
-                        {
-                            label: 'Faster',
+                        {   label: 'Faster',
                             value: function(rowData, rowIdx) {
                                 return rowData[1].toLowerCase().includes('faster');
                         }},                        
-                        {
-                            label: 'Jetstream',
+                        {   label: 'Jetstream',
                             value: function(rowData, rowIdx) {
                                 return rowData[1].toLowerCase().includes('jetstream');
                         }},                        
-                        {
-                            label: 'Kyric',
+                        {   label: 'Kyric',
                             value: function(rowData, rowIdx) {
                                 return rowData[1].toLowerCase().includes('kyric');
                         }},                        
-                        {
-                            label: 'Ookami',
+                        {   label: 'Ookami',
                             value: function(rowData, rowIdx) {
                                 return rowData[1].toLowerCase().includes('ookami');
                         }},                        
-                        {
-                            label: 'Stampede-3',
+                        {   label: 'Stampede-3',
                             value: function(rowData, rowIdx) {
                                 return rowData[1].toLowerCase().includes('stampede3');
                         }}                        
             ]}},             
-            {   // Pane 2: Software Type     
-                targets: [2],           
+            {   targets: [2],           
                 searchPanes: {
+                    name: 'Software Type',
                     className: 'noShadow',
                     options: [
-                        {
-                            label: 'API',
+                        {   label: 'API',
                             value: function(rowData, rowIdx) {
                                 return rowData[2].toLowerCase().includes('api');
                         }},
-                        {
-                            label: 'Application',
+                        {   label: 'Application',
                             value: function(rowData, rowIdx) {
                                 return rowData[2].toLowerCase().includes('application');
                         }},
-                        {
-                            label: 'Command Line',
+                        {   label: 'Command Line',
                             value: function(rowData, rowIdx) {
                                 return rowData[2].toLowerCase().includes('command');
                         }},
-                        {
-                            label: 'Compiler',
+                        {   label: 'Compiler',
                             value: function(rowData, rowIdx) {
                                 return rowData[2].toLowerCase().includes('compiler');
                         }},
-                        {
-                            label: 'Editor',
+                        {   label: 'Editor',
                             value: function(rowData, rowIdx) {
                                 return rowData[2].toLowerCase().includes('editor');
                         }},
-                        {
-                            label: 'Framework',
+                        {   label: 'Framework',
                             value: function(rowData, rowIdx) {
                                 return rowData[2].toLowerCase().includes('framework');
                         }},
-                        {
-                            label: 'Language',
+                        {   label: 'Language',
                             value: function(rowData, rowIdx) {
                                 return rowData[2].toLowerCase().includes('language');
                         }},
-                        {
-                            label: 'Library',
+                        {   label: 'Library',
                             value: function(rowData, rowIdx) {
                                 return rowData[2].toLowerCase().includes('library');
                         }},
-                        {
-                            label: 'Package',
+                        {   label: 'Package',
                             value: function(rowData, rowIdx) {
                                 return rowData[2].toLowerCase().includes('package');
                         }},
-                        {
-                            label: 'Parser',
+                        {   label: 'Parser',
                             value: function(rowData, rowIdx) {
                                 return rowData[2].toLowerCase().includes('pars');
                         }},
-                        {
-                            label: 'Plugin',
+                        {   label: 'Plugin',
                             value: function(rowData, rowIdx) {
                                 return rowData[2].toLowerCase().includes('plug');
                         }},
-                        {
-                            label: 'Service',
+                        {   label: 'Service',
                             value: function(rowData, rowIdx) {
                                 return rowData[2].toLowerCase().includes('service');
                         }},
-                        {
-                            label: 'Software',
+                        {   label: 'Software',
                             value: function(rowData, rowIdx) {
                                 return rowData[2].toLowerCase().includes('software');
                         }},
-                        {
-                            label: 'Toolkit',
+                        {   label: 'Toolkit',
                             value: function(rowData, rowIdx) {
                                 return rowData[2].toLowerCase().includes('toolkit');
                         }},
-                        {
-                            label: 'Utility',
+                        {   label: 'Utility',
                             value: function(rowData, rowIdx) {
                                 return rowData[2].toLowerCase().includes('utility');
                         }},
             ]}},   
-            {   // Pane 3: Research Area 
-                targets: [5],               
+            {   targets: [5],               
                 searchPanes: {
+                    name: 'Research Area',
                     className: 'noShadow',
                     options: [
-                        {
-                            label: 'Artificial Intelligence',
+                        {   label: 'Artificial Intelligence',
                             value: function(rowData, rowIdx) {
                                 return /\b(ai|artificial intelligence|machine learning|deep learning|natural language)\b/i.test(rowData[5]);
                         }}, 
-                        {
-                            label: 'Astronomy/Cosmology',
+                        {   label: 'Astronomy/Cosmology',
                             value: function(rowData, rowIdx) {
                                 return /(astro|cosmo)/i.test(rowData[5]);
                         }}, 
-                        {
-                            label: 'Biology',
+                        {   label: 'Biology',
                             value: function(rowData, rowIdx) {
                                 return /(bio|genom|DNA|genet|sequenc|ngs|population|prote|sciences|transcriptomics)/i.test(rowData[5]);
                         }}, 
-                        {
-                            label: 'Chemistry',
+                        {   label: 'Chemistry',
                             value: function(rowData, rowIdx) {
                                 return rowData[5].toLowerCase().includes('chemistry');
                         }}, 
-                        {
-                            label: 'Climate & Meteorology',
+                        {   label: 'Climate & Meteorology',
                             value: function(rowData, rowIdx) {
                                 return /(climate|weather|meteor)/i.test(rowData[5]);
                         }},                        
-                        {
-                            label: 'Computer Science',
+                        {   label: 'Computer Science',
                             value: function(rowData, rowIdx) {
                                 return /(comput|network|cyber|operating systems|program|software|visualization)/i.test(rowData[5]);
                         }},                        
-                        {
-                            label: 'Data Science/Management',
+                        {   label: 'Data Science/Management',
                             value: function(rowData, rowIdx) {
                                 return /(data|info|infra)/i.test(rowData[5]);
                         }},   
-                        {
-                            label: 'Ecology/Hydrology',
+                        {   label: 'Ecology/Hydrology',
                             value: function(rowData, rowIdx) {
                                 return /(ecology|environmental|hydro)/i.test(rowData[5]);
                         }},                      
-                        {
-                            label: 'Engineering',
+                        {   label: 'Engineering',
                             value: function(rowData, rowIdx) {
                                 return /(engineering|electrical|robotic)/i.test(rowData[5]);
                         }},  
-                        {
-                            label: 'Health Sciences',
+                        {   label: 'Health Sciences',
                             value: function(rowData, rowIdx) {
                                 return /(health|epidemiolog|cancer|immun|medic)/i.test(rowData[5]);
                         }},                       
-                        {
-                            label: 'General Use',
+                        {   label: 'General Use',
                             value: function(rowData, rowIdx) {
                                 return rowData[5].toLowerCase().includes('general');
                         }}, 
-                        {
-                            label: 'Genetics',
+                        {   label: 'Genetics',
                             value: function(rowData, rowIdx) {
                                 return rowData[5].toLowerCase().includes('genet');
                         }}, 
-                        {
-                            label: 'Mathematics',
+                        {   label: 'Mathematics',
                             value: function(rowData, rowIdx) {
                                 return /(mathematics|statistics|geometry|graph|number|numer|optimization|quant)/i.test(rowData[5]);
                         }},  
-                        {
-                            label: 'Physics',
+                        {   label: 'Physics',
                             value: function(rowData, rowIdx) {
                                 return /(physics|dynamics|spectro)/i.test(rowData[5]);
                         }},                       
-                        {
-                            label: 'Neurology/Psychology',
+                        {   label: 'Neurology/Psychology',
                             value: function(rowData, rowIdx) {
                                 return /(neuro|psych)/i.test(rowData[5]);
                         }},                        
             ]}},
-            {   // Pane 4: General Tags 
-                targets: [9],               
+            {   targets: [9],               
                 searchPanes: {
-                    show: true,
+                    name: 'General Tags',
                     className: 'noShadow',
+                    show: true,
                     options: [
-                        {
-                            label: '2D',
+                        {   label: '2D',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('2d');
                         }},
-                        {
-                            label: '3D',
+                        {   label: '3D',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('3d');
                         }},   
-                        {
-                            label: 'Artificial Intelligence',
+                        {   label: 'Artificial Intelligence',
                             value: function(rowData, rowIdx) {
                                 return /\b(ai|artificial intelligence)\b/i.test(rowData[9]);
                         }},                         
-                        {
-                            label: 'Assembly',
+                        {   label: 'Assembly',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('assembl');
                         }},
-                        {
-                            label: 'Astronomy',
+                        {   label: 'Astronomy',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('astro');
                         }},
-                        {
-                            label: 'Audio',
+                        {   label: 'Audio',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('audio');
                         }},
-                        {
-                            label: 'Bioinformatics',
+                        {   label: 'Bioinformatics',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('bioinformatics');
                         }},
-                        {
-                            label: 'C++',
+                        {   label: 'C++',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('c++');
                         }},
-                        {
-                            label: 'CUDA',
+                        {   label: 'CUDA',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('cuda');
                         }},
-                        {
-                            label: 'Genetics/Genomics',
+                        {   label: 'Genetics/Genomics',
                             value: function(rowData, rowIdx) {
                                 return /(gene|genom)/i.test(rowData[9]);
                         }},
-                        {
-                            label: 'GPU',
+                        {   label: 'GPU',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('gpu');
                         }},
-                        {
-                            label: 'Graph',
+                        {   label: 'Graph',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('graph');
                         }},
-                        {
-                            label: 'GUI',
+                        {   label: 'GUI',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('gui');
                         }},
-                        {
-                            label: 'High Performance Computing',
+                        {   label: 'High Performance Computing',
                             value: function(rowData, rowIdx) {
                                 return /\b(hpc|high[-\s]performance computing)\b/i.test(rowData[9]);
                         }},
-                        {
-                            label: 'HTML',
+                        {   label: 'HTML',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('html');
                         }},
-                        {
-                            label: 'Imaging',
+                        {   label: 'Imaging',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('imag');
                         }}, 
-                        {
-                            label: 'Library',
+                        {   label: 'Library',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('library');
                         }}, 
-                        {
-                            label: 'Machine Learning',
+                        {   label: 'Machine Learning',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('machine learning');
                         }},
-                        {
-                            label: 'Open Source',
+                        {   label: 'Open Source',
                             value: function(rowData, rowIdx) {
                                 return /open[\s-]source/i.test(rowData[9]);
                         }},
-                        {
-                            label: 'Parser',
+                        {   label: 'Parser',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('parser');
                         }},
-                        {
-                            label: 'Python',
+                        {   label: 'Python',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('python');
                         }},
-                        {
-                            label: 'Sequencing',
+                        {   label: 'Sequencing',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('sequencing');
                         }},
-                        {
-                            label: 'Software',
+                        {   label: 'Software',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('software');
                         }},
-                        {
-                            label: 'User Interface',
+                        {   label: 'User Interface',
                             value: function(rowData, rowIdx) {
                                 return /\b(ui|user[\s-]interface)\b/i.test(rowData[9]);
                         }},
-                        {
-                            label: 'Visualization',
+                        {   label: 'Visualization',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('visualization');
                         }}, 
-                        {
-                            label: 'XML',
+                        {   label: 'XML',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('xml');
                         }}, 
-                        {
-                            label: 'YAML',
+                        {   label: 'YAML',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('yaml');
                         }},          
             ]}},
             {   // Disables all other columns not explicitly shown from displaying as Panes
-                //targets: [9, 14, 15],
                 targets: "_all",
                 searchPanes: {
                     show: false
@@ -503,11 +436,9 @@ $(document).ready(function()
             {   // Software Details Modal  
                 target: [0],             
                 render: function(data, type, row) {
-                    if (type === 'display')
-                        {
+                    if (type === 'display') {
                             return '<a data-toggle="modal" data-target="#softwareDetails-modal" href="#">' + data + '</a>'
-                        }
-                    return data
+                        } return data
             }},   
             {   // Example Use Modal
                 targets:[16],
@@ -517,14 +448,12 @@ $(document).ready(function()
             {   // Columns with clickable URLs
                 targets: [7,10,11,12,13], 
                 render: function(data, type, row) {
-                    if (type === 'display' && data) 
-                    {
+                    if (type === 'display' && data) {
                         return makeLinkClickable(data);
-                    }
-                    return data;
+                    } return data;
             }}, 
             { width: '65px', targets: [1], className: 'dt-center' },    // RP Names
-            { width: '100px', targets: [16], className: 'dt-center'}, // Example Use Button
+            { width: '100px', targets: [16], className: 'dt-center'},   // Example Use Button
             { width: '100px', targets: [5], className: 'dt-center'},    // Research Area
             { width: '110px', targets: [2,4], className: 'dt-center'},  // Software Type, Research Field
             { width: '115px', targets: [3], className: 'dt-center'},    // Software Class
@@ -537,7 +466,9 @@ $(document).ready(function()
         ],
     });
 
-    // Prevent clicking links in the table from Selecting the row
+/*////////////////////////////////////////////////////////////////
+    Prevent clicking links in the table from Selecting the row //
+*///////////////////////////////////////////////////////////////
     $('#softwareTable').on('click', 'a', function(e) {
         // Ensures this event listener doesn't trample 'Report Issue' event
         if ($("#reportIssueText").text() != 'Cancel')
@@ -546,24 +477,26 @@ $(document).ready(function()
         }
     }); 
 
-    // Return softwareDetails modal to default state when closed
+/*///////////////////////////////////////////////////////////////
+    Return softwareDetails modal to default state when closed //
+*//////////////////////////////////////////////////////////////
     $('#softwareDetails-modal').on('hidden.bs.modal', function() {
         $('.collapse').each(function() {
             // Reopen all closed drawers except for Example Use
             if ($(this).attr('id') !== 'modalExampleUse' && !$(this).hasClass('show')) {
-            $(this).addClass('show');
+                $(this).addClass('show');
             } 
             // Reclose Example Use
             else if ($(this).attr('id') == 'modalExampleUse' && $(this).hasClass('show')) {
-            $(this).removeClass('show');
+                $(this).removeClass('show');
             }
         });
     });
 
-    /*////////////////////
-        Mouse Scrolling //
-    */////////////////////
-    var $scrollBody = $('div.dt-scroll-body:last')
+/*/////////////////////
+    Mouse Scrolling //
+*////////////////////
+    var $scrollBody = $('div.dt-scroll-body:last')  // If scrolling breaks, ensure that the table is the last dt-scroll-body
     var scrollSensitivity = 100; // Distance from edge in pixels.
     var scrollSpeed = 7; // Speed of the scroll step in pixels.
     var scrollInterval;
@@ -643,10 +576,9 @@ $(document).ready(function()
         clearInterval(scrollInterval);
     }
  
- 
-/*/////////////////////////////////////////////
+/*//////////////////////////////////////////////
     Disable Searching Through Hidden Columns //
-*//////////////////////////////////////////////
+*/////////////////////////////////////////////
     $.fn.dataTable.ext.search.push(
         function(settings, data, dataIndex) {
             var api = new $.fn.dataTable.Api(settings);
@@ -664,18 +596,16 @@ $(document).ready(function()
         }
     );
 
-
-/*////////////////////////////////////////////////////////////////////
+/*/////////////////////////////////////////////////////////////////////
     Initialize a Showdown converter with the Highlight.js extension //
-*/////////////////////////////////////////////////////////////////////
+*////////////////////////////////////////////////////////////////////
     var converter = new showdown.Converter({
         extensions: [highlightExtension]
     });
 
-
-/*/////////////////////////////////////////////////////
+/*//////////////////////////////////////////////////////
     Event Listener for Software 'Example Use' Modal  //
-*//////////////////////////////////////////////////////    
+*/////////////////////////////////////////////////////    
     staticTable.on('click','.example-use-btn', function(e){
         e.stopPropagation()
         let rowData = staticTable.row(e.target.closest('tr')).data();
@@ -701,10 +631,9 @@ $(document).ready(function()
         }})
     })
 
-
-/*//////////////////////////////////////////////
+/*///////////////////////////////////////////////
     Event Listener for Software Details Modal //
-*///////////////////////////////////////////////
+*//////////////////////////////////////////////
     staticTable.on('click', 'a[data-target$="#softwareDetails-modal"]', function(e){
         // Prevent webpage scrolling to top behind modal
         e.preventDefault();
@@ -771,15 +700,12 @@ $(document).ready(function()
         })
         // Show modal
         $('#softwareDetails-modal').modal('show');
-    })
-
-    
+    })   
 });
 
-
-/*/////////////////////////////
+/*//////////////////////////////
     Clickable Links In Table //
-*//////////////////////////////
+*/////////////////////////////
 function makeLinkClickable(data) 
 {
     var urlRegex = /(https?:\/\/[^\s]+)/g;
@@ -791,10 +717,9 @@ function makeLinkClickable(data)
     });
 }
 
-
-/*/////////////////////////////////
-    Highlight.js for Example Use //
-*//////////////////////////////////
+/*//////////////////////////////////////////
+    Highlight.js for 'Example Use' modal //
+*/////////////////////////////////////////
 // Define the Highlight.js extension for Showdown
 function highlightExtension() {
     return [{
@@ -811,3 +736,5 @@ function highlightExtension() {
         }
     }];
 }
+
+
