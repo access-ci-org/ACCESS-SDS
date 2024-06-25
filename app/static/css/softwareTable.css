@@ -16,7 +16,7 @@ table.dataTable>tbody>tr>td {
     position: relative;
 }
 .dt-scroll{
-    border:3px solid #999
+    border: 5px rgb(150, 150, 150) outset;
 }
 .dt-scroll::after,
 .dt-scroll::before {
@@ -223,6 +223,7 @@ div.dtsp-panesContainer button.dtsp-clearAll.dtsp-disabledButton{
 .dtsp-showAll:hover,
 .dtsp-clearAll:hover{
     background-color: rgb(90, 143, 161) !important;
+    border-radius: 4px !important;
 }
 
 div.dtsp-topRow{
@@ -252,7 +253,7 @@ div.dtsp-topRow button.dtsp-nameButton:focus span {
     background-size:20px; 
 }
 div.dtsp-topRow div.dtsp-subRow1 button.dtsp-searchIcon {
-    margin-top:3px;
+    margin-top:5px;
 }
 div.dtsp-topRow div.dtsp-subRow2 {
     color:white !important;
@@ -264,18 +265,20 @@ button.dtsp-paneButton.dtsp-collapseButton,
 button.dtsp-paneButton.clearButton {
     border: 3px #144655 outset !important;
     color:white;
+    font-size:1.5em;
+}
+
+div.dtsp-topRow button.dtsp-collapseButton span.dtsp-caret {
+    top: 7px;
 }
 
 button.dtsp-paneButton.clearButton.dtsp-disabledButton {
     border: 3px #144655 inset !important;
 }
-div.dtsp-buttonGroup{
-
-}
 
 div.dtsp-searchPane button.dtsp-paneButton {
     margin:0;
-
+    opacity:1;
 }
 
 
