@@ -18,7 +18,7 @@ $(document).ready(function() {
                 var formattedDate = lastUpdatedDate.toLocaleString('en-US', options);
                 console.log("Formatted date: ", formattedDate);
                 
-                document.getElementById("lastUpdated").innerHTML = 'Last Updated: ' + formattedDate;
+                document.getElementById("lastUpdated").innerHTML = formattedDate;
             } else {
                 console.log("Invalid date format");
                 document.getElementById("lastUpdated").innerHTML = "Invalid date format.";
