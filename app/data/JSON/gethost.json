@@ -1,0 +1,11 @@
+{
+    "Software": "gethost",
+    "AI Description": "gethost is a command-line utility that retrieves the IP address and hostname of a specified domain or URL. It can be used to quickly obtain network information during troubleshooting or system administration tasks.",
+    "Core Features": "1. Retrieve the IP address and hostname of a domain or URL.\n2. Simple and straightforward command-line interface.\n3. Useful for network troubleshooting and system administration.",
+    "General Tags": "Networking, Command-Line, System Administration",
+    "Software Type": "Networking Tool",
+    "Software Class": "Command-Line Utility",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

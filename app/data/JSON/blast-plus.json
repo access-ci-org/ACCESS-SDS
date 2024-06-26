@@ -1,0 +1,11 @@
+{
+    "Software": "BLAST+",
+    "AI Description": "BLAST+ (Basic Local Alignment Search Tool) is a suite of command-line tools for nucleotide and protein sequence similarity searches. It is widely used for comparing query sequences against a database of sequences to identify homologous sequences and infer functional and evolutionary relationships.",
+    "Core Features": "Nucleotide & Protein Sequence Similarity Searches, Identification Of Homologous Sequences, Functional & Evolutionary Relationship Inference, Command-Line Interface For Flexible & Customized Searches, Various Search Algorithms Including Blastn, Blastp, Blastx, & Others, Support For Large Sequence Databases, Statistical Significance Evaluation Of Search Results",
+    "General Tags": "Sequence Analysis, Bioinformatics, Sequence Similarity, Homology, Evolutionary Relationships",
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Sequence Analysis Software",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

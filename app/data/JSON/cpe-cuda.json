@@ -1,0 +1,11 @@
+{
+    "Software": "CPE-CUDA",
+    "AI Description": "CPE-CUDA is a software tool designed for parallelizing and optimizing Computational Pipeline Engines (CPE) using CUDA (Compute Unified Device Architecture). It aims to accelerate the execution of CPE workflows by leveraging the parallel processing power of NVIDIA GPUs.",
+    "Core Features": "Parallelizing Computational Pipeline Engines, Optimizing Workflows Using Cuda, Utilizing Nvidia Gpus For Acceleration",
+    "General Tags": "Parallel Computing, Optimization, Gpu Acceleration, Workflow Management",
+    "Software Type": "Computational Software",
+    "Software Class": "Tools",
+    "Research Area": "Software Engineering, Systems, & Development",
+    "Research Discipline": "Computer Science",
+    "Research Field": "Engineering & Technology"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "py-tables",
+    "AI Description": "PyTables is a package for managing hierarchical datasets and designed to efficiently and easily cope with extremely large amounts of data.",
+    "Core Features": "PyTables allows users to store and manipulate large datasets in HDF5 format, query data using NumPy-like syntax, compress and filter data for efficient storage, and perform parallel I/O operations.",
+    "General Tags": "Python Library, Data Management, Data Storage",
+    "Software Type": "Data Management",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "R ggplot2",
+    "AI Description": "ggplot2 is a data visualization package for the statistical programming language R. It provides a powerful and flexible system for creating elegant and complex plots.",
+    "Core Features": "1. Grammar of graphics\n2. Flexible and customizable plots\n3. Support for various plot types (scatter plots, bar charts, box plots, etc.)\n4. Theme customization\n5. Faceting for creating multiple plots based on categories\n6. Easy to use and intuitive syntax",
+    "General Tags": "Data Visualization, Statistical Programming, Graphics, Plotting",
+    "Software Type": "Library",
+    "Software Class": "Data Visualization",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Statistics & Probability"
+}

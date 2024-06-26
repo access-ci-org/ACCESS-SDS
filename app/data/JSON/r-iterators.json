@@ -1,0 +1,11 @@
+{
+    "Software": "r-iterators",
+    "AI Description": "r-iterators is a library in R that provides a collection of iterator constructs for R, allowing for efficient iteration over objects without the need to load them into memory all at once.",
+    "Core Features": "1. Enables efficient iteration over large objects in R\n2. Allows for lazy evaluation of elements in R objects\n3. Supports various types of iterators such as next, hasNext, reset, and clone\n4. Facilitates processing of large datasets or complex objects without overwhelming memory resources",
+    "General Tags": "R Library, Iterators, Lazy Evaluation",
+    "Software Type": "Computational Tool",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Other Computer & Information Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "dpct",
+    "AI Description": "Data Parallel C++ for CUDA is a C++ programming model for accelerators based on the NVIDIA CUDA architecture. It allows users to write C++ code that can be compiled to target NVIDIA GPUs using CUDA for parallel execution.",
+    "Core Features": "Supports C++ programming model for NVIDIA GPUs, enables users to write C++ code for parallel execution on GPUs, allows compilation of C++ code to target CUDA architecture, provides accelerated computing capabilities.",
+    "General Tags": "Cuda Programming, Gpu Computing, Parallel Programming",
+    "Software Type": "Development Compiler",
+    "Software Class": "Compiler",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

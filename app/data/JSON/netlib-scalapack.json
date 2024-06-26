@@ -1,0 +1,11 @@
+{
+    "Software": "Netlib Scalapack",
+    "AI Description": "Netlib Scalapack is a library of high-performance linear algebra routines for distributed memory computers. It is built on top of BLAS and provides a parallel programming model using the Scalable Linear Algebra Core (ScaLAPACK) for distributed memory systems.",
+    "Core Features": "1. Parallel linear algebra routines optimized for distributed memory computers.\n2. Implements algorithms for dense and banded matrices.\n3. Supports various matrix operations such as matrix multiplication, factorization, and solvers.\n4. Designed for high performance and scalability on parallel architectures.",
+    "General Tags": "Linear Algebra, Distributed Computing, High Performance Computing",
+    "Software Type": "Computational Software",
+    "Software Class": "Libraries",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Physical Sciences"
+}

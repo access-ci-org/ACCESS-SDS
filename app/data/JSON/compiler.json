@@ -1,0 +1,11 @@
+{
+    "Software": "Compiler",
+    "AI Description": "A compiler is a special program that processes statements written in a particular programming language and turns them into machine language or \"code\" that a computer's processor uses. It typically acts as a translator that converts high-level programming languages into machine language.",
+    "Core Features": "Translation Of High-Level Programming Languages Into Machine Language, Optimization Of Code For Better Performance, Error Checking & Debugging Capabilities, Generation Of Executable Files",
+    "General Tags": "Compiler, Software Development, Programming",
+    "Software Type": "Compiler",
+    "Software Class": "Development Tools",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

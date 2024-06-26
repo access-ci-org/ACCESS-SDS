@@ -1,0 +1,11 @@
+{
+    "Software": "pkgconf",
+    "AI Description": "pkgconf is a package configuration system. It helps to provide a uniform and system-agnostic API for the management of build and link flags. It replaces the functionality of pkg-config.",
+    "Core Features": "1. Management of build and link flags\n2. Provides a uniform and system-agnostic API\n3. Replaces the functionality of pkg-config\n4. Lightweight and efficient\n5. Easy to use and integrate into the build process",
+    "General Tags": "Package Configuration, Build Flags, Link Flags, System-Agnostic",
+    "Software Type": "Package Configuration",
+    "Software Class": "Development Tools",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "Lua",
+    "AI Description": "Lua is a lightweight, high-level, multi-paradigm programming language designed for embedded use in applications. It is known for its simplicity, efficiency, and flexibility.",
+    "Core Features": "Dynamic Typing, Garbage Collection, Coroutine Support, Extensibility Through C Api, Table-Based Data Structures",
+    "General Tags": "Programming Language, Scripting Language, Embedded Systems",
+    "Software Type": "",
+    "Software Class": "",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

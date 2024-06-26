@@ -1,0 +1,11 @@
+{
+    "Software": "PASTA",
+    "AI Description": "PASTA (Practical Alignment using SAT\u00e9 and TrAnsitivity) is a multiple sequence alignment program that uses a divide-and-conquer strategy to improve the scalability and accuracy of alignment.",
+    "Core Features": "PASTA incorporates the SAT\u00e9 (SAT\u00e9-I and SAT\u00e9-II) algorithm and transitivity to align sequences by breaking the alignment problem into smaller subproblems, which are then joined together to build the final alignment. It allows for the alignment of large datasets and can handle a wide range of sequence types.",
+    "General Tags": "Bioinformatics, Computational Biology, Sequence Alignment",
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Sequence Alignment",
+    "Research Area": "Computational Biology",
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
+}

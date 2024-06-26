@@ -1,0 +1,11 @@
+{
+    "Software": "compress-raw-zlib",
+    "AI Description": "compress-raw-zlib is a raw Zlib compression and decompression library written in C for Python, providing low-level access to Zlib compression and decompression functionality.",
+    "Core Features": "Key features include raw Zlib compression and decompression without any header or wrapper data, enabling direct interaction with Zlib streams. The library offers efficient compression and decompression operations for data processing.",
+    "General Tags": "Compression, Decompression, Raw Zlib, Library",
+    "Software Type": "Compression & Decompression",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

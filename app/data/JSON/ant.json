@@ -1,0 +1,11 @@
+{
+    "Software": "Ant",
+    "AI Description": "Ant is a build automation tool that is mainly used for Java projects. It automates the process of compiling and building Java applications, along with tasks such as testing and deployment.",
+    "Core Features": "Ant provides a simple XML-based build file that outlines the steps needed to build a project. It facilitates the compilation of Java code, running tests, packaging applications, and deploying them. Ant is extensible and can be integrated with other tools and libraries.",
+    "General Tags": "Automation, Java, Build Tool, Deployment",
+    "Software Type": "Tool",
+    "Software Class": "Build Automation",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer Science"
+}

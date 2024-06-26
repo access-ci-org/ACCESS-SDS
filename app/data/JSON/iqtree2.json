@@ -1,0 +1,11 @@
+{
+    "Software": "IQ-TREE 2",
+    "AI Description": "IQ-TREE 2 is a phylogenetic software tool that implements efficient algorithms for maximum-likelihood phylogenomic analysis of large datasets. It is designed to handle ultra-large alignment and provides a wide range of models for DNA, protein, codon, and amino acid substitution.",
+    "Core Features": "Maximum-Likelihood Phylogenetic Analysis, Ultra-Large Dataset Handling, Support For Various Substitution Models (DNA, Protein, Codon, Amino Acid), Selection Of Best-Fit Model Via Modelfinder, Bootstrap & Bayesian Analysis, Phylogenetic Tree Visualization & Annotation",
+    "General Tags": "Bioinformatics, Phylogenetics, Phylogenomic Analysis, Maximum Likelihood, Evolutionary Biology",
+    "Software Type": "Bioinformatics Software",
+    "Software Class": "Analysis Tool",
+    "Research Area": "Phylogenetics",
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
+}

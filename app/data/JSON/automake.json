@@ -1,0 +1,11 @@
+{
+    "Software": "Automake",
+    "AI Description": "Automake is a build automation tool that automatically generates makefiles for software compilation.",
+    "Core Features": "Automates the generation of Makefiles for software projects, simplifies the process of building software, supports the GNU build system, assists in maintaining project consistency and portability.",
+    "General Tags": "Build Automation, Software Development, Compilers",
+    "Software Type": "Compiler",
+    "Software Class": "Build Tools",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
+}

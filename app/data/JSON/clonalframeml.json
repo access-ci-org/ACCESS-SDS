@@ -1,0 +1,11 @@
+{
+    "Software": "ClonalFrameML",
+    "AI Description": "ClonalFrameML is a software for inferring recombination in bacterial and archaeal genomes. It uses a maximum likelihood framework to detect recombination events and reconstruct the clonal relationships between individuals.",
+    "Core Features": "1. Inference of recombination events in bacterial and archaeal genomes. 2. Reconstruction of clonal relationships between individuals. 3. Maximum likelihood framework for accurate estimation.",
+    "General Tags": "Bioinformatics, Hpc Tools",
+    "Software Type": "",
+    "Software Class": "",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

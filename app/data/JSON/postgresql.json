@@ -1,0 +1,11 @@
+{
+    "Software": "PostgreSQL",
+    "AI Description": "PostgreSQL is a powerful, open-source relational database management system known for its reliability, robustness, and performance. It offers advanced features such as multi-version concurrency control, point-in-time recovery, and full ACID compliance.",
+    "Core Features": "Relational Database Management System, Open-Source, Acid Compliance, Mvcc (Multi-Version Concurrency Control), Point-In-Time Recovery, Extensible, Support For Json, Xml, & Other Non-Structured Data Types",
+    "General Tags": "Database Management, Relational Database, Open Source, Data Management",
+    "Software Type": "",
+    "Software Class": "",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": ""
+}

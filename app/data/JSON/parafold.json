@@ -1,0 +1,11 @@
+{
+    "Software": "Parafold",
+    "AI Description": "Parafold is a software tool for RNA secondary structure prediction using deep learning models. It utilizes neural networks to predict RNA secondary structures from primary sequences.",
+    "Core Features": "1. RNA secondary structure prediction\n2. Deep learning models\n3. Neural networks\n4. Primary sequence input",
+    "General Tags": "RNA Secondary Structure Prediction, Deep Learning, Neural Networks",
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Prediction Tool",
+    "Research Area": "Computational Biology",
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
+}

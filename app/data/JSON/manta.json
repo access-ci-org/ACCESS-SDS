@@ -1,0 +1,11 @@
+{
+    "Software": "manta",
+    "AI Description": "Manta is a structural variant and indel caller for mapped sequencing data, primarily for whole genome and exome resequencing. It identifies and characterizes genomic rearrangements in contrast to single nucleotide variants and small indels.",
+    "Core Features": "Structural Variant Identification, Indel Calling, Genomic Rearrangement Characterization",
+    "General Tags": "Structural Variant Calling, Genomic Analysis, Sequencing Data Analysis",
+    "Software Type": "Computational Software",
+    "Software Class": "Bioinformatics & Hpc Tools",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

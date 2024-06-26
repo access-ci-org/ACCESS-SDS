@@ -1,0 +1,11 @@
+{
+    "Software": "mashtree",
+    "AI Description": "Mashtree is a tool for constructing phylogenetic trees directly from pairwise Mash distances. It builds hierarchical trees from Mash distance matrices in Newick tree format. Mashtree provides a fast and memory-efficient method for creating phylogenetic trees based on genomic similarity.",
+    "Core Features": "1. Constructs phylogenetic trees directly from pairwise Mash distances.\n2. Builds hierarchical trees from Mash distance matrices in Newick tree format.\n3. Fast and memory-efficient method for creating phylogenetic trees based on genomic similarity.",
+    "General Tags": "Phylogenetic Trees, Genomic Similarity, Mash Distances",
+    "Software Type": "Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Area": "Phylogenetics",
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
+}

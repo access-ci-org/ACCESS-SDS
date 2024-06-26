@@ -1,0 +1,11 @@
+{
+    "Software": "graphite2",
+    "AI Description": "Graphite is a system that can be used to create 'smart fonts' capable of displaying writing systems with various complex behaviors. Graphite fonts are capable of providing contextual forms, reordering, ligatures, and other advanced typographic behavior.",
+    "Core Features": "1. Support for creating 'smart fonts' with advanced typographic behavior\n2. Capable of displaying writing systems with complex behaviors\n3. Provides features such as contextual forms, ligatures, and reordering\n4. Enables the creation of fonts for languages/scripts that require special typographic handling",
+    "General Tags": "Font Rendering, Typography, Smart Fonts",
+    "Software Type": "Library",
+    "Software Class": "Font Rendering Engine",
+    "Research Area": "Font Technology",
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
+}

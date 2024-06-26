@@ -1,0 +1,11 @@
+{
+    "Software": "pytesseract",
+    "AI Description": "Pytesseract is a Python wrapper for Google's Tesseract-OCR Engine. It allows for easy integration of Tesseract OCR functionality in Python scripts.",
+    "Core Features": "Optical Character Recognition (Ocr), Simple Python Integration, Supports Multiple Languages",
+    "General Tags": "Ocr, Text Recognition, Image Processing",
+    "Software Type": "Ocr Library",
+    "Software Class": "Libraries/Modules",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

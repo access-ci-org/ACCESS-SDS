@@ -1,0 +1,11 @@
+{
+    "Software": "Cooler",
+    "AI Description": "Cooler is a computational software package used for the analysis, normalization, and visualization of Hi-C and other chromatin interaction data. It provides tools for processing, exploring, and interpreting high-resolution chromatin interaction data.",
+    "Core Features": "1. Processing Hi-C data\n2. Normalization of chromatin interaction matrices\n3. Visualization of chromatin interactions\n4. Analysis and interpretation tools for Hi-C data",
+    "General Tags": "Computational Software, Hi-C Data Analysis, Chromatin Interaction Data Analysis",
+    "Software Type": "Bioinformatics",
+    "Software Class": "Data Analysis & Visualization",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

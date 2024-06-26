@@ -1,0 +1,11 @@
+{
+    "Software": "R-NMF",
+    "AI Description": "R-NMF is an R package for performing Non-negative Matrix Factorization (NMF), a dimensionality reduction technique widely used in various fields, including bioinformatics, image processing, and natural language processing. It allows users to decompose a given data matrix into two lower-dimensional matrices, representing the underlying patterns and features in the data.",
+    "Core Features": "Non-Negative Matrix Factorization (Nmf), Dimensionality Reduction, Clustering & Pattern Discovery, Sparse Coding, Topic Modeling",
+    "General Tags": "Data Analysis, Machine Learning, Dimensionality Reduction, Pattern Recognition",
+    "Software Type": "Package",
+    "Software Class": "Data Analysis",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences, Statistics & Probability"
+}

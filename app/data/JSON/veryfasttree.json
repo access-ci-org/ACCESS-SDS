@@ -1,0 +1,11 @@
+{
+    "Software": "veryfasttree",
+    "AI Description": "veryfasttree is a program for constructing phylogenetic trees from sequence alignment data. It is a fast and scalable tool designed for large datasets and utilizes a heuristic approach to tree building.",
+    "Core Features": "1. Rapid construction of phylogenetic trees\n2. Suitable for large datasets\n3. Heuristic tree-building method\n4. Supports various input formats\n5. Handles DNA, RNA, and protein sequence data",
+    "General Tags": "Phylogenetic Tree Construction, Sequence Alignment, Bioinformatics",
+    "Software Type": "Sequence Analysis Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Area": "Evolutionary Biology",
+    "Research Discipline": "Systematics & Population Biology",
+    "Research Field": "Biological Sciences"
+}

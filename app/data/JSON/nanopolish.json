@@ -1,0 +1,11 @@
+{
+    "Software": "nanopolish",
+    "AI Description": "Nanopolish is a software package for signal-level analysis of Oxford Nanopore sequencing data. It provides tools for basecalling, mapping, and variant calling from raw nanopore signal data.",
+    "Core Features": "Basecalling Of Raw Oxford Nanopore Signal Data, Alignment Of Nanopore Reads To A Reference Genome, Variant Calling To Detect Single Nucleotide Variants & Indels, Methylation Detection From Nanopore Sequencing Data",
+    "General Tags": "Bioinformatics, Nanopore Sequencing, Variant Calling, Signal Analysis",
+    "Software Type": "Data Analysis Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Area": "Genomics",
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
+}

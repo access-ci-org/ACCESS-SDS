@@ -1,0 +1,11 @@
+{
+    "Software": "CoinUtils",
+    "AI Description": "CoinUtils is an open-source C++ library that provides utilities and tools for optimization problems. It is part of the COIN-OR project, a collection of operations research software tools.",
+    "Core Features": "1. Linear and integer programming utilities\n2. LP and MIP file format conversion tools\n3. Mathematical programming libraries for optimization\n4. Compatible with other COIN-OR packages like Clp and Cbc",
+    "General Tags": "Optimization, Operations Research, Mathematical Programming",
+    "Software Type": "Optimization Software",
+    "Software Class": "Library",
+    "Research Area": "Optimization",
+    "Research Discipline": "Applied Mathematics",
+    "Research Field": "Mathematics"
+}

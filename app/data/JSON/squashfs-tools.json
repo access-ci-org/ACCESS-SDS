@@ -1,0 +1,11 @@
+{
+    "Software": "squashfs-tools",
+    "AI Description": "Squashfs is a compressed read-only file system for Linux. The squashfs-tools package includes a set of tools for working with Squashfs filesystems, allowing users to create, manipulate, and extract Squashfs images.",
+    "Core Features": "- Create Compressed Read-Only File Systems, - Extract Contents From Squashfs Images, - Manipulate Squashfs Filesystems, - High Compression Ratios, - Low Overhead, - Support For Incremental Updates",
+    "General Tags": "File System, Compression, Linux, Utilities",
+    "Software Type": "Tool",
+    "Software Class": "Utility",
+    "Research Area": "Software Engineering, Systems, & Development",
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "ShigeiFinder",
+    "AI Description": "ShigeiFinder is a software tool for identifying significant gene expression interactions from single-cell RNA-seq data.",
+    "Core Features": "Some core features of ShigeiFinder include differential gene expression analysis, identification of gene-gene interactions, visualization of gene networks, and statistical analysis of gene expression patterns.",
+    "General Tags": "Single-Cell RNA-Seq, Gene Expression, Interaction Analysis, Bioinformatics",
+    "Software Type": "Data Analysis Tool",
+    "Software Class": "Analytical Tool",
+    "Research Area": "Gene Expression Analysis",
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
+}

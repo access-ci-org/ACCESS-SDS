@@ -1,0 +1,11 @@
+{
+    "Software": "Ensembl VEP",
+    "AI Description": "Ensembl Variant Effect Predictor (VEP) determines the effect of genetic variants on genes, transcripts, and protein sequences to understand their implications in diseases and phenotypes.",
+    "Core Features": "VEP annotates variants with consequence types, predicts their functional effects, identifies known variants from databases, and offers customizable output formats.",
+    "General Tags": "Variant Annotation, Genetic Variant Analysis, Functional Genomics",
+    "Software Type": "Variant Annotation Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Area": "Genetic Variation Analysis",
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "Cereal",
+    "AI Description": "Cereal is a C++11 library for serialization. It is designed to be fast, compact, and have an easy-to-use API.",
+    "Core Features": "Cereal provides functionalities for serializing and deserializing data structures in C++. It supports a wide range of data types, including custom classes, and offers flexibility in serialization formats.",
+    "General Tags": "Serialization, C++, Library",
+    "Software Type": "Data Serialization",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

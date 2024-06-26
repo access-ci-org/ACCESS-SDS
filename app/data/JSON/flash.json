@@ -1,0 +1,11 @@
+{
+    "Software": "Flash",
+    "AI Description": "Flash is a multi-purpose computational software that specializes in numerical simulations for fluid dynamics, electromagnetics, structural analysis, and other physics-based applications. It is developed and maintained by the Center for Computational Sciences and Engineering at Lawrence Berkeley National Laboratory.",
+    "Core Features": "Flash provides a comprehensive suite of tools for solving complex partial differential equations, supporting various physical models and simulation methodologies. It offers advanced meshing capabilities, parallel computing support, visualization tools, and post-processing features.",
+    "General Tags": "Computational Software, Numerical Simulation, Fluid Dynamics, Electromagnetics, Structural Analysis",
+    "Software Type": "Computational Physics",
+    "Software Class": "Simulation Software",
+    "Research Area": "Fluid & Plasma Physics",
+    "Research Discipline": "Physical Sciences",
+    "Research Field": "Physical Sciences"
+}

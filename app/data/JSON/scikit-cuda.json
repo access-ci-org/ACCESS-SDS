@@ -1,0 +1,11 @@
+{
+    "Software": "scikit-cuda",
+    "AI Description": "scikit-cuda is a Python library that provides a Python interface to Nvidia's CUDA parallel computation API. It aims to make GPU programming more accessible to Python developers by providing GPU-accelerated linear algebra operations and other numerical algorithms.",
+    "Core Features": "Provides Python Interface To Nvidia'S Cuda Api For Gpu Programming, Supports Gpu-Accelerated Linear Algebra Operations & Numerical Algorithms, Allows For Seamless Integration Of Cuda Code Within Python Programs, Enables Faster Computation For Large-Scale Numerical Tasks",
+    "General Tags": "Python Library, Gpu Programming, Numerical Algorithms, Linear Algebra, Cuda Api",
+    "Software Type": "Python Library",
+    "Software Class": "Computational Software",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

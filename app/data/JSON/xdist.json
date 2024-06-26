@@ -1,0 +1,11 @@
+{
+    "Software": "xdist",
+    "AI Description": "xdist is a py.test plugin that extends the test execution loop with parallelization capabilities, allowing for distributing test execution across multiple CPUs.",
+    "Core Features": "Parallel Test Execution, Distributed Testing, Cpu Utilization Optimization",
+    "General Tags": "Testing, Python, Parallelization",
+    "Software Type": "Plugin",
+    "Software Class": "Testing Tool",
+    "Research Area": "Software Development",
+    "Research Discipline": "Software Engineering, Systems, & Development",
+    "Research Field": "Computer & Information Sciences"
+}

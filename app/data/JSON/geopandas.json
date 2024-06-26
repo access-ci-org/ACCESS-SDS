@@ -1,0 +1,11 @@
+{
+    "Software": "Geopandas",
+    "AI Description": "Geopandas is an open-source python library for working with geospatial data, enabling users to easily manipulate and analyze geospatial datasets.",
+    "Core Features": "Reading & Writing Spatial Data Formats, Spatial Operations & Manipulations, Attribute Joins Between Geospatial Datasets, Handling Of Coordinate Reference Systems (Crs), Visualization Of Geospatial Data",
+    "General Tags": "Geospatial Data, Python Library, Geospatial Analysis",
+    "Software Type": "Data Analysis",
+    "Software Class": "Python Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Earth & Environmental Sciences"
+}

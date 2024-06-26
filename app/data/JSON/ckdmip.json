@@ -1,0 +1,11 @@
+{
+    "Software": "CKDmip",
+    "AI Description": "CKDmip is a software for computing cosmic microwave background (CMB) radiation temperature anisotropies and polarization spectra using the Cosmic Microwave Background (CMB) perturbation code.",
+    "Core Features": "CKDmip allows for the calculation of Cl's due to cosmic microwave background using CMB perturbation code, facilitating research and analysis in cosmology.",
+    "General Tags": "Cosmic Microwave Background, Cmb Radiation, Temperature Anisotropies, Polarization Spectra",
+    "Software Type": "Hpc Tool",
+    "Software Class": "Computational Software",
+    "Research Area": "Cosmology",
+    "Research Discipline": "Astronomy & Planetary Sciences",
+    "Research Field": "Physical Sciences"
+}

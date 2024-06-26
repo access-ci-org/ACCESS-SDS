@@ -1,0 +1,11 @@
+{
+    "Software": "lifelines",
+    "AI Description": "Lifelines is a Python library for survival analysis, reliability, and lifetime data analysis. It provides tools for data preprocessing, estimating survival functions, hazard rates, and confidence intervals, as well as modeling, predicting, and visualizing survival data.",
+    "Core Features": "Survival Analysis, Reliability Analysis, Lifetime Data Analysis, Data Preprocessing, Survival Function Estimation, Hazard Rate Estimation, Confidence Interval Estimation, Modeling & Prediction Of Survival Data, Visualization Tools",
+    "General Tags": "Python Library, Survival Analysis, Lifetime Data Analysis, Reliability Analysis, Data Visualization",
+    "Software Type": "Python Library",
+    "Software Class": "Data Analysis",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Statistics & Probability"
+}

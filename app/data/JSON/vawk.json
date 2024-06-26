@@ -1,0 +1,11 @@
+{
+    "Software": "vawk",
+    "AI Description": "vawk is a vectorized AWK-like language and runtime designed for efficient and high-performance processing of structured text data.",
+    "Core Features": "vawk provides a syntax similar to AWK for processing text data, but offers vectorized operations for improved performance. It supports common text processing tasks such as filtering, transforming, and aggregating data. The vectorized nature allows for faster execution on large datasets.",
+    "General Tags": "Text Processing, Data Manipulation, Vectorized Operations",
+    "Software Type": "Language/Runtime",
+    "Software Class": "Text Processing",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

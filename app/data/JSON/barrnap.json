@@ -1,0 +1,11 @@
+{
+    "Software": "barrnap",
+    "AI Description": "Barrnap is a software tool for rapid ribosomal RNA prediction. It identifies rRNA sequences in DNA sequence data using a profile hidden Markov model (HMM) that is more tuned to ribosomal RNA genes.",
+    "Core Features": "1. Identify ribosomal RNA sequences in DNA data.\n2. Utilizes a profile hidden Markov model (HMM) for accurate prediction.\n3. Rapid and efficient rRNA prediction.\n4. Helps in annotating rRNA genes in genomic data.",
+    "General Tags": "Bioinformatics, Genomics, Sequence Analysis, Ribosomal RNA, DNA Sequencing",
+    "Software Type": "Sequence Analysis Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Area": "Sequence Analysis",
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
+}

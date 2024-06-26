@@ -1,0 +1,11 @@
+{
+    "Software": "bwa",
+    "AI Description": "Burrows-Wheeler Aligner (BWA) is a software package for mapping low-divergent sequences against a large reference genome, such as the human genome. It consists of three algorithms: BWA-backtrack, BWA-SW, and BWA-MEM. The BWA-backtrack algorithm is designed for Illumina sequence reads up to 100bp, while BWA-SW and BWA-MEM are for longer Illumina reads, including 100bp reads produced by the HiSeq 2000 platform.",
+    "Core Features": "Mapping Low-Divergent Sequences, Alignment Of Illumina Sequence Reads, Support For Short & Long Reads, Efficient Memory Usage",
+    "General Tags": "Sequence Alignment, Bioinformatics, Genomics, Next-Generation Sequencing (Ngs)",
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Alignment Tool",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

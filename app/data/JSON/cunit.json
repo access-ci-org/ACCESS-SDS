@@ -1,0 +1,11 @@
+{
+    "Software": "CUnit",
+    "AI Description": "CUnit is a lightweight C unit testing framework for automated testing of C code. It provides an easy-to-use framework for writing test cases and test suites to verify the correct functioning of C programs.",
+    "Core Features": "Supports Various Assertion Styles, Test Case Management, Logging & Reporting Of Test Results, Integration With Build Systems, Extensible & Customizable For Specific Testing Needs",
+    "General Tags": "Unit Testing, C Programming, Development Tools",
+    "Software Type": "Testing Framework",
+    "Software Class": "Testing",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

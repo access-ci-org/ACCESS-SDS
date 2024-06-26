@@ -1,0 +1,11 @@
+{
+    "Software": "mpip",
+    "AI Description": "mpip is a small utility that helps to install and manage MPI libraries on HPC clusters by simplifying the process of downloading, configuring, building, and installing MPI libraries.",
+    "Core Features": "mpip automates the installation process for MPI libraries, reducing the time and effort required to set up MPI on HPC clusters. It supports popular MPI implementations such as Open MPI and MPICH.",
+    "General Tags": "Software Utility, Hpc, Mpi Libraries, Cluster Management, Installation Tool",
+    "Software Type": "",
+    "Software Class": "",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
+}

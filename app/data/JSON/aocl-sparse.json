@@ -1,0 +1,11 @@
+{
+    "Software": "aocl-sparse",
+    "AI Description": "The aocl-sparse tool is part of the Intel FPGA SDK for OpenCL and is designed for optimizing sparse matrix operations on FPGAs. It provides a framework for developing custom sparse matrix kernels and integrating them into OpenCL applications for high-performance computing.",
+    "Core Features": "Optimizes Sparse Matrix Operations On Fpgas, Supports Custom Sparse Matrix Kernels Development, Integration With Opencl Applications For Hpc, Enhanced Performance For Sparse Matrix Computations",
+    "General Tags": "Sparse Matrix Operations, Fpga Optimization, Opencl Applications, High-Performance Computing",
+    "Software Type": "",
+    "Software Class": "Compiler/Tool",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
+}

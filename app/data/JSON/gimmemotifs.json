@@ -1,0 +1,11 @@
+{
+    "Software": "gimmemotifs",
+    "AI Description": "Gimmemotifs is a software package for de novo motif discovery, motif comparison and scanning for known motifs in DNA sequences. It provides a unified framework for running multiple motif discovery tools and merging the results to improve motif predictions.",
+    "Core Features": "1. De novo motif discovery\n2. Motif comparison\n3. Scanning for known motifs in DNA sequences\n4. Unified framework for running multiple motif discovery tools\n5. Merging results to improve motif predictions",
+    "General Tags": "Motif Discovery, DNA Sequences, Motif Comparison, Motif Scanning",
+    "Software Type": "Bioinformatics",
+    "Software Class": "Computational Biology",
+    "Research Area": "Genetics",
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
+}

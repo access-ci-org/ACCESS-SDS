@@ -1,0 +1,11 @@
+{
+    "Software": "ucx-cuda",
+    "AI Description": "ucx-cuda is a CUDA-enabled version of the Unified Communication X (UCX) framework, designed to provide high-performance communication primitives for parallel programming models on NVIDIA GPUs.",
+    "Core Features": "Optimized Communication Primitives For Parallel Programming On Nvidia Gpus, Support For Cuda-Aware Mpi & Other Communication Libraries, Enhanced Performance & Scalability For Gpu-Accelerated Applications, Integration With Various Programming Models Like Mpi, Openshmem, & Pgas Languages",
+    "General Tags": "Ucx, Cuda, Gpu-Accelerated Computing, Communication Primitives",
+    "Software Type": "Communication Framework",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "settarg",
+    "AI Description": "Settarg is a command-line utility designed for setting target specific optimizations in C/C++ compilers. It helps in specifying optimization flags tailored for a particular CPU architecture to improve performance.",
+    "Core Features": "Setting Target-Specific Optimizations In Compilers, Improving Performance Of Compiled Code, Command-Line Interface For Ease Of Use",
+    "General Tags": "Compilers, Optimization, Performance Enhancement, Command-Line Tool",
+    "Software Type": "Command-Line Utility",
+    "Software Class": "Compiler",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

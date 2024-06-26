@@ -1,0 +1,11 @@
+{
+    "Software": "R - foreach",
+    "AI Description": "R package that provides support for parallel execution of R code using various backends.",
+    "Core Features": "Allows Users To Write Parallel Code In R Using A High-Level Foreach() Function, Supports Parallel Execution On Multiple Backends Such As Doparallel, Dosnow, Dompi, Domc, Doredis, Doazureparallel, Facilitates Easy Generation Of Parallel Iterations For Looping Over Elements",
+    "General Tags": "R Package, Parallel Computing, Code Parallelization, High-Performance Computing",
+    "Software Type": "Parallel Computing",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Other Natural Sciences"
+}

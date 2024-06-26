@@ -1,0 +1,11 @@
+{
+    "Software": "libspatialite",
+    "AI Description": "libspatialite is an open-source library that extends the core SQLite database engine with spatial SQL capabilities. It allows users to create, manage, and query spatial data in a SQLite database, providing support for spatial functions and geometric data types.",
+    "Core Features": "1. Spatial SQL capabilities within SQLite database engine\n2. Support for spatial functions and geometric data types\n3. Enables creation, management, and querying of spatial data\n4. Open-source and actively maintained",
+    "General Tags": "Spatialite, Geospatial, Database, Spatial Data",
+    "Software Type": "Database Management",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

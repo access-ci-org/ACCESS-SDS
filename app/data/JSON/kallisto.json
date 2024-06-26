@@ -1,0 +1,11 @@
+{
+    "Software": "kallisto",
+    "AI Description": "kallisto is a program for quantifying abundances of transcripts from RNA-Seq data, using pseudoalignment to quickly determine compatibility of reads with targets, allowing rapid transcript quantification.",
+    "Core Features": "Efficient & Ultrafast RNA-Seq Quantification, Pseudoalignment-Based Approach, Accurate & Reliable Transcript Quantification, Compatibility With Standard RNA-Seq Analysis Pipelines, Multiple Output Formats For Downstream Analysis",
+    "General Tags": "RNA-Seq, Transcriptomics, Bioinformatics, Gene Expression Analysis, Computational Biology",
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Quantification Tool",
+    "Research Area": "Transcriptomics",
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "ANTLR",
+    "AI Description": "ANTLR (ANother Tool for Language Recognition) is a powerful parser generator for reading, processing, executing, or translating structured text or binary files.",
+    "Core Features": "Powerful Parser Generator, Support For Multiple Programming Languages, Parsing Expression Grammar (Peg) Support, Automatic Ast Construction, Lexer & Parser Generation",
+    "General Tags": "Compiler, Parser Generator, Syntax Analysis, Code Generation",
+    "Software Type": "",
+    "Software Class": "",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": ""
+}

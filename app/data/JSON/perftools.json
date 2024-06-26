@@ -1,0 +1,11 @@
+{
+    "Software": "perftools",
+    "AI Description": "Perftools is a collection of performance analysis tools designed to help developers optimize their software by identifying performance bottlenecks and areas for improvement. It includes a suite of profiling tools that can be used to analyze CPU and memory usage, as well as identify hotspots in code.",
+    "Core Features": "Cpu Profiling, Memory Profiling, Identification Of Performance Bottlenecks, Code Optimization, Performance Analysis",
+    "General Tags": "Performance Analysis, Optimization, Profiling",
+    "Software Type": "Performance Analysis Tools",
+    "Software Class": "Developer Tools",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
+}

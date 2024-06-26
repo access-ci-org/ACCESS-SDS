@@ -1,0 +1,11 @@
+{
+    "Software": "afterQC",
+    "AI Description": "afterQC is a quality control tool for high-throughput sequencing data. It performs post-alignment quality control on next-generation sequencing data to provide comprehensive QC metrics and visualizations.",
+    "Core Features": "Some core features of afterQC include adapter trimming, read filtering, read trimming, quality control metrics generation, and visualization of QC reports.",
+    "General Tags": "Quality Control, High-Throughput Sequencing Data, Next-Generation Sequencing",
+    "Software Type": "",
+    "Software Class": "",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "Lambda",
+    "AI Description": "Lambda is a programming language that is supported by Amazon Web Services. It allows users to write serverless code to run on AWS infrastructure without managing servers.",
+    "Core Features": "1. Serverless computing\n2. Automatic scaling\n3. Pay-per-use pricing model\n4. Integration with various AWS services",
+    "General Tags": "Programming Language, Serverless Computing, Cloud Services",
+    "Software Type": "",
+    "Software Class": "Programming Language",
+    "Research Area": "",
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
+}

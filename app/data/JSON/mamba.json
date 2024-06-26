@@ -1,0 +1,11 @@
+{
+    "Software": "mamba",
+    "AI Description": "Mamba is a reimplementation of the high-performance package manager Conda that aims to be much faster in resolving package dependencies. It provides a simple and fast way to manage environments and packages for conda-enabled systems.",
+    "Core Features": "Efficiently resolves package dependency graphs, supports package installation, creation, update, removal, and environment management, enables users to quickly create isolated environments for different projects, supports package installation from various sources like Anaconda repositories and Conda-Forge, provides compatibility with Conda environments and configuration files, offers a clean and easy-to-use command-line interface.",
+    "General Tags": "Package Manager, Dependency Resolver, Environment Management",
+    "Software Type": "Package Manager",
+    "Software Class": "Software",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
+}

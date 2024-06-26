@@ -1,0 +1,11 @@
+{
+    "Software": "torchtext",
+    "AI Description": "torchtext is a library used for natural language processing (NLP) tasks in PyTorch. It provides utilities and datasets for processing text data, such as tokenization, vocabulary building, word embeddings, and data loading for NLP models.",
+    "Core Features": "Tokenization Of Text Data, Building Vocabularies For Text Processing, Word Embeddings For Nlp Models, Data Loading Utilities For Nlp Tasks",
+    "General Tags": "Nlp, Natural Language Processing, Pytorch, Text Processing",
+    "Software Type": "Library",
+    "Software Class": "Deep Learning",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

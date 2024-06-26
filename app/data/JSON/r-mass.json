@@ -1,0 +1,11 @@
+{
+    "Software": "R-Mass",
+    "AI Description": "R-Mass is a comprehensive R package designed for mass spectrometry data analysis. It provides functionality for preprocessing, visualization, statistical analysis, and interpretation of mass spectrometry data.",
+    "Core Features": "Data Preprocessing For Mass Spectrometry Data, Data Visualization Tools For Mass Spectra, Statistical Analysis Methods Tailored For Mass Spectrometry Data, Interpretation Of Mass Spectrometry Results",
+    "General Tags": "R Package, Mass Spectrometry, Data Analysis, Statistical Analysis, Data Visualization",
+    "Software Type": "R Package",
+    "Software Class": "Data Analysis Tool",
+    "Research Area": "Mass Spectrometry",
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
+}

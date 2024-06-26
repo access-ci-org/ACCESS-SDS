@@ -1,0 +1,11 @@
+{
+    "Software": "PROJ",
+    "AI Description": "PROJ is a standard Unix filter function designed to convert geographic longitude and latitude coordinates into Cartesian coordinates. It is widely used in geospatial applications for coordinate transformation and map projection.",
+    "Core Features": "Coordinate transformation, Map projection, Geospatial data processing",
+    "General Tags": "Geospatial, Coordinate Transformation, Map Projection",
+    "Software Type": "Coordinate Transformation Tool",
+    "Software Class": "Geospatial Software",
+    "Research Area": "Geospatial Analysis",
+    "Research Discipline": "Geography",
+    "Research Field": "Earth Sciences"
+}

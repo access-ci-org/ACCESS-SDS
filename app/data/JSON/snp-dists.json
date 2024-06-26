@@ -1,0 +1,11 @@
+{
+    "Software": "snp-dists",
+    "AI Description": "snp-dists is a tool used for calculating SNP distances between genomes. It is particularly useful for analyzing bacterial genomes and identifying genetic variations.",
+    "Core Features": "Calculates Snp Distances Between Genomes, Works Well With Bacterial Genomes, Identifies Genetic Variations, Useful For Phylogenetic Analysis, Supports Input In Various Formats",
+    "General Tags": "Genomics, Bioinformatics, Sequence Analysis, Phylogenetics",
+    "Software Type": "Analysis Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Area": "Genetic Variation",
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "py-gsd",
+    "AI Description": "Py-GSD is a Python library for reading and writing General Simulation Data files. It provides a high-level, Pythonic interface to the GSD file format, making it easier for users to manipulate and analyze simulation data in Python.",
+    "Core Features": "1. Reading and writing General Simulation Data (GSD) files\n2. High-level Pythonic interface\n3. Simplifies manipulation and analysis of simulation data",
+    "General Tags": "Python Library, Simulation Data, Data Analysis",
+    "Software Type": "Python Library",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

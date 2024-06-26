@@ -1,0 +1,11 @@
+{
+    "Software": "Meson",
+    "AI Description": "Meson is an open-source build system meant to be both extremely fast and as user-friendly as possible.",
+    "Core Features": "Cross-compilation support, automatic dependency management, integrated testing framework, easy-to-read syntax",
+    "General Tags": "Build System, Software Development, Automation",
+    "Software Type": "Compiler",
+    "Software Class": "Build System",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

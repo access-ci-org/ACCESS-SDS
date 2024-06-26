@@ -1,0 +1,11 @@
+{
+    "Software": "lddt",
+    "AI Description": "lddt (Local Dynamic Data race Tester) is a tool for testing and debugging data races in parallel programs.",
+    "Core Features": "lddt is designed to pinpoint the exact locations in the source code where data races occur in parallel programs. It provides detailed information on the variables being accessed and the threads involved in the race.",
+    "General Tags": "Testing, Debugging, Parallel Programming",
+    "Software Type": "Testing & Debugging Tool",
+    "Software Class": "Development Tool",
+    "Research Area": "Software Engineering, Systems, & Development",
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
+}

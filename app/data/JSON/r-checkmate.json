@@ -1,0 +1,11 @@
+{
+    "Software": "R - checkmate",
+    "AI Description": "checkmate is an R package designed to improve the quality and reliability of code by providing a set of functions for checking the properties of objects. It offers a rich set of test functions for checking the state of objects or functions and provides informative error messages for quick debugging and troubleshooting.",
+    "Core Features": "1. Extensive set of functions for checking the properties of R objects and functions.\n2. Supports various types of checks including type checks, value checks, object structure checks, container checks, and more.\n3. Provides clear and informative error messages to assist in debugging and troubleshooting.\n4. Enables users to ensure data integrity and validity by verifying the correctness of input data.\n5. Facilitates writing robust code by enforcing conditions and constraints on the input and output of functions.",
+    "General Tags": "R Package, Data Quality, Error Handling, Debugging, Data Validation",
+    "Software Type": "Library/Package",
+    "Software Class": "Programming & Scripting Tools",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

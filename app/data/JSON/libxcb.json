@@ -1,0 +1,11 @@
+{
+    "Software": "libxcb",
+    "AI Description": "libxcb is a C language library for the X Window System's X protocol, providing a replacement for the traditional Xlib API. It allows for more efficient communication between X clients and the X server by reducing round-trip requests.",
+    "Core Features": "Efficient Communication With The X Server, Replacement For Xlib Api, Reduces Round-Trip Requests",
+    "General Tags": "X Window System, C Library, X Protocol",
+    "Software Type": "Programming",
+    "Software Class": "Library",
+    "Research Area": "Systems Programming",
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
+}

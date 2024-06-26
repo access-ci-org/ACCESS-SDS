@@ -1,0 +1,11 @@
+{
+    "Software": "SignalP 6",
+    "AI Description": "SignalP 6.0 predicts the presence and location of signal peptide cleavage sites in amino acid sequences from different organisms such as Gram-positive bacteria, Gram-negative bacteria, archae, eukaryotes, and viruses. It contains several algorithms for discriminating signal peptides from transmembrane regions.",
+    "Core Features": "Predicts Signal Peptide Cleavage Sites In Amino Acid Sequences, Differentiates Signal Peptides From Transmembrane Regions, Available For Various Organisms Including Bacteria, Archae, Eukaryotes, & Viruses",
+    "General Tags": "Bioinformatics, Computational Biology, Protein Analysis, Bioinformatics Tools",
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Prediction Tool",
+    "Research Area": "Protein Structure & Function",
+    "Research Discipline": "Molecular Biology",
+    "Research Field": "Biological Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "CLIP",
+    "AI Description": "CLIP (Contrastive Language-Image Pretraining) is a framework for learning joint representations of images and text. It is designed to pretrain on large scale image-text datasets to learn a powerful visual-linguistic understanding.",
+    "Core Features": "1. Pretraining on large-scale image-text datasets\n2. Learning joint representations of images and text\n3. Enhancing visual-linguistic understanding\n4. Facilitating downstream tasks such as zero-shot learning, image-text retrieval, and visual question answering",
+    "General Tags": "Machine Learning, Deep Learning, Image-Text Representation, Pretraining",
+    "Software Type": "Deep Learning",
+    "Software Class": "Machine Learning Framework",
+    "Research Area": "Natural Language Processing",
+    "Research Discipline": "Artificial Intelligence & Intelligent Systems",
+    "Research Field": "Computer & Information Sciences"
+}

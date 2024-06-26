@@ -1,0 +1,11 @@
+{
+    "Software": "R codetools",
+    "AI Description": "R codetools is a collection of tools to check and analyze code in R packages or R sessions. It provides functions for static code analysis, profiling, and interactive code debugging.",
+    "Core Features": "Static Code Analysis, Profiling, Interactive Code Debugging",
+    "General Tags": "R, Code Analysis, Profiling, Debugging",
+    "Software Type": "Library",
+    "Software Class": "Development Tools",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

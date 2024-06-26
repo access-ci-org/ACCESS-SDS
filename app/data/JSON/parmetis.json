@@ -1,0 +1,11 @@
+{
+    "Software": "ParMETIS",
+    "AI Description": "ParMETIS is an MPI-based parallel graph partitioning and sparse matrix ordering library designed for efficiently solving large, sparse graph problems. It provides high-performance graph partitioning, matrix reordering, and fill-reducing matrix ordering capabilities for a wide range of scientific computing applications.",
+    "Core Features": "Mpi-Based Parallel Graph Partitioning, Sparse Matrix Reordering, High-Performance Capabilities, Optimized For Large, Sparse Graph Problems",
+    "General Tags": "Graph Partitioning, Sparse Matrix Ordering, Scientific Computing, Parallel Computing",
+    "Software Type": "Computational Tool",
+    "Software Class": "Library",
+    "Research Area": "Graph Theory",
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
+}

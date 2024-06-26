@@ -1,0 +1,11 @@
+{
+    "Software": "readline-devel",
+    "AI Description": "The readline library provides a set of functions for use by applications that allow users to edit command lines as they are typed in. Both Emacs and vi editing modes are available. The default editing mode is Emacs, but this can be changed when the application is run. In Emacs mode, the command line can be edited using the standard Emacs keystrokes.",
+    "Core Features": "1. Provides command line editing capabilities for applications. 2. Supports both Emacs and vi editing modes. 3. Allows users to edit command lines as they are typed in using standard keystrokes.",
+    "General Tags": "Software Development, Library, Command Line Editing",
+    "Software Type": "Development",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
+}

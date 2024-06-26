@@ -1,0 +1,11 @@
+{
+    "Software": "perl-bundle2-cpan",
+    "AI Description": "perl-bundle2-cpan is a Perl module that allows for the installation of multiple CPAN modules in one go, making it easier to manage dependencies and streamline the process of installing Perl modules.",
+    "Core Features": "Installs Multiple Cpan Modules At Once, Manages Dependencies Efficiently, Streamlines The Installation Process",
+    "General Tags": "Perl, Cpan, Dependency Management, Module Installation",
+    "Software Type": "Package",
+    "Software Class": "Library",
+    "Research Area": "Software Engineering, Systems, & Development",
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "R GenePlotter",
+    "AI Description": "R GenePlotter is an R package used for visualizing genetic data and generating various plots for genetic analysis. It provides a wide range of plotting functions specifically tailored for genetic studies.",
+    "Core Features": "Visualization Of Genetic Data, Generation Of Custom Plots For Genetic Analysis, Support For Various Types Of Genetic Data Such As Snp, Cnv, & Gene Expression Data, Interactive & Customizable Plots, Integration With R Statistical Environment",
+    "General Tags": "Data Visualization, Genetics, R Package",
+    "Software Type": "Statistical Analysis Tool",
+    "Software Class": "Data Visualization",
+    "Research Area": "Genomics",
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
+}

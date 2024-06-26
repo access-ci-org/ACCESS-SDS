@@ -1,0 +1,11 @@
+{
+    "Software": "R-Curl",
+    "AI Description": "R-Curl is an R interface to the libcurl library, allowing HTTP client functionality to be accessed directly from within R. It provides functions to make HTTP requests, download data from URLs, and handle various aspects of web communication.",
+    "Core Features": "Http Client Functionality Within R Environment, Support For Making Http Requests, Downloading Data From Urls, Handling Web Communication Tasks",
+    "General Tags": "R Package, Web Communication, Http Client, Data Download",
+    "Software Type": "Library",
+    "Software Class": "Data Access & Manipulation",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

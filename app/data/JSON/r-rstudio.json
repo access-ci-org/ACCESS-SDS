@@ -1,0 +1,11 @@
+{
+    "Software": "RStudio",
+    "AI Description": "RStudio is an integrated development environment (IDE) for R, a programming language and environment widely used for statistical computing and graphics. RStudio provides an intuitive and productive user interface for R, allowing users to efficiently write, execute, and debug R code.",
+    "Core Features": "Integrated Development Environment For The R Programming Language, Code Editor With Syntax Highlighting & Code Completion, Integrated Console For Interactive R Sessions, Data Visualization & Plotting Capabilities, Package Management & Integration With Cran, Project Management Features, Support For Rmarkdown For Reproducible Research",
+    "General Tags": "Ide, Statistical Computing, Data Visualization, Programming",
+    "Software Type": "Ide",
+    "Software Class": "Integrated Development Environment",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Other Natural Sciences"
+}

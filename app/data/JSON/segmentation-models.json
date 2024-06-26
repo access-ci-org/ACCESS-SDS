@@ -1,0 +1,11 @@
+{
+    "Software": "segmentation-models",
+    "AI Description": "Segmentation Models is an open-source library for semantic segmentation models that provides pre-trained models, scripts, and modular API for building custom segmentation models.",
+    "Core Features": "Provides Pre-Trained Segmentation Models, Modular Api For Building Custom Segmentation Models, Supports Various Backbones Such As Resnet, Mobilenet, Efficientnet, Offers Easy Model Deployment In Keras & Tensorflow",
+    "General Tags": "Semantic Segmentation, Deep Learning, Computer Vision, Image Processing",
+    "Software Type": "Library",
+    "Software Class": "Machine Learning",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

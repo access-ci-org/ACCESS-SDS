@@ -1,0 +1,11 @@
+{
+    "Software": "fastai",
+    "AI Description": "The fastai library simplifies training fast and accurate neural networks using modern best practices. It is built on top of PyTorch and provides many high-level abstractions to make it easy to train state-of-the-art models with little code.",
+    "Core Features": "1. High-level API for training deep learning models. 2. Implements cutting-edge techniques in an accessible way. 3. Provides pre-trained models for transfer learning. 4. Includes tools for interpretability and visualization.",
+    "General Tags": "Deep Learning, Neural Networks, Machine Learning, Pytorch",
+    "Software Type": "Machine Learning Framework",
+    "Software Class": "Libraries",
+    "Research Area": "Machine Learning, Deep Learning",
+    "Research Discipline": "Artificial Intelligence & Intelligent Systems",
+    "Research Field": "Computer & Information Sciences"
+}

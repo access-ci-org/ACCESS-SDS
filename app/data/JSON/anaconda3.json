@@ -1,0 +1,11 @@
+{
+    "Software": "Anaconda3",
+    "AI Description": "Anaconda is a free and open-source distribution of Python programming language for scientific computing that aims to simplify package management and deployment. It includes over 250 popular data science packages and their dependencies, making it a one-stop solution for Python programming in data science, machine learning, deep learning, and other related fields.",
+    "Core Features": "Comprehensive Python Distribution For Scientific Computing, Package Management With Conda Package Manager, Includes Popular Data Science Packages Like Numpy, Pandas, Matplotlib, Etc., Cross-Platform Support, Ability To Create Isolated Environments For Different Projects",
+    "General Tags": "Python, Data Science, Machine Learning, Deep Learning, Package Management",
+    "Software Type": "Development Tools",
+    "Software Class": "Programming Language Distribution",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

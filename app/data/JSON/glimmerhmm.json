@@ -1,0 +1,11 @@
+{
+    "Software": "GlimmerHMM",
+    "AI Description": "GlimmerHMM is a software system for gene prediction in microbial genomes. It uses hidden Markov models to represent various aspects of a gene (e.g., start codons, stop codons, and exons) to accurately predict the locations of genes.",
+    "Core Features": "Gene Prediction In Microbial Genomes, Utilizes Hidden Markov Models, Predicts Start & Stop Codons, & Exons, Accurate Gene Location Prediction",
+    "General Tags": "Gene Prediction, Microbial Genomes, Hidden Markov Models, Bioinformatics",
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Gene Prediction",
+    "Research Area": "Microbial Genomics",
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
+}

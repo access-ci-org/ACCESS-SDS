@@ -1,0 +1,11 @@
+{
+    "Software": "Seidr",
+    "AI Description": "Seidr is a software package designed for the efficient and scalable estimation of relatedness and inbreeding coefficients from large-scale genomic data.",
+    "Core Features": "Estimation Of Relatedness Coefficients, Estimation Of Inbreeding Coefficients, Support For Large-Scale Genomic Data, Efficient & Scalable Algorithms",
+    "General Tags": "Genomics, Relatedness, Inbreeding, Computational Biology",
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Genomic Analysis Tool",
+    "Research Area": "Population Genetics",
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
+}

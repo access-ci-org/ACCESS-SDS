@@ -1,0 +1,11 @@
+{
+    "Software": "GraphBLAS",
+    "AI Description": "GraphBLAS is a collection of high-performance linear algebraic operations specifically designed for sparse graphs and matrices.",
+    "Core Features": "1. Extensive set of linear algebra operations for manipulating graph structures and sparse matrices.\n2. Optimized for performing calculations on large-scale graphs efficiently.\n3. Provides a flexible framework for developing graph algorithms and applications.\n4. Supports a wide range of graph analytics and machine learning tasks.\n5. Designed for parallel and distributed computing environments.",
+    "General Tags": "Graph, Linear Algebra, Sparse Matrices",
+    "Software Type": "Library",
+    "Software Class": "Computational Software",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

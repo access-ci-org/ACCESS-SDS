@@ -1,0 +1,11 @@
+{
+    "Software": "Anaconda3 with mimalloc (Mi100)",
+    "AI Description": "Anaconda is a comprehensive distribution of Python and R programming languages used for scientific computing, data science, machine learning, and artificial intelligence applications. This specific version includes the mimalloc memory allocator optimized for performance on AMD GPUs, particularly the AMD Radeon Instinct MI100 accelerator.",
+    "Core Features": "1. Includes popular Python packages such as NumPy, SciPy, pandas, scikit-learn, and TensorFlow.\n2. Incorporates R programming language and essential packages for statistical analysis.\n3. Optimized for high performance computing on AMD GPUs.\n4. Enables seamless integration of GPU-accelerated libraries for data processing and machine learning tasks.",
+    "General Tags": "Anaconda, Python, R, Scientific Computing, Data Science, Machine Learning, Artificial Intelligence, Mimalloc, Performance Optimization, Amd Gpus",
+    "Software Type": "Programming Environment",
+    "Software Class": "Distribution",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
+}

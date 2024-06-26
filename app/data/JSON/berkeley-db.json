@@ -1,0 +1,11 @@
+{
+    "Software": "Berkeley DB",
+    "AI Description": "Berkeley DB is an embedded database library developed by Oracle that provides a high-performance, scalable, transactional database management system for applications requiring native persistence.",
+    "Core Features": "Embedded Database Management System, High-Performance, Scalable, Transactional Support, Acid Properties, Support For Key/Value Data Model",
+    "General Tags": "Database Management System, Embedded Database, Acid Properties, Transaction Support",
+    "Software Type": "Library",
+    "Software Class": "Database Management System",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

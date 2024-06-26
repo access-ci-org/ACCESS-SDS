@@ -1,0 +1,11 @@
+{
+    "Software": "libcap",
+    "AI Description": "libcap is a library used to manage Linux capabilities (fine-grained kernel permission controls) for programs that need to perform certain privileged operations without the need for full superuser privileges.",
+    "Core Features": "Manages Linux Capabilities For Programs, Allows Programs To Perform Specific Privileged Operations Without Full Superuser Privileges, Enhances Security By Limiting Program Access To Only Necessary Capabilities",
+    "General Tags": "Linux Capabilities Management, Security Enhancement, Privileged Operations",
+    "Software Type": "Linux Utility",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

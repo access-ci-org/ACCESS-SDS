@@ -1,0 +1,11 @@
+{
+    "Software": "xcb-util-image",
+    "AI Description": "The xcb-util-image library provides a number of functions used for manipulating and creating XCB format images, including loading and saving images to disk in various formats.",
+    "Core Features": "1. Load and save XCB format images in various file formats.\n2. Manipulate XCB images using different operations.\n3. Convert images between different formats supported by XCB.\n4. Provides utility functions for working with XCB images.",
+    "General Tags": "Image Processing, Xcb, Library",
+    "Software Type": "Library",
+    "Software Class": "Utility Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

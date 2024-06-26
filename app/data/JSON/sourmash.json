@@ -1,0 +1,11 @@
+{
+    "Software": "sourmash",
+    "AI Description": "Sourmash is a command-line tool and Python library for comparing and analyzing nucleotide signatures from genomics data. It is specifically designed for estimating similarity between genomic datasets using MinHash sketches.",
+    "Core Features": "Estimation Of Jaccard Similarity Between Genomic Datasets, Minhash-Based Sketching For Fast & Memory-Efficient Operations, Compatibility With Various File Formats Including Fastq, Fasta, & Sra, Support For Creating & Querying Minhash Databases, Integration With Other Bioinformatics Tools Like Mash & Kraken",
+    "General Tags": "Bioinformatics, Genomics, Nucleotide Signatures, Minhash Sketches",
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Computational Software",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

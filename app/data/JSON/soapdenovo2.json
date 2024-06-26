@@ -1,0 +1,11 @@
+{
+    "Software": "SOAPdenovo2",
+    "AI Description": "SOAPdenovo2 is a standalone de novo assembler specifically designed to assemble short reads generated on the Illumina platform. It is an updated version of SOAPdenovo which includes improvements in scalability, adaptability to different data sizes, and provides high-quality assemblies for complex genomes.",
+    "Core Features": "1. De novo assembly of short reads\n2. Improved scalability and adaptability\n3. High-quality assemblies for complex genomes\n4. Handles large amounts of data efficiently\n5. Capable of detecting various types of variations",
+    "General Tags": "De Novo Assembly, Short Reads, Illumina Platform",
+    "Software Type": "Bioinformatics",
+    "Software Class": "Assembly",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

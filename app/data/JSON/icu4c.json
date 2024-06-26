@@ -1,0 +1,11 @@
+{
+    "Software": "icu4c",
+    "AI Description": "ICU (International Components for Unicode) is a mature, widely used set of C/C++ and Java libraries providing Unicode and Globalization support for software applications. ICU is widely portable and gives applications the same results on all platforms and between C/C++ and Java software.",
+    "Core Features": "Unicode Support, Globalization Support, Cross-Platform Compatibility, C/C++ & Java Libraries",
+    "General Tags": "Unicode, Globalization, Cross-Platform, Libraries",
+    "Software Type": "Development",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

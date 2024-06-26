@@ -1,0 +1,11 @@
+{
+    "Software": "cryptsetup",
+    "AI Description": "cryptsetup is a utility used to conveniently set up disk encryption based on the Dm-crypt kernel module. It allows users to easily configure encrypted block devices using LUKS (Linux Unified Key Setup), manage cryptographic volumes, and interact with encrypted volumes.",
+    "Core Features": "Disk Encryption Setup, Luks Support, Cryptographic Volume Management, Interaction With Encrypted Volumes",
+    "General Tags": "Disk Encryption, Data Security, Cryptography, Linux",
+    "Software Type": "System Software",
+    "Software Class": "Utility",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

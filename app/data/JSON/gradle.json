@@ -1,0 +1,11 @@
+{
+    "Software": "Gradle",
+    "AI Description": "Gradle is an open-source build automation tool focused on flexibility and performance. It uses a Groovy-based domain-specific language (DSL) to define build configurations, allowing for highly customizable build processes.",
+    "Core Features": "Support For Multi-Project Builds, Dependency Management, Plugins For Various Tasks, Incremental Builds, Extensible Through Groovy Dsl",
+    "General Tags": "Build Automation, Dependency Management, Java, Groovy",
+    "Software Type": "Tools",
+    "Software Class": "Build Tools",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "open-data-cube-core",
+    "AI Description": "Open Data Cube (ODC) is an open-source software package that helps in the management, analysis, and visualization of large environmental and Earth observation data sets. ODC Core provides the foundational components and functionalities for working with satellite and Earth observation data.",
+    "Core Features": "Data Ingestion & Storage, Data Indexing & Querying, Data Processing & Analysis, Data Visualization, Integration With Python Ecosystem",
+    "General Tags": "Earth Observation, Data Management, Data Analysis, Data Visualization, Open Source",
+    "Software Type": "Software Library",
+    "Software Class": "Data Management/Analysis",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Earth & Environmental Sciences"
+}

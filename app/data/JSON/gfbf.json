@@ -1,0 +1,11 @@
+{
+    "Software": "gfbf",
+    "AI Description": "Gfbf is a compiler for Boolean functions, implemented as an SMT/SAT translation tool. It takes a Boolean function expressed as an algebraic normal form (ANF) as input and produces output in various formats including Conjunctive Normal Form (CNF), Decision Diagrams, and Truth Tables. The tool is designed to efficiently manipulate and analyze Boolean functions for various applications in logic synthesis, verification, and optimization.",
+    "Core Features": "Boolean Function Compilation, Anf To Cnf Conversion, Smt/Sat Translation, Decision Diagram Generation, Truth Table Export",
+    "General Tags": "Compiler, Boolean Functions, Logic Synthesis, Verification, Optimization",
+    "Software Type": "Compilation Tool",
+    "Software Class": "Compiler",
+    "Research Area": "Artificial Intelligence & Intelligent Systems",
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "MOOSE",
+    "AI Description": "MOOSE (Multiphysics Object-Oriented Simulation Environment) is a finite element simulation framework designed for solving complex multiphysics and multiscale engineering problems. It provides a flexible and extensible platform for researchers and engineers to develop and deploy simulation tools for a wide range of applications.",
+    "Core Features": "MOOSE offers a wide range of capabilities including support for parallel computing, flexible input file format, automatic mesh adaptation, nonlinear solvers, and the ability to couple multiple physics phenomena. It also includes a library of predefined finite element kernels for common physics problems.",
+    "General Tags": "Simulation, Multiphysics, Finite Element Method",
+    "Software Type": "Computational Software",
+    "Software Class": "Simulation Framework",
+    "Research Area": "Mechanical Engineering",
+    "Research Discipline": "Engineering & Technology",
+    "Research Field": "Engineering & Technology"
+}

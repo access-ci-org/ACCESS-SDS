@@ -1,0 +1,11 @@
+{
+    "Software": "pyfaidx",
+    "AI Description": "pyfaidx is a Python library that enables efficient random access to genome FASTA files in both uncompressed and gzipped formats. It provides a simple interface for indexing and querying sequences from FASTA files.",
+    "Core Features": "Efficient Random Access To Genome Fasta Files, Support For Both Uncompressed & Gzipped Formats, Simple Interface For Indexing & Querying Sequences",
+    "General Tags": "Python Library, Genome Analysis, Bioinformatics",
+    "Software Type": "Genomics",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

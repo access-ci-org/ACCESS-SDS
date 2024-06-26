@@ -1,0 +1,11 @@
+{
+    "Software": "RDKit",
+    "AI Description": "RDKit is an open-source toolkit for cheminformatics that provides a wide range of functionality for cheminformatics, including molecular modeling, cheminformatics, and machine learning tools.",
+    "Core Features": "Some core features of RDKit include molecular fingerprinting, substructure searching, chemical similarity calculations, molecular property prediction, molecular similarity clustering, chemical reaction handling, 2D and 3D molecular visualization, and descriptor calculation.",
+    "General Tags": "Cheminformatics, Molecular Modeling, Cheminformatics Toolkit",
+    "Software Type": "Toolkit",
+    "Software Class": "Cheminformatics Software",
+    "Research Area": "Analytical & Materials Chemistry",
+    "Research Discipline": "Chemical Sciences",
+    "Research Field": "Natural Sciences"
+}

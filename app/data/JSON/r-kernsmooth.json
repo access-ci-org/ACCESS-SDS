@@ -1,0 +1,11 @@
+{
+    "Software": "r-kernsmooth",
+    "AI Description": "The r-kernsmooth package in R provides functions for kernel smoothing, a non-parametric technique for estimating probability density functions of data points. Kernel smoothing can help visualize data distribution and identify underlying patterns in the data.",
+    "Core Features": "1. Kernel density estimation for univariate and multivariate data sets.\n2. Support for various kernel functions such as Gaussian, Epanechnikov, and rectangular kernels.\n3. Bandwidth selection methods to optimize the smoothing process.\n4. Computation of kernel density estimates and cumulative distribution functions.\n5. Plotting functions for visualizing smoothed density estimates.",
+    "General Tags": "Statistics, Data Visualization, Probability Estimation",
+    "Software Type": "Library",
+    "Software Class": "Statistical Analysis",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Mathematics"
+}

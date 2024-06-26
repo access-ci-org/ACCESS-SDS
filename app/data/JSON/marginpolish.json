@@ -1,0 +1,11 @@
+{
+    "Software": "MarginPolish",
+    "AI Description": "MarginPolish is a tool for polishing genome assemblies by generating new consensus sequences based on raw nanopore sequencing data.",
+    "Core Features": "1. Uses raw nanopore sequencing data to improve the accuracy of genome assemblies. 2. Implements a graph-based approach to correct errors in the assembly. 3. Can be used as a standalone tool or integrated into existing genome assembly pipelines.",
+    "General Tags": "Genome Assembly, Nanopore Sequencing, Polishing",
+    "Software Type": "Tool",
+    "Software Class": "Bioinformatics",
+    "Research Area": "Genome Assembly",
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
+}

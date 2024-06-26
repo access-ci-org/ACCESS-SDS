@@ -1,0 +1,11 @@
+{
+    "Software": "Aesara",
+    "AI Description": "Aesara is a Python library for symbolic mathematical operations, particularly focusing on deep learning and optimization. It allows for the creation of complex mathematical expressions and their manipulation symbolically, enabling automatic differentiation and optimization of functions.",
+    "Core Features": "Symbolic mathematical operations, automatic differentiation, optimization, deep learning support",
+    "General Tags": "Python Library, Symbolic Computation, Deep Learning, Optimization",
+    "Software Type": "Library",
+    "Software Class": "Scientific Computing",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

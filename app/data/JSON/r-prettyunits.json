@@ -1,0 +1,11 @@
+{
+    "Software": "r-prettyunits",
+    "AI Description": "The r-prettyunits package provides a mechanism to format and print human-readable data units in a pretty and customized manner. It offers functions to convert messy data units (e.g., bytes, seconds) into tidy and readable formats for better presentation and interpretation.",
+    "Core Features": "Conversion Of Data Units Into Human-Readable Formats, Customizable Formatting Options For Units, Support For A Variety Of Units Such As Bytes, Seconds, Etc.",
+    "General Tags": "Data Units, Data Formatting, Data Presentation",
+    "Software Type": "R Package",
+    "Software Class": "Data Visualization",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Other Computer & Information Sciences"
+}

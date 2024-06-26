@@ -1,0 +1,11 @@
+{
+    "Software": "Py3Dmol",
+    "AI Description": "Py3Dmol is a Python library that provides a simple way to use the 3Dmol.js molecular viewer in Jupyter notebooks or Python scripts. It enables interactive visualization of molecular structures and is particularly useful for educational purposes and research in chemistry, biochemistry, and structural biology.",
+    "Core Features": "Interactive Molecular Visualization, Support For Various Molecular File Formats, Customizable Styles & Representations, Integration With Jupyter Notebooks, Ability To Embed 3D Molecular Visualizations In Web Applications",
+    "General Tags": "Molecular Visualization, Python Library",
+    "Software Type": "Python Library",
+    "Software Class": "Visualization",
+    "Research Area": "Chemistry, Biochemistry, Structural Biology",
+    "Research Discipline": "Chemical Sciences, Biological Sciences",
+    "Research Field": "Chemical Sciences, Biological Sciences"
+}

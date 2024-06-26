@@ -1,0 +1,11 @@
+{
+    "Software": "poppler",
+    "AI Description": "Poppler is a software utility library that is used to render PDF documents. It is a PDF rendering library based on the xpdf-3.0 code base. It provides various command-line utilities for working with PDF files as well.",
+    "Core Features": "1. Rendering PDF documents\n2. Parsing PDF files\n3. Extracting text and images from PDFs\n4. Converting PDF to other formats\n5. Command-line utilities for PDF manipulation",
+    "General Tags": "Pdf Rendering, Pdf Manipulation, Pdf Parsing",
+    "Software Type": "Library",
+    "Software Class": "Utility Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

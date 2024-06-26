@@ -1,0 +1,11 @@
+{
+    "Software": "Dask",
+    "AI Description": "Dask is a flexible parallel computing library for analytic computing, designed to scale from single machines to large clusters. It provides advanced parallelism for analytics, enabling performance at scale for the tools you love.",
+    "Core Features": "Parallel Computing, Scalability, Efficient Task Scheduling, Integration With Existing Libraries Like Numpy, Pandas, & Scikit-Learn",
+    "General Tags": "Parallel Computing, Scalable Computing, Analytics, Data Science",
+    "Software Type": "Library",
+    "Software Class": "Computational Software",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

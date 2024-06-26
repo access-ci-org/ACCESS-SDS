@@ -1,0 +1,11 @@
+{
+    "Software": "netcdf4-python",
+    "AI Description": "NetCDF4 is a Python interface to the netCDF version 4 library. NetCDF is a set of software libraries and self-describing, machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data.",
+    "Core Features": "Read & Write Netcdf Files In Both Classic & Netcdf 4 Formats, Support For Various Data Types (E.G., Floats, Integers, Strings), Efficient Handling Of Large Datasets, Integration With Popular Scientific Python Libraries Like Numpy, Ability To Work With Multidimensional Data Arrays, Metadata Support For Maintaining Information About The Data",
+    "General Tags": "Python Library, Netcdf, Scientific Data Handling, Array-Oriented Data, Data Storage & Access",
+    "Software Type": "Library",
+    "Software Class": "Data Handling & Storage",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Earth & Environmental Sciences"
+}

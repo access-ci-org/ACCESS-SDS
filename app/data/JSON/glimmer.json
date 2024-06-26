@@ -1,0 +1,11 @@
+{
+    "Software": "Glimmer",
+    "AI Description": "Glimmer is a gene prediction software tool designed for microbial genomes. It uses a combination of statistics and hidden Markov models to predict potential protein-coding genes in DNA sequences.",
+    "Core Features": "1. Gene prediction based on statistical models and hidden Markov models.\n2. Specifically tailored for microbial genomes.\n3. Supports both bacterial and archaeal genomes.\n4. Provides predictions for protein-coding genes.",
+    "General Tags": "Gene Prediction, Microbial Genomes, Hidden Markov Models",
+    "Software Type": "Gene Prediction Tool",
+    "Software Class": "Bioinformatics",
+    "Research Area": "Microbial Genomics",
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
+}

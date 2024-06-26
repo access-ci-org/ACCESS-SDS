@@ -1,0 +1,11 @@
+{
+    "Software": "bamkit",
+    "AI Description": "BamKit is a toolkit for analyzing and manipulating BAM files, which are binary sequence alignment/map format files commonly used in bioinformatics for storing mapped sequence data.",
+    "Core Features": "BamKit provides functionalities for parsing BAM files, extracting alignment statistics, filtering reads, marking duplicates, sorting reads, and indexing BAM files.",
+    "General Tags": "Bioinformatics, Hpc Tools",
+    "Software Type": "Tool",
+    "Software Class": "Computational Biology",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

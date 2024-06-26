@@ -1,0 +1,11 @@
+{
+    "Software": "ciriquant",
+    "AI Description": "ciriquant is a computational software package for analyzing circadian oscillations in time-course data. It allows for the identification of significantly rhythmic genes and estimation of circadian parameters.",
+    "Core Features": "1. Detection of circadian rhythms in time-course gene expression data. 2. Estimation of circadian parameters such as period and phase. 3. Statistical analysis to determine significantly rhythmic genes. 4. Visualization tools for circadian patterns.",
+    "General Tags": "Computational Biology, Time-Series Analysis, Biological Rhythms",
+    "Software Type": "",
+    "Software Class": "",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": ""
+}

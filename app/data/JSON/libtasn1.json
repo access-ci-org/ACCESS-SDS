@@ -1,0 +1,11 @@
+{
+    "Software": "libtasn1",
+    "AI Description": "libtasn1 is a library developed for ASN.1 and DER manipulation. ASN.1 is a standard interface description language for defining data structures that can be serialized and deserialized in a cross-platform way.",
+    "Core Features": "Asn.1 & Der Manipulation, Cross-Platform Data Serialization & Deserialization",
+    "General Tags": "Library, Asn.1, Der, Serialization, Deserialization",
+    "Software Type": "Development Library",
+    "Software Class": "Library",
+    "Research Area": "Computational Science",
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
+}

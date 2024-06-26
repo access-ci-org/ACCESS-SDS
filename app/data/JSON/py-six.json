@@ -1,0 +1,11 @@
+{
+    "Software": "py-six",
+    "AI Description": "Py-six is a Python 2 and 3 compatibility library, providing utilities for writing code that runs on both Python 2 and 3 without modification.",
+    "Core Features": "Provides compatibility utilities for writing Python code that works on both Python 2 and 3, including functions for common tasks like string manipulation and exception handling.",
+    "General Tags": "Python, Compatibility Library, Programming",
+    "Software Type": "Language Compatibility",
+    "Software Class": "Library",
+    "Research Area": "Software Development",
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "NLopt",
+    "AI Description": "NLopt is an open-source library for nonlinear optimization problems. It provides a common interface for several different optimization algorithms, allowing users to easily switch between them.",
+    "Core Features": "1. Support for various optimization algorithms\n2. Numerical optimization routines for constrained and unconstrained problems\n3. Ability to handle both gradient-based and derivative-free optimization\n4. Integration with several programming languages for ease of use",
+    "General Tags": "Optimization, Library, Open-Source",
+    "Software Type": "Library",
+    "Software Class": "Optimization Software",
+    "Research Area": "Optimization",
+    "Research Discipline": "Applied Mathematics",
+    "Research Field": "Mathematics"
+}

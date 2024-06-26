@@ -1,0 +1,11 @@
+{
+    "Software": "libwebp",
+    "AI Description": "libwebp is a library for working with the WebP image format. It provides tools to encode, decode, and manipulate images in the WebP format, which is a modern image format that provides both lossy and lossless compression for images on the web.",
+    "Core Features": "Encoding & Decoding Webp Images, Lossy & Lossless Compression Options, Support For Animation & Transparency, Conversion Between Webp & Other Image Formats",
+    "General Tags": "Image Processing, Compression, Web Development, Library",
+    "Software Type": "Image Processing",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Other Computer & Information Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "Trans-ABySS",
+    "AI Description": "Trans-ABySS is a software package for de novo transcriptome assembly from RNA-Seq data. It aims to reconstruct full-length isoforms and to accurately capture gene expression levels.",
+    "Core Features": "De Novo Transcriptome Assembly, Full-Length Isoform Reconstruction, Gene Expression Level Estimation",
+    "General Tags": "Bioinformatics, Transcriptome Assembly, RNA-Seq",
+    "Software Type": "Tool",
+    "Software Class": "Bioinformatics",
+    "Research Area": "Genetics",
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
+}

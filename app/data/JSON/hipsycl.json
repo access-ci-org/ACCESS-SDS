@@ -1,0 +1,11 @@
+{
+    "Software": "hipsycl",
+    "AI Description": "hipsycl is a SYCL implementation targeting CPUs, CUDA, and HIP backends for heterogeneous systems, allowing for portable performance across different hardware platforms.",
+    "Core Features": "1. Support for SYCL, a single-source standard for heterogeneous parallel programming. 2. Targeting CPUs, CUDA, and HIP backends for flexibility in hardware support. 3. Portable performance across different hardware platforms. 4. Integration with various development environments and tools for ease of use.",
+    "General Tags": "Heterogeneous Computing, Parallel Programming, Hardware Acceleration",
+    "Software Type": "Programming Library",
+    "Software Class": "Compiler",
+    "Research Area": "Parallel & Distributed Computing",
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
+}

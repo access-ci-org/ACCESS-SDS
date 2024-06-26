@@ -1,0 +1,11 @@
+{
+    "Software": "intel-compiler",
+    "AI Description": "The Intel Compiler suite is a set of optimizing compilers with support for C, C++, and Fortran languages. It provides advanced optimizations and performance tuning for applications running on Intel architecture-based platforms.",
+    "Core Features": "1. Advanced optimizations for Intel processors\n2. Support for C, C++, and Fortran languages\n3. Performance tuning capabilities\n4. Vectorization and parallelization support\n5. Interoperability with existing codebases\n6. Integration with Intel architecture-based platforms",
+    "General Tags": "Compiler, Optimization, Performance, Parallelization",
+    "Software Type": "Development Tools",
+    "Software Class": "Compiler",
+    "Research Area": "Software Engineering, Systems, & Development",
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
+}

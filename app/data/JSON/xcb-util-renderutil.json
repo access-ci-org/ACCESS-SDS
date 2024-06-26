@@ -1,0 +1,11 @@
+{
+    "Software": "xcb-util-renderutil",
+    "AI Description": "A set of libraries which provide a convenient API for rendering text with XCB.",
+    "Core Features": "1. Provides a high-level XCB API for rendering text.\n2. Supports client-side caching of text extents.\n3. Renders text using the XCB Render extension.\n4. Offers utilities for working with X core fonts.",
+    "General Tags": "Xcb, Rendering, Text, Api",
+    "Software Type": "Rendering",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

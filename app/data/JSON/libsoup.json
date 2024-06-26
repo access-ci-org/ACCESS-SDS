@@ -1,0 +1,11 @@
+{
+    "Software": "libsoup",
+    "AI Description": "libsoup is an HTTP client/server library for GNOME. It uses GObjects and the glib main loop, to integrate well with GNOME applications. Features include asynchronous I/O using GMainContext and WebSockets support.",
+    "Core Features": "Http Client/Server Functionality, Asynchronous I/O With Gmaincontext, Websockets Support",
+    "General Tags": "Http, Client/Server, Gnome, Gobjects, Asynchronous I/O, Websockets",
+    "Software Type": "Http Client/Server Library",
+    "Software Class": "Library",
+    "Research Area": "Networking",
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
+}

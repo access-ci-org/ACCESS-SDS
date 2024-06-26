@@ -1,0 +1,11 @@
+{
+    "Software": "voro++",
+    "AI Description": "Voro++ is an open-source software library for the computation of the Voronoi diagram, a partitioning of space into a set of polygons based on the distance to a specified set of points. It provides a variety of algorithms for constructing Voronoi diagrams in both two and three dimensions.",
+    "Core Features": "Efficient Computation Of Voronoi Diagrams, Support For Both 2D & 3D Spaces, Robust & Accurate Results, Configurable & Customizable Options, Compatible With Various Programming Languages",
+    "General Tags": "Voronoi Diagram, Computational Geometry, Open-Source",
+    "Software Type": "Library",
+    "Software Class": "Computational Software",
+    "Research Area": "Applied Mathematics, Other Mathematics",
+    "Research Discipline": "Mathematics",
+    "Research Field": "Mathematics"
+}

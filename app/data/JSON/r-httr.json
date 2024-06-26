@@ -1,0 +1,11 @@
+{
+    "Software": "r-httr",
+    "AI Description": "The r-httr package is an R package that provides a friendly interface to work with web APIs by building on top of the curl package and simplifying HTTP requests.",
+    "Core Features": "Simplified Http Request Handling, Support For Working With Web Apis, Integration With The Curl Package",
+    "General Tags": "R Package, Http Requests, Web Apis, Data Retrieval, Data Communication",
+    "Software Type": "Data Science",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

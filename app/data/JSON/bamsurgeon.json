@@ -1,0 +1,11 @@
+{
+    "Software": "bamsurgeon",
+    "AI Description": "bamsurgeon is a toolkit for adding mutations to a .bam file for use in testing variant calling pipelines. It can be used to spike in synthetic SNVs, indels, and/or denovo SVs to specific genomic coordinates.",
+    "Core Features": "1. Spike in synthetic single nucleotide variants (SNVs)\n2. Introduce insertions and deletions (indels) at specified genomic locations\n3. Add de novo structural variants (SVs) to a given genomic position\n4. Allow for customization of mutation rate, allele frequency, and mutation type\n5. Test variant calling pipelines by simulating mutations in a controlled manner",
+    "General Tags": "Genomic Data, Mutation Simulation, Variant Calling, Bioinformatics",
+    "Software Type": "Mutation Simulation",
+    "Software Class": "Bioinformatics Tool",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

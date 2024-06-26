@@ -1,0 +1,11 @@
+{
+    "Software": "serf",
+    "AI Description": "Serf is a decentralized solution for cluster membership, failure detection, and orchestration. It is lightweight and highly available, providing a mechanism for event broadcasting and key/value storage.",
+    "Core Features": "Decentralized Cluster Membership, Failure Detection, Event Broadcasting, Key/Value Storage, High Availability",
+    "General Tags": "Cluster Management, Orchestration, Decentralized System",
+    "Software Type": "",
+    "Software Class": "",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
+}

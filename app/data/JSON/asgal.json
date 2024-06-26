@@ -1,0 +1,11 @@
+{
+    "Software": "asgal",
+    "AI Description": "asgal is a lightweight tool that aligns sequencing reads against a reference genome, generating BAM files, calling SNPs, and creating variant call format (VCF) files. It is designed for usability and simplicity in analyzing large genomic datasets.",
+    "Core Features": "Read Alignment Against Reference Genome, Bam File Generation, Snp Calling, Vcf File Creation",
+    "General Tags": "Genomics, Bioinformatics, Sequence Analysis",
+    "Software Type": "Alignment & Variant Calling",
+    "Software Class": "Bioinformatics Tools",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

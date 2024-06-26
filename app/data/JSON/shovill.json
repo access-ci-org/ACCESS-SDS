@@ -1,0 +1,11 @@
+{
+    "Software": "shovill",
+    "AI Description": "Shovill is a de novo assembly pipeline for bacterial genomes that utilizes SPAdes to perform assembly and a variety of other tools to perform trimming, polishing, and quality assessment.",
+    "Core Features": "1. De novo assembly of bacterial genomes 2. Trimming and polishing of assemblies 3. Quality assessment of assembled genomes",
+    "General Tags": "De Novo Assembly, Bacterial Genomes, Assembly Pipeline",
+    "Software Type": "Tool",
+    "Software Class": "Bioinformatics",
+    "Research Area": "Genomics",
+    "Research Discipline": "Microbiology",
+    "Research Field": "Biological Sciences"
+}

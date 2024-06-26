@@ -1,0 +1,11 @@
+{
+    "Software": "module-info",
+    "AI Description": "module-info is a software tool that provides information about loaded modules and their dependencies in a computing environment. It helps users to manage and troubleshoot software dependencies and configurations.",
+    "Core Features": "Display Information About Loaded Modules, Show Dependencies Between Modules, Assist In Managing Software Configurations, Troubleshoot Software Dependency Issues",
+    "General Tags": "Software, Dependency Management, Software Configuration",
+    "Software Type": "System Information Tool",
+    "Software Class": "Utility Software",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

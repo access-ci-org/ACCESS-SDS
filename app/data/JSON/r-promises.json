@@ -1,0 +1,11 @@
+{
+    "Software": "r-promises",
+    "AI Description": "The r-promises package in R provides a way to represent and work with promises, which are a way to delay the evaluation of an expression. Promises can help improve the performance of R code by allowing for lazy evaluation and delayed computation.",
+    "Core Features": "1. Implementation of promises for lazy evaluation.\n2. Delayed computation of expressions.\n3. Improved performance by deferring evaluation.",
+    "General Tags": "R Package, Promises, Lazy Evaluation",
+    "Software Type": "Library/Package",
+    "Software Class": "Programming Language Library/Package",
+    "Research Area": "Software Engineering, Systems, & Development",
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
+}

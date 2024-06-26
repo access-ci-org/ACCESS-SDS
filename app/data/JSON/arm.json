@@ -1,0 +1,11 @@
+{
+    "Software": "arm",
+    "AI Description": "Arm is a software development suite for building and debugging embedded applications on Arm-based devices. It provides tools for optimizing code for performance, debugging, and profiling applications for a wide range of Arm processors.",
+    "Core Features": "Arm compiler, Arm debugger, Arm profiler, Code optimization, Debugging tools, Performance analysis tools",
+    "General Tags": "Software Development, Embedded Applications, Debugging, Performance Optimization",
+    "Software Type": "Compiler/Debugger",
+    "Software Class": "Development Tools",
+    "Research Area": "Electrical, Electronic, & Information Engineering",
+    "Research Discipline": "Engineering & Technology",
+    "Research Field": "Engineering & Technology"
+}

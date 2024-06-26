@@ -1,0 +1,11 @@
+{
+    "Software": "parliament2",
+    "AI Description": "Parliament2 is a fork of the Parliament tool that provides a toolkit for developing scalable symbolic model checking algorithms.",
+    "Core Features": "Key features include symbolic model checking, support for developing scalable algorithms, bug checking, and verification of complex systems.",
+    "General Tags": "Symbolic Model Checking, Scalable Algorithms, Bug Checking, System Verification",
+    "Software Type": "Model Checking",
+    "Software Class": "Computational Software",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

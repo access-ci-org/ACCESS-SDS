@@ -1,0 +1,11 @@
+{
+    "Software": "xtalopt",
+    "AI Description": "xtalopt is a genetic algorithm-based crystal structure prediction software that aims to predict the structure of a material given its composition. It helps in exploring the possible crystallographic structures and configurations of materials.",
+    "Core Features": "1. Genetic algorithm optimization\n2. Crystal structure prediction\n3. Material composition input\n4. Flexible input parameters\n5. Visualization of predicted structures",
+    "General Tags": "Crystal Structure Prediction, Material Science, Genetic Algorithm, Computational Chemistry",
+    "Software Type": "Prediction Software",
+    "Software Class": "Crystallography Software",
+    "Research Area": "Crystallography",
+    "Research Discipline": "Materials Science",
+    "Research Field": "Physical Sciences"
+}

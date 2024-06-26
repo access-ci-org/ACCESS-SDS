@@ -1,0 +1,11 @@
+{
+    "Software": "MUMmer",
+    "AI Description": "MUMmer is a system for rapidly aligning entire genomes, whether in complete or draft form. It can also align a wide range of sequences, including protein-coding sequences.",
+    "Core Features": "Whole-Genome Alignment, Alignment Of Draft Genomes, Alignment Of Protein-Coding Sequences",
+    "General Tags": "Genome Alignment, Sequence Alignment, Bioinformatics",
+    "Software Type": "Bioinformatics",
+    "Software Class": "Sequence Alignment",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "python_cacher",
+    "AI Description": "python_cacher is a Python package for caching function results and improving computational efficiency by storing and retrieving expensive function calls.",
+    "Core Features": "Efficient Function Result Caching, Automatic Caching Of Function Calls, Memoization For Improved Performance, Supports Caching With Different Storage Backends",
+    "General Tags": "Python Library, Function Caching, Computational Efficiency",
+    "Software Type": "Library",
+    "Software Class": "Computational Software",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

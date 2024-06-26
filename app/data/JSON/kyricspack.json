@@ -1,0 +1,11 @@
+{
+    "Software": "Spack",
+    "AI Description": "Spack is a flexible package manager for supercomputers, HPC systems, and other large-scale computing environments. It is designed to support multiple versions and configurations of software on a wide range of platforms.",
+    "Core Features": "Spack allows users to easily install, configure, and manage a wide variety of software packages. It supports custom builds, dependencies, and compilers, and offers a simple command-line interface for package management. Spack is highly customizable and can be used with a wide range of HPC systems and architectures.",
+    "General Tags": "Package Manager, Hpc, Supercomputers",
+    "Software Type": "Package Manager",
+    "Software Class": "Software Tools",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Physical Sciences, Engineering & Technology"
+}

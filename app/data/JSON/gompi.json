@@ -1,0 +1,11 @@
+{
+    "Software": "Gompi",
+    "AI Description": "Gompi is a parallel computing software tool that provides a set of compilers and libraries for running MPI (Message Passing Interface) programs on HPC (High Performance Computing) clusters. It aims to enhance the performance of parallel applications by optimizing communication and coordination between nodes in distributed computing environments.",
+    "Core Features": "Supports Mpi For Developing Parallel Applications, Includes Compilers & Libraries For Efficient Execution On Hpc Clusters, Optimizes Communication & Coordination Between Computing Nodes, Facilitates High-Performance Computing For Scientific & Engineering Simulations",
+    "General Tags": "Hpc, Parallel Computing, Mpi, Distributed Computing",
+    "Software Type": "",
+    "Software Class": "",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
+}

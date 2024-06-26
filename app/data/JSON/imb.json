@@ -1,0 +1,11 @@
+{
+    "Software": "IMB",
+    "AI Description": "IMB stands for In-Memory Database benchmark. It is a benchmarking tool specifically designed to evaluate the performance of in-memory databases.",
+    "Core Features": "IMB allows users to compare different in-memory databases based on various performance metrics such as transaction throughput, response times, and scalability. It provides a standardized testing environment to ensure fair comparisons between different database systems.",
+    "General Tags": "Benchmarking, In-Memory Databases",
+    "Software Type": "Tool",
+    "Software Class": "Benchmarking",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

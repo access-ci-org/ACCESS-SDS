@@ -1,0 +1,11 @@
+{
+    "Software": "AdapterRemoval",
+    "AI Description": "AdapterRemoval searches for and removes adapter sequences from High-Throughput Sequencing (HTS) data. AdapterRemoval can also identify paired sequences in which both reads overlap after adapter removal and generate a statistics file detailing the results.",
+    "Core Features": "Adapter Trimming & Removal, Identification Of Overlapping Paired-End Reads, Statistics Generation",
+    "General Tags": "Bioinformatics, Hts Data Processing, Sequence Analysis",
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Sequence Analysis Tool",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

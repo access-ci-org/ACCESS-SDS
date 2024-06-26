@@ -1,0 +1,11 @@
+{
+    "Software": "idev",
+    "AI Description": "idev is a compiler wrapper that simplifies the use of Intel's data parallel C++ (DPC++) compiler for offloading computations to GPUs.",
+    "Core Features": "idev facilitates the compilation and execution of DPC++ code for GPU offloading, allowing developers to harness the power of GPUs for compute-intensive tasks.",
+    "General Tags": "Compiler Wrapper, Dpc++ Compiler, Gpu Offloading",
+    "Software Type": "Tool",
+    "Software Class": "Compiler",
+    "Research Area": "Applied Computer Science",
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
+}

@@ -1,0 +1,18 @@
+{
+    "tags": {
+        "research_discipline": "Bioinformatics",
+        "research_area": "RNA sequence analysis",
+        "software_class": "Bioinformatics tool",
+        "software_type": "Sequence analysis software",
+        "field_of_science": "Biological Sciences"
+    },
+    "Software": "Infernal",
+    "AI Description": "Infernal is a software for searching DNA sequence databases for RNA structure and sequence similarities. It is used to align RNA sequences to RNA sequence and structural models.",
+    "Core Features": "1. Searching DNA sequence databases for RNA structure and sequence similarities\n2. Aligning RNA sequences to RNA sequence and structural models\n3. Building covariance models\n4. Detecting RNA homologs",
+    "General Tags": "RNA Sequence Analysis, Bioinformatics, Sequence Alignment",
+    "Software Type": "",
+    "Software Class": "",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": ""
+}

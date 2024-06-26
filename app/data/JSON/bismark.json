@@ -1,0 +1,11 @@
+{
+    "Software": "Bismark",
+    "AI Description": "Bismark is a software tool specifically designed for aligning bisulfite treated DNA sequencing reads and methylation calls. It is widely used in epigenetics research to analyze DNA methylation patterns.",
+    "Core Features": "1. Alignment of bisulfite treated DNA sequencing reads\n2. Identification of methylated cytosines\n3. Differential methylation analysis\n4. Visualization of methylation patterns\n5. Compatibility with various sequencing platforms and data formats",
+    "General Tags": "Epigenetics, DNA Methylation, Bisulfite Sequencing, Genomics, Bioinformatics",
+    "Software Type": "Alignment & Methylation Analysis",
+    "Software Class": "Bioinformatics",
+    "Research Area": "Epigenetics",
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "dsuite",
+    "AI Description": "Dsuite is a Python package for processing, analyzing, and visualizing longitudinal and survival data in a user-friendly way. It is designed to facilitate data exploration, estimation of parametric and non-parametric models, and visualization of results for longitudinal and survival data analysis.",
+    "Core Features": "Some of the core features of dsuite include data preprocessing, model estimation for longitudinal and survival analysis, visualization tools for exploring and interpreting results, and integration with other Python libraries for statistical analysis and data visualization.",
+    "General Tags": "Python Library, Data Analysis, Data Visualization",
+    "Software Type": "Python Library",
+    "Software Class": "Data Analysis Tool",
+    "Research Area": "Longitudinal Data Analysis, Survival Analysis",
+    "Research Discipline": "Biostatistics",
+    "Research Field": "Statistics & Probability"
+}

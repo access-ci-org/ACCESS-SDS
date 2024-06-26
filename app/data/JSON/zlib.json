@@ -1,0 +1,11 @@
+{
+    "Software": "zlib",
+    "AI Description": "zlib is a software library for data compression that provides functions for file compression and decompression using the DEFLATE compression algorithm. It is widely used in various applications for reducing file size and conserving storage space.",
+    "Core Features": "1. Compression and decompression functions\n2. Support for the DEFLATE compression algorithm\n3. Cross-platform compatibility\n4. High compression ratio\n5. Fast compression and decompression speeds",
+    "General Tags": "Compression, Data Compression, File Compression, Deflate Algorithm",
+    "Software Type": "Data Compression",
+    "Software Class": "Libraries",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

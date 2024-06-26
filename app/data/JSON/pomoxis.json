@@ -1,0 +1,11 @@
+{
+    "Software": "Pomoxis",
+    "AI Description": "Pomoxis is a Python package for analyzing single-cell RNA sequencing data, offering a range of tools for data processing, analysis, and visualization.",
+    "Core Features": "1. Provides preprocessing tools for quality control, normalization, and batch effect removal. \n2. Implements various algorithms for cell clustering, cell type identification, and trajectory inference. \n3. Offers a selection of visualization options, including t-SNE, UMAP, and heatmap plots. \n4. Supports integration with other popular bioinformatics tools and databases for additional analyses.",
+    "General Tags": "Single-Cell RNA Sequencing, Data Analysis, Visualization, Bioinformatics",
+    "Software Type": "Python Library",
+    "Software Class": "Data Analysis Tool",
+    "Research Area": "Single-Cell RNA Sequencing",
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "PyPy",
+    "AI Description": "PyPy is a fast, compliant alternative implementation of the Python programming language. It aims to provide a high-performance, flexible, and efficient interpreter for Python, while maintaining compatibility with the CPython reference implementation.",
+    "Core Features": "1. Just-in-time compilation for improved speed\n2. Reduced memory usage compared to CPython\n3. Compatibility with existing Python code and libraries\n4. Support for multiple Python versions\n5. Built-in garbage collection\n6. Cross-platform support",
+    "General Tags": "Python Interpreter, Alternative Implementation, Just-In-Time Compilation, High Performance",
+    "Software Type": "Programming Language Implementation",
+    "Software Class": "Interpreter",
+    "Research Area": "Python Programming, Programming Languages",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

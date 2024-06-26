@@ -1,0 +1,11 @@
+{
+    "Software": "LD Score Regression (LDSC)",
+    "AI Description": "LD Score Regression (LDSC) is a computational tool used for estimating heritability from summary statistics of genome-wide association studies (GWAS). It leverages linkage disequilibrium information from reference populations to estimate genetic correlations among different traits or diseases.",
+    "Core Features": "1. Estimating heritability from GWAS summary statistics\n2. Estimating genetic correlations among traits or diseases\n3. Utilizing linkage disequilibrium information from reference panels\n4. Conducting partitioned heritability analysis\n5. Performing LD score regression analysis",
+    "General Tags": "Computational Tool, Genomics, Gwas, Heritability Estimation",
+    "Software Type": "Tool",
+    "Software Class": "Bioinformatics",
+    "Research Area": "Genetics",
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Natural Sciences, Biological Sciences"
+}

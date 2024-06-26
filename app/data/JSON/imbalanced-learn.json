@@ -1,0 +1,11 @@
+{
+    "Software": "imbalanced-learn",
+    "AI Description": "Imbalanced-learn is a Python library designed to tackle the problem of imbalanced datasets in machine learning. It provides a set of tools and techniques to deal with classification tasks where the distribution of classes is skewed, with one class significantly more frequent than the others.",
+    "Core Features": "Over-Sampling Techniques (Smote, Adasyn, Etc.), Under-Sampling Techniques, Combined Over-Sampling & Under-Sampling, Ensemble Techniques (Balancedrandomforestclassifier, Rusboostclassifier), Cost-Sensitive Learning, Support For Scikit-Learn Pipeline Integration",
+    "General Tags": "Imbalanced Datasets, Machine Learning, Classification Tasks, Python Library, Over-Sampling, Under-Sampling, Ensemble Techniques",
+    "Software Type": "Python Library",
+    "Software Class": "Data Analysis",
+    "Research Area": "",
+    "Research Discipline": "Artificial Intelligence & Intelligent Systems",
+    "Research Field": "Computer & Information Sciences"
+}

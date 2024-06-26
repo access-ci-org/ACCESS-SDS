@@ -1,0 +1,11 @@
+{
+    "Software": "SICER",
+    "AI Description": "SICER (Spatial clustering for Identification of ChIP-Enriched Regions) is a tool used for the identification of enriched domains from ChIP-Seq data. It is specifically designed to detect broad regions of enrichment, which is particularly useful for analyzing histone modification data.",
+    "Core Features": "1. Identifies broad regions of enrichment in ChIP-Seq data.\n2. Utilizes a spatial clustering algorithm for improved accuracy.\n3. Capable of handling large datasets efficiently.\n4. Provides statistical analysis of identified domains.\n5. Offers visualization options for better interpretation of results.",
+    "General Tags": "Chip-Seq, Bioinformatics, Genomics",
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Analysis Tool",
+    "Research Area": "Genomics",
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
+}

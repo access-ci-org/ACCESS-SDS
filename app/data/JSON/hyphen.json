@@ -1,0 +1,11 @@
+{
+    "Software": "hyphen",
+    "AI Description": "Hyphen is a command-line tool for generating word hyphenation points using the TeX patterns. It can be used to improve the appearance of justified text by splitting words at appropriate points.",
+    "Core Features": "Generate Word Hyphenation Points, Utilizes Tex Patterns, Improves Text Justification",
+    "General Tags": "Word Hyphenation, Text Formatting, Tex Patterns",
+    "Software Type": "Utility Tool",
+    "Software Class": "Text Formatting/Processing",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Other Mathematics"
+}

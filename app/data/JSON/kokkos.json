@@ -1,0 +1,11 @@
+{
+    "Software": "Kokkos",
+    "AI Description": "Kokkos is a programming model for writing performance portable parallel applications in C++. It allows developers to write code once and run efficiently on multiple types of heterogeneous architectures.",
+    "Core Features": "1. Abstraction of memory layout and parallel execution to achieve performance portability\n2. Array programming to express parallel algorithms\n3. Support for multiple backends such as OpenMP, CUDA, and HIP\n4. Integration with existing programming models like MPI and pthreads\n5. Extensive documentation and user support",
+    "General Tags": "Programming Model, Performance Portability, Parallel Computing",
+    "Software Type": "Library",
+    "Software Class": "Programming Model",
+    "Research Area": "Parallel Computing, High-Performance Computing",
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "shapeit4",
+    "AI Description": "SHAPEIT4 is a fast and accurate method for haplotype phasing based on a haplotype model similar to that used in SHAPEIT2. It adopts a new exact fragment inference algorithm that scales linearly with the effective number of haplotypes, making it highly efficient for large cohorts. SHAPEIT4 also includes a novel model that captures long-range phasing information through a conditional random field.",
+    "Core Features": "Fast & Accurate Haplotype Phasing, New Exact Fragment Inference Algorithm, Efficient For Large Cohorts, Captures Long-Range Phasing Information",
+    "General Tags": "Phasing, Haplotype, Genomics, Bioinformatics, Computational Biology",
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Phasing Tool",
+    "Research Area": "Population Genetics",
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
+}

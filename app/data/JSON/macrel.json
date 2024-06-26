@@ -1,0 +1,11 @@
+{
+    "Software": "macrel",
+    "AI Description": "Macrel is a computational tool used to predict molecular binding sites in protein structures based on evolutionary conservation and amino acid physicochemical properties. It can be utilized to identify potential ligand binding sites, protein-protein interaction sites, or active sites for enzymes.",
+    "Core Features": "Prediction Of Molecular Binding Sites, Utilizes Evolutionary Conservation & Amino Acid Properties, Identification Of Ligand Binding Sites, Identification Of Protein-Protein Interaction Sites, Prediction Of Active Sites In Enzymes",
+    "General Tags": "Molecular Binding Sites, Protein Structures, Evolutionary Conservation, Ligand Binding, Protein-Protein Interactions, Enzyme Active Sites",
+    "Software Type": "Computational Tool",
+    "Software Class": "Bioinformatics",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

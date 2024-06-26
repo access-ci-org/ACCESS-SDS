@@ -1,0 +1,11 @@
+{
+    "Software": "Arrow",
+    "AI Description": "Arrow is a cross-language development platform for in-memory data that specifies a standardized language-independent columnar memory format for flat and hierarchical data, organized for efficient analytic operations on modern hardware like CPUs and GPUs.",
+    "Core Features": "Cross-Language Development Platform, Columnar Memory Format, Language-Independent, Efficient Analytic Operations, Support For Modern Hardware Like Cpus & Gpus",
+    "General Tags": "Data Processing, Data Analytics, In-Memory Data, Standardized Format",
+    "Software Type": "Development Platform",
+    "Software Class": "Data Processing",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

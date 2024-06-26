@@ -1,0 +1,11 @@
+{
+    "Software": "fseq",
+    "AI Description": "F-seq is a Python package that provides tools for peak calling and peak detection in functional genomics datasets, specifically ChIP-seq and DNase-seq data. It is designed to identify enriched regions in the genome that represent potential binding sites of proteins or other functional elements.",
+    "Core Features": "Peak Calling In Chip-Seq & DNAse-Seq Data, Identification Of Enriched Regions In The Genome, Analysis Of Potential Binding Sites Of Proteins Or Functional Elements",
+    "General Tags": "Genomics, Peak Calling, Functional Genomics, Python Package",
+    "Software Type": "Python Library",
+    "Software Class": "Bioinformatics",
+    "Research Area": "Functional Genomics",
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "Emacs",
+    "AI Description": "Emacs is a highly customizable, extensible, and self-documenting text editor. It is known for its powerful editing capabilities, which include content-aware editing, syntax highlighting, and a wide range of plugins and extensions.",
+    "Core Features": "Emacs offers a range of features like syntax highlighting, auto-indentation, content-aware editing, integrated version control, and a large collection of plugins and packages (e.g., Org mode for organizing notes and tasks). It supports various programming languages and can be customized using Emacs Lisp.",
+    "General Tags": "Text Editor, Customizable, Extensible, Self-Documenting",
+    "Software Type": "Text Editor",
+    "Software Class": "Productivity Tool",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

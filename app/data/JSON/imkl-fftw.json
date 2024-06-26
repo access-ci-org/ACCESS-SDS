@@ -1,0 +1,11 @@
+{
+    "Software": "imkl-fftw",
+    "AI Description": "imkl-fftw is a library that combines Intel Math Kernel Library (IMKL) with FFTW (Fastest Fourier Transform in the West) for high-performance computation of Fourier transforms on Intel architectures.",
+    "Core Features": "1. Integration of Intel Math Kernel Library (IMKL) for optimized mathematical functions.\n2. Utilizes the Fastest Fourier Transform in the West (FFTW) for efficient Fourier transform computations.\n3. High performance on Intel architectures for Fourier transform operations.",
+    "General Tags": "Software Library, Math Library, Mathematical Computation, Fourier Transforms, High-Performance Computing",
+    "Software Type": "Mathematical Computation",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Mathematics"
+}

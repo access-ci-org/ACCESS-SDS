@@ -1,0 +1,11 @@
+{
+    "Software": "Hyperopt",
+    "AI Description": "Hyperopt is a Python library for optimizing over arbitrary search spaces. The main goal of Hyperopt is to provide a flexible and expressive architecture for an optimization workforce, including hyperparameter optimization, machine learning and statistics.",
+    "Core Features": "1. Distributed optimization: Hyperopt can distribute the optimization process across multiple compute nodes.\n2. Parallel execution: Allows for parallel evaluation of the objective function.\n3. Plug and play: Easily integrates with different Python libraries and frameworks, such as scikit-learn.\n4. Support for various algorithms: Supports different optimization algorithms like TPE (Tree-structured Parzen Estimator) and random search.\n5. Scalability: Can handle optimization problems with a large number of parameters efficiently.",
+    "General Tags": "Optimization, Machine Learning, Statistics",
+    "Software Type": "",
+    "Software Class": "Python Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

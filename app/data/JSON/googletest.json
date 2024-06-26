@@ -1,0 +1,11 @@
+{
+    "Software": "googletest",
+    "AI Description": "Google Test is a unit testing library for the C++ programming language. It is designed to be easy to write and understand tests, provides a rich set of assertions for verifying test expectations, and supports various testing styles.",
+    "Core Features": "Supports Various Testing Styles (Functional, Fixture, Parameterized, Etc.), Rich Set Of Assertion Macros For Validating Test Outcomes, Automatic Test Discovery & Registration, Integration With The Google C++ Testing Framework For Advanced Features, Reusable Test Fixtures For Common Setup & Teardown Operations",
+    "General Tags": "Unit Testing, C++ Testing, Testing Library, Software Testing",
+    "Software Type": "Library",
+    "Software Class": "Testing Framework",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "gawk",
+    "AI Description": "Gawk is a powerful text processing utility that allows for pattern scanning and processing. It is based on the Awk programming language and is particularly useful for manipulating text files and generating reports.",
+    "Core Features": "1. Pattern scanning and processing of text files\n2. Automatic data restructuring and report generation\n3. Advanced text manipulation capabilities\n4. User-defined functions and variables\n5. Conditional control structures for data processing",
+    "General Tags": "Text Processing, Data Manipulation, Pattern Scanning",
+    "Software Type": "Text Processing Tool",
+    "Software Class": "Command-Line Utility",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

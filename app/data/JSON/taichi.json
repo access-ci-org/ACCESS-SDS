@@ -1,0 +1,11 @@
+{
+    "Software": "Taichi",
+    "AI Description": "Taichi is a software infrastructure that enables preparing and running high-performance computation on parallel computing devices such as CPUs and GPUs. It focuses on providing a flexible and optimized framework for computational simulations and numerical methods.",
+    "Core Features": "1. Supports parallel computing on CPUs and GPUs.\n2. Enables the development of high-performance numerical simulations.\n3. Offers a flexible and optimized framework for various computational tasks.\n4. Provides tools for efficient computation and simulation in scientific research and engineering applications.",
+    "General Tags": "Computational Software, Parallel Computing, Numerical Simulations",
+    "Software Type": "Framework",
+    "Software Class": "Simulation",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
+}

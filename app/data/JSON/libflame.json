@@ -1,0 +1,11 @@
+{
+    "Software": "libflame",
+    "AI Description": "libflame is a portable library for dense matrix computations, providing high-performance implementations of the BLAS and LAPACK interfaces.",
+    "Core Features": "1. Provides optimized implementations of BLAS and LAPACK functions. 2. Portable and easy to install. 3. Supports various architectures and compilers. 4. Offers a user-friendly interface for linear algebra operations.",
+    "General Tags": "Linear Algebra, Matrix Computations, Numerical Computation",
+    "Software Type": "Numerical Computing",
+    "Software Class": "Library",
+    "Research Area": "Numerical Analysis",
+    "Research Discipline": "Applied Mathematics",
+    "Research Field": "Mathematics"
+}

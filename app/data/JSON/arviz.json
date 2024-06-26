@@ -1,0 +1,11 @@
+{
+    "Software": "ArviZ",
+    "AI Description": "ArviZ is a Python package for exploratory analysis of Bayesian models. It provides a common data structure and functions for visualizing and summarizing outputs from Bayesian inference.",
+    "Core Features": "1. Visualization of posterior distributions, traces, and diagnostics\n2. Summary statistics for posterior samples\n3. Probability density plots and pair plots for correlations\n4. Comparison of multiple models\n5. Goodness-of-fit checks and convergence diagnostics",
+    "General Tags": "Python Library, Bayesian Inference, Data Visualization",
+    "Software Type": "Python Library",
+    "Software Class": "Data Analysis & Visualization",
+    "Research Area": "Bayesian Statistics",
+    "Research Discipline": "Statistics & Probability",
+    "Research Field": "Other Mathematics"
+}

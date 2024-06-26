@@ -1,0 +1,11 @@
+{
+    "Software": "qrupdate",
+    "AI Description": "qrupdate is a Python library for updating and solving the QR factorization. It provides functions to update a QR factorization of a matrix when new columns are added, as well as solving linear least squares problems based on the updated QR factorization.",
+    "Core Features": "1. Updating QR factorization with new columns\n2. Solving linear least squares problems using the updated QR factorization\n3. Fast and efficient computation\n4. Compatible with NumPy arrays",
+    "General Tags": "Python Library, Qr Factorization, Linear Least Squares, Math Library",
+    "Software Type": "Mathematical Computing",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Mathematics"
+}

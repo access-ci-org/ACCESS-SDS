@@ -1,0 +1,11 @@
+{
+    "Software": "wget",
+    "AI Description": "GNU Wget is a utility for non-interactive download of files from the Web. It supports HTTP, HTTPS, and FTP protocols, as well as retrieval through HTTP proxies.",
+    "Core Features": "1. Supports recursive downloading\n2. Supports resuming downloads\n3. Can follow links in HTML pages\n4. Can be used as a spider to download a webpage and its requisites\n5. Supports bandwidth limiting\n6. Can be run in the background",
+    "General Tags": "Download Manager, Command-Line Tool",
+    "Software Type": "System Tool",
+    "Software Class": "Utility",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

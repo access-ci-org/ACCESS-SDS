@@ -1,0 +1,11 @@
+{
+    "Software": "Intel C++ Compiler (Intel CCL)",
+    "AI Description": "The Intel C++ Compiler (Intel CCL) is a high-performance optimizing compiler for C and C++ programming languages. It is designed to produce highly optimized code for Intel processors, including Intel Xeon Scalable processors and Intel Xeon Phi processors. Intel CCL supports the latest C++ language standards and provides advanced vectorization and parallelization capabilities.",
+    "Core Features": "High-Performance Optimizing Compiler For C & C++, Optimizes Code For Intel Processors, Support For Latest C++ Language Standards, Advanced Vectorization & Parallelization, Improved Code Performance & Efficiency",
+    "General Tags": "Compiler, C++, Performance Optimization, Intel Processors",
+    "Software Type": "Compiler",
+    "Software Class": "Development Tools",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
+}

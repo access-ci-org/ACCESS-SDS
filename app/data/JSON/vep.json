@@ -1,0 +1,11 @@
+{
+    "Software": "VEP",
+    "AI Description": "The Variant Effect Predictor (VEP) determines the functional consequences of genetic variants. It annotates and predicts the effects of variants such as amino acid changes, regulatory region disruptions, and protein-truncating variants on genes, transcripts, and protein sequences.",
+    "Core Features": "1. Annotation of genetic variants\n2. Prediction of variant consequences on genes, transcripts, and proteins\n3. Identification of regulatory region disruptions\n4. Assessment of protein-truncating variants",
+    "General Tags": "Genomics, Bioinformatics, Variant Annotation, Functional Genomics, Variant Analysis",
+    "Software Type": "Command Line Tool",
+    "Software Class": "Analysis Tool",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

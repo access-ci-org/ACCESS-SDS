@@ -1,0 +1,11 @@
+{
+    "Software": "Intel MPI",
+    "AI Description": "Intel MPI (Message Passing Interface) is a high-performance MPI library implementation specifically designed for Intel architecture-based clusters. It enables parallel performance for high-performance computing (HPC) applications, allowing for efficient communication among distributed processes.",
+    "Core Features": "High-Performance Message Passing Interface (Mpi) Library, Optimized For Intel Architecture-Based Clusters, Facilitates Efficient Communication Among Distributed Processes, Supports Parallel Performance For Hpc Applications",
+    "General Tags": "Mpi Library, High-Performance Computing, Parallel Computing, Cluster Computing",
+    "Software Type": "Compilers & Libraries",
+    "Software Class": "Tools",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
+}

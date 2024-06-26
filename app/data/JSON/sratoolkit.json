@@ -1,0 +1,11 @@
+{
+    "Software": "SRA Toolkit",
+    "AI Description": "The SRA Toolkit is a collection of tools and libraries for accessing data in the Sequence Read Archive (SRA), a large repository of next-generation sequencing data. It provides command-line utilities and APIs to download, transform, and analyze high-throughput sequencing data.",
+    "Core Features": "Downloading Sequencing Data From The Sra Database, Converting Data Formats (E.G., Sra To Fastq), Quality Control & Filtering Of Sequencing Data, Basic Analysis Of Sequencing Reads, Integration With Bioinformatics Pipelines",
+    "General Tags": "Bioinformatics, Ngs Data Analysis, Data Transformation, Sequence Data Management",
+    "Software Type": "Data Analysis Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

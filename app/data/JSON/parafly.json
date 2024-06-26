@@ -1,0 +1,11 @@
+{
+    "Software": "Parafly",
+    "AI Description": "Parafly is a Python library for parallelizing and distributing task execution across multiple cores or nodes, aimed at improving computational efficiency for high-performance computing applications.",
+    "Core Features": "1. Task parallelization and distribution\n2. Multi-core processing support\n3. Scalability for distributed computing\n4. Integration with Python ecosystem\n5. Resource management and allocation",
+    "General Tags": "Parallelization, Distributed Computing, Python Library",
+    "Software Type": "Python Library",
+    "Software Class": "Parallelization & Distributed Computing",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

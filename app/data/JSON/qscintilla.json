@@ -1,0 +1,11 @@
+{
+    "Software": "QScintilla",
+    "AI Description": "QScintilla is a port to Qt of Neil Hodgson's Scintilla editing component. It provides a rich text editing features and is commonly used for source code editing in integrated development environments (IDEs) and text editors.",
+    "Core Features": "Syntax highlighting, code folding, auto-completion, indentation guides, line numbering, and extensive customization options for text editors and IDEs.",
+    "General Tags": "Text Editing, Source Code Editing, Ides",
+    "Software Type": "Text Editor",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
+}

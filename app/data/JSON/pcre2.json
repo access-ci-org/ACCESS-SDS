@@ -1,0 +1,11 @@
+{
+    "Software": "pcre2",
+    "AI Description": "PCRE2 is a C library implementing Perl-compatible regular expressions. It is a reimplementation of PCRE but with a different API that is designed to be compatible with Perl 5. It provides a regular expression matching engine that supports Perl-style patterns while also providing some features not found in Perl, such as matching up to 2^16 code units.",
+    "Core Features": "1. Implementing Perl-compatible regular expressions\n2. Compatible with Perl 5 API\n3. Regular expression matching engine supporting Perl-style patterns\n4. Additional features compared to Perl, such as matching up to 2^16 code units",
+    "General Tags": "Regular Expressions, Text Processing, Pattern Matching",
+    "Software Type": "C Library",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

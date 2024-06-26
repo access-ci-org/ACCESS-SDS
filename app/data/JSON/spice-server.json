@@ -1,0 +1,11 @@
+{
+    "Software": "SPICE server",
+    "AI Description": "SPICE (Simple Protocol for Independent Computing Environments) is a remote display system that provides a way for virtualized guests to interact with a host. The SPICE server facilitates the sharing of USB devices, audio, video, and more between a guest and a host system. It enables high-quality interactive remote desktop experiences for virtual machines.",
+    "Core Features": "Remote Display System, Allows Sharing Of Usb Devices, Audio, & Video, Facilitates High-Quality Interactive Remote Desktop Experiences, Enhances Virtual Machine Interaction With The Host System",
+    "General Tags": "Remote Display, Virtualization, Usb Sharing, Audio-Video Sharing",
+    "Software Type": "Remote Display System",
+    "Software Class": "Virtualization",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
+}

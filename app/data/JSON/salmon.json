@@ -1,0 +1,11 @@
+{
+    "Software": "salmon",
+    "AI Description": "Salmon is a wicked-fast program to provide quantification of transcript expression from RNA-seq data.",
+    "Core Features": "Salmon uses selective alignment of RNA-sequencing reads against a quasi index of the known transcripts to quickly determine the compatibility of the reads with the transcripts, and to quantify the abundance of the transcripts.To quantify expression levels, Salmon employs a two-phase inference procedure that is highly robust, accurate, and is faster than most other tools available.",
+    "General Tags": "RNA-Seq, Transcript Expression Quantification",
+    "Software Type": "Tool",
+    "Software Class": "Bioinformatics",
+    "Research Area": "Transcriptomics",
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
+}

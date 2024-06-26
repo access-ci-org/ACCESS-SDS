@@ -1,0 +1,11 @@
+{
+    "Software": "Intel oneAPI MPI",
+    "AI Description": "Intel oneAPI MPI is a high-performance message passing interface library optimized for Intel architecture. It enables developers to perform parallel computing tasks efficiently and effectively.",
+    "Core Features": "High-Performance Message Passing Interface Library, Optimized For Intel Architecture, Supports Parallel Computing Tasks, Provides Efficient Communication Among Distributed Computing Nodes, Scalable Performance For Large-Scale Parallel Applications",
+    "General Tags": "Mpi Library, Parallel Computing, High Performance Computing",
+    "Software Type": "Mpi Library",
+    "Software Class": "Library",
+    "Research Area": "Parallel Computing",
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
+}

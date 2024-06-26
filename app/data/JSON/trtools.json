@@ -1,0 +1,11 @@
+{
+    "Software": "trtools",
+    "AI Description": "trtools is a Python library for performing transformation operations on tabular data, making data manipulation tasks easier and more efficient.",
+    "Core Features": "Provides Tools For Data Transformation In Tabular Format, Supports Operations Like Filtering, Joining, Grouping, & Aggregating Data, Offers Functionality For Handling Missing Values & Outliers In The Data, Designed To Work Efficiently With Large Datasets, Includes Customization Options For Specific Data Manipulation Needs",
+    "General Tags": "Python Library, Data Transformation, Tabular Data, Data Manipulation",
+    "Software Type": "Library",
+    "Software Class": "Data Analysis & Visualization",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

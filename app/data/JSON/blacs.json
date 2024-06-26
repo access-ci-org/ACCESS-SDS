@@ -1,0 +1,11 @@
+{
+    "Software": "BLACS",
+    "AI Description": "The Basic Linear Algebra Communication Subprograms (BLACS) is a collection of routines for dense linear algebra operations that can be used to construct parallel linear algebra software libraries. BLACS is typically used in high-performance computing environments to efficiently solve large-scale linear algebra problems in parallel.",
+    "Core Features": "1. Enables the development of parallel linear algebra libraries\n2. Optimized for high-performance computing environments\n3. Support for various matrix operations and parallel communication\n4. Efficiently handles large-scale linear algebra problems",
+    "General Tags": "Linear Algebra, High-Performance Computing, Parallel Computing",
+    "Software Type": "Computational Software",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Physical Sciences"
+}

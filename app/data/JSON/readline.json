@@ -1,0 +1,11 @@
+{
+    "Software": "readline",
+    "AI Description": "GNU Readline is a free software library that provides line-editing and history capabilities for interactive programs with a command-line interface. It allows users to edit command lines as they are typed in, recall and re-edit previous input, and perform basic character manipulations.",
+    "Core Features": "1. Emacs and vi editing modes for command line editing.\n2. History manipulation features like searching, recalling, and editing previous commands.\n3. Customizable key bindings and configuration options.\n4. Support for completion of filenames, variable names, and commands.\n5. Input and output redirection capabilities within the command line interface.",
+    "General Tags": "Gnu, Command Line Interface, Interactive Programs, Line Editing, History Manipulation",
+    "Software Type": "Command Line Tool",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

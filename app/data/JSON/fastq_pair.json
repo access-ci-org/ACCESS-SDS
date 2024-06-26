@@ -1,0 +1,11 @@
+{
+    "Software": "fastq_pair",
+    "AI Description": "fastq_pair is a tool for pairing and sorting paired-end reads in FASTQ format. It is designed to efficiently process large volumes of paired-end sequencing data by identifying matching read pairs and organizing them for downstream analysis.",
+    "Core Features": "Pairing & Sorting Paired-End Reads In Fastq Format, Efficient Processing Of Large Volumes Of Sequencing Data, Identification Of Matching Read Pairs, Organization Of Paired-End Reads For Downstream Analysis",
+    "General Tags": "Bioinformatics, Computational Biology, Sequencing Data, Paired-End Reads, Fastq Format",
+    "Software Type": "Data Processing Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

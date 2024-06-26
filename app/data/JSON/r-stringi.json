@@ -1,0 +1,11 @@
+{
+    "Software": "r-stringi",
+    "AI Description": "R package stringi is a powerful and flexible string processing toolbox for R with consistent interface. It is an innovative, easy-to-use, and efficient tool for manipulating strings.",
+    "Core Features": "Some core features of r-stringi include Unicode string processing, regular expressions with ICU (International Components for Unicode), character set conversion and normalization, text boundary detection, string case conversion, string sorting, and much more.",
+    "General Tags": "String Processing, Text Manipulation, Unicode, Regular Expressions",
+    "Software Type": "Data Analysis",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

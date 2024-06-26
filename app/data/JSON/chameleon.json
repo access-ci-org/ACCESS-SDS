@@ -1,0 +1,11 @@
+{
+    "Software": "Chameleon",
+    "AI Description": "Chameleon is a Python library for creating customizable color palettes for data visualization purposes. It provides a user-friendly interface to easily generate aesthetically pleasing color schemes for various types of visualizations.",
+    "Core Features": "1. Generate custom color palettes\n2. Easily customize color schemes\n3. Compatibility with popular data visualization libraries\n4. Seamless integration with Python data analysis workflows",
+    "General Tags": "Python Library, Data Visualization, Color Palette, Visualization, Python",
+    "Software Type": "Library",
+    "Software Class": "Data Visualization Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Other Computer & Information Sciences"
+}

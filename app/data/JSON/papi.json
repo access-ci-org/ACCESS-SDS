@@ -1,0 +1,11 @@
+{
+    "Software": "PAPI",
+    "AI Description": "PAPI (Performance Application Programming Interface) is a portable and efficient API that provides a consistent interface and methodology for collecting performance counter data from the underlying hardware.",
+    "Core Features": "1. Abstraction of hardware-specific details for performance monitoring. 2. Support for a wide range of hardware performance counters. 3. Portable across different platforms and architectures. 4. Integration with various performance analysis tools.",
+    "General Tags": "Performance Monitoring, Api, Hardware Counter",
+    "Software Type": "Library",
+    "Software Class": "Performance Monitoring",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
+}

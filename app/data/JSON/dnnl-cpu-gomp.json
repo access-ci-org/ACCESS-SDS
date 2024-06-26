@@ -1,0 +1,11 @@
+{
+    "Software": "dnnl-cpu-gomp",
+    "AI Description": "The dnnl-cpu-gomp is an open-source deep neural network library developed for CPU-based computations employing OpenMP (Open Multi-Processing) as a thread-processing technology.",
+    "Core Features": "Optimized For Deep Neural Network Computations On Cpus, Utilizes Openmp For Parallelism In Thread Processing, Includes Various Functions & Operations For Neural Network Implementations, Supports Efficient Execution Of Deep Learning Models On Cpu Architectures",
+    "General Tags": "Deep Learning, Neural Networks, Openmp, Cpu Computing",
+    "Software Type": "Computational Software",
+    "Software Class": "Libraries & Frameworks",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

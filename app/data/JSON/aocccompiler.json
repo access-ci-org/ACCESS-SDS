@@ -1,0 +1,11 @@
+{
+    "Software": "aocc compiler",
+    "AI Description": "The AMD Optimizing C/C++ Compiler is a high performance compiler suite that builds upon the Open64 compiler infrastructure. It includes support for the latest C and C++ standards, as well as numerous advanced optimization features for AMD processors.",
+    "Core Features": "Support For The Latest C & C++ Standards, Advanced Optimization Features For Amd Processors, Built Upon The Open64 Compiler Infrastructure",
+    "General Tags": "Compiler, C/C++, Optimization, Amd",
+    "Software Type": "Compilers",
+    "Software Class": "Compiler",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

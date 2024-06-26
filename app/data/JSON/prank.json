@@ -1,0 +1,11 @@
+{
+    "Software": "Prank",
+    "AI Description": "PRANK is a probabilistic multiple sequence alignment program for DNA, codon and amino-acid sequences. It constructs multiple alignments by aligning sequences pairwise based on local alignment and phylogenetic information.",
+    "Core Features": "Probabilistic Multiple Sequence Alignment, DNA, Codon, & Amino-Acid Sequence Alignment, Incorporates Phylogenetic Information, User-Friendly Interface",
+    "General Tags": "Sequence Alignment, Bioinformatics, Genomics, Phylogenetics",
+    "Software Type": "Computational Software",
+    "Software Class": "Bioinformatics",
+    "Research Area": "",
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
+}

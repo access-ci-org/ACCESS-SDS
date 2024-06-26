@@ -1,0 +1,11 @@
+{
+    "Software": "jemalloc",
+    "AI Description": "jemalloc is a general-purpose memory allocator implementation designed for high performance in multithreaded applications. It is widely used in the software industry to optimize memory allocation and improve overall performance of applications.",
+    "Core Features": "Efficient Memory Allocation & Deallocation, Optimized For Multithreaded Applications, Scalable & Customizable, Supports Advanced Memory Management Features",
+    "General Tags": "Memory Allocator, Performance Optimization, Multithreading",
+    "Software Type": "Memory Allocator",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

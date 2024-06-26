@@ -1,0 +1,11 @@
+{
+    "Software": "archspec",
+    "AI Description": "Archspec is a framework for detecting the architecture of a system and producing a structured representation of its features for further analysis and optimization. It aims to provide insights into the architectural characteristics of a computing system, helping developers understand and leverage these features for performance optimization and code generation.",
+    "Core Features": "Detecting System Architecture, Producing Structured Representation Of System Features, Performance Optimization, Code Generation",
+    "General Tags": "Architecture Detection, System Analysis, Performance Optimization, Code Generation",
+    "Software Type": "Framework",
+    "Software Class": "Software Development",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

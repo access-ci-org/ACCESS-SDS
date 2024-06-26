@@ -1,0 +1,11 @@
+{
+    "Software": "ntl",
+    "AI Description": "ntl is a high-performance, portable C++ library providing data types for arbitrary length integers and floating-point numbers. It aims to offer efficient implementations for the fundamental algorithms in number theory.",
+    "Core Features": "Arbitrary length integer arithmetic, arbitrary precision floating-point arithmetic, number theory algorithms, efficient implementations, portable and high-performance.",
+    "General Tags": "Arbitrary Length Integers, Number Theory, High-Performance Computing, C++ Library",
+    "Software Type": "Data Types & Algorithms",
+    "Software Class": "Library",
+    "Research Area": "Number Theory",
+    "Research Discipline": "Pure Mathematics",
+    "Research Field": "Mathematics"
+}

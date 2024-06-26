@@ -1,0 +1,11 @@
+{
+    "Software": "waylandpp",
+    "AI Description": "waylandpp is a C++ binding library for Wayland, which is a protocol for a compositor to talk to its clients.",
+    "Core Features": "Provides a wrapper around the Wayland C library to allow C++ developers to interact with the Wayland protocol easily. Offers object-oriented programming constructs for working with Wayland interfaces. Facilitates the creation of Wayland compositors and clients using modern C++ practices.",
+    "General Tags": "Wayland, C++, Binding Library",
+    "Software Type": "Programming Interface",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

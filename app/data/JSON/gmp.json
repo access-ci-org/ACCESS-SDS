@@ -1,0 +1,11 @@
+{
+    "Software": "gmp",
+    "AI Description": "The GNU Multiple Precision Arithmetic Library (GMP) is a free library for arbitrary-precision arithmetic, operating on signed integers, rational numbers, and floating-point numbers.",
+    "Core Features": "1. High-performance arithmetic functions for integers, rationals, and floating-point numbers. \n2. Support for a wide range of mathematical operations including addition, subtraction, multiplication, division, exponentiation, and more. \n3. Efficient memory management and algorithms for large numbers. \n4. Portable and easy to use C library with interfaces available for various programming languages.",
+    "General Tags": "Computational Software, Library, Mathematics, Software Development",
+    "Software Type": "Library",
+    "Software Class": "Library",
+    "Research Area": "Other Mathematics",
+    "Research Discipline": "Pure Mathematics",
+    "Research Field": "Mathematics"
+}

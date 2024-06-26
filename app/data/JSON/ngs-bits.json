@@ -1,0 +1,11 @@
+{
+    "Software": "NGS-bits",
+    "AI Description": "NGS-bits is a software suite designed for analysis of next-generation sequencing (NGS) data. It provides a variety of tools and algorithms for processing and interpreting NGS data.",
+    "Core Features": "NGS-bits offers functionalities for quality control, read mapping, variant calling, and downstream analysis of NGS data. It supports popular sequencing platforms and file formats, allowing users to efficiently analyze their genomic data.",
+    "General Tags": "Ngs, Next-Generation Sequencing, Bioinformatics",
+    "Software Type": "Bioinformatics Tools",
+    "Software Class": "Ngs Analysis Tools",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

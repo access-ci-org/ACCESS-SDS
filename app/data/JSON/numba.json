@@ -1,0 +1,11 @@
+{
+    "Software": "numba",
+    "AI Description": "Numba is an open-source just-in-time (JIT) compiler that translates a subset of Python and NumPy code into fast machine code.",
+    "Core Features": "1. Just-in-time (JIT) compilation for improving the performance of Python and NumPy code. 2. Support for parallel computing with multi-threading. 3. Seamless integration with NumPy arrays and functions. 4. Easy to use and efficient optimization techniques like loop unrolling and vectorization.",
+    "General Tags": "Jit Compiler, Python Optimization, Numpy Optimization",
+    "Software Type": "Open-Source",
+    "Software Class": "Compiler",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

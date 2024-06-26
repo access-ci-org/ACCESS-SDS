@@ -1,0 +1,11 @@
+{
+    "Software": "R futile logger",
+    "AI Description": "The futile logger package in R provides a simple, flexible and effective logging utility for R developers. It allows users to easily log messages, warnings, and errors while customizing log output formatting and destination.",
+    "Core Features": "Logging Messages, Warnings, & Errors, Customizable Log Output Formatting, Configurable Log Destination",
+    "General Tags": "Logging, R Package, Utility",
+    "Software Type": "R Package",
+    "Software Class": "Logging",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Other Natural Sciences"
+}

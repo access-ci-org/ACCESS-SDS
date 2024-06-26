@@ -1,0 +1,11 @@
+{
+    "Software": "ior",
+    "AI Description": "ior is a versatile software tool for analyzing and optimizing input/output (I/O) performance in high-performance computing (HPC) systems. It is designed to assess and improve the efficiency of data transfer operations in parallel computing environments.",
+    "Core Features": "I/O performance analysis, Parallel I/O optimization, Benchmarking, Profiling",
+    "General Tags": "High-Performance Computing, Parallel Computing, I/O Optimization",
+    "Software Type": "Utility Software",
+    "Software Class": "Performance Analysis Tool",
+    "Research Area": "High-Performance Computing",
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer Science"
+}

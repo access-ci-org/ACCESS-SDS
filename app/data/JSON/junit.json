@@ -1,0 +1,11 @@
+{
+    "Software": "JUnit",
+    "AI Description": "JUnit is a popular open-source unit testing framework for Java programming language. It is widely used by developers to write and run repeatable automated tests to ensure the correctness of their code.",
+    "Core Features": "Supports Writing & Running Automated Tests In Java, Provides Annotations For Test Methods, Includes Assertion Methods For Test Results, Supports Test Fixtures To Set Up Initial Conditions, Generates Test Reports For Easy Result Analysis",
+    "General Tags": "Unit Testing, Java, Testing Framework",
+    "Software Type": "Development Tool",
+    "Software Class": "Software Testing Framework",
+    "Research Area": "Software Development",
+    "Research Discipline": "Software Engineering, Systems, & Development",
+    "Research Field": "Computer & Information Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "R Shiny",
+    "AI Description": "R Shiny is a web application framework for R that allows users to create interactive web applications directly from R. It enables data scientists to develop interactive, web-based dashboards, visualizations, and applications without needing to know HTML, CSS, or JavaScript.",
+    "Core Features": "Interactive Web Applications, Integration With R Code & Packages, Responsive Design For Multiple Devices, Support For Various Input Controls & Reactive Output Elements, Customizable & Dynamic User Interfaces",
+    "General Tags": "Web Application Framework, Data Visualization, Interactive Dashboards, R Integration",
+    "Software Type": "Application Software",
+    "Software Class": "Development Tools",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

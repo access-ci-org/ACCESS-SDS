@@ -1,0 +1,11 @@
+{
+    "Software": "r-formula",
+    "AI Description": "r-formula is a software package designed for statistical computing and graphics in R. It provides a simple and intuitive formula interface for specifying statistical models in R programming language.",
+    "Core Features": "1. Easy-to-use formula interface for specifying regression models and other statistical analyses\n2. Supports a wide range of statistical models including linear regression, logistic regression, ANOVA, and more\n3. Allows users to easily manipulate and transform variables within the formula\n4. Provides intuitive syntax for specifying interactions and nested effects in statistical models\n5. Enables visualization of model formulae and mathematical expressions",
+    "General Tags": "Statistical Computing, Formula Interface, Regression Analysis",
+    "Software Type": "Statistical Software",
+    "Software Class": "Statistical Analysis",
+    "Research Area": "Statistical Modeling",
+    "Research Discipline": "Statistics & Probability",
+    "Research Field": "Mathematics"
+}

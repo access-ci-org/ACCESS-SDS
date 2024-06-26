@@ -1,0 +1,11 @@
+{
+    "Software": "atram",
+    "AI Description": "atram is a software package that is developed to automate the assembly of targeted genomic regions from whole-genome shotgun data. It is specifically designed for capturing and assembling large genomic regions, such as mitochondria, chloroplasts, and other organelles.",
+    "Core Features": "Automated Assembly Of Targeted Genomic Regions, Designed For Capturing & Assembling Large Genomic Regions, Works With Whole-Genome Shotgun Data, Specifically Tailored For Organelle Assemblies",
+    "General Tags": "Genomics, Bioinformatics, Assembly",
+    "Software Type": "Genomic Assembly",
+    "Software Class": "Bioinformatics",
+    "Research Area": "Genetics",
+    "Research Discipline": "Cell Biology",
+    "Research Field": "Biological Sciences"
+}

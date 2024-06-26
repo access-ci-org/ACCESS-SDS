@@ -1,0 +1,11 @@
+{
+    "Software": "nghttp2",
+    "AI Description": "nghttp2 is an open-source implementation of the Hypertext Transfer Protocol version 2 (HTTP/2) and its header compression algorithm. The project also include a HTTP/2 server, client, and proxy.",
+    "Core Features": "1. Implementation of HTTP/2 protocol. 2. Optimized header compression algorithm. 3. Provides HTTP/2 server, client, and proxy. 4. Open-source and actively maintained.",
+    "General Tags": "Http/2, Web Protocol, Networking",
+    "Software Type": "Library",
+    "Software Class": "Networking",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

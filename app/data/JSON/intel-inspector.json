@@ -1,0 +1,11 @@
+{
+    "Software": "intel-inspector",
+    "AI Description": "The Intel Inspector is a dynamic memory and threading error checking tool for users developing serial and multithreaded applications on Windows or Linux operating systems. It helps developers find memory and threading errors early in the code development cycle to eliminate costly and time-consuming issues that might otherwise arise later in the development phase or in the field.",
+    "Core Features": "1. Detects memory leaks and errors in multithreaded applications.\n2. Provides highly detailed error analysis and debugging capabilities.\n3. Supports serial and multithreaded applications on Windows and Linux platforms.\n4. Offers comprehensive data race and deadlock detection.",
+    "General Tags": "Software, Development, Debugging, Memory Management, Multithreading",
+    "Software Type": "Memory & Threading Error Checker",
+    "Software Class": "Debugging Tool",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
+}

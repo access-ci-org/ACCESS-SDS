@@ -1,0 +1,11 @@
+{
+    "Software": "mujoco-py",
+    "AI Description": "mujoco-py is a Python library that provides a simplified interface to the MuJoCo physics engine for robotic simulations and control tasks. It allows users to create, manipulate, and control dynamic systems in a simulated environment.",
+    "Core Features": "Integration With The Mujoco Physics Engine, Simplified Python Interface For Interacting With Mujoco Simulations, Support For Robotic Simulations & Control Tasks, Efficient Computation Of Physics-Based Simulations",
+    "General Tags": "Physics Engine, Robotic Simulations, Control Tasks, Simulation Environment",
+    "Software Type": "Python Library",
+    "Software Class": "Simulation Software",
+    "Research Area": "Artificial Intelligence & Intelligent Systems",
+    "Research Discipline": "Computer Science",
+    "Research Field": "Engineering & Technology"
+}

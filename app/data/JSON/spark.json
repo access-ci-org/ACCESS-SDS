@@ -1,0 +1,11 @@
+{
+    "Software": "Spark",
+    "AI Description": "Apache Spark is an open-source distributed computing system that provides an interface for programming entire clusters with implicit data parallelism and fault tolerance.",
+    "Core Features": "1. In-memory computation for increased speed\n2. Support for various data processing tasks like batch processing, ETL, streaming analytics, machine learning, and graph processing\n3. Fault tolerance through lineage graph and RDDs (Resilient Distributed Datasets)\n4. Compatibility with Hadoop's Distributed File System (HDFS)\n5. APIs in Java, Scala, Python, and R",
+    "General Tags": "Distributed Computing, Big Data, Data Processing",
+    "Software Type": "Distributed Computing System",
+    "Software Class": "Big Data Processing",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

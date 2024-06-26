@@ -1,0 +1,11 @@
+{
+    "Software": "Neuron",
+    "AI Description": "NEURON is a simulation environment for modeling individual neurons and networks of neurons. It offers flexibility and power which makes it a widely used tool in computational neuroscience.",
+    "Core Features": "NEURON allows users to create and simulate computational models of individual neurons and networks of neurons. It provides a high level of flexibility in model design and parameterization, along with detailed visualization tools to analyze simulation results.",
+    "General Tags": "Neuroscience, Computational Modeling, Simulation, Neural Networks, Neuron Modeling",
+    "Software Type": "Computational Modeling",
+    "Software Class": "Simulation Software",
+    "Research Area": "Computational Neuroscience",
+    "Research Discipline": "Neuroscience",
+    "Research Field": "Biological Sciences"
+}

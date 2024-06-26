@@ -1,0 +1,11 @@
+{
+    "Software": "gffutils",
+    "AI Description": "gffutils is a Python package for working with and manipulating GFF (General Feature Format) files, a tab-delimited file format that stores genomic features. It provides tools for parsing, querying, and analyzing GFF files.",
+    "Core Features": "Parsing & Reading Gff Files, Querying Genomic Features, Filtering & Manipulating Gff Data, Converting Gff Files To Different Formats, Integration With Python For Further Analysis",
+    "General Tags": "Genomic Data, Bioinformatics, Python Library, File Parsing, Data Manipulation",
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Data Processing & Analysis",
+    "Research Area": "",
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
+}

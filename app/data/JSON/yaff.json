@@ -1,0 +1,11 @@
+{
+    "Software": "yaff",
+    "AI Description": "The Yet Another Force Field (YAFF) tool is a versatile Python library for developing force fields and running molecular dynamics simulations. It provides efficient implementations of force fields along with tools for parameterizing various interactions.",
+    "Core Features": "1. Development of force fields\n2. Molecular dynamics simulations\n3. Parameterization of interactions\n4. Python library for ease of use",
+    "General Tags": "Molecular Dynamics, Force Field Development, Python Library",
+    "Software Type": "Python Library",
+    "Software Class": "Computational Software",
+    "Research Area": "Molecular Dynamics Simulations",
+    "Research Discipline": "Biophysics",
+    "Research Field": "Natural Sciences"
+}

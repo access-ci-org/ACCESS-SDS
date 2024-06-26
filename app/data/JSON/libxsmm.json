@@ -1,0 +1,11 @@
+{
+    "Software": "libxsmm",
+    "AI Description": "libxsmm is a library for small, dense matrix-matrix multiplications developed for modern CPUs. It provides high performance on Intel Architecture CPUs and comes with different optimized code paths tailored for different processor microarchitectures.",
+    "Core Features": "Optimized for modern Intel Architecture CPUs, tailored code paths for different microarchitectures, high-performance small, dense matrix-matrix multiplications",
+    "General Tags": "Library, Matrix Multiplication, Intel Cpus",
+    "Software Type": "Optimization Library",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

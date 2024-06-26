@@ -1,0 +1,11 @@
+{
+    "Software": "py-jdcal",
+    "AI Description": "py-jdcal is a library for converting between Julian dates and proleptic Gregorian Ordinal dates.",
+    "Core Features": "1. Conversion of Julian dates to proleptic Gregorian Ordinal dates.\n2. Conversion of proleptic Gregorian Ordinal dates to Julian dates.",
+    "General Tags": "Date Conversion, Calendar, Julian Date, Gregorian Date",
+    "Software Type": "Python Library",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Other Natural Sciences"
+}

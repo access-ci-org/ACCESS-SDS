@@ -1,0 +1,11 @@
+{
+    "Software": "libtool",
+    "AI Description": "Libtool is a generic library support script that manages the creation of static and dynamic libraries on various Unix-like operating systems.",
+    "Core Features": "Libtool provides a consistent, portable interface for building, installing and using shared libraries on different platforms. It abstracts the differences between various systems, such as Linux, macOS, and BSD, to ensure the smooth compilation and linking processes for software developers.",
+    "General Tags": "Library Management, Software Development, Compilation",
+    "Software Type": "Utility/Tool",
+    "Software Class": "Library/Toolset",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
+}

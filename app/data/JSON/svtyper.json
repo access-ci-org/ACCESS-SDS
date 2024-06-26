@@ -1,0 +1,11 @@
+{
+    "Software": "svtyper",
+    "AI Description": "svtyper is a tool designed to genotype structural variants.",
+    "Core Features": "It uses read pairs from whole-genome sequencing data to phase and genotype complex structural variants. It can determine the presence or absence of heterozygous breakpoint junctions.",
+    "General Tags": "Genotyping, Structural Variants, Whole-Genome Sequencing",
+    "Software Type": "Tool",
+    "Software Class": "Bioinformatics",
+    "Research Area": "Genomics",
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
+}

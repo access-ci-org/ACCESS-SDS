@@ -1,0 +1,11 @@
+{
+    "Software": "speedseq",
+    "AI Description": "SpeedSeq is a suite of open-source tools for rapidly analyzing sequencing data to identify infections.",
+    "Core Features": "SpeedSeq provides high-performance sequencing analysis tools for detecting genetic mutations responsible for infections. It includes modules for alignment, variant calling, annotation, and visualization.",
+    "General Tags": "Sequencing Data Analysis, Genetic Mutations, Infections",
+    "Software Type": "Computational Software",
+    "Software Class": "Bioinformatics & Hpc Tools",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

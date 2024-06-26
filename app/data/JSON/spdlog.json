@@ -1,0 +1,11 @@
+{
+    "Software": "spdlog",
+    "AI Description": "spdlog is a header-only, feature-rich, and highly performant logging library for C++ which provides various logging outputs and log levels.",
+    "Core Features": "Header-Only Library For Easy Integration, Supports Various Logging Outputs Like Console, File, Rotating File, Etc., Configurable Log Levels For Filtering Log Messages, Fast & Efficient Logging With Minimal Overhead, Thread-Safe Logging For Multithreaded Applications",
+    "General Tags": "Logging, C++, Performance",
+    "Software Type": "Logging",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences, Computer Science, Software Engineering, Systems, & Development"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "pyspoa",
+    "AI Description": "PySpoa is a Python library for partial-order alignment (POA) that provides tools for performing accurate sequence alignment. Based on a divide-and-conquer strategy, PySpoa efficiently aligns sequences without global constraint and is especially useful for long read sequences in bioinformatics applications.",
+    "Core Features": "1. Partial-order alignment (POA) for accurate sequence alignment.\n2. Divide-and-conquer strategy for efficient alignment.\n3. Compatible with long read sequences.\n4. Python library for ease of integration and usage in bioinformatics workflows.",
+    "General Tags": "Bioinformatics, Sequence Alignment, Partial-Order Alignment, Python Library",
+    "Software Type": "Alignment Tool",
+    "Software Class": "Library",
+    "Research Area": "Genomics",
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
+}

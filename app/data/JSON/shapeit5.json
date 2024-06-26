@@ -1,0 +1,11 @@
+{
+    "Software": "Shapeit5",
+    "AI Description": "Shapeit5 is a software package for phasing genomic data, which refers to the process of determining the parental origin of alleles on homologous chromosomes. It is commonly used in genetic studies to infer haplotypes from genotype data.",
+    "Core Features": "Genomic Data Phasing, Inferring Haplotypes From Genotype Data, Determining Parental Origin Of Alleles On Homologous Chromosomes",
+    "General Tags": "Genomics, Data Phasing, Haplotype Inference",
+    "Software Type": "Phasing Tool",
+    "Software Class": "Bioinformatics",
+    "Research Area": "Population Genetics",
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
+}

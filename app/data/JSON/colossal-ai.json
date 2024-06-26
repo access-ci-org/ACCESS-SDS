@@ -1,0 +1,11 @@
+{
+    "Software": "Colossal-ai",
+    "AI Description": "Colossal-AI is an open-source library that simplifies the design, training, and evaluation of complex neural networks for deep learning tasks. It provides a high-level interface that allows researchers and practitioners to easily experiment with various neural network architectures and algorithms.",
+    "Core Features": "1. Simplified design of complex neural networks\n2. Easy training and evaluation of neural network models\n3. High-level interface for experimenting with different architectures and algorithms\n4. Integration with popular deep learning frameworks\n5. Supports distributed training for large-scale models",
+    "General Tags": "Deep Learning, Neural Networks, Machine Learning",
+    "Software Type": "Library",
+    "Software Class": "Machine Learning Library",
+    "Research Area": "Deep Learning",
+    "Research Discipline": "Artificial Intelligence & Intelligent Systems",
+    "Research Field": "Computer & Information Sciences"
+}

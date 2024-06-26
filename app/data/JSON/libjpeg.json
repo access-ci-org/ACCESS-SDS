@@ -1,0 +1,11 @@
+{
+    "Software": "libjpeg",
+    "AI Description": "libjpeg is a widely-used open-source library for reading and writing images in JPEG format. It provides functions for compression and decompression of JPEG images, making it a valuable tool for handling image files in various applications.",
+    "Core Features": "Support For Reading & Writing Jpeg Images, Compression & Decompression Functions, Portable & Efficient Image Processing",
+    "General Tags": "Image Processing, Compression, Library",
+    "Software Type": "Image Processing",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

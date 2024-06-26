@@ -1,0 +1,11 @@
+{
+    "Software": "prokka",
+    "AI Description": "Prokka is a software tool for rapid prokaryotic genome annotation. It annotates bacterial, archaeal, and viral genomes quickly and easily. Prokka performs a comprehensive annotation that includes gene prediction, functional annotation, and other genomic features.",
+    "Core Features": "1. Rapid prokaryotic genome annotation\n2. Gene prediction\n3. Functional annotation\n4. Identification of genomic features\n5. Easy-to-use tool for bacterial, archaeal, and viral genomes",
+    "General Tags": "Genome Annotation, Bioinformatics, Genomics",
+    "Software Type": "Annotation Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Area": "Genome Annotation",
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
+}

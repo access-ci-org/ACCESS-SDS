@@ -1,0 +1,11 @@
+{
+    "Software": "jsoncpp",
+    "AI Description": "JsonCpp is a C++ library that allows manipulating JSON data structures. It provides features for parsing, generating, and manipulating JSON data in C++ applications.",
+    "Core Features": "Parsing Json Data, Generating Json Data, Manipulating Json Data Structures, Support For C++ Applications",
+    "General Tags": "C++, Json, Library, Data Manipulation",
+    "Software Type": "Development Tools",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

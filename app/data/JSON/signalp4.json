@@ -1,0 +1,11 @@
+{
+    "Software": "SignalP 4.0",
+    "AI Description": "SignalP is a software package for detecting signal peptides and predicting their cleavage sites. It provides analysis of eukaryotic signal peptides and their cleavage sites for both Sec and Tat pathways.",
+    "Core Features": "1. Detection of signal peptides in eukaryotic protein sequences\n2. Prediction of cleavage sites for signal peptides in both Sec and Tat pathways\n3. Differentiates between signal peptides and transmembrane regions in proteins\n4. Provides graphical output and detailed result interpretation\n5. Available as a web server for online prediction",
+    "General Tags": "Signal Peptide Prediction, Cleavage Site Prediction, Bioinformatics",
+    "Software Type": "",
+    "Software Class": "",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": ""
+}

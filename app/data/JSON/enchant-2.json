@@ -1,0 +1,11 @@
+{
+    "Software": "enchant-2",
+    "AI Description": "Enchant is a spellchecking library that provides a consistent API for invoking spellchecking routines across different platforms. Enchant-2 is the newer version of the Enchant spellchecking framework.",
+    "Core Features": "1. Cross-platform spellchecking capabilities. 2. Consistent API for invoking spellchecking routines. 3. Supports multiple backends for spellchecking. 4. Customizable dictionaries and language support.",
+    "General Tags": "Spellchecking, Library, Cross-Platform, Spellchecking Routines",
+    "Software Type": "Spellchecking",
+    "Software Class": "Spellchecking Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

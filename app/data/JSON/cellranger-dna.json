@@ -1,0 +1,11 @@
+{
+    "Software": "cellranger-dna",
+    "AI Description": "Cell Ranger DNA is a software package from 10x Genomics that enables the analysis of single-cell DNA sequencing data. It is specifically designed to process single-cell data from linked-read sequencing technologies, such as the 10x Genomics Chromium platform, to identify structural variants, copy number variations, and clonality in individual cells.",
+    "Core Features": "Analysis Of Single-Cell DNA Sequencing Data, Identification Of Structural Variants, Detection Of Copy Number Variations, Estimation Of Clonality In Individual Cells, Support For Linked-Read Sequencing Technologies",
+    "General Tags": "Single-Cell DNA Sequencing, Structural Variants, Copy Number Variations, Clonality Analysis, Linked-Read Sequencing",
+    "Software Type": "Tool",
+    "Software Class": "Bioinformatics",
+    "Research Area": "Genomics",
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
+}

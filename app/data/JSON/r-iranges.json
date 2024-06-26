@@ -1,0 +1,11 @@
+{
+    "Software": "r-iranges",
+    "AI Description": "r-iranges is an R/Bioconductor package that provides efficient and scalable data structures to work with genomic ranges and to perform operations such as finding overlaps, nearest features, counting overlaps, and merging ranges.",
+    "Core Features": "Some core features of r-iranges include creating, manipulating, and querying genomic ranges efficiently, supporting various operations on genomic ranges like overlaps and nearest features, and integrating seamlessly with other Bioconductor packages for genomic data analysis.",
+    "General Tags": "R Package, Bioconductor, Genomic Ranges, Data Analysis",
+    "Software Type": "Package",
+    "Software Class": "Computational Biology",
+    "Research Area": "Genomic Data Analysis",
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
+}

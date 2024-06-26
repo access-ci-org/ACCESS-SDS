@@ -1,0 +1,11 @@
+{
+    "Software": "Platon",
+    "AI Description": "Platon is a versatile software package used for crystallography. It can be employed for structure determination of small molecules from single crystal X-ray diffraction data.",
+    "Core Features": "Platon offers functionalities for crystal structure visualization, analysis, and validation. It assists in the building and refinement of molecular structures, as well as in the interpretation of structural data. The software also aids in the identification of structural features, symmetry operations, and hydrogen bonding patterns. Platon includes tools for generating publication-ready graphics and reports.",
+    "General Tags": "Crystallography, Structure Determination, X-Ray Diffraction",
+    "Software Type": "Data Analysis & Visualization",
+    "Software Class": "Crystallography Software",
+    "Research Area": "Crystallography",
+    "Research Discipline": "",
+    "Research Field": "Physical Sciences"
+}

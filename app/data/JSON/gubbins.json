@@ -1,0 +1,11 @@
+{
+    "Software": "Gubbins",
+    "AI Description": "Gubbins is a software tool for the analysis of bacterial recombination data. It identifies recombination events in bacterial populations from whole-genome sequence data.",
+    "Core Features": "1. Detection of recombination events in bacterial populations\n2. Analysis of whole-genome sequence data\n3. Identification of genomic regions under recombination\n4. Visualization of recombination events\n5. Phylogenetic tree construction",
+    "General Tags": "Bacterial Recombination, Whole-Genome Sequencing, Population Genetics",
+    "Software Type": "",
+    "Software Class": "",
+    "Research Area": "",
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
+}

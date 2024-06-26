@@ -1,0 +1,11 @@
+{
+    "Software": "r-base64",
+    "AI Description": "r-base64 is an R package that provides functions for encoding and decoding base64 data in R language. Base64 is a binary-to-text encoding scheme that converts binary data into ASCII strings using a set of 64 printable characters.",
+    "Core Features": "Encode Binary Data Into Base64 Format, Decode Base64 Strings Back To Binary Data, Support For Efficient & Secure Data Encoding & Decoding, Integration With R Environment For Seamless Data Manipulation",
+    "General Tags": "Base64 Encoding, Data Encoding, R Package, Binary-To-Text Conversion",
+    "Software Type": "Encoding/Decoding Tool",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Other Computer & Information Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "r-yaml",
+    "AI Description": "r-yaml is an R package that provides methods to convert R data to YAML (YAML Ain't Markup Language) and back.",
+    "Core Features": "Convert R data to YAML format and vice versa, support for pretty-printing YAML output, integration with R environment for seamless data conversion.",
+    "General Tags": "R Package, Data Conversion, Yaml",
+    "Software Type": "Package",
+    "Software Class": "Data Conversion",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Other Natural Sciences"
+}

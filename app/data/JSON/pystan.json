@@ -1,0 +1,11 @@
+{
+    "Software": "PyStan",
+    "AI Description": "PyStan is the Python interface for Stan, a probabilistic programming language for Bayesian statistical inference. PyStan allows users to define Bayesian models in Stan language and perform Bayesian analysis using Markov chain Monte Carlo (MCMC) methods.",
+    "Core Features": "1. Define Bayesian models using Stan language. \n2. Perform Bayesian inference using MCMC methods. \n3. Access to a wide range of statistical algorithms for Bayesian analysis. \n4. Integration with Python for data manipulation and visualization.",
+    "General Tags": "Bayesian Statistics, Probabilistic Programming, Mcmc Methods, Statistical Inference",
+    "Software Type": "Library",
+    "Software Class": "Statistical Software",
+    "Research Area": "Bayesian Inference",
+    "Research Discipline": "Statistics & Probability",
+    "Research Field": "Mathematics"
+}

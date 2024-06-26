@@ -1,0 +1,11 @@
+{
+    "Software": "Exonerate",
+    "AI Description": "Exonerate is a versatile tool for sequence alignment and homology search. It is widely used for comparison of protein and nucleotide sequences against a wide range of genomic databases.",
+    "Core Features": "Flexible Sequence Alignment & Homology Search Algorithms, Support For Protein-Protein, DNA-DNA, Protein-DNA, & Est-Genome Alignments, Ability To Handle Large Genomic Datasets Efficiently, Customizable Scoring Parameters For Alignment, Output In Various Formats For Downstream Analysis",
+    "General Tags": "Sequence Alignment, Homology Search, Bioinformatics, Genomics",
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Sequence Alignment",
+    "Research Area": "Genomics",
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "ply",
+    "AI Description": "Ply is a pure-Python implementation of the popular Lex and Yacc parsing tools. It is designed to simplify the process of writing lexers and parsers in Python, providing a high-level, object-oriented interface that makes it easy to define grammars directly in the code.",
+    "Core Features": "1. Pure-Python implementation\n2. Simplifies writing lexers and parsers in Python\n3. High-level, object-oriented interface\n4. Allows defining grammars directly in the code",
+    "General Tags": "Parser, Lexer, Python, Parsing",
+    "Software Type": "Library",
+    "Software Class": "Compiler",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

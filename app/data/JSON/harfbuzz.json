@@ -1,0 +1,11 @@
+{
+    "Software": "harfbuzz",
+    "AI Description": "HarfBuzz is an open-source text shaping engine. It is used to convert Unicode text to beautifully formatted and language-appropriate glyphs. HarfBuzz focuses on providing correct script shaping for complex scripts and languages.",
+    "Core Features": "Unicode text shaping, support for complex scripts, language-specific shaping rules, high-quality text layout, customization options for font features, text rendering optimization.",
+    "General Tags": "Text Shaping Engine, Unicode Text, Text Layout, Font Features Customization",
+    "Software Type": "Library",
+    "Software Class": "Package",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

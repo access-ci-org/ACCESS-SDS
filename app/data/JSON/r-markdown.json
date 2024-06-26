@@ -1,0 +1,11 @@
+{
+    "Software": "R Markdown",
+    "AI Description": "R Markdown is an open-source tool that combines the R programming language with Markdown, a plain text formatting syntax, to create dynamic documents that weave together code, results, and narrative text. It allows users to generate reports, presentations, dashboards, interactive websites, and more, all in a reproducible manner.",
+    "Core Features": "Integrates R Code For Data Analysis & Visualization Within Markdown Documents, Supports Various Output Formats Such As Html, Pdf, Word, & Powerpoint, Enables The Creation Of Interactive Elements Using Shiny Apps & Html Widgets, Facilitates Easy Sharing & Collaboration On Data-Driven Documents, Provides Templates & Custom Styling Options For Personalized Document Design",
+    "General Tags": "R Programming, Data Visualization, Reproducible Research",
+    "Software Type": "Authoring Tool",
+    "Software Class": "Document Generation",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Other Computer & Information Sciences"
+}

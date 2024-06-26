@@ -1,0 +1,11 @@
+{
+    "Software": "pplacer",
+    "AI Description": "pplacer is a phylogenetic placement tool that places query sequences on a fixed reference phylogenetic tree while simultaneously estimating their likelihoods. It is particularly useful for analyzing large collections of short reads, such as those generated from next-generation sequencing technologies.",
+    "Core Features": "Phylogenetic Placement Of Query Sequences, Estimation Of Likelihoods For Query Sequence Placements, Analysis Of Large Collections Of Short Reads, Compatibility With Next-Generation Sequencing Data",
+    "General Tags": "Phylogenetic Analysis, Sequence Placement, Phylogenetic Tree, Likelihood Estimation",
+    "Software Type": "Tool",
+    "Software Class": "Bioinformatics",
+    "Research Area": "Systematics & Population Biology",
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
+}

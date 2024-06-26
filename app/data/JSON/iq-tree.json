@@ -1,0 +1,11 @@
+{
+    "Software": "IQ-TREE",
+    "AI Description": "IQ-TREE is a versatile and fast software tool for maximum likelihood phylogenetic tree estimation. It implements a wide range of models for nucleotide and amino acid sequences, including substitution models, clock models, and site-specific rate variation. IQ-TREE also provides rigorous statistical tests to evaluate the robustness of the inferred phylogenies. It supports large phylogenomic data sets and offers parallel computing capabilities for efficient analysis.",
+    "Core Features": "Maximum Likelihood Phylogenetic Tree Estimation, Multiple Substitution Models & Rate Heterogeneity Options, Model Selection Criteria, Ultrafast Bootstrap Approximation, Branch Test Based On Approximate Likelihood Ratio Test (Alrt), Bayesian Model Averaging",
+    "General Tags": "Phylogenetics, Bioinformatics, Phylogenetic Tree Estimation, Sequence Analysis",
+    "Software Type": "Computational Tool",
+    "Software Class": "Bioinformatics",
+    "Research Area": "Phylogenetics",
+    "Research Discipline": "Systematics & Population Biology",
+    "Research Field": "Biological Sciences"
+}

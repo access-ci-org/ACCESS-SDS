@@ -1,0 +1,11 @@
+{
+    "Software": "MEGAHIT",
+    "AI Description": "MEGAHIT is a highly efficient and ultra-fast single-nucleotide polymorphism (SNP)-aware metagenome assembly software tool. It is designed for the assembly of metagenomic sequencing data, providing users with high-quality draft assemblies.",
+    "Core Features": "Efficient Metagenome Assembly, Snp-Aware Assembly, Ultra-Fast Performance, High-Quality Draft Assemblies",
+    "General Tags": "Metagenome Assembly, Bioinformatics, Sequencing Data, Snp-Aware, Draft Assemblies",
+    "Software Type": "Assembly Software",
+    "Software Class": "Metagenome Assembly Tool",
+    "Research Area": "Metagenomics",
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
+}

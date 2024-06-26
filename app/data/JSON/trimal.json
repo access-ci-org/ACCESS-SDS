@@ -1,0 +1,11 @@
+{
+    "Software": "trimal",
+    "AI Description": "Trimal is a bioinformatics tool used for multiple sequence alignment trimming. It can remove poorly aligned positions or divergent regions in a sequence alignment, which can be beneficial for downstream phylogenetic analysis or evolutionary studies. Trimal offers several trimming methods and criteria to suit different research needs.",
+    "Core Features": "1. Multiple sequence alignment trimming\n2. Removal of poorly aligned positions\n3. Elimination of divergent regions\n4. Various trimming methods and criteria",
+    "General Tags": "Bioinformatics, Sequence Analysis, Alignment Trimming",
+    "Software Type": "Alignment Trimming",
+    "Software Class": "Sequence Analysis",
+    "Research Area": "Evolutionary Biology",
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
+}

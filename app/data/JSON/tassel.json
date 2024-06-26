@@ -1,0 +1,11 @@
+{
+    "Software": "Tassel",
+    "AI Description": "Tassel is a bioinformatics software tool used for analyzing genetic variation in plants. It provides a wide range of functionalities for genetic analysis, visualization, and data management, particularly designed for plant biologists and breeders.",
+    "Core Features": "Some of the core features of Tassel include SNP discovery, population genetic analysis, association mapping, phylogenetic analysis, genotyping by sequencing (GBS) analysis, diversity analysis, and marker-trait association analysis.",
+    "General Tags": "Bioinformatics, Genetic Analysis, Plant Biology",
+    "Software Type": "Analysis Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Area": "Genetic Variation Analysis",
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
+}

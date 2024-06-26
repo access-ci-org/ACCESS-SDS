@@ -1,0 +1,11 @@
+{
+    "Software": "score-P",
+    "AI Description": "score-P is a performance measurement system targeted at HPC applications. It provides a comprehensive suite for event trace analysis, profile evaluation, and performance report generation. The tool assists in gaining insights into application execution and identifying potential optimizations.",
+    "Core Features": "Event Trace Analysis, Profile Evaluation, Performance Report Generation, Hpc Application Performance Measurement",
+    "General Tags": "Hpc Tools, Performance Measurement, Event Trace Analysis, Profile Evaluation, Optimization, Hpc Applications",
+    "Software Type": "Tool",
+    "Software Class": "Performance Measurement System",
+    "Research Area": "",
+    "Research Discipline": "Performance Evaluation & Benchmarking",
+    "Research Field": "Engineering & Technology"
+}

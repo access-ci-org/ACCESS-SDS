@@ -1,0 +1,11 @@
+{
+    "Software": "phrap",
+    "AI Description": "Phrap is a software for assembling shotgun DNA sequencing data. It is commonly used in genomics research for aligning and assembling DNA sequencing reads into longer contiguous sequences.",
+    "Core Features": "1. DNA sequencing data assembly\n2. Alignment of sequencing reads\n3. Generation of consensus sequences\n4. Error correction and base calling\n5. Support for various sequencing technologies",
+    "General Tags": "DNA Sequencing, Genomics, Assembly",
+    "Software Type": "Assembly",
+    "Software Class": "Bioinformatics",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

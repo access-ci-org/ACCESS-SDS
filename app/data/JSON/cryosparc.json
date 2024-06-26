@@ -1,0 +1,11 @@
+{
+    "Software": "CryoSPARC",
+    "AI Description": "CryoSPARC is a comprehensive software platform for cryo-EM data processing that enables high-resolution structure determination of biological macromolecules.",
+    "Core Features": "Automated Particle Picking, 3D Heterogeneity Analysis, Ab-Initio 3D Reconstruction, High-Resolution Refinement, Model Building & Validation",
+    "General Tags": "Cryo-Em, Biological Macromolecules, Structural Biology, Data Processing",
+    "Software Type": "Cryo-Em Software",
+    "Software Class": "Data Processing",
+    "Research Area": "Structural Biology",
+    "Research Discipline": "Biophysics",
+    "Research Field": "Biological Sciences"
+}

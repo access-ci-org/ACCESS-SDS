@@ -1,0 +1,11 @@
+{
+    "Software": "intel-dnnl-cpu-iomp",
+    "AI Description": "The Intel oneAPI Deep Neural Network Library (DNNL) for CPU with Intel oneAPI Math Kernel Library (iomp) is a high-performance library for deep learning applications optimized for Intel CPUs. It provides highly optimized functions for deep learning frameworks and applications to accelerate training and inference tasks.",
+    "Core Features": "1. Accelerated deep learning operations on Intel CPUs.\n2. Integration with deep learning frameworks like TensorFlow and PyTorch.\n3. Support for various neural network layer types.\n4. Enhanced performance through optimizations for Intel architecture.\n5. Scalability for large-scale deep learning models.",
+    "General Tags": "Deep Learning, Cpu Optimization, Neural Networks",
+    "Software Type": "Tool",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

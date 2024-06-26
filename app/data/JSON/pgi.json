@@ -1,0 +1,11 @@
+{
+    "Software": "PGI",
+    "AI Description": "PGI Compilers & Tools are the essential HPC development tools for scientists, researchers, and engineers. PGI products deliver world-class performance across a wide range of applications and provide a full-featured, performance optimizing OpenMP and OpenACC parallel programming environment for multicore CPUs and NVIDIA GPUs.",
+    "Core Features": "1. High performance optimizing compilers\n2. OpenMP and OpenACC parallel programming support\n3. Compatibility with multicore CPUs and NVIDIA GPUs\n4. Extensive optimization capabilities\n5. Debugging and profiling tools\n6. Comprehensive set of performance analysis features",
+    "General Tags": "Hpc, Compilers, Parallel Programming",
+    "Software Type": "Development Tool",
+    "Software Class": "Compiler",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
+}

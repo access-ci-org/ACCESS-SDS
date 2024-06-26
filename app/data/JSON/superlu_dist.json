@@ -1,0 +1,11 @@
+{
+    "Software": "SuperLU_DIST",
+    "AI Description": "SuperLU_DIST is a parallel, distributed-memory sparse direct solver for large linear systems with multiple right-hand sides. It is designed for distributed-memory parallel computers and utilizes partial pivoting with static pivoting thresholds. This software package provides a highly parallel sparse direct solver that performs matrix factorization and triangular solution stages efficiently on large-scale parallel machines.",
+    "Core Features": "Parallel, Distributed-Memory Sparse Direct Solver, Designed For Distributed-Memory Parallel Computers, Utilizes Partial Pivoting With Static Pivoting Thresholds, Efficient Matrix Factorization & Triangular Solution Stages On Large-Scale Parallel Machines",
+    "General Tags": "Sparse Linear Solver, Parallel Computing, Distributed-Memory Solver, Matrix Factorization",
+    "Software Type": "Solver",
+    "Software Class": "Computational Software",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
+}

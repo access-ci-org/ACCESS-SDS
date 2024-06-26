@@ -1,0 +1,11 @@
+{
+    "Software": "BLASR",
+    "AI Description": "BLASR is a software tool designed for aligning SMRT sequencing reads to a reference genome. It is developed by Pacific Biosciences and provides accurate mapping of long and noisy reads.",
+    "Core Features": "Key features of BLASR include alignment of long reads with high error rates, compatibility with Pacific Biosciences sequencing data, support for various input formats such as HDF5 and FASTQ, and customizable parameters for optimization.",
+    "General Tags": "Alignment, Sequencing, Genomics",
+    "Software Type": "Mapping",
+    "Software Class": "Alignment",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

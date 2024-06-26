@@ -1,0 +1,11 @@
+{
+    "Software": "DFTB+",
+    "AI Description": "DFTB+ is a software package for efficient, approximate density functional based tight-binding (DFTB) calculations in quantum chemistry and solid-state physics. It offers a computationally less expensive alternative to density functional theory (DFT) for large-scale simulations.",
+    "Core Features": "1. Approximate density functional based tight-binding (DFTB) method. 2. Efficient calculations in quantum chemistry and solid-state physics. 3. Suitable for large-scale simulations. 4. Includes various parameter sets for different chemical elements. 5. Compatible with periodic and non-periodic systems.",
+    "General Tags": "Quantum Chemistry, Solid-State Physics, Density Functional Theory, Computational Chemistry",
+    "Software Type": "Quantum Chemistry Software",
+    "Software Class": "Computational Software",
+    "Research Area": "Condensed Matter Physics",
+    "Research Discipline": "Physical Sciences",
+    "Research Field": "Physical Sciences"
+}

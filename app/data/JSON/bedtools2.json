@@ -1,0 +1,11 @@
+{
+    "Software": "bedtools2",
+    "AI Description": "Bedtools2 is a powerful suite of tools for manipulating genomic features and annotations. It allows users to perform a wide range of tasks on genomic intervals, such as intersecting, merging, comparing, and analyzing BED, GFF, VCF, and other common genomic file formats.",
+    "Core Features": "1. Intersecting genomic intervals\n2. Merging overlapping features\n3. Comparing genomic files\n4. Filtering and manipulating genomic data\n5. Calculating coverage and overlaps\n6. Handling multiple file formats",
+    "General Tags": "Genomic Data Analysis, Bed Files, Bioinformatics",
+    "Software Type": "Tool",
+    "Software Class": "Genomic Analysis",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

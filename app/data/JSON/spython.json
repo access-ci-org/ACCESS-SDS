@@ -1,0 +1,11 @@
+{
+    "Software": "Spython",
+    "AI Description": "Spython is a software tool that combines the functionalities of the Python programming language with specific features tailored for scientific computing, data analysis, and visualization tasks. It aims to streamline the workflow for researchers and scientists by providing an integrated environment for code development, data manipulation, and result visualization.",
+    "Core Features": "Integration With Popular Python Libraries For Scientific Computing, Such As Numpy, Scipy, Pandas, & Matplotlib, Interactive Data Exploration & Visualization Capabilities, Support For Parallel Computing & Distributed Processing, Code Profiling & Optimization Tools, Built-In Tools For Machine Learning & Statistical Analysis, Integration With Jupyter Notebooks For Interactive Computing",
+    "General Tags": "Scientific Computing, Data Analysis, Visualization, Python Programming, Research Tools",
+    "Software Type": "Scientific Computing Tool",
+    "Software Class": "Integrated Development Environment (Ide)",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences, Other Mathematics, Other Natural Sciences"
+}

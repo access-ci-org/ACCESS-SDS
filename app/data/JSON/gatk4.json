@@ -1,0 +1,11 @@
+{
+    "Software": "gatk4",
+    "AI Description": "The Genome Analysis Toolkit (GATK) is a software package developed at the Broad Institute to analyze high-throughput sequencing data. The toolkit offers a wide variety of tools for variant discovery, genotyping, and other genomic analyses.",
+    "Core Features": "1. Variant discovery and genotyping\n2. Joint variant calling in cohorts\n3. Quality control and variant filtration\n4. Haplotype phasing and imputation\n5. Structural variant discovery\n6. Functional annotation of variants",
+    "General Tags": "Bioinformatics, Genomic Analysis, Variant Discovery, High-Throughput Sequencing",
+    "Software Type": "Genomic Analysis Tool",
+    "Software Class": "Data Analysis",
+    "Research Area": "Genomics",
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
+}

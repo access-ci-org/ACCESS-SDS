@@ -1,0 +1,11 @@
+{
+    "Software": "RepeatScout",
+    "AI Description": "RepeatScout is a computational tool designed for the identification and classification of repetitive sequences in genomic data. It utilizes de novo repeat detection algorithms to discover novel repetitive elements within DNA sequences.",
+    "Core Features": "1. De novo repeat identification\n2. Classification of repetitive sequences\n3. Discovery of novel repetitive elements\n4. Identification of potential transposable elements\n5. Generation of consensus sequences for repeats",
+    "General Tags": "Genomics, Bioinformatics, Computational Biology",
+    "Software Type": "Genomic Sequence Analysis",
+    "Software Class": "Bioinformatics Tool",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "miniasm",
+    "AI Description": "Miniasm is a minimal-contig assembler that generates long noisy read assemblies using the Overlap-Layout-Consensus (OLC) paradigm.",
+    "Core Features": "1. Assembles long noisy reads\n2. Corrects reads errors and identifies overlaps between reads\n3. Generates contigs using the OLC paradigm\n4. Handles high error rates efficiently",
+    "General Tags": "Assembly, Genome, Sequence Analysis",
+    "Software Type": "Assembler",
+    "Software Class": "Bioinformatics",
+    "Research Area": "Genomics",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

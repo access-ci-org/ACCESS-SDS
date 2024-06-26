@@ -1,0 +1,11 @@
+{
+    "Software": "osu-micro-benchmarks",
+    "AI Description": "OSU Micro-Benchmarks is a suite of parallel micro-benchmarks written in C with MPI and OpenMP implementations, designed for evaluating the performance of parallel computing systems and HPC networks.",
+    "Core Features": "1. Contains a range of micro-benchmarks to measure various aspects such as latency, bandwidth, and message rate. 2. Supports MPI and OpenMP implementations for evaluating parallel performance. 3. Enables detailed performance analysis for HPC systems and networks. 4. Provides scalability testing capabilities for parallel computing applications.",
+    "General Tags": "Performance Evaluation, Hpc, Benchmarking",
+    "Software Type": "Tool",
+    "Software Class": "Benchmarking Tools",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
+}

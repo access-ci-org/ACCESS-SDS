@@ -1,0 +1,11 @@
+{
+    "Software": "mykrobe",
+    "AI Description": "mykrobe is a software tool designed for the prediction of antimicrobial resistance and species identification in bacterial pathogens using genomic data. It helps in guiding clinicians to select the most effective antibiotics for treating infections caused by resistant bacteria.",
+    "Core Features": "Predicts Antimicrobial Resistance In Bacterial Pathogens, Identifies Bacterial Species Using Genomic Data, Guides Clinicians In Selecting Effective Antibiotics",
+    "General Tags": "Genomics, Bacterial Pathogens, Antimicrobial Resistance, Species Identification",
+    "Software Type": "Tool",
+    "Software Class": "Bioinformatics",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

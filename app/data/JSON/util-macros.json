@@ -1,0 +1,11 @@
+{
+    "Software": "util-macros",
+    "AI Description": "util-macros is a collection of utility macros for C programmers to aid in simplifying common tasks and improving code readability. These macros are designed to enhance the efficiency and maintainability of C code by providing useful functions and utilities.",
+    "Core Features": "1. Provides a variety of utility macros for common tasks in C programming.\n2. Enhances code readability and maintainability by abstracting common operations into reusable macros.\n3. Facilitates rapid development by offering predefined functionalities for tasks like error handling, memory management, and string manipulation.\n4. Supports customization and extension to suit specific project requirements.\n5. Helps streamline the development process and reduce the chance of errors in C code.",
+    "General Tags": "Programming, Development, C Programming, Utility Macros",
+    "Software Type": "Utility",
+    "Software Class": "Library",
+    "Research Area": "Software Engineering, Systems, & Development",
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
+}

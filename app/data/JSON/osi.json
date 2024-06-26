@@ -1,0 +1,11 @@
+{
+    "Software": "OSI",
+    "AI Description": "OSI (Open System Interconnection) is a conceptual framework that standardizes the functions of a telecommunication or computing system into seven abstraction layers. It facilitates communication between different systems by defining a set of protocols to be used at each layer.",
+    "Core Features": "Standardizes Communication Functions In Telecommunication Or Computing Systems, Defines Seven Abstraction Layers For Communication Protocols, Facilitates Interoperability Between Different Systems, Establishes A Clear Structure For Network Communication",
+    "General Tags": "Networking, Communication, Protocol, Standardization",
+    "Software Type": "Networking Software",
+    "Software Class": "Software Type",
+    "Research Area": "Software Engineering, Systems, & Development",
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
+}

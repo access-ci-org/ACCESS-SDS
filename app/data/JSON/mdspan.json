@@ -1,0 +1,11 @@
+{
+    "Software": "mdspan",
+    "AI Description": "mdspan is a C++ library that provides a multidimensional array data structure with a fixed size at compile time. It offers a high-performance alternative to traditional dynamically allocated multidimensional arrays.",
+    "Core Features": "Compile-Time Fixed-Size Multidimensional Arrays, High-Performance Operations, Efficient Memory Layout & Access Patterns",
+    "General Tags": "C++ Library, Multidimensional Array, Data Structure, High-Performance Computing",
+    "Software Type": "Data Structure",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

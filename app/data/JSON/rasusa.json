@@ -1,0 +1,11 @@
+{
+    "Software": "Rasusa",
+    "AI Description": "Rasusa (Random Subsample) is a tool for generating random subsamples from sequencing data. It allows users to create statistically independent subsets of reads from raw data for downstream analysis and quality control.",
+    "Core Features": "Generation Of Random Subsamples From Sequencing Data, Creation Of Statistically Independent Subsets Of Reads, Quality Control Of Raw Sequencing Data",
+    "General Tags": "Bioinformatics, Sequence Analysis, Quality Control",
+    "Software Type": "Command Line Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

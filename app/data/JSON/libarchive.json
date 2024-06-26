@@ -1,0 +1,11 @@
+{
+    "Software": "libarchive",
+    "AI Description": "libarchive is a programming library that can create and read several different streaming archive formats, including most popular tar variants, cpio, and zip. It can also write entry content directly to or read entry content directly from memory, and provides hooks to read and write the entry content as it is processed. Program is available in C and C++.",
+    "Core Features": "Support For Multiple Archive Formats Such As Tar, Cpio, Zip, Ability To Create & Read Archives, Supports Reading From & Writing To Memory Directly, Provides Hooks For Processing Entry Content, Available In C & C++",
+    "General Tags": "Programming Library, Archive, Compression, Data Management",
+    "Software Type": "Data Management",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "BLAT",
+    "AI Description": "BLAT (BLAST-Like Alignment Tool) is a sequence analysis software used for comparing genomic DNA sequences to the human genome. It is particularly useful for finding regions of similarity between DNA sequences at the nucleotide level.",
+    "Core Features": "1. Rapid alignment of DNA sequences\n2. Ability to handle large genomes\n3. Identifying regions of similarity at the nucleotide level\n4. Support for genome mapping and finding gene structures\n5. User-friendly interface",
+    "General Tags": "Sequence Analysis, DNA Alignment, Genomic Analysis",
+    "Software Type": "Tool",
+    "Software Class": "Bioinformatics",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

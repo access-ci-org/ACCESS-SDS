@@ -1,0 +1,11 @@
+{
+    "Software": "Ragel",
+    "AI Description": "Ragel is a domain-specific language and state machine compiler used for creating efficient state machine code in various programming languages. It can be employed for parsing, scanning, and code generation tasks.",
+    "Core Features": "Ragel allows users to define state machines using a concise and readable syntax, supports various output formats such as C, C++, and Java, offers features for specifying actions associated with state transitions, and provides optimization options for generating high-performance code.",
+    "General Tags": "State Machine Compiler, Domain-Specific Language, Code Generation, Parsing, Compilers",
+    "Software Type": "Domain-Specific Language",
+    "Software Class": "Compiler",
+    "Research Area": "Software Engineering, Systems, & Development",
+    "Research Discipline": "Other Computer & Information Sciences",
+    "Research Field": "Computer & Information Sciences"
+}

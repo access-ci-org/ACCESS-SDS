@@ -1,0 +1,11 @@
+{
+    "Software": "LMDB",
+    "AI Description": "LMDB is an extremely fast, memory-efficient and crash-proof key-value store that is well-suited for embedded applications and high-performance web services. It is written in C and operates directly on memory-mapped files.",
+    "Core Features": "High Performance, Memory-Efficient, Crash-Proof, Key-Value Store, Embedded Applications Support",
+    "General Tags": "Database, Key-Value Store, Memory-Mapped Files",
+    "Software Type": "Database Management System",
+    "Software Class": "Computational Software",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

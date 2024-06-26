@@ -1,0 +1,11 @@
+{
+    "Software": "StarPU",
+    "AI Description": "StarPU is a runtime system designed for heterogeneous multicore machines with accelerators. It offers a unified runtime system that can handle multi-threading, task parallelism, data management, and data locality management. StarPU is specifically tailored for dense numerical linear algebra operation kernels and iterative solvers.",
+    "Core Features": "Support For Heterogeneous Multicore Architectures, Unified Runtime System For Multi-Threading, Task Parallelism, & Data Management, Optimized For Dense Numerical Linear Algebra Operations & Iterative Solvers",
+    "General Tags": "Runtime System, Heterogeneous Computing, Multicore Architectures",
+    "Software Type": "Hpc Tool",
+    "Software Class": "",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Other"
+}

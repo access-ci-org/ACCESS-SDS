@@ -1,0 +1,11 @@
+{
+    "Software": "Valgrind",
+    "AI Description": "Valgrind is a programming tool for memory debugging, memory leak detection, and profiling. It can also be used for cache and thread error detection.",
+    "Core Features": "Memory Debugging, Memory Leak Detection, Profiling, Cache Error Detection, Thread Error Detection",
+    "General Tags": "Debugging, Profiling, Development Tool",
+    "Software Type": "Programming Tool",
+    "Software Class": "Development Tool",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

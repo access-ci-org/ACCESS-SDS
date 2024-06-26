@@ -1,0 +1,11 @@
+{
+    "Software": "mkl32",
+    "AI Description": "Intel(R) Math Kernel Library for 32-bit applications",
+    "Core Features": "mkl32 is a highly optimized, thread-safe mathematical library for Intel processors. It offers highly optimized, extensively threaded math routines for linear algebra, fast Fourier transforms, vector math, and statistics. This library is designed to improve application performance on Intel architecture-based systems.",
+    "General Tags": "Mathematics, Computational Software, Hpc Tools",
+    "Software Type": "Library",
+    "Software Class": "Math Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Other Mathematics"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "HPL",
+    "AI Description": "The High Performance Linpack (HPL) benchmark is a tool for analyzing and ranking the performance of computer systems, particularly supercomputers. It measures the floating-point rate of execution for solving a dense system of linear equations. HPL is widely used to assess and compare the computational performance of High Performance Computing (HPC) systems.",
+    "Core Features": "Measures The Floating-Point Rate Of Execution For Solving Linear Equations, Provides A Standardized Benchmark For Comparing Hpc Systems, Used To Assess & Rank The Performance Of Supercomputers",
+    "General Tags": "Hpc, Benchmarking, Performance Analysis",
+    "Software Type": "Benchmarking Tool",
+    "Software Class": "Computational Software",
+    "Research Area": "Performance Evaluation & Benchmarking",
+    "Research Discipline": "Infrastructure & Instrumentation",
+    "Research Field": "Engineering & Technology"
+}

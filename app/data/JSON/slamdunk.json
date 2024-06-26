@@ -1,0 +1,11 @@
+{
+    "Software": "SLAMdunk",
+    "AI Description": "SLAMdunk is a genome alignment-based tool specifically designed for mapping, quantification, and analysis of next-generation sequencing (NGS) data from RNA-seq experiments.",
+    "Core Features": "Genome Alignment For RNA-Seq Data, Quantification Of Gene Expression Levels, Integration Of Transcriptomics Data, Visualization Tools For Result Interpretation",
+    "General Tags": "Ngs Data Analysis, RNA-Seq Data Processing, Transcriptomics, Bioinformatics",
+    "Software Type": "RNA-Seq Mapper",
+    "Software Class": "Ngs Analysis Tool",
+    "Research Area": "Transcriptomics",
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
+}

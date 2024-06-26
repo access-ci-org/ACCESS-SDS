@@ -1,0 +1,11 @@
+{
+    "Software": "h5py",
+    "AI Description": "h5py is a Python library providing a high-level interface to the HDF5 library. It allows you to store huge amounts of numerical data and easily manipulate that data from NumPy.",
+    "Core Features": "High-Level Interface To The Hdf5 Library, Efficiently Store & Manipulate Large Numerical Datasets, Seamless Integration With Numpy Arrays, Support For Complex Data Structures, Ability To Access Data Stored In Hdf5 Files",
+    "General Tags": "Python Library, Data Storage, Numerical Data, Data Manipulation",
+    "Software Type": "Library",
+    "Software Class": "Python Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

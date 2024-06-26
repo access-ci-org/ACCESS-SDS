@@ -1,0 +1,11 @@
+{
+    "Software": "scirpy",
+    "AI Description": "scirpy is a Python-based toolkit for single-cell immune receptor profiling analysis. It provides a comprehensive set of tools for the analysis of B cell and T cell receptor repertoires in single-cell RNA sequencing data.",
+    "Core Features": "Analysis Of B Cell & T Cell Receptor Repertoires, Integration With Single-Cell RNA Sequencing Data, Clonotyping & V(D)J Gene Usage Analysis, Diversity & Similarity Metrics, Identification Of Clonally Related Cells",
+    "General Tags": "Python Library, Single-Cell Analysis, Immune Receptor Profiling",
+    "Software Type": "Python Library",
+    "Software Class": "Bioinformatics Tool",
+    "Research Area": "Immunology",
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
+}

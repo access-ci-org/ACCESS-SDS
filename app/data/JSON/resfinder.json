@@ -1,0 +1,11 @@
+{
+    "Software": "ResFinder",
+    "AI Description": "ResFinder is a web-based tool developed by the Center for Genomic Epidemiology for identification of acquired antimicrobial resistance genes in whole-genome sequencing data of bacterial isolates. It helps in predicting acquired antimicrobial resistance by comparing the input genome sequences to a set of known resistance genes.",
+    "Core Features": "Identification Of Acquired Antimicrobial Resistance Genes, Analysis Of Whole-Genome Sequencing Data, Comparison Of Input Genome Sequences To A Database Of Known Resistance Genes, Prediction Of Antimicrobial Resistance",
+    "General Tags": "Bioinformatics",
+    "Software Type": "Web-Based Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Area": "Antimicrobial Resistance",
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
+}

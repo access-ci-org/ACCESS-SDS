@@ -1,0 +1,11 @@
+{
+    "Software": "gst-plugins-base",
+    "AI Description": "gst-plugins-base is a collection of GStreamer plugins and elements, which serve as the base for GStreamer. These plugins provide essential functionalities for building audio and video processing pipelines in GStreamer-based applications.",
+    "Core Features": "1. Support for various container formats like AVI, QuickTime, Matroska, etc. \n2. Decoding and encoding support for a wide range of audio and video codecs. \n3. Basic elements for audio and video playback, recording, streaming, and manipulation. \n4. Integration with hardware-accelerated video decoding and encoding through VA-API, VDPAU, etc.",
+    "General Tags": "Audio Processing, Video Processing, Multimedia Framework",
+    "Software Type": "Plugin",
+    "Software Class": "Library",
+    "Research Area": "Multimedia Processing",
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
+}

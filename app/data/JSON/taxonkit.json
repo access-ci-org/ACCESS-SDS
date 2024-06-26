@@ -1,0 +1,11 @@
+{
+    "Software": "taxonkit",
+    "AI Description": "TaxonKit is a fast and versatile toolkit for biological taxonomy. It is designed to support the retrieval and formatting of taxonomic information from popular data sources, such as NCBI and GTDB. TaxonKit aims to provide efficient ways to extract and manipulate taxonomic data for downstream analysis.",
+    "Core Features": "1. Retrieval of taxonomic information from NCBI and GTDB databases\n2. Batch processing of taxonomic data\n3. Formatting and standardization of taxonomic data\n4. Integration with other bioinformatics tools and pipelines",
+    "General Tags": "Bioinformatics, Taxonomy, Data Retrieval, Data Manipulation",
+    "Software Type": "Data Retrieval & Manipulation",
+    "Software Class": "Bioinformatics Tool",
+    "Research Area": "Systematics & Population Biology",
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
+}

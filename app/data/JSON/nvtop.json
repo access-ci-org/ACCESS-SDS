@@ -1,0 +1,11 @@
+{
+    "Software": "nvtop",
+    "AI Description": "nvtop is an NVIDIA GPU system monitoring tool with a user-friendly CLI interface. It provides real-time monitoring of GPU utilization, memory usage, temperature, power consumption, and other important metrics.",
+    "Core Features": "Real-Time Monitoring Of Nvidia Gpu Metrics, User-Friendly Command-Line Interface (Cli), Display Of Gpu Utilization, Memory Usage, Temperature, Power Consumption, & More, Support For Multiple Gpus On A Single System, Color-Coded Display For Easy Visualization Of Gpu Performance",
+    "General Tags": "System Monitoring, Gpu Monitoring, Nvidia Gpu, Command-Line Interface, Performance Optimization",
+    "Software Type": "Utility",
+    "Software Class": "Monitoring & Analysis Tools",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

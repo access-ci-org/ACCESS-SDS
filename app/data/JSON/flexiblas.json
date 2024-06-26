@@ -1,0 +1,11 @@
+{
+    "Software": "FlexiBLAS",
+    "AI Description": "FlexiBLAS is a lightweight BLAS (Basic Linear Algebra Subprograms) library that aims to provide efficient and flexible implementations of BLAS routines for various hardware platforms. It is designed to optimize performance on CPUs, GPUs, and other accelerators, making it suitable for a wide range of scientific computing applications.",
+    "Core Features": "Efficient Implementations Of Blas Routines, Support For Various Hardware Platforms Including Cpus, Gpus, & Accelerators, High Performance Optimization Techniques, Lightweight & Easy To Use",
+    "General Tags": "Blas Library, Scientific Computing, Linear Algebra",
+    "Software Type": "Library",
+    "Software Class": "Computational Software",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Other Mathematics"
+}

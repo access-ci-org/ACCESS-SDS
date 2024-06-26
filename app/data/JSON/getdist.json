@@ -1,0 +1,11 @@
+{
+    "Software": "GetDist",
+    "AI Description": "GetDist is a Python package for analyzing Monte Carlo Markov Chains (MCMC) samples, primarily used in cosmological parameter estimation. It provides tools for plotting and analyzing MCMC samples, computing confidence limits, and generating parameter constraints and posterior plots.",
+    "Core Features": "Analysis Of Mcmc Samples, Parameter Estimation In Cosmology, Generation Of Parameter Constraints & Posterior Plots, Computation Of Confidence Limits",
+    "General Tags": "Mcmc Analysis, Parameter Estimation, Posterior Plots, Cosmology",
+    "Software Type": "Python Library",
+    "Software Class": "Data Analysis",
+    "Research Area": "Cosmology",
+    "Research Discipline": "Astronomy & Planetary Sciences",
+    "Research Field": "Physical Sciences"
+}

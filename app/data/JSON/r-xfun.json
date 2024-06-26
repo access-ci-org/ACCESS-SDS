@@ -1,0 +1,11 @@
+{
+    "Software": "r-xfun",
+    "AI Description": "The r-xfun package is a collection of miscellaneous functions to assist and facilitate various tasks in R programming. It provides a set of utility functions to streamline workflows, enhance productivity, and simplify common programming operations in R.",
+    "Core Features": "1. File operations: Functions for file manipulation, file organization, and file system interaction.\n2. String operations: Tools for string manipulation, formatting, and regular expression handling.\n3. List operations: Functions for working with lists, list processing, and list management.\n4. Data operations: Utilities for data manipulation, data transformation, and data processing tasks.\n5. Miscellaneous functions: Assorted functions for diverse tasks such as text formatting, path handling, and environment management.",
+    "General Tags": "R Package, Data Manipulation, Utility Functions",
+    "Software Type": "Library",
+    "Software Class": "Utility",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

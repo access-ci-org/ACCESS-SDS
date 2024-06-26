@@ -1,0 +1,11 @@
+{
+    "Software": "pyzmq",
+    "AI Description": "PyZMQ is a Python library that provides bindings for ZeroMQ. ZeroMQ is a high-performance asynchronous messaging library that allows you to build distributed applications.",
+    "Core Features": "Asynchronous Messaging, Building Distributed Applications, High-Performance Messaging Library",
+    "General Tags": "Python Library, Messaging Library, Distributed Applications, Asynchronous Messaging",
+    "Software Type": "Programming Library",
+    "Software Class": "Library",
+    "Research Area": "Artificial Intelligence & Intelligent Systems",
+    "Research Discipline": "Computer & Information Sciences",
+    "Research Field": "Computer & Information Sciences"
+}

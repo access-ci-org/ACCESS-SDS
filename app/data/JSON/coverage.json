@@ -1,0 +1,11 @@
+{
+    "Software": "Coverage",
+    "AI Description": "Coverage is a tool used to measure the extent to which the source code of a program has been tested. It is often used in software development to assess the quality and thoroughness of testing by determining which parts of the code have been executed during testing.",
+    "Core Features": "Measures Code Coverage To Evaluate The Effectiveness Of Test Suites, Identifies Parts Of The Code That Have Not Been Tested, Helps Developers Understand The Quality Of Their Testing Efforts, Can Be Used To Improve Test Coverage & Identify Potential Gaps In Testing",
+    "General Tags": "Code Coverage, Testing, Software Development, Quality Assurance",
+    "Software Type": "Tool",
+    "Software Class": "Testing & Quality Assurance",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology, Computer & Information Sciences, Software Engineering, Systems, & Development"
+}

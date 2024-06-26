@@ -1,0 +1,11 @@
+{
+    "Software": "py-pip",
+    "AI Description": "py-pip is the official installer for Python packages from the Python Package Index (PyPI). It is used to install and manage software packages written in Python.",
+    "Core Features": "1. Install Python packages from PyPI. 2. Manage package dependencies. 3. Easily uninstall packages. 4. Search for packages on PyPI. 5. Upgrade outdated packages. 6. Create own packages for distribution.",
+    "General Tags": "Package Management, Python, Software Installation",
+    "Software Type": "Package Management",
+    "Software Class": "Development Tools",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences, Software Engineering, Systems, & Development"
+}

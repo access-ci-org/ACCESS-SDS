@@ -1,0 +1,11 @@
+{
+    "Software": "r-xml",
+    "AI Description": "The r-xml package in R provides tools for parsing and generating XML within the R environment.",
+    "Core Features": "1. Parsing XML documents to data structures in R.\n2. Generation of XML documents from R data structures.\n3. Manipulation and transformation of XML data within R.\n4. XPath querying support for XML data.\n5. Integration with other R packages for data analysis and visualization.",
+    "General Tags": "R Package, Xml Parser, Data Transformation",
+    "Software Type": "Library",
+    "Software Class": "Data Processing & Analysis",
+    "Research Area": "Information Retrieval",
+    "Research Discipline": "Information Science",
+    "Research Field": "Computer & Information Sciences"
+}

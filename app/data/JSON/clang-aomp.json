@@ -1,0 +1,11 @@
+{
+    "Software": "clang-aomp",
+    "AI Description": "clang-aomp is a compiler based on Clang that integrates the AMD Optimizing Compiler (AOCC) and OpenMP runtime. It is designed for accelerating applications on AMD GPUs.",
+    "Core Features": "Integration Of Amd Optimizing Compiler, Openmp Support, Optimizations For Amd Gpus",
+    "General Tags": "Compiler, Openmp, Gpu Acceleration",
+    "Software Type": "Compiler",
+    "Software Class": "Development Tools",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
+}

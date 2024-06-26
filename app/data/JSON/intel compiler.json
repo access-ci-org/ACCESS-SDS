@@ -1,0 +1,11 @@
+{
+    "Software": "Intel Compiler",
+    "AI Description": "The Intel Compiler is a set of high-performance compilers for Intel processors that allows developers to optimize and tune their code for Intel architecture. It supports C, C++, and Fortran languages.",
+    "Core Features": "The Intel Compiler provides advanced optimization techniques, parallel programming support with OpenMP and MPI, vectorization capabilities, and debugging tools for efficient software development. It generates code optimized for Intel processors to achieve superior performance.",
+    "General Tags": "Compiler, Performance Optimization, Parallel Programming, Intel Processor",
+    "Software Type": "Compiler",
+    "Software Class": "Development Tools",
+    "Research Area": "Software Engineering, Systems, & Development",
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
+}

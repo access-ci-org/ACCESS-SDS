@@ -1,0 +1,11 @@
+{
+    "Software": "yaxt",
+    "AI Description": "YAXT (Yet Another XTabulator) is a Python library for creating publication-ready quantitative tables with an emphasis on simplicity and customization. It provides a straightforward interface for generating tables directly from pandas DataFrames.",
+    "Core Features": "1. Creation of publication-ready quantitative tables\n2. Customization options for table formatting\n3. Direct integration with pandas DataFrames\n4. Support for adding metadata to tables\n5. Ability to export tables in various formats",
+    "General Tags": "Python Library, Data Analysis, Table Generation",
+    "Software Type": "Library",
+    "Software Class": "Data Analysis",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

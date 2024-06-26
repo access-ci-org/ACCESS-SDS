@@ -1,0 +1,11 @@
+{
+    "Software": "cobaya",
+    "AI Description": "Cobaya is an open-source platform for Bayesian analysis of physical and cosmological models. It provides a user-friendly interface for defining models, running parameter estimation, and sampling from posterior distributions.",
+    "Core Features": "Bayesian Analysis Of Physical & Cosmological Models, User-Friendly Model Definition Interface, Parameter Estimation & Sampling From Posterior Distributions",
+    "General Tags": "Bayesian Analysis, Physical Models, Cosmological Models",
+    "Software Type": "Analysis",
+    "Software Class": "Computational Tool",
+    "Research Area": "Cosmology",
+    "Research Discipline": "Astronomy & Planetary Sciences",
+    "Research Field": "Physical Sciences"
+}

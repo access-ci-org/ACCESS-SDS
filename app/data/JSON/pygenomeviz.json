@@ -1,0 +1,11 @@
+{
+    "Software": "pygenomeviz",
+    "AI Description": "PyGenomeViz is a Python library for creating interactive, publication-quality visualizations of genomics data. It provides a user-friendly and customizable platform for visualizing various genomic features and their associated data.",
+    "Core Features": "Interactive Visualizations Of Genomics Data, Publication-Quality Graphics, Customizable Plots & Annotations, Support For Various Genomic Data Formats",
+    "General Tags": "Genomics, Data Visualization, Python Library, Bioinformatics",
+    "Software Type": "Library",
+    "Software Class": "Visualization Tool",
+    "Research Area": "Genomics",
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
+}

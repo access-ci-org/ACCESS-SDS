@@ -1,0 +1,11 @@
+{
+    "Software": "Pioman",
+    "AI Description": "Pioman is a Python package that provides tools for parallel input and output (IO) management. It aims to optimize IO performance in high-performance computing (HPC) environments by enabling efficient reading and writing of large datasets. Pioman is particularly useful for scientific simulations and data analysis workflows that involve heavy IO operations.",
+    "Core Features": "Efficient Parallel Input & Output Management, Optimization For High-Performance Computing Environments, Enhanced Io Performance For Large Datasets, Python Package For Easy Integration",
+    "General Tags": "Python Library, Hpc Tool, Io Management",
+    "Software Type": "Library",
+    "Software Class": "Data Management",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

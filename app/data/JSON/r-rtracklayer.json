@@ -1,0 +1,11 @@
+{
+    "Software": "rtracklayer",
+    "AI Description": "The rtracklayer package provides a collection of tools to process and manipulate genome annotation tracks in R. It enables users to read, write, and manipulate popular genome annotation file formats such as BED, GFF, BEDGraph, and BAM. rtracklayer facilitates the visualization, summarization, and analysis of genomic data, making it easier for researchers to work with biological data in R environments.",
+    "Core Features": "Reading & Writing Genome Annotation Files, Manipulation & Visualization Of Genomic Data Tracks, Integration With Popular Bioinformatics Tools & Databases, Flexible & Customizable Functionalities For Data Analysis",
+    "General Tags": "Bioinformatics, Genomics, Data Visualization, Data Analysis",
+    "Software Type": "R Package",
+    "Software Class": "Data Processing & Manipulation",
+    "Research Area": "Genome Annotation",
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
+}

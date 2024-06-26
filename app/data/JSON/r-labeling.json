@@ -1,0 +1,11 @@
+{
+    "Software": "r-labeling",
+    "AI Description": "An R package for efficient graph-based ad-hoc labeling of nodes and edges in the context of network visualizations.",
+    "Core Features": "1. Ad-hoc labeling of nodes and edges.\n2. Graph-based labeling for network visualizations.\n3. Supports custom labeling options.\n4. Efficient labeling algorithms.",
+    "General Tags": "R Package, Graph-Based Labeling, Network Visualization, Graph Algorithms",
+    "Software Type": "R Package",
+    "Software Class": "Graph Visualization",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

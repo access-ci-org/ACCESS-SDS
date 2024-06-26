@@ -1,0 +1,11 @@
+{
+    "Software": "iml",
+    "AI Description": "Interpretable Machine Learning",
+    "Core Features": "iml is an R package that enables interpretable machine learning for regression and classification models. It provides a suite of tools for understanding the predictions of machine learning models by creating interpretable explanations.",
+    "General Tags": "Machine Learning, Interpretability, Model Explanation",
+    "Software Type": "R Package",
+    "Software Class": "Machine Learning Interpretability",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

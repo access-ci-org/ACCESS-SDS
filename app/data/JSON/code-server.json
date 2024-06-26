@@ -1,0 +1,11 @@
+{
+    "Software": "code-server",
+    "AI Description": "Code-server is a tool that allows you to run a Visual Studio Code instance in the browser, making it convenient for remote development, collaboration, and accessing your coding environment from anywhere.",
+    "Core Features": "Remote Development In The Browser, Access To Visual Studio Code Environment, Real-Time Collaboration Features, Support For Extensions & Plugins, Integrated Terminal For Running Commands",
+    "General Tags": "Remote Development, Visual Studio Code, Browser-Based Coding, Collaboration, Coding Environment",
+    "Software Type": "Development Tool",
+    "Software Class": "Integrated Development Environment (Ide)",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

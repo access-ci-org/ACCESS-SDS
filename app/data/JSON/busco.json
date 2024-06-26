@@ -1,0 +1,11 @@
+{
+    "Software": "Busco",
+    "AI Description": "BUSCO (Benchmarking Universal Single-Copy Orthologs) is a software package that assesses genome assembly, gene set, and transcriptome completeness based on evolutionarily informed expectations of gene content.",
+    "Core Features": "1. Evaluation of genome assembly and gene or protein set completeness. 2. Benchmarking against evolutionarily-informed expectations. 3. Analysis of orthologous genes or proteins. 4. Scalable and versatile for different organisms.",
+    "General Tags": "Genomics, Genome Assembly, Gene Set, Transcriptome, Orthologs",
+    "Software Type": "Tools",
+    "Software Class": "Computational Biology",
+    "Research Area": "Genomics",
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
+}

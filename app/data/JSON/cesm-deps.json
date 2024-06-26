@@ -1,0 +1,11 @@
+{
+    "Software": "cesm-deps",
+    "AI Description": "CESM-DEPS is a set of dependencies and tools for supporting the Community Earth System Model (CESM) software. It includes various libraries, compilers, and software packages necessary for running CESM simulations.",
+    "Core Features": "Provides Essential Dependencies & Tools For Cesm Software, Includes Libraries, Compilers, & Other Software Required For Cesm Simulations, Ensures Smooth Operation & Performance Optimization Of Cesm Models",
+    "General Tags": "Dependencies, Cesm, Earth System Model, Simulation, Software Package",
+    "Software Type": "Libraries & Dependencies",
+    "Software Class": "Tools & Utilities",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Earth & Environmental Sciences"
+}

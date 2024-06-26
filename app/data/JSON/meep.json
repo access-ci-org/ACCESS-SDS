@@ -1,0 +1,11 @@
+{
+    "Software": "Meep",
+    "AI Description": "Meep (or MIT Electromagnetic Equation Propagation) is a free finite-difference time-domain (FDTD) simulation software package developed at MIT to model electromagnetic systems.",
+    "Core Features": "Some core features of Meep include simulating electromagnetic fields in periodic and non-periodic environments, calculating transmission and reflection of structures, supporting various boundary conditions such as PML (perfectly matched layers), and analyzing photonic crystals and waveguides.",
+    "General Tags": "Simulation, Electromagnetics, Fdtd",
+    "Software Type": "Computational Software",
+    "Software Class": "Simulation",
+    "Research Area": "Condensed Matter Physics",
+    "Research Discipline": "Physical Sciences",
+    "Research Field": "Physical Sciences"
+}

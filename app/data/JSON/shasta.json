@@ -1,0 +1,11 @@
+{
+    "Software": "Shasta",
+    "AI Description": "Shasta is a long-read assembler designed for PacBio and Oxford Nanopore data. It efficiently assembles long noisy reads into highly accurate contigs and is optimized for high error rates commonly found in third-generation sequencing technologies.",
+    "Core Features": "Optimized For Long Noisy Reads From Pacbio & Oxford Nanopore Technologies, Efficiently Assembles Highly Accurate Contigs, Handles High Error Rates Commonly Found In Third-Generation Sequencing Data",
+    "General Tags": "Genome Assembly, Long-Read Sequencing, Bioinformatics",
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Assembler",
+    "Research Area": "Genomics",
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
+}

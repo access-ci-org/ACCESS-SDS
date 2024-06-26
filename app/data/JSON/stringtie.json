@@ -1,0 +1,11 @@
+{
+    "Software": "stringtie",
+    "AI Description": "StringTie is a software for transcript assembly and quantification of RNA-Seq data. It is designed to efficiently assemble and quantify full-length transcripts representing multiple splice variants for each gene locus.",
+    "Core Features": "Some core features of StringTie include de novo transcriptome assembly, discovery of novel transcripts, estimation of transcript abundances, identification of differentially expressed genes, compatibility with diverse RNA-Seq library preparation protocols, and ability to handle single-end and paired-end reads.",
+    "General Tags": "RNA-Seq, Transcript Assembly, Transcript Quantification",
+    "Software Type": "Transcriptomics Tool",
+    "Software Class": "Bioinformatics",
+    "Research Area": "Genetics, Bioinformatics",
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
+}

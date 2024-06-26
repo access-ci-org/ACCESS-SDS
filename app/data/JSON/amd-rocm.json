@@ -1,0 +1,11 @@
+{
+    "Software": "AMD ROCm",
+    "AI Description": "AMD ROCm (Radeon Open Compute platform) is an open software platform designed for heterogenous computing among CPUs and GPUs. It allows developers to leverage the power of AMD GPUs for a wide range of applications, from deep learning to scientific computing.",
+    "Core Features": "1. Heterogeneous computing support\n2. Deep learning frameworks integration\n3. Scientific computing capabilities\n4. Open-source platform\n5. GPU accelerated applications\n6. Support for AMD GPUs",
+    "General Tags": "Heterogeneous Computing, Deep Learning, Scientific Computing",
+    "Software Type": "Development Tools",
+    "Software Class": "Middleware",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

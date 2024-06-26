@@ -1,0 +1,11 @@
+{
+    "Software": "libsigsegv",
+    "AI Description": "libsigsegv is a library for handling page faults in user mode. It provides a convenient and efficient way to establish a handler for memory violations while exploring memory areas.",
+    "Core Features": "Handling Page Faults In User Mode, Establishing A Handler For Memory Violations, Exploring Memory Areas",
+    "General Tags": "Library, Memory, Page Fault",
+    "Software Type": "Utility",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

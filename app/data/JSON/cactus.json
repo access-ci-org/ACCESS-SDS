@@ -1,0 +1,11 @@
+{
+    "Software": "Cactus",
+    "AI Description": "Cactus is an open-source software package designed for numerical relativity simulations within the Einstein field equations of general relativity. It provides a framework for solving partial differential equations on adaptive grids in high-performance computing environments.",
+    "Core Features": "1. Solves partial differential equations\n2. Supports adaptive grid techniques\n3. Designed for numerical relativity simulations\n4. Utilizes advanced high-performance computing environments",
+    "General Tags": "Computational Software, Hpc Tools",
+    "Software Type": "Simulation Software",
+    "Software Class": "Scientific Computing",
+    "Research Area": "Numerical Relativity",
+    "Research Discipline": "Gravitational Physics",
+    "Research Field": "Physical Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "libgd",
+    "AI Description": "Libgd is an open-source graphics library. It allows your code to quickly draw images complete with lines, arcs, text, multiple colors, cut and paste from other images, and flood fills. It can generate WBMP files on the fly. It is also compatible with PHP.",
+    "Core Features": "Drawing Images With Various Shapes & Colors, Support For Text Rendering, Manipulation Of Images Including Cut, Paste, & Flood Fill Operations, Generates Wbmp Files Dynamically, Php Compatibility For Web Applications",
+    "General Tags": "Graphics Library, Image Manipulation, Php Library",
+    "Software Type": "Graphics Library",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Other Computer & Information Sciences"
+}

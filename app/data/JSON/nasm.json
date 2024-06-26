@@ -1,0 +1,11 @@
+{
+    "Software": "nasm",
+    "AI Description": "NASM (Netwide Assembler) is an 80x86 and x86-64 assembler designed for portability and modularity. It supports a range of object file formats, including Linux and Windows executables, and generates code compatible with Intel syntax.",
+    "Core Features": "Support For 80X86 & X86-64 Architectures, Cross-Platform & Portable, Intel Syntax Support, Wide Range Of Object File Formats",
+    "General Tags": "Assembler, Cross-Platform, X86, Programming",
+    "Software Type": "Assembler",
+    "Software Class": "Development Tools",
+    "Research Area": "Software Engineering, Systems, & Development",
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
+}

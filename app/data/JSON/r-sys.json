@@ -1,0 +1,11 @@
+{
+    "Software": "R-SYS",
+    "AI Description": "R-SYS is an open-source software system that provides a comprehensive set of tools for statistical computing and graphical techniques in the R programming language. It is designed to facilitate data analysis, visualization, and modeling for researchers and data scientists.",
+    "Core Features": "1. Data manipulation and transformation capabilities\n2. Statistical analysis tools for hypothesis testing, regression, and multivariate analysis\n3. High-quality graphical capabilities for data visualization and interpretation\n4. Extensive library of statistical functions and packages\n5. Integration with other programming languages and data sources\n6. Support for reproducible research and report generation",
+    "General Tags": "Statistical Computing, Data Analysis, Data Visualization",
+    "Software Type": "Data Analysis Tool",
+    "Software Class": "Statistical Computing",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Statistics & Probability"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "libjpeg-turbo",
+    "AI Description": "libjpeg-turbo is a high-speed version of the widely-used JPEG image compression library. It uses SIMD instructions to accelerate JPEG compression and decompression on x86, x86-64, and ARM processors.",
+    "Core Features": "High-Speed Jpeg Compression & Decompression, Supports Simd Instructions For Acceleration, Compatible With Existing Jpeg Files & Programs, Provides Tools For Jpeg Format Conversion",
+    "General Tags": "Image Compression, Jpeg Compression, Library, Open Source",
+    "Software Type": "Compression Library",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "OpenMPI",
+    "AI Description": "OpenMPI is an open-source Message Passing Interface (MPI) library that allows parallel computing on a distributed memory system. It enables high performance computing (HPC) by facilitating communication and coordination between processes running on multiple nodes.",
+    "Core Features": "1. Support for parallel computing using the MPI standard.\n2. Scalability and performance optimization for HPC applications.\n3. Fault tolerance and resilience features for handling node failures.\n4. Interoperability with different programming languages like C, C++, and Fortran.\n5. Dynamic process management and load balancing capabilities.",
+    "General Tags": "Mpi Library, Parallel Computing, High Performance Computing, Distributed Memory System",
+    "Software Type": "Development Tools",
+    "Software Class": "Library",
+    "Research Area": "Software Engineering, Systems, & Development",
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
+}

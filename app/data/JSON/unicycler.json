@@ -1,0 +1,11 @@
+{
+    "Software": "Unicycler",
+    "AI Description": "Unicycler is a hybrid assembly pipeline for bacterial genomes. It can assemble both short and long reads using a combination of de novo assembly and polishing steps.",
+    "Core Features": "Hybrid Assembly Of Bacterial Genomes, Utilizes Short & Long Sequencing Reads, Incorporates De Novo Assembly & Polishing Steps, Automatic Error Correction, Visualization Of Assembly Graphs",
+    "General Tags": "Bioinformatics, Genomics, Assembly, Bacteria",
+    "Software Type": "Sequence Assembly",
+    "Software Class": "Bioinformatics Tool",
+    "Research Area": "Genomics",
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "R6",
+    "AI Description": "R6 is an object-oriented programming system in R that allows for the creation of reference classes. It provides a way to define classes with reference semantics, similar to traditional object-oriented programming languages such as Java or C++. Reference classes allow for mutable objects and methods that can modify object state.",
+    "Core Features": "Creation Of Reference Classes In R, Implementation Of Classical Object-Oriented Programming Concepts, Support For Mutable Objects, Methods That Can Modify Object State",
+    "General Tags": "Programming, Object-Oriented Programming, Reference Classes, R Language",
+    "Software Type": "Software Library",
+    "Software Class": "Programming Language Extension",
+    "Research Area": "Applied Mathematics",
+    "Research Discipline": "Other Mathematics",
+    "Research Field": "Mathematics"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "mothur",
+    "AI Description": "Mothur is a software package for bioinformatics analysis of microbial communities. It provides a suite of tools for processing high-throughput sequencing data, including quality control, alignment, taxonomy assignment, and diversity analysis.",
+    "Core Features": "1. Quality control of sequencing data\n2. OTU (operational taxonomic unit) clustering\n3. Taxonomy assignment\n4. Diversity analysis\n5. Phylogenetic tree construction",
+    "General Tags": "Bioinformatics, Microbial Communities, High-Throughput Sequencing",
+    "Software Type": "Analysis Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Area": "Bioinformatics",
+    "Research Discipline": "Microbial Ecology",
+    "Research Field": "Biological Sciences"
+}

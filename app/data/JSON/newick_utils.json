@@ -1,0 +1,11 @@
+{
+    "Software": "newick_utils",
+    "AI Description": "Newick Utils is a collection of command-line tools for processing Newick tree files used in phylogenetics and computational biology. It provides various utilities for manipulating, analyzing, and visualizing phylogenetic trees represented in the Newick format.",
+    "Core Features": "Parsing & Converting Newick Tree Files, Tree Traversal & Manipulation, Phylogenetic Tree Comparison & Analysis, Visualization Of Phylogenetic Trees, Support For Various Tree Formats",
+    "General Tags": "Phylogenetics, Bioinformatics, Computational Biology, Phylogenetic Trees, Command-Line Tools",
+    "Software Type": "Command-Line Utility",
+    "Software Class": "Bioinformatics Tool",
+    "Research Area": "Phylogenetics",
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
+}

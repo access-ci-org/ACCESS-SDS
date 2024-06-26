@@ -1,0 +1,11 @@
+{
+    "Software": "BamTools",
+    "AI Description": "BamTools is a software toolkit for manipulating BAM (Binary Alignment Map) files. It provides both a C++ API for BAM file input and output, and a command-line tool for performing various operations on BAM files.",
+    "Core Features": "Efficient Bam File Reading & Writing, Tools For Filtering, Sorting, Merging, Indexing Bam Files, Support For Extracting Regions, Statistics, & Alignments From Bam Files, Integration With Other Bioinformatics Tools",
+    "General Tags": "Bioinformatics, Bam Files, Sequence Alignment, Toolkit",
+    "Software Type": "Toolkit",
+    "Software Class": "Analysis & Manipulation Tools",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

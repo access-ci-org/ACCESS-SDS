@@ -1,0 +1,11 @@
+{
+    "Software": "r-data-table",
+    "AI Description": "r-data-table is an R package that provides an enhanced data manipulation toolbox using the data.table package. It is designed for fast aggregation of large data sets, rolling joins, and dealing with ordered data.",
+    "Core Features": "1. Efficient aggregation and manipulation of large datasets\n2. Fast and flexible sorting, grouping, and joining operations\n3. Optimized for dealing with ordered data\n4. Support for in-memory calculations on large datasets\n5. Integration with R programming language for data analysis and visualization tasks",
+    "General Tags": "R Package, Data Manipulation, Data Analysis, Data Visualization",
+    "Software Type": "Data Processing Tool",
+    "Software Class": "Data Manipulation & Analysis",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Other Natural Sciences"
+}

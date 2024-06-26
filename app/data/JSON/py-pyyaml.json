@@ -1,0 +1,11 @@
+{
+    "Software": "py-pyyaml",
+    "AI Description": "PyYAML is a Python library that supports YAML syntax. YAML is a human-readable data serialization standard that can be used in conjunction with all programming languages and is often used for configuration files, data exchange, and data serialization.",
+    "Core Features": "1. Parsing and emitting YAML. 2. Support for all YAML constructs. 3. Unicode support. 4. Binding to other programming languages like Ruby and Perl. 5. Integration with Python data types.",
+    "General Tags": "Python Library, Yaml, Data Serialization, Configuration Files",
+    "Software Type": "Python Package",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences, Other Computer & Information Sciences"
+}

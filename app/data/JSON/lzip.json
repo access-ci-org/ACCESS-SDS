@@ -1,0 +1,11 @@
+{
+    "Software": "lzip",
+    "AI Description": "Lzip is a lossless data compressor based on the LZMA algorithm, with very safe integrity checking and a user interface similar to the one of bzip2 or gzip. Lzip decompresses almost as fast as gzip and compresses better than bzip2, which makes it well suited for software distribution and data archiving.",
+    "Core Features": "1. Lossless compression using the LZMA algorithm. 2. Very safe integrity checking. 3. Similar user interface to bzip2 or gzip. 4. Fast decompression speeds. 5. Better compression ratio than bzip2.",
+    "General Tags": "Compression, Data Archiving, Software Distribution",
+    "Software Type": "Utility",
+    "Software Class": "Compression Software",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
+}

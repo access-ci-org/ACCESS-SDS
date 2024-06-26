@@ -1,0 +1,11 @@
+{
+    "Software": "R-misc3d",
+    "AI Description": "R-misc3d is an R package that provides various functions for generating 3D plots and visualizations in R. It allows users to create interactive 3D plots for exploratory data analysis and visualization in R environment.",
+    "Core Features": "1. Supports creation of 3D scatter plots, surface plots, wireframe plots, and other types of 3D visualizations.\n2. Enables customization of plot appearance, including color schemes, axis labels, and point sizes.\n3. Facilitates interactive rotation, zooming, and panning of 3D plots for detailed examination of data.\n4. Offers options for exporting 3D plots to different file formats for publication or further analysis.",
+    "General Tags": "3D Plots, Data Visualization, Exploratory Data Analysis",
+    "Software Type": "Package/Library",
+    "Software Class": "Visualization Software",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Other Mathematics"
+}

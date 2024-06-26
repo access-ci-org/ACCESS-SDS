@@ -1,0 +1,11 @@
+{
+    "Software": "Picard",
+    "AI Description": "Picard is a set of command line tools for manipulating high-throughput sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF. It is primarily used for processing and analyzing next-generation sequencing (NGS) data in genomics.",
+    "Core Features": "1. Processing and manipulation of HTS data\n2. Quality control and metrics generation\n3. Data format conversion and manipulation\n4. Read group and sample information handling\n5. Sequence dictionary operations",
+    "General Tags": "Bioinformatics, Ngs, Hts, Sequencing Data, Sam, Bam, Vcf",
+    "Software Type": "Command Line Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Area": "Ngs Data Analysis",
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
+}

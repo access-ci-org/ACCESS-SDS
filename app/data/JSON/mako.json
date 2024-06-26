@@ -1,0 +1,11 @@
+{
+    "Software": "Mako",
+    "AI Description": "Mako is a template library written in Python. It provides a familiar, non-XML syntax that compiles into Python modules for maximum performance.",
+    "Core Features": "1. Familiar syntax similar to Python\n2. High performance through Python module compilation\n3. Customizable template inheritance and variable substitutions\n4. Supports embedding Python code directly in templates\n5. Integration with various web frameworks like Flask and Django",
+    "General Tags": "Template Library, Python, Web Development",
+    "Software Type": "Programming",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

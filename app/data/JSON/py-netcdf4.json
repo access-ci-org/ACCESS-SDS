@@ -1,0 +1,11 @@
+{
+    "Software": "py-netcdf4",
+    "AI Description": "Py-NetCDF4 is a Python interface to the netCDF version 4 library. It allows users to read and write netCDF files in a Pythonic way, providing support to access and manipulate data stored in netCDF format.",
+    "Core Features": "Reading & Writing Netcdf Files, Manipulating Data Stored In Netcdf Format, Support For Netcdf Version 4 Library",
+    "General Tags": "Python Library, Netcdf, Data Manipulation",
+    "Software Type": "Data Processing",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Earth & Environmental Sciences"
+}

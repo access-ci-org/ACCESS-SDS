@@ -1,0 +1,11 @@
+{
+    "Software": "RagTag",
+    "AI Description": "RagTag is a software tool designed to scaffold, polish, and evaluate assemblies by aligning them to reference genomes. It is particularly useful for improving the quality of genome assemblies and identifying misassemblies.",
+    "Core Features": "Scaffolding Assemblies To A Reference Genome, Polishing Assemblies Using Reference Genomes, Detecting & Correcting Misassemblies In Genome Assemblies, Evaluating The Quality Of Genome Assemblies",
+    "General Tags": "Assembly Improvement, Genome Alignment, Assembly Evaluation",
+    "Software Type": "Bioinformatics",
+    "Software Class": "Computational Biology",
+    "Research Area": "Genetics",
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
+}

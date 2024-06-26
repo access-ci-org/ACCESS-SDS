@@ -1,0 +1,11 @@
+{
+    "Software": "rocm-cmake",
+    "AI Description": "ROCm CMake is an open-source set of CMake modules designed to facilitate building software with the ROCm ecosystem. It provides CMake configurations and utilities to enable ROCm development and integration of HIP and HCC compilers into projects.",
+    "Core Features": "1. Simplifies the process of incorporating ROCm into CMake-based projects.\n2. Provides CMake module files for building with ROCm libraries and tools.\n3. Supports the integration of HIP and HCC compilers in CMake projects.\n4. Facilitates the seamless use of ROCm tools and libraries in CMake workflows.",
+    "General Tags": "Rocm, Cmake, Hip Compiler, Hcc Compiler",
+    "Software Type": "Compiler",
+    "Software Class": "Development Tools",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

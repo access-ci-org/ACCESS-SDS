@@ -1,0 +1,11 @@
+{
+    "Software": "nss",
+    "AI Description": "Network Security Services (NSS) is a set of libraries designed to support cross-platform development of security-enabled client and server applications. It provides a complete open-source implementation of cryptographic libraries supporting Secure Sockets Layer (SSL) and Transport Layer Security (TLS) protocols.",
+    "Core Features": "1. SSL and TLS encryption support\n2. Cross-platform compatibility\n3. Cryptographic libraries for secure communication\n4. Open-source implementation\n5. Secure client-server applications development",
+    "General Tags": "Security, Network, Encryption",
+    "Software Type": "Security",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

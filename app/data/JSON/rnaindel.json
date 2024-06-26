@@ -1,0 +1,11 @@
+{
+    "Software": "rnaindel",
+    "AI Description": "rnaindel is a computational tool for predicting RNA editing sites in plant organelle genomes. It utilizes machine learning algorithms to identify potential RNA editing sites based on sequence features.",
+    "Core Features": "1. Prediction of RNA editing sites in plant organelle genomes. 2. Machine learning algorithms for site identification. 3. Utilizes sequence features for accurate predictions.",
+    "General Tags": "Computational Biology, Bioinformatics, Machine Learning",
+    "Software Type": "RNA Editing Prediction Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Area": "Plant Genetics",
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
+}

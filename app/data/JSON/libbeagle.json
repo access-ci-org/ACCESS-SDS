@@ -1,0 +1,11 @@
+{
+    "Software": "libbeagle",
+    "AI Description": "Libbeagle is a library for scalable, high-performance computing with emphasis on large computational biology applications. It provides various functions and data structures to efficiently handle biological data analysis tasks.",
+    "Core Features": "Scalable Computing, High Performance, Support For Large Computational Biology Applications, Efficient Handling Of Biological Data Analysis Tasks",
+    "General Tags": "Library, Computational Biology, High Performance Computing",
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Library",
+    "Research Area": "Computational Biology",
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
+}

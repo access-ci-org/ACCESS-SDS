@@ -1,0 +1,11 @@
+{
+    "Software": "ldjump",
+    "AI Description": "ldjump is a software package that is designed to conduct large-scale linkage disequilibrium (LD) analysis in populations. It allows for the exploration of LD patterns across genomic regions to identify informative SNPs for association studies.",
+    "Core Features": "Some core features of ldjump include LD estimation, LD block detection, SNP selection based on LD patterns, and visualization of LD structures.",
+    "General Tags": "Linkage Disequilibrium, Genomics, Association Studies",
+    "Software Type": "Tool",
+    "Software Class": "Bioinformatics",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "r-foreign",
+    "AI Description": "r-foreign is an R package that provides a set of functions for importing and exporting data between R and other software formats.",
+    "Core Features": "The package allows users to import data from various statistical software formats such as SPSS, SAS, and Stata into R data frames. It also enables users to export R data frames to formats compatible with other statistical software. Additionally, r-foreign provides functions for handling missing data and factors during data import.",
+    "General Tags": "Data Import, Data Export, Statistical Software Formats",
+    "Software Type": "Data Manipulation",
+    "Software Class": "R Package",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Other Mathematics"
+}

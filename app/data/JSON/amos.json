@@ -1,0 +1,11 @@
+{
+    "Software": "AMOS",
+    "AI Description": "AMOS (A Modular Open-Source Assembler) is a collection of tools and techniques for assembly of DNA sequences. It includes a robust collection of assembly algorithms and pipeline components for analyzing data from common next-generation sequencing platforms.",
+    "Core Features": "DNA Sequence Assembly, Next-Generation Sequencing Data Analysis, Modular & Open-Source Framework, Various Assembly Algorithms",
+    "General Tags": "Assembly, DNA Sequencing, Bioinformatics",
+    "Software Type": "Sequence Assembly Software",
+    "Software Class": "Bioinformatics Tool",
+    "Research Area": "Genomics",
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
+}

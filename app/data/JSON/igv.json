@@ -1,0 +1,11 @@
+{
+    "Software": "IGV",
+    "AI Description": "Integrative Genomics Viewer (IGV) is a high-performance visualization tool for interactive exploration of large, diverse genomics data sets. It supports a wide variety of data types, including next-generation sequencing data, microarrays, and genomic annotations.",
+    "Core Features": "IGV allows users to visualize and analyze genomic data through an interactive and user-friendly interface. Users can view aligned reads, gene expression data, variant calls, copy number variations, and more. It supports various file formats such as BAM, VCF, BED, and GFF. Users can also customize the display settings, zoom in on specific regions, and compare multiple samples side by side.",
+    "General Tags": "Visualization, Genomics, Sequencing, Data Analysis",
+    "Software Type": "Genomics Software",
+    "Software Class": "Visualization Tool",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "FreeIPMI",
+    "AI Description": "FreeIPMI is an open-source BMC (Baseboard Management Controller) software that provides a consistent and reliable interface for managing and monitoring IPMI-compliant systems. It allows administrators to remotely manage server hardware, monitor sensors, power on/off servers, and perform other BMC-related functions.",
+    "Core Features": "Remote Power Control, Sensor Monitoring, System Event Log Retrieval, Fru Data Retrieval, Health Monitoring",
+    "General Tags": "Bmc, Baseboard Management Controller, Open-Source, Hardware Management, Monitoring",
+    "Software Type": "Management & Monitoring Tool",
+    "Software Class": "Systems Software",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

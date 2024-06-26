@@ -1,0 +1,11 @@
+{
+    "Software": "ClustalW",
+    "AI Description": "ClustalW is a widely used multiple sequence alignment program for DNA or protein sequences. It aligns multiple sequences using various algorithms to identify homologous regions and conserved motifs.",
+    "Core Features": "1. Multiple sequence alignment for DNA or protein sequences\n2. Identifies homologous regions and conserved motifs\n3. Supports various alignment algorithms\n4. Generates phylogenetic trees based on aligned sequences",
+    "General Tags": "Bioinformatics, Sequence Alignment",
+    "Software Type": "Tool",
+    "Software Class": "Computational Software",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

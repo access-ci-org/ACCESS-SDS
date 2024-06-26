@@ -1,0 +1,11 @@
+{
+    "Software": "TACC-APPTAINER",
+    "AI Description": "TACC-APPTAINER is a tool developed by the Texas Advanced Computing Center (TACC) for creating and managing portable and reproducible application containers. It allows users to package their scientific applications and dependencies into a container that can be easily deployed on different computing environments.",
+    "Core Features": "Creation Of Portable Application Containers, Management Of Containerized Scientific Applications, Support For Reproducibility Of Computational Experiments, Easy Deployment On Various Computing Environments",
+    "General Tags": "Containerization, Reproducibility, Computational Science, High-Performance Computing",
+    "Software Type": "Tool",
+    "Software Class": "Containerization",
+    "Research Area": "",
+    "Research Discipline": "Infrastructure & Instrumentation",
+    "Research Field": "Engineering & Technology"
+}

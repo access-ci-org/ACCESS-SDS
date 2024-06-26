@@ -1,0 +1,11 @@
+{
+    "Software": "dnaapler",
+    "AI Description": "dnaapler is a bioinformatics tool for predicting DNA replication origins in microbial genomes. It uses machine learning models trained on replication initiation sites to identify potential origins of replication.",
+    "Core Features": "1. Prediction of DNA replication origins\n2. Machine learning-based approach\n3. Identification of replication initiation sites in microbial genomes",
+    "General Tags": "Bioinformatics, Tool, DNA Replication, Genomics",
+    "Software Type": "Prediction Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Area": "Bioinformatics",
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
+}

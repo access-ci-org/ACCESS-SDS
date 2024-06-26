@@ -1,0 +1,11 @@
+{
+    "Software": "NAMD3",
+    "AI Description": "NAMD3 is a parallel molecular dynamics code designed for high-performance simulation of large biomolecular systems. It is capable of running on a wide range of hardware platforms, from individual workstations to large HPC clusters, making it suitable for a variety of research applications in biophysics and computational biology.",
+    "Core Features": "High-Performance Simulation Of Biomolecular Systems, Parallel Computing Capabilities For Efficient Simulations, Scalability Across Different Hardware Platforms, Support For A Wide Range Of Molecular Dynamics Simulations, Advanced Algorithms For Improved Accuracy & Efficiency",
+    "General Tags": "Molecular Dynamics, Biomolecular Systems, Computational Biology, Hpc, Parallel Computing",
+    "Software Type": "Scientific Simulation Software",
+    "Software Class": "Molecular Dynamics Simulation Software",
+    "Research Area": "Protein Dynamics",
+    "Research Discipline": "Biophysics",
+    "Research Field": "Biological Sciences"
+}

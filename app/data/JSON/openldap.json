@@ -1,0 +1,11 @@
+{
+    "Software": "OpenLDAP",
+    "AI Description": "OpenLDAP is an open-source implementation of the Lightweight Directory Access Protocol (LDAP) that provides a platform-independent, stable, and high-performance LDAP server suite. It is designed to provide robust, scalable, and secure directory services for managing user authentication, access control, and directory information.",
+    "Core Features": "Ldap Server Implementation, Secure Authentication & Access Control, Scalable Directory Services, Cross-Platform Support, High-Performance, Open-Source",
+    "General Tags": "Ldap, Directory Services, Authentication, Access Control, Open Source",
+    "Software Type": "System Software",
+    "Software Class": "Infrastructure & Instrumentation",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

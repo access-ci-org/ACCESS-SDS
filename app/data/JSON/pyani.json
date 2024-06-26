@@ -1,0 +1,11 @@
+{
+    "Software": "pyani",
+    "AI Description": "pyani is a Python module that calculates average nucleotide identity (ANI) and related measures for whole genome comparisons. It is a tool used to compare microbial genomes to determine genetic relatedness and evolutionary distances.",
+    "Core Features": "1. Calculation of Average Nucleotide Identity (ANI) for whole genome comparisons.\n2. Utilizes the JSpecies suite to perform ANI calculations efficiently.\n3. Supports multiple input formats including FASTA, Genbank, and multi-FASTA files.\n4. Provides options for parallelization to speed up the computation process.\n5. Generates output in various formats for easy interpretation and downstream analysis.",
+    "General Tags": "Bioinformatics, Computational Biology, Microbial Genomics",
+    "Software Type": "Genomics Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "prinseq",
+    "AI Description": "Prinseq is a bioinformatics tool that is used for filtering, reformatting, and trimming high-throughput sequencing data. It aids in quality control and preprocessing of sequence data to improve downstream analysis.",
+    "Core Features": "1. Quality control and preprocessing of high-throughput sequencing data. 2. Filtering based on various criteria such as length, complexity, quality scores, and duplication levels. 3. Trimming and reformatting of sequences. 4. Support for various file formats commonly used in sequencing data analysis.",
+    "General Tags": "Bioinformatics, Sequencing, Quality Control, Preprocessing",
+    "Software Type": "Data Analysis Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

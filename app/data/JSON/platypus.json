@@ -1,0 +1,11 @@
+{
+    "Software": "Platypus",
+    "AI Description": "Platypus is a highly flexible variant detection and visualization software for short-read sequencing. It is particularly designed for calling single nucleotide variants (SNVs), small insertions and deletions (indels), and larger deletions from mapped short-read data.",
+    "Core Features": "Platypus offers high sensitivity and specificity in variant calling, supports positional quality scores, supports multi-sample calling, integrates with SAM/BAM and VCF formats, enables rapid analysis of genetic variations, and provides visualization tools for analyzing variants.",
+    "General Tags": "Variant Detection, Sequencing, Bioinformatics",
+    "Software Type": "Variant Detection Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Area": "Genomics",
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
+}

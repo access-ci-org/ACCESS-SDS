@@ -1,0 +1,11 @@
+{
+    "Software": "R-FDb.InfiniumMethylation.Hg19",
+    "AI Description": "R-FDb.InfiniumMethylation.Hg19 provides access to pre-processed and harmonized methylation array datasets from Infinium HumanMethylation 450K and EPIC arrays in human genome build hg19. It allows for easy retrieval of DNA methylation data for downstream analysis in R.",
+    "Core Features": "Access To Pre-Processed Methylation Array Datasets, Harmonized Data For Infinium Humanmethylation 450K & Epic Arrays, Retrieval Of DNA Methylation Data For Analysis In R",
+    "General Tags": "Bioinformatics, DNA Methylation, Array Data, Data Retrieval",
+    "Software Type": "R Package",
+    "Software Class": "Data Repository/Database",
+    "Research Area": "Genetics",
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "spglib-python",
+    "AI Description": "Spglib-python is a Python wrapper for the C library Spglib, which is a library for finding and manipulating spacegroup symmetry. It provides a wide range of functionalities for crystallography and solid-state physics calculations.",
+    "Core Features": "Determination Of Space Group Of A Crystal Structure, Find Symmetry Elements & Operations, Generate K-Point Grids For Brillouin Zone Integration, Crystallographic Operations Like Primitive Cell Determination & Symmetry Reduction",
+    "General Tags": "Crystallography, Solid State Physics",
+    "Software Type": "Python Library",
+    "Software Class": "Computational Software",
+    "Research Area": "Crystallography",
+    "Research Discipline": "Condensed Matter Physics",
+    "Research Field": "Physical Sciences"
+}

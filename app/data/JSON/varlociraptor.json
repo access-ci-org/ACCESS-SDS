@@ -1,0 +1,11 @@
+{
+    "Software": "Varlociraptor",
+    "AI Description": "Varlociraptor is a software tool that provides rapid and comprehensive annotation of diploid genomes, including single-nucleotide polymorphisms (SNPs), multi-nucleotide variants (MNVs), insertions and deletions (indels). It offers users the ability to compare annotated genomic variants across samples.",
+    "Core Features": "1. Rapid annotation of diploid genomes\n2. Identification and analysis of SNPs, MNVs, indels\n3. Comparison of annotated genomic variants across samples",
+    "General Tags": "Genomics, Variant Annotation, Bioinformatics",
+    "Software Type": "Tool",
+    "Software Class": "Bioinformatics",
+    "Research Area": "Variant Annotation",
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
+}

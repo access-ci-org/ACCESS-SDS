@@ -1,0 +1,11 @@
+{
+    "Software": "mesa-glu",
+    "AI Description": "mesa-gl is an open-source implementation of the OpenGL specification, a system for rendering interactive 3D graphics, and a widely used and versatile graphics library. mesa-glu is the OpenGL Utility Library (GLU) component of Mesa, providing useful functions for building OpenGL applications.",
+    "Core Features": "Some core features of mesa-glu include: offering higher-level functionality than the base OpenGL API, supporting various complex geometric, tessellation, and matrix operations, providing tessellation and NURBS rendering, handling mipmapping and texture mapping functionalities, offering error checking and debugging tools, and creating geometric primitives.",
+    "General Tags": "Graphics, 3D Graphics, Opengl, Graphics Library",
+    "Software Type": "Library",
+    "Software Class": "Rendering & Graphics",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

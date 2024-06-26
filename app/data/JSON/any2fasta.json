@@ -1,0 +1,11 @@
+{
+    "Software": "any2fasta",
+    "AI Description": "any2fasta is a tool for converting sequence data in various formats to the standard FASTA format. It allows users to easily convert DNA, RNA, protein sequences, and other biological sequence data into the FASTA format for compatibility with a wide range of bioinformatics tools and databases.",
+    "Core Features": "1. Convert sequence data to FASTA format\n2. Support for DNA, RNA, protein sequences\n3. Compatible with a variety of sequence data formats\n4. Simple and user-friendly interface for quick conversions",
+    "General Tags": "Sequence Data, Fasta Format, Bioinformatics",
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Data Conversion",
+    "Research Area": "Genetics",
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Natural Sciences"
+}

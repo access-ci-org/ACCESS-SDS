@@ -1,0 +1,11 @@
+{
+    "Software": "SWAT",
+    "AI Description": "Soil and Water Assessment Tool (SWAT) is a river basin scale model developed to quantify impact of land management practices on water, sediment, and agricultural chemical yields in large complex watersheds with varying soils, land use, and management conditions.",
+    "Core Features": "1. Simulation of daily or hourly water balance components such as evapotranspiration, percolation, runoff, and groundwater recharge.\n2. Representation of routing of water, sediments, nutrients, and agricultural chemicals in river catchments.\n3. Assessment of management practices like land use change, terracing, nutrient management, and irrigation management on water quality and quantity.",
+    "General Tags": "Hydrology, Water Management, Watershed Modeling",
+    "Software Type": "Computational",
+    "Software Class": "Modeling Software",
+    "Research Area": "Hydrology & Water Resources",
+    "Research Discipline": "Environmental Sciences",
+    "Research Field": "Earth & Environmental Sciences"
+}

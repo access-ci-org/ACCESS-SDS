@@ -1,0 +1,11 @@
+{
+    "Software": "netcdf-cxx4",
+    "AI Description": "netcdf-cxx4 is a C++ library for accessing netCDF-4 classic and extended model data formats. It provides a high-level interface for reading and writing netCDF-4 data files in C++.",
+    "Core Features": "Accessing Netcdf-4 Classic & Extended Model Data Formats, Reading & Writing Netcdf-4 Data Files, High-Level Interface For C++",
+    "General Tags": "Netcdf, C++, Data Format",
+    "Software Type": "Data Processing",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

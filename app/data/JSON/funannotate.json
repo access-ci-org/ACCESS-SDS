@@ -1,0 +1,11 @@
+{
+    "Software": "funannotate",
+    "AI Description": "funannotate is a pipeline for genome prediction and annotation of fungi. It automates the process of predicting gene models, functional annotation, and comparative genomics analysis for fungal genomes.",
+    "Core Features": "Automated Genome Prediction & Annotation For Fungi, Gene Model Prediction Using Multiple Tools, Functional Annotation With Interproscan, Signalp, & Other Databases, Comparative Genomics Analysis For Multiple Genomes, User-Friendly Interface For Customization & Visualization",
+    "General Tags": "Genome Prediction, Genome Annotation, Fungi, Bioinformatics",
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Genome Annotation",
+    "Research Area": "Genetics",
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
+}

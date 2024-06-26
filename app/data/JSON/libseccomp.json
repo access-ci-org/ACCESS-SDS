@@ -1,0 +1,11 @@
+{
+    "Software": "libseccomp",
+    "AI Description": "Libseccomp is an open-source library that provides an easy-to-use, platform-independent interface for working with the Linux Kernel's syscall filtering mechanism. It allows developers to filter system calls made by an application, restricting the actions the application can perform at the kernel level.",
+    "Core Features": "Allows Filtering Of System Calls At The Kernel Level, Provides An Easy-To-Use Interface For Working With The Linux Kernel'S Syscall Filtering Mechanism, Platform-Independent Implementation",
+    "General Tags": "Syscall Filtering, Linux Kernel, Security",
+    "Software Type": "Development",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

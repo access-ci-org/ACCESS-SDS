@@ -1,0 +1,11 @@
+{
+    "Software": "dnnl",
+    "AI Description": "Deep Neural Network Library (DNNL) is an open-source, performance-oriented library for deep learning applications. Formerly known as Intel Math Kernel Library for Deep Neural Networks (MKL-DNN), it provides optimized building blocks for implementation of deep learning neural network layers on various hardware platforms.",
+    "Core Features": "1. Efficient deep learning neural network layer implementations. 2. Open-source and highly optimized for performance. 3. Support for various hardware platforms. 4. Integration with popular deep learning frameworks like TensorFlow and PyTorch.",
+    "General Tags": "Deep Learning, Neural Networks, Machine Learning, Performance Optimization",
+    "Software Type": "Deep Learning Library",
+    "Software Class": "Library",
+    "Research Area": "Deep Learning",
+    "Research Discipline": "Artificial Intelligence & Intelligent Systems",
+    "Research Field": "Computer & Information Sciences"
+}

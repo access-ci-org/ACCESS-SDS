@@ -1,0 +1,11 @@
+{
+    "Software": "amduprof",
+    "AI Description": "amduprof is a tool developed for profiling OpenCL applications on AMD GPUs. It provides insights into the performance of OpenCL kernels by analyzing memory access patterns, kernel occupancy, and compute unit utilization.",
+    "Core Features": "Profiling Opencl Applications, Analyzing Memory Access Patterns, Identifying Kernel Occupancy, Monitoring Compute Unit Utilization",
+    "General Tags": "Gpu Profiling, Opencl Profiler, Performance Analysis",
+    "Software Type": "Tool",
+    "Software Class": "Performance Profiler",
+    "Research Area": "Artificial Intelligence & Intelligent Systems",
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
+}

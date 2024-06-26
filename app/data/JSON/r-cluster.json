@@ -1,0 +1,11 @@
+{
+    "Software": "r-cluster",
+    "AI Description": "r-cluster is a software tool for clustering analysis in R, a popular programming language and environment for statistical computing and graphics. It provides a comprehensive set of functions and algorithms for clustering data points based on similarity or distance metrics.",
+    "Core Features": "1. Implementation of various clustering algorithms such as K-means, hierarchical clustering, DBSCAN, and more.\n2. Support for different distance metrics and similarity measures.\n3. Visualization of clustering results through plots and dendrograms.\n4. Integration with other R packages for data preprocessing and analysis.\n5. Scalable for handling large datasets and high-dimensional data.",
+    "General Tags": "Clustering Analysis, Data Clustering, R Package",
+    "Software Type": "Statistical Analysis Tool",
+    "Software Class": "Clustering Software",
+    "Research Area": "Data Science",
+    "Research Discipline": "Statistics & Probability",
+    "Research Field": "Other Mathematics"
+}

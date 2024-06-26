@@ -1,0 +1,11 @@
+{
+    "Software": "pblat",
+    "AI Description": "pblat (Parallel BLAT) is a software tool that efficiently aligns biological sequences to a reference genome by using the BLAT algorithm in a parallel computing framework. It is specifically designed for high-throughput sequence analysis tasks, offering improved speed and scalability for large-scale genomic analyses.",
+    "Core Features": "1. Parallel alignment of biological sequences to a reference genome\n2. Utilizes the BLAT algorithm for high-speed sequence alignment\n3. Scalable performance for large-scale genomic analysis tasks\n4. Supports various input formats and options for customization\n5. Enables efficient detection of sequence similarities and variations",
+    "General Tags": "Bioinformatics, Sequence Alignment, Genomics, Parallel Computing",
+    "Software Type": "Sequence Analysis Tool",
+    "Software Class": "Alignment Tool",
+    "Research Area": "Sequence Alignment",
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
+}

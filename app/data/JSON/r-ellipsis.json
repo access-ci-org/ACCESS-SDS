@@ -1,0 +1,11 @@
+{
+    "Software": "r-ellipsis",
+    "AI Description": "The r-ellipsis package provides tools for working with the \"...\", which can be used to enforce lazy-load package dependency and avoid unnecessary loading. It is particularly useful for optimizing the loading of packages within R scripts and functions.",
+    "Core Features": "Enables Lazy-Loading Of Package Dependencies, Avoids Unnecessary Loading Of Packages, Optimizes Loading Of Packages Within R Scripts & Functions",
+    "General Tags": "R Package, Package Management, Optimization",
+    "Software Type": "Library",
+    "Software Class": "Package",
+    "Research Area": "Statistical Computing",
+    "Research Discipline": "Statistics & Probability",
+    "Research Field": "Mathematics"
+}

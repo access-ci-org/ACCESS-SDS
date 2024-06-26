@@ -1,0 +1,11 @@
+{
+    "Software": "Maker",
+    "AI Description": "MAKER is an easy-to-use genome annotation pipeline designed for small to large vertebrate genomes. It identifies repeats, aligns ESTs and proteins to a genome, produces ab initio gene predictions, and automatically synthesizes these data into gene annotations.",
+    "Core Features": "Repeat identification, EST and protein alignment to a genome, gene predictions, gene annotation synthesis",
+    "General Tags": "Genome Annotation, Bioinformatics",
+    "Software Type": "Annotation Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Area": "Functional Genomics",
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
+}

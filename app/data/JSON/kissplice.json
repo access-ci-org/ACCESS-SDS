@@ -1,0 +1,11 @@
+{
+    "Software": "kissplice",
+    "AI Description": "Kissplice is a bioinformatics tool designed for the analysis of RNA-Seq data to identify and quantify various types of RNA splicing events such as exon skipping, intron retention, and alternative 5' or 3' splicing.",
+    "Core Features": "Identification Of Various RNA Splicing Events, Quantification Of Splicing Events, Visualization Of Splicing Patterns, Detection Of Novel Splicing Events, Analysis Of Alternative Splicing Dynamics",
+    "General Tags": "Bioinformatics, RNA-Seq, Splicing, Transcriptomics",
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Analysis Tool",
+    "Research Area": "Transcriptomics",
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "Zoltan",
+    "AI Description": "Zoltan is a toolkit for managing parallel memory for dynamic applications in high-performance computing environments. It provides scalable parallel dynamic load-balancing, graph partitioning, and dynamic data restructuring services.",
+    "Core Features": "Scalable Parallel Dynamic Load-Balancing, Graph Partitioning, Dynamic Data Restructuring Services",
+    "General Tags": "Parallel Computing, High-Performance Computing, Dynamic Applications",
+    "Software Type": "Hpc Tools",
+    "Software Class": "Computational Software",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
+}

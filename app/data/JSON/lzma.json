@@ -1,0 +1,11 @@
+{
+    "Software": "lzma",
+    "AI Description": "LZMA is a high-compression data compression software program that employs the Lempel-Ziv-Markov chain algorithm (LZMA). It provides lossless data compression and decompression algorithms.",
+    "Core Features": "LZMA achieves high compression ratios and fast decompression speeds. It supports multiple compression settings and dictionary sizes. LZMA also offers integrity checking for compressed data.",
+    "General Tags": "Compression, Data Compression, Algorithm",
+    "Software Type": "Tool",
+    "Software Class": "Data Compression Software",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

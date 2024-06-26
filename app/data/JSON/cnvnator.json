@@ -1,0 +1,11 @@
+{
+    "Software": "CNVnator",
+    "AI Description": "CNVnator is a tool designed for the detection of copy number variations (CNVs) and genotyping using whole-genome sequencing data. It is particularly useful in studying structural variations in the human genome.",
+    "Core Features": "Detection Of Copy Number Variations (Cnvs), Genotyping, Utilizes Whole-Genome Sequencing Data, Identification Of Structural Variations In The Genome",
+    "General Tags": "Cnv Detection, Whole-Genome Sequencing, Genotyping, Structural Variations",
+    "Software Type": "Tool",
+    "Software Class": "Bioinformatics",
+    "Research Area": "Structural Genomics",
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
+}

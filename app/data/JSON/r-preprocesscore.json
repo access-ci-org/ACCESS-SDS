@@ -1,0 +1,11 @@
+{
+    "Software": "r-preprocesscore",
+    "AI Description": "The R package preprocessCore provides a collection of functions for normalization, feature selection, and missing value imputation for microarray data.",
+    "Core Features": "This package offers functionality for preprocessing high-dimensional microarray data, including various normalization methods, feature selection techniques, and imputation of missing values. It aims to improve the quality and reliability of downstream analyses by ensuring the data is preprocessed effectively.",
+    "General Tags": "R Package, Preprocessing, Microarray Data",
+    "Software Type": "Tool",
+    "Software Class": "Data Preprocessing",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

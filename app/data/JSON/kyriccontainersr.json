@@ -1,0 +1,11 @@
+{
+    "Software": "kyric/containers/r",
+    "AI Description": "A container image for running R programming language applications. It provides a pre-configured environment with R and essential dependencies for seamless development and execution of R scripts.",
+    "Core Features": "1. Pre-configured environment for R programming language. 2. Includes essential dependencies commonly used in R applications. 3. Facilitates easy development and execution of R scripts. 4. Suitable for researchers and developers working with R language and packages.",
+    "General Tags": "Container, R, Programming, Development",
+    "Software Type": "Development Environment",
+    "Software Class": "Container Image",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Other Mathematics"
+}

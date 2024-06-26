@@ -1,0 +1,11 @@
+{
+    "Software": "pymc3",
+    "AI Description": "PyMC3 is a Python library for probabilistic programming that uses Bayesian statistical modeling to perform probabilistic inference.",
+    "Core Features": "1. Bayesian statistical modeling\n2. Probabilistic inference\n3. Markov chain Monte Carlo (MCMC) sampling\n4. Variational inference\n5. Generalized linear models\n6. Time series analysis",
+    "General Tags": "Python Library, Probabilistic Programming, Bayesian Statistics",
+    "Software Type": "Library",
+    "Software Class": "Data Analysis",
+    "Research Area": "Data Science",
+    "Research Discipline": "Statistics & Probability",
+    "Research Field": "Mathematics"
+}

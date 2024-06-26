@@ -1,0 +1,11 @@
+{
+    "Software": "netcdf-cxx",
+    "AI Description": "netcdf-cxx is a C++ interface for the NetCDF data format, which provides implementations to read and write self-describing, machine-independent binary data files. It is designed to simplify the use of NetCDF in C++ applications.",
+    "Core Features": "Provides A C++ Interface For Manipulating Netcdf Data Files, Enables Reading & Writing Of Netcdf Files In A Machine-Independent Binary Format, Supports Self-Describing Data Formats & Metadata, Facilitates Interoperability With C++ Applications For Data Analysis & Visualization",
+    "General Tags": "Netcdf, C++",
+    "Software Type": "Data Processing",
+    "Software Class": "Library",
+    "Research Area": "Climate & Global Dynamics",
+    "Research Discipline": "Earth & Environmental Sciences",
+    "Research Field": "Earth & Environmental Sciences"
+}

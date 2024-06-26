@@ -1,0 +1,11 @@
+{
+    "Software": "assimp",
+    "AI Description": "Open Asset Import Library (short name: Assimp) is a portable Open Source library to import various well-known 3D model formats in a uniform manner. The most recent version also knows how to export 3D files and is therefore called Assimp. The library provides a C++ interface. There are also bindings for various other languages available. Assimp aims to provide a full asset conversion pipeline for use in game engines or real-time rendering systems",
+    "Core Features": "1. Import support for multiple 3D model formats. 2. Export support for 3D files. 3. Offers a C++ interface. 4. Provides a full asset conversion pipeline. 5. Portable and Open Source.",
+    "General Tags": "3D Models, Asset Import, Game Development",
+    "Software Type": "3D Modeling/Rendering",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

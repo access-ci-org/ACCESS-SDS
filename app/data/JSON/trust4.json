@@ -1,0 +1,11 @@
+{
+    "Software": "trust4",
+    "AI Description": "trust4 is a tool for estimating a gene tree given species trees. It is widely used in phylogenomic studies to infer the evolutionary relationships of genes in the context of species evolution.",
+    "Core Features": "1. Inferring gene trees in the context of species trees\n2. Handling gene duplication and loss events\n3. Incorporating various models of gene evolution\n4. Allowing for the detection of horizontal gene transfers\n5. Compatibility with multiple sequence alignment formats",
+    "General Tags": "Phylogenomics, Evolutionary Biology, Computational Biology",
+    "Software Type": "Bioinformatics",
+    "Software Class": "Algorithm",
+    "Research Area": "Phylogenomics",
+    "Research Discipline": "Systematics & Population Biology",
+    "Research Field": "Biological Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "pyGenomeTracks",
+    "AI Description": "pyGenomeTracks is a Python package for plotting high quality and highly customizable visualizations of genomic data. It allows users to create complex, publication-ready figures to explore and represent genomics data effectively.",
+    "Core Features": "Creation Of Customizable & High-Quality Genomic Data Visualizations, Support For Various Types Of Genomics Data, Including Gene Annotations, Chip-Seq Peaks, & Interaction Matrices, Highly Configurable Layout Options For Precise Control Over Track Placement, Sizing, & Styling, Integration With Popular Genomics Data Formats Such As Bed, Bam, Bigwig, & Vcf Files, Ability To Add Custom Tracks, Labels, Legends, & Annotations To The Plots, Interactive Plotting Capabilities For Zooming, Panning, & Exploring Genomic Regions",
+    "General Tags": "Genomics, Data Visualization, Python, Genomic Data Analysis",
+    "Software Type": "Python Library",
+    "Software Class": "Genomic Visualization Tool",
+    "Research Area": "Genomics",
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
+}

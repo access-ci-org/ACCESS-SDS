@@ -1,0 +1,11 @@
+{
+    "Software": "CUDA 10.2",
+    "AI Description": "CUDA\u00ae is a parallel computing platform and programming model developed by NVIDIA for general computing on graphical processing units (GPUs). With CUDA, developers can dramatically speed up computing applications by harnessing the power of GPUs.",
+    "Core Features": "Parallel Computing Platform, Gpu Acceleration, Programming Model For Nvidia Gpus, Support For C, C++, & Cuda Python, Advanced Optimization Tools",
+    "General Tags": "Gpu Computing, Parallel Programming, High Performance Computing (Hpc)",
+    "Software Type": "Compiler/Sdk",
+    "Software Class": "",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

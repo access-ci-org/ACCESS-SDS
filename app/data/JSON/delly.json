@@ -1,0 +1,11 @@
+{
+    "Software": "Delly",
+    "AI Description": "Delly is a structural variant discovery tool that integrates multiple SV detection methods to accurately identify deletions, inversions, duplications, and translocations.",
+    "Core Features": "1. Integrates multiple SV detection methods\n2. Identifies deletions, inversions, duplications, and translocations\n3. Provides high accuracy in SV discovery\n4. Offers visualization tools for easy interpretation of results",
+    "General Tags": "Structural Variant Discovery, Sv Detection, Genomics",
+    "Software Type": "Tool",
+    "Software Class": "Bioinformatics",
+    "Research Area": "Structural Variant Discovery",
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
+}

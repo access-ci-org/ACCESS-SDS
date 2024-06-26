@@ -1,0 +1,11 @@
+{
+    "Software": "pytest-shard",
+    "AI Description": "pytest-shard is a pytest plugin that allows test execution to be split across multiple workers for faster test runs. It enables parallel test execution by distributing the test load among several processes.",
+    "Core Features": "Parallel Test Execution, Distributed Test Load Across Multiple Workers, Improved Test Run Performance",
+    "General Tags": "Pytest, Testing, Parallelization",
+    "Software Type": "Python Library",
+    "Software Class": "Testing & Quality Assurance",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

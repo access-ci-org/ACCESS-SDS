@@ -1,0 +1,11 @@
+{
+    "Software": "gcc-native-mixed",
+    "AI Description": "The gcc-native-mixed compiler is a version of the GNU Compiler Collection (GCC) that is specifically optimized for mixed-language programming, allowing developers to combine different programming languages within the same codebase.",
+    "Core Features": "Supports mixed-language programming, Optimized for combining multiple programming languages, High performance and efficiency, Comprehensive set of optimization flags, Advanced debugging capabilities",
+    "General Tags": "Compiler, Mixed-Language Programming, Optimization",
+    "Software Type": "Development Tool",
+    "Software Class": "Compiler",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer Science"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "g2clib",
+    "AI Description": "g2clib is a library for the manipulation of geophysical data in the GEMPAK format. It provides routines for reading, writing, and manipulating meteorological and geophysical data.",
+    "Core Features": "1. Reading and writing GEMPAK files\n2. Geophysical data manipulation\n3. Support for meteorological data\n4. Data analysis and visualization functions",
+    "General Tags": "Geophysics, Meteorology, Data Manipulation, Data Analysis",
+    "Software Type": "Computational Tool",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Earth & Environmental Sciences"
+}

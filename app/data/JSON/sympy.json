@@ -1,0 +1,11 @@
+{
+    "Software": "SymPy",
+    "AI Description": "SymPy is a Python library for symbolic mathematics that aims to become a full-featured computer algebra system. It provides capabilities for symbolic computation, algebraic manipulation, calculus, equation solving, and more.",
+    "Core Features": "1. Symbolic mathematics\n2. Algebraic manipulation\n3. Calculus\n4. Equation solving\n5. Linear algebra\n6. Discrete mathematics\n7. Simplification of expressions\n8. Differentiation and integration\n9. Equation manipulation\n10. Arbitrary precision arithmetic",
+    "General Tags": "Symbolic Mathematics, Computer Algebra System, Mathematics, Python Library",
+    "Software Type": "Scientific Computing",
+    "Software Class": "Library",
+    "Research Area": "Mathematics",
+    "Research Discipline": "Pure Mathematics",
+    "Research Field": "Mathematics"
+}

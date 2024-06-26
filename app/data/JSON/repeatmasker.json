@@ -1,0 +1,11 @@
+{
+    "Software": "RepeatMasker",
+    "AI Description": "RepeatMasker is a program that screens DNA sequences for interspersed repeats and low complexity DNA sequences. It can be used to identify repetitive elements, such as transposons and retroviruses, in genomic sequences.",
+    "Core Features": "Identification Of Interspersed Repeats, Screening Of Low Complexity DNA Sequences, Detection Of Transposons & Retroviruses, Annotation & Masking Of Repetitive Elements",
+    "General Tags": "Genomics, Bioinformatics, Sequence Analysis, Repeat Detection",
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Sequence Analysis Tool",
+    "Research Area": "Genomic Analysis",
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
+}

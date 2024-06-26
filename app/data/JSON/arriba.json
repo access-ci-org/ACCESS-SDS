@@ -1,0 +1,11 @@
+{
+    "Software": "Arriba",
+    "AI Description": "Arriba is a fast and accurate tool for gene fusion detection in RNA-Seq data. It can identify gene fusions, transcript fusions, and fusion transcript isoforms, providing detailed information on their structure.",
+    "Core Features": "1. Gene fusion detection in RNA-Seq data\n2. Identification of gene fusions, transcript fusions, and fusion transcript isoforms\n3. Detailed structural information on detected fusions\n4. Fast and accurate analysis\n5. Supports multiple input file formats",
+    "General Tags": "Software, Gene Fusion Detection, RNA-Seq, Transcriptome Analysis",
+    "Software Type": "Tool",
+    "Software Class": "Bioinformatics",
+    "Research Area": "Transcriptomics",
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
+}

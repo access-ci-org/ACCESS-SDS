@@ -1,0 +1,11 @@
+{
+    "Software": "PDAL",
+    "AI Description": "PDAL is an open-source library for point cloud processing and data management. It offers a variety of tools and pipelines for manipulating geospatial data in the form of point clouds.",
+    "Core Features": "1. Point cloud data manipulation\n2. Geospatial data processing\n3. Support for LiDAR data\n4. Integration with GIS software\n5. Pipeline workflow creation",
+    "General Tags": "Point Cloud, Geospatial Data, Lidar, Gis, Data Processing",
+    "Software Type": "Point Cloud Processing",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Other Natural Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "tfold",
+    "AI Description": "tfold is a software tool designed for predicting RNA secondary structures and folding energies. It uses thermodynamic parameters to predict the minimum free energy (MFE) secondary structure of RNA sequences.",
+    "Core Features": "Prediction Of RNA Secondary Structures, Estimation Of Folding Energies, Calculation Of Minimum Free Energy (Mfe) Secondary Structures",
+    "General Tags": "RNA Secondary Structures, RNA Folding, Thermodynamic Parameters, Prediction Tool",
+    "Software Type": "Prediction Software",
+    "Software Class": "Bioinformatics Tool",
+    "Research Area": "Computational Biology",
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
+}

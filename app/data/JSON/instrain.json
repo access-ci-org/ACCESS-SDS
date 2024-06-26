@@ -1,0 +1,11 @@
+{
+    "Software": "instrain",
+    "AI Description": "instrain is a python package for identifying strains in metagenomic data. It allows users to infer strain-level composition of metagenomes and identify variants specific to different strains within a microbial community.",
+    "Core Features": "1. Strain-level composition identification in metagenomic data\n2. Variant identification specific to different strains within a microbial community\n3. Analysis of strain heterogeneity and evolution within microbial populations",
+    "General Tags": "Metagenomics, Microbial Community, Strain Identification, Variant Analysis",
+    "Software Type": "Python Library",
+    "Software Class": "Library",
+    "Research Area": "Metagenomics, Microbial Ecology",
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
+}

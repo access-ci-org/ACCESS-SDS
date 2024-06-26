@@ -1,0 +1,11 @@
+{
+    "Software": "Jmol",
+    "AI Description": "Jmol is an open-source Java viewer for chemical structures in 3D with features for visualization, analysis, and manipulation of molecular structures.",
+    "Core Features": "Jmol allows users to view 3D chemical structures, display crystal structures, visualize protein structures, animate molecules, and perform measurements and analysis on molecular structures. It supports a wide range of file formats for input and output, including CIF, PDB, XYZ, and more. Users can customize the display of molecules with various rendering options, color schemes, and labeling.",
+    "General Tags": "Molecular Visualization, Molecular Analysis, Chemistry",
+    "Software Type": "Modeling & Simulation",
+    "Software Class": "Visualization",
+    "Research Area": "Chemical Sciences",
+    "Research Discipline": "Physical Chemistry, Inorganic & Nuclear Chemistry",
+    "Research Field": "Chemical Sciences"
+}

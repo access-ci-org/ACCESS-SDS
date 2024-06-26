@@ -1,0 +1,11 @@
+{
+    "Software": "RepeatModeler",
+    "AI Description": "RepeatModeler is a tool for de novo identification, classification, and analysis of repetitive elements in genomic sequences. It combines several software packages and custom Perl scripts to build consensus models of repeat families from repeat sequences present in a genome.",
+    "Core Features": "De Novo Identification Of Repetitive Elements, Classification & Analysis Of Repeat Sequences, Building Consensus Models Of Repeat Families, Integration Of Multiple Software Tools & Scripts",
+    "General Tags": "Genomics, Bioinformatics, Repeat Sequences, De Novo Identification",
+    "Software Type": "Research Tool",
+    "Software Class": "Genomic Analysis Tool",
+    "Research Area": "Genomics",
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
+}

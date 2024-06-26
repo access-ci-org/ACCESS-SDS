@@ -1,0 +1,11 @@
+{
+    "Software": "r-viridislite",
+    "AI Description": "r-viridislite is an R package that provides the 'viridisLite' color scales for the 'ggplot2' package. The package offers color scales that are perceptually uniform, colorblind friendly, and suitable for displaying data in scientific plots and visualizations.",
+    "Core Features": "Implementation Of Viridis Color Scales For Ggplot2, Perceptually Uniform Color Scales, Colorblind Friendly Palettes, Suitable For Scientific Plots & Visualizations",
+    "General Tags": "R Package, Color Scales, Data Visualization, Scientific Plots",
+    "Software Type": "Package",
+    "Software Class": "",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Other Natural Sciences"
+}

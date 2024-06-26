@@ -1,0 +1,11 @@
+{
+    "Software": "MONAI",
+    "AI Description": "MONAI (Medical Open Network for AI) is a PyTorch-based, open-source framework for healthcare imaging. It provides domain-optimized foundational capabilities for developing medical imaging deep learning algorithms. MONAI enables the reproducible and scalable research for the development of novel imaging technologies and clinical applications.",
+    "Core Features": "Domain-Specific Transformations & Dataloaders For Medical Image Processing, Utilities For Handling Medical Image Metadata & Visualization, Integration With Pytorch & Deep Learning Libraries, Scalable Infrastructure For Reproducible Medical Imaging Research",
+    "General Tags": "Deep Learning, Medical Imaging, Pytorch, Open Source",
+    "Software Type": "Research",
+    "Software Class": "Framework",
+    "Research Area": "Medical Imaging",
+    "Research Discipline": "Biomedical Engineering",
+    "Research Field": "Engineering & Technology"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "Intel Dev-Utilities",
+    "AI Description": "Intel Dev-Utilities is a collection of software tools provided by Intel to assist developers in optimizing and enhancing the performance of their applications for Intel processors.",
+    "Core Features": "Includes tools for performance analysis, debuggers, compilers, and libraries optimized for Intel processors. Helps developers improve code performance, identify bottlenecks, and optimize for parallel processing. Supports various programming languages and development environments.",
+    "General Tags": "Optimization, Performance Analysis, Debugging, Compilers, Libraries",
+    "Software Type": "Performance Optimization Tools",
+    "Software Class": "Development Tools",
+    "Research Area": "Software Engineering, Systems, & Development",
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
+}

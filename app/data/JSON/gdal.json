@@ -1,0 +1,11 @@
+{
+    "Software": "GDAL",
+    "AI Description": "GDAL (Geospatial Data Abstraction Library) is a translator library for raster and vector geospatial data formats that is released under an X/MIT style Open Source license. It is a collection of geospatial data manipulation libraries that support raster and vector data formats, and includes protocols to access geospatial data sources.",
+    "Core Features": "Supports A Wide Range Of Raster & Vector Geospatial Data Formats, Ability To Translate Between Different Formats, Geospatial Data Manipulation Capabilities, Source, Coordinate System, & Reprojection Support, Can Be Used For Data Conversions, Processing, Analysis, & Visualization",
+    "General Tags": "Geospatial Data, Raster Data, Vector Data, Data Formats, Geospatial Analysis",
+    "Software Type": "Library",
+    "Software Class": "Geospatial Data Processing",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Earth & Environmental Sciences, Engineering & Technology"
+}

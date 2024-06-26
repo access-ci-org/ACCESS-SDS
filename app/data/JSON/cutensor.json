@@ -1,0 +1,11 @@
+{
+    "Software": "cutensor",
+    "AI Description": "cuTensor is a CUDA-accelerated library for tensor operations in NVIDIA GPUs. It provides optimized implementations for tensor contractions and element-wise operations, allowing for efficient computation of large-scale tensor operations in parallel.",
+    "Core Features": "1. Highly optimized tensor contractions\n2. Element-wise operations for tensors\n3. Utilizes CUDA for GPU acceleration\n4. Efficient computation of large-scale tensor operations\n5. Supports various tensor data types",
+    "General Tags": "Cuda, Gpu Acceleration, Tensor Operations, Parallel Computing",
+    "Software Type": "Computational Software",
+    "Software Class": "Library",
+    "Research Area": "High-Performance Computing (Hpc)",
+    "Research Discipline": "Applied Computer Science",
+    "Research Field": "Computer & Information Sciences"
+}

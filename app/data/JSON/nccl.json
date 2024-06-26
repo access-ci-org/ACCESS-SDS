@@ -1,0 +1,11 @@
+{
+    "Software": "nccl",
+    "AI Description": "NCCL (NVIDIA Collective Communication Library) is a library of multi-GPU collective communication primitives that are topology-aware and can be used to implement collective communications algorithms within CUDA kernels.",
+    "Core Features": "1. High-performance collective communication primitives for multiple GPUs. 2. Topology-aware algorithms for efficient communication patterns. 3. Optimized for NVIDIA GPUs with CUDA support. 4. Supports various communication operations like all-reduce, broadcast, reduce, etc.",
+    "General Tags": "Cuda, Parallel Computing, Multi-Gpu Communication, Gpu Programming, Hpc",
+    "Software Type": "Parallel Computing",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

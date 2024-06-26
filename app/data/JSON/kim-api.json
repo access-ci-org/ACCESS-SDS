@@ -1,0 +1,11 @@
+{
+    "Software": "kim-api",
+    "AI Description": "The Knowledgebase for Interatomic Models (KIM) Application Programming Interface (API) is an open framework for the development of interoperable atomistic and multiscale simulation codes. It provides a common interface for atomistic simulations and facilitates the incorporation and sharing of interatomic models.",
+    "Core Features": "1. Standardizes the interface between atomistic simulation codes and interatomic potential models.\n2. Enables the seamless integration of new potential models into existing simulation codes.\n3. Facilitates the sharing and dissemination of interatomic models within the materials science community.\n4. Supports multiple programming languages, including C/C++, Fortran, Python, and MATLAB.",
+    "General Tags": "Computational Software, Hpc Tools",
+    "Software Type": "Application Programming Interface",
+    "Software Class": "Simulation Tools",
+    "Research Area": "Materials Simulation",
+    "Research Discipline": "Materials Science",
+    "Research Field": "Physical Sciences"
+}

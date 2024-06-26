@@ -1,0 +1,11 @@
+{
+    "Software": "CRISPRCasFinder",
+    "AI Description": "CRISPRCasFinder is a tool for the identification of CRISPR arrays and Cas proteins in prokaryotic genomes. It uses a combination of CRISPR technology and Cas protein identification to accurately identify CRISPR-Cas systems in bacterial and archaeal genomes.",
+    "Core Features": "1. Detection of CRISPR arrays in bacterial and archaeal genomes. 2. Identification of Cas proteins associated with CRISPR loci. 3. Prediction of potential CRISPR-Cas systems configurations. 4. Visualization of CRISPR arrays and Cas proteins in genomic context.",
+    "General Tags": "Genome Analysis, Crispr-Cas Systems, Prokaryotic Genomes",
+    "Software Type": "Genome Analysis Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Area": "Bioinformatics",
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
+}

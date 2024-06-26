@@ -1,0 +1,12 @@
+{
+    "Field of Science": "Computer and Information Sciences",
+    "Software": "ccl",
+    "AI Description": "CCL (Cpp Command Line Library) is a C++ library targeting Unix platform that makes it easy to define and parse command line arguments. It provides a simple and intuitive way to define and parse command-line arguments for C++ programs.",
+    "Core Features": "1. Easy definition of command line arguments with strong typing. 2. Automatic generation of help messages. 3. Support for positional arguments, switches, and flags. 4. No external dependencies.",
+    "General Tags": "Command Line Interface, C++ Library",
+    "Software Type": "",
+    "Software Class": "",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": ""
+}

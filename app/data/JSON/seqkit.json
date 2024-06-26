@@ -1,0 +1,11 @@
+{
+    "Software": "seqkit",
+    "AI Description": "SeqKit is a cross-platform, ultrafast, and handy sequenced data manipulation toolkit. It allows users to quickly manipulate sequences in fasta/fastq format, including filtering, splitting, removing duplicates, converting formats, and extracting sequences. SeqKit is designed to be efficient and user-friendly for handling large-scale sequencing data.",
+    "Core Features": "Manipulate Sequences In Fasta/Fastq Format, Filtering, Splitting, & Removing Duplicates, Format Conversion & Sequence Extraction, Efficient Handling Of Large-Scale Sequencing Data",
+    "General Tags": "Sequence Manipulation, Fasta, Fastq",
+    "Software Type": "Bioinformatics",
+    "Software Class": "Data Analysis",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

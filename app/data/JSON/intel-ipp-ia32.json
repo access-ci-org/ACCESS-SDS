@@ -1,0 +1,11 @@
+{
+    "Software": "intel-ipp-ia32",
+    "AI Description": "Intel Integrated Performance Primitives (Intel IPP) for IA-32 architecture is a software library that provides a comprehensive set of high-performance functions for building advanced applications in various domains. It offers optimized routines for signal and data processing, image processing, cryptography, and more.",
+    "Core Features": "1. Optimized routines for signal and data processing.\n2. High-performance functions for image processing.\n3. Cryptography functions for secure data handling.\n4. Support for various domains and applications.\n5. Platform-specific optimizations for IA-32 architecture.",
+    "General Tags": "Software Library, Performance Optimization, Signal Processing, Image Processing, Cryptography",
+    "Software Type": "Shared Library",
+    "Software Class": "Library",
+    "Research Area": "Software Engineering, Systems, & Development",
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
+}

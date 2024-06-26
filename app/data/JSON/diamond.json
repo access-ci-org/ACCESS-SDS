@@ -1,0 +1,11 @@
+{
+    "Software": "Diamond",
+    "AI Description": "Diamond is a sequence aligner for protein and translated DNA searches, designed for high performance analysis of protein sequence data utilizing the Diamond heuristic aligner. It is particularly optimized for aligning sequencing reads produced by next-generation sequencing (NGS) machines.",
+    "Core Features": "High-Performance Sequence Aligner For Protein & Translated DNA Searches, Optimized For Aligning Data From Ngs Machines, Utilizes The Diamond Heuristic Aligner For Rapid Alignment, Supports Sensitive Alignment Of Multiple Query Sequences Against A Large Sequence Database, Provides Significant Speedup Compared To Blast Tools",
+    "General Tags": "Sequence Alignment, Ngs Analysis, Bioinformatics",
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Sequence Aligner",
+    "Research Area": "Genomics, Proteomics",
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
+}

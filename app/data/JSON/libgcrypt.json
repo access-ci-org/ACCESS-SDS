@@ -1,0 +1,11 @@
+{
+    "Software": "Libgcrypt",
+    "AI Description": "Libgcrypt is a general-purpose cryptographic library originally based on code from GnuPG. It provides various cryptographic algorithms to secure data and communications.",
+    "Core Features": "Encryption & Decryption Functions, Symmetric-Key Algorithms (Aes, Camellia, Etc.), Public-Key Algorithms (Rsa, Dsa, Etc.), Hash Functions (Sha-1, Sha-256, Etc.), Random Number Generation",
+    "General Tags": "Cryptography, Security, Encryption",
+    "Software Type": "Cryptographic Library",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
+}

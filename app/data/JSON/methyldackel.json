@@ -1,0 +1,11 @@
+{
+    "Software": "MethylDackel",
+    "AI Description": "MethylDackel is a program for extracting methylation information from bisulfite sequencing data. It identifies methylated and unmethylated cytosines at single-base resolution.",
+    "Core Features": "1. Extracts methylation information from bisulfite sequencing data.\n2. Identifies methylated and unmethylated cytosines at single-base resolution.\n3. Supports analysis of DNA methylation patterns.",
+    "General Tags": "DNA Methylation, Bisulfite Sequencing, Epigenetics",
+    "Software Type": "Data Analysis Tool",
+    "Software Class": "Bioinformatics",
+    "Research Area": "Epigenetics",
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
+}

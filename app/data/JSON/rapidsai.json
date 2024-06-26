@@ -1,0 +1,11 @@
+{
+    "Software": "RAPIDS AI",
+    "AI Description": "RAPIDS is an open-source suite of software libraries and APIs built on CUDA that allows end-to-end data science and analytics pipelines to be accelerated using NVIDIA GPUs. It focuses on common data preparation tasks in data science, such as loading, preprocessing, and feature engineering, along with machine learning algorithms and deep learning integration.",
+    "Core Features": "Gpu-Accelerated Data Processing & Machine Learning, Integration With Popular Data Science & Machine Learning Frameworks Like Dask, Xgboost, & Pytorch, Support For End-To-End Data Science Workflows, Including Data Loading, Preprocessing, Model Training, & Inference, High-Performance Computing With Parallel Processing & Memory Optimization",
+    "General Tags": "Data Science, Machine Learning, Gpu Acceleration, Big Data Processing",
+    "Software Type": "Data Science & Machine Learning",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

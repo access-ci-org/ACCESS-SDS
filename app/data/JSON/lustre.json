@@ -1,0 +1,11 @@
+{
+    "Software": "Lustre",
+    "AI Description": "Lustre is an open-source parallel distributed file system commonly used for large-scale cluster computing. It is designed for high-performance computing (HPC) environments and is known for its scalability, performance, and reliability.",
+    "Core Features": "Parallel Distributed File System, Scalable To Petabytes Of Storage, High Performance For Hpc Applications, Support For Large Numbers Of Clients",
+    "General Tags": "File System, Parallel Computing, Hpc, Cluster Computing",
+    "Software Type": "Distributed File System",
+    "Software Class": "File System",
+    "Research Area": "Infrastructure & Instrumentation",
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
+}

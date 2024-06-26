@@ -1,0 +1,11 @@
+{
+    "Software": "PHP",
+    "AI Description": "PHP is a popular general-purpose scripting language that is especially suited to web development. It is a server-side scripting language embedded in HTML.",
+    "Core Features": "PHP code is usually processed on a web server by a PHP interpreter implemented as a module, a daemon process, or as a Common Gateway Interface (CGI) executable. On a web server, the result of the interpreted and executed PHP code \u2014 which may be any type of data, such as generated HTML or binary image data \u2014 would form the whole or part of an HTTP response. Various web template systems, web content management systems, and web frameworks exist which can be employed to orchestrate or facilitate the generation of that response and PHP code.",
+    "General Tags": "Programming Language, Web Development",
+    "Software Type": "Scripting Language",
+    "Software Class": "Programming Language",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

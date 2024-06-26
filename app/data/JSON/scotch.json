@@ -1,0 +1,11 @@
+{
+    "Software": "Scotch",
+    "AI Description": "Scotch is a software package and library for graph and mesh partitioning, ordering, and clustering. It is designed to efficiently distribute data and computations across distributed memory parallel computers.",
+    "Core Features": "Scotch provides high-quality partitioning and ordering methods for optimizing data distribution and minimizing communication overhead in parallel computing. It offers capabilities for partitioning both graphs and meshes, with algorithms that aim to balance workloads, minimize edge cuts, and optimize memory usage.",
+    "General Tags": "Graph Partitioning, Mesh Partitioning, Parallel Computing, Distributed Memory",
+    "Software Type": "Library",
+    "Software Class": "Partitioning & Clustering",
+    "Research Area": "High-Performance Computing (Hpc)",
+    "Research Discipline": "Software Engineering, Systems, & Development",
+    "Research Field": "Computer & Information Sciences"
+}

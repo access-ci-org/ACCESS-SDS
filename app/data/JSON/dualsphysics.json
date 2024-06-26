@@ -1,0 +1,11 @@
+{
+    "Software": "DualSPHysics",
+    "AI Description": "DualSPHysics is a popular open-source computational fluid dynamics software package based on the Smoothed Particle Hydrodynamics (SPH) method. It allows for the simulation of free-surface flows, fluid-structure interactions, and complex fluid dynamics phenomena.",
+    "Core Features": "Smoothed Particle Hydrodynamics (Sph) Simulations, Simulation Of Free-Surface Flows, Fluid-Structure Interactions Modeling, Parallel Computing Capabilities, Open-Source & Customizable, User-Friendly Interface",
+    "General Tags": "Computational Fluid Dynamics, Fluid Dynamics, Open-Source Software, Parallel Computing, Sph Method",
+    "Software Type": "Computational",
+    "Software Class": "Simulation Software",
+    "Research Area": "Computational Fluid Dynamics",
+    "Research Discipline": "Fluid Dynamics",
+    "Research Field": "Physical Sciences"
+}

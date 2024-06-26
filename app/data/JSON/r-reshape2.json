@@ -1,0 +1,11 @@
+{
+    "Software": "R Reshape2",
+    "AI Description": "The R Reshape2 package provides functions that help reshape data frames, which are particularly useful for data manipulation and analysis tasks in R programming language. It allows users to easily transform data between long and wide formats, making it convenient for data wrangling and reshaping operations.",
+    "Core Features": "Reshaping Data Frames From Long To Wide & Vice Versa, Aggregating & Restructuring Data For Analysis, Splitting & Combining Columns For Better Data Organization, Facilitating Tidy Data Principles In R Programming",
+    "General Tags": "Data Manipulation, Data Analysis, Data Wrangling, R Programming",
+    "Software Type": "Package",
+    "Software Class": "Data Manipulation Tool",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Other Natural Sciences"
+}

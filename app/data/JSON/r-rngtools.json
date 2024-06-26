@@ -1,0 +1,11 @@
+{
+    "Software": "r-rngtools",
+    "AI Description": "r-rngtools is an R package for random number generation which provides tools to efficiently create pseudorandom and non-uniform random numbers. It includes random number generators with additional functionalities for specifying distributions and independent streams.",
+    "Core Features": "1. Pseudorandom number generation\n2. Non-uniform random number generation\n3. Additional functionalities for specifying distributions\n4. Support for independent streams",
+    "General Tags": "R Package, Random Number Generation",
+    "Software Type": "Library",
+    "Software Class": "Statistical Software",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Statistics & Probability"
+}

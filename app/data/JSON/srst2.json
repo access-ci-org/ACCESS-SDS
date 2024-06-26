@@ -1,0 +1,11 @@
+{
+    "Software": "SRST2",
+    "AI Description": "SRST2 is a sequence typing tool designed for bacterial pathogen surveillance. It enables rapid and accurate detection of known alleles or novel alleles based on short read sequencing data, allowing researchers to identify sequence types and antimicrobial resistance genes in bacterial isolates.",
+    "Core Features": "1. Sequence typing for bacterial pathogens\n2. Detection of known and novel alleles\n3. Identification of sequence types and antimicrobial resistance genes\n4. Utilizes short read sequencing data for analysis",
+    "General Tags": "Sequence Typing, Bacterial Pathogen Surveillance, Allele Detection, Antimicrobial Resistance Genes",
+    "Software Type": "Sequencing Data Analysis Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

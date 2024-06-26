@@ -1,0 +1,11 @@
+{
+    "Software": "MKL",
+    "AI Description": "Intel Math Kernel Library (Intel MKL) is a highly optimized, thread-safe, mathematical library for performing mathematical, statistical, and data analysis computations. It offers high-performance implementations of BLAS, LAPACK, ScaLAPACK, sparse solvers, FFT, and more for Intel processors.",
+    "Core Features": "Highly optimized mathematical library; Thread-safe functions; Implementations of BLAS, LAPACK, ScaLAPACK, FFT, sparse solvers, and more; Supports Intel processors for improved performance.",
+    "General Tags": "Mathematical Library, Optimized Computations, Thread-Safe Functions",
+    "Software Type": "Computational Software",
+    "Software Class": "Library",
+    "Research Area": "Numerical Analysis",
+    "Research Discipline": "Applied Mathematics",
+    "Research Field": "Mathematics"
+}

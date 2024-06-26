@@ -1,0 +1,11 @@
+{
+    "Software": "Julia",
+    "AI Description": "Julia is a high-level, high-performance dynamic programming language for technical computing, with syntax that is familiar to users of other technical computing environments. It provides a sophisticated compiler, distributed parallel execution, numerical accuracy, and extensive mathematical function libraries.",
+    "Core Features": "Julia combines the high-level ease of use and flexibility of languages like Python and Matlab with the speed and performance of lower-level languages like C and Fortran. It offers a just-in-time compiler that generates optimized machine code using LLVM, making it highly efficient for numerical and scientific computing. Julia supports multiple dispatch, which allows functions to be defined with multiple methods with different argument types or numbers. It also has built-in package manager and a vast ecosystem of packages for various domains such as data science, machine learning, optimization, and more.",
+    "General Tags": "Programming Language, Technical Computing, High-Performance Computing, Scientific Computing, Numerical Analysis",
+    "Software Type": "Compiler",
+    "Software Class": "Programming Language",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

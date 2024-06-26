@@ -1,0 +1,11 @@
+{
+    "Software": "scGen",
+    "AI Description": "scGen is a deep learning framework for generating bulk-level transcriptomic profiles from single-cell RNA-sequencing data. It predicts the influence of genetic and environmental factors on gene expression at a population-level, bridging the resolution gap between single-cell and bulk-level omics data.",
+    "Core Features": "Generates Bulk-Level Transcriptomic Profiles From Scrna-Seq Data, Predicts Gene Expression Influenced By Genetic & Environmental Factors, Bridges Resolution Gap Between Single-Cell & Bulk-Level Omics Data, Utilizes Deep Learning Techniques For Modeling Gene Expression",
+    "General Tags": "Single-Cell RNA-Sequencing, Bulk-Level Transcriptomic Profiles, Deep Learning, Gene Expression Prediction",
+    "Software Type": "Deep Learning Framework",
+    "Software Class": "Data Analysis",
+    "Research Area": "Genomics",
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
+}

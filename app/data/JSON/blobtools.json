@@ -1,0 +1,11 @@
+{
+    "Software": "BlobTools",
+    "AI Description": "BlobTools is a software suite for visualizing and analyzing genome assembly data. It allows users to assess the quality and taxonomic composition of a genome assembly using data generated from short-read sequencing technologies.",
+    "Core Features": "Some of the core features of BlobTools include taxon assignment, assessment of genome completeness, visualization of assembly statistics, and exploration of metagenomic datasets.",
+    "General Tags": "Genome Assembly, Data Visualization, Metagenomics",
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Visualization & Analysis",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

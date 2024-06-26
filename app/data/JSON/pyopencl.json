@@ -1,0 +1,11 @@
+{
+    "Software": "PyOpenCL",
+    "AI Description": "PyOpenCL lets you access GPUs and other massively parallel compute devices by using the Open Computing Language (OpenCL). The package is built on top of the OpenCL C API and enables Python scripts to easily make full use of compute devices like GPUs, TPUs, and other accelerators.",
+    "Core Features": "Provides Python Bindings For Opencl Api, Enables Parallel Computing On Gpus & Other Devices, Integration With Numpy Arrays For Data Manipulation, Supports Heterogeneous Computing Environments",
+    "General Tags": "Programming, Parallel Computing, Gpu Acceleration",
+    "Software Type": "Python Package",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences, Other Computer & Information Sciences"
+}

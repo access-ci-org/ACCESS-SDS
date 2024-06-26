@@ -1,0 +1,11 @@
+{
+    "Software": "JupyterHub",
+    "AI Description": "JupyterHub brings the power of Jupyter Notebooks to groups of users. It allows multiple users to access Jupyter Notebooks through a browser, providing a collaborative and interactive environment for data science, scientific computing, and other computational tasks.",
+    "Core Features": "Multi-User Jupyter Notebook Server, Browser-Based Interface, Support For Multiple Languages Including Python, R, & Julia, Scalability For Large Groups Of Users, Customizable User Environments, Integration With Authentication Services Like Oauth & Ldap",
+    "General Tags": "Data Science, Collaborative Computing, Notebook Environment, Interactive Computing",
+    "Software Type": "Collaborative Tool",
+    "Software Class": "Data Science Tools",
+    "Research Area": "Data Science",
+    "Research Discipline": "Informatics, Analytics & Information Science",
+    "Research Field": "Computer & Information Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "libxc",
+    "AI Description": "LibXC is a library of exchange-correlation functionals for density-functional theory.",
+    "Core Features": "Provides A Wide Range Of Exchange-Correlation Functionals For Use In Density-Functional Theory Calculations, Supports Various Functionals Including Lda, Gga, Meta-Gga, Hybrid Functionals, Range-Separated Functionals, & More, Offers An Api For Easy Integration With Electronic Structure Codes",
+    "General Tags": "Quantum Mechanics, Computational Chemistry",
+    "Software Type": "Density Functional Theory",
+    "Software Class": "Library",
+    "Research Area": "Molecular Modelling & Simulation",
+    "Research Discipline": "",
+    "Research Field": "Chemical Sciences"
+}

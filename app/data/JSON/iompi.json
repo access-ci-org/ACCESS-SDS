@@ -1,0 +1,11 @@
+{
+    "Software": "IOMPI",
+    "AI Description": "IOMPI (Integrated Operator Methods Package Interface) is a software framework designed to facilitate the development and implementation of operator-based numerical methods for solving partial differential equations (PDEs) in computational physics and engineering.",
+    "Core Features": "1. Provides a comprehensive set of tools for efficiently solving linear and nonlinear PDEs.\n2. Supports a variety of numerical methods, such as finite element methods (FEM), finite difference methods (FDM), and spectral methods.\n3. Offers support for parallel computing and can leverage high-performance computing (HPC) resources.\n4. Includes pre-built solvers for common PDEs and allows users to implement custom solvers.\n5. Enables easy integration with existing simulation codes and software packages.",
+    "General Tags": "Computational Software, Numerical Methods, Partial Differential Equations, Scientific Computing",
+    "Software Type": "Library",
+    "Software Class": "Simulation Software",
+    "Research Area": "Computational Physics",
+    "Research Discipline": "Applied Mathematics",
+    "Research Field": "Physical Sciences"
+}

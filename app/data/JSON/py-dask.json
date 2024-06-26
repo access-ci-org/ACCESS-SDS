@@ -1,0 +1,11 @@
+{
+    "Software": "py-dask",
+    "AI Description": "Dask is a flexible parallel computing library for analytic computing. It provides advanced parallelism for analytics, enabling performance at scale for the tools you love. Dask natively scales Python and can leverage a wide variety of existing Python libraries. It operates well on small clusters and individual machines while scale up to massive clusters.",
+    "Core Features": "1. Dask provides advanced parallelism for analytic computing.\n2. It scales Python and can leverage a wide range of existing Python libraries.\n3. Dask operates efficiently on small clusters, single machines, and scales up to massive clusters.\n4. It enables performance at scale for various analytical tools.",
+    "General Tags": "Parallel Computing, Python Library, Analytics, Performance Scaling",
+    "Software Type": "Python Library",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

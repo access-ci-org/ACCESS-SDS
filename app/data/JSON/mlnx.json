@@ -1,0 +1,11 @@
+{
+    "Software": "mlnx",
+    "AI Description": "MLNX is a set of software tools developed by Mellanox Technologies, now part of NVIDIA, for high-performance networking and computing solutions.",
+    "Core Features": "MLNX provides high-performance networking solutions, including network adapters, switches, cables, and software for interconnect networking. It offers fast data transfer speeds, low latency, scalability, and reliability for HPC and data center environments.",
+    "General Tags": "High-Performance Computing, Networking, Data Transfer, Hpc Solutions",
+    "Software Type": "Software",
+    "Software Class": "Network Tool",
+    "Research Area": "",
+    "Research Discipline": "Infrastructure & Instrumentation",
+    "Research Field": "Engineering & Technology"
+}

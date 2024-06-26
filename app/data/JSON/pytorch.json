@@ -1,0 +1,11 @@
+{
+    "Software": "PyTorch",
+    "AI Description": "PyTorch is an open-source machine learning library used for numerical computations and building deep learning models.",
+    "Core Features": "Dynamic Computation Graph, Gpu Acceleration, Automatic Differentiation, Support For Complex Neural Networks",
+    "General Tags": "Machine Learning, Deep Learning, Numerical Computation, Neural Networks",
+    "Software Type": "Machine Learning Framework",
+    "Software Class": "Library",
+    "Research Area": "Deep Learning",
+    "Research Discipline": "Artificial Intelligence & Intelligent Systems",
+    "Research Field": "Computer & Information Sciences"
+}

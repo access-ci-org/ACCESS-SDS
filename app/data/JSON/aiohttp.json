@@ -1,0 +1,11 @@
+{
+    "Software": "aiohttp",
+    "AI Description": "aiohttp is an asynchronous HTTP client/server framework for Python. It allows for handling HTTP requests and responses in an asynchronous manner, making it ideal for building high-performance web applications.",
+    "Core Features": "Asynchronous Client & Server Components For Http, Websockets Support, Middleware Support For Extending Functionality, Ssl/Tls Support For Secure Communication",
+    "General Tags": "Python Library, Web Development, Asynchronous Programming",
+    "Software Type": "Http Client/Server Framework",
+    "Software Class": "Web Framework",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

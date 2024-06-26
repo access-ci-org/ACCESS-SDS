@@ -1,0 +1,11 @@
+{
+    "Software": "nvbio",
+    "AI Description": "nvbio is a GPU-accelerated library of high-performance bioinformatics algorithms designed to leverage the parallel processing power of NVIDIA GPUs. It offers various tools for DNA sequence analysis and manipulation, allowing for faster and more efficient processing of large-scale genomic data.",
+    "Core Features": "Gpu-Accelerated Bioinformatics Algorithms, High-Performance DNA Sequence Analysis, Parallel Processing With Nvidia Gpus, Support For Large-Scale Genomic Data, Efficient Manipulation Of DNA Sequences",
+    "General Tags": "Bioinformatics, Gpu Acceleration, Genomic Data Processing, DNA Sequence Analysis",
+    "Software Type": "Library",
+    "Software Class": "Bioinformatics",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

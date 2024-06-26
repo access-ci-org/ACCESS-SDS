@@ -1,0 +1,11 @@
+{
+    "Software": "yasm",
+    "AI Description": "Yasm is a complete rewrite of the NASM assembler under the new BSD License. It is designed to have NASM compatibility for NASM's source code usage. Yasm currently supports the x86 and AMD64 instruction sets, accepts NASM and GAS assembler syntaxes, outputs binary, ELF32, ELF64, COFF, Mach-O (32 and 64), RDOFF2, SREC, and Hex formats, and generates source debugging information in STABS, DWARF 2, and CodeView 8 formats.",
+    "Core Features": "Yasm offers NASM compatibility, multiple supported instruction sets, various assembler syntaxes, and output formats including binary, ELF32, ELF64, COFF, Mach-O, and more. It also provides source debugging information in STABS, DWARF 2, and CodeView 8 formats.",
+    "General Tags": "Assembler, Assembly, Development, Programming",
+    "Software Type": "Assembler",
+    "Software Class": "Development Tools",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
+}

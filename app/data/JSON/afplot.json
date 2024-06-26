@@ -1,0 +1,11 @@
+{
+    "Software": "afplot",
+    "AI Description": "The afplot software is a tool designed for plotting allele frequency distributions, which are commonly used in population genetic analyses and genetic diversity studies. It allows users to visualize the distribution of allele frequencies across a population or a set of individuals.",
+    "Core Features": "1. Plotting allele frequency distributions\n2. Customizable visualization options\n3. Supports data from population genetic studies\n4. Easy-to-use interface for generating plots\n5. Helpful for analyzing genetic diversity and population structure",
+    "General Tags": "Allele Frequency, Population Genetics, Genetic Diversity, Data Visualization, Population Structure",
+    "Software Type": "Tool",
+    "Software Class": "Data Visualization",
+    "Research Area": "Genetics",
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
+}

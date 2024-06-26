@@ -1,0 +1,11 @@
+{
+    "Software": "MPC",
+    "AI Description": "MPC, short for Multi-Party Computation, is a cryptographic protocol that allows multiple parties to jointly compute a function over their inputs while keeping those inputs private. It ensures data privacy and security in collaborative computations.",
+    "Core Features": "1. Secure computation: Enables computation on private data without revealing the data to any of the parties involved. 2. Privacy-preserving protocols: Utilizes cryptographic techniques to ensure that the inputs remain confidential during computation. 3. Collaboration support: Facilitates cooperation between multiple parties in executing computations while maintaining privacy.",
+    "General Tags": "Cryptographic Protocol, Secure Computation, Privacy-Preserving, Collaborative Computation",
+    "Software Type": "Cryptographic Protocol",
+    "Software Class": "Computational Software",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

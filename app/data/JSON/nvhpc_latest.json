@@ -1,0 +1,11 @@
+{
+    "Software": "nvhpc_latest",
+    "AI Description": "NVIDIA HPC SDK is a comprehensive suite of compilers, libraries, and tools for accelerating HPC applications on GPU-accelerated systems.",
+    "Core Features": "The NVIDIA HPC SDK includes optimizing Fortran, C, and C++ compilers, math libraries, and software development tools to help developers maximize application performance.",
+    "General Tags": "Hpc, Compiler, Math Library, Software Development",
+    "Software Type": "Tool",
+    "Software Class": "Compiler",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
+}

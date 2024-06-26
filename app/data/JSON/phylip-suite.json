@@ -1,0 +1,11 @@
+{
+    "Software": "PHYLIP Suite",
+    "AI Description": "PHYLIP (the PHYLogeny Inference Package) is a free package of programs for inferring phylogenies. It is distributed as source code that can be compiled on a wide range of UNIX platforms, as well as on PCs running MS-DOS or MS-Windows.",
+    "Core Features": "Includes a wide array of tools for phylogenetic analysis such as likelihood-based methods, distance matrix methods, parsimony methods, and tree plotting. Features interactive and batch modes, as well as flexible input/output formats. Capable of handling large datasets and provides statistical support for phylogenetic analysis.",
+    "General Tags": "Phylogenetics, Bioinformatics, Computational Biology, Phylogenetic Analysis",
+    "Software Type": "Bioinformatics Software",
+    "Software Class": "Analysis Tools",
+    "Research Area": "Phylogenetics",
+    "Research Discipline": "Systematics & Population Biology",
+    "Research Field": "Biological Sciences"
+}

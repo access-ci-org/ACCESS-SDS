@@ -1,0 +1,11 @@
+{
+    "Software": "double-conversion",
+    "AI Description": "double-conversion is a performant library for converting double-precision floating-point values to and from decimal strings, designed for high-performance and precision in conversions.",
+    "Core Features": "1. Efficient conversion of double-precision floating-point numbers.\n2. High precision in decimal string conversion.\n3. Optimized for performance.\n4. Supports both converting double to string and parsing strings into doubles.",
+    "General Tags": "Conversion, Performance, Precision",
+    "Software Type": "",
+    "Software Class": "",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

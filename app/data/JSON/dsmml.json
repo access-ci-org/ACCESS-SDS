@@ -1,0 +1,11 @@
+{
+    "Software": "dsmml",
+    "AI Description": "dsmml is a deep learning library specifically designed for molecular machine learning applications. It offers a range of tools and techniques tailored for computational chemistry and drug discovery tasks.",
+    "Core Features": "The core features of dsmml include support for deep learning models such as convolutional neural networks (CNNs) and recurrent neural networks (RNNs) for molecular structure analysis, molecular property prediction, ligand-protein interaction analysis, and virtual screening. It also provides pre-trained models, dataset management tools, and visualization capabilities for interpreting model results.",
+    "General Tags": "Deep Learning, Molecular Machine Learning, Computational Chemistry, Drug Discovery",
+    "Software Type": "Deep Learning Library",
+    "Software Class": "Molecular Machine Learning Library",
+    "Research Area": "Physical Chemistry",
+    "Research Discipline": "Chemical Sciences",
+    "Research Field": "Other Chemical Sciences"
+}

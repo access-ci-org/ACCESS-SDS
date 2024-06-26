@@ -1,0 +1,11 @@
+{
+    "Software": "PyTensor",
+    "AI Description": "PyTensor is a Python library for tensor operations and computations. It provides a high-level interface for handling multi-dimensional arrays and performing various tensor manipulations.",
+    "Core Features": "Efficient Tensor Operations, Support For Multi-Dimensional Arrays, Tensor Decomposition & Factorization Methods, Integration With Other Python Scientific Computing Libraries",
+    "General Tags": "Python Library, Tensor Operations, Scientific Computing",
+    "Software Type": "Scientific Computing",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

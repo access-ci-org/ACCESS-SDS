@@ -1,0 +1,11 @@
+{
+    "Software": "py-pycuda",
+    "AI Description": "PyCUDA is a Python programming environment that allows the use of NVIDIA CUDA for general-purpose computations using the GPU. It provides a Python interface to the NVIDIA CUDA parallel computing architecture along with the tools for working with GPU arrays.",
+    "Core Features": "1. GPU accelerated computing with CUDA.\n2. Seamless integration with Python for ease of use.\n3. Ability to write code that is executed directly on the GPU.\n4. High performance computing capabilities using the GPU.",
+    "General Tags": "Parallel Computing, Gpu Acceleration, Python Interface",
+    "Software Type": "Library",
+    "Software Class": "Gpu Computing",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

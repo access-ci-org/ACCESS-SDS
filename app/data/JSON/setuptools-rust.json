@@ -1,0 +1,11 @@
+{
+    "Software": "setuptools-rust",
+    "AI Description": "Setuptools-Rust is a Python library that extends the Setuptools build system, allowing you to build and distribute Rust packages from Python projects seamlessly. It simplifies the integration of Rust code into Python projects, making cross-language development easier and more efficient.",
+    "Core Features": "1. Integration of Rust code into Python projects.\n2. Simplified build and distribution of Rust packages.\n3. Seamless communication between Python and Rust components.\n4. Improved cross-language development workflow.\n5. Enhanced performance and flexibility for projects requiring Rust functionality.",
+    "General Tags": "Python Library, Build System, Rust Integration",
+    "Software Type": "Plug-In/Extension",
+    "Software Class": "Library",
+    "Research Area": "Software Development",
+    "Research Discipline": "Software Engineering, Systems, & Development",
+    "Research Field": "Computer & Information Sciences"
+}

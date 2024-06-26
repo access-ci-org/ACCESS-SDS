@@ -1,0 +1,11 @@
+{
+    "Software": "netlib-lapack",
+    "AI Description": "Netlib LAPACK (Linear Algebra PACKage) is a widely-used library for numerical linear algebra. It provides routines for solving systems of simultaneous linear equations, least-squares solutions of linear systems of equations, eigenvalue problems, and singular value problems.",
+    "Core Features": "1. Linear equation solving\n2. Least-squares solutions\n3. Eigenvalue problems\n4. Singular value problems",
+    "General Tags": "Numerical Computing, Linear Algebra, Library, Numerical Analysis",
+    "Software Type": "Library",
+    "Software Class": "",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

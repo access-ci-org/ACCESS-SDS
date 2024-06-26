@@ -1,0 +1,11 @@
+{
+    "Software": "strace",
+    "AI Description": "strace is a diagnostic, debugging and instructional userspace utility for Linux. It is used to monitor and tamper with interactions between processes and the Linux kernel, which include system calls, signal deliveries, and changes of process state.",
+    "Core Features": "1. Tracing system calls and signals\n2. Monitoring system call frequency and execution time\n3. Debugging and diagnosing issues in software\n4. Intercepting and recording system calls for analysis\n5. Analyzing system call errors and return values",
+    "General Tags": "Debugging, Diagnostic, Monitoring",
+    "Software Type": "Diagnostic Tool",
+    "Software Class": "System Utility",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

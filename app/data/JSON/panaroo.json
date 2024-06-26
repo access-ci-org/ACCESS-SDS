@@ -1,0 +1,11 @@
+{
+    "Software": "Panaroo",
+    "AI Description": "Panaroo is a pangenome visualization tool that allows users to compare and analyze pangenomes from microbial species. It provides an interactive and intuitive interface for exploring gene presence and absence within pangenomes.",
+    "Core Features": "Visualization Of Pangenomes, Interactive Exploration Of Gene Presence & Absence, Comparison Of Multiple Microbial Species, Identification Of Core & Accessory Genes, Detection Of Genomic Variations",
+    "General Tags": "Pangenome Analysis, Microbial Genomics, Bioinformatics, Genome Visualization",
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Analysis & Visualization Tool",
+    "Research Area": "Genomics",
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
+}

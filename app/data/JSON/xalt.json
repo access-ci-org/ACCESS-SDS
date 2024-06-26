@@ -1,0 +1,11 @@
+{
+    "Software": "xalt",
+    "AI Description": "XALT (XALT Accounting for Loadable and Transient Objects) is a tool designed to track the detailed usage of HPC systems by monitoring library dependencies and executables during job executions. It captures information on modules, compilers, libraries, and executables used in each job, providing detailed insights into the software stack and usage patterns on the HPC system.",
+    "Core Features": "Tracks Module Usage, Monitors Compiler & Library Dependencies, Captures Detailed Job Execution Information, Provides Insights Into Software Stack Usage On Hpc Systems",
+    "General Tags": "Hpc, Monitoring",
+    "Software Type": "Performance Tracking",
+    "Software Class": "Utilities",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
+}

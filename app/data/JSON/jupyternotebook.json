@@ -1,0 +1,11 @@
+{
+    "Software": "Jupyter Notebook",
+    "AI Description": "Jupyter Notebook is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations, and explanatory text. These documents are executable and can support various programming languages.",
+    "Core Features": "Supports interactive data visualization, offers support for over 40 programming languages, integrates easily with data science and machine learning libraries such as Pandas, NumPy, and Scikit-learn, provides a collaborative environment for data analysis and research projects, facilitates the creation of interactive presentations, enables the creation of reproducible research workflows.",
+    "General Tags": "Data Science, Machine Learning, Collaboration, Interactive Computing",
+    "Software Type": "Development Environment",
+    "Software Class": "Data Analysis & Visualization Tools",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

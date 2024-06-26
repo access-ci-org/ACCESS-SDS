@@ -1,0 +1,11 @@
+{
+    "Software": "r-gridextra",
+    "AI Description": "r-gridextra is an R package that provides a set of functions to enhance and extend the grid graphics system in R, allowing for more flexibility and customizability in creating and arranging plots.",
+    "Core Features": "Offers Additional Functionality & Customization Options For Grid-Based Plots In R, Enables Easy Creation Of Complex Multi-Plot Layouts & Annotations, Supports The Arrangement Of Plots In Grids With Different Configurations, Facilitates The Addition Of Custom Grobs & Decorations To Plots",
+    "General Tags": "R Package, Data Visualization, Plotting, Grid Graphics",
+    "Software Type": "Plotting",
+    "Software Class": "Data Visualization",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Other Natural Sciences"
+}

@@ -1,0 +1,21 @@
+{
+    "tags": {
+        "research_discipline": [],
+        "research_area": [],
+        "software_class": "Version Control System",
+        "software_type": "Tool",
+        "field_of_science": [
+            "Computer and Information Sciences",
+            "Software Engineering, Systems, and Development"
+        ]
+    },
+    "Software": "module-git",
+    "AI Description": "module-git is a version control system designed to efficiently handle large projects, providing powerful branching, merging, and collaboration features. It allows multiple developers to work on the same codebase concurrently and maintain a complete history of changes.",
+    "Core Features": "Some core features of module-git include distributed version control, branching and merging capabilities, efficient handling of large projects, support for non-linear development workflows, and secure collaboration tools.",
+    "General Tags": "Version Control, Distributed Version Control, Collaboration, Software Development",
+    "Software Type": "",
+    "Software Class": "",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": ""
+}

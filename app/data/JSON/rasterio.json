@@ -1,0 +1,11 @@
+{
+    "Software": "rasterio",
+    "AI Description": "Rasterio is a Python library for reading and writing geospatial raster datasets. It is built on the capabilities of the GDAL (Geospatial Data Abstraction Library) and provides easy access to the functionalities for opening, reading, and writing geospatial raster data formats.",
+    "Core Features": "Read & Write Geospatial Raster Datasets, Access Metadata & Geospatial Information Of Raster Datasets, Manipulate Raster Data Through Various Functions & Operations, Integration With Other Geospatial Libraries & Tools",
+    "General Tags": "Python Library, Geospatial Data, Raster Data, Gdal, Remote Sensing",
+    "Software Type": "Data Processing/Analysis",
+    "Software Class": "Libraries",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Earth & Environmental Sciences"
+}

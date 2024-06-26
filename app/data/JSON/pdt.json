@@ -1,0 +1,11 @@
+{
+    "Software": "pdt",
+    "AI Description": "Program Database Toolkit (PDT) is a framework for analyzing source code written in several programming languages and for making rich program knowledge accessible to developers, analysts, and creating tools for source code understanding.",
+    "Core Features": "PDT analyzes multiple programming languages, builds abstract syntax trees, control-flow graphs, program dependence graphs, and call graphs; provides a rich API for programmatic access to analyzed programs; supports interactive development of program analysis methods; and enables the development of new program understanding tools.",
+    "General Tags": "Software, Programming, Source Code, Analysis",
+    "Software Type": "Tools",
+    "Software Class": "",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

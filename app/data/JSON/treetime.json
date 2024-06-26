@@ -1,0 +1,11 @@
+{
+    "Software": "treetime",
+    "AI Description": "treetime is a flexible and efficient tool for dating phylogenetic trees. It uses a maximum-likelihood-based approach to infer ancestral dates and divergence times, allowing for the incorporation of temporal information into phylogenetic analyses.",
+    "Core Features": "Phylogenetic Tree Dating, Maximum-Likelihood Method, Ancestral Date & Divergence Time Inference, Incorporation Of Temporal Information, Flexible & Efficient",
+    "General Tags": "Phylogenetics, Evolutionary Biology, Bioinformatics, Computational Biology, Phylogenetic Analysis",
+    "Software Type": "Bioinformatics",
+    "Software Class": "Phylogenetic Dating Tool",
+    "Research Area": "Phylogenetics",
+    "Research Discipline": "Evolutionary Biology",
+    "Research Field": "Biological Sciences"
+}

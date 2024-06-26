@@ -1,0 +1,11 @@
+{
+    "Software": "anaconda3_cpu",
+    "AI Description": "Anaconda is a popular package and environment manager for Python and R programming languages. Anaconda3 specifically refers to the Python 3 version of Anaconda, which includes a wide range of pre-installed scientific computing packages and libraries. The CPU version indicates that it is optimized for central processing unit (CPU) computations.",
+    "Core Features": "1. Bundled with a wide range of scientific computing packages and libraries\n2. Supports package management and environment creation\n3. Includes tools for data science, machine learning, and scientific computing\n4. Cross-platform compatibility for Windows, macOS, and Linux\n5. Optimized for CPU-based computations",
+    "General Tags": "Package Manager, Python Environment, Scientific Computing, Data Science, Machine Learning",
+    "Software Type": "Environment Manager",
+    "Software Class": "Package Management",
+    "Research Area": "Data Science, Scientific Computing, Machine Learning",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

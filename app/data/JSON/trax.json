@@ -1,0 +1,11 @@
+{
+    "Software": "trax",
+    "AI Description": "Trax is a deep learning library that focuses on clear code and speed. It is designed to deliver scalable and efficient machine learning with emphasis on flexibility and speed of experimentation.",
+    "Core Features": "Trax offers a modular deep learning framework that enables rapid prototyping with high performance. It provides a library of layers, models, optimizers, and supports automatic differentiation. Trax also includes JAX backend for accelerated numerical computing and high-performance machine learning.",
+    "General Tags": "Deep Learning, Machine Learning, Scalable, Efficient",
+    "Software Type": "Deep Learning Framework",
+    "Software Class": "Library",
+    "Research Area": "Machine Learning",
+    "Research Discipline": "Artificial Intelligence & Intelligent Systems",
+    "Research Field": "Computer & Information Sciences"
+}

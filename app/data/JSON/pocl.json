@@ -1,0 +1,11 @@
+{
+    "Software": "pocl",
+    "AI Description": "Portable Computing Language (pocl) is an open-source implementation of the OpenCL standard which aims to provide a portable programming layer for execution on various devices including CPUs, GPUs, and FPGAs. It enables developers to write parallel programs that can be executed efficiently across different hardware platforms.",
+    "Core Features": "Opencl Standard Implementation, Supports Cpus, Gpus, & Fpgas, Portability Across Different Hardware Architectures, Parallel Programming Support",
+    "General Tags": "Opencl, Parallel Computing, Hardware Acceleration",
+    "Software Type": "Development Tools",
+    "Software Class": "Compiler",
+    "Research Area": "Parallel Computing",
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
+}

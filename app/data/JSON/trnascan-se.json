@@ -1,0 +1,11 @@
+{
+    "Software": "tRNAscan-SE",
+    "AI Description": "tRNAscan-SE is a program for the identification of transfer RNA (tRNA) genes in genomic sequence. It combines search techniques for computational RNA gene detection and a homology search for analyzing secondary structure features of candidate genes. tRNAscan-SE is widely used for the prediction of tRNA genes in both prokaryotic and eukaryotic genomes.",
+    "Core Features": "1. Identification of tRNA genes in genomic sequences. 2. Search techniques for computational RNA gene detection. 3. Homology search for analyzing secondary structure features of candidate genes. 4. Prediction in prokaryotic and eukaryotic genomes.",
+    "General Tags": "Bioinformatics, Genomics, Computational Biology, Sequence Analysis",
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Gene Identification",
+    "Research Area": "Trna Gene Prediction",
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
+}

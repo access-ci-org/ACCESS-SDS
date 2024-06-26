@@ -1,0 +1,11 @@
+{
+    "Software": "HDBSCAN",
+    "AI Description": "HDBSCAN (Hierarchical Density-Based Spatial Clustering of Applications with Noise) is a clustering algorithm that is based on density rather than distance, and in contrast to many other clustering algorithms, HDBSCAN has a parameterless approach that automatically determines the number of clusters in the data.",
+    "Core Features": "Density-Based Clustering, Automatic Cluster Determination, Ability To Handle Noise/Outliers, Scalable To Large Datasets, Robust To Different Cluster Geometries & Densities",
+    "General Tags": "Clustering Algorithm, Data Mining, Unsupervised Learning, Machine Learning",
+    "Software Type": "Data Mining Tool",
+    "Software Class": "Clustering Algorithm",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

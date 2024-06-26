@@ -1,0 +1,11 @@
+{
+    "Software": "g2lib",
+    "AI Description": "g2lib is a C++ library for 2D and 3D geometric computing, mainly focusing on computational geometry and computer graphics. It provides efficient and robust geometric algorithms for various tasks.",
+    "Core Features": "1. Robust geometric algorithms for intersection testing, distance computation, convex hulls, triangulation, Voronoi diagrams, etc.\n2. Support for both 2D and 3D geometric operations.\n3. Implementation of algorithms like line-line intersection, point location, closest point on a segment, and more.\n4. Suitable for applications in computer graphics, visualization, spatial analysis, and geometric modeling.",
+    "General Tags": "Computational Geometry, Computer Graphics, Geometric Computing",
+    "Software Type": "Computational Software",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "libsndfile",
+    "AI Description": "libsndfile is a C library for reading and writing files containing sampled sound (such as WAV, AIFF, and AU) through one standard interface.",
+    "Core Features": "Supports Reading & Writing A Variety Of Audio File Formats, Provides A Simple & Consistent Api For Audio File I/O Operations, Offers Support For A Wide Range Of Sample Formats & Data Types, Cross-Platform Compatibility For Use In Different Operating Systems",
+    "General Tags": "Audio Processing, File Input/Output, C Library, Audio File Formats",
+    "Software Type": "Audio Processing",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Other Natural Sciences"
+}

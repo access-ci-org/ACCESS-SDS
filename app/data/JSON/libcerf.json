@@ -1,0 +1,11 @@
+{
+    "Software": "libcerf",
+    "AI Description": "libcerf is a C library that provides efficient and accurate implementations of complex error functions, along with Dawson, Fresnel, and Voigt functions. The library is designed to facilitate the computation of complex error functions for a wide range of applications in scientific computing.",
+    "Core Features": "Efficient & Accurate Implementations Of Complex Error Functions, Support For Dawson, Fresnel, & Voigt Functions, Optimized For Scientific Computing Applications",
+    "General Tags": "Error Functions, Scientific Computing, C Library",
+    "Software Type": "Library",
+    "Software Class": "Computational Software",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Mathematics"
+}

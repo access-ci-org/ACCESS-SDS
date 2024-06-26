@@ -1,0 +1,11 @@
+{
+    "Software": "binutils",
+    "AI Description": "Binutils is a collection of binary tools, including linker (ld), assembler (as), archiver (ar), and other tools to manipulate object files and executables.",
+    "Core Features": "Binutils provides essential tools for creating, modifying, and analyzing executable and object files. It includes utilities for linking object files into executables, assembling source code into object files, creating archives, and more. Binutils supports a wide range of binary formats and architectures.",
+    "General Tags": "Binary Tools, Linker, Assembler, Object Files",
+    "Software Type": "System Software",
+    "Software Class": "Development Tools",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

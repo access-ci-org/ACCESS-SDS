@@ -78,14 +78,7 @@ function enterReportingState()
   $(document).on('keydown',handleKeyDown);        // Enable 'handleKeyDown' Event Listener
   
   // Disable selecting rows while reporting
-  if (window.location.href.includes("ai-generated"))
-  {
-    dynamicTable.select.style('api');
-  }
-  else
-  {
-    staticTable.select.style('api');  
-  }
+  staticTable.select.style('api');  
 }
 
 function exitReportingState()
@@ -113,14 +106,7 @@ function exitReportingState()
   hideAlert();
 
   // Renable selecting rows once report is done
-  if (window.location.href.includes("ai-generated"))
-  {
-      dynamicTable.select.style('multi');
-  }
-  else
-  {
-    staticTable.select.style('multi'); 
-  }
+  staticTable.select.style('multi'); 
 }
 
 function handleIssueReportClick(event)

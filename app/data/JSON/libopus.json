@@ -1,0 +1,11 @@
+{
+    "Software": "libopus",
+    "AI Description": "libopus is a high-quality audio codec that is specifically designed for interactive speech and audio transmission over the Internet. It is part of the wider Opus audio codec family, covering a wide range of bitrates and applications.",
+    "Core Features": "Ultra-Wideband Audio Support (From 8 Khz Narrowband To 48 Khz Fullband), Low Latency For Real-Time Communication, Variable Bitrate Support For Efficiency, Audio Bandwidth Scalability, Standalone Audio Codec Or Used Within Other Container Formats, Support For Both Speech & Music, Robustness Against Packet Loss",
+    "General Tags": "Audio Codec, Real-Time Communication, Internet Transmission",
+    "Software Type": "",
+    "Software Class": "Audio Codec",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
+}

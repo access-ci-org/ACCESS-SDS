@@ -1,0 +1,11 @@
+{
+    "Software": "Lima",
+    "AI Description": "Lima is an open-source software tool developed for single-cell RNA-seq data analysis. It provides a user-friendly interface and a variety of algorithms for processing and analyzing single-cell transcriptomic data.",
+    "Core Features": "Quality Control Of Single-Cell Data, Normalization & Batch Correction, Dimensionality Reduction Techniques, Clustering Algorithms, Gene Expression Analysis, Cell Type Identification",
+    "General Tags": "Single-Cell RNA-Seq, Data Analysis, Transcriptomics",
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Analysis Tool",
+    "Research Area": "Bioinformatics",
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
+}

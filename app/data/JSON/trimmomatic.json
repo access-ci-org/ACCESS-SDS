@@ -1,0 +1,11 @@
+{
+    "Software": "Trimmomatic",
+    "AI Description": "Trimmomatic is a flexible and efficient tool for trimming raw next-generation sequencing data. It provides several trimming modes and options to cater to different sequencing platforms and quality control requirements.",
+    "Core Features": "Adapter Trimming, Quality Filtering, Read Length Trimming, Paired-End Read Alignment, Multiple Sequencing Platform Support",
+    "General Tags": "Ngs Data Processing, Quality Control, Bioinformatics",
+    "Software Type": "Tool",
+    "Software Class": "Ngs Data Processing",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Biological Sciences"
+}

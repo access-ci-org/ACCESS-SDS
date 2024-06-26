@@ -1,0 +1,11 @@
+{
+    "Software": "Bamgineer",
+    "AI Description": "Bamgineer is a software tool designed for generating and modifying C/C++ source code using a genetic programming approach. It utilizes genetic programming to evolve programs to match a given target set of functionality.",
+    "Core Features": "1. Genetic programming for code generation and modification. 2. Evolves programs to match specified functionality. 3. Supports C/C++ programming languages.",
+    "General Tags": "Genetic Programming, Code Generation, C/C++",
+    "Software Type": "Development Tool",
+    "Software Class": "Code Generation",
+    "Research Area": "Software Engineering, Systems, & Development",
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
+}

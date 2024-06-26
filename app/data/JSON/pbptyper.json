@@ -1,0 +1,11 @@
+{
+    "Software": "pbptyper",
+    "AI Description": "pbptyper is a tool for high-throughput genotyping of bacterial pathogens based on MinION nanopore sequencing data. It utilizes a portable and scalable approach to rapidly and accurately type multiple bacterial isolates simultaneously.",
+    "Core Features": "1. Rapid and accurate genotyping of bacterial pathogens\n2. High-throughput analysis of MinION nanopore sequencing data\n3. Portable and scalable approach\n4. Simultaneous typing of multiple bacterial isolates",
+    "General Tags": "Genotyping, Bacterial Pathogens, Minion Nanopore Sequencing, High-Throughput Analysis",
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Genomics",
+    "Research Area": "Molecular Biology",
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
+}

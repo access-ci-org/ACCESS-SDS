@@ -1,0 +1,11 @@
+{
+    "Software": "Roary",
+    "AI Description": "Roary is a high-speed stand-alone tool for detecting core genes from prokaryotic pan-genomes. It is particularly useful for performing fast pan-genome analyses of thousands of prokaryotic genomes.",
+    "Core Features": "1. Identification of core and accessory genes in prokaryotic pan-genomes\n2. Scalable for analyzing thousands of genomes\n3. Produce highly accurate results\n4. Generates visualizations to aid in the interpretation of results",
+    "General Tags": "Bioinformatics, Genomics, Pan-Genome Analysis, Prokaryotic Genomes",
+    "Software Type": "Tool",
+    "Software Class": "Bioinformatics",
+    "Research Area": "Pan-Genome Analysis",
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
+}

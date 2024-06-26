@@ -1,0 +1,11 @@
+{
+    "Software": "at-spi2-atk",
+    "AI Description": "at-spi2-atk is the Assistive Technology Service Provider Interface (AT-SPI) for the ATK toolkit, which allows assistive technologies to interact with graphical user interfaces.",
+    "Core Features": "Provides an interface for assistive technologies to access and interact with the ATK accessibility library, supports the creation and manipulation of accessible components in graphical user interfaces, enables assistive technologies to receive and respond to events from ATK objects.",
+    "General Tags": "Assistive Technology, Accessibility, User Interface",
+    "Software Type": "Interface",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

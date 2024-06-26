@@ -1,0 +1,11 @@
+{
+    "Software": "phast",
+    "AI Description": "PHAST (PHylogenetic Analysis with Space/Time models) is a software package for comparative and evolutionary genomics. It is designed for analyzing patterns of evolutionary conservation and acceleration in multiple alignments of genomic sequences.",
+    "Core Features": "Phylogenetic Comparative Genomics, Evolutionary Conservation Analysis, Detection Of Accelerated Evolution, Spatial & Temporal Models, Multiple Sequence Alignment Analysis",
+    "General Tags": "Genomics, Phylogenetics, Evolutionary Biology, Bioinformatics",
+    "Software Type": "Bioinformatics",
+    "Software Class": "Analysis Tool",
+    "Research Area": "Comparative & Evolutionary Genomics",
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
+}

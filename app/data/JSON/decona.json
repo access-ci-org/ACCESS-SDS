@@ -1,0 +1,11 @@
+{
+    "Software": "decona",
+    "AI Description": "Decona is a Conda package management tool that simplifies the installation and management of software packages, dependencies, and environments through the Conda package manager.",
+    "Core Features": "Decona provides a user-friendly interface for creating, managing, and sharing Conda environments. It enables users to easily install, update, and remove Conda packages, as well as manage dependencies and virtual environments.",
+    "General Tags": "Conda, Package Management, Software Installation, Dependency Management",
+    "Software Type": "Conda Package Manager",
+    "Software Class": "Package Management Tool",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Other Computer & Information Sciences"
+}

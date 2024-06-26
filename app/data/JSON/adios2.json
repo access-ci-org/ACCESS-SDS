@@ -1,0 +1,11 @@
+{
+    "Software": "adios2",
+    "AI Description": "ADIOS 2 (Adaptable Input/Output System) is a next-generation high-performance I/O middleware library that provides a simple, high-level interface for efficiently managing data on parallel storage systems. It is designed to address the increasing challenges of achieving high performance and scalability when dealing with I/O operations in large-scale scientific simulations and data processing applications.",
+    "Core Features": "High-Performance I/O Middleware Library, Simple & High-Level Interface, Efficient Data Management On Parallel Storage Systems, Support For Various Data Formats & Storage Systems, Parallel I/O Operations For Large-Scale Simulations, Scalability & Performance Optimizations",
+    "General Tags": "I/O Middleware, High-Performance Computing, Data Management, Parallel Computing",
+    "Software Type": "Library",
+    "Software Class": "Middleware",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

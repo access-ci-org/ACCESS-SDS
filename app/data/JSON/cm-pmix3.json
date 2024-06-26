@@ -1,0 +1,11 @@
+{
+    "Software": "cm-pmix3",
+    "AI Description": "cm-pmix3 is a lightweight, high-performance library that provides process management and control functions for large-scale computing environments.",
+    "Core Features": "It offers capabilities for process monitoring, reporting, and control, with support for spawning, killing, and monitoring individual processes within a job. The library is designed to work seamlessly with various job schedulers and resource managers.",
+    "General Tags": "Process Management, High-Performance Computing, Job Scheduling",
+    "Software Type": "System & Process Management",
+    "Software Class": "Library",
+    "Research Area": "Infrastructure & Instrumentation",
+    "Research Discipline": "Other Computer & Information Sciences",
+    "Research Field": "Engineering & Technology"
+}

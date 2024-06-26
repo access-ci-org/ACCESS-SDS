@@ -1,0 +1,11 @@
+{
+    "Software": "vadr",
+    "AI Description": "VADR (Viral Annotation DefineR) is a software package that performs automated annotation, alignment, and modeling of viral sequences. It is designed to aid in the identification and characterization of viral genomes.",
+    "Core Features": "1. Automated annotation of viral genomes\n2. Sequence alignment for viral sequences\n3. Modeling of viral genomic structures\n4. Identification of viral features and patterns",
+    "General Tags": "Viral Sequences, Genome Annotation, Sequence Alignment, Viral Genomics",
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Annotation & Analysis Tools",
+    "Research Area": "Viral Genomics",
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
+}

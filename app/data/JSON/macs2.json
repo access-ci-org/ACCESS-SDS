@@ -1,0 +1,11 @@
+{
+    "Software": "MACS2",
+    "AI Description": "Model-based Analysis of ChIP-Seq (MACS) version 2 is a tool for identifying transcription factor binding sites and histone modification enrichment from ChIP-Seq data. It uses a dynamic Poisson distribution to effectively capture local biases in the genome while comparing the tag position density profiles between ChIP-Seq data and control samples.",
+    "Core Features": "Identification Of Transcription Factor Binding Sites, Analysis Of Histone Modification Enrichment, Utilizes Dynamic Poisson Distribution, Comparing Tag Position Density Profiles",
+    "General Tags": "Chip-Seq Analysis, Transcription Factor Binding Sites, Histone Modification, Bioinformatics",
+    "Software Type": "Command-Line Tool",
+    "Software Class": "Bioinformatics Tool",
+    "Research Area": "Genetics",
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
+}

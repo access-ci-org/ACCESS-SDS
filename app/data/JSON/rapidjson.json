@@ -1,0 +1,11 @@
+{
+    "Software": "RapidJSON",
+    "AI Description": "RapidJSON is a fast JSON parser and generator for C++ with both SAX/DOM styles. It is designed to be highly memory efficient and is self-contained with no external dependencies.",
+    "Core Features": "Fast Parsing & Generation Of Json Data, Support For Both Sax & Dom Parsing Styles, Memory Efficient Design, No External Dependencies, Conforms To Json Standards, Utf-8 Encoding Support",
+    "General Tags": "Json, C++, Parser, Generator, Sax, Dom, Memory Efficient",
+    "Software Type": "Library",
+    "Software Class": "Utility Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

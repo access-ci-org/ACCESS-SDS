@@ -1,0 +1,11 @@
+{
+    "Software": "Iso-Seq3",
+    "AI Description": "Iso-Seq3 is a package for transcriptome sequencing that aims at generating full-length cDNA sequences to accurately characterize the transcriptome landscape. It is designed to process Iso-Seq data obtained from a PacBio Sequel instrument for high-quality transcript reconstruction and analysis.",
+    "Core Features": "Full-Length Cdna Sequencing For Transcriptome Analysis, Data Processing From Pacbio Sequel Instrument, Accurate Characterization Of Transcript Isoforms, Identification Of Alternative Splicing Events & Fusion Transcripts",
+    "General Tags": "Transcriptome Sequencing, Isoform Analysis, Alternative Splicing, Transcript Reconstruction",
+    "Software Type": "Analysis Tool",
+    "Software Class": "Computational Software",
+    "Research Area": "Bioinformatics",
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
+}

@@ -1,0 +1,11 @@
+{
+    "Software": "SCAFACOS",
+    "AI Description": "SCAFACOS (Single-Cell Analysis Framework for Assessing Clonal Outcomes of Signaling) is a computational tool designed for analyzing single-cell signaling data and inferring clonal outcomes in cellular systems. It is specifically tailored for studying cellular heterogeneity and clonal dynamics in response to signaling pathways.",
+    "Core Features": "Key features of SCAFACOS include analyzing and visualizing single-cell signaling data, identifying clonal subpopulations within a cell population, assessing clonal diversity and evolution over time, and elucidating the impact of signaling pathways on clonal outcomes.",
+    "General Tags": "Computational Tool, Single-Cell Analysis, Signaling Pathways, Clonal Dynamics",
+    "Software Type": "Data Analysis Tool",
+    "Software Class": "Bioinformatics",
+    "Research Area": "Cell Signaling",
+    "Research Discipline": "Cell Biology",
+    "Research Field": "Biological Sciences"
+}

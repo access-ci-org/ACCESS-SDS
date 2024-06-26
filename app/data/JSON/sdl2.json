@@ -1,0 +1,11 @@
+{
+    "Software": "SDL2",
+    "AI Description": "Simple DirectMedia Layer is a cross-platform development library designed to provide low level access to audio, keyboard, mouse, joystick, and graphics hardware via OpenGL and Direct3D. It is used by video playback software, emulators, and popular games including Valve's Steam.",
+    "Core Features": "Cross-Platform Support, Low-Level Access To Audio, Keyboard, Mouse, Joystick, & Graphics Hardware, Hardware-Accelerated 2D Graphics Rendering",
+    "General Tags": "Development, Multimedia, Graphics, Input-Output",
+    "Software Type": "Development",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Engineering & Technology"
+}

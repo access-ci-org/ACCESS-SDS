@@ -1,0 +1,11 @@
+{
+    "Software": "PyOpenGL",
+    "AI Description": "PyOpenGL is a cross-platform open source Python binding to OpenGL and related APIs that provides access to high-performance 2D and 3D graphics rendering capabilities. It allows developers to utilize the full feature set of OpenGL within Python applications.",
+    "Core Features": "1. Python binding to OpenGL, OpenGL ES, and related APIs\n2. Support for modern OpenGL features\n3. Cross-platform compatibility\n4. High-performance 2D and 3D graphics rendering capabilities\n5. Extensive documentation and tutorials\n6. Active community support",
+    "General Tags": "Graphics, Opengl, Python, 2D, 3D, Rendering",
+    "Software Type": "Library",
+    "Software Class": "Graphics Library",
+    "Research Area": "Computer Graphics",
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
+}

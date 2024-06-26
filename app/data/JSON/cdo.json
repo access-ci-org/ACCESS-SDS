@@ -1,0 +1,11 @@
+{
+    "Software": "CDO",
+    "AI Description": "Climate Data Operators (CDO) is a collection of command-line operators for manipulating and analyzing climate and numerical weather prediction (NWP) model data.",
+    "Core Features": "Supports A Wide Range Of File Formats Including Grib, Netcdf, Hdf, & More, Provides Tools For Data Selection, Slicing, Aggregation, Interpolation, Calculation, & Visualization, Enables Batch Processing & Scripting For Automatic Data Processing, Includes Comprehensive Documentation & Support For A Variety Of Operations On Climate Data",
+    "General Tags": "Climate Data, Data Manipulation, Command Line, Data Analysis",
+    "Software Type": "Command Line Tool",
+    "Software Class": "Data Processing & Analysis",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Earth & Environmental Sciences"
+}

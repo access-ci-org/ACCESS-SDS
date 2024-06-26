@@ -1,0 +1,11 @@
+{
+    "Software": "r-biostrings",
+    "AI Description": "The Biostrings package in R provides efficient manipulation of biological strings, including DNA and RNA sequences. It offers a wide range of functions for string matching, reverse complement, translation, and many other biological sequence-related operations.",
+    "Core Features": "Efficient Manipulation Of Biological Strings, String Matching & Searching, Reverse Complement Generation, Translation Of Sequences, Support For DNA & RNA Sequences",
+    "General Tags": "Bioinformatics, Biological Sequences, Sequence Analysis, Computational Biology",
+    "Software Type": "Library",
+    "Software Class": "Bioinformatics Tool",
+    "Research Area": "Molecular Biology",
+    "Research Discipline": "Genetics",
+    "Research Field": "Biological Sciences"
+}

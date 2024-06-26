@@ -1,0 +1,11 @@
+{
+    "Software": "kmergenie",
+    "AI Description": "kmergenie is a software tool used for estimating the best k-mer length for genome de novo assembly. It analyzes the histogram of k-mer occurrences in the input reads and recommends the optimal k-mer length to use for assembly.",
+    "Core Features": "Estimates The Optimal K-Mer Length For De Novo Genome Assembly, Analyzes K-Mer Occurrence Histograms From Input Reads, Helps Avoid Excessive Memory Usage & Computational Time In Assembly Processes",
+    "General Tags": "Genome Assembly, Bioinformatics, De Bruijn Graph",
+    "Software Type": "Software Tool",
+    "Software Class": "Genome Analysis Tool",
+    "Research Area": "Genome Assembly",
+    "Research Discipline": "Genomics",
+    "Research Field": "Biological Sciences"
+}

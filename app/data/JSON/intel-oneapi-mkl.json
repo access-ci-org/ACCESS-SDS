@@ -1,0 +1,11 @@
+{
+    "Software": "Intel oneAPI Math Kernel Library (oneMKL)",
+    "AI Description": "Intel oneAPI Math Kernel Library (oneMKL) is a high-performance mathematical function library that provides optimized math routines for scientific, engineering, and machine learning applications. It offers highly optimized, thread-safe, and vectorized functions across various domains such as linear algebra, fast Fourier transforms, statistical analysis, and more.",
+    "Core Features": "High-Performance Mathematical Function Library, Optimized Math Routines For Scientific, Engineering, & Machine Learning Applications, Thread-Safe & Vectorized Functions, Supports Linear Algebra, Fast Fourier Transforms, Statistical Analysis, & More",
+    "General Tags": "Math Library, High Performance Computing, Optimized Functions, Scientific Computing",
+    "Software Type": "Library",
+    "Software Class": "Math Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Applied Computer Science"
+}

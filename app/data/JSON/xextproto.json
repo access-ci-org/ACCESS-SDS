@@ -1,0 +1,11 @@
+{
+    "Software": "xextproto",
+    "AI Description": "X11 Extension protocols and auxiliary headers",
+    "Core Features": "Provides X11 extension protocols and auxiliary headers necessary for building various X-related software",
+    "General Tags": "Linux, X11, X Window System",
+    "Software Type": "Library",
+    "Software Class": "Development Tool",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

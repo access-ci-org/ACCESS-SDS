@@ -1,0 +1,11 @@
+{
+    "Software": "iperf3",
+    "AI Description": "iperf3 is a tool for actively measuring the maximum achievable bandwidth on IP networks. It supports various parameters to customize the testing process and is widely used for network performance testing and tuning.",
+    "Core Features": "1. Measures TCP, UDP, and SCTP bandwidth performance\n2. Supports IPv4 and IPv6\n3. Option for bidirectional testing\n4. Customizable testing parameters\n5. Supports client-server architecture\n6. Real-time measurements and statistics",
+    "General Tags": "Network Testing, Bandwidth Measurement, Network Performance",
+    "Software Type": "Tool",
+    "Software Class": "Network Testing",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

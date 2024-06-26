@@ -1,0 +1,11 @@
+{
+    "Software": "Docker",
+    "AI Description": "Docker is a platform that enables users to develop, ship, and run applications within containers. Containers allow developers to package up an application with all parts it needs, such as libraries and other dependencies, and ship it all out as one package.",
+    "Core Features": "Containerization Of Applications, Efficient & Lightweight, Portability Across Environments, Automated Deployment, Scalability, Isolation Of Applications",
+    "General Tags": "Containerization, Deployment, Scalability, Isolation",
+    "Software Type": "Virtualization",
+    "Software Class": "Containerization Platform",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

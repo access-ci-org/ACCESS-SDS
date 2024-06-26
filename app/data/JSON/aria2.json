@@ -1,0 +1,11 @@
+{
+    "Software": "aria2",
+    "AI Description": "aria2 is a lightweight multi-protocol & multi-source command-line download utility. It supports HTTP/HTTPS, FTP, BitTorrent and Metalink. aria2 can be manipulated via built-in JSON-RPC and XML-RPC interfaces.",
+    "Core Features": "Multi-Protocol & Multi-Source Download Utility, Supports Http/Https, Ftp, Bittorrent, & Metalink Protocols, Highly Customizable With Many Settings & Configurations, Supports Segmented Downloading For Faster Speeds, Command-Line Interface For Ease Of Use, Can Be Controlled Through Json-Rpc & Xml-Rpc Interfaces",
+    "General Tags": "Download Manager, Command-Line Utility, Cross-Platform, Open Source",
+    "Software Type": "",
+    "Software Class": "",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences, Other Computer & Information Sciences"
+}

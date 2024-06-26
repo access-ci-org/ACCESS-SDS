@@ -1,0 +1,11 @@
+{
+    "Software": "Espresso",
+    "AI Description": "Espresso is a software package for quantum chemistry calculations based on the density functional theory (DFT). It provides a wide range of capabilities for electronic structure calculations of solid-state systems.",
+    "Core Features": "1. Density functional theory calculations\n2. Electronic structure calculations for solid-state systems\n3. Ability to perform total energy, structure optimization, phonon, and other advanced calculations\n4. Support for various exchange-correlation functionals\n5. Parallel computing capabilities for large-scale simulations",
+    "General Tags": "Quantum Chemistry, Dft, Solid-State Systems",
+    "Software Type": "Open-Source",
+    "Software Class": "Computational Chemistry",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Physical Sciences"
+}

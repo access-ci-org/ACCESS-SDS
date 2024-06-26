@@ -1,0 +1,11 @@
+{
+    "Software": "OpenMM",
+    "AI Description": "OpenMM is a widely-used open-source toolkit for molecular dynamics simulation. It provides a high-performance, flexible, and easy-to-use platform for the development of computationally intensive simulations of biomolecular systems.",
+    "Core Features": "Efficient Implementation Of Molecular Dynamics Algorithms, Support For Cuda & Opencl For Gpu Acceleration, Python & C++ Apis For Easy Integration & Extensibility, Extensive Support For Various Force Fields & Integrators, Integration With Popular Simulation & Visualization Tools",
+    "General Tags": "Molecular Dynamics, Biomolecular Simulations, Computational Chemistry, Biophysics, Gpu Acceleration",
+    "Software Type": "Molecular Dynamics Software",
+    "Software Class": "Simulation Tool",
+    "Research Area": "Structural Biology",
+    "Research Discipline": "Bioinformatics",
+    "Research Field": "Biological Sciences"
+}

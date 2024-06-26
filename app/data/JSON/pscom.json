@@ -1,0 +1,11 @@
+{
+    "Software": "pscom",
+    "AI Description": "pscom is a Python library for process-based communication. It provides tools for easy communication between different processes, making it simple to pass messages and data between them.",
+    "Core Features": "1. Process-based communication\n2. Allows passing messages and data between processes\n3. Python library for facilitating inter-process communication",
+    "General Tags": "Python Library, Process Communication, Inter-Process Communication",
+    "Software Type": "Python Library",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

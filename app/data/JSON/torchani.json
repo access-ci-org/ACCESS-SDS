@@ -1,0 +1,11 @@
+{
+    "Software": "TorchANI",
+    "AI Description": "TorchANI is a PyTorch implementation of the ANI (Anisotropic Network Model) neural network potential for predicting molecular interactions and properties in chemical systems.",
+    "Core Features": "Pytorch Implementation Of Ani Neural Network Potential, Predicts Molecular Interactions & Properties In Chemical Systems, Support For Various Chemical Tasks Such As Energy Predictions, Force Predictions, & Molecular Geometry Optimizations, Option For Multi-Gpu Training & Inference",
+    "General Tags": "Computational Chemistry, Machine Learning, Python Library, Chemical Modeling",
+    "Software Type": "Python Library",
+    "Software Class": "Computational Chemistry Software",
+    "Research Area": "Chemical Sciences",
+    "Research Discipline": "Physical Chemistry",
+    "Research Field": "Chemical Sciences"
+}

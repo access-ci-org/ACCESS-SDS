@@ -1,0 +1,11 @@
+{
+    "Software": "Clust",
+    "AI Description": "Clust is a software for clustering heterogeneous time series data. It allows users to identify similarity patterns and group time series data together based on various criteria.",
+    "Core Features": "1. Clustering heterogeneous time series data\n2. Identifying similarity patterns among time series\n3. Grouping time series data based on specified criteria\n4. Analyzing patterns and trends within clusters",
+    "General Tags": "Clustering, Time Series Data, Pattern Identification",
+    "Software Type": "Data Analysis Tool",
+    "Software Class": "Clustering Software",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Other Computer & Information Sciences"
+}

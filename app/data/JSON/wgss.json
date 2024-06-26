@@ -1,0 +1,11 @@
+{
+    "Software": "WGSS",
+    "AI Description": "WGSS (Whole-Genome Shotgun Sequencing) is a computational approach used in genomics to sequence an entire genome by breaking it into smaller, overlapping fragments, which are then reassembled to reconstruct the original genome.",
+    "Core Features": "1. High-throughput sequencing of entire genomes. 2. Assembly of genome sequences from short reads. 3. Identification of genetic variations, mutations, and structural variants. 4. Comparative genomics and evolutionary analysis. 5. Functional annotation of genome sequences.",
+    "General Tags": "Computational Software, Bioinformatics, Hpc Tools",
+    "Software Type": "Computational Tool",
+    "Software Class": "Genomics",
+    "Research Area": "Genetics",
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
+}

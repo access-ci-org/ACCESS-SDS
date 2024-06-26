@@ -1,0 +1,11 @@
+{
+    "Software": "wxPython",
+    "AI Description": "wxPython is a cross-platform GUI toolkit for the Python programming language. It allows Python programmers to create functional and native-looking user interfaces for their applications.",
+    "Core Features": "1. Native widgets on all platforms\n2. Extensive documentation and community support\n3. Customizable and flexible widget library\n4. Support for event-driven programming\n5. Integration with other Python libraries and tools",
+    "General Tags": "Gui Toolkit, Cross-Platform, Python",
+    "Software Type": "Library",
+    "Software Class": "User Interface Development",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

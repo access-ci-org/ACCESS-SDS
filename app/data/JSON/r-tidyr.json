@@ -1,0 +1,11 @@
+{
+    "Software": "r-tidyr",
+    "AI Description": "tidyr is an R package that helps tidy messy data by rearranging columns and rows for easier data manipulation and analysis.",
+    "Core Features": "Rearrange Columns & Rows, Handle Missing Data, Create Tidy Datasets",
+    "General Tags": "R Package, Data Manipulation, Data Tidying",
+    "Software Type": "Package",
+    "Software Class": "Data Management & Analysis",
+    "Research Area": "Data Science, Statistical Analysis",
+    "Research Discipline": "Statistics & Probability",
+    "Research Field": "Statistics & Probability"
+}

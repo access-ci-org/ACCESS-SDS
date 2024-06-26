@@ -1,0 +1,11 @@
+{
+    "Software": "netCDF-C++4",
+    "AI Description": "netCDF-C++4 is a C++ interface for netCDF4, which is a software library and file format for storing multidimensional scientific data. It provides an object-oriented programming interface to the netCDF library, allowing users to read and write data stored in netCDF format using C++.",
+    "Core Features": "Provides A C++ Interface For Netcdf4, Allows Reading & Writing Of Multidimensional Scientific Data, Supports Object-Oriented Programming Approach, Enables Manipulation Of Data Stored In Netcdf Format",
+    "General Tags": "Netcdf, C++ Interface, Scientific Data Storage",
+    "Software Type": "Data Storage",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Other Natural Sciences"
+}

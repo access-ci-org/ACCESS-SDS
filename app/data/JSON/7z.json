@@ -1,0 +1,11 @@
+{
+    "Software": "7-Zip",
+    "AI Description": "7-Zip is a file archiver with a high compression ratio. It supports several archive formats and can be used to compress and decompress files efficiently.",
+    "Core Features": "7-Zip provides a high compression ratio, supports various archive formats including 7z, XZ, BZIP2, GZIP, TAR, ZIP, and WIM, has a powerful file manager and command-line version, offers AES-256 encryption, and is open-source software.",
+    "General Tags": "File Archiver, Compression, Encryption",
+    "Software Type": "Archiver",
+    "Software Class": "Utility",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": ""
+}

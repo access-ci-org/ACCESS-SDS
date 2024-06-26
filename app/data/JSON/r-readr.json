@@ -1,0 +1,11 @@
+{
+    "Software": "readr",
+    "AI Description": "readr is a R package used for reading flat/tabular text files into R easily and efficiently. It provides a high-performance and user-friendly way to import structured data from files.",
+    "Core Features": "Efficient Reading Of Delimited Files, Support For Various File Formats Like Csv, Tsv, Fwf, Consistent & Predictable Behavior For Column Types, Easy Handling Of File Encoding & Column Specification",
+    "General Tags": "Data Import, Data Processing, Data Manipulation",
+    "Software Type": "R Package",
+    "Software Class": "Data Analysis",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Other Mathematics"
+}

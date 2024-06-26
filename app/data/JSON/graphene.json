@@ -1,0 +1,11 @@
+{
+    "Software": "graphene",
+    "AI Description": "Graphene is a Python library for building GraphQL APIs fast and easily.",
+    "Core Features": "1. Simplifies the process of building GraphQL APIs\n2. Integrates seamlessly with Python-based web frameworks\n3. Provides a simple and elegant syntax for defining GraphQL schemas\n4. Supports auto-generated documentation",
+    "General Tags": "Python Library, Graphql",
+    "Software Type": "Library",
+    "Software Class": "Web Development",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

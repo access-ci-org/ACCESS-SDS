@@ -1,0 +1,11 @@
+{
+    "Software": "CusparseLT",
+    "AI Description": "CusparseLT library is a lightweight version of NVIDIA's cuSPARSE library designed for sparse matrix operations on NVIDIA GPUs. It offers high-performance accelerated computation for sparse matrix manipulation in GPU-accelerated applications.",
+    "Core Features": "1. Sparse matrix-vector multiplication (SpMV)\n2. Sparse matrix solution (Ax = b) for linear systems\n3. Support for various sparse matrix formats\n4. GPU acceleration for faster computation\n5. Integration with CUDA programming model",
+    "General Tags": "Sparse Matrix Operations, Gpu Acceleration, Linear Algebra, Cuda Programming",
+    "Software Type": "Computational Software",
+    "Software Class": "Library",
+    "Research Area": "Applied Computer Science",
+    "Research Discipline": "Computer Science",
+    "Research Field": "Computer & Information Sciences"
+}

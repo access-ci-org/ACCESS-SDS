@@ -1,0 +1,11 @@
+{
+    "Software": "libogg",
+    "AI Description": "Libogg is a reference implementation of the Ogg bitstream format. It provides a simple, low-level API for working with Ogg bitstreams.",
+    "Core Features": "1. Encoding and decoding of Ogg bitstreams\n2. Low-level API for Ogg format manipulation\n3. Support for multiple-channel audio and packet-based streams\n4. Integration with other Ogg-related libraries such as libvorbis",
+    "General Tags": "Library, Bitstream, Audio",
+    "Software Type": "Data Format",
+    "Software Class": "Library",
+    "Research Area": "",
+    "Research Discipline": "",
+    "Research Field": "Computer & Information Sciences"
+}

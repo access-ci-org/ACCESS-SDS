@@ -1,0 +1,11 @@
+{
+    "Software": "SortMeRNA",
+    "AI Description": "SortMeRNA is a software tool for filtering, mapping, and removing ribosomal RNA (rRNA) sequences from high-throughput sequencing data. It is specifically designed for metatranscriptomic and metagenomic data analysis.",
+    "Core Features": "Filtering & Mapping Ribosomal RNA Sequences, Suitable For Metatranscriptomic & Metagenomic Data, High-Throughput Sequencing Data Processing, Efficient Removal Of Rrna Sequences, Supports Various Input & Output Formats",
+    "General Tags": "Bioinformatics, Hpc Tools, Computational Software",
+    "Software Type": "Bioinformatics Tool",
+    "Software Class": "Sequence Analysis",
+    "Research Area": "Genetics",
+    "Research Discipline": "Biological Sciences",
+    "Research Field": "Biological Sciences"
+}
