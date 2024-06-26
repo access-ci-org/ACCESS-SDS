@@ -18,6 +18,6 @@ jobs:
         date "+%Y-%m-%d %H:%M:%S" > app/static/last_updated.txt
         git config user.name 'github-actions[bot]'
         git config user.email 'github-actions[bot]@users.noreply.github.com'
-        git add app/last_updated.txt
+        git add app/static/last_updated.txt
         git commit -m "Update last_updated.txt with the current timestamp"
         git push
