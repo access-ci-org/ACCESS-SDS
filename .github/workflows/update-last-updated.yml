@@ -1,0 +1,23 @@
+name: Update Last Updated Timestamp
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-timestamp:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Update last_updated.txt
+      run: |
+        date "+%Y-%m-%d %H:%M:%S" > app/static/last_updated.txt
+        git config user.name 'github-actions[bot]'
+        git config user.email 'github-actions[bot]@users.noreply.github.com'
+        git add app/last_updated.txt
+        git commit -m "Update last_updated.txt with the current timestamp"
+        git push
