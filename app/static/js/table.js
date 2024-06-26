@@ -321,7 +321,11 @@ $(document).ready(function()
                         {   label: '3D',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('3d');
-                        }},   
+                        }}, 
+                        {   label: 'Alignment',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('alignment');
+                        }},  
                         {   label: 'Artificial Intelligence',
                             value: function(rowData, rowIdx) {
                                 return /\b(ai|artificial intelligence)\b/i.test(rowData[9]);
@@ -338,17 +342,45 @@ $(document).ready(function()
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('audio');
                         }},
+                        {   label: 'Bayesian',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('bayesian');
+                        }},
                         {   label: 'Bioinformatics',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('bioinformatics');
+                        }},
+                        {   label: 'C',
+                            value: function(rowData, rowIdx) {
+                                return /\sc[,/\\\s]/.test(rowData[9].toLowerCase());
                         }},
                         {   label: 'C++',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('c++');
                         }},
+                        {   label: 'Command Line',
+                            value: function(rowData, rowIdx) {
+                                return /\b(command[-\s]line)\b/i.test(rowData[9]);
+                        }},
+                        {   label: 'Cross-Platform',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('cross-platform');
+                        }},
                         {   label: 'CUDA',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('cuda');
+                        }},
+                        {   label: 'Deep Learning',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('deep learning');
+                        }},
+                        {   label: 'FastQ',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('fastq');
+                        }},
+                        {   label: 'Fortran',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('fortran');
                         }},
                         {   label: 'Genetics/Genomics',
                             value: function(rowData, rowIdx) {
@@ -360,7 +392,11 @@ $(document).ready(function()
                         }},
                         {   label: 'Graph',
                             value: function(rowData, rowIdx) {
-                                return rowData[9].toLowerCase().includes('graph');
+                                return /\b(graph )\b/i.test(rowData[9]);
+                        }},
+                        {   label: 'Graphics',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('graphic');
                         }},
                         {   label: 'GUI',
                             value: function(rowData, rowIdx) {
@@ -378,25 +414,61 @@ $(document).ready(function()
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('imag');
                         }}, 
+                        {   label: 'Java',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('java');
+                        }}, 
+                        {   label: 'JSON',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('json');
+                        }}, 
                         {   label: 'Library',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('library');
+                        }}, 
+                        {   label: 'Linux',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('linux');
                         }}, 
                         {   label: 'Machine Learning',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('machine learning');
                         }},
+                        {   label: 'Neural Network',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('neural network');
+                        }},
                         {   label: 'Open Source',
                             value: function(rowData, rowIdx) {
                                 return /open[\s-]source/i.test(rowData[9]);
+                        }},
+                        {   label: 'OpenGL',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('opengl');
+                        }},
+                        {   label: 'Optimization',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('optimization');
                         }},
                         {   label: 'Parser',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('parser');
                         }},
+                        {   label: 'Phylogenics',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('phylogenics');
+                        }},
                         {   label: 'Python',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('python');
+                        }},
+                        {   label: 'Pytorch',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('pytorch');
+                        }},
+                        {   label: 'R',
+                            value: function(rowData, rowIdx) {
+                                return /\b(R )\b/i.test(rowData[9]);
                         }},
                         {   label: 'Sequencing',
                             value: function(rowData, rowIdx) {
@@ -406,6 +478,10 @@ $(document).ready(function()
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('software');
                         }},
+                        {   label: 'Unicode',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('unicode');
+                        }},
                         {   label: 'User Interface',
                             value: function(rowData, rowIdx) {
                                 return /\b(ui|user[\s-]interface)\b/i.test(rowData[9]);
@@ -413,6 +489,10 @@ $(document).ready(function()
                         {   label: 'Visualization',
                             value: function(rowData, rowIdx) {
                                 return rowData[9].toLowerCase().includes('visualization');
+                        }}, 
+                        {   label: 'Web',
+                            value: function(rowData, rowIdx) {
+                                return rowData[9].toLowerCase().includes('web');
                         }}, 
                         {   label: 'XML',
                             value: function(rowData, rowIdx) {
