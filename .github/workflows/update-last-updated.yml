@@ -3,7 +3,7 @@ name: Update Last Updated Timestamp
 on:
   push:
     branches:
-      - issue-34-website-timestamp
+      - main
 
 jobs:
   update-timestamp:
