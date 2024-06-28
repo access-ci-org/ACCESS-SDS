@@ -10,7 +10,7 @@ RP_NAMES = [
 SKIPPED_RPS = {'DARWIN','ookami','stampede-3'}
 
 # I/O Locations
-SPIDER_DIRECTORY = 's./data/spiderOutput/'
+SPIDER_DIRECTORY = './data/spiderOutput/'
 SPIDER_POSTFIX = '_spider_output.txt'
 OUTPUT_DIRECTORY = './data/versionInfo.csv'
 

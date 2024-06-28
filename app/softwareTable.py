@@ -11,7 +11,7 @@ from app.parseJSONInfo import json_sanitizer
 CURATED_INPUT_DIRECTORY = './data/CSV/ACCESS_Software.csv'
 CURATED_OUTPUT_DIRECTORY = './data/CSV/staticTable.csv'
 
-GENERATED_INPUT_DIRECTORY = "./data/CSV/JSON"
+GENERATED_INPUT_DIRECTORY = "./data/JSON"
 GENERATED_OUTPUT_DIRECTORY = './data/CSV/generatedTable.csv'
 
 FINAL_OUTPUT_DIRECTORY = './data/CSV/softwareTable.csv'
@@ -68,7 +68,7 @@ def create_software_table():
             curated_table_DF = create_curated_table()
             print("Static table not found. Creating...")
         try:
-            generated_table_DF = pd.read_csv(GENERATED_OUTPUT_DIRECTORY)
+            generated_table_DF = pd.read_csv(GENERATED_OUTPUT_DIRECTORY, na_filter=False)
             print("AI Generated table found!")
         except:
             generated_table_DF = create_generated_table('f')
@@ -85,6 +85,7 @@ def create_software_table():
         # Drop the unmerged versions of columns
         merged_DF = merged_DF.drop(columns=[column + '_static' for column in MERGE_COLUMNS]
                                   + [column + '_generated' for column in MERGE_COLUMNS] )
+        merged_DF = merged_DF.replace(np.nan, '')
         
         # Add 'Example Use' modals to table
         merged_DF.insert(16, 'Example Use', '')
