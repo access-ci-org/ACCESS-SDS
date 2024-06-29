@@ -9,7 +9,7 @@ import re
 import json
 import pandas as pd
 from datetime import datetime
-import logging
+# import logging
 
 app = Flask(__name__)
 
